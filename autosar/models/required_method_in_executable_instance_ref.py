@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -38,9 +40,7 @@ class RequiredMethodInExecutableInstanceRef:
     class Meta:
         name = "REQUIRED-METHOD-IN-EXECUTABLE-INSTANCE-REF"
 
-    context_root_sw_component_prototype_ref: Optional[
-        "RequiredMethodInExecutableInstanceRef.ContextRootSwComponentPrototypeRef"
-    ] = field(
+    context_root_sw_component_prototype_ref: RequiredMethodInExecutableInstanceRef.ContextRootSwComponentPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF",
@@ -49,7 +49,7 @@ class RequiredMethodInExecutableInstanceRef:
         },
     )
     context_component_prototype_ref: list[
-        "RequiredMethodInExecutableInstanceRef.ContextComponentPrototypeRef"
+        RequiredMethodInExecutableInstanceRef.ContextComponentPrototypeRef
     ] = field(
         default_factory=list,
         metadata={
@@ -58,9 +58,7 @@ class RequiredMethodInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_r_port_prototype_ref: Optional[
-        "RequiredMethodInExecutableInstanceRef.ContextRPortPrototypeRef"
-    ] = field(
+    context_r_port_prototype_ref: RequiredMethodInExecutableInstanceRef.ContextRPortPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-R-PORT-PROTOTYPE-REF",
@@ -68,9 +66,7 @@ class RequiredMethodInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_method_ref: Optional[
-        "RequiredMethodInExecutableInstanceRef.TargetMethodRef"
-    ] = field(
+    target_method_ref: RequiredMethodInExecutableInstanceRef.TargetMethodRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-METHOD-REF",
@@ -78,14 +74,14 @@ class RequiredMethodInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -96,7 +92,7 @@ class RequiredMethodInExecutableInstanceRef:
 
     @dataclass
     class ContextRootSwComponentPrototypeRef(Ref):
-        dest: Optional[RootSwComponentPrototypeSubtypesEnum] = field(
+        dest: RootSwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -107,7 +103,7 @@ class RequiredMethodInExecutableInstanceRef:
 
     @dataclass
     class ContextComponentPrototypeRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -118,7 +114,7 @@ class RequiredMethodInExecutableInstanceRef:
 
     @dataclass
     class ContextRPortPrototypeRef(Ref):
-        dest: Optional[RPortPrototypeSubtypesEnum] = field(
+        dest: RPortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -129,7 +125,7 @@ class RequiredMethodInExecutableInstanceRef:
 
     @dataclass
     class TargetMethodRef(Ref):
-        dest: Optional[ClientServerOperationSubtypesEnum] = field(
+        dest: ClientServerOperationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

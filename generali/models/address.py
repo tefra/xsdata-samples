@@ -7,7 +7,7 @@ class Address:
     class Meta:
         name = "address"
 
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "type",
@@ -15,7 +15,7 @@ class Address:
             "required": True,
         },
     )
-    description: Optional[object] = field(
+    description: object | None = field(
         default=None,
         metadata={
             "type": "Element",

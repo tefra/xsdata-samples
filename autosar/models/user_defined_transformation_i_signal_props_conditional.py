@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -45,7 +47,7 @@ class UserDefinedTransformationISignalPropsConditional:
     class Meta:
         name = "USER-DEFINED-TRANSFORMATION-I-SIGNAL-PROPS-CONDITIONAL"
 
-    cs_error_reaction: Optional[CsTransformerErrorReactionEnum] = field(
+    cs_error_reaction: CsTransformerErrorReactionEnum | None = field(
         default=None,
         metadata={
             "name": "CS-ERROR-REACTION",
@@ -53,9 +55,7 @@ class UserDefinedTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_prototype_transformation_propss: Optional[
-        "UserDefinedTransformationISignalPropsConditional.DataPrototypeTransformationPropss"
-    ] = field(
+    data_prototype_transformation_propss: UserDefinedTransformationISignalPropsConditional.DataPrototypeTransformationPropss | None = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-TRANSFORMATION-PROPSS",
@@ -63,9 +63,7 @@ class UserDefinedTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformer_ref: Optional[
-        "UserDefinedTransformationISignalPropsConditional.TransformerRef"
-    ] = field(
+    transformer_ref: UserDefinedTransformationISignalPropsConditional.TransformerRef | None = field(
         default=None,
         metadata={
             "name": "TRANSFORMER-REF",
@@ -73,7 +71,7 @@ class UserDefinedTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -81,14 +79,14 @@ class UserDefinedTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -112,7 +110,7 @@ class UserDefinedTransformationISignalPropsConditional:
 
     @dataclass
     class TransformerRef(Ref):
-        dest: Optional[TransformationTechnologySubtypesEnum] = field(
+        dest: TransformationTechnologySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

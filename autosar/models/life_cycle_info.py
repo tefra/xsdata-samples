@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -51,7 +53,7 @@ class LifeCycleInfo:
     class Meta:
         name = "LIFE-CYCLE-INFO"
 
-    lc_object_ref: Optional["LifeCycleInfo.LcObjectRef"] = field(
+    lc_object_ref: LifeCycleInfo.LcObjectRef | None = field(
         default=None,
         metadata={
             "name": "LC-OBJECT-REF",
@@ -59,7 +61,7 @@ class LifeCycleInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lc_state_ref: Optional["LifeCycleInfo.LcStateRef"] = field(
+    lc_state_ref: LifeCycleInfo.LcStateRef | None = field(
         default=None,
         metadata={
             "name": "LC-STATE-REF",
@@ -67,7 +69,7 @@ class LifeCycleInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    period_begin: Optional[LifeCyclePeriod] = field(
+    period_begin: LifeCyclePeriod | None = field(
         default=None,
         metadata={
             "name": "PERIOD-BEGIN",
@@ -75,7 +77,7 @@ class LifeCycleInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    period_end: Optional[LifeCyclePeriod] = field(
+    period_end: LifeCyclePeriod | None = field(
         default=None,
         metadata={
             "name": "PERIOD-END",
@@ -83,7 +85,7 @@ class LifeCycleInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remark: Optional[DocumentationBlock] = field(
+    remark: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "REMARK",
@@ -91,7 +93,7 @@ class LifeCycleInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    use_instead_refs: Optional["LifeCycleInfo.UseInsteadRefs"] = field(
+    use_instead_refs: LifeCycleInfo.UseInsteadRefs | None = field(
         default=None,
         metadata={
             "name": "USE-INSTEAD-REFS",
@@ -99,14 +101,14 @@ class LifeCycleInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -117,7 +119,7 @@ class LifeCycleInfo:
 
     @dataclass
     class LcObjectRef(Ref):
-        dest: Optional[ReferrableSubtypesEnum] = field(
+        dest: ReferrableSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -128,7 +130,7 @@ class LifeCycleInfo:
 
     @dataclass
     class LcStateRef(Ref):
-        dest: Optional[LifeCycleStateSubtypesEnum] = field(
+        dest: LifeCycleStateSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -139,7 +141,7 @@ class LifeCycleInfo:
 
     @dataclass
     class UseInsteadRefs:
-        use_instead_ref: list["LifeCycleInfo.UseInsteadRefs.UseInsteadRef"] = (
+        use_instead_ref: list[LifeCycleInfo.UseInsteadRefs.UseInsteadRef] = (
             field(
                 default_factory=list,
                 metadata={
@@ -152,7 +154,7 @@ class LifeCycleInfo:
 
         @dataclass
         class UseInsteadRef(Ref):
-            dest: Optional[ReferrableSubtypesEnum] = field(
+            dest: ReferrableSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

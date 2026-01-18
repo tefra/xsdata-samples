@@ -21,16 +21,7 @@ class ParkingAreasRelStructure(ContainmentAggregationStructure):
         name = "parkingAreas_RelStructure"
 
     parking_area_ref_or_parking_area: Iterable[
-        Union[
-            VehiclePoolingParkingAreaRef,
-            VehicleSharingParkingAreaRef,
-            TaxiParkingAreaRef,
-            ParkingAreaRef,
-            VehiclePoolingParkingArea,
-            VehicleSharingParkingArea,
-            TaxiParkingArea,
-            ParkingArea,
-        ]
+        VehiclePoolingParkingAreaRef | VehicleSharingParkingAreaRef | TaxiParkingAreaRef | ParkingAreaRef | VehiclePoolingParkingArea | VehicleSharingParkingArea | TaxiParkingArea | ParkingArea
     ] = field(
         default_factory=list,
         metadata={

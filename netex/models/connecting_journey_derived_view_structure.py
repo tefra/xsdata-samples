@@ -23,7 +23,7 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "ConnectingJourney_DerivedViewStructure"
 
-    service_journey_ref: Optional[ServiceJourneyRefStructure] = field(
+    service_journey_ref: ServiceJourneyRefStructure | None = field(
         default=None,
         metadata={
             "name": "ServiceJourneyRef",
@@ -32,9 +32,7 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             "required": True,
         },
     )
-    departure_time_or_frequency: Optional[
-        Union[XmlTime, FrequencyStructure]
-    ] = field(
+    departure_time_or_frequency: XmlTime | FrequencyStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -52,7 +50,7 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -60,7 +58,7 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination_display_view: Optional[DestinationDisplayView] = field(
+    destination_display_view: DestinationDisplayView | None = field(
         default=None,
         metadata={
             "name": "DestinationDisplayView",
@@ -68,7 +66,7 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_type_ref: Optional[Union[FareDayTypeRef, DayTypeRef]] = field(
+    day_type_ref: FareDayTypeRef | DayTypeRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -86,14 +84,7 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    journey_pattern_ref: Optional[
-        Union[
-            ServiceJourneyPatternRef,
-            ServicePatternRef,
-            DeadRunJourneyPatternRef,
-            JourneyPatternRef,
-        ]
-    ] = field(
+    journey_pattern_ref: ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -121,7 +112,7 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    connecting_order: Optional[int] = field(
+    connecting_order: int | None = field(
         default=None,
         metadata={
             "name": "ConnectingOrder",
@@ -129,7 +120,7 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    connecting_visit_number: Optional[int] = field(
+    connecting_visit_number: int | None = field(
         default=None,
         metadata={
             "name": "ConnectingVisitNumber",

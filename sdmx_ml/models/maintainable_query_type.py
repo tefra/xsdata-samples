@@ -19,7 +19,7 @@ class MaintainableQueryType(VersionableQueryType):
         value.
     """
 
-    agency_id: Union[str, WildCardValueType] = field(
+    agency_id: str | WildCardValueType = field(
         default=WildCardValueType.PERCENT_SIGN,
         metadata={
             "name": "agencyID",

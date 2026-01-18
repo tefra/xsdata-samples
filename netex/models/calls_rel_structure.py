@@ -16,7 +16,7 @@ class CallsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "calls_RelStructure"
 
-    call: Iterable[Union[DatedCall, Call]] = field(
+    call: Iterable[DatedCall | Call] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

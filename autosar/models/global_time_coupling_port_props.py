@@ -33,7 +33,7 @@ class GlobalTimeCouplingPortProps:
     class Meta:
         name = "GLOBAL-TIME-COUPLING-PORT-PROPS"
 
-    propagation_delay: Optional[TimeValue] = field(
+    propagation_delay: TimeValue | None = field(
         default=None,
         metadata={
             "name": "PROPAGATION-DELAY",
@@ -41,14 +41,14 @@ class GlobalTimeCouplingPortProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

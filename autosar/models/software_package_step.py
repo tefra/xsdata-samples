@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -94,7 +96,7 @@ class SoftwarePackageStep:
     class Meta:
         name = "SOFTWARE-PACKAGE-STEP"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -103,9 +105,7 @@ class SoftwarePackageStep:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SoftwarePackageStep.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SoftwarePackageStep.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -113,7 +113,7 @@ class SoftwarePackageStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class SoftwarePackageStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class SoftwarePackageStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class SoftwarePackageStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class SoftwarePackageStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +153,7 @@ class SoftwarePackageStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SoftwarePackageStep.Annotations"] = field(
+    annotations: SoftwarePackageStep.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,7 +161,7 @@ class SoftwarePackageStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_switch: Optional[Boolean] = field(
+    activation_switch: Boolean | None = field(
         default=None,
         metadata={
             "name": "ACTIVATION-SWITCH",
@@ -169,7 +169,7 @@ class SoftwarePackageStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pre_activate_refs: Optional["SoftwarePackageStep.PreActivateRefs"] = field(
+    pre_activate_refs: SoftwarePackageStep.PreActivateRefs | None = field(
         default=None,
         metadata={
             "name": "PRE-ACTIVATE-REFS",
@@ -177,7 +177,7 @@ class SoftwarePackageStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: Optional["SoftwarePackageStep.ProcessRef"] = field(
+    process_ref: SoftwarePackageStep.ProcessRef | None = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
@@ -185,7 +185,7 @@ class SoftwarePackageStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transfers: Optional["SoftwarePackageStep.Transfers"] = field(
+    transfers: SoftwarePackageStep.Transfers | None = field(
         default=None,
         metadata={
             "name": "TRANSFERS",
@@ -193,7 +193,7 @@ class SoftwarePackageStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    verify_refs: Optional["SoftwarePackageStep.VerifyRefs"] = field(
+    verify_refs: SoftwarePackageStep.VerifyRefs | None = field(
         default=None,
         metadata={
             "name": "VERIFY-REFS",
@@ -201,14 +201,14 @@ class SoftwarePackageStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -216,7 +216,7 @@ class SoftwarePackageStep:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -249,7 +249,7 @@ class SoftwarePackageStep:
     @dataclass
     class PreActivateRefs:
         pre_activate_ref: list[
-            "SoftwarePackageStep.PreActivateRefs.PreActivateRef"
+            SoftwarePackageStep.PreActivateRefs.PreActivateRef
         ] = field(
             default_factory=list,
             metadata={
@@ -261,7 +261,7 @@ class SoftwarePackageStep:
 
         @dataclass
         class PreActivateRef(Ref):
-            dest: Optional[SoftwarePackageSubtypesEnum] = field(
+            dest: SoftwarePackageSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -272,7 +272,7 @@ class SoftwarePackageStep:
 
     @dataclass
     class ProcessRef(Ref):
-        dest: Optional[SoftwarePackageSubtypesEnum] = field(
+        dest: SoftwarePackageSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -294,7 +294,7 @@ class SoftwarePackageStep:
 
     @dataclass
     class VerifyRefs:
-        verify_ref: list["SoftwarePackageStep.VerifyRefs.VerifyRef"] = field(
+        verify_ref: list[SoftwarePackageStep.VerifyRefs.VerifyRef] = field(
             default_factory=list,
             metadata={
                 "name": "VERIFY-REF",
@@ -305,7 +305,7 @@ class SoftwarePackageStep:
 
         @dataclass
         class VerifyRef(Ref):
-            dest: Optional[SoftwarePackageSubtypesEnum] = field(
+            dest: SoftwarePackageSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

@@ -40,7 +40,7 @@ class VolumeIssueGroup:
             "type": "Element",
         },
     )
-    volume_series: Optional[VolumeSeries] = field(
+    volume_series: VolumeSeries | None = field(
         default=None,
         metadata={
             "name": "volume-series",
@@ -81,41 +81,41 @@ class VolumeIssueGroup:
             "type": "Element",
         },
     )
-    issue_part: Optional[IssuePart] = field(
+    issue_part: IssuePart | None = field(
         default=None,
         metadata={
             "name": "issue-part",
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",

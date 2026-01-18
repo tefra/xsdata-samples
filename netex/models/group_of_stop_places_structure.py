@@ -27,7 +27,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
-    public_code: Optional[str] = field(
+    public_code: str | None = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -35,14 +35,14 @@ class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    members: Optional[StopPlaceRefsRelStructure] = field(
+    members: StopPlaceRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alternative_names: Optional[AlternativeNamesRelStructure] = field(
+    alternative_names: AlternativeNamesRelStructure | None = field(
         default=None,
         metadata={
             "name": "alternativeNames",
@@ -50,7 +50,7 @@ class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    centroid: Optional[SimplePointVersionStructure] = field(
+    centroid: SimplePointVersionStructure | None = field(
         default=None,
         metadata={
             "name": "Centroid",
@@ -58,7 +58,7 @@ class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    polygon: Optional[Polygon] = field(
+    polygon: Polygon | None = field(
         default=None,
         metadata={
             "name": "Polygon",
@@ -66,7 +66,7 @@ class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.opengis.net/gml/3.2",
         },
     )
-    transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
+    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -74,20 +74,7 @@ class GroupOfStopPlacesStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
-        Union[
-            AirSubmode,
-            BusSubmode,
-            CoachSubmode,
-            FunicularSubmode,
-            MetroSubmode,
-            TramSubmode,
-            TelecabinSubmode,
-            RailSubmode,
-            WaterSubmode,
-            SnowAndIceSubmode,
-        ]
-    ] = field(
+    choice: AirSubmode | BusSubmode | CoachSubmode | FunicularSubmode | MetroSubmode | TramSubmode | TelecabinSubmode | RailSubmode | WaterSubmode | SnowAndIceSubmode | None = field(
         default=None,
         metadata={
             "type": "Elements",

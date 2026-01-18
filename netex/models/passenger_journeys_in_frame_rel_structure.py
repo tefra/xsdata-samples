@@ -17,12 +17,7 @@ class PassengerJourneysInFrameRelStructure(ContainmentAggregationStructure):
         name = "passengerJourneysInFrame_RelStructure"
 
     choice: Iterable[
-        Union[
-            DatedServiceJourney,
-            ServiceJourney,
-            SpecialService,
-            TemplateServiceJourney,
-        ]
+        DatedServiceJourney | ServiceJourney | SpecialService | TemplateServiceJourney
     ] = field(
         default_factory=list,
         metadata={

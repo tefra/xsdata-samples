@@ -33,7 +33,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class OrderCancellationType:
-    ublextensions: Optional[Ublextensions] = field(
+    ublextensions: Ublextensions | None = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -41,7 +41,7 @@ class OrderCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: Optional[UblversionId] = field(
+    ublversion_id: UblversionId | None = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -49,7 +49,7 @@ class OrderCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: Optional[CustomizationId] = field(
+    customization_id: CustomizationId | None = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -57,7 +57,7 @@ class OrderCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: Optional[ProfileId] = field(
+    profile_id: ProfileId | None = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -65,7 +65,7 @@ class OrderCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: Optional[ProfileExecutionId] = field(
+    profile_execution_id: ProfileExecutionId | None = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -73,7 +73,7 @@ class OrderCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -82,7 +82,7 @@ class OrderCancellationType:
             "required": True,
         },
     )
-    copy_indicator: Optional[CopyIndicator] = field(
+    copy_indicator: CopyIndicator | None = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -90,7 +90,7 @@ class OrderCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -98,7 +98,7 @@ class OrderCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -107,7 +107,7 @@ class OrderCancellationType:
             "required": True,
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -141,7 +141,7 @@ class OrderCancellationType:
             "min_occurs": 1,
         },
     )
-    originator_document_reference: Optional[OriginatorDocumentReference] = (
+    originator_document_reference: OriginatorDocumentReference | None = (
         field(
             default=None,
             metadata={
@@ -177,7 +177,7 @@ class OrderCancellationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    buyer_customer_party: Optional[BuyerCustomerParty] = field(
+    buyer_customer_party: BuyerCustomerParty | None = field(
         default=None,
         metadata={
             "name": "BuyerCustomerParty",
@@ -186,7 +186,7 @@ class OrderCancellationType:
             "required": True,
         },
     )
-    seller_supplier_party: Optional[SellerSupplierParty] = field(
+    seller_supplier_party: SellerSupplierParty | None = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",
@@ -195,7 +195,7 @@ class OrderCancellationType:
             "required": True,
         },
     )
-    originator_customer_party: Optional[OriginatorCustomerParty] = field(
+    originator_customer_party: OriginatorCustomerParty | None = field(
         default=None,
         metadata={
             "name": "OriginatorCustomerParty",

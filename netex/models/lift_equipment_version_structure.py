@@ -16,7 +16,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
     class Meta:
         name = "LiftEquipment_VersionStructure"
 
-    depth: Optional[Decimal] = field(
+    depth: Decimal | None = field(
         default=None,
         metadata={
             "name": "Depth",
@@ -24,7 +24,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_load: Optional[Decimal] = field(
+    maximum_load: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumLoad",
@@ -32,7 +32,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheelchair_passable: Optional[bool] = field(
+    wheelchair_passable: bool | None = field(
         default=None,
         metadata={
             "name": "WheelchairPassable",
@@ -40,7 +40,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheelchair_turning_circle: Optional[Decimal] = field(
+    wheelchair_turning_circle: Decimal | None = field(
         default=None,
         metadata={
             "name": "WheelchairTurningCircle",
@@ -48,7 +48,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    internal_width: Optional[Decimal] = field(
+    internal_width: Decimal | None = field(
         default=None,
         metadata={
             "name": "InternalWidth",
@@ -56,7 +56,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    internal_height: Optional[Decimal] = field(
+    internal_height: Decimal | None = field(
         default=None,
         metadata={
             "name": "InternalHeight",
@@ -64,7 +64,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    handrail_type: Optional[HandrailEnumeration] = field(
+    handrail_type: HandrailEnumeration | None = field(
         default=None,
         metadata={
             "name": "HandrailType",
@@ -72,7 +72,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    handrail_height: Optional[Decimal] = field(
+    handrail_height: Decimal | None = field(
         default=None,
         metadata={
             "name": "HandrailHeight",
@@ -80,7 +80,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    lower_handrail_height: Optional[Decimal] = field(
+    lower_handrail_height: Decimal | None = field(
         default=None,
         metadata={
             "name": "LowerHandrailHeight",
@@ -88,7 +88,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tactile_writing: Optional[bool] = field(
+    tactile_writing: bool | None = field(
         default=None,
         metadata={
             "name": "TactileWriting",
@@ -96,7 +96,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    call_button_height: Optional[Decimal] = field(
+    call_button_height: Decimal | None = field(
         default=None,
         metadata={
             "name": "CallButtonHeight",
@@ -104,7 +104,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_button_height: Optional[Decimal] = field(
+    direction_button_height: Decimal | None = field(
         default=None,
         metadata={
             "name": "DirectionButtonHeight",
@@ -112,7 +112,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    raised_buttons: Optional[bool] = field(
+    raised_buttons: bool | None = field(
         default=None,
         metadata={
             "name": "RaisedButtons",
@@ -120,7 +120,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    braille_buttons: Optional[bool] = field(
+    braille_buttons: bool | None = field(
         default=None,
         metadata={
             "name": "BrailleButtons",
@@ -128,7 +128,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tactile_ground_floor_button: Optional[bool] = field(
+    tactile_ground_floor_button: bool | None = field(
         default=None,
         metadata={
             "name": "TactileGroundFloorButton",
@@ -136,7 +136,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ground_mark_aligned_with_button: Optional[bool] = field(
+    ground_mark_aligned_with_button: bool | None = field(
         default=None,
         metadata={
             "name": "GroundMarkAlignedWithButton",
@@ -144,7 +144,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    through_loader: Optional[bool] = field(
+    through_loader: bool | None = field(
         default=None,
         metadata={
             "name": "ThroughLoader",
@@ -152,7 +152,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mirror_on_opposite_side: Optional[bool] = field(
+    mirror_on_opposite_side: bool | None = field(
         default=None,
         metadata={
             "name": "MirrorOnOppositeSide",
@@ -160,7 +160,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    attendant: Optional[bool] = field(
+    attendant: bool | None = field(
         default=None,
         metadata={
             "name": "Attendant",
@@ -168,7 +168,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    automatic: Optional[bool] = field(
+    automatic: bool | None = field(
         default=None,
         metadata={
             "name": "Automatic",
@@ -176,7 +176,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    external_floor_selection: Optional[bool] = field(
+    external_floor_selection: bool | None = field(
         default=None,
         metadata={
             "name": "ExternalFloorSelection",
@@ -184,7 +184,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alarm_button: Optional[bool] = field(
+    alarm_button: bool | None = field(
         default=None,
         metadata={
             "name": "AlarmButton",
@@ -192,7 +192,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tactile_actuators: Optional[bool] = field(
+    tactile_actuators: bool | None = field(
         default=None,
         metadata={
             "name": "TactileActuators",
@@ -200,7 +200,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    audio_announcements: Optional[bool] = field(
+    audio_announcements: bool | None = field(
         default=None,
         metadata={
             "name": "AudioAnnouncements",
@@ -208,7 +208,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accoustic_announcements: Optional[bool] = field(
+    accoustic_announcements: bool | None = field(
         default=None,
         metadata={
             "name": "AccousticAnnouncements",
@@ -216,9 +216,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    reached_floor_announcement: Optional[
-        ReachedFloorAnnouncementEnumeration
-    ] = field(
+    reached_floor_announcement: ReachedFloorAnnouncementEnumeration | None = field(
         default=None,
         metadata={
             "name": "ReachedFloorAnnouncement",
@@ -226,7 +224,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    magnetic_induction_loop: Optional[bool] = field(
+    magnetic_induction_loop: bool | None = field(
         default=None,
         metadata={
             "name": "MagneticInductionLoop",
@@ -234,7 +232,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    signage_to_lift: Optional[bool] = field(
+    signage_to_lift: bool | None = field(
         default=None,
         metadata={
             "name": "SignageToLift",
@@ -242,7 +240,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    suitable_for_cycles: Optional[bool] = field(
+    suitable_for_cycles: bool | None = field(
         default=None,
         metadata={
             "name": "SuitableForCycles",
@@ -250,7 +248,7 @@ class LiftEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    buttons_height: Optional[Decimal] = field(
+    buttons_height: Decimal | None = field(
         default=None,
         metadata={
             "name": "ButtonsHeight",

@@ -16,7 +16,7 @@ class DurationValue(DataValue):
     :ivar duration_value_extension:
     """
 
-    duration: Optional[float] = field(
+    duration: float | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -24,7 +24,7 @@ class DurationValue(DataValue):
             "required": True,
         },
     )
-    duration_value_extension: Optional[ExtensionType] = field(
+    duration_value_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "durationValueExtension",

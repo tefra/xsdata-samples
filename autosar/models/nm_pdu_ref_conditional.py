@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,7 +33,7 @@ class NmPduRefConditional:
     class Meta:
         name = "NM-PDU-REF-CONDITIONAL"
 
-    nm_pdu_ref: Optional["NmPduRefConditional.NmPduRef"] = field(
+    nm_pdu_ref: NmPduRefConditional.NmPduRef | None = field(
         default=None,
         metadata={
             "name": "NM-PDU-REF",
@@ -39,7 +41,7 @@ class NmPduRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -47,14 +49,14 @@ class NmPduRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -65,7 +67,7 @@ class NmPduRefConditional:
 
     @dataclass
     class NmPduRef(Ref):
-        dest: Optional[NmPduSubtypesEnum] = field(
+        dest: NmPduSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -26,13 +26,13 @@ class TCorrelationProperty(TRootElement):
             "min_occurs": 1,
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    type_value: Optional[QName] = field(
+    type_value: QName | None = field(
         default=None,
         metadata={
             "name": "type",

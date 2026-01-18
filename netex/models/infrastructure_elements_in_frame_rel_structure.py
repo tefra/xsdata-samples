@@ -18,7 +18,7 @@ class InfrastructureElementsInFrameRelStructure(
         name = "infrastructureElementsInFrame_RelStructure"
 
     railway_element_or_road_element_or_wire_element: Iterable[
-        Union[RailwayElement, RoadElement, WireElement]
+        RailwayElement | RoadElement | WireElement
     ] = field(
         default_factory=list,
         metadata={

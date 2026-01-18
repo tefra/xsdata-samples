@@ -27,7 +27,7 @@ class TrackingType(BaseHeaderType):
         boundary.</description>
     """
 
-    tracking_id: Optional[str] = field(
+    tracking_id: str | None = field(
         default=None,
         metadata={
             "name": "TrackingID",
@@ -36,7 +36,7 @@ class TrackingType(BaseHeaderType):
             "required": True,
         },
     )
-    conversation_id: Optional[str] = field(
+    conversation_id: str | None = field(
         default=None,
         metadata={
             "name": "ConversationID",

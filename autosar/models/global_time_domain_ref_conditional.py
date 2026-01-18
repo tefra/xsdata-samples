@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,9 +33,7 @@ class GlobalTimeDomainRefConditional:
     class Meta:
         name = "GLOBAL-TIME-DOMAIN-REF-CONDITIONAL"
 
-    global_time_domain_ref: Optional[
-        "GlobalTimeDomainRefConditional.GlobalTimeDomainRef"
-    ] = field(
+    global_time_domain_ref: GlobalTimeDomainRefConditional.GlobalTimeDomainRef | None = field(
         default=None,
         metadata={
             "name": "GLOBAL-TIME-DOMAIN-REF",
@@ -41,7 +41,7 @@ class GlobalTimeDomainRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -49,14 +49,14 @@ class GlobalTimeDomainRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +67,7 @@ class GlobalTimeDomainRefConditional:
 
     @dataclass
     class GlobalTimeDomainRef(Ref):
-        dest: Optional[GlobalTimeDomainSubtypesEnum] = field(
+        dest: GlobalTimeDomainSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -42,7 +42,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PremiumType:
-    is_minimum: Optional[bool] = field(
+    is_minimum: bool | None = field(
         default=None,
         metadata={
             "name": "IsMinimum",
@@ -50,7 +50,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    days_of_credit: Optional[NumberType] = field(
+    days_of_credit: NumberType | None = field(
         default=None,
         metadata={
             "name": "DaysOfCredit",
@@ -58,7 +58,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    catnat: Optional[AmountType] = field(
+    catnat: AmountType | None = field(
         default=None,
         metadata={
             "name": "CATNAT",
@@ -66,7 +66,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    gareat: Optional[AmountType] = field(
+    gareat: AmountType | None = field(
         default=None,
         metadata={
             "name": "GAREAT",
@@ -74,7 +74,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    gross: Optional[AmountType] = field(
+    gross: AmountType | None = field(
         default=None,
         metadata={
             "name": "Gross",
@@ -82,7 +82,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    net: Optional[AmountType] = field(
+    net: AmountType | None = field(
         default=None,
         metadata={
             "name": "Net",
@@ -90,7 +90,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    technical: Optional[AmountType] = field(
+    technical: AmountType | None = field(
         default=None,
         metadata={
             "name": "Technical",
@@ -98,7 +98,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    number_of_installments: Optional[NumberType] = field(
+    number_of_installments: NumberType | None = field(
         default=None,
         metadata={
             "name": "NumberOfInstallments",
@@ -107,7 +107,7 @@ class PremiumType:
             "required": True,
         },
     )
-    description: Optional[TextType] = field(
+    description: TextType | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -115,7 +115,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    identifier: Optional[Idtype] = field(
+    identifier: Idtype | None = field(
         default=None,
         metadata={
             "name": "Identifier",
@@ -123,7 +123,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    reserve_held: Optional[AmountType] = field(
+    reserve_held: AmountType | None = field(
         default=None,
         metadata={
             "name": "ReserveHeld",
@@ -131,7 +131,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    settlement_due_date: Optional[DateType] = field(
+    settlement_due_date: DateType | None = field(
         default=None,
         metadata={
             "name": "SettlementDueDate",
@@ -139,7 +139,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    payment: Optional[PremiumValueEnum] = field(
+    payment: PremiumValueEnum | None = field(
         default=None,
         metadata={
             "name": "Payment",
@@ -147,7 +147,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    warranty: Optional[WarrantyEnum] = field(
+    warranty: WarrantyEnum | None = field(
         default=None,
         metadata={
             "name": "Warranty",
@@ -155,7 +155,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    instalment_term: Optional[InstalmentTermEnum] = field(
+    instalment_term: InstalmentTermEnum | None = field(
         default=None,
         metadata={
             "name": "InstalmentTerm",
@@ -163,7 +163,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    premium_allocations: Optional[PremiumTypePremiumAllocations] = field(
+    premium_allocations: PremiumTypePremiumAllocations | None = field(
         default=None,
         metadata={
             "name": "PremiumAllocations",
@@ -171,7 +171,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    collected_amounts: Optional[PremiumTypeCollectedAmounts] = field(
+    collected_amounts: PremiumTypeCollectedAmounts | None = field(
         default=None,
         metadata={
             "name": "CollectedAmounts",
@@ -179,7 +179,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    gwpshare: Optional[AmountType] = field(
+    gwpshare: AmountType | None = field(
         default=None,
         metadata={
             "name": "GWPShare",
@@ -187,7 +187,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    share_percentage: Optional[PercentType] = field(
+    share_percentage: PercentType | None = field(
         default=None,
         metadata={
             "name": "SharePercentage",
@@ -195,7 +195,7 @@ class PremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    number_of_ptlayers: Optional[NumberType] = field(
+    number_of_ptlayers: NumberType | None = field(
         default=None,
         metadata={
             "name": "NumberOfPTLayers",

@@ -17,7 +17,7 @@ class IdentifiableQueryType:
         wild cared with the "%" value.
     """
 
-    id: Union[str, WildCardValueType] = field(
+    id: str | WildCardValueType = field(
         default=WildCardValueType.PERCENT_SIGN,
         metadata={
             "type": "Attribute",

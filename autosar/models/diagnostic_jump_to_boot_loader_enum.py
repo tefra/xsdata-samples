@@ -29,20 +29,20 @@ class DiagnosticJumpToBootLoaderEnum:
     class Meta:
         name = "DIAGNOSTIC-JUMP-TO-BOOT-LOADER-ENUM"
 
-    value: Optional[DiagnosticJumpToBootLoaderEnumSimple] = field(
+    value: DiagnosticJumpToBootLoaderEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

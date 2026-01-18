@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -38,9 +40,7 @@ class IdsmSignatureSupportCp:
     class Meta:
         name = "IDSM-SIGNATURE-SUPPORT-CP"
 
-    authentication_ref: Optional[
-        "IdsmSignatureSupportCp.AuthenticationRef"
-    ] = field(
+    authentication_ref: IdsmSignatureSupportCp.AuthenticationRef | None = field(
         default=None,
         metadata={
             "name": "AUTHENTICATION-REF",
@@ -48,9 +48,7 @@ class IdsmSignatureSupportCp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_service_key_ref: Optional[
-        "IdsmSignatureSupportCp.CryptoServiceKeyRef"
-    ] = field(
+    crypto_service_key_ref: IdsmSignatureSupportCp.CryptoServiceKeyRef | None = field(
         default=None,
         metadata={
             "name": "CRYPTO-SERVICE-KEY-REF",
@@ -58,14 +56,14 @@ class IdsmSignatureSupportCp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -76,7 +74,7 @@ class IdsmSignatureSupportCp:
 
     @dataclass
     class AuthenticationRef(Ref):
-        dest: Optional[CryptoServicePrimitiveSubtypesEnum] = field(
+        dest: CryptoServicePrimitiveSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -87,7 +85,7 @@ class IdsmSignatureSupportCp:
 
     @dataclass
     class CryptoServiceKeyRef(Ref):
-        dest: Optional[CryptoServiceKeySubtypesEnum] = field(
+        dest: CryptoServiceKeySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

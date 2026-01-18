@@ -9,7 +9,7 @@ class Automaton:
     class Meta:
         name = "automaton"
 
-    automatonstuff: Optional[Automatonstuff] = field(
+    automatonstuff: Automatonstuff | None = field(
         default=None,
         metadata={
             "type": "Element",

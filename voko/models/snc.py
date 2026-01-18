@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -38,26 +40,26 @@ class Snc:
     class Meta:
         name = "snc"
 
-    mrk: Optional[str] = field(
+    mrk: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    ref_attribute: Optional[str] = field(
+    ref_attribute: str | None = field(
         default=None,
         metadata={
             "name": "ref",
             "type": "Attribute",
         },
     )
-    num: Optional[str] = field(
+    num: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    subsnc: list["Subsnc"] = field(
+    subsnc: list[Subsnc] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -81,7 +83,7 @@ class Snc:
             "type": "Element",
         },
     )
-    dif: list["Dif"] = field(
+    dif: list[Dif] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -166,7 +168,7 @@ class Dif:
     class Meta:
         name = "dif"
 
-    lng: Optional[str] = field(
+    lng: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -265,13 +267,13 @@ class Subsnc:
     class Meta:
         name = "subsnc"
 
-    mrk: Optional[str] = field(
+    mrk: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    ref_attribute: Optional[str] = field(
+    ref_attribute: str | None = field(
         default=None,
         metadata={
             "name": "ref",

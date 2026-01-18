@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -43,7 +45,7 @@ class SubElementMapping:
     class Meta:
         name = "SUB-ELEMENT-MAPPING"
 
-    first_elements: Optional["SubElementMapping.FirstElements"] = field(
+    first_elements: SubElementMapping.FirstElements | None = field(
         default=None,
         metadata={
             "name": "FIRST-ELEMENTS",
@@ -51,7 +53,7 @@ class SubElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_elements: Optional["SubElementMapping.SecondElements"] = field(
+    second_elements: SubElementMapping.SecondElements | None = field(
         default=None,
         metadata={
             "name": "SECOND-ELEMENTS",
@@ -59,7 +61,7 @@ class SubElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    text_table_mappings: Optional["SubElementMapping.TextTableMappings"] = (
+    text_table_mappings: SubElementMapping.TextTableMappings | None = (
         field(
             default=None,
             metadata={
@@ -69,14 +71,14 @@ class SubElementMapping:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

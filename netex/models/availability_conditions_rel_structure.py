@@ -19,12 +19,7 @@ class AvailabilityConditionsRelStructure(ContainmentAggregationStructure):
         name = "availabilityConditions_RelStructure"
 
     choice: Iterable[
-        Union[
-            AvailabilityConditionRef,
-            AvailabilityCondition,
-            ValidDuring,
-            ValidBetween,
-        ]
+        AvailabilityConditionRef | AvailabilityCondition | ValidDuring | ValidBetween
     ] = field(
         default_factory=list,
         metadata={

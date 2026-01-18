@@ -14,7 +14,7 @@ class OperatingDepartmentVersionStructure(DepartmentVersionStructure):
     class Meta:
         name = "OperatingDepartment_VersionStructure"
 
-    operational_contexts: Optional[OperationalContexRefsRelStructure] = field(
+    operational_contexts: OperationalContexRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "operationalContexts",

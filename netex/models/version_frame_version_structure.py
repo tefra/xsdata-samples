@@ -23,7 +23,7 @@ class VersionFrameVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "VersionFrame_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -31,7 +31,7 @@ class VersionFrameVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -39,7 +39,7 @@ class VersionFrameVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_frame_ref: Optional[TypeOfFrameRef] = field(
+    type_of_frame_ref: TypeOfFrameRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfFrameRef",
@@ -47,7 +47,7 @@ class VersionFrameVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    baseline_version_frame_ref: Optional[VersionRefStructure] = field(
+    baseline_version_frame_ref: VersionRefStructure | None = field(
         default=None,
         metadata={
             "name": "BaselineVersionFrameRef",
@@ -55,14 +55,14 @@ class VersionFrameVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    codespaces: Optional[CodespacesRelStructure] = field(
+    codespaces: CodespacesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    frame_defaults: Optional[VersionFrameDefaultsStructure] = field(
+    frame_defaults: VersionFrameDefaultsStructure | None = field(
         default=None,
         metadata={
             "name": "FrameDefaults",
@@ -70,28 +70,28 @@ class VersionFrameVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    versions: Optional[VersionsRelStructure] = field(
+    versions: VersionsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prerequisites: Optional[VersionFrameRefsRelStructure] = field(
+    prerequisites: VersionFrameRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    traces: Optional[TracesRelStructure] = field(
+    traces: TracesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    content_validity_conditions: Optional[ValidityConditionsRelStructure] = (
+    content_validity_conditions: ValidityConditionsRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -101,7 +101,7 @@ class VersionFrameVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    layers: Optional[LayerRefsRelStructure] = field(
+    layers: LayerRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

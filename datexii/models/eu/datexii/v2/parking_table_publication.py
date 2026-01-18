@@ -14,7 +14,7 @@ class ParkingTablePublication:
     sites or groups of them, located in an urban or interurban context.
     """
 
-    header_information: Optional[HeaderInformation] = field(
+    header_information: HeaderInformation | None = field(
         default=None,
         metadata={
             "name": "headerInformation",

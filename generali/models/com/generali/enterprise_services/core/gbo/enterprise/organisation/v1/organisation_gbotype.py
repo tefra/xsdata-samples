@@ -55,7 +55,7 @@ class OrganisationGbotype:
     class Meta:
         name = "OrganisationGBOType"
 
-    dunsnumber: Optional[str] = field(
+    dunsnumber: str | None = field(
         default=None,
         metadata={
             "name": "DUNSNumber",
@@ -65,7 +65,7 @@ class OrganisationGbotype:
             "pattern": r"([0-9]{9})",
         },
     )
-    gunsnumber: Optional[str] = field(
+    gunsnumber: str | None = field(
         default=None,
         metadata={
             "name": "GUNSNumber",
@@ -75,7 +75,7 @@ class OrganisationGbotype:
             "pattern": r"G([0-9]{9})",
         },
     )
-    full_name: Optional[str] = field(
+    full_name: str | None = field(
         default=None,
         metadata={
             "name": "FullName",
@@ -83,7 +83,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    primary_address: Optional[AddressType] = field(
+    primary_address: AddressType | None = field(
         default=None,
         metadata={
             "name": "PrimaryAddress",
@@ -92,7 +92,7 @@ class OrganisationGbotype:
             "required": True,
         },
     )
-    gen_global_ultimate_guns: Optional[str] = field(
+    gen_global_ultimate_guns: str | None = field(
         default=None,
         metadata={
             "name": "GenGlobalUltimateGUNS",
@@ -102,7 +102,7 @@ class OrganisationGbotype:
             "pattern": r"G([0-9]{9})",
         },
     )
-    ultimate_gunsname: Optional[str] = field(
+    ultimate_gunsname: str | None = field(
         default=None,
         metadata={
             "name": "UltimateGUNSName",
@@ -110,7 +110,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    ultimate_dunsnumber: Optional[str] = field(
+    ultimate_dunsnumber: str | None = field(
         default=None,
         metadata={
             "name": "UltimateDUNSNumber",
@@ -120,7 +120,7 @@ class OrganisationGbotype:
             "pattern": r"([0-9]{9})",
         },
     )
-    national_id: Optional[str] = field(
+    national_id: str | None = field(
         default=None,
         metadata={
             "name": "NationalID",
@@ -128,7 +128,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    national_idtype: Optional[str] = field(
+    national_idtype: str | None = field(
         default=None,
         metadata={
             "name": "NationalIDType",
@@ -136,7 +136,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    sic: Optional[str] = field(
+    sic: str | None = field(
         default=None,
         metadata={
             "name": "SIC",
@@ -144,7 +144,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    out_of_business: Optional[bool] = field(
+    out_of_business: bool | None = field(
         default=None,
         metadata={
             "name": "OutOfBusiness",
@@ -152,7 +152,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    party_roles: Optional[OrganisationGbotypePartyRoles] = field(
+    party_roles: OrganisationGbotypePartyRoles | None = field(
         default=None,
         metadata={
             "name": "PartyRoles",
@@ -160,7 +160,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    duplicate: Optional[bool] = field(
+    duplicate: bool | None = field(
         default=None,
         metadata={
             "name": "Duplicate",
@@ -168,7 +168,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    is_linked: Optional[bool] = field(
+    is_linked: bool | None = field(
         default=None,
         metadata={
             "name": "IsLinked",
@@ -176,7 +176,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    active: Optional[bool] = field(
+    active: bool | None = field(
         default=None,
         metadata={
             "name": "Active",
@@ -184,7 +184,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    creation_date: Optional[XmlDateTime] = field(
+    creation_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "CreationDate",
@@ -192,7 +192,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    date_last_update: Optional[XmlDateTime] = field(
+    date_last_update: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "DateLastUpdate",
@@ -200,7 +200,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    user_last_change_by: Optional[str] = field(
+    user_last_change_by: str | None = field(
         default=None,
         metadata={
             "name": "UserLastChangeBy",
@@ -208,7 +208,7 @@ class OrganisationGbotype:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    extended_record: Optional[ExtendedRecordType] = field(
+    extended_record: ExtendedRecordType | None = field(
         default=None,
         metadata={
             "name": "ExtendedRecord",

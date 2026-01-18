@@ -19,7 +19,7 @@ class GeographicalStructureFactorsRelStructure(
         name = "geographicalStructureFactors_RelStructure"
 
     geographical_structure_factor_ref_or_geographical_structure_factor: Iterable[
-        Union[GeographicalStructureFactorRef, GeographicalStructureFactor]
+        GeographicalStructureFactorRef | GeographicalStructureFactor
     ] = field(
         default_factory=list,
         metadata={

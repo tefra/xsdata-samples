@@ -29,7 +29,7 @@ class GroupOfPeopleInvolved:
     :ivar group_of_people_involved_extension:
     """
 
-    number_of_people: Optional[int] = field(
+    number_of_people: int | None = field(
         default=None,
         metadata={
             "name": "numberOfPeople",
@@ -37,7 +37,7 @@ class GroupOfPeopleInvolved:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    injury_status: Optional[InjuryStatusTypeEnum] = field(
+    injury_status: InjuryStatusTypeEnum | None = field(
         default=None,
         metadata={
             "name": "injuryStatus",
@@ -45,7 +45,7 @@ class GroupOfPeopleInvolved:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    involvement_role: Optional[InvolvementRolesEnum] = field(
+    involvement_role: InvolvementRolesEnum | None = field(
         default=None,
         metadata={
             "name": "involvementRole",
@@ -53,7 +53,7 @@ class GroupOfPeopleInvolved:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    category_of_people_involved: Optional[PersonCategoryEnum] = field(
+    category_of_people_involved: PersonCategoryEnum | None = field(
         default=None,
         metadata={
             "name": "categoryOfPeopleInvolved",
@@ -61,7 +61,7 @@ class GroupOfPeopleInvolved:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    group_of_people_involved_extension: Optional[ExtensionType] = field(
+    group_of_people_involved_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "groupOfPeopleInvolvedExtension",

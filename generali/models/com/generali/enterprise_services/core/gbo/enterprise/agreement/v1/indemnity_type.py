@@ -15,7 +15,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class IndemnityType:
-    limit: Optional[AmountType] = field(
+    limit: AmountType | None = field(
         default=None,
         metadata={
             "name": "Limit",
@@ -23,7 +23,7 @@ class IndemnityType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    period: Optional[QuantityType] = field(
+    period: QuantityType | None = field(
         default=None,
         metadata={
             "name": "Period",

@@ -15,7 +15,7 @@ class BoardingPositionsRelStructure(ContainmentAggregationStructure):
         name = "boardingPositions_RelStructure"
 
     boarding_position_ref_or_boarding_position: Iterable[
-        Union[BoardingPositionRef, BoardingPosition]
+        BoardingPositionRef | BoardingPosition
     ] = field(
         default_factory=list,
         metadata={

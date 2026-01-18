@@ -19,7 +19,7 @@ class FareStructureElementsInSequenceRelStructure(
         name = "fareStructureElementsInSequence_RelStructure"
 
     fare_structure_element_in_sequence_or_controllable_element_in_sequence: Iterable[
-        Union[FareStructureElementInSequence, ControllableElementInSequence]
+        FareStructureElementInSequence | ControllableElementInSequence
     ] = field(
         default_factory=list,
         metadata={

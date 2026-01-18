@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -84,7 +86,7 @@ class HealthChannelSupervision:
     class Meta:
         name = "HEALTH-CHANNEL-SUPERVISION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -93,9 +95,7 @@ class HealthChannelSupervision:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "HealthChannelSupervision.ShortNameFragments"
-    ] = field(
+    short_name_fragments: HealthChannelSupervision.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -103,7 +103,7 @@ class HealthChannelSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -111,7 +111,7 @@ class HealthChannelSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -119,7 +119,7 @@ class HealthChannelSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -127,7 +127,7 @@ class HealthChannelSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -135,7 +135,7 @@ class HealthChannelSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -143,7 +143,7 @@ class HealthChannelSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["HealthChannelSupervision.Annotations"] = field(
+    annotations: HealthChannelSupervision.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -151,7 +151,7 @@ class HealthChannelSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    recovery_notification: Optional[RecoveryNotification] = field(
+    recovery_notification: RecoveryNotification | None = field(
         default=None,
         metadata={
             "name": "RECOVERY-NOTIFICATION",
@@ -159,7 +159,7 @@ class HealthChannelSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    supervision_ref: Optional["HealthChannelSupervision.SupervisionRef"] = (
+    supervision_ref: HealthChannelSupervision.SupervisionRef | None = (
         field(
             default=None,
             metadata={
@@ -169,14 +169,14 @@ class HealthChannelSupervision:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -184,7 +184,7 @@ class HealthChannelSupervision:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -216,7 +216,7 @@ class HealthChannelSupervision:
 
     @dataclass
     class SupervisionRef(Ref):
-        dest: Optional[GlobalSupervisionSubtypesEnum] = field(
+        dest: GlobalSupervisionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

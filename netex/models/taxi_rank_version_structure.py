@@ -14,7 +14,7 @@ class TaxiRankVersionStructure(StopPlaceVersionStructure):
     class Meta:
         name = "TaxiRank_VersionStructure"
 
-    maximum_standing_duration: Optional[XmlDuration] = field(
+    maximum_standing_duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MaximumStandingDuration",
@@ -22,7 +22,7 @@ class TaxiRankVersionStructure(StopPlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    taxi_stands: Optional[TaxiStandsRelStructure] = field(
+    taxi_stands: TaxiStandsRelStructure | None = field(
         default=None,
         metadata={
             "name": "taxiStands",

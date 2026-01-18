@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -66,9 +68,7 @@ class TransmissionModeDeclaration:
     class Meta:
         name = "TRANSMISSION-MODE-DECLARATION"
 
-    mode_driven_false_conditions: Optional[
-        "TransmissionModeDeclaration.ModeDrivenFalseConditions"
-    ] = field(
+    mode_driven_false_conditions: TransmissionModeDeclaration.ModeDrivenFalseConditions | None = field(
         default=None,
         metadata={
             "name": "MODE-DRIVEN-FALSE-CONDITIONS",
@@ -76,9 +76,7 @@ class TransmissionModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_driven_true_conditions: Optional[
-        "TransmissionModeDeclaration.ModeDrivenTrueConditions"
-    ] = field(
+    mode_driven_true_conditions: TransmissionModeDeclaration.ModeDrivenTrueConditions | None = field(
         default=None,
         metadata={
             "name": "MODE-DRIVEN-TRUE-CONDITIONS",
@@ -86,9 +84,7 @@ class TransmissionModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_mode_conditions: Optional[
-        "TransmissionModeDeclaration.TransmissionModeConditions"
-    ] = field(
+    transmission_mode_conditions: TransmissionModeDeclaration.TransmissionModeConditions | None = field(
         default=None,
         metadata={
             "name": "TRANSMISSION-MODE-CONDITIONS",
@@ -96,7 +92,7 @@ class TransmissionModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_mode_false_timing: Optional[TransmissionModeTiming] = field(
+    transmission_mode_false_timing: TransmissionModeTiming | None = field(
         default=None,
         metadata={
             "name": "TRANSMISSION-MODE-FALSE-TIMING",
@@ -104,7 +100,7 @@ class TransmissionModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_mode_true_timing: Optional[TransmissionModeTiming] = field(
+    transmission_mode_true_timing: TransmissionModeTiming | None = field(
         default=None,
         metadata={
             "name": "TRANSMISSION-MODE-TRUE-TIMING",
@@ -112,14 +108,14 @@ class TransmissionModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

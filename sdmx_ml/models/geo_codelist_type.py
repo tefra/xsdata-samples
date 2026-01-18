@@ -18,7 +18,7 @@ class GeoCodelistType(GeoCodelistBaseType):
         type implementations.
     """
 
-    geo_type: Optional[GeoCodelistTypeType] = field(
+    geo_type: GeoCodelistTypeType | None = field(
         default=None,
         metadata={
             "name": "geoType",

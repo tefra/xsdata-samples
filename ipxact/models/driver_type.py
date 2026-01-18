@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -26,14 +28,14 @@ class DriverType:
     class Meta:
         name = "driverType"
 
-    range: Optional[Range] = field(
+    range: Range | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    view_ref: list["DriverType.ViewRef"] = field(
+    view_ref: list[DriverType.ViewRef] = field(
         default_factory=list,
         metadata={
             "name": "viewRef",
@@ -41,7 +43,7 @@ class DriverType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    default_value: Optional[DefaultValue] = field(
+    default_value: DefaultValue | None = field(
         default=None,
         metadata={
             "name": "defaultValue",
@@ -49,7 +51,7 @@ class DriverType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    clock_driver: Optional[ClockDriver] = field(
+    clock_driver: ClockDriver | None = field(
         default=None,
         metadata={
             "name": "clockDriver",
@@ -57,7 +59,7 @@ class DriverType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    single_shot_driver: Optional[SingleShotDriver] = field(
+    single_shot_driver: SingleShotDriver | None = field(
         default=None,
         metadata={
             "name": "singleShotDriver",
@@ -65,7 +67,7 @@ class DriverType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -81,7 +83,7 @@ class DriverType:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

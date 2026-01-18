@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -19,7 +21,7 @@ class MemoryMapRefType:
     class Meta:
         name = "memoryMapRefType"
 
-    mode_ref: list["MemoryMapRefType.ModeRef"] = field(
+    mode_ref: list[MemoryMapRefType.ModeRef] = field(
         default_factory=list,
         metadata={
             "name": "modeRef",
@@ -27,7 +29,7 @@ class MemoryMapRefType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    memory_map_ref: Optional[str] = field(
+    memory_map_ref: str | None = field(
         default=None,
         metadata={
             "name": "memoryMapRef",
@@ -48,7 +50,7 @@ class MemoryMapRefType:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

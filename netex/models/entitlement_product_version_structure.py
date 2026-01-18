@@ -15,7 +15,7 @@ class EntitlementProductVersionStructure(ServiceAccessRightVersionStructure):
     class Meta:
         name = "EntitlementProduct_VersionStructure"
 
-    general_organisation_ref: Optional[GeneralOrganisationRef] = field(
+    general_organisation_ref: GeneralOrganisationRef | None = field(
         default=None,
         metadata={
             "name": "GeneralOrganisationRef",
@@ -23,7 +23,7 @@ class EntitlementProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: Optional[FareProductPricesRelStructure] = field(
+    prices: FareProductPricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

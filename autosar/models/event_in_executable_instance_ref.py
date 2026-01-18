@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -38,9 +40,7 @@ class EventInExecutableInstanceRef:
     class Meta:
         name = "EVENT-IN-EXECUTABLE-INSTANCE-REF"
 
-    context_root_sw_component_prototype_ref: Optional[
-        "EventInExecutableInstanceRef.ContextRootSwComponentPrototypeRef"
-    ] = field(
+    context_root_sw_component_prototype_ref: EventInExecutableInstanceRef.ContextRootSwComponentPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF",
@@ -49,7 +49,7 @@ class EventInExecutableInstanceRef:
         },
     )
     context_sw_component_prototype_ref: list[
-        "EventInExecutableInstanceRef.ContextSwComponentPrototypeRef"
+        EventInExecutableInstanceRef.ContextSwComponentPrototypeRef
     ] = field(
         default_factory=list,
         metadata={
@@ -58,9 +58,7 @@ class EventInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_r_port_prototype_ref: Optional[
-        "EventInExecutableInstanceRef.ContextRPortPrototypeRef"
-    ] = field(
+    context_r_port_prototype_ref: EventInExecutableInstanceRef.ContextRPortPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-R-PORT-PROTOTYPE-REF",
@@ -68,9 +66,7 @@ class EventInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_event_ref: Optional[
-        "EventInExecutableInstanceRef.TargetEventRef"
-    ] = field(
+    target_event_ref: EventInExecutableInstanceRef.TargetEventRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-EVENT-REF",
@@ -78,14 +74,14 @@ class EventInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -96,7 +92,7 @@ class EventInExecutableInstanceRef:
 
     @dataclass
     class ContextRootSwComponentPrototypeRef(Ref):
-        dest: Optional[RootSwComponentPrototypeSubtypesEnum] = field(
+        dest: RootSwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -107,7 +103,7 @@ class EventInExecutableInstanceRef:
 
     @dataclass
     class ContextSwComponentPrototypeRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -118,7 +114,7 @@ class EventInExecutableInstanceRef:
 
     @dataclass
     class ContextRPortPrototypeRef(Ref):
-        dest: Optional[RPortPrototypeSubtypesEnum] = field(
+        dest: RPortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -129,7 +125,7 @@ class EventInExecutableInstanceRef:
 
     @dataclass
     class TargetEventRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

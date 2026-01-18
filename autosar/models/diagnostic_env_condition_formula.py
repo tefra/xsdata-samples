@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -46,7 +48,7 @@ class DiagnosticEnvConditionFormula:
     class Meta:
         name = "DIAGNOSTIC-ENV-CONDITION-FORMULA"
 
-    nrc_value: Optional[PositiveInteger] = field(
+    nrc_value: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "NRC-VALUE",
@@ -54,7 +56,7 @@ class DiagnosticEnvConditionFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    op: Optional[DiagnosticLogicalOperatorEnum] = field(
+    op: DiagnosticLogicalOperatorEnum | None = field(
         default=None,
         metadata={
             "name": "OP",
@@ -62,7 +64,7 @@ class DiagnosticEnvConditionFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parts: Optional["DiagnosticEnvConditionFormula.Parts"] = field(
+    parts: DiagnosticEnvConditionFormula.Parts | None = field(
         default=None,
         metadata={
             "name": "PARTS",
@@ -70,14 +72,14 @@ class DiagnosticEnvConditionFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -89,7 +91,7 @@ class DiagnosticEnvConditionFormula:
     @dataclass
     class Parts:
         diagnostic_env_condition_formula: list[
-            "DiagnosticEnvConditionFormula"
+            DiagnosticEnvConditionFormula
         ] = field(
             default_factory=list,
             metadata={

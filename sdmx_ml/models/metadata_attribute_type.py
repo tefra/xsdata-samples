@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Union
 
@@ -47,7 +49,7 @@ class MetadataAttributeType(MetadataAttributeBaseType):
         the concept from which it takes its identity.
     """
 
-    metadata_attribute: tuple["MetadataAttribute", ...] = field(
+    metadata_attribute: tuple[MetadataAttribute, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "MetadataAttribute",
@@ -62,7 +64,7 @@ class MetadataAttributeType(MetadataAttributeBaseType):
             "type": "Attribute",
         },
     )
-    max_occurs: Union[int, UnboundedCodeType] = field(
+    max_occurs: int | UnboundedCodeType = field(
         default=1,
         metadata={
             "name": "maxOccurs",

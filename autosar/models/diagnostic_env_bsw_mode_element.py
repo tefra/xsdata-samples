@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class DiagnosticEnvBswModeElement:
     class Meta:
         name = "DIAGNOSTIC-ENV-BSW-MODE-ELEMENT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -48,9 +50,7 @@ class DiagnosticEnvBswModeElement:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticEnvBswModeElement.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticEnvBswModeElement.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -58,7 +58,7 @@ class DiagnosticEnvBswModeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_iref: Optional[ModeInBswModuleDescriptionInstanceRef] = field(
+    mode_iref: ModeInBswModuleDescriptionInstanceRef | None = field(
         default=None,
         metadata={
             "name": "MODE-IREF",
@@ -66,14 +66,14 @@ class DiagnosticEnvBswModeElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

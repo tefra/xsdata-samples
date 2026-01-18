@@ -28,9 +28,7 @@ class EquipmentOrSystemFault(TrafficElement):
     :ivar equipment_or_system_fault_extension:
     """
 
-    equipment_or_system_fault_type: Optional[
-        EquipmentOrSystemFaultTypeEnum
-    ] = field(
+    equipment_or_system_fault_type: EquipmentOrSystemFaultTypeEnum | None = field(
         default=None,
         metadata={
             "name": "equipmentOrSystemFaultType",
@@ -39,7 +37,7 @@ class EquipmentOrSystemFault(TrafficElement):
             "required": True,
         },
     )
-    faulty_equipment_or_system_type: Optional[EquipmentOrSystemTypeEnum] = (
+    faulty_equipment_or_system_type: EquipmentOrSystemTypeEnum | None = (
         field(
             default=None,
             metadata={
@@ -50,7 +48,7 @@ class EquipmentOrSystemFault(TrafficElement):
             },
         )
     )
-    equipment_or_system_fault_extension: Optional[ExtensionType] = field(
+    equipment_or_system_fault_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "equipmentOrSystemFaultExtension",

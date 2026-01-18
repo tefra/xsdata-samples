@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,9 +33,7 @@ class DiagnosticCommonProps:
     class Meta:
         name = "DIAGNOSTIC-COMMON-PROPS"
 
-    diagnostic_common_props_variants: Optional[
-        "DiagnosticCommonProps.DiagnosticCommonPropsVariants"
-    ] = field(
+    diagnostic_common_props_variants: DiagnosticCommonProps.DiagnosticCommonPropsVariants | None = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-COMMON-PROPS-VARIANTS",
@@ -41,14 +41,14 @@ class DiagnosticCommonProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

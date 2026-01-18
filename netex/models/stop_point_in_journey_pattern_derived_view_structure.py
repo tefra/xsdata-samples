@@ -27,15 +27,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "StopPointInJourneyPattern_DerivedViewStructure"
 
-    point_in_journey_pattern_ref: Optional[
-        Union[
-            PointInSingleJourneyPathRef,
-            FarePointInPatternRef,
-            StopPointInJourneyPatternRef,
-            TimingPointInJourneyPatternRef,
-            PointInJourneyPatternRef,
-        ]
-    ] = field(
+    point_in_journey_pattern_ref: PointInSingleJourneyPathRef | FarePointInPatternRef | StopPointInJourneyPatternRef | TimingPointInJourneyPatternRef | PointInJourneyPatternRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -68,7 +60,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    visit_number: Optional[int] = field(
+    visit_number: int | None = field(
         default=None,
         metadata={
             "name": "VisitNumber",
@@ -76,13 +68,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: Optional[
-        Union[
-            FareScheduledStopPointRef,
-            ScheduledStopPointRef,
-            ScheduledStopPointView,
-        ]
-    ] = field(
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: FareScheduledStopPointRef | ScheduledStopPointRef | ScheduledStopPointView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -105,7 +91,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    onward_timing_link_view: Optional[OnwardTimingLinkView] = field(
+    onward_timing_link_view: OnwardTimingLinkView | None = field(
         default=None,
         metadata={
             "name": "OnwardTimingLinkView",
@@ -113,9 +99,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    onward_service_link_ref_or_onward_service_link_view: Optional[
-        Union[ServiceLinkRefStructure, OnwardServiceLinkView]
-    ] = field(
+    onward_service_link_ref_or_onward_service_link_view: ServiceLinkRefStructure | OnwardServiceLinkView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -133,7 +117,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    timing_point_status: Optional[TimingPointStatusEnumeration] = field(
+    timing_point_status: TimingPointStatusEnumeration | None = field(
         default=None,
         metadata={
             "name": "TimingPointStatus",
@@ -141,7 +125,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_wait_point: Optional[bool] = field(
+    is_wait_point: bool | None = field(
         default=None,
         metadata={
             "name": "IsWaitPoint",
@@ -149,9 +133,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_type_ref_or_timeband_ref: Optional[
-        Union[TimeDemandTypeRef, TimebandRef]
-    ] = field(
+    time_demand_type_ref_or_timeband_ref: TimeDemandTypeRef | TimebandRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -169,7 +151,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    wait_time: Optional[XmlDuration] = field(
+    wait_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "WaitTime",
@@ -177,7 +159,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    scheduled_headway_interval: Optional[XmlDuration] = field(
+    scheduled_headway_interval: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "ScheduledHeadwayInterval",
@@ -185,7 +167,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_headway_interval: Optional[XmlDuration] = field(
+    minimum_headway_interval: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MinimumHeadwayInterval",
@@ -193,7 +175,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_headway_interval: Optional[XmlDuration] = field(
+    maximum_headway_interval: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MaximumHeadwayInterval",
@@ -201,7 +183,7 @@ class StopPointInJourneyPatternDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

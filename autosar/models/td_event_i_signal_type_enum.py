@@ -27,20 +27,20 @@ class TdEventISignalTypeEnum:
     class Meta:
         name = "TD-EVENT-I-SIGNAL-TYPE-ENUM"
 
-    value: Optional[TdEventISignalTypeEnumSimple] = field(
+    value: TdEventISignalTypeEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

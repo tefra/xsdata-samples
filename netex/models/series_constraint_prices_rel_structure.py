@@ -22,11 +22,7 @@ class SeriesConstraintPricesRelStructure(
         name = "seriesConstraintPrices_RelStructure"
 
     series_constraint_price_ref_or_series_constraint_price_or_cell_ref: Iterable[
-        Union[
-            SeriesConstraintPriceRef,
-            SeriesConstraintPriceVersionedChildStructure,
-            CellRef,
-        ]
+        SeriesConstraintPriceRef | SeriesConstraintPriceVersionedChildStructure | CellRef
     ] = field(
         default_factory=list,
         metadata={

@@ -18,11 +18,7 @@ class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
         name = "customerEligibilities_RelStructure"
 
     customer_eligibility: Iterable[
-        Union[
-            ResidentialQualificationEligibility,
-            CommercialProfileEligibility,
-            UserProfileEligibility,
-        ]
+        ResidentialQualificationEligibility | CommercialProfileEligibility | UserProfileEligibility
     ] = field(
         default_factory=list,
         metadata={

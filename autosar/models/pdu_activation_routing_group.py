@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -56,7 +58,7 @@ class PduActivationRoutingGroup:
     class Meta:
         name = "PDU-ACTIVATION-ROUTING-GROUP"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -65,9 +67,7 @@ class PduActivationRoutingGroup:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "PduActivationRoutingGroup.ShortNameFragments"
-    ] = field(
+    short_name_fragments: PduActivationRoutingGroup.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -75,7 +75,7 @@ class PduActivationRoutingGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_control_type: Optional[EventGroupControlTypeEnum] = field(
+    event_group_control_type: EventGroupControlTypeEnum | None = field(
         default=None,
         metadata={
             "name": "EVENT-GROUP-CONTROL-TYPE",
@@ -83,9 +83,7 @@ class PduActivationRoutingGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_pdu_identifier_tcp_refs: Optional[
-        "PduActivationRoutingGroup.IPduIdentifierTcpRefs"
-    ] = field(
+    i_pdu_identifier_tcp_refs: PduActivationRoutingGroup.IPduIdentifierTcpRefs | None = field(
         default=None,
         metadata={
             "name": "I-PDU-IDENTIFIER-TCP-REFS",
@@ -93,9 +91,7 @@ class PduActivationRoutingGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_pdu_identifier_udp_refs: Optional[
-        "PduActivationRoutingGroup.IPduIdentifierUdpRefs"
-    ] = field(
+    i_pdu_identifier_udp_refs: PduActivationRoutingGroup.IPduIdentifierUdpRefs | None = field(
         default=None,
         metadata={
             "name": "I-PDU-IDENTIFIER-UDP-REFS",
@@ -103,7 +99,7 @@ class PduActivationRoutingGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -111,14 +107,14 @@ class PduActivationRoutingGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -141,7 +137,7 @@ class PduActivationRoutingGroup:
     @dataclass
     class IPduIdentifierTcpRefs:
         i_pdu_identifier_tcp_ref: list[
-            "PduActivationRoutingGroup.IPduIdentifierTcpRefs.IPduIdentifierTcpRef"
+            PduActivationRoutingGroup.IPduIdentifierTcpRefs.IPduIdentifierTcpRef
         ] = field(
             default_factory=list,
             metadata={
@@ -153,7 +149,7 @@ class PduActivationRoutingGroup:
 
         @dataclass
         class IPduIdentifierTcpRef(Ref):
-            dest: Optional[SoConIPduIdentifierSubtypesEnum] = field(
+            dest: SoConIPduIdentifierSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -165,7 +161,7 @@ class PduActivationRoutingGroup:
     @dataclass
     class IPduIdentifierUdpRefs:
         i_pdu_identifier_udp_ref: list[
-            "PduActivationRoutingGroup.IPduIdentifierUdpRefs.IPduIdentifierUdpRef"
+            PduActivationRoutingGroup.IPduIdentifierUdpRefs.IPduIdentifierUdpRef
         ] = field(
             default_factory=list,
             metadata={
@@ -177,7 +173,7 @@ class PduActivationRoutingGroup:
 
         @dataclass
         class IPduIdentifierUdpRef(Ref):
-            dest: Optional[SoConIPduIdentifierSubtypesEnum] = field(
+            dest: SoConIPduIdentifierSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

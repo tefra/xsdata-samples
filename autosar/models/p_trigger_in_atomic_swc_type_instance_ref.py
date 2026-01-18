@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -30,9 +32,7 @@ class PTriggerInAtomicSwcTypeInstanceRef:
     class Meta:
         name = "P-TRIGGER-IN-ATOMIC-SWC-TYPE-INSTANCE-REF"
 
-    context_p_port_ref: Optional[
-        "PTriggerInAtomicSwcTypeInstanceRef.ContextPPortRef"
-    ] = field(
+    context_p_port_ref: PTriggerInAtomicSwcTypeInstanceRef.ContextPPortRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-P-PORT-REF",
@@ -40,9 +40,7 @@ class PTriggerInAtomicSwcTypeInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_trigger_ref: Optional[
-        "PTriggerInAtomicSwcTypeInstanceRef.TargetTriggerRef"
-    ] = field(
+    target_trigger_ref: PTriggerInAtomicSwcTypeInstanceRef.TargetTriggerRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-TRIGGER-REF",
@@ -50,14 +48,14 @@ class PTriggerInAtomicSwcTypeInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -68,7 +66,7 @@ class PTriggerInAtomicSwcTypeInstanceRef:
 
     @dataclass
     class ContextPPortRef(Ref):
-        dest: Optional[AbstractProvidedPortPrototypeSubtypesEnum] = field(
+        dest: AbstractProvidedPortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -79,7 +77,7 @@ class PTriggerInAtomicSwcTypeInstanceRef:
 
     @dataclass
     class TargetTriggerRef(Ref):
-        dest: Optional[TriggerSubtypesEnum] = field(
+        dest: TriggerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

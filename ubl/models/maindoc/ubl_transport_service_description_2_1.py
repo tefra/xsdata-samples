@@ -32,7 +32,7 @@ __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDe
 
 @dataclass(frozen=True)
 class TransportServiceDescriptionType:
-    ublextensions: Optional[Ublextensions] = field(
+    ublextensions: Ublextensions | None = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -40,7 +40,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: Optional[UblversionId] = field(
+    ublversion_id: UblversionId | None = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -48,7 +48,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: Optional[CustomizationId] = field(
+    customization_id: CustomizationId | None = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -56,7 +56,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: Optional[ProfileId] = field(
+    profile_id: ProfileId | None = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -64,7 +64,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: Optional[ProfileExecutionId] = field(
+    profile_execution_id: ProfileExecutionId | None = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -72,7 +72,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -81,7 +81,7 @@ class TransportServiceDescriptionType:
             "required": True,
         },
     )
-    copy_indicator: Optional[CopyIndicator] = field(
+    copy_indicator: CopyIndicator | None = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -89,7 +89,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -97,7 +97,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -105,7 +105,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -121,7 +121,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    service_name: Optional[ServiceName] = field(
+    service_name: ServiceName | None = field(
         default=None,
         metadata={
             "name": "ServiceName",
@@ -129,7 +129,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    response_code: Optional[ResponseCode] = field(
+    response_code: ResponseCode | None = field(
         default=None,
         metadata={
             "name": "ResponseCode",
@@ -145,7 +145,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sender_party: Optional[SenderParty] = field(
+    sender_party: SenderParty | None = field(
         default=None,
         metadata={
             "name": "SenderParty",
@@ -153,7 +153,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    receiver_party: Optional[ReceiverParty] = field(
+    receiver_party: ReceiverParty | None = field(
         default=None,
         metadata={
             "name": "ReceiverParty",
@@ -161,9 +161,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_service_description_request_document_reference: Optional[
-        TransportServiceDescriptionRequestDocumentReference
-    ] = field(
+    transport_service_description_request_document_reference: TransportServiceDescriptionRequestDocumentReference | None = field(
         default=None,
         metadata={
             "name": "TransportServiceDescriptionRequestDocumentReference",
@@ -171,9 +169,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_service_provider_party: Optional[
-        TransportServiceProviderParty
-    ] = field(
+    transport_service_provider_party: TransportServiceProviderParty | None = field(
         default=None,
         metadata={
             "name": "TransportServiceProviderParty",
@@ -181,7 +177,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    service_charge_payment_terms: Optional[ServiceChargePaymentTerms] = field(
+    service_charge_payment_terms: ServiceChargePaymentTerms | None = field(
         default=None,
         metadata={
             "name": "ServiceChargePaymentTerms",
@@ -189,7 +185,7 @@ class TransportServiceDescriptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    validity_period: Optional[ValidityPeriod] = field(
+    validity_period: ValidityPeriod | None = field(
         default=None,
         metadata={
             "name": "ValidityPeriod",

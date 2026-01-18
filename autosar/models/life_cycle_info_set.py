@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -109,7 +111,7 @@ class LifeCycleInfoSet:
     class Meta:
         name = "LIFE-CYCLE-INFO-SET"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -118,7 +120,7 @@ class LifeCycleInfoSet:
             "required": True,
         },
     )
-    short_name_fragments: Optional["LifeCycleInfoSet.ShortNameFragments"] = (
+    short_name_fragments: LifeCycleInfoSet.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -128,7 +130,7 @@ class LifeCycleInfoSet:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -136,7 +138,7 @@ class LifeCycleInfoSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -144,7 +146,7 @@ class LifeCycleInfoSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -152,7 +154,7 @@ class LifeCycleInfoSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -160,7 +162,7 @@ class LifeCycleInfoSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -168,7 +170,7 @@ class LifeCycleInfoSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["LifeCycleInfoSet.Annotations"] = field(
+    annotations: LifeCycleInfoSet.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -176,7 +178,7 @@ class LifeCycleInfoSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -184,7 +186,7 @@ class LifeCycleInfoSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_lc_state_ref: Optional["LifeCycleInfoSet.DefaultLcStateRef"] = (
+    default_lc_state_ref: LifeCycleInfoSet.DefaultLcStateRef | None = (
         field(
             default=None,
             metadata={
@@ -194,7 +196,7 @@ class LifeCycleInfoSet:
             },
         )
     )
-    default_period_begin: Optional[LifeCyclePeriod] = field(
+    default_period_begin: LifeCyclePeriod | None = field(
         default=None,
         metadata={
             "name": "DEFAULT-PERIOD-BEGIN",
@@ -202,7 +204,7 @@ class LifeCycleInfoSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_period_end: Optional[LifeCyclePeriod] = field(
+    default_period_end: LifeCyclePeriod | None = field(
         default=None,
         metadata={
             "name": "DEFAULT-PERIOD-END",
@@ -210,7 +212,7 @@ class LifeCycleInfoSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    life_cycle_infos: Optional["LifeCycleInfoSet.LifeCycleInfos"] = field(
+    life_cycle_infos: LifeCycleInfoSet.LifeCycleInfos | None = field(
         default=None,
         metadata={
             "name": "LIFE-CYCLE-INFOS",
@@ -218,9 +220,7 @@ class LifeCycleInfoSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    used_life_cycle_state_definition_group_ref: Optional[
-        "LifeCycleInfoSet.UsedLifeCycleStateDefinitionGroupRef"
-    ] = field(
+    used_life_cycle_state_definition_group_ref: LifeCycleInfoSet.UsedLifeCycleStateDefinitionGroupRef | None = field(
         default=None,
         metadata={
             "name": "USED-LIFE-CYCLE-STATE-DEFINITION-GROUP-REF",
@@ -228,14 +228,14 @@ class LifeCycleInfoSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -243,7 +243,7 @@ class LifeCycleInfoSet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -275,7 +275,7 @@ class LifeCycleInfoSet:
 
     @dataclass
     class DefaultLcStateRef(Ref):
-        dest: Optional[LifeCycleStateSubtypesEnum] = field(
+        dest: LifeCycleStateSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -297,7 +297,7 @@ class LifeCycleInfoSet:
 
     @dataclass
     class UsedLifeCycleStateDefinitionGroupRef(Ref):
-        dest: Optional[LifeCycleStateDefinitionGroupSubtypesEnum] = field(
+        dest: LifeCycleStateDefinitionGroupSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -15,7 +15,7 @@ class ResponsibilitySetsRelStructure(ContainmentAggregationStructure):
         name = "responsibilitySets_RelStructure"
 
     responsibility_set_ref_or_responsibility_set: Iterable[
-        Union[ResponsibilitySetRef, ResponsibilitySet]
+        ResponsibilitySetRef | ResponsibilitySet
     ] = field(
         default_factory=list,
         metadata={

@@ -27,7 +27,7 @@ class TicketValidatorEquipmentVersionStructure(
             "tokens": True,
         },
     )
-    audio_validation_feedback: Optional[bool] = field(
+    audio_validation_feedback: bool | None = field(
         default=None,
         metadata={
             "name": "AudioValidationFeedback",
@@ -35,7 +35,7 @@ class TicketValidatorEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    visual_validation_feedback: Optional[bool] = field(
+    visual_validation_feedback: bool | None = field(
         default=None,
         metadata={
             "name": "VisualValidationFeedback",
@@ -43,7 +43,7 @@ class TicketValidatorEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tactile_validation_feedback: Optional[bool] = field(
+    tactile_validation_feedback: bool | None = field(
         default=None,
         metadata={
             "name": "TactileValidationFeedback",
@@ -51,7 +51,7 @@ class TicketValidatorEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validation_guidance: Optional[MultilingualString] = field(
+    validation_guidance: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ValidationGuidance",

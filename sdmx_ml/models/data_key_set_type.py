@@ -28,7 +28,7 @@ class DataKeySetType:
             "min_occurs": 1,
         },
     )
-    is_included: Optional[bool] = field(
+    is_included: bool | None = field(
         default=None,
         metadata={
             "name": "isIncluded",

@@ -103,7 +103,7 @@ class Ipv6NdpProps:
     class Meta:
         name = "IPV-6-NDP-PROPS"
 
-    tcp_ip_ndp_default_reachable_time: Optional[TimeValue] = field(
+    tcp_ip_ndp_default_reachable_time: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-DEFAULT-REACHABLE-TIME",
@@ -111,7 +111,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_default_retrans_timer: Optional[TimeValue] = field(
+    tcp_ip_ndp_default_retrans_timer: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-DEFAULT-RETRANS-TIMER",
@@ -119,7 +119,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_default_router_list_size: Optional[PositiveInteger] = field(
+    tcp_ip_ndp_default_router_list_size: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-DEFAULT-ROUTER-LIST-SIZE",
@@ -127,7 +127,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_defensive_processing: Optional[Boolean] = field(
+    tcp_ip_ndp_defensive_processing: Boolean | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-DEFENSIVE-PROCESSING",
@@ -135,7 +135,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_delay_first_probe_time: Optional[PositiveInteger] = field(
+    tcp_ip_ndp_delay_first_probe_time: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-DELAY-FIRST-PROBE-TIME",
@@ -143,7 +143,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_destination_cache_size: Optional[PositiveInteger] = field(
+    tcp_ip_ndp_destination_cache_size: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-DESTINATION-CACHE-SIZE",
@@ -151,7 +151,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_dynamic_hop_limit_enabled: Optional[Boolean] = field(
+    tcp_ip_ndp_dynamic_hop_limit_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-DYNAMIC-HOP-LIMIT-ENABLED",
@@ -159,7 +159,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_dynamic_mtu_enabled: Optional[Boolean] = field(
+    tcp_ip_ndp_dynamic_mtu_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-DYNAMIC-MTU-ENABLED",
@@ -167,7 +167,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_dynamic_reachable_time_enabled: Optional[Boolean] = field(
+    tcp_ip_ndp_dynamic_reachable_time_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-DYNAMIC-REACHABLE-TIME-ENABLED",
@@ -175,7 +175,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_dynamic_retrans_time_enabled: Optional[Boolean] = field(
+    tcp_ip_ndp_dynamic_retrans_time_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-DYNAMIC-RETRANS-TIME-ENABLED",
@@ -183,7 +183,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_max_random_factor: Optional[PositiveInteger] = field(
+    tcp_ip_ndp_max_random_factor: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-MAX-RANDOM-FACTOR",
@@ -191,7 +191,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_max_rtr_solicitation_delay: Optional[TimeValue] = field(
+    tcp_ip_ndp_max_rtr_solicitation_delay: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-MAX-RTR-SOLICITATION-DELAY",
@@ -199,7 +199,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_max_rtr_solicitations: Optional[PositiveInteger] = field(
+    tcp_ip_ndp_max_rtr_solicitations: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-MAX-RTR-SOLICITATIONS",
@@ -207,7 +207,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_min_random_factor: Optional[PositiveInteger] = field(
+    tcp_ip_ndp_min_random_factor: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-MIN-RANDOM-FACTOR",
@@ -215,7 +215,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_neighbor_unreachability_detection_enabled: Optional[Boolean] = (
+    tcp_ip_ndp_neighbor_unreachability_detection_enabled: Boolean | None = (
         field(
             default=None,
             metadata={
@@ -225,7 +225,7 @@ class Ipv6NdpProps:
             },
         )
     )
-    tcp_ip_ndp_num_multicast_solicitations: Optional[PositiveInteger] = field(
+    tcp_ip_ndp_num_multicast_solicitations: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-NUM-MULTICAST-SOLICITATIONS",
@@ -233,7 +233,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_num_unicast_solicitations: Optional[PositiveInteger] = field(
+    tcp_ip_ndp_num_unicast_solicitations: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-NUM-UNICAST-SOLICITATIONS",
@@ -241,7 +241,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_packet_queue_enabled: Optional[Boolean] = field(
+    tcp_ip_ndp_packet_queue_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-PACKET-QUEUE-ENABLED",
@@ -249,7 +249,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_prefix_list_size: Optional[PositiveInteger] = field(
+    tcp_ip_ndp_prefix_list_size: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-PREFIX-LIST-SIZE",
@@ -257,7 +257,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_random_reachable_time_enabled: Optional[Boolean] = field(
+    tcp_ip_ndp_random_reachable_time_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-RANDOM-REACHABLE-TIME-ENABLED",
@@ -265,7 +265,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_rnd_rtr_solicitation_delay_enabled: Optional[Boolean] = field(
+    tcp_ip_ndp_rnd_rtr_solicitation_delay_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-RND-RTR-SOLICITATION-DELAY-ENABLED",
@@ -273,7 +273,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_rtr_solicitation_interval: Optional[TimeValue] = field(
+    tcp_ip_ndp_rtr_solicitation_interval: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-RTR-SOLICITATION-INTERVAL",
@@ -281,7 +281,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_slaac_dad_number_of_transmissions: Optional[PositiveInteger] = (
+    tcp_ip_ndp_slaac_dad_number_of_transmissions: PositiveInteger | None = (
         field(
             default=None,
             metadata={
@@ -291,7 +291,7 @@ class Ipv6NdpProps:
             },
         )
     )
-    tcp_ip_ndp_slaac_dad_retransmission_delay: Optional[TimeValue] = field(
+    tcp_ip_ndp_slaac_dad_retransmission_delay: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-SLAAC-DAD-RETRANSMISSION-DELAY",
@@ -299,7 +299,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_slaac_delay_enabled: Optional[Boolean] = field(
+    tcp_ip_ndp_slaac_delay_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-SLAAC-DELAY-ENABLED",
@@ -307,7 +307,7 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ndp_slaac_optimistic_dad_enabled: Optional[Boolean] = field(
+    tcp_ip_ndp_slaac_optimistic_dad_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-NDP-SLAAC-OPTIMISTIC-DAD-ENABLED",
@@ -315,14 +315,14 @@ class Ipv6NdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

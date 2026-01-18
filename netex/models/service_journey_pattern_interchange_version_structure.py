@@ -15,7 +15,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(
     class Meta:
         name = "ServiceJourneyPatternInterchange_VersionStructure"
 
-    from_point_ref: Optional[ScheduledStopPointRefStructure] = field(
+    from_point_ref: ScheduledStopPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "FromPointRef",
@@ -24,7 +24,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "required": True,
         },
     )
-    from_visit_number: Optional[int] = field(
+    from_visit_number: int | None = field(
         default=None,
         metadata={
             "name": "FromVisitNumber",
@@ -32,7 +32,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_point_ref: Optional[ScheduledStopPointRefStructure] = field(
+    to_point_ref: ScheduledStopPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "ToPointRef",
@@ -41,7 +41,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "required": True,
         },
     )
-    to_visit_number: Optional[int] = field(
+    to_visit_number: int | None = field(
         default=None,
         metadata={
             "name": "ToVisitNumber",
@@ -49,7 +49,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_journey_pattern_ref: Optional[JourneyPatternRefStructure] = field(
+    from_journey_pattern_ref: JourneyPatternRefStructure | None = field(
         default=None,
         metadata={
             "name": "FromJourneyPatternRef",
@@ -58,7 +58,7 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "required": True,
         },
     )
-    to_journey_pattern_ref: Optional[JourneyPatternRefStructure] = field(
+    to_journey_pattern_ref: JourneyPatternRefStructure | None = field(
         default=None,
         metadata={
             "name": "ToJourneyPatternRef",

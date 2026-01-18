@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -91,7 +93,7 @@ class Documentation:
     class Meta:
         name = "DOCUMENTATION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -100,7 +102,7 @@ class Documentation:
             "required": True,
         },
     )
-    short_name_fragments: Optional["Documentation.ShortNameFragments"] = field(
+    short_name_fragments: Documentation.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -108,7 +110,7 @@ class Documentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -116,7 +118,7 @@ class Documentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -124,7 +126,7 @@ class Documentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -132,7 +134,7 @@ class Documentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -140,7 +142,7 @@ class Documentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -148,7 +150,7 @@ class Documentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["Documentation.Annotations"] = field(
+    annotations: Documentation.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -156,7 +158,7 @@ class Documentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -164,7 +166,7 @@ class Documentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contexts: Optional["Documentation.Contexts"] = field(
+    contexts: Documentation.Contexts | None = field(
         default=None,
         metadata={
             "name": "CONTEXTS",
@@ -172,7 +174,7 @@ class Documentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    documentation_content: Optional[PredefinedChapter] = field(
+    documentation_content: PredefinedChapter | None = field(
         default=None,
         metadata={
             "name": "DOCUMENTATION-CONTENT",
@@ -180,14 +182,14 @@ class Documentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -195,7 +197,7 @@ class Documentation:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

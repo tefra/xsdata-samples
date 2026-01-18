@@ -46,25 +46,21 @@ class PlanningSchedule:
             "required": True,
         }
     )
-    list_of_location_grouped_planning_detail: Optional[
-        ListOfLocationGroupedPlanningDetail
-    ] = field(
+    list_of_location_grouped_planning_detail: ListOfLocationGroupedPlanningDetail | None = field(
         default=None,
         metadata={
             "name": "ListOfLocationGroupedPlanningDetail",
             "type": "Element",
         },
     )
-    list_of_material_grouped_planning_detail: Optional[
-        ListOfMaterialGroupedPlanningDetail
-    ] = field(
+    list_of_material_grouped_planning_detail: ListOfMaterialGroupedPlanningDetail | None = field(
         default=None,
         metadata={
             "name": "ListOfMaterialGroupedPlanningDetail",
             "type": "Element",
         },
     )
-    planning_schedule_summary: Optional[PlanningScheduleSummary] = field(
+    planning_schedule_summary: PlanningScheduleSummary | None = field(
         default=None,
         metadata={
             "name": "PlanningScheduleSummary",

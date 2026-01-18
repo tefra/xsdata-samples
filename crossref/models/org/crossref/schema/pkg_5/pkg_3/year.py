@@ -14,7 +14,7 @@ class Year:
         name = "year"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    value: Optional[int] = field(
+    value: int | None = field(
         default=None,
         metadata={
             "required": True,

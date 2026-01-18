@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -112,7 +114,7 @@ class LinPhysicalChannel:
     class Meta:
         name = "LIN-PHYSICAL-CHANNEL"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -121,7 +123,7 @@ class LinPhysicalChannel:
             "required": True,
         },
     )
-    short_name_fragments: Optional["LinPhysicalChannel.ShortNameFragments"] = (
+    short_name_fragments: LinPhysicalChannel.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -131,7 +133,7 @@ class LinPhysicalChannel:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -139,7 +141,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -147,7 +149,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -155,7 +157,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -163,7 +165,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -171,7 +173,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["LinPhysicalChannel.Annotations"] = field(
+    annotations: LinPhysicalChannel.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -179,7 +181,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_connectors: Optional["LinPhysicalChannel.CommConnectors"] = field(
+    comm_connectors: LinPhysicalChannel.CommConnectors | None = field(
         default=None,
         metadata={
             "name": "COMM-CONNECTORS",
@@ -187,7 +189,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_triggerings: Optional["LinPhysicalChannel.FrameTriggerings"] = field(
+    frame_triggerings: LinPhysicalChannel.FrameTriggerings | None = field(
         default=None,
         metadata={
             "name": "FRAME-TRIGGERINGS",
@@ -195,7 +197,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_triggerings: Optional["LinPhysicalChannel.ISignalTriggerings"] = (
+    i_signal_triggerings: LinPhysicalChannel.ISignalTriggerings | None = (
         field(
             default=None,
             metadata={
@@ -205,9 +207,7 @@ class LinPhysicalChannel:
             },
         )
     )
-    managed_physical_channel_refs: Optional[
-        "LinPhysicalChannel.ManagedPhysicalChannelRefs"
-    ] = field(
+    managed_physical_channel_refs: LinPhysicalChannel.ManagedPhysicalChannelRefs | None = field(
         default=None,
         metadata={
             "name": "MANAGED-PHYSICAL-CHANNEL-REFS",
@@ -215,7 +215,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggerings: Optional["LinPhysicalChannel.PduTriggerings"] = field(
+    pdu_triggerings: LinPhysicalChannel.PduTriggerings | None = field(
         default=None,
         metadata={
             "name": "PDU-TRIGGERINGS",
@@ -223,7 +223,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -231,7 +231,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bus_idle_timeout_period: Optional[TimeValue] = field(
+    bus_idle_timeout_period: TimeValue | None = field(
         default=None,
         metadata={
             "name": "BUS-IDLE-TIMEOUT-PERIOD",
@@ -239,7 +239,7 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    schedule_tables: Optional["LinPhysicalChannel.ScheduleTables"] = field(
+    schedule_tables: LinPhysicalChannel.ScheduleTables | None = field(
         default=None,
         metadata={
             "name": "SCHEDULE-TABLES",
@@ -247,14 +247,14 @@ class LinPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -262,7 +262,7 @@ class LinPhysicalChannel:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -354,7 +354,7 @@ class LinPhysicalChannel:
     @dataclass
     class ManagedPhysicalChannelRefs:
         managed_physical_channel_ref: list[
-            "LinPhysicalChannel.ManagedPhysicalChannelRefs.ManagedPhysicalChannelRef"
+            LinPhysicalChannel.ManagedPhysicalChannelRefs.ManagedPhysicalChannelRef
         ] = field(
             default_factory=list,
             metadata={
@@ -366,7 +366,7 @@ class LinPhysicalChannel:
 
         @dataclass
         class ManagedPhysicalChannelRef(Ref):
-            dest: Optional[PhysicalChannelSubtypesEnum] = field(
+            dest: PhysicalChannelSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

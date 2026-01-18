@@ -17,12 +17,7 @@ class NetworkRestrictionsInFrameRelStructure(ContainmentAggregationStructure):
         name = "networkRestrictionsInFrame_RelStructure"
 
     network_restriction: Iterable[
-        Union[
-            OvertakingPossibility,
-            MeetingRestriction,
-            RestrictedManoeuvre,
-            VehicleTypeAtPoint,
-        ]
+        OvertakingPossibility | MeetingRestriction | RestrictedManoeuvre | VehicleTypeAtPoint
     ] = field(
         default_factory=list,
         metadata={

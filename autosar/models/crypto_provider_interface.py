@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -113,7 +115,7 @@ class CryptoProviderInterface:
     class Meta:
         name = "CRYPTO-PROVIDER-INTERFACE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -122,9 +124,7 @@ class CryptoProviderInterface:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "CryptoProviderInterface.ShortNameFragments"
-    ] = field(
+    short_name_fragments: CryptoProviderInterface.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -132,7 +132,7 @@ class CryptoProviderInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -140,7 +140,7 @@ class CryptoProviderInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -148,7 +148,7 @@ class CryptoProviderInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -156,7 +156,7 @@ class CryptoProviderInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -164,7 +164,7 @@ class CryptoProviderInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -172,7 +172,7 @@ class CryptoProviderInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["CryptoProviderInterface.Annotations"] = field(
+    annotations: CryptoProviderInterface.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -180,7 +180,7 @@ class CryptoProviderInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -188,7 +188,7 @@ class CryptoProviderInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional["CryptoProviderInterface.BlueprintPolicys"] = (
+    blueprint_policys: CryptoProviderInterface.BlueprintPolicys | None = (
         field(
             default=None,
             metadata={
@@ -198,7 +198,7 @@ class CryptoProviderInterface:
             },
         )
     )
-    short_name_pattern: Optional[String] = field(
+    short_name_pattern: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -206,7 +206,7 @@ class CryptoProviderInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_service: Optional[Boolean] = field(
+    is_service: Boolean | None = field(
         default=None,
         metadata={
             "name": "IS-SERVICE",
@@ -214,7 +214,7 @@ class CryptoProviderInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    namespaces: Optional["CryptoProviderInterface.Namespaces"] = field(
+    namespaces: CryptoProviderInterface.Namespaces | None = field(
         default=None,
         metadata={
             "name": "NAMESPACES",
@@ -222,7 +222,7 @@ class CryptoProviderInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_kind: Optional[ServiceProviderEnum] = field(
+    service_kind: ServiceProviderEnum | None = field(
         default=None,
         metadata={
             "name": "SERVICE-KIND",
@@ -230,14 +230,14 @@ class CryptoProviderInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -245,7 +245,7 @@ class CryptoProviderInterface:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

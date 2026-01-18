@@ -13,7 +13,7 @@ class AddressVersionStructure(PlaceVersionStructure):
     class Meta:
         name = "Address_VersionStructure"
 
-    country_ref: Optional[CountryRef] = field(
+    country_ref: CountryRef | None = field(
         default=None,
         metadata={
             "name": "CountryRef",
@@ -21,7 +21,7 @@ class AddressVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    country_name: Optional[MultilingualString] = field(
+    country_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "CountryName",

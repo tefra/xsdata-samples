@@ -28,7 +28,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "JourneyPart_VersionStructure"
 
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -36,7 +36,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parent_journey_ref: Optional[VehicleJourneyRefStructure] = field(
+    parent_journey_ref: VehicleJourneyRefStructure | None = field(
         default=None,
         metadata={
             "name": "ParentJourneyRef",
@@ -44,7 +44,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    main_part_ref: Optional[JourneyPartRefStructure] = field(
+    main_part_ref: JourneyPartRefStructure | None = field(
         default=None,
         metadata={
             "name": "MainPartRef",
@@ -52,7 +52,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_part_couple_ref: Optional[JourneyPartCoupleRef] = field(
+    journey_part_couple_ref: JourneyPartCoupleRef | None = field(
         default=None,
         metadata={
             "name": "JourneyPartCoupleRef",
@@ -60,7 +60,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_number_ref: Optional[TrainNumberRef] = field(
+    train_number_ref: TrainNumberRef | None = field(
         default=None,
         metadata={
             "name": "TrainNumberRef",
@@ -68,7 +68,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    block_part_ref: Optional[Union[TrainBlockPartRef, BlockPartRef]] = field(
+    block_part_ref: TrainBlockPartRef | BlockPartRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -86,7 +86,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    from_stop_point_ref: Optional[ScheduledStopPointRefStructure] = field(
+    from_stop_point_ref: ScheduledStopPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "FromStopPointRef",
@@ -94,7 +94,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_stop_point_ref: Optional[ScheduledStopPointRefStructure] = field(
+    to_stop_point_ref: ScheduledStopPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "ToStopPointRef",
@@ -102,7 +102,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_time: Optional[XmlTime] = field(
+    start_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "StartTime",
@@ -111,7 +111,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "required": True,
         },
     )
-    start_time_day_offset: Optional[int] = field(
+    start_time_day_offset: int | None = field(
         default=None,
         metadata={
             "name": "StartTimeDayOffset",
@@ -119,7 +119,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_time: Optional[XmlTime] = field(
+    end_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "EndTime",
@@ -128,7 +128,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "required": True,
         },
     )
-    end_time_day_offset: Optional[int] = field(
+    end_time_day_offset: int | None = field(
         default=None,
         metadata={
             "name": "EndTimeDayOffset",
@@ -136,7 +136,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_orientation: Optional[bool] = field(
+    vehicle_orientation: bool | None = field(
         default=None,
         metadata={
             "name": "VehicleOrientation",
@@ -144,9 +144,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    purpose_of_journey_partition_ref: Optional[
-        PurposeOfJourneyPartitionRef
-    ] = field(
+    purpose_of_journey_partition_ref: PurposeOfJourneyPartitionRef | None = field(
         default=None,
         metadata={
             "name": "PurposeOfJourneyPartitionRef",
@@ -154,14 +152,14 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    facilities: Optional[ServiceFacilitySetsRelStructure] = field(
+    facilities: ServiceFacilitySetsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_part_positions: Optional[JourneyPartPositionsRelStructure] = field(
+    journey_part_positions: JourneyPartPositionsRelStructure | None = field(
         default=None,
         metadata={
             "name": "journeyPartPositions",
@@ -169,7 +167,7 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -15,7 +15,7 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "GroupOfEntities_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -23,7 +23,7 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -31,7 +31,7 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -39,7 +39,7 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    purpose_of_grouping_ref: Optional[PurposeOfGroupingRef] = field(
+    purpose_of_grouping_ref: PurposeOfGroupingRef | None = field(
         default=None,
         metadata={
             "name": "PurposeOfGroupingRef",
@@ -47,7 +47,7 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -55,7 +55,7 @@ class GroupOfEntitiesVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    info_links: Optional[InfoLinksRelStructure] = field(
+    info_links: InfoLinksRelStructure | None = field(
         default=None,
         metadata={
             "name": "infoLinks",

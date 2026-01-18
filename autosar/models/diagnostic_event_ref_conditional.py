@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,9 +33,7 @@ class DiagnosticEventRefConditional:
     class Meta:
         name = "DIAGNOSTIC-EVENT-REF-CONDITIONAL"
 
-    diagnostic_event_ref: Optional[
-        "DiagnosticEventRefConditional.DiagnosticEventRef"
-    ] = field(
+    diagnostic_event_ref: DiagnosticEventRefConditional.DiagnosticEventRef | None = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EVENT-REF",
@@ -41,7 +41,7 @@ class DiagnosticEventRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -49,14 +49,14 @@ class DiagnosticEventRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +67,7 @@ class DiagnosticEventRefConditional:
 
     @dataclass
     class DiagnosticEventRef(Ref):
-        dest: Optional[DiagnosticEventSubtypesEnum] = field(
+        dest: DiagnosticEventSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -30,7 +30,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class CoinsurerInvolvementType(OrganisationInvolvementType):
-    apply_to: Optional[PremiumTypeEnum] = field(
+    apply_to: PremiumTypeEnum | None = field(
         default=None,
         metadata={
             "name": "ApplyTo",
@@ -38,7 +38,7 @@ class CoinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    organisation_role: Optional[InsurerRoleType] = field(
+    organisation_role: InsurerRoleType | None = field(
         default=None,
         metadata={
             "name": "OrganisationRole",
@@ -46,7 +46,7 @@ class CoinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    sequence_number: Optional[NumericType] = field(
+    sequence_number: NumericType | None = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
@@ -54,7 +54,7 @@ class CoinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    coinsurance_percentage: Optional[PercentType] = field(
+    coinsurance_percentage: PercentType | None = field(
         default=None,
         metadata={
             "name": "CoinsurancePercentage",
@@ -62,7 +62,7 @@ class CoinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    involvement_type: Optional[CoinsurerInvolvementTypeEnum] = field(
+    involvement_type: CoinsurerInvolvementTypeEnum | None = field(
         default=None,
         metadata={
             "name": "InvolvementType",
@@ -70,7 +70,7 @@ class CoinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    commision_percentage: Optional[PercentType] = field(
+    commision_percentage: PercentType | None = field(
         default=None,
         metadata={
             "name": "CommisionPercentage",
@@ -78,7 +78,7 @@ class CoinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    coinsurer_reference: Optional[CodeType] = field(
+    coinsurer_reference: CodeType | None = field(
         default=None,
         metadata={
             "name": "CoinsurerReference",
@@ -86,7 +86,7 @@ class CoinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    retained_risk_share: Optional[PercentType] = field(
+    retained_risk_share: PercentType | None = field(
         default=None,
         metadata={
             "name": "RetainedRiskShare",
@@ -94,7 +94,7 @@ class CoinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    overrider_percentage: Optional[PercentType] = field(
+    overrider_percentage: PercentType | None = field(
         default=None,
         metadata={
             "name": "OverriderPercentage",
@@ -102,7 +102,7 @@ class CoinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    local_ceded_share: Optional[PercentType] = field(
+    local_ceded_share: PercentType | None = field(
         default=None,
         metadata={
             "name": "LocalCededShare",

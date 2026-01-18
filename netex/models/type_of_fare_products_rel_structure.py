@@ -15,7 +15,7 @@ class TypeOfFareProductsRelStructure(ContainmentAggregationStructure):
         name = "typeOfFareProducts_RelStructure"
 
     type_of_fare_product_ref_or_type_of_fare_product: Iterable[
-        Union[TypeOfFareProductRef, TypeOfFareProduct]
+        TypeOfFareProductRef | TypeOfFareProduct
     ] = field(
         default_factory=list,
         metadata={

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -119,7 +121,7 @@ class DiagnosticEventPortMapping:
     class Meta:
         name = "DIAGNOSTIC-EVENT-PORT-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -128,9 +130,7 @@ class DiagnosticEventPortMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticEventPortMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticEventPortMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -138,7 +138,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -146,7 +146,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -154,7 +154,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -162,7 +162,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -170,7 +170,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -178,7 +178,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticEventPortMapping.Annotations"] = field(
+    annotations: DiagnosticEventPortMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -186,7 +186,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -194,9 +194,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_service_dependency_ref: Optional[
-        "DiagnosticEventPortMapping.BswServiceDependencyRef"
-    ] = field(
+    bsw_service_dependency_ref: DiagnosticEventPortMapping.BswServiceDependencyRef | None = field(
         default=None,
         metadata={
             "name": "BSW-SERVICE-DEPENDENCY-REF",
@@ -204,9 +202,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_event_ref: Optional[
-        "DiagnosticEventPortMapping.DiagnosticEventRef"
-    ] = field(
+    diagnostic_event_ref: DiagnosticEventPortMapping.DiagnosticEventRef | None = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EVENT-REF",
@@ -214,7 +210,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: Optional["DiagnosticEventPortMapping.ProcessRef"] = field(
+    process_ref: DiagnosticEventPortMapping.ProcessRef | None = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
@@ -222,9 +218,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_flat_service_dependency_ref: Optional[
-        "DiagnosticEventPortMapping.SwcFlatServiceDependencyRef"
-    ] = field(
+    swc_flat_service_dependency_ref: DiagnosticEventPortMapping.SwcFlatServiceDependencyRef | None = field(
         default=None,
         metadata={
             "name": "SWC-FLAT-SERVICE-DEPENDENCY-REF",
@@ -232,9 +226,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_service_dependency_in_executable_iref: Optional[
-        SwcServiceDependencyInExecutableInstanceRef
-    ] = field(
+    swc_service_dependency_in_executable_iref: SwcServiceDependencyInExecutableInstanceRef | None = field(
         default=None,
         metadata={
             "name": "SWC-SERVICE-DEPENDENCY-IN-EXECUTABLE-IREF",
@@ -242,9 +234,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_service_dependency_in_system_iref: Optional[
-        SwcServiceDependencyInSystemInstanceRef
-    ] = field(
+    swc_service_dependency_in_system_iref: SwcServiceDependencyInSystemInstanceRef | None = field(
         default=None,
         metadata={
             "name": "SWC-SERVICE-DEPENDENCY-IN-SYSTEM-IREF",
@@ -252,9 +242,7 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_service_dependency_iref: Optional[
-        SwcServiceDependencyInCompositionInstanceRef
-    ] = field(
+    swc_service_dependency_iref: SwcServiceDependencyInCompositionInstanceRef | None = field(
         default=None,
         metadata={
             "name": "SWC-SERVICE-DEPENDENCY-IREF",
@@ -262,14 +250,14 @@ class DiagnosticEventPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -277,7 +265,7 @@ class DiagnosticEventPortMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -309,7 +297,7 @@ class DiagnosticEventPortMapping:
 
     @dataclass
     class BswServiceDependencyRef(Ref):
-        dest: Optional[BswServiceDependencyIdentSubtypesEnum] = field(
+        dest: BswServiceDependencyIdentSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -320,7 +308,7 @@ class DiagnosticEventPortMapping:
 
     @dataclass
     class DiagnosticEventRef(Ref):
-        dest: Optional[DiagnosticEventSubtypesEnum] = field(
+        dest: DiagnosticEventSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -331,7 +319,7 @@ class DiagnosticEventPortMapping:
 
     @dataclass
     class ProcessRef(Ref):
-        dest: Optional[ProcessDesignSubtypesEnum] = field(
+        dest: ProcessDesignSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -342,7 +330,7 @@ class DiagnosticEventPortMapping:
 
     @dataclass
     class SwcFlatServiceDependencyRef(Ref):
-        dest: Optional[SwcServiceDependencySubtypesEnum] = field(
+        dest: SwcServiceDependencySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -48,13 +50,7 @@ class PayloadStructureType:
         service which will return the referenced object.
     """
 
-    provision_agreement_or_structure_usage_or_structure: Optional[
-        Union[
-            "PayloadStructureType.ProvisionAgreement",
-            "PayloadStructureType.StructureUsage",
-            "PayloadStructureType.Structure",
-        ]
-    ] = field(
+    provision_agreement_or_structure_usage_or_structure: PayloadStructureType.ProvisionAgreement | PayloadStructureType.StructureUsage | PayloadStructureType.Structure | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -79,7 +75,7 @@ class PayloadStructureType:
             ),
         },
     )
-    structure_id: Optional[str] = field(
+    structure_id: str | None = field(
         default=None,
         metadata={
             "name": "structureID",
@@ -87,20 +83,20 @@ class PayloadStructureType:
             "required": True,
         },
     )
-    schema_url: Optional[str] = field(
+    schema_url: str | None = field(
         default=None,
         metadata={
             "name": "schemaURL",
             "type": "Attribute",
         },
     )
-    namespace: Optional[str] = field(
+    namespace: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    dimension_at_observation: Optional[Union[str, ObsDimensionsCodeType]] = (
+    dimension_at_observation: str | ObsDimensionsCodeType | None = (
         field(
             default=None,
             metadata={
@@ -110,21 +106,21 @@ class PayloadStructureType:
             },
         )
     )
-    explicit_measures: Optional[bool] = field(
+    explicit_measures: bool | None = field(
         default=None,
         metadata={
             "name": "explicitMeasures",
             "type": "Attribute",
         },
     )
-    service_url: Optional[str] = field(
+    service_url: str | None = field(
         default=None,
         metadata={
             "name": "serviceURL",
             "type": "Attribute",
         },
     )
-    structure_url: Optional[str] = field(
+    structure_url: str | None = field(
         default=None,
         metadata={
             "name": "structureURL",
@@ -134,7 +130,7 @@ class PayloadStructureType:
 
     @dataclass(frozen=True)
     class ProvisionAgreement:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -144,7 +140,7 @@ class PayloadStructureType:
 
     @dataclass(frozen=True)
     class StructureUsage:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -154,7 +150,7 @@ class PayloadStructureType:
 
     @dataclass(frozen=True)
     class Structure:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,

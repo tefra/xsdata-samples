@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -55,9 +57,7 @@ class PortPrototypeBlueprintInitValue:
     class Meta:
         name = "PORT-PROTOTYPE-BLUEPRINT-INIT-VALUE"
 
-    data_prototype_ref: Optional[
-        "PortPrototypeBlueprintInitValue.DataPrototypeRef"
-    ] = field(
+    data_prototype_ref: PortPrototypeBlueprintInitValue.DataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-REF",
@@ -65,7 +65,7 @@ class PortPrototypeBlueprintInitValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: Optional["PortPrototypeBlueprintInitValue.Value"] = field(
+    value: PortPrototypeBlueprintInitValue.Value | None = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -73,14 +73,14 @@ class PortPrototypeBlueprintInitValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -91,7 +91,7 @@ class PortPrototypeBlueprintInitValue:
 
     @dataclass
     class DataPrototypeRef(Ref):
-        dest: Optional[AutosarDataPrototypeSubtypesEnum] = field(
+        dest: AutosarDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -102,9 +102,7 @@ class PortPrototypeBlueprintInitValue:
 
     @dataclass
     class Value:
-        application_assoc_map_value_specification: Optional[
-            ApplicationAssocMapValueSpecification
-        ] = field(
+        application_assoc_map_value_specification: ApplicationAssocMapValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-ASSOC-MAP-VALUE-SPECIFICATION",
@@ -112,9 +110,7 @@ class PortPrototypeBlueprintInitValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_rule_based_value_specification: Optional[
-            ApplicationRuleBasedValueSpecification
-        ] = field(
+        application_rule_based_value_specification: ApplicationRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-RULE-BASED-VALUE-SPECIFICATION",
@@ -122,9 +118,7 @@ class PortPrototypeBlueprintInitValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_value_specification: Optional[
-            ApplicationValueSpecification
-        ] = field(
+        application_value_specification: ApplicationValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-VALUE-SPECIFICATION",
@@ -132,7 +126,7 @@ class PortPrototypeBlueprintInitValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        array_value_specification: Optional[ArrayValueSpecification] = field(
+        array_value_specification: ArrayValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "ARRAY-VALUE-SPECIFICATION",
@@ -140,9 +134,7 @@ class PortPrototypeBlueprintInitValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        composite_rule_based_value_specification: Optional[
-            CompositeRuleBasedValueSpecification
-        ] = field(
+        composite_rule_based_value_specification: CompositeRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "COMPOSITE-RULE-BASED-VALUE-SPECIFICATION",
@@ -150,7 +142,7 @@ class PortPrototypeBlueprintInitValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        constant_reference: Optional[ConstantReference] = field(
+        constant_reference: ConstantReference | None = field(
             default=None,
             metadata={
                 "name": "CONSTANT-REFERENCE",
@@ -158,9 +150,7 @@ class PortPrototypeBlueprintInitValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        not_available_value_specification: Optional[
-            NotAvailableValueSpecification
-        ] = field(
+        not_available_value_specification: NotAvailableValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NOT-AVAILABLE-VALUE-SPECIFICATION",
@@ -168,9 +158,7 @@ class PortPrototypeBlueprintInitValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_rule_based_value_specification: Optional[
-            NumericalRuleBasedValueSpecification
-        ] = field(
+        numerical_rule_based_value_specification: NumericalRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-RULE-BASED-VALUE-SPECIFICATION",
@@ -178,9 +166,7 @@ class PortPrototypeBlueprintInitValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: Optional[
-            NumericalValueSpecification
-        ] = field(
+        numerical_value_specification: NumericalValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-VALUE-SPECIFICATION",
@@ -188,7 +174,7 @@ class PortPrototypeBlueprintInitValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        record_value_specification: Optional[RecordValueSpecification] = field(
+        record_value_specification: RecordValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "RECORD-VALUE-SPECIFICATION",
@@ -196,9 +182,7 @@ class PortPrototypeBlueprintInitValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: Optional[
-            ReferenceValueSpecification
-        ] = field(
+        reference_value_specification: ReferenceValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "REFERENCE-VALUE-SPECIFICATION",
@@ -206,7 +190,7 @@ class PortPrototypeBlueprintInitValue:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        text_value_specification: Optional[TextValueSpecification] = field(
+        text_value_specification: TextValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "TEXT-VALUE-SPECIFICATION",

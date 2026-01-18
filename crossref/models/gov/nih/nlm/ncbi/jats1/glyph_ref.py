@@ -14,20 +14,20 @@ class GlyphRef:
         name = "glyph-ref"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    glyph_data: Optional[str] = field(
+    glyph_data: str | None = field(
         default=None,
         metadata={
             "name": "glyph-data",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

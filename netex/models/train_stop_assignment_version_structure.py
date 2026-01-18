@@ -21,13 +21,7 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
     class Meta:
         name = "TrainStopAssignment_VersionStructure"
 
-    passenger_stop_assignment_ref: Optional[
-        Union[
-            VehicleJourneyStopAssignmentRef,
-            DynamicStopAssignmentRef,
-            PassengerStopAssignmentRef,
-        ]
-    ] = field(
+    passenger_stop_assignment_ref: VehicleJourneyStopAssignmentRef | DynamicStopAssignmentRef | PassengerStopAssignmentRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -50,7 +44,7 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             ),
         },
     )
-    train_ref: Optional[TrainRef] = field(
+    train_ref: TrainRef | None = field(
         default=None,
         metadata={
             "name": "TrainRef",
@@ -58,9 +52,7 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_component_ref_or_train_component_view: Optional[
-        Union[TrainComponentRef, TrainComponentView]
-    ] = field(
+    train_component_ref_or_train_component_view: TrainComponentRef | TrainComponentView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -78,7 +70,7 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             ),
         },
     )
-    position_of_train_element: Optional[int] = field(
+    position_of_train_element: int | None = field(
         default=None,
         metadata={
             "name": "PositionOfTrainElement",
@@ -86,7 +78,7 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    boarding_position_ref: Optional[BoardingPositionRefStructure] = field(
+    boarding_position_ref: BoardingPositionRefStructure | None = field(
         default=None,
         metadata={
             "name": "BoardingPositionRef",
@@ -94,7 +86,7 @@ class TrainStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entrance_to_vehicle: Optional[MultilingualString] = field(
+    entrance_to_vehicle: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "EntranceToVehicle",

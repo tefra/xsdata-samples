@@ -24,4 +24,4 @@ class DoubleValueType(ValueType):
             "type": "Ignore",
         },
     )
-    value: Optional[float] = field(default=None)
+    value: float | None = field(default=None)

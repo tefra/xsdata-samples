@@ -23,7 +23,7 @@ class LineShapeStructure2(DataManagedObjectStructure):
     class Meta:
         name = "LineShapeStructure"
 
-    formula: Optional[str] = field(
+    formula: str | None = field(
         default=None,
         metadata={
             "name": "Formula",
@@ -31,7 +31,7 @@ class LineShapeStructure2(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -39,21 +39,7 @@ class LineShapeStructure2(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    link_ref_or_infrastructure_link_ref: Optional[
-        Union[
-            OnwardVehicleMeetingLinkRef,
-            VehicleMeetingLinkRef,
-            ServiceLinkRef,
-            LineLinkRef,
-            TimingLinkRef,
-            WireLinkRef,
-            RoadLinkRef,
-            RailwayLinkRef,
-            ActivationLinkRef,
-            PathLinkRef,
-            RouteLinkRef,
-        ]
-    ] = field(
+    link_ref_or_infrastructure_link_ref: OnwardVehicleMeetingLinkRef | VehicleMeetingLinkRef | ServiceLinkRef | LineLinkRef | TimingLinkRef | WireLinkRef | RoadLinkRef | RailwayLinkRef | ActivationLinkRef | PathLinkRef | RouteLinkRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -116,7 +102,7 @@ class LineShapeStructure2(DataManagedObjectStructure):
             ),
         },
     )
-    locating_system_ref: Optional[str] = field(
+    locating_system_ref: str | None = field(
         default=None,
         metadata={
             "name": "LocatingSystemRef",

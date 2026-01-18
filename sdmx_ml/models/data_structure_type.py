@@ -26,7 +26,7 @@ class DataStructureType(DataStructureBaseType):
         attribute relationshp for a given metadata attribute.
     """
 
-    metadata: Optional[str] = field(
+    metadata: str | None = field(
         default=None,
         metadata={
             "name": "Metadata",

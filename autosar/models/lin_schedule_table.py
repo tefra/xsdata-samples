@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -103,7 +105,7 @@ class LinScheduleTable:
     class Meta:
         name = "LIN-SCHEDULE-TABLE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -112,7 +114,7 @@ class LinScheduleTable:
             "required": True,
         },
     )
-    short_name_fragments: Optional["LinScheduleTable.ShortNameFragments"] = (
+    short_name_fragments: LinScheduleTable.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -122,7 +124,7 @@ class LinScheduleTable:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -130,7 +132,7 @@ class LinScheduleTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -138,7 +140,7 @@ class LinScheduleTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -146,7 +148,7 @@ class LinScheduleTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -154,7 +156,7 @@ class LinScheduleTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -162,7 +164,7 @@ class LinScheduleTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["LinScheduleTable.Annotations"] = field(
+    annotations: LinScheduleTable.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -170,7 +172,7 @@ class LinScheduleTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resume_position: Optional[ResumePosition] = field(
+    resume_position: ResumePosition | None = field(
         default=None,
         metadata={
             "name": "RESUME-POSITION",
@@ -178,7 +180,7 @@ class LinScheduleTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    run_mode: Optional[RunMode] = field(
+    run_mode: RunMode | None = field(
         default=None,
         metadata={
             "name": "RUN-MODE",
@@ -186,7 +188,7 @@ class LinScheduleTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    table_entrys: Optional["LinScheduleTable.TableEntrys"] = field(
+    table_entrys: LinScheduleTable.TableEntrys | None = field(
         default=None,
         metadata={
             "name": "TABLE-ENTRYS",
@@ -194,7 +196,7 @@ class LinScheduleTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -202,14 +204,14 @@ class LinScheduleTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -217,7 +219,7 @@ class LinScheduleTable:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

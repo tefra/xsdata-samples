@@ -22,7 +22,7 @@ class VehicleModelVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "VehicleModel_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -30,7 +30,7 @@ class VehicleModelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -38,7 +38,7 @@ class VehicleModelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    manufacturer: Optional[MultilingualString] = field(
+    manufacturer: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Manufacturer",
@@ -46,15 +46,7 @@ class VehicleModelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_type_ref_or_vehicle_type_ref: Optional[
-        Union[
-            SimpleVehicleTypeRef,
-            CompoundTrainRef,
-            TrainRef,
-            VehicleTypeRef,
-            TransportTypeRef,
-        ]
-    ] = field(
+    transport_type_ref_or_vehicle_type_ref: SimpleVehicleTypeRef | CompoundTrainRef | TrainRef | VehicleTypeRef | TransportTypeRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -87,7 +79,7 @@ class VehicleModelVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    equipment_profiles: Optional[VehicleEquipmentProfileRefsRelStructure] = (
+    equipment_profiles: VehicleEquipmentProfileRefsRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -97,9 +89,7 @@ class VehicleModelVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    vehicle_model_profile_ref: Optional[
-        Union[CycleModelProfileRef, CarModelProfileRef]
-    ] = field(
+    vehicle_model_profile_ref: CycleModelProfileRef | CarModelProfileRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

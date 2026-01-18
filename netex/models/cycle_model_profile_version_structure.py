@@ -14,7 +14,7 @@ class CycleModelProfileVersionStructure(VehicleModelProfileVersionStructure):
     class Meta:
         name = "CycleModelProfile_VersionStructure"
 
-    gear_type_descriotion: Optional[MultilingualString] = field(
+    gear_type_descriotion: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "GearTypeDescriotion",
@@ -22,7 +22,7 @@ class CycleModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    battery: Optional[bool] = field(
+    battery: bool | None = field(
         default=None,
         metadata={
             "name": "Battery",
@@ -30,7 +30,7 @@ class CycleModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    lamps: Optional[bool] = field(
+    lamps: bool | None = field(
         default=None,
         metadata={
             "name": "Lamps",
@@ -38,7 +38,7 @@ class CycleModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    helmet: Optional[bool] = field(
+    helmet: bool | None = field(
         default=None,
         metadata={
             "name": "Helmet",
@@ -46,7 +46,7 @@ class CycleModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    pump: Optional[bool] = field(
+    pump: bool | None = field(
         default=None,
         metadata={
             "name": "Pump",
@@ -54,7 +54,7 @@ class CycleModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    locker: Optional[bool] = field(
+    locker: bool | None = field(
         default=None,
         metadata={
             "name": "Locker",
@@ -62,7 +62,7 @@ class CycleModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    basket: Optional[bool] = field(
+    basket: bool | None = field(
         default=None,
         metadata={
             "name": "Basket",
@@ -70,7 +70,7 @@ class CycleModelProfileVersionStructure(VehicleModelProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    lock: Optional[bool] = field(
+    lock: bool | None = field(
         default=None,
         metadata={
             "name": "Lock",

@@ -16,7 +16,7 @@ class StartTimeAtStopPointVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "StartTimeAtStopPoint_VersionedChildStructure"
 
-    fare_demand_factor_ref: Optional[FareDemandFactorRef] = field(
+    fare_demand_factor_ref: FareDemandFactorRef | None = field(
         default=None,
         metadata={
             "name": "FareDemandFactorRef",
@@ -24,9 +24,7 @@ class StartTimeAtStopPointVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    scheduled_stop_point_ref: Optional[
-        Union[FareScheduledStopPointRef, ScheduledStopPointRef]
-    ] = field(
+    scheduled_stop_point_ref: FareScheduledStopPointRef | ScheduledStopPointRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -44,7 +42,7 @@ class StartTimeAtStopPointVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    start_time: Optional[XmlTime] = field(
+    start_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "StartTime",
@@ -52,7 +50,7 @@ class StartTimeAtStopPointVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_time: Optional[XmlTime] = field(
+    end_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "EndTime",
@@ -60,7 +58,7 @@ class StartTimeAtStopPointVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_offset: Optional[int] = field(
+    day_offset: int | None = field(
         default=None,
         metadata={
             "name": "DayOffset",

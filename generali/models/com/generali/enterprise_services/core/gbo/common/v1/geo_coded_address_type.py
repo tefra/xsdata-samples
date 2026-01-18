@@ -22,7 +22,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class GeoCodedAddressType(AddressType):
-    geocoded_addres_line1: Optional[str] = field(
+    geocoded_addres_line1: str | None = field(
         default=None,
         metadata={
             "name": "GeocodedAddresLine1",
@@ -30,7 +30,7 @@ class GeoCodedAddressType(AddressType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    geocoded_addres_line2: Optional[str] = field(
+    geocoded_addres_line2: str | None = field(
         default=None,
         metadata={
             "name": "GeocodedAddresLine2",
@@ -38,7 +38,7 @@ class GeoCodedAddressType(AddressType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    geocoded_state: Optional[str] = field(
+    geocoded_state: str | None = field(
         default=None,
         metadata={
             "name": "GeocodedState",
@@ -46,7 +46,7 @@ class GeoCodedAddressType(AddressType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    geocoded_town: Optional[str] = field(
+    geocoded_town: str | None = field(
         default=None,
         metadata={
             "name": "GeocodedTown",
@@ -54,7 +54,7 @@ class GeoCodedAddressType(AddressType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    geocoded_zip_code: Optional[str] = field(
+    geocoded_zip_code: str | None = field(
         default=None,
         metadata={
             "name": "GeocodedZipCode",
@@ -62,7 +62,7 @@ class GeoCodedAddressType(AddressType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    geocoded_country: Optional[CountryGbotype] = field(
+    geocoded_country: CountryGbotype | None = field(
         default=None,
         metadata={
             "name": "GeocodedCountry",
@@ -70,7 +70,7 @@ class GeoCodedAddressType(AddressType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    geocoded_accuracy: Optional[GeocodedAccuracyEnum] = field(
+    geocoded_accuracy: GeocodedAccuracyEnum | None = field(
         default=None,
         metadata={
             "name": "GeocodedAccuracy",
@@ -78,7 +78,7 @@ class GeoCodedAddressType(AddressType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    global_position_address: Optional[GeographicLocationType] = field(
+    global_position_address: GeographicLocationType | None = field(
         default=None,
         metadata={
             "name": "GlobalPositionAddress",
@@ -86,7 +86,7 @@ class GeoCodedAddressType(AddressType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    cresta_zone: Optional[CrestaZoneType] = field(
+    cresta_zone: CrestaZoneType | None = field(
         default=None,
         metadata={
             "name": "CrestaZone",
@@ -94,7 +94,7 @@ class GeoCodedAddressType(AddressType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    accuracy_level: Optional[str] = field(
+    accuracy_level: str | None = field(
         default=None,
         metadata={
             "name": "AccuracyLevel",

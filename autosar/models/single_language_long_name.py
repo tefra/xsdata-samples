@@ -30,14 +30,14 @@ class SingleLanguageLongName:
     class Meta:
         name = "SINGLE-LANGUAGE-LONG-NAME"
 
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

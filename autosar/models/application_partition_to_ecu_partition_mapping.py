@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -93,7 +95,7 @@ class ApplicationPartitionToEcuPartitionMapping:
     class Meta:
         name = "APPLICATION-PARTITION-TO-ECU-PARTITION-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -102,9 +104,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ApplicationPartitionToEcuPartitionMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ApplicationPartitionToEcuPartitionMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -112,7 +112,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -120,7 +120,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -128,7 +128,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -136,7 +136,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -144,7 +144,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -152,9 +152,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "ApplicationPartitionToEcuPartitionMapping.Annotations"
-    ] = field(
+    annotations: ApplicationPartitionToEcuPartitionMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -162,9 +160,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    application_partition_refs: Optional[
-        "ApplicationPartitionToEcuPartitionMapping.ApplicationPartitionRefs"
-    ] = field(
+    application_partition_refs: ApplicationPartitionToEcuPartitionMapping.ApplicationPartitionRefs | None = field(
         default=None,
         metadata={
             "name": "APPLICATION-PARTITION-REFS",
@@ -172,9 +168,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_partition_ref: Optional[
-        "ApplicationPartitionToEcuPartitionMapping.EcuPartitionRef"
-    ] = field(
+    ecu_partition_ref: ApplicationPartitionToEcuPartitionMapping.EcuPartitionRef | None = field(
         default=None,
         metadata={
             "name": "ECU-PARTITION-REF",
@@ -182,7 +176,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -190,14 +184,14 @@ class ApplicationPartitionToEcuPartitionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -205,7 +199,7 @@ class ApplicationPartitionToEcuPartitionMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -238,7 +232,7 @@ class ApplicationPartitionToEcuPartitionMapping:
     @dataclass
     class ApplicationPartitionRefs:
         application_partition_ref: list[
-            "ApplicationPartitionToEcuPartitionMapping.ApplicationPartitionRefs.ApplicationPartitionRef"
+            ApplicationPartitionToEcuPartitionMapping.ApplicationPartitionRefs.ApplicationPartitionRef
         ] = field(
             default_factory=list,
             metadata={
@@ -250,7 +244,7 @@ class ApplicationPartitionToEcuPartitionMapping:
 
         @dataclass
         class ApplicationPartitionRef(Ref):
-            dest: Optional[ApplicationPartitionSubtypesEnum] = field(
+            dest: ApplicationPartitionSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -261,7 +255,7 @@ class ApplicationPartitionToEcuPartitionMapping:
 
     @dataclass
     class EcuPartitionRef(Ref):
-        dest: Optional[EcuPartitionSubtypesEnum] = field(
+        dest: EcuPartitionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -14,7 +14,7 @@ class AmountOfPriceUnitProductVersionStructure(FareProductVersionStructure):
     class Meta:
         name = "AmountOfPriceUnitProduct_VersionStructure"
 
-    product_type: Optional[AmountOfPriceUnitEnumeration] = field(
+    product_type: AmountOfPriceUnitEnumeration | None = field(
         default=None,
         metadata={
             "name": "ProductType",
@@ -22,7 +22,7 @@ class AmountOfPriceUnitProductVersionStructure(FareProductVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    price_unit_ref: Optional[PriceUnitRef] = field(
+    price_unit_ref: PriceUnitRef | None = field(
         default=None,
         metadata={
             "name": "PriceUnitRef",
@@ -30,7 +30,7 @@ class AmountOfPriceUnitProductVersionStructure(FareProductVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    amount: Optional[Decimal] = field(
+    amount: Decimal | None = field(
         default=None,
         metadata={
             "name": "Amount",

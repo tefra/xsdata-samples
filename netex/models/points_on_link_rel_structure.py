@@ -25,7 +25,7 @@ class PointsOnLinkRelStructure(StrictContainmentAggregationStructure):
             "min_occurs": 1,
         },
     )
-    line_string: Optional[LineStringType] = field(
+    line_string: LineStringType | None = field(
         default=None,
         metadata={
             "name": "LineString",

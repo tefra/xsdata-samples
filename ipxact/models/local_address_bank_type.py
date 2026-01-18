@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -48,7 +50,7 @@ class LocalAddressBankType:
     class Meta:
         name = "localAddressBankType"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -56,7 +58,7 @@ class LocalAddressBankType:
             "required": True,
         },
     )
-    display_name: Optional[DisplayName] = field(
+    display_name: DisplayName | None = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -64,7 +66,7 @@ class LocalAddressBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -72,14 +74,14 @@ class LocalAddressBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_handles: Optional["LocalAddressBankType.AccessHandles"] = field(
+    access_handles: LocalAddressBankType.AccessHandles | None = field(
         default=None,
         metadata={
             "name": "accessHandles",
@@ -87,7 +89,7 @@ class LocalAddressBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    base_address: Optional[BaseAddress] = field(
+    base_address: BaseAddress | None = field(
         default=None,
         metadata={
             "name": "baseAddress",
@@ -111,21 +113,21 @@ class LocalAddressBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    usage: Optional[UsageType] = field(
+    usage: UsageType | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    volatile: Optional[Volatile] = field(
+    volatile: Volatile | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_policies: Optional[AccessPolicies] = field(
+    access_policies: AccessPolicies | None = field(
         default=None,
         metadata={
             "name": "accessPolicies",
@@ -133,14 +135,14 @@ class LocalAddressBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    parameters: Optional[Parameters] = field(
+    parameters: Parameters | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -148,7 +150,7 @@ class LocalAddressBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bank_alignment: Optional[BankAlignmentType] = field(
+    bank_alignment: BankAlignmentType | None = field(
         default=None,
         metadata={
             "name": "bankAlignment",
@@ -156,7 +158,7 @@ class LocalAddressBankType:
             "required": True,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

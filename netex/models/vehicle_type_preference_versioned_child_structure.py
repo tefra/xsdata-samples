@@ -18,7 +18,7 @@ class VehicleTypePreferenceVersionedChildStructure(
     class Meta:
         name = "VehicleTypePreference_VersionedChildStructure"
 
-    rank: Optional[int] = field(
+    rank: int | None = field(
         default=None,
         metadata={
             "name": "Rank",
@@ -26,7 +26,7 @@ class VehicleTypePreferenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_type_ref: Optional[Union[FareDayTypeRef, DayTypeRef]] = field(
+    day_type_ref: FareDayTypeRef | DayTypeRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -44,7 +44,7 @@ class VehicleTypePreferenceVersionedChildStructure(
             ),
         },
     )
-    vehicle_type_preference_ref: Optional[VehicleTypePreferenceRef] = field(
+    vehicle_type_preference_ref: VehicleTypePreferenceRef | None = field(
         default=None,
         metadata={
             "name": "VehicleTypePreferenceRef",

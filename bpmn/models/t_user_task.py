@@ -20,7 +20,7 @@ class TUserTask(TTask):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    implementation: Union[str, TImplementationValue] = field(
+    implementation: str | TImplementationValue = field(
         default=TImplementationValue.UNSPECIFIED,
         metadata={
             "type": "Attribute",

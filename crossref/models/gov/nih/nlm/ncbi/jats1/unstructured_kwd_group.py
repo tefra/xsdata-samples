@@ -16,54 +16,54 @@ class UnstructuredKwdGroup:
         name = "unstructured-kwd-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    assigning_authority: Optional[str] = field(
+    assigning_authority: str | None = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    kwd_group_type: Optional[str] = field(
+    kwd_group_type: str | None = field(
         default=None,
         metadata={
             "name": "kwd-group-type",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    vocab: Optional[str] = field(
+    vocab: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: Optional[str] = field(
+    vocab_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",

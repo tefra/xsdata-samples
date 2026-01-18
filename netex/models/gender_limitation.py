@@ -11,7 +11,7 @@ class GenderLimitation:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: Optional[GenderLimitationEnumeration] = field(
+    value: GenderLimitationEnumeration | None = field(
         default=None,
         metadata={
             "required": True,

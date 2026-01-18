@@ -38,7 +38,7 @@ __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:BillOfLading-2"
 
 @dataclass(frozen=True)
 class BillOfLadingType:
-    ublextensions: Optional[Ublextensions] = field(
+    ublextensions: Ublextensions | None = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -46,7 +46,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: Optional[UblversionId] = field(
+    ublversion_id: UblversionId | None = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -54,7 +54,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: Optional[CustomizationId] = field(
+    customization_id: CustomizationId | None = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -62,7 +62,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: Optional[ProfileId] = field(
+    profile_id: ProfileId | None = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -70,7 +70,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: Optional[ProfileExecutionId] = field(
+    profile_execution_id: ProfileExecutionId | None = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -78,7 +78,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -87,7 +87,7 @@ class BillOfLadingType:
             "required": True,
         },
     )
-    carrier_assigned_id: Optional[CarrierAssignedId] = field(
+    carrier_assigned_id: CarrierAssignedId | None = field(
         default=None,
         metadata={
             "name": "CarrierAssignedID",
@@ -95,7 +95,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -103,7 +103,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -111,7 +111,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -119,7 +119,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -143,7 +143,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_status_code: Optional[DocumentStatusCode] = field(
+    document_status_code: DocumentStatusCode | None = field(
         default=None,
         metadata={
             "name": "DocumentStatusCode",
@@ -151,7 +151,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    shipping_order_id: Optional[ShippingOrderId] = field(
+    shipping_order_id: ShippingOrderId | None = field(
         default=None,
         metadata={
             "name": "ShippingOrderID",
@@ -159,7 +159,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    to_order_indicator: Optional[ToOrderIndicator] = field(
+    to_order_indicator: ToOrderIndicator | None = field(
         default=None,
         metadata={
             "name": "ToOrderIndicator",
@@ -167,7 +167,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    ad_valorem_indicator: Optional[AdValoremIndicator] = field(
+    ad_valorem_indicator: AdValoremIndicator | None = field(
         default=None,
         metadata={
             "name": "AdValoremIndicator",
@@ -175,7 +175,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declared_carriage_value_amount: Optional[DeclaredCarriageValueAmount] = (
+    declared_carriage_value_amount: DeclaredCarriageValueAmount | None = (
         field(
             default=None,
             metadata={
@@ -193,7 +193,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    consignor_party: Optional[ConsignorParty] = field(
+    consignor_party: ConsignorParty | None = field(
         default=None,
         metadata={
             "name": "ConsignorParty",
@@ -201,7 +201,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    carrier_party: Optional[CarrierParty] = field(
+    carrier_party: CarrierParty | None = field(
         default=None,
         metadata={
             "name": "CarrierParty",
@@ -209,7 +209,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    freight_forwarder_party: Optional[FreightForwarderParty] = field(
+    freight_forwarder_party: FreightForwarderParty | None = field(
         default=None,
         metadata={
             "name": "FreightForwarderParty",
@@ -217,7 +217,7 @@ class BillOfLadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    shipment: Optional[Shipment] = field(
+    shipment: Shipment | None = field(
         default=None,
         metadata={
             "name": "Shipment",

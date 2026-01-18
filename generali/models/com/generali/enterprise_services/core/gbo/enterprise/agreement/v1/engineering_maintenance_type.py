@@ -15,7 +15,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class EngineeringMaintenanceType:
-    inception_date: Optional[DateTimeType] = field(
+    inception_date: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "InceptionDate",
@@ -24,7 +24,7 @@ class EngineeringMaintenanceType:
             "required": True,
         },
     )
-    expiry_date: Optional[DateTimeType] = field(
+    expiry_date: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "ExpiryDate",
@@ -33,7 +33,7 @@ class EngineeringMaintenanceType:
             "required": True,
         },
     )
-    years: Optional[EngineeringMaintenanceTypeYears] = field(
+    years: EngineeringMaintenanceTypeYears | None = field(
         default=None,
         metadata={
             "name": "Years",

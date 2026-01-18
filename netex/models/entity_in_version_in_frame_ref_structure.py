@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class EntityInVersionInFrameRefStructure(VersionOfObjectRefStructure):
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

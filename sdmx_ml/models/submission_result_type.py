@@ -25,7 +25,7 @@ class SubmissionResultType:
         or warning information.
     """
 
-    submitted_structure: Optional[SubmittedStructureType] = field(
+    submitted_structure: SubmittedStructureType | None = field(
         default=None,
         metadata={
             "name": "SubmittedStructure",
@@ -34,7 +34,7 @@ class SubmissionResultType:
             "required": True,
         },
     )
-    status_message: Optional[StatusMessageType2] = field(
+    status_message: StatusMessageType2 | None = field(
         default=None,
         metadata={
             "name": "StatusMessage",

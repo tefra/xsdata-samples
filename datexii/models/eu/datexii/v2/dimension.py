@@ -23,7 +23,7 @@ class Dimension:
     :ivar dimension_extension:
     """
 
-    dimension_length: Optional[float] = field(
+    dimension_length: float | None = field(
         default=None,
         metadata={
             "name": "dimensionLength",
@@ -31,7 +31,7 @@ class Dimension:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    dimension_width: Optional[float] = field(
+    dimension_width: float | None = field(
         default=None,
         metadata={
             "name": "dimensionWidth",
@@ -39,7 +39,7 @@ class Dimension:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    dimension_height: Optional[float] = field(
+    dimension_height: float | None = field(
         default=None,
         metadata={
             "name": "dimensionHeight",
@@ -47,7 +47,7 @@ class Dimension:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    dimension_usable_area: Optional[int] = field(
+    dimension_usable_area: int | None = field(
         default=None,
         metadata={
             "name": "dimensionUsableArea",
@@ -55,7 +55,7 @@ class Dimension:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    dimension_extension: Optional[ExtensionType] = field(
+    dimension_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "dimensionExtension",

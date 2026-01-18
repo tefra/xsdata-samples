@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -44,7 +46,7 @@ class VariableDataPrototypeInCompositionInstanceRef:
         name = "VARIABLE-DATA-PROTOTYPE-IN-COMPOSITION-INSTANCE-REF"
 
     context_sw_component_prototype_ref: list[
-        "VariableDataPrototypeInCompositionInstanceRef.ContextSwComponentPrototypeRef"
+        VariableDataPrototypeInCompositionInstanceRef.ContextSwComponentPrototypeRef
     ] = field(
         default_factory=list,
         metadata={
@@ -53,9 +55,7 @@ class VariableDataPrototypeInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_port_prototype_ref: Optional[
-        "VariableDataPrototypeInCompositionInstanceRef.ContextPortPrototypeRef"
-    ] = field(
+    context_port_prototype_ref: VariableDataPrototypeInCompositionInstanceRef.ContextPortPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-PORT-PROTOTYPE-REF",
@@ -63,9 +63,7 @@ class VariableDataPrototypeInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_variable_data_prototype_ref: Optional[
-        "VariableDataPrototypeInCompositionInstanceRef.TargetVariableDataPrototypeRef"
-    ] = field(
+    target_variable_data_prototype_ref: VariableDataPrototypeInCompositionInstanceRef.TargetVariableDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-VARIABLE-DATA-PROTOTYPE-REF",
@@ -73,7 +71,7 @@ class VariableDataPrototypeInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -81,14 +79,14 @@ class VariableDataPrototypeInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -99,7 +97,7 @@ class VariableDataPrototypeInCompositionInstanceRef:
 
     @dataclass
     class ContextSwComponentPrototypeRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -110,7 +108,7 @@ class VariableDataPrototypeInCompositionInstanceRef:
 
     @dataclass
     class ContextPortPrototypeRef(Ref):
-        dest: Optional[PortPrototypeSubtypesEnum] = field(
+        dest: PortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -121,7 +119,7 @@ class VariableDataPrototypeInCompositionInstanceRef:
 
     @dataclass
     class TargetVariableDataPrototypeRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

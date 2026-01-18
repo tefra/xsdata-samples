@@ -15,7 +15,7 @@ class PointOfInterestSpacesRelStructure(ContainmentAggregationStructure):
         name = "pointOfInterestSpaces_RelStructure"
 
     point_of_interest_space_ref_or_point_of_interest_space: Iterable[
-        Union[SiteComponentRefStructure, PointOfInterestSpace]
+        SiteComponentRefStructure | PointOfInterestSpace
     ] = field(
         default_factory=list,
         metadata={

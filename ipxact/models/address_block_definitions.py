@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,7 +35,7 @@ class AddressBlockDefinitions:
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
     address_block_definition: list[
-        "AddressBlockDefinitions.AddressBlockDefinition"
+        AddressBlockDefinitions.AddressBlockDefinition
     ] = field(
         default_factory=list,
         metadata={
@@ -78,81 +80,81 @@ class AddressBlockDefinitions:
         :ivar id:
         """
 
-        name: Optional[str] = field(
+        name: str | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        display_name: Optional[DisplayName] = field(
+        display_name: DisplayName | None = field(
             default=None,
             metadata={
                 "name": "displayName",
                 "type": "Element",
             },
         )
-        short_description: Optional[ShortDescription] = field(
+        short_description: ShortDescription | None = field(
             default=None,
             metadata={
                 "name": "shortDescription",
                 "type": "Element",
             },
         )
-        description: Optional[Description] = field(
+        description: Description | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        type_identifier: Optional[str] = field(
+        type_identifier: str | None = field(
             default=None,
             metadata={
                 "name": "typeIdentifier",
                 "type": "Element",
             },
         )
-        range: Optional[UnsignedPositiveLongintExpression] = field(
+        range: UnsignedPositiveLongintExpression | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        width: Optional[UnsignedPositiveIntExpression] = field(
+        width: UnsignedPositiveIntExpression | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        usage: Optional[UsageType] = field(
+        usage: UsageType | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        volatile: Optional[Volatile] = field(
+        volatile: Volatile | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        access_policies: Optional[AccessPolicies] = field(
+        access_policies: AccessPolicies | None = field(
             default=None,
             metadata={
                 "name": "accessPolicies",
                 "type": "Element",
             },
         )
-        parameters: Optional[Parameters] = field(
+        parameters: Parameters | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
         register: list[
-            "AddressBlockDefinitions.AddressBlockDefinition.Register"
+            AddressBlockDefinitions.AddressBlockDefinition.Register
         ] = field(
             default_factory=list,
             metadata={
@@ -166,21 +168,21 @@ class AddressBlockDefinitions:
                 "type": "Element",
             },
         )
-        address_unit_bits: Optional[AddressUnitBits] = field(
+        address_unit_bits: AddressUnitBits | None = field(
             default=None,
             metadata={
                 "name": "addressUnitBits",
                 "type": "Element",
             },
         )
-        vendor_extensions: Optional[VendorExtensions] = field(
+        vendor_extensions: VendorExtensions | None = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -218,49 +220,47 @@ class AddressBlockDefinitions:
             :ivar id:
             """
 
-            name: Optional[str] = field(
+            name: str | None = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "required": True,
                 },
             )
-            display_name: Optional[DisplayName] = field(
+            display_name: DisplayName | None = field(
                 default=None,
                 metadata={
                     "name": "displayName",
                     "type": "Element",
                 },
             )
-            short_description: Optional[ShortDescription] = field(
+            short_description: ShortDescription | None = field(
                 default=None,
                 metadata={
                     "name": "shortDescription",
                     "type": "Element",
                 },
             )
-            description: Optional[Description] = field(
+            description: Description | None = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 },
             )
-            access_handles: Optional[
-                "AddressBlockDefinitions.AddressBlockDefinition.Register.AccessHandles"
-            ] = field(
+            access_handles: AddressBlockDefinitions.AddressBlockDefinition.Register.AccessHandles | None = field(
                 default=None,
                 metadata={
                     "name": "accessHandles",
                     "type": "Element",
                 },
             )
-            array: Optional[Array] = field(
+            array: Array | None = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 },
             )
-            address_offset: Optional[UnsignedLongintExpression] = field(
+            address_offset: UnsignedLongintExpression | None = field(
                 default=None,
                 metadata={
                     "name": "addressOffset",
@@ -268,35 +268,33 @@ class AddressBlockDefinitions:
                     "required": True,
                 },
             )
-            register_definition_ref: Optional[
-                "AddressBlockDefinitions.AddressBlockDefinition.Register.RegisterDefinitionRef"
-            ] = field(
+            register_definition_ref: AddressBlockDefinitions.AddressBlockDefinition.Register.RegisterDefinitionRef | None = field(
                 default=None,
                 metadata={
                     "name": "registerDefinitionRef",
                     "type": "Element",
                 },
             )
-            type_identifier: Optional[str] = field(
+            type_identifier: str | None = field(
                 default=None,
                 metadata={
                     "name": "typeIdentifier",
                     "type": "Element",
                 },
             )
-            size: Optional[UnsignedPositiveIntExpression] = field(
+            size: UnsignedPositiveIntExpression | None = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 },
             )
-            volatile: Optional[Volatile] = field(
+            volatile: Volatile | None = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 },
             )
-            access_policies: Optional[AccessPolicies] = field(
+            access_policies: AccessPolicies | None = field(
                 default=None,
                 metadata={
                     "name": "accessPolicies",
@@ -310,27 +308,27 @@ class AddressBlockDefinitions:
                     "type": "Element",
                 },
             )
-            alternate_registers: Optional[AlternateRegisters] = field(
+            alternate_registers: AlternateRegisters | None = field(
                 default=None,
                 metadata={
                     "name": "alternateRegisters",
                     "type": "Element",
                 },
             )
-            parameters: Optional[Parameters] = field(
+            parameters: Parameters | None = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 },
             )
-            vendor_extensions: Optional[VendorExtensions] = field(
+            vendor_extensions: VendorExtensions | None = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
                     "type": "Element",
                 },
             )
-            id: Optional[str] = field(
+            id: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
@@ -357,7 +355,7 @@ class AddressBlockDefinitions:
                         "required": True,
                     },
                 )
-                type_definitions: Optional[str] = field(
+                type_definitions: str | None = field(
                     default=None,
                     metadata={
                         "name": "typeDefinitions",

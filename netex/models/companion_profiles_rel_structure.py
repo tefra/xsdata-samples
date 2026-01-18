@@ -15,7 +15,7 @@ class CompanionProfilesRelStructure(OneToManyRelationshipStructure):
         name = "companionProfiles_RelStructure"
 
     companion_profile_ref_or_companion_profile: Iterable[
-        Union[CompanionProfileRef, CompanionProfile]
+        CompanionProfileRef | CompanionProfile
     ] = field(
         default_factory=list,
         metadata={

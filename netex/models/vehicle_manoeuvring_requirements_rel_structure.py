@@ -19,7 +19,7 @@ class VehicleManoeuvringRequirementsRelStructure(
         name = "vehicleManoeuvringRequirements_RelStructure"
 
     vehicle_manoeuvring_requirement_ref_or_vehicle_manoeuvring_requirement: Iterable[
-        Union[VehicleManoeuvringRequirementRef, VehicleManoeuvringRequirement]
+        VehicleManoeuvringRequirementRef | VehicleManoeuvringRequirement
     ] = field(
         default_factory=list,
         metadata={

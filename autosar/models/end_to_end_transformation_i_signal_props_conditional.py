@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -60,7 +62,7 @@ class EndToEndTransformationISignalPropsConditional:
     class Meta:
         name = "END-TO-END-TRANSFORMATION-I-SIGNAL-PROPS-CONDITIONAL"
 
-    cs_error_reaction: Optional[CsTransformerErrorReactionEnum] = field(
+    cs_error_reaction: CsTransformerErrorReactionEnum | None = field(
         default=None,
         metadata={
             "name": "CS-ERROR-REACTION",
@@ -68,9 +70,7 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_prototype_transformation_propss: Optional[
-        "EndToEndTransformationISignalPropsConditional.DataPrototypeTransformationPropss"
-    ] = field(
+    data_prototype_transformation_propss: EndToEndTransformationISignalPropsConditional.DataPrototypeTransformationPropss | None = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-TRANSFORMATION-PROPSS",
@@ -78,9 +78,7 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformer_ref: Optional[
-        "EndToEndTransformationISignalPropsConditional.TransformerRef"
-    ] = field(
+    transformer_ref: EndToEndTransformationISignalPropsConditional.TransformerRef | None = field(
         default=None,
         metadata={
             "name": "TRANSFORMER-REF",
@@ -88,9 +86,7 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_ids: Optional[
-        "EndToEndTransformationISignalPropsConditional.DataIds"
-    ] = field(
+    data_ids: EndToEndTransformationISignalPropsConditional.DataIds | None = field(
         default=None,
         metadata={
             "name": "DATA-IDS",
@@ -98,7 +94,7 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_length: Optional[PositiveInteger] = field(
+    data_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "DATA-LENGTH",
@@ -106,7 +102,7 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_data_length: Optional[PositiveInteger] = field(
+    max_data_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-DATA-LENGTH",
@@ -114,7 +110,7 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_data_length: Optional[PositiveInteger] = field(
+    min_data_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MIN-DATA-LENGTH",
@@ -122,7 +118,7 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_id: Optional[PositiveInteger] = field(
+    source_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SOURCE-ID",
@@ -130,7 +126,7 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -138,14 +134,14 @@ class EndToEndTransformationISignalPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -169,7 +165,7 @@ class EndToEndTransformationISignalPropsConditional:
 
     @dataclass
     class TransformerRef(Ref):
-        dest: Optional[TransformationTechnologySubtypesEnum] = field(
+        dest: TransformationTechnologySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

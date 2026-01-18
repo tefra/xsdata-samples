@@ -15,9 +15,7 @@ class PointOfInterestClassificationDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "PointOfInterestClassification_DerivedViewStructure"
 
-    point_of_interest_classification_ref: Optional[
-        PointOfInterestClassificationRef
-    ] = field(
+    point_of_interest_classification_ref: PointOfInterestClassificationRef | None = field(
         default=None,
         metadata={
             "name": "PointOfInterestClassificationRef",
@@ -25,7 +23,7 @@ class PointOfInterestClassificationDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",

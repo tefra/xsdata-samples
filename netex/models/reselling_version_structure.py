@@ -25,7 +25,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "Reselling_VersionStructure"
 
-    allowed: Optional[ResellTypeEnumeration] = field(
+    allowed: ResellTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "Allowed",
@@ -33,7 +33,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    can_change_class: Optional[bool] = field(
+    can_change_class: bool | None = field(
         default=None,
         metadata={
             "name": "CanChangeClass",
@@ -41,7 +41,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    unused_tickets_only: Optional[bool] = field(
+    unused_tickets_only: bool | None = field(
         default=None,
         metadata={
             "name": "UnusedTicketsOnly",
@@ -49,7 +49,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    only_at_certain_distribution_points: Optional[bool] = field(
+    only_at_certain_distribution_points: bool | None = field(
         default=None,
         metadata={
             "name": "OnlyAtCertainDistributionPoints",
@@ -57,7 +57,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    resell_when: Optional[ResellWhenEnumeration] = field(
+    resell_when: ResellWhenEnumeration | None = field(
         default=None,
         metadata={
             "name": "ResellWhen",
@@ -65,9 +65,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    exchangable_from_any_time_or_exchangable_from_duration_or_exchangable_from_percent_use: Optional[
-        Union[EmptyType2, XmlDuration, Decimal]
-    ] = field(
+    exchangable_from_any_time_or_exchangable_from_duration_or_exchangable_from_percent_use: EmptyType2 | XmlDuration | Decimal | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -90,7 +88,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             ),
         },
     )
-    exchangable_from_interval_ref: Optional[TimeIntervalRefStructure] = field(
+    exchangable_from_interval_ref: TimeIntervalRefStructure | None = field(
         default=None,
         metadata={
             "name": "ExchangableFromIntervalRef",
@@ -98,9 +96,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    exchangable_until_any_time_or_exchangable_until_duration_or_exchangable_until_percent_use: Optional[
-        Union[EmptyType2, XmlDuration, Decimal]
-    ] = field(
+    exchangable_until_any_time_or_exchangable_until_duration_or_exchangable_until_percent_use: EmptyType2 | XmlDuration | Decimal | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -123,7 +119,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             ),
         },
     )
-    exchangable_until_interval_ref: Optional[TimeIntervalRefStructure] = field(
+    exchangable_until_interval_ref: TimeIntervalRefStructure | None = field(
         default=None,
         metadata={
             "name": "ExchangableUntilIntervalRef",
@@ -131,7 +127,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    effective_from: Optional[EffectiveFromEnumeration] = field(
+    effective_from: EffectiveFromEnumeration | None = field(
         default=None,
         metadata={
             "name": "EffectiveFrom",
@@ -139,7 +135,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notification_period: Optional[XmlDuration] = field(
+    notification_period: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "NotificationPeriod",
@@ -147,7 +143,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_fee: Optional[bool] = field(
+    has_fee: bool | None = field(
         default=None,
         metadata={
             "name": "HasFee",
@@ -155,7 +151,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    refund_basis: Optional[PerBasisEnumeration] = field(
+    refund_basis: PerBasisEnumeration | None = field(
         default=None,
         metadata={
             "name": "RefundBasis",
@@ -172,9 +168,7 @@ class ResellingVersionStructure(UsageParameterVersionStructure):
             "tokens": True,
         },
     )
-    types_of_payment_method_ref: Optional[
-        TypeOfPaymentMethodRefsRelStructure
-    ] = field(
+    types_of_payment_method_ref: TypeOfPaymentMethodRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "typesOfPaymentMethodRef",

@@ -29,14 +29,14 @@ class EcucParameterDerivationFormula:
     class Meta:
         name = "ECUC-PARAMETER-DERIVATION-FORMULA"
 
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class EcucParameterDerivationFormula:
 
     @dataclass
     class EcucQueryRef(Ref):
-        dest: Optional[EcucQuerySubtypesEnum] = field(
+        dest: EcucQuerySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -82,7 +82,7 @@ class EcucParameterDerivationFormula:
 
     @dataclass
     class EcucQueryStringRef(Ref):
-        dest: Optional[EcucQuerySubtypesEnum] = field(
+        dest: EcucQuerySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

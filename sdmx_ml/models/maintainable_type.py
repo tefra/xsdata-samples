@@ -38,7 +38,7 @@ class MaintainableType(MaintainableBaseType):
         service which will return the referenced object.
     """
 
-    agency_id: Optional[str] = field(
+    agency_id: str | None = field(
         default=None,
         metadata={
             "name": "agencyID",
@@ -54,14 +54,14 @@ class MaintainableType(MaintainableBaseType):
             "type": "Attribute",
         },
     )
-    service_url: Optional[str] = field(
+    service_url: str | None = field(
         default=None,
         metadata={
             "name": "serviceURL",
             "type": "Attribute",
         },
     )
-    structure_url: Optional[str] = field(
+    structure_url: str | None = field(
         default=None,
         metadata={
             "name": "structureURL",

@@ -22,7 +22,7 @@ class TpegAreaLocation:
     :ivar tpeg_area_location_extension:
     """
 
-    tpeg_area_location_type: Optional[TpegLoc01AreaLocationSubtypeEnum] = (
+    tpeg_area_location_type: TpegLoc01AreaLocationSubtypeEnum | None = (
         field(
             default=None,
             metadata={
@@ -33,7 +33,7 @@ class TpegAreaLocation:
             },
         )
     )
-    tpeg_height: Optional[TpegHeight] = field(
+    tpeg_height: TpegHeight | None = field(
         default=None,
         metadata={
             "name": "tpegHeight",
@@ -41,7 +41,7 @@ class TpegAreaLocation:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    tpeg_area_location_extension: Optional[ExtensionType] = field(
+    tpeg_area_location_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "tpegAreaLocationExtension",

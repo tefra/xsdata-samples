@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -109,7 +111,7 @@ class Collection:
     class Meta:
         name = "COLLECTION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -118,7 +120,7 @@ class Collection:
             "required": True,
         },
     )
-    short_name_fragments: Optional["Collection.ShortNameFragments"] = field(
+    short_name_fragments: Collection.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -126,7 +128,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -134,7 +136,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -142,7 +144,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -150,7 +152,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -158,7 +160,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -166,7 +168,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["Collection.Annotations"] = field(
+    annotations: Collection.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -174,7 +176,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -182,7 +184,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    auto_collect: Optional[AutoCollectEnum] = field(
+    auto_collect: AutoCollectEnum | None = field(
         default=None,
         metadata={
             "name": "AUTO-COLLECT",
@@ -190,7 +192,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    element_role: Optional[Identifier] = field(
+    element_role: Identifier | None = field(
         default=None,
         metadata={
             "name": "ELEMENT-ROLE",
@@ -198,7 +200,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    element_refs: Optional["Collection.ElementRefs"] = field(
+    element_refs: Collection.ElementRefs | None = field(
         default=None,
         metadata={
             "name": "ELEMENT-REFS",
@@ -206,7 +208,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_element_refs: Optional["Collection.SourceElementRefs"] = field(
+    source_element_refs: Collection.SourceElementRefs | None = field(
         default=None,
         metadata={
             "name": "SOURCE-ELEMENT-REFS",
@@ -214,7 +216,7 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    collected_instance_irefs: Optional["Collection.CollectedInstanceIrefs"] = (
+    collected_instance_irefs: Collection.CollectedInstanceIrefs | None = (
         field(
             default=None,
             metadata={
@@ -224,7 +226,7 @@ class Collection:
             },
         )
     )
-    source_instance_irefs: Optional["Collection.SourceInstanceIrefs"] = field(
+    source_instance_irefs: Collection.SourceInstanceIrefs | None = field(
         default=None,
         metadata={
             "name": "SOURCE-INSTANCE-IREFS",
@@ -232,14 +234,14 @@ class Collection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -247,7 +249,7 @@ class Collection:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -279,7 +281,7 @@ class Collection:
 
     @dataclass
     class ElementRefs:
-        element_ref: list["Collection.ElementRefs.ElementRef"] = field(
+        element_ref: list[Collection.ElementRefs.ElementRef] = field(
             default_factory=list,
             metadata={
                 "name": "ELEMENT-REF",
@@ -290,7 +292,7 @@ class Collection:
 
         @dataclass
         class ElementRef(Ref):
-            dest: Optional[IdentifiableSubtypesEnum] = field(
+            dest: IdentifiableSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -302,7 +304,7 @@ class Collection:
     @dataclass
     class SourceElementRefs:
         source_element_ref: list[
-            "Collection.SourceElementRefs.SourceElementRef"
+            Collection.SourceElementRefs.SourceElementRef
         ] = field(
             default_factory=list,
             metadata={
@@ -314,7 +316,7 @@ class Collection:
 
         @dataclass
         class SourceElementRef(Ref):
-            dest: Optional[IdentifiableSubtypesEnum] = field(
+            dest: IdentifiableSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

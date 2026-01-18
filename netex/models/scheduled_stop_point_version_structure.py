@@ -25,7 +25,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
     class Meta:
         name = "ScheduledStopPoint_VersionStructure"
 
-    stop_areas: Optional[StopAreaRefsRelStructure] = field(
+    stop_areas: StopAreaRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "stopAreas",
@@ -33,7 +33,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariff_zones: Optional[TariffZoneRefsRelStructure] = field(
+    tariff_zones: TariffZoneRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "tariffZones",
@@ -41,7 +41,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -49,7 +49,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name_suffix: Optional[MultilingualString] = field(
+    name_suffix: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "NameSuffix",
@@ -57,7 +57,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -65,7 +65,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    label: Optional[MultilingualString] = field(
+    label: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Label",
@@ -73,7 +73,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_stop_code: Optional[PrivateCodeStructure] = field(
+    short_stop_code: PrivateCodeStructure | None = field(
         default=None,
         metadata={
             "name": "ShortStopCode",
@@ -81,7 +81,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_code: Optional[PrivateCodeStructure] = field(
+    public_code: PrivateCodeStructure | None = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -89,7 +89,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -97,7 +97,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    external_stop_point_ref: Optional[ExternalObjectRefStructure] = field(
+    external_stop_point_ref: ExternalObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "ExternalStopPointRef",
@@ -105,7 +105,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    url: Optional[str] = field(
+    url: str | None = field(
         default=None,
         metadata={
             "name": "Url",
@@ -113,7 +113,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_type: Optional[StopTypeEnumeration] = field(
+    stop_type: StopTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "StopType",
@@ -121,7 +121,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    compass_bearing: Optional[float] = field(
+    compass_bearing: float | None = field(
         default=None,
         metadata={
             "name": "CompassBearing",
@@ -129,7 +129,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    presentation: Optional[PresentationStructure] = field(
+    presentation: PresentationStructure | None = field(
         default=None,
         metadata={
             "name": "Presentation",
@@ -146,7 +146,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "tokens": True,
         },
     )
-    for_alighting: Optional[bool] = field(
+    for_alighting: bool | None = field(
         default=None,
         metadata={
             "name": "ForAlighting",
@@ -154,7 +154,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    for_boarding: Optional[bool] = field(
+    for_boarding: bool | None = field(
         default=None,
         metadata={
             "name": "ForBoarding",
@@ -162,7 +162,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    request_stop: Optional[bool] = field(
+    request_stop: bool | None = field(
         default=None,
         metadata={
             "name": "RequestStop",
@@ -170,7 +170,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    request_method_type: Optional[RequestMethodTypeEnumeration] = field(
+    request_method_type: RequestMethodTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "RequestMethodType",
@@ -178,7 +178,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    country_ref: Optional[CountryRef] = field(
+    country_ref: CountryRef | None = field(
         default=None,
         metadata={
             "name": "CountryRef",
@@ -186,9 +186,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    topographic_place_ref_or_topographic_place_view: Optional[
-        Union[TopographicPlaceRef, TopographicPlaceView]
-    ] = field(
+    topographic_place_ref_or_topographic_place_view: TopographicPlaceRef | TopographicPlaceView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -206,7 +204,7 @@ class ScheduledStopPointVersionStructure(TimingPointVersionStructure):
             ),
         },
     )
-    at_centre: Optional[bool] = field(
+    at_centre: bool | None = field(
         default=None,
         metadata={
             "name": "AtCentre",

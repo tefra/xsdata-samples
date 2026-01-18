@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -41,7 +43,7 @@ class PortDefinedArgumentBlueprint:
     class Meta:
         name = "PORT-DEFINED-ARGUMENT-BLUEPRINT"
 
-    blueprint_mapping_guide: Optional[DocumentationBlock] = field(
+    blueprint_mapping_guide: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-MAPPING-GUIDE",
@@ -49,7 +51,7 @@ class PortDefinedArgumentBlueprint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_type_ref: Optional["PortDefinedArgumentBlueprint.ValueTypeRef"] = (
+    value_type_ref: PortDefinedArgumentBlueprint.ValueTypeRef | None = (
         field(
             default=None,
             metadata={
@@ -59,7 +61,7 @@ class PortDefinedArgumentBlueprint:
             },
         )
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -67,14 +69,14 @@ class PortDefinedArgumentBlueprint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -85,7 +87,7 @@ class PortDefinedArgumentBlueprint:
 
     @dataclass
     class ValueTypeRef(Ref):
-        dest: Optional[ImplementationDataTypeSubtypesEnum] = field(
+        dest: ImplementationDataTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -18,7 +18,7 @@ class Noisbn:
         name = "noisbn"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    reason: Optional[NoisbnReason] = field(
+    reason: NoisbnReason | None = field(
         default=None,
         metadata={
             "type": "Attribute",

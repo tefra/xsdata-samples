@@ -18,7 +18,7 @@ class TpegDescriptor:
     :ivar tpeg_descriptor_extension:
     """
 
-    descriptor: Optional[MultilingualString] = field(
+    descriptor: MultilingualString | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -26,7 +26,7 @@ class TpegDescriptor:
             "required": True,
         },
     )
-    tpeg_descriptor_extension: Optional[ExtensionType] = field(
+    tpeg_descriptor_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "tpegDescriptorExtension",

@@ -16,7 +16,7 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "TrainComponent_VersionStructure"
 
-    label: Optional[MultilingualString] = field(
+    label: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Label",
@@ -24,7 +24,7 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -32,7 +32,7 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_ref: Optional[TrainRef] = field(
+    train_ref: TrainRef | None = field(
         default=None,
         metadata={
             "name": "TrainRef",
@@ -40,9 +40,7 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_element_ref_or_train_element: Optional[
-        Union[TrainElementRef, TrainElement]
-    ] = field(
+    train_element_ref_or_train_element: TrainElementRef | TrainElement | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -60,7 +58,7 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    operational_orientation: Optional[VehicleOrientationEnumeration] = field(
+    operational_orientation: VehicleOrientationEnumeration | None = field(
         default=None,
         metadata={
             "name": "OperationalOrientation",
@@ -68,7 +66,7 @@ class TrainComponentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

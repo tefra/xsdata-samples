@@ -32,22 +32,20 @@ class DiagnosticStatusBitHandlingTestFailedSinceLastClearEnum:
             "DIAGNOSTIC-STATUS-BIT-HANDLING-TEST-FAILED-SINCE-LAST-CLEAR-ENUM"
         )
 
-    value: Optional[
-        DiagnosticStatusBitHandlingTestFailedSinceLastClearEnumSimple
-    ] = field(
+    value: DiagnosticStatusBitHandlingTestFailedSinceLastClearEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

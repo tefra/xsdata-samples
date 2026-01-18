@@ -18,7 +18,7 @@ class AttributeBaseType(ComponentType):
     concept role is restricted to the values valid for a data attribute.
     """
 
-    concept_identity: Optional[str] = field(
+    concept_identity: str | None = field(
         default=None,
         metadata={
             "name": "ConceptIdentity",

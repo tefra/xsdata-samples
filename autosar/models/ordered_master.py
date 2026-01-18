@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -34,7 +36,7 @@ class OrderedMaster:
     class Meta:
         name = "ORDERED-MASTER"
 
-    index: Optional[PositiveInteger] = field(
+    index: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "INDEX",
@@ -42,7 +44,7 @@ class OrderedMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_sync_server_ref: Optional["OrderedMaster.TimeSyncServerRef"] = field(
+    time_sync_server_ref: OrderedMaster.TimeSyncServerRef | None = field(
         default=None,
         metadata={
             "name": "TIME-SYNC-SERVER-REF",
@@ -50,14 +52,14 @@ class OrderedMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -68,7 +70,7 @@ class OrderedMaster:
 
     @dataclass
     class TimeSyncServerRef(Ref):
-        dest: Optional[TimeSyncServerConfigurationSubtypesEnum] = field(
+        dest: TimeSyncServerConfigurationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

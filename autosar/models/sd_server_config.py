@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -46,7 +48,7 @@ class SdServerConfig:
     class Meta:
         name = "SD-SERVER-CONFIG"
 
-    capability_records: Optional["SdServerConfig.CapabilityRecords"] = field(
+    capability_records: SdServerConfig.CapabilityRecords | None = field(
         default=None,
         metadata={
             "name": "CAPABILITY-RECORDS",
@@ -54,7 +56,7 @@ class SdServerConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_offer_behavior: Optional[InitialSdDelayConfig] = field(
+    initial_offer_behavior: InitialSdDelayConfig | None = field(
         default=None,
         metadata={
             "name": "INITIAL-OFFER-BEHAVIOR",
@@ -62,7 +64,7 @@ class SdServerConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    offer_cyclic_delay: Optional[TimeValue] = field(
+    offer_cyclic_delay: TimeValue | None = field(
         default=None,
         metadata={
             "name": "OFFER-CYCLIC-DELAY",
@@ -70,7 +72,7 @@ class SdServerConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    request_response_delay: Optional[RequestResponseDelay] = field(
+    request_response_delay: RequestResponseDelay | None = field(
         default=None,
         metadata={
             "name": "REQUEST-RESPONSE-DELAY",
@@ -78,7 +80,7 @@ class SdServerConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    server_service_major_version: Optional[PositiveInteger] = field(
+    server_service_major_version: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SERVER-SERVICE-MAJOR-VERSION",
@@ -86,7 +88,7 @@ class SdServerConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    server_service_minor_version: Optional[PositiveInteger] = field(
+    server_service_minor_version: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SERVER-SERVICE-MINOR-VERSION",
@@ -94,7 +96,7 @@ class SdServerConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ttl: Optional[PositiveInteger] = field(
+    ttl: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TTL",
@@ -102,14 +104,14 @@ class SdServerConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

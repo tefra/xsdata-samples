@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -36,9 +38,7 @@ class CommunicationControllerMapping:
     class Meta:
         name = "COMMUNICATION-CONTROLLER-MAPPING"
 
-    communication_controller_ref: Optional[
-        "CommunicationControllerMapping.CommunicationControllerRef"
-    ] = field(
+    communication_controller_ref: CommunicationControllerMapping.CommunicationControllerRef | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONTROLLER-REF",
@@ -46,9 +46,7 @@ class CommunicationControllerMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_communication_controller_ref: Optional[
-        "CommunicationControllerMapping.HwCommunicationControllerRef"
-    ] = field(
+    hw_communication_controller_ref: CommunicationControllerMapping.HwCommunicationControllerRef | None = field(
         default=None,
         metadata={
             "name": "HW-COMMUNICATION-CONTROLLER-REF",
@@ -56,14 +54,14 @@ class CommunicationControllerMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -74,7 +72,7 @@ class CommunicationControllerMapping:
 
     @dataclass
     class CommunicationControllerRef(Ref):
-        dest: Optional[CommunicationControllerSubtypesEnum] = field(
+        dest: CommunicationControllerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -85,7 +83,7 @@ class CommunicationControllerMapping:
 
     @dataclass
     class HwCommunicationControllerRef(Ref):
-        dest: Optional[HwElementSubtypesEnum] = field(
+        dest: HwElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -16,7 +16,7 @@ class RoadConditions(Conditions):
     conditions (e.g. oil, mud, leaves etc. on the road).
     """
 
-    road_conditions_extension: Optional[ExtensionType] = field(
+    road_conditions_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "roadConditionsExtension",

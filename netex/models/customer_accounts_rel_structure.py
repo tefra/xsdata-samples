@@ -15,7 +15,7 @@ class CustomerAccountsRelStructure(ContainmentAggregationStructure):
         name = "customerAccounts_RelStructure"
 
     customer_account_ref_or_customer_account: Iterable[
-        Union[CustomerAccountRef, CustomerAccount]
+        CustomerAccountRef | CustomerAccount
     ] = field(
         default_factory=list,
         metadata={

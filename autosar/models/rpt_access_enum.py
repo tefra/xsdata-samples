@@ -28,20 +28,20 @@ class RptAccessEnum:
     class Meta:
         name = "RPT-ACCESS-ENUM"
 
-    value: Optional[RptAccessEnumSimple] = field(
+    value: RptAccessEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -16,11 +18,7 @@ class DataConstraintAttachmentType:
     """
 
     data_provider_or_simple_data_source_or_data_structure: tuple[
-        Union[
-            "DataConstraintAttachmentType.DataProvider",
-            "DataConstraintAttachmentType.SimpleDataSource",
-            "DataConstraintAttachmentType.DataStructure",
-        ],
+        DataConstraintAttachmentType.DataProvider | DataConstraintAttachmentType.SimpleDataSource | DataConstraintAttachmentType.DataStructure,
         ...,
     ] = field(
         default_factory=tuple,
@@ -52,11 +50,7 @@ class DataConstraintAttachmentType:
         },
     )
     queryable_data_source_or_dataflow_or_provision_agreement: tuple[
-        Union[
-            QueryableDataSourceType1,
-            "DataConstraintAttachmentType.Dataflow",
-            "DataConstraintAttachmentType.ProvisionAgreement",
-        ],
+        QueryableDataSourceType1 | DataConstraintAttachmentType.Dataflow | DataConstraintAttachmentType.ProvisionAgreement,
         ...,
     ] = field(
         default_factory=tuple,
@@ -88,7 +82,7 @@ class DataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class DataProvider:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -98,7 +92,7 @@ class DataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class SimpleDataSource:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -107,7 +101,7 @@ class DataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class DataStructure:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -117,7 +111,7 @@ class DataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class Dataflow:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -127,7 +121,7 @@ class DataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class ProvisionAgreement:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,

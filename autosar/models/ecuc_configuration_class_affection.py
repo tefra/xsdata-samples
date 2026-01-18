@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class EcucConfigurationClassAffection:
     class Meta:
         name = "ECUC-CONFIGURATION-CLASS-AFFECTION"
 
-    affected_refs: Optional["EcucConfigurationClassAffection.AffectedRefs"] = (
+    affected_refs: EcucConfigurationClassAffection.AffectedRefs | None = (
         field(
             default=None,
             metadata={
@@ -49,7 +51,7 @@ class EcucConfigurationClassAffection:
             },
         )
     )
-    affection_kind: Optional[EcucAffectionEnum] = field(
+    affection_kind: EcucAffectionEnum | None = field(
         default=None,
         metadata={
             "name": "AFFECTION-KIND",
@@ -57,14 +59,14 @@ class EcucConfigurationClassAffection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -76,7 +78,7 @@ class EcucConfigurationClassAffection:
     @dataclass
     class AffectedRefs:
         affected_ref: list[
-            "EcucConfigurationClassAffection.AffectedRefs.AffectedRef"
+            EcucConfigurationClassAffection.AffectedRefs.AffectedRef
         ] = field(
             default_factory=list,
             metadata={
@@ -88,7 +90,7 @@ class EcucConfigurationClassAffection:
 
         @dataclass
         class AffectedRef(Ref):
-            dest: Optional[EcucCommonAttributesSubtypesEnum] = field(
+            dest: EcucCommonAttributesSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

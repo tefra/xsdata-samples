@@ -34,7 +34,7 @@ class ParkingStatusValidity:
     :ivar parking_status_validity_extension:
     """
 
-    parking_status_time: Optional[XmlDateTime] = field(
+    parking_status_time: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "parkingStatusTime",
@@ -42,7 +42,7 @@ class ParkingStatusValidity:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_status_time_offset_to_origin: Optional[float] = field(
+    parking_status_time_offset_to_origin: float | None = field(
         default=None,
         metadata={
             "name": "parkingStatusTimeOffsetToOrigin",
@@ -50,7 +50,7 @@ class ParkingStatusValidity:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    validity_time_specification: Optional[OverallPeriod] = field(
+    validity_time_specification: OverallPeriod | None = field(
         default=None,
         metadata={
             "name": "validityTimeSpecification",
@@ -58,7 +58,7 @@ class ParkingStatusValidity:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_status_validity_extension: Optional[ExtensionType] = field(
+    parking_status_validity_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "parkingStatusValidityExtension",

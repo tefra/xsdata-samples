@@ -12,7 +12,7 @@ class VehicleChargingEquipmentVersionStructure(PlaceEquipmentVersionStructure):
     class Meta:
         name = "VehicleChargingEquipment_VersionStructure"
 
-    free_recharging: Optional[bool] = field(
+    free_recharging: bool | None = field(
         default=None,
         metadata={
             "name": "FreeRecharging",
@@ -20,7 +20,7 @@ class VehicleChargingEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    reservation_required: Optional[bool] = field(
+    reservation_required: bool | None = field(
         default=None,
         metadata={
             "name": "ReservationRequired",
@@ -28,7 +28,7 @@ class VehicleChargingEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    reservation_url: Optional[str] = field(
+    reservation_url: str | None = field(
         default=None,
         metadata={
             "name": "ReservationUrl",
@@ -36,7 +36,7 @@ class VehicleChargingEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_power: Optional[Decimal] = field(
+    maximum_power: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumPower",
@@ -44,7 +44,7 @@ class VehicleChargingEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    grid_voltage: Optional[Decimal] = field(
+    grid_voltage: Decimal | None = field(
         default=None,
         metadata={
             "name": "GridVoltage",

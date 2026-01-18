@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -40,7 +42,7 @@ class RuleBasedValueCont:
     class Meta:
         name = "RULE-BASED-VALUE-CONT"
 
-    unit_ref: Optional["RuleBasedValueCont.UnitRef"] = field(
+    unit_ref: RuleBasedValueCont.UnitRef | None = field(
         default=None,
         metadata={
             "name": "UNIT-REF",
@@ -48,7 +50,7 @@ class RuleBasedValueCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_arraysize: Optional[ValueList] = field(
+    sw_arraysize: ValueList | None = field(
         default=None,
         metadata={
             "name": "SW-ARRAYSIZE",
@@ -56,7 +58,7 @@ class RuleBasedValueCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rule_based_values: Optional[RuleBasedValueSpecification] = field(
+    rule_based_values: RuleBasedValueSpecification | None = field(
         default=None,
         metadata={
             "name": "RULE-BASED-VALUES",
@@ -64,14 +66,14 @@ class RuleBasedValueCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +84,7 @@ class RuleBasedValueCont:
 
     @dataclass
     class UnitRef(Ref):
-        dest: Optional[UnitSubtypesEnum] = field(
+        dest: UnitSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

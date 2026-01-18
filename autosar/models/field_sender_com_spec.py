@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -85,9 +87,7 @@ class FieldSenderComSpec:
     class Meta:
         name = "FIELD-SENDER-COM-SPEC"
 
-    composite_network_representations: Optional[
-        "FieldSenderComSpec.CompositeNetworkRepresentations"
-    ] = field(
+    composite_network_representations: FieldSenderComSpec.CompositeNetworkRepresentations | None = field(
         default=None,
         metadata={
             "name": "COMPOSITE-NETWORK-REPRESENTATIONS",
@@ -95,7 +95,7 @@ class FieldSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: Optional["FieldSenderComSpec.DataElementRef"] = field(
+    data_element_ref: FieldSenderComSpec.DataElementRef | None = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENT-REF",
@@ -103,7 +103,7 @@ class FieldSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_update_period: Optional[TimeValue] = field(
+    data_update_period: TimeValue | None = field(
         default=None,
         metadata={
             "name": "DATA-UPDATE-PERIOD",
@@ -111,7 +111,7 @@ class FieldSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    handle_out_of_range: Optional[HandleOutOfRangeEnum] = field(
+    handle_out_of_range: HandleOutOfRangeEnum | None = field(
         default=None,
         metadata={
             "name": "HANDLE-OUT-OF-RANGE",
@@ -119,7 +119,7 @@ class FieldSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_representation: Optional[SwDataDefProps] = field(
+    network_representation: SwDataDefProps | None = field(
         default=None,
         metadata={
             "name": "NETWORK-REPRESENTATION",
@@ -127,7 +127,7 @@ class FieldSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sender_intent: Optional[SenderIntentEnum] = field(
+    sender_intent: SenderIntentEnum | None = field(
         default=None,
         metadata={
             "name": "SENDER-INTENT",
@@ -135,7 +135,7 @@ class FieldSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_acknowledge: Optional[TransmissionAcknowledgementRequest] = (
+    transmission_acknowledge: TransmissionAcknowledgementRequest | None = (
         field(
             default=None,
             metadata={
@@ -145,7 +145,7 @@ class FieldSenderComSpec:
             },
         )
     )
-    transmission_props: Optional[TransmissionComSpecProps] = field(
+    transmission_props: TransmissionComSpecProps | None = field(
         default=None,
         metadata={
             "name": "TRANSMISSION-PROPS",
@@ -153,7 +153,7 @@ class FieldSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    uses_end_to_end_protection: Optional[BooleanValueVariationPoint] = field(
+    uses_end_to_end_protection: BooleanValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "USES-END-TO-END-PROTECTION",
@@ -161,7 +161,7 @@ class FieldSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    init_value: Optional["FieldSenderComSpec.InitValue"] = field(
+    init_value: FieldSenderComSpec.InitValue | None = field(
         default=None,
         metadata={
             "name": "INIT-VALUE",
@@ -169,14 +169,14 @@ class FieldSenderComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -200,7 +200,7 @@ class FieldSenderComSpec:
 
     @dataclass
     class DataElementRef(Ref):
-        dest: Optional[AutosarDataPrototypeSubtypesEnum] = field(
+        dest: AutosarDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -211,9 +211,7 @@ class FieldSenderComSpec:
 
     @dataclass
     class InitValue:
-        application_assoc_map_value_specification: Optional[
-            ApplicationAssocMapValueSpecification
-        ] = field(
+        application_assoc_map_value_specification: ApplicationAssocMapValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-ASSOC-MAP-VALUE-SPECIFICATION",
@@ -221,9 +219,7 @@ class FieldSenderComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_rule_based_value_specification: Optional[
-            ApplicationRuleBasedValueSpecification
-        ] = field(
+        application_rule_based_value_specification: ApplicationRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-RULE-BASED-VALUE-SPECIFICATION",
@@ -231,9 +227,7 @@ class FieldSenderComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_value_specification: Optional[
-            ApplicationValueSpecification
-        ] = field(
+        application_value_specification: ApplicationValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-VALUE-SPECIFICATION",
@@ -241,7 +235,7 @@ class FieldSenderComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        array_value_specification: Optional[ArrayValueSpecification] = field(
+        array_value_specification: ArrayValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "ARRAY-VALUE-SPECIFICATION",
@@ -249,9 +243,7 @@ class FieldSenderComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        composite_rule_based_value_specification: Optional[
-            CompositeRuleBasedValueSpecification
-        ] = field(
+        composite_rule_based_value_specification: CompositeRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "COMPOSITE-RULE-BASED-VALUE-SPECIFICATION",
@@ -259,7 +251,7 @@ class FieldSenderComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        constant_reference: Optional[ConstantReference] = field(
+        constant_reference: ConstantReference | None = field(
             default=None,
             metadata={
                 "name": "CONSTANT-REFERENCE",
@@ -267,9 +259,7 @@ class FieldSenderComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        not_available_value_specification: Optional[
-            NotAvailableValueSpecification
-        ] = field(
+        not_available_value_specification: NotAvailableValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NOT-AVAILABLE-VALUE-SPECIFICATION",
@@ -277,9 +267,7 @@ class FieldSenderComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_rule_based_value_specification: Optional[
-            NumericalRuleBasedValueSpecification
-        ] = field(
+        numerical_rule_based_value_specification: NumericalRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-RULE-BASED-VALUE-SPECIFICATION",
@@ -287,9 +275,7 @@ class FieldSenderComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: Optional[
-            NumericalValueSpecification
-        ] = field(
+        numerical_value_specification: NumericalValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-VALUE-SPECIFICATION",
@@ -297,7 +283,7 @@ class FieldSenderComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        record_value_specification: Optional[RecordValueSpecification] = field(
+        record_value_specification: RecordValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "RECORD-VALUE-SPECIFICATION",
@@ -305,9 +291,7 @@ class FieldSenderComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: Optional[
-            ReferenceValueSpecification
-        ] = field(
+        reference_value_specification: ReferenceValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "REFERENCE-VALUE-SPECIFICATION",
@@ -315,7 +299,7 @@ class FieldSenderComSpec:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        text_value_specification: Optional[TextValueSpecification] = field(
+        text_value_specification: TextValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "TEXT-VALUE-SPECIFICATION",

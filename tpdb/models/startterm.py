@@ -11,20 +11,20 @@ class Startterm:
     class Meta:
         name = "startterm"
 
-    constructor_based: Optional[ConstructorBased] = field(
+    constructor_based: ConstructorBased | None = field(
         default=None,
         metadata={
             "name": "constructor-based",
             "type": "Element",
         },
     )
-    full: Optional[Full] = field(
+    full: Full | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    automaton: Optional[Automaton] = field(
+    automaton: Automaton | None = field(
         default=None,
         metadata={
             "type": "Element",

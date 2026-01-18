@@ -14,27 +14,27 @@ class IssnL:
         name = "issn-l"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    assigning_authority: Optional[str] = field(
+    assigning_authority: str | None = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

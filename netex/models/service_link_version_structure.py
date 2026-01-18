@@ -14,7 +14,7 @@ class ServiceLinkVersionStructure(LinkVersionStructure):
     class Meta:
         name = "ServiceLink_VersionStructure"
 
-    from_point_ref: Optional[ScheduledStopPointRefStructure] = field(
+    from_point_ref: ScheduledStopPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "FromPointRef",
@@ -23,7 +23,7 @@ class ServiceLinkVersionStructure(LinkVersionStructure):
             "required": True,
         },
     )
-    to_point_ref: Optional[ScheduledStopPointRefStructure] = field(
+    to_point_ref: ScheduledStopPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "ToPointRef",
@@ -32,7 +32,7 @@ class ServiceLinkVersionStructure(LinkVersionStructure):
             "required": True,
         },
     )
-    vehicle_mode: Optional[VehicleMode] = field(
+    vehicle_mode: VehicleMode | None = field(
         default=None,
         metadata={
             "name": "VehicleMode",
@@ -40,7 +40,7 @@ class ServiceLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operational_context_ref: Optional[OperationalContextRef] = field(
+    operational_context_ref: OperationalContextRef | None = field(
         default=None,
         metadata={
             "name": "OperationalContextRef",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -9,13 +11,13 @@ class DiagramElement:
     class Meta:
         namespace = "http://www.omg.org/spec/DD/20100524/DI"
 
-    extension: Optional["DiagramElement.Extension"] = field(
+    extension: DiagramElement.Extension | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

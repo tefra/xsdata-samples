@@ -21,9 +21,7 @@ class InterUrbanParkingSite(ParkingSite):
     :ivar inter_urban_parking_site_extension:
     """
 
-    inter_urban_parking_site_location: Optional[
-        InterUrbanParkingSiteLocationEnum
-    ] = field(
+    inter_urban_parking_site_location: InterUrbanParkingSiteLocationEnum | None = field(
         default=None,
         metadata={
             "name": "interUrbanParkingSiteLocation",
@@ -32,7 +30,7 @@ class InterUrbanParkingSite(ParkingSite):
             "required": True,
         },
     )
-    inter_urban_parking_site_extension: Optional[ExtensionType] = field(
+    inter_urban_parking_site_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "interUrbanParkingSiteExtension",

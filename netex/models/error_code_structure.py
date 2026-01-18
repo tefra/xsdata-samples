@@ -6,7 +6,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ErrorCodeStructure:
-    error_text: Optional[str] = field(
+    error_text: str | None = field(
         default=None,
         metadata={
             "name": "ErrorText",
@@ -14,7 +14,7 @@ class ErrorCodeStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    number: Optional[int] = field(
+    number: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

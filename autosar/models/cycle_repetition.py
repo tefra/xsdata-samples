@@ -35,7 +35,7 @@ class CycleRepetition:
     class Meta:
         name = "CYCLE-REPETITION"
 
-    base_cycle: Optional[Integer] = field(
+    base_cycle: Integer | None = field(
         default=None,
         metadata={
             "name": "BASE-CYCLE",
@@ -43,7 +43,7 @@ class CycleRepetition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cycle_repetition: Optional[CycleRepetitionType] = field(
+    cycle_repetition: CycleRepetitionType | None = field(
         default=None,
         metadata={
             "name": "CYCLE-REPETITION",
@@ -51,14 +51,14 @@ class CycleRepetition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

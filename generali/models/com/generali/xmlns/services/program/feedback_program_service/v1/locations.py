@@ -15,7 +15,7 @@ class Locations:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    location: Optional[Location] = field(
+    location: Location | None = field(
         default=None,
         metadata={
             "name": "Location",

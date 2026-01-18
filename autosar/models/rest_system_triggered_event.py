@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,7 +33,7 @@ class RestSystemTriggeredEvent:
     class Meta:
         name = "REST-SYSTEM-TRIGGERED-EVENT"
 
-    element_ref: Optional["RestSystemTriggeredEvent.ElementRef"] = field(
+    element_ref: RestSystemTriggeredEvent.ElementRef | None = field(
         default=None,
         metadata={
             "name": "ELEMENT-REF",
@@ -39,14 +41,14 @@ class RestSystemTriggeredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -57,7 +59,7 @@ class RestSystemTriggeredEvent:
 
     @dataclass
     class ElementRef(Ref):
-        dest: Optional[RestElementDefSubtypesEnum] = field(
+        dest: RestElementDefSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

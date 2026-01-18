@@ -17,12 +17,7 @@ class TravelDocumentsRelStructure(FrameContainmentStructure):
         name = "travelDocuments_RelStructure"
 
     choice: Iterable[
-        Union[
-            ServiceAccessCodeRef,
-            TravelDocumentRef,
-            TravelDocument,
-            ServiceAccessCode,
-        ]
+        ServiceAccessCodeRef | TravelDocumentRef | TravelDocument | ServiceAccessCode
     ] = field(
         default_factory=list,
         metadata={

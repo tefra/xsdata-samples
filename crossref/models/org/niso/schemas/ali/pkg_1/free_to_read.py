@@ -14,33 +14,33 @@ class FreeToRead:
         name = "free_to_read"
         namespace = "http://www.niso.org/schemas/ali/1.0/"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    end_date: Optional[str] = field(
+    end_date: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    start_date: Optional[str] = field(
+    start_date: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

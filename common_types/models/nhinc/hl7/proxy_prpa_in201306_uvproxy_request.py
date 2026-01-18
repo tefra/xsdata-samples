@@ -15,7 +15,7 @@ class ProxyPrpaIn201306UvproxyRequestType:
     class Meta:
         name = "Proxy_PRPA_IN201306UVProxyRequestType"
 
-    prpa_in201306_uv02: Optional[PrpaIn201306Uv02] = field(
+    prpa_in201306_uv02: PrpaIn201306Uv02 | None = field(
         default=None,
         metadata={
             "name": "PRPA_IN201306UV02",
@@ -24,7 +24,7 @@ class ProxyPrpaIn201306UvproxyRequestType:
             "required": True,
         },
     )
-    assertion: Optional[AssertionType] = field(
+    assertion: AssertionType | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -32,7 +32,7 @@ class ProxyPrpaIn201306UvproxyRequestType:
             "required": True,
         },
     )
-    nhin_target_system: Optional[NhinTargetSystemType] = field(
+    nhin_target_system: NhinTargetSystemType | None = field(
         default=None,
         metadata={
             "name": "nhinTargetSystem",
@@ -48,7 +48,7 @@ class ProxyPrpaIn201306UvproxySecuredRequestType:
     class Meta:
         name = "Proxy_PRPA_IN201306UVProxySecuredRequestType"
 
-    prpa_in201306_uv02: Optional[PrpaIn201306Uv02] = field(
+    prpa_in201306_uv02: PrpaIn201306Uv02 | None = field(
         default=None,
         metadata={
             "name": "PRPA_IN201306UV02",
@@ -57,7 +57,7 @@ class ProxyPrpaIn201306UvproxySecuredRequestType:
             "required": True,
         },
     )
-    nhin_target_system: Optional[NhinTargetSystemType] = field(
+    nhin_target_system: NhinTargetSystemType | None = field(
         default=None,
         metadata={
             "name": "nhinTargetSystem",

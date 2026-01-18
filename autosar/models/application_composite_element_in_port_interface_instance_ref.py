@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -37,9 +39,7 @@ class ApplicationCompositeElementInPortInterfaceInstanceRef:
     class Meta:
         name = "APPLICATION-COMPOSITE-ELEMENT-IN-PORT-INTERFACE-INSTANCE-REF"
 
-    root_data_prototype_ref: Optional[
-        "ApplicationCompositeElementInPortInterfaceInstanceRef.RootDataPrototypeRef"
-    ] = field(
+    root_data_prototype_ref: ApplicationCompositeElementInPortInterfaceInstanceRef.RootDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "ROOT-DATA-PROTOTYPE-REF",
@@ -48,7 +48,7 @@ class ApplicationCompositeElementInPortInterfaceInstanceRef:
         },
     )
     context_data_prototype_ref: list[
-        "ApplicationCompositeElementInPortInterfaceInstanceRef.ContextDataPrototypeRef"
+        ApplicationCompositeElementInPortInterfaceInstanceRef.ContextDataPrototypeRef
     ] = field(
         default_factory=list,
         metadata={
@@ -57,9 +57,7 @@ class ApplicationCompositeElementInPortInterfaceInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_data_prototype_ref: Optional[
-        "ApplicationCompositeElementInPortInterfaceInstanceRef.TargetDataPrototypeRef"
-    ] = field(
+    target_data_prototype_ref: ApplicationCompositeElementInPortInterfaceInstanceRef.TargetDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-REF",
@@ -67,14 +65,14 @@ class ApplicationCompositeElementInPortInterfaceInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -85,7 +83,7 @@ class ApplicationCompositeElementInPortInterfaceInstanceRef:
 
     @dataclass
     class RootDataPrototypeRef(Ref):
-        dest: Optional[AutosarDataPrototypeSubtypesEnum] = field(
+        dest: AutosarDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -96,9 +94,7 @@ class ApplicationCompositeElementInPortInterfaceInstanceRef:
 
     @dataclass
     class ContextDataPrototypeRef(Ref):
-        dest: Optional[
-            ApplicationCompositeElementDataPrototypeSubtypesEnum
-        ] = field(
+        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -109,9 +105,7 @@ class ApplicationCompositeElementInPortInterfaceInstanceRef:
 
     @dataclass
     class TargetDataPrototypeRef(Ref):
-        dest: Optional[
-            ApplicationCompositeElementDataPrototypeSubtypesEnum
-        ] = field(
+        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

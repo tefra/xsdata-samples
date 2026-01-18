@@ -25,7 +25,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/org
 
 @dataclass
 class ExtendedRecordType:
-    company_info: Optional[CompanyInfoType] = field(
+    company_info: CompanyInfoType | None = field(
         default=None,
         metadata={
             "name": "CompanyInfo",
@@ -33,7 +33,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    global_ultimate_info: Optional[GlobalUltimateInfoType] = field(
+    global_ultimate_info: GlobalUltimateInfoType | None = field(
         default=None,
         metadata={
             "name": "GlobalUltimateInfo",
@@ -41,7 +41,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    domestic_ultimate_info: Optional[DomesticUltimateInfoType] = field(
+    domestic_ultimate_info: DomesticUltimateInfoType | None = field(
         default=None,
         metadata={
             "name": "DomesticUltimateInfo",
@@ -49,7 +49,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    tree_below_info: Optional[TreeBelowType] = field(
+    tree_below_info: TreeBelowType | None = field(
         default=None,
         metadata={
             "name": "TreeBelowInfo",
@@ -57,9 +57,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    duplicated_gunsnumbers: Optional[
-        ExtendedRecordTypeDuplicatedGunsnumbers
-    ] = field(
+    duplicated_gunsnumbers: ExtendedRecordTypeDuplicatedGunsnumbers | None = field(
         default=None,
         metadata={
             "name": "DuplicatedGUNSNumbers",
@@ -67,7 +65,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    party_roles: Optional[ExtendedRecordTypePartyRoles] = field(
+    party_roles: ExtendedRecordTypePartyRoles | None = field(
         default=None,
         metadata={
             "name": "PartyRoles",

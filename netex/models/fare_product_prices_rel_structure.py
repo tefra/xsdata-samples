@@ -18,7 +18,7 @@ class FareProductPricesRelStructure(StrictContainmentAggregationStructure):
         name = "fareProductPrices_RelStructure"
 
     fare_product_price_ref_or_cell_ref_or_fare_product_price: Iterable[
-        Union[FareProductPriceRef, CellRef, FareProductPrice]
+        FareProductPriceRef | CellRef | FareProductPrice
     ] = field(
         default_factory=list,
         metadata={

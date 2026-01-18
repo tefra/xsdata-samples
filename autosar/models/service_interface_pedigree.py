@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -84,7 +86,7 @@ class ServiceInterfacePedigree:
     class Meta:
         name = "SERVICE-INTERFACE-PEDIGREE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -93,9 +95,7 @@ class ServiceInterfacePedigree:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ServiceInterfacePedigree.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ServiceInterfacePedigree.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -103,7 +103,7 @@ class ServiceInterfacePedigree:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -111,7 +111,7 @@ class ServiceInterfacePedigree:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -119,7 +119,7 @@ class ServiceInterfacePedigree:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -127,7 +127,7 @@ class ServiceInterfacePedigree:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -135,7 +135,7 @@ class ServiceInterfacePedigree:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -143,7 +143,7 @@ class ServiceInterfacePedigree:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ServiceInterfacePedigree.Annotations"] = field(
+    annotations: ServiceInterfacePedigree.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -151,7 +151,7 @@ class ServiceInterfacePedigree:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -159,9 +159,7 @@ class ServiceInterfacePedigree:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_interface_refs: Optional[
-        "ServiceInterfacePedigree.ServiceInterfaceRefs"
-    ] = field(
+    service_interface_refs: ServiceInterfacePedigree.ServiceInterfaceRefs | None = field(
         default=None,
         metadata={
             "name": "SERVICE-INTERFACE-REFS",
@@ -169,14 +167,14 @@ class ServiceInterfacePedigree:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -184,7 +182,7 @@ class ServiceInterfacePedigree:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -217,7 +215,7 @@ class ServiceInterfacePedigree:
     @dataclass
     class ServiceInterfaceRefs:
         service_interface_ref: list[
-            "ServiceInterfacePedigree.ServiceInterfaceRefs.ServiceInterfaceRef"
+            ServiceInterfacePedigree.ServiceInterfaceRefs.ServiceInterfaceRef
         ] = field(
             default_factory=list,
             metadata={
@@ -229,7 +227,7 @@ class ServiceInterfacePedigree:
 
         @dataclass
         class ServiceInterfaceRef(Ref):
-            dest: Optional[ServiceInterfaceSubtypesEnum] = field(
+            dest: ServiceInterfaceSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

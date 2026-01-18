@@ -31,7 +31,7 @@ class CoctMt040008UvResponsible:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -55,14 +55,14 @@ class CoctMt040008UvResponsible:
             "min_occurs": 1,
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -70,7 +70,7 @@ class CoctMt040008UvResponsible:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    agent_organization: Optional[CoctMt150007UvOrganization] = field(
+    agent_organization: CoctMt150007UvOrganization | None = field(
         default=None,
         metadata={
             "name": "agentOrganization",
@@ -79,7 +79,7 @@ class CoctMt040008UvResponsible:
             "nillable": True,
         },
     )
-    agent_person: Optional[CoctMt030207UvPerson] = field(
+    agent_person: CoctMt030207UvPerson | None = field(
         default=None,
         metadata={
             "name": "agentPerson",
@@ -88,7 +88,7 @@ class CoctMt040008UvResponsible:
             "nillable": True,
         },
     )
-    agent_device: Optional[CoctMt140007UvDevice] = field(
+    agent_device: CoctMt140007UvDevice | None = field(
         default=None,
         metadata={
             "name": "agentDevice",
@@ -97,7 +97,7 @@ class CoctMt040008UvResponsible:
             "nillable": True,
         },
     )
-    represented_organization: Optional[CoctMt150007UvOrganization] = field(
+    represented_organization: CoctMt150007UvOrganization | None = field(
         default=None,
         metadata={
             "name": "representedOrganization",
@@ -106,7 +106,7 @@ class CoctMt040008UvResponsible:
             "nillable": True,
         },
     )
-    represented_person: Optional[CoctMt030207UvPerson] = field(
+    represented_person: CoctMt030207UvPerson | None = field(
         default=None,
         metadata={
             "name": "representedPerson",
@@ -115,7 +115,7 @@ class CoctMt040008UvResponsible:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",

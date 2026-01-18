@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -57,7 +59,7 @@ class End2EndMethodProtectionProps:
     class Meta:
         name = "END-2-END-METHOD-PROTECTION-PROPS"
 
-    data_ids: Optional["End2EndMethodProtectionProps.DataIds"] = field(
+    data_ids: End2EndMethodProtectionProps.DataIds | None = field(
         default=None,
         metadata={
             "name": "DATA-IDS",
@@ -65,7 +67,7 @@ class End2EndMethodProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_length: Optional[PositiveInteger] = field(
+    data_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "DATA-LENGTH",
@@ -73,7 +75,7 @@ class End2EndMethodProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_update_period: Optional[TimeValue] = field(
+    data_update_period: TimeValue | None = field(
         default=None,
         metadata={
             "name": "DATA-UPDATE-PERIOD",
@@ -81,9 +83,7 @@ class End2EndMethodProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    e_2_e_profile_configuration_ref: Optional[
-        "End2EndMethodProtectionProps.E2EProfileConfigurationRef"
-    ] = field(
+    e_2_e_profile_configuration_ref: End2EndMethodProtectionProps.E2EProfileConfigurationRef | None = field(
         default=None,
         metadata={
             "name": "E-2-E-PROFILE-CONFIGURATION-REF",
@@ -91,7 +91,7 @@ class End2EndMethodProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_data_length: Optional[PositiveInteger] = field(
+    max_data_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-DATA-LENGTH",
@@ -99,7 +99,7 @@ class End2EndMethodProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_ref: Optional["End2EndMethodProtectionProps.MethodRef"] = field(
+    method_ref: End2EndMethodProtectionProps.MethodRef | None = field(
         default=None,
         metadata={
             "name": "METHOD-REF",
@@ -107,7 +107,7 @@ class End2EndMethodProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_data_length: Optional[PositiveInteger] = field(
+    min_data_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MIN-DATA-LENGTH",
@@ -115,7 +115,7 @@ class End2EndMethodProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_id: Optional[PositiveInteger] = field(
+    source_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SOURCE-ID",
@@ -123,14 +123,14 @@ class End2EndMethodProtectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -163,7 +163,7 @@ class End2EndMethodProtectionProps:
 
     @dataclass
     class E2EProfileConfigurationRef(Ref):
-        dest: Optional[E2EProfileConfigurationSubtypesEnum] = field(
+        dest: E2EProfileConfigurationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -174,7 +174,7 @@ class End2EndMethodProtectionProps:
 
     @dataclass
     class MethodRef(Ref):
-        dest: Optional[ServiceMethodDeploymentSubtypesEnum] = field(
+        dest: ServiceMethodDeploymentSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -59,7 +59,7 @@ class ParkingOccupancy:
     :ivar parking_occupancy_extension:
     """
 
-    parking_number_of_spaces_override: Optional[int] = field(
+    parking_number_of_spaces_override: int | None = field(
         default=None,
         metadata={
             "name": "parkingNumberOfSpacesOverride",
@@ -67,7 +67,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_number_of_vacant_spaces: Optional[int] = field(
+    parking_number_of_vacant_spaces: int | None = field(
         default=None,
         metadata={
             "name": "parkingNumberOfVacantSpaces",
@@ -75,7 +75,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_number_of_vacant_spaces_lower_than: Optional[int] = field(
+    parking_number_of_vacant_spaces_lower_than: int | None = field(
         default=None,
         metadata={
             "name": "parkingNumberOfVacantSpacesLowerThan",
@@ -83,7 +83,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_number_of_vacant_spaces_higher_than: Optional[int] = field(
+    parking_number_of_vacant_spaces_higher_than: int | None = field(
         default=None,
         metadata={
             "name": "parkingNumberOfVacantSpacesHigherThan",
@@ -91,9 +91,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_number_of_vacant_spaces_graded: Optional[
-        ParkingVacantSpacesEnum
-    ] = field(
+    parking_number_of_vacant_spaces_graded: ParkingVacantSpacesEnum | None = field(
         default=None,
         metadata={
             "name": "parkingNumberOfVacantSpacesGraded",
@@ -101,7 +99,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_number_of_occupied_spaces: Optional[int] = field(
+    parking_number_of_occupied_spaces: int | None = field(
         default=None,
         metadata={
             "name": "parkingNumberOfOccupiedSpaces",
@@ -109,7 +107,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_number_of_vehicles: Optional[int] = field(
+    parking_number_of_vehicles: int | None = field(
         default=None,
         metadata={
             "name": "parkingNumberOfVehicles",
@@ -117,7 +115,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_occupancy: Optional[float] = field(
+    parking_occupancy: float | None = field(
         default=None,
         metadata={
             "name": "parkingOccupancy",
@@ -125,7 +123,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_occupancy_graded: Optional[ParkingOccupancyEnum] = field(
+    parking_occupancy_graded: ParkingOccupancyEnum | None = field(
         default=None,
         metadata={
             "name": "parkingOccupancyGraded",
@@ -133,7 +131,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_occupancy_trend: Optional[ParkingOccupancyTrendEnum] = field(
+    parking_occupancy_trend: ParkingOccupancyTrendEnum | None = field(
         default=None,
         metadata={
             "name": "parkingOccupancyTrend",
@@ -141,7 +139,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_not_allowed: Optional[bool] = field(
+    parking_not_allowed: bool | None = field(
         default=None,
         metadata={
             "name": "parkingNotAllowed",
@@ -157,7 +155,7 @@ class ParkingOccupancy:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_occupancy_extension: Optional[ExtensionType] = field(
+    parking_occupancy_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "parkingOccupancyExtension",

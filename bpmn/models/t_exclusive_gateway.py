@@ -11,7 +11,7 @@ class TExclusiveGateway(TGateway):
     class Meta:
         name = "tExclusiveGateway"
 
-    default: Optional[str] = field(
+    default: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

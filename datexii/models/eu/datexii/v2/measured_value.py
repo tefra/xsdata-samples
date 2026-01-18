@@ -33,7 +33,7 @@ class MeasuredValue:
     :ivar measured_value_extension:
     """
 
-    measurement_equipment_type_used: Optional[MultilingualString] = field(
+    measurement_equipment_type_used: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "measurementEquipmentTypeUsed",
@@ -41,9 +41,7 @@ class MeasuredValue:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    location_characteristics_override: Optional[
-        LocationCharacteristicsOverride
-    ] = field(
+    location_characteristics_override: LocationCharacteristicsOverride | None = field(
         default=None,
         metadata={
             "name": "locationCharacteristicsOverride",
@@ -59,7 +57,7 @@ class MeasuredValue:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    basic_data: Optional[BasicData] = field(
+    basic_data: BasicData | None = field(
         default=None,
         metadata={
             "name": "basicData",
@@ -67,7 +65,7 @@ class MeasuredValue:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measured_value_extension: Optional[ExtensionType] = field(
+    measured_value_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "measuredValueExtension",

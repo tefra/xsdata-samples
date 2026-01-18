@@ -28,7 +28,7 @@ class InstitutionId:
             "pattern": r"[hH][tT][tT][pP][sS]://.{1,50}",
         },
     )
-    type_value: Optional[InstitutionIdType] = field(
+    type_value: InstitutionIdType | None = field(
         default=None,
         metadata={
             "name": "type",

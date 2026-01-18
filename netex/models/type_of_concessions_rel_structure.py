@@ -15,7 +15,7 @@ class TypeOfConcessionsRelStructure(ContainmentAggregationStructure):
         name = "typeOfConcessions_RelStructure"
 
     type_of_concession_ref_or_type_of_concession: Iterable[
-        Union[TypeOfConcessionRef, TypeOfConcession]
+        TypeOfConcessionRef | TypeOfConcession
     ] = field(
         default_factory=list,
         metadata={

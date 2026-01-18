@@ -23,18 +23,7 @@ class JourneyRefsRelStructure(OneToManyRelationshipStructure):
         name = "journeyRefs_RelStructure"
 
     choice: Iterable[
-        Union[
-            SingleJourneyRef,
-            DatedVehicleJourneyRef,
-            DatedSpecialServiceRef,
-            SpecialServiceRef,
-            TemplateServiceJourneyRef,
-            ServiceJourneyRef,
-            DeadRunRef,
-            VehicleJourneyRef,
-            JourneyDesignator,
-            ServiceDesignator,
-        ]
+        SingleJourneyRef | DatedVehicleJourneyRef | DatedSpecialServiceRef | SpecialServiceRef | TemplateServiceJourneyRef | ServiceJourneyRef | DeadRunRef | VehicleJourneyRef | JourneyDesignator | ServiceDesignator
     ] = field(
         default_factory=list,
         metadata={

@@ -68,7 +68,7 @@ class VmsPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_code: Optional[str] = field(
+    pictogram_code: str | None = field(
         default=None,
         metadata={
             "name": "pictogramCode",
@@ -77,7 +77,7 @@ class VmsPictogram:
             "max_length": 1024,
         },
     )
-    pictogram_url: Optional[str] = field(
+    pictogram_url: str | None = field(
         default=None,
         metadata={
             "name": "pictogramUrl",
@@ -85,7 +85,7 @@ class VmsPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    additional_pictogram_description: Optional[MultilingualString] = field(
+    additional_pictogram_description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "additionalPictogramDescription",
@@ -93,7 +93,7 @@ class VmsPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_flashing: Optional[bool] = field(
+    pictogram_flashing: bool | None = field(
         default=None,
         metadata={
             "name": "pictogramFlashing",
@@ -101,7 +101,7 @@ class VmsPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_in_inverse_colour: Optional[bool] = field(
+    pictogram_in_inverse_colour: bool | None = field(
         default=None,
         metadata={
             "name": "pictogramInInverseColour",
@@ -109,7 +109,7 @@ class VmsPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    presence_of_red_triangle: Optional[bool] = field(
+    presence_of_red_triangle: bool | None = field(
         default=None,
         metadata={
             "name": "presenceOfRedTriangle",
@@ -118,7 +118,7 @@ class VmsPictogram:
             "required": True,
         },
     )
-    vienna_convention_compliant: Optional[bool] = field(
+    vienna_convention_compliant: bool | None = field(
         default=None,
         metadata={
             "name": "viennaConventionCompliant",
@@ -126,7 +126,7 @@ class VmsPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    distance_attribute: Optional[int] = field(
+    distance_attribute: int | None = field(
         default=None,
         metadata={
             "name": "distanceAttribute",
@@ -134,7 +134,7 @@ class VmsPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    height_attribute: Optional[float] = field(
+    height_attribute: float | None = field(
         default=None,
         metadata={
             "name": "heightAttribute",
@@ -142,7 +142,7 @@ class VmsPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    length_attribute: Optional[float] = field(
+    length_attribute: float | None = field(
         default=None,
         metadata={
             "name": "lengthAttribute",
@@ -150,7 +150,7 @@ class VmsPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    speed_attribute: Optional[float] = field(
+    speed_attribute: float | None = field(
         default=None,
         metadata={
             "name": "speedAttribute",
@@ -158,7 +158,7 @@ class VmsPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    weight_attribute: Optional[float] = field(
+    weight_attribute: float | None = field(
         default=None,
         metadata={
             "name": "weightAttribute",
@@ -166,7 +166,7 @@ class VmsPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    weight_per_axle_attribute: Optional[float] = field(
+    weight_per_axle_attribute: float | None = field(
         default=None,
         metadata={
             "name": "weightPerAxleAttribute",
@@ -174,7 +174,7 @@ class VmsPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    width_attribute: Optional[float] = field(
+    width_attribute: float | None = field(
         default=None,
         metadata={
             "name": "widthAttribute",
@@ -182,7 +182,7 @@ class VmsPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_supplementary_panel: Optional[VmsSupplementaryPanel] = field(
+    vms_supplementary_panel: VmsSupplementaryPanel | None = field(
         default=None,
         metadata={
             "name": "vmsSupplementaryPanel",
@@ -190,7 +190,7 @@ class VmsPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_pictogram_extension: Optional[ExtensionType] = field(
+    vms_pictogram_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "vmsPictogramExtension",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -83,7 +85,7 @@ class EcucValidationCondition:
     class Meta:
         name = "ECUC-VALIDATION-CONDITION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -92,9 +94,7 @@ class EcucValidationCondition:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "EcucValidationCondition.ShortNameFragments"
-    ] = field(
+    short_name_fragments: EcucValidationCondition.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -102,7 +102,7 @@ class EcucValidationCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -110,7 +110,7 @@ class EcucValidationCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -118,7 +118,7 @@ class EcucValidationCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -126,7 +126,7 @@ class EcucValidationCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -134,7 +134,7 @@ class EcucValidationCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -142,7 +142,7 @@ class EcucValidationCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["EcucValidationCondition.Annotations"] = field(
+    annotations: EcucValidationCondition.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -150,7 +150,7 @@ class EcucValidationCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_querys: Optional["EcucValidationCondition.EcucQuerys"] = field(
+    ecuc_querys: EcucValidationCondition.EcucQuerys | None = field(
         default=None,
         metadata={
             "name": "ECUC-QUERYS",
@@ -158,7 +158,7 @@ class EcucValidationCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    validation_formula: Optional[EcucConditionFormula] = field(
+    validation_formula: EcucConditionFormula | None = field(
         default=None,
         metadata={
             "name": "VALIDATION-FORMULA",
@@ -166,14 +166,14 @@ class EcucValidationCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -181,7 +181,7 @@ class EcucValidationCondition:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

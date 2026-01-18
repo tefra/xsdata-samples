@@ -22,11 +22,7 @@ class VehicleMeetingPointAssignmentsRelStructure(
         name = "vehicleMeetingPointAssignments_RelStructure"
 
     dynamic_vehicle_meeting_point_assignment_ref_or_vehicle_meeting_point_assignment_ref_or_vehicle_meeting_point_assignment: Iterable[
-        Union[
-            DynamicVehicleMeetingPointAssignmentRef,
-            VehicleMeetingPointAssignmentRef,
-            VehicleMeetingPointAssignment1,
-        ]
+        DynamicVehicleMeetingPointAssignmentRef | VehicleMeetingPointAssignmentRef | VehicleMeetingPointAssignment1
     ] = field(
         default_factory=list,
         metadata={

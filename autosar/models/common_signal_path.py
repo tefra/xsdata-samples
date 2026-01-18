@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -42,7 +44,7 @@ class CommonSignalPath:
     class Meta:
         name = "COMMON-SIGNAL-PATH"
 
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -50,7 +52,7 @@ class CommonSignalPath:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -58,7 +60,7 @@ class CommonSignalPath:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operations: Optional["CommonSignalPath.Operations"] = field(
+    operations: CommonSignalPath.Operations | None = field(
         default=None,
         metadata={
             "name": "OPERATIONS",
@@ -66,7 +68,7 @@ class CommonSignalPath:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    signals: Optional["CommonSignalPath.Signals"] = field(
+    signals: CommonSignalPath.Signals | None = field(
         default=None,
         metadata={
             "name": "SIGNALS",
@@ -74,14 +76,14 @@ class CommonSignalPath:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

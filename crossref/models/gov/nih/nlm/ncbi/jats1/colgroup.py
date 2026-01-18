@@ -22,32 +22,32 @@ class Colgroup:
             "type": "Element",
         },
     )
-    align: Optional[ColgroupAlign] = field(
+    align: ColgroupAlign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: Optional[str] = field(
+    char: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: Optional[str] = field(
+    charoff: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -59,25 +59,25 @@ class Colgroup:
             "type": "Attribute",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: Optional[ColgroupValign] = field(
+    valign: ColgroupValign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    width: Optional[str] = field(
+    width: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

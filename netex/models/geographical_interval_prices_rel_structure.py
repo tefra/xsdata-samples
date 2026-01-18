@@ -22,11 +22,7 @@ class GeographicalIntervalPricesRelStructure(
         name = "geographicalIntervalPrices_RelStructure"
 
     geographical_interval_price_ref_or_geographical_interval_price_or_cell_ref: Iterable[
-        Union[
-            GeographicalIntervalPriceRef,
-            GeographicalIntervalPriceVersionedChildStructure,
-            CellRef,
-        ]
+        GeographicalIntervalPriceRef | GeographicalIntervalPriceVersionedChildStructure | CellRef
     ] = field(
         default_factory=list,
         metadata={

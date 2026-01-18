@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -94,7 +96,7 @@ class ProcessDesign:
     class Meta:
         name = "PROCESS-DESIGN"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -103,7 +105,7 @@ class ProcessDesign:
             "required": True,
         },
     )
-    short_name_fragments: Optional["ProcessDesign.ShortNameFragments"] = field(
+    short_name_fragments: ProcessDesign.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -111,7 +113,7 @@ class ProcessDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -119,7 +121,7 @@ class ProcessDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -127,7 +129,7 @@ class ProcessDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -135,7 +137,7 @@ class ProcessDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -143,7 +145,7 @@ class ProcessDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -151,7 +153,7 @@ class ProcessDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ProcessDesign.Annotations"] = field(
+    annotations: ProcessDesign.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -159,7 +161,7 @@ class ProcessDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -167,9 +169,7 @@ class ProcessDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    deterministic_client_resource_needss: Optional[
-        "ProcessDesign.DeterministicClientResourceNeedss"
-    ] = field(
+    deterministic_client_resource_needss: ProcessDesign.DeterministicClientResourceNeedss | None = field(
         default=None,
         metadata={
             "name": "DETERMINISTIC-CLIENT-RESOURCE-NEEDSS",
@@ -177,7 +177,7 @@ class ProcessDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    executable_ref: Optional["ProcessDesign.ExecutableRef"] = field(
+    executable_ref: ProcessDesign.ExecutableRef | None = field(
         default=None,
         metadata={
             "name": "EXECUTABLE-REF",
@@ -185,14 +185,14 @@ class ProcessDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -200,7 +200,7 @@ class ProcessDesign:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -245,7 +245,7 @@ class ProcessDesign:
 
     @dataclass
     class ExecutableRef(Ref):
-        dest: Optional[ExecutableSubtypesEnum] = field(
+        dest: ExecutableSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

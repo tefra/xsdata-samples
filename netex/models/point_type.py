@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class PointType(AbstractGeometricPrimitiveType):
-    pos: Optional[Pos] = field(
+    pos: Pos | None = field(
         default=None,
         metadata={
             "type": "Element",

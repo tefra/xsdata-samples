@@ -14,7 +14,7 @@ class HumidityInformation(WeatherData):
     Measurements of atmospheric humidity.
     """
 
-    humidity: Optional[Humidity] = field(
+    humidity: Humidity | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -22,7 +22,7 @@ class HumidityInformation(WeatherData):
             "required": True,
         },
     )
-    humidity_information_extension: Optional[ExtensionType] = field(
+    humidity_information_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "humidityInformationExtension",

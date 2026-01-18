@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -93,7 +95,7 @@ class SwRecordLayoutV:
     class Meta:
         name = "SW-RECORD-LAYOUT-V"
 
-    short_label: Optional[Identifier] = field(
+    short_label: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -101,7 +103,7 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[AsamRecordLayoutSemantics] = field(
+    category: AsamRecordLayoutSemantics | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -109,7 +111,7 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -117,7 +119,7 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_type_ref: Optional["SwRecordLayoutV.BaseTypeRef"] = field(
+    base_type_ref: SwRecordLayoutV.BaseTypeRef | None = field(
         default=None,
         metadata={
             "name": "BASE-TYPE-REF",
@@ -125,7 +127,7 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_v_axis: Optional[AxisIndexType] = field(
+    sw_record_layout_v_axis: AxisIndexType | None = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-V-AXIS",
@@ -133,7 +135,7 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_v_prop: Optional[NmtokenString] = field(
+    sw_record_layout_v_prop: NmtokenString | None = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-V-PROP",
@@ -141,7 +143,7 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_v_index: Optional[NmtokensString] = field(
+    sw_record_layout_v_index: NmtokensString | None = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-V-INDEX",
@@ -149,9 +151,7 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_generic_axis_param_type_ref: Optional[
-        "SwRecordLayoutV.SwGenericAxisParamTypeRef"
-    ] = field(
+    sw_generic_axis_param_type_ref: SwRecordLayoutV.SwGenericAxisParamTypeRef | None = field(
         default=None,
         metadata={
             "name": "SW-GENERIC-AXIS-PARAM-TYPE-REF",
@@ -159,7 +159,7 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_v_fix_value: Optional[Integer] = field(
+    sw_record_layout_v_fix_value: Integer | None = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-V-FIX-VALUE",
@@ -167,14 +167,14 @@ class SwRecordLayoutV:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -185,7 +185,7 @@ class SwRecordLayoutV:
 
     @dataclass
     class BaseTypeRef(Ref):
-        dest: Optional[SwBaseTypeSubtypesEnum] = field(
+        dest: SwBaseTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -196,7 +196,7 @@ class SwRecordLayoutV:
 
     @dataclass
     class SwGenericAxisParamTypeRef(Ref):
-        dest: Optional[SwGenericAxisParamTypeSubtypesEnum] = field(
+        dest: SwGenericAxisParamTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

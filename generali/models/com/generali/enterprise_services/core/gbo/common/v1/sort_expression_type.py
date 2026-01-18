@@ -34,14 +34,14 @@ class SortExpressionType:
             "min_occurs": 1,
         },
     )
-    sort_order_code: Optional[SortOrderCodeType] = field(
+    sort_order_code: SortOrderCodeType | None = field(
         default=None,
         metadata={
             "name": "sortOrderCode",
             "type": "Attribute",
         },
     )
-    collation_algorithm_code: Optional[CollationAlgorithmCodeType] = field(
+    collation_algorithm_code: CollationAlgorithmCodeType | None = field(
         default=None,
         metadata={
             "name": "collationAlgorithmCode",

@@ -41,7 +41,7 @@ class HeaderType:
     :ivar event:
     """
 
-    source_system: Optional[str] = field(
+    source_system: str | None = field(
         default=None,
         metadata={
             "name": "SourceSystem",
@@ -49,7 +49,7 @@ class HeaderType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    target_systems: Optional[HeaderTypeTargetSystems] = field(
+    target_systems: HeaderTypeTargetSystems | None = field(
         default=None,
         metadata={
             "name": "TargetSystems",
@@ -57,7 +57,7 @@ class HeaderType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    conversation_id: Optional[str] = field(
+    conversation_id: str | None = field(
         default=None,
         metadata={
             "name": "ConversationID",
@@ -65,7 +65,7 @@ class HeaderType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    message_id: Optional[str] = field(
+    message_id: str | None = field(
         default=None,
         metadata={
             "name": "MessageID",
@@ -73,7 +73,7 @@ class HeaderType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    properties: Optional[HeaderTypeProperties] = field(
+    properties: HeaderTypeProperties | None = field(
         default=None,
         metadata={
             "name": "Properties",
@@ -81,7 +81,7 @@ class HeaderType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    creation_date_time: Optional[DateTimeType] = field(
+    creation_date_time: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "CreationDateTime",
@@ -89,7 +89,7 @@ class HeaderType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    event: Optional[str] = field(
+    event: str | None = field(
         default=None,
         metadata={
             "name": "Event",

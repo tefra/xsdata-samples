@@ -21,7 +21,7 @@ class TDataAssociation(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    target_ref: Optional[str] = field(
+    target_ref: str | None = field(
         default=None,
         metadata={
             "name": "targetRef",
@@ -30,7 +30,7 @@ class TDataAssociation(TBaseElement):
             "required": True,
         },
     )
-    transformation: Optional[TFormalExpression] = field(
+    transformation: TFormalExpression | None = field(
         default=None,
         metadata={
             "type": "Element",

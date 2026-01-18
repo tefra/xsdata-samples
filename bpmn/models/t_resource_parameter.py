@@ -12,20 +12,20 @@ class TResourceParameter(TBaseElement):
     class Meta:
         name = "tResourceParameter"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    type_value: Optional[QName] = field(
+    type_value: QName | None = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
         },
     )
-    is_required: Optional[bool] = field(
+    is_required: bool | None = field(
         default=None,
         metadata={
             "name": "isRequired",

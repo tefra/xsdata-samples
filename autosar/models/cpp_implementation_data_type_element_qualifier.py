@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -36,7 +38,7 @@ class CppImplementationDataTypeElementQualifier:
     class Meta:
         name = "CPP-IMPLEMENTATION-DATA-TYPE-ELEMENT-QUALIFIER"
 
-    inplace: Optional[Boolean] = field(
+    inplace: Boolean | None = field(
         default=None,
         metadata={
             "name": "INPLACE",
@@ -44,9 +46,7 @@ class CppImplementationDataTypeElementQualifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_reference_ref: Optional[
-        "CppImplementationDataTypeElementQualifier.TypeReferenceRef"
-    ] = field(
+    type_reference_ref: CppImplementationDataTypeElementQualifier.TypeReferenceRef | None = field(
         default=None,
         metadata={
             "name": "TYPE-REFERENCE-REF",
@@ -54,14 +54,14 @@ class CppImplementationDataTypeElementQualifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -72,7 +72,7 @@ class CppImplementationDataTypeElementQualifier:
 
     @dataclass
     class TypeReferenceRef(Ref):
-        dest: Optional[CppImplementationDataTypeSubtypesEnum] = field(
+        dest: CppImplementationDataTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

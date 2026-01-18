@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -96,7 +98,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
     class Meta:
         name = "PERSISTENCY-DEPLOYMENT-TO-CRYPTO-KEY-SLOT-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,9 +107,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "PersistencyDeploymentToCryptoKeySlotMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: PersistencyDeploymentToCryptoKeySlotMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -115,7 +115,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -123,7 +123,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -131,7 +131,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -139,7 +139,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -147,7 +147,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -155,9 +155,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "PersistencyDeploymentToCryptoKeySlotMapping.Annotations"
-    ] = field(
+    annotations: PersistencyDeploymentToCryptoKeySlotMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -165,7 +163,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -173,9 +171,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_key_slot_ref: Optional[
-        "PersistencyDeploymentToCryptoKeySlotMapping.CryptoKeySlotRef"
-    ] = field(
+    crypto_key_slot_ref: PersistencyDeploymentToCryptoKeySlotMapping.CryptoKeySlotRef | None = field(
         default=None,
         metadata={
             "name": "CRYPTO-KEY-SLOT-REF",
@@ -183,7 +179,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_slot_usage: Optional[CryptoKeySlotUsageEnum] = field(
+    key_slot_usage: CryptoKeySlotUsageEnum | None = field(
         default=None,
         metadata={
             "name": "KEY-SLOT-USAGE",
@@ -191,9 +187,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    persistency_deployment_ref: Optional[
-        "PersistencyDeploymentToCryptoKeySlotMapping.PersistencyDeploymentRef"
-    ] = field(
+    persistency_deployment_ref: PersistencyDeploymentToCryptoKeySlotMapping.PersistencyDeploymentRef | None = field(
         default=None,
         metadata={
             "name": "PERSISTENCY-DEPLOYMENT-REF",
@@ -201,7 +195,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    verification_hash: Optional[String] = field(
+    verification_hash: String | None = field(
         default=None,
         metadata={
             "name": "VERIFICATION-HASH",
@@ -209,14 +203,14 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -224,7 +218,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -256,7 +250,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
 
     @dataclass
     class CryptoKeySlotRef(Ref):
-        dest: Optional[CryptoKeySlotSubtypesEnum] = field(
+        dest: CryptoKeySlotSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -267,7 +261,7 @@ class PersistencyDeploymentToCryptoKeySlotMapping:
 
     @dataclass
     class PersistencyDeploymentRef(Ref):
-        dest: Optional[PersistencyDeploymentSubtypesEnum] = field(
+        dest: PersistencyDeploymentSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

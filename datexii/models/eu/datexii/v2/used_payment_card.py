@@ -29,7 +29,7 @@ class UsedPaymentCard:
     :ivar used_payment_card_extension:
     """
 
-    payment_card: Optional[PaymentCardTypesEnum] = field(
+    payment_card: PaymentCardTypesEnum | None = field(
         default=None,
         metadata={
             "name": "paymentCard",
@@ -38,7 +38,7 @@ class UsedPaymentCard:
             "required": True,
         },
     )
-    other_payment_card: Optional[str] = field(
+    other_payment_card: str | None = field(
         default=None,
         metadata={
             "name": "otherPaymentCard",
@@ -47,7 +47,7 @@ class UsedPaymentCard:
             "max_length": 1024,
         },
     )
-    payment_card_brand: Optional[PaymentCardBrandsEnum] = field(
+    payment_card_brand: PaymentCardBrandsEnum | None = field(
         default=None,
         metadata={
             "name": "paymentCardBrand",
@@ -55,7 +55,7 @@ class UsedPaymentCard:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    other_payment_card_brand: Optional[str] = field(
+    other_payment_card_brand: str | None = field(
         default=None,
         metadata={
             "name": "otherPaymentCardBrand",
@@ -64,7 +64,7 @@ class UsedPaymentCard:
             "max_length": 1024,
         },
     )
-    used_payment_card_extension: Optional[ExtensionType] = field(
+    used_payment_card_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "usedPaymentCardExtension",

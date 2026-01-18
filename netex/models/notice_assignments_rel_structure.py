@@ -16,7 +16,7 @@ class NoticeAssignmentsRelStructure(ContainmentAggregationStructure):
         name = "noticeAssignments_RelStructure"
 
     sales_notice_assignment_or_notice_assignment_or_notice_assignment_view: Iterable[
-        Union[SalesNoticeAssignment, NoticeAssignment, NoticeAssignmentView]
+        SalesNoticeAssignment | NoticeAssignment | NoticeAssignmentView
     ] = field(
         default_factory=list,
         metadata={

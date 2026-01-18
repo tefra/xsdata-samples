@@ -21,7 +21,7 @@ class ElaboratedDataFault(Fault):
     :ivar elaborated_data_fault_extension:
     """
 
-    elaborated_data_fault: Optional[ElaboratedDataFaultEnum] = field(
+    elaborated_data_fault: ElaboratedDataFaultEnum | None = field(
         default=None,
         metadata={
             "name": "elaboratedDataFault",
@@ -30,7 +30,7 @@ class ElaboratedDataFault(Fault):
             "required": True,
         },
     )
-    elaborated_data_fault_extension: Optional[ExtensionType] = field(
+    elaborated_data_fault_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "elaboratedDataFaultExtension",

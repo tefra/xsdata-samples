@@ -15,7 +15,7 @@ class VehicleModelProfilesInFrameRelStructure(ContainmentAggregationStructure):
         name = "vehicleModelProfilesInFrame_RelStructure"
 
     car_model_profile_or_cycle_model_profile: Iterable[
-        Union[CarModelProfile, CycleModelProfile]
+        CarModelProfile | CycleModelProfile
     ] = field(
         default_factory=list,
         metadata={

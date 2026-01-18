@@ -38,7 +38,7 @@ class NumericalValueSpecification:
     class Meta:
         name = "NUMERICAL-VALUE-SPECIFICATION"
 
-    short_label: Optional[Identifier] = field(
+    short_label: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -46,7 +46,7 @@ class NumericalValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -54,7 +54,7 @@ class NumericalValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: Optional[NumericalValueVariationPoint] = field(
+    value: NumericalValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -62,14 +62,14 @@ class NumericalValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

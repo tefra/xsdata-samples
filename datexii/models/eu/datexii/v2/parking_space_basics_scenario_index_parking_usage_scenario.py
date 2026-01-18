@@ -13,7 +13,7 @@ class ParkingSpaceBasicsScenarioIndexParkingUsageScenario:
     class Meta:
         name = "_ParkingSpaceBasicsScenarioIndexParkingUsageScenario"
 
-    parking_usage_scenario: Optional[ParkingUsageScenario] = field(
+    parking_usage_scenario: ParkingUsageScenario | None = field(
         default=None,
         metadata={
             "name": "parkingUsageScenario",
@@ -22,7 +22,7 @@ class ParkingSpaceBasicsScenarioIndexParkingUsageScenario:
             "required": True,
         },
     )
-    scenario_index: Optional[int] = field(
+    scenario_index: int | None = field(
         default=None,
         metadata={
             "name": "scenarioIndex",

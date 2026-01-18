@@ -48,7 +48,7 @@ class DeterministicClientResource:
     class Meta:
         name = "DETERMINISTIC-CLIENT-RESOURCE"
 
-    number_of_instructions: Optional[NormalizedInstruction] = field(
+    number_of_instructions: NormalizedInstruction | None = field(
         default=None,
         metadata={
             "name": "NUMBER-OF-INSTRUCTIONS",
@@ -56,7 +56,7 @@ class DeterministicClientResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sequential_instructions_begin: Optional[NormalizedInstruction] = field(
+    sequential_instructions_begin: NormalizedInstruction | None = field(
         default=None,
         metadata={
             "name": "SEQUENTIAL-INSTRUCTIONS-BEGIN",
@@ -64,7 +64,7 @@ class DeterministicClientResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sequential_instructions_end: Optional[NormalizedInstruction] = field(
+    sequential_instructions_end: NormalizedInstruction | None = field(
         default=None,
         metadata={
             "name": "SEQUENTIAL-INSTRUCTIONS-END",
@@ -72,7 +72,7 @@ class DeterministicClientResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    speedup: Optional[Float] = field(
+    speedup: Float | None = field(
         default=None,
         metadata={
             "name": "SPEEDUP",
@@ -80,14 +80,14 @@ class DeterministicClientResource:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

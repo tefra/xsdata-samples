@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -45,9 +47,7 @@ class FlexrayAbsolutelyScheduledTiming:
     class Meta:
         name = "FLEXRAY-ABSOLUTELY-SCHEDULED-TIMING"
 
-    communication_cycle: Optional[
-        "FlexrayAbsolutelyScheduledTiming.CommunicationCycle"
-    ] = field(
+    communication_cycle: FlexrayAbsolutelyScheduledTiming.CommunicationCycle | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CYCLE",
@@ -55,7 +55,7 @@ class FlexrayAbsolutelyScheduledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    slot_id: Optional[PositiveInteger] = field(
+    slot_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SLOT-ID",
@@ -63,14 +63,14 @@ class FlexrayAbsolutelyScheduledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -81,7 +81,7 @@ class FlexrayAbsolutelyScheduledTiming:
 
     @dataclass
     class CommunicationCycle:
-        cycle_counter: Optional[CycleCounter] = field(
+        cycle_counter: CycleCounter | None = field(
             default=None,
             metadata={
                 "name": "CYCLE-COUNTER",
@@ -89,7 +89,7 @@ class FlexrayAbsolutelyScheduledTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        cycle_repetition: Optional[CycleRepetition] = field(
+        cycle_repetition: CycleRepetition | None = field(
             default=None,
             metadata={
                 "name": "CYCLE-REPETITION",

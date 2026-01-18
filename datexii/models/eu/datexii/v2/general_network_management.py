@@ -29,9 +29,7 @@ class GeneralNetworkManagement(NetworkManagement):
     :ivar general_network_management_extension:
     """
 
-    general_network_management_type: Optional[
-        GeneralNetworkManagementTypeEnum
-    ] = field(
+    general_network_management_type: GeneralNetworkManagementTypeEnum | None = field(
         default=None,
         metadata={
             "name": "generalNetworkManagementType",
@@ -40,7 +38,7 @@ class GeneralNetworkManagement(NetworkManagement):
             "required": True,
         },
     )
-    traffic_manually_directed_by: Optional[PersonCategoryEnum] = field(
+    traffic_manually_directed_by: PersonCategoryEnum | None = field(
         default=None,
         metadata={
             "name": "trafficManuallyDirectedBy",
@@ -48,7 +46,7 @@ class GeneralNetworkManagement(NetworkManagement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    general_network_management_extension: Optional[ExtensionType] = field(
+    general_network_management_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "generalNetworkManagementExtension",

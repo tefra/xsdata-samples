@@ -17,7 +17,7 @@ class ParkingRoute:
     :ivar parking_route_extension:
     """
 
-    parking_route_colour: Optional[RGBColour] = field(
+    parking_route_colour: RGBColour | None = field(
         default=None,
         metadata={
             "name": "parkingRouteColour",
@@ -25,7 +25,7 @@ class ParkingRoute:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_route_extension: Optional[ExtensionType] = field(
+    parking_route_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "parkingRouteExtension",

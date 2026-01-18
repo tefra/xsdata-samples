@@ -19,14 +19,7 @@ class StopAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
         name = "stopAssignmentsInFrame_RelStructure"
 
     stop_assignment: Iterable[
-        Union[
-            VehicleJourneyStopAssignment,
-            FlexibleStopAssignment,
-            NavigationPathAssignment,
-            TrainStopAssignment,
-            DynamicStopAssignment,
-            PassengerStopAssignment,
-        ]
+        VehicleJourneyStopAssignment | FlexibleStopAssignment | NavigationPathAssignment | TrainStopAssignment | DynamicStopAssignment | PassengerStopAssignment
     ] = field(
         default_factory=list,
         metadata={

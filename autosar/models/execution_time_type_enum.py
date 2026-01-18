@@ -28,20 +28,20 @@ class ExecutionTimeTypeEnum:
     class Meta:
         name = "EXECUTION-TIME-TYPE-ENUM"
 
-    value: Optional[ExecutionTimeTypeEnumSimple] = field(
+    value: ExecutionTimeTypeEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

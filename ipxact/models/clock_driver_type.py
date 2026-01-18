@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -24,7 +26,7 @@ class ClockDriverType:
     class Meta:
         name = "clockDriverType"
 
-    clock_period: Optional["ClockDriverType.ClockPeriod"] = field(
+    clock_period: ClockDriverType.ClockPeriod | None = field(
         default=None,
         metadata={
             "name": "clockPeriod",
@@ -33,7 +35,7 @@ class ClockDriverType:
             "required": True,
         },
     )
-    clock_pulse_offset: Optional["ClockDriverType.ClockPulseOffset"] = field(
+    clock_pulse_offset: ClockDriverType.ClockPulseOffset | None = field(
         default=None,
         metadata={
             "name": "clockPulseOffset",
@@ -42,7 +44,7 @@ class ClockDriverType:
             "required": True,
         },
     )
-    clock_pulse_value: Optional[UnsignedBitExpression] = field(
+    clock_pulse_value: UnsignedBitExpression | None = field(
         default=None,
         metadata={
             "name": "clockPulseValue",
@@ -51,7 +53,7 @@ class ClockDriverType:
             "required": True,
         },
     )
-    clock_pulse_duration: Optional["ClockDriverType.ClockPulseDuration"] = (
+    clock_pulse_duration: ClockDriverType.ClockPulseDuration | None = (
         field(
             default=None,
             metadata={
@@ -62,7 +64,7 @@ class ClockDriverType:
             },
         )
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

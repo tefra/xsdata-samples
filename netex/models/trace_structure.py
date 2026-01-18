@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class TraceStructure:
-    object_ref: Optional[VersionOfObjectRefStructure] = field(
+    object_ref: VersionOfObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "ObjectRef",
@@ -19,7 +19,7 @@ class TraceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    changed_at: Optional[XmlDateTime] = field(
+    changed_at: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "ChangedAt",
@@ -28,7 +28,7 @@ class TraceStructure:
             "required": True,
         },
     )
-    changed_by: Optional[str] = field(
+    changed_by: str | None = field(
         default=None,
         metadata={
             "name": "ChangedBy",
@@ -36,7 +36,7 @@ class TraceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[str] = field(
+    description: str | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -44,7 +44,7 @@ class TraceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    delta: Optional[Delta] = field(
+    delta: Delta | None = field(
         default=None,
         metadata={
             "name": "Delta",
@@ -52,13 +52,13 @@ class TraceStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    created: Optional[XmlDateTime] = field(
+    created: XmlDateTime | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -31,7 +31,7 @@ class BaseDimensionType(BaseDimensionBaseType):
             "pattern": r".+\.conceptscheme\.Concept=.+",
         },
     )
-    position: Optional[int] = field(
+    position: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

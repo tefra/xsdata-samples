@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -86,7 +88,7 @@ class CpSoftwareClusterToEcuInstanceMapping:
     class Meta:
         name = "CP-SOFTWARE-CLUSTER-TO-ECU-INSTANCE-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -95,9 +97,7 @@ class CpSoftwareClusterToEcuInstanceMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "CpSoftwareClusterToEcuInstanceMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: CpSoftwareClusterToEcuInstanceMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -105,7 +105,7 @@ class CpSoftwareClusterToEcuInstanceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -113,7 +113,7 @@ class CpSoftwareClusterToEcuInstanceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -121,7 +121,7 @@ class CpSoftwareClusterToEcuInstanceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -129,7 +129,7 @@ class CpSoftwareClusterToEcuInstanceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -137,7 +137,7 @@ class CpSoftwareClusterToEcuInstanceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -145,9 +145,7 @@ class CpSoftwareClusterToEcuInstanceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "CpSoftwareClusterToEcuInstanceMapping.Annotations"
-    ] = field(
+    annotations: CpSoftwareClusterToEcuInstanceMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -155,9 +153,7 @@ class CpSoftwareClusterToEcuInstanceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: Optional[
-        "CpSoftwareClusterToEcuInstanceMapping.EcuInstanceRef"
-    ] = field(
+    ecu_instance_ref: CpSoftwareClusterToEcuInstanceMapping.EcuInstanceRef | None = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
@@ -165,9 +161,7 @@ class CpSoftwareClusterToEcuInstanceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_cluster_refs: Optional[
-        "CpSoftwareClusterToEcuInstanceMapping.SwClusterRefs"
-    ] = field(
+    sw_cluster_refs: CpSoftwareClusterToEcuInstanceMapping.SwClusterRefs | None = field(
         default=None,
         metadata={
             "name": "SW-CLUSTER-REFS",
@@ -175,7 +169,7 @@ class CpSoftwareClusterToEcuInstanceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -183,14 +177,14 @@ class CpSoftwareClusterToEcuInstanceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -198,7 +192,7 @@ class CpSoftwareClusterToEcuInstanceMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -230,7 +224,7 @@ class CpSoftwareClusterToEcuInstanceMapping:
 
     @dataclass
     class EcuInstanceRef(Ref):
-        dest: Optional[EcuInstanceSubtypesEnum] = field(
+        dest: EcuInstanceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -242,7 +236,7 @@ class CpSoftwareClusterToEcuInstanceMapping:
     @dataclass
     class SwClusterRefs:
         sw_cluster_ref: list[
-            "CpSoftwareClusterToEcuInstanceMapping.SwClusterRefs.SwClusterRef"
+            CpSoftwareClusterToEcuInstanceMapping.SwClusterRefs.SwClusterRef
         ] = field(
             default_factory=list,
             metadata={
@@ -254,7 +248,7 @@ class CpSoftwareClusterToEcuInstanceMapping:
 
         @dataclass
         class SwClusterRef(Ref):
-            dest: Optional[CpSoftwareClusterSubtypesEnum] = field(
+            dest: CpSoftwareClusterSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

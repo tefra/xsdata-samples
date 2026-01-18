@@ -12,7 +12,7 @@ class TSequenceFlow(TFlowElement):
     class Meta:
         name = "tSequenceFlow"
 
-    condition_expression: Optional[TExpression] = field(
+    condition_expression: TExpression | None = field(
         default=None,
         metadata={
             "name": "conditionExpression",
@@ -20,7 +20,7 @@ class TSequenceFlow(TFlowElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    source_ref: Optional[str] = field(
+    source_ref: str | None = field(
         default=None,
         metadata={
             "name": "sourceRef",
@@ -28,7 +28,7 @@ class TSequenceFlow(TFlowElement):
             "required": True,
         },
     )
-    target_ref: Optional[str] = field(
+    target_ref: str | None = field(
         default=None,
         metadata={
             "name": "targetRef",
@@ -36,7 +36,7 @@ class TSequenceFlow(TFlowElement):
             "required": True,
         },
     )
-    is_immediate: Optional[bool] = field(
+    is_immediate: bool | None = field(
         default=None,
         metadata={
             "name": "isImmediate",

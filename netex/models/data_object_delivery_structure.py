@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class DataObjectDeliveryStructure(AbstractServiceDeliveryStructure):
-    data_object_request: Optional[DataObjectRequest] = field(
+    data_object_request: DataObjectRequest | None = field(
         default=None,
         metadata={
             "name": "DataObjectRequest",
@@ -21,7 +21,7 @@ class DataObjectDeliveryStructure(AbstractServiceDeliveryStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    data_objects: Optional[DataObjectsRelStructure] = field(
+    data_objects: DataObjectsRelStructure | None = field(
         default=None,
         metadata={
             "name": "dataObjects",
@@ -29,7 +29,7 @@ class DataObjectDeliveryStructure(AbstractServiceDeliveryStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    extensions: Optional[Extensions2] = field(
+    extensions: Extensions2 | None = field(
         default=None,
         metadata={
             "name": "Extensions",

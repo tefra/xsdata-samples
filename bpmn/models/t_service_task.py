@@ -13,13 +13,13 @@ class TServiceTask(TTask):
     class Meta:
         name = "tServiceTask"
 
-    implementation: Union[str, TImplementationValue] = field(
+    implementation: str | TImplementationValue = field(
         default=TImplementationValue.WEB_SERVICE,
         metadata={
             "type": "Attribute",
         },
     )
-    operation_ref: Optional[QName] = field(
+    operation_ref: QName | None = field(
         default=None,
         metadata={
             "name": "operationRef",

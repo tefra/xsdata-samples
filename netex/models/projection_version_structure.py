@@ -16,7 +16,7 @@ class ProjectionVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Projection_VersionStructure"
 
-    type_of_projection_ref: Optional[TypeOfProjectionRefStructure] = field(
+    type_of_projection_ref: TypeOfProjectionRefStructure | None = field(
         default=None,
         metadata={
             "name": "TypeOfProjectionRef",
@@ -24,7 +24,7 @@ class ProjectionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -32,9 +32,7 @@ class ProjectionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    spatial_feature_ref: Optional[
-        Union[ComplexFeatureRef, SimpleFeatureRef, SpatialFeatureRef]
-    ] = field(
+    spatial_feature_ref: ComplexFeatureRef | SimpleFeatureRef | SpatialFeatureRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -57,7 +55,7 @@ class ProjectionVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

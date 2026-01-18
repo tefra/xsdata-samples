@@ -14,7 +14,7 @@ class PersonalModeOfOperationValueStructure(ModeOfOperationValueStructure):
     class Meta:
         name = "PersonalModeOfOperation_ValueStructure"
 
-    personal_operation_type: Optional[PersonalOperationTypeEnumeration] = (
+    personal_operation_type: PersonalOperationTypeEnumeration | None = (
         field(
             default=None,
             metadata={

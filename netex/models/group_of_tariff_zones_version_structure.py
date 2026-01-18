@@ -14,7 +14,7 @@ class GroupOfTariffZonesVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "GroupOfTariffZones_VersionStructure"
 
-    members: Optional[TariffZoneRefsRelStructure] = field(
+    members: TariffZoneRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

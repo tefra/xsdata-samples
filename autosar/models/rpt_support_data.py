@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -43,7 +45,7 @@ class RptSupportData:
     class Meta:
         name = "RPT-SUPPORT-DATA"
 
-    execution_contexts: Optional["RptSupportData.ExecutionContexts"] = field(
+    execution_contexts: RptSupportData.ExecutionContexts | None = field(
         default=None,
         metadata={
             "name": "EXECUTION-CONTEXTS",
@@ -51,7 +53,7 @@ class RptSupportData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_components: Optional["RptSupportData.RptComponents"] = field(
+    rpt_components: RptSupportData.RptComponents | None = field(
         default=None,
         metadata={
             "name": "RPT-COMPONENTS",
@@ -59,7 +61,7 @@ class RptSupportData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_service_points: Optional["RptSupportData.RptServicePoints"] = field(
+    rpt_service_points: RptSupportData.RptServicePoints | None = field(
         default=None,
         metadata={
             "name": "RPT-SERVICE-POINTS",
@@ -67,14 +69,14 @@ class RptSupportData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

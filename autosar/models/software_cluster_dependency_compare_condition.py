@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -45,7 +47,7 @@ class SoftwareClusterDependencyCompareCondition:
     class Meta:
         name = "SOFTWARE-CLUSTER-DEPENDENCY-COMPARE-CONDITION"
 
-    compare_type: Optional[SoftwareClusterDependencyOperatorEnum] = field(
+    compare_type: SoftwareClusterDependencyOperatorEnum | None = field(
         default=None,
         metadata={
             "name": "COMPARE-TYPE",
@@ -53,7 +55,7 @@ class SoftwareClusterDependencyCompareCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consider_build_number: Optional[Boolean] = field(
+    consider_build_number: Boolean | None = field(
         default=None,
         metadata={
             "name": "CONSIDER-BUILD-NUMBER",
@@ -61,9 +63,7 @@ class SoftwareClusterDependencyCompareCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_cluster_ref: Optional[
-        "SoftwareClusterDependencyCompareCondition.SoftwareClusterRef"
-    ] = field(
+    software_cluster_ref: SoftwareClusterDependencyCompareCondition.SoftwareClusterRef | None = field(
         default=None,
         metadata={
             "name": "SOFTWARE-CLUSTER-REF",
@@ -71,7 +71,7 @@ class SoftwareClusterDependencyCompareCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    version: Optional[StrongRevisionLabelString] = field(
+    version: StrongRevisionLabelString | None = field(
         default=None,
         metadata={
             "name": "VERSION",
@@ -79,14 +79,14 @@ class SoftwareClusterDependencyCompareCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -97,7 +97,7 @@ class SoftwareClusterDependencyCompareCondition:
 
     @dataclass
     class SoftwareClusterRef(Ref):
-        dest: Optional[SoftwareClusterSubtypesEnum] = field(
+        dest: SoftwareClusterSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

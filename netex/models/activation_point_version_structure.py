@@ -14,7 +14,7 @@ class ActivationPointVersionStructure(PointVersionStructure):
     class Meta:
         name = "ActivationPoint_VersionStructure"
 
-    activation_point_number: Optional[str] = field(
+    activation_point_number: str | None = field(
         default=None,
         metadata={
             "name": "ActivationPointNumber",
@@ -22,7 +22,7 @@ class ActivationPointVersionStructure(PointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -30,7 +30,7 @@ class ActivationPointVersionStructure(PointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -38,7 +38,7 @@ class ActivationPointVersionStructure(PointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_activation_ref: Optional[TypeOfActivationRef] = field(
+    type_of_activation_ref: TypeOfActivationRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfActivationRef",

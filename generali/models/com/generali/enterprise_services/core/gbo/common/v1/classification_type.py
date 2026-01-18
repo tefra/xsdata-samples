@@ -16,7 +16,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class ClassificationType:
-    code: Optional[CodeType] = field(
+    code: CodeType | None = field(
         default=None,
         metadata={
             "name": "Code",
@@ -25,7 +25,7 @@ class ClassificationType:
             "required": True,
         },
     )
-    type_value: Optional[SictypeEnum] = field(
+    type_value: SictypeEnum | None = field(
         default=None,
         metadata={
             "name": "Type",
@@ -34,7 +34,7 @@ class ClassificationType:
             "required": True,
         },
     )
-    description: Optional[TextType] = field(
+    description: TextType | None = field(
         default=None,
         metadata={
             "name": "Description",

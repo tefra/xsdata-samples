@@ -89,7 +89,7 @@ class BaseReferenceComponentOptionalType(BaseComponentType):
         Notification or Sales Order.</description>
     """
 
-    ids: Optional[BaseReferenceComponentOptionalTypeIds] = field(
+    ids: BaseReferenceComponentOptionalTypeIds | None = field(
         default=None,
         metadata={
             "name": "IDs",
@@ -97,7 +97,7 @@ class BaseReferenceComponentOptionalType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    name_text: Optional[TextType] = field(
+    name_text: TextType | None = field(
         default=None,
         metadata={
             "name": "NameText",
@@ -105,7 +105,7 @@ class BaseReferenceComponentOptionalType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    desc_text: Optional[TextType] = field(
+    desc_text: TextType | None = field(
         default=None,
         metadata={
             "name": "DescText",
@@ -113,7 +113,7 @@ class BaseReferenceComponentOptionalType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    full_name: Optional[TextType] = field(
+    full_name: TextType | None = field(
         default=None,
         metadata={
             "name": "FullName",
@@ -121,7 +121,7 @@ class BaseReferenceComponentOptionalType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    type_code: Optional[CodeType] = field(
+    type_code: CodeType | None = field(
         default=None,
         metadata={
             "name": "TypeCode",
@@ -129,7 +129,7 @@ class BaseReferenceComponentOptionalType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    categories: Optional[BaseReferenceComponentOptionalTypeCategories] = field(
+    categories: BaseReferenceComponentOptionalTypeCategories | None = field(
         default=None,
         metadata={
             "name": "Categories",
@@ -137,7 +137,7 @@ class BaseReferenceComponentOptionalType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    status_code: Optional[CodeType] = field(
+    status_code: CodeType | None = field(
         default=None,
         metadata={
             "name": "StatusCode",
@@ -145,7 +145,7 @@ class BaseReferenceComponentOptionalType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    version_id: Optional[Idtype] = field(
+    version_id: Idtype | None = field(
         default=None,
         metadata={
             "name": "VersionID",
@@ -153,7 +153,7 @@ class BaseReferenceComponentOptionalType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    created_date_time: Optional[DateTimeType] = field(
+    created_date_time: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "CreatedDateTime",
@@ -161,7 +161,7 @@ class BaseReferenceComponentOptionalType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    created_by_id: Optional[Idtype] = field(
+    created_by_id: Idtype | None = field(
         default=None,
         metadata={
             "name": "CreatedByID",
@@ -169,7 +169,7 @@ class BaseReferenceComponentOptionalType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    last_modified_date_time: Optional[DateTimeType] = field(
+    last_modified_date_time: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "LastModifiedDateTime",
@@ -177,7 +177,7 @@ class BaseReferenceComponentOptionalType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    last_modified_by_id: Optional[Idtype] = field(
+    last_modified_by_id: Idtype | None = field(
         default=None,
         metadata={
             "name": "LastModifiedByID",
@@ -185,7 +185,7 @@ class BaseReferenceComponentOptionalType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    validity_period: Optional[TimePeriodType] = field(
+    validity_period: TimePeriodType | None = field(
         default=None,
         metadata={
             "name": "ValidityPeriod",
@@ -193,14 +193,14 @@ class BaseReferenceComponentOptionalType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    relationship_type_code: Optional[str] = field(
+    relationship_type_code: str | None = field(
         default=None,
         metadata={
             "name": "relationshipTypeCode",
             "type": "Attribute",
         },
     )
-    business_object_type_code: Optional[str] = field(
+    business_object_type_code: str | None = field(
         default=None,
         metadata={
             "name": "businessObjectTypeCode",

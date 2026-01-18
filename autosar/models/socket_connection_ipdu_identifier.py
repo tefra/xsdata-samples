@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -58,7 +60,7 @@ class SocketConnectionIpduIdentifier:
     class Meta:
         name = "SOCKET-CONNECTION-IPDU-IDENTIFIER"
 
-    header_id: Optional[PositiveInteger] = field(
+    header_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "HEADER-ID",
@@ -66,7 +68,7 @@ class SocketConnectionIpduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_collection_pdu_timeout: Optional[TimeValue] = field(
+    pdu_collection_pdu_timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "PDU-COLLECTION-PDU-TIMEOUT",
@@ -74,7 +76,7 @@ class SocketConnectionIpduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_collection_semantics: Optional[PduCollectionSemanticsEnum] = field(
+    pdu_collection_semantics: PduCollectionSemanticsEnum | None = field(
         default=None,
         metadata={
             "name": "PDU-COLLECTION-SEMANTICS",
@@ -82,7 +84,7 @@ class SocketConnectionIpduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_collection_trigger: Optional[PduCollectionTriggerEnum] = field(
+    pdu_collection_trigger: PduCollectionTriggerEnum | None = field(
         default=None,
         metadata={
             "name": "PDU-COLLECTION-TRIGGER",
@@ -90,7 +92,7 @@ class SocketConnectionIpduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_ref: Optional["SocketConnectionIpduIdentifier.PduRef"] = field(
+    pdu_ref: SocketConnectionIpduIdentifier.PduRef | None = field(
         default=None,
         metadata={
             "name": "PDU-REF",
@@ -98,9 +100,7 @@ class SocketConnectionIpduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggering_ref: Optional[
-        "SocketConnectionIpduIdentifier.PduTriggeringRef"
-    ] = field(
+    pdu_triggering_ref: SocketConnectionIpduIdentifier.PduTriggeringRef | None = field(
         default=None,
         metadata={
             "name": "PDU-TRIGGERING-REF",
@@ -108,9 +108,7 @@ class SocketConnectionIpduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    routing_group_refs: Optional[
-        "SocketConnectionIpduIdentifier.RoutingGroupRefs"
-    ] = field(
+    routing_group_refs: SocketConnectionIpduIdentifier.RoutingGroupRefs | None = field(
         default=None,
         metadata={
             "name": "ROUTING-GROUP-REFS",
@@ -118,14 +116,14 @@ class SocketConnectionIpduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -136,7 +134,7 @@ class SocketConnectionIpduIdentifier:
 
     @dataclass
     class PduRef(Ref):
-        dest: Optional[PduSubtypesEnum] = field(
+        dest: PduSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -147,7 +145,7 @@ class SocketConnectionIpduIdentifier:
 
     @dataclass
     class PduTriggeringRef(Ref):
-        dest: Optional[PduTriggeringSubtypesEnum] = field(
+        dest: PduTriggeringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -159,7 +157,7 @@ class SocketConnectionIpduIdentifier:
     @dataclass
     class RoutingGroupRefs:
         routing_group_ref: list[
-            "SocketConnectionIpduIdentifier.RoutingGroupRefs.RoutingGroupRef"
+            SocketConnectionIpduIdentifier.RoutingGroupRefs.RoutingGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -171,7 +169,7 @@ class SocketConnectionIpduIdentifier:
 
         @dataclass
         class RoutingGroupRef(Ref):
-            dest: Optional[SoAdRoutingGroupSubtypesEnum] = field(
+            dest: SoAdRoutingGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

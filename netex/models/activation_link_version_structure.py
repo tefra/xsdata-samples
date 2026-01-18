@@ -13,7 +13,7 @@ class ActivationLinkVersionStructure(LinkVersionStructure):
     class Meta:
         name = "ActivationLink_VersionStructure"
 
-    type_of_activation_ref: Optional[TypeOfActivationRef] = field(
+    type_of_activation_ref: TypeOfActivationRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfActivationRef",
@@ -21,7 +21,7 @@ class ActivationLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_point_ref: Optional[ActivationPointRefStructure] = field(
+    from_point_ref: ActivationPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "FromPointRef",
@@ -30,7 +30,7 @@ class ActivationLinkVersionStructure(LinkVersionStructure):
             "required": True,
         },
     )
-    to_point_ref: Optional[ActivationPointRefStructure] = field(
+    to_point_ref: ActivationPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "ToPointRef",

@@ -11,7 +11,7 @@ class TextPage:
     class Meta:
         name = "_TextPage"
 
-    vms_text: Optional[VmsText] = field(
+    vms_text: VmsText | None = field(
         default=None,
         metadata={
             "name": "vmsText",
@@ -20,7 +20,7 @@ class TextPage:
             "required": True,
         },
     )
-    page_number: Optional[int] = field(
+    page_number: int | None = field(
         default=None,
         metadata={
             "name": "pageNumber",

@@ -15,7 +15,7 @@ class HeaderTypePropertiesProperty:
             "required": True,
         },
     )
-    key: Optional[str] = field(
+    key: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

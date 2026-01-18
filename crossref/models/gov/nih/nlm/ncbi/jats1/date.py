@@ -20,78 +20,78 @@ class Date:
         name = "date"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    day: Optional[Day] = field(
+    day: Day | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    month: Optional[Month] = field(
+    month: Month | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    season: Optional[Season] = field(
+    season: Season | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    year: Optional[Year] = field(
+    year: Year | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    era: Optional[Era] = field(
+    era: Era | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    calendar: Optional[str] = field(
+    calendar: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    date_type: Optional[str] = field(
+    date_type: str | None = field(
         default=None,
         metadata={
             "name": "date-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    iso_8601_date: Optional[str] = field(
+    iso_8601_date: str | None = field(
         default=None,
         metadata={
             "name": "iso-8601-date",
             "type": "Attribute",
         },
     )
-    publication_format: Optional[str] = field(
+    publication_format: str | None = field(
         default=None,
         metadata={
             "name": "publication-format",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

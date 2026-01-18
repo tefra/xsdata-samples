@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -52,9 +54,7 @@ class RoleBasedMcDataAssignment:
     class Meta:
         name = "ROLE-BASED-MC-DATA-ASSIGNMENT"
 
-    execution_context_refs: Optional[
-        "RoleBasedMcDataAssignment.ExecutionContextRefs"
-    ] = field(
+    execution_context_refs: RoleBasedMcDataAssignment.ExecutionContextRefs | None = field(
         default=None,
         metadata={
             "name": "EXECUTION-CONTEXT-REFS",
@@ -62,9 +62,7 @@ class RoleBasedMcDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_data_instance_refs: Optional[
-        "RoleBasedMcDataAssignment.McDataInstanceRefs"
-    ] = field(
+    mc_data_instance_refs: RoleBasedMcDataAssignment.McDataInstanceRefs | None = field(
         default=None,
         metadata={
             "name": "MC-DATA-INSTANCE-REFS",
@@ -72,7 +70,7 @@ class RoleBasedMcDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    role: Optional[Identifier] = field(
+    role: Identifier | None = field(
         default=None,
         metadata={
             "name": "ROLE",
@@ -80,7 +78,7 @@ class RoleBasedMcDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -88,14 +86,14 @@ class RoleBasedMcDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -107,7 +105,7 @@ class RoleBasedMcDataAssignment:
     @dataclass
     class ExecutionContextRefs:
         execution_context_ref: list[
-            "RoleBasedMcDataAssignment.ExecutionContextRefs.ExecutionContextRef"
+            RoleBasedMcDataAssignment.ExecutionContextRefs.ExecutionContextRef
         ] = field(
             default_factory=list,
             metadata={
@@ -119,7 +117,7 @@ class RoleBasedMcDataAssignment:
 
         @dataclass
         class ExecutionContextRef(Ref):
-            dest: Optional[RptExecutionContextSubtypesEnum] = field(
+            dest: RptExecutionContextSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -131,7 +129,7 @@ class RoleBasedMcDataAssignment:
     @dataclass
     class McDataInstanceRefs:
         mc_data_instance_ref: list[
-            "RoleBasedMcDataAssignment.McDataInstanceRefs.McDataInstanceRef"
+            RoleBasedMcDataAssignment.McDataInstanceRefs.McDataInstanceRef
         ] = field(
             default_factory=list,
             metadata={
@@ -143,7 +141,7 @@ class RoleBasedMcDataAssignment:
 
         @dataclass
         class McDataInstanceRef(Ref):
-            dest: Optional[McDataInstanceSubtypesEnum] = field(
+            dest: McDataInstanceSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

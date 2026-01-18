@@ -14,7 +14,7 @@ class VehicleJourneyRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "vehicleJourneyRefs_RelStructure"
 
-    vehicle_journey_ref: Iterable[Union[DeadRunRef, VehicleJourneyRef]] = (
+    vehicle_journey_ref: Iterable[DeadRunRef | VehicleJourneyRef] = (
         field(
             default_factory=list,
             metadata={

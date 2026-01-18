@@ -17,7 +17,7 @@ class DistanceMatrixElementRefsRelStructure(OneToManyRelationshipStructure):
         name = "distanceMatrixElementRefs_RelStructure"
 
     distance_matrix_element_ref_or_distance_matrix_element_inverse_ref: Iterable[
-        Union[DistanceMatrixElementRef, DistanceMatrixElementInverseRef]
+        DistanceMatrixElementRef | DistanceMatrixElementInverseRef
     ] = field(
         default_factory=list,
         metadata={

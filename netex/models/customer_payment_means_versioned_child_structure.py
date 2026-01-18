@@ -20,7 +20,7 @@ class CustomerPaymentMeansVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "CustomerPaymentMeans_VersionedChildStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -28,7 +28,7 @@ class CustomerPaymentMeansVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_account_ref: Optional[CustomerAccountRef] = field(
+    customer_account_ref: CustomerAccountRef | None = field(
         default=None,
         metadata={
             "name": "CustomerAccountRef",
@@ -36,9 +36,7 @@ class CustomerPaymentMeansVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    medium_access_device_ref: Optional[
-        Union[MobileDeviceRef, EmvCardRef, SmartcardRef]
-    ] = field(
+    medium_access_device_ref: MobileDeviceRef | EmvCardRef | SmartcardRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -61,7 +59,7 @@ class CustomerPaymentMeansVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    payment_method: Optional[PaymentMethodEnumeration] = field(
+    payment_method: PaymentMethodEnumeration | None = field(
         default=None,
         metadata={
             "name": "PaymentMethod",
@@ -69,7 +67,7 @@ class CustomerPaymentMeansVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_payment_method_ref: Optional[TypeOfPaymentMethodRef] = field(
+    type_of_payment_method_ref: TypeOfPaymentMethodRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfPaymentMethodRef",
@@ -77,7 +75,7 @@ class CustomerPaymentMeansVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    last_verified_date: Optional[XmlDateTime] = field(
+    last_verified_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "LastVerifiedDate",

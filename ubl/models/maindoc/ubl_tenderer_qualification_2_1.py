@@ -32,7 +32,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class TendererQualificationType:
-    ublextensions: Optional[Ublextensions] = field(
+    ublextensions: Ublextensions | None = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -40,7 +40,7 @@ class TendererQualificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: Optional[UblversionId] = field(
+    ublversion_id: UblversionId | None = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -48,7 +48,7 @@ class TendererQualificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: Optional[CustomizationId] = field(
+    customization_id: CustomizationId | None = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -56,7 +56,7 @@ class TendererQualificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: Optional[ProfileId] = field(
+    profile_id: ProfileId | None = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -64,7 +64,7 @@ class TendererQualificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: Optional[ProfileExecutionId] = field(
+    profile_execution_id: ProfileExecutionId | None = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -72,7 +72,7 @@ class TendererQualificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -81,7 +81,7 @@ class TendererQualificationType:
             "required": True,
         },
     )
-    copy_indicator: Optional[CopyIndicator] = field(
+    copy_indicator: CopyIndicator | None = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -89,7 +89,7 @@ class TendererQualificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -97,7 +97,7 @@ class TendererQualificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contract_folder_id: Optional[ContractFolderId] = field(
+    contract_folder_id: ContractFolderId | None = field(
         default=None,
         metadata={
             "name": "ContractFolderID",
@@ -106,7 +106,7 @@ class TendererQualificationType:
             "required": True,
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -115,7 +115,7 @@ class TendererQualificationType:
             "required": True,
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -131,7 +131,7 @@ class TendererQualificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    version_id: Optional[VersionId] = field(
+    version_id: VersionId | None = field(
         default=None,
         metadata={
             "name": "VersionID",
@@ -139,7 +139,7 @@ class TendererQualificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    previous_version_id: Optional[PreviousVersionId] = field(
+    previous_version_id: PreviousVersionId | None = field(
         default=None,
         metadata={
             "name": "PreviousVersionID",
@@ -166,7 +166,7 @@ class TendererQualificationType:
             },
         )
     )
-    contracting_party: Optional[ContractingParty] = field(
+    contracting_party: ContractingParty | None = field(
         default=None,
         metadata={
             "name": "ContractingParty",

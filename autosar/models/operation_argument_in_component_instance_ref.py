@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -46,7 +48,7 @@ class OperationArgumentInComponentInstanceRef:
     class Meta:
         name = "OPERATION-ARGUMENT-IN-COMPONENT-INSTANCE-REF"
 
-    base_ref: Optional["OperationArgumentInComponentInstanceRef.BaseRef"] = (
+    base_ref: OperationArgumentInComponentInstanceRef.BaseRef | None = (
         field(
             default=None,
             metadata={
@@ -57,7 +59,7 @@ class OperationArgumentInComponentInstanceRef:
         )
     )
     context_component_ref: list[
-        "OperationArgumentInComponentInstanceRef.ContextComponentRef"
+        OperationArgumentInComponentInstanceRef.ContextComponentRef
     ] = field(
         default_factory=list,
         metadata={
@@ -66,9 +68,7 @@ class OperationArgumentInComponentInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_port_prototype_ref: Optional[
-        "OperationArgumentInComponentInstanceRef.ContextPortPrototypeRef"
-    ] = field(
+    context_port_prototype_ref: OperationArgumentInComponentInstanceRef.ContextPortPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-PORT-PROTOTYPE-REF",
@@ -76,9 +76,7 @@ class OperationArgumentInComponentInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_operation_ref: Optional[
-        "OperationArgumentInComponentInstanceRef.ContextOperationRef"
-    ] = field(
+    context_operation_ref: OperationArgumentInComponentInstanceRef.ContextOperationRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-OPERATION-REF",
@@ -86,9 +84,7 @@ class OperationArgumentInComponentInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_argument_data_prototype_ref: Optional[
-        "OperationArgumentInComponentInstanceRef.RootArgumentDataPrototypeRef"
-    ] = field(
+    root_argument_data_prototype_ref: OperationArgumentInComponentInstanceRef.RootArgumentDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "ROOT-ARGUMENT-DATA-PROTOTYPE-REF",
@@ -97,7 +93,7 @@ class OperationArgumentInComponentInstanceRef:
         },
     )
     context_data_prototype_ref: list[
-        "OperationArgumentInComponentInstanceRef.ContextDataPrototypeRef"
+        OperationArgumentInComponentInstanceRef.ContextDataPrototypeRef
     ] = field(
         default_factory=list,
         metadata={
@@ -106,9 +102,7 @@ class OperationArgumentInComponentInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_data_prototype_ref: Optional[
-        "OperationArgumentInComponentInstanceRef.TargetDataPrototypeRef"
-    ] = field(
+    target_data_prototype_ref: OperationArgumentInComponentInstanceRef.TargetDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-REF",
@@ -116,14 +110,14 @@ class OperationArgumentInComponentInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -134,7 +128,7 @@ class OperationArgumentInComponentInstanceRef:
 
     @dataclass
     class BaseRef(Ref):
-        dest: Optional[SwComponentTypeSubtypesEnum] = field(
+        dest: SwComponentTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -145,7 +139,7 @@ class OperationArgumentInComponentInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -156,7 +150,7 @@ class OperationArgumentInComponentInstanceRef:
 
     @dataclass
     class ContextPortPrototypeRef(Ref):
-        dest: Optional[PortPrototypeSubtypesEnum] = field(
+        dest: PortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -167,7 +161,7 @@ class OperationArgumentInComponentInstanceRef:
 
     @dataclass
     class ContextOperationRef(Ref):
-        dest: Optional[ClientServerOperationSubtypesEnum] = field(
+        dest: ClientServerOperationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -178,7 +172,7 @@ class OperationArgumentInComponentInstanceRef:
 
     @dataclass
     class RootArgumentDataPrototypeRef(Ref):
-        dest: Optional[ArgumentDataPrototypeSubtypesEnum] = field(
+        dest: ArgumentDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -189,9 +183,7 @@ class OperationArgumentInComponentInstanceRef:
 
     @dataclass
     class ContextDataPrototypeRef(Ref):
-        dest: Optional[
-            ApplicationCompositeElementDataPrototypeSubtypesEnum
-        ] = field(
+        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -202,7 +194,7 @@ class OperationArgumentInComponentInstanceRef:
 
     @dataclass
     class TargetDataPrototypeRef(Ref):
-        dest: Optional[DataPrototypeSubtypesEnum] = field(
+        dest: DataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,7 +35,7 @@ class InnerPortGroupInCompositionInstanceRef:
     class Meta:
         name = "INNER-PORT-GROUP-IN-COMPOSITION-INSTANCE-REF"
 
-    context_ref: list["InnerPortGroupInCompositionInstanceRef.ContextRef"] = (
+    context_ref: list[InnerPortGroupInCompositionInstanceRef.ContextRef] = (
         field(
             default_factory=list,
             metadata={
@@ -43,9 +45,7 @@ class InnerPortGroupInCompositionInstanceRef:
             },
         )
     )
-    target_ref: Optional[
-        "InnerPortGroupInCompositionInstanceRef.TargetRef"
-    ] = field(
+    target_ref: InnerPortGroupInCompositionInstanceRef.TargetRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-REF",
@@ -53,14 +53,14 @@ class InnerPortGroupInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class InnerPortGroupInCompositionInstanceRef:
 
     @dataclass
     class ContextRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -82,7 +82,7 @@ class InnerPortGroupInCompositionInstanceRef:
 
     @dataclass
     class TargetRef(Ref):
-        dest: Optional[PortGroupSubtypesEnum] = field(
+        dest: PortGroupSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

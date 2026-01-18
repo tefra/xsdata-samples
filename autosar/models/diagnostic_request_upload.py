@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -101,7 +103,7 @@ class DiagnosticRequestUpload:
     class Meta:
         name = "DIAGNOSTIC-REQUEST-UPLOAD"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -110,9 +112,7 @@ class DiagnosticRequestUpload:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticRequestUpload.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticRequestUpload.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -120,7 +120,7 @@ class DiagnosticRequestUpload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -128,7 +128,7 @@ class DiagnosticRequestUpload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -136,7 +136,7 @@ class DiagnosticRequestUpload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -144,7 +144,7 @@ class DiagnosticRequestUpload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -152,7 +152,7 @@ class DiagnosticRequestUpload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -160,7 +160,7 @@ class DiagnosticRequestUpload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticRequestUpload.Annotations"] = field(
+    annotations: DiagnosticRequestUpload.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -168,7 +168,7 @@ class DiagnosticRequestUpload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -176,9 +176,7 @@ class DiagnosticRequestUpload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: Optional[
-        "DiagnosticRequestUpload.AccessPermissionRef"
-    ] = field(
+    access_permission_ref: DiagnosticRequestUpload.AccessPermissionRef | None = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -186,7 +184,7 @@ class DiagnosticRequestUpload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_range_refs: Optional["DiagnosticRequestUpload.MemoryRangeRefs"] = (
+    memory_range_refs: DiagnosticRequestUpload.MemoryRangeRefs | None = (
         field(
             default=None,
             metadata={
@@ -196,9 +194,7 @@ class DiagnosticRequestUpload:
             },
         )
     )
-    request_upload_class_ref: Optional[
-        "DiagnosticRequestUpload.RequestUploadClassRef"
-    ] = field(
+    request_upload_class_ref: DiagnosticRequestUpload.RequestUploadClassRef | None = field(
         default=None,
         metadata={
             "name": "REQUEST-UPLOAD-CLASS-REF",
@@ -206,14 +202,14 @@ class DiagnosticRequestUpload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -221,7 +217,7 @@ class DiagnosticRequestUpload:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -253,7 +249,7 @@ class DiagnosticRequestUpload:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: Optional[DiagnosticAccessPermissionSubtypesEnum] = field(
+        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -265,7 +261,7 @@ class DiagnosticRequestUpload:
     @dataclass
     class MemoryRangeRefs:
         memory_range_ref: list[
-            "DiagnosticRequestUpload.MemoryRangeRefs.MemoryRangeRef"
+            DiagnosticRequestUpload.MemoryRangeRefs.MemoryRangeRef
         ] = field(
             default_factory=list,
             metadata={
@@ -277,7 +273,7 @@ class DiagnosticRequestUpload:
 
         @dataclass
         class MemoryRangeRef(Ref):
-            dest: Optional[DiagnosticMemoryIdentifierSubtypesEnum] = field(
+            dest: DiagnosticMemoryIdentifierSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -288,7 +284,7 @@ class DiagnosticRequestUpload:
 
     @dataclass
     class RequestUploadClassRef(Ref):
-        dest: Optional[DiagnosticRequestUploadClassSubtypesEnum] = field(
+        dest: DiagnosticRequestUploadClassSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

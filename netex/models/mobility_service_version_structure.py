@@ -29,7 +29,7 @@ class MobilityServiceVersionStructure(EquipmentVersionStructure):
     class Meta:
         name = "MobilityService_VersionStructure"
 
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -37,7 +37,7 @@ class MobilityServiceVersionStructure(EquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_date: Optional[XmlDate] = field(
+    start_date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -45,7 +45,7 @@ class MobilityServiceVersionStructure(EquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_mobility_service_ref: Optional[TypeOfMobilityServiceRef] = field(
+    type_of_mobility_service_ref: TypeOfMobilityServiceRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfMobilityServiceRef",
@@ -53,20 +53,7 @@ class MobilityServiceVersionStructure(EquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: Optional[
-        Union[
-            RetailConsortiumRef,
-            OnlineServiceOperatorRef,
-            GeneralOrganisationRef,
-            ManagementAgentRef,
-            ServicedOrganisationRef,
-            TravelAgentRef,
-            OtherOrganisationRef,
-            AuthorityRef,
-            OperatorRef,
-            OrganisationRef,
-        ]
-    ] = field(
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -124,7 +111,7 @@ class MobilityServiceVersionStructure(EquipmentVersionStructure):
             ),
         },
     )
-    topographic_place_ref: Optional[TopographicPlaceRef] = field(
+    topographic_place_ref: TopographicPlaceRef | None = field(
         default=None,
         metadata={
             "name": "TopographicPlaceRef",
@@ -132,9 +119,7 @@ class MobilityServiceVersionStructure(EquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_booking_arrangements: Optional[
-        ServiceBookingArrangementsStructure
-    ] = field(
+    service_booking_arrangements: ServiceBookingArrangementsStructure | None = field(
         default=None,
         metadata={
             "name": "ServiceBookingArrangements",

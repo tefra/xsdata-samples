@@ -15,7 +15,7 @@ class GeographicalUnitVersionStructure(FareUnitVersionStructure):
     class Meta:
         name = "GeographicalUnit_VersionStructure"
 
-    distance: Optional[Decimal] = field(
+    distance: Decimal | None = field(
         default=None,
         metadata={
             "name": "Distance",
@@ -23,7 +23,7 @@ class GeographicalUnitVersionStructure(FareUnitVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: Optional[GeographicalUnitPricesRelStructure] = field(
+    prices: GeographicalUnitPricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

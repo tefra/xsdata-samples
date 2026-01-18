@@ -11,7 +11,7 @@ class LocationContainedInItinerary:
     class Meta:
         name = "_LocationContainedInItinerary"
 
-    location: Optional[Location] = field(
+    location: Location | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -19,7 +19,7 @@ class LocationContainedInItinerary:
             "required": True,
         },
     )
-    index: Optional[int] = field(
+    index: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

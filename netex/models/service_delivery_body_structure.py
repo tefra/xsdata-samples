@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import Optional, Union
@@ -12,7 +14,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ServiceDeliveryBodyStructure:
-    status: Optional[bool] = field(
+    status: bool | None = field(
         default=None,
         metadata={
             "name": "Status",
@@ -20,9 +22,7 @@ class ServiceDeliveryBodyStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: Optional[
-        "ServiceDeliveryBodyStructure.ErrorCondition"
-    ] = field(
+    error_condition: ServiceDeliveryBodyStructure.ErrorCondition | None = field(
         default=None,
         metadata={
             "name": "ErrorCondition",
@@ -30,7 +30,7 @@ class ServiceDeliveryBodyStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    more_data: Optional[bool] = field(
+    more_data: bool | None = field(
         default=None,
         metadata={
             "name": "MoreData",
@@ -46,7 +46,7 @@ class ServiceDeliveryBodyStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    srs_name: Optional[str] = field(
+    srs_name: str | None = field(
         default=None,
         metadata={
             "name": "srsName",
@@ -56,9 +56,7 @@ class ServiceDeliveryBodyStructure:
 
     @dataclass
     class ErrorCondition:
-        capability_not_supported_error_or_other_error: Optional[
-            Union[CapabilityNotSupportedError, OtherError]
-        ] = field(
+        capability_not_supported_error_or_other_error: CapabilityNotSupportedError | OtherError | None = field(
             default=None,
             metadata={
                 "type": "Elements",
@@ -76,7 +74,7 @@ class ServiceDeliveryBodyStructure:
                 ),
             },
         )
-        description: Optional[ErrorDescriptionStructure] = field(
+        description: ErrorDescriptionStructure | None = field(
             default=None,
             metadata={
                 "name": "Description",

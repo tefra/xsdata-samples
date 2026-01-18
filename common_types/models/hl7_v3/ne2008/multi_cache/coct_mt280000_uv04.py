@@ -27,7 +27,7 @@ class CoctMt280000Uv04CrossReference:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -51,14 +51,14 @@ class CoctMt280000Uv04CrossReference:
             "min_occurs": 1,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[ActClassRoot] = field(
+    class_code: ActClassRoot | None = field(
         default=None,
         metadata={
             "name": "classCode",

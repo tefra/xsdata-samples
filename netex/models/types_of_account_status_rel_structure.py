@@ -15,7 +15,7 @@ class TypesOfAccountStatusRelStructure(ContainmentAggregationStructure):
         name = "typesOfAccountStatus_RelStructure"
 
     customer_account_status_ref_or_customer_account_status: Iterable[
-        Union[CustomerAccountStatusRef, CustomerAccountStatus]
+        CustomerAccountStatusRef | CustomerAccountStatus
     ] = field(
         default_factory=list,
         metadata={

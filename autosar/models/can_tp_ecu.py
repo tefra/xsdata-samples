@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -38,7 +40,7 @@ class CanTpEcu:
     class Meta:
         name = "CAN-TP-ECU"
 
-    cycle_time_main_function: Optional[TimeValue] = field(
+    cycle_time_main_function: TimeValue | None = field(
         default=None,
         metadata={
             "name": "CYCLE-TIME-MAIN-FUNCTION",
@@ -46,7 +48,7 @@ class CanTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: Optional["CanTpEcu.EcuInstanceRef"] = field(
+    ecu_instance_ref: CanTpEcu.EcuInstanceRef | None = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
@@ -54,7 +56,7 @@ class CanTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -62,14 +64,14 @@ class CanTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -80,7 +82,7 @@ class CanTpEcu:
 
     @dataclass
     class EcuInstanceRef(Ref):
-        dest: Optional[EcuInstanceSubtypesEnum] = field(
+        dest: EcuInstanceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -146,7 +148,7 @@ class BswModuleEntry:
     class Meta:
         name = "BSW-MODULE-ENTRY"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -155,7 +157,7 @@ class BswModuleEntry:
             "required": True,
         },
     )
-    short_name_fragments: Optional["BswModuleEntry.ShortNameFragments"] = (
+    short_name_fragments: BswModuleEntry.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -165,7 +167,7 @@ class BswModuleEntry:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -173,7 +175,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -181,7 +183,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -189,7 +191,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -197,7 +199,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -205,7 +207,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["BswModuleEntry.Annotations"] = field(
+    annotations: BswModuleEntry.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -213,7 +215,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -221,7 +223,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional["BswModuleEntry.BlueprintPolicys"] = field(
+    blueprint_policys: BswModuleEntry.BlueprintPolicys | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -229,7 +231,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: Optional[String] = field(
+    short_name_pattern: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -237,7 +239,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    function_prototype_emitter: Optional[NmtokenString] = field(
+    function_prototype_emitter: NmtokenString | None = field(
         default=None,
         metadata={
             "name": "FUNCTION-PROTOTYPE-EMITTER",
@@ -245,7 +247,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_id: Optional[PositiveInteger] = field(
+    service_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SERVICE-ID",
@@ -253,7 +255,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    role: Optional[Identifier] = field(
+    role: Identifier | None = field(
         default=None,
         metadata={
             "name": "ROLE",
@@ -261,7 +263,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_reentrant: Optional[Boolean] = field(
+    is_reentrant: Boolean | None = field(
         default=None,
         metadata={
             "name": "IS-REENTRANT",
@@ -269,7 +271,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_synchronous: Optional[Boolean] = field(
+    is_synchronous: Boolean | None = field(
         default=None,
         metadata={
             "name": "IS-SYNCHRONOUS",
@@ -277,7 +279,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    call_type: Optional[BswCallType] = field(
+    call_type: BswCallType | None = field(
         default=None,
         metadata={
             "name": "CALL-TYPE",
@@ -285,7 +287,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    execution_context: Optional[BswExecutionContext] = field(
+    execution_context: BswExecutionContext | None = field(
         default=None,
         metadata={
             "name": "EXECUTION-CONTEXT",
@@ -293,7 +295,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_service_impl_policy: Optional[SwServiceImplPolicyEnum] = field(
+    sw_service_impl_policy: SwServiceImplPolicyEnum | None = field(
         default=None,
         metadata={
             "name": "SW-SERVICE-IMPL-POLICY",
@@ -301,7 +303,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_entry_kind: Optional[BswEntryKindEnum] = field(
+    bsw_entry_kind: BswEntryKindEnum | None = field(
         default=None,
         metadata={
             "name": "BSW-ENTRY-KIND",
@@ -309,7 +311,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    return_type: Optional[SwServiceArg] = field(
+    return_type: SwServiceArg | None = field(
         default=None,
         metadata={
             "name": "RETURN-TYPE",
@@ -317,7 +319,7 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    arguments: Optional["BswModuleEntry.Arguments"] = field(
+    arguments: BswModuleEntry.Arguments | None = field(
         default=None,
         metadata={
             "name": "ARGUMENTS",
@@ -325,14 +327,14 @@ class BswModuleEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -340,7 +342,7 @@ class BswModuleEntry:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -37,7 +39,7 @@ class TriggerPortAnnotation:
     class Meta:
         name = "TRIGGER-PORT-ANNOTATION"
 
-    label: Optional[MultilanguageLongName] = field(
+    label: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -45,7 +47,7 @@ class TriggerPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_origin: Optional[String] = field(
+    annotation_origin: String | None = field(
         default=None,
         metadata={
             "name": "ANNOTATION-ORIGIN",
@@ -53,7 +55,7 @@ class TriggerPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_text: Optional[DocumentationBlock] = field(
+    annotation_text: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "ANNOTATION-TEXT",
@@ -61,7 +63,7 @@ class TriggerPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_ref: Optional["TriggerPortAnnotation.TriggerRef"] = field(
+    trigger_ref: TriggerPortAnnotation.TriggerRef | None = field(
         default=None,
         metadata={
             "name": "TRIGGER-REF",
@@ -69,14 +71,14 @@ class TriggerPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -87,7 +89,7 @@ class TriggerPortAnnotation:
 
     @dataclass
     class TriggerRef(Ref):
-        dest: Optional[TriggerSubtypesEnum] = field(
+        dest: TriggerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

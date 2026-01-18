@@ -33,7 +33,7 @@ class SetMetadata:
         name = "set_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    titles: Optional[Titles] = field(
+    titles: Titles | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -47,37 +47,37 @@ class SetMetadata:
             "max_occurs": 6,
         },
     )
-    noisbn: Optional[Noisbn] = field(
+    noisbn: Noisbn | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    contributors: Optional[Contributors] = field(
+    contributors: Contributors | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    part_number: Optional[PartNumber] = field(
+    part_number: PartNumber | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    publisher_item: Optional[PublisherItem] = field(
+    publisher_item: PublisherItem | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    archive_locations: Optional[ArchiveLocations] = field(
+    archive_locations: ArchiveLocations | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    doi_data: Optional[DoiData] = field(
+    doi_data: DoiData | None = field(
         default=None,
         metadata={
             "type": "Element",

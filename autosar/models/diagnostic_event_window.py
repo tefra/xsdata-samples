@@ -33,7 +33,7 @@ class DiagnosticEventWindow:
     class Meta:
         name = "DIAGNOSTIC-EVENT-WINDOW"
 
-    event_window_time: Optional[DiagnosticEventWindowTimeEnum] = field(
+    event_window_time: DiagnosticEventWindowTimeEnum | None = field(
         default=None,
         metadata={
             "name": "EVENT-WINDOW-TIME",
@@ -41,7 +41,7 @@ class DiagnosticEventWindow:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    storage_state_evaluation: Optional[Boolean] = field(
+    storage_state_evaluation: Boolean | None = field(
         default=None,
         metadata={
             "name": "STORAGE-STATE-EVALUATION",
@@ -49,14 +49,14 @@ class DiagnosticEventWindow:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

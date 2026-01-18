@@ -15,7 +15,7 @@ class InterchangeRulesRelStructure(ContainmentAggregationStructure):
         name = "interchangeRules_RelStructure"
 
     interchange_rule_ref_or_interchange_rule: Iterable[
-        Union[InterchangeRuleRef, InterchangeRule]
+        InterchangeRuleRef | InterchangeRule
     ] = field(
         default_factory=list,
         metadata={

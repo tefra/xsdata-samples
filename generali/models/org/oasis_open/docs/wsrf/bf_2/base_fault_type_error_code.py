@@ -9,7 +9,7 @@ class BaseFaultTypeErrorCode:
     class Meta:
         global_type = False
 
-    dialect: Optional[str] = field(
+    dialect: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -15,7 +15,7 @@ class FacilityRequirementsRelStructure(ContainmentAggregationStructure):
         name = "facilityRequirements_RelStructure"
 
     facility_requirement_ref_or_facility_requirement: Iterable[
-        Union[FacilityRequirementRef, FacilityRequirement]
+        FacilityRequirementRef | FacilityRequirement
     ] = field(
         default_factory=list,
         metadata={

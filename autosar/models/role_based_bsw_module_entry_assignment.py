@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -47,9 +49,7 @@ class RoleBasedBswModuleEntryAssignment:
     class Meta:
         name = "ROLE-BASED-BSW-MODULE-ENTRY-ASSIGNMENT"
 
-    assigned_entry_ref: Optional[
-        "RoleBasedBswModuleEntryAssignment.AssignedEntryRef"
-    ] = field(
+    assigned_entry_ref: RoleBasedBswModuleEntryAssignment.AssignedEntryRef | None = field(
         default=None,
         metadata={
             "name": "ASSIGNED-ENTRY-REF",
@@ -57,7 +57,7 @@ class RoleBasedBswModuleEntryAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    role: Optional[Identifier] = field(
+    role: Identifier | None = field(
         default=None,
         metadata={
             "name": "ROLE",
@@ -65,7 +65,7 @@ class RoleBasedBswModuleEntryAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -73,14 +73,14 @@ class RoleBasedBswModuleEntryAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -91,7 +91,7 @@ class RoleBasedBswModuleEntryAssignment:
 
     @dataclass
     class AssignedEntryRef(Ref):
-        dest: Optional[BswModuleEntrySubtypesEnum] = field(
+        dest: BswModuleEntrySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

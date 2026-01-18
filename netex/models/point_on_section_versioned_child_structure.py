@@ -59,43 +59,7 @@ class PointOnSectionVersionedChildStructure(
     class Meta:
         name = "PointOnSection_VersionedChildStructure"
 
-    choice_1: Optional[
-        Union[
-            VehicleMeetingPointRef,
-            WirePointRef,
-            RoadPointRef,
-            RailwayPointRef,
-            TrafficControlPointRef,
-            BeaconPointRef,
-            ActivationPointRef,
-            BorderPointRef,
-            FareScheduledStopPointRef,
-            ScheduledStopPointRef,
-            GaragePointRef,
-            ParkingPointRef,
-            ReliefPointRef,
-            TimingPointRef,
-            RoutePointRef,
-            PointRef,
-            VehicleMeetingPoint,
-            BorderPoint,
-            FareScheduledStopPoint,
-            ScheduledStopPoint,
-            PathJunction,
-            RoutePoint,
-            ParkingPoint,
-            GaragePoint,
-            ReliefPoint,
-            TimingPoint,
-            WireJunction,
-            RoadJunction,
-            RailwayJunction,
-            TrafficControlPoint,
-            BeaconPoint,
-            ActivationPoint,
-            Point2,
-        ]
-    ] = field(
+    choice_1: VehicleMeetingPointRef | WirePointRef | RoadPointRef | RailwayPointRef | TrafficControlPointRef | BeaconPointRef | ActivationPointRef | BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | RoutePointRef | PointRef | VehicleMeetingPoint | BorderPoint | FareScheduledStopPoint | ScheduledStopPoint | PathJunction | RoutePoint | ParkingPoint | GaragePoint | ReliefPoint | TimingPoint | WireJunction | RoadJunction | RailwayJunction | TrafficControlPoint | BeaconPoint | ActivationPoint | Point2 | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -268,21 +232,7 @@ class PointOnSectionVersionedChildStructure(
             ),
         },
     )
-    link_ref_or_infrastructure_link_ref: Optional[
-        Union[
-            OnwardVehicleMeetingLinkRef,
-            VehicleMeetingLinkRef,
-            ServiceLinkRef,
-            LineLinkRef,
-            TimingLinkRef,
-            WireLinkRef,
-            RoadLinkRef,
-            RailwayLinkRef,
-            ActivationLinkRef,
-            PathLinkRef,
-            RouteLinkRef,
-        ]
-    ] = field(
+    link_ref_or_infrastructure_link_ref: OnwardVehicleMeetingLinkRef | VehicleMeetingLinkRef | ServiceLinkRef | LineLinkRef | TimingLinkRef | WireLinkRef | RoadLinkRef | RailwayLinkRef | ActivationLinkRef | PathLinkRef | RouteLinkRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -345,7 +295,7 @@ class PointOnSectionVersionedChildStructure(
             ),
         },
     )
-    reverse: Optional[bool] = field(
+    reverse: bool | None = field(
         default=None,
         metadata={
             "name": "Reverse",

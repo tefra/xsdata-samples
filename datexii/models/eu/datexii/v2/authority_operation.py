@@ -20,7 +20,7 @@ class AuthorityOperation(Activity):
     :ivar authority_operation_extension:
     """
 
-    authority_operation_type: Optional[AuthorityOperationTypeEnum] = field(
+    authority_operation_type: AuthorityOperationTypeEnum | None = field(
         default=None,
         metadata={
             "name": "authorityOperationType",
@@ -29,7 +29,7 @@ class AuthorityOperation(Activity):
             "required": True,
         },
     )
-    authority_operation_extension: Optional[ExtensionType] = field(
+    authority_operation_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "authorityOperationExtension",

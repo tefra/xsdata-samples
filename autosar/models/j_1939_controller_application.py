@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -88,7 +90,7 @@ class J1939ControllerApplication:
     class Meta:
         name = "J-1939-CONTROLLER-APPLICATION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -97,9 +99,7 @@ class J1939ControllerApplication:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "J1939ControllerApplication.ShortNameFragments"
-    ] = field(
+    short_name_fragments: J1939ControllerApplication.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -107,7 +107,7 @@ class J1939ControllerApplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -115,7 +115,7 @@ class J1939ControllerApplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -123,7 +123,7 @@ class J1939ControllerApplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -131,7 +131,7 @@ class J1939ControllerApplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -139,7 +139,7 @@ class J1939ControllerApplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -147,7 +147,7 @@ class J1939ControllerApplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["J1939ControllerApplication.Annotations"] = field(
+    annotations: J1939ControllerApplication.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -155,7 +155,7 @@ class J1939ControllerApplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -163,7 +163,7 @@ class J1939ControllerApplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    function_id: Optional[PositiveInteger] = field(
+    function_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "FUNCTION-ID",
@@ -171,7 +171,7 @@ class J1939ControllerApplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_prototype_iref: Optional[ComponentInSystemInstanceRef] = (
+    sw_component_prototype_iref: ComponentInSystemInstanceRef | None = (
         field(
             default=None,
             metadata={
@@ -181,14 +181,14 @@ class J1939ControllerApplication:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -196,7 +196,7 @@ class J1939ControllerApplication:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

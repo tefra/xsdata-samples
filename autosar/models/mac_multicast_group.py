@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -85,7 +87,7 @@ class MacMulticastGroup:
     class Meta:
         name = "MAC-MULTICAST-GROUP"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -94,7 +96,7 @@ class MacMulticastGroup:
             "required": True,
         },
     )
-    short_name_fragments: Optional["MacMulticastGroup.ShortNameFragments"] = (
+    short_name_fragments: MacMulticastGroup.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -104,7 +106,7 @@ class MacMulticastGroup:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -112,7 +114,7 @@ class MacMulticastGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -120,7 +122,7 @@ class MacMulticastGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -128,7 +130,7 @@ class MacMulticastGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -136,7 +138,7 @@ class MacMulticastGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -144,7 +146,7 @@ class MacMulticastGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["MacMulticastGroup.Annotations"] = field(
+    annotations: MacMulticastGroup.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -152,7 +154,7 @@ class MacMulticastGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mac_multicast_address: Optional[MacAddressString] = field(
+    mac_multicast_address: MacAddressString | None = field(
         default=None,
         metadata={
             "name": "MAC-MULTICAST-ADDRESS",
@@ -160,14 +162,14 @@ class MacMulticastGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -175,7 +177,7 @@ class MacMulticastGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

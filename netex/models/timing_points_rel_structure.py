@@ -17,7 +17,7 @@ class TimingPointsRelStructure(ContainmentAggregationStructure):
         name = "timingPoints_RelStructure"
 
     relief_point_or_parking_point_or_timing_point: Iterable[
-        Union[ParkingPoint, GaragePoint, ReliefPoint, TimingPoint]
+        ParkingPoint | GaragePoint | ReliefPoint | TimingPoint
     ] = field(
         default_factory=list,
         metadata={

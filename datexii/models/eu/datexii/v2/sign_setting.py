@@ -15,7 +15,7 @@ class SignSetting(OperatorAction):
     displayed.
     """
 
-    vms_setting: Optional[VmsSetting] = field(
+    vms_setting: VmsSetting | None = field(
         default=None,
         metadata={
             "name": "vmsSetting",
@@ -24,7 +24,7 @@ class SignSetting(OperatorAction):
             "required": True,
         },
     )
-    sign_setting_extension: Optional[ExtensionType] = field(
+    sign_setting_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "signSettingExtension",

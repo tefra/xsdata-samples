@@ -29,20 +29,20 @@ class TimeSynchronizationKindEnum:
     class Meta:
         name = "TIME-SYNCHRONIZATION-KIND-ENUM"
 
-    value: Optional[TimeSynchronizationKindEnumSimple] = field(
+    value: TimeSynchronizationKindEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

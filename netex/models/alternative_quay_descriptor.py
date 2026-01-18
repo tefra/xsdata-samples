@@ -36,7 +36,7 @@ class AlternativeQuayDescriptor(
             "type": "Ignore",
         },
     )
-    type_of_name: Optional[str] = field(
+    type_of_name: str | None = field(
         default=None,
         metadata={
             "name": "TypeOfName",

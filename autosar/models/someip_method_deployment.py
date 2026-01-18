@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -115,7 +117,7 @@ class SomeipMethodDeployment:
     class Meta:
         name = "SOMEIP-METHOD-DEPLOYMENT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -124,9 +126,7 @@ class SomeipMethodDeployment:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SomeipMethodDeployment.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SomeipMethodDeployment.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -134,7 +134,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -142,7 +142,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -150,7 +150,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -158,7 +158,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -166,7 +166,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -174,7 +174,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SomeipMethodDeployment.Annotations"] = field(
+    annotations: SomeipMethodDeployment.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -182,7 +182,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_ref: Optional["SomeipMethodDeployment.MethodRef"] = field(
+    method_ref: SomeipMethodDeployment.MethodRef | None = field(
         default=None,
         metadata={
             "name": "METHOD-REF",
@@ -190,7 +190,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum_segment_length_request: Optional[PositiveInteger] = field(
+    maximum_segment_length_request: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAXIMUM-SEGMENT-LENGTH-REQUEST",
@@ -198,7 +198,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum_segment_length_response: Optional[PositiveInteger] = field(
+    maximum_segment_length_response: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAXIMUM-SEGMENT-LENGTH-RESPONSE",
@@ -206,7 +206,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_id: Optional[PositiveInteger] = field(
+    method_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "METHOD-ID",
@@ -214,7 +214,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    separation_time_request: Optional[TimeValue] = field(
+    separation_time_request: TimeValue | None = field(
         default=None,
         metadata={
             "name": "SEPARATION-TIME-REQUEST",
@@ -222,7 +222,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    separation_time_response: Optional[TimeValue] = field(
+    separation_time_response: TimeValue | None = field(
         default=None,
         metadata={
             "name": "SEPARATION-TIME-RESPONSE",
@@ -230,7 +230,7 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transport_protocol: Optional[TransportLayerProtocolEnum] = field(
+    transport_protocol: TransportLayerProtocolEnum | None = field(
         default=None,
         metadata={
             "name": "TRANSPORT-PROTOCOL",
@@ -238,14 +238,14 @@ class SomeipMethodDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -253,7 +253,7 @@ class SomeipMethodDeployment:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -285,7 +285,7 @@ class SomeipMethodDeployment:
 
     @dataclass
     class MethodRef(Ref):
-        dest: Optional[ClientServerOperationSubtypesEnum] = field(
+        dest: ClientServerOperationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

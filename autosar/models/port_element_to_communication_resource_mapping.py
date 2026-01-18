@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -111,7 +113,7 @@ class PortElementToCommunicationResourceMapping:
     class Meta:
         name = "PORT-ELEMENT-TO-COMMUNICATION-RESOURCE-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -120,9 +122,7 @@ class PortElementToCommunicationResourceMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "PortElementToCommunicationResourceMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: PortElementToCommunicationResourceMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -130,7 +130,7 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -138,7 +138,7 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -146,7 +146,7 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -154,7 +154,7 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -162,7 +162,7 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -170,9 +170,7 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "PortElementToCommunicationResourceMapping.Annotations"
-    ] = field(
+    annotations: PortElementToCommunicationResourceMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -180,7 +178,7 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_server_operation_iref: Optional[OperationInSystemInstanceRef] = (
+    client_server_operation_iref: OperationInSystemInstanceRef | None = (
         field(
             default=None,
             metadata={
@@ -190,9 +188,7 @@ class PortElementToCommunicationResourceMapping:
             },
         )
     )
-    communication_resource_ref: Optional[
-        "PortElementToCommunicationResourceMapping.CommunicationResourceRef"
-    ] = field(
+    communication_resource_ref: PortElementToCommunicationResourceMapping.CommunicationResourceRef | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-RESOURCE-REF",
@@ -200,9 +196,7 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_declaration_group_prototype_iref: Optional[
-        ModeDeclarationGroupPrototypeInSystemInstanceRef
-    ] = field(
+    mode_declaration_group_prototype_iref: ModeDeclarationGroupPrototypeInSystemInstanceRef | None = field(
         default=None,
         metadata={
             "name": "MODE-DECLARATION-GROUP-PROTOTYPE-IREF",
@@ -210,9 +204,7 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter_data_prototype_iref: Optional[
-        ParameterDataPrototypeInSystemInstanceRef
-    ] = field(
+    parameter_data_prototype_iref: ParameterDataPrototypeInSystemInstanceRef | None = field(
         default=None,
         metadata={
             "name": "PARAMETER-DATA-PROTOTYPE-IREF",
@@ -220,7 +212,7 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_iref: Optional[TriggerInSystemInstanceRef] = field(
+    trigger_iref: TriggerInSystemInstanceRef | None = field(
         default=None,
         metadata={
             "name": "TRIGGER-IREF",
@@ -228,9 +220,7 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variable_data_prototype_iref: Optional[
-        VariableDataPrototypeInSystemInstanceRef
-    ] = field(
+    variable_data_prototype_iref: VariableDataPrototypeInSystemInstanceRef | None = field(
         default=None,
         metadata={
             "name": "VARIABLE-DATA-PROTOTYPE-IREF",
@@ -238,7 +228,7 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -246,14 +236,14 @@ class PortElementToCommunicationResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -261,7 +251,7 @@ class PortElementToCommunicationResourceMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -293,7 +283,7 @@ class PortElementToCommunicationResourceMapping:
 
     @dataclass
     class CommunicationResourceRef(Ref):
-        dest: Optional[CpSoftwareClusterCommunicationResourceSubtypesEnum] = (
+        dest: CpSoftwareClusterCommunicationResourceSubtypesEnum | None = (
             field(
                 default=None,
                 metadata={

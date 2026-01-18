@@ -15,7 +15,7 @@ class VehicleEquipmentsRelStructure(ContainmentAggregationStructure):
         name = "vehicleEquipments_RelStructure"
 
     access_vehicle_equipment_or_wheelchair_vehicle_equipment: Iterable[
-        Union[AccessVehicleEquipment, WheelchairVehicleEquipment]
+        AccessVehicleEquipment | WheelchairVehicleEquipment
     ] = field(
         default_factory=list,
         metadata={

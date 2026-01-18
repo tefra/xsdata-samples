@@ -24,21 +24,21 @@ class TrafficConcentration(TrafficData):
     :ivar traffic_concentration_extension:
     """
 
-    concentration: Optional[ConcentrationOfVehiclesValue] = field(
+    concentration: ConcentrationOfVehiclesValue | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    occupancy: Optional[PercentageValue] = field(
+    occupancy: PercentageValue | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    traffic_concentration_extension: Optional[ExtensionType] = field(
+    traffic_concentration_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "trafficConcentrationExtension",

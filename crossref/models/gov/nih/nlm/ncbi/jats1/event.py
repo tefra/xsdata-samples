@@ -35,7 +35,7 @@ class Event:
         name = "event"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    event_desc: Optional[EventDesc] = field(
+    event_desc: EventDesc | None = field(
         default=None,
         metadata={
             "name": "event-desc",
@@ -49,14 +49,14 @@ class Event:
             "type": "Element",
         },
     )
-    article_version: Optional[ArticleVersion] = field(
+    article_version: ArticleVersion | None = field(
         default=None,
         metadata={
             "name": "article-version",
             "type": "Element",
         },
     )
-    article_version_alternatives: Optional[ArticleVersionAlternatives] = field(
+    article_version_alternatives: ArticleVersionAlternatives | None = field(
         default=None,
         metadata={
             "name": "article-version-alternatives",
@@ -70,7 +70,7 @@ class Event:
             "type": "Element",
         },
     )
-    pub_date_not_available: Optional[PubDateNotAvailable] = field(
+    pub_date_not_available: PubDateNotAvailable | None = field(
         default=None,
         metadata={
             "name": "pub-date-not-available",
@@ -89,7 +89,7 @@ class Event:
             "type": "Element",
         },
     )
-    issn_l: Optional[IssnL] = field(
+    issn_l: IssnL | None = field(
         default=None,
         metadata={
             "name": "issn-l",
@@ -102,7 +102,7 @@ class Event:
             "type": "Element",
         },
     )
-    permissions: Optional[Permissions] = field(
+    permissions: Permissions | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -121,34 +121,34 @@ class Event:
             "type": "Element",
         },
     )
-    event_type: Optional[str] = field(
+    event_type: str | None = field(
         default=None,
         metadata={
             "name": "event-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",

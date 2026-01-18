@@ -16,7 +16,7 @@ class UserProfileRefsRelStructure(OneToManyRelationshipStructure):
         name = "userProfileRefs_RelStructure"
 
     user_profile_ref: Iterable[
-        Union[VehiclePoolerProfileRef, CompanionProfileRef, UserProfileRef]
+        VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef
     ] = field(
         default_factory=list,
         metadata={

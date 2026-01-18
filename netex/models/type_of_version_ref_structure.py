@@ -16,45 +16,45 @@ class TypeOfVersionRefStructure:
             "required": True,
         },
     )
-    name_of_ref_class: Optional[str] = field(
+    name_of_ref_class: str | None = field(
         default=None,
         metadata={
             "name": "nameOfRefClass",
             "type": "Attribute",
         },
     )
-    created: Optional[XmlDateTime] = field(
+    created: XmlDateTime | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    changed: Optional[XmlDateTime] = field(
+    changed: XmlDateTime | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    modification: Optional[ModificationEnumeration] = field(
+    modification: ModificationEnumeration | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    ref: Optional[str] = field(
+    ref: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version_ref: Optional[str] = field(
+    version_ref: str | None = field(
         default=None,
         metadata={
             "name": "versionRef",

@@ -43,7 +43,7 @@ class Ipv4ArpProps:
     class Meta:
         name = "IPV-4-ARP-PROPS"
 
-    tcp_ip_arp_num_gratuitous_arp_on_startup: Optional[PositiveInteger] = (
+    tcp_ip_arp_num_gratuitous_arp_on_startup: PositiveInteger | None = (
         field(
             default=None,
             metadata={
@@ -53,7 +53,7 @@ class Ipv4ArpProps:
             },
         )
     )
-    tcp_ip_arp_packet_queue_enabled: Optional[Boolean] = field(
+    tcp_ip_arp_packet_queue_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-ARP-PACKET-QUEUE-ENABLED",
@@ -61,7 +61,7 @@ class Ipv4ArpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_arp_request_timeout: Optional[TimeValue] = field(
+    tcp_ip_arp_request_timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-ARP-REQUEST-TIMEOUT",
@@ -69,7 +69,7 @@ class Ipv4ArpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_arp_table_entry_timeout: Optional[TimeValue] = field(
+    tcp_ip_arp_table_entry_timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-ARP-TABLE-ENTRY-TIMEOUT",
@@ -77,14 +77,14 @@ class Ipv4ArpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

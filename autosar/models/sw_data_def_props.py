@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -103,9 +105,7 @@ class SwDataDefProps:
     class Meta:
         name = "SW-DATA-DEF-PROPS"
 
-    sw_data_def_props_variants: Optional[
-        "SwDataDefProps.SwDataDefPropsVariants"
-    ] = field(
+    sw_data_def_props_variants: SwDataDefProps.SwDataDefPropsVariants | None = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEF-PROPS-VARIANTS",
@@ -113,14 +113,14 @@ class SwDataDefProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -131,7 +131,7 @@ class SwDataDefProps:
 
     @dataclass
     class SwDataDefPropsVariants:
-        sw_data_def_props_conditional: list["SwDataDefPropsConditional"] = (
+        sw_data_def_props_conditional: list[SwDataDefPropsConditional] = (
             field(
                 default_factory=list,
                 metadata={
@@ -180,7 +180,7 @@ class SwPointerTargetProps:
     class Meta:
         name = "SW-POINTER-TARGET-PROPS"
 
-    target_category: Optional[Identifier] = field(
+    target_category: Identifier | None = field(
         default=None,
         metadata={
             "name": "TARGET-CATEGORY",
@@ -188,7 +188,7 @@ class SwPointerTargetProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_data_def_props: Optional[SwDataDefProps] = field(
+    sw_data_def_props: SwDataDefProps | None = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEF-PROPS",
@@ -196,9 +196,7 @@ class SwPointerTargetProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    function_pointer_signature_ref: Optional[
-        "SwPointerTargetProps.FunctionPointerSignatureRef"
-    ] = field(
+    function_pointer_signature_ref: SwPointerTargetProps.FunctionPointerSignatureRef | None = field(
         default=None,
         metadata={
             "name": "FUNCTION-POINTER-SIGNATURE-REF",
@@ -206,14 +204,14 @@ class SwPointerTargetProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -224,7 +222,7 @@ class SwPointerTargetProps:
 
     @dataclass
     class FunctionPointerSignatureRef(Ref):
-        dest: Optional[BswModuleEntrySubtypesEnum] = field(
+        dest: BswModuleEntrySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -375,7 +373,7 @@ class SwDataDefPropsConditional:
     class Meta:
         name = "SW-DATA-DEF-PROPS-CONDITIONAL"
 
-    display_presentation: Optional[DisplayPresentationEnum] = field(
+    display_presentation: DisplayPresentationEnum | None = field(
         default=None,
         metadata={
             "name": "DISPLAY-PRESENTATION",
@@ -383,7 +381,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    step_size: Optional[Float] = field(
+    step_size: Float | None = field(
         default=None,
         metadata={
             "name": "STEP-SIZE",
@@ -391,9 +389,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_value_block_size_mults: Optional[
-        "SwDataDefPropsConditional.SwValueBlockSizeMults"
-    ] = field(
+    sw_value_block_size_mults: SwDataDefPropsConditional.SwValueBlockSizeMults | None = field(
         default=None,
         metadata={
             "name": "SW-VALUE-BLOCK-SIZE-MULTS",
@@ -401,7 +397,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SwDataDefPropsConditional.Annotations"] = field(
+    annotations: SwDataDefPropsConditional.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -409,9 +405,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_addr_method_ref: Optional[
-        "SwDataDefPropsConditional.SwAddrMethodRef"
-    ] = field(
+    sw_addr_method_ref: SwDataDefPropsConditional.SwAddrMethodRef | None = field(
         default=None,
         metadata={
             "name": "SW-ADDR-METHOD-REF",
@@ -419,7 +413,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_alignment: Optional[AlignmentType] = field(
+    sw_alignment: AlignmentType | None = field(
         default=None,
         metadata={
             "name": "SW-ALIGNMENT",
@@ -427,7 +421,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_type_ref: Optional["SwDataDefPropsConditional.BaseTypeRef"] = field(
+    base_type_ref: SwDataDefPropsConditional.BaseTypeRef | None = field(
         default=None,
         metadata={
             "name": "BASE-TYPE-REF",
@@ -435,7 +429,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_bit_representation: Optional[SwBitRepresentation] = field(
+    sw_bit_representation: SwBitRepresentation | None = field(
         default=None,
         metadata={
             "name": "SW-BIT-REPRESENTATION",
@@ -443,7 +437,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_calibration_access: Optional[SwCalibrationAccessEnum] = field(
+    sw_calibration_access: SwCalibrationAccessEnum | None = field(
         default=None,
         metadata={
             "name": "SW-CALIBRATION-ACCESS",
@@ -451,7 +445,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_value_block_size: Optional[NumericalValueVariationPoint] = field(
+    sw_value_block_size: NumericalValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "SW-VALUE-BLOCK-SIZE",
@@ -459,7 +453,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_calprm_axis_set: Optional[SwCalprmAxisSet] = field(
+    sw_calprm_axis_set: SwCalprmAxisSet | None = field(
         default=None,
         metadata={
             "name": "SW-CALPRM-AXIS-SET",
@@ -467,7 +461,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_text_props: Optional[SwTextProps] = field(
+    sw_text_props: SwTextProps | None = field(
         default=None,
         metadata={
             "name": "SW-TEXT-PROPS",
@@ -475,9 +469,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_comparison_variables: Optional[
-        "SwDataDefPropsConditional.SwComparisonVariables"
-    ] = field(
+    sw_comparison_variables: SwDataDefPropsConditional.SwComparisonVariables | None = field(
         default=None,
         metadata={
             "name": "SW-COMPARISON-VARIABLES",
@@ -485,7 +477,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    compu_method_ref: Optional["SwDataDefPropsConditional.CompuMethodRef"] = (
+    compu_method_ref: SwDataDefPropsConditional.CompuMethodRef | None = (
         field(
             default=None,
             metadata={
@@ -495,7 +487,7 @@ class SwDataDefPropsConditional:
             },
         )
     )
-    data_constr_ref: Optional["SwDataDefPropsConditional.DataConstrRef"] = (
+    data_constr_ref: SwDataDefPropsConditional.DataConstrRef | None = (
         field(
             default=None,
             metadata={
@@ -505,7 +497,7 @@ class SwDataDefPropsConditional:
             },
         )
     )
-    sw_data_dependency: Optional[SwDataDependency] = field(
+    sw_data_dependency: SwDataDependency | None = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEPENDENCY",
@@ -513,7 +505,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    display_format: Optional[DisplayFormatString] = field(
+    display_format: DisplayFormatString | None = field(
         default=None,
         metadata={
             "name": "DISPLAY-FORMAT",
@@ -521,9 +513,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implementation_data_type_ref: Optional[
-        "SwDataDefPropsConditional.ImplementationDataTypeRef"
-    ] = field(
+    implementation_data_type_ref: SwDataDefPropsConditional.ImplementationDataTypeRef | None = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-DATA-TYPE-REF",
@@ -531,7 +521,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_host_variable: Optional[SwVariableRefProxy] = field(
+    sw_host_variable: SwVariableRefProxy | None = field(
         default=None,
         metadata={
             "name": "SW-HOST-VARIABLE",
@@ -539,7 +529,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_impl_policy: Optional[SwImplPolicyEnum] = field(
+    sw_impl_policy: SwImplPolicyEnum | None = field(
         default=None,
         metadata={
             "name": "SW-IMPL-POLICY",
@@ -547,7 +537,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    additional_native_type_qualifier: Optional[NativeDeclarationString] = (
+    additional_native_type_qualifier: NativeDeclarationString | None = (
         field(
             default=None,
             metadata={
@@ -557,7 +547,7 @@ class SwDataDefPropsConditional:
             },
         )
     )
-    sw_intended_resolution: Optional[NumericalValue] = field(
+    sw_intended_resolution: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "SW-INTENDED-RESOLUTION",
@@ -565,7 +555,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_interpolation_method: Optional[Identifier] = field(
+    sw_interpolation_method: Identifier | None = field(
         default=None,
         metadata={
             "name": "SW-INTERPOLATION-METHOD",
@@ -573,7 +563,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    invalid_value: Optional["SwDataDefPropsConditional.InvalidValue"] = field(
+    invalid_value: SwDataDefPropsConditional.InvalidValue | None = field(
         default=None,
         metadata={
             "name": "INVALID-VALUE",
@@ -581,7 +571,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_function: Optional[Identifier] = field(
+    mc_function: Identifier | None = field(
         default=None,
         metadata={
             "name": "MC-FUNCTION",
@@ -589,7 +579,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_is_virtual: Optional[Boolean] = field(
+    sw_is_virtual: Boolean | None = field(
         default=None,
         metadata={
             "name": "SW-IS-VIRTUAL",
@@ -597,7 +587,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_pointer_target_props: Optional[SwPointerTargetProps] = field(
+    sw_pointer_target_props: SwPointerTargetProps | None = field(
         default=None,
         metadata={
             "name": "SW-POINTER-TARGET-PROPS",
@@ -605,9 +595,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_ref: Optional[
-        "SwDataDefPropsConditional.SwRecordLayoutRef"
-    ] = field(
+    sw_record_layout_ref: SwDataDefPropsConditional.SwRecordLayoutRef | None = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-REF",
@@ -615,7 +603,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_refresh_timing: Optional[MultidimensionalTime] = field(
+    sw_refresh_timing: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "SW-REFRESH-TIMING",
@@ -623,7 +611,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_ref: Optional["SwDataDefPropsConditional.UnitRef"] = field(
+    unit_ref: SwDataDefPropsConditional.UnitRef | None = field(
         default=None,
         metadata={
             "name": "UNIT-REF",
@@ -631,9 +619,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_axis_data_type_ref: Optional[
-        "SwDataDefPropsConditional.ValueAxisDataTypeRef"
-    ] = field(
+    value_axis_data_type_ref: SwDataDefPropsConditional.ValueAxisDataTypeRef | None = field(
         default=None,
         metadata={
             "name": "VALUE-AXIS-DATA-TYPE-REF",
@@ -641,7 +627,7 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -649,14 +635,14 @@ class SwDataDefPropsConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -691,7 +677,7 @@ class SwDataDefPropsConditional:
 
     @dataclass
     class SwAddrMethodRef(Ref):
-        dest: Optional[SwAddrMethodSubtypesEnum] = field(
+        dest: SwAddrMethodSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -702,7 +688,7 @@ class SwDataDefPropsConditional:
 
     @dataclass
     class BaseTypeRef(Ref):
-        dest: Optional[SwBaseTypeSubtypesEnum] = field(
+        dest: SwBaseTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -735,7 +721,7 @@ class SwDataDefPropsConditional:
             },
         )
         mc_data_instance_var_ref: list[
-            "SwDataDefPropsConditional.SwComparisonVariables.McDataInstanceVarRef"
+            SwDataDefPropsConditional.SwComparisonVariables.McDataInstanceVarRef
         ] = field(
             default_factory=list,
             metadata={
@@ -748,7 +734,7 @@ class SwDataDefPropsConditional:
 
         @dataclass
         class McDataInstanceVarRef(Ref):
-            dest: Optional[McDataInstanceSubtypesEnum] = field(
+            dest: McDataInstanceSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -759,7 +745,7 @@ class SwDataDefPropsConditional:
 
     @dataclass
     class CompuMethodRef(Ref):
-        dest: Optional[CompuMethodSubtypesEnum] = field(
+        dest: CompuMethodSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -770,7 +756,7 @@ class SwDataDefPropsConditional:
 
     @dataclass
     class DataConstrRef(Ref):
-        dest: Optional[DataConstrSubtypesEnum] = field(
+        dest: DataConstrSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -781,7 +767,7 @@ class SwDataDefPropsConditional:
 
     @dataclass
     class ImplementationDataTypeRef(Ref):
-        dest: Optional[AbstractImplementationDataTypeSubtypesEnum] = field(
+        dest: AbstractImplementationDataTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -792,9 +778,7 @@ class SwDataDefPropsConditional:
 
     @dataclass
     class InvalidValue:
-        application_assoc_map_value_specification: Optional[
-            ApplicationAssocMapValueSpecification
-        ] = field(
+        application_assoc_map_value_specification: ApplicationAssocMapValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-ASSOC-MAP-VALUE-SPECIFICATION",
@@ -802,9 +786,7 @@ class SwDataDefPropsConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_rule_based_value_specification: Optional[
-            ApplicationRuleBasedValueSpecification
-        ] = field(
+        application_rule_based_value_specification: ApplicationRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-RULE-BASED-VALUE-SPECIFICATION",
@@ -812,9 +794,7 @@ class SwDataDefPropsConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_value_specification: Optional[
-            ApplicationValueSpecification
-        ] = field(
+        application_value_specification: ApplicationValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-VALUE-SPECIFICATION",
@@ -822,7 +802,7 @@ class SwDataDefPropsConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        array_value_specification: Optional[ArrayValueSpecification] = field(
+        array_value_specification: ArrayValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "ARRAY-VALUE-SPECIFICATION",
@@ -830,9 +810,7 @@ class SwDataDefPropsConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        composite_rule_based_value_specification: Optional[
-            CompositeRuleBasedValueSpecification
-        ] = field(
+        composite_rule_based_value_specification: CompositeRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "COMPOSITE-RULE-BASED-VALUE-SPECIFICATION",
@@ -840,7 +818,7 @@ class SwDataDefPropsConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        constant_reference: Optional[ConstantReference] = field(
+        constant_reference: ConstantReference | None = field(
             default=None,
             metadata={
                 "name": "CONSTANT-REFERENCE",
@@ -848,9 +826,7 @@ class SwDataDefPropsConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        not_available_value_specification: Optional[
-            NotAvailableValueSpecification
-        ] = field(
+        not_available_value_specification: NotAvailableValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NOT-AVAILABLE-VALUE-SPECIFICATION",
@@ -858,9 +834,7 @@ class SwDataDefPropsConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_rule_based_value_specification: Optional[
-            NumericalRuleBasedValueSpecification
-        ] = field(
+        numerical_rule_based_value_specification: NumericalRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-RULE-BASED-VALUE-SPECIFICATION",
@@ -868,9 +842,7 @@ class SwDataDefPropsConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: Optional[
-            NumericalValueSpecification
-        ] = field(
+        numerical_value_specification: NumericalValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-VALUE-SPECIFICATION",
@@ -878,7 +850,7 @@ class SwDataDefPropsConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        record_value_specification: Optional[RecordValueSpecification] = field(
+        record_value_specification: RecordValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "RECORD-VALUE-SPECIFICATION",
@@ -886,9 +858,7 @@ class SwDataDefPropsConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: Optional[
-            ReferenceValueSpecification
-        ] = field(
+        reference_value_specification: ReferenceValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "REFERENCE-VALUE-SPECIFICATION",
@@ -896,7 +866,7 @@ class SwDataDefPropsConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        text_value_specification: Optional[TextValueSpecification] = field(
+        text_value_specification: TextValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "TEXT-VALUE-SPECIFICATION",
@@ -907,7 +877,7 @@ class SwDataDefPropsConditional:
 
     @dataclass
     class SwRecordLayoutRef(Ref):
-        dest: Optional[SwRecordLayoutSubtypesEnum] = field(
+        dest: SwRecordLayoutSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -918,7 +888,7 @@ class SwDataDefPropsConditional:
 
     @dataclass
     class UnitRef(Ref):
-        dest: Optional[UnitSubtypesEnum] = field(
+        dest: UnitSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -929,7 +899,7 @@ class SwDataDefPropsConditional:
 
     @dataclass
     class ValueAxisDataTypeRef(Ref):
-        dest: Optional[ApplicationPrimitiveDataTypeSubtypesEnum] = field(
+        dest: ApplicationPrimitiveDataTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

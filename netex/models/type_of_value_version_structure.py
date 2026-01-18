@@ -13,7 +13,7 @@ class TypeOfValueVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "TypeOfValue_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -21,7 +21,7 @@ class TypeOfValueVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -29,7 +29,7 @@ class TypeOfValueVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -37,7 +37,7 @@ class TypeOfValueVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    image: Optional[str] = field(
+    image: str | None = field(
         default=None,
         metadata={
             "name": "Image",
@@ -45,7 +45,7 @@ class TypeOfValueVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    url: Optional[str] = field(
+    url: str | None = field(
         default=None,
         metadata={
             "name": "Url",
@@ -53,7 +53,7 @@ class TypeOfValueVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",

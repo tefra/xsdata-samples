@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -11,9 +13,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class DataObjectServiceCapabilitiesStructure(AbstractCapabilitiesStructure):
-    topic_filtering: Optional[
-        "DataObjectServiceCapabilitiesStructure.TopicFiltering"
-    ] = field(
+    topic_filtering: DataObjectServiceCapabilitiesStructure.TopicFiltering | None = field(
         default=None,
         metadata={
             "name": "TopicFiltering",
@@ -21,7 +21,7 @@ class DataObjectServiceCapabilitiesStructure(AbstractCapabilitiesStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    request_policy: Optional[DataObjectCapabilityRequestPolicyStructure] = (
+    request_policy: DataObjectCapabilityRequestPolicyStructure | None = (
         field(
             default=None,
             metadata={
@@ -31,9 +31,7 @@ class DataObjectServiceCapabilitiesStructure(AbstractCapabilitiesStructure):
             },
         )
     )
-    subscription_policy: Optional[
-        "DataObjectServiceCapabilitiesStructure.SubscriptionPolicy"
-    ] = field(
+    subscription_policy: DataObjectServiceCapabilitiesStructure.SubscriptionPolicy | None = field(
         default=None,
         metadata={
             "name": "SubscriptionPolicy",
@@ -41,7 +39,7 @@ class DataObjectServiceCapabilitiesStructure(AbstractCapabilitiesStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    response_features: Optional[object] = field(
+    response_features: object | None = field(
         default=None,
         metadata={
             "name": "ResponseFeatures",
@@ -52,7 +50,7 @@ class DataObjectServiceCapabilitiesStructure(AbstractCapabilitiesStructure):
 
     @dataclass
     class TopicFiltering:
-        filter_by_frame: Optional[bool] = field(
+        filter_by_frame: bool | None = field(
             default=None,
             metadata={
                 "name": "FilterByFrame",
@@ -63,7 +61,7 @@ class DataObjectServiceCapabilitiesStructure(AbstractCapabilitiesStructure):
 
     @dataclass
     class SubscriptionPolicy:
-        has_incremental_updates: Optional[bool] = field(
+        has_incremental_updates: bool | None = field(
             default=None,
             metadata={
                 "name": "HasIncrementalUpdates",

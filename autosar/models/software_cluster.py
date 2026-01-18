@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -162,7 +164,7 @@ class SoftwareCluster:
     class Meta:
         name = "SOFTWARE-CLUSTER"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -171,7 +173,7 @@ class SoftwareCluster:
             "required": True,
         },
     )
-    short_name_fragments: Optional["SoftwareCluster.ShortNameFragments"] = (
+    short_name_fragments: SoftwareCluster.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -181,7 +183,7 @@ class SoftwareCluster:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -189,7 +191,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -197,7 +199,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -205,7 +207,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -213,7 +215,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -221,7 +223,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SoftwareCluster.Annotations"] = field(
+    annotations: SoftwareCluster.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -229,7 +231,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -237,9 +239,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    claimed_function_group_refs: Optional[
-        "SoftwareCluster.ClaimedFunctionGroupRefs"
-    ] = field(
+    claimed_function_group_refs: SoftwareCluster.ClaimedFunctionGroupRefs | None = field(
         default=None,
         metadata={
             "name": "CLAIMED-FUNCTION-GROUP-REFS",
@@ -247,7 +247,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    conflicts_to: Optional[SoftwareClusterDependencyFormula] = field(
+    conflicts_to: SoftwareClusterDependencyFormula | None = field(
         default=None,
         metadata={
             "name": "CONFLICTS-TO",
@@ -255,9 +255,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_ar_element_refs: Optional[
-        "SoftwareCluster.ContainedArElementRefs"
-    ] = field(
+    contained_ar_element_refs: SoftwareCluster.ContainedArElementRefs | None = field(
         default=None,
         metadata={
             "name": "CONTAINED-AR-ELEMENT-REFS",
@@ -265,9 +263,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_fibex_element_refs: Optional[
-        "SoftwareCluster.ContainedFibexElementRefs"
-    ] = field(
+    contained_fibex_element_refs: SoftwareCluster.ContainedFibexElementRefs | None = field(
         default=None,
         metadata={
             "name": "CONTAINED-FIBEX-ELEMENT-REFS",
@@ -275,9 +271,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_package_element_refs: Optional[
-        "SoftwareCluster.ContainedPackageElementRefs"
-    ] = field(
+    contained_package_element_refs: SoftwareCluster.ContainedPackageElementRefs | None = field(
         default=None,
         metadata={
             "name": "CONTAINED-PACKAGE-ELEMENT-REFS",
@@ -285,9 +279,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_process_refs: Optional[
-        "SoftwareCluster.ContainedProcessRefs"
-    ] = field(
+    contained_process_refs: SoftwareCluster.ContainedProcessRefs | None = field(
         default=None,
         metadata={
             "name": "CONTAINED-PROCESS-REFS",
@@ -295,7 +287,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    depends_on: Optional[SoftwareClusterDependencyFormula] = field(
+    depends_on: SoftwareClusterDependencyFormula | None = field(
         default=None,
         metadata={
             "name": "DEPENDS-ON",
@@ -303,7 +295,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    design_refs: Optional["SoftwareCluster.DesignRefs"] = field(
+    design_refs: SoftwareCluster.DesignRefs | None = field(
         default=None,
         metadata={
             "name": "DESIGN-REFS",
@@ -311,7 +303,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_addresss: Optional["SoftwareCluster.DiagnosticAddresss"] = (
+    diagnostic_addresss: SoftwareCluster.DiagnosticAddresss | None = (
         field(
             default=None,
             metadata={
@@ -321,9 +313,7 @@ class SoftwareCluster:
             },
         )
     )
-    diagnostic_extract_ref: Optional[
-        "SoftwareCluster.DiagnosticExtractRef"
-    ] = field(
+    diagnostic_extract_ref: SoftwareCluster.DiagnosticExtractRef | None = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EXTRACT-REF",
@@ -331,7 +321,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    license_refs: Optional["SoftwareCluster.LicenseRefs"] = field(
+    license_refs: SoftwareCluster.LicenseRefs | None = field(
         default=None,
         metadata={
             "name": "LICENSE-REFS",
@@ -339,9 +329,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    module_instantiation_refs: Optional[
-        "SoftwareCluster.ModuleInstantiationRefs"
-    ] = field(
+    module_instantiation_refs: SoftwareCluster.ModuleInstantiationRefs | None = field(
         default=None,
         metadata={
             "name": "MODULE-INSTANTIATION-REFS",
@@ -349,7 +337,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    release_notes_ref: Optional["SoftwareCluster.ReleaseNotesRef"] = field(
+    release_notes_ref: SoftwareCluster.ReleaseNotesRef | None = field(
         default=None,
         metadata={
             "name": "RELEASE-NOTES-REF",
@@ -357,7 +345,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_approval: Optional[String] = field(
+    type_approval: String | None = field(
         default=None,
         metadata={
             "name": "TYPE-APPROVAL",
@@ -365,7 +353,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vendor_id: Optional[PositiveInteger] = field(
+    vendor_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "VENDOR-ID",
@@ -373,7 +361,7 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vendor_signature_ref: Optional["SoftwareCluster.VendorSignatureRef"] = (
+    vendor_signature_ref: SoftwareCluster.VendorSignatureRef | None = (
         field(
             default=None,
             metadata={
@@ -383,7 +371,7 @@ class SoftwareCluster:
             },
         )
     )
-    version: Optional[StrongRevisionLabelString] = field(
+    version: StrongRevisionLabelString | None = field(
         default=None,
         metadata={
             "name": "VERSION",
@@ -391,14 +379,14 @@ class SoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -406,7 +394,7 @@ class SoftwareCluster:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -439,7 +427,7 @@ class SoftwareCluster:
     @dataclass
     class ClaimedFunctionGroupRefs:
         claimed_function_group_ref: list[
-            "SoftwareCluster.ClaimedFunctionGroupRefs.ClaimedFunctionGroupRef"
+            SoftwareCluster.ClaimedFunctionGroupRefs.ClaimedFunctionGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -451,7 +439,7 @@ class SoftwareCluster:
 
         @dataclass
         class ClaimedFunctionGroupRef(Ref):
-            dest: Optional[ModeDeclarationGroupPrototypeSubtypesEnum] = field(
+            dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -463,7 +451,7 @@ class SoftwareCluster:
     @dataclass
     class ContainedArElementRefs:
         contained_ar_element_ref: list[
-            "SoftwareCluster.ContainedArElementRefs.ContainedArElementRef"
+            SoftwareCluster.ContainedArElementRefs.ContainedArElementRef
         ] = field(
             default_factory=list,
             metadata={
@@ -475,7 +463,7 @@ class SoftwareCluster:
 
         @dataclass
         class ContainedArElementRef(Ref):
-            dest: Optional[ArElementSubtypesEnum] = field(
+            dest: ArElementSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -487,7 +475,7 @@ class SoftwareCluster:
     @dataclass
     class ContainedFibexElementRefs:
         contained_fibex_element_ref: list[
-            "SoftwareCluster.ContainedFibexElementRefs.ContainedFibexElementRef"
+            SoftwareCluster.ContainedFibexElementRefs.ContainedFibexElementRef
         ] = field(
             default_factory=list,
             metadata={
@@ -499,7 +487,7 @@ class SoftwareCluster:
 
         @dataclass
         class ContainedFibexElementRef(Ref):
-            dest: Optional[FibexElementSubtypesEnum] = field(
+            dest: FibexElementSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -511,7 +499,7 @@ class SoftwareCluster:
     @dataclass
     class ContainedPackageElementRefs:
         contained_package_element_ref: list[
-            "SoftwareCluster.ContainedPackageElementRefs.ContainedPackageElementRef"
+            SoftwareCluster.ContainedPackageElementRefs.ContainedPackageElementRef
         ] = field(
             default_factory=list,
             metadata={
@@ -523,7 +511,7 @@ class SoftwareCluster:
 
         @dataclass
         class ContainedPackageElementRef(Ref):
-            dest: Optional[UploadablePackageElementSubtypesEnum] = field(
+            dest: UploadablePackageElementSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -535,7 +523,7 @@ class SoftwareCluster:
     @dataclass
     class ContainedProcessRefs:
         contained_process_ref: list[
-            "SoftwareCluster.ContainedProcessRefs.ContainedProcessRef"
+            SoftwareCluster.ContainedProcessRefs.ContainedProcessRef
         ] = field(
             default_factory=list,
             metadata={
@@ -547,7 +535,7 @@ class SoftwareCluster:
 
         @dataclass
         class ContainedProcessRef(Ref):
-            dest: Optional[ProcessSubtypesEnum] = field(
+            dest: ProcessSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -558,7 +546,7 @@ class SoftwareCluster:
 
     @dataclass
     class DesignRefs:
-        design_ref: list["SoftwareCluster.DesignRefs.DesignRef"] = field(
+        design_ref: list[SoftwareCluster.DesignRefs.DesignRef] = field(
             default_factory=list,
             metadata={
                 "name": "DESIGN-REF",
@@ -569,7 +557,7 @@ class SoftwareCluster:
 
         @dataclass
         class DesignRef(Ref):
-            dest: Optional[SoftwareClusterDesignSubtypesEnum] = field(
+            dest: SoftwareClusterDesignSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -593,7 +581,7 @@ class SoftwareCluster:
 
     @dataclass
     class DiagnosticExtractRef(Ref):
-        dest: Optional[DiagnosticContributionSetSubtypesEnum] = field(
+        dest: DiagnosticContributionSetSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -604,7 +592,7 @@ class SoftwareCluster:
 
     @dataclass
     class LicenseRefs:
-        license_ref: list["SoftwareCluster.LicenseRefs.LicenseRef"] = field(
+        license_ref: list[SoftwareCluster.LicenseRefs.LicenseRef] = field(
             default_factory=list,
             metadata={
                 "name": "LICENSE-REF",
@@ -615,7 +603,7 @@ class SoftwareCluster:
 
         @dataclass
         class LicenseRef(Ref):
-            dest: Optional[DocumentationSubtypesEnum] = field(
+            dest: DocumentationSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -627,7 +615,7 @@ class SoftwareCluster:
     @dataclass
     class ModuleInstantiationRefs:
         module_instantiation_ref: list[
-            "SoftwareCluster.ModuleInstantiationRefs.ModuleInstantiationRef"
+            SoftwareCluster.ModuleInstantiationRefs.ModuleInstantiationRef
         ] = field(
             default_factory=list,
             metadata={
@@ -639,7 +627,7 @@ class SoftwareCluster:
 
         @dataclass
         class ModuleInstantiationRef(Ref):
-            dest: Optional[AdaptiveModuleInstantiationSubtypesEnum] = field(
+            dest: AdaptiveModuleInstantiationSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -650,7 +638,7 @@ class SoftwareCluster:
 
     @dataclass
     class ReleaseNotesRef(Ref):
-        dest: Optional[DocumentationSubtypesEnum] = field(
+        dest: DocumentationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -661,7 +649,7 @@ class SoftwareCluster:
 
     @dataclass
     class VendorSignatureRef(Ref):
-        dest: Optional[CryptoServiceCertificateSubtypesEnum] = field(
+        dest: CryptoServiceCertificateSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

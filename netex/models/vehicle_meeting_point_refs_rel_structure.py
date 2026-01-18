@@ -12,7 +12,7 @@ class VehicleMeetingPointRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "vehicleMeetingPointRefs_RelStructure"
 
-    vehicle_meeting_point_ref: Optional[VehicleMeetingPointRef] = field(
+    vehicle_meeting_point_ref: VehicleMeetingPointRef | None = field(
         default=None,
         metadata={
             "name": "VehicleMeetingPointRef",

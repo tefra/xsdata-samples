@@ -14,7 +14,7 @@ class CommercialProfileVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "CommercialProfile_VersionStructure"
 
-    type_of_concession_ref: Optional[TypeOfConcessionRef] = field(
+    type_of_concession_ref: TypeOfConcessionRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfConcessionRef",
@@ -22,7 +22,7 @@ class CommercialProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    consumption_amount: Optional[Decimal] = field(
+    consumption_amount: Decimal | None = field(
         default=None,
         metadata={
             "name": "ConsumptionAmount",
@@ -30,7 +30,7 @@ class CommercialProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    consumption_units: Optional[Decimal] = field(
+    consumption_units: Decimal | None = field(
         default=None,
         metadata={
             "name": "ConsumptionUnits",
@@ -38,7 +38,7 @@ class CommercialProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    general_group_of_entities_ref: Optional[GeneralGroupOfEntitiesRef] = field(
+    general_group_of_entities_ref: GeneralGroupOfEntitiesRef | None = field(
         default=None,
         metadata={
             "name": "GeneralGroupOfEntitiesRef",

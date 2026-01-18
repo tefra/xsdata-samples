@@ -21,7 +21,7 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "DayTypeAssignment_VersionStructure"
 
-    service_calendar_ref: Optional[ServiceCalendarRef] = field(
+    service_calendar_ref: ServiceCalendarRef | None = field(
         default=None,
         metadata={
             "name": "ServiceCalendarRef",
@@ -29,11 +29,7 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
-        Union[
-            UicOperatingPeriodRef, OperatingPeriodRef, OperatingDayRef, XmlDate
-        ]
-    ] = field(
+    choice: UicOperatingPeriodRef | OperatingPeriodRef | OperatingDayRef | XmlDate | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -61,7 +57,7 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    day_type_ref: Optional[Union[FareDayTypeRef, DayTypeRef]] = field(
+    day_type_ref: FareDayTypeRef | DayTypeRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -88,7 +84,7 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             "max_occurs": 5,
         },
     )
-    is_available: Optional[bool] = field(
+    is_available: bool | None = field(
         default=None,
         metadata={
             "name": "isAvailable",

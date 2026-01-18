@@ -11,7 +11,7 @@ class TCategoryValue(TBaseElement):
     class Meta:
         name = "tCategoryValue"
 
-    value: Optional[str] = field(
+    value: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -118,7 +120,7 @@ class DiagnosticEnableConditionPortMapping:
     class Meta:
         name = "DIAGNOSTIC-ENABLE-CONDITION-PORT-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -127,9 +129,7 @@ class DiagnosticEnableConditionPortMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticEnableConditionPortMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticEnableConditionPortMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -137,7 +137,7 @@ class DiagnosticEnableConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -145,7 +145,7 @@ class DiagnosticEnableConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -153,7 +153,7 @@ class DiagnosticEnableConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -161,7 +161,7 @@ class DiagnosticEnableConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -169,7 +169,7 @@ class DiagnosticEnableConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -177,9 +177,7 @@ class DiagnosticEnableConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "DiagnosticEnableConditionPortMapping.Annotations"
-    ] = field(
+    annotations: DiagnosticEnableConditionPortMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -187,7 +185,7 @@ class DiagnosticEnableConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -195,9 +193,7 @@ class DiagnosticEnableConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    enable_condition_ref: Optional[
-        "DiagnosticEnableConditionPortMapping.EnableConditionRef"
-    ] = field(
+    enable_condition_ref: DiagnosticEnableConditionPortMapping.EnableConditionRef | None = field(
         default=None,
         metadata={
             "name": "ENABLE-CONDITION-REF",
@@ -205,9 +201,7 @@ class DiagnosticEnableConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: Optional[
-        "DiagnosticEnableConditionPortMapping.ProcessRef"
-    ] = field(
+    process_ref: DiagnosticEnableConditionPortMapping.ProcessRef | None = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
@@ -215,9 +209,7 @@ class DiagnosticEnableConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_flat_service_dependency_ref: Optional[
-        "DiagnosticEnableConditionPortMapping.SwcFlatServiceDependencyRef"
-    ] = field(
+    swc_flat_service_dependency_ref: DiagnosticEnableConditionPortMapping.SwcFlatServiceDependencyRef | None = field(
         default=None,
         metadata={
             "name": "SWC-FLAT-SERVICE-DEPENDENCY-REF",
@@ -225,9 +217,7 @@ class DiagnosticEnableConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_service_dependency_in_executable_iref: Optional[
-        SwcServiceDependencyInExecutableInstanceRef
-    ] = field(
+    swc_service_dependency_in_executable_iref: SwcServiceDependencyInExecutableInstanceRef | None = field(
         default=None,
         metadata={
             "name": "SWC-SERVICE-DEPENDENCY-IN-EXECUTABLE-IREF",
@@ -235,9 +225,7 @@ class DiagnosticEnableConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_service_dependency_in_system_iref: Optional[
-        SwcServiceDependencyInSystemInstanceRef
-    ] = field(
+    swc_service_dependency_in_system_iref: SwcServiceDependencyInSystemInstanceRef | None = field(
         default=None,
         metadata={
             "name": "SWC-SERVICE-DEPENDENCY-IN-SYSTEM-IREF",
@@ -245,9 +233,7 @@ class DiagnosticEnableConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_service_dependency_iref: Optional[
-        SwcServiceDependencyInCompositionInstanceRef
-    ] = field(
+    swc_service_dependency_iref: SwcServiceDependencyInCompositionInstanceRef | None = field(
         default=None,
         metadata={
             "name": "SWC-SERVICE-DEPENDENCY-IREF",
@@ -255,14 +241,14 @@ class DiagnosticEnableConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -270,7 +256,7 @@ class DiagnosticEnableConditionPortMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -302,7 +288,7 @@ class DiagnosticEnableConditionPortMapping:
 
     @dataclass
     class EnableConditionRef(Ref):
-        dest: Optional[DiagnosticEnableConditionSubtypesEnum] = field(
+        dest: DiagnosticEnableConditionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -313,7 +299,7 @@ class DiagnosticEnableConditionPortMapping:
 
     @dataclass
     class ProcessRef(Ref):
-        dest: Optional[ProcessDesignSubtypesEnum] = field(
+        dest: ProcessDesignSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -324,7 +310,7 @@ class DiagnosticEnableConditionPortMapping:
 
     @dataclass
     class SwcFlatServiceDependencyRef(Ref):
-        dest: Optional[SwcServiceDependencySubtypesEnum] = field(
+        dest: SwcServiceDependencySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

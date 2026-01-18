@@ -29,7 +29,7 @@ class TParticipant(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    participant_multiplicity: Optional[ParticipantMultiplicity] = field(
+    participant_multiplicity: ParticipantMultiplicity | None = field(
         default=None,
         metadata={
             "name": "participantMultiplicity",
@@ -37,13 +37,13 @@ class TParticipant(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    process_ref: Optional[QName] = field(
+    process_ref: QName | None = field(
         default=None,
         metadata={
             "name": "processRef",

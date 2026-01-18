@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class FixedStartWindowStructure:
-    maximum_services_before: Optional[int] = field(
+    maximum_services_before: int | None = field(
         default=None,
         metadata={
             "name": "MaximumServicesBefore",
@@ -16,7 +16,7 @@ class FixedStartWindowStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_period_before: Optional[XmlDuration] = field(
+    flexible_period_before: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "FlexiblePeriodBefore",
@@ -24,7 +24,7 @@ class FixedStartWindowStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_services_after: Optional[int] = field(
+    maximum_services_after: int | None = field(
         default=None,
         metadata={
             "name": "MaximumServicesAfter",
@@ -32,7 +32,7 @@ class FixedStartWindowStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_period_after: Optional[XmlDuration] = field(
+    flexible_period_after: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "FlexiblePeriodAfter",

@@ -15,7 +15,7 @@ class FulfilmentMethodsRelStructure(ContainmentAggregationStructure):
         name = "fulfilmentMethods_RelStructure"
 
     fulfilment_method_ref_or_fulfilment_method: Iterable[
-        Union[FulfilmentMethodRef, FulfilmentMethod]
+        FulfilmentMethodRef | FulfilmentMethod
     ] = field(
         default_factory=list,
         metadata={

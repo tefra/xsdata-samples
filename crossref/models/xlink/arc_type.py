@@ -33,7 +33,7 @@ class ArcType:
             "required": True,
         },
     )
-    arcrole: Optional[str] = field(
+    arcrole: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -41,28 +41,28 @@ class ArcType:
             "min_length": 1,
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    from_value: Optional[str] = field(
+    from_value: str | None = field(
         default=None,
         metadata={
             "name": "from",
@@ -70,7 +70,7 @@ class ArcType:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    to: Optional[str] = field(
+    to: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

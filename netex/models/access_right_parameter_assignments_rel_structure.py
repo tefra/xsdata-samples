@@ -27,14 +27,7 @@ class AccessRightParameterAssignmentsRelStructure(
         name = "accessRightParameterAssignments_RelStructure"
 
     access_right_parameter_assignment: Iterable[
-        Union[
-            CustomerPurchaseParameterAssignment,
-            SpecificParameterAssignment,
-            GenericParameterAssignmentInContext,
-            GenericParameterAssignment,
-            ValidityParameterAssignment,
-            AccessRightParameterAssignment,
-        ]
+        CustomerPurchaseParameterAssignment | SpecificParameterAssignment | GenericParameterAssignmentInContext | GenericParameterAssignment | ValidityParameterAssignment | AccessRightParameterAssignment
     ] = field(
         default_factory=list,
         metadata={

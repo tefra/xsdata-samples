@@ -30,7 +30,7 @@ class ReservingVersionStructure(BookingPolicyVersionStructure):
             "tokens": True,
         },
     )
-    minimum_number_to_reserve: Optional[int] = field(
+    minimum_number_to_reserve: int | None = field(
         default=None,
         metadata={
             "name": "MinimumNumberToReserve",
@@ -38,7 +38,7 @@ class ReservingVersionStructure(BookingPolicyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_number_to_reserve: Optional[int] = field(
+    maximum_number_to_reserve: int | None = field(
         default=None,
         metadata={
             "name": "MaximumNumberToReserve",
@@ -46,7 +46,7 @@ class ReservingVersionStructure(BookingPolicyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    must_reserve_whole_compartment: Optional[bool] = field(
+    must_reserve_whole_compartment: bool | None = field(
         default=None,
         metadata={
             "name": "MustReserveWholeCompartment",
@@ -54,7 +54,7 @@ class ReservingVersionStructure(BookingPolicyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    reservation_charge_type: Optional[ReservationChargeTypeEnumeration] = (
+    reservation_charge_type: ReservationChargeTypeEnumeration | None = (
         field(
             default=None,
             metadata={
@@ -64,7 +64,7 @@ class ReservingVersionStructure(BookingPolicyVersionStructure):
             },
         )
     )
-    fee_basis: Optional[PerBasisEnumeration] = field(
+    fee_basis: PerBasisEnumeration | None = field(
         default=None,
         metadata={
             "name": "FeeBasis",
@@ -72,7 +72,7 @@ class ReservingVersionStructure(BookingPolicyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_free_connecting_reservations: Optional[bool] = field(
+    has_free_connecting_reservations: bool | None = field(
         default=None,
         metadata={
             "name": "HasFreeConnectingReservations",
@@ -80,7 +80,7 @@ class ReservingVersionStructure(BookingPolicyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_free_connecting_reservations: Optional[int] = field(
+    number_of_free_connecting_reservations: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfFreeConnectingReservations",
@@ -88,7 +88,7 @@ class ReservingVersionStructure(BookingPolicyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_fee_refundable: Optional[bool] = field(
+    is_fee_refundable: bool | None = field(
         default=None,
         metadata={
             "name": "IsFeeRefundable",
@@ -96,7 +96,7 @@ class ReservingVersionStructure(BookingPolicyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_arrangements: Optional[BookingArrangementsStructure] = field(
+    booking_arrangements: BookingArrangementsStructure | None = field(
         default=None,
         metadata={
             "name": "BookingArrangements",
@@ -104,7 +104,7 @@ class ReservingVersionStructure(BookingPolicyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    seat_allocation_method: Optional[SeatAllocationMethodEnumeration] = field(
+    seat_allocation_method: SeatAllocationMethodEnumeration | None = field(
         default=None,
         metadata={
             "name": "SeatAllocationMethod",
@@ -112,7 +112,7 @@ class ReservingVersionStructure(BookingPolicyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    reservation_expiry_period: Optional[XmlDuration] = field(
+    reservation_expiry_period: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "ReservationExpiryPeriod",

@@ -16,7 +16,7 @@ class RefundingVersionStructure(ResellingVersionStructure):
     class Meta:
         name = "Refunding_VersionStructure"
 
-    refund_type: Optional[RefundTypeEnumeration] = field(
+    refund_type: RefundTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "RefundType",
@@ -33,7 +33,7 @@ class RefundingVersionStructure(ResellingVersionStructure):
             "tokens": True,
         },
     )
-    partial_refund_basis: Optional[PartialRefundBasisEnumeration] = field(
+    partial_refund_basis: PartialRefundBasisEnumeration | None = field(
         default=None,
         metadata={
             "name": "PartialRefundBasis",

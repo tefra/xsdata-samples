@@ -18,19 +18,19 @@ class Status:
     class Meta:
         name = "status"
 
-    no: Optional[No] = field(
+    no: No | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    maybe: Optional[Maybe] = field(
+    maybe: Maybe | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    yes: Optional[Yes] = field(
+    yes: Yes | None = field(
         default=None,
         metadata={
             "type": "Element",

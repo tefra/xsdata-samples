@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import Optional, Union
@@ -28,7 +30,7 @@ class GroupOfServicesVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "GroupOfServices_VersionStructure"
 
-    day_types: Optional["GroupOfServicesVersionStructure.DayTypes"] = field(
+    day_types: GroupOfServicesVersionStructure.DayTypes | None = field(
         default=None,
         metadata={
             "name": "dayTypes",
@@ -36,7 +38,7 @@ class GroupOfServicesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_type: Optional[DirectionType] = field(
+    direction_type: DirectionType | None = field(
         default=None,
         metadata={
             "name": "DirectionType",
@@ -44,9 +46,7 @@ class GroupOfServicesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_ref_or_direction_view: Optional[
-        Union[DirectionRef, DirectionView]
-    ] = field(
+    direction_ref_or_direction_view: DirectionRef | DirectionView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -64,7 +64,7 @@ class GroupOfServicesVersionStructure(GroupOfEntitiesVersionStructure):
             ),
         },
     )
-    origin: Optional[GroupOfServicesEndPointDerivedViewStructure] = field(
+    origin: GroupOfServicesEndPointDerivedViewStructure | None = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -72,7 +72,7 @@ class GroupOfServicesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination: Optional[GroupOfServicesEndPointDerivedViewStructure] = field(
+    destination: GroupOfServicesEndPointDerivedViewStructure | None = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -80,7 +80,7 @@ class GroupOfServicesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination_displays: Optional[DestinationDisplayRefsRelStructure] = field(
+    destination_displays: DestinationDisplayRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "destinationDisplays",
@@ -88,14 +88,14 @@ class GroupOfServicesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    members: Optional[GroupOfServicesMembersRelStructure] = field(
+    members: GroupOfServicesMembersRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class SomeipSdClientServiceInstanceConfigRefConditional:
     class Meta:
         name = "SOMEIP-SD-CLIENT-SERVICE-INSTANCE-CONFIG-REF-CONDITIONAL"
 
-    someip_sd_client_service_instance_config_ref: Optional[
-        "SomeipSdClientServiceInstanceConfigRefConditional.SomeipSdClientServiceInstanceConfigRef"
-    ] = field(
+    someip_sd_client_service_instance_config_ref: SomeipSdClientServiceInstanceConfigRefConditional.SomeipSdClientServiceInstanceConfigRef | None = field(
         default=None,
         metadata={
             "name": "SOMEIP-SD-CLIENT-SERVICE-INSTANCE-CONFIG-REF",
@@ -43,7 +43,7 @@ class SomeipSdClientServiceInstanceConfigRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class SomeipSdClientServiceInstanceConfigRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class SomeipSdClientServiceInstanceConfigRefConditional:
 
     @dataclass
     class SomeipSdClientServiceInstanceConfigRef(Ref):
-        dest: Optional[SomeipSdClientServiceInstanceConfigSubtypesEnum] = (
+        dest: SomeipSdClientServiceInstanceConfigSubtypesEnum | None = (
             field(
                 default=None,
                 metadata={

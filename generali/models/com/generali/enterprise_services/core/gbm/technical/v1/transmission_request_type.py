@@ -21,7 +21,7 @@ class TransmissionRequestType(BaseGbmheaderType):
         retrieve</description>
     """
 
-    payload: Optional[PayloadType] = field(
+    payload: PayloadType | None = field(
         default=None,
         metadata={
             "name": "Payload",

@@ -27,7 +27,7 @@ class InterWorkRelation:
         name = "inter_work_relation"
         namespace = "http://www.crossref.org/relations.xsd"
 
-    relationship_type: Optional[InterWorkRelationRelationshipType] = field(
+    relationship_type: InterWorkRelationRelationshipType | None = field(
         default=None,
         metadata={
             "name": "relationship-type",
@@ -35,7 +35,7 @@ class InterWorkRelation:
             "required": True,
         },
     )
-    identifier_type: Optional[InterWorkRelationIdentifierType] = field(
+    identifier_type: InterWorkRelationIdentifierType | None = field(
         default=None,
         metadata={
             "name": "identifier-type",
@@ -43,7 +43,7 @@ class InterWorkRelation:
             "required": True,
         },
     )
-    namespace: Optional[str] = field(
+    namespace: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

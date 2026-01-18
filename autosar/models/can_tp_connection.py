@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -91,7 +93,7 @@ class CanTpConnection:
     class Meta:
         name = "CAN-TP-CONNECTION"
 
-    ident: Optional[TpConnectionIdent] = field(
+    ident: TpConnectionIdent | None = field(
         default=None,
         metadata={
             "name": "IDENT",
@@ -99,7 +101,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    addressing_format: Optional[CanTpAddressingFormatType] = field(
+    addressing_format: CanTpAddressingFormatType | None = field(
         default=None,
         metadata={
             "name": "ADDRESSING-FORMAT",
@@ -107,7 +109,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    can_tp_channel_ref: Optional["CanTpConnection.CanTpChannelRef"] = field(
+    can_tp_channel_ref: CanTpConnection.CanTpChannelRef | None = field(
         default=None,
         metadata={
             "name": "CAN-TP-CHANNEL-REF",
@@ -115,7 +117,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cancellation: Optional[Boolean] = field(
+    cancellation: Boolean | None = field(
         default=None,
         metadata={
             "name": "CANCELLATION",
@@ -123,7 +125,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_pdu_ref: Optional["CanTpConnection.DataPduRef"] = field(
+    data_pdu_ref: CanTpConnection.DataPduRef | None = field(
         default=None,
         metadata={
             "name": "DATA-PDU-REF",
@@ -131,7 +133,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flow_control_pdu_ref: Optional["CanTpConnection.FlowControlPduRef"] = (
+    flow_control_pdu_ref: CanTpConnection.FlowControlPduRef | None = (
         field(
             default=None,
             metadata={
@@ -141,7 +143,7 @@ class CanTpConnection:
             },
         )
     )
-    max_block_size: Optional[Integer] = field(
+    max_block_size: Integer | None = field(
         default=None,
         metadata={
             "name": "MAX-BLOCK-SIZE",
@@ -149,7 +151,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multicast_ref: Optional["CanTpConnection.MulticastRef"] = field(
+    multicast_ref: CanTpConnection.MulticastRef | None = field(
         default=None,
         metadata={
             "name": "MULTICAST-REF",
@@ -157,7 +159,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    padding_activation: Optional[Boolean] = field(
+    padding_activation: Boolean | None = field(
         default=None,
         metadata={
             "name": "PADDING-ACTIVATION",
@@ -165,7 +167,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    receiver_refs: Optional["CanTpConnection.ReceiverRefs"] = field(
+    receiver_refs: CanTpConnection.ReceiverRefs | None = field(
         default=None,
         metadata={
             "name": "RECEIVER-REFS",
@@ -173,7 +175,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ta_type: Optional[NetworkTargetAddressType] = field(
+    ta_type: NetworkTargetAddressType | None = field(
         default=None,
         metadata={
             "name": "TA-TYPE",
@@ -181,7 +183,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_br: Optional[TimeValue] = field(
+    timeout_br: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIMEOUT-BR",
@@ -189,7 +191,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_bs: Optional[TimeValue] = field(
+    timeout_bs: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIMEOUT-BS",
@@ -197,7 +199,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_cr: Optional[TimeValue] = field(
+    timeout_cr: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIMEOUT-CR",
@@ -205,7 +207,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_cs: Optional[TimeValue] = field(
+    timeout_cs: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIMEOUT-CS",
@@ -213,7 +215,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_sdu_ref: Optional["CanTpConnection.TpSduRef"] = field(
+    tp_sdu_ref: CanTpConnection.TpSduRef | None = field(
         default=None,
         metadata={
             "name": "TP-SDU-REF",
@@ -221,7 +223,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmit_cancellation: Optional[Boolean] = field(
+    transmit_cancellation: Boolean | None = field(
         default=None,
         metadata={
             "name": "TRANSMIT-CANCELLATION",
@@ -229,7 +231,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmitter_ref: Optional["CanTpConnection.TransmitterRef"] = field(
+    transmitter_ref: CanTpConnection.TransmitterRef | None = field(
         default=None,
         metadata={
             "name": "TRANSMITTER-REF",
@@ -237,7 +239,7 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -245,14 +247,14 @@ class CanTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -263,7 +265,7 @@ class CanTpConnection:
 
     @dataclass
     class CanTpChannelRef(Ref):
-        dest: Optional[CanTpChannelSubtypesEnum] = field(
+        dest: CanTpChannelSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -274,7 +276,7 @@ class CanTpConnection:
 
     @dataclass
     class DataPduRef(Ref):
-        dest: Optional[NPduSubtypesEnum] = field(
+        dest: NPduSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -285,7 +287,7 @@ class CanTpConnection:
 
     @dataclass
     class FlowControlPduRef(Ref):
-        dest: Optional[NPduSubtypesEnum] = field(
+        dest: NPduSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -296,7 +298,7 @@ class CanTpConnection:
 
     @dataclass
     class MulticastRef(Ref):
-        dest: Optional[CanTpAddressSubtypesEnum] = field(
+        dest: CanTpAddressSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -307,7 +309,7 @@ class CanTpConnection:
 
     @dataclass
     class ReceiverRefs:
-        receiver_ref: list["CanTpConnection.ReceiverRefs.ReceiverRef"] = field(
+        receiver_ref: list[CanTpConnection.ReceiverRefs.ReceiverRef] = field(
             default_factory=list,
             metadata={
                 "name": "RECEIVER-REF",
@@ -318,7 +320,7 @@ class CanTpConnection:
 
         @dataclass
         class ReceiverRef(Ref):
-            dest: Optional[CanTpNodeSubtypesEnum] = field(
+            dest: CanTpNodeSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -329,7 +331,7 @@ class CanTpConnection:
 
     @dataclass
     class TpSduRef(Ref):
-        dest: Optional[IPduSubtypesEnum] = field(
+        dest: IPduSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -340,7 +342,7 @@ class CanTpConnection:
 
     @dataclass
     class TransmitterRef(Ref):
-        dest: Optional[CanTpNodeSubtypesEnum] = field(
+        dest: CanTpNodeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -108,7 +110,7 @@ class SwRecordLayoutGroup:
     class Meta:
         name = "SW-RECORD-LAYOUT-GROUP"
 
-    short_label: Optional[Identifier] = field(
+    short_label: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -116,7 +118,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[AsamRecordLayoutSemantics] = field(
+    category: AsamRecordLayoutSemantics | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -124,7 +126,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -132,7 +134,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_group_axis: Optional[AxisIndexType] = field(
+    sw_record_layout_group_axis: AxisIndexType | None = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-GROUP-AXIS",
@@ -140,7 +142,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_group_index: Optional[NmtokenString] = field(
+    sw_record_layout_group_index: NmtokenString | None = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-GROUP-INDEX",
@@ -148,9 +150,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_generic_axis_param_type_ref: Optional[
-        "SwRecordLayoutGroup.SwGenericAxisParamTypeRef"
-    ] = field(
+    sw_generic_axis_param_type_ref: SwRecordLayoutGroup.SwGenericAxisParamTypeRef | None = field(
         default=None,
         metadata={
             "name": "SW-GENERIC-AXIS-PARAM-TYPE-REF",
@@ -158,7 +158,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_group_from: Optional[RecordLayoutIteratorPoint] = field(
+    sw_record_layout_group_from: RecordLayoutIteratorPoint | None = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-GROUP-FROM",
@@ -166,7 +166,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_group_to: Optional[RecordLayoutIteratorPoint] = field(
+    sw_record_layout_group_to: RecordLayoutIteratorPoint | None = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-GROUP-TO",
@@ -174,7 +174,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_group_step: Optional[Integer] = field(
+    sw_record_layout_group_step: Integer | None = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-GROUP-STEP",
@@ -182,7 +182,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_component: Optional[Identifier] = field(
+    sw_record_layout_component: Identifier | None = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-COMPONENT",
@@ -190,7 +190,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_ref: list["SwRecordLayoutGroup.SwRecordLayoutRef"] = (
+    sw_record_layout_ref: list[SwRecordLayoutGroup.SwRecordLayoutRef] = (
         field(
             default_factory=list,
             metadata={
@@ -208,7 +208,7 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_group: list["SwRecordLayoutGroup"] = field(
+    sw_record_layout_group: list[SwRecordLayoutGroup] = field(
         default_factory=list,
         metadata={
             "name": "SW-RECORD-LAYOUT-GROUP",
@@ -216,14 +216,14 @@ class SwRecordLayoutGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -234,7 +234,7 @@ class SwRecordLayoutGroup:
 
     @dataclass
     class SwGenericAxisParamTypeRef(Ref):
-        dest: Optional[SwGenericAxisParamTypeSubtypesEnum] = field(
+        dest: SwGenericAxisParamTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -245,7 +245,7 @@ class SwRecordLayoutGroup:
 
     @dataclass
     class SwRecordLayoutRef(Ref):
-        dest: Optional[SwRecordLayoutSubtypesEnum] = field(
+        dest: SwRecordLayoutSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -15,7 +15,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class RiskPartyInvolvement(RiskInvolvement):
-    insured_role: Optional[InsuredRoleType] = field(
+    insured_role: InsuredRoleType | None = field(
         default=None,
         metadata={
             "name": "InsuredRole",

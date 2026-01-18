@@ -14,13 +14,13 @@ class Break:
         name = "break"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

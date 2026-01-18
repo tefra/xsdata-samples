@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -36,7 +38,7 @@ class BswEntryRelationship:
     class Meta:
         name = "BSW-ENTRY-RELATIONSHIP"
 
-    from_ref: Optional["BswEntryRelationship.FromRef"] = field(
+    from_ref: BswEntryRelationship.FromRef | None = field(
         default=None,
         metadata={
             "name": "FROM-REF",
@@ -44,7 +46,7 @@ class BswEntryRelationship:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    to_ref: Optional["BswEntryRelationship.ToRef"] = field(
+    to_ref: BswEntryRelationship.ToRef | None = field(
         default=None,
         metadata={
             "name": "TO-REF",
@@ -52,7 +54,7 @@ class BswEntryRelationship:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_entry_relationship_type: Optional[BswEntryRelationshipEnum] = field(
+    bsw_entry_relationship_type: BswEntryRelationshipEnum | None = field(
         default=None,
         metadata={
             "name": "BSW-ENTRY-RELATIONSHIP-TYPE",
@@ -60,14 +62,14 @@ class BswEntryRelationship:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -78,7 +80,7 @@ class BswEntryRelationship:
 
     @dataclass
     class FromRef(Ref):
-        dest: Optional[BswModuleEntrySubtypesEnum] = field(
+        dest: BswModuleEntrySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -89,7 +91,7 @@ class BswEntryRelationship:
 
     @dataclass
     class ToRef(Ref):
-        dest: Optional[BswModuleEntrySubtypesEnum] = field(
+        dest: BswModuleEntrySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

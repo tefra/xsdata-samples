@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from decimal import Decimal
 from enum import Enum
@@ -46,7 +48,7 @@ class AdxpExplicit:
     class Meta:
         name = "ADXP_explicit"
 
-    part_type: Optional[AddressPartType] = field(
+    part_type: AddressPartType | None = field(
         default=None,
         metadata={
             "name": "partType",
@@ -80,7 +82,7 @@ class AnyType:
     class Meta:
         name = "ANY"
 
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -111,7 +113,7 @@ class EnxpExplicit:
     class Meta:
         name = "ENXP_explicit"
 
-    part_type: Optional[EntityNamePartType] = field(
+    part_type: EntityNamePartType | None = field(
         default=None,
         metadata={
             "name": "partType",
@@ -150,14 +152,14 @@ class IvxbTsExplicit:
     class Meta:
         name = "IVXB_TS_explicit"
 
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    value: Optional[str] = field(
+    value: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -190,14 +192,14 @@ class SxcmTsExplicit:
     class Meta:
         name = "SXCM_TS_explicit"
 
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    value: Optional[str] = field(
+    value: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -228,14 +230,14 @@ class TsExplicit:
     class Meta:
         name = "TS_explicit"
 
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    value: Optional[str] = field(
+    value: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -309,7 +311,7 @@ class Bl(AnyType):
     class Meta:
         name = "BL"
 
-    value: Optional[str] = field(
+    value: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -347,21 +349,21 @@ class Ii(AnyType):
     class Meta:
         name = "II"
 
-    root: Optional[str] = field(
+    root: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    extension: Optional[str] = field(
+    extension: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "min_length": 1,
         },
     )
-    assigning_authority_name: Optional[str] = field(
+    assigning_authority_name: str | None = field(
         default=None,
         metadata={
             "name": "assigningAuthorityName",
@@ -369,7 +371,7 @@ class Ii(AnyType):
             "min_length": 1,
         },
     )
-    displayable: Optional[str] = field(
+    displayable: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -430,14 +432,14 @@ class TelExplicit:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    value: Optional[str] = field(
+    value: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -467,7 +469,7 @@ class Url(AnyType):
     class Meta:
         name = "URL"
 
-    value: Optional[str] = field(
+    value: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -979,7 +981,7 @@ class AdExplicit:
     class Meta:
         name = "AD_explicit"
 
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -993,7 +995,7 @@ class AdExplicit:
             "tokens": True,
         },
     )
-    is_not_ordered: Optional[str] = field(
+    is_not_ordered: str | None = field(
         default=None,
         metadata={
             "name": "isNotOrdered",
@@ -1165,7 +1167,7 @@ class Bn(AnynonNull):
     class Meta:
         name = "BN"
 
-    value: Optional[str] = field(
+    value: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1214,20 +1216,20 @@ class Ed(Bin):
             "pattern": r"[^\s]+",
         },
     )
-    language: Optional[str] = field(
+    language: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    compression: Optional[CompressionAlgorithm] = field(
+    compression: CompressionAlgorithm | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    integrity_check: Optional[bytes] = field(
+    integrity_check: bytes | None = field(
         default=None,
         metadata={
             "name": "integrityCheck",
@@ -1259,7 +1261,7 @@ class Int(Qty):
     class Meta:
         name = "INT"
 
-    value: Optional[int] = field(
+    value: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1288,13 +1290,13 @@ class Mo(Qty):
     class Meta:
         name = "MO"
 
-    value: Optional[Union[Decimal, float]] = field(
+    value: Decimal | float | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    currency: Optional[str] = field(
+    currency: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1321,7 +1323,7 @@ class Real(Qty):
     class Meta:
         name = "REAL"
 
-    value: Optional[Union[Decimal, float]] = field(
+    value: Decimal | float | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1342,7 +1344,7 @@ class RtoQtyQty(Qty):
     class Meta:
         name = "RTO_QTY_QTY"
 
-    numerator: Optional[Qty] = field(
+    numerator: Qty | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1350,7 +1352,7 @@ class RtoQtyQty(Qty):
             "required": True,
         },
     )
-    denominator: Optional[Qty] = field(
+    denominator: Qty | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1371,7 +1373,7 @@ class Ts(Qty):
     class Meta:
         name = "TS"
 
-    value: Optional[str] = field(
+    value: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1417,7 +1419,7 @@ class ThumbnailExplicit:
     class Meta:
         name = "thumbnail_explicit"
 
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1438,20 +1440,20 @@ class ThumbnailExplicit:
             "pattern": r"[^\s]+",
         },
     )
-    language: Optional[str] = field(
+    language: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    compression: Optional[CompressionAlgorithm] = field(
+    compression: CompressionAlgorithm | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    integrity_check: Optional[bytes] = field(
+    integrity_check: bytes | None = field(
         default=None,
         metadata={
             "name": "integrityCheck",
@@ -1519,7 +1521,7 @@ class Cd(AnyType):
     class Meta:
         name = "CD"
 
-    original_text: Optional[Ed] = field(
+    original_text: Ed | None = field(
         default=None,
         metadata={
             "name": "originalText",
@@ -1527,28 +1529,28 @@ class Cd(AnyType):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    qualifier: list["Cr"] = field(
+    qualifier: list[Cr] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    translation: list["Cd"] = field(
+    translation: list[Cd] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[str] = field(
+    code: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    code_system: Optional[str] = field(
+    code_system: str | None = field(
         default=None,
         metadata={
             "name": "codeSystem",
@@ -1556,7 +1558,7 @@ class Cd(AnyType):
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    code_system_name: Optional[str] = field(
+    code_system_name: str | None = field(
         default=None,
         metadata={
             "name": "codeSystemName",
@@ -1564,7 +1566,7 @@ class Cd(AnyType):
             "min_length": 1,
         },
     )
-    code_system_version: Optional[str] = field(
+    code_system_version: str | None = field(
         default=None,
         metadata={
             "name": "codeSystemVersion",
@@ -1572,7 +1574,7 @@ class Cd(AnyType):
             "min_length": 1,
         },
     )
-    display_name: Optional[str] = field(
+    display_name: str | None = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -1580,7 +1582,7 @@ class Cd(AnyType):
             "min_length": 1,
         },
     )
-    value_set: Optional[str] = field(
+    value_set: str | None = field(
         default=None,
         metadata={
             "name": "valueSet",
@@ -1589,7 +1591,7 @@ class Cd(AnyType):
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    value_set_version: Optional[str] = field(
+    value_set_version: str | None = field(
         default=None,
         metadata={
             "name": "valueSetVersion",
@@ -1638,7 +1640,7 @@ class EdExplicit:
     class Meta:
         name = "ED_explicit"
 
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1659,20 +1661,20 @@ class EdExplicit:
             "pattern": r"[^\s]+",
         },
     )
-    language: Optional[str] = field(
+    language: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    compression: Optional[CompressionAlgorithm] = field(
+    compression: CompressionAlgorithm | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    integrity_check: Optional[bytes] = field(
+    integrity_check: bytes | None = field(
         default=None,
         metadata={
             "name": "integrityCheck",
@@ -1790,7 +1792,7 @@ class ScExplicit:
     class Meta:
         name = "SC_explicit"
 
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1811,20 +1813,20 @@ class ScExplicit:
             "pattern": r"[^\s]+",
         },
     )
-    language: Optional[str] = field(
+    language: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    compression: Optional[CompressionAlgorithm] = field(
+    compression: CompressionAlgorithm | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    integrity_check: Optional[bytes] = field(
+    integrity_check: bytes | None = field(
         default=None,
         metadata={
             "name": "integrityCheck",
@@ -1839,14 +1841,14 @@ class ScExplicit:
             "type": "Attribute",
         },
     )
-    code: Optional[str] = field(
+    code: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    code_system: Optional[str] = field(
+    code_system: str | None = field(
         default=None,
         metadata={
             "name": "codeSystem",
@@ -1854,7 +1856,7 @@ class ScExplicit:
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    code_system_name: Optional[str] = field(
+    code_system_name: str | None = field(
         default=None,
         metadata={
             "name": "codeSystemName",
@@ -1862,7 +1864,7 @@ class ScExplicit:
             "min_length": 1,
         },
     )
-    code_system_version: Optional[str] = field(
+    code_system_version: str | None = field(
         default=None,
         metadata={
             "name": "codeSystemVersion",
@@ -1870,7 +1872,7 @@ class ScExplicit:
             "min_length": 1,
         },
     )
-    display_name: Optional[str] = field(
+    display_name: str | None = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -1994,20 +1996,20 @@ class StExplicit:
             "pattern": r"[^\s]+",
         },
     )
-    language: Optional[str] = field(
+    language: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    compression: Optional[CompressionAlgorithm] = field(
+    compression: CompressionAlgorithm | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    integrity_check: Optional[bytes] = field(
+    integrity_check: bytes | None = field(
         default=None,
         metadata={
             "name": "integrityCheck",
@@ -2102,7 +2104,7 @@ class Adxp(St):
     class Meta:
         name = "ADXP"
 
-    part_type: Optional[AddressPartType] = field(
+    part_type: AddressPartType | None = field(
         default=None,
         metadata={
             "name": "partType",
@@ -2153,7 +2155,7 @@ class Enxp(St):
     class Meta:
         name = "ENXP"
 
-    part_type: Optional[EntityNamePartType] = field(
+    part_type: EntityNamePartType | None = field(
         default=None,
         metadata={
             "name": "partType",
@@ -2197,7 +2199,7 @@ class PqrExplicit:
     class Meta:
         name = "PQR_explicit"
 
-    original_text: Optional[EdExplicit] = field(
+    original_text: EdExplicit | None = field(
         default=None,
         metadata={
             "name": "originalText",
@@ -2205,21 +2207,21 @@ class PqrExplicit:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    code: Optional[str] = field(
+    code: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    code_system: Optional[str] = field(
+    code_system: str | None = field(
         default=None,
         metadata={
             "name": "codeSystem",
@@ -2227,7 +2229,7 @@ class PqrExplicit:
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    code_system_name: Optional[str] = field(
+    code_system_name: str | None = field(
         default=None,
         metadata={
             "name": "codeSystemName",
@@ -2235,7 +2237,7 @@ class PqrExplicit:
             "min_length": 1,
         },
     )
-    code_system_version: Optional[str] = field(
+    code_system_version: str | None = field(
         default=None,
         metadata={
             "name": "codeSystemVersion",
@@ -2243,7 +2245,7 @@ class PqrExplicit:
             "min_length": 1,
         },
     )
-    display_name: Optional[str] = field(
+    display_name: str | None = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -2251,7 +2253,7 @@ class PqrExplicit:
             "min_length": 1,
         },
     )
-    value: Optional[Union[Decimal, float]] = field(
+    value: Decimal | float | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2281,14 +2283,14 @@ class Sc(St):
     class Meta:
         name = "SC"
 
-    code: Optional[str] = field(
+    code: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    code_system: Optional[str] = field(
+    code_system: str | None = field(
         default=None,
         metadata={
             "name": "codeSystem",
@@ -2296,7 +2298,7 @@ class Sc(St):
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    code_system_name: Optional[str] = field(
+    code_system_name: str | None = field(
         default=None,
         metadata={
             "name": "codeSystemName",
@@ -2304,7 +2306,7 @@ class Sc(St):
             "min_length": 1,
         },
     )
-    code_system_version: Optional[str] = field(
+    code_system_version: str | None = field(
         default=None,
         metadata={
             "name": "codeSystemVersion",
@@ -2312,7 +2314,7 @@ class Sc(St):
             "min_length": 1,
         },
     )
-    display_name: Optional[str] = field(
+    display_name: str | None = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -2478,14 +2480,14 @@ class PqExplicit:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    value: Optional[Union[Decimal, float]] = field(
+    value: Decimal | float | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3008,7 +3010,7 @@ class Ad(AnyType):
             "tokens": True,
         },
     )
-    is_not_ordered: Optional[str] = field(
+    is_not_ordered: str | None = field(
         default=None,
         metadata={
             "name": "isNotOrdered",
@@ -3215,14 +3217,14 @@ class Cr(AnyType):
     class Meta:
         name = "CR"
 
-    name: Optional[Cv] = field(
+    name: Cv | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[Cd] = field(
+    value: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3338,7 +3340,7 @@ class IvlTsExplicit:
     class Meta:
         name = "IVL_TS_explicit"
 
-    low: Optional[IvxbTsExplicit] = field(
+    low: IvxbTsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3361,21 +3363,21 @@ class IvlTsExplicit:
             "max_occurs": 3,
         },
     )
-    center: Optional[TsExplicit] = field(
+    center: TsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    value: Optional[str] = field(
+    value: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3404,7 +3406,7 @@ class Pqr(Cv):
     class Meta:
         name = "PQR"
 
-    value: Optional[Union[Decimal, float]] = field(
+    value: Decimal | float | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3448,7 +3450,7 @@ class CdExplicit(AnyType):
     class Meta:
         name = "CD_explicit"
 
-    original_text: Optional[EdExplicit] = field(
+    original_text: EdExplicit | None = field(
         default=None,
         metadata={
             "name": "originalText",
@@ -3470,14 +3472,14 @@ class CdExplicit(AnyType):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[str] = field(
+    code: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[^\s]+",
         },
     )
-    code_system: Optional[str] = field(
+    code_system: str | None = field(
         default=None,
         metadata={
             "name": "codeSystem",
@@ -3485,7 +3487,7 @@ class CdExplicit(AnyType):
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    code_system_name: Optional[str] = field(
+    code_system_name: str | None = field(
         default=None,
         metadata={
             "name": "codeSystemName",
@@ -3493,7 +3495,7 @@ class CdExplicit(AnyType):
             "min_length": 1,
         },
     )
-    code_system_version: Optional[str] = field(
+    code_system_version: str | None = field(
         default=None,
         metadata={
             "name": "codeSystemVersion",
@@ -3501,7 +3503,7 @@ class CdExplicit(AnyType):
             "min_length": 1,
         },
     )
-    display_name: Optional[str] = field(
+    display_name: str | None = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -3509,7 +3511,7 @@ class CdExplicit(AnyType):
             "min_length": 1,
         },
     )
-    value_set: Optional[str] = field(
+    value_set: str | None = field(
         default=None,
         metadata={
             "name": "valueSet",
@@ -3518,7 +3520,7 @@ class CdExplicit(AnyType):
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    value_set_version: Optional[str] = field(
+    value_set_version: str | None = field(
         default=None,
         metadata={
             "name": "valueSetVersion",
@@ -3552,7 +3554,7 @@ class EnExplicit:
     class Meta:
         name = "EN_explicit"
 
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -3631,7 +3633,7 @@ class OnExplicit:
     class Meta:
         name = "ON_explicit"
 
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -3700,7 +3702,7 @@ class PnExplicit:
     class Meta:
         name = "PN_explicit"
 
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -3780,7 +3782,7 @@ class Pq(Qty):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[Union[Decimal, float]] = field(
+    value: Decimal | float | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3835,7 +3837,7 @@ class IvlTs(SxcmTs):
     class Meta:
         name = "IVL_TS"
 
-    low: Optional[IvxbTs] = field(
+    low: IvxbTs | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3858,7 +3860,7 @@ class IvlTs(SxcmTs):
             "max_occurs": 3,
         },
     )
-    center: Optional[Ts] = field(
+    center: Ts | None = field(
         default=None,
         metadata={
             "type": "Element",

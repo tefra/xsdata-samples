@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -47,7 +49,7 @@ class BswModeSenderPolicy:
     class Meta:
         name = "BSW-MODE-SENDER-POLICY"
 
-    ack_request: Optional[BswModeSwitchAckRequest] = field(
+    ack_request: BswModeSwitchAckRequest | None = field(
         default=None,
         metadata={
             "name": "ACK-REQUEST",
@@ -55,7 +57,7 @@ class BswModeSenderPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    enhanced_mode_api: Optional[Boolean] = field(
+    enhanced_mode_api: Boolean | None = field(
         default=None,
         metadata={
             "name": "ENHANCED-MODE-API",
@@ -63,9 +65,7 @@ class BswModeSenderPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provided_mode_group_ref: Optional[
-        "BswModeSenderPolicy.ProvidedModeGroupRef"
-    ] = field(
+    provided_mode_group_ref: BswModeSenderPolicy.ProvidedModeGroupRef | None = field(
         default=None,
         metadata={
             "name": "PROVIDED-MODE-GROUP-REF",
@@ -73,7 +73,7 @@ class BswModeSenderPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    queue_length: Optional[PositiveInteger] = field(
+    queue_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "QUEUE-LENGTH",
@@ -81,7 +81,7 @@ class BswModeSenderPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -89,14 +89,14 @@ class BswModeSenderPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -107,7 +107,7 @@ class BswModeSenderPolicy:
 
     @dataclass
     class ProvidedModeGroupRef(Ref):
-        dest: Optional[ModeDeclarationGroupPrototypeSubtypesEnum] = field(
+        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

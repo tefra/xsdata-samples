@@ -34,7 +34,7 @@ class UserDefinedCommunicationControllerConditional:
     class Meta:
         name = "USER-DEFINED-COMMUNICATION-CONTROLLER-CONDITIONAL"
 
-    wake_up_by_controller_supported: Optional[Boolean] = field(
+    wake_up_by_controller_supported: Boolean | None = field(
         default=None,
         metadata={
             "name": "WAKE-UP-BY-CONTROLLER-SUPPORTED",
@@ -42,7 +42,7 @@ class UserDefinedCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -50,14 +50,14 @@ class UserDefinedCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

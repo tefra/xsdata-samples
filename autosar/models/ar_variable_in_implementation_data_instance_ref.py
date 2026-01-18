@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -52,9 +54,7 @@ class ArVariableInImplementationDataInstanceRef:
     class Meta:
         name = "AR-VARIABLE-IN-IMPLEMENTATION-DATA-INSTANCE-REF"
 
-    port_prototype_ref: Optional[
-        "ArVariableInImplementationDataInstanceRef.PortPrototypeRef"
-    ] = field(
+    port_prototype_ref: ArVariableInImplementationDataInstanceRef.PortPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-REF",
@@ -62,9 +62,7 @@ class ArVariableInImplementationDataInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_variable_data_prototype_ref: Optional[
-        "ArVariableInImplementationDataInstanceRef.RootVariableDataPrototypeRef"
-    ] = field(
+    root_variable_data_prototype_ref: ArVariableInImplementationDataInstanceRef.RootVariableDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "ROOT-VARIABLE-DATA-PROTOTYPE-REF",
@@ -72,9 +70,7 @@ class ArVariableInImplementationDataInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_data_prototype_refs: Optional[
-        "ArVariableInImplementationDataInstanceRef.ContextDataPrototypeRefs"
-    ] = field(
+    context_data_prototype_refs: ArVariableInImplementationDataInstanceRef.ContextDataPrototypeRefs | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-DATA-PROTOTYPE-REFS",
@@ -82,9 +78,7 @@ class ArVariableInImplementationDataInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_data_prototype_ref: Optional[
-        "ArVariableInImplementationDataInstanceRef.TargetDataPrototypeRef"
-    ] = field(
+    target_data_prototype_ref: ArVariableInImplementationDataInstanceRef.TargetDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-REF",
@@ -92,14 +86,14 @@ class ArVariableInImplementationDataInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -110,7 +104,7 @@ class ArVariableInImplementationDataInstanceRef:
 
     @dataclass
     class PortPrototypeRef(Ref):
-        dest: Optional[PortPrototypeSubtypesEnum] = field(
+        dest: PortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -121,7 +115,7 @@ class ArVariableInImplementationDataInstanceRef:
 
     @dataclass
     class RootVariableDataPrototypeRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -133,7 +127,7 @@ class ArVariableInImplementationDataInstanceRef:
     @dataclass
     class ContextDataPrototypeRefs:
         context_data_prototype_ref: list[
-            "ArVariableInImplementationDataInstanceRef.ContextDataPrototypeRefs.ContextDataPrototypeRef"
+            ArVariableInImplementationDataInstanceRef.ContextDataPrototypeRefs.ContextDataPrototypeRef
         ] = field(
             default_factory=list,
             metadata={
@@ -145,7 +139,7 @@ class ArVariableInImplementationDataInstanceRef:
 
         @dataclass
         class ContextDataPrototypeRef(Ref):
-            dest: Optional[ImplementationDataTypeElementSubtypesEnum] = field(
+            dest: ImplementationDataTypeElementSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -156,7 +150,7 @@ class ArVariableInImplementationDataInstanceRef:
 
     @dataclass
     class TargetDataPrototypeRef(Ref):
-        dest: Optional[ImplementationDataTypeElementSubtypesEnum] = field(
+        dest: ImplementationDataTypeElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

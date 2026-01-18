@@ -15,7 +15,7 @@ class ClassesInRepositoryRelStructure(OneToManyRelationshipStructure):
         name = "classesInRepository_RelStructure"
 
     class_in_frame_ref_or_class_in_frame: Iterable[
-        Union[ClassInFrameRef, ClassInFrame]
+        ClassInFrameRef | ClassInFrame
     ] = field(
         default_factory=list,
         metadata={

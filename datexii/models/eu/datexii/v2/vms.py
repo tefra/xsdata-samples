@@ -54,7 +54,7 @@ class Vms:
     :ivar vms_extension:
     """
 
-    vms_working: Optional[bool] = field(
+    vms_working: bool | None = field(
         default=None,
         metadata={
             "name": "vmsWorking",
@@ -63,7 +63,7 @@ class Vms:
             "required": True,
         },
     )
-    vms_message_sequencing_interval: Optional[float] = field(
+    vms_message_sequencing_interval: float | None = field(
         default=None,
         metadata={
             "name": "vmsMessageSequencingInterval",
@@ -79,7 +79,7 @@ class Vms:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    text_display_area_settings: Optional[TextDisplayAreaSettings] = field(
+    text_display_area_settings: TextDisplayAreaSettings | None = field(
         default=None,
         metadata={
             "name": "textDisplayAreaSettings",
@@ -97,7 +97,7 @@ class Vms:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_location_override: Optional[Location] = field(
+    vms_location_override: Location | None = field(
         default=None,
         metadata={
             "name": "vmsLocationOverride",
@@ -105,7 +105,7 @@ class Vms:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    managed_logical_location_override: Optional[VmsManagedLogicalLocation] = (
+    managed_logical_location_override: VmsManagedLogicalLocation | None = (
         field(
             default=None,
             metadata={
@@ -115,7 +115,7 @@ class Vms:
             },
         )
     )
-    vms_dynamic_characteristics: Optional[VmsDynamicCharacteristics] = field(
+    vms_dynamic_characteristics: VmsDynamicCharacteristics | None = field(
         default=None,
         metadata={
             "name": "vmsDynamicCharacteristics",
@@ -131,7 +131,7 @@ class Vms:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_extension: Optional[ExtensionType] = field(
+    vms_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "vmsExtension",

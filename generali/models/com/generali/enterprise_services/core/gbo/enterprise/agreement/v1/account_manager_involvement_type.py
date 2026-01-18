@@ -15,9 +15,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class AccountManagerInvolvementType:
-    multinational_fronting_office_role: Optional[
-        MultinationalFrontingOfficeRoleType
-    ] = field(
+    multinational_fronting_office_role: MultinationalFrontingOfficeRoleType | None = field(
         default=None,
         metadata={
             "name": "MultinationalFrontingOfficeRole",
@@ -26,9 +24,7 @@ class AccountManagerInvolvementType:
             "required": True,
         },
     )
-    account_manager_type: Optional[
-        AccountManagerInvolvementTypeAccountManagerType
-    ] = field(
+    account_manager_type: AccountManagerInvolvementTypeAccountManagerType | None = field(
         default=None,
         metadata={
             "name": "AccountManagerType",

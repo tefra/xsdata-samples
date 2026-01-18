@@ -14,7 +14,7 @@ class CoupledJourneyVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "CoupledJourney_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -22,7 +22,7 @@ class CoupledJourneyVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -30,7 +30,7 @@ class CoupledJourneyVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_block_ref: Optional[TrainBlockRef] = field(
+    train_block_ref: TrainBlockRef | None = field(
         default=None,
         metadata={
             "name": "TrainBlockRef",
@@ -38,7 +38,7 @@ class CoupledJourneyVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journeys: Optional[VehicleJourneyRefsRelStructure] = field(
+    journeys: VehicleJourneyRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

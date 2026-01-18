@@ -17,7 +17,7 @@ class BlockPartsRelStructure(ContainmentAggregationStructure):
         name = "blockParts_RelStructure"
 
     choice: Iterable[
-        Union[TrainBlockPartRef, BlockPartRef, BlockPart, TrainBlockPart]
+        TrainBlockPartRef | BlockPartRef | BlockPart | TrainBlockPart
     ] = field(
         default_factory=list,
         metadata={

@@ -21,7 +21,7 @@ class LinearElementByCode(LinearElement):
     :ivar linear_element_by_code_extension:
     """
 
-    linear_element_identifier: Optional[str] = field(
+    linear_element_identifier: str | None = field(
         default=None,
         metadata={
             "name": "linearElementIdentifier",
@@ -31,7 +31,7 @@ class LinearElementByCode(LinearElement):
             "max_length": 1024,
         },
     )
-    linear_element_by_code_extension: Optional[ExtensionType] = field(
+    linear_element_by_code_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "linearElementByCodeExtension",

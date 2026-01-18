@@ -31,7 +31,7 @@ class GetProgramGbmrequestType(BaseGbmtype):
     class Meta:
         name = "GetProgramGBMRequestType"
 
-    app_data: Optional[ProgramReqAppDataType] = field(
+    app_data: ProgramReqAppDataType | None = field(
         default=None,
         metadata={
             "name": "AppData",
@@ -39,7 +39,7 @@ class GetProgramGbmrequestType(BaseGbmtype):
             "namespace": "http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1",
         },
     )
-    program_gbo: Optional[BaseGbotype] = field(
+    program_gbo: BaseGbotype | None = field(
         default=None,
         metadata={
             "name": "ProgramGBO",

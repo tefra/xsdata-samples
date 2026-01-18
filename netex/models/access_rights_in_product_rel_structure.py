@@ -17,7 +17,7 @@ class AccessRightsInProductRelStructure(StrictContainmentAggregationStructure):
         name = "accessRightsInProduct_RelStructure"
 
     access_right_in_product_ref_or_access_right_in_product: Iterable[
-        Union[AccessRightInProductRef, AccessRightInProduct]
+        AccessRightInProductRef | AccessRightInProduct
     ] = field(
         default_factory=list,
         metadata={

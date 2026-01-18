@@ -23,14 +23,7 @@ class VehicleServicePlaceAssignmentRefsRelStructure(
     class Meta:
         name = "vehicleServicePlaceAssignmentRefs_RelStructure"
 
-    vehicle_service_place_assignment_ref: Optional[
-        Union[
-            VehiclePoolingPlaceAssignmentRef,
-            VehicleSharingPlaceAssignmentRef,
-            TaxiServicePlaceAssignmentRef,
-            VehicleServicePlaceAssignmentRef,
-        ]
-    ] = field(
+    vehicle_service_place_assignment_ref: VehiclePoolingPlaceAssignmentRef | VehicleSharingPlaceAssignmentRef | TaxiServicePlaceAssignmentRef | VehicleServicePlaceAssignmentRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

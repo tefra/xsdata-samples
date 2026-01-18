@@ -30,7 +30,7 @@ class Subart:
     class Meta:
         name = "subart"
 
-    mrk: Optional[str] = field(
+    mrk: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

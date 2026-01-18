@@ -15,7 +15,7 @@ class NavigationPathsRelStructure(ContainmentAggregationStructure):
         name = "navigationPaths_RelStructure"
 
     navigation_path_ref_or_navigation_path: Iterable[
-        Union[NavigationPathRef, NavigationPath]
+        NavigationPathRef | NavigationPath
     ] = field(
         default_factory=list,
         metadata={

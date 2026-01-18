@@ -30,7 +30,7 @@ class RequestResponseDelay:
     class Meta:
         name = "REQUEST-RESPONSE-DELAY"
 
-    max_value: Optional[TimeValue] = field(
+    max_value: TimeValue | None = field(
         default=None,
         metadata={
             "name": "MAX-VALUE",
@@ -38,7 +38,7 @@ class RequestResponseDelay:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_value: Optional[TimeValue] = field(
+    min_value: TimeValue | None = field(
         default=None,
         metadata={
             "name": "MIN-VALUE",
@@ -46,14 +46,14 @@ class RequestResponseDelay:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

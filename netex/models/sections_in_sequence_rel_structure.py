@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
@@ -78,7 +80,7 @@ class SectionsInSequenceRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "sectionsInSequence_RelStructure"
 
-    section_in_sequence: Iterable["SectionInSequence"] = field(
+    section_in_sequence: Iterable[SectionInSequence] = field(
         default_factory=list,
         metadata={
             "name": "SectionInSequence",
@@ -94,7 +96,7 @@ class LinkSequenceVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "LinkSequence_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -102,7 +104,7 @@ class LinkSequenceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -110,7 +112,7 @@ class LinkSequenceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -118,7 +120,7 @@ class LinkSequenceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distance: Optional[Decimal] = field(
+    distance: Decimal | None = field(
         default=None,
         metadata={
             "name": "Distance",
@@ -126,7 +128,7 @@ class LinkSequenceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -134,14 +136,14 @@ class LinkSequenceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    projections: Optional[ProjectionsRelStructure] = field(
+    projections: ProjectionsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    info_links: Optional[InfoLinksRelStructure] = field(
+    info_links: InfoLinksRelStructure | None = field(
         default=None,
         metadata={
             "name": "infoLinks",
@@ -149,7 +151,7 @@ class LinkSequenceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sections_in_sequence: Optional[SectionsInSequenceRelStructure] = field(
+    sections_in_sequence: SectionsInSequenceRelStructure | None = field(
         default=None,
         metadata={
             "name": "sectionsInSequence",
@@ -164,7 +166,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "JourneyPattern_VersionStructure"
 
-    route_ref_or_route_view: Optional[Union[RouteRef, RouteView]] = field(
+    route_ref_or_route_view: RouteRef | RouteView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -182,7 +184,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             ),
         },
     )
-    direction_type: Optional[DirectionTypeEnumeration] = field(
+    direction_type: DirectionTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "DirectionType",
@@ -190,9 +192,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_ref_or_direction_view: Optional[
-        Union[DirectionRef, DirectionView]
-    ] = field(
+    direction_ref_or_direction_view: DirectionRef | DirectionView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -210,9 +210,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             ),
         },
     )
-    destination_display_ref_or_destination_display_view: Optional[
-        Union[DestinationDisplayRef, DestinationDisplayView]
-    ] = field(
+    destination_display_ref_or_destination_display_view: DestinationDisplayRef | DestinationDisplayView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -230,7 +228,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             ),
         },
     )
-    type_of_journey_pattern_ref: Optional[TypeOfJourneyPatternRef] = field(
+    type_of_journey_pattern_ref: TypeOfJourneyPatternRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfJourneyPatternRef",
@@ -238,7 +236,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operational_context_ref: Optional[OperationalContextRef] = field(
+    operational_context_ref: OperationalContextRef | None = field(
         default=None,
         metadata={
             "name": "OperationalContextRef",
@@ -246,7 +244,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timing_pattern_ref: Optional[TimingPatternRef] = field(
+    timing_pattern_ref: TimingPatternRef | None = field(
         default=None,
         metadata={
             "name": "TimingPatternRef",
@@ -254,7 +252,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -262,7 +260,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    run_times: Optional[JourneyPatternRunTimesRelStructure] = field(
+    run_times: JourneyPatternRunTimesRelStructure | None = field(
         default=None,
         metadata={
             "name": "runTimes",
@@ -270,7 +268,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wait_times: Optional[JourneyPatternWaitTimesRelStructure] = field(
+    wait_times: JourneyPatternWaitTimesRelStructure | None = field(
         default=None,
         metadata={
             "name": "waitTimes",
@@ -278,21 +276,21 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    headways: Optional[JourneyPatternHeadwaysRelStructure] = field(
+    headways: JourneyPatternHeadwaysRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    layovers: Optional[JourneyPatternLayoversRelStructure] = field(
+    layovers: JourneyPatternLayoversRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    points_in_sequence: Optional[PointsInJourneyPatternRelStructure] = field(
+    points_in_sequence: PointsInJourneyPatternRelStructure | None = field(
         default=None,
         metadata={
             "name": "pointsInSequence",
@@ -300,7 +298,7 @@ class JourneyPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    links_in_sequence: Optional[LinksInJourneyPatternRelStructure] = field(
+    links_in_sequence: LinksInJourneyPatternRelStructure | None = field(
         default=None,
         metadata={
             "name": "linksInSequence",
@@ -315,7 +313,7 @@ class SectionVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "Section_VersionStructure"
 
-    purpose_of_grouping_ref: Optional[PurposeOfGroupingRef] = field(
+    purpose_of_grouping_ref: PurposeOfGroupingRef | None = field(
         default=None,
         metadata={
             "name": "PurposeOfGroupingRef",
@@ -323,7 +321,7 @@ class SectionVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    used_in: Optional[LinkSequenceRefsRelStructure] = field(
+    used_in: LinkSequenceRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "usedIn",
@@ -331,7 +329,7 @@ class SectionVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name_of_link_class: Optional[str] = field(
+    name_of_link_class: str | None = field(
         default=None,
         metadata={
             "name": "nameOfLinkClass",
@@ -345,11 +343,7 @@ class CommonSectionVersionStructure(SectionVersionStructure):
     class Meta:
         name = "CommonSection_VersionStructure"
 
-    points_on_section_or_members: Optional[
-        Union[
-            PointsOnSectionRelStructure, CommonSectionPointMembersRelStructure
-        ]
-    ] = field(
+    points_on_section_or_members: PointsOnSectionRelStructure | CommonSectionPointMembersRelStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -374,7 +368,7 @@ class GeneralSectionVersionStructure(SectionVersionStructure):
     class Meta:
         name = "GeneralSection_VersionStructure"
 
-    points_on_section: Optional[PointsOnSectionRelStructure] = field(
+    points_on_section: PointsOnSectionRelStructure | None = field(
         default=None,
         metadata={
             "name": "pointsOnSection",
@@ -382,7 +376,7 @@ class GeneralSectionVersionStructure(SectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    links_on_section: Optional[LinksOnSectionRelStructure] = field(
+    links_on_section: LinksOnSectionRelStructure | None = field(
         default=None,
         metadata={
             "name": "linksOnSection",
@@ -403,12 +397,7 @@ class LineSectionVersionStructure(SectionVersionStructure):
     class Meta:
         name = "LineSection_VersionStructure"
 
-    points_on_section_or_members: Optional[
-        Union[
-            PointOnLineSectionsRelStructure,
-            CommonSectionPointMembersRelStructure,
-        ]
-    ] = field(
+    points_on_section_or_members: PointOnLineSectionsRelStructure | CommonSectionPointMembersRelStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -426,12 +415,7 @@ class LineSectionVersionStructure(SectionVersionStructure):
             ),
         },
     )
-    reverse_points_on_section_or_reverse_members: Optional[
-        Union[
-            PointOnLineSectionsRelStructure,
-            CommonSectionPointMembersRelStructure,
-        ]
-    ] = field(
+    reverse_points_on_section_or_reverse_members: PointOnLineSectionsRelStructure | CommonSectionPointMembersRelStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -449,7 +433,7 @@ class LineSectionVersionStructure(SectionVersionStructure):
             ),
         },
     )
-    section_type: Optional[SectionTypeEnumeration] = field(
+    section_type: SectionTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "SectionType",
@@ -457,7 +441,7 @@ class LineSectionVersionStructure(SectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
+    line_ref: FlexibleLineRef | LineRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -475,7 +459,7 @@ class LineSectionVersionStructure(SectionVersionStructure):
             ),
         },
     )
-    transport_organisation_ref: Optional[Union[AuthorityRef, OperatorRef]] = (
+    transport_organisation_ref: AuthorityRef | OperatorRef | None = (
         field(
             default=None,
             metadata={
@@ -508,15 +492,7 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
     class Meta:
         name = "FareSection_VersionStructure"
 
-    choice: Optional[
-        Union[
-            ServiceJourneyPatternRef,
-            ServicePatternRef,
-            DeadRunJourneyPatternRef,
-            JourneyPatternRef,
-            JourneyPattern,
-        ]
-    ] = field(
+    choice: ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef | JourneyPattern | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -549,7 +525,7 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
             ),
         },
     )
-    from_point_in_pattern_ref: Optional[FarePointInPatternRefStructure] = (
+    from_point_in_pattern_ref: FarePointInPatternRefStructure | None = (
         field(
             default=None,
             metadata={
@@ -559,7 +535,7 @@ class FareSectionVersionStructure(GeneralSectionVersionStructure):
             },
         )
     )
-    to_point_in_pattern_ref: Optional[FarePointInPatternRefStructure] = field(
+    to_point_in_pattern_ref: FarePointInPatternRefStructure | None = field(
         default=None,
         metadata={
             "name": "ToPointInPatternRef",
@@ -594,20 +570,7 @@ class SectionInSequenceVersionedChildStructure(
     class Meta:
         name = "SectionInSequence_VersionedChildStructure"
 
-    section_ref_or_general_section_ref_or_section: Optional[
-        Union[
-            ParentCommonSectionRef,
-            CommonSectionRef,
-            LineSectionRef,
-            FareSectionRef,
-            GeneralSectionRef,
-            SectionRef,
-            FareSection,
-            CommonSection,
-            LineSection,
-            GeneralSection,
-        ]
-    ] = field(
+    section_ref_or_general_section_ref_or_section: ParentCommonSectionRef | CommonSectionRef | LineSectionRef | FareSectionRef | GeneralSectionRef | SectionRef | FareSection | CommonSection | LineSection | GeneralSection | None = field(
         default=None,
         metadata={
             "type": "Elements",

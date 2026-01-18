@@ -15,7 +15,7 @@ class Errors:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    error_item: Optional[ErrorItem] = field(
+    error_item: ErrorItem | None = field(
         default=None,
         metadata={
             "name": "ErrorItem",

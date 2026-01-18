@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -832,7 +834,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class ActivityPropertyType:
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -841,7 +843,7 @@ class ActivityPropertyType:
             "required": True,
         },
     )
-    value: Optional[Value] = field(
+    value: Value | None = field(
         default=None,
         metadata={
             "name": "Value",
@@ -854,7 +856,7 @@ class ActivityPropertyType:
 
 @dataclass(frozen=True)
 class AddressLineType:
-    line: Optional[Line] = field(
+    line: Line | None = field(
         default=None,
         metadata={
             "name": "Line",
@@ -867,7 +869,7 @@ class AddressLineType:
 
 @dataclass(frozen=True)
 class AirTransportType:
-    aircraft_id: Optional[AircraftId] = field(
+    aircraft_id: AircraftId | None = field(
         default=None,
         metadata={
             "name": "AircraftID",
@@ -880,7 +882,7 @@ class AirTransportType:
 
 @dataclass(frozen=True)
 class AuctionTermsType:
-    auction_constraint_indicator: Optional[AuctionConstraintIndicator] = field(
+    auction_constraint_indicator: AuctionConstraintIndicator | None = field(
         default=None,
         metadata={
             "name": "AuctionConstraintIndicator",
@@ -930,7 +932,7 @@ class AuctionTermsType:
             },
         )
     )
-    auction_uri: Optional[AuctionUri] = field(
+    auction_uri: AuctionUri | None = field(
         default=None,
         metadata={
             "name": "AuctionURI",
@@ -942,7 +944,7 @@ class AuctionTermsType:
 
 @dataclass(frozen=True)
 class AwardingCriterionResponseType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -950,7 +952,7 @@ class AwardingCriterionResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    awarding_criterion_id: Optional[AwardingCriterionId] = field(
+    awarding_criterion_id: AwardingCriterionId | None = field(
         default=None,
         metadata={
             "name": "AwardingCriterionID",
@@ -976,7 +978,7 @@ class AwardingCriterionResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -984,7 +986,7 @@ class AwardingCriterionResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    amount: Optional[Amount] = field(
+    amount: Amount | None = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -993,7 +995,7 @@ class AwardingCriterionResponseType:
         },
     )
     subordinate_awarding_criterion_response: tuple[
-        "SubordinateAwardingCriterionResponse", ...
+        SubordinateAwardingCriterionResponse, ...
     ] = field(
         default_factory=tuple,
         metadata={
@@ -1006,7 +1008,7 @@ class AwardingCriterionResponseType:
 
 @dataclass(frozen=True)
 class AwardingCriterionType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -1014,7 +1016,7 @@ class AwardingCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    awarding_criterion_type_code: Optional[AwardingCriterionTypeCode] = field(
+    awarding_criterion_type_code: AwardingCriterionTypeCode | None = field(
         default=None,
         metadata={
             "name": "AwardingCriterionTypeCode",
@@ -1030,7 +1032,7 @@ class AwardingCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    weight_numeric: Optional[WeightNumeric] = field(
+    weight_numeric: WeightNumeric | None = field(
         default=None,
         metadata={
             "name": "WeightNumeric",
@@ -1054,7 +1056,7 @@ class AwardingCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    calculation_expression_code: Optional[CalculationExpressionCode] = field(
+    calculation_expression_code: CalculationExpressionCode | None = field(
         default=None,
         metadata={
             "name": "CalculationExpressionCode",
@@ -1062,7 +1064,7 @@ class AwardingCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_quantity: Optional[MinimumQuantity] = field(
+    minimum_quantity: MinimumQuantity | None = field(
         default=None,
         metadata={
             "name": "MinimumQuantity",
@@ -1070,7 +1072,7 @@ class AwardingCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_quantity: Optional[MaximumQuantity] = field(
+    maximum_quantity: MaximumQuantity | None = field(
         default=None,
         metadata={
             "name": "MaximumQuantity",
@@ -1078,7 +1080,7 @@ class AwardingCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_amount: Optional[MinimumAmount] = field(
+    minimum_amount: MinimumAmount | None = field(
         default=None,
         metadata={
             "name": "MinimumAmount",
@@ -1086,7 +1088,7 @@ class AwardingCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_amount: Optional[MaximumAmount] = field(
+    maximum_amount: MaximumAmount | None = field(
         default=None,
         metadata={
             "name": "MaximumAmount",
@@ -1103,7 +1105,7 @@ class AwardingCriterionType:
         },
     )
     subordinate_awarding_criterion: tuple[
-        "SubordinateAwardingCriterion", ...
+        SubordinateAwardingCriterion, ...
     ] = field(
         default_factory=tuple,
         metadata={
@@ -1116,7 +1118,7 @@ class AwardingCriterionType:
 
 @dataclass(frozen=True)
 class CardAccountType:
-    primary_account_number_id: Optional[PrimaryAccountNumberId] = field(
+    primary_account_number_id: PrimaryAccountNumberId | None = field(
         default=None,
         metadata={
             "name": "PrimaryAccountNumberID",
@@ -1125,7 +1127,7 @@ class CardAccountType:
             "required": True,
         },
     )
-    network_id: Optional[NetworkId] = field(
+    network_id: NetworkId | None = field(
         default=None,
         metadata={
             "name": "NetworkID",
@@ -1134,7 +1136,7 @@ class CardAccountType:
             "required": True,
         },
     )
-    card_type_code: Optional[CardTypeCode] = field(
+    card_type_code: CardTypeCode | None = field(
         default=None,
         metadata={
             "name": "CardTypeCode",
@@ -1142,7 +1144,7 @@ class CardAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validity_start_date: Optional[ValidityStartDate] = field(
+    validity_start_date: ValidityStartDate | None = field(
         default=None,
         metadata={
             "name": "ValidityStartDate",
@@ -1150,7 +1152,7 @@ class CardAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    expiry_date: Optional[ExpiryDate] = field(
+    expiry_date: ExpiryDate | None = field(
         default=None,
         metadata={
             "name": "ExpiryDate",
@@ -1158,7 +1160,7 @@ class CardAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issuer_id: Optional[IssuerId] = field(
+    issuer_id: IssuerId | None = field(
         default=None,
         metadata={
             "name": "IssuerID",
@@ -1166,7 +1168,7 @@ class CardAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_number_id: Optional[IssueNumberId] = field(
+    issue_number_id: IssueNumberId | None = field(
         default=None,
         metadata={
             "name": "IssueNumberID",
@@ -1174,7 +1176,7 @@ class CardAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    cv2_id: Optional[Cv2Id] = field(
+    cv2_id: Cv2Id | None = field(
         default=None,
         metadata={
             "name": "CV2ID",
@@ -1182,7 +1184,7 @@ class CardAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    card_chip_code: Optional[CardChipCode] = field(
+    card_chip_code: CardChipCode | None = field(
         default=None,
         metadata={
             "name": "CardChipCode",
@@ -1190,7 +1192,7 @@ class CardAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    chip_application_id: Optional[ChipApplicationId] = field(
+    chip_application_id: ChipApplicationId | None = field(
         default=None,
         metadata={
             "name": "ChipApplicationID",
@@ -1198,7 +1200,7 @@ class CardAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    holder_name: Optional[HolderName] = field(
+    holder_name: HolderName | None = field(
         default=None,
         metadata={
             "name": "HolderName",
@@ -1210,7 +1212,7 @@ class CardAccountType:
 
 @dataclass(frozen=True)
 class CatalogueReferenceType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -1219,7 +1221,7 @@ class CatalogueReferenceType:
             "required": True,
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -1227,7 +1229,7 @@ class CatalogueReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -1235,7 +1237,7 @@ class CatalogueReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -1243,7 +1245,7 @@ class CatalogueReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    revision_date: Optional[RevisionDate] = field(
+    revision_date: RevisionDate | None = field(
         default=None,
         metadata={
             "name": "RevisionDate",
@@ -1251,7 +1253,7 @@ class CatalogueReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    revision_time: Optional[RevisionTime] = field(
+    revision_time: RevisionTime | None = field(
         default=None,
         metadata={
             "name": "RevisionTime",
@@ -1275,7 +1277,7 @@ class CatalogueReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    version_id: Optional[VersionId] = field(
+    version_id: VersionId | None = field(
         default=None,
         metadata={
             "name": "VersionID",
@@ -1283,7 +1285,7 @@ class CatalogueReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    previous_version_id: Optional[PreviousVersionId] = field(
+    previous_version_id: PreviousVersionId | None = field(
         default=None,
         metadata={
             "name": "PreviousVersionID",
@@ -1295,7 +1297,7 @@ class CatalogueReferenceType:
 
 @dataclass(frozen=True)
 class ClassificationCategoryType:
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -1303,7 +1305,7 @@ class ClassificationCategoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    code_value: Optional[CodeValue] = field(
+    code_value: CodeValue | None = field(
         default=None,
         metadata={
             "name": "CodeValue",
@@ -1320,7 +1322,7 @@ class ClassificationCategoryType:
         },
     )
     categorizes_classification_category: tuple[
-        "CategorizesClassificationCategory", ...
+        CategorizesClassificationCategory, ...
     ] = field(
         default_factory=tuple,
         metadata={
@@ -1333,7 +1335,7 @@ class ClassificationCategoryType:
 
 @dataclass(frozen=True)
 class ClauseType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -1353,7 +1355,7 @@ class ClauseType:
 
 @dataclass(frozen=True)
 class CommodityClassificationType:
-    nature_code: Optional[NatureCode] = field(
+    nature_code: NatureCode | None = field(
         default=None,
         metadata={
             "name": "NatureCode",
@@ -1361,7 +1363,7 @@ class CommodityClassificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    cargo_type_code: Optional[CargoTypeCode] = field(
+    cargo_type_code: CargoTypeCode | None = field(
         default=None,
         metadata={
             "name": "CargoTypeCode",
@@ -1369,7 +1371,7 @@ class CommodityClassificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    commodity_code: Optional[CommodityCode] = field(
+    commodity_code: CommodityCode | None = field(
         default=None,
         metadata={
             "name": "CommodityCode",
@@ -1377,7 +1379,7 @@ class CommodityClassificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    item_classification_code: Optional[ItemClassificationCode] = field(
+    item_classification_code: ItemClassificationCode | None = field(
         default=None,
         metadata={
             "name": "ItemClassificationCode",
@@ -1389,7 +1391,7 @@ class CommodityClassificationType:
 
 @dataclass(frozen=True)
 class CommunicationType:
-    channel_code: Optional[ChannelCode] = field(
+    channel_code: ChannelCode | None = field(
         default=None,
         metadata={
             "name": "ChannelCode",
@@ -1397,7 +1399,7 @@ class CommunicationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    channel: Optional[Channel] = field(
+    channel: Channel | None = field(
         default=None,
         metadata={
             "name": "Channel",
@@ -1405,7 +1407,7 @@ class CommunicationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    value: Optional[Value] = field(
+    value: Value | None = field(
         default=None,
         metadata={
             "name": "Value",
@@ -1417,7 +1419,7 @@ class CommunicationType:
 
 @dataclass(frozen=True)
 class ConditionType:
-    attribute_id: Optional[AttributeId] = field(
+    attribute_id: AttributeId | None = field(
         default=None,
         metadata={
             "name": "AttributeID",
@@ -1426,7 +1428,7 @@ class ConditionType:
             "required": True,
         },
     )
-    measure: Optional[Measure] = field(
+    measure: Measure | None = field(
         default=None,
         metadata={
             "name": "Measure",
@@ -1442,7 +1444,7 @@ class ConditionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_measure: Optional[MinimumMeasure] = field(
+    minimum_measure: MinimumMeasure | None = field(
         default=None,
         metadata={
             "name": "MinimumMeasure",
@@ -1450,7 +1452,7 @@ class ConditionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_measure: Optional[MaximumMeasure] = field(
+    maximum_measure: MaximumMeasure | None = field(
         default=None,
         metadata={
             "name": "MaximumMeasure",
@@ -1462,7 +1464,7 @@ class ConditionType:
 
 @dataclass(frozen=True)
 class ConsumptionAverageType:
-    average_amount: Optional[AverageAmount] = field(
+    average_amount: AverageAmount | None = field(
         default=None,
         metadata={
             "name": "AverageAmount",
@@ -1482,7 +1484,7 @@ class ConsumptionAverageType:
 
 @dataclass(frozen=True)
 class ConsumptionCorrectionType:
-    correction_type: Optional[CorrectionType] = field(
+    correction_type: CorrectionType | None = field(
         default=None,
         metadata={
             "name": "CorrectionType",
@@ -1490,7 +1492,7 @@ class ConsumptionCorrectionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    correction_type_code: Optional[CorrectionTypeCode] = field(
+    correction_type_code: CorrectionTypeCode | None = field(
         default=None,
         metadata={
             "name": "CorrectionTypeCode",
@@ -1498,7 +1500,7 @@ class ConsumptionCorrectionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    meter_number: Optional[MeterNumber] = field(
+    meter_number: MeterNumber | None = field(
         default=None,
         metadata={
             "name": "MeterNumber",
@@ -1506,7 +1508,7 @@ class ConsumptionCorrectionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    gas_pressure_quantity: Optional[GasPressureQuantity] = field(
+    gas_pressure_quantity: GasPressureQuantity | None = field(
         default=None,
         metadata={
             "name": "GasPressureQuantity",
@@ -1514,9 +1516,7 @@ class ConsumptionCorrectionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    actual_temperature_reduction_quantity: Optional[
-        ActualTemperatureReductionQuantity
-    ] = field(
+    actual_temperature_reduction_quantity: ActualTemperatureReductionQuantity | None = field(
         default=None,
         metadata={
             "name": "ActualTemperatureReductionQuantity",
@@ -1524,9 +1524,7 @@ class ConsumptionCorrectionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    normal_temperature_reduction_quantity: Optional[
-        NormalTemperatureReductionQuantity
-    ] = field(
+    normal_temperature_reduction_quantity: NormalTemperatureReductionQuantity | None = field(
         default=None,
         metadata={
             "name": "NormalTemperatureReductionQuantity",
@@ -1534,9 +1532,7 @@ class ConsumptionCorrectionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    difference_temperature_reduction_quantity: Optional[
-        DifferenceTemperatureReductionQuantity
-    ] = field(
+    difference_temperature_reduction_quantity: DifferenceTemperatureReductionQuantity | None = field(
         default=None,
         metadata={
             "name": "DifferenceTemperatureReductionQuantity",
@@ -1552,7 +1548,7 @@ class ConsumptionCorrectionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    correction_unit_amount: Optional[CorrectionUnitAmount] = field(
+    correction_unit_amount: CorrectionUnitAmount | None = field(
         default=None,
         metadata={
             "name": "CorrectionUnitAmount",
@@ -1560,7 +1556,7 @@ class ConsumptionCorrectionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    consumption_energy_quantity: Optional[ConsumptionEnergyQuantity] = field(
+    consumption_energy_quantity: ConsumptionEnergyQuantity | None = field(
         default=None,
         metadata={
             "name": "ConsumptionEnergyQuantity",
@@ -1568,7 +1564,7 @@ class ConsumptionCorrectionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    consumption_water_quantity: Optional[ConsumptionWaterQuantity] = field(
+    consumption_water_quantity: ConsumptionWaterQuantity | None = field(
         default=None,
         metadata={
             "name": "ConsumptionWaterQuantity",
@@ -1576,7 +1572,7 @@ class ConsumptionCorrectionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    correction_amount: Optional[CorrectionAmount] = field(
+    correction_amount: CorrectionAmount | None = field(
         default=None,
         metadata={
             "name": "CorrectionAmount",
@@ -1596,7 +1592,7 @@ class ContractExecutionRequirementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    execution_requirement_code: Optional[ExecutionRequirementCode] = field(
+    execution_requirement_code: ExecutionRequirementCode | None = field(
         default=None,
         metadata={
             "name": "ExecutionRequirementCode",
@@ -1616,7 +1612,7 @@ class ContractExecutionRequirementType:
 
 @dataclass(frozen=True)
 class ContractingActivityType:
-    activity_type_code: Optional[ActivityTypeCode] = field(
+    activity_type_code: ActivityTypeCode | None = field(
         default=None,
         metadata={
             "name": "ActivityTypeCode",
@@ -1624,7 +1620,7 @@ class ContractingActivityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    activity_type: Optional[ActivityType] = field(
+    activity_type: ActivityType | None = field(
         default=None,
         metadata={
             "name": "ActivityType",
@@ -1636,7 +1632,7 @@ class ContractingActivityType:
 
 @dataclass(frozen=True)
 class ContractingPartyTypeType:
-    party_type_code: Optional[PartyTypeCode] = field(
+    party_type_code: PartyTypeCode | None = field(
         default=None,
         metadata={
             "name": "PartyTypeCode",
@@ -1644,7 +1640,7 @@ class ContractingPartyTypeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    party_type: Optional[UblCommonBasicComponents21PartyType] = field(
+    party_type: UblCommonBasicComponents21PartyType | None = field(
         default=None,
         metadata={
             "name": "PartyType",
@@ -1656,7 +1652,7 @@ class ContractingPartyTypeType:
 
 @dataclass(frozen=True)
 class CountryType:
-    identification_code: Optional[IdentificationCode] = field(
+    identification_code: IdentificationCode | None = field(
         default=None,
         metadata={
             "name": "IdentificationCode",
@@ -1664,7 +1660,7 @@ class CountryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -1676,7 +1672,7 @@ class CountryType:
 
 @dataclass(frozen=True)
 class CreditAccountType:
-    account_id: Optional[AccountId] = field(
+    account_id: AccountId | None = field(
         default=None,
         metadata={
             "name": "AccountID",
@@ -1689,7 +1685,7 @@ class CreditAccountType:
 
 @dataclass(frozen=True)
 class DeliveryUnitType:
-    batch_quantity: Optional[BatchQuantity] = field(
+    batch_quantity: BatchQuantity | None = field(
         default=None,
         metadata={
             "name": "BatchQuantity",
@@ -1698,7 +1694,7 @@ class DeliveryUnitType:
             "required": True,
         },
     )
-    consumer_unit_quantity: Optional[ConsumerUnitQuantity] = field(
+    consumer_unit_quantity: ConsumerUnitQuantity | None = field(
         default=None,
         metadata={
             "name": "ConsumerUnitQuantity",
@@ -1706,7 +1702,7 @@ class DeliveryUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    hazardous_risk_indicator: Optional[HazardousRiskIndicator] = field(
+    hazardous_risk_indicator: HazardousRiskIndicator | None = field(
         default=None,
         metadata={
             "name": "HazardousRiskIndicator",
@@ -1718,7 +1714,7 @@ class DeliveryUnitType:
 
 @dataclass(frozen=True)
 class DimensionType:
-    attribute_id: Optional[AttributeId] = field(
+    attribute_id: AttributeId | None = field(
         default=None,
         metadata={
             "name": "AttributeID",
@@ -1727,7 +1723,7 @@ class DimensionType:
             "required": True,
         },
     )
-    measure: Optional[Measure] = field(
+    measure: Measure | None = field(
         default=None,
         metadata={
             "name": "Measure",
@@ -1743,7 +1739,7 @@ class DimensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_measure: Optional[MinimumMeasure] = field(
+    minimum_measure: MinimumMeasure | None = field(
         default=None,
         metadata={
             "name": "MinimumMeasure",
@@ -1751,7 +1747,7 @@ class DimensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_measure: Optional[MaximumMeasure] = field(
+    maximum_measure: MaximumMeasure | None = field(
         default=None,
         metadata={
             "name": "MaximumMeasure",
@@ -1763,7 +1759,7 @@ class DimensionType:
 
 @dataclass(frozen=True)
 class EconomicOperatorRoleType:
-    role_code: Optional[RoleCode] = field(
+    role_code: RoleCode | None = field(
         default=None,
         metadata={
             "name": "RoleCode",
@@ -1783,7 +1779,7 @@ class EconomicOperatorRoleType:
 
 @dataclass(frozen=True)
 class EventCommentType:
-    comment: Optional[Comment] = field(
+    comment: Comment | None = field(
         default=None,
         metadata={
             "name": "Comment",
@@ -1792,7 +1788,7 @@ class EventCommentType:
             "required": True,
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -1800,7 +1796,7 @@ class EventCommentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -1812,9 +1808,7 @@ class EventCommentType:
 
 @dataclass(frozen=True)
 class EventTacticEnumerationType:
-    consumer_incentive_tactic_type_code: Optional[
-        ConsumerIncentiveTacticTypeCode
-    ] = field(
+    consumer_incentive_tactic_type_code: ConsumerIncentiveTacticTypeCode | None = field(
         default=None,
         metadata={
             "name": "ConsumerIncentiveTacticTypeCode",
@@ -1822,7 +1816,7 @@ class EventTacticEnumerationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    display_tactic_type_code: Optional[DisplayTacticTypeCode] = field(
+    display_tactic_type_code: DisplayTacticTypeCode | None = field(
         default=None,
         metadata={
             "name": "DisplayTacticTypeCode",
@@ -1830,7 +1824,7 @@ class EventTacticEnumerationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    feature_tactic_type_code: Optional[FeatureTacticTypeCode] = field(
+    feature_tactic_type_code: FeatureTacticTypeCode | None = field(
         default=None,
         metadata={
             "name": "FeatureTacticTypeCode",
@@ -1838,9 +1832,7 @@ class EventTacticEnumerationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    trade_item_packing_labeling_type_code: Optional[
-        TradeItemPackingLabelingTypeCode
-    ] = field(
+    trade_item_packing_labeling_type_code: TradeItemPackingLabelingTypeCode | None = field(
         default=None,
         metadata={
             "name": "TradeItemPackingLabelingTypeCode",
@@ -1852,7 +1844,7 @@ class EventTacticEnumerationType:
 
 @dataclass(frozen=True)
 class EvidenceSuppliedType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -1865,7 +1857,7 @@ class EvidenceSuppliedType:
 
 @dataclass(frozen=True)
 class ExternalReferenceType:
-    uri: Optional[Uri] = field(
+    uri: Uri | None = field(
         default=None,
         metadata={
             "name": "URI",
@@ -1873,7 +1865,7 @@ class ExternalReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_hash: Optional[DocumentHash] = field(
+    document_hash: DocumentHash | None = field(
         default=None,
         metadata={
             "name": "DocumentHash",
@@ -1881,7 +1873,7 @@ class ExternalReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    hash_algorithm_method: Optional[HashAlgorithmMethod] = field(
+    hash_algorithm_method: HashAlgorithmMethod | None = field(
         default=None,
         metadata={
             "name": "HashAlgorithmMethod",
@@ -1889,7 +1881,7 @@ class ExternalReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    expiry_date: Optional[ExpiryDate] = field(
+    expiry_date: ExpiryDate | None = field(
         default=None,
         metadata={
             "name": "ExpiryDate",
@@ -1897,7 +1889,7 @@ class ExternalReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    expiry_time: Optional[ExpiryTime] = field(
+    expiry_time: ExpiryTime | None = field(
         default=None,
         metadata={
             "name": "ExpiryTime",
@@ -1905,7 +1897,7 @@ class ExternalReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    mime_code: Optional[MimeCode] = field(
+    mime_code: MimeCode | None = field(
         default=None,
         metadata={
             "name": "MimeCode",
@@ -1913,7 +1905,7 @@ class ExternalReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    format_code: Optional[FormatCode] = field(
+    format_code: FormatCode | None = field(
         default=None,
         metadata={
             "name": "FormatCode",
@@ -1921,7 +1913,7 @@ class ExternalReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    encoding_code: Optional[EncodingCode] = field(
+    encoding_code: EncodingCode | None = field(
         default=None,
         metadata={
             "name": "EncodingCode",
@@ -1929,7 +1921,7 @@ class ExternalReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    character_set_code: Optional[CharacterSetCode] = field(
+    character_set_code: CharacterSetCode | None = field(
         default=None,
         metadata={
             "name": "CharacterSetCode",
@@ -1937,7 +1929,7 @@ class ExternalReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    file_name: Optional[FileName] = field(
+    file_name: FileName | None = field(
         default=None,
         metadata={
             "name": "FileName",
@@ -1957,7 +1949,7 @@ class ExternalReferenceType:
 
 @dataclass(frozen=True)
 class ForecastExceptionCriterionLineType:
-    forecast_purpose_code: Optional[ForecastPurposeCode] = field(
+    forecast_purpose_code: ForecastPurposeCode | None = field(
         default=None,
         metadata={
             "name": "ForecastPurposeCode",
@@ -1966,7 +1958,7 @@ class ForecastExceptionCriterionLineType:
             "required": True,
         },
     )
-    forecast_type_code: Optional[ForecastTypeCode] = field(
+    forecast_type_code: ForecastTypeCode | None = field(
         default=None,
         metadata={
             "name": "ForecastTypeCode",
@@ -1975,7 +1967,7 @@ class ForecastExceptionCriterionLineType:
             "required": True,
         },
     )
-    comparison_data_source_code: Optional[ComparisonDataSourceCode] = field(
+    comparison_data_source_code: ComparisonDataSourceCode | None = field(
         default=None,
         metadata={
             "name": "ComparisonDataSourceCode",
@@ -1983,7 +1975,7 @@ class ForecastExceptionCriterionLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    data_source_code: Optional[DataSourceCode] = field(
+    data_source_code: DataSourceCode | None = field(
         default=None,
         metadata={
             "name": "DataSourceCode",
@@ -1992,7 +1984,7 @@ class ForecastExceptionCriterionLineType:
             "required": True,
         },
     )
-    time_delta_days_quantity: Optional[TimeDeltaDaysQuantity] = field(
+    time_delta_days_quantity: TimeDeltaDaysQuantity | None = field(
         default=None,
         metadata={
             "name": "TimeDeltaDaysQuantity",
@@ -2004,7 +1996,7 @@ class ForecastExceptionCriterionLineType:
 
 @dataclass(frozen=True)
 class ForecastExceptionType:
-    forecast_purpose_code: Optional[ForecastPurposeCode] = field(
+    forecast_purpose_code: ForecastPurposeCode | None = field(
         default=None,
         metadata={
             "name": "ForecastPurposeCode",
@@ -2013,7 +2005,7 @@ class ForecastExceptionType:
             "required": True,
         },
     )
-    forecast_type_code: Optional[ForecastTypeCode] = field(
+    forecast_type_code: ForecastTypeCode | None = field(
         default=None,
         metadata={
             "name": "ForecastTypeCode",
@@ -2022,7 +2014,7 @@ class ForecastExceptionType:
             "required": True,
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -2031,7 +2023,7 @@ class ForecastExceptionType:
             "required": True,
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -2039,7 +2031,7 @@ class ForecastExceptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    data_source_code: Optional[DataSourceCode] = field(
+    data_source_code: DataSourceCode | None = field(
         default=None,
         metadata={
             "name": "DataSourceCode",
@@ -2048,7 +2040,7 @@ class ForecastExceptionType:
             "required": True,
         },
     )
-    comparison_data_code: Optional[ComparisonDataCode] = field(
+    comparison_data_code: ComparisonDataCode | None = field(
         default=None,
         metadata={
             "name": "ComparisonDataCode",
@@ -2056,7 +2048,7 @@ class ForecastExceptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    comparison_forecast_issue_time: Optional[ComparisonForecastIssueTime] = (
+    comparison_forecast_issue_time: ComparisonForecastIssueTime | None = (
         field(
             default=None,
             metadata={
@@ -2066,7 +2058,7 @@ class ForecastExceptionType:
             },
         )
     )
-    comparison_forecast_issue_date: Optional[ComparisonForecastIssueDate] = (
+    comparison_forecast_issue_date: ComparisonForecastIssueDate | None = (
         field(
             default=None,
             metadata={
@@ -2080,7 +2072,7 @@ class ForecastExceptionType:
 
 @dataclass(frozen=True)
 class ItemComparisonType:
-    price_amount: Optional[PriceAmount] = field(
+    price_amount: PriceAmount | None = field(
         default=None,
         metadata={
             "name": "PriceAmount",
@@ -2088,7 +2080,7 @@ class ItemComparisonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -2100,7 +2092,7 @@ class ItemComparisonType:
 
 @dataclass(frozen=True)
 class ItemPropertyGroupType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -2109,7 +2101,7 @@ class ItemPropertyGroupType:
             "required": True,
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -2117,7 +2109,7 @@ class ItemPropertyGroupType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    importance_code: Optional[ImportanceCode] = field(
+    importance_code: ImportanceCode | None = field(
         default=None,
         metadata={
             "name": "ImportanceCode",
@@ -2129,7 +2121,7 @@ class ItemPropertyGroupType:
 
 @dataclass(frozen=True)
 class ItemPropertyRangeType:
-    minimum_value: Optional[MinimumValue] = field(
+    minimum_value: MinimumValue | None = field(
         default=None,
         metadata={
             "name": "MinimumValue",
@@ -2137,7 +2129,7 @@ class ItemPropertyRangeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_value: Optional[MaximumValue] = field(
+    maximum_value: MaximumValue | None = field(
         default=None,
         metadata={
             "name": "MaximumValue",
@@ -2149,7 +2141,7 @@ class ItemPropertyRangeType:
 
 @dataclass(frozen=True)
 class LanguageType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -2157,7 +2149,7 @@ class LanguageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -2165,7 +2157,7 @@ class LanguageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    locale_code: Optional[LocaleCode] = field(
+    locale_code: LocaleCode | None = field(
         default=None,
         metadata={
             "name": "LocaleCode",
@@ -2177,7 +2169,7 @@ class LanguageType:
 
 @dataclass(frozen=True)
 class LocationCoordinateType:
-    coordinate_system_code: Optional[CoordinateSystemCode] = field(
+    coordinate_system_code: CoordinateSystemCode | None = field(
         default=None,
         metadata={
             "name": "CoordinateSystemCode",
@@ -2185,7 +2177,7 @@ class LocationCoordinateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    latitude_degrees_measure: Optional[LatitudeDegreesMeasure] = field(
+    latitude_degrees_measure: LatitudeDegreesMeasure | None = field(
         default=None,
         metadata={
             "name": "LatitudeDegreesMeasure",
@@ -2193,7 +2185,7 @@ class LocationCoordinateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    latitude_minutes_measure: Optional[LatitudeMinutesMeasure] = field(
+    latitude_minutes_measure: LatitudeMinutesMeasure | None = field(
         default=None,
         metadata={
             "name": "LatitudeMinutesMeasure",
@@ -2201,7 +2193,7 @@ class LocationCoordinateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    latitude_direction_code: Optional[LatitudeDirectionCode] = field(
+    latitude_direction_code: LatitudeDirectionCode | None = field(
         default=None,
         metadata={
             "name": "LatitudeDirectionCode",
@@ -2209,7 +2201,7 @@ class LocationCoordinateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    longitude_degrees_measure: Optional[LongitudeDegreesMeasure] = field(
+    longitude_degrees_measure: LongitudeDegreesMeasure | None = field(
         default=None,
         metadata={
             "name": "LongitudeDegreesMeasure",
@@ -2217,7 +2209,7 @@ class LocationCoordinateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    longitude_minutes_measure: Optional[LongitudeMinutesMeasure] = field(
+    longitude_minutes_measure: LongitudeMinutesMeasure | None = field(
         default=None,
         metadata={
             "name": "LongitudeMinutesMeasure",
@@ -2225,7 +2217,7 @@ class LocationCoordinateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    longitude_direction_code: Optional[LongitudeDirectionCode] = field(
+    longitude_direction_code: LongitudeDirectionCode | None = field(
         default=None,
         metadata={
             "name": "LongitudeDirectionCode",
@@ -2233,7 +2225,7 @@ class LocationCoordinateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    altitude_measure: Optional[AltitudeMeasure] = field(
+    altitude_measure: AltitudeMeasure | None = field(
         default=None,
         metadata={
             "name": "AltitudeMeasure",
@@ -2245,7 +2237,7 @@ class LocationCoordinateType:
 
 @dataclass(frozen=True)
 class MeterPropertyType:
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -2253,7 +2245,7 @@ class MeterPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name_code: Optional[NameCode] = field(
+    name_code: NameCode | None = field(
         default=None,
         metadata={
             "name": "NameCode",
@@ -2261,7 +2253,7 @@ class MeterPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    value: Optional[Value] = field(
+    value: Value | None = field(
         default=None,
         metadata={
             "name": "Value",
@@ -2269,7 +2261,7 @@ class MeterPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    value_quantity: Optional[ValueQuantity] = field(
+    value_quantity: ValueQuantity | None = field(
         default=None,
         metadata={
             "name": "ValueQuantity",
@@ -2289,7 +2281,7 @@ class MeterPropertyType:
 
 @dataclass(frozen=True)
 class MeterReadingType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -2297,9 +2289,7 @@ class MeterReadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    meter_reading_type: Optional[
-        UblCommonBasicComponents21MeterReadingType
-    ] = field(
+    meter_reading_type: UblCommonBasicComponents21MeterReadingType | None = field(
         default=None,
         metadata={
             "name": "MeterReadingType",
@@ -2307,7 +2297,7 @@ class MeterReadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    meter_reading_type_code: Optional[MeterReadingTypeCode] = field(
+    meter_reading_type_code: MeterReadingTypeCode | None = field(
         default=None,
         metadata={
             "name": "MeterReadingTypeCode",
@@ -2315,7 +2305,7 @@ class MeterReadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    previous_meter_reading_date: Optional[PreviousMeterReadingDate] = field(
+    previous_meter_reading_date: PreviousMeterReadingDate | None = field(
         default=None,
         metadata={
             "name": "PreviousMeterReadingDate",
@@ -2324,7 +2314,7 @@ class MeterReadingType:
             "required": True,
         },
     )
-    previous_meter_quantity: Optional[PreviousMeterQuantity] = field(
+    previous_meter_quantity: PreviousMeterQuantity | None = field(
         default=None,
         metadata={
             "name": "PreviousMeterQuantity",
@@ -2333,7 +2323,7 @@ class MeterReadingType:
             "required": True,
         },
     )
-    latest_meter_reading_date: Optional[LatestMeterReadingDate] = field(
+    latest_meter_reading_date: LatestMeterReadingDate | None = field(
         default=None,
         metadata={
             "name": "LatestMeterReadingDate",
@@ -2342,7 +2332,7 @@ class MeterReadingType:
             "required": True,
         },
     )
-    latest_meter_quantity: Optional[LatestMeterQuantity] = field(
+    latest_meter_quantity: LatestMeterQuantity | None = field(
         default=None,
         metadata={
             "name": "LatestMeterQuantity",
@@ -2351,7 +2341,7 @@ class MeterReadingType:
             "required": True,
         },
     )
-    previous_meter_reading_method: Optional[PreviousMeterReadingMethod] = (
+    previous_meter_reading_method: PreviousMeterReadingMethod | None = (
         field(
             default=None,
             metadata={
@@ -2361,9 +2351,7 @@ class MeterReadingType:
             },
         )
     )
-    previous_meter_reading_method_code: Optional[
-        PreviousMeterReadingMethodCode
-    ] = field(
+    previous_meter_reading_method_code: PreviousMeterReadingMethodCode | None = field(
         default=None,
         metadata={
             "name": "PreviousMeterReadingMethodCode",
@@ -2371,7 +2359,7 @@ class MeterReadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    latest_meter_reading_method: Optional[LatestMeterReadingMethod] = field(
+    latest_meter_reading_method: LatestMeterReadingMethod | None = field(
         default=None,
         metadata={
             "name": "LatestMeterReadingMethod",
@@ -2379,9 +2367,7 @@ class MeterReadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    latest_meter_reading_method_code: Optional[
-        LatestMeterReadingMethodCode
-    ] = field(
+    latest_meter_reading_method_code: LatestMeterReadingMethodCode | None = field(
         default=None,
         metadata={
             "name": "LatestMeterReadingMethodCode",
@@ -2397,7 +2383,7 @@ class MeterReadingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    delivered_quantity: Optional[DeliveredQuantity] = field(
+    delivered_quantity: DeliveredQuantity | None = field(
         default=None,
         metadata={
             "name": "DeliveredQuantity",
@@ -2410,7 +2396,7 @@ class MeterReadingType:
 
 @dataclass(frozen=True)
 class MonetaryTotalType:
-    line_extension_amount: Optional[LineExtensionAmount] = field(
+    line_extension_amount: LineExtensionAmount | None = field(
         default=None,
         metadata={
             "name": "LineExtensionAmount",
@@ -2418,7 +2404,7 @@ class MonetaryTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_exclusive_amount: Optional[TaxExclusiveAmount] = field(
+    tax_exclusive_amount: TaxExclusiveAmount | None = field(
         default=None,
         metadata={
             "name": "TaxExclusiveAmount",
@@ -2426,7 +2412,7 @@ class MonetaryTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_inclusive_amount: Optional[TaxInclusiveAmount] = field(
+    tax_inclusive_amount: TaxInclusiveAmount | None = field(
         default=None,
         metadata={
             "name": "TaxInclusiveAmount",
@@ -2434,7 +2420,7 @@ class MonetaryTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    allowance_total_amount: Optional[AllowanceTotalAmount] = field(
+    allowance_total_amount: AllowanceTotalAmount | None = field(
         default=None,
         metadata={
             "name": "AllowanceTotalAmount",
@@ -2442,7 +2428,7 @@ class MonetaryTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    charge_total_amount: Optional[ChargeTotalAmount] = field(
+    charge_total_amount: ChargeTotalAmount | None = field(
         default=None,
         metadata={
             "name": "ChargeTotalAmount",
@@ -2450,7 +2436,7 @@ class MonetaryTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    prepaid_amount: Optional[PrepaidAmount] = field(
+    prepaid_amount: PrepaidAmount | None = field(
         default=None,
         metadata={
             "name": "PrepaidAmount",
@@ -2458,7 +2444,7 @@ class MonetaryTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payable_rounding_amount: Optional[PayableRoundingAmount] = field(
+    payable_rounding_amount: PayableRoundingAmount | None = field(
         default=None,
         metadata={
             "name": "PayableRoundingAmount",
@@ -2466,7 +2452,7 @@ class MonetaryTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payable_amount: Optional[PayableAmount] = field(
+    payable_amount: PayableAmount | None = field(
         default=None,
         metadata={
             "name": "PayableAmount",
@@ -2475,7 +2461,7 @@ class MonetaryTotalType:
             "required": True,
         },
     )
-    payable_alternative_amount: Optional[PayableAlternativeAmount] = field(
+    payable_alternative_amount: PayableAlternativeAmount | None = field(
         default=None,
         metadata={
             "name": "PayableAlternativeAmount",
@@ -2487,7 +2473,7 @@ class MonetaryTotalType:
 
 @dataclass(frozen=True)
 class PartyIdentificationType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -2500,7 +2486,7 @@ class PartyIdentificationType:
 
 @dataclass(frozen=True)
 class PartyNameType:
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -2513,7 +2499,7 @@ class PartyNameType:
 
 @dataclass(frozen=True)
 class PaymentType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -2521,7 +2507,7 @@ class PaymentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    paid_amount: Optional[PaidAmount] = field(
+    paid_amount: PaidAmount | None = field(
         default=None,
         metadata={
             "name": "PaidAmount",
@@ -2529,7 +2515,7 @@ class PaymentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    received_date: Optional[ReceivedDate] = field(
+    received_date: ReceivedDate | None = field(
         default=None,
         metadata={
             "name": "ReceivedDate",
@@ -2537,7 +2523,7 @@ class PaymentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    paid_date: Optional[PaidDate] = field(
+    paid_date: PaidDate | None = field(
         default=None,
         metadata={
             "name": "PaidDate",
@@ -2545,7 +2531,7 @@ class PaymentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    paid_time: Optional[PaidTime] = field(
+    paid_time: PaidTime | None = field(
         default=None,
         metadata={
             "name": "PaidTime",
@@ -2553,7 +2539,7 @@ class PaymentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    instruction_id: Optional[InstructionId] = field(
+    instruction_id: InstructionId | None = field(
         default=None,
         metadata={
             "name": "InstructionID",
@@ -2565,7 +2551,7 @@ class PaymentType:
 
 @dataclass(frozen=True)
 class PeriodType:
-    start_date: Optional[StartDate] = field(
+    start_date: StartDate | None = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -2573,7 +2559,7 @@ class PeriodType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    start_time: Optional[StartTime] = field(
+    start_time: StartTime | None = field(
         default=None,
         metadata={
             "name": "StartTime",
@@ -2581,7 +2567,7 @@ class PeriodType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    end_date: Optional[EndDate] = field(
+    end_date: EndDate | None = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -2589,7 +2575,7 @@ class PeriodType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    end_time: Optional[EndTime] = field(
+    end_time: EndTime | None = field(
         default=None,
         metadata={
             "name": "EndTime",
@@ -2597,7 +2583,7 @@ class PeriodType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    duration_measure: Optional[DurationMeasure] = field(
+    duration_measure: DurationMeasure | None = field(
         default=None,
         metadata={
             "name": "DurationMeasure",
@@ -2625,7 +2611,7 @@ class PeriodType:
 
 @dataclass(frozen=True)
 class PhysicalAttributeType:
-    attribute_id: Optional[AttributeId] = field(
+    attribute_id: AttributeId | None = field(
         default=None,
         metadata={
             "name": "AttributeID",
@@ -2634,7 +2620,7 @@ class PhysicalAttributeType:
             "required": True,
         },
     )
-    position_code: Optional[PositionCode] = field(
+    position_code: PositionCode | None = field(
         default=None,
         metadata={
             "name": "PositionCode",
@@ -2642,7 +2628,7 @@ class PhysicalAttributeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    description_code: Optional[DescriptionCode] = field(
+    description_code: DescriptionCode | None = field(
         default=None,
         metadata={
             "name": "DescriptionCode",
@@ -2662,9 +2648,7 @@ class PhysicalAttributeType:
 
 @dataclass(frozen=True)
 class ProcessJustificationType:
-    previous_cancellation_reason_code: Optional[
-        PreviousCancellationReasonCode
-    ] = field(
+    previous_cancellation_reason_code: PreviousCancellationReasonCode | None = field(
         default=None,
         metadata={
             "name": "PreviousCancellationReasonCode",
@@ -2672,7 +2656,7 @@ class ProcessJustificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    process_reason_code: Optional[ProcessReasonCode] = field(
+    process_reason_code: ProcessReasonCode | None = field(
         default=None,
         metadata={
             "name": "ProcessReasonCode",
@@ -2700,7 +2684,7 @@ class ProcessJustificationType:
 
 @dataclass(frozen=True)
 class RailTransportType:
-    train_id: Optional[TrainId] = field(
+    train_id: TrainId | None = field(
         default=None,
         metadata={
             "name": "TrainID",
@@ -2709,7 +2693,7 @@ class RailTransportType:
             "required": True,
         },
     )
-    rail_car_id: Optional[RailCarId] = field(
+    rail_car_id: RailCarId | None = field(
         default=None,
         metadata={
             "name": "RailCarID",
@@ -2721,7 +2705,7 @@ class RailTransportType:
 
 @dataclass(frozen=True)
 class RegulationType:
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -2730,7 +2714,7 @@ class RegulationType:
             "required": True,
         },
     )
-    legal_reference: Optional[LegalReference] = field(
+    legal_reference: LegalReference | None = field(
         default=None,
         metadata={
             "name": "LegalReference",
@@ -2738,7 +2722,7 @@ class RegulationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    ontology_uri: Optional[OntologyUri] = field(
+    ontology_uri: OntologyUri | None = field(
         default=None,
         metadata={
             "name": "OntologyURI",
@@ -2750,7 +2734,7 @@ class RegulationType:
 
 @dataclass(frozen=True)
 class RelatedItemType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -2758,7 +2742,7 @@ class RelatedItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -2778,7 +2762,7 @@ class RelatedItemType:
 
 @dataclass(frozen=True)
 class RoadTransportType:
-    license_plate_id: Optional[LicensePlateId] = field(
+    license_plate_id: LicensePlateId | None = field(
         default=None,
         metadata={
             "name": "LicensePlateID",
@@ -2791,7 +2775,7 @@ class RoadTransportType:
 
 @dataclass(frozen=True)
 class SecondaryHazardType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -2799,7 +2783,7 @@ class SecondaryHazardType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    placard_notation: Optional[PlacardNotation] = field(
+    placard_notation: PlacardNotation | None = field(
         default=None,
         metadata={
             "name": "PlacardNotation",
@@ -2807,7 +2791,7 @@ class SecondaryHazardType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    placard_endorsement: Optional[PlacardEndorsement] = field(
+    placard_endorsement: PlacardEndorsement | None = field(
         default=None,
         metadata={
             "name": "PlacardEndorsement",
@@ -2815,7 +2799,7 @@ class SecondaryHazardType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    emergency_procedures_code: Optional[EmergencyProceduresCode] = field(
+    emergency_procedures_code: EmergencyProceduresCode | None = field(
         default=None,
         metadata={
             "name": "EmergencyProceduresCode",
@@ -2835,7 +2819,7 @@ class SecondaryHazardType:
 
 @dataclass(frozen=True)
 class ServiceFrequencyType:
-    week_day_code: Optional[WeekDayCode] = field(
+    week_day_code: WeekDayCode | None = field(
         default=None,
         metadata={
             "name": "WeekDayCode",
@@ -2848,7 +2832,7 @@ class ServiceFrequencyType:
 
 @dataclass(frozen=True)
 class SubcontractTermsType:
-    rate: Optional[Rate] = field(
+    rate: Rate | None = field(
         default=None,
         metadata={
             "name": "Rate",
@@ -2856,7 +2840,7 @@ class SubcontractTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    unknown_price_indicator: Optional[UnknownPriceIndicator] = field(
+    unknown_price_indicator: UnknownPriceIndicator | None = field(
         default=None,
         metadata={
             "name": "UnknownPriceIndicator",
@@ -2872,7 +2856,7 @@ class SubcontractTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    amount: Optional[Amount] = field(
+    amount: Amount | None = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -2880,7 +2864,7 @@ class SubcontractTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    subcontracting_conditions_code: Optional[SubcontractingConditionsCode] = (
+    subcontracting_conditions_code: SubcontractingConditionsCode | None = (
         field(
             default=None,
             metadata={
@@ -2890,7 +2874,7 @@ class SubcontractTermsType:
             },
         )
     )
-    maximum_percent: Optional[MaximumPercent] = field(
+    maximum_percent: MaximumPercent | None = field(
         default=None,
         metadata={
             "name": "MaximumPercent",
@@ -2898,7 +2882,7 @@ class SubcontractTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_percent: Optional[MinimumPercent] = field(
+    minimum_percent: MinimumPercent | None = field(
         default=None,
         metadata={
             "name": "MinimumPercent",
@@ -2910,7 +2894,7 @@ class SubcontractTermsType:
 
 @dataclass(frozen=True)
 class TemperatureType:
-    attribute_id: Optional[AttributeId] = field(
+    attribute_id: AttributeId | None = field(
         default=None,
         metadata={
             "name": "AttributeID",
@@ -2919,7 +2903,7 @@ class TemperatureType:
             "required": True,
         },
     )
-    measure: Optional[Measure] = field(
+    measure: Measure | None = field(
         default=None,
         metadata={
             "name": "Measure",
@@ -2940,7 +2924,7 @@ class TemperatureType:
 
 @dataclass(frozen=True)
 class TransportEquipmentSealType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -2949,7 +2933,7 @@ class TransportEquipmentSealType:
             "required": True,
         },
     )
-    seal_issuer_type_code: Optional[SealIssuerTypeCode] = field(
+    seal_issuer_type_code: SealIssuerTypeCode | None = field(
         default=None,
         metadata={
             "name": "SealIssuerTypeCode",
@@ -2957,7 +2941,7 @@ class TransportEquipmentSealType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    condition: Optional[UblCommonBasicComponents21Condition] = field(
+    condition: UblCommonBasicComponents21Condition | None = field(
         default=None,
         metadata={
             "name": "Condition",
@@ -2965,7 +2949,7 @@ class TransportEquipmentSealType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    seal_status_code: Optional[SealStatusCode] = field(
+    seal_status_code: SealStatusCode | None = field(
         default=None,
         metadata={
             "name": "SealStatusCode",
@@ -2973,7 +2957,7 @@ class TransportEquipmentSealType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    sealing_party_type: Optional[SealingPartyType] = field(
+    sealing_party_type: SealingPartyType | None = field(
         default=None,
         metadata={
             "name": "SealingPartyType",
@@ -2985,7 +2969,7 @@ class TransportEquipmentSealType:
 
 @dataclass(frozen=True)
 class UnstructuredPriceType:
-    price_amount: Optional[PriceAmount] = field(
+    price_amount: PriceAmount | None = field(
         default=None,
         metadata={
             "name": "PriceAmount",
@@ -2993,7 +2977,7 @@ class UnstructuredPriceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    time_amount: Optional[TimeAmount] = field(
+    time_amount: TimeAmount | None = field(
         default=None,
         metadata={
             "name": "TimeAmount",
@@ -3005,7 +2989,7 @@ class UnstructuredPriceType:
 
 @dataclass(frozen=True)
 class WebSiteAccessType:
-    uri: Optional[Uri] = field(
+    uri: Uri | None = field(
         default=None,
         metadata={
             "name": "URI",
@@ -3013,7 +2997,7 @@ class WebSiteAccessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    password: Optional[Password] = field(
+    password: Password | None = field(
         default=None,
         metadata={
             "name": "Password",
@@ -3022,7 +3006,7 @@ class WebSiteAccessType:
             "required": True,
         },
     )
-    login: Optional[Login] = field(
+    login: Login | None = field(
         default=None,
         metadata={
             "name": "Login",
@@ -3953,7 +3937,7 @@ class WebSiteAccess(WebSiteAccessType):
 
 @dataclass(frozen=True)
 class AddressType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -3961,7 +3945,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    address_type_code: Optional[AddressTypeCode] = field(
+    address_type_code: AddressTypeCode | None = field(
         default=None,
         metadata={
             "name": "AddressTypeCode",
@@ -3969,7 +3953,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    address_format_code: Optional[AddressFormatCode] = field(
+    address_format_code: AddressFormatCode | None = field(
         default=None,
         metadata={
             "name": "AddressFormatCode",
@@ -3977,7 +3961,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    postbox: Optional[Postbox] = field(
+    postbox: Postbox | None = field(
         default=None,
         metadata={
             "name": "Postbox",
@@ -3985,7 +3969,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    floor: Optional[Floor] = field(
+    floor: Floor | None = field(
         default=None,
         metadata={
             "name": "Floor",
@@ -3993,7 +3977,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    room: Optional[Room] = field(
+    room: Room | None = field(
         default=None,
         metadata={
             "name": "Room",
@@ -4001,7 +3985,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    street_name: Optional[StreetName] = field(
+    street_name: StreetName | None = field(
         default=None,
         metadata={
             "name": "StreetName",
@@ -4009,7 +3993,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    additional_street_name: Optional[AdditionalStreetName] = field(
+    additional_street_name: AdditionalStreetName | None = field(
         default=None,
         metadata={
             "name": "AdditionalStreetName",
@@ -4017,7 +4001,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    block_name: Optional[BlockName] = field(
+    block_name: BlockName | None = field(
         default=None,
         metadata={
             "name": "BlockName",
@@ -4025,7 +4009,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    building_name: Optional[BuildingName] = field(
+    building_name: BuildingName | None = field(
         default=None,
         metadata={
             "name": "BuildingName",
@@ -4033,7 +4017,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    building_number: Optional[BuildingNumber] = field(
+    building_number: BuildingNumber | None = field(
         default=None,
         metadata={
             "name": "BuildingNumber",
@@ -4041,7 +4025,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    inhouse_mail: Optional[InhouseMail] = field(
+    inhouse_mail: InhouseMail | None = field(
         default=None,
         metadata={
             "name": "InhouseMail",
@@ -4049,7 +4033,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    department: Optional[Department] = field(
+    department: Department | None = field(
         default=None,
         metadata={
             "name": "Department",
@@ -4057,7 +4041,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    mark_attention: Optional[MarkAttention] = field(
+    mark_attention: MarkAttention | None = field(
         default=None,
         metadata={
             "name": "MarkAttention",
@@ -4065,7 +4049,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    mark_care: Optional[MarkCare] = field(
+    mark_care: MarkCare | None = field(
         default=None,
         metadata={
             "name": "MarkCare",
@@ -4073,7 +4057,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    plot_identification: Optional[PlotIdentification] = field(
+    plot_identification: PlotIdentification | None = field(
         default=None,
         metadata={
             "name": "PlotIdentification",
@@ -4081,7 +4065,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    city_subdivision_name: Optional[CitySubdivisionName] = field(
+    city_subdivision_name: CitySubdivisionName | None = field(
         default=None,
         metadata={
             "name": "CitySubdivisionName",
@@ -4089,7 +4073,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    city_name: Optional[CityName] = field(
+    city_name: CityName | None = field(
         default=None,
         metadata={
             "name": "CityName",
@@ -4097,7 +4081,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    postal_zone: Optional[PostalZone] = field(
+    postal_zone: PostalZone | None = field(
         default=None,
         metadata={
             "name": "PostalZone",
@@ -4105,7 +4089,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    country_subentity: Optional[CountrySubentity] = field(
+    country_subentity: CountrySubentity | None = field(
         default=None,
         metadata={
             "name": "CountrySubentity",
@@ -4113,7 +4097,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    country_subentity_code: Optional[CountrySubentityCode] = field(
+    country_subentity_code: CountrySubentityCode | None = field(
         default=None,
         metadata={
             "name": "CountrySubentityCode",
@@ -4121,7 +4105,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    region: Optional[Region] = field(
+    region: Region | None = field(
         default=None,
         metadata={
             "name": "Region",
@@ -4129,7 +4113,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    district: Optional[District] = field(
+    district: District | None = field(
         default=None,
         metadata={
             "name": "District",
@@ -4137,7 +4121,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    timezone_offset: Optional[TimezoneOffset] = field(
+    timezone_offset: TimezoneOffset | None = field(
         default=None,
         metadata={
             "name": "TimezoneOffset",
@@ -4153,7 +4137,7 @@ class AddressType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    country: Optional[Country] = field(
+    country: Country | None = field(
         default=None,
         metadata={
             "name": "Country",
@@ -4173,7 +4157,7 @@ class AddressType:
 
 @dataclass(frozen=True)
 class AttachmentType:
-    embedded_document_binary_object: Optional[EmbeddedDocumentBinaryObject] = (
+    embedded_document_binary_object: EmbeddedDocumentBinaryObject | None = (
         field(
             default=None,
             metadata={
@@ -4183,7 +4167,7 @@ class AttachmentType:
             },
         )
     )
-    external_reference: Optional[ExternalReference] = field(
+    external_reference: ExternalReference | None = field(
         default=None,
         metadata={
             "name": "ExternalReference",
@@ -4195,7 +4179,7 @@ class AttachmentType:
 
 @dataclass(frozen=True)
 class CapabilityType:
-    capability_type_code: Optional[CapabilityTypeCode] = field(
+    capability_type_code: CapabilityTypeCode | None = field(
         default=None,
         metadata={
             "name": "CapabilityTypeCode",
@@ -4211,7 +4195,7 @@ class CapabilityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    value_amount: Optional[ValueAmount] = field(
+    value_amount: ValueAmount | None = field(
         default=None,
         metadata={
             "name": "ValueAmount",
@@ -4219,7 +4203,7 @@ class CapabilityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    value_quantity: Optional[ValueQuantity] = field(
+    value_quantity: ValueQuantity | None = field(
         default=None,
         metadata={
             "name": "ValueQuantity",
@@ -4235,7 +4219,7 @@ class CapabilityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    validity_period: Optional[ValidityPeriod] = field(
+    validity_period: ValidityPeriod | None = field(
         default=None,
         metadata={
             "name": "ValidityPeriod",
@@ -4247,7 +4231,7 @@ class CapabilityType:
 
 @dataclass(frozen=True)
 class ClassificationSchemeType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -4256,7 +4240,7 @@ class ClassificationSchemeType:
             "required": True,
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -4264,7 +4248,7 @@ class ClassificationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    last_revision_date: Optional[LastRevisionDate] = field(
+    last_revision_date: LastRevisionDate | None = field(
         default=None,
         metadata={
             "name": "LastRevisionDate",
@@ -4272,7 +4256,7 @@ class ClassificationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    last_revision_time: Optional[LastRevisionTime] = field(
+    last_revision_time: LastRevisionTime | None = field(
         default=None,
         metadata={
             "name": "LastRevisionTime",
@@ -4288,7 +4272,7 @@ class ClassificationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -4304,7 +4288,7 @@ class ClassificationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    agency_id: Optional[AgencyId] = field(
+    agency_id: AgencyId | None = field(
         default=None,
         metadata={
             "name": "AgencyID",
@@ -4312,7 +4296,7 @@ class ClassificationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    agency_name: Optional[AgencyName] = field(
+    agency_name: AgencyName | None = field(
         default=None,
         metadata={
             "name": "AgencyName",
@@ -4320,7 +4304,7 @@ class ClassificationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    version_id: Optional[VersionId] = field(
+    version_id: VersionId | None = field(
         default=None,
         metadata={
             "name": "VersionID",
@@ -4328,7 +4312,7 @@ class ClassificationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uri: Optional[Uri] = field(
+    uri: Uri | None = field(
         default=None,
         metadata={
             "name": "URI",
@@ -4336,7 +4320,7 @@ class ClassificationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    scheme_uri: Optional[SchemeUri] = field(
+    scheme_uri: SchemeUri | None = field(
         default=None,
         metadata={
             "name": "SchemeURI",
@@ -4344,7 +4328,7 @@ class ClassificationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    language_id: Optional[LanguageId] = field(
+    language_id: LanguageId | None = field(
         default=None,
         metadata={
             "name": "LanguageID",
@@ -4365,7 +4349,7 @@ class ClassificationSchemeType:
 
 @dataclass(frozen=True)
 class ConsumptionHistoryType:
-    meter_number: Optional[MeterNumber] = field(
+    meter_number: MeterNumber | None = field(
         default=None,
         metadata={
             "name": "MeterNumber",
@@ -4373,7 +4357,7 @@ class ConsumptionHistoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -4382,7 +4366,7 @@ class ConsumptionHistoryType:
             "required": True,
         },
     )
-    amount: Optional[Amount] = field(
+    amount: Amount | None = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -4390,7 +4374,7 @@ class ConsumptionHistoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    consumption_level_code: Optional[ConsumptionLevelCode] = field(
+    consumption_level_code: ConsumptionLevelCode | None = field(
         default=None,
         metadata={
             "name": "ConsumptionLevelCode",
@@ -4398,7 +4382,7 @@ class ConsumptionHistoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    consumption_level: Optional[ConsumptionLevel] = field(
+    consumption_level: ConsumptionLevel | None = field(
         default=None,
         metadata={
             "name": "ConsumptionLevel",
@@ -4414,7 +4398,7 @@ class ConsumptionHistoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    period: Optional[Period] = field(
+    period: Period | None = field(
         default=None,
         metadata={
             "name": "Period",
@@ -4427,7 +4411,7 @@ class ConsumptionHistoryType:
 
 @dataclass(frozen=True)
 class ConsumptionReportReferenceType:
-    consumption_report_id: Optional[ConsumptionReportId] = field(
+    consumption_report_id: ConsumptionReportId | None = field(
         default=None,
         metadata={
             "name": "ConsumptionReportID",
@@ -4436,7 +4420,7 @@ class ConsumptionReportReferenceType:
             "required": True,
         },
     )
-    consumption_type: Optional[UblCommonBasicComponents21ConsumptionType] = (
+    consumption_type: UblCommonBasicComponents21ConsumptionType | None = (
         field(
             default=None,
             metadata={
@@ -4446,7 +4430,7 @@ class ConsumptionReportReferenceType:
             },
         )
     )
-    consumption_type_code: Optional[ConsumptionTypeCode] = field(
+    consumption_type_code: ConsumptionTypeCode | None = field(
         default=None,
         metadata={
             "name": "ConsumptionTypeCode",
@@ -4454,7 +4438,7 @@ class ConsumptionReportReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_consumed_quantity: Optional[TotalConsumedQuantity] = field(
+    total_consumed_quantity: TotalConsumedQuantity | None = field(
         default=None,
         metadata={
             "name": "TotalConsumedQuantity",
@@ -4463,7 +4447,7 @@ class ConsumptionReportReferenceType:
             "required": True,
         },
     )
-    period: Optional[Period] = field(
+    period: Period | None = field(
         default=None,
         metadata={
             "name": "Period",
@@ -4476,7 +4460,7 @@ class ConsumptionReportReferenceType:
 
 @dataclass(frozen=True)
 class ContactType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -4484,7 +4468,7 @@ class ContactType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -4492,7 +4476,7 @@ class ContactType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    telephone: Optional[Telephone] = field(
+    telephone: Telephone | None = field(
         default=None,
         metadata={
             "name": "Telephone",
@@ -4500,7 +4484,7 @@ class ContactType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    telefax: Optional[Telefax] = field(
+    telefax: Telefax | None = field(
         default=None,
         metadata={
             "name": "Telefax",
@@ -4508,7 +4492,7 @@ class ContactType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    electronic_mail: Optional[ElectronicMail] = field(
+    electronic_mail: ElectronicMail | None = field(
         default=None,
         metadata={
             "name": "ElectronicMail",
@@ -4544,7 +4528,7 @@ class DeclarationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declaration_type_code: Optional[DeclarationTypeCode] = field(
+    declaration_type_code: DeclarationTypeCode | None = field(
         default=None,
         metadata={
             "name": "DeclarationTypeCode",
@@ -4572,7 +4556,7 @@ class DeclarationType:
 
 @dataclass(frozen=True)
 class EventTacticType:
-    comment: Optional[Comment] = field(
+    comment: Comment | None = field(
         default=None,
         metadata={
             "name": "Comment",
@@ -4580,7 +4564,7 @@ class EventTacticType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -4588,7 +4572,7 @@ class EventTacticType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    event_tactic_enumeration: Optional[EventTacticEnumeration] = field(
+    event_tactic_enumeration: EventTacticEnumeration | None = field(
         default=None,
         metadata={
             "name": "EventTacticEnumeration",
@@ -4597,7 +4581,7 @@ class EventTacticType:
             "required": True,
         },
     )
-    period: Optional[Period] = field(
+    period: Period | None = field(
         default=None,
         metadata={
             "name": "Period",
@@ -4609,7 +4593,7 @@ class EventTacticType:
 
 @dataclass(frozen=True)
 class FinancialGuaranteeType:
-    guarantee_type_code: Optional[GuaranteeTypeCode] = field(
+    guarantee_type_code: GuaranteeTypeCode | None = field(
         default=None,
         metadata={
             "name": "GuaranteeTypeCode",
@@ -4626,7 +4610,7 @@ class FinancialGuaranteeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    liability_amount: Optional[LiabilityAmount] = field(
+    liability_amount: LiabilityAmount | None = field(
         default=None,
         metadata={
             "name": "LiabilityAmount",
@@ -4634,7 +4618,7 @@ class FinancialGuaranteeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    amount_rate: Optional[AmountRate] = field(
+    amount_rate: AmountRate | None = field(
         default=None,
         metadata={
             "name": "AmountRate",
@@ -4642,7 +4626,7 @@ class FinancialGuaranteeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    constitution_period: Optional[ConstitutionPeriod] = field(
+    constitution_period: ConstitutionPeriod | None = field(
         default=None,
         metadata={
             "name": "ConstitutionPeriod",
@@ -4654,7 +4638,7 @@ class FinancialGuaranteeType:
 
 @dataclass(frozen=True)
 class HazardousGoodsTransitType:
-    transport_emergency_card_code: Optional[TransportEmergencyCardCode] = (
+    transport_emergency_card_code: TransportEmergencyCardCode | None = (
         field(
             default=None,
             metadata={
@@ -4664,7 +4648,7 @@ class HazardousGoodsTransitType:
             },
         )
     )
-    packing_criteria_code: Optional[PackingCriteriaCode] = field(
+    packing_criteria_code: PackingCriteriaCode | None = field(
         default=None,
         metadata={
             "name": "PackingCriteriaCode",
@@ -4672,7 +4656,7 @@ class HazardousGoodsTransitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    hazardous_regulation_code: Optional[HazardousRegulationCode] = field(
+    hazardous_regulation_code: HazardousRegulationCode | None = field(
         default=None,
         metadata={
             "name": "HazardousRegulationCode",
@@ -4680,7 +4664,7 @@ class HazardousGoodsTransitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    inhalation_toxicity_zone_code: Optional[InhalationToxicityZoneCode] = (
+    inhalation_toxicity_zone_code: InhalationToxicityZoneCode | None = (
         field(
             default=None,
             metadata={
@@ -4690,7 +4674,7 @@ class HazardousGoodsTransitType:
             },
         )
     )
-    transport_authorization_code: Optional[TransportAuthorizationCode] = field(
+    transport_authorization_code: TransportAuthorizationCode | None = field(
         default=None,
         metadata={
             "name": "TransportAuthorizationCode",
@@ -4698,7 +4682,7 @@ class HazardousGoodsTransitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_temperature: Optional[MaximumTemperature] = field(
+    maximum_temperature: MaximumTemperature | None = field(
         default=None,
         metadata={
             "name": "MaximumTemperature",
@@ -4706,7 +4690,7 @@ class HazardousGoodsTransitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    minimum_temperature: Optional[MinimumTemperature] = field(
+    minimum_temperature: MinimumTemperature | None = field(
         default=None,
         metadata={
             "name": "MinimumTemperature",
@@ -4718,7 +4702,7 @@ class HazardousGoodsTransitType:
 
 @dataclass(frozen=True)
 class ItemPropertyType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -4726,7 +4710,7 @@ class ItemPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -4735,7 +4719,7 @@ class ItemPropertyType:
             "required": True,
         },
     )
-    name_code: Optional[NameCode] = field(
+    name_code: NameCode | None = field(
         default=None,
         metadata={
             "name": "NameCode",
@@ -4743,7 +4727,7 @@ class ItemPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    test_method: Optional[TestMethod] = field(
+    test_method: TestMethod | None = field(
         default=None,
         metadata={
             "name": "TestMethod",
@@ -4751,7 +4735,7 @@ class ItemPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    value: Optional[Value] = field(
+    value: Value | None = field(
         default=None,
         metadata={
             "name": "Value",
@@ -4759,7 +4743,7 @@ class ItemPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    value_quantity: Optional[ValueQuantity] = field(
+    value_quantity: ValueQuantity | None = field(
         default=None,
         metadata={
             "name": "ValueQuantity",
@@ -4775,7 +4759,7 @@ class ItemPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    importance_code: Optional[ImportanceCode] = field(
+    importance_code: ImportanceCode | None = field(
         default=None,
         metadata={
             "name": "ImportanceCode",
@@ -4791,7 +4775,7 @@ class ItemPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    usability_period: Optional[UsabilityPeriod] = field(
+    usability_period: UsabilityPeriod | None = field(
         default=None,
         metadata={
             "name": "UsabilityPeriod",
@@ -4807,7 +4791,7 @@ class ItemPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    range_dimension: Optional[RangeDimension] = field(
+    range_dimension: RangeDimension | None = field(
         default=None,
         metadata={
             "name": "RangeDimension",
@@ -4815,7 +4799,7 @@ class ItemPropertyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item_property_range: Optional[ItemPropertyRange] = field(
+    item_property_range: ItemPropertyRange | None = field(
         default=None,
         metadata={
             "name": "ItemPropertyRange",
@@ -4827,7 +4811,7 @@ class ItemPropertyType:
 
 @dataclass(frozen=True)
 class MeterType:
-    meter_number: Optional[MeterNumber] = field(
+    meter_number: MeterNumber | None = field(
         default=None,
         metadata={
             "name": "MeterNumber",
@@ -4835,7 +4819,7 @@ class MeterType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    meter_name: Optional[MeterName] = field(
+    meter_name: MeterName | None = field(
         default=None,
         metadata={
             "name": "MeterName",
@@ -4843,7 +4827,7 @@ class MeterType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    meter_constant: Optional[MeterConstant] = field(
+    meter_constant: MeterConstant | None = field(
         default=None,
         metadata={
             "name": "MeterConstant",
@@ -4851,7 +4835,7 @@ class MeterType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    meter_constant_code: Optional[MeterConstantCode] = field(
+    meter_constant_code: MeterConstantCode | None = field(
         default=None,
         metadata={
             "name": "MeterConstantCode",
@@ -4859,7 +4843,7 @@ class MeterType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_delivered_quantity: Optional[TotalDeliveredQuantity] = field(
+    total_delivered_quantity: TotalDeliveredQuantity | None = field(
         default=None,
         metadata={
             "name": "TotalDeliveredQuantity",
@@ -4887,7 +4871,7 @@ class MeterType:
 
 @dataclass(frozen=True)
 class PriceListType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -4895,7 +4879,7 @@ class PriceListType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    status_code: Optional[StatusCode] = field(
+    status_code: StatusCode | None = field(
         default=None,
         metadata={
             "name": "StatusCode",
@@ -4911,7 +4895,7 @@ class PriceListType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    previous_price_list: Optional["PreviousPriceList"] = field(
+    previous_price_list: PreviousPriceList | None = field(
         default=None,
         metadata={
             "name": "PreviousPriceList",
@@ -4923,7 +4907,7 @@ class PriceListType:
 
 @dataclass(frozen=True)
 class RenewalType:
-    amount: Optional[Amount] = field(
+    amount: Amount | None = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -4931,7 +4915,7 @@ class RenewalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    period: Optional[Period] = field(
+    period: Period | None = field(
         default=None,
         metadata={
             "name": "Period",
@@ -4943,7 +4927,7 @@ class RenewalType:
 
 @dataclass(frozen=True)
 class RetailPlannedImpactType:
-    amount: Optional[Amount] = field(
+    amount: Amount | None = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -4952,7 +4936,7 @@ class RetailPlannedImpactType:
             "required": True,
         },
     )
-    forecast_purpose_code: Optional[ForecastPurposeCode] = field(
+    forecast_purpose_code: ForecastPurposeCode | None = field(
         default=None,
         metadata={
             "name": "ForecastPurposeCode",
@@ -4961,7 +4945,7 @@ class RetailPlannedImpactType:
             "required": True,
         },
     )
-    forecast_type_code: Optional[ForecastTypeCode] = field(
+    forecast_type_code: ForecastTypeCode | None = field(
         default=None,
         metadata={
             "name": "ForecastTypeCode",
@@ -4970,7 +4954,7 @@ class RetailPlannedImpactType:
             "required": True,
         },
     )
-    period: Optional[Period] = field(
+    period: Period | None = field(
         default=None,
         metadata={
             "name": "Period",
@@ -4982,7 +4966,7 @@ class RetailPlannedImpactType:
 
 @dataclass(frozen=True)
 class StatusType:
-    condition_code: Optional[ConditionCode] = field(
+    condition_code: ConditionCode | None = field(
         default=None,
         metadata={
             "name": "ConditionCode",
@@ -4990,7 +4974,7 @@ class StatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    reference_date: Optional[ReferenceDate] = field(
+    reference_date: ReferenceDate | None = field(
         default=None,
         metadata={
             "name": "ReferenceDate",
@@ -4998,7 +4982,7 @@ class StatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    reference_time: Optional[ReferenceTime] = field(
+    reference_time: ReferenceTime | None = field(
         default=None,
         metadata={
             "name": "ReferenceTime",
@@ -5014,7 +4998,7 @@ class StatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    status_reason_code: Optional[StatusReasonCode] = field(
+    status_reason_code: StatusReasonCode | None = field(
         default=None,
         metadata={
             "name": "StatusReasonCode",
@@ -5030,7 +5014,7 @@ class StatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    sequence_id: Optional[SequenceId] = field(
+    sequence_id: SequenceId | None = field(
         default=None,
         metadata={
             "name": "SequenceID",
@@ -5046,7 +5030,7 @@ class StatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    indication_indicator: Optional[IndicationIndicator] = field(
+    indication_indicator: IndicationIndicator | None = field(
         default=None,
         metadata={
             "name": "IndicationIndicator",
@@ -5054,7 +5038,7 @@ class StatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    percent: Optional[Percent] = field(
+    percent: Percent | None = field(
         default=None,
         metadata={
             "name": "Percent",
@@ -5062,7 +5046,7 @@ class StatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    reliability_percent: Optional[ReliabilityPercent] = field(
+    reliability_percent: ReliabilityPercent | None = field(
         default=None,
         metadata={
             "name": "ReliabilityPercent",
@@ -5082,7 +5066,7 @@ class StatusType:
 
 @dataclass(frozen=True)
 class StowageType:
-    location_id: Optional[LocationId] = field(
+    location_id: LocationId | None = field(
         default=None,
         metadata={
             "name": "LocationID",
@@ -5404,7 +5388,7 @@ class UtilityMeter(MeterType):
 
 @dataclass(frozen=True)
 class BudgetAccountType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -5412,7 +5396,7 @@ class BudgetAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    budget_year_numeric: Optional[BudgetYearNumeric] = field(
+    budget_year_numeric: BudgetYearNumeric | None = field(
         default=None,
         metadata={
             "name": "BudgetYearNumeric",
@@ -5420,7 +5404,7 @@ class BudgetAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    required_classification_scheme: Optional[RequiredClassificationScheme] = (
+    required_classification_scheme: RequiredClassificationScheme | None = (
         field(
             default=None,
             metadata={
@@ -5434,7 +5418,7 @@ class BudgetAccountType:
 
 @dataclass(frozen=True)
 class ConsumptionPointType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -5451,7 +5435,7 @@ class ConsumptionPointType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    subscriber_id: Optional[SubscriberId] = field(
+    subscriber_id: SubscriberId | None = field(
         default=None,
         metadata={
             "name": "SubscriberID",
@@ -5459,7 +5443,7 @@ class ConsumptionPointType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    subscriber_type: Optional[SubscriberType] = field(
+    subscriber_type: SubscriberType | None = field(
         default=None,
         metadata={
             "name": "SubscriberType",
@@ -5467,7 +5451,7 @@ class ConsumptionPointType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    subscriber_type_code: Optional[SubscriberTypeCode] = field(
+    subscriber_type_code: SubscriberTypeCode | None = field(
         default=None,
         metadata={
             "name": "SubscriberTypeCode",
@@ -5475,7 +5459,7 @@ class ConsumptionPointType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_delivered_quantity: Optional[TotalDeliveredQuantity] = field(
+    total_delivered_quantity: TotalDeliveredQuantity | None = field(
         default=None,
         metadata={
             "name": "TotalDeliveredQuantity",
@@ -5483,7 +5467,7 @@ class ConsumptionPointType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    address: Optional[Address] = field(
+    address: Address | None = field(
         default=None,
         metadata={
             "name": "Address",
@@ -5491,7 +5475,7 @@ class ConsumptionPointType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    web_site_access: Optional[WebSiteAccess] = field(
+    web_site_access: WebSiteAccess | None = field(
         default=None,
         metadata={
             "name": "WebSiteAccess",
@@ -5519,7 +5503,7 @@ class ContractExtensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_number_numeric: Optional[MinimumNumberNumeric] = field(
+    minimum_number_numeric: MinimumNumberNumeric | None = field(
         default=None,
         metadata={
             "name": "MinimumNumberNumeric",
@@ -5527,7 +5511,7 @@ class ContractExtensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_number_numeric: Optional[MaximumNumberNumeric] = field(
+    maximum_number_numeric: MaximumNumberNumeric | None = field(
         default=None,
         metadata={
             "name": "MaximumNumberNumeric",
@@ -5535,7 +5519,7 @@ class ContractExtensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    option_validity_period: Optional[OptionValidityPeriod] = field(
+    option_validity_period: OptionValidityPeriod | None = field(
         default=None,
         metadata={
             "name": "OptionValidityPeriod",
@@ -5555,7 +5539,7 @@ class ContractExtensionType:
 
 @dataclass(frozen=True)
 class CorporateRegistrationSchemeType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -5563,7 +5547,7 @@ class CorporateRegistrationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -5571,9 +5555,7 @@ class CorporateRegistrationSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    corporate_registration_type_code: Optional[
-        CorporateRegistrationTypeCode
-    ] = field(
+    corporate_registration_type_code: CorporateRegistrationTypeCode | None = field(
         default=None,
         metadata={
             "name": "CorporateRegistrationTypeCode",
@@ -5593,7 +5575,7 @@ class CorporateRegistrationSchemeType:
 
 @dataclass(frozen=True)
 class DocumentReferenceType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -5602,7 +5584,7 @@ class DocumentReferenceType:
             "required": True,
         },
     )
-    copy_indicator: Optional[CopyIndicator] = field(
+    copy_indicator: CopyIndicator | None = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -5610,7 +5592,7 @@ class DocumentReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -5618,7 +5600,7 @@ class DocumentReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -5626,7 +5608,7 @@ class DocumentReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -5634,7 +5616,7 @@ class DocumentReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_type_code: Optional[DocumentTypeCode] = field(
+    document_type_code: DocumentTypeCode | None = field(
         default=None,
         metadata={
             "name": "DocumentTypeCode",
@@ -5642,7 +5624,7 @@ class DocumentReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_type: Optional[DocumentType] = field(
+    document_type: DocumentType | None = field(
         default=None,
         metadata={
             "name": "DocumentType",
@@ -5658,7 +5640,7 @@ class DocumentReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    language_id: Optional[LanguageId] = field(
+    language_id: LanguageId | None = field(
         default=None,
         metadata={
             "name": "LanguageID",
@@ -5666,7 +5648,7 @@ class DocumentReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    locale_code: Optional[LocaleCode] = field(
+    locale_code: LocaleCode | None = field(
         default=None,
         metadata={
             "name": "LocaleCode",
@@ -5674,7 +5656,7 @@ class DocumentReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    version_id: Optional[VersionId] = field(
+    version_id: VersionId | None = field(
         default=None,
         metadata={
             "name": "VersionID",
@@ -5682,7 +5664,7 @@ class DocumentReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_status_code: Optional[DocumentStatusCode] = field(
+    document_status_code: DocumentStatusCode | None = field(
         default=None,
         metadata={
             "name": "DocumentStatusCode",
@@ -5698,7 +5680,7 @@ class DocumentReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    attachment: Optional[Attachment] = field(
+    attachment: Attachment | None = field(
         default=None,
         metadata={
             "name": "Attachment",
@@ -5706,7 +5688,7 @@ class DocumentReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    validity_period: Optional[ValidityPeriod] = field(
+    validity_period: ValidityPeriod | None = field(
         default=None,
         metadata={
             "name": "ValidityPeriod",
@@ -5714,7 +5696,7 @@ class DocumentReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    issuer_party: Optional["IssuerParty"] = field(
+    issuer_party: IssuerParty | None = field(
         default=None,
         metadata={
             "name": "IssuerParty",
@@ -5722,7 +5704,7 @@ class DocumentReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    result_of_verification: Optional["ResultOfVerification"] = field(
+    result_of_verification: ResultOfVerification | None = field(
         default=None,
         metadata={
             "name": "ResultOfVerification",
@@ -5734,7 +5716,7 @@ class DocumentReferenceType:
 
 @dataclass(frozen=True)
 class FinancialInstitutionType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -5742,7 +5724,7 @@ class FinancialInstitutionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -5750,7 +5732,7 @@ class FinancialInstitutionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    address: Optional[Address] = field(
+    address: Address | None = field(
         default=None,
         metadata={
             "name": "Address",
@@ -5762,7 +5744,7 @@ class FinancialInstitutionType:
 
 @dataclass(frozen=True)
 class LocationType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -5786,7 +5768,7 @@ class LocationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    country_subentity: Optional[CountrySubentity] = field(
+    country_subentity: CountrySubentity | None = field(
         default=None,
         metadata={
             "name": "CountrySubentity",
@@ -5794,7 +5776,7 @@ class LocationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    country_subentity_code: Optional[CountrySubentityCode] = field(
+    country_subentity_code: CountrySubentityCode | None = field(
         default=None,
         metadata={
             "name": "CountrySubentityCode",
@@ -5802,7 +5784,7 @@ class LocationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    location_type_code: Optional[LocationTypeCode] = field(
+    location_type_code: LocationTypeCode | None = field(
         default=None,
         metadata={
             "name": "LocationTypeCode",
@@ -5810,7 +5792,7 @@ class LocationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    information_uri: Optional[InformationUri] = field(
+    information_uri: InformationUri | None = field(
         default=None,
         metadata={
             "name": "InformationURI",
@@ -5818,7 +5800,7 @@ class LocationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -5834,7 +5816,7 @@ class LocationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    address: Optional[Address] = field(
+    address: Address | None = field(
         default=None,
         metadata={
             "name": "Address",
@@ -5842,7 +5824,7 @@ class LocationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    subsidiary_location: tuple["SubsidiaryLocation", ...] = field(
+    subsidiary_location: tuple[SubsidiaryLocation, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubsidiaryLocation",
@@ -5862,7 +5844,7 @@ class LocationType:
 
 @dataclass(frozen=True)
 class LotIdentificationType:
-    lot_number_id: Optional[LotNumberId] = field(
+    lot_number_id: LotNumberId | None = field(
         default=None,
         metadata={
             "name": "LotNumberID",
@@ -5870,7 +5852,7 @@ class LotIdentificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    expiry_date: Optional[ExpiryDate] = field(
+    expiry_date: ExpiryDate | None = field(
         default=None,
         metadata={
             "name": "ExpiryDate",
@@ -5890,7 +5872,7 @@ class LotIdentificationType:
 
 @dataclass(frozen=True)
 class ResponseType:
-    reference_id: Optional[ReferenceId] = field(
+    reference_id: ReferenceId | None = field(
         default=None,
         metadata={
             "name": "ReferenceID",
@@ -5898,7 +5880,7 @@ class ResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    response_code: Optional[ResponseCode] = field(
+    response_code: ResponseCode | None = field(
         default=None,
         metadata={
             "name": "ResponseCode",
@@ -5914,7 +5896,7 @@ class ResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    effective_date: Optional[EffectiveDate] = field(
+    effective_date: EffectiveDate | None = field(
         default=None,
         metadata={
             "name": "EffectiveDate",
@@ -5922,7 +5904,7 @@ class ResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    effective_time: Optional[EffectiveTime] = field(
+    effective_time: EffectiveTime | None = field(
         default=None,
         metadata={
             "name": "EffectiveTime",
@@ -5942,7 +5924,7 @@ class ResponseType:
 
 @dataclass(frozen=True)
 class TaxSchemeType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -5950,7 +5932,7 @@ class TaxSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -5958,7 +5940,7 @@ class TaxSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_type_code: Optional[TaxTypeCode] = field(
+    tax_type_code: TaxTypeCode | None = field(
         default=None,
         metadata={
             "name": "TaxTypeCode",
@@ -5966,7 +5948,7 @@ class TaxSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    currency_code: Optional[CurrencyCode] = field(
+    currency_code: CurrencyCode | None = field(
         default=None,
         metadata={
             "name": "CurrencyCode",
@@ -5994,7 +5976,7 @@ class TradingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    reference: Optional[Reference] = field(
+    reference: Reference | None = field(
         default=None,
         metadata={
             "name": "Reference",
@@ -6002,7 +5984,7 @@ class TradingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    applicable_address: Optional[ApplicableAddress] = field(
+    applicable_address: ApplicableAddress | None = field(
         default=None,
         metadata={
             "name": "ApplicableAddress",
@@ -6586,7 +6568,7 @@ class WorkOrderDocumentReference(DocumentReferenceType):
 
 @dataclass(frozen=True)
 class BranchType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -6594,7 +6576,7 @@ class BranchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -6602,7 +6584,7 @@ class BranchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    financial_institution: Optional[FinancialInstitution] = field(
+    financial_institution: FinancialInstitution | None = field(
         default=None,
         metadata={
             "name": "FinancialInstitution",
@@ -6610,7 +6592,7 @@ class BranchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    address: Optional[Address] = field(
+    address: Address | None = field(
         default=None,
         metadata={
             "name": "Address",
@@ -6622,7 +6604,7 @@ class BranchType:
 
 @dataclass(frozen=True)
 class BudgetAccountLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -6630,7 +6612,7 @@ class BudgetAccountLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_amount: Optional[TotalAmount] = field(
+    total_amount: TotalAmount | None = field(
         default=None,
         metadata={
             "name": "TotalAmount",
@@ -6650,7 +6632,7 @@ class BudgetAccountLineType:
 
 @dataclass(frozen=True)
 class ConsumptionReportType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -6659,7 +6641,7 @@ class ConsumptionReportType:
             "required": True,
         },
     )
-    consumption_type: Optional[UblCommonBasicComponents21ConsumptionType] = (
+    consumption_type: UblCommonBasicComponents21ConsumptionType | None = (
         field(
             default=None,
             metadata={
@@ -6669,7 +6651,7 @@ class ConsumptionReportType:
             },
         )
     )
-    consumption_type_code: Optional[ConsumptionTypeCode] = field(
+    consumption_type_code: ConsumptionTypeCode | None = field(
         default=None,
         metadata={
             "name": "ConsumptionTypeCode",
@@ -6685,7 +6667,7 @@ class ConsumptionReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_consumed_quantity: Optional[TotalConsumedQuantity] = field(
+    total_consumed_quantity: TotalConsumedQuantity | None = field(
         default=None,
         metadata={
             "name": "TotalConsumedQuantity",
@@ -6693,7 +6675,7 @@ class ConsumptionReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    basic_consumed_quantity: Optional[BasicConsumedQuantity] = field(
+    basic_consumed_quantity: BasicConsumedQuantity | None = field(
         default=None,
         metadata={
             "name": "BasicConsumedQuantity",
@@ -6701,7 +6683,7 @@ class ConsumptionReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    resident_occupants_numeric: Optional[ResidentOccupantsNumeric] = field(
+    resident_occupants_numeric: ResidentOccupantsNumeric | None = field(
         default=None,
         metadata={
             "name": "ResidentOccupantsNumeric",
@@ -6709,7 +6691,7 @@ class ConsumptionReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    consumers_energy_level_code: Optional[ConsumersEnergyLevelCode] = field(
+    consumers_energy_level_code: ConsumersEnergyLevelCode | None = field(
         default=None,
         metadata={
             "name": "ConsumersEnergyLevelCode",
@@ -6717,7 +6699,7 @@ class ConsumptionReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    consumers_energy_level: Optional[ConsumersEnergyLevel] = field(
+    consumers_energy_level: ConsumersEnergyLevel | None = field(
         default=None,
         metadata={
             "name": "ConsumersEnergyLevel",
@@ -6725,7 +6707,7 @@ class ConsumptionReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    residence_type: Optional[ResidenceType] = field(
+    residence_type: ResidenceType | None = field(
         default=None,
         metadata={
             "name": "ResidenceType",
@@ -6733,7 +6715,7 @@ class ConsumptionReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    residence_type_code: Optional[ResidenceTypeCode] = field(
+    residence_type_code: ResidenceTypeCode | None = field(
         default=None,
         metadata={
             "name": "ResidenceTypeCode",
@@ -6741,7 +6723,7 @@ class ConsumptionReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    heating_type: Optional[HeatingType] = field(
+    heating_type: HeatingType | None = field(
         default=None,
         metadata={
             "name": "HeatingType",
@@ -6749,7 +6731,7 @@ class ConsumptionReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    heating_type_code: Optional[HeatingTypeCode] = field(
+    heating_type_code: HeatingTypeCode | None = field(
         default=None,
         metadata={
             "name": "HeatingTypeCode",
@@ -6757,7 +6739,7 @@ class ConsumptionReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    period: Optional[Period] = field(
+    period: Period | None = field(
         default=None,
         metadata={
             "name": "Period",
@@ -6765,7 +6747,7 @@ class ConsumptionReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    guidance_document_reference: Optional[GuidanceDocumentReference] = field(
+    guidance_document_reference: GuidanceDocumentReference | None = field(
         default=None,
         metadata={
             "name": "GuidanceDocumentReference",
@@ -6773,7 +6755,7 @@ class ConsumptionReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_reference: Optional[DocumentReference] = field(
+    document_reference: DocumentReference | None = field(
         default=None,
         metadata={
             "name": "DocumentReference",
@@ -6803,7 +6785,7 @@ class ConsumptionReportType:
 
 @dataclass(frozen=True)
 class ContractType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -6811,7 +6793,7 @@ class ContractType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -6819,7 +6801,7 @@ class ContractType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -6827,7 +6809,7 @@ class ContractType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    nomination_date: Optional[NominationDate] = field(
+    nomination_date: NominationDate | None = field(
         default=None,
         metadata={
             "name": "NominationDate",
@@ -6835,7 +6817,7 @@ class ContractType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    nomination_time: Optional[NominationTime] = field(
+    nomination_time: NominationTime | None = field(
         default=None,
         metadata={
             "name": "NominationTime",
@@ -6843,7 +6825,7 @@ class ContractType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contract_type_code: Optional[ContractTypeCode] = field(
+    contract_type_code: ContractTypeCode | None = field(
         default=None,
         metadata={
             "name": "ContractTypeCode",
@@ -6851,7 +6833,7 @@ class ContractType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contract_type: Optional[UblCommonBasicComponents21ContractType] = field(
+    contract_type: UblCommonBasicComponents21ContractType | None = field(
         default=None,
         metadata={
             "name": "ContractType",
@@ -6867,7 +6849,7 @@ class ContractType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    version_id: Optional[VersionId] = field(
+    version_id: VersionId | None = field(
         default=None,
         metadata={
             "name": "VersionID",
@@ -6883,7 +6865,7 @@ class ContractType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validity_period: Optional[ValidityPeriod] = field(
+    validity_period: ValidityPeriod | None = field(
         default=None,
         metadata={
             "name": "ValidityPeriod",
@@ -6899,7 +6881,7 @@ class ContractType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    nomination_period: Optional[NominationPeriod] = field(
+    nomination_period: NominationPeriod | None = field(
         default=None,
         metadata={
             "name": "NominationPeriod",
@@ -6907,7 +6889,7 @@ class ContractType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contractual_delivery: Optional["ContractualDelivery"] = field(
+    contractual_delivery: ContractualDelivery | None = field(
         default=None,
         metadata={
             "name": "ContractualDelivery",
@@ -6919,7 +6901,7 @@ class ContractType:
 
 @dataclass(frozen=True)
 class EmissionCalculationMethodType:
-    calculation_method_code: Optional[CalculationMethodCode] = field(
+    calculation_method_code: CalculationMethodCode | None = field(
         default=None,
         metadata={
             "name": "CalculationMethodCode",
@@ -6927,7 +6909,7 @@ class EmissionCalculationMethodType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    fullness_indication_code: Optional[FullnessIndicationCode] = field(
+    fullness_indication_code: FullnessIndicationCode | None = field(
         default=None,
         metadata={
             "name": "FullnessIndicationCode",
@@ -6935,7 +6917,7 @@ class EmissionCalculationMethodType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    measurement_from_location: Optional[MeasurementFromLocation] = field(
+    measurement_from_location: MeasurementFromLocation | None = field(
         default=None,
         metadata={
             "name": "MeasurementFromLocation",
@@ -6943,7 +6925,7 @@ class EmissionCalculationMethodType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    measurement_to_location: Optional[MeasurementToLocation] = field(
+    measurement_to_location: MeasurementToLocation | None = field(
         default=None,
         metadata={
             "name": "MeasurementToLocation",
@@ -6955,7 +6937,7 @@ class EmissionCalculationMethodType:
 
 @dataclass(frozen=True)
 class EnergyTaxReportType:
-    tax_energy_amount: Optional[TaxEnergyAmount] = field(
+    tax_energy_amount: TaxEnergyAmount | None = field(
         default=None,
         metadata={
             "name": "TaxEnergyAmount",
@@ -6963,7 +6945,7 @@ class EnergyTaxReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_energy_on_account_amount: Optional[TaxEnergyOnAccountAmount] = field(
+    tax_energy_on_account_amount: TaxEnergyOnAccountAmount | None = field(
         default=None,
         metadata={
             "name": "TaxEnergyOnAccountAmount",
@@ -6971,7 +6953,7 @@ class EnergyTaxReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_energy_balance_amount: Optional[TaxEnergyBalanceAmount] = field(
+    tax_energy_balance_amount: TaxEnergyBalanceAmount | None = field(
         default=None,
         metadata={
             "name": "TaxEnergyBalanceAmount",
@@ -6979,7 +6961,7 @@ class EnergyTaxReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_scheme: Optional[TaxScheme] = field(
+    tax_scheme: TaxScheme | None = field(
         default=None,
         metadata={
             "name": "TaxScheme",
@@ -6992,7 +6974,7 @@ class EnergyTaxReportType:
 
 @dataclass(frozen=True)
 class EventType:
-    identification_id: Optional[IdentificationId] = field(
+    identification_id: IdentificationId | None = field(
         default=None,
         metadata={
             "name": "IdentificationID",
@@ -7000,7 +6982,7 @@ class EventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    occurrence_date: Optional[OccurrenceDate] = field(
+    occurrence_date: OccurrenceDate | None = field(
         default=None,
         metadata={
             "name": "OccurrenceDate",
@@ -7008,7 +6990,7 @@ class EventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    occurrence_time: Optional[OccurrenceTime] = field(
+    occurrence_time: OccurrenceTime | None = field(
         default=None,
         metadata={
             "name": "OccurrenceTime",
@@ -7016,7 +6998,7 @@ class EventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    type_code: Optional[TypeCode] = field(
+    type_code: TypeCode | None = field(
         default=None,
         metadata={
             "name": "TypeCode",
@@ -7032,7 +7014,7 @@ class EventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    completion_indicator: Optional[CompletionIndicator] = field(
+    completion_indicator: CompletionIndicator | None = field(
         default=None,
         metadata={
             "name": "CompletionIndicator",
@@ -7056,7 +7038,7 @@ class EventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    occurence_location: Optional[OccurenceLocation] = field(
+    occurence_location: OccurenceLocation | None = field(
         default=None,
         metadata={
             "name": "OccurenceLocation",
@@ -7068,7 +7050,7 @@ class EventType:
 
 @dataclass(frozen=True)
 class ItemInstanceType:
-    product_trace_id: Optional[ProductTraceId] = field(
+    product_trace_id: ProductTraceId | None = field(
         default=None,
         metadata={
             "name": "ProductTraceID",
@@ -7076,7 +7058,7 @@ class ItemInstanceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    manufacture_date: Optional[ManufactureDate] = field(
+    manufacture_date: ManufactureDate | None = field(
         default=None,
         metadata={
             "name": "ManufactureDate",
@@ -7084,7 +7066,7 @@ class ItemInstanceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    manufacture_time: Optional[ManufactureTime] = field(
+    manufacture_time: ManufactureTime | None = field(
         default=None,
         metadata={
             "name": "ManufactureTime",
@@ -7092,7 +7074,7 @@ class ItemInstanceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    best_before_date: Optional[BestBeforeDate] = field(
+    best_before_date: BestBeforeDate | None = field(
         default=None,
         metadata={
             "name": "BestBeforeDate",
@@ -7100,7 +7082,7 @@ class ItemInstanceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    registration_id: Optional[RegistrationId] = field(
+    registration_id: RegistrationId | None = field(
         default=None,
         metadata={
             "name": "RegistrationID",
@@ -7108,7 +7090,7 @@ class ItemInstanceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    serial_id: Optional[SerialId] = field(
+    serial_id: SerialId | None = field(
         default=None,
         metadata={
             "name": "SerialID",
@@ -7124,7 +7106,7 @@ class ItemInstanceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    lot_identification: Optional[LotIdentification] = field(
+    lot_identification: LotIdentification | None = field(
         default=None,
         metadata={
             "name": "LotIdentification",
@@ -7136,7 +7118,7 @@ class ItemInstanceType:
 
 @dataclass(frozen=True)
 class LineReferenceType:
-    line_id: Optional[LineId] = field(
+    line_id: LineId | None = field(
         default=None,
         metadata={
             "name": "LineID",
@@ -7145,7 +7127,7 @@ class LineReferenceType:
             "required": True,
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -7153,7 +7135,7 @@ class LineReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_status_code: Optional[LineStatusCode] = field(
+    line_status_code: LineStatusCode | None = field(
         default=None,
         metadata={
             "name": "LineStatusCode",
@@ -7161,7 +7143,7 @@ class LineReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_reference: Optional[DocumentReference] = field(
+    document_reference: DocumentReference | None = field(
         default=None,
         metadata={
             "name": "DocumentReference",
@@ -7173,7 +7155,7 @@ class LineReferenceType:
 
 @dataclass(frozen=True)
 class MaritimeTransportType:
-    vessel_id: Optional[VesselId] = field(
+    vessel_id: VesselId | None = field(
         default=None,
         metadata={
             "name": "VesselID",
@@ -7181,7 +7163,7 @@ class MaritimeTransportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    vessel_name: Optional[VesselName] = field(
+    vessel_name: VesselName | None = field(
         default=None,
         metadata={
             "name": "VesselName",
@@ -7189,7 +7171,7 @@ class MaritimeTransportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    radio_call_sign_id: Optional[RadioCallSignId] = field(
+    radio_call_sign_id: RadioCallSignId | None = field(
         default=None,
         metadata={
             "name": "RadioCallSignID",
@@ -7205,7 +7187,7 @@ class MaritimeTransportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    gross_tonnage_measure: Optional[GrossTonnageMeasure] = field(
+    gross_tonnage_measure: GrossTonnageMeasure | None = field(
         default=None,
         metadata={
             "name": "GrossTonnageMeasure",
@@ -7213,7 +7195,7 @@ class MaritimeTransportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    net_tonnage_measure: Optional[NetTonnageMeasure] = field(
+    net_tonnage_measure: NetTonnageMeasure | None = field(
         default=None,
         metadata={
             "name": "NetTonnageMeasure",
@@ -7221,9 +7203,7 @@ class MaritimeTransportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    registry_certificate_document_reference: Optional[
-        RegistryCertificateDocumentReference
-    ] = field(
+    registry_certificate_document_reference: RegistryCertificateDocumentReference | None = field(
         default=None,
         metadata={
             "name": "RegistryCertificateDocumentReference",
@@ -7231,7 +7211,7 @@ class MaritimeTransportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    registry_port_location: Optional[RegistryPortLocation] = field(
+    registry_port_location: RegistryPortLocation | None = field(
         default=None,
         metadata={
             "name": "RegistryPortLocation",
@@ -7243,7 +7223,7 @@ class MaritimeTransportType:
 
 @dataclass(frozen=True)
 class OrderReferenceType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -7252,7 +7232,7 @@ class OrderReferenceType:
             "required": True,
         },
     )
-    sales_order_id: Optional[SalesOrderId] = field(
+    sales_order_id: SalesOrderId | None = field(
         default=None,
         metadata={
             "name": "SalesOrderID",
@@ -7260,7 +7240,7 @@ class OrderReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    copy_indicator: Optional[CopyIndicator] = field(
+    copy_indicator: CopyIndicator | None = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -7268,7 +7248,7 @@ class OrderReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -7276,7 +7256,7 @@ class OrderReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -7284,7 +7264,7 @@ class OrderReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -7292,7 +7272,7 @@ class OrderReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customer_reference: Optional[CustomerReference] = field(
+    customer_reference: CustomerReference | None = field(
         default=None,
         metadata={
             "name": "CustomerReference",
@@ -7300,7 +7280,7 @@ class OrderReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    order_type_code: Optional[OrderTypeCode] = field(
+    order_type_code: OrderTypeCode | None = field(
         default=None,
         metadata={
             "name": "OrderTypeCode",
@@ -7308,7 +7288,7 @@ class OrderReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_reference: Optional[DocumentReference] = field(
+    document_reference: DocumentReference | None = field(
         default=None,
         metadata={
             "name": "DocumentReference",
@@ -7320,7 +7300,7 @@ class OrderReferenceType:
 
 @dataclass(frozen=True)
 class PartyTaxSchemeType:
-    registration_name: Optional[RegistrationName] = field(
+    registration_name: RegistrationName | None = field(
         default=None,
         metadata={
             "name": "RegistrationName",
@@ -7328,7 +7308,7 @@ class PartyTaxSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    company_id: Optional[CompanyId] = field(
+    company_id: CompanyId | None = field(
         default=None,
         metadata={
             "name": "CompanyID",
@@ -7336,7 +7316,7 @@ class PartyTaxSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_level_code: Optional[TaxLevelCode] = field(
+    tax_level_code: TaxLevelCode | None = field(
         default=None,
         metadata={
             "name": "TaxLevelCode",
@@ -7344,7 +7324,7 @@ class PartyTaxSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    exemption_reason_code: Optional[ExemptionReasonCode] = field(
+    exemption_reason_code: ExemptionReasonCode | None = field(
         default=None,
         metadata={
             "name": "ExemptionReasonCode",
@@ -7360,7 +7340,7 @@ class PartyTaxSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    registration_address: Optional[RegistrationAddress] = field(
+    registration_address: RegistrationAddress | None = field(
         default=None,
         metadata={
             "name": "RegistrationAddress",
@@ -7368,7 +7348,7 @@ class PartyTaxSchemeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_scheme: Optional[TaxScheme] = field(
+    tax_scheme: TaxScheme | None = field(
         default=None,
         metadata={
             "name": "TaxScheme",
@@ -7381,7 +7361,7 @@ class PartyTaxSchemeType:
 
 @dataclass(frozen=True)
 class TaxCategoryType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -7389,7 +7369,7 @@ class TaxCategoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -7397,7 +7377,7 @@ class TaxCategoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    percent: Optional[Percent] = field(
+    percent: Percent | None = field(
         default=None,
         metadata={
             "name": "Percent",
@@ -7405,7 +7385,7 @@ class TaxCategoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    base_unit_measure: Optional[BaseUnitMeasure] = field(
+    base_unit_measure: BaseUnitMeasure | None = field(
         default=None,
         metadata={
             "name": "BaseUnitMeasure",
@@ -7413,7 +7393,7 @@ class TaxCategoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    per_unit_amount: Optional[PerUnitAmount] = field(
+    per_unit_amount: PerUnitAmount | None = field(
         default=None,
         metadata={
             "name": "PerUnitAmount",
@@ -7421,7 +7401,7 @@ class TaxCategoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_exemption_reason_code: Optional[TaxExemptionReasonCode] = field(
+    tax_exemption_reason_code: TaxExemptionReasonCode | None = field(
         default=None,
         metadata={
             "name": "TaxExemptionReasonCode",
@@ -7437,7 +7417,7 @@ class TaxCategoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tier_range: Optional[TierRange] = field(
+    tier_range: TierRange | None = field(
         default=None,
         metadata={
             "name": "TierRange",
@@ -7445,7 +7425,7 @@ class TaxCategoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tier_rate_percent: Optional[TierRatePercent] = field(
+    tier_rate_percent: TierRatePercent | None = field(
         default=None,
         metadata={
             "name": "TierRatePercent",
@@ -7453,7 +7433,7 @@ class TaxCategoryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_scheme: Optional[TaxScheme] = field(
+    tax_scheme: TaxScheme | None = field(
         default=None,
         metadata={
             "name": "TaxScheme",
@@ -7466,7 +7446,7 @@ class TaxCategoryType:
 
 @dataclass(frozen=True)
 class TenderRequirementType:
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -7483,7 +7463,7 @@ class TenderRequirementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    template_document_reference: Optional[TemplateDocumentReference] = field(
+    template_document_reference: TemplateDocumentReference | None = field(
         default=None,
         metadata={
             "name": "TemplateDocumentReference",
@@ -7495,7 +7475,7 @@ class TenderRequirementType:
 
 @dataclass(frozen=True)
 class TransactionConditionsType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -7503,7 +7483,7 @@ class TransactionConditionsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    action_code: Optional[ActionCode] = field(
+    action_code: ActionCode | None = field(
         default=None,
         metadata={
             "name": "ActionCode",
@@ -7531,7 +7511,7 @@ class TransactionConditionsType:
 
 @dataclass(frozen=True)
 class WorkPhaseReferenceType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -7539,7 +7519,7 @@ class WorkPhaseReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    work_phase_code: Optional[WorkPhaseCode] = field(
+    work_phase_code: WorkPhaseCode | None = field(
         default=None,
         metadata={
             "name": "WorkPhaseCode",
@@ -7555,7 +7535,7 @@ class WorkPhaseReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    progress_percent: Optional[ProgressPercent] = field(
+    progress_percent: ProgressPercent | None = field(
         default=None,
         metadata={
             "name": "ProgressPercent",
@@ -7563,7 +7543,7 @@ class WorkPhaseReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    start_date: Optional[StartDate] = field(
+    start_date: StartDate | None = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -7571,7 +7551,7 @@ class WorkPhaseReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    end_date: Optional[EndDate] = field(
+    end_date: EndDate | None = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -7791,7 +7771,7 @@ class WorkPhaseReference(WorkPhaseReferenceType):
 
 @dataclass(frozen=True)
 class DependentPriceReferenceType:
-    percent: Optional[Percent] = field(
+    percent: Percent | None = field(
         default=None,
         metadata={
             "name": "Percent",
@@ -7799,7 +7779,7 @@ class DependentPriceReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    location_address: Optional[LocationAddress] = field(
+    location_address: LocationAddress | None = field(
         default=None,
         metadata={
             "name": "LocationAddress",
@@ -7807,7 +7787,7 @@ class DependentPriceReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    dependent_line_reference: Optional[DependentLineReference] = field(
+    dependent_line_reference: DependentLineReference | None = field(
         default=None,
         metadata={
             "name": "DependentLineReference",
@@ -7819,7 +7799,7 @@ class DependentPriceReferenceType:
 
 @dataclass(frozen=True)
 class DutyType:
-    amount: Optional[Amount] = field(
+    amount: Amount | None = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -7828,7 +7808,7 @@ class DutyType:
             "required": True,
         },
     )
-    duty: Optional[UblCommonBasicComponents21Duty] = field(
+    duty: UblCommonBasicComponents21Duty | None = field(
         default=None,
         metadata={
             "name": "Duty",
@@ -7836,7 +7816,7 @@ class DutyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    duty_code: Optional[DutyCode] = field(
+    duty_code: DutyCode | None = field(
         default=None,
         metadata={
             "name": "DutyCode",
@@ -7844,7 +7824,7 @@ class DutyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_category: Optional[TaxCategory] = field(
+    tax_category: TaxCategory | None = field(
         default=None,
         metadata={
             "name": "TaxCategory",
@@ -7894,9 +7874,7 @@ class EnergyWaterSupplyType:
 
 @dataclass(frozen=True)
 class EnvironmentalEmissionType:
-    environmental_emission_type_code: Optional[
-        EnvironmentalEmissionTypeCode
-    ] = field(
+    environmental_emission_type_code: EnvironmentalEmissionTypeCode | None = field(
         default=None,
         metadata={
             "name": "EnvironmentalEmissionTypeCode",
@@ -7905,7 +7883,7 @@ class EnvironmentalEmissionType:
             "required": True,
         },
     )
-    value_measure: Optional[ValueMeasure] = field(
+    value_measure: ValueMeasure | None = field(
         default=None,
         metadata={
             "name": "ValueMeasure",
@@ -7934,7 +7912,7 @@ class EnvironmentalEmissionType:
 
 @dataclass(frozen=True)
 class ExchangeRateType:
-    source_currency_code: Optional[SourceCurrencyCode] = field(
+    source_currency_code: SourceCurrencyCode | None = field(
         default=None,
         metadata={
             "name": "SourceCurrencyCode",
@@ -7943,7 +7921,7 @@ class ExchangeRateType:
             "required": True,
         },
     )
-    source_currency_base_rate: Optional[SourceCurrencyBaseRate] = field(
+    source_currency_base_rate: SourceCurrencyBaseRate | None = field(
         default=None,
         metadata={
             "name": "SourceCurrencyBaseRate",
@@ -7951,7 +7929,7 @@ class ExchangeRateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    target_currency_code: Optional[TargetCurrencyCode] = field(
+    target_currency_code: TargetCurrencyCode | None = field(
         default=None,
         metadata={
             "name": "TargetCurrencyCode",
@@ -7960,7 +7938,7 @@ class ExchangeRateType:
             "required": True,
         },
     )
-    target_currency_base_rate: Optional[TargetCurrencyBaseRate] = field(
+    target_currency_base_rate: TargetCurrencyBaseRate | None = field(
         default=None,
         metadata={
             "name": "TargetCurrencyBaseRate",
@@ -7968,7 +7946,7 @@ class ExchangeRateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    exchange_market_id: Optional[ExchangeMarketId] = field(
+    exchange_market_id: ExchangeMarketId | None = field(
         default=None,
         metadata={
             "name": "ExchangeMarketID",
@@ -7976,7 +7954,7 @@ class ExchangeRateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    calculation_rate: Optional[CalculationRate] = field(
+    calculation_rate: CalculationRate | None = field(
         default=None,
         metadata={
             "name": "CalculationRate",
@@ -7984,7 +7962,7 @@ class ExchangeRateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    mathematic_operator_code: Optional[MathematicOperatorCode] = field(
+    mathematic_operator_code: MathematicOperatorCode | None = field(
         default=None,
         metadata={
             "name": "MathematicOperatorCode",
@@ -7992,7 +7970,7 @@ class ExchangeRateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    date: Optional[Date] = field(
+    date: Date | None = field(
         default=None,
         metadata={
             "name": "Date",
@@ -8000,7 +7978,7 @@ class ExchangeRateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    foreign_exchange_contract: Optional[ForeignExchangeContract] = field(
+    foreign_exchange_contract: ForeignExchangeContract | None = field(
         default=None,
         metadata={
             "name": "ForeignExchangeContract",
@@ -8012,7 +7990,7 @@ class ExchangeRateType:
 
 @dataclass(frozen=True)
 class FinancialAccountType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -8020,7 +7998,7 @@ class FinancialAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -8028,7 +8006,7 @@ class FinancialAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    alias_name: Optional[AliasName] = field(
+    alias_name: AliasName | None = field(
         default=None,
         metadata={
             "name": "AliasName",
@@ -8036,7 +8014,7 @@ class FinancialAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    account_type_code: Optional[AccountTypeCode] = field(
+    account_type_code: AccountTypeCode | None = field(
         default=None,
         metadata={
             "name": "AccountTypeCode",
@@ -8044,7 +8022,7 @@ class FinancialAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    account_format_code: Optional[AccountFormatCode] = field(
+    account_format_code: AccountFormatCode | None = field(
         default=None,
         metadata={
             "name": "AccountFormatCode",
@@ -8052,7 +8030,7 @@ class FinancialAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    currency_code: Optional[CurrencyCode] = field(
+    currency_code: CurrencyCode | None = field(
         default=None,
         metadata={
             "name": "CurrencyCode",
@@ -8068,7 +8046,7 @@ class FinancialAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    financial_institution_branch: Optional[FinancialInstitutionBranch] = field(
+    financial_institution_branch: FinancialInstitutionBranch | None = field(
         default=None,
         metadata={
             "name": "FinancialInstitutionBranch",
@@ -8076,7 +8054,7 @@ class FinancialAccountType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    country: Optional[Country] = field(
+    country: Country | None = field(
         default=None,
         metadata={
             "name": "Country",
@@ -8088,7 +8066,7 @@ class FinancialAccountType:
 
 @dataclass(frozen=True)
 class FrameworkAgreementType:
-    expected_operator_quantity: Optional[ExpectedOperatorQuantity] = field(
+    expected_operator_quantity: ExpectedOperatorQuantity | None = field(
         default=None,
         metadata={
             "name": "ExpectedOperatorQuantity",
@@ -8096,7 +8074,7 @@ class FrameworkAgreementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_operator_quantity: Optional[MaximumOperatorQuantity] = field(
+    maximum_operator_quantity: MaximumOperatorQuantity | None = field(
         default=None,
         metadata={
             "name": "MaximumOperatorQuantity",
@@ -8120,7 +8098,7 @@ class FrameworkAgreementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    duration_period: Optional[DurationPeriod] = field(
+    duration_period: DurationPeriod | None = field(
         default=None,
         metadata={
             "name": "DurationPeriod",
@@ -8142,7 +8120,7 @@ class FrameworkAgreementType:
 
 @dataclass(frozen=True)
 class LineResponseType:
-    line_reference: Optional[LineReference] = field(
+    line_reference: LineReference | None = field(
         default=None,
         metadata={
             "name": "LineReference",
@@ -8164,7 +8142,7 @@ class LineResponseType:
 
 @dataclass(frozen=True)
 class OrderLineReferenceType:
-    line_id: Optional[LineId] = field(
+    line_id: LineId | None = field(
         default=None,
         metadata={
             "name": "LineID",
@@ -8173,7 +8151,7 @@ class OrderLineReferenceType:
             "required": True,
         },
     )
-    sales_order_line_id: Optional[SalesOrderLineId] = field(
+    sales_order_line_id: SalesOrderLineId | None = field(
         default=None,
         metadata={
             "name": "SalesOrderLineID",
@@ -8181,7 +8159,7 @@ class OrderLineReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -8189,7 +8167,7 @@ class OrderLineReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_status_code: Optional[LineStatusCode] = field(
+    line_status_code: LineStatusCode | None = field(
         default=None,
         metadata={
             "name": "LineStatusCode",
@@ -8197,7 +8175,7 @@ class OrderLineReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    order_reference: Optional[OrderReference] = field(
+    order_reference: OrderReference | None = field(
         default=None,
         metadata={
             "name": "OrderReference",
@@ -8209,7 +8187,7 @@ class OrderLineReferenceType:
 
 @dataclass(frozen=True)
 class ProjectReferenceType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -8218,7 +8196,7 @@ class ProjectReferenceType:
             "required": True,
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -8226,7 +8204,7 @@ class ProjectReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -8246,9 +8224,7 @@ class ProjectReferenceType:
 
 @dataclass(frozen=True)
 class RequestedTenderTotalType:
-    estimated_overall_contract_amount: Optional[
-        EstimatedOverallContractAmount
-    ] = field(
+    estimated_overall_contract_amount: EstimatedOverallContractAmount | None = field(
         default=None,
         metadata={
             "name": "EstimatedOverallContractAmount",
@@ -8256,7 +8232,7 @@ class RequestedTenderTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_amount: Optional[TotalAmount] = field(
+    total_amount: TotalAmount | None = field(
         default=None,
         metadata={
             "name": "TotalAmount",
@@ -8264,7 +8240,7 @@ class RequestedTenderTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_included_indicator: Optional[TaxIncludedIndicator] = field(
+    tax_included_indicator: TaxIncludedIndicator | None = field(
         default=None,
         metadata={
             "name": "TaxIncludedIndicator",
@@ -8272,7 +8248,7 @@ class RequestedTenderTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_amount: Optional[MinimumAmount] = field(
+    minimum_amount: MinimumAmount | None = field(
         default=None,
         metadata={
             "name": "MinimumAmount",
@@ -8280,7 +8256,7 @@ class RequestedTenderTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_amount: Optional[MaximumAmount] = field(
+    maximum_amount: MaximumAmount | None = field(
         default=None,
         metadata={
             "name": "MaximumAmount",
@@ -8296,9 +8272,7 @@ class RequestedTenderTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    average_subsequent_contract_amount: Optional[
-        AverageSubsequentContractAmount
-    ] = field(
+    average_subsequent_contract_amount: AverageSubsequentContractAmount | None = field(
         default=None,
         metadata={
             "name": "AverageSubsequentContractAmount",
@@ -8318,7 +8292,7 @@ class RequestedTenderTotalType:
 
 @dataclass(frozen=True)
 class TaxSubtotalType:
-    taxable_amount: Optional[TaxableAmount] = field(
+    taxable_amount: TaxableAmount | None = field(
         default=None,
         metadata={
             "name": "TaxableAmount",
@@ -8326,7 +8300,7 @@ class TaxSubtotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_amount: Optional[TaxAmount] = field(
+    tax_amount: TaxAmount | None = field(
         default=None,
         metadata={
             "name": "TaxAmount",
@@ -8335,7 +8309,7 @@ class TaxSubtotalType:
             "required": True,
         },
     )
-    calculation_sequence_numeric: Optional[CalculationSequenceNumeric] = field(
+    calculation_sequence_numeric: CalculationSequenceNumeric | None = field(
         default=None,
         metadata={
             "name": "CalculationSequenceNumeric",
@@ -8343,7 +8317,7 @@ class TaxSubtotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transaction_currency_tax_amount: Optional[TransactionCurrencyTaxAmount] = (
+    transaction_currency_tax_amount: TransactionCurrencyTaxAmount | None = (
         field(
             default=None,
             metadata={
@@ -8353,7 +8327,7 @@ class TaxSubtotalType:
             },
         )
     )
-    percent: Optional[Percent] = field(
+    percent: Percent | None = field(
         default=None,
         metadata={
             "name": "Percent",
@@ -8361,7 +8335,7 @@ class TaxSubtotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    base_unit_measure: Optional[BaseUnitMeasure] = field(
+    base_unit_measure: BaseUnitMeasure | None = field(
         default=None,
         metadata={
             "name": "BaseUnitMeasure",
@@ -8369,7 +8343,7 @@ class TaxSubtotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    per_unit_amount: Optional[PerUnitAmount] = field(
+    per_unit_amount: PerUnitAmount | None = field(
         default=None,
         metadata={
             "name": "PerUnitAmount",
@@ -8377,7 +8351,7 @@ class TaxSubtotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tier_range: Optional[TierRange] = field(
+    tier_range: TierRange | None = field(
         default=None,
         metadata={
             "name": "TierRange",
@@ -8385,7 +8359,7 @@ class TaxSubtotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tier_rate_percent: Optional[TierRatePercent] = field(
+    tier_rate_percent: TierRatePercent | None = field(
         default=None,
         metadata={
             "name": "TierRatePercent",
@@ -8393,7 +8367,7 @@ class TaxSubtotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_category: Optional[TaxCategory] = field(
+    tax_category: TaxCategory | None = field(
         default=None,
         metadata={
             "name": "TaxCategory",
@@ -8406,7 +8380,7 @@ class TaxSubtotalType:
 
 @dataclass(frozen=True)
 class UtilityItemType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -8415,7 +8389,7 @@ class UtilityItemType:
             "required": True,
         },
     )
-    subscriber_id: Optional[SubscriberId] = field(
+    subscriber_id: SubscriberId | None = field(
         default=None,
         metadata={
             "name": "SubscriberID",
@@ -8423,7 +8397,7 @@ class UtilityItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    subscriber_type: Optional[SubscriberType] = field(
+    subscriber_type: SubscriberType | None = field(
         default=None,
         metadata={
             "name": "SubscriberType",
@@ -8431,7 +8405,7 @@ class UtilityItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    subscriber_type_code: Optional[SubscriberTypeCode] = field(
+    subscriber_type_code: SubscriberTypeCode | None = field(
         default=None,
         metadata={
             "name": "SubscriberTypeCode",
@@ -8447,7 +8421,7 @@ class UtilityItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pack_quantity: Optional[PackQuantity] = field(
+    pack_quantity: PackQuantity | None = field(
         default=None,
         metadata={
             "name": "PackQuantity",
@@ -8455,7 +8429,7 @@ class UtilityItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pack_size_numeric: Optional[PackSizeNumeric] = field(
+    pack_size_numeric: PackSizeNumeric | None = field(
         default=None,
         metadata={
             "name": "PackSizeNumeric",
@@ -8463,7 +8437,7 @@ class UtilityItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    consumption_type: Optional[UblCommonBasicComponents21ConsumptionType] = (
+    consumption_type: UblCommonBasicComponents21ConsumptionType | None = (
         field(
             default=None,
             metadata={
@@ -8473,7 +8447,7 @@ class UtilityItemType:
             },
         )
     )
-    consumption_type_code: Optional[ConsumptionTypeCode] = field(
+    consumption_type_code: ConsumptionTypeCode | None = field(
         default=None,
         metadata={
             "name": "ConsumptionTypeCode",
@@ -8481,7 +8455,7 @@ class UtilityItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    current_charge_type: Optional[CurrentChargeType] = field(
+    current_charge_type: CurrentChargeType | None = field(
         default=None,
         metadata={
             "name": "CurrentChargeType",
@@ -8489,7 +8463,7 @@ class UtilityItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    current_charge_type_code: Optional[CurrentChargeTypeCode] = field(
+    current_charge_type_code: CurrentChargeTypeCode | None = field(
         default=None,
         metadata={
             "name": "CurrentChargeTypeCode",
@@ -8497,7 +8471,7 @@ class UtilityItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    one_time_charge_type: Optional[OneTimeChargeType] = field(
+    one_time_charge_type: OneTimeChargeType | None = field(
         default=None,
         metadata={
             "name": "OneTimeChargeType",
@@ -8505,7 +8479,7 @@ class UtilityItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    one_time_charge_type_code: Optional[OneTimeChargeTypeCode] = field(
+    one_time_charge_type_code: OneTimeChargeTypeCode | None = field(
         default=None,
         metadata={
             "name": "OneTimeChargeTypeCode",
@@ -8513,7 +8487,7 @@ class UtilityItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_category: Optional[TaxCategory] = field(
+    tax_category: TaxCategory | None = field(
         default=None,
         metadata={
             "name": "TaxCategory",
@@ -8521,7 +8495,7 @@ class UtilityItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contract: Optional[Contract] = field(
+    contract: Contract | None = field(
         default=None,
         metadata={
             "name": "Contract",
@@ -8665,7 +8639,7 @@ class UtilityItem(UtilityItemType):
 
 @dataclass(frozen=True)
 class PaymentTermsType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -8681,7 +8655,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    prepaid_payment_reference_id: Optional[PrepaidPaymentReferenceId] = field(
+    prepaid_payment_reference_id: PrepaidPaymentReferenceId | None = field(
         default=None,
         metadata={
             "name": "PrepaidPaymentReferenceID",
@@ -8697,7 +8671,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    reference_event_code: Optional[ReferenceEventCode] = field(
+    reference_event_code: ReferenceEventCode | None = field(
         default=None,
         metadata={
             "name": "ReferenceEventCode",
@@ -8705,7 +8679,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    settlement_discount_percent: Optional[SettlementDiscountPercent] = field(
+    settlement_discount_percent: SettlementDiscountPercent | None = field(
         default=None,
         metadata={
             "name": "SettlementDiscountPercent",
@@ -8713,7 +8687,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    penalty_surcharge_percent: Optional[PenaltySurchargePercent] = field(
+    penalty_surcharge_percent: PenaltySurchargePercent | None = field(
         default=None,
         metadata={
             "name": "PenaltySurchargePercent",
@@ -8721,7 +8695,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_percent: Optional[PaymentPercent] = field(
+    payment_percent: PaymentPercent | None = field(
         default=None,
         metadata={
             "name": "PaymentPercent",
@@ -8729,7 +8703,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    amount: Optional[Amount] = field(
+    amount: Amount | None = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -8737,7 +8711,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    settlement_discount_amount: Optional[SettlementDiscountAmount] = field(
+    settlement_discount_amount: SettlementDiscountAmount | None = field(
         default=None,
         metadata={
             "name": "SettlementDiscountAmount",
@@ -8745,7 +8719,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    penalty_amount: Optional[PenaltyAmount] = field(
+    penalty_amount: PenaltyAmount | None = field(
         default=None,
         metadata={
             "name": "PenaltyAmount",
@@ -8753,7 +8727,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_terms_details_uri: Optional[PaymentTermsDetailsUri] = field(
+    payment_terms_details_uri: PaymentTermsDetailsUri | None = field(
         default=None,
         metadata={
             "name": "PaymentTermsDetailsURI",
@@ -8761,7 +8735,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_due_date: Optional[PaymentDueDate] = field(
+    payment_due_date: PaymentDueDate | None = field(
         default=None,
         metadata={
             "name": "PaymentDueDate",
@@ -8769,7 +8743,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    installment_due_date: Optional[InstallmentDueDate] = field(
+    installment_due_date: InstallmentDueDate | None = field(
         default=None,
         metadata={
             "name": "InstallmentDueDate",
@@ -8777,7 +8751,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    invoicing_party_reference: Optional[InvoicingPartyReference] = field(
+    invoicing_party_reference: InvoicingPartyReference | None = field(
         default=None,
         metadata={
             "name": "InvoicingPartyReference",
@@ -8785,7 +8759,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    settlement_period: Optional[SettlementPeriod] = field(
+    settlement_period: SettlementPeriod | None = field(
         default=None,
         metadata={
             "name": "SettlementPeriod",
@@ -8793,7 +8767,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    penalty_period: Optional[PenaltyPeriod] = field(
+    penalty_period: PenaltyPeriod | None = field(
         default=None,
         metadata={
             "name": "PenaltyPeriod",
@@ -8801,7 +8775,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    exchange_rate: Optional[ExchangeRate] = field(
+    exchange_rate: ExchangeRate | None = field(
         default=None,
         metadata={
             "name": "ExchangeRate",
@@ -8809,7 +8783,7 @@ class PaymentTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    validity_period: Optional[ValidityPeriod] = field(
+    validity_period: ValidityPeriod | None = field(
         default=None,
         metadata={
             "name": "ValidityPeriod",
@@ -8821,7 +8795,7 @@ class PaymentTermsType:
 
 @dataclass(frozen=True)
 class PersonType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -8829,7 +8803,7 @@ class PersonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    first_name: Optional[FirstName] = field(
+    first_name: FirstName | None = field(
         default=None,
         metadata={
             "name": "FirstName",
@@ -8837,7 +8811,7 @@ class PersonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    family_name: Optional[FamilyName] = field(
+    family_name: FamilyName | None = field(
         default=None,
         metadata={
             "name": "FamilyName",
@@ -8845,7 +8819,7 @@ class PersonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    title: Optional[Title] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "name": "Title",
@@ -8853,7 +8827,7 @@ class PersonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    middle_name: Optional[MiddleName] = field(
+    middle_name: MiddleName | None = field(
         default=None,
         metadata={
             "name": "MiddleName",
@@ -8861,7 +8835,7 @@ class PersonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    other_name: Optional[OtherName] = field(
+    other_name: OtherName | None = field(
         default=None,
         metadata={
             "name": "OtherName",
@@ -8869,7 +8843,7 @@ class PersonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name_suffix: Optional[NameSuffix] = field(
+    name_suffix: NameSuffix | None = field(
         default=None,
         metadata={
             "name": "NameSuffix",
@@ -8877,7 +8851,7 @@ class PersonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    job_title: Optional[JobTitle] = field(
+    job_title: JobTitle | None = field(
         default=None,
         metadata={
             "name": "JobTitle",
@@ -8885,7 +8859,7 @@ class PersonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    nationality_id: Optional[NationalityId] = field(
+    nationality_id: NationalityId | None = field(
         default=None,
         metadata={
             "name": "NationalityID",
@@ -8893,7 +8867,7 @@ class PersonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    gender_code: Optional[GenderCode] = field(
+    gender_code: GenderCode | None = field(
         default=None,
         metadata={
             "name": "GenderCode",
@@ -8901,7 +8875,7 @@ class PersonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    birth_date: Optional[BirthDate] = field(
+    birth_date: BirthDate | None = field(
         default=None,
         metadata={
             "name": "BirthDate",
@@ -8909,7 +8883,7 @@ class PersonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    birthplace_name: Optional[BirthplaceName] = field(
+    birthplace_name: BirthplaceName | None = field(
         default=None,
         metadata={
             "name": "BirthplaceName",
@@ -8917,7 +8891,7 @@ class PersonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    organization_department: Optional[OrganizationDepartment] = field(
+    organization_department: OrganizationDepartment | None = field(
         default=None,
         metadata={
             "name": "OrganizationDepartment",
@@ -8925,7 +8899,7 @@ class PersonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contact: Optional[Contact] = field(
+    contact: Contact | None = field(
         default=None,
         metadata={
             "name": "Contact",
@@ -8933,7 +8907,7 @@ class PersonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    financial_account: Optional[FinancialAccount] = field(
+    financial_account: FinancialAccount | None = field(
         default=None,
         metadata={
             "name": "FinancialAccount",
@@ -8949,7 +8923,7 @@ class PersonType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    residence_address: Optional[ResidenceAddress] = field(
+    residence_address: ResidenceAddress | None = field(
         default=None,
         metadata={
             "name": "ResidenceAddress",
@@ -8961,7 +8935,7 @@ class PersonType:
 
 @dataclass(frozen=True)
 class TaxTotalType:
-    tax_amount: Optional[TaxAmount] = field(
+    tax_amount: TaxAmount | None = field(
         default=None,
         metadata={
             "name": "TaxAmount",
@@ -8970,7 +8944,7 @@ class TaxTotalType:
             "required": True,
         },
     )
-    rounding_amount: Optional[RoundingAmount] = field(
+    rounding_amount: RoundingAmount | None = field(
         default=None,
         metadata={
             "name": "RoundingAmount",
@@ -8978,7 +8952,7 @@ class TaxTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_evidence_indicator: Optional[TaxEvidenceIndicator] = field(
+    tax_evidence_indicator: TaxEvidenceIndicator | None = field(
         default=None,
         metadata={
             "name": "TaxEvidenceIndicator",
@@ -8986,7 +8960,7 @@ class TaxTotalType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_included_indicator: Optional[TaxIncludedIndicator] = field(
+    tax_included_indicator: TaxIncludedIndicator | None = field(
         default=None,
         metadata={
             "name": "TaxIncludedIndicator",
@@ -9120,7 +9094,7 @@ class WithholdingTaxTotal(TaxTotalType):
 
 @dataclass(frozen=True)
 class AwardingTermsType:
-    weighting_algorithm_code: Optional[WeightingAlgorithmCode] = field(
+    weighting_algorithm_code: WeightingAlgorithmCode | None = field(
         default=None,
         metadata={
             "name": "WeightingAlgorithmCode",
@@ -9154,7 +9128,7 @@ class AwardingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    prize_indicator: Optional[PrizeIndicator] = field(
+    prize_indicator: PrizeIndicator | None = field(
         default=None,
         metadata={
             "name": "PrizeIndicator",
@@ -9178,7 +9152,7 @@ class AwardingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    followup_contract_indicator: Optional[FollowupContractIndicator] = field(
+    followup_contract_indicator: FollowupContractIndicator | None = field(
         default=None,
         metadata={
             "name": "FollowupContractIndicator",
@@ -9186,7 +9160,7 @@ class AwardingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    binding_on_buyer_indicator: Optional[BindingOnBuyerIndicator] = field(
+    binding_on_buyer_indicator: BindingOnBuyerIndicator | None = field(
         default=None,
         metadata={
             "name": "BindingOnBuyerIndicator",
@@ -9214,7 +9188,7 @@ class AwardingTermsType:
 
 @dataclass(frozen=True)
 class OnAccountPaymentType:
-    estimated_consumed_quantity: Optional[EstimatedConsumedQuantity] = field(
+    estimated_consumed_quantity: EstimatedConsumedQuantity | None = field(
         default=None,
         metadata={
             "name": "EstimatedConsumedQuantity",
@@ -9244,7 +9218,7 @@ class OnAccountPaymentType:
 
 @dataclass(frozen=True)
 class PartyType:
-    mark_care_indicator: Optional[MarkCareIndicator] = field(
+    mark_care_indicator: MarkCareIndicator | None = field(
         default=None,
         metadata={
             "name": "MarkCareIndicator",
@@ -9252,7 +9226,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    mark_attention_indicator: Optional[MarkAttentionIndicator] = field(
+    mark_attention_indicator: MarkAttentionIndicator | None = field(
         default=None,
         metadata={
             "name": "MarkAttentionIndicator",
@@ -9260,7 +9234,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    website_uri: Optional[WebsiteUri] = field(
+    website_uri: WebsiteUri | None = field(
         default=None,
         metadata={
             "name": "WebsiteURI",
@@ -9268,7 +9242,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    logo_reference_id: Optional[LogoReferenceId] = field(
+    logo_reference_id: LogoReferenceId | None = field(
         default=None,
         metadata={
             "name": "LogoReferenceID",
@@ -9276,7 +9250,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    endpoint_id: Optional[EndpointId] = field(
+    endpoint_id: EndpointId | None = field(
         default=None,
         metadata={
             "name": "EndpointID",
@@ -9284,7 +9258,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    industry_classification_code: Optional[IndustryClassificationCode] = field(
+    industry_classification_code: IndustryClassificationCode | None = field(
         default=None,
         metadata={
             "name": "IndustryClassificationCode",
@@ -9308,7 +9282,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    language: Optional[Language] = field(
+    language: Language | None = field(
         default=None,
         metadata={
             "name": "Language",
@@ -9316,7 +9290,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    postal_address: Optional[PostalAddress] = field(
+    postal_address: PostalAddress | None = field(
         default=None,
         metadata={
             "name": "PostalAddress",
@@ -9324,7 +9298,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    physical_location: Optional[PhysicalLocation] = field(
+    physical_location: PhysicalLocation | None = field(
         default=None,
         metadata={
             "name": "PhysicalLocation",
@@ -9340,7 +9314,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    party_legal_entity: tuple["PartyLegalEntity", ...] = field(
+    party_legal_entity: tuple[PartyLegalEntity, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PartyLegalEntity",
@@ -9348,7 +9322,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contact: Optional[Contact] = field(
+    contact: Contact | None = field(
         default=None,
         metadata={
             "name": "Contact",
@@ -9364,7 +9338,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    agent_party: Optional["AgentParty"] = field(
+    agent_party: AgentParty | None = field(
         default=None,
         metadata={
             "name": "AgentParty",
@@ -9372,7 +9346,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    service_provider_party: tuple["ServiceProviderParty", ...] = field(
+    service_provider_party: tuple[ServiceProviderParty, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ServiceProviderParty",
@@ -9380,7 +9354,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    power_of_attorney: tuple["PowerOfAttorney", ...] = field(
+    power_of_attorney: tuple[PowerOfAttorney, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "PowerOfAttorney",
@@ -9388,7 +9362,7 @@ class PartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    financial_account: Optional[FinancialAccount] = field(
+    financial_account: FinancialAccount | None = field(
         default=None,
         metadata={
             "name": "FinancialAccount",
@@ -9400,7 +9374,7 @@ class PartyType:
 
 @dataclass(frozen=True)
 class PriceExtensionType:
-    amount: Optional[Amount] = field(
+    amount: Amount | None = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -9879,7 +9853,7 @@ class AppealTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    presentation_period: Optional[PresentationPeriod] = field(
+    presentation_period: PresentationPeriod | None = field(
         default=None,
         metadata={
             "name": "PresentationPeriod",
@@ -9887,7 +9861,7 @@ class AppealTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    appeal_information_party: Optional[AppealInformationParty] = field(
+    appeal_information_party: AppealInformationParty | None = field(
         default=None,
         metadata={
             "name": "AppealInformationParty",
@@ -9895,7 +9869,7 @@ class AppealTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    appeal_receiver_party: Optional[AppealReceiverParty] = field(
+    appeal_receiver_party: AppealReceiverParty | None = field(
         default=None,
         metadata={
             "name": "AppealReceiverParty",
@@ -9903,7 +9877,7 @@ class AppealTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    mediation_party: Optional[MediationParty] = field(
+    mediation_party: MediationParty | None = field(
         default=None,
         metadata={
             "name": "MediationParty",
@@ -9918,7 +9892,7 @@ class ContractingPartyType1:
     class Meta:
         name = "ContractingPartyType"
 
-    buyer_profile_uri: Optional[BuyerProfileUri] = field(
+    buyer_profile_uri: BuyerProfileUri | None = field(
         default=None,
         metadata={
             "name": "BuyerProfileURI",
@@ -9942,7 +9916,7 @@ class ContractingPartyType1:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    party: Optional[Party] = field(
+    party: Party | None = field(
         default=None,
         metadata={
             "name": "Party",
@@ -9955,7 +9929,7 @@ class ContractingPartyType1:
 
 @dataclass(frozen=True)
 class CustomerPartyType:
-    customer_assigned_account_id: Optional[CustomerAssignedAccountId] = field(
+    customer_assigned_account_id: CustomerAssignedAccountId | None = field(
         default=None,
         metadata={
             "name": "CustomerAssignedAccountID",
@@ -9963,7 +9937,7 @@ class CustomerPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    supplier_assigned_account_id: Optional[SupplierAssignedAccountId] = field(
+    supplier_assigned_account_id: SupplierAssignedAccountId | None = field(
         default=None,
         metadata={
             "name": "SupplierAssignedAccountID",
@@ -9979,7 +9953,7 @@ class CustomerPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    party: Optional[Party] = field(
+    party: Party | None = field(
         default=None,
         metadata={
             "name": "Party",
@@ -9987,7 +9961,7 @@ class CustomerPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery_contact: Optional[DeliveryContact] = field(
+    delivery_contact: DeliveryContact | None = field(
         default=None,
         metadata={
             "name": "DeliveryContact",
@@ -9995,7 +9969,7 @@ class CustomerPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    accounting_contact: Optional[AccountingContact] = field(
+    accounting_contact: AccountingContact | None = field(
         default=None,
         metadata={
             "name": "AccountingContact",
@@ -10003,7 +9977,7 @@ class CustomerPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    buyer_contact: Optional[BuyerContact] = field(
+    buyer_contact: BuyerContact | None = field(
         default=None,
         metadata={
             "name": "BuyerContact",
@@ -10015,7 +9989,7 @@ class CustomerPartyType:
 
 @dataclass(frozen=True)
 class CustomsDeclarationType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -10024,7 +9998,7 @@ class CustomsDeclarationType:
             "required": True,
         },
     )
-    issuer_party: Optional[IssuerParty] = field(
+    issuer_party: IssuerParty | None = field(
         default=None,
         metadata={
             "name": "IssuerParty",
@@ -10036,7 +10010,7 @@ class CustomsDeclarationType:
 
 @dataclass(frozen=True)
 class DespatchType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -10044,7 +10018,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    requested_despatch_date: Optional[RequestedDespatchDate] = field(
+    requested_despatch_date: RequestedDespatchDate | None = field(
         default=None,
         metadata={
             "name": "RequestedDespatchDate",
@@ -10052,7 +10026,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    requested_despatch_time: Optional[RequestedDespatchTime] = field(
+    requested_despatch_time: RequestedDespatchTime | None = field(
         default=None,
         metadata={
             "name": "RequestedDespatchTime",
@@ -10060,7 +10034,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    estimated_despatch_date: Optional[EstimatedDespatchDate] = field(
+    estimated_despatch_date: EstimatedDespatchDate | None = field(
         default=None,
         metadata={
             "name": "EstimatedDespatchDate",
@@ -10068,7 +10042,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    estimated_despatch_time: Optional[EstimatedDespatchTime] = field(
+    estimated_despatch_time: EstimatedDespatchTime | None = field(
         default=None,
         metadata={
             "name": "EstimatedDespatchTime",
@@ -10076,7 +10050,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    actual_despatch_date: Optional[ActualDespatchDate] = field(
+    actual_despatch_date: ActualDespatchDate | None = field(
         default=None,
         metadata={
             "name": "ActualDespatchDate",
@@ -10084,7 +10058,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    actual_despatch_time: Optional[ActualDespatchTime] = field(
+    actual_despatch_time: ActualDespatchTime | None = field(
         default=None,
         metadata={
             "name": "ActualDespatchTime",
@@ -10092,7 +10066,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    guaranteed_despatch_date: Optional[GuaranteedDespatchDate] = field(
+    guaranteed_despatch_date: GuaranteedDespatchDate | None = field(
         default=None,
         metadata={
             "name": "GuaranteedDespatchDate",
@@ -10100,7 +10074,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    guaranteed_despatch_time: Optional[GuaranteedDespatchTime] = field(
+    guaranteed_despatch_time: GuaranteedDespatchTime | None = field(
         default=None,
         metadata={
             "name": "GuaranteedDespatchTime",
@@ -10108,7 +10082,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    release_id: Optional[ReleaseId] = field(
+    release_id: ReleaseId | None = field(
         default=None,
         metadata={
             "name": "ReleaseID",
@@ -10124,7 +10098,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    despatch_address: Optional[DespatchAddress] = field(
+    despatch_address: DespatchAddress | None = field(
         default=None,
         metadata={
             "name": "DespatchAddress",
@@ -10132,7 +10106,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    despatch_location: Optional[DespatchLocation] = field(
+    despatch_location: DespatchLocation | None = field(
         default=None,
         metadata={
             "name": "DespatchLocation",
@@ -10140,7 +10114,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    despatch_party: Optional[DespatchParty] = field(
+    despatch_party: DespatchParty | None = field(
         default=None,
         metadata={
             "name": "DespatchParty",
@@ -10148,7 +10122,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    carrier_party: Optional[CarrierParty] = field(
+    carrier_party: CarrierParty | None = field(
         default=None,
         metadata={
             "name": "CarrierParty",
@@ -10164,7 +10138,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contact: Optional[Contact] = field(
+    contact: Contact | None = field(
         default=None,
         metadata={
             "name": "Contact",
@@ -10172,7 +10146,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    estimated_despatch_period: Optional[EstimatedDespatchPeriod] = field(
+    estimated_despatch_period: EstimatedDespatchPeriod | None = field(
         default=None,
         metadata={
             "name": "EstimatedDespatchPeriod",
@@ -10180,7 +10154,7 @@ class DespatchType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    requested_despatch_period: Optional[RequestedDespatchPeriod] = field(
+    requested_despatch_period: RequestedDespatchPeriod | None = field(
         default=None,
         metadata={
             "name": "RequestedDespatchPeriod",
@@ -10192,7 +10166,7 @@ class DespatchType:
 
 @dataclass(frozen=True)
 class DocumentDistributionType:
-    print_qualifier: Optional[PrintQualifier] = field(
+    print_qualifier: PrintQualifier | None = field(
         default=None,
         metadata={
             "name": "PrintQualifier",
@@ -10201,7 +10175,7 @@ class DocumentDistributionType:
             "required": True,
         },
     )
-    maximum_copies_numeric: Optional[MaximumCopiesNumeric] = field(
+    maximum_copies_numeric: MaximumCopiesNumeric | None = field(
         default=None,
         metadata={
             "name": "MaximumCopiesNumeric",
@@ -10210,7 +10184,7 @@ class DocumentDistributionType:
             "required": True,
         },
     )
-    party: Optional[Party] = field(
+    party: Party | None = field(
         default=None,
         metadata={
             "name": "Party",
@@ -10223,7 +10197,7 @@ class DocumentDistributionType:
 
 @dataclass(frozen=True)
 class DocumentResponseType:
-    response: Optional[Response] = field(
+    response: Response | None = field(
         default=None,
         metadata={
             "name": "Response",
@@ -10241,7 +10215,7 @@ class DocumentResponseType:
             "min_occurs": 1,
         },
     )
-    issuer_party: Optional[IssuerParty] = field(
+    issuer_party: IssuerParty | None = field(
         default=None,
         metadata={
             "name": "IssuerParty",
@@ -10249,7 +10223,7 @@ class DocumentResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    recipient_party: Optional[RecipientParty] = field(
+    recipient_party: RecipientParty | None = field(
         default=None,
         metadata={
             "name": "RecipientParty",
@@ -10277,7 +10251,7 @@ class EconomicOperatorShortListType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    expected_quantity: Optional[ExpectedQuantity] = field(
+    expected_quantity: ExpectedQuantity | None = field(
         default=None,
         metadata={
             "name": "ExpectedQuantity",
@@ -10285,7 +10259,7 @@ class EconomicOperatorShortListType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_quantity: Optional[MaximumQuantity] = field(
+    maximum_quantity: MaximumQuantity | None = field(
         default=None,
         metadata={
             "name": "MaximumQuantity",
@@ -10293,7 +10267,7 @@ class EconomicOperatorShortListType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_quantity: Optional[MinimumQuantity] = field(
+    minimum_quantity: MinimumQuantity | None = field(
         default=None,
         metadata={
             "name": "MinimumQuantity",
@@ -10313,7 +10287,7 @@ class EconomicOperatorShortListType:
 
 @dataclass(frozen=True)
 class EndorserPartyType:
-    role_code: Optional[RoleCode] = field(
+    role_code: RoleCode | None = field(
         default=None,
         metadata={
             "name": "RoleCode",
@@ -10322,7 +10296,7 @@ class EndorserPartyType:
             "required": True,
         },
     )
-    sequence_numeric: Optional[SequenceNumeric] = field(
+    sequence_numeric: SequenceNumeric | None = field(
         default=None,
         metadata={
             "name": "SequenceNumeric",
@@ -10331,7 +10305,7 @@ class EndorserPartyType:
             "required": True,
         },
     )
-    party: Optional[Party] = field(
+    party: Party | None = field(
         default=None,
         metadata={
             "name": "Party",
@@ -10340,7 +10314,7 @@ class EndorserPartyType:
             "required": True,
         },
     )
-    signatory_contact: Optional[SignatoryContact] = field(
+    signatory_contact: SignatoryContact | None = field(
         default=None,
         metadata={
             "name": "SignatoryContact",
@@ -10353,7 +10327,7 @@ class EndorserPartyType:
 
 @dataclass(frozen=True)
 class EvidenceType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -10361,7 +10335,7 @@ class EvidenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    evidence_type_code: Optional[EvidenceTypeCode] = field(
+    evidence_type_code: EvidenceTypeCode | None = field(
         default=None,
         metadata={
             "name": "EvidenceTypeCode",
@@ -10385,7 +10359,7 @@ class EvidenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    evidence_issuing_party: Optional[EvidenceIssuingParty] = field(
+    evidence_issuing_party: EvidenceIssuingParty | None = field(
         default=None,
         metadata={
             "name": "EvidenceIssuingParty",
@@ -10393,7 +10367,7 @@ class EvidenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_reference: Optional[DocumentReference] = field(
+    document_reference: DocumentReference | None = field(
         default=None,
         metadata={
             "name": "DocumentReference",
@@ -10401,7 +10375,7 @@ class EvidenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    language: Optional[Language] = field(
+    language: Language | None = field(
         default=None,
         metadata={
             "name": "Language",
@@ -10413,7 +10387,7 @@ class EvidenceType:
 
 @dataclass(frozen=True)
 class HazardousItemType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -10421,7 +10395,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    placard_notation: Optional[PlacardNotation] = field(
+    placard_notation: PlacardNotation | None = field(
         default=None,
         metadata={
             "name": "PlacardNotation",
@@ -10429,7 +10403,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    placard_endorsement: Optional[PlacardEndorsement] = field(
+    placard_endorsement: PlacardEndorsement | None = field(
         default=None,
         metadata={
             "name": "PlacardEndorsement",
@@ -10445,7 +10419,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    undgcode: Optional[Undgcode] = field(
+    undgcode: Undgcode | None = field(
         default=None,
         metadata={
             "name": "UNDGCode",
@@ -10453,7 +10427,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    emergency_procedures_code: Optional[EmergencyProceduresCode] = field(
+    emergency_procedures_code: EmergencyProceduresCode | None = field(
         default=None,
         metadata={
             "name": "EmergencyProceduresCode",
@@ -10461,7 +10435,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    medical_first_aid_guide_code: Optional[MedicalFirstAidGuideCode] = field(
+    medical_first_aid_guide_code: MedicalFirstAidGuideCode | None = field(
         default=None,
         metadata={
             "name": "MedicalFirstAidGuideCode",
@@ -10469,7 +10443,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    technical_name: Optional[TechnicalName] = field(
+    technical_name: TechnicalName | None = field(
         default=None,
         metadata={
             "name": "TechnicalName",
@@ -10477,7 +10451,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    category_name: Optional[CategoryName] = field(
+    category_name: CategoryName | None = field(
         default=None,
         metadata={
             "name": "CategoryName",
@@ -10485,7 +10459,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    hazardous_category_code: Optional[HazardousCategoryCode] = field(
+    hazardous_category_code: HazardousCategoryCode | None = field(
         default=None,
         metadata={
             "name": "HazardousCategoryCode",
@@ -10493,7 +10467,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    upper_orange_hazard_placard_id: Optional[UpperOrangeHazardPlacardId] = (
+    upper_orange_hazard_placard_id: UpperOrangeHazardPlacardId | None = (
         field(
             default=None,
             metadata={
@@ -10503,7 +10477,7 @@ class HazardousItemType:
             },
         )
     )
-    lower_orange_hazard_placard_id: Optional[LowerOrangeHazardPlacardId] = (
+    lower_orange_hazard_placard_id: LowerOrangeHazardPlacardId | None = (
         field(
             default=None,
             metadata={
@@ -10513,7 +10487,7 @@ class HazardousItemType:
             },
         )
     )
-    marking_id: Optional[MarkingId] = field(
+    marking_id: MarkingId | None = field(
         default=None,
         metadata={
             "name": "MarkingID",
@@ -10521,7 +10495,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    hazard_class_id: Optional[HazardClassId] = field(
+    hazard_class_id: HazardClassId | None = field(
         default=None,
         metadata={
             "name": "HazardClassID",
@@ -10529,7 +10503,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    net_weight_measure: Optional[NetWeightMeasure] = field(
+    net_weight_measure: NetWeightMeasure | None = field(
         default=None,
         metadata={
             "name": "NetWeightMeasure",
@@ -10537,7 +10511,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    net_volume_measure: Optional[NetVolumeMeasure] = field(
+    net_volume_measure: NetVolumeMeasure | None = field(
         default=None,
         metadata={
             "name": "NetVolumeMeasure",
@@ -10545,7 +10519,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -10553,7 +10527,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contact_party: Optional[ContactParty] = field(
+    contact_party: ContactParty | None = field(
         default=None,
         metadata={
             "name": "ContactParty",
@@ -10577,7 +10551,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    emergency_temperature: Optional[EmergencyTemperature] = field(
+    emergency_temperature: EmergencyTemperature | None = field(
         default=None,
         metadata={
             "name": "EmergencyTemperature",
@@ -10585,7 +10559,7 @@ class HazardousItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    flashpoint_temperature: Optional[FlashpointTemperature] = field(
+    flashpoint_temperature: FlashpointTemperature | None = field(
         default=None,
         metadata={
             "name": "FlashpointTemperature",
@@ -10605,7 +10579,7 @@ class HazardousItemType:
 
 @dataclass(frozen=True)
 class ImmobilizedSecurityType:
-    immobilization_certificate_id: Optional[ImmobilizationCertificateId] = (
+    immobilization_certificate_id: ImmobilizationCertificateId | None = (
         field(
             default=None,
             metadata={
@@ -10615,7 +10589,7 @@ class ImmobilizedSecurityType:
             },
         )
     )
-    security_id: Optional[SecurityId] = field(
+    security_id: SecurityId | None = field(
         default=None,
         metadata={
             "name": "SecurityID",
@@ -10623,7 +10597,7 @@ class ImmobilizedSecurityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -10631,7 +10605,7 @@ class ImmobilizedSecurityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    face_value_amount: Optional[FaceValueAmount] = field(
+    face_value_amount: FaceValueAmount | None = field(
         default=None,
         metadata={
             "name": "FaceValueAmount",
@@ -10639,7 +10613,7 @@ class ImmobilizedSecurityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    market_value_amount: Optional[MarketValueAmount] = field(
+    market_value_amount: MarketValueAmount | None = field(
         default=None,
         metadata={
             "name": "MarketValueAmount",
@@ -10647,7 +10621,7 @@ class ImmobilizedSecurityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    shares_number_quantity: Optional[SharesNumberQuantity] = field(
+    shares_number_quantity: SharesNumberQuantity | None = field(
         default=None,
         metadata={
             "name": "SharesNumberQuantity",
@@ -10655,7 +10629,7 @@ class ImmobilizedSecurityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issuer_party: Optional[IssuerParty] = field(
+    issuer_party: IssuerParty | None = field(
         default=None,
         metadata={
             "name": "IssuerParty",
@@ -10667,7 +10641,7 @@ class ImmobilizedSecurityType:
 
 @dataclass(frozen=True)
 class ItemIdentificationType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -10676,7 +10650,7 @@ class ItemIdentificationType:
             "required": True,
         },
     )
-    extended_id: Optional[ExtendedId] = field(
+    extended_id: ExtendedId | None = field(
         default=None,
         metadata={
             "name": "ExtendedID",
@@ -10684,7 +10658,7 @@ class ItemIdentificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    barcode_symbology_id: Optional[BarcodeSymbologyId] = field(
+    barcode_symbology_id: BarcodeSymbologyId | None = field(
         default=None,
         metadata={
             "name": "BarcodeSymbologyID",
@@ -10708,7 +10682,7 @@ class ItemIdentificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    issuer_party: Optional[IssuerParty] = field(
+    issuer_party: IssuerParty | None = field(
         default=None,
         metadata={
             "name": "IssuerParty",
@@ -10720,7 +10694,7 @@ class ItemIdentificationType:
 
 @dataclass(frozen=True)
 class NotificationRequirementType:
-    notification_type_code: Optional[NotificationTypeCode] = field(
+    notification_type_code: NotificationTypeCode | None = field(
         default=None,
         metadata={
             "name": "NotificationTypeCode",
@@ -10729,9 +10703,7 @@ class NotificationRequirementType:
             "required": True,
         },
     )
-    post_event_notification_duration_measure: Optional[
-        PostEventNotificationDurationMeasure
-    ] = field(
+    post_event_notification_duration_measure: PostEventNotificationDurationMeasure | None = field(
         default=None,
         metadata={
             "name": "PostEventNotificationDurationMeasure",
@@ -10739,9 +10711,7 @@ class NotificationRequirementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pre_event_notification_duration_measure: Optional[
-        PreEventNotificationDurationMeasure
-    ] = field(
+    pre_event_notification_duration_measure: PreEventNotificationDurationMeasure | None = field(
         default=None,
         metadata={
             "name": "PreEventNotificationDurationMeasure",
@@ -10777,7 +10747,7 @@ class NotificationRequirementType:
 
 @dataclass(frozen=True)
 class PaymentMandateType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -10785,7 +10755,7 @@ class PaymentMandateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    mandate_type_code: Optional[MandateTypeCode] = field(
+    mandate_type_code: MandateTypeCode | None = field(
         default=None,
         metadata={
             "name": "MandateTypeCode",
@@ -10793,9 +10763,7 @@ class PaymentMandateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_payment_instructions_numeric: Optional[
-        MaximumPaymentInstructionsNumeric
-    ] = field(
+    maximum_payment_instructions_numeric: MaximumPaymentInstructionsNumeric | None = field(
         default=None,
         metadata={
             "name": "MaximumPaymentInstructionsNumeric",
@@ -10803,7 +10771,7 @@ class PaymentMandateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_paid_amount: Optional[MaximumPaidAmount] = field(
+    maximum_paid_amount: MaximumPaidAmount | None = field(
         default=None,
         metadata={
             "name": "MaximumPaidAmount",
@@ -10811,7 +10779,7 @@ class PaymentMandateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    signature_id: Optional[SignatureId] = field(
+    signature_id: SignatureId | None = field(
         default=None,
         metadata={
             "name": "SignatureID",
@@ -10819,7 +10787,7 @@ class PaymentMandateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payer_party: Optional[PayerParty] = field(
+    payer_party: PayerParty | None = field(
         default=None,
         metadata={
             "name": "PayerParty",
@@ -10827,7 +10795,7 @@ class PaymentMandateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payer_financial_account: Optional[PayerFinancialAccount] = field(
+    payer_financial_account: PayerFinancialAccount | None = field(
         default=None,
         metadata={
             "name": "PayerFinancialAccount",
@@ -10835,7 +10803,7 @@ class PaymentMandateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    validity_period: Optional[ValidityPeriod] = field(
+    validity_period: ValidityPeriod | None = field(
         default=None,
         metadata={
             "name": "ValidityPeriod",
@@ -10843,7 +10811,7 @@ class PaymentMandateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_reversal_period: Optional[PaymentReversalPeriod] = field(
+    payment_reversal_period: PaymentReversalPeriod | None = field(
         default=None,
         metadata={
             "name": "PaymentReversalPeriod",
@@ -10863,7 +10831,7 @@ class PaymentMandateType:
 
 @dataclass(frozen=True)
 class PickupType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -10871,7 +10839,7 @@ class PickupType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    actual_pickup_date: Optional[ActualPickupDate] = field(
+    actual_pickup_date: ActualPickupDate | None = field(
         default=None,
         metadata={
             "name": "ActualPickupDate",
@@ -10879,7 +10847,7 @@ class PickupType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    actual_pickup_time: Optional[ActualPickupTime] = field(
+    actual_pickup_time: ActualPickupTime | None = field(
         default=None,
         metadata={
             "name": "ActualPickupTime",
@@ -10887,7 +10855,7 @@ class PickupType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    earliest_pickup_date: Optional[EarliestPickupDate] = field(
+    earliest_pickup_date: EarliestPickupDate | None = field(
         default=None,
         metadata={
             "name": "EarliestPickupDate",
@@ -10895,7 +10863,7 @@ class PickupType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    earliest_pickup_time: Optional[EarliestPickupTime] = field(
+    earliest_pickup_time: EarliestPickupTime | None = field(
         default=None,
         metadata={
             "name": "EarliestPickupTime",
@@ -10903,7 +10871,7 @@ class PickupType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    latest_pickup_date: Optional[LatestPickupDate] = field(
+    latest_pickup_date: LatestPickupDate | None = field(
         default=None,
         metadata={
             "name": "LatestPickupDate",
@@ -10911,7 +10879,7 @@ class PickupType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    latest_pickup_time: Optional[LatestPickupTime] = field(
+    latest_pickup_time: LatestPickupTime | None = field(
         default=None,
         metadata={
             "name": "LatestPickupTime",
@@ -10919,7 +10887,7 @@ class PickupType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pickup_location: Optional[PickupLocation] = field(
+    pickup_location: PickupLocation | None = field(
         default=None,
         metadata={
             "name": "PickupLocation",
@@ -10927,7 +10895,7 @@ class PickupType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    pickup_party: Optional[PickupParty] = field(
+    pickup_party: PickupParty | None = field(
         default=None,
         metadata={
             "name": "PickupParty",
@@ -10939,7 +10907,7 @@ class PickupType:
 
 @dataclass(frozen=True)
 class PowerOfAttorneyType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -10947,7 +10915,7 @@ class PowerOfAttorneyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -10955,7 +10923,7 @@ class PowerOfAttorneyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -10971,7 +10939,7 @@ class PowerOfAttorneyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    notary_party: Optional[NotaryParty] = field(
+    notary_party: NotaryParty | None = field(
         default=None,
         metadata={
             "name": "NotaryParty",
@@ -10979,7 +10947,7 @@ class PowerOfAttorneyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    agent_party: Optional[AgentParty] = field(
+    agent_party: AgentParty | None = field(
         default=None,
         metadata={
             "name": "AgentParty",
@@ -11008,7 +10976,7 @@ class PowerOfAttorneyType:
 
 @dataclass(frozen=True)
 class ResultOfVerificationType:
-    validator_id: Optional[ValidatorId] = field(
+    validator_id: ValidatorId | None = field(
         default=None,
         metadata={
             "name": "ValidatorID",
@@ -11016,7 +10984,7 @@ class ResultOfVerificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validation_result_code: Optional[ValidationResultCode] = field(
+    validation_result_code: ValidationResultCode | None = field(
         default=None,
         metadata={
             "name": "ValidationResultCode",
@@ -11024,7 +10992,7 @@ class ResultOfVerificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validation_date: Optional[ValidationDate] = field(
+    validation_date: ValidationDate | None = field(
         default=None,
         metadata={
             "name": "ValidationDate",
@@ -11032,7 +11000,7 @@ class ResultOfVerificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validation_time: Optional[ValidationTime] = field(
+    validation_time: ValidationTime | None = field(
         default=None,
         metadata={
             "name": "ValidationTime",
@@ -11040,7 +11008,7 @@ class ResultOfVerificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validate_process: Optional[ValidateProcess] = field(
+    validate_process: ValidateProcess | None = field(
         default=None,
         metadata={
             "name": "ValidateProcess",
@@ -11048,7 +11016,7 @@ class ResultOfVerificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validate_tool: Optional[ValidateTool] = field(
+    validate_tool: ValidateTool | None = field(
         default=None,
         metadata={
             "name": "ValidateTool",
@@ -11056,7 +11024,7 @@ class ResultOfVerificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validate_tool_version: Optional[ValidateToolVersion] = field(
+    validate_tool_version: ValidateToolVersion | None = field(
         default=None,
         metadata={
             "name": "ValidateToolVersion",
@@ -11064,7 +11032,7 @@ class ResultOfVerificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    signatory_party: Optional[SignatoryParty] = field(
+    signatory_party: SignatoryParty | None = field(
         default=None,
         metadata={
             "name": "SignatoryParty",
@@ -11076,7 +11044,7 @@ class ResultOfVerificationType:
 
 @dataclass(frozen=True)
 class ServiceProviderPartyType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -11084,7 +11052,7 @@ class ServiceProviderPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    service_type_code: Optional[ServiceTypeCode] = field(
+    service_type_code: ServiceTypeCode | None = field(
         default=None,
         metadata={
             "name": "ServiceTypeCode",
@@ -11100,7 +11068,7 @@ class ServiceProviderPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    party: Optional[Party] = field(
+    party: Party | None = field(
         default=None,
         metadata={
             "name": "Party",
@@ -11109,7 +11077,7 @@ class ServiceProviderPartyType:
             "required": True,
         },
     )
-    seller_contact: Optional[SellerContact] = field(
+    seller_contact: SellerContact | None = field(
         default=None,
         metadata={
             "name": "SellerContact",
@@ -11121,7 +11089,7 @@ class ServiceProviderPartyType:
 
 @dataclass(frozen=True)
 class ShareholderPartyType:
-    partecipation_percent: Optional[PartecipationPercent] = field(
+    partecipation_percent: PartecipationPercent | None = field(
         default=None,
         metadata={
             "name": "PartecipationPercent",
@@ -11129,7 +11097,7 @@ class ShareholderPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    party: Optional[Party] = field(
+    party: Party | None = field(
         default=None,
         metadata={
             "name": "Party",
@@ -11141,7 +11109,7 @@ class ShareholderPartyType:
 
 @dataclass(frozen=True)
 class SignatureType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -11158,7 +11126,7 @@ class SignatureType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validation_date: Optional[ValidationDate] = field(
+    validation_date: ValidationDate | None = field(
         default=None,
         metadata={
             "name": "ValidationDate",
@@ -11166,7 +11134,7 @@ class SignatureType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validation_time: Optional[ValidationTime] = field(
+    validation_time: ValidationTime | None = field(
         default=None,
         metadata={
             "name": "ValidationTime",
@@ -11174,7 +11142,7 @@ class SignatureType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validator_id: Optional[ValidatorId] = field(
+    validator_id: ValidatorId | None = field(
         default=None,
         metadata={
             "name": "ValidatorID",
@@ -11182,7 +11150,7 @@ class SignatureType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    canonicalization_method: Optional[CanonicalizationMethod] = field(
+    canonicalization_method: CanonicalizationMethod | None = field(
         default=None,
         metadata={
             "name": "CanonicalizationMethod",
@@ -11190,7 +11158,7 @@ class SignatureType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    signature_method: Optional[SignatureMethod] = field(
+    signature_method: SignatureMethod | None = field(
         default=None,
         metadata={
             "name": "SignatureMethod",
@@ -11198,7 +11166,7 @@ class SignatureType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    signatory_party: Optional[SignatoryParty] = field(
+    signatory_party: SignatoryParty | None = field(
         default=None,
         metadata={
             "name": "SignatoryParty",
@@ -11206,7 +11174,7 @@ class SignatureType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    digital_signature_attachment: Optional[DigitalSignatureAttachment] = field(
+    digital_signature_attachment: DigitalSignatureAttachment | None = field(
         default=None,
         metadata={
             "name": "DigitalSignatureAttachment",
@@ -11214,7 +11182,7 @@ class SignatureType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    original_document_reference: Optional[OriginalDocumentReference] = field(
+    original_document_reference: OriginalDocumentReference | None = field(
         default=None,
         metadata={
             "name": "OriginalDocumentReference",
@@ -11226,7 +11194,7 @@ class SignatureType:
 
 @dataclass(frozen=True)
 class SupplierPartyType:
-    customer_assigned_account_id: Optional[CustomerAssignedAccountId] = field(
+    customer_assigned_account_id: CustomerAssignedAccountId | None = field(
         default=None,
         metadata={
             "name": "CustomerAssignedAccountID",
@@ -11242,7 +11210,7 @@ class SupplierPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    data_sending_capability: Optional[DataSendingCapability] = field(
+    data_sending_capability: DataSendingCapability | None = field(
         default=None,
         metadata={
             "name": "DataSendingCapability",
@@ -11250,7 +11218,7 @@ class SupplierPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    party: Optional[Party] = field(
+    party: Party | None = field(
         default=None,
         metadata={
             "name": "Party",
@@ -11258,7 +11226,7 @@ class SupplierPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    despatch_contact: Optional[DespatchContact] = field(
+    despatch_contact: DespatchContact | None = field(
         default=None,
         metadata={
             "name": "DespatchContact",
@@ -11266,7 +11234,7 @@ class SupplierPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    accounting_contact: Optional[AccountingContact] = field(
+    accounting_contact: AccountingContact | None = field(
         default=None,
         metadata={
             "name": "AccountingContact",
@@ -11274,7 +11242,7 @@ class SupplierPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_contact: Optional[SellerContact] = field(
+    seller_contact: SellerContact | None = field(
         default=None,
         metadata={
             "name": "SellerContact",
@@ -11286,7 +11254,7 @@ class SupplierPartyType:
 
 @dataclass(frozen=True)
 class TradeFinancingType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -11294,7 +11262,7 @@ class TradeFinancingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    financing_instrument_code: Optional[FinancingInstrumentCode] = field(
+    financing_instrument_code: FinancingInstrumentCode | None = field(
         default=None,
         metadata={
             "name": "FinancingInstrumentCode",
@@ -11302,7 +11270,7 @@ class TradeFinancingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contract_document_reference: Optional[ContractDocumentReference] = field(
+    contract_document_reference: ContractDocumentReference | None = field(
         default=None,
         metadata={
             "name": "ContractDocumentReference",
@@ -11318,7 +11286,7 @@ class TradeFinancingType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    financing_party: Optional[FinancingParty] = field(
+    financing_party: FinancingParty | None = field(
         default=None,
         metadata={
             "name": "FinancingParty",
@@ -11327,7 +11295,7 @@ class TradeFinancingType:
             "required": True,
         },
     )
-    financing_financial_account: Optional[FinancingFinancialAccount] = field(
+    financing_financial_account: FinancingFinancialAccount | None = field(
         default=None,
         metadata={
             "name": "FinancingFinancialAccount",
@@ -11347,7 +11315,7 @@ class TradeFinancingType:
 
 @dataclass(frozen=True)
 class TransportMeansType:
-    journey_id: Optional[JourneyId] = field(
+    journey_id: JourneyId | None = field(
         default=None,
         metadata={
             "name": "JourneyID",
@@ -11355,7 +11323,7 @@ class TransportMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    registration_nationality_id: Optional[RegistrationNationalityId] = field(
+    registration_nationality_id: RegistrationNationalityId | None = field(
         default=None,
         metadata={
             "name": "RegistrationNationalityID",
@@ -11371,7 +11339,7 @@ class TransportMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    direction_code: Optional[DirectionCode] = field(
+    direction_code: DirectionCode | None = field(
         default=None,
         metadata={
             "name": "DirectionCode",
@@ -11379,7 +11347,7 @@ class TransportMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transport_means_type_code: Optional[TransportMeansTypeCode] = field(
+    transport_means_type_code: TransportMeansTypeCode | None = field(
         default=None,
         metadata={
             "name": "TransportMeansTypeCode",
@@ -11387,7 +11355,7 @@ class TransportMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    trade_service_code: Optional[TradeServiceCode] = field(
+    trade_service_code: TradeServiceCode | None = field(
         default=None,
         metadata={
             "name": "TradeServiceCode",
@@ -11395,7 +11363,7 @@ class TransportMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    stowage: Optional[Stowage] = field(
+    stowage: Stowage | None = field(
         default=None,
         metadata={
             "name": "Stowage",
@@ -11403,7 +11371,7 @@ class TransportMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    air_transport: Optional[AirTransport] = field(
+    air_transport: AirTransport | None = field(
         default=None,
         metadata={
             "name": "AirTransport",
@@ -11411,7 +11379,7 @@ class TransportMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    road_transport: Optional[RoadTransport] = field(
+    road_transport: RoadTransport | None = field(
         default=None,
         metadata={
             "name": "RoadTransport",
@@ -11419,7 +11387,7 @@ class TransportMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    rail_transport: Optional[RailTransport] = field(
+    rail_transport: RailTransport | None = field(
         default=None,
         metadata={
             "name": "RailTransport",
@@ -11427,7 +11395,7 @@ class TransportMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    maritime_transport: Optional[MaritimeTransport] = field(
+    maritime_transport: MaritimeTransport | None = field(
         default=None,
         metadata={
             "name": "MaritimeTransport",
@@ -11435,7 +11403,7 @@ class TransportMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    owner_party: Optional[OwnerParty] = field(
+    owner_party: OwnerParty | None = field(
         default=None,
         metadata={
             "name": "OwnerParty",
@@ -11455,7 +11423,7 @@ class TransportMeansType:
 
 @dataclass(frozen=True)
 class WinningPartyType:
-    rank: Optional[Rank] = field(
+    rank: Rank | None = field(
         default=None,
         metadata={
             "name": "Rank",
@@ -11463,7 +11431,7 @@ class WinningPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    party: Optional[Party] = field(
+    party: Party | None = field(
         default=None,
         metadata={
             "name": "Party",
@@ -11740,7 +11708,7 @@ class WinningParty(WinningPartyType):
 
 @dataclass(frozen=True)
 class CertificateType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -11749,7 +11717,7 @@ class CertificateType:
             "required": True,
         },
     )
-    certificate_type_code: Optional[CertificateTypeCode] = field(
+    certificate_type_code: CertificateTypeCode | None = field(
         default=None,
         metadata={
             "name": "CertificateTypeCode",
@@ -11758,7 +11726,7 @@ class CertificateType:
             "required": True,
         },
     )
-    certificate_type: Optional[UblCommonBasicComponents21CertificateType] = (
+    certificate_type: UblCommonBasicComponents21CertificateType | None = (
         field(
             default=None,
             metadata={
@@ -11777,7 +11745,7 @@ class CertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issuer_party: Optional[IssuerParty] = field(
+    issuer_party: IssuerParty | None = field(
         default=None,
         metadata={
             "name": "IssuerParty",
@@ -11806,7 +11774,7 @@ class CertificateType:
 
 @dataclass(frozen=True)
 class CompletedTaskType:
-    annual_average_amount: Optional[AnnualAverageAmount] = field(
+    annual_average_amount: AnnualAverageAmount | None = field(
         default=None,
         metadata={
             "name": "AnnualAverageAmount",
@@ -11814,7 +11782,7 @@ class CompletedTaskType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_task_amount: Optional[TotalTaskAmount] = field(
+    total_task_amount: TotalTaskAmount | None = field(
         default=None,
         metadata={
             "name": "TotalTaskAmount",
@@ -11822,7 +11790,7 @@ class CompletedTaskType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    party_capacity_amount: Optional[PartyCapacityAmount] = field(
+    party_capacity_amount: PartyCapacityAmount | None = field(
         default=None,
         metadata={
             "name": "PartyCapacityAmount",
@@ -11846,7 +11814,7 @@ class CompletedTaskType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    period: Optional[Period] = field(
+    period: Period | None = field(
         default=None,
         metadata={
             "name": "Period",
@@ -11854,7 +11822,7 @@ class CompletedTaskType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    recipient_customer_party: Optional[RecipientCustomerParty] = field(
+    recipient_customer_party: RecipientCustomerParty | None = field(
         default=None,
         metadata={
             "name": "RecipientCustomerParty",
@@ -11866,7 +11834,7 @@ class CompletedTaskType:
 
 @dataclass(frozen=True)
 class EndorsementType:
-    document_id: Optional[DocumentId] = field(
+    document_id: DocumentId | None = field(
         default=None,
         metadata={
             "name": "DocumentID",
@@ -11875,7 +11843,7 @@ class EndorsementType:
             "required": True,
         },
     )
-    approval_status: Optional[ApprovalStatus] = field(
+    approval_status: ApprovalStatus | None = field(
         default=None,
         metadata={
             "name": "ApprovalStatus",
@@ -11892,7 +11860,7 @@ class EndorsementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    endorser_party: Optional[EndorserParty] = field(
+    endorser_party: EndorserParty | None = field(
         default=None,
         metadata={
             "name": "EndorserParty",
@@ -11913,7 +11881,7 @@ class EndorsementType:
 
 @dataclass(frozen=True)
 class EvaluationCriterionType:
-    evaluation_criterion_type_code: Optional[EvaluationCriterionTypeCode] = (
+    evaluation_criterion_type_code: EvaluationCriterionTypeCode | None = (
         field(
             default=None,
             metadata={
@@ -11931,7 +11899,7 @@ class EvaluationCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    threshold_amount: Optional[ThresholdAmount] = field(
+    threshold_amount: ThresholdAmount | None = field(
         default=None,
         metadata={
             "name": "ThresholdAmount",
@@ -11939,7 +11907,7 @@ class EvaluationCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    threshold_quantity: Optional[ThresholdQuantity] = field(
+    threshold_quantity: ThresholdQuantity | None = field(
         default=None,
         metadata={
             "name": "ThresholdQuantity",
@@ -11947,7 +11915,7 @@ class EvaluationCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    expression_code: Optional[ExpressionCode] = field(
+    expression_code: ExpressionCode | None = field(
         default=None,
         metadata={
             "name": "ExpressionCode",
@@ -11963,7 +11931,7 @@ class EvaluationCriterionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    duration_period: Optional[DurationPeriod] = field(
+    duration_period: DurationPeriod | None = field(
         default=None,
         metadata={
             "name": "DurationPeriod",
@@ -11983,7 +11951,7 @@ class EvaluationCriterionType:
 
 @dataclass(frozen=True)
 class PartyLegalEntityType:
-    registration_name: Optional[RegistrationName] = field(
+    registration_name: RegistrationName | None = field(
         default=None,
         metadata={
             "name": "RegistrationName",
@@ -11991,7 +11959,7 @@ class PartyLegalEntityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    company_id: Optional[CompanyId] = field(
+    company_id: CompanyId | None = field(
         default=None,
         metadata={
             "name": "CompanyID",
@@ -11999,7 +11967,7 @@ class PartyLegalEntityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    registration_date: Optional[RegistrationDate] = field(
+    registration_date: RegistrationDate | None = field(
         default=None,
         metadata={
             "name": "RegistrationDate",
@@ -12007,7 +11975,7 @@ class PartyLegalEntityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    registration_expiration_date: Optional[RegistrationExpirationDate] = field(
+    registration_expiration_date: RegistrationExpirationDate | None = field(
         default=None,
         metadata={
             "name": "RegistrationExpirationDate",
@@ -12015,7 +11983,7 @@ class PartyLegalEntityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    company_legal_form_code: Optional[CompanyLegalFormCode] = field(
+    company_legal_form_code: CompanyLegalFormCode | None = field(
         default=None,
         metadata={
             "name": "CompanyLegalFormCode",
@@ -12023,7 +11991,7 @@ class PartyLegalEntityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    company_legal_form: Optional[CompanyLegalForm] = field(
+    company_legal_form: CompanyLegalForm | None = field(
         default=None,
         metadata={
             "name": "CompanyLegalForm",
@@ -12031,7 +11999,7 @@ class PartyLegalEntityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    sole_proprietorship_indicator: Optional[SoleProprietorshipIndicator] = (
+    sole_proprietorship_indicator: SoleProprietorshipIndicator | None = (
         field(
             default=None,
             metadata={
@@ -12041,7 +12009,7 @@ class PartyLegalEntityType:
             },
         )
     )
-    company_liquidation_status_code: Optional[CompanyLiquidationStatusCode] = (
+    company_liquidation_status_code: CompanyLiquidationStatusCode | None = (
         field(
             default=None,
             metadata={
@@ -12051,7 +12019,7 @@ class PartyLegalEntityType:
             },
         )
     )
-    corporate_stock_amount: Optional[CorporateStockAmount] = field(
+    corporate_stock_amount: CorporateStockAmount | None = field(
         default=None,
         metadata={
             "name": "CorporateStockAmount",
@@ -12059,7 +12027,7 @@ class PartyLegalEntityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    fully_paid_shares_indicator: Optional[FullyPaidSharesIndicator] = field(
+    fully_paid_shares_indicator: FullyPaidSharesIndicator | None = field(
         default=None,
         metadata={
             "name": "FullyPaidSharesIndicator",
@@ -12067,7 +12035,7 @@ class PartyLegalEntityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    registration_address: Optional[RegistrationAddress] = field(
+    registration_address: RegistrationAddress | None = field(
         default=None,
         metadata={
             "name": "RegistrationAddress",
@@ -12075,7 +12043,7 @@ class PartyLegalEntityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    corporate_registration_scheme: Optional[CorporateRegistrationScheme] = (
+    corporate_registration_scheme: CorporateRegistrationScheme | None = (
         field(
             default=None,
             metadata={
@@ -12085,7 +12053,7 @@ class PartyLegalEntityType:
             },
         )
     )
-    head_office_party: Optional[HeadOfficeParty] = field(
+    head_office_party: HeadOfficeParty | None = field(
         default=None,
         metadata={
             "name": "HeadOfficeParty",
@@ -12105,7 +12073,7 @@ class PartyLegalEntityType:
 
 @dataclass(frozen=True)
 class PaymentMeansType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -12113,7 +12081,7 @@ class PaymentMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_means_code: Optional[PaymentMeansCode] = field(
+    payment_means_code: PaymentMeansCode | None = field(
         default=None,
         metadata={
             "name": "PaymentMeansCode",
@@ -12122,7 +12090,7 @@ class PaymentMeansType:
             "required": True,
         },
     )
-    payment_due_date: Optional[PaymentDueDate] = field(
+    payment_due_date: PaymentDueDate | None = field(
         default=None,
         metadata={
             "name": "PaymentDueDate",
@@ -12130,7 +12098,7 @@ class PaymentMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_channel_code: Optional[PaymentChannelCode] = field(
+    payment_channel_code: PaymentChannelCode | None = field(
         default=None,
         metadata={
             "name": "PaymentChannelCode",
@@ -12138,7 +12106,7 @@ class PaymentMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    instruction_id: Optional[InstructionId] = field(
+    instruction_id: InstructionId | None = field(
         default=None,
         metadata={
             "name": "InstructionID",
@@ -12162,7 +12130,7 @@ class PaymentMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    card_account: Optional[CardAccount] = field(
+    card_account: CardAccount | None = field(
         default=None,
         metadata={
             "name": "CardAccount",
@@ -12170,7 +12138,7 @@ class PaymentMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payer_financial_account: Optional[PayerFinancialAccount] = field(
+    payer_financial_account: PayerFinancialAccount | None = field(
         default=None,
         metadata={
             "name": "PayerFinancialAccount",
@@ -12178,7 +12146,7 @@ class PaymentMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payee_financial_account: Optional[PayeeFinancialAccount] = field(
+    payee_financial_account: PayeeFinancialAccount | None = field(
         default=None,
         metadata={
             "name": "PayeeFinancialAccount",
@@ -12186,7 +12154,7 @@ class PaymentMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    credit_account: Optional[CreditAccount] = field(
+    credit_account: CreditAccount | None = field(
         default=None,
         metadata={
             "name": "CreditAccount",
@@ -12194,7 +12162,7 @@ class PaymentMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_mandate: Optional[PaymentMandate] = field(
+    payment_mandate: PaymentMandate | None = field(
         default=None,
         metadata={
             "name": "PaymentMandate",
@@ -12202,7 +12170,7 @@ class PaymentMeansType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    trade_financing: Optional[TradeFinancing] = field(
+    trade_financing: TradeFinancing | None = field(
         default=None,
         metadata={
             "name": "TradeFinancing",
@@ -12222,7 +12190,7 @@ class TendererRequirementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tenderer_requirement_type_code: Optional[TendererRequirementTypeCode] = (
+    tenderer_requirement_type_code: TendererRequirementTypeCode | None = (
         field(
             default=None,
             metadata={
@@ -12240,7 +12208,7 @@ class TendererRequirementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    legal_reference: Optional[LegalReference] = field(
+    legal_reference: LegalReference | None = field(
         default=None,
         metadata={
             "name": "LegalReference",
@@ -12260,7 +12228,7 @@ class TendererRequirementType:
 
 @dataclass(frozen=True)
 class TenderingProcessType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -12268,7 +12236,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    original_contracting_system_id: Optional[OriginalContractingSystemId] = (
+    original_contracting_system_id: OriginalContractingSystemId | None = (
         field(
             default=None,
             metadata={
@@ -12294,7 +12262,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    procedure_code: Optional[ProcedureCode] = field(
+    procedure_code: ProcedureCode | None = field(
         default=None,
         metadata={
             "name": "ProcedureCode",
@@ -12302,7 +12270,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    urgency_code: Optional[UrgencyCode] = field(
+    urgency_code: UrgencyCode | None = field(
         default=None,
         metadata={
             "name": "UrgencyCode",
@@ -12310,7 +12278,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    expense_code: Optional[ExpenseCode] = field(
+    expense_code: ExpenseCode | None = field(
         default=None,
         metadata={
             "name": "ExpenseCode",
@@ -12318,7 +12286,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    part_presentation_code: Optional[PartPresentationCode] = field(
+    part_presentation_code: PartPresentationCode | None = field(
         default=None,
         metadata={
             "name": "PartPresentationCode",
@@ -12326,7 +12294,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contracting_system_code: Optional[ContractingSystemCode] = field(
+    contracting_system_code: ContractingSystemCode | None = field(
         default=None,
         metadata={
             "name": "ContractingSystemCode",
@@ -12334,7 +12302,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    submission_method_code: Optional[SubmissionMethodCode] = field(
+    submission_method_code: SubmissionMethodCode | None = field(
         default=None,
         metadata={
             "name": "SubmissionMethodCode",
@@ -12342,9 +12310,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    candidate_reduction_constraint_indicator: Optional[
-        CandidateReductionConstraintIndicator
-    ] = field(
+    candidate_reduction_constraint_indicator: CandidateReductionConstraintIndicator | None = field(
         default=None,
         metadata={
             "name": "CandidateReductionConstraintIndicator",
@@ -12352,9 +12318,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    government_agreement_constraint_indicator: Optional[
-        GovernmentAgreementConstraintIndicator
-    ] = field(
+    government_agreement_constraint_indicator: GovernmentAgreementConstraintIndicator | None = field(
         default=None,
         metadata={
             "name": "GovernmentAgreementConstraintIndicator",
@@ -12362,7 +12326,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_availability_period: Optional[DocumentAvailabilityPeriod] = field(
+    document_availability_period: DocumentAvailabilityPeriod | None = field(
         default=None,
         metadata={
             "name": "DocumentAvailabilityPeriod",
@@ -12370,9 +12334,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tender_submission_deadline_period: Optional[
-        TenderSubmissionDeadlinePeriod
-    ] = field(
+    tender_submission_deadline_period: TenderSubmissionDeadlinePeriod | None = field(
         default=None,
         metadata={
             "name": "TenderSubmissionDeadlinePeriod",
@@ -12380,7 +12342,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    invitation_submission_period: Optional[InvitationSubmissionPeriod] = field(
+    invitation_submission_period: InvitationSubmissionPeriod | None = field(
         default=None,
         metadata={
             "name": "InvitationSubmissionPeriod",
@@ -12388,9 +12350,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    participation_request_reception_period: Optional[
-        ParticipationRequestReceptionPeriod
-    ] = field(
+    participation_request_reception_period: ParticipationRequestReceptionPeriod | None = field(
         default=None,
         metadata={
             "name": "ParticipationRequestReceptionPeriod",
@@ -12424,7 +12384,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    economic_operator_short_list: Optional[EconomicOperatorShortList] = field(
+    economic_operator_short_list: EconomicOperatorShortList | None = field(
         default=None,
         metadata={
             "name": "EconomicOperatorShortList",
@@ -12440,7 +12400,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    auction_terms: Optional[AuctionTerms] = field(
+    auction_terms: AuctionTerms | None = field(
         default=None,
         metadata={
             "name": "AuctionTerms",
@@ -12448,7 +12408,7 @@ class TenderingProcessType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    framework_agreement: Optional[FrameworkAgreement] = field(
+    framework_agreement: FrameworkAgreement | None = field(
         default=None,
         metadata={
             "name": "FrameworkAgreement",
@@ -12544,7 +12504,7 @@ class TenderingProcess(TenderingProcessType):
 
 @dataclass(frozen=True)
 class AllowanceChargeType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -12552,7 +12512,7 @@ class AllowanceChargeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    charge_indicator: Optional[ChargeIndicator] = field(
+    charge_indicator: ChargeIndicator | None = field(
         default=None,
         metadata={
             "name": "ChargeIndicator",
@@ -12561,7 +12521,7 @@ class AllowanceChargeType:
             "required": True,
         },
     )
-    allowance_charge_reason_code: Optional[AllowanceChargeReasonCode] = field(
+    allowance_charge_reason_code: AllowanceChargeReasonCode | None = field(
         default=None,
         metadata={
             "name": "AllowanceChargeReasonCode",
@@ -12577,7 +12537,7 @@ class AllowanceChargeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    multiplier_factor_numeric: Optional[MultiplierFactorNumeric] = field(
+    multiplier_factor_numeric: MultiplierFactorNumeric | None = field(
         default=None,
         metadata={
             "name": "MultiplierFactorNumeric",
@@ -12585,7 +12545,7 @@ class AllowanceChargeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    prepaid_indicator: Optional[PrepaidIndicator] = field(
+    prepaid_indicator: PrepaidIndicator | None = field(
         default=None,
         metadata={
             "name": "PrepaidIndicator",
@@ -12593,7 +12553,7 @@ class AllowanceChargeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    sequence_numeric: Optional[SequenceNumeric] = field(
+    sequence_numeric: SequenceNumeric | None = field(
         default=None,
         metadata={
             "name": "SequenceNumeric",
@@ -12601,7 +12561,7 @@ class AllowanceChargeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    amount: Optional[Amount] = field(
+    amount: Amount | None = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -12610,7 +12570,7 @@ class AllowanceChargeType:
             "required": True,
         },
     )
-    base_amount: Optional[BaseAmount] = field(
+    base_amount: BaseAmount | None = field(
         default=None,
         metadata={
             "name": "BaseAmount",
@@ -12618,7 +12578,7 @@ class AllowanceChargeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost_code: Optional[AccountingCostCode] = field(
+    accounting_cost_code: AccountingCostCode | None = field(
         default=None,
         metadata={
             "name": "AccountingCostCode",
@@ -12626,7 +12586,7 @@ class AllowanceChargeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost: Optional[AccountingCost] = field(
+    accounting_cost: AccountingCost | None = field(
         default=None,
         metadata={
             "name": "AccountingCost",
@@ -12634,7 +12594,7 @@ class AllowanceChargeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    per_unit_amount: Optional[PerUnitAmount] = field(
+    per_unit_amount: PerUnitAmount | None = field(
         default=None,
         metadata={
             "name": "PerUnitAmount",
@@ -12650,7 +12610,7 @@ class AllowanceChargeType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tax_total: Optional[TaxTotal] = field(
+    tax_total: TaxTotal | None = field(
         default=None,
         metadata={
             "name": "TaxTotal",
@@ -12678,7 +12638,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pack_quantity: Optional[PackQuantity] = field(
+    pack_quantity: PackQuantity | None = field(
         default=None,
         metadata={
             "name": "PackQuantity",
@@ -12686,7 +12646,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pack_size_numeric: Optional[PackSizeNumeric] = field(
+    pack_size_numeric: PackSizeNumeric | None = field(
         default=None,
         metadata={
             "name": "PackSizeNumeric",
@@ -12694,7 +12654,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    catalogue_indicator: Optional[CatalogueIndicator] = field(
+    catalogue_indicator: CatalogueIndicator | None = field(
         default=None,
         metadata={
             "name": "CatalogueIndicator",
@@ -12702,7 +12662,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -12710,7 +12670,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    hazardous_risk_indicator: Optional[HazardousRiskIndicator] = field(
+    hazardous_risk_indicator: HazardousRiskIndicator | None = field(
         default=None,
         metadata={
             "name": "HazardousRiskIndicator",
@@ -12750,7 +12710,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    buyers_item_identification: Optional[BuyersItemIdentification] = field(
+    buyers_item_identification: BuyersItemIdentification | None = field(
         default=None,
         metadata={
             "name": "BuyersItemIdentification",
@@ -12758,7 +12718,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sellers_item_identification: Optional[SellersItemIdentification] = field(
+    sellers_item_identification: SellersItemIdentification | None = field(
         default=None,
         metadata={
             "name": "SellersItemIdentification",
@@ -12776,7 +12736,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    standard_item_identification: Optional[StandardItemIdentification] = field(
+    standard_item_identification: StandardItemIdentification | None = field(
         default=None,
         metadata={
             "name": "StandardItemIdentification",
@@ -12784,7 +12744,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    catalogue_item_identification: Optional[CatalogueItemIdentification] = (
+    catalogue_item_identification: CatalogueItemIdentification | None = (
         field(
             default=None,
             metadata={
@@ -12804,7 +12764,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    catalogue_document_reference: Optional[CatalogueDocumentReference] = field(
+    catalogue_document_reference: CatalogueDocumentReference | None = field(
         default=None,
         metadata={
             "name": "CatalogueDocumentReference",
@@ -12822,7 +12782,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    origin_country: Optional[OriginCountry] = field(
+    origin_country: OriginCountry | None = field(
         default=None,
         metadata={
             "name": "OriginCountry",
@@ -12878,9 +12838,7 @@ class ItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    information_content_provider_party: Optional[
-        InformationContentProviderParty
-    ] = field(
+    information_content_provider_party: InformationContentProviderParty | None = field(
         default=None,
         metadata={
             "name": "InformationContentProviderParty",
@@ -12924,7 +12882,7 @@ class ItemType:
 
 @dataclass(frozen=True)
 class QualifyingPartyType:
-    participation_percent: Optional[ParticipationPercent] = field(
+    participation_percent: ParticipationPercent | None = field(
         default=None,
         metadata={
             "name": "ParticipationPercent",
@@ -12940,7 +12898,7 @@ class QualifyingPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    operating_years_quantity: Optional[OperatingYearsQuantity] = field(
+    operating_years_quantity: OperatingYearsQuantity | None = field(
         default=None,
         metadata={
             "name": "OperatingYearsQuantity",
@@ -12948,7 +12906,7 @@ class QualifyingPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    employee_quantity: Optional[EmployeeQuantity] = field(
+    employee_quantity: EmployeeQuantity | None = field(
         default=None,
         metadata={
             "name": "EmployeeQuantity",
@@ -12956,9 +12914,7 @@ class QualifyingPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    business_classification_evidence_id: Optional[
-        BusinessClassificationEvidenceId
-    ] = field(
+    business_classification_evidence_id: BusinessClassificationEvidenceId | None = field(
         default=None,
         metadata={
             "name": "BusinessClassificationEvidenceID",
@@ -12966,7 +12922,7 @@ class QualifyingPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    business_identity_evidence_id: Optional[BusinessIdentityEvidenceId] = (
+    business_identity_evidence_id: BusinessIdentityEvidenceId | None = (
         field(
             default=None,
             metadata={
@@ -12976,7 +12932,7 @@ class QualifyingPartyType:
             },
         )
     )
-    tenderer_role_code: Optional[TendererRoleCode] = field(
+    tenderer_role_code: TendererRoleCode | None = field(
         default=None,
         metadata={
             "name": "TendererRoleCode",
@@ -12984,7 +12940,7 @@ class QualifyingPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    business_classification_scheme: Optional[BusinessClassificationScheme] = (
+    business_classification_scheme: BusinessClassificationScheme | None = (
         field(
             default=None,
             metadata={
@@ -13026,7 +12982,7 @@ class QualifyingPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    party: Optional[Party] = field(
+    party: Party | None = field(
         default=None,
         metadata={
             "name": "Party",
@@ -13034,7 +12990,7 @@ class QualifyingPartyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    economic_operator_role: Optional[EconomicOperatorRole] = field(
+    economic_operator_role: EconomicOperatorRole | None = field(
         default=None,
         metadata={
             "name": "EconomicOperatorRole",
@@ -13046,7 +13002,7 @@ class QualifyingPartyType:
 
 @dataclass(frozen=True)
 class TendererQualificationRequestType:
-    company_legal_form_code: Optional[CompanyLegalFormCode] = field(
+    company_legal_form_code: CompanyLegalFormCode | None = field(
         default=None,
         metadata={
             "name": "CompanyLegalFormCode",
@@ -13054,7 +13010,7 @@ class TendererQualificationRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    company_legal_form: Optional[CompanyLegalForm] = field(
+    company_legal_form: CompanyLegalForm | None = field(
         default=None,
         metadata={
             "name": "CompanyLegalForm",
@@ -13070,7 +13026,7 @@ class TendererQualificationRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    operating_years_quantity: Optional[OperatingYearsQuantity] = field(
+    operating_years_quantity: OperatingYearsQuantity | None = field(
         default=None,
         metadata={
             "name": "OperatingYearsQuantity",
@@ -13078,7 +13034,7 @@ class TendererQualificationRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    employee_quantity: Optional[EmployeeQuantity] = field(
+    employee_quantity: EmployeeQuantity | None = field(
         default=None,
         metadata={
             "name": "EmployeeQuantity",
@@ -13206,7 +13162,7 @@ class TendererQualificationRequest(TendererQualificationRequestType):
 
 @dataclass(frozen=True)
 class BillingReferenceLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -13215,7 +13171,7 @@ class BillingReferenceLineType:
             "required": True,
         },
     )
-    amount: Optional[Amount] = field(
+    amount: Amount | None = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -13235,7 +13191,7 @@ class BillingReferenceLineType:
 
 @dataclass(frozen=True)
 class CatalogueItemSpecificationUpdateLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -13244,7 +13200,7 @@ class CatalogueItemSpecificationUpdateLineType:
             "required": True,
         },
     )
-    contractor_customer_party: Optional[ContractorCustomerParty] = field(
+    contractor_customer_party: ContractorCustomerParty | None = field(
         default=None,
         metadata={
             "name": "ContractorCustomerParty",
@@ -13252,7 +13208,7 @@ class CatalogueItemSpecificationUpdateLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_supplier_party: Optional[SellerSupplierParty] = field(
+    seller_supplier_party: SellerSupplierParty | None = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",
@@ -13260,7 +13216,7 @@ class CatalogueItemSpecificationUpdateLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item: Optional[Item] = field(
+    item: Item | None = field(
         default=None,
         metadata={
             "name": "Item",
@@ -13273,7 +13229,7 @@ class CatalogueItemSpecificationUpdateLineType:
 
 @dataclass(frozen=True)
 class DeliveryTermsType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -13289,7 +13245,7 @@ class DeliveryTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    loss_risk_responsibility_code: Optional[LossRiskResponsibilityCode] = (
+    loss_risk_responsibility_code: LossRiskResponsibilityCode | None = (
         field(
             default=None,
             metadata={
@@ -13307,7 +13263,7 @@ class DeliveryTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    amount: Optional[Amount] = field(
+    amount: Amount | None = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -13315,7 +13271,7 @@ class DeliveryTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    delivery_location: Optional[DeliveryLocation] = field(
+    delivery_location: DeliveryLocation | None = field(
         default=None,
         metadata={
             "name": "DeliveryLocation",
@@ -13323,7 +13279,7 @@ class DeliveryTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    allowance_charge: Optional[AllowanceCharge] = field(
+    allowance_charge: AllowanceCharge | None = field(
         default=None,
         metadata={
             "name": "AllowanceCharge",
@@ -13335,7 +13291,7 @@ class DeliveryTermsType:
 
 @dataclass(frozen=True)
 class DespatchLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -13344,7 +13300,7 @@ class DespatchLineType:
             "required": True,
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -13360,7 +13316,7 @@ class DespatchLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_status_code: Optional[LineStatusCode] = field(
+    line_status_code: LineStatusCode | None = field(
         default=None,
         metadata={
             "name": "LineStatusCode",
@@ -13368,7 +13324,7 @@ class DespatchLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    delivered_quantity: Optional[DeliveredQuantity] = field(
+    delivered_quantity: DeliveredQuantity | None = field(
         default=None,
         metadata={
             "name": "DeliveredQuantity",
@@ -13376,7 +13332,7 @@ class DespatchLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    backorder_quantity: Optional[BackorderQuantity] = field(
+    backorder_quantity: BackorderQuantity | None = field(
         default=None,
         metadata={
             "name": "BackorderQuantity",
@@ -13392,7 +13348,7 @@ class DespatchLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    outstanding_quantity: Optional[OutstandingQuantity] = field(
+    outstanding_quantity: OutstandingQuantity | None = field(
         default=None,
         metadata={
             "name": "OutstandingQuantity",
@@ -13408,7 +13364,7 @@ class DespatchLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    oversupply_quantity: Optional[OversupplyQuantity] = field(
+    oversupply_quantity: OversupplyQuantity | None = field(
         default=None,
         metadata={
             "name": "OversupplyQuantity",
@@ -13433,7 +13389,7 @@ class DespatchLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item: Optional[Item] = field(
+    item: Item | None = field(
         default=None,
         metadata={
             "name": "Item",
@@ -13442,7 +13398,7 @@ class DespatchLineType:
             "required": True,
         },
     )
-    shipment: tuple["Shipment", ...] = field(
+    shipment: tuple[Shipment, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Shipment",
@@ -13454,7 +13410,7 @@ class DespatchLineType:
 
 @dataclass(frozen=True)
 class EventLineItemType:
-    line_number_numeric: Optional[LineNumberNumeric] = field(
+    line_number_numeric: LineNumberNumeric | None = field(
         default=None,
         metadata={
             "name": "LineNumberNumeric",
@@ -13462,9 +13418,7 @@ class EventLineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    participating_locations_location: Optional[
-        ParticipatingLocationsLocation
-    ] = field(
+    participating_locations_location: ParticipatingLocationsLocation | None = field(
         default=None,
         metadata={
             "name": "ParticipatingLocationsLocation",
@@ -13480,7 +13434,7 @@ class EventLineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    supply_item: Optional[SupplyItem] = field(
+    supply_item: SupplyItem | None = field(
         default=None,
         metadata={
             "name": "SupplyItem",
@@ -13493,7 +13447,7 @@ class EventLineItemType:
 
 @dataclass(frozen=True)
 class ExceptionCriteriaLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -13510,7 +13464,7 @@ class ExceptionCriteriaLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    threshold_value_comparison_code: Optional[ThresholdValueComparisonCode] = (
+    threshold_value_comparison_code: ThresholdValueComparisonCode | None = (
         field(
             default=None,
             metadata={
@@ -13521,7 +13475,7 @@ class ExceptionCriteriaLineType:
             },
         )
     )
-    threshold_quantity: Optional[ThresholdQuantity] = field(
+    threshold_quantity: ThresholdQuantity | None = field(
         default=None,
         metadata={
             "name": "ThresholdQuantity",
@@ -13530,7 +13484,7 @@ class ExceptionCriteriaLineType:
             "required": True,
         },
     )
-    exception_status_code: Optional[ExceptionStatusCode] = field(
+    exception_status_code: ExceptionStatusCode | None = field(
         default=None,
         metadata={
             "name": "ExceptionStatusCode",
@@ -13538,7 +13492,7 @@ class ExceptionCriteriaLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    collaboration_priority_code: Optional[CollaborationPriorityCode] = field(
+    collaboration_priority_code: CollaborationPriorityCode | None = field(
         default=None,
         metadata={
             "name": "CollaborationPriorityCode",
@@ -13546,7 +13500,7 @@ class ExceptionCriteriaLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    exception_resolution_code: Optional[ExceptionResolutionCode] = field(
+    exception_resolution_code: ExceptionResolutionCode | None = field(
         default=None,
         metadata={
             "name": "ExceptionResolutionCode",
@@ -13554,7 +13508,7 @@ class ExceptionCriteriaLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    supply_chain_activity_type_code: Optional[SupplyChainActivityTypeCode] = (
+    supply_chain_activity_type_code: SupplyChainActivityTypeCode | None = (
         field(
             default=None,
             metadata={
@@ -13564,7 +13518,7 @@ class ExceptionCriteriaLineType:
             },
         )
     )
-    performance_metric_type_code: Optional[PerformanceMetricTypeCode] = field(
+    performance_metric_type_code: PerformanceMetricTypeCode | None = field(
         default=None,
         metadata={
             "name": "PerformanceMetricTypeCode",
@@ -13572,7 +13526,7 @@ class ExceptionCriteriaLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    effective_period: Optional[EffectivePeriod] = field(
+    effective_period: EffectivePeriod | None = field(
         default=None,
         metadata={
             "name": "EffectivePeriod",
@@ -13589,9 +13543,7 @@ class ExceptionCriteriaLineType:
             "min_occurs": 1,
         },
     )
-    forecast_exception_criterion_line: Optional[
-        ForecastExceptionCriterionLine
-    ] = field(
+    forecast_exception_criterion_line: ForecastExceptionCriterionLine | None = field(
         default=None,
         metadata={
             "name": "ForecastExceptionCriterionLine",
@@ -13603,7 +13555,7 @@ class ExceptionCriteriaLineType:
 
 @dataclass(frozen=True)
 class ExceptionNotificationLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -13628,7 +13580,7 @@ class ExceptionNotificationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    exception_status_code: Optional[ExceptionStatusCode] = field(
+    exception_status_code: ExceptionStatusCode | None = field(
         default=None,
         metadata={
             "name": "ExceptionStatusCode",
@@ -13636,7 +13588,7 @@ class ExceptionNotificationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    collaboration_priority_code: Optional[CollaborationPriorityCode] = field(
+    collaboration_priority_code: CollaborationPriorityCode | None = field(
         default=None,
         metadata={
             "name": "CollaborationPriorityCode",
@@ -13644,7 +13596,7 @@ class ExceptionNotificationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    resolution_code: Optional[ResolutionCode] = field(
+    resolution_code: ResolutionCode | None = field(
         default=None,
         metadata={
             "name": "ResolutionCode",
@@ -13652,7 +13604,7 @@ class ExceptionNotificationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    compared_value_measure: Optional[ComparedValueMeasure] = field(
+    compared_value_measure: ComparedValueMeasure | None = field(
         default=None,
         metadata={
             "name": "ComparedValueMeasure",
@@ -13661,7 +13613,7 @@ class ExceptionNotificationLineType:
             "required": True,
         },
     )
-    source_value_measure: Optional[SourceValueMeasure] = field(
+    source_value_measure: SourceValueMeasure | None = field(
         default=None,
         metadata={
             "name": "SourceValueMeasure",
@@ -13670,7 +13622,7 @@ class ExceptionNotificationLineType:
             "required": True,
         },
     )
-    variance_quantity: Optional[VarianceQuantity] = field(
+    variance_quantity: VarianceQuantity | None = field(
         default=None,
         metadata={
             "name": "VarianceQuantity",
@@ -13678,7 +13630,7 @@ class ExceptionNotificationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    supply_chain_activity_type_code: Optional[SupplyChainActivityTypeCode] = (
+    supply_chain_activity_type_code: SupplyChainActivityTypeCode | None = (
         field(
             default=None,
             metadata={
@@ -13688,7 +13640,7 @@ class ExceptionNotificationLineType:
             },
         )
     )
-    performance_metric_type_code: Optional[PerformanceMetricTypeCode] = field(
+    performance_metric_type_code: PerformanceMetricTypeCode | None = field(
         default=None,
         metadata={
             "name": "PerformanceMetricTypeCode",
@@ -13696,7 +13648,7 @@ class ExceptionNotificationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    exception_observation_period: Optional[ExceptionObservationPeriod] = field(
+    exception_observation_period: ExceptionObservationPeriod | None = field(
         default=None,
         metadata={
             "name": "ExceptionObservationPeriod",
@@ -13712,7 +13664,7 @@ class ExceptionNotificationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    forecast_exception: Optional[ForecastException] = field(
+    forecast_exception: ForecastException | None = field(
         default=None,
         metadata={
             "name": "ForecastException",
@@ -13720,7 +13672,7 @@ class ExceptionNotificationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    supply_item: Optional[SupplyItem] = field(
+    supply_item: SupplyItem | None = field(
         default=None,
         metadata={
             "name": "SupplyItem",
@@ -13733,7 +13685,7 @@ class ExceptionNotificationLineType:
 
 @dataclass(frozen=True)
 class InstructionForReturnsLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -13750,7 +13702,7 @@ class InstructionForReturnsLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -13759,7 +13711,7 @@ class InstructionForReturnsLineType:
             "required": True,
         },
     )
-    manufacturer_party: Optional[ManufacturerParty] = field(
+    manufacturer_party: ManufacturerParty | None = field(
         default=None,
         metadata={
             "name": "ManufacturerParty",
@@ -13767,7 +13719,7 @@ class InstructionForReturnsLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item: Optional[Item] = field(
+    item: Item | None = field(
         default=None,
         metadata={
             "name": "Item",
@@ -13780,7 +13732,7 @@ class InstructionForReturnsLineType:
 
 @dataclass(frozen=True)
 class InventoryReportLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -13797,7 +13749,7 @@ class InventoryReportLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -13806,7 +13758,7 @@ class InventoryReportLineType:
             "required": True,
         },
     )
-    inventory_value_amount: Optional[InventoryValueAmount] = field(
+    inventory_value_amount: InventoryValueAmount | None = field(
         default=None,
         metadata={
             "name": "InventoryValueAmount",
@@ -13814,7 +13766,7 @@ class InventoryReportLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    availability_date: Optional[AvailabilityDate] = field(
+    availability_date: AvailabilityDate | None = field(
         default=None,
         metadata={
             "name": "AvailabilityDate",
@@ -13822,7 +13774,7 @@ class InventoryReportLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    availability_status_code: Optional[AvailabilityStatusCode] = field(
+    availability_status_code: AvailabilityStatusCode | None = field(
         default=None,
         metadata={
             "name": "AvailabilityStatusCode",
@@ -13830,7 +13782,7 @@ class InventoryReportLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    item: Optional[Item] = field(
+    item: Item | None = field(
         default=None,
         metadata={
             "name": "Item",
@@ -13839,7 +13791,7 @@ class InventoryReportLineType:
             "required": True,
         },
     )
-    inventory_location: Optional[InventoryLocation] = field(
+    inventory_location: InventoryLocation | None = field(
         default=None,
         metadata={
             "name": "InventoryLocation",
@@ -13851,7 +13803,7 @@ class InventoryReportLineType:
 
 @dataclass(frozen=True)
 class PerformanceDataLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -13868,7 +13820,7 @@ class PerformanceDataLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    performance_value_quantity: Optional[PerformanceValueQuantity] = field(
+    performance_value_quantity: PerformanceValueQuantity | None = field(
         default=None,
         metadata={
             "name": "PerformanceValueQuantity",
@@ -13877,7 +13829,7 @@ class PerformanceDataLineType:
             "required": True,
         },
     )
-    performance_metric_type_code: Optional[PerformanceMetricTypeCode] = field(
+    performance_metric_type_code: PerformanceMetricTypeCode | None = field(
         default=None,
         metadata={
             "name": "PerformanceMetricTypeCode",
@@ -13886,7 +13838,7 @@ class PerformanceDataLineType:
             "required": True,
         },
     )
-    period: Optional[Period] = field(
+    period: Period | None = field(
         default=None,
         metadata={
             "name": "Period",
@@ -13894,7 +13846,7 @@ class PerformanceDataLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item: Optional[Item] = field(
+    item: Item | None = field(
         default=None,
         metadata={
             "name": "Item",
@@ -13906,7 +13858,7 @@ class PerformanceDataLineType:
 
 @dataclass(frozen=True)
 class PriceType:
-    price_amount: Optional[PriceAmount] = field(
+    price_amount: PriceAmount | None = field(
         default=None,
         metadata={
             "name": "PriceAmount",
@@ -13915,7 +13867,7 @@ class PriceType:
             "required": True,
         },
     )
-    base_quantity: Optional[BaseQuantity] = field(
+    base_quantity: BaseQuantity | None = field(
         default=None,
         metadata={
             "name": "BaseQuantity",
@@ -13931,7 +13883,7 @@ class PriceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    price_type_code: Optional[PriceTypeCode] = field(
+    price_type_code: PriceTypeCode | None = field(
         default=None,
         metadata={
             "name": "PriceTypeCode",
@@ -13939,7 +13891,7 @@ class PriceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    price_type: Optional[UblCommonBasicComponents21PriceType] = field(
+    price_type: UblCommonBasicComponents21PriceType | None = field(
         default=None,
         metadata={
             "name": "PriceType",
@@ -13947,7 +13899,7 @@ class PriceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    orderable_unit_factor_rate: Optional[OrderableUnitFactorRate] = field(
+    orderable_unit_factor_rate: OrderableUnitFactorRate | None = field(
         default=None,
         metadata={
             "name": "OrderableUnitFactorRate",
@@ -13963,7 +13915,7 @@ class PriceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    price_list: Optional[PriceList] = field(
+    price_list: PriceList | None = field(
         default=None,
         metadata={
             "name": "PriceList",
@@ -13979,7 +13931,7 @@ class PriceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    pricing_exchange_rate: Optional[PricingExchangeRate] = field(
+    pricing_exchange_rate: PricingExchangeRate | None = field(
         default=None,
         metadata={
             "name": "PricingExchangeRate",
@@ -13991,7 +13943,7 @@ class PriceType:
 
 @dataclass(frozen=True)
 class ReceiptLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -14000,7 +13952,7 @@ class ReceiptLineType:
             "required": True,
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -14016,7 +13968,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    received_quantity: Optional[ReceivedQuantity] = field(
+    received_quantity: ReceivedQuantity | None = field(
         default=None,
         metadata={
             "name": "ReceivedQuantity",
@@ -14024,7 +13976,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    short_quantity: Optional[ShortQuantity] = field(
+    short_quantity: ShortQuantity | None = field(
         default=None,
         metadata={
             "name": "ShortQuantity",
@@ -14032,7 +13984,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    shortage_action_code: Optional[ShortageActionCode] = field(
+    shortage_action_code: ShortageActionCode | None = field(
         default=None,
         metadata={
             "name": "ShortageActionCode",
@@ -14040,7 +13992,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    rejected_quantity: Optional[RejectedQuantity] = field(
+    rejected_quantity: RejectedQuantity | None = field(
         default=None,
         metadata={
             "name": "RejectedQuantity",
@@ -14048,7 +14000,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    reject_reason_code: Optional[RejectReasonCode] = field(
+    reject_reason_code: RejectReasonCode | None = field(
         default=None,
         metadata={
             "name": "RejectReasonCode",
@@ -14064,7 +14016,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    reject_action_code: Optional[RejectActionCode] = field(
+    reject_action_code: RejectActionCode | None = field(
         default=None,
         metadata={
             "name": "RejectActionCode",
@@ -14072,7 +14024,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity_discrepancy_code: Optional[QuantityDiscrepancyCode] = field(
+    quantity_discrepancy_code: QuantityDiscrepancyCode | None = field(
         default=None,
         metadata={
             "name": "QuantityDiscrepancyCode",
@@ -14080,7 +14032,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    oversupply_quantity: Optional[OversupplyQuantity] = field(
+    oversupply_quantity: OversupplyQuantity | None = field(
         default=None,
         metadata={
             "name": "OversupplyQuantity",
@@ -14088,7 +14040,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    received_date: Optional[ReceivedDate] = field(
+    received_date: ReceivedDate | None = field(
         default=None,
         metadata={
             "name": "ReceivedDate",
@@ -14096,7 +14048,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    timing_complaint_code: Optional[TimingComplaintCode] = field(
+    timing_complaint_code: TimingComplaintCode | None = field(
         default=None,
         metadata={
             "name": "TimingComplaintCode",
@@ -14104,7 +14056,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    timing_complaint: Optional[TimingComplaint] = field(
+    timing_complaint: TimingComplaint | None = field(
         default=None,
         metadata={
             "name": "TimingComplaint",
@@ -14112,7 +14064,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    order_line_reference: Optional[OrderLineReference] = field(
+    order_line_reference: OrderLineReference | None = field(
         default=None,
         metadata={
             "name": "OrderLineReference",
@@ -14144,7 +14096,7 @@ class ReceiptLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    shipment: tuple["Shipment", ...] = field(
+    shipment: tuple[Shipment, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Shipment",
@@ -14156,7 +14108,7 @@ class ReceiptLineType:
 
 @dataclass(frozen=True)
 class StockAvailabilityReportLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -14173,7 +14125,7 @@ class StockAvailabilityReportLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -14182,7 +14134,7 @@ class StockAvailabilityReportLineType:
             "required": True,
         },
     )
-    value_amount: Optional[ValueAmount] = field(
+    value_amount: ValueAmount | None = field(
         default=None,
         metadata={
             "name": "ValueAmount",
@@ -14190,7 +14142,7 @@ class StockAvailabilityReportLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    availability_date: Optional[AvailabilityDate] = field(
+    availability_date: AvailabilityDate | None = field(
         default=None,
         metadata={
             "name": "AvailabilityDate",
@@ -14198,7 +14150,7 @@ class StockAvailabilityReportLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    availability_status_code: Optional[AvailabilityStatusCode] = field(
+    availability_status_code: AvailabilityStatusCode | None = field(
         default=None,
         metadata={
             "name": "AvailabilityStatusCode",
@@ -14206,7 +14158,7 @@ class StockAvailabilityReportLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    item: Optional[Item] = field(
+    item: Item | None = field(
         default=None,
         metadata={
             "name": "Item",
@@ -14329,7 +14281,7 @@ class TaxInclusivePrice(PriceType):
 
 @dataclass(frozen=True)
 class BillingReferenceType:
-    invoice_document_reference: Optional[InvoiceDocumentReference] = field(
+    invoice_document_reference: InvoiceDocumentReference | None = field(
         default=None,
         metadata={
             "name": "InvoiceDocumentReference",
@@ -14337,9 +14289,7 @@ class BillingReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    self_billed_invoice_document_reference: Optional[
-        SelfBilledInvoiceDocumentReference
-    ] = field(
+    self_billed_invoice_document_reference: SelfBilledInvoiceDocumentReference | None = field(
         default=None,
         metadata={
             "name": "SelfBilledInvoiceDocumentReference",
@@ -14347,7 +14297,7 @@ class BillingReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    credit_note_document_reference: Optional[CreditNoteDocumentReference] = (
+    credit_note_document_reference: CreditNoteDocumentReference | None = (
         field(
             default=None,
             metadata={
@@ -14357,9 +14307,7 @@ class BillingReferenceType:
             },
         )
     )
-    self_billed_credit_note_document_reference: Optional[
-        SelfBilledCreditNoteDocumentReference
-    ] = field(
+    self_billed_credit_note_document_reference: SelfBilledCreditNoteDocumentReference | None = field(
         default=None,
         metadata={
             "name": "SelfBilledCreditNoteDocumentReference",
@@ -14367,7 +14315,7 @@ class BillingReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    debit_note_document_reference: Optional[DebitNoteDocumentReference] = (
+    debit_note_document_reference: DebitNoteDocumentReference | None = (
         field(
             default=None,
             metadata={
@@ -14377,7 +14325,7 @@ class BillingReferenceType:
             },
         )
     )
-    reminder_document_reference: Optional[ReminderDocumentReference] = field(
+    reminder_document_reference: ReminderDocumentReference | None = field(
         default=None,
         metadata={
             "name": "ReminderDocumentReference",
@@ -14385,7 +14333,7 @@ class BillingReferenceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    additional_document_reference: Optional[AdditionalDocumentReference] = (
+    additional_document_reference: AdditionalDocumentReference | None = (
         field(
             default=None,
             metadata={
@@ -14407,7 +14355,7 @@ class BillingReferenceType:
 
 @dataclass(frozen=True)
 class ConsignmentType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -14416,7 +14364,7 @@ class ConsignmentType:
             "required": True,
         },
     )
-    carrier_assigned_id: Optional[CarrierAssignedId] = field(
+    carrier_assigned_id: CarrierAssignedId | None = field(
         default=None,
         metadata={
             "name": "CarrierAssignedID",
@@ -14424,7 +14372,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    consignee_assigned_id: Optional[ConsigneeAssignedId] = field(
+    consignee_assigned_id: ConsigneeAssignedId | None = field(
         default=None,
         metadata={
             "name": "ConsigneeAssignedID",
@@ -14432,7 +14380,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    consignor_assigned_id: Optional[ConsignorAssignedId] = field(
+    consignor_assigned_id: ConsignorAssignedId | None = field(
         default=None,
         metadata={
             "name": "ConsignorAssignedID",
@@ -14440,7 +14388,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    freight_forwarder_assigned_id: Optional[FreightForwarderAssignedId] = (
+    freight_forwarder_assigned_id: FreightForwarderAssignedId | None = (
         field(
             default=None,
             metadata={
@@ -14450,7 +14398,7 @@ class ConsignmentType:
             },
         )
     )
-    broker_assigned_id: Optional[BrokerAssignedId] = field(
+    broker_assigned_id: BrokerAssignedId | None = field(
         default=None,
         metadata={
             "name": "BrokerAssignedID",
@@ -14458,7 +14406,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contracted_carrier_assigned_id: Optional[ContractedCarrierAssignedId] = (
+    contracted_carrier_assigned_id: ContractedCarrierAssignedId | None = (
         field(
             default=None,
             metadata={
@@ -14468,7 +14416,7 @@ class ConsignmentType:
             },
         )
     )
-    performing_carrier_assigned_id: Optional[PerformingCarrierAssignedId] = (
+    performing_carrier_assigned_id: PerformingCarrierAssignedId | None = (
         field(
             default=None,
             metadata={
@@ -14486,7 +14434,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_invoice_amount: Optional[TotalInvoiceAmount] = field(
+    total_invoice_amount: TotalInvoiceAmount | None = field(
         default=None,
         metadata={
             "name": "TotalInvoiceAmount",
@@ -14494,7 +14442,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declared_customs_value_amount: Optional[DeclaredCustomsValueAmount] = (
+    declared_customs_value_amount: DeclaredCustomsValueAmount | None = (
         field(
             default=None,
             metadata={
@@ -14512,7 +14460,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tariff_code: Optional[TariffCode] = field(
+    tariff_code: TariffCode | None = field(
         default=None,
         metadata={
             "name": "TariffCode",
@@ -14520,7 +14468,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    insurance_premium_amount: Optional[InsurancePremiumAmount] = field(
+    insurance_premium_amount: InsurancePremiumAmount | None = field(
         default=None,
         metadata={
             "name": "InsurancePremiumAmount",
@@ -14528,7 +14476,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    gross_weight_measure: Optional[GrossWeightMeasure] = field(
+    gross_weight_measure: GrossWeightMeasure | None = field(
         default=None,
         metadata={
             "name": "GrossWeightMeasure",
@@ -14536,7 +14484,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    net_weight_measure: Optional[NetWeightMeasure] = field(
+    net_weight_measure: NetWeightMeasure | None = field(
         default=None,
         metadata={
             "name": "NetWeightMeasure",
@@ -14544,7 +14492,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    net_net_weight_measure: Optional[NetNetWeightMeasure] = field(
+    net_net_weight_measure: NetNetWeightMeasure | None = field(
         default=None,
         metadata={
             "name": "NetNetWeightMeasure",
@@ -14552,7 +14500,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    chargeable_weight_measure: Optional[ChargeableWeightMeasure] = field(
+    chargeable_weight_measure: ChargeableWeightMeasure | None = field(
         default=None,
         metadata={
             "name": "ChargeableWeightMeasure",
@@ -14560,7 +14508,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    gross_volume_measure: Optional[GrossVolumeMeasure] = field(
+    gross_volume_measure: GrossVolumeMeasure | None = field(
         default=None,
         metadata={
             "name": "GrossVolumeMeasure",
@@ -14568,7 +14516,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    net_volume_measure: Optional[NetVolumeMeasure] = field(
+    net_volume_measure: NetVolumeMeasure | None = field(
         default=None,
         metadata={
             "name": "NetVolumeMeasure",
@@ -14576,7 +14524,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    loading_length_measure: Optional[LoadingLengthMeasure] = field(
+    loading_length_measure: LoadingLengthMeasure | None = field(
         default=None,
         metadata={
             "name": "LoadingLengthMeasure",
@@ -14592,7 +14540,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    hazardous_risk_indicator: Optional[HazardousRiskIndicator] = field(
+    hazardous_risk_indicator: HazardousRiskIndicator | None = field(
         default=None,
         metadata={
             "name": "HazardousRiskIndicator",
@@ -14600,7 +14548,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    animal_food_indicator: Optional[AnimalFoodIndicator] = field(
+    animal_food_indicator: AnimalFoodIndicator | None = field(
         default=None,
         metadata={
             "name": "AnimalFoodIndicator",
@@ -14608,7 +14556,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    human_food_indicator: Optional[HumanFoodIndicator] = field(
+    human_food_indicator: HumanFoodIndicator | None = field(
         default=None,
         metadata={
             "name": "HumanFoodIndicator",
@@ -14616,7 +14564,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    livestock_indicator: Optional[LivestockIndicator] = field(
+    livestock_indicator: LivestockIndicator | None = field(
         default=None,
         metadata={
             "name": "LivestockIndicator",
@@ -14624,7 +14572,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    bulk_cargo_indicator: Optional[BulkCargoIndicator] = field(
+    bulk_cargo_indicator: BulkCargoIndicator | None = field(
         default=None,
         metadata={
             "name": "BulkCargoIndicator",
@@ -14632,7 +14580,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    containerized_indicator: Optional[ContainerizedIndicator] = field(
+    containerized_indicator: ContainerizedIndicator | None = field(
         default=None,
         metadata={
             "name": "ContainerizedIndicator",
@@ -14640,7 +14588,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    general_cargo_indicator: Optional[GeneralCargoIndicator] = field(
+    general_cargo_indicator: GeneralCargoIndicator | None = field(
         default=None,
         metadata={
             "name": "GeneralCargoIndicator",
@@ -14648,7 +14596,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    special_security_indicator: Optional[SpecialSecurityIndicator] = field(
+    special_security_indicator: SpecialSecurityIndicator | None = field(
         default=None,
         metadata={
             "name": "SpecialSecurityIndicator",
@@ -14656,7 +14604,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    third_party_payer_indicator: Optional[ThirdPartyPayerIndicator] = field(
+    third_party_payer_indicator: ThirdPartyPayerIndicator | None = field(
         default=None,
         metadata={
             "name": "ThirdPartyPayerIndicator",
@@ -14704,7 +14652,7 @@ class ConsignmentType:
             },
         )
     )
-    sequence_id: Optional[SequenceId] = field(
+    sequence_id: SequenceId | None = field(
         default=None,
         metadata={
             "name": "SequenceID",
@@ -14712,7 +14660,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    shipping_priority_level_code: Optional[ShippingPriorityLevelCode] = field(
+    shipping_priority_level_code: ShippingPriorityLevelCode | None = field(
         default=None,
         metadata={
             "name": "ShippingPriorityLevelCode",
@@ -14720,7 +14668,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    handling_code: Optional[HandlingCode] = field(
+    handling_code: HandlingCode | None = field(
         default=None,
         metadata={
             "name": "HandlingCode",
@@ -14744,7 +14692,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_goods_item_quantity: Optional[TotalGoodsItemQuantity] = field(
+    total_goods_item_quantity: TotalGoodsItemQuantity | None = field(
         default=None,
         metadata={
             "name": "TotalGoodsItemQuantity",
@@ -14752,9 +14700,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_transport_handling_unit_quantity: Optional[
-        TotalTransportHandlingUnitQuantity
-    ] = field(
+    total_transport_handling_unit_quantity: TotalTransportHandlingUnitQuantity | None = field(
         default=None,
         metadata={
             "name": "TotalTransportHandlingUnitQuantity",
@@ -14762,7 +14708,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    insurance_value_amount: Optional[InsuranceValueAmount] = field(
+    insurance_value_amount: InsuranceValueAmount | None = field(
         default=None,
         metadata={
             "name": "InsuranceValueAmount",
@@ -14770,9 +14716,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declared_for_carriage_value_amount: Optional[
-        DeclaredForCarriageValueAmount
-    ] = field(
+    declared_for_carriage_value_amount: DeclaredForCarriageValueAmount | None = field(
         default=None,
         metadata={
             "name": "DeclaredForCarriageValueAmount",
@@ -14780,9 +14724,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declared_statistics_value_amount: Optional[
-        DeclaredStatisticsValueAmount
-    ] = field(
+    declared_statistics_value_amount: DeclaredStatisticsValueAmount | None = field(
         default=None,
         metadata={
             "name": "DeclaredStatisticsValueAmount",
@@ -14790,7 +14732,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    free_on_board_value_amount: Optional[FreeOnBoardValueAmount] = field(
+    free_on_board_value_amount: FreeOnBoardValueAmount | None = field(
         default=None,
         metadata={
             "name": "FreeOnBoardValueAmount",
@@ -14806,7 +14748,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    split_consignment_indicator: Optional[SplitConsignmentIndicator] = field(
+    split_consignment_indicator: SplitConsignmentIndicator | None = field(
         default=None,
         metadata={
             "name": "SplitConsignmentIndicator",
@@ -14822,7 +14764,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    consignment_quantity: Optional[ConsignmentQuantity] = field(
+    consignment_quantity: ConsignmentQuantity | None = field(
         default=None,
         metadata={
             "name": "ConsignmentQuantity",
@@ -14830,7 +14772,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    consolidatable_indicator: Optional[ConsolidatableIndicator] = field(
+    consolidatable_indicator: ConsolidatableIndicator | None = field(
         default=None,
         metadata={
             "name": "ConsolidatableIndicator",
@@ -14846,7 +14788,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    loading_sequence_id: Optional[LoadingSequenceId] = field(
+    loading_sequence_id: LoadingSequenceId | None = field(
         default=None,
         metadata={
             "name": "LoadingSequenceID",
@@ -14854,7 +14796,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    child_consignment_quantity: Optional[ChildConsignmentQuantity] = field(
+    child_consignment_quantity: ChildConsignmentQuantity | None = field(
         default=None,
         metadata={
             "name": "ChildConsignmentQuantity",
@@ -14862,7 +14804,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_packages_quantity: Optional[TotalPackagesQuantity] = field(
+    total_packages_quantity: TotalPackagesQuantity | None = field(
         default=None,
         metadata={
             "name": "TotalPackagesQuantity",
@@ -14870,7 +14812,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    consolidated_shipment: tuple["ConsolidatedShipment", ...] = field(
+    consolidated_shipment: tuple[ConsolidatedShipment, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ConsolidatedShipment",
@@ -14886,9 +14828,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    requested_pickup_transport_event: Optional[
-        "RequestedPickupTransportEvent"
-    ] = field(
+    requested_pickup_transport_event: RequestedPickupTransportEvent | None = field(
         default=None,
         metadata={
             "name": "RequestedPickupTransportEvent",
@@ -14896,9 +14836,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    requested_delivery_transport_event: Optional[
-        "RequestedDeliveryTransportEvent"
-    ] = field(
+    requested_delivery_transport_event: RequestedDeliveryTransportEvent | None = field(
         default=None,
         metadata={
             "name": "RequestedDeliveryTransportEvent",
@@ -14906,7 +14844,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    planned_pickup_transport_event: Optional["PlannedPickupTransportEvent"] = (
+    planned_pickup_transport_event: PlannedPickupTransportEvent | None = (
         field(
             default=None,
             metadata={
@@ -14916,9 +14854,7 @@ class ConsignmentType:
             },
         )
     )
-    planned_delivery_transport_event: Optional[
-        "PlannedDeliveryTransportEvent"
-    ] = field(
+    planned_delivery_transport_event: PlannedDeliveryTransportEvent | None = field(
         default=None,
         metadata={
             "name": "PlannedDeliveryTransportEvent",
@@ -14934,7 +14870,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    child_consignment: tuple["ChildConsignment", ...] = field(
+    child_consignment: tuple[ChildConsignment, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ChildConsignment",
@@ -14942,7 +14878,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    consignee_party: Optional[ConsigneeParty] = field(
+    consignee_party: ConsigneeParty | None = field(
         default=None,
         metadata={
             "name": "ConsigneeParty",
@@ -14950,7 +14886,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    exporter_party: Optional[ExporterParty] = field(
+    exporter_party: ExporterParty | None = field(
         default=None,
         metadata={
             "name": "ExporterParty",
@@ -14958,7 +14894,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    consignor_party: Optional[ConsignorParty] = field(
+    consignor_party: ConsignorParty | None = field(
         default=None,
         metadata={
             "name": "ConsignorParty",
@@ -14966,7 +14902,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    importer_party: Optional[ImporterParty] = field(
+    importer_party: ImporterParty | None = field(
         default=None,
         metadata={
             "name": "ImporterParty",
@@ -14974,7 +14910,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    carrier_party: Optional[CarrierParty] = field(
+    carrier_party: CarrierParty | None = field(
         default=None,
         metadata={
             "name": "CarrierParty",
@@ -14982,7 +14918,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    freight_forwarder_party: Optional[FreightForwarderParty] = field(
+    freight_forwarder_party: FreightForwarderParty | None = field(
         default=None,
         metadata={
             "name": "FreightForwarderParty",
@@ -14990,7 +14926,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    notify_party: Optional[NotifyParty] = field(
+    notify_party: NotifyParty | None = field(
         default=None,
         metadata={
             "name": "NotifyParty",
@@ -14998,7 +14934,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    original_despatch_party: Optional[OriginalDespatchParty] = field(
+    original_despatch_party: OriginalDespatchParty | None = field(
         default=None,
         metadata={
             "name": "OriginalDespatchParty",
@@ -15006,7 +14942,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    final_delivery_party: Optional[FinalDeliveryParty] = field(
+    final_delivery_party: FinalDeliveryParty | None = field(
         default=None,
         metadata={
             "name": "FinalDeliveryParty",
@@ -15014,7 +14950,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    performing_carrier_party: Optional[PerformingCarrierParty] = field(
+    performing_carrier_party: PerformingCarrierParty | None = field(
         default=None,
         metadata={
             "name": "PerformingCarrierParty",
@@ -15022,7 +14958,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    substitute_carrier_party: Optional[SubstituteCarrierParty] = field(
+    substitute_carrier_party: SubstituteCarrierParty | None = field(
         default=None,
         metadata={
             "name": "SubstituteCarrierParty",
@@ -15030,7 +14966,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    logistics_operator_party: Optional[LogisticsOperatorParty] = field(
+    logistics_operator_party: LogisticsOperatorParty | None = field(
         default=None,
         metadata={
             "name": "LogisticsOperatorParty",
@@ -15038,7 +14974,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_advisor_party: Optional[TransportAdvisorParty] = field(
+    transport_advisor_party: TransportAdvisorParty | None = field(
         default=None,
         metadata={
             "name": "TransportAdvisorParty",
@@ -15046,9 +14982,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    hazardous_item_notification_party: Optional[
-        HazardousItemNotificationParty
-    ] = field(
+    hazardous_item_notification_party: HazardousItemNotificationParty | None = field(
         default=None,
         metadata={
             "name": "HazardousItemNotificationParty",
@@ -15056,7 +14990,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    insurance_party: Optional[InsuranceParty] = field(
+    insurance_party: InsuranceParty | None = field(
         default=None,
         metadata={
             "name": "InsuranceParty",
@@ -15064,7 +14998,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    mortgage_holder_party: Optional[MortgageHolderParty] = field(
+    mortgage_holder_party: MortgageHolderParty | None = field(
         default=None,
         metadata={
             "name": "MortgageHolderParty",
@@ -15072,7 +15006,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    bill_of_lading_holder_party: Optional[BillOfLadingHolderParty] = field(
+    bill_of_lading_holder_party: BillOfLadingHolderParty | None = field(
         default=None,
         metadata={
             "name": "BillOfLadingHolderParty",
@@ -15080,7 +15014,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    original_departure_country: Optional[OriginalDepartureCountry] = field(
+    original_departure_country: OriginalDepartureCountry | None = field(
         default=None,
         metadata={
             "name": "OriginalDepartureCountry",
@@ -15088,7 +15022,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    final_destination_country: Optional[FinalDestinationCountry] = field(
+    final_destination_country: FinalDestinationCountry | None = field(
         default=None,
         metadata={
             "name": "FinalDestinationCountry",
@@ -15104,7 +15038,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_contract: Optional["TransportContract"] = field(
+    transport_contract: TransportContract | None = field(
         default=None,
         metadata={
             "name": "TransportContract",
@@ -15112,7 +15046,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_event: tuple["TransportEvent", ...] = field(
+    transport_event: tuple[TransportEvent, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransportEvent",
@@ -15120,9 +15054,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    original_despatch_transportation_service: Optional[
-        "OriginalDespatchTransportationService"
-    ] = field(
+    original_despatch_transportation_service: OriginalDespatchTransportationService | None = field(
         default=None,
         metadata={
             "name": "OriginalDespatchTransportationService",
@@ -15130,9 +15062,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    final_delivery_transportation_service: Optional[
-        "FinalDeliveryTransportationService"
-    ] = field(
+    final_delivery_transportation_service: FinalDeliveryTransportationService | None = field(
         default=None,
         metadata={
             "name": "FinalDeliveryTransportationService",
@@ -15140,7 +15070,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery_terms: Optional[DeliveryTerms] = field(
+    delivery_terms: DeliveryTerms | None = field(
         default=None,
         metadata={
             "name": "DeliveryTerms",
@@ -15148,7 +15078,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_terms: Optional["PaymentTerms"] = field(
+    payment_terms: PaymentTerms | None = field(
         default=None,
         metadata={
             "name": "PaymentTerms",
@@ -15156,7 +15086,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    collect_payment_terms: Optional["CollectPaymentTerms"] = field(
+    collect_payment_terms: CollectPaymentTerms | None = field(
         default=None,
         metadata={
             "name": "CollectPaymentTerms",
@@ -15164,7 +15094,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    disbursement_payment_terms: Optional["DisbursementPaymentTerms"] = field(
+    disbursement_payment_terms: DisbursementPaymentTerms | None = field(
         default=None,
         metadata={
             "name": "DisbursementPaymentTerms",
@@ -15172,7 +15102,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    prepaid_payment_terms: Optional["PrepaidPaymentTerms"] = field(
+    prepaid_payment_terms: PrepaidPaymentTerms | None = field(
         default=None,
         metadata={
             "name": "PrepaidPaymentTerms",
@@ -15196,7 +15126,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    main_carriage_shipment_stage: tuple["MainCarriageShipmentStage", ...] = (
+    main_carriage_shipment_stage: tuple[MainCarriageShipmentStage, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -15206,7 +15136,7 @@ class ConsignmentType:
             },
         )
     )
-    pre_carriage_shipment_stage: tuple["PreCarriageShipmentStage", ...] = (
+    pre_carriage_shipment_stage: tuple[PreCarriageShipmentStage, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -15216,7 +15146,7 @@ class ConsignmentType:
             },
         )
     )
-    on_carriage_shipment_stage: tuple["OnCarriageShipmentStage", ...] = field(
+    on_carriage_shipment_stage: tuple[OnCarriageShipmentStage, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "OnCarriageShipmentStage",
@@ -15224,7 +15154,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_handling_unit: tuple["TransportHandlingUnit", ...] = field(
+    transport_handling_unit: tuple[TransportHandlingUnit, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransportHandlingUnit",
@@ -15232,7 +15162,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    first_arrival_port_location: Optional[FirstArrivalPortLocation] = field(
+    first_arrival_port_location: FirstArrivalPortLocation | None = field(
         default=None,
         metadata={
             "name": "FirstArrivalPortLocation",
@@ -15240,7 +15170,7 @@ class ConsignmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    last_exit_port_location: Optional[LastExitPortLocation] = field(
+    last_exit_port_location: LastExitPortLocation | None = field(
         default=None,
         metadata={
             "name": "LastExitPortLocation",
@@ -15252,7 +15182,7 @@ class ConsignmentType:
 
 @dataclass(frozen=True)
 class DeliveryType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -15260,7 +15190,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -15268,7 +15198,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_quantity: Optional[MinimumQuantity] = field(
+    minimum_quantity: MinimumQuantity | None = field(
         default=None,
         metadata={
             "name": "MinimumQuantity",
@@ -15276,7 +15206,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_quantity: Optional[MaximumQuantity] = field(
+    maximum_quantity: MaximumQuantity | None = field(
         default=None,
         metadata={
             "name": "MaximumQuantity",
@@ -15284,7 +15214,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    actual_delivery_date: Optional[ActualDeliveryDate] = field(
+    actual_delivery_date: ActualDeliveryDate | None = field(
         default=None,
         metadata={
             "name": "ActualDeliveryDate",
@@ -15292,7 +15222,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    actual_delivery_time: Optional[ActualDeliveryTime] = field(
+    actual_delivery_time: ActualDeliveryTime | None = field(
         default=None,
         metadata={
             "name": "ActualDeliveryTime",
@@ -15300,7 +15230,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    latest_delivery_date: Optional[LatestDeliveryDate] = field(
+    latest_delivery_date: LatestDeliveryDate | None = field(
         default=None,
         metadata={
             "name": "LatestDeliveryDate",
@@ -15308,7 +15238,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    latest_delivery_time: Optional[LatestDeliveryTime] = field(
+    latest_delivery_time: LatestDeliveryTime | None = field(
         default=None,
         metadata={
             "name": "LatestDeliveryTime",
@@ -15316,7 +15246,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    release_id: Optional[ReleaseId] = field(
+    release_id: ReleaseId | None = field(
         default=None,
         metadata={
             "name": "ReleaseID",
@@ -15324,7 +15254,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tracking_id: Optional[TrackingId] = field(
+    tracking_id: TrackingId | None = field(
         default=None,
         metadata={
             "name": "TrackingID",
@@ -15332,7 +15262,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    delivery_address: Optional[DeliveryAddress] = field(
+    delivery_address: DeliveryAddress | None = field(
         default=None,
         metadata={
             "name": "DeliveryAddress",
@@ -15340,7 +15270,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery_location: Optional[DeliveryLocation] = field(
+    delivery_location: DeliveryLocation | None = field(
         default=None,
         metadata={
             "name": "DeliveryLocation",
@@ -15348,7 +15278,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    alternative_delivery_location: Optional[AlternativeDeliveryLocation] = (
+    alternative_delivery_location: AlternativeDeliveryLocation | None = (
         field(
             default=None,
             metadata={
@@ -15358,7 +15288,7 @@ class DeliveryType:
             },
         )
     )
-    requested_delivery_period: Optional[RequestedDeliveryPeriod] = field(
+    requested_delivery_period: RequestedDeliveryPeriod | None = field(
         default=None,
         metadata={
             "name": "RequestedDeliveryPeriod",
@@ -15366,7 +15296,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    promised_delivery_period: Optional[PromisedDeliveryPeriod] = field(
+    promised_delivery_period: PromisedDeliveryPeriod | None = field(
         default=None,
         metadata={
             "name": "PromisedDeliveryPeriod",
@@ -15374,7 +15304,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    estimated_delivery_period: Optional[EstimatedDeliveryPeriod] = field(
+    estimated_delivery_period: EstimatedDeliveryPeriod | None = field(
         default=None,
         metadata={
             "name": "EstimatedDeliveryPeriod",
@@ -15382,7 +15312,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    carrier_party: Optional[CarrierParty] = field(
+    carrier_party: CarrierParty | None = field(
         default=None,
         metadata={
             "name": "CarrierParty",
@@ -15390,7 +15320,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery_party: Optional[DeliveryParty] = field(
+    delivery_party: DeliveryParty | None = field(
         default=None,
         metadata={
             "name": "DeliveryParty",
@@ -15406,7 +15336,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    despatch: Optional[Despatch] = field(
+    despatch: Despatch | None = field(
         default=None,
         metadata={
             "name": "Despatch",
@@ -15422,7 +15352,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    minimum_delivery_unit: Optional[MinimumDeliveryUnit] = field(
+    minimum_delivery_unit: MinimumDeliveryUnit | None = field(
         default=None,
         metadata={
             "name": "MinimumDeliveryUnit",
@@ -15430,7 +15360,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    maximum_delivery_unit: Optional[MaximumDeliveryUnit] = field(
+    maximum_delivery_unit: MaximumDeliveryUnit | None = field(
         default=None,
         metadata={
             "name": "MaximumDeliveryUnit",
@@ -15438,7 +15368,7 @@ class DeliveryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    shipment: Optional["Shipment"] = field(
+    shipment: Shipment | None = field(
         default=None,
         metadata={
             "name": "Shipment",
@@ -15450,7 +15380,7 @@ class DeliveryType:
 
 @dataclass(frozen=True)
 class MiscellaneousEventType:
-    miscellaneous_event_type_code: Optional[MiscellaneousEventTypeCode] = (
+    miscellaneous_event_type_code: MiscellaneousEventTypeCode | None = (
         field(
             default=None,
             metadata={
@@ -15474,7 +15404,7 @@ class MiscellaneousEventType:
 
 @dataclass(frozen=True)
 class PromotionalEventLineItemType:
-    amount: Optional[Amount] = field(
+    amount: Amount | None = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -15483,7 +15413,7 @@ class PromotionalEventLineItemType:
             "required": True,
         },
     )
-    event_line_item: Optional[EventLineItem] = field(
+    event_line_item: EventLineItem | None = field(
         default=None,
         metadata={
             "name": "EventLineItem",
@@ -15496,7 +15426,7 @@ class PromotionalEventLineItemType:
 
 @dataclass(frozen=True)
 class SalesItemType:
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -15529,7 +15459,7 @@ class SalesItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item: Optional[Item] = field(
+    item: Item | None = field(
         default=None,
         metadata={
             "name": "Item",
@@ -15542,7 +15472,7 @@ class SalesItemType:
 
 @dataclass(frozen=True)
 class TelecommunicationsServiceType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -15550,7 +15480,7 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    call_date: Optional[CallDate] = field(
+    call_date: CallDate | None = field(
         default=None,
         metadata={
             "name": "CallDate",
@@ -15559,7 +15489,7 @@ class TelecommunicationsServiceType:
             "required": True,
         },
     )
-    call_time: Optional[CallTime] = field(
+    call_time: CallTime | None = field(
         default=None,
         metadata={
             "name": "CallTime",
@@ -15568,7 +15498,7 @@ class TelecommunicationsServiceType:
             "required": True,
         },
     )
-    service_number_called: Optional[ServiceNumberCalled] = field(
+    service_number_called: ServiceNumberCalled | None = field(
         default=None,
         metadata={
             "name": "ServiceNumberCalled",
@@ -15577,9 +15507,7 @@ class TelecommunicationsServiceType:
             "required": True,
         },
     )
-    telecommunications_service_category: Optional[
-        TelecommunicationsServiceCategory
-    ] = field(
+    telecommunications_service_category: TelecommunicationsServiceCategory | None = field(
         default=None,
         metadata={
             "name": "TelecommunicationsServiceCategory",
@@ -15587,9 +15515,7 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    telecommunications_service_category_code: Optional[
-        TelecommunicationsServiceCategoryCode
-    ] = field(
+    telecommunications_service_category_code: TelecommunicationsServiceCategoryCode | None = field(
         default=None,
         metadata={
             "name": "TelecommunicationsServiceCategoryCode",
@@ -15597,7 +15523,7 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    movie_title: Optional[MovieTitle] = field(
+    movie_title: MovieTitle | None = field(
         default=None,
         metadata={
             "name": "MovieTitle",
@@ -15605,7 +15531,7 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    roaming_partner_name: Optional[RoamingPartnerName] = field(
+    roaming_partner_name: RoamingPartnerName | None = field(
         default=None,
         metadata={
             "name": "RoamingPartnerName",
@@ -15613,7 +15539,7 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pay_per_view: Optional[PayPerView] = field(
+    pay_per_view: PayPerView | None = field(
         default=None,
         metadata={
             "name": "PayPerView",
@@ -15621,7 +15547,7 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -15629,9 +15555,7 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    telecommunications_service_call: Optional[
-        TelecommunicationsServiceCall
-    ] = field(
+    telecommunications_service_call: TelecommunicationsServiceCall | None = field(
         default=None,
         metadata={
             "name": "TelecommunicationsServiceCall",
@@ -15639,9 +15563,7 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    telecommunications_service_call_code: Optional[
-        TelecommunicationsServiceCallCode
-    ] = field(
+    telecommunications_service_call_code: TelecommunicationsServiceCallCode | None = field(
         default=None,
         metadata={
             "name": "TelecommunicationsServiceCallCode",
@@ -15649,7 +15571,7 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    call_base_amount: Optional[CallBaseAmount] = field(
+    call_base_amount: CallBaseAmount | None = field(
         default=None,
         metadata={
             "name": "CallBaseAmount",
@@ -15657,7 +15579,7 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    call_extension_amount: Optional[CallExtensionAmount] = field(
+    call_extension_amount: CallExtensionAmount | None = field(
         default=None,
         metadata={
             "name": "CallExtensionAmount",
@@ -15665,7 +15587,7 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    price: Optional[Price] = field(
+    price: Price | None = field(
         default=None,
         metadata={
             "name": "Price",
@@ -15673,7 +15595,7 @@ class TelecommunicationsServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    country: Optional[Country] = field(
+    country: Country | None = field(
         default=None,
         metadata={
             "name": "Country",
@@ -15769,7 +15691,7 @@ class TransportExecutionTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    bonus_payment_terms: Optional[BonusPaymentTerms] = field(
+    bonus_payment_terms: BonusPaymentTerms | None = field(
         default=None,
         metadata={
             "name": "BonusPaymentTerms",
@@ -15777,7 +15699,7 @@ class TransportExecutionTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    commission_payment_terms: Optional[CommissionPaymentTerms] = field(
+    commission_payment_terms: CommissionPaymentTerms | None = field(
         default=None,
         metadata={
             "name": "CommissionPaymentTerms",
@@ -15785,7 +15707,7 @@ class TransportExecutionTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    penalty_payment_terms: Optional[PenaltyPaymentTerms] = field(
+    penalty_payment_terms: PenaltyPaymentTerms | None = field(
         default=None,
         metadata={
             "name": "PenaltyPaymentTerms",
@@ -15809,7 +15731,7 @@ class TransportExecutionTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    service_charge_payment_terms: Optional[ServiceChargePaymentTerms] = field(
+    service_charge_payment_terms: ServiceChargePaymentTerms | None = field(
         default=None,
         metadata={
             "name": "ServiceChargePaymentTerms",
@@ -15887,7 +15809,7 @@ class TransportExecutionTerms(TransportExecutionTermsType):
 
 @dataclass(frozen=True)
 class ActivityDataLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -15896,7 +15818,7 @@ class ActivityDataLineType:
             "required": True,
         },
     )
-    supply_chain_activity_type_code: Optional[SupplyChainActivityTypeCode] = (
+    supply_chain_activity_type_code: SupplyChainActivityTypeCode | None = (
         field(
             default=None,
             metadata={
@@ -15907,7 +15829,7 @@ class ActivityDataLineType:
             },
         )
     )
-    buyer_customer_party: Optional[BuyerCustomerParty] = field(
+    buyer_customer_party: BuyerCustomerParty | None = field(
         default=None,
         metadata={
             "name": "BuyerCustomerParty",
@@ -15915,7 +15837,7 @@ class ActivityDataLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_supplier_party: Optional[SellerSupplierParty] = field(
+    seller_supplier_party: SellerSupplierParty | None = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",
@@ -15923,7 +15845,7 @@ class ActivityDataLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    activity_period: Optional[ActivityPeriod] = field(
+    activity_period: ActivityPeriod | None = field(
         default=None,
         metadata={
             "name": "ActivityPeriod",
@@ -15931,7 +15853,7 @@ class ActivityDataLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    activity_origin_location: Optional[ActivityOriginLocation] = field(
+    activity_origin_location: ActivityOriginLocation | None = field(
         default=None,
         metadata={
             "name": "ActivityOriginLocation",
@@ -15940,7 +15862,7 @@ class ActivityDataLineType:
             "required": True,
         },
     )
-    activity_final_location: Optional[ActivityFinalLocation] = field(
+    activity_final_location: ActivityFinalLocation | None = field(
         default=None,
         metadata={
             "name": "ActivityFinalLocation",
@@ -15961,7 +15883,7 @@ class ActivityDataLineType:
 
 @dataclass(frozen=True)
 class ConsumptionLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -15970,9 +15892,7 @@ class ConsumptionLineType:
             "required": True,
         },
     )
-    parent_document_line_reference_id: Optional[
-        ParentDocumentLineReferenceId
-    ] = field(
+    parent_document_line_reference_id: ParentDocumentLineReferenceId | None = field(
         default=None,
         metadata={
             "name": "ParentDocumentLineReferenceID",
@@ -15980,7 +15900,7 @@ class ConsumptionLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    invoiced_quantity: Optional[InvoicedQuantity] = field(
+    invoiced_quantity: InvoicedQuantity | None = field(
         default=None,
         metadata={
             "name": "InvoicedQuantity",
@@ -15989,7 +15909,7 @@ class ConsumptionLineType:
             "required": True,
         },
     )
-    line_extension_amount: Optional[LineExtensionAmount] = field(
+    line_extension_amount: LineExtensionAmount | None = field(
         default=None,
         metadata={
             "name": "LineExtensionAmount",
@@ -15998,7 +15918,7 @@ class ConsumptionLineType:
             "required": True,
         },
     )
-    period: Optional[Period] = field(
+    period: Period | None = field(
         default=None,
         metadata={
             "name": "Period",
@@ -16030,7 +15950,7 @@ class ConsumptionLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    utility_item: Optional[UtilityItem] = field(
+    utility_item: UtilityItem | None = field(
         default=None,
         metadata={
             "name": "UtilityItem",
@@ -16039,7 +15959,7 @@ class ConsumptionLineType:
             "required": True,
         },
     )
-    price: Optional[Price] = field(
+    price: Price | None = field(
         default=None,
         metadata={
             "name": "Price",
@@ -16047,7 +15967,7 @@ class ConsumptionLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    unstructured_price: Optional[UnstructuredPrice] = field(
+    unstructured_price: UnstructuredPrice | None = field(
         default=None,
         metadata={
             "name": "UnstructuredPrice",
@@ -16059,7 +15979,7 @@ class ConsumptionLineType:
 
 @dataclass(frozen=True)
 class ForecastLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -16076,7 +15996,7 @@ class ForecastLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    frozen_document_indicator: Optional[FrozenDocumentIndicator] = field(
+    frozen_document_indicator: FrozenDocumentIndicator | None = field(
         default=None,
         metadata={
             "name": "FrozenDocumentIndicator",
@@ -16084,7 +16004,7 @@ class ForecastLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    forecast_type_code: Optional[ForecastTypeCode] = field(
+    forecast_type_code: ForecastTypeCode | None = field(
         default=None,
         metadata={
             "name": "ForecastTypeCode",
@@ -16093,7 +16013,7 @@ class ForecastLineType:
             "required": True,
         },
     )
-    forecast_period: Optional[ForecastPeriod] = field(
+    forecast_period: ForecastPeriod | None = field(
         default=None,
         metadata={
             "name": "ForecastPeriod",
@@ -16101,7 +16021,7 @@ class ForecastLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sales_item: Optional[SalesItem] = field(
+    sales_item: SalesItem | None = field(
         default=None,
         metadata={
             "name": "SalesItem",
@@ -16113,7 +16033,7 @@ class ForecastLineType:
 
 @dataclass(frozen=True)
 class ForecastRevisionLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -16138,7 +16058,7 @@ class ForecastRevisionLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    revised_forecast_line_id: Optional[RevisedForecastLineId] = field(
+    revised_forecast_line_id: RevisedForecastLineId | None = field(
         default=None,
         metadata={
             "name": "RevisedForecastLineID",
@@ -16147,7 +16067,7 @@ class ForecastRevisionLineType:
             "required": True,
         },
     )
-    source_forecast_issue_date: Optional[SourceForecastIssueDate] = field(
+    source_forecast_issue_date: SourceForecastIssueDate | None = field(
         default=None,
         metadata={
             "name": "SourceForecastIssueDate",
@@ -16156,7 +16076,7 @@ class ForecastRevisionLineType:
             "required": True,
         },
     )
-    source_forecast_issue_time: Optional[SourceForecastIssueTime] = field(
+    source_forecast_issue_time: SourceForecastIssueTime | None = field(
         default=None,
         metadata={
             "name": "SourceForecastIssueTime",
@@ -16165,7 +16085,7 @@ class ForecastRevisionLineType:
             "required": True,
         },
     )
-    adjustment_reason_code: Optional[AdjustmentReasonCode] = field(
+    adjustment_reason_code: AdjustmentReasonCode | None = field(
         default=None,
         metadata={
             "name": "AdjustmentReasonCode",
@@ -16173,7 +16093,7 @@ class ForecastRevisionLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    forecast_period: Optional[ForecastPeriod] = field(
+    forecast_period: ForecastPeriod | None = field(
         default=None,
         metadata={
             "name": "ForecastPeriod",
@@ -16181,7 +16101,7 @@ class ForecastRevisionLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sales_item: Optional[SalesItem] = field(
+    sales_item: SalesItem | None = field(
         default=None,
         metadata={
             "name": "SalesItem",
@@ -16193,7 +16113,7 @@ class ForecastRevisionLineType:
 
 @dataclass(frozen=True)
 class GoodsItemType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -16201,7 +16121,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    sequence_number_id: Optional[SequenceNumberId] = field(
+    sequence_number_id: SequenceNumberId | None = field(
         default=None,
         metadata={
             "name": "SequenceNumberID",
@@ -16217,7 +16137,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    hazardous_risk_indicator: Optional[HazardousRiskIndicator] = field(
+    hazardous_risk_indicator: HazardousRiskIndicator | None = field(
         default=None,
         metadata={
             "name": "HazardousRiskIndicator",
@@ -16225,7 +16145,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declared_customs_value_amount: Optional[DeclaredCustomsValueAmount] = (
+    declared_customs_value_amount: DeclaredCustomsValueAmount | None = (
         field(
             default=None,
             metadata={
@@ -16235,9 +16155,7 @@ class GoodsItemType:
             },
         )
     )
-    declared_for_carriage_value_amount: Optional[
-        DeclaredForCarriageValueAmount
-    ] = field(
+    declared_for_carriage_value_amount: DeclaredForCarriageValueAmount | None = field(
         default=None,
         metadata={
             "name": "DeclaredForCarriageValueAmount",
@@ -16245,9 +16163,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declared_statistics_value_amount: Optional[
-        DeclaredStatisticsValueAmount
-    ] = field(
+    declared_statistics_value_amount: DeclaredStatisticsValueAmount | None = field(
         default=None,
         metadata={
             "name": "DeclaredStatisticsValueAmount",
@@ -16255,7 +16171,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    free_on_board_value_amount: Optional[FreeOnBoardValueAmount] = field(
+    free_on_board_value_amount: FreeOnBoardValueAmount | None = field(
         default=None,
         metadata={
             "name": "FreeOnBoardValueAmount",
@@ -16263,7 +16179,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    insurance_value_amount: Optional[InsuranceValueAmount] = field(
+    insurance_value_amount: InsuranceValueAmount | None = field(
         default=None,
         metadata={
             "name": "InsuranceValueAmount",
@@ -16271,7 +16187,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    value_amount: Optional[ValueAmount] = field(
+    value_amount: ValueAmount | None = field(
         default=None,
         metadata={
             "name": "ValueAmount",
@@ -16279,7 +16195,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    gross_weight_measure: Optional[GrossWeightMeasure] = field(
+    gross_weight_measure: GrossWeightMeasure | None = field(
         default=None,
         metadata={
             "name": "GrossWeightMeasure",
@@ -16287,7 +16203,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    net_weight_measure: Optional[NetWeightMeasure] = field(
+    net_weight_measure: NetWeightMeasure | None = field(
         default=None,
         metadata={
             "name": "NetWeightMeasure",
@@ -16295,7 +16211,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    net_net_weight_measure: Optional[NetNetWeightMeasure] = field(
+    net_net_weight_measure: NetNetWeightMeasure | None = field(
         default=None,
         metadata={
             "name": "NetNetWeightMeasure",
@@ -16303,7 +16219,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    chargeable_weight_measure: Optional[ChargeableWeightMeasure] = field(
+    chargeable_weight_measure: ChargeableWeightMeasure | None = field(
         default=None,
         metadata={
             "name": "ChargeableWeightMeasure",
@@ -16311,7 +16227,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    gross_volume_measure: Optional[GrossVolumeMeasure] = field(
+    gross_volume_measure: GrossVolumeMeasure | None = field(
         default=None,
         metadata={
             "name": "GrossVolumeMeasure",
@@ -16319,7 +16235,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    net_volume_measure: Optional[NetVolumeMeasure] = field(
+    net_volume_measure: NetVolumeMeasure | None = field(
         default=None,
         metadata={
             "name": "NetVolumeMeasure",
@@ -16327,7 +16243,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -16335,7 +16251,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    preference_criterion_code: Optional[PreferenceCriterionCode] = field(
+    preference_criterion_code: PreferenceCriterionCode | None = field(
         default=None,
         metadata={
             "name": "PreferenceCriterionCode",
@@ -16343,7 +16259,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    required_customs_id: Optional[RequiredCustomsId] = field(
+    required_customs_id: RequiredCustomsId | None = field(
         default=None,
         metadata={
             "name": "RequiredCustomsID",
@@ -16351,7 +16267,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customs_status_code: Optional[CustomsStatusCode] = field(
+    customs_status_code: CustomsStatusCode | None = field(
         default=None,
         metadata={
             "name": "CustomsStatusCode",
@@ -16359,7 +16275,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customs_tariff_quantity: Optional[CustomsTariffQuantity] = field(
+    customs_tariff_quantity: CustomsTariffQuantity | None = field(
         default=None,
         metadata={
             "name": "CustomsTariffQuantity",
@@ -16367,9 +16283,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customs_import_classified_indicator: Optional[
-        CustomsImportClassifiedIndicator
-    ] = field(
+    customs_import_classified_indicator: CustomsImportClassifiedIndicator | None = field(
         default=None,
         metadata={
             "name": "CustomsImportClassifiedIndicator",
@@ -16377,7 +16291,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    chargeable_quantity: Optional[ChargeableQuantity] = field(
+    chargeable_quantity: ChargeableQuantity | None = field(
         default=None,
         metadata={
             "name": "ChargeableQuantity",
@@ -16385,7 +16299,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    returnable_quantity: Optional[ReturnableQuantity] = field(
+    returnable_quantity: ReturnableQuantity | None = field(
         default=None,
         metadata={
             "name": "ReturnableQuantity",
@@ -16393,7 +16307,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    trace_id: Optional[TraceId] = field(
+    trace_id: TraceId | None = field(
         default=None,
         metadata={
             "name": "TraceID",
@@ -16409,7 +16323,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    goods_item_container: tuple["GoodsItemContainer", ...] = field(
+    goods_item_container: tuple[GoodsItemContainer, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "GoodsItemContainer",
@@ -16425,7 +16339,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    invoice_line: tuple["InvoiceLine", ...] = field(
+    invoice_line: tuple[InvoiceLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "InvoiceLine",
@@ -16441,7 +16355,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contained_goods_item: tuple["ContainedGoodsItem", ...] = field(
+    contained_goods_item: tuple[ContainedGoodsItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ContainedGoodsItem",
@@ -16449,7 +16363,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    origin_address: Optional[OriginAddress] = field(
+    origin_address: OriginAddress | None = field(
         default=None,
         metadata={
             "name": "OriginAddress",
@@ -16457,7 +16371,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery: Optional[Delivery] = field(
+    delivery: Delivery | None = field(
         default=None,
         metadata={
             "name": "Delivery",
@@ -16465,7 +16379,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    pickup: Optional[Pickup] = field(
+    pickup: Pickup | None = field(
         default=None,
         metadata={
             "name": "Pickup",
@@ -16473,7 +16387,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    despatch: Optional[Despatch] = field(
+    despatch: Despatch | None = field(
         default=None,
         metadata={
             "name": "Despatch",
@@ -16489,7 +16403,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    containing_package: tuple["ContainingPackage", ...] = field(
+    containing_package: tuple[ContainingPackage, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ContainingPackage",
@@ -16497,7 +16411,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    shipment_document_reference: Optional[ShipmentDocumentReference] = field(
+    shipment_document_reference: ShipmentDocumentReference | None = field(
         default=None,
         metadata={
             "name": "ShipmentDocumentReference",
@@ -16505,7 +16419,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    minimum_temperature: Optional[MinimumTemperature] = field(
+    minimum_temperature: MinimumTemperature | None = field(
         default=None,
         metadata={
             "name": "MinimumTemperature",
@@ -16513,7 +16427,7 @@ class GoodsItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    maximum_temperature: Optional[MaximumTemperature] = field(
+    maximum_temperature: MaximumTemperature | None = field(
         default=None,
         metadata={
             "name": "MaximumTemperature",
@@ -16525,7 +16439,7 @@ class GoodsItemType:
 
 @dataclass(frozen=True)
 class ItemInformationRequestLineType:
-    time_frequency_code: Optional[TimeFrequencyCode] = field(
+    time_frequency_code: TimeFrequencyCode | None = field(
         default=None,
         metadata={
             "name": "TimeFrequencyCode",
@@ -16533,7 +16447,7 @@ class ItemInformationRequestLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    supply_chain_activity_type_code: Optional[SupplyChainActivityTypeCode] = (
+    supply_chain_activity_type_code: SupplyChainActivityTypeCode | None = (
         field(
             default=None,
             metadata={
@@ -16543,7 +16457,7 @@ class ItemInformationRequestLineType:
             },
         )
     )
-    forecast_type_code: Optional[ForecastTypeCode] = field(
+    forecast_type_code: ForecastTypeCode | None = field(
         default=None,
         metadata={
             "name": "ForecastTypeCode",
@@ -16551,7 +16465,7 @@ class ItemInformationRequestLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    performance_metric_type_code: Optional[PerformanceMetricTypeCode] = field(
+    performance_metric_type_code: PerformanceMetricTypeCode | None = field(
         default=None,
         metadata={
             "name": "PerformanceMetricTypeCode",
@@ -16581,7 +16495,7 @@ class ItemInformationRequestLineType:
 
 @dataclass(frozen=True)
 class PromotionalSpecificationType:
-    specification_id: Optional[SpecificationId] = field(
+    specification_id: SpecificationId | None = field(
         default=None,
         metadata={
             "name": "SpecificationID",
@@ -16610,7 +16524,7 @@ class PromotionalSpecificationType:
 
 @dataclass(frozen=True)
 class ReminderLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -16627,7 +16541,7 @@ class ReminderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -16635,9 +16549,7 @@ class ReminderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    balance_brought_forward_indicator: Optional[
-        BalanceBroughtForwardIndicator
-    ] = field(
+    balance_brought_forward_indicator: BalanceBroughtForwardIndicator | None = field(
         default=None,
         metadata={
             "name": "BalanceBroughtForwardIndicator",
@@ -16645,7 +16557,7 @@ class ReminderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    debit_line_amount: Optional[DebitLineAmount] = field(
+    debit_line_amount: DebitLineAmount | None = field(
         default=None,
         metadata={
             "name": "DebitLineAmount",
@@ -16653,7 +16565,7 @@ class ReminderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    credit_line_amount: Optional[CreditLineAmount] = field(
+    credit_line_amount: CreditLineAmount | None = field(
         default=None,
         metadata={
             "name": "CreditLineAmount",
@@ -16661,7 +16573,7 @@ class ReminderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost_code: Optional[AccountingCostCode] = field(
+    accounting_cost_code: AccountingCostCode | None = field(
         default=None,
         metadata={
             "name": "AccountingCostCode",
@@ -16669,7 +16581,7 @@ class ReminderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost: Optional[AccountingCost] = field(
+    accounting_cost: AccountingCost | None = field(
         default=None,
         metadata={
             "name": "AccountingCost",
@@ -16677,7 +16589,7 @@ class ReminderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    penalty_surcharge_percent: Optional[PenaltySurchargePercent] = field(
+    penalty_surcharge_percent: PenaltySurchargePercent | None = field(
         default=None,
         metadata={
             "name": "PenaltySurchargePercent",
@@ -16685,7 +16597,7 @@ class ReminderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    amount: Optional[Amount] = field(
+    amount: Amount | None = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -16693,7 +16605,7 @@ class ReminderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_purpose_code: Optional[PaymentPurposeCode] = field(
+    payment_purpose_code: PaymentPurposeCode | None = field(
         default=None,
         metadata={
             "name": "PaymentPurposeCode",
@@ -16717,7 +16629,7 @@ class ReminderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    exchange_rate: Optional[ExchangeRate] = field(
+    exchange_rate: ExchangeRate | None = field(
         default=None,
         metadata={
             "name": "ExchangeRate",
@@ -16729,7 +16641,7 @@ class ReminderLineType:
 
 @dataclass(frozen=True)
 class RemittanceAdviceLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -16746,7 +16658,7 @@ class RemittanceAdviceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -16754,7 +16666,7 @@ class RemittanceAdviceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    debit_line_amount: Optional[DebitLineAmount] = field(
+    debit_line_amount: DebitLineAmount | None = field(
         default=None,
         metadata={
             "name": "DebitLineAmount",
@@ -16762,7 +16674,7 @@ class RemittanceAdviceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    credit_line_amount: Optional[CreditLineAmount] = field(
+    credit_line_amount: CreditLineAmount | None = field(
         default=None,
         metadata={
             "name": "CreditLineAmount",
@@ -16770,7 +16682,7 @@ class RemittanceAdviceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    balance_amount: Optional[BalanceAmount] = field(
+    balance_amount: BalanceAmount | None = field(
         default=None,
         metadata={
             "name": "BalanceAmount",
@@ -16778,7 +16690,7 @@ class RemittanceAdviceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_purpose_code: Optional[PaymentPurposeCode] = field(
+    payment_purpose_code: PaymentPurposeCode | None = field(
         default=None,
         metadata={
             "name": "PaymentPurposeCode",
@@ -16786,7 +16698,7 @@ class RemittanceAdviceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    invoicing_party_reference: Optional[InvoicingPartyReference] = field(
+    invoicing_party_reference: InvoicingPartyReference | None = field(
         default=None,
         metadata={
             "name": "InvoicingPartyReference",
@@ -16794,7 +16706,7 @@ class RemittanceAdviceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_supplier_party: Optional[AccountingSupplierParty] = field(
+    accounting_supplier_party: AccountingSupplierParty | None = field(
         default=None,
         metadata={
             "name": "AccountingSupplierParty",
@@ -16802,7 +16714,7 @@ class RemittanceAdviceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    accounting_customer_party: Optional[AccountingCustomerParty] = field(
+    accounting_customer_party: AccountingCustomerParty | None = field(
         default=None,
         metadata={
             "name": "AccountingCustomerParty",
@@ -16810,7 +16722,7 @@ class RemittanceAdviceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    buyer_customer_party: Optional[BuyerCustomerParty] = field(
+    buyer_customer_party: BuyerCustomerParty | None = field(
         default=None,
         metadata={
             "name": "BuyerCustomerParty",
@@ -16818,7 +16730,7 @@ class RemittanceAdviceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_supplier_party: Optional[SellerSupplierParty] = field(
+    seller_supplier_party: SellerSupplierParty | None = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",
@@ -16826,7 +16738,7 @@ class RemittanceAdviceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    originator_customer_party: Optional[OriginatorCustomerParty] = field(
+    originator_customer_party: OriginatorCustomerParty | None = field(
         default=None,
         metadata={
             "name": "OriginatorCustomerParty",
@@ -16834,7 +16746,7 @@ class RemittanceAdviceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payee_party: Optional[PayeeParty] = field(
+    payee_party: PayeeParty | None = field(
         default=None,
         metadata={
             "name": "PayeeParty",
@@ -16866,7 +16778,7 @@ class RemittanceAdviceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    exchange_rate: Optional[ExchangeRate] = field(
+    exchange_rate: ExchangeRate | None = field(
         default=None,
         metadata={
             "name": "ExchangeRate",
@@ -16878,7 +16790,7 @@ class RemittanceAdviceLineType:
 
 @dataclass(frozen=True)
 class StatementLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -16895,7 +16807,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -16903,9 +16815,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    balance_brought_forward_indicator: Optional[
-        BalanceBroughtForwardIndicator
-    ] = field(
+    balance_brought_forward_indicator: BalanceBroughtForwardIndicator | None = field(
         default=None,
         metadata={
             "name": "BalanceBroughtForwardIndicator",
@@ -16913,7 +16823,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    debit_line_amount: Optional[DebitLineAmount] = field(
+    debit_line_amount: DebitLineAmount | None = field(
         default=None,
         metadata={
             "name": "DebitLineAmount",
@@ -16921,7 +16831,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    credit_line_amount: Optional[CreditLineAmount] = field(
+    credit_line_amount: CreditLineAmount | None = field(
         default=None,
         metadata={
             "name": "CreditLineAmount",
@@ -16929,7 +16839,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    balance_amount: Optional[BalanceAmount] = field(
+    balance_amount: BalanceAmount | None = field(
         default=None,
         metadata={
             "name": "BalanceAmount",
@@ -16937,7 +16847,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_purpose_code: Optional[PaymentPurposeCode] = field(
+    payment_purpose_code: PaymentPurposeCode | None = field(
         default=None,
         metadata={
             "name": "PaymentPurposeCode",
@@ -16945,7 +16855,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_means: Optional[PaymentMeans] = field(
+    payment_means: PaymentMeans | None = field(
         default=None,
         metadata={
             "name": "PaymentMeans",
@@ -16961,7 +16871,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    buyer_customer_party: Optional[BuyerCustomerParty] = field(
+    buyer_customer_party: BuyerCustomerParty | None = field(
         default=None,
         metadata={
             "name": "BuyerCustomerParty",
@@ -16969,7 +16879,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_supplier_party: Optional[SellerSupplierParty] = field(
+    seller_supplier_party: SellerSupplierParty | None = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",
@@ -16977,7 +16887,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    originator_customer_party: Optional[OriginatorCustomerParty] = field(
+    originator_customer_party: OriginatorCustomerParty | None = field(
         default=None,
         metadata={
             "name": "OriginatorCustomerParty",
@@ -16985,7 +16895,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    accounting_customer_party: Optional[AccountingCustomerParty] = field(
+    accounting_customer_party: AccountingCustomerParty | None = field(
         default=None,
         metadata={
             "name": "AccountingCustomerParty",
@@ -16993,7 +16903,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    accounting_supplier_party: Optional[AccountingSupplierParty] = field(
+    accounting_supplier_party: AccountingSupplierParty | None = field(
         default=None,
         metadata={
             "name": "AccountingSupplierParty",
@@ -17001,7 +16911,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payee_party: Optional[PayeeParty] = field(
+    payee_party: PayeeParty | None = field(
         default=None,
         metadata={
             "name": "PayeeParty",
@@ -17033,7 +16943,7 @@ class StatementLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    exchange_rate: Optional[ExchangeRate] = field(
+    exchange_rate: ExchangeRate | None = field(
         default=None,
         metadata={
             "name": "ExchangeRate",
@@ -17061,7 +16971,7 @@ class StatementLineType:
 
 @dataclass(frozen=True)
 class TelecommunicationsSupplyLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -17070,7 +16980,7 @@ class TelecommunicationsSupplyLineType:
             "required": True,
         },
     )
-    phone_number: Optional[PhoneNumber] = field(
+    phone_number: PhoneNumber | None = field(
         default=None,
         metadata={
             "name": "PhoneNumber",
@@ -17087,7 +16997,7 @@ class TelecommunicationsSupplyLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_extension_amount: Optional[LineExtensionAmount] = field(
+    line_extension_amount: LineExtensionAmount | None = field(
         default=None,
         metadata={
             "name": "LineExtensionAmount",
@@ -17216,7 +17126,7 @@ class TelecommunicationsSupplyLine(TelecommunicationsSupplyLineType):
 
 @dataclass(frozen=True)
 class PackageType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -17224,7 +17134,7 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -17232,7 +17142,7 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    returnable_material_indicator: Optional[ReturnableMaterialIndicator] = (
+    returnable_material_indicator: ReturnableMaterialIndicator | None = (
         field(
             default=None,
             metadata={
@@ -17242,7 +17152,7 @@ class PackageType:
             },
         )
     )
-    package_level_code: Optional[PackageLevelCode] = field(
+    package_level_code: PackageLevelCode | None = field(
         default=None,
         metadata={
             "name": "PackageLevelCode",
@@ -17250,7 +17160,7 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    packaging_type_code: Optional[PackagingTypeCode] = field(
+    packaging_type_code: PackagingTypeCode | None = field(
         default=None,
         metadata={
             "name": "PackagingTypeCode",
@@ -17266,7 +17176,7 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    trace_id: Optional[TraceId] = field(
+    trace_id: TraceId | None = field(
         default=None,
         metadata={
             "name": "TraceID",
@@ -17274,7 +17184,7 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contained_package: tuple["ContainedPackage", ...] = field(
+    contained_package: tuple[ContainedPackage, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ContainedPackage",
@@ -17282,9 +17192,7 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    containing_transport_equipment: Optional[
-        "ContainingTransportEquipment"
-    ] = field(
+    containing_transport_equipment: ContainingTransportEquipment | None = field(
         default=None,
         metadata={
             "name": "ContainingTransportEquipment",
@@ -17316,7 +17224,7 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery: Optional[Delivery] = field(
+    delivery: Delivery | None = field(
         default=None,
         metadata={
             "name": "Delivery",
@@ -17324,7 +17232,7 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    pickup: Optional[Pickup] = field(
+    pickup: Pickup | None = field(
         default=None,
         metadata={
             "name": "Pickup",
@@ -17332,7 +17240,7 @@ class PackageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    despatch: Optional[Despatch] = field(
+    despatch: Despatch | None = field(
         default=None,
         metadata={
             "name": "Despatch",
@@ -17344,7 +17252,7 @@ class PackageType:
 
 @dataclass(frozen=True)
 class PromotionalEventType:
-    promotional_event_type_code: Optional[PromotionalEventTypeCode] = field(
+    promotional_event_type_code: PromotionalEventTypeCode | None = field(
         default=None,
         metadata={
             "name": "PromotionalEventTypeCode",
@@ -17353,7 +17261,7 @@ class PromotionalEventType:
             "required": True,
         },
     )
-    submission_date: Optional[SubmissionDate] = field(
+    submission_date: SubmissionDate | None = field(
         default=None,
         metadata={
             "name": "SubmissionDate",
@@ -17361,9 +17269,7 @@ class PromotionalEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    first_shipment_availibility_date: Optional[
-        FirstShipmentAvailibilityDate
-    ] = field(
+    first_shipment_availibility_date: FirstShipmentAvailibilityDate | None = field(
         default=None,
         metadata={
             "name": "FirstShipmentAvailibilityDate",
@@ -17371,7 +17277,7 @@ class PromotionalEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    latest_proposal_acceptance_date: Optional[LatestProposalAcceptanceDate] = (
+    latest_proposal_acceptance_date: LatestProposalAcceptanceDate | None = (
         field(
             default=None,
             metadata={
@@ -17394,7 +17300,7 @@ class PromotionalEventType:
 
 @dataclass(frozen=True)
 class ShipmentType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -17403,7 +17309,7 @@ class ShipmentType:
             "required": True,
         },
     )
-    shipping_priority_level_code: Optional[ShippingPriorityLevelCode] = field(
+    shipping_priority_level_code: ShippingPriorityLevelCode | None = field(
         default=None,
         metadata={
             "name": "ShippingPriorityLevelCode",
@@ -17411,7 +17317,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    handling_code: Optional[HandlingCode] = field(
+    handling_code: HandlingCode | None = field(
         default=None,
         metadata={
             "name": "HandlingCode",
@@ -17435,7 +17341,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    gross_weight_measure: Optional[GrossWeightMeasure] = field(
+    gross_weight_measure: GrossWeightMeasure | None = field(
         default=None,
         metadata={
             "name": "GrossWeightMeasure",
@@ -17443,7 +17349,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    net_weight_measure: Optional[NetWeightMeasure] = field(
+    net_weight_measure: NetWeightMeasure | None = field(
         default=None,
         metadata={
             "name": "NetWeightMeasure",
@@ -17451,7 +17357,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    net_net_weight_measure: Optional[NetNetWeightMeasure] = field(
+    net_net_weight_measure: NetNetWeightMeasure | None = field(
         default=None,
         metadata={
             "name": "NetNetWeightMeasure",
@@ -17459,7 +17365,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    gross_volume_measure: Optional[GrossVolumeMeasure] = field(
+    gross_volume_measure: GrossVolumeMeasure | None = field(
         default=None,
         metadata={
             "name": "GrossVolumeMeasure",
@@ -17467,7 +17373,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    net_volume_measure: Optional[NetVolumeMeasure] = field(
+    net_volume_measure: NetVolumeMeasure | None = field(
         default=None,
         metadata={
             "name": "NetVolumeMeasure",
@@ -17475,7 +17381,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_goods_item_quantity: Optional[TotalGoodsItemQuantity] = field(
+    total_goods_item_quantity: TotalGoodsItemQuantity | None = field(
         default=None,
         metadata={
             "name": "TotalGoodsItemQuantity",
@@ -17483,9 +17389,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_transport_handling_unit_quantity: Optional[
-        TotalTransportHandlingUnitQuantity
-    ] = field(
+    total_transport_handling_unit_quantity: TotalTransportHandlingUnitQuantity | None = field(
         default=None,
         metadata={
             "name": "TotalTransportHandlingUnitQuantity",
@@ -17493,7 +17397,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    insurance_value_amount: Optional[InsuranceValueAmount] = field(
+    insurance_value_amount: InsuranceValueAmount | None = field(
         default=None,
         metadata={
             "name": "InsuranceValueAmount",
@@ -17501,7 +17405,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declared_customs_value_amount: Optional[DeclaredCustomsValueAmount] = (
+    declared_customs_value_amount: DeclaredCustomsValueAmount | None = (
         field(
             default=None,
             metadata={
@@ -17511,9 +17415,7 @@ class ShipmentType:
             },
         )
     )
-    declared_for_carriage_value_amount: Optional[
-        DeclaredForCarriageValueAmount
-    ] = field(
+    declared_for_carriage_value_amount: DeclaredForCarriageValueAmount | None = field(
         default=None,
         metadata={
             "name": "DeclaredForCarriageValueAmount",
@@ -17521,9 +17423,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    declared_statistics_value_amount: Optional[
-        DeclaredStatisticsValueAmount
-    ] = field(
+    declared_statistics_value_amount: DeclaredStatisticsValueAmount | None = field(
         default=None,
         metadata={
             "name": "DeclaredStatisticsValueAmount",
@@ -17531,7 +17431,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    free_on_board_value_amount: Optional[FreeOnBoardValueAmount] = field(
+    free_on_board_value_amount: FreeOnBoardValueAmount | None = field(
         default=None,
         metadata={
             "name": "FreeOnBoardValueAmount",
@@ -17555,7 +17455,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    split_consignment_indicator: Optional[SplitConsignmentIndicator] = field(
+    split_consignment_indicator: SplitConsignmentIndicator | None = field(
         default=None,
         metadata={
             "name": "SplitConsignmentIndicator",
@@ -17563,7 +17463,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    consignment_quantity: Optional[ConsignmentQuantity] = field(
+    consignment_quantity: ConsignmentQuantity | None = field(
         default=None,
         metadata={
             "name": "ConsignmentQuantity",
@@ -17587,7 +17487,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    shipment_stage: tuple["ShipmentStage", ...] = field(
+    shipment_stage: tuple[ShipmentStage, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ShipmentStage",
@@ -17595,7 +17495,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery: Optional[Delivery] = field(
+    delivery: Delivery | None = field(
         default=None,
         metadata={
             "name": "Delivery",
@@ -17603,7 +17503,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_handling_unit: tuple["TransportHandlingUnit", ...] = field(
+    transport_handling_unit: tuple[TransportHandlingUnit, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "TransportHandlingUnit",
@@ -17611,7 +17511,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    return_address: Optional[ReturnAddress] = field(
+    return_address: ReturnAddress | None = field(
         default=None,
         metadata={
             "name": "ReturnAddress",
@@ -17619,7 +17519,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    origin_address: Optional[OriginAddress] = field(
+    origin_address: OriginAddress | None = field(
         default=None,
         metadata={
             "name": "OriginAddress",
@@ -17627,7 +17527,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    first_arrival_port_location: Optional[FirstArrivalPortLocation] = field(
+    first_arrival_port_location: FirstArrivalPortLocation | None = field(
         default=None,
         metadata={
             "name": "FirstArrivalPortLocation",
@@ -17635,7 +17535,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    last_exit_port_location: Optional[LastExitPortLocation] = field(
+    last_exit_port_location: LastExitPortLocation | None = field(
         default=None,
         metadata={
             "name": "LastExitPortLocation",
@@ -17643,7 +17543,7 @@ class ShipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    export_country: Optional[ExportCountry] = field(
+    export_country: ExportCountry | None = field(
         default=None,
         metadata={
             "name": "ExportCountry",
@@ -17663,9 +17563,7 @@ class ShipmentType:
 
 @dataclass(frozen=True)
 class TelecommunicationsSupplyType:
-    telecommunications_supply_type: Optional[
-        UblCommonBasicComponents21TelecommunicationsSupplyType
-    ] = field(
+    telecommunications_supply_type: UblCommonBasicComponents21TelecommunicationsSupplyType | None = field(
         default=None,
         metadata={
             "name": "TelecommunicationsSupplyType",
@@ -17673,9 +17571,7 @@ class TelecommunicationsSupplyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    telecommunications_supply_type_code: Optional[
-        TelecommunicationsSupplyTypeCode
-    ] = field(
+    telecommunications_supply_type_code: TelecommunicationsSupplyTypeCode | None = field(
         default=None,
         metadata={
             "name": "TelecommunicationsSupplyTypeCode",
@@ -17683,7 +17579,7 @@ class TelecommunicationsSupplyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    privacy_code: Optional[PrivacyCode] = field(
+    privacy_code: PrivacyCode | None = field(
         default=None,
         metadata={
             "name": "PrivacyCode",
@@ -17700,7 +17596,7 @@ class TelecommunicationsSupplyType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_amount: Optional[TotalAmount] = field(
+    total_amount: TotalAmount | None = field(
         default=None,
         metadata={
             "name": "TotalAmount",
@@ -17789,7 +17685,7 @@ class TelecommunicationsSupply(TelecommunicationsSupplyType):
 
 @dataclass(frozen=True)
 class CertificateOfOriginApplicationType:
-    reference_id: Optional[ReferenceId] = field(
+    reference_id: ReferenceId | None = field(
         default=None,
         metadata={
             "name": "ReferenceID",
@@ -17798,7 +17694,7 @@ class CertificateOfOriginApplicationType:
             "required": True,
         },
     )
-    certificate_type: Optional[UblCommonBasicComponents21CertificateType] = (
+    certificate_type: UblCommonBasicComponents21CertificateType | None = (
         field(
             default=None,
             metadata={
@@ -17809,7 +17705,7 @@ class CertificateOfOriginApplicationType:
             },
         )
     )
-    application_status_code: Optional[ApplicationStatusCode] = field(
+    application_status_code: ApplicationStatusCode | None = field(
         default=None,
         metadata={
             "name": "ApplicationStatusCode",
@@ -17817,7 +17713,7 @@ class CertificateOfOriginApplicationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    original_job_id: Optional[OriginalJobId] = field(
+    original_job_id: OriginalJobId | None = field(
         default=None,
         metadata={
             "name": "OriginalJobID",
@@ -17826,7 +17722,7 @@ class CertificateOfOriginApplicationType:
             "required": True,
         },
     )
-    previous_job_id: Optional[PreviousJobId] = field(
+    previous_job_id: PreviousJobId | None = field(
         default=None,
         metadata={
             "name": "PreviousJobID",
@@ -17842,7 +17738,7 @@ class CertificateOfOriginApplicationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    shipment: Optional[Shipment] = field(
+    shipment: Shipment | None = field(
         default=None,
         metadata={
             "name": "Shipment",
@@ -17860,7 +17756,7 @@ class CertificateOfOriginApplicationType:
             "min_occurs": 1,
         },
     )
-    preparation_party: Optional[PreparationParty] = field(
+    preparation_party: PreparationParty | None = field(
         default=None,
         metadata={
             "name": "PreparationParty",
@@ -17869,7 +17765,7 @@ class CertificateOfOriginApplicationType:
             "required": True,
         },
     )
-    issuer_party: Optional[IssuerParty] = field(
+    issuer_party: IssuerParty | None = field(
         default=None,
         metadata={
             "name": "IssuerParty",
@@ -17878,7 +17774,7 @@ class CertificateOfOriginApplicationType:
             "required": True,
         },
     )
-    exporter_party: Optional[ExporterParty] = field(
+    exporter_party: ExporterParty | None = field(
         default=None,
         metadata={
             "name": "ExporterParty",
@@ -17886,7 +17782,7 @@ class CertificateOfOriginApplicationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    importer_party: Optional[ImporterParty] = field(
+    importer_party: ImporterParty | None = field(
         default=None,
         metadata={
             "name": "ImporterParty",
@@ -17894,7 +17790,7 @@ class CertificateOfOriginApplicationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    issuing_country: Optional[IssuingCountry] = field(
+    issuing_country: IssuingCountry | None = field(
         default=None,
         metadata={
             "name": "IssuingCountry",
@@ -17933,7 +17829,7 @@ class CertificateOfOriginApplicationType:
 
 @dataclass(frozen=True)
 class ConsumptionType:
-    utility_statement_type_code: Optional[UtilityStatementTypeCode] = field(
+    utility_statement_type_code: UtilityStatementTypeCode | None = field(
         default=None,
         metadata={
             "name": "UtilityStatementTypeCode",
@@ -17941,7 +17837,7 @@ class ConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    main_period: Optional[MainPeriod] = field(
+    main_period: MainPeriod | None = field(
         default=None,
         metadata={
             "name": "MainPeriod",
@@ -17965,7 +17861,7 @@ class ConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    energy_water_supply: Optional[EnergyWaterSupply] = field(
+    energy_water_supply: EnergyWaterSupply | None = field(
         default=None,
         metadata={
             "name": "EnergyWaterSupply",
@@ -17973,7 +17869,7 @@ class ConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    telecommunications_supply: Optional[TelecommunicationsSupply] = field(
+    telecommunications_supply: TelecommunicationsSupply | None = field(
         default=None,
         metadata={
             "name": "TelecommunicationsSupply",
@@ -17981,7 +17877,7 @@ class ConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    legal_monetary_total: Optional[LegalMonetaryTotal] = field(
+    legal_monetary_total: LegalMonetaryTotal | None = field(
         default=None,
         metadata={
             "name": "LegalMonetaryTotal",
@@ -17994,7 +17890,7 @@ class ConsumptionType:
 
 @dataclass(frozen=True)
 class ItemLocationQuantityType:
-    lead_time_measure: Optional[LeadTimeMeasure] = field(
+    lead_time_measure: LeadTimeMeasure | None = field(
         default=None,
         metadata={
             "name": "LeadTimeMeasure",
@@ -18002,7 +17898,7 @@ class ItemLocationQuantityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_quantity: Optional[MinimumQuantity] = field(
+    minimum_quantity: MinimumQuantity | None = field(
         default=None,
         metadata={
             "name": "MinimumQuantity",
@@ -18010,7 +17906,7 @@ class ItemLocationQuantityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_quantity: Optional[MaximumQuantity] = field(
+    maximum_quantity: MaximumQuantity | None = field(
         default=None,
         metadata={
             "name": "MaximumQuantity",
@@ -18018,7 +17914,7 @@ class ItemLocationQuantityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    hazardous_risk_indicator: Optional[HazardousRiskIndicator] = field(
+    hazardous_risk_indicator: HazardousRiskIndicator | None = field(
         default=None,
         metadata={
             "name": "HazardousRiskIndicator",
@@ -18044,7 +17940,7 @@ class ItemLocationQuantityType:
             },
         )
     )
-    price: Optional[Price] = field(
+    price: Price | None = field(
         default=None,
         metadata={
             "name": "Price",
@@ -18068,7 +17964,7 @@ class ItemLocationQuantityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    package: Optional[Package] = field(
+    package: Package | None = field(
         default=None,
         metadata={
             "name": "Package",
@@ -18084,7 +17980,7 @@ class ItemLocationQuantityType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    dependent_price_reference: Optional[DependentPriceReference] = field(
+    dependent_price_reference: DependentPriceReference | None = field(
         default=None,
         metadata={
             "name": "DependentPriceReference",
@@ -18096,7 +17992,7 @@ class ItemLocationQuantityType:
 
 @dataclass(frozen=True)
 class OrderedShipmentType:
-    shipment: Optional[Shipment] = field(
+    shipment: Shipment | None = field(
         default=None,
         metadata={
             "name": "Shipment",
@@ -18117,7 +18013,7 @@ class OrderedShipmentType:
 
 @dataclass(frozen=True)
 class TransportEventType:
-    identification_id: Optional[IdentificationId] = field(
+    identification_id: IdentificationId | None = field(
         default=None,
         metadata={
             "name": "IdentificationID",
@@ -18125,7 +18021,7 @@ class TransportEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    occurrence_date: Optional[OccurrenceDate] = field(
+    occurrence_date: OccurrenceDate | None = field(
         default=None,
         metadata={
             "name": "OccurrenceDate",
@@ -18133,7 +18029,7 @@ class TransportEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    occurrence_time: Optional[OccurrenceTime] = field(
+    occurrence_time: OccurrenceTime | None = field(
         default=None,
         metadata={
             "name": "OccurrenceTime",
@@ -18141,7 +18037,7 @@ class TransportEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transport_event_type_code: Optional[TransportEventTypeCode] = field(
+    transport_event_type_code: TransportEventTypeCode | None = field(
         default=None,
         metadata={
             "name": "TransportEventTypeCode",
@@ -18157,7 +18053,7 @@ class TransportEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    completion_indicator: Optional[CompletionIndicator] = field(
+    completion_indicator: CompletionIndicator | None = field(
         default=None,
         metadata={
             "name": "CompletionIndicator",
@@ -18165,7 +18061,7 @@ class TransportEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    reported_shipment: Optional[ReportedShipment] = field(
+    reported_shipment: ReportedShipment | None = field(
         default=None,
         metadata={
             "name": "ReportedShipment",
@@ -18189,7 +18085,7 @@ class TransportEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    location: Optional[Location] = field(
+    location: Location | None = field(
         default=None,
         metadata={
             "name": "Location",
@@ -18197,7 +18093,7 @@ class TransportEventType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    signature: Optional[Signature] = field(
+    signature: Signature | None = field(
         default=None,
         metadata={
             "name": "Signature",
@@ -18481,7 +18377,7 @@ class WarehousingTransportEvent(TransportEventType):
 
 @dataclass(frozen=True)
 class CatalogueLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -18490,7 +18386,7 @@ class CatalogueLineType:
             "required": True,
         },
     )
-    action_code: Optional[ActionCode] = field(
+    action_code: ActionCode | None = field(
         default=None,
         metadata={
             "name": "ActionCode",
@@ -18498,7 +18394,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    life_cycle_status_code: Optional[LifeCycleStatusCode] = field(
+    life_cycle_status_code: LifeCycleStatusCode | None = field(
         default=None,
         metadata={
             "name": "LifeCycleStatusCode",
@@ -18506,7 +18402,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contract_subdivision: Optional[ContractSubdivision] = field(
+    contract_subdivision: ContractSubdivision | None = field(
         default=None,
         metadata={
             "name": "ContractSubdivision",
@@ -18522,7 +18418,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    orderable_indicator: Optional[OrderableIndicator] = field(
+    orderable_indicator: OrderableIndicator | None = field(
         default=None,
         metadata={
             "name": "OrderableIndicator",
@@ -18530,7 +18426,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    orderable_unit: Optional[OrderableUnit] = field(
+    orderable_unit: OrderableUnit | None = field(
         default=None,
         metadata={
             "name": "OrderableUnit",
@@ -18538,7 +18434,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    content_unit_quantity: Optional[ContentUnitQuantity] = field(
+    content_unit_quantity: ContentUnitQuantity | None = field(
         default=None,
         metadata={
             "name": "ContentUnitQuantity",
@@ -18546,9 +18442,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    order_quantity_increment_numeric: Optional[
-        OrderQuantityIncrementNumeric
-    ] = field(
+    order_quantity_increment_numeric: OrderQuantityIncrementNumeric | None = field(
         default=None,
         metadata={
             "name": "OrderQuantityIncrementNumeric",
@@ -18556,7 +18450,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_order_quantity: Optional[MinimumOrderQuantity] = field(
+    minimum_order_quantity: MinimumOrderQuantity | None = field(
         default=None,
         metadata={
             "name": "MinimumOrderQuantity",
@@ -18564,7 +18458,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_order_quantity: Optional[MaximumOrderQuantity] = field(
+    maximum_order_quantity: MaximumOrderQuantity | None = field(
         default=None,
         metadata={
             "name": "MaximumOrderQuantity",
@@ -18580,7 +18474,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pack_level_code: Optional[PackLevelCode] = field(
+    pack_level_code: PackLevelCode | None = field(
         default=None,
         metadata={
             "name": "PackLevelCode",
@@ -18588,7 +18482,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contractor_customer_party: Optional[ContractorCustomerParty] = field(
+    contractor_customer_party: ContractorCustomerParty | None = field(
         default=None,
         metadata={
             "name": "ContractorCustomerParty",
@@ -18596,7 +18490,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_supplier_party: Optional[SellerSupplierParty] = field(
+    seller_supplier_party: SellerSupplierParty | None = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",
@@ -18604,7 +18498,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    warranty_party: Optional[WarrantyParty] = field(
+    warranty_party: WarrantyParty | None = field(
         default=None,
         metadata={
             "name": "WarrantyParty",
@@ -18612,7 +18506,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    warranty_validity_period: Optional[WarrantyValidityPeriod] = field(
+    warranty_validity_period: WarrantyValidityPeriod | None = field(
         default=None,
         metadata={
             "name": "WarrantyValidityPeriod",
@@ -18620,7 +18514,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    line_validity_period: Optional[LineValidityPeriod] = field(
+    line_validity_period: LineValidityPeriod | None = field(
         default=None,
         metadata={
             "name": "LineValidityPeriod",
@@ -18702,7 +18596,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item: Optional[Item] = field(
+    item: Item | None = field(
         default=None,
         metadata={
             "name": "Item",
@@ -18719,7 +18613,7 @@ class CatalogueLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    call_for_tenders_line_reference: Optional[CallForTendersLineReference] = (
+    call_for_tenders_line_reference: CallForTendersLineReference | None = (
         field(
             default=None,
             metadata={
@@ -18729,9 +18623,7 @@ class CatalogueLineType:
             },
         )
     )
-    call_for_tenders_document_reference: Optional[
-        CallForTendersDocumentReference
-    ] = field(
+    call_for_tenders_document_reference: CallForTendersDocumentReference | None = field(
         default=None,
         metadata={
             "name": "CallForTendersDocumentReference",
@@ -18743,7 +18635,7 @@ class CatalogueLineType:
 
 @dataclass(frozen=True)
 class CataloguePricingUpdateLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -18752,7 +18644,7 @@ class CataloguePricingUpdateLineType:
             "required": True,
         },
     )
-    contractor_customer_party: Optional[ContractorCustomerParty] = field(
+    contractor_customer_party: ContractorCustomerParty | None = field(
         default=None,
         metadata={
             "name": "ContractorCustomerParty",
@@ -18760,7 +18652,7 @@ class CataloguePricingUpdateLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_supplier_party: Optional[SellerSupplierParty] = field(
+    seller_supplier_party: SellerSupplierParty | None = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",
@@ -18782,7 +18674,7 @@ class CataloguePricingUpdateLineType:
 
 @dataclass(frozen=True)
 class CatalogueRequestLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -18791,7 +18683,7 @@ class CatalogueRequestLineType:
             "required": True,
         },
     )
-    contract_subdivision: Optional[ContractSubdivision] = field(
+    contract_subdivision: ContractSubdivision | None = field(
         default=None,
         metadata={
             "name": "ContractSubdivision",
@@ -18807,7 +18699,7 @@ class CatalogueRequestLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_validity_period: Optional[LineValidityPeriod] = field(
+    line_validity_period: LineValidityPeriod | None = field(
         default=None,
         metadata={
             "name": "LineValidityPeriod",
@@ -18825,7 +18717,7 @@ class CatalogueRequestLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item: Optional[Item] = field(
+    item: Item | None = field(
         default=None,
         metadata={
             "name": "Item",
@@ -18838,7 +18730,7 @@ class CatalogueRequestLineType:
 
 @dataclass(frozen=True)
 class ItemManagementProfileType:
-    frozen_period_days_numeric: Optional[FrozenPeriodDaysNumeric] = field(
+    frozen_period_days_numeric: FrozenPeriodDaysNumeric | None = field(
         default=None,
         metadata={
             "name": "FrozenPeriodDaysNumeric",
@@ -18846,7 +18738,7 @@ class ItemManagementProfileType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_inventory_quantity: Optional[MinimumInventoryQuantity] = field(
+    minimum_inventory_quantity: MinimumInventoryQuantity | None = field(
         default=None,
         metadata={
             "name": "MinimumInventoryQuantity",
@@ -18854,7 +18746,7 @@ class ItemManagementProfileType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    multiple_order_quantity: Optional[MultipleOrderQuantity] = field(
+    multiple_order_quantity: MultipleOrderQuantity | None = field(
         default=None,
         metadata={
             "name": "MultipleOrderQuantity",
@@ -18862,7 +18754,7 @@ class ItemManagementProfileType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    order_interval_days_numeric: Optional[OrderIntervalDaysNumeric] = field(
+    order_interval_days_numeric: OrderIntervalDaysNumeric | None = field(
         default=None,
         metadata={
             "name": "OrderIntervalDaysNumeric",
@@ -18880,7 +18772,7 @@ class ItemManagementProfileType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    target_service_percent: Optional[TargetServicePercent] = field(
+    target_service_percent: TargetServicePercent | None = field(
         default=None,
         metadata={
             "name": "TargetServicePercent",
@@ -18888,7 +18780,7 @@ class ItemManagementProfileType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    target_inventory_quantity: Optional[TargetInventoryQuantity] = field(
+    target_inventory_quantity: TargetInventoryQuantity | None = field(
         default=None,
         metadata={
             "name": "TargetInventoryQuantity",
@@ -18896,7 +18788,7 @@ class ItemManagementProfileType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    effective_period: Optional[EffectivePeriod] = field(
+    effective_period: EffectivePeriod | None = field(
         default=None,
         metadata={
             "name": "EffectivePeriod",
@@ -18905,7 +18797,7 @@ class ItemManagementProfileType:
             "required": True,
         },
     )
-    item: Optional[Item] = field(
+    item: Item | None = field(
         default=None,
         metadata={
             "name": "Item",
@@ -18914,7 +18806,7 @@ class ItemManagementProfileType:
             "required": True,
         },
     )
-    item_location_quantity: Optional[ItemLocationQuantity] = field(
+    item_location_quantity: ItemLocationQuantity | None = field(
         default=None,
         metadata={
             "name": "ItemLocationQuantity",
@@ -18926,7 +18818,7 @@ class ItemManagementProfileType:
 
 @dataclass(frozen=True)
 class PricingReferenceType:
-    original_item_location_quantity: Optional[OriginalItemLocationQuantity] = (
+    original_item_location_quantity: OriginalItemLocationQuantity | None = (
         field(
             default=None,
             metadata={
@@ -18948,7 +18840,7 @@ class PricingReferenceType:
 
 @dataclass(frozen=True)
 class RequestForTenderLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -18956,7 +18848,7 @@ class RequestForTenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -18972,7 +18864,7 @@ class RequestForTenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -18980,7 +18872,7 @@ class RequestForTenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_quantity: Optional[MinimumQuantity] = field(
+    minimum_quantity: MinimumQuantity | None = field(
         default=None,
         metadata={
             "name": "MinimumQuantity",
@@ -18988,7 +18880,7 @@ class RequestForTenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_quantity: Optional[MaximumQuantity] = field(
+    maximum_quantity: MaximumQuantity | None = field(
         default=None,
         metadata={
             "name": "MaximumQuantity",
@@ -18996,7 +18888,7 @@ class RequestForTenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_included_indicator: Optional[TaxIncludedIndicator] = field(
+    tax_included_indicator: TaxIncludedIndicator | None = field(
         default=None,
         metadata={
             "name": "TaxIncludedIndicator",
@@ -19004,7 +18896,7 @@ class RequestForTenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_amount: Optional[MinimumAmount] = field(
+    minimum_amount: MinimumAmount | None = field(
         default=None,
         metadata={
             "name": "MinimumAmount",
@@ -19012,7 +18904,7 @@ class RequestForTenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_amount: Optional[MaximumAmount] = field(
+    maximum_amount: MaximumAmount | None = field(
         default=None,
         metadata={
             "name": "MaximumAmount",
@@ -19020,7 +18912,7 @@ class RequestForTenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    estimated_amount: Optional[EstimatedAmount] = field(
+    estimated_amount: EstimatedAmount | None = field(
         default=None,
         metadata={
             "name": "EstimatedAmount",
@@ -19054,7 +18946,7 @@ class RequestForTenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    warranty_validity_period: Optional[WarrantyValidityPeriod] = field(
+    warranty_validity_period: WarrantyValidityPeriod | None = field(
         default=None,
         metadata={
             "name": "WarrantyValidityPeriod",
@@ -19062,7 +18954,7 @@ class RequestForTenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item: Optional[Item] = field(
+    item: Item | None = field(
         default=None,
         metadata={
             "name": "Item",
@@ -19071,7 +18963,7 @@ class RequestForTenderLineType:
             "required": True,
         },
     )
-    sub_request_for_tender_line: tuple["SubRequestForTenderLine", ...] = field(
+    sub_request_for_tender_line: tuple[SubRequestForTenderLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubRequestForTenderLine",
@@ -19083,7 +18975,7 @@ class RequestForTenderLineType:
 
 @dataclass(frozen=True)
 class ShipmentStageType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -19091,7 +18983,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transport_mode_code: Optional[TransportModeCode] = field(
+    transport_mode_code: TransportModeCode | None = field(
         default=None,
         metadata={
             "name": "TransportModeCode",
@@ -19099,7 +18991,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transport_means_type_code: Optional[TransportMeansTypeCode] = field(
+    transport_means_type_code: TransportMeansTypeCode | None = field(
         default=None,
         metadata={
             "name": "TransportMeansTypeCode",
@@ -19107,7 +18999,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transit_direction_code: Optional[TransitDirectionCode] = field(
+    transit_direction_code: TransitDirectionCode | None = field(
         default=None,
         metadata={
             "name": "TransitDirectionCode",
@@ -19115,7 +19007,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pre_carriage_indicator: Optional[PreCarriageIndicator] = field(
+    pre_carriage_indicator: PreCarriageIndicator | None = field(
         default=None,
         metadata={
             "name": "PreCarriageIndicator",
@@ -19123,7 +19015,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    on_carriage_indicator: Optional[OnCarriageIndicator] = field(
+    on_carriage_indicator: OnCarriageIndicator | None = field(
         default=None,
         metadata={
             "name": "OnCarriageIndicator",
@@ -19131,7 +19023,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    estimated_delivery_date: Optional[EstimatedDeliveryDate] = field(
+    estimated_delivery_date: EstimatedDeliveryDate | None = field(
         default=None,
         metadata={
             "name": "EstimatedDeliveryDate",
@@ -19139,7 +19031,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    estimated_delivery_time: Optional[EstimatedDeliveryTime] = field(
+    estimated_delivery_time: EstimatedDeliveryTime | None = field(
         default=None,
         metadata={
             "name": "EstimatedDeliveryTime",
@@ -19147,7 +19039,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    required_delivery_date: Optional[RequiredDeliveryDate] = field(
+    required_delivery_date: RequiredDeliveryDate | None = field(
         default=None,
         metadata={
             "name": "RequiredDeliveryDate",
@@ -19155,7 +19047,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    required_delivery_time: Optional[RequiredDeliveryTime] = field(
+    required_delivery_time: RequiredDeliveryTime | None = field(
         default=None,
         metadata={
             "name": "RequiredDeliveryTime",
@@ -19163,7 +19055,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    loading_sequence_id: Optional[LoadingSequenceId] = field(
+    loading_sequence_id: LoadingSequenceId | None = field(
         default=None,
         metadata={
             "name": "LoadingSequenceID",
@@ -19171,7 +19063,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    successive_sequence_id: Optional[SuccessiveSequenceId] = field(
+    successive_sequence_id: SuccessiveSequenceId | None = field(
         default=None,
         metadata={
             "name": "SuccessiveSequenceID",
@@ -19195,7 +19087,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    crew_quantity: Optional[CrewQuantity] = field(
+    crew_quantity: CrewQuantity | None = field(
         default=None,
         metadata={
             "name": "CrewQuantity",
@@ -19203,7 +19095,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    passenger_quantity: Optional[PassengerQuantity] = field(
+    passenger_quantity: PassengerQuantity | None = field(
         default=None,
         metadata={
             "name": "PassengerQuantity",
@@ -19211,7 +19103,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transit_period: Optional[TransitPeriod] = field(
+    transit_period: TransitPeriod | None = field(
         default=None,
         metadata={
             "name": "TransitPeriod",
@@ -19227,7 +19119,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_means: Optional[TransportMeans] = field(
+    transport_means: TransportMeans | None = field(
         default=None,
         metadata={
             "name": "TransportMeans",
@@ -19235,7 +19127,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    loading_port_location: Optional[LoadingPortLocation] = field(
+    loading_port_location: LoadingPortLocation | None = field(
         default=None,
         metadata={
             "name": "LoadingPortLocation",
@@ -19243,7 +19135,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    unloading_port_location: Optional[UnloadingPortLocation] = field(
+    unloading_port_location: UnloadingPortLocation | None = field(
         default=None,
         metadata={
             "name": "UnloadingPortLocation",
@@ -19251,7 +19143,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transship_port_location: Optional[TransshipPortLocation] = field(
+    transship_port_location: TransshipPortLocation | None = field(
         default=None,
         metadata={
             "name": "TransshipPortLocation",
@@ -19259,7 +19151,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    loading_transport_event: Optional[LoadingTransportEvent] = field(
+    loading_transport_event: LoadingTransportEvent | None = field(
         default=None,
         metadata={
             "name": "LoadingTransportEvent",
@@ -19267,7 +19159,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    examination_transport_event: Optional[ExaminationTransportEvent] = field(
+    examination_transport_event: ExaminationTransportEvent | None = field(
         default=None,
         metadata={
             "name": "ExaminationTransportEvent",
@@ -19275,7 +19167,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    availability_transport_event: Optional[AvailabilityTransportEvent] = field(
+    availability_transport_event: AvailabilityTransportEvent | None = field(
         default=None,
         metadata={
             "name": "AvailabilityTransportEvent",
@@ -19283,7 +19175,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    exportation_transport_event: Optional[ExportationTransportEvent] = field(
+    exportation_transport_event: ExportationTransportEvent | None = field(
         default=None,
         metadata={
             "name": "ExportationTransportEvent",
@@ -19291,7 +19183,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    discharge_transport_event: Optional[DischargeTransportEvent] = field(
+    discharge_transport_event: DischargeTransportEvent | None = field(
         default=None,
         metadata={
             "name": "DischargeTransportEvent",
@@ -19299,7 +19191,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    warehousing_transport_event: Optional[WarehousingTransportEvent] = field(
+    warehousing_transport_event: WarehousingTransportEvent | None = field(
         default=None,
         metadata={
             "name": "WarehousingTransportEvent",
@@ -19307,7 +19199,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    takeover_transport_event: Optional[TakeoverTransportEvent] = field(
+    takeover_transport_event: TakeoverTransportEvent | None = field(
         default=None,
         metadata={
             "name": "TakeoverTransportEvent",
@@ -19315,9 +19207,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    optional_takeover_transport_event: Optional[
-        OptionalTakeoverTransportEvent
-    ] = field(
+    optional_takeover_transport_event: OptionalTakeoverTransportEvent | None = field(
         default=None,
         metadata={
             "name": "OptionalTakeoverTransportEvent",
@@ -19325,7 +19215,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    dropoff_transport_event: Optional[DropoffTransportEvent] = field(
+    dropoff_transport_event: DropoffTransportEvent | None = field(
         default=None,
         metadata={
             "name": "DropoffTransportEvent",
@@ -19333,7 +19223,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    actual_pickup_transport_event: Optional[ActualPickupTransportEvent] = (
+    actual_pickup_transport_event: ActualPickupTransportEvent | None = (
         field(
             default=None,
             metadata={
@@ -19343,7 +19233,7 @@ class ShipmentStageType:
             },
         )
     )
-    delivery_transport_event: Optional[DeliveryTransportEvent] = field(
+    delivery_transport_event: DeliveryTransportEvent | None = field(
         default=None,
         metadata={
             "name": "DeliveryTransportEvent",
@@ -19351,7 +19241,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    receipt_transport_event: Optional[ReceiptTransportEvent] = field(
+    receipt_transport_event: ReceiptTransportEvent | None = field(
         default=None,
         metadata={
             "name": "ReceiptTransportEvent",
@@ -19359,7 +19249,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    storage_transport_event: Optional[StorageTransportEvent] = field(
+    storage_transport_event: StorageTransportEvent | None = field(
         default=None,
         metadata={
             "name": "StorageTransportEvent",
@@ -19367,7 +19257,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    acceptance_transport_event: Optional[AcceptanceTransportEvent] = field(
+    acceptance_transport_event: AcceptanceTransportEvent | None = field(
         default=None,
         metadata={
             "name": "AcceptanceTransportEvent",
@@ -19375,7 +19265,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    terminal_operator_party: Optional[TerminalOperatorParty] = field(
+    terminal_operator_party: TerminalOperatorParty | None = field(
         default=None,
         metadata={
             "name": "TerminalOperatorParty",
@@ -19383,7 +19273,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    customs_agent_party: Optional[CustomsAgentParty] = field(
+    customs_agent_party: CustomsAgentParty | None = field(
         default=None,
         metadata={
             "name": "CustomsAgentParty",
@@ -19391,7 +19281,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    estimated_transit_period: Optional[EstimatedTransitPeriod] = field(
+    estimated_transit_period: EstimatedTransitPeriod | None = field(
         default=None,
         metadata={
             "name": "EstimatedTransitPeriod",
@@ -19407,7 +19297,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    freight_charge_location: Optional[FreightChargeLocation] = field(
+    freight_charge_location: FreightChargeLocation | None = field(
         default=None,
         metadata={
             "name": "FreightChargeLocation",
@@ -19423,9 +19313,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    requested_departure_transport_event: Optional[
-        RequestedDepartureTransportEvent
-    ] = field(
+    requested_departure_transport_event: RequestedDepartureTransportEvent | None = field(
         default=None,
         metadata={
             "name": "RequestedDepartureTransportEvent",
@@ -19433,9 +19321,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    requested_arrival_transport_event: Optional[
-        RequestedArrivalTransportEvent
-    ] = field(
+    requested_arrival_transport_event: RequestedArrivalTransportEvent | None = field(
         default=None,
         metadata={
             "name": "RequestedArrivalTransportEvent",
@@ -19453,9 +19339,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    planned_departure_transport_event: Optional[
-        PlannedDepartureTransportEvent
-    ] = field(
+    planned_departure_transport_event: PlannedDepartureTransportEvent | None = field(
         default=None,
         metadata={
             "name": "PlannedDepartureTransportEvent",
@@ -19463,7 +19347,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    planned_arrival_transport_event: Optional[PlannedArrivalTransportEvent] = (
+    planned_arrival_transport_event: PlannedArrivalTransportEvent | None = (
         field(
             default=None,
             metadata={
@@ -19483,9 +19367,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    actual_departure_transport_event: Optional[
-        ActualDepartureTransportEvent
-    ] = field(
+    actual_departure_transport_event: ActualDepartureTransportEvent | None = field(
         default=None,
         metadata={
             "name": "ActualDepartureTransportEvent",
@@ -19493,7 +19375,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    actual_waypoint_transport_event: Optional[ActualWaypointTransportEvent] = (
+    actual_waypoint_transport_event: ActualWaypointTransportEvent | None = (
         field(
             default=None,
             metadata={
@@ -19503,7 +19385,7 @@ class ShipmentStageType:
             },
         )
     )
-    actual_arrival_transport_event: Optional[ActualArrivalTransportEvent] = (
+    actual_arrival_transport_event: ActualArrivalTransportEvent | None = (
         field(
             default=None,
             metadata={
@@ -19521,9 +19403,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    estimated_departure_transport_event: Optional[
-        EstimatedDepartureTransportEvent
-    ] = field(
+    estimated_departure_transport_event: EstimatedDepartureTransportEvent | None = field(
         default=None,
         metadata={
             "name": "EstimatedDepartureTransportEvent",
@@ -19531,9 +19411,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    estimated_arrival_transport_event: Optional[
-        EstimatedArrivalTransportEvent
-    ] = field(
+    estimated_arrival_transport_event: EstimatedArrivalTransportEvent | None = field(
         default=None,
         metadata={
             "name": "EstimatedArrivalTransportEvent",
@@ -19557,7 +19435,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    reporting_person: Optional[ReportingPerson] = field(
+    reporting_person: ReportingPerson | None = field(
         default=None,
         metadata={
             "name": "ReportingPerson",
@@ -19573,7 +19451,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    security_officer_person: Optional[SecurityOfficerPerson] = field(
+    security_officer_person: SecurityOfficerPerson | None = field(
         default=None,
         metadata={
             "name": "SecurityOfficerPerson",
@@ -19581,7 +19459,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    master_person: Optional[MasterPerson] = field(
+    master_person: MasterPerson | None = field(
         default=None,
         metadata={
             "name": "MasterPerson",
@@ -19589,7 +19467,7 @@ class ShipmentStageType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    ships_surgeon_person: Optional[ShipsSurgeonPerson] = field(
+    ships_surgeon_person: ShipsSurgeonPerson | None = field(
         default=None,
         metadata={
             "name": "ShipsSurgeonPerson",
@@ -19609,7 +19487,7 @@ class SupplierConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    utility_supplier_party: Optional[UtilitySupplierParty] = field(
+    utility_supplier_party: UtilitySupplierParty | None = field(
         default=None,
         metadata={
             "name": "UtilitySupplierParty",
@@ -19617,7 +19495,7 @@ class SupplierConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    utility_customer_party: Optional[UtilityCustomerParty] = field(
+    utility_customer_party: UtilityCustomerParty | None = field(
         default=None,
         metadata={
             "name": "UtilityCustomerParty",
@@ -19625,7 +19503,7 @@ class SupplierConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    consumption: Optional[Consumption] = field(
+    consumption: Consumption | None = field(
         default=None,
         metadata={
             "name": "Consumption",
@@ -19634,7 +19512,7 @@ class SupplierConsumptionType:
             "required": True,
         },
     )
-    contract: Optional[Contract] = field(
+    contract: Contract | None = field(
         default=None,
         metadata={
             "name": "Contract",
@@ -19655,7 +19533,7 @@ class SupplierConsumptionType:
 
 @dataclass(frozen=True)
 class TenderLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -19671,7 +19549,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -19679,7 +19557,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_extension_amount: Optional[LineExtensionAmount] = field(
+    line_extension_amount: LineExtensionAmount | None = field(
         default=None,
         metadata={
             "name": "LineExtensionAmount",
@@ -19687,7 +19565,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_tax_amount: Optional[TotalTaxAmount] = field(
+    total_tax_amount: TotalTaxAmount | None = field(
         default=None,
         metadata={
             "name": "TotalTaxAmount",
@@ -19695,7 +19573,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    orderable_unit: Optional[OrderableUnit] = field(
+    orderable_unit: OrderableUnit | None = field(
         default=None,
         metadata={
             "name": "OrderableUnit",
@@ -19703,7 +19581,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    content_unit_quantity: Optional[ContentUnitQuantity] = field(
+    content_unit_quantity: ContentUnitQuantity | None = field(
         default=None,
         metadata={
             "name": "ContentUnitQuantity",
@@ -19711,9 +19589,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    order_quantity_increment_numeric: Optional[
-        OrderQuantityIncrementNumeric
-    ] = field(
+    order_quantity_increment_numeric: OrderQuantityIncrementNumeric | None = field(
         default=None,
         metadata={
             "name": "OrderQuantityIncrementNumeric",
@@ -19721,7 +19597,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_order_quantity: Optional[MinimumOrderQuantity] = field(
+    minimum_order_quantity: MinimumOrderQuantity | None = field(
         default=None,
         metadata={
             "name": "MinimumOrderQuantity",
@@ -19729,7 +19605,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_order_quantity: Optional[MaximumOrderQuantity] = field(
+    maximum_order_quantity: MaximumOrderQuantity | None = field(
         default=None,
         metadata={
             "name": "MaximumOrderQuantity",
@@ -19745,7 +19621,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pack_level_code: Optional[PackLevelCode] = field(
+    pack_level_code: PackLevelCode | None = field(
         default=None,
         metadata={
             "name": "PackLevelCode",
@@ -19761,7 +19637,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item: Optional[Item] = field(
+    item: Item | None = field(
         default=None,
         metadata={
             "name": "Item",
@@ -19787,7 +19663,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    warranty_party: Optional[WarrantyParty] = field(
+    warranty_party: WarrantyParty | None = field(
         default=None,
         metadata={
             "name": "WarrantyParty",
@@ -19795,7 +19671,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    warranty_validity_period: Optional[WarrantyValidityPeriod] = field(
+    warranty_validity_period: WarrantyValidityPeriod | None = field(
         default=None,
         metadata={
             "name": "WarrantyValidityPeriod",
@@ -19803,7 +19679,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sub_tender_line: tuple["SubTenderLine", ...] = field(
+    sub_tender_line: tuple[SubTenderLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubTenderLine",
@@ -19811,7 +19687,7 @@ class TenderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    call_for_tenders_line_reference: Optional[CallForTendersLineReference] = (
+    call_for_tenders_line_reference: CallForTendersLineReference | None = (
         field(
             default=None,
             metadata={
@@ -19821,9 +19697,7 @@ class TenderLineType:
             },
         )
     )
-    call_for_tenders_document_reference: Optional[
-        CallForTendersDocumentReference
-    ] = field(
+    call_for_tenders_document_reference: CallForTendersDocumentReference | None = field(
         default=None,
         metadata={
             "name": "CallForTendersDocumentReference",
@@ -19835,7 +19709,7 @@ class TenderLineType:
 
 @dataclass(frozen=True)
 class TransportEquipmentType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -19851,7 +19725,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transport_equipment_type_code: Optional[TransportEquipmentTypeCode] = (
+    transport_equipment_type_code: TransportEquipmentTypeCode | None = (
         field(
             default=None,
             metadata={
@@ -19861,7 +19735,7 @@ class TransportEquipmentType:
             },
         )
     )
-    provider_type_code: Optional[ProviderTypeCode] = field(
+    provider_type_code: ProviderTypeCode | None = field(
         default=None,
         metadata={
             "name": "ProviderTypeCode",
@@ -19869,7 +19743,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    owner_type_code: Optional[OwnerTypeCode] = field(
+    owner_type_code: OwnerTypeCode | None = field(
         default=None,
         metadata={
             "name": "OwnerTypeCode",
@@ -19877,7 +19751,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    size_type_code: Optional[SizeTypeCode] = field(
+    size_type_code: SizeTypeCode | None = field(
         default=None,
         metadata={
             "name": "SizeTypeCode",
@@ -19885,7 +19759,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    disposition_code: Optional[DispositionCode] = field(
+    disposition_code: DispositionCode | None = field(
         default=None,
         metadata={
             "name": "DispositionCode",
@@ -19893,7 +19767,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    fullness_indication_code: Optional[FullnessIndicationCode] = field(
+    fullness_indication_code: FullnessIndicationCode | None = field(
         default=None,
         metadata={
             "name": "FullnessIndicationCode",
@@ -19901,7 +19775,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    refrigeration_on_indicator: Optional[RefrigerationOnIndicator] = field(
+    refrigeration_on_indicator: RefrigerationOnIndicator | None = field(
         default=None,
         metadata={
             "name": "RefrigerationOnIndicator",
@@ -19917,7 +19791,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    returnability_indicator: Optional[ReturnabilityIndicator] = field(
+    returnability_indicator: ReturnabilityIndicator | None = field(
         default=None,
         metadata={
             "name": "ReturnabilityIndicator",
@@ -19925,7 +19799,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    legal_status_indicator: Optional[LegalStatusIndicator] = field(
+    legal_status_indicator: LegalStatusIndicator | None = field(
         default=None,
         metadata={
             "name": "LegalStatusIndicator",
@@ -19933,7 +19807,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    air_flow_percent: Optional[AirFlowPercent] = field(
+    air_flow_percent: AirFlowPercent | None = field(
         default=None,
         metadata={
             "name": "AirFlowPercent",
@@ -19941,7 +19815,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    humidity_percent: Optional[HumidityPercent] = field(
+    humidity_percent: HumidityPercent | None = field(
         default=None,
         metadata={
             "name": "HumidityPercent",
@@ -19949,7 +19823,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    animal_food_approved_indicator: Optional[AnimalFoodApprovedIndicator] = (
+    animal_food_approved_indicator: AnimalFoodApprovedIndicator | None = (
         field(
             default=None,
             metadata={
@@ -19959,7 +19833,7 @@ class TransportEquipmentType:
             },
         )
     )
-    human_food_approved_indicator: Optional[HumanFoodApprovedIndicator] = (
+    human_food_approved_indicator: HumanFoodApprovedIndicator | None = (
         field(
             default=None,
             metadata={
@@ -19969,9 +19843,7 @@ class TransportEquipmentType:
             },
         )
     )
-    dangerous_goods_approved_indicator: Optional[
-        DangerousGoodsApprovedIndicator
-    ] = field(
+    dangerous_goods_approved_indicator: DangerousGoodsApprovedIndicator | None = field(
         default=None,
         metadata={
             "name": "DangerousGoodsApprovedIndicator",
@@ -19979,7 +19851,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    refrigerated_indicator: Optional[RefrigeratedIndicator] = field(
+    refrigerated_indicator: RefrigeratedIndicator | None = field(
         default=None,
         metadata={
             "name": "RefrigeratedIndicator",
@@ -19987,7 +19859,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    characteristics: Optional[Characteristics] = field(
+    characteristics: Characteristics | None = field(
         default=None,
         metadata={
             "name": "Characteristics",
@@ -20021,7 +19893,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    gross_weight_measure: Optional[GrossWeightMeasure] = field(
+    gross_weight_measure: GrossWeightMeasure | None = field(
         default=None,
         metadata={
             "name": "GrossWeightMeasure",
@@ -20029,7 +19901,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    gross_volume_measure: Optional[GrossVolumeMeasure] = field(
+    gross_volume_measure: GrossVolumeMeasure | None = field(
         default=None,
         metadata={
             "name": "GrossVolumeMeasure",
@@ -20037,7 +19909,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tare_weight_measure: Optional[TareWeightMeasure] = field(
+    tare_weight_measure: TareWeightMeasure | None = field(
         default=None,
         metadata={
             "name": "TareWeightMeasure",
@@ -20045,7 +19917,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tracking_device_code: Optional[TrackingDeviceCode] = field(
+    tracking_device_code: TrackingDeviceCode | None = field(
         default=None,
         metadata={
             "name": "TrackingDeviceCode",
@@ -20053,7 +19925,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    power_indicator: Optional[PowerIndicator] = field(
+    power_indicator: PowerIndicator | None = field(
         default=None,
         metadata={
             "name": "PowerIndicator",
@@ -20061,7 +19933,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    trace_id: Optional[TraceId] = field(
+    trace_id: TraceId | None = field(
         default=None,
         metadata={
             "name": "TraceID",
@@ -20085,7 +19957,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    minimum_temperature: Optional[MinimumTemperature] = field(
+    minimum_temperature: MinimumTemperature | None = field(
         default=None,
         metadata={
             "name": "MinimumTemperature",
@@ -20093,7 +19965,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    maximum_temperature: Optional[MaximumTemperature] = field(
+    maximum_temperature: MaximumTemperature | None = field(
         default=None,
         metadata={
             "name": "MaximumTemperature",
@@ -20101,7 +19973,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    provider_party: Optional[ProviderParty] = field(
+    provider_party: ProviderParty | None = field(
         default=None,
         metadata={
             "name": "ProviderParty",
@@ -20109,7 +19981,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    loading_proof_party: Optional[LoadingProofParty] = field(
+    loading_proof_party: LoadingProofParty | None = field(
         default=None,
         metadata={
             "name": "LoadingProofParty",
@@ -20117,7 +19989,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    supplier_party: Optional[SupplierParty] = field(
+    supplier_party: SupplierParty | None = field(
         default=None,
         metadata={
             "name": "SupplierParty",
@@ -20125,7 +19997,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    owner_party: Optional[OwnerParty] = field(
+    owner_party: OwnerParty | None = field(
         default=None,
         metadata={
             "name": "OwnerParty",
@@ -20133,7 +20005,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    operating_party: Optional[OperatingParty] = field(
+    operating_party: OperatingParty | None = field(
         default=None,
         metadata={
             "name": "OperatingParty",
@@ -20141,7 +20013,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    loading_location: Optional[LoadingLocation] = field(
+    loading_location: LoadingLocation | None = field(
         default=None,
         metadata={
             "name": "LoadingLocation",
@@ -20149,7 +20021,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    unloading_location: Optional[UnloadingLocation] = field(
+    unloading_location: UnloadingLocation | None = field(
         default=None,
         metadata={
             "name": "UnloadingLocation",
@@ -20157,7 +20029,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    storage_location: Optional[StorageLocation] = field(
+    storage_location: StorageLocation | None = field(
         default=None,
         metadata={
             "name": "StorageLocation",
@@ -20221,7 +20093,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    applicable_transport_means: Optional[ApplicableTransportMeans] = field(
+    applicable_transport_means: ApplicableTransportMeans | None = field(
         default=None,
         metadata={
             "name": "ApplicableTransportMeans",
@@ -20246,7 +20118,7 @@ class TransportEquipmentType:
         },
     )
     packaged_transport_handling_unit: tuple[
-        "PackagedTransportHandlingUnit", ...
+        PackagedTransportHandlingUnit, ...
     ] = field(
         default_factory=tuple,
         metadata={
@@ -20271,7 +20143,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    attached_transport_equipment: tuple["AttachedTransportEquipment", ...] = (
+    attached_transport_equipment: tuple[AttachedTransportEquipment, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -20281,7 +20153,7 @@ class TransportEquipmentType:
             },
         )
     )
-    delivery: Optional[Delivery] = field(
+    delivery: Delivery | None = field(
         default=None,
         metadata={
             "name": "Delivery",
@@ -20289,7 +20161,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    pickup: Optional[Pickup] = field(
+    pickup: Pickup | None = field(
         default=None,
         metadata={
             "name": "Pickup",
@@ -20297,7 +20169,7 @@ class TransportEquipmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    despatch: Optional[Despatch] = field(
+    despatch: Despatch | None = field(
         default=None,
         metadata={
             "name": "Despatch",
@@ -20314,7 +20186,7 @@ class TransportEquipmentType:
         },
     )
     contained_in_transport_equipment: tuple[
-        "ContainedInTransportEquipment", ...
+        ContainedInTransportEquipment, ...
     ] = field(
         default_factory=tuple,
         metadata={
@@ -20343,7 +20215,7 @@ class TransportEquipmentType:
 
 @dataclass(frozen=True)
 class TransportScheduleType:
-    sequence_numeric: Optional[SequenceNumeric] = field(
+    sequence_numeric: SequenceNumeric | None = field(
         default=None,
         metadata={
             "name": "SequenceNumeric",
@@ -20352,7 +20224,7 @@ class TransportScheduleType:
             "required": True,
         },
     )
-    reference_date: Optional[ReferenceDate] = field(
+    reference_date: ReferenceDate | None = field(
         default=None,
         metadata={
             "name": "ReferenceDate",
@@ -20360,7 +20232,7 @@ class TransportScheduleType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    reference_time: Optional[ReferenceTime] = field(
+    reference_time: ReferenceTime | None = field(
         default=None,
         metadata={
             "name": "ReferenceTime",
@@ -20368,7 +20240,7 @@ class TransportScheduleType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    reliability_percent: Optional[ReliabilityPercent] = field(
+    reliability_percent: ReliabilityPercent | None = field(
         default=None,
         metadata={
             "name": "ReliabilityPercent",
@@ -20384,7 +20256,7 @@ class TransportScheduleType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    status_location: Optional[StatusLocation] = field(
+    status_location: StatusLocation | None = field(
         default=None,
         metadata={
             "name": "StatusLocation",
@@ -20393,7 +20265,7 @@ class TransportScheduleType:
             "required": True,
         },
     )
-    actual_arrival_transport_event: Optional[ActualArrivalTransportEvent] = (
+    actual_arrival_transport_event: ActualArrivalTransportEvent | None = (
         field(
             default=None,
             metadata={
@@ -20403,9 +20275,7 @@ class TransportScheduleType:
             },
         )
     )
-    actual_departure_transport_event: Optional[
-        ActualDepartureTransportEvent
-    ] = field(
+    actual_departure_transport_event: ActualDepartureTransportEvent | None = field(
         default=None,
         metadata={
             "name": "ActualDepartureTransportEvent",
@@ -20413,9 +20283,7 @@ class TransportScheduleType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    estimated_departure_transport_event: Optional[
-        EstimatedDepartureTransportEvent
-    ] = field(
+    estimated_departure_transport_event: EstimatedDepartureTransportEvent | None = field(
         default=None,
         metadata={
             "name": "EstimatedDepartureTransportEvent",
@@ -20423,9 +20291,7 @@ class TransportScheduleType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    estimated_arrival_transport_event: Optional[
-        EstimatedArrivalTransportEvent
-    ] = field(
+    estimated_arrival_transport_event: EstimatedArrivalTransportEvent | None = field(
         default=None,
         metadata={
             "name": "EstimatedArrivalTransportEvent",
@@ -20433,9 +20299,7 @@ class TransportScheduleType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    planned_departure_transport_event: Optional[
-        PlannedDepartureTransportEvent
-    ] = field(
+    planned_departure_transport_event: PlannedDepartureTransportEvent | None = field(
         default=None,
         metadata={
             "name": "PlannedDepartureTransportEvent",
@@ -20443,7 +20307,7 @@ class TransportScheduleType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    planned_arrival_transport_event: Optional[PlannedArrivalTransportEvent] = (
+    planned_arrival_transport_event: PlannedArrivalTransportEvent | None = (
         field(
             default=None,
             metadata={
@@ -20589,7 +20453,7 @@ class UnsupportedTransportEquipment(TransportEquipmentType):
 
 @dataclass(frozen=True)
 class CreditNoteLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -20598,7 +20462,7 @@ class CreditNoteLineType:
             "required": True,
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -20614,7 +20478,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    credited_quantity: Optional[CreditedQuantity] = field(
+    credited_quantity: CreditedQuantity | None = field(
         default=None,
         metadata={
             "name": "CreditedQuantity",
@@ -20622,7 +20486,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_extension_amount: Optional[LineExtensionAmount] = field(
+    line_extension_amount: LineExtensionAmount | None = field(
         default=None,
         metadata={
             "name": "LineExtensionAmount",
@@ -20630,7 +20494,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tax_point_date: Optional[TaxPointDate] = field(
+    tax_point_date: TaxPointDate | None = field(
         default=None,
         metadata={
             "name": "TaxPointDate",
@@ -20638,7 +20502,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost_code: Optional[AccountingCostCode] = field(
+    accounting_cost_code: AccountingCostCode | None = field(
         default=None,
         metadata={
             "name": "AccountingCostCode",
@@ -20646,7 +20510,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost: Optional[AccountingCost] = field(
+    accounting_cost: AccountingCost | None = field(
         default=None,
         metadata={
             "name": "AccountingCost",
@@ -20654,7 +20518,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_purpose_code: Optional[PaymentPurposeCode] = field(
+    payment_purpose_code: PaymentPurposeCode | None = field(
         default=None,
         metadata={
             "name": "PaymentPurposeCode",
@@ -20662,7 +20526,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    free_of_charge_indicator: Optional[FreeOfChargeIndicator] = field(
+    free_of_charge_indicator: FreeOfChargeIndicator | None = field(
         default=None,
         metadata={
             "name": "FreeOfChargeIndicator",
@@ -20726,7 +20590,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    pricing_reference: Optional[PricingReference] = field(
+    pricing_reference: PricingReference | None = field(
         default=None,
         metadata={
             "name": "PricingReference",
@@ -20734,7 +20598,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    originator_party: Optional[OriginatorParty] = field(
+    originator_party: OriginatorParty | None = field(
         default=None,
         metadata={
             "name": "OriginatorParty",
@@ -20774,7 +20638,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item: Optional[Item] = field(
+    item: Item | None = field(
         default=None,
         metadata={
             "name": "Item",
@@ -20782,7 +20646,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    price: Optional[Price] = field(
+    price: Price | None = field(
         default=None,
         metadata={
             "name": "Price",
@@ -20798,7 +20662,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sub_credit_note_line: tuple["SubCreditNoteLine", ...] = field(
+    sub_credit_note_line: tuple[SubCreditNoteLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubCreditNoteLine",
@@ -20806,7 +20670,7 @@ class CreditNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item_price_extension: Optional[ItemPriceExtension] = field(
+    item_price_extension: ItemPriceExtension | None = field(
         default=None,
         metadata={
             "name": "ItemPriceExtension",
@@ -20818,7 +20682,7 @@ class CreditNoteLineType:
 
 @dataclass(frozen=True)
 class DebitNoteLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -20827,7 +20691,7 @@ class DebitNoteLineType:
             "required": True,
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -20843,7 +20707,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    debited_quantity: Optional[DebitedQuantity] = field(
+    debited_quantity: DebitedQuantity | None = field(
         default=None,
         metadata={
             "name": "DebitedQuantity",
@@ -20851,7 +20715,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_extension_amount: Optional[LineExtensionAmount] = field(
+    line_extension_amount: LineExtensionAmount | None = field(
         default=None,
         metadata={
             "name": "LineExtensionAmount",
@@ -20860,7 +20724,7 @@ class DebitNoteLineType:
             "required": True,
         },
     )
-    tax_point_date: Optional[TaxPointDate] = field(
+    tax_point_date: TaxPointDate | None = field(
         default=None,
         metadata={
             "name": "TaxPointDate",
@@ -20868,7 +20732,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost_code: Optional[AccountingCostCode] = field(
+    accounting_cost_code: AccountingCostCode | None = field(
         default=None,
         metadata={
             "name": "AccountingCostCode",
@@ -20876,7 +20740,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost: Optional[AccountingCost] = field(
+    accounting_cost: AccountingCost | None = field(
         default=None,
         metadata={
             "name": "AccountingCost",
@@ -20884,7 +20748,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_purpose_code: Optional[PaymentPurposeCode] = field(
+    payment_purpose_code: PaymentPurposeCode | None = field(
         default=None,
         metadata={
             "name": "PaymentPurposeCode",
@@ -20932,7 +20796,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    pricing_reference: Optional[PricingReference] = field(
+    pricing_reference: PricingReference | None = field(
         default=None,
         metadata={
             "name": "PricingReference",
@@ -20964,7 +20828,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item: Optional[Item] = field(
+    item: Item | None = field(
         default=None,
         metadata={
             "name": "Item",
@@ -20972,7 +20836,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    price: Optional[Price] = field(
+    price: Price | None = field(
         default=None,
         metadata={
             "name": "Price",
@@ -20980,7 +20844,7 @@ class DebitNoteLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sub_debit_note_line: tuple["SubDebitNoteLine", ...] = field(
+    sub_debit_note_line: tuple[SubDebitNoteLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubDebitNoteLine",
@@ -20992,7 +20856,7 @@ class DebitNoteLineType:
 
 @dataclass(frozen=True)
 class GoodsItemContainerType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -21001,7 +20865,7 @@ class GoodsItemContainerType:
             "required": True,
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -21021,7 +20885,7 @@ class GoodsItemContainerType:
 
 @dataclass(frozen=True)
 class InvoiceLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -21030,7 +20894,7 @@ class InvoiceLineType:
             "required": True,
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -21046,7 +20910,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    invoiced_quantity: Optional[InvoicedQuantity] = field(
+    invoiced_quantity: InvoicedQuantity | None = field(
         default=None,
         metadata={
             "name": "InvoicedQuantity",
@@ -21054,7 +20918,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_extension_amount: Optional[LineExtensionAmount] = field(
+    line_extension_amount: LineExtensionAmount | None = field(
         default=None,
         metadata={
             "name": "LineExtensionAmount",
@@ -21063,7 +20927,7 @@ class InvoiceLineType:
             "required": True,
         },
     )
-    tax_point_date: Optional[TaxPointDate] = field(
+    tax_point_date: TaxPointDate | None = field(
         default=None,
         metadata={
             "name": "TaxPointDate",
@@ -21071,7 +20935,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost_code: Optional[AccountingCostCode] = field(
+    accounting_cost_code: AccountingCostCode | None = field(
         default=None,
         metadata={
             "name": "AccountingCostCode",
@@ -21079,7 +20943,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost: Optional[AccountingCost] = field(
+    accounting_cost: AccountingCost | None = field(
         default=None,
         metadata={
             "name": "AccountingCost",
@@ -21087,7 +20951,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_purpose_code: Optional[PaymentPurposeCode] = field(
+    payment_purpose_code: PaymentPurposeCode | None = field(
         default=None,
         metadata={
             "name": "PaymentPurposeCode",
@@ -21095,7 +20959,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    free_of_charge_indicator: Optional[FreeOfChargeIndicator] = field(
+    free_of_charge_indicator: FreeOfChargeIndicator | None = field(
         default=None,
         metadata={
             "name": "FreeOfChargeIndicator",
@@ -21151,7 +21015,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    pricing_reference: Optional[PricingReference] = field(
+    pricing_reference: PricingReference | None = field(
         default=None,
         metadata={
             "name": "PricingReference",
@@ -21159,7 +21023,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    originator_party: Optional[OriginatorParty] = field(
+    originator_party: OriginatorParty | None = field(
         default=None,
         metadata={
             "name": "OriginatorParty",
@@ -21207,7 +21071,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item: Optional[Item] = field(
+    item: Item | None = field(
         default=None,
         metadata={
             "name": "Item",
@@ -21216,7 +21080,7 @@ class InvoiceLineType:
             "required": True,
         },
     )
-    price: Optional[Price] = field(
+    price: Price | None = field(
         default=None,
         metadata={
             "name": "Price",
@@ -21224,7 +21088,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery_terms: Optional[DeliveryTerms] = field(
+    delivery_terms: DeliveryTerms | None = field(
         default=None,
         metadata={
             "name": "DeliveryTerms",
@@ -21232,7 +21096,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sub_invoice_line: tuple["SubInvoiceLine", ...] = field(
+    sub_invoice_line: tuple[SubInvoiceLine, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubInvoiceLine",
@@ -21240,7 +21104,7 @@ class InvoiceLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item_price_extension: Optional[ItemPriceExtension] = field(
+    item_price_extension: ItemPriceExtension | None = field(
         default=None,
         metadata={
             "name": "ItemPriceExtension",
@@ -21252,7 +21116,7 @@ class InvoiceLineType:
 
 @dataclass(frozen=True)
 class LineItemType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -21261,7 +21125,7 @@ class LineItemType:
             "required": True,
         },
     )
-    sales_order_id: Optional[SalesOrderId] = field(
+    sales_order_id: SalesOrderId | None = field(
         default=None,
         metadata={
             "name": "SalesOrderID",
@@ -21269,7 +21133,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -21285,7 +21149,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_status_code: Optional[LineStatusCode] = field(
+    line_status_code: LineStatusCode | None = field(
         default=None,
         metadata={
             "name": "LineStatusCode",
@@ -21293,7 +21157,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -21301,7 +21165,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_extension_amount: Optional[LineExtensionAmount] = field(
+    line_extension_amount: LineExtensionAmount | None = field(
         default=None,
         metadata={
             "name": "LineExtensionAmount",
@@ -21309,7 +21173,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_tax_amount: Optional[TotalTaxAmount] = field(
+    total_tax_amount: TotalTaxAmount | None = field(
         default=None,
         metadata={
             "name": "TotalTaxAmount",
@@ -21317,7 +21181,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_quantity: Optional[MinimumQuantity] = field(
+    minimum_quantity: MinimumQuantity | None = field(
         default=None,
         metadata={
             "name": "MinimumQuantity",
@@ -21325,7 +21189,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_quantity: Optional[MaximumQuantity] = field(
+    maximum_quantity: MaximumQuantity | None = field(
         default=None,
         metadata={
             "name": "MaximumQuantity",
@@ -21333,7 +21197,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    minimum_backorder_quantity: Optional[MinimumBackorderQuantity] = field(
+    minimum_backorder_quantity: MinimumBackorderQuantity | None = field(
         default=None,
         metadata={
             "name": "MinimumBackorderQuantity",
@@ -21341,7 +21205,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_backorder_quantity: Optional[MaximumBackorderQuantity] = field(
+    maximum_backorder_quantity: MaximumBackorderQuantity | None = field(
         default=None,
         metadata={
             "name": "MaximumBackorderQuantity",
@@ -21349,7 +21213,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    inspection_method_code: Optional[InspectionMethodCode] = field(
+    inspection_method_code: InspectionMethodCode | None = field(
         default=None,
         metadata={
             "name": "InspectionMethodCode",
@@ -21357,7 +21221,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    partial_delivery_indicator: Optional[PartialDeliveryIndicator] = field(
+    partial_delivery_indicator: PartialDeliveryIndicator | None = field(
         default=None,
         metadata={
             "name": "PartialDeliveryIndicator",
@@ -21365,7 +21229,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    back_order_allowed_indicator: Optional[BackOrderAllowedIndicator] = field(
+    back_order_allowed_indicator: BackOrderAllowedIndicator | None = field(
         default=None,
         metadata={
             "name": "BackOrderAllowedIndicator",
@@ -21373,7 +21237,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost_code: Optional[AccountingCostCode] = field(
+    accounting_cost_code: AccountingCostCode | None = field(
         default=None,
         metadata={
             "name": "AccountingCostCode",
@@ -21381,7 +21245,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost: Optional[AccountingCost] = field(
+    accounting_cost: AccountingCost | None = field(
         default=None,
         metadata={
             "name": "AccountingCost",
@@ -21405,7 +21269,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery_terms: Optional[DeliveryTerms] = field(
+    delivery_terms: DeliveryTerms | None = field(
         default=None,
         metadata={
             "name": "DeliveryTerms",
@@ -21413,7 +21277,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    originator_party: Optional[OriginatorParty] = field(
+    originator_party: OriginatorParty | None = field(
         default=None,
         metadata={
             "name": "OriginatorParty",
@@ -21429,7 +21293,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    pricing_reference: Optional[PricingReference] = field(
+    pricing_reference: PricingReference | None = field(
         default=None,
         metadata={
             "name": "PricingReference",
@@ -21445,7 +21309,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    price: Optional[Price] = field(
+    price: Price | None = field(
         default=None,
         metadata={
             "name": "Price",
@@ -21453,7 +21317,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item: Optional[Item] = field(
+    item: Item | None = field(
         default=None,
         metadata={
             "name": "Item",
@@ -21462,7 +21326,7 @@ class LineItemType:
             "required": True,
         },
     )
-    sub_line_item: tuple["SubLineItem", ...] = field(
+    sub_line_item: tuple[SubLineItem, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "SubLineItem",
@@ -21470,7 +21334,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    warranty_validity_period: Optional[WarrantyValidityPeriod] = field(
+    warranty_validity_period: WarrantyValidityPeriod | None = field(
         default=None,
         metadata={
             "name": "WarrantyValidityPeriod",
@@ -21478,7 +21342,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    warranty_party: Optional[WarrantyParty] = field(
+    warranty_party: WarrantyParty | None = field(
         default=None,
         metadata={
             "name": "WarrantyParty",
@@ -21494,7 +21358,7 @@ class LineItemType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    item_price_extension: Optional[ItemPriceExtension] = field(
+    item_price_extension: ItemPriceExtension | None = field(
         default=None,
         metadata={
             "name": "ItemPriceExtension",
@@ -21514,7 +21378,7 @@ class LineItemType:
 
 @dataclass(frozen=True)
 class ProcurementProjectType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -21539,7 +21403,7 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    procurement_type_code: Optional[ProcurementTypeCode] = field(
+    procurement_type_code: ProcurementTypeCode | None = field(
         default=None,
         metadata={
             "name": "ProcurementTypeCode",
@@ -21547,7 +21411,7 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    procurement_sub_type_code: Optional[ProcurementSubTypeCode] = field(
+    procurement_sub_type_code: ProcurementSubTypeCode | None = field(
         default=None,
         metadata={
             "name": "ProcurementSubTypeCode",
@@ -21555,7 +21419,7 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quality_control_code: Optional[QualityControlCode] = field(
+    quality_control_code: QualityControlCode | None = field(
         default=None,
         metadata={
             "name": "QualityControlCode",
@@ -21563,7 +21427,7 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    required_fee_amount: Optional[RequiredFeeAmount] = field(
+    required_fee_amount: RequiredFeeAmount | None = field(
         default=None,
         metadata={
             "name": "RequiredFeeAmount",
@@ -21579,7 +21443,7 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    requested_delivery_date: Optional[RequestedDeliveryDate] = field(
+    requested_delivery_date: RequestedDeliveryDate | None = field(
         default=None,
         metadata={
             "name": "RequestedDeliveryDate",
@@ -21587,9 +21451,7 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    estimated_overall_contract_quantity: Optional[
-        EstimatedOverallContractQuantity
-    ] = field(
+    estimated_overall_contract_quantity: EstimatedOverallContractQuantity | None = field(
         default=None,
         metadata={
             "name": "EstimatedOverallContractQuantity",
@@ -21605,7 +21467,7 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    requested_tender_total: Optional[RequestedTenderTotal] = field(
+    requested_tender_total: RequestedTenderTotal | None = field(
         default=None,
         metadata={
             "name": "RequestedTenderTotal",
@@ -21613,7 +21475,7 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    main_commodity_classification: Optional[MainCommodityClassification] = (
+    main_commodity_classification: MainCommodityClassification | None = (
         field(
             default=None,
             metadata={
@@ -21641,7 +21503,7 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    planned_period: Optional[PlannedPeriod] = field(
+    planned_period: PlannedPeriod | None = field(
         default=None,
         metadata={
             "name": "PlannedPeriod",
@@ -21649,7 +21511,7 @@ class ProcurementProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contract_extension: Optional[ContractExtension] = field(
+    contract_extension: ContractExtension | None = field(
         default=None,
         metadata={
             "name": "ContractExtension",
@@ -21669,7 +21531,7 @@ class ProcurementProjectType:
 
 @dataclass(frozen=True)
 class SubscriberConsumptionType:
-    consumption_id: Optional[ConsumptionId] = field(
+    consumption_id: ConsumptionId | None = field(
         default=None,
         metadata={
             "name": "ConsumptionID",
@@ -21677,7 +21539,7 @@ class SubscriberConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    specification_type_code: Optional[SpecificationTypeCode] = field(
+    specification_type_code: SpecificationTypeCode | None = field(
         default=None,
         metadata={
             "name": "SpecificationTypeCode",
@@ -21693,7 +21555,7 @@ class SubscriberConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_metered_quantity: Optional[TotalMeteredQuantity] = field(
+    total_metered_quantity: TotalMeteredQuantity | None = field(
         default=None,
         metadata={
             "name": "TotalMeteredQuantity",
@@ -21701,7 +21563,7 @@ class SubscriberConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    subscriber_party: Optional[SubscriberParty] = field(
+    subscriber_party: SubscriberParty | None = field(
         default=None,
         metadata={
             "name": "SubscriberParty",
@@ -21709,7 +21571,7 @@ class SubscriberConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    utility_consumption_point: Optional[UtilityConsumptionPoint] = field(
+    utility_consumption_point: UtilityConsumptionPoint | None = field(
         default=None,
         metadata={
             "name": "UtilityConsumptionPoint",
@@ -21726,7 +21588,7 @@ class SubscriberConsumptionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    consumption: Optional[Consumption] = field(
+    consumption: Consumption | None = field(
         default=None,
         metadata={
             "name": "Consumption",
@@ -21746,7 +21608,7 @@ class SubscriberConsumptionType:
 
 @dataclass(frozen=True)
 class TransportHandlingUnitType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -21754,9 +21616,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transport_handling_unit_type_code: Optional[
-        TransportHandlingUnitTypeCode
-    ] = field(
+    transport_handling_unit_type_code: TransportHandlingUnitTypeCode | None = field(
         default=None,
         metadata={
             "name": "TransportHandlingUnitTypeCode",
@@ -21764,7 +21624,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    handling_code: Optional[HandlingCode] = field(
+    handling_code: HandlingCode | None = field(
         default=None,
         metadata={
             "name": "HandlingCode",
@@ -21780,7 +21640,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    hazardous_risk_indicator: Optional[HazardousRiskIndicator] = field(
+    hazardous_risk_indicator: HazardousRiskIndicator | None = field(
         default=None,
         metadata={
             "name": "HazardousRiskIndicator",
@@ -21788,7 +21648,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_goods_item_quantity: Optional[TotalGoodsItemQuantity] = field(
+    total_goods_item_quantity: TotalGoodsItemQuantity | None = field(
         default=None,
         metadata={
             "name": "TotalGoodsItemQuantity",
@@ -21796,7 +21656,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_package_quantity: Optional[TotalPackageQuantity] = field(
+    total_package_quantity: TotalPackageQuantity | None = field(
         default=None,
         metadata={
             "name": "TotalPackageQuantity",
@@ -21820,7 +21680,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    trace_id: Optional[TraceId] = field(
+    trace_id: TraceId | None = field(
         default=None,
         metadata={
             "name": "TraceID",
@@ -21886,7 +21746,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    minimum_temperature: Optional[MinimumTemperature] = field(
+    minimum_temperature: MinimumTemperature | None = field(
         default=None,
         metadata={
             "name": "MinimumTemperature",
@@ -21894,7 +21754,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    maximum_temperature: Optional[MaximumTemperature] = field(
+    maximum_temperature: MaximumTemperature | None = field(
         default=None,
         metadata={
             "name": "MaximumTemperature",
@@ -21910,9 +21770,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    floor_space_measurement_dimension: Optional[
-        FloorSpaceMeasurementDimension
-    ] = field(
+    floor_space_measurement_dimension: FloorSpaceMeasurementDimension | None = field(
         default=None,
         metadata={
             "name": "FloorSpaceMeasurementDimension",
@@ -21920,9 +21778,7 @@ class TransportHandlingUnitType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    pallet_space_measurement_dimension: Optional[
-        PalletSpaceMeasurementDimension
-    ] = field(
+    pallet_space_measurement_dimension: PalletSpaceMeasurementDimension | None = field(
         default=None,
         metadata={
             "name": "PalletSpaceMeasurementDimension",
@@ -21974,7 +21830,7 @@ class TransportHandlingUnitType:
 
 @dataclass(frozen=True)
 class TransportationServiceType:
-    transport_service_code: Optional[TransportServiceCode] = field(
+    transport_service_code: TransportServiceCode | None = field(
         default=None,
         metadata={
             "name": "TransportServiceCode",
@@ -21983,7 +21839,7 @@ class TransportationServiceType:
             "required": True,
         },
     )
-    tariff_class_code: Optional[TariffClassCode] = field(
+    tariff_class_code: TariffClassCode | None = field(
         default=None,
         metadata={
             "name": "TariffClassCode",
@@ -21991,7 +21847,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    priority: Optional[Priority] = field(
+    priority: Priority | None = field(
         default=None,
         metadata={
             "name": "Priority",
@@ -21999,7 +21855,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    freight_rate_class_code: Optional[FreightRateClassCode] = field(
+    freight_rate_class_code: FreightRateClassCode | None = field(
         default=None,
         metadata={
             "name": "FreightRateClassCode",
@@ -22017,9 +21873,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transportation_service_details_uri: Optional[
-        TransportationServiceDetailsUri
-    ] = field(
+    transportation_service_details_uri: TransportationServiceDetailsUri | None = field(
         default=None,
         metadata={
             "name": "TransportationServiceDetailsURI",
@@ -22027,7 +21881,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    nomination_date: Optional[NominationDate] = field(
+    nomination_date: NominationDate | None = field(
         default=None,
         metadata={
             "name": "NominationDate",
@@ -22035,7 +21889,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    nomination_time: Optional[NominationTime] = field(
+    nomination_time: NominationTime | None = field(
         default=None,
         metadata={
             "name": "NominationTime",
@@ -22043,7 +21897,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -22051,7 +21905,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    sequence_numeric: Optional[SequenceNumeric] = field(
+    sequence_numeric: SequenceNumeric | None = field(
         default=None,
         metadata={
             "name": "SequenceNumeric",
@@ -22115,7 +21969,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    total_capacity_dimension: Optional[TotalCapacityDimension] = field(
+    total_capacity_dimension: TotalCapacityDimension | None = field(
         default=None,
         metadata={
             "name": "TotalCapacityDimension",
@@ -22139,9 +21993,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    responsible_transport_service_provider_party: Optional[
-        ResponsibleTransportServiceProviderParty
-    ] = field(
+    responsible_transport_service_provider_party: ResponsibleTransportServiceProviderParty | None = field(
         default=None,
         metadata={
             "name": "ResponsibleTransportServiceProviderParty",
@@ -22157,7 +22009,7 @@ class TransportationServiceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    estimated_duration_period: Optional[EstimatedDurationPeriod] = field(
+    estimated_duration_period: EstimatedDurationPeriod | None = field(
         default=None,
         metadata={
             "name": "EstimatedDurationPeriod",
@@ -22309,7 +22161,7 @@ class TransportationService(TransportationServiceType):
 
 @dataclass(frozen=True)
 class OrderLineType:
-    substitution_status_code: Optional[SubstitutionStatusCode] = field(
+    substitution_status_code: SubstitutionStatusCode | None = field(
         default=None,
         metadata={
             "name": "SubstitutionStatusCode",
@@ -22325,7 +22177,7 @@ class OrderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_item: Optional[LineItem] = field(
+    line_item: LineItem | None = field(
         default=None,
         metadata={
             "name": "LineItem",
@@ -22364,7 +22216,7 @@ class OrderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    catalogue_line_reference: Optional[CatalogueLineReference] = field(
+    catalogue_line_reference: CatalogueLineReference | None = field(
         default=None,
         metadata={
             "name": "CatalogueLineReference",
@@ -22372,7 +22224,7 @@ class OrderLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    quotation_line_reference: Optional[QuotationLineReference] = field(
+    quotation_line_reference: QuotationLineReference | None = field(
         default=None,
         metadata={
             "name": "QuotationLineReference",
@@ -22400,7 +22252,7 @@ class OrderLineType:
 
 @dataclass(frozen=True)
 class ProcurementProjectLotType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -22409,7 +22261,7 @@ class ProcurementProjectLotType:
             "required": True,
         },
     )
-    tendering_terms: Optional["TenderingTerms"] = field(
+    tendering_terms: TenderingTerms | None = field(
         default=None,
         metadata={
             "name": "TenderingTerms",
@@ -22417,7 +22269,7 @@ class ProcurementProjectLotType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    procurement_project: Optional[ProcurementProject] = field(
+    procurement_project: ProcurementProject | None = field(
         default=None,
         metadata={
             "name": "ProcurementProject",
@@ -22429,7 +22281,7 @@ class ProcurementProjectLotType:
 
 @dataclass(frozen=True)
 class QuotationLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -22445,7 +22297,7 @@ class QuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -22453,7 +22305,7 @@ class QuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_extension_amount: Optional[LineExtensionAmount] = field(
+    line_extension_amount: LineExtensionAmount | None = field(
         default=None,
         metadata={
             "name": "LineExtensionAmount",
@@ -22461,7 +22313,7 @@ class QuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_tax_amount: Optional[TotalTaxAmount] = field(
+    total_tax_amount: TotalTaxAmount | None = field(
         default=None,
         metadata={
             "name": "TotalTaxAmount",
@@ -22469,7 +22321,7 @@ class QuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    request_for_quotation_line_id: Optional[RequestForQuotationLineId] = field(
+    request_for_quotation_line_id: RequestForQuotationLineId | None = field(
         default=None,
         metadata={
             "name": "RequestForQuotationLineID",
@@ -22485,7 +22337,7 @@ class QuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    line_item: Optional[LineItem] = field(
+    line_item: LineItem | None = field(
         default=None,
         metadata={
             "name": "LineItem",
@@ -22512,7 +22364,7 @@ class QuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    request_line_reference: Optional[RequestLineReference] = field(
+    request_line_reference: RequestLineReference | None = field(
         default=None,
         metadata={
             "name": "RequestLineReference",
@@ -22524,7 +22376,7 @@ class QuotationLineType:
 
 @dataclass(frozen=True)
 class RequestForQuotationLineType:
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -22532,7 +22384,7 @@ class RequestForQuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -22548,7 +22400,7 @@ class RequestForQuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    optional_line_item_indicator: Optional[OptionalLineItemIndicator] = field(
+    optional_line_item_indicator: OptionalLineItemIndicator | None = field(
         default=None,
         metadata={
             "name": "OptionalLineItemIndicator",
@@ -22556,7 +22408,7 @@ class RequestForQuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    privacy_code: Optional[PrivacyCode] = field(
+    privacy_code: PrivacyCode | None = field(
         default=None,
         metadata={
             "name": "PrivacyCode",
@@ -22564,7 +22416,7 @@ class RequestForQuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    security_classification_code: Optional[SecurityClassificationCode] = field(
+    security_classification_code: SecurityClassificationCode | None = field(
         default=None,
         metadata={
             "name": "SecurityClassificationCode",
@@ -22580,7 +22432,7 @@ class RequestForQuotationLineType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    line_item: Optional[LineItem] = field(
+    line_item: LineItem | None = field(
         default=None,
         metadata={
             "name": "LineItem",
@@ -22593,7 +22445,7 @@ class RequestForQuotationLineType:
 
 @dataclass(frozen=True)
 class TransportationSegmentType:
-    sequence_numeric: Optional[SequenceNumeric] = field(
+    sequence_numeric: SequenceNumeric | None = field(
         default=None,
         metadata={
             "name": "SequenceNumeric",
@@ -22602,9 +22454,7 @@ class TransportationSegmentType:
             "required": True,
         },
     )
-    transport_execution_plan_reference_id: Optional[
-        TransportExecutionPlanReferenceId
-    ] = field(
+    transport_execution_plan_reference_id: TransportExecutionPlanReferenceId | None = field(
         default=None,
         metadata={
             "name": "TransportExecutionPlanReferenceID",
@@ -22612,7 +22462,7 @@ class TransportationSegmentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transportation_service: Optional[TransportationService] = field(
+    transportation_service: TransportationService | None = field(
         default=None,
         metadata={
             "name": "TransportationService",
@@ -22621,9 +22471,7 @@ class TransportationSegmentType:
             "required": True,
         },
     )
-    transport_service_provider_party: Optional[
-        TransportServiceProviderParty
-    ] = field(
+    transport_service_provider_party: TransportServiceProviderParty | None = field(
         default=None,
         metadata={
             "name": "TransportServiceProviderParty",
@@ -22632,7 +22480,7 @@ class TransportationSegmentType:
             "required": True,
         },
     )
-    referenced_consignment: Optional[ReferencedConsignment] = field(
+    referenced_consignment: ReferencedConsignment | None = field(
         default=None,
         metadata={
             "name": "ReferencedConsignment",
@@ -22688,7 +22536,7 @@ class TransportationSegment(TransportationSegmentType):
 
 @dataclass(frozen=True)
 class QualificationResolutionType:
-    admission_code: Optional[AdmissionCode] = field(
+    admission_code: AdmissionCode | None = field(
         default=None,
         metadata={
             "name": "AdmissionCode",
@@ -22713,7 +22561,7 @@ class QualificationResolutionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    resolution_date: Optional[ResolutionDate] = field(
+    resolution_date: ResolutionDate | None = field(
         default=None,
         metadata={
             "name": "ResolutionDate",
@@ -22722,7 +22570,7 @@ class QualificationResolutionType:
             "required": True,
         },
     )
-    resolution_time: Optional[ResolutionTime] = field(
+    resolution_time: ResolutionTime | None = field(
         default=None,
         metadata={
             "name": "ResolutionTime",
@@ -22730,7 +22578,7 @@ class QualificationResolutionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    procurement_project_lot: Optional[ProcurementProjectLot] = field(
+    procurement_project_lot: ProcurementProjectLot | None = field(
         default=None,
         metadata={
             "name": "ProcurementProjectLot",
@@ -22742,7 +22590,7 @@ class QualificationResolutionType:
 
 @dataclass(frozen=True)
 class TenderPreparationType:
-    tender_envelope_id: Optional[TenderEnvelopeId] = field(
+    tender_envelope_id: TenderEnvelopeId | None = field(
         default=None,
         metadata={
             "name": "TenderEnvelopeID",
@@ -22751,7 +22599,7 @@ class TenderPreparationType:
             "required": True,
         },
     )
-    tender_envelope_type_code: Optional[TenderEnvelopeTypeCode] = field(
+    tender_envelope_type_code: TenderEnvelopeTypeCode | None = field(
         default=None,
         metadata={
             "name": "TenderEnvelopeTypeCode",
@@ -22767,7 +22615,7 @@ class TenderPreparationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    open_tender_id: Optional[OpenTenderId] = field(
+    open_tender_id: OpenTenderId | None = field(
         default=None,
         metadata={
             "name": "OpenTenderID",
@@ -22795,7 +22643,7 @@ class TenderPreparationType:
 
 @dataclass(frozen=True)
 class TenderedProjectType:
-    variant_id: Optional[VariantId] = field(
+    variant_id: VariantId | None = field(
         default=None,
         metadata={
             "name": "VariantID",
@@ -22803,7 +22651,7 @@ class TenderedProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    fee_amount: Optional[FeeAmount] = field(
+    fee_amount: FeeAmount | None = field(
         default=None,
         metadata={
             "name": "FeeAmount",
@@ -22819,7 +22667,7 @@ class TenderedProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tender_envelope_id: Optional[TenderEnvelopeId] = field(
+    tender_envelope_id: TenderEnvelopeId | None = field(
         default=None,
         metadata={
             "name": "TenderEnvelopeID",
@@ -22827,7 +22675,7 @@ class TenderedProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    tender_envelope_type_code: Optional[TenderEnvelopeTypeCode] = field(
+    tender_envelope_type_code: TenderEnvelopeTypeCode | None = field(
         default=None,
         metadata={
             "name": "TenderEnvelopeTypeCode",
@@ -22835,7 +22683,7 @@ class TenderedProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    procurement_project_lot: Optional[ProcurementProjectLot] = field(
+    procurement_project_lot: ProcurementProjectLot | None = field(
         default=None,
         metadata={
             "name": "ProcurementProjectLot",
@@ -22859,7 +22707,7 @@ class TenderedProjectType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    legal_monetary_total: Optional[LegalMonetaryTotal] = field(
+    legal_monetary_total: LegalMonetaryTotal | None = field(
         default=None,
         metadata={
             "name": "LegalMonetaryTotal",
@@ -22897,7 +22745,7 @@ class TendererPartyQualificationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    main_qualifying_party: Optional[MainQualifyingParty] = field(
+    main_qualifying_party: MainQualifyingParty | None = field(
         default=None,
         metadata={
             "name": "MainQualifyingParty",
@@ -22948,7 +22796,7 @@ class TendererPartyQualification(TendererPartyQualificationType):
 
 @dataclass(frozen=True)
 class TenderResultType:
-    tender_result_code: Optional[TenderResultCode] = field(
+    tender_result_code: TenderResultCode | None = field(
         default=None,
         metadata={
             "name": "TenderResultCode",
@@ -22964,7 +22812,7 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    advertisement_amount: Optional[AdvertisementAmount] = field(
+    advertisement_amount: AdvertisementAmount | None = field(
         default=None,
         metadata={
             "name": "AdvertisementAmount",
@@ -22972,7 +22820,7 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    award_date: Optional[AwardDate] = field(
+    award_date: AwardDate | None = field(
         default=None,
         metadata={
             "name": "AwardDate",
@@ -22981,7 +22829,7 @@ class TenderResultType:
             "required": True,
         },
     )
-    award_time: Optional[AwardTime] = field(
+    award_time: AwardTime | None = field(
         default=None,
         metadata={
             "name": "AwardTime",
@@ -22989,7 +22837,7 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    received_tender_quantity: Optional[ReceivedTenderQuantity] = field(
+    received_tender_quantity: ReceivedTenderQuantity | None = field(
         default=None,
         metadata={
             "name": "ReceivedTenderQuantity",
@@ -22997,7 +22845,7 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    lower_tender_amount: Optional[LowerTenderAmount] = field(
+    lower_tender_amount: LowerTenderAmount | None = field(
         default=None,
         metadata={
             "name": "LowerTenderAmount",
@@ -23005,7 +22853,7 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    higher_tender_amount: Optional[HigherTenderAmount] = field(
+    higher_tender_amount: HigherTenderAmount | None = field(
         default=None,
         metadata={
             "name": "HigherTenderAmount",
@@ -23013,7 +22861,7 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    start_date: Optional[StartDate] = field(
+    start_date: StartDate | None = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -23021,9 +22869,7 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    received_electronic_tender_quantity: Optional[
-        ReceivedElectronicTenderQuantity
-    ] = field(
+    received_electronic_tender_quantity: ReceivedElectronicTenderQuantity | None = field(
         default=None,
         metadata={
             "name": "ReceivedElectronicTenderQuantity",
@@ -23031,9 +22877,7 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    received_foreign_tender_quantity: Optional[
-        ReceivedForeignTenderQuantity
-    ] = field(
+    received_foreign_tender_quantity: ReceivedForeignTenderQuantity | None = field(
         default=None,
         metadata={
             "name": "ReceivedForeignTenderQuantity",
@@ -23041,7 +22885,7 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contract: Optional[Contract] = field(
+    contract: Contract | None = field(
         default=None,
         metadata={
             "name": "Contract",
@@ -23049,7 +22893,7 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    awarded_tendered_project: Optional[AwardedTenderedProject] = field(
+    awarded_tendered_project: AwardedTenderedProject | None = field(
         default=None,
         metadata={
             "name": "AwardedTenderedProject",
@@ -23057,7 +22901,7 @@ class TenderResultType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contract_formalization_period: Optional[ContractFormalizationPeriod] = (
+    contract_formalization_period: ContractFormalizationPeriod | None = (
         field(
             default=None,
             metadata={
@@ -23087,7 +22931,7 @@ class TenderResultType:
 
 @dataclass(frozen=True)
 class TenderingTermsType:
-    awarding_method_type_code: Optional[AwardingMethodTypeCode] = field(
+    awarding_method_type_code: AwardingMethodTypeCode | None = field(
         default=None,
         metadata={
             "name": "AwardingMethodTypeCode",
@@ -23095,7 +22939,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    price_evaluation_code: Optional[PriceEvaluationCode] = field(
+    price_evaluation_code: PriceEvaluationCode | None = field(
         default=None,
         metadata={
             "name": "PriceEvaluationCode",
@@ -23103,7 +22947,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_variant_quantity: Optional[MaximumVariantQuantity] = field(
+    maximum_variant_quantity: MaximumVariantQuantity | None = field(
         default=None,
         metadata={
             "name": "MaximumVariantQuantity",
@@ -23111,7 +22955,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    variant_constraint_indicator: Optional[VariantConstraintIndicator] = field(
+    variant_constraint_indicator: VariantConstraintIndicator | None = field(
         default=None,
         metadata={
             "name": "VariantConstraintIndicator",
@@ -23139,7 +22983,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    funding_program_code: Optional[FundingProgramCode] = field(
+    funding_program_code: FundingProgramCode | None = field(
         default=None,
         metadata={
             "name": "FundingProgramCode",
@@ -23155,7 +22999,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    maximum_advertisement_amount: Optional[MaximumAdvertisementAmount] = field(
+    maximum_advertisement_amount: MaximumAdvertisementAmount | None = field(
         default=None,
         metadata={
             "name": "MaximumAdvertisementAmount",
@@ -23171,7 +23015,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_frequency_code: Optional[PaymentFrequencyCode] = field(
+    payment_frequency_code: PaymentFrequencyCode | None = field(
         default=None,
         metadata={
             "name": "PaymentFrequencyCode",
@@ -23179,7 +23023,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    economic_operator_registry_uri: Optional[EconomicOperatorRegistryUri] = (
+    economic_operator_registry_uri: EconomicOperatorRegistryUri | None = (
         field(
             default=None,
             metadata={
@@ -23189,7 +23033,7 @@ class TenderingTermsType:
             },
         )
     )
-    required_curricula_indicator: Optional[RequiredCurriculaIndicator] = field(
+    required_curricula_indicator: RequiredCurriculaIndicator | None = field(
         default=None,
         metadata={
             "name": "RequiredCurriculaIndicator",
@@ -23197,7 +23041,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    other_conditions_indicator: Optional[OtherConditionsIndicator] = field(
+    other_conditions_indicator: OtherConditionsIndicator | None = field(
         default=None,
         metadata={
             "name": "OtherConditionsIndicator",
@@ -23213,7 +23057,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    latest_security_clearance_date: Optional[LatestSecurityClearanceDate] = (
+    latest_security_clearance_date: LatestSecurityClearanceDate | None = (
         field(
             default=None,
             metadata={
@@ -23223,7 +23067,7 @@ class TenderingTermsType:
             },
         )
     )
-    documentation_fee_amount: Optional[DocumentationFeeAmount] = field(
+    documentation_fee_amount: DocumentationFeeAmount | None = field(
         default=None,
         metadata={
             "name": "DocumentationFeeAmount",
@@ -23249,9 +23093,7 @@ class TenderingTermsType:
             },
         )
     )
-    procurement_legislation_document_reference: Optional[
-        ProcurementLegislationDocumentReference
-    ] = field(
+    procurement_legislation_document_reference: ProcurementLegislationDocumentReference | None = field(
         default=None,
         metadata={
             "name": "ProcurementLegislationDocumentReference",
@@ -23259,9 +23101,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    fiscal_legislation_document_reference: Optional[
-        FiscalLegislationDocumentReference
-    ] = field(
+    fiscal_legislation_document_reference: FiscalLegislationDocumentReference | None = field(
         default=None,
         metadata={
             "name": "FiscalLegislationDocumentReference",
@@ -23269,9 +23109,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    environmental_legislation_document_reference: Optional[
-        EnvironmentalLegislationDocumentReference
-    ] = field(
+    environmental_legislation_document_reference: EnvironmentalLegislationDocumentReference | None = field(
         default=None,
         metadata={
             "name": "EnvironmentalLegislationDocumentReference",
@@ -23279,9 +23117,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    employment_legislation_document_reference: Optional[
-        EmploymentLegislationDocumentReference
-    ] = field(
+    employment_legislation_document_reference: EmploymentLegislationDocumentReference | None = field(
         default=None,
         metadata={
             "name": "EmploymentLegislationDocumentReference",
@@ -23299,9 +23135,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    call_for_tenders_document_reference: Optional[
-        CallForTendersDocumentReference
-    ] = field(
+    call_for_tenders_document_reference: CallForTendersDocumentReference | None = field(
         default=None,
         metadata={
             "name": "CallForTendersDocumentReference",
@@ -23309,7 +23143,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    warranty_validity_period: Optional[WarrantyValidityPeriod] = field(
+    warranty_validity_period: WarrantyValidityPeriod | None = field(
         default=None,
         metadata={
             "name": "WarrantyValidityPeriod",
@@ -23361,7 +23195,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    awarding_terms: Optional[AwardingTerms] = field(
+    awarding_terms: AwardingTerms | None = field(
         default=None,
         metadata={
             "name": "AwardingTerms",
@@ -23369,7 +23203,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    additional_information_party: Optional[AdditionalInformationParty] = field(
+    additional_information_party: AdditionalInformationParty | None = field(
         default=None,
         metadata={
             "name": "AdditionalInformationParty",
@@ -23377,7 +23211,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    document_provider_party: Optional[DocumentProviderParty] = field(
+    document_provider_party: DocumentProviderParty | None = field(
         default=None,
         metadata={
             "name": "DocumentProviderParty",
@@ -23385,7 +23219,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tender_recipient_party: Optional[TenderRecipientParty] = field(
+    tender_recipient_party: TenderRecipientParty | None = field(
         default=None,
         metadata={
             "name": "TenderRecipientParty",
@@ -23393,7 +23227,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contract_responsible_party: Optional[ContractResponsibleParty] = field(
+    contract_responsible_party: ContractResponsibleParty | None = field(
         default=None,
         metadata={
             "name": "ContractResponsibleParty",
@@ -23409,7 +23243,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    tender_validity_period: Optional[TenderValidityPeriod] = field(
+    tender_validity_period: TenderValidityPeriod | None = field(
         default=None,
         metadata={
             "name": "TenderValidityPeriod",
@@ -23417,7 +23251,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    contract_acceptance_period: Optional[ContractAcceptancePeriod] = field(
+    contract_acceptance_period: ContractAcceptancePeriod | None = field(
         default=None,
         metadata={
             "name": "ContractAcceptancePeriod",
@@ -23425,7 +23259,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    appeal_terms: Optional[AppealTerms] = field(
+    appeal_terms: AppealTerms | None = field(
         default=None,
         metadata={
             "name": "AppealTerms",
@@ -23449,9 +23283,7 @@ class TenderingTermsType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    replaced_notice_document_reference: Optional[
-        ReplacedNoticeDocumentReference
-    ] = field(
+    replaced_notice_document_reference: ReplacedNoticeDocumentReference | None = field(
         default=None,
         metadata={
             "name": "ReplacedNoticeDocumentReference",

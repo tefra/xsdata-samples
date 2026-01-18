@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -44,7 +46,7 @@ class HwAttributeValue:
     class Meta:
         name = "HW-ATTRIBUTE-VALUE"
 
-    annotation: Optional[Annotation] = field(
+    annotation: Annotation | None = field(
         default=None,
         metadata={
             "name": "ANNOTATION",
@@ -52,7 +54,7 @@ class HwAttributeValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_attribute_def_ref: Optional["HwAttributeValue.HwAttributeDefRef"] = (
+    hw_attribute_def_ref: HwAttributeValue.HwAttributeDefRef | None = (
         field(
             default=None,
             metadata={
@@ -62,7 +64,7 @@ class HwAttributeValue:
             },
         )
     )
-    v: Optional[NumericalValueVariationPoint] = field(
+    v: NumericalValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "V",
@@ -70,7 +72,7 @@ class HwAttributeValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vt: Optional[VerbatimString] = field(
+    vt: VerbatimString | None = field(
         default=None,
         metadata={
             "name": "VT",
@@ -78,7 +80,7 @@ class HwAttributeValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -86,14 +88,14 @@ class HwAttributeValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -104,7 +106,7 @@ class HwAttributeValue:
 
     @dataclass
     class HwAttributeDefRef(Ref):
-        dest: Optional[HwAttributeDefSubtypesEnum] = field(
+        dest: HwAttributeDefSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

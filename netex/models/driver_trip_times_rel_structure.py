@@ -15,7 +15,7 @@ class DriverTripTimesRelStructure(ContainmentAggregationStructure):
         name = "driverTripTimes_RelStructure"
 
     driver_trip_time_ref_or_driver_trip_time: Iterable[
-        Union[DriverTripTimeRef, DriverTripTime]
+        DriverTripTimeRef | DriverTripTime
     ] = field(
         default_factory=list,
         metadata={

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -50,7 +52,7 @@ class BswVariableAccess:
     class Meta:
         name = "BSW-VARIABLE-ACCESS"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -59,7 +61,7 @@ class BswVariableAccess:
             "required": True,
         },
     )
-    short_name_fragments: Optional["BswVariableAccess.ShortNameFragments"] = (
+    short_name_fragments: BswVariableAccess.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -69,9 +71,7 @@ class BswVariableAccess:
             },
         )
     )
-    accessed_variable_ref: Optional[
-        "BswVariableAccess.AccessedVariableRef"
-    ] = field(
+    accessed_variable_ref: BswVariableAccess.AccessedVariableRef | None = field(
         default=None,
         metadata={
             "name": "ACCESSED-VARIABLE-REF",
@@ -79,9 +79,7 @@ class BswVariableAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_limitation_refs: Optional[
-        "BswVariableAccess.ContextLimitationRefs"
-    ] = field(
+    context_limitation_refs: BswVariableAccess.ContextLimitationRefs | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-LIMITATION-REFS",
@@ -89,7 +87,7 @@ class BswVariableAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -97,14 +95,14 @@ class BswVariableAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -126,7 +124,7 @@ class BswVariableAccess:
 
     @dataclass
     class AccessedVariableRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -138,7 +136,7 @@ class BswVariableAccess:
     @dataclass
     class ContextLimitationRefs:
         context_limitation_ref: list[
-            "BswVariableAccess.ContextLimitationRefs.ContextLimitationRef"
+            BswVariableAccess.ContextLimitationRefs.ContextLimitationRef
         ] = field(
             default_factory=list,
             metadata={
@@ -150,7 +148,7 @@ class BswVariableAccess:
 
         @dataclass
         class ContextLimitationRef(Ref):
-            dest: Optional[BswDistinguishedPartitionSubtypesEnum] = field(
+            dest: BswDistinguishedPartitionSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

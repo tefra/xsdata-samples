@@ -18,7 +18,7 @@ class VehicleJourneyHeadwayVersionedChildStructure(
     class Meta:
         name = "VehicleJourneyHeadway_VersionedChildStructure"
 
-    vehicle_journey_ref: Optional[Union[DeadRunRef, VehicleJourneyRef]] = (
+    vehicle_journey_ref: DeadRunRef | VehicleJourneyRef | None = (
         field(
             default=None,
             metadata={
@@ -38,9 +38,7 @@ class VehicleJourneyHeadwayVersionedChildStructure(
             },
         )
     )
-    timing_point_in_journey_pattern_ref: Optional[
-        TimingPointInJourneyPatternRef
-    ] = field(
+    timing_point_in_journey_pattern_ref: TimingPointInJourneyPatternRef | None = field(
         default=None,
         metadata={
             "name": "TimingPointInJourneyPatternRef",

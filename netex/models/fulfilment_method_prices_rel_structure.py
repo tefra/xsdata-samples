@@ -22,11 +22,7 @@ class FulfilmentMethodPricesRelStructure(
         name = "fulfilmentMethodPrices_RelStructure"
 
     fulfilment_method_price_ref_or_fulfilment_method_price_or_cell_ref: Iterable[
-        Union[
-            FulfilmentMethodPriceRef,
-            FulfilmentMethodPriceVersionedChildStructure,
-            CellRef,
-        ]
+        FulfilmentMethodPriceRef | FulfilmentMethodPriceVersionedChildStructure | CellRef
     ] = field(
         default_factory=list,
         metadata={

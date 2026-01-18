@@ -27,20 +27,20 @@ class RequestTypeEnum:
     class Meta:
         name = "REQUEST-TYPE-ENUM"
 
-    value: Optional[RequestTypeEnumSimple] = field(
+    value: RequestTypeEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -14,7 +14,7 @@ class TypeOfPassengerInformationEquipmentValueStructure(
     class Meta:
         name = "TypeOfPassengerInformationEquipment_ValueStructure"
 
-    broad_type: Optional[MultilingualString] = field(
+    broad_type: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "BroadType",

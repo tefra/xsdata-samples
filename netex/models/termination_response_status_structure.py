@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional, Union
 
@@ -18,7 +20,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class TerminationResponseStatusStructure:
-    response_timestamp: Optional[ResponseTimestamp] = field(
+    response_timestamp: ResponseTimestamp | None = field(
         default=None,
         metadata={
             "name": "ResponseTimestamp",
@@ -26,7 +28,7 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    request_message_ref: Optional[MessageQualifierStructure] = field(
+    request_message_ref: MessageQualifierStructure | None = field(
         default=None,
         metadata={
             "name": "RequestMessageRef",
@@ -34,7 +36,7 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscriber_ref: Optional[ParticipantRefStructure] = field(
+    subscriber_ref: ParticipantRefStructure | None = field(
         default=None,
         metadata={
             "name": "SubscriberRef",
@@ -42,7 +44,7 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscription_filter_ref: Optional[SubscriptionFilterRefStructure] = field(
+    subscription_filter_ref: SubscriptionFilterRefStructure | None = field(
         default=None,
         metadata={
             "name": "SubscriptionFilterRef",
@@ -50,7 +52,7 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscription_ref: Optional[SubscriptionQualifierStructure] = field(
+    subscription_ref: SubscriptionQualifierStructure | None = field(
         default=None,
         metadata={
             "name": "SubscriptionRef",
@@ -58,7 +60,7 @@ class TerminationResponseStatusStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    status: Optional[Status] = field(
+    status: Status | None = field(
         default=None,
         metadata={
             "name": "Status",
@@ -67,9 +69,7 @@ class TerminationResponseStatusStructure:
             "required": True,
         },
     )
-    error_condition: Optional[
-        "TerminationResponseStatusStructure.ErrorCondition"
-    ] = field(
+    error_condition: TerminationResponseStatusStructure.ErrorCondition | None = field(
         default=None,
         metadata={
             "name": "ErrorCondition",
@@ -80,14 +80,7 @@ class TerminationResponseStatusStructure:
 
     @dataclass
     class ErrorCondition:
-        choice: Optional[
-            Union[
-                CapabilityNotSupportedError,
-                UnknownSubscriberError,
-                UnknownSubscriptionError,
-                OtherError,
-            ]
-        ] = field(
+        choice: CapabilityNotSupportedError | UnknownSubscriberError | UnknownSubscriptionError | OtherError | None = field(
             default=None,
             metadata={
                 "type": "Elements",
@@ -115,7 +108,7 @@ class TerminationResponseStatusStructure:
                 ),
             },
         )
-        description: Optional[ErrorDescriptionStructure] = field(
+        description: ErrorDescriptionStructure | None = field(
             default=None,
             metadata={
                 "name": "Description",

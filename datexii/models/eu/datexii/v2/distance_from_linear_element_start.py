@@ -20,7 +20,7 @@ class DistanceFromLinearElementStart(DistanceAlongLinearElement):
     :ivar distance_from_linear_element_start_extension:
     """
 
-    distance_along: Optional[float] = field(
+    distance_along: float | None = field(
         default=None,
         metadata={
             "name": "distanceAlong",
@@ -29,7 +29,7 @@ class DistanceFromLinearElementStart(DistanceAlongLinearElement):
             "required": True,
         },
     )
-    distance_from_linear_element_start_extension: Optional[ExtensionType] = (
+    distance_from_linear_element_start_extension: ExtensionType | None = (
         field(
             default=None,
             metadata={

@@ -16,7 +16,7 @@ class ServiceJourneyInterchangeVersionStructure(InterchangeVersionStructure):
     class Meta:
         name = "ServiceJourneyInterchange_VersionStructure"
 
-    from_point_ref: Optional[ScheduledStopPointRefStructure] = field(
+    from_point_ref: ScheduledStopPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "FromPointRef",
@@ -24,7 +24,7 @@ class ServiceJourneyInterchangeVersionStructure(InterchangeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_visit_number: Optional[int] = field(
+    from_visit_number: int | None = field(
         default=None,
         metadata={
             "name": "FromVisitNumber",
@@ -32,7 +32,7 @@ class ServiceJourneyInterchangeVersionStructure(InterchangeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_point_ref: Optional[ScheduledStopPointRefStructure] = field(
+    to_point_ref: ScheduledStopPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "ToPointRef",
@@ -40,7 +40,7 @@ class ServiceJourneyInterchangeVersionStructure(InterchangeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_visit_number: Optional[int] = field(
+    to_visit_number: int | None = field(
         default=None,
         metadata={
             "name": "ToVisitNumber",
@@ -48,7 +48,7 @@ class ServiceJourneyInterchangeVersionStructure(InterchangeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_journey_ref: Optional[VehicleJourneyRefStructure] = field(
+    from_journey_ref: VehicleJourneyRefStructure | None = field(
         default=None,
         metadata={
             "name": "FromJourneyRef",
@@ -57,7 +57,7 @@ class ServiceJourneyInterchangeVersionStructure(InterchangeVersionStructure):
             "required": True,
         },
     )
-    to_journey_ref: Optional[VehicleJourneyRefStructure] = field(
+    to_journey_ref: VehicleJourneyRefStructure | None = field(
         default=None,
         metadata={
             "name": "ToJourneyRef",
@@ -66,9 +66,7 @@ class ServiceJourneyInterchangeVersionStructure(InterchangeVersionStructure):
             "required": True,
         },
     )
-    service_journey_pattern_interchange_ref: Optional[
-        ServiceJourneyPatternInterchangeRef
-    ] = field(
+    service_journey_pattern_interchange_ref: ServiceJourneyPatternInterchangeRef | None = field(
         default=None,
         metadata={
             "name": "ServiceJourneyPatternInterchangeRef",

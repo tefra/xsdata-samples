@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -47,7 +49,7 @@ class PortWireType:
     class Meta:
         name = "portWireType"
 
-    direction: Optional[ComponentPortDirectionType] = field(
+    direction: ComponentPortDirectionType | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -55,21 +57,21 @@ class PortWireType:
             "required": True,
         },
     )
-    qualifier: Optional[QualifierType] = field(
+    qualifier: QualifierType | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vectors: Optional[ExtendedVectorsType] = field(
+    vectors: ExtendedVectorsType | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    wire_type_defs: Optional[WireTypeDefs] = field(
+    wire_type_defs: WireTypeDefs | None = field(
         default=None,
         metadata={
             "name": "wireTypeDefs",
@@ -77,7 +79,7 @@ class PortWireType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    domain_type_defs: Optional[DomainTypeDefs] = field(
+    domain_type_defs: DomainTypeDefs | None = field(
         default=None,
         metadata={
             "name": "domainTypeDefs",
@@ -85,7 +87,7 @@ class PortWireType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    signal_type_defs: Optional[SignalTypeDefs] = field(
+    signal_type_defs: SignalTypeDefs | None = field(
         default=None,
         metadata={
             "name": "signalTypeDefs",
@@ -93,14 +95,14 @@ class PortWireType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    drivers: Optional[Drivers] = field(
+    drivers: Drivers | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    constraint_sets: Optional[ConstraintSets] = field(
+    constraint_sets: ConstraintSets | None = field(
         default=None,
         metadata={
             "name": "constraintSets",
@@ -108,7 +110,7 @@ class PortWireType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    power_constraints: Optional["PortWireType.PowerConstraints"] = field(
+    power_constraints: PortWireType.PowerConstraints | None = field(
         default=None,
         metadata={
             "name": "powerConstraints",

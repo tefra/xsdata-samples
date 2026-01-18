@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class DiagnosticOperationCycleRefConditional:
     class Meta:
         name = "DIAGNOSTIC-OPERATION-CYCLE-REF-CONDITIONAL"
 
-    diagnostic_operation_cycle_ref: Optional[
-        "DiagnosticOperationCycleRefConditional.DiagnosticOperationCycleRef"
-    ] = field(
+    diagnostic_operation_cycle_ref: DiagnosticOperationCycleRefConditional.DiagnosticOperationCycleRef | None = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-OPERATION-CYCLE-REF",
@@ -43,7 +43,7 @@ class DiagnosticOperationCycleRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class DiagnosticOperationCycleRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class DiagnosticOperationCycleRefConditional:
 
     @dataclass
     class DiagnosticOperationCycleRef(Ref):
-        dest: Optional[DiagnosticOperationCycleSubtypesEnum] = field(
+        dest: DiagnosticOperationCycleSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

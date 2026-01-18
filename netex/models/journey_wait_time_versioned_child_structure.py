@@ -24,17 +24,7 @@ class JourneyWaitTimeVersionedChildStructure(
     class Meta:
         name = "JourneyWaitTime_VersionedChildStructure"
 
-    choice: Optional[
-        Union[
-            BorderPointRef,
-            FareScheduledStopPointRef,
-            ScheduledStopPointRef,
-            GaragePointRef,
-            ParkingPointRef,
-            ReliefPointRef,
-            TimingPointRef,
-        ]
-    ] = field(
+    choice: BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -77,7 +67,7 @@ class JourneyWaitTimeVersionedChildStructure(
             ),
         },
     )
-    wait_time: Optional[XmlDuration] = field(
+    wait_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "WaitTime",

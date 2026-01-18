@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -89,7 +91,7 @@ class ApApplicationErrorSet:
     class Meta:
         name = "AP-APPLICATION-ERROR-SET"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -98,9 +100,7 @@ class ApApplicationErrorSet:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ApApplicationErrorSet.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ApApplicationErrorSet.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -108,7 +108,7 @@ class ApApplicationErrorSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -116,7 +116,7 @@ class ApApplicationErrorSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -124,7 +124,7 @@ class ApApplicationErrorSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -132,7 +132,7 @@ class ApApplicationErrorSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -140,7 +140,7 @@ class ApApplicationErrorSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -148,7 +148,7 @@ class ApApplicationErrorSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ApApplicationErrorSet.Annotations"] = field(
+    annotations: ApApplicationErrorSet.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -156,7 +156,7 @@ class ApApplicationErrorSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -164,9 +164,7 @@ class ApApplicationErrorSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ap_application_error_refs: Optional[
-        "ApApplicationErrorSet.ApApplicationErrorRefs"
-    ] = field(
+    ap_application_error_refs: ApApplicationErrorSet.ApApplicationErrorRefs | None = field(
         default=None,
         metadata={
             "name": "AP-APPLICATION-ERROR-REFS",
@@ -174,14 +172,14 @@ class ApApplicationErrorSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -189,7 +187,7 @@ class ApApplicationErrorSet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -222,7 +220,7 @@ class ApApplicationErrorSet:
     @dataclass
     class ApApplicationErrorRefs:
         ap_application_error_ref: list[
-            "ApApplicationErrorSet.ApApplicationErrorRefs.ApApplicationErrorRef"
+            ApApplicationErrorSet.ApApplicationErrorRefs.ApApplicationErrorRef
         ] = field(
             default_factory=list,
             metadata={
@@ -234,7 +232,7 @@ class ApApplicationErrorSet:
 
         @dataclass
         class ApApplicationErrorRef(Ref):
-            dest: Optional[ApApplicationErrorSubtypesEnum] = field(
+            dest: ApApplicationErrorSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

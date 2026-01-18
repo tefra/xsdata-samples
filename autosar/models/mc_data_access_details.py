@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class McDataAccessDetails:
     class Meta:
         name = "MC-DATA-ACCESS-DETAILS"
 
-    rte_event_irefs: Optional["McDataAccessDetails.RteEventIrefs"] = field(
+    rte_event_irefs: McDataAccessDetails.RteEventIrefs | None = field(
         default=None,
         metadata={
             "name": "RTE-EVENT-IREFS",
@@ -47,9 +49,7 @@ class McDataAccessDetails:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variable_access_irefs: Optional[
-        "McDataAccessDetails.VariableAccessIrefs"
-    ] = field(
+    variable_access_irefs: McDataAccessDetails.VariableAccessIrefs | None = field(
         default=None,
         metadata={
             "name": "VARIABLE-ACCESS-IREFS",
@@ -57,14 +57,14 @@ class McDataAccessDetails:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

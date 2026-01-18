@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class PrintPresentationStructure:
-    colour: Optional[str] = field(
+    colour: str | None = field(
         default=None,
         metadata={
             "name": "Colour",
@@ -16,7 +16,7 @@ class PrintPresentationStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    colour_name: Optional[str] = field(
+    colour_name: str | None = field(
         default=None,
         metadata={
             "name": "ColourName",
@@ -24,7 +24,7 @@ class PrintPresentationStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    colour_system: Optional[str] = field(
+    colour_system: str | None = field(
         default=None,
         metadata={
             "name": "ColourSystem",
@@ -32,7 +32,7 @@ class PrintPresentationStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    background_colour: Optional[bytes] = field(
+    background_colour: bytes | None = field(
         default=None,
         metadata={
             "name": "BackgroundColour",
@@ -42,7 +42,7 @@ class PrintPresentationStructure:
             "format": "base16",
         },
     )
-    background_colour_name: Optional[str] = field(
+    background_colour_name: str | None = field(
         default=None,
         metadata={
             "name": "BackgroundColourName",
@@ -50,7 +50,7 @@ class PrintPresentationStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    text_colour: Optional[str] = field(
+    text_colour: str | None = field(
         default=None,
         metadata={
             "name": "TextColour",
@@ -58,7 +58,7 @@ class PrintPresentationStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    text_colour_name: Optional[str] = field(
+    text_colour_name: str | None = field(
         default=None,
         metadata={
             "name": "TextColourName",
@@ -66,7 +66,7 @@ class PrintPresentationStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    text_font: Optional[str] = field(
+    text_font: str | None = field(
         default=None,
         metadata={
             "name": "TextFont",
@@ -74,7 +74,7 @@ class PrintPresentationStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    text_font_name: Optional[str] = field(
+    text_font_name: str | None = field(
         default=None,
         metadata={
             "name": "TextFontName",
@@ -82,7 +82,7 @@ class PrintPresentationStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    text_language: Optional[str] = field(
+    text_language: str | None = field(
         default=None,
         metadata={
             "name": "TextLanguage",
@@ -90,7 +90,7 @@ class PrintPresentationStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    font_size: Optional[FontSizeEnumeration] = field(
+    font_size: FontSizeEnumeration | None = field(
         default=None,
         metadata={
             "name": "FontSize",

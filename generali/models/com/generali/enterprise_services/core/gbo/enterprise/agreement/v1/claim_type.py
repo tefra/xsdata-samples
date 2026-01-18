@@ -18,7 +18,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class ClaimType:
-    claim_number: Optional[str] = field(
+    claim_number: str | None = field(
         default=None,
         metadata={
             "name": "ClaimNumber",
@@ -27,7 +27,7 @@ class ClaimType:
             "required": True,
         },
     )
-    policy_number: Optional[str] = field(
+    policy_number: str | None = field(
         default=None,
         metadata={
             "name": "PolicyNumber",
@@ -36,7 +36,7 @@ class ClaimType:
             "required": True,
         },
     )
-    status: Optional[str] = field(
+    status: str | None = field(
         default=None,
         metadata={
             "name": "Status",
@@ -45,7 +45,7 @@ class ClaimType:
             "required": True,
         },
     )
-    source: Optional[str] = field(
+    source: str | None = field(
         default=None,
         metadata={
             "name": "Source",
@@ -54,7 +54,7 @@ class ClaimType:
             "required": True,
         },
     )
-    contact: Optional[str] = field(
+    contact: str | None = field(
         default=None,
         metadata={
             "name": "Contact",
@@ -63,7 +63,7 @@ class ClaimType:
             "required": True,
         },
     )
-    interest: Optional[str] = field(
+    interest: str | None = field(
         default=None,
         metadata={
             "name": "Interest",
@@ -71,7 +71,7 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    date_open: Optional[DateTimeType] = field(
+    date_open: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "DateOpen",
@@ -80,7 +80,7 @@ class ClaimType:
             "required": True,
         },
     )
-    date_last_transaction: Optional[DateTimeType] = field(
+    date_last_transaction: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "DateLastTransaction",
@@ -89,7 +89,7 @@ class ClaimType:
             "required": True,
         },
     )
-    date_of_loss: Optional[DateTimeType] = field(
+    date_of_loss: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "DateOfLoss",
@@ -97,7 +97,7 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    date_reported: Optional[DateTimeType] = field(
+    date_reported: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "DateReported",
@@ -105,7 +105,7 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    date_last_updated: Optional[DateTimeType] = field(
+    date_last_updated: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "DateLastUpdated",
@@ -114,7 +114,7 @@ class ClaimType:
             "required": True,
         },
     )
-    last_update_by: Optional[str] = field(
+    last_update_by: str | None = field(
         default=None,
         metadata={
             "name": "LastUpdateBy",
@@ -123,7 +123,7 @@ class ClaimType:
             "required": True,
         },
     )
-    adjuster: Optional[str] = field(
+    adjuster: str | None = field(
         default=None,
         metadata={
             "name": "Adjuster",
@@ -131,7 +131,7 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    comments: Optional[str] = field(
+    comments: str | None = field(
         default=None,
         metadata={
             "name": "Comments",
@@ -139,7 +139,7 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    cause_of_loss: Optional[str] = field(
+    cause_of_loss: str | None = field(
         default=None,
         metadata={
             "name": "CauseOfLoss",
@@ -147,7 +147,7 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    loss_description: Optional[str] = field(
+    loss_description: str | None = field(
         default=None,
         metadata={
             "name": "LossDescription",
@@ -155,7 +155,7 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    location_key: Optional[str] = field(
+    location_key: str | None = field(
         default=None,
         metadata={
             "name": "LocationKey",
@@ -163,7 +163,7 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    address: Optional[AddressType] = field(
+    address: AddressType | None = field(
         default=None,
         metadata={
             "name": "Address",
@@ -171,7 +171,7 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    currency: Optional[str] = field(
+    currency: str | None = field(
         default=None,
         metadata={
             "name": "Currency",
@@ -180,7 +180,7 @@ class ClaimType:
             "required": True,
         },
     )
-    deductibles: Optional[AmountType] = field(
+    deductibles: AmountType | None = field(
         default=None,
         metadata={
             "name": "Deductibles",
@@ -189,7 +189,7 @@ class ClaimType:
             "required": True,
         },
     )
-    paid_claim: Optional[AmountType] = field(
+    paid_claim: AmountType | None = field(
         default=None,
         metadata={
             "name": "PaidClaim",
@@ -198,7 +198,7 @@ class ClaimType:
             "required": True,
         },
     )
-    paid_vendor_fee: Optional[AmountType] = field(
+    paid_vendor_fee: AmountType | None = field(
         default=None,
         metadata={
             "name": "PaidVendorFee",
@@ -207,7 +207,7 @@ class ClaimType:
             "required": True,
         },
     )
-    recovery_reserve: Optional[AmountType] = field(
+    recovery_reserve: AmountType | None = field(
         default=None,
         metadata={
             "name": "RecoveryReserve",
@@ -215,7 +215,7 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    claim_reserve: Optional[AmountType] = field(
+    claim_reserve: AmountType | None = field(
         default=None,
         metadata={
             "name": "ClaimReserve",
@@ -224,7 +224,7 @@ class ClaimType:
             "required": True,
         },
     )
-    vendor_fee_reserve: Optional[AmountType] = field(
+    vendor_fee_reserve: AmountType | None = field(
         default=None,
         metadata={
             "name": "VendorFeeReserve",
@@ -233,7 +233,7 @@ class ClaimType:
             "required": True,
         },
     )
-    total_incurred: Optional[AmountType] = field(
+    total_incurred: AmountType | None = field(
         default=None,
         metadata={
             "name": "TotalIncurred",
@@ -241,7 +241,7 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    producing_office_contact: Optional[str] = field(
+    producing_office_contact: str | None = field(
         default=None,
         metadata={
             "name": "ProducingOfficeContact",
@@ -249,7 +249,7 @@ class ClaimType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    fronting_office_contact: Optional[str] = field(
+    fronting_office_contact: str | None = field(
         default=None,
         metadata={
             "name": "FrontingOfficeContact",

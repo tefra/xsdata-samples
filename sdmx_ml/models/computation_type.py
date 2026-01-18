@@ -37,7 +37,7 @@ class ComputationType(AnnotableType):
             "min_occurs": 1,
         },
     )
-    local_id: Optional[str] = field(
+    local_id: str | None = field(
         default=None,
         metadata={
             "name": "localID",
@@ -45,21 +45,21 @@ class ComputationType(AnnotableType):
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    software_package: Optional[str] = field(
+    software_package: str | None = field(
         default=None,
         metadata={
             "name": "softwarePackage",
             "type": "Attribute",
         },
     )
-    software_language: Optional[str] = field(
+    software_language: str | None = field(
         default=None,
         metadata={
             "name": "softwareLanguage",
             "type": "Attribute",
         },
     )
-    software_version: Optional[str] = field(
+    software_version: str | None = field(
         default=None,
         metadata={
             "name": "softwareVersion",

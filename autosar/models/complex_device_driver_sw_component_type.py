@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -145,7 +147,7 @@ class ComplexDeviceDriverSwComponentType:
     class Meta:
         name = "COMPLEX-DEVICE-DRIVER-SW-COMPONENT-TYPE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -154,9 +156,7 @@ class ComplexDeviceDriverSwComponentType:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ComplexDeviceDriverSwComponentType.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ComplexDeviceDriverSwComponentType.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -164,7 +164,7 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -172,7 +172,7 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -180,7 +180,7 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -188,7 +188,7 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -196,7 +196,7 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -204,7 +204,7 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ComplexDeviceDriverSwComponentType.Annotations"] = (
+    annotations: ComplexDeviceDriverSwComponentType.Annotations | None = (
         field(
             default=None,
             metadata={
@@ -214,7 +214,7 @@ class ComplexDeviceDriverSwComponentType:
             },
         )
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -222,9 +222,7 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional[
-        "ComplexDeviceDriverSwComponentType.BlueprintPolicys"
-    ] = field(
+    blueprint_policys: ComplexDeviceDriverSwComponentType.BlueprintPolicys | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -232,7 +230,7 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: Optional[String] = field(
+    short_name_pattern: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -240,9 +238,7 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_documentations: Optional[
-        "ComplexDeviceDriverSwComponentType.SwComponentDocumentations"
-    ] = field(
+    sw_component_documentations: ComplexDeviceDriverSwComponentType.SwComponentDocumentations | None = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-DOCUMENTATIONS",
@@ -250,9 +246,7 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consistency_needss: Optional[
-        "ComplexDeviceDriverSwComponentType.ConsistencyNeedss"
-    ] = field(
+    consistency_needss: ComplexDeviceDriverSwComponentType.ConsistencyNeedss | None = field(
         default=None,
         metadata={
             "name": "CONSISTENCY-NEEDSS",
@@ -260,7 +254,7 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ports: Optional["ComplexDeviceDriverSwComponentType.Ports"] = field(
+    ports: ComplexDeviceDriverSwComponentType.Ports | None = field(
         default=None,
         metadata={
             "name": "PORTS",
@@ -268,7 +262,7 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_groups: Optional["ComplexDeviceDriverSwComponentType.PortGroups"] = (
+    port_groups: ComplexDeviceDriverSwComponentType.PortGroups | None = (
         field(
             default=None,
             metadata={
@@ -278,9 +272,7 @@ class ComplexDeviceDriverSwComponentType:
             },
         )
     )
-    unit_group_refs: Optional[
-        "ComplexDeviceDriverSwComponentType.UnitGroupRefs"
-    ] = field(
+    unit_group_refs: ComplexDeviceDriverSwComponentType.UnitGroupRefs | None = field(
         default=None,
         metadata={
             "name": "UNIT-GROUP-REFS",
@@ -288,9 +280,7 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    internal_behaviors: Optional[
-        "ComplexDeviceDriverSwComponentType.InternalBehaviors"
-    ] = field(
+    internal_behaviors: ComplexDeviceDriverSwComponentType.InternalBehaviors | None = field(
         default=None,
         metadata={
             "name": "INTERNAL-BEHAVIORS",
@@ -298,7 +288,7 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbol_props: Optional[SymbolProps] = field(
+    symbol_props: SymbolProps | None = field(
         default=None,
         metadata={
             "name": "SYMBOL-PROPS",
@@ -306,9 +296,7 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hardware_element_refs: Optional[
-        "ComplexDeviceDriverSwComponentType.HardwareElementRefs"
-    ] = field(
+    hardware_element_refs: ComplexDeviceDriverSwComponentType.HardwareElementRefs | None = field(
         default=None,
         metadata={
             "name": "HARDWARE-ELEMENT-REFS",
@@ -316,14 +304,14 @@ class ComplexDeviceDriverSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -331,7 +319,7 @@ class ComplexDeviceDriverSwComponentType:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -453,7 +441,7 @@ class ComplexDeviceDriverSwComponentType:
     @dataclass
     class UnitGroupRefs:
         unit_group_ref: list[
-            "ComplexDeviceDriverSwComponentType.UnitGroupRefs.UnitGroupRef"
+            ComplexDeviceDriverSwComponentType.UnitGroupRefs.UnitGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -465,7 +453,7 @@ class ComplexDeviceDriverSwComponentType:
 
         @dataclass
         class UnitGroupRef(Ref):
-            dest: Optional[UnitGroupSubtypesEnum] = field(
+            dest: UnitGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -488,7 +476,7 @@ class ComplexDeviceDriverSwComponentType:
     @dataclass
     class HardwareElementRefs:
         hardware_element_ref: list[
-            "ComplexDeviceDriverSwComponentType.HardwareElementRefs.HardwareElementRef"
+            ComplexDeviceDriverSwComponentType.HardwareElementRefs.HardwareElementRef
         ] = field(
             default_factory=list,
             metadata={
@@ -500,7 +488,7 @@ class ComplexDeviceDriverSwComponentType:
 
         @dataclass
         class HardwareElementRef(Ref):
-            dest: Optional[HwDescriptionEntitySubtypesEnum] = field(
+            dest: HwDescriptionEntitySubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -32,9 +34,7 @@ class POperationInAtomicSwcInstanceRef:
     class Meta:
         name = "P-OPERATION-IN-ATOMIC-SWC-INSTANCE-REF"
 
-    context_p_port_ref: Optional[
-        "POperationInAtomicSwcInstanceRef.ContextPPortRef"
-    ] = field(
+    context_p_port_ref: POperationInAtomicSwcInstanceRef.ContextPPortRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-P-PORT-REF",
@@ -42,9 +42,7 @@ class POperationInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_provided_operation_ref: Optional[
-        "POperationInAtomicSwcInstanceRef.TargetProvidedOperationRef"
-    ] = field(
+    target_provided_operation_ref: POperationInAtomicSwcInstanceRef.TargetProvidedOperationRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-PROVIDED-OPERATION-REF",
@@ -52,14 +50,14 @@ class POperationInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +68,7 @@ class POperationInAtomicSwcInstanceRef:
 
     @dataclass
     class ContextPPortRef(Ref):
-        dest: Optional[AbstractProvidedPortPrototypeSubtypesEnum] = field(
+        dest: AbstractProvidedPortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -81,7 +79,7 @@ class POperationInAtomicSwcInstanceRef:
 
     @dataclass
     class TargetProvidedOperationRef(Ref):
-        dest: Optional[ClientServerOperationSubtypesEnum] = field(
+        dest: ClientServerOperationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

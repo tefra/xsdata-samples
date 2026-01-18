@@ -34,7 +34,7 @@ class DimensionListType(DimensionListBaseType):
             "min_occurs": 1,
         },
     )
-    time_dimension: Optional[TimeDimension] = field(
+    time_dimension: TimeDimension | None = field(
         default=None,
         metadata={
             "name": "TimeDimension",

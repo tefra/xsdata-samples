@@ -17,7 +17,7 @@ class IntegerMetreDistanceValue(DataValue):
     :ivar integer_metre_distance_value_extension:
     """
 
-    integer_metre_distance: Optional[int] = field(
+    integer_metre_distance: int | None = field(
         default=None,
         metadata={
             "name": "integerMetreDistance",
@@ -26,7 +26,7 @@ class IntegerMetreDistanceValue(DataValue):
             "required": True,
         },
     )
-    integer_metre_distance_value_extension: Optional[ExtensionType] = field(
+    integer_metre_distance_value_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "integerMetreDistanceValueExtension",

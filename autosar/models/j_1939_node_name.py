@@ -41,7 +41,7 @@ class J1939NodeName:
     class Meta:
         name = "J-1939-NODE-NAME"
 
-    arbitrary_address_capable: Optional[Boolean] = field(
+    arbitrary_address_capable: Boolean | None = field(
         default=None,
         metadata={
             "name": "ARBITRARY-ADDRESS-CAPABLE",
@@ -49,7 +49,7 @@ class J1939NodeName:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance: Optional[Integer] = field(
+    ecu_instance: Integer | None = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE",
@@ -57,7 +57,7 @@ class J1939NodeName:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    function: Optional[Integer] = field(
+    function: Integer | None = field(
         default=None,
         metadata={
             "name": "FUNCTION",
@@ -65,7 +65,7 @@ class J1939NodeName:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    function_instance: Optional[Integer] = field(
+    function_instance: Integer | None = field(
         default=None,
         metadata={
             "name": "FUNCTION-INSTANCE",
@@ -73,7 +73,7 @@ class J1939NodeName:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    identitiy_number: Optional[Integer] = field(
+    identitiy_number: Integer | None = field(
         default=None,
         metadata={
             "name": "IDENTITIY-NUMBER",
@@ -81,7 +81,7 @@ class J1939NodeName:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    industry_group: Optional[Integer] = field(
+    industry_group: Integer | None = field(
         default=None,
         metadata={
             "name": "INDUSTRY-GROUP",
@@ -89,7 +89,7 @@ class J1939NodeName:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    manufacturer_code: Optional[Integer] = field(
+    manufacturer_code: Integer | None = field(
         default=None,
         metadata={
             "name": "MANUFACTURER-CODE",
@@ -97,7 +97,7 @@ class J1939NodeName:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vehicle_system: Optional[Integer] = field(
+    vehicle_system: Integer | None = field(
         default=None,
         metadata={
             "name": "VEHICLE-SYSTEM",
@@ -105,7 +105,7 @@ class J1939NodeName:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vehicle_system_instance: Optional[Integer] = field(
+    vehicle_system_instance: Integer | None = field(
         default=None,
         metadata={
             "name": "VEHICLE-SYSTEM-INSTANCE",
@@ -113,14 +113,14 @@ class J1939NodeName:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

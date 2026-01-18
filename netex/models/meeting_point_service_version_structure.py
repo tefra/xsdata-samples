@@ -13,7 +13,7 @@ class MeetingPointServiceVersionStructure(CustomerServiceVersionStructure):
     class Meta:
         name = "MeetingPointService_VersionStructure"
 
-    meeting_point_service_type: Optional[MeetingPointEnumeration] = field(
+    meeting_point_service_type: MeetingPointEnumeration | None = field(
         default=None,
         metadata={
             "name": "MeetingPointServiceType",
@@ -22,7 +22,7 @@ class MeetingPointServiceVersionStructure(CustomerServiceVersionStructure):
             "required": True,
         },
     )
-    label: Optional[MultilingualString] = field(
+    label: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Label",

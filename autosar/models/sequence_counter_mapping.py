@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,7 +35,7 @@ class SequenceCounterMapping:
     class Meta:
         name = "SEQUENCE-COUNTER-MAPPING"
 
-    system_signal_ref: Optional["SequenceCounterMapping.SystemSignalRef"] = (
+    system_signal_ref: SequenceCounterMapping.SystemSignalRef | None = (
         field(
             default=None,
             metadata={
@@ -43,14 +45,14 @@ class SequenceCounterMapping:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -61,7 +63,7 @@ class SequenceCounterMapping:
 
     @dataclass
     class SystemSignalRef(Ref):
-        dest: Optional[SystemSignalSubtypesEnum] = field(
+        dest: SystemSignalSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

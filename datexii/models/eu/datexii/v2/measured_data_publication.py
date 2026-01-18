@@ -25,9 +25,7 @@ class MeasuredDataPublication(PayloadPublication):
     :ivar measured_data_publication_extension:
     """
 
-    measurement_site_table_reference: Optional[
-        MeasurementSiteTableVersionedReference
-    ] = field(
+    measurement_site_table_reference: MeasurementSiteTableVersionedReference | None = field(
         default=None,
         metadata={
             "name": "measurementSiteTableReference",
@@ -36,7 +34,7 @@ class MeasuredDataPublication(PayloadPublication):
             "required": True,
         },
     )
-    header_information: Optional[HeaderInformation] = field(
+    header_information: HeaderInformation | None = field(
         default=None,
         metadata={
             "name": "headerInformation",
@@ -54,7 +52,7 @@ class MeasuredDataPublication(PayloadPublication):
             "min_occurs": 1,
         },
     )
-    measured_data_publication_extension: Optional[ExtensionType] = field(
+    measured_data_publication_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "measuredDataPublicationExtension",

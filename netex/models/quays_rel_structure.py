@@ -16,7 +16,7 @@ class QuaysRelStructure(ContainmentAggregationStructure):
         name = "quays_RelStructure"
 
     taxi_stand_ref_or_quay_ref_or_quay: Iterable[
-        Union[TaxiStandRef, QuayRef, Quay]
+        TaxiStandRef | QuayRef | Quay
     ] = field(
         default_factory=list,
         metadata={

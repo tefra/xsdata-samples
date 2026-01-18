@@ -24,7 +24,7 @@ class DedicatedAccess:
     :ivar dedicated_access_extension:
     """
 
-    dedicated_access: Optional[ParkingAccessReference] = field(
+    dedicated_access: ParkingAccessReference | None = field(
         default=None,
         metadata={
             "name": "dedicatedAccess",
@@ -33,7 +33,7 @@ class DedicatedAccess:
             "required": True,
         },
     )
-    distance_from_parking_space: Optional[int] = field(
+    distance_from_parking_space: int | None = field(
         default=None,
         metadata={
             "name": "distanceFromParkingSpace",
@@ -41,7 +41,7 @@ class DedicatedAccess:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    dedicated_access_extension: Optional[ExtensionType] = field(
+    dedicated_access_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "dedicatedAccessExtension",

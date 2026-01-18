@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -34,9 +36,7 @@ class PortPrototypeInExecutableInstanceRef:
     class Meta:
         name = "PORT-PROTOTYPE-IN-EXECUTABLE-INSTANCE-REF"
 
-    context_root_sw_component_prototype_ref: Optional[
-        "PortPrototypeInExecutableInstanceRef.ContextRootSwComponentPrototypeRef"
-    ] = field(
+    context_root_sw_component_prototype_ref: PortPrototypeInExecutableInstanceRef.ContextRootSwComponentPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF",
@@ -45,7 +45,7 @@ class PortPrototypeInExecutableInstanceRef:
         },
     )
     context_component_prototype_ref: list[
-        "PortPrototypeInExecutableInstanceRef.ContextComponentPrototypeRef"
+        PortPrototypeInExecutableInstanceRef.ContextComponentPrototypeRef
     ] = field(
         default_factory=list,
         metadata={
@@ -54,9 +54,7 @@ class PortPrototypeInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_port_prototype_ref: Optional[
-        "PortPrototypeInExecutableInstanceRef.TargetPortPrototypeRef"
-    ] = field(
+    target_port_prototype_ref: PortPrototypeInExecutableInstanceRef.TargetPortPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-PORT-PROTOTYPE-REF",
@@ -64,14 +62,14 @@ class PortPrototypeInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +80,7 @@ class PortPrototypeInExecutableInstanceRef:
 
     @dataclass
     class ContextRootSwComponentPrototypeRef(Ref):
-        dest: Optional[RootSwComponentPrototypeSubtypesEnum] = field(
+        dest: RootSwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -93,7 +91,7 @@ class PortPrototypeInExecutableInstanceRef:
 
     @dataclass
     class ContextComponentPrototypeRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -104,7 +102,7 @@ class PortPrototypeInExecutableInstanceRef:
 
     @dataclass
     class TargetPortPrototypeRef(Ref):
-        dest: Optional[PortPrototypeSubtypesEnum] = field(
+        dest: PortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

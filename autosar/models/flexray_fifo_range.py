@@ -28,7 +28,7 @@ class FlexrayFifoRange:
     class Meta:
         name = "FLEXRAY-FIFO-RANGE"
 
-    range_max: Optional[Integer] = field(
+    range_max: Integer | None = field(
         default=None,
         metadata={
             "name": "RANGE-MAX",
@@ -36,7 +36,7 @@ class FlexrayFifoRange:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    range_min: Optional[Integer] = field(
+    range_min: Integer | None = field(
         default=None,
         metadata={
             "name": "RANGE-MIN",
@@ -44,14 +44,14 @@ class FlexrayFifoRange:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

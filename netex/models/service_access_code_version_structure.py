@@ -16,7 +16,7 @@ class ServiceAccessCodeVersionStructure(TravelDocumentVersionStructure):
     class Meta:
         name = "ServiceAccessCode_VersionStructure"
 
-    access_code: Optional[str] = field(
+    access_code: str | None = field(
         default=None,
         metadata={
             "name": "AccessCode",
@@ -25,7 +25,7 @@ class ServiceAccessCodeVersionStructure(TravelDocumentVersionStructure):
             "required": True,
         },
     )
-    expiry_date: Optional[XmlDateTime] = field(
+    expiry_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "ExpiryDate",
@@ -33,9 +33,7 @@ class ServiceAccessCodeVersionStructure(TravelDocumentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_access_credentials_assignment_ref: Optional[
-        VehicleAccessCredentialsAssignmentRef
-    ] = field(
+    vehicle_access_credentials_assignment_ref: VehicleAccessCredentialsAssignmentRef | None = field(
         default=None,
         metadata={
             "name": "VehicleAccessCredentialsAssignmentRef",

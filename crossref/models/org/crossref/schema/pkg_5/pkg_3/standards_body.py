@@ -21,14 +21,14 @@ class StandardsBody:
         name = "standards_body"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    standards_body_name: Optional[StandardsBodyName] = field(
+    standards_body_name: StandardsBodyName | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    standards_body_acronym: Optional[StandardsBodyAcronym] = field(
+    standards_body_acronym: StandardsBodyAcronym | None = field(
         default=None,
         metadata={
             "type": "Element",

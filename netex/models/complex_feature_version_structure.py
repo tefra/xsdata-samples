@@ -14,7 +14,7 @@ class ComplexFeatureVersionStructure(GroupOfPointsVersionStructure):
     class Meta:
         name = "ComplexFeature_VersionStructure"
 
-    feature_members: Optional[ComplexFeatureMembersRelStructure] = field(
+    feature_members: ComplexFeatureMembersRelStructure | None = field(
         default=None,
         metadata={
             "name": "featureMembers",

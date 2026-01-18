@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import ForwardRef, Optional, Union
@@ -189,20 +191,20 @@ class XhtmlBrType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -223,33 +225,33 @@ class XhtmlColType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -261,34 +263,34 @@ class XhtmlColType:
             "type": "Attribute",
         },
     )
-    width: Optional[str] = field(
+    width: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d*\*",
         },
     )
-    align: Optional[XhtmlColTypeAlign] = field(
+    align: XhtmlColTypeAlign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: Optional[str] = field(
+    char: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    charoff: Optional[str] = field(
+    charoff: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    valign: Optional[XhtmlColTypeValign] = field(
+    valign: XhtmlColTypeValign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -309,33 +311,33 @@ class XhtmlHrType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -348,20 +350,20 @@ class XhtmlParamType:
     class Meta:
         name = "xhtml.param.type"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    value: Optional[str] = field(
+    value: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -373,7 +375,7 @@ class XhtmlParamType:
             "type": "Attribute",
         },
     )
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "type",
@@ -395,33 +397,33 @@ class XhtmlInlPresType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -572,33 +574,33 @@ class XhtmlAddressType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -756,33 +758,33 @@ class XhtmlColgroupType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -794,34 +796,34 @@ class XhtmlColgroupType:
             "type": "Attribute",
         },
     )
-    width: Optional[str] = field(
+    width: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d*\*",
         },
     )
-    align: Optional[XhtmlColgroupTypeAlign] = field(
+    align: XhtmlColgroupTypeAlign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: Optional[str] = field(
+    char: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    charoff: Optional[str] = field(
+    charoff: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    valign: Optional[XhtmlColgroupTypeValign] = field(
+    valign: XhtmlColgroupTypeValign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -884,45 +886,45 @@ class XhtmlEditType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    cite: Optional[str] = field(
+    cite: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    datetime: Optional[XmlDateTime] = field(
+    datetime: XmlDateTime | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1193,33 +1195,33 @@ class XhtmlAbbrType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1398,91 +1400,91 @@ class XhtmlBlockquoteType:
     class Meta:
         name = "xhtml.blockquote.type"
 
-    h1: list["XhtmlH1Type"] = field(
+    h1: list[XhtmlH1Type] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    h2: list["XhtmlH2Type"] = field(
+    h2: list[XhtmlH2Type] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    h3: list["XhtmlH3Type"] = field(
+    h3: list[XhtmlH3Type] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    h4: list["XhtmlH4Type"] = field(
+    h4: list[XhtmlH4Type] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    h5: list["XhtmlH5Type"] = field(
+    h5: list[XhtmlH5Type] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    h6: list["XhtmlH6Type"] = field(
+    h6: list[XhtmlH6Type] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    ul: list["XhtmlUlType"] = field(
+    ul: list[XhtmlUlType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    ol: list["XhtmlOlType"] = field(
+    ol: list[XhtmlOlType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    dl: list["XhtmlDlType"] = field(
+    dl: list[XhtmlDlType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    p: list["XhtmlPType"] = field(
+    p: list[XhtmlPType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    div: list["XhtmlDivType"] = field(
+    div: list[XhtmlDivType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    pre: list["XhtmlPreType"] = field(
+    pre: list[XhtmlPreType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    blockquote: list["XhtmlBlockquoteType"] = field(
+    blockquote: list[XhtmlBlockquoteType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1503,7 +1505,7 @@ class XhtmlBlockquoteType:
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    table: list["XhtmlTableType"] = field(
+    table: list[XhtmlTableType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -1533,39 +1535,39 @@ class XhtmlBlockquoteType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    cite: Optional[str] = field(
+    cite: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1586,33 +1588,33 @@ class XhtmlH1Type:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1799,33 +1801,33 @@ class XhtmlH2Type:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2012,33 +2014,33 @@ class XhtmlH3Type:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2225,33 +2227,33 @@ class XhtmlH4Type:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2438,33 +2440,33 @@ class XhtmlH5Type:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2651,33 +2653,33 @@ class XhtmlH6Type:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2864,33 +2866,33 @@ class XhtmlPType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3077,33 +3079,33 @@ class XhtmlPreType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3249,33 +3251,33 @@ class XhtmlAcronymType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3462,33 +3464,33 @@ class XhtmlDivType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3755,33 +3757,33 @@ class XhtmlCiteType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3968,33 +3970,33 @@ class XhtmlCodeType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4181,33 +4183,33 @@ class XhtmlDfnType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4394,33 +4396,33 @@ class XhtmlEmType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4607,33 +4609,33 @@ class XhtmlKbdType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4820,33 +4822,33 @@ class XhtmlSampType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5033,33 +5035,33 @@ class XhtmlStrongType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5246,33 +5248,33 @@ class XhtmlVarType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5459,39 +5461,39 @@ class XhtmlQType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    cite: Optional[str] = field(
+    cite: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5678,33 +5680,33 @@ class XhtmlSpanType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5891,58 +5893,58 @@ class XhtmlAType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charset: Optional[str] = field(
+    charset: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5962,14 +5964,14 @@ class XhtmlAType:
             "tokens": True,
         },
     )
-    accesskey: Optional[str] = field(
+    accesskey: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    tabindex: Optional[int] = field(
+    tabindex: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6151,33 +6153,33 @@ class XhtmlDdType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6444,33 +6446,33 @@ class XhtmlDtType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6671,33 +6673,33 @@ class XhtmlDlType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6718,33 +6720,33 @@ class XhtmlLiType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7019,33 +7021,33 @@ class XhtmlOlType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7074,33 +7076,33 @@ class XhtmlUlType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7121,70 +7123,70 @@ class XhtmlObjectType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    declare: Optional[XhtmlObjectTypeDeclare] = field(
+    declare: XhtmlObjectTypeDeclare | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    classid: Optional[str] = field(
+    classid: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    codebase: Optional[str] = field(
+    codebase: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    data: Optional[str] = field(
+    data: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
         },
     )
-    codetype: Optional[str] = field(
+    codetype: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7197,33 +7199,33 @@ class XhtmlObjectType:
             "tokens": True,
         },
     )
-    standby: Optional[str] = field(
+    standby: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    height: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"\d+[%]|\d*\.\d+[%]",
-        },
-    )
-    width: Optional[str] = field(
+    height: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    name: Optional[str] = field(
+    width: str | None = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        },
+    )
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    tabindex: Optional[int] = field(
+    tabindex: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7495,33 +7497,33 @@ class XhtmlCaptionType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7708,33 +7710,33 @@ class XhtmlHeadingType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7921,45 +7923,45 @@ class XhtmlTdType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    abbr: Optional[str] = field(
+    abbr: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    axis: Optional[str] = field(
+    axis: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7972,7 +7974,7 @@ class XhtmlTdType:
             "tokens": True,
         },
     )
-    scope: Optional[XhtmlTdTypeScope] = field(
+    scope: XhtmlTdTypeScope | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7990,27 +7992,27 @@ class XhtmlTdType:
             "type": "Attribute",
         },
     )
-    align: Optional[XhtmlTdTypeAlign] = field(
+    align: XhtmlTdTypeAlign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: Optional[str] = field(
+    char: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    charoff: Optional[str] = field(
+    charoff: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    valign: Optional[XhtmlTdTypeValign] = field(
+    valign: XhtmlTdTypeValign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8277,45 +8279,45 @@ class XhtmlThType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    abbr: Optional[str] = field(
+    abbr: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    axis: Optional[str] = field(
+    axis: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8328,7 +8330,7 @@ class XhtmlThType:
             "tokens": True,
         },
     )
-    scope: Optional[XhtmlThTypeScope] = field(
+    scope: XhtmlThTypeScope | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8346,27 +8348,27 @@ class XhtmlThType:
             "type": "Attribute",
         },
     )
-    align: Optional[XhtmlThTypeAlign] = field(
+    align: XhtmlThTypeAlign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: Optional[str] = field(
+    char: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    charoff: Optional[str] = field(
+    charoff: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    valign: Optional[XhtmlThTypeValign] = field(
+    valign: XhtmlThTypeValign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8647,59 +8649,59 @@ class XhtmlTrType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: Optional[XhtmlTrTypeAlign] = field(
+    align: XhtmlTrTypeAlign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: Optional[str] = field(
+    char: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    charoff: Optional[str] = field(
+    charoff: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    valign: Optional[XhtmlTrTypeValign] = field(
+    valign: XhtmlTrTypeValign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8728,59 +8730,59 @@ class XhtmlTbodyType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: Optional[XhtmlTbodyTypeAlign] = field(
+    align: XhtmlTbodyTypeAlign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: Optional[str] = field(
+    char: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    charoff: Optional[str] = field(
+    charoff: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    valign: Optional[XhtmlTbodyTypeValign] = field(
+    valign: XhtmlTbodyTypeValign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8809,59 +8811,59 @@ class XhtmlTfootType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: Optional[XhtmlTfootTypeAlign] = field(
+    align: XhtmlTfootTypeAlign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: Optional[str] = field(
+    char: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    charoff: Optional[str] = field(
+    charoff: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    valign: Optional[XhtmlTfootTypeValign] = field(
+    valign: XhtmlTfootTypeValign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8890,59 +8892,59 @@ class XhtmlTheadType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: Optional[XhtmlTheadTypeAlign] = field(
+    align: XhtmlTheadTypeAlign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: Optional[str] = field(
+    char: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "length": 1,
         },
     )
-    charoff: Optional[str] = field(
+    charoff: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    valign: Optional[XhtmlTheadTypeValign] = field(
+    valign: XhtmlTheadTypeValign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8955,7 +8957,7 @@ class XhtmlTableType:
     class Meta:
         name = "xhtml.table.type"
 
-    caption: Optional[XhtmlCaptionType] = field(
+    caption: XhtmlCaptionType | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -8976,14 +8978,14 @@ class XhtmlTableType:
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    thead: Optional[XhtmlTheadType] = field(
+    thead: XhtmlTheadType | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.w3.org/1999/xhtml",
         },
     )
-    tfoot: Optional[XhtmlTfootType] = field(
+    tfoot: XhtmlTfootType | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -9012,77 +9014,77 @@ class XhtmlTableType:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "class",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    summary: Optional[str] = field(
+    summary: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    width: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"\d+[%]|\d*\.\d+[%]",
-        },
-    )
-    border: Optional[int] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    frame: Optional[XhtmlTableTypeFrame] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    rules: Optional[XhtmlTableTypeRules] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    cellspacing: Optional[str] = field(
+    width: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\d+[%]|\d*\.\d+[%]",
         },
     )
-    cellpadding: Optional[str] = field(
+    border: int | None = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    frame: XhtmlTableTypeFrame | None = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    rules: XhtmlTableTypeRules | None = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    cellspacing: str | None = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\d+[%]|\d*\.\d+[%]",
+        },
+    )
+    cellpadding: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

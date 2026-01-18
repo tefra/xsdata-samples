@@ -34,7 +34,7 @@ class SalesOfferPackageVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "SalesOfferPackage_VersionStructure"
 
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -42,7 +42,7 @@ class SalesOfferPackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_sales_offer_package_ref: Optional[TypeOfSalesOfferPackageRef] = (
+    type_of_sales_offer_package_ref: TypeOfSalesOfferPackageRef | None = (
         field(
             default=None,
             metadata={
@@ -52,7 +52,7 @@ class SalesOfferPackageVersionStructure(PriceableObjectVersionStructure):
             },
         )
     )
-    condition_summary: Optional[ConditionSummary] = field(
+    condition_summary: ConditionSummary | None = field(
         default=None,
         metadata={
             "name": "ConditionSummary",
@@ -60,9 +60,7 @@ class SalesOfferPackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_parameter_assignments: Optional[
-        GenericParameterAssignmentsRelStructure
-    ] = field(
+    validity_parameter_assignments: GenericParameterAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "validityParameterAssignments",
@@ -70,7 +68,7 @@ class SalesOfferPackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distribution_assignments: Optional[DistributionAssignmentsRelStructure] = (
+    distribution_assignments: DistributionAssignmentsRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -80,7 +78,7 @@ class SalesOfferPackageVersionStructure(PriceableObjectVersionStructure):
             },
         )
     )
-    rounding_ref: Optional[RoundingRef] = field(
+    rounding_ref: RoundingRef | None = field(
         default=None,
         metadata={
             "name": "RoundingRef",
@@ -88,16 +86,14 @@ class SalesOfferPackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: Optional[SalesOfferPackagePricesRelStructure] = field(
+    prices: SalesOfferPackagePricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sales_offer_package_elements: Optional[
-        SalesOfferPackageElementsRelStructure
-    ] = field(
+    sales_offer_package_elements: SalesOfferPackageElementsRelStructure | None = field(
         default=None,
         metadata={
             "name": "salesOfferPackageElements",
@@ -105,12 +101,7 @@ class SalesOfferPackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages: Optional[
-        Union[
-            GroupOfSalesOfferPackagesRef,
-            GroupOfSalesOfferPackageRefsRelStructure,
-        ]
-    ] = field(
+    group_of_sales_offer_packages_ref_or_groups_of_sale_offer_packages: GroupOfSalesOfferPackagesRef | GroupOfSalesOfferPackageRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -128,9 +119,7 @@ class SalesOfferPackageVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    sales_offer_package_substitutions: Optional[
-        SalesOfferPackageSubstitutionsRelStructure
-    ] = field(
+    sales_offer_package_substitutions: SalesOfferPackageSubstitutionsRelStructure | None = field(
         default=None,
         metadata={
             "name": "salesOfferPackageSubstitutions",

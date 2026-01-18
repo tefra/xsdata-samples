@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
@@ -31,11 +33,7 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
         name = "administrativeZones_RelStructure"
 
     administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone: Iterable[
-        Union[
-            AdministrativeZoneRef,
-            "TransportAdministrativeZone",
-            "AdministrativeZone",
-        ]
+        AdministrativeZoneRef | TransportAdministrativeZone | AdministrativeZone
     ] = field(
         default_factory=list,
         metadata={
@@ -66,7 +64,7 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
     class Meta:
         name = "AdministrativeZone_VersionStructure"
 
-    public_code: Optional[PrivateCodeStructure] = field(
+    public_code: PrivateCodeStructure | None = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -74,20 +72,7 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: Optional[
-        Union[
-            RetailConsortiumRef,
-            OnlineServiceOperatorRef,
-            GeneralOrganisationRef,
-            ManagementAgentRef,
-            ServicedOrganisationRef,
-            TravelAgentRef,
-            OtherOrganisationRef,
-            AuthorityRef,
-            OperatorRef,
-            OrganisationRef,
-        ]
-    ] = field(
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -145,14 +130,14 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
             ),
         },
     )
-    responsibilities: Optional[ResponsibilitySetsRelStructure] = field(
+    responsibilities: ResponsibilitySetsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    codespace_assignments: Optional[CodespaceAssignmentsRelStructure] = field(
+    codespace_assignments: CodespaceAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "codespaceAssignments",
@@ -160,7 +145,7 @@ class AdministrativeZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    subzones: Optional[AdministrativeZonesRelStructure] = field(
+    subzones: AdministrativeZonesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

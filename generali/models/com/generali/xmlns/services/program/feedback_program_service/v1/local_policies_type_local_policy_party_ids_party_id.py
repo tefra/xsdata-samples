@@ -24,14 +24,14 @@ class LocalPoliciesTypeLocalPolicyPartyIdsPartyId:
             "required": True,
         },
     )
-    party_type: Optional[str] = field(
+    party_type: str | None = field(
         default=None,
         metadata={
             "name": "PartyType",
             "type": "Attribute",
         },
     )
-    party_guns: Optional[str] = field(
+    party_guns: str | None = field(
         default=None,
         metadata={
             "name": "PartyGUNS",

@@ -11,7 +11,7 @@ class AccommodationAccess:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: Optional[AccommodationAccessEnumeration] = field(
+    value: AccommodationAccessEnumeration | None = field(
         default=None,
         metadata={
             "required": True,

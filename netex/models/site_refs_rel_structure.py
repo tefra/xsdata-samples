@@ -19,14 +19,7 @@ class SiteRefsRelStructure(OneToManyRelationshipStructure):
         name = "siteRefs_RelStructure"
 
     stop_place_ref_or_site_ref: Iterable[
-        Union[
-            TaxiRankRef,
-            StopPlaceRef,
-            ParkingRef,
-            PointOfInterestRef,
-            ServiceSiteRef,
-            SiteRef,
-        ]
+        TaxiRankRef | StopPlaceRef | ParkingRef | PointOfInterestRef | ServiceSiteRef | SiteRef
     ] = field(
         default_factory=list,
         metadata={

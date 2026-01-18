@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -142,7 +144,7 @@ class ExecutionOrderConstraint:
     class Meta:
         name = "EXECUTION-ORDER-CONSTRAINT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -151,9 +153,7 @@ class ExecutionOrderConstraint:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ExecutionOrderConstraint.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ExecutionOrderConstraint.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -161,7 +161,7 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -169,7 +169,7 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -177,7 +177,7 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -185,7 +185,7 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -193,7 +193,7 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -201,7 +201,7 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ExecutionOrderConstraint.Annotations"] = field(
+    annotations: ExecutionOrderConstraint.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -209,7 +209,7 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace_refs: Optional["ExecutionOrderConstraint.TraceRefs"] = field(
+    trace_refs: ExecutionOrderConstraint.TraceRefs | None = field(
         default=None,
         metadata={
             "name": "TRACE-REFS",
@@ -217,9 +217,7 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_condition_ref: Optional[
-        "ExecutionOrderConstraint.TimingConditionRef"
-    ] = field(
+    timing_condition_ref: ExecutionOrderConstraint.TimingConditionRef | None = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
@@ -227,7 +225,7 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -235,9 +233,7 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_composition_ref: Optional[
-        "ExecutionOrderConstraint.BaseCompositionRef"
-    ] = field(
+    base_composition_ref: ExecutionOrderConstraint.BaseCompositionRef | None = field(
         default=None,
         metadata={
             "name": "BASE-COMPOSITION-REF",
@@ -245,9 +241,7 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    execution_order_constraint_type: Optional[
-        ExecutionOrderConstraintTypeEnum
-    ] = field(
+    execution_order_constraint_type: ExecutionOrderConstraintTypeEnum | None = field(
         default=None,
         metadata={
             "name": "EXECUTION-ORDER-CONSTRAINT-TYPE",
@@ -255,7 +249,7 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ignore_order_allowed: Optional[Boolean] = field(
+    ignore_order_allowed: Boolean | None = field(
         default=None,
         metadata={
             "name": "IGNORE-ORDER-ALLOWED",
@@ -263,7 +257,7 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_event: Optional[Boolean] = field(
+    is_event: Boolean | None = field(
         default=None,
         metadata={
             "name": "IS-EVENT",
@@ -271,7 +265,7 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ordered_elements: Optional["ExecutionOrderConstraint.OrderedElements"] = (
+    ordered_elements: ExecutionOrderConstraint.OrderedElements | None = (
         field(
             default=None,
             metadata={
@@ -281,7 +275,7 @@ class ExecutionOrderConstraint:
             },
         )
     )
-    permit_multiple_references_to_ee: Optional[Boolean] = field(
+    permit_multiple_references_to_ee: Boolean | None = field(
         default=None,
         metadata={
             "name": "PERMIT-MULTIPLE-REFERENCES-TO-EE",
@@ -289,14 +283,14 @@ class ExecutionOrderConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -304,7 +298,7 @@ class ExecutionOrderConstraint:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -336,7 +330,7 @@ class ExecutionOrderConstraint:
 
     @dataclass
     class TraceRefs:
-        trace_ref: list["ExecutionOrderConstraint.TraceRefs.TraceRef"] = field(
+        trace_ref: list[ExecutionOrderConstraint.TraceRefs.TraceRef] = field(
             default_factory=list,
             metadata={
                 "name": "TRACE-REF",
@@ -347,7 +341,7 @@ class ExecutionOrderConstraint:
 
         @dataclass
         class TraceRef(Ref):
-            dest: Optional[TraceableSubtypesEnum] = field(
+            dest: TraceableSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -358,7 +352,7 @@ class ExecutionOrderConstraint:
 
     @dataclass
     class TimingConditionRef(Ref):
-        dest: Optional[TimingConditionSubtypesEnum] = field(
+        dest: TimingConditionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -369,7 +363,7 @@ class ExecutionOrderConstraint:
 
     @dataclass
     class BaseCompositionRef(Ref):
-        dest: Optional[CompositionSwComponentTypeSubtypesEnum] = field(
+        dest: CompositionSwComponentTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

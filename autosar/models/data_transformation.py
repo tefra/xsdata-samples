@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -97,7 +99,7 @@ class DataTransformation:
     class Meta:
         name = "DATA-TRANSFORMATION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -106,7 +108,7 @@ class DataTransformation:
             "required": True,
         },
     )
-    short_name_fragments: Optional["DataTransformation.ShortNameFragments"] = (
+    short_name_fragments: DataTransformation.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -116,7 +118,7 @@ class DataTransformation:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -124,7 +126,7 @@ class DataTransformation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -132,7 +134,7 @@ class DataTransformation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -140,7 +142,7 @@ class DataTransformation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -148,7 +150,7 @@ class DataTransformation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -156,7 +158,7 @@ class DataTransformation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DataTransformation.Annotations"] = field(
+    annotations: DataTransformation.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -164,7 +166,7 @@ class DataTransformation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_transformation_kind: Optional[DataTransformationKindEnum] = field(
+    data_transformation_kind: DataTransformationKindEnum | None = field(
         default=None,
         metadata={
             "name": "DATA-TRANSFORMATION-KIND",
@@ -172,7 +174,7 @@ class DataTransformation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    execute_despite_data_unavailability: Optional[Boolean] = field(
+    execute_despite_data_unavailability: Boolean | None = field(
         default=None,
         metadata={
             "name": "EXECUTE-DESPITE-DATA-UNAVAILABILITY",
@@ -180,9 +182,7 @@ class DataTransformation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformer_chain_refs: Optional[
-        "DataTransformation.TransformerChainRefs"
-    ] = field(
+    transformer_chain_refs: DataTransformation.TransformerChainRefs | None = field(
         default=None,
         metadata={
             "name": "TRANSFORMER-CHAIN-REFS",
@@ -190,7 +190,7 @@ class DataTransformation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -198,14 +198,14 @@ class DataTransformation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -213,7 +213,7 @@ class DataTransformation:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -246,7 +246,7 @@ class DataTransformation:
     @dataclass
     class TransformerChainRefs:
         transformer_chain_ref: list[
-            "DataTransformation.TransformerChainRefs.TransformerChainRef"
+            DataTransformation.TransformerChainRefs.TransformerChainRef
         ] = field(
             default_factory=list,
             metadata={
@@ -258,7 +258,7 @@ class DataTransformation:
 
         @dataclass
         class TransformerChainRef(Ref):
-            dest: Optional[TransformationTechnologySubtypesEnum] = field(
+            dest: TransformationTechnologySubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

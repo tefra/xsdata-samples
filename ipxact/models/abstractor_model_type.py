@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -26,21 +28,21 @@ class AbstractorModelType:
     class Meta:
         name = "abstractorModelType"
 
-    views: Optional["AbstractorModelType.Views"] = field(
+    views: AbstractorModelType.Views | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    instantiations: Optional["AbstractorModelType.Instantiations"] = field(
+    instantiations: AbstractorModelType.Instantiations | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    ports: Optional["AbstractorModelType.Ports"] = field(
+    ports: AbstractorModelType.Ports | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -54,7 +56,7 @@ class AbstractorModelType:
         :ivar view: Single view of an abstracto
         """
 
-        view: list["AbstractorModelType.Views.View"] = field(
+        view: list[AbstractorModelType.Views.View] = field(
             default_factory=list,
             metadata={
                 "type": "Element",
@@ -85,7 +87,7 @@ class AbstractorModelType:
             :ivar id:
             """
 
-            name: Optional[str] = field(
+            name: str | None = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -93,7 +95,7 @@ class AbstractorModelType:
                     "required": True,
                 },
             )
-            display_name: Optional[DisplayName] = field(
+            display_name: DisplayName | None = field(
                 default=None,
                 metadata={
                     "name": "displayName",
@@ -101,7 +103,7 @@ class AbstractorModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            short_description: Optional[ShortDescription] = field(
+            short_description: ShortDescription | None = field(
                 default=None,
                 metadata={
                     "name": "shortDescription",
@@ -109,7 +111,7 @@ class AbstractorModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            description: Optional[Description] = field(
+            description: Description | None = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -117,7 +119,7 @@ class AbstractorModelType:
                 },
             )
             env_identifier: list[
-                "AbstractorModelType.Views.View.EnvIdentifier"
+                AbstractorModelType.Views.View.EnvIdentifier
             ] = field(
                 default_factory=list,
                 metadata={
@@ -126,7 +128,7 @@ class AbstractorModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            component_instantiation_ref: Optional[str] = field(
+            component_instantiation_ref: str | None = field(
                 default=None,
                 metadata={
                     "name": "componentInstantiationRef",
@@ -134,7 +136,7 @@ class AbstractorModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            vendor_extensions: Optional[VendorExtensions] = field(
+            vendor_extensions: VendorExtensions | None = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
@@ -142,7 +144,7 @@ class AbstractorModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            id: Optional[str] = field(
+            id: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
@@ -159,7 +161,7 @@ class AbstractorModelType:
                         "pattern": r"[a-zA-Z0-9_+\*\.]*:[a-zA-Z0-9_+\*\.]*:[a-zA-Z0-9_+\*\.]*",
                     },
                 )
-                id: Optional[str] = field(
+                id: str | None = field(
                     default=None,
                     metadata={
                         "type": "Attribute",

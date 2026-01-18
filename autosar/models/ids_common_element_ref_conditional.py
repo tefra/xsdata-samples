@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,9 +33,7 @@ class IdsCommonElementRefConditional:
     class Meta:
         name = "IDS-COMMON-ELEMENT-REF-CONDITIONAL"
 
-    ids_common_element_ref: Optional[
-        "IdsCommonElementRefConditional.IdsCommonElementRef"
-    ] = field(
+    ids_common_element_ref: IdsCommonElementRefConditional.IdsCommonElementRef | None = field(
         default=None,
         metadata={
             "name": "IDS-COMMON-ELEMENT-REF",
@@ -41,7 +41,7 @@ class IdsCommonElementRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -49,14 +49,14 @@ class IdsCommonElementRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +67,7 @@ class IdsCommonElementRefConditional:
 
     @dataclass
     class IdsCommonElementRef(Ref):
-        dest: Optional[IdsCommonElementSubtypesEnum] = field(
+        dest: IdsCommonElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

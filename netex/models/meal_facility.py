@@ -11,7 +11,7 @@ class MealFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: Optional[MealFacilityEnumeration] = field(
+    value: MealFacilityEnumeration | None = field(
         default=None,
         metadata={
             "required": True,

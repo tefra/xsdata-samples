@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -51,7 +53,7 @@ class SomeipTransformationISignalProps:
     class Meta:
         name = "SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS"
 
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -59,7 +61,7 @@ class SomeipTransformationISignalProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -67,7 +69,7 @@ class SomeipTransformationISignalProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -75,7 +77,7 @@ class SomeipTransformationISignalProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -83,9 +85,7 @@ class SomeipTransformationISignalProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    someip_transformation_i_signal_props_variants: Optional[
-        "SomeipTransformationISignalProps.SomeipTransformationISignalPropsVariants"
-    ] = field(
+    someip_transformation_i_signal_props_variants: SomeipTransformationISignalProps.SomeipTransformationISignalPropsVariants | None = field(
         default=None,
         metadata={
             "name": "SOMEIP-TRANSFORMATION-I-SIGNAL-PROPS-VARIANTS",
@@ -93,14 +93,14 @@ class SomeipTransformationISignalProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

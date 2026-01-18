@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -98,7 +100,7 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
     class Meta:
         name = "PROVIDED-SERVICE-INSTANCE-TO-SW-CLUSTER-DESIGN-P-PORT-PROTOTYPE-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -107,9 +109,7 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -117,7 +117,7 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -125,7 +125,7 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -133,7 +133,7 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -141,7 +141,7 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -149,7 +149,7 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -157,9 +157,7 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping.Annotations"
-    ] = field(
+    annotations: ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +165,7 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,9 +173,7 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provided_port_prototype_iref: Optional[
-        PPortPrototypeInSoftwareClusterDesignInstanceRef
-    ] = field(
+    provided_port_prototype_iref: PPortPrototypeInSoftwareClusterDesignInstanceRef | None = field(
         default=None,
         metadata={
             "name": "PROVIDED-PORT-PROTOTYPE-IREF",
@@ -185,9 +181,7 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provided_service_instance_ref: Optional[
-        "ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping.ProvidedServiceInstanceRef"
-    ] = field(
+    provided_service_instance_ref: ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping.ProvidedServiceInstanceRef | None = field(
         default=None,
         metadata={
             "name": "PROVIDED-SERVICE-INSTANCE-REF",
@@ -195,14 +189,14 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -210,7 +204,7 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -242,7 +236,7 @@ class ProvidedServiceInstanceToSwClusterDesignPPortPrototypeMapping:
 
     @dataclass
     class ProvidedServiceInstanceRef(Ref):
-        dest: Optional[ProvidedApServiceInstanceSubtypesEnum] = field(
+        dest: ProvidedApServiceInstanceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

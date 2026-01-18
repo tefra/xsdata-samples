@@ -12,13 +12,13 @@ class TMessage(TRootElement):
     class Meta:
         name = "tMessage"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    item_ref: Optional[QName] = field(
+    item_ref: QName | None = field(
         default=None,
         metadata={
             "name": "itemRef",

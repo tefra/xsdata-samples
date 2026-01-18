@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -83,7 +85,7 @@ class J1939TpConnection:
     class Meta:
         name = "J-1939-TP-CONNECTION"
 
-    ident: Optional[TpConnectionIdent] = field(
+    ident: TpConnectionIdent | None = field(
         default=None,
         metadata={
             "name": "IDENT",
@@ -91,7 +93,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    broadcast: Optional[Boolean] = field(
+    broadcast: Boolean | None = field(
         default=None,
         metadata={
             "name": "BROADCAST",
@@ -99,7 +101,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    buffer_ratio: Optional[PositiveInteger] = field(
+    buffer_ratio: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "BUFFER-RATIO",
@@ -107,7 +109,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cancellation: Optional[Boolean] = field(
+    cancellation: Boolean | None = field(
         default=None,
         metadata={
             "name": "CANCELLATION",
@@ -115,7 +117,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_pdu_ref: Optional["J1939TpConnection.DataPduRef"] = field(
+    data_pdu_ref: J1939TpConnection.DataPduRef | None = field(
         default=None,
         metadata={
             "name": "DATA-PDU-REF",
@@ -123,7 +125,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    direct_pdu_ref: Optional["J1939TpConnection.DirectPduRef"] = field(
+    direct_pdu_ref: J1939TpConnection.DirectPduRef | None = field(
         default=None,
         metadata={
             "name": "DIRECT-PDU-REF",
@@ -131,7 +133,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dynamic_bs: Optional[Boolean] = field(
+    dynamic_bs: Boolean | None = field(
         default=None,
         metadata={
             "name": "DYNAMIC-BS",
@@ -139,7 +141,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flow_control_pdu_refs: Optional["J1939TpConnection.FlowControlPduRefs"] = (
+    flow_control_pdu_refs: J1939TpConnection.FlowControlPduRefs | None = (
         field(
             default=None,
             metadata={
@@ -149,7 +151,7 @@ class J1939TpConnection:
             },
         )
     )
-    max_bs: Optional[PositiveInteger] = field(
+    max_bs: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-BS",
@@ -157,7 +159,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_exp_bs: Optional[PositiveInteger] = field(
+    max_exp_bs: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-EXP-BS",
@@ -165,7 +167,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    receiver_refs: Optional["J1939TpConnection.ReceiverRefs"] = field(
+    receiver_refs: J1939TpConnection.ReceiverRefs | None = field(
         default=None,
         metadata={
             "name": "RECEIVER-REFS",
@@ -173,7 +175,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    retry: Optional[Boolean] = field(
+    retry: Boolean | None = field(
         default=None,
         metadata={
             "name": "RETRY",
@@ -181,7 +183,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_pgs: Optional["J1939TpConnection.TpPgs"] = field(
+    tp_pgs: J1939TpConnection.TpPgs | None = field(
         default=None,
         metadata={
             "name": "TP-PGS",
@@ -189,7 +191,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_sdu_refs: Optional["J1939TpConnection.TpSduRefs"] = field(
+    tp_sdu_refs: J1939TpConnection.TpSduRefs | None = field(
         default=None,
         metadata={
             "name": "TP-SDU-REFS",
@@ -197,7 +199,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmitter_ref: Optional["J1939TpConnection.TransmitterRef"] = field(
+    transmitter_ref: J1939TpConnection.TransmitterRef | None = field(
         default=None,
         metadata={
             "name": "TRANSMITTER-REF",
@@ -205,7 +207,7 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -213,14 +215,14 @@ class J1939TpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -231,7 +233,7 @@ class J1939TpConnection:
 
     @dataclass
     class DataPduRef(Ref):
-        dest: Optional[NPduSubtypesEnum] = field(
+        dest: NPduSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -242,7 +244,7 @@ class J1939TpConnection:
 
     @dataclass
     class DirectPduRef(Ref):
-        dest: Optional[NPduSubtypesEnum] = field(
+        dest: NPduSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -254,7 +256,7 @@ class J1939TpConnection:
     @dataclass
     class FlowControlPduRefs:
         flow_control_pdu_ref: list[
-            "J1939TpConnection.FlowControlPduRefs.FlowControlPduRef"
+            J1939TpConnection.FlowControlPduRefs.FlowControlPduRef
         ] = field(
             default_factory=list,
             metadata={
@@ -267,7 +269,7 @@ class J1939TpConnection:
 
         @dataclass
         class FlowControlPduRef(Ref):
-            dest: Optional[NPduSubtypesEnum] = field(
+            dest: NPduSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -278,7 +280,7 @@ class J1939TpConnection:
 
     @dataclass
     class ReceiverRefs:
-        receiver_ref: list["J1939TpConnection.ReceiverRefs.ReceiverRef"] = (
+        receiver_ref: list[J1939TpConnection.ReceiverRefs.ReceiverRef] = (
             field(
                 default_factory=list,
                 metadata={
@@ -291,7 +293,7 @@ class J1939TpConnection:
 
         @dataclass
         class ReceiverRef(Ref):
-            dest: Optional[J1939TpNodeSubtypesEnum] = field(
+            dest: J1939TpNodeSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -313,7 +315,7 @@ class J1939TpConnection:
 
     @dataclass
     class TpSduRefs:
-        tp_sdu_ref: list["J1939TpConnection.TpSduRefs.TpSduRef"] = field(
+        tp_sdu_ref: list[J1939TpConnection.TpSduRefs.TpSduRef] = field(
             default_factory=list,
             metadata={
                 "name": "TP-SDU-REF",
@@ -324,7 +326,7 @@ class J1939TpConnection:
 
         @dataclass
         class TpSduRef(Ref):
-            dest: Optional[IPduSubtypesEnum] = field(
+            dest: IPduSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -335,7 +337,7 @@ class J1939TpConnection:
 
     @dataclass
     class TransmitterRef(Ref):
-        dest: Optional[J1939TpNodeSubtypesEnum] = field(
+        dest: J1939TpNodeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

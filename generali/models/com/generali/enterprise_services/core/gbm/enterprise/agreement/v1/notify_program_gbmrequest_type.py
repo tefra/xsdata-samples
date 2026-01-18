@@ -26,7 +26,7 @@ class NotifyProgramGbmrequestType(BaseGbmheaderType):
     class Meta:
         name = "NotifyProgramGBMRequestType"
 
-    program_gbo: Optional[ProgramGbotype] = field(
+    program_gbo: ProgramGbotype | None = field(
         default=None,
         metadata={
             "name": "ProgramGBO",

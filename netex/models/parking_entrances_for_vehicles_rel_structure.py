@@ -15,7 +15,7 @@ class ParkingEntrancesForVehiclesRelStructure(ContainmentAggregationStructure):
         name = "parkingEntrancesForVehicles_RelStructure"
 
     parking_entrance_for_vehicles_ref_or_parking_entrance_for_vehicles: Iterable[
-        Union[ParkingEntranceForVehiclesRef, ParkingEntranceForVehicles]
+        ParkingEntranceForVehiclesRef | ParkingEntranceForVehicles
     ] = field(
         default_factory=list,
         metadata={

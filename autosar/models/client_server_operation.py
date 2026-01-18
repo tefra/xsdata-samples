@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -118,7 +120,7 @@ class ClientServerOperation:
     class Meta:
         name = "CLIENT-SERVER-OPERATION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -127,9 +129,7 @@ class ClientServerOperation:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ClientServerOperation.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ClientServerOperation.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -137,7 +137,7 @@ class ClientServerOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -145,7 +145,7 @@ class ClientServerOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -153,7 +153,7 @@ class ClientServerOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -161,7 +161,7 @@ class ClientServerOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -169,7 +169,7 @@ class ClientServerOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -177,7 +177,7 @@ class ClientServerOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ClientServerOperation.Annotations"] = field(
+    annotations: ClientServerOperation.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -185,7 +185,7 @@ class ClientServerOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    arguments: Optional["ClientServerOperation.Arguments"] = field(
+    arguments: ClientServerOperation.Arguments | None = field(
         default=None,
         metadata={
             "name": "ARGUMENTS",
@@ -193,7 +193,7 @@ class ClientServerOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diag_arg_integrity: Optional[Boolean] = field(
+    diag_arg_integrity: Boolean | None = field(
         default=None,
         metadata={
             "name": "DIAG-ARG-INTEGRITY",
@@ -201,7 +201,7 @@ class ClientServerOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fire_and_forget: Optional[Boolean] = field(
+    fire_and_forget: Boolean | None = field(
         default=None,
         metadata={
             "name": "FIRE-AND-FORGET",
@@ -209,9 +209,7 @@ class ClientServerOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    possible_ap_error_refs: Optional[
-        "ClientServerOperation.PossibleApErrorRefs"
-    ] = field(
+    possible_ap_error_refs: ClientServerOperation.PossibleApErrorRefs | None = field(
         default=None,
         metadata={
             "name": "POSSIBLE-AP-ERROR-REFS",
@@ -219,9 +217,7 @@ class ClientServerOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    possible_ap_error_set_refs: Optional[
-        "ClientServerOperation.PossibleApErrorSetRefs"
-    ] = field(
+    possible_ap_error_set_refs: ClientServerOperation.PossibleApErrorSetRefs | None = field(
         default=None,
         metadata={
             "name": "POSSIBLE-AP-ERROR-SET-REFS",
@@ -229,9 +225,7 @@ class ClientServerOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    possible_error_refs: Optional[
-        "ClientServerOperation.PossibleErrorRefs"
-    ] = field(
+    possible_error_refs: ClientServerOperation.PossibleErrorRefs | None = field(
         default=None,
         metadata={
             "name": "POSSIBLE-ERROR-REFS",
@@ -239,7 +233,7 @@ class ClientServerOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -247,14 +241,14 @@ class ClientServerOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -262,7 +256,7 @@ class ClientServerOperation:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -306,7 +300,7 @@ class ClientServerOperation:
     @dataclass
     class PossibleApErrorRefs:
         possible_ap_error_ref: list[
-            "ClientServerOperation.PossibleApErrorRefs.PossibleApErrorRef"
+            ClientServerOperation.PossibleApErrorRefs.PossibleApErrorRef
         ] = field(
             default_factory=list,
             metadata={
@@ -318,7 +312,7 @@ class ClientServerOperation:
 
         @dataclass
         class PossibleApErrorRef(Ref):
-            dest: Optional[ApApplicationErrorSubtypesEnum] = field(
+            dest: ApApplicationErrorSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -330,7 +324,7 @@ class ClientServerOperation:
     @dataclass
     class PossibleApErrorSetRefs:
         possible_ap_error_set_ref: list[
-            "ClientServerOperation.PossibleApErrorSetRefs.PossibleApErrorSetRef"
+            ClientServerOperation.PossibleApErrorSetRefs.PossibleApErrorSetRef
         ] = field(
             default_factory=list,
             metadata={
@@ -342,7 +336,7 @@ class ClientServerOperation:
 
         @dataclass
         class PossibleApErrorSetRef(Ref):
-            dest: Optional[ApApplicationErrorSetSubtypesEnum] = field(
+            dest: ApApplicationErrorSetSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -354,7 +348,7 @@ class ClientServerOperation:
     @dataclass
     class PossibleErrorRefs:
         possible_error_ref: list[
-            "ClientServerOperation.PossibleErrorRefs.PossibleErrorRef"
+            ClientServerOperation.PossibleErrorRefs.PossibleErrorRef
         ] = field(
             default_factory=list,
             metadata={
@@ -366,7 +360,7 @@ class ClientServerOperation:
 
         @dataclass
         class PossibleErrorRef(Ref):
-            dest: Optional[ApplicationErrorSubtypesEnum] = field(
+            dest: ApplicationErrorSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

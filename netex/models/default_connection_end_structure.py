@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class DefaultConnectionEndStructure:
-    transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
+    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -19,7 +19,7 @@ class DefaultConnectionEndStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operator_view: Optional[OperatorView] = field(
+    operator_view: OperatorView | None = field(
         default=None,
         metadata={
             "name": "OperatorView",

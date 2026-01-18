@@ -30,19 +30,19 @@ class Book:
         name = "book"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    book_metadata: Optional[BookMetadata] = field(
+    book_metadata: BookMetadata | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    book_series_metadata: Optional[BookSeriesMetadata] = field(
+    book_series_metadata: BookSeriesMetadata | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    book_set_metadata: Optional[BookSetMetadata] = field(
+    book_set_metadata: BookSetMetadata | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -54,7 +54,7 @@ class Book:
             "type": "Element",
         },
     )
-    book_type: Optional[BookBookType] = field(
+    book_type: BookBookType | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -32,7 +34,7 @@ class TimeRangeType:
     class Meta:
         name = "TIME-RANGE-TYPE"
 
-    tolerance: Optional["TimeRangeType.Tolerance"] = field(
+    tolerance: TimeRangeType.Tolerance | None = field(
         default=None,
         metadata={
             "name": "TOLERANCE",
@@ -40,7 +42,7 @@ class TimeRangeType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: Optional[TimeValue] = field(
+    value: TimeValue | None = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -48,14 +50,14 @@ class TimeRangeType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -66,7 +68,7 @@ class TimeRangeType:
 
     @dataclass
     class Tolerance:
-        absolute_tolerance: Optional[AbsoluteTolerance] = field(
+        absolute_tolerance: AbsoluteTolerance | None = field(
             default=None,
             metadata={
                 "name": "ABSOLUTE-TOLERANCE",
@@ -74,7 +76,7 @@ class TimeRangeType:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        relative_tolerance: Optional[RelativeTolerance] = field(
+        relative_tolerance: RelativeTolerance | None = field(
             default=None,
             metadata={
                 "name": "RELATIVE-TOLERANCE",

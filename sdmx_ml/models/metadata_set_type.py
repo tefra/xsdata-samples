@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -50,12 +52,7 @@ class MetadataSetType(MetadataSetBaseType):
         quarterly basis).
     """
 
-    metadata_provision_agreement_or_metadataflow: Optional[
-        Union[
-            "MetadataSetType.MetadataProvisionAgreement",
-            "MetadataSetType.Metadataflow",
-        ]
-    ] = field(
+    metadata_provision_agreement_or_metadataflow: MetadataSetType.MetadataProvisionAgreement | MetadataSetType.Metadataflow | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -92,13 +89,13 @@ class MetadataSetType(MetadataSetBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/metadata/generic",
         },
     )
-    action: Optional[ActionType] = field(
+    action: ActionType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    reporting_begin_date: Optional[Union[XmlPeriod, XmlDate, XmlDateTime]] = (
+    reporting_begin_date: XmlPeriod | XmlDate | XmlDateTime | None = (
         field(
             default=None,
             metadata={
@@ -107,7 +104,7 @@ class MetadataSetType(MetadataSetBaseType):
             },
         )
     )
-    reporting_end_date: Optional[Union[XmlPeriod, XmlDate, XmlDateTime]] = (
+    reporting_end_date: XmlPeriod | XmlDate | XmlDateTime | None = (
         field(
             default=None,
             metadata={
@@ -116,16 +113,14 @@ class MetadataSetType(MetadataSetBaseType):
             },
         )
     )
-    publication_year: Optional[XmlPeriod] = field(
+    publication_year: XmlPeriod | None = field(
         default=None,
         metadata={
             "name": "publicationYear",
             "type": "Attribute",
         },
     )
-    publication_period: Optional[
-        Union[XmlPeriod, XmlDate, XmlDateTime, str]
-    ] = field(
+    publication_period: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
         default=None,
         metadata={
             "name": "publicationPeriod",
@@ -136,7 +131,7 @@ class MetadataSetType(MetadataSetBaseType):
 
     @dataclass(frozen=True)
     class MetadataProvisionAgreement:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -146,7 +141,7 @@ class MetadataSetType(MetadataSetBaseType):
 
     @dataclass(frozen=True)
     class Metadataflow:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,

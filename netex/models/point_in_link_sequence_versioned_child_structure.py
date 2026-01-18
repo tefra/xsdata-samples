@@ -32,29 +32,7 @@ class PointInLinkSequenceVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "PointInLinkSequence_VersionedChildStructure"
 
-    choice: Optional[
-        Union[
-            TripRef,
-            TripPatternTripRef,
-            SingleJourneyPathRef,
-            SingleJourneyRef,
-            DatedVehicleJourneyRef,
-            DatedSpecialServiceRef,
-            SpecialServiceRef,
-            TemplateServiceJourneyRef,
-            ServiceJourneyRef,
-            DeadRunRef,
-            VehicleJourneyRef,
-            ServiceJourneyPatternRef,
-            ServicePatternRef,
-            DeadRunJourneyPatternRef,
-            JourneyPatternRef,
-            TimingPatternRef,
-            NavigationPathRef,
-            RouteRef,
-            LinkSequenceRef,
-        ]
-    ] = field(
+    choice: TripRef | TripPatternTripRef | SingleJourneyPathRef | SingleJourneyRef | DatedVehicleJourneyRef | DatedSpecialServiceRef | SpecialServiceRef | TemplateServiceJourneyRef | ServiceJourneyRef | DeadRunRef | VehicleJourneyRef | ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef | TimingPatternRef | NavigationPathRef | RouteRef | LinkSequenceRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -157,14 +135,14 @@ class PointInLinkSequenceVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    projections: Optional[ProjectionsRelStructure] = field(
+    projections: ProjectionsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -172,7 +150,7 @@ class PointInLinkSequenceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

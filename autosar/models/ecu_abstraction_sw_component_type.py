@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -145,7 +147,7 @@ class EcuAbstractionSwComponentType:
     class Meta:
         name = "ECU-ABSTRACTION-SW-COMPONENT-TYPE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -154,9 +156,7 @@ class EcuAbstractionSwComponentType:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "EcuAbstractionSwComponentType.ShortNameFragments"
-    ] = field(
+    short_name_fragments: EcuAbstractionSwComponentType.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -164,7 +164,7 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -172,7 +172,7 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -180,7 +180,7 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -188,7 +188,7 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -196,7 +196,7 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -204,7 +204,7 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["EcuAbstractionSwComponentType.Annotations"] = field(
+    annotations: EcuAbstractionSwComponentType.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -212,7 +212,7 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -220,9 +220,7 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional[
-        "EcuAbstractionSwComponentType.BlueprintPolicys"
-    ] = field(
+    blueprint_policys: EcuAbstractionSwComponentType.BlueprintPolicys | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -230,7 +228,7 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: Optional[String] = field(
+    short_name_pattern: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -238,9 +236,7 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_documentations: Optional[
-        "EcuAbstractionSwComponentType.SwComponentDocumentations"
-    ] = field(
+    sw_component_documentations: EcuAbstractionSwComponentType.SwComponentDocumentations | None = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-DOCUMENTATIONS",
@@ -248,9 +244,7 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consistency_needss: Optional[
-        "EcuAbstractionSwComponentType.ConsistencyNeedss"
-    ] = field(
+    consistency_needss: EcuAbstractionSwComponentType.ConsistencyNeedss | None = field(
         default=None,
         metadata={
             "name": "CONSISTENCY-NEEDSS",
@@ -258,7 +252,7 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ports: Optional["EcuAbstractionSwComponentType.Ports"] = field(
+    ports: EcuAbstractionSwComponentType.Ports | None = field(
         default=None,
         metadata={
             "name": "PORTS",
@@ -266,7 +260,7 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_groups: Optional["EcuAbstractionSwComponentType.PortGroups"] = field(
+    port_groups: EcuAbstractionSwComponentType.PortGroups | None = field(
         default=None,
         metadata={
             "name": "PORT-GROUPS",
@@ -274,9 +268,7 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_group_refs: Optional[
-        "EcuAbstractionSwComponentType.UnitGroupRefs"
-    ] = field(
+    unit_group_refs: EcuAbstractionSwComponentType.UnitGroupRefs | None = field(
         default=None,
         metadata={
             "name": "UNIT-GROUP-REFS",
@@ -284,9 +276,7 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    internal_behaviors: Optional[
-        "EcuAbstractionSwComponentType.InternalBehaviors"
-    ] = field(
+    internal_behaviors: EcuAbstractionSwComponentType.InternalBehaviors | None = field(
         default=None,
         metadata={
             "name": "INTERNAL-BEHAVIORS",
@@ -294,7 +284,7 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbol_props: Optional[SymbolProps] = field(
+    symbol_props: SymbolProps | None = field(
         default=None,
         metadata={
             "name": "SYMBOL-PROPS",
@@ -302,9 +292,7 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hardware_element_refs: Optional[
-        "EcuAbstractionSwComponentType.HardwareElementRefs"
-    ] = field(
+    hardware_element_refs: EcuAbstractionSwComponentType.HardwareElementRefs | None = field(
         default=None,
         metadata={
             "name": "HARDWARE-ELEMENT-REFS",
@@ -312,14 +300,14 @@ class EcuAbstractionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -327,7 +315,7 @@ class EcuAbstractionSwComponentType:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -449,7 +437,7 @@ class EcuAbstractionSwComponentType:
     @dataclass
     class UnitGroupRefs:
         unit_group_ref: list[
-            "EcuAbstractionSwComponentType.UnitGroupRefs.UnitGroupRef"
+            EcuAbstractionSwComponentType.UnitGroupRefs.UnitGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -461,7 +449,7 @@ class EcuAbstractionSwComponentType:
 
         @dataclass
         class UnitGroupRef(Ref):
-            dest: Optional[UnitGroupSubtypesEnum] = field(
+            dest: UnitGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -484,7 +472,7 @@ class EcuAbstractionSwComponentType:
     @dataclass
     class HardwareElementRefs:
         hardware_element_ref: list[
-            "EcuAbstractionSwComponentType.HardwareElementRefs.HardwareElementRef"
+            EcuAbstractionSwComponentType.HardwareElementRefs.HardwareElementRef
         ] = field(
             default_factory=list,
             metadata={
@@ -496,7 +484,7 @@ class EcuAbstractionSwComponentType:
 
         @dataclass
         class HardwareElementRef(Ref):
-            dest: Optional[HwDescriptionEntitySubtypesEnum] = field(
+            dest: HwDescriptionEntitySubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

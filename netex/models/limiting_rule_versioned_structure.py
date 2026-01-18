@@ -14,7 +14,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
     class Meta:
         name = "LimitingRule_VersionedStructure"
 
-    minimum_price: Optional[Decimal] = field(
+    minimum_price: Decimal | None = field(
         default=None,
         metadata={
             "name": "MinimumPrice",
@@ -22,7 +22,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_price_as_percentage: Optional[Decimal] = field(
+    minimum_price_as_percentage: Decimal | None = field(
         default=None,
         metadata={
             "name": "MinimumPriceAsPercentage",
@@ -30,7 +30,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_price_as_multiple: Optional[int] = field(
+    minimum_price_as_multiple: int | None = field(
         default=None,
         metadata={
             "name": "MinimumPriceAsMultiple",
@@ -38,7 +38,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_price: Optional[Decimal] = field(
+    maximum_price: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumPrice",
@@ -46,7 +46,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_price_as_percentage: Optional[Decimal] = field(
+    maximum_price_as_percentage: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumPriceAsPercentage",
@@ -54,7 +54,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_price_as_multiple: Optional[int] = field(
+    maximum_price_as_multiple: int | None = field(
         default=None,
         metadata={
             "name": "MaximumPriceAsMultiple",
@@ -62,7 +62,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_limit_price_as_percentage: Optional[Decimal] = field(
+    minimum_limit_price_as_percentage: Decimal | None = field(
         default=None,
         metadata={
             "name": "MinimumLimitPriceAsPercentage",
@@ -70,7 +70,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_limit_price: Optional[Decimal] = field(
+    minimum_limit_price: Decimal | None = field(
         default=None,
         metadata={
             "name": "MinimumLimitPrice",
@@ -78,7 +78,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_limit_price_as_percentage: Optional[Decimal] = field(
+    maximum_limit_price_as_percentage: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumLimitPriceAsPercentage",
@@ -86,7 +86,7 @@ class LimitingRuleVersionedStructure(DiscountingRuleVersionedStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_limit_price: Optional[Decimal] = field(
+    maximum_limit_price: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumLimitPrice",

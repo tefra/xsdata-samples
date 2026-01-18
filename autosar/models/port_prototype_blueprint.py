@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -131,7 +133,7 @@ class PortPrototypeBlueprint:
     class Meta:
         name = "PORT-PROTOTYPE-BLUEPRINT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -140,9 +142,7 @@ class PortPrototypeBlueprint:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "PortPrototypeBlueprint.ShortNameFragments"
-    ] = field(
+    short_name_fragments: PortPrototypeBlueprint.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -150,7 +150,7 @@ class PortPrototypeBlueprint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -158,7 +158,7 @@ class PortPrototypeBlueprint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -166,7 +166,7 @@ class PortPrototypeBlueprint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -174,7 +174,7 @@ class PortPrototypeBlueprint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -182,7 +182,7 @@ class PortPrototypeBlueprint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -190,7 +190,7 @@ class PortPrototypeBlueprint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["PortPrototypeBlueprint.Annotations"] = field(
+    annotations: PortPrototypeBlueprint.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -198,7 +198,7 @@ class PortPrototypeBlueprint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -206,7 +206,7 @@ class PortPrototypeBlueprint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional["PortPrototypeBlueprint.BlueprintPolicys"] = (
+    blueprint_policys: PortPrototypeBlueprint.BlueprintPolicys | None = (
         field(
             default=None,
             metadata={
@@ -216,7 +216,7 @@ class PortPrototypeBlueprint:
             },
         )
     )
-    short_name_pattern: Optional[String] = field(
+    short_name_pattern: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -224,7 +224,7 @@ class PortPrototypeBlueprint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    init_values: Optional["PortPrototypeBlueprint.InitValues"] = field(
+    init_values: PortPrototypeBlueprint.InitValues | None = field(
         default=None,
         metadata={
             "name": "INIT-VALUES",
@@ -232,7 +232,7 @@ class PortPrototypeBlueprint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    interface_ref: Optional["PortPrototypeBlueprint.InterfaceRef"] = field(
+    interface_ref: PortPrototypeBlueprint.InterfaceRef | None = field(
         default=None,
         metadata={
             "name": "INTERFACE-REF",
@@ -240,7 +240,7 @@ class PortPrototypeBlueprint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provided_com_specs: Optional["PortPrototypeBlueprint.ProvidedComSpecs"] = (
+    provided_com_specs: PortPrototypeBlueprint.ProvidedComSpecs | None = (
         field(
             default=None,
             metadata={
@@ -250,7 +250,7 @@ class PortPrototypeBlueprint:
             },
         )
     )
-    required_com_specs: Optional["PortPrototypeBlueprint.RequiredComSpecs"] = (
+    required_com_specs: PortPrototypeBlueprint.RequiredComSpecs | None = (
         field(
             default=None,
             metadata={
@@ -260,14 +260,14 @@ class PortPrototypeBlueprint:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -275,7 +275,7 @@ class PortPrototypeBlueprint:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -349,7 +349,7 @@ class PortPrototypeBlueprint:
 
     @dataclass
     class InterfaceRef(Ref):
-        dest: Optional[PortInterfaceSubtypesEnum] = field(
+        dest: PortInterfaceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

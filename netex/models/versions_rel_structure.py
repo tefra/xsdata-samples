@@ -14,7 +14,7 @@ class VersionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "versions_RelStructure"
 
-    version_ref_or_version: Iterable[Union[VersionRef, Version]] = field(
+    version_ref_or_version: Iterable[VersionRef | Version] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

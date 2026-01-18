@@ -39,7 +39,7 @@ class CarParks(NonRoadEventInformation):
     :ivar car_parks_extension:
     """
 
-    car_park_configuration: Optional[CarParkConfigurationEnum] = field(
+    car_park_configuration: CarParkConfigurationEnum | None = field(
         default=None,
         metadata={
             "name": "carParkConfiguration",
@@ -47,7 +47,7 @@ class CarParks(NonRoadEventInformation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    car_park_identity: Optional[str] = field(
+    car_park_identity: str | None = field(
         default=None,
         metadata={
             "name": "carParkIdentity",
@@ -57,7 +57,7 @@ class CarParks(NonRoadEventInformation):
             "max_length": 1024,
         },
     )
-    car_park_occupancy: Optional[float] = field(
+    car_park_occupancy: float | None = field(
         default=None,
         metadata={
             "name": "carParkOccupancy",
@@ -65,7 +65,7 @@ class CarParks(NonRoadEventInformation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    car_park_status: Optional[CarParkStatusEnum] = field(
+    car_park_status: CarParkStatusEnum | None = field(
         default=None,
         metadata={
             "name": "carParkStatus",
@@ -73,7 +73,7 @@ class CarParks(NonRoadEventInformation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    exit_rate: Optional[int] = field(
+    exit_rate: int | None = field(
         default=None,
         metadata={
             "name": "exitRate",
@@ -81,7 +81,7 @@ class CarParks(NonRoadEventInformation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    fill_rate: Optional[int] = field(
+    fill_rate: int | None = field(
         default=None,
         metadata={
             "name": "fillRate",
@@ -89,7 +89,7 @@ class CarParks(NonRoadEventInformation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    number_of_vacant_parking_spaces: Optional[int] = field(
+    number_of_vacant_parking_spaces: int | None = field(
         default=None,
         metadata={
             "name": "numberOfVacantParkingSpaces",
@@ -97,7 +97,7 @@ class CarParks(NonRoadEventInformation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    occupied_spaces: Optional[int] = field(
+    occupied_spaces: int | None = field(
         default=None,
         metadata={
             "name": "occupiedSpaces",
@@ -105,7 +105,7 @@ class CarParks(NonRoadEventInformation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    queuing_time: Optional[float] = field(
+    queuing_time: float | None = field(
         default=None,
         metadata={
             "name": "queuingTime",
@@ -113,7 +113,7 @@ class CarParks(NonRoadEventInformation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    total_capacity: Optional[int] = field(
+    total_capacity: int | None = field(
         default=None,
         metadata={
             "name": "totalCapacity",
@@ -121,7 +121,7 @@ class CarParks(NonRoadEventInformation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    car_parks_extension: Optional[ExtensionType] = field(
+    car_parks_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "carParksExtension",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -101,7 +103,7 @@ class TlsIamRemoteSubject:
     class Meta:
         name = "TLS-IAM-REMOTE-SUBJECT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -110,9 +112,7 @@ class TlsIamRemoteSubject:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "TlsIamRemoteSubject.ShortNameFragments"
-    ] = field(
+    short_name_fragments: TlsIamRemoteSubject.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -120,7 +120,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -128,7 +128,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -136,7 +136,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -144,7 +144,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -152,7 +152,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -160,7 +160,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["TlsIamRemoteSubject.Annotations"] = field(
+    annotations: TlsIamRemoteSubject.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -168,7 +168,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -176,9 +176,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    accepted_crypto_cipher_suite_with_psk_refs: Optional[
-        "TlsIamRemoteSubject.AcceptedCryptoCipherSuiteWithPskRefs"
-    ] = field(
+    accepted_crypto_cipher_suite_with_psk_refs: TlsIamRemoteSubject.AcceptedCryptoCipherSuiteWithPskRefs | None = field(
         default=None,
         metadata={
             "name": "ACCEPTED-CRYPTO-CIPHER-SUITE-WITH-PSK-REFS",
@@ -186,9 +184,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    accepted_remote_certificate_refs: Optional[
-        "TlsIamRemoteSubject.AcceptedRemoteCertificateRefs"
-    ] = field(
+    accepted_remote_certificate_refs: TlsIamRemoteSubject.AcceptedRemoteCertificateRefs | None = field(
         default=None,
         metadata={
             "name": "ACCEPTED-REMOTE-CERTIFICATE-REFS",
@@ -196,7 +192,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cert_common_name: Optional[String] = field(
+    cert_common_name: String | None = field(
         default=None,
         metadata={
             "name": "CERT-COMMON-NAME",
@@ -204,7 +200,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    derived_certificate_accepted: Optional[Boolean] = field(
+    derived_certificate_accepted: Boolean | None = field(
         default=None,
         metadata={
             "name": "DERIVED-CERTIFICATE-ACCEPTED",
@@ -212,9 +208,7 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    iam_relevant_tls_secure_com_props_refs: Optional[
-        "TlsIamRemoteSubject.IamRelevantTlsSecureComPropsRefs"
-    ] = field(
+    iam_relevant_tls_secure_com_props_refs: TlsIamRemoteSubject.IamRelevantTlsSecureComPropsRefs | None = field(
         default=None,
         metadata={
             "name": "IAM-RELEVANT-TLS-SECURE-COM-PROPS-REFS",
@@ -222,14 +216,14 @@ class TlsIamRemoteSubject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -237,7 +231,7 @@ class TlsIamRemoteSubject:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -270,7 +264,7 @@ class TlsIamRemoteSubject:
     @dataclass
     class AcceptedCryptoCipherSuiteWithPskRefs:
         accepted_crypto_cipher_suite_with_psk_ref: list[
-            "TlsIamRemoteSubject.AcceptedCryptoCipherSuiteWithPskRefs.AcceptedCryptoCipherSuiteWithPskRef"
+            TlsIamRemoteSubject.AcceptedCryptoCipherSuiteWithPskRefs.AcceptedCryptoCipherSuiteWithPskRef
         ] = field(
             default_factory=list,
             metadata={
@@ -282,7 +276,7 @@ class TlsIamRemoteSubject:
 
         @dataclass
         class AcceptedCryptoCipherSuiteWithPskRef(Ref):
-            dest: Optional[TlsCryptoCipherSuiteSubtypesEnum] = field(
+            dest: TlsCryptoCipherSuiteSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -294,7 +288,7 @@ class TlsIamRemoteSubject:
     @dataclass
     class AcceptedRemoteCertificateRefs:
         accepted_remote_certificate_ref: list[
-            "TlsIamRemoteSubject.AcceptedRemoteCertificateRefs.AcceptedRemoteCertificateRef"
+            TlsIamRemoteSubject.AcceptedRemoteCertificateRefs.AcceptedRemoteCertificateRef
         ] = field(
             default_factory=list,
             metadata={
@@ -306,7 +300,7 @@ class TlsIamRemoteSubject:
 
         @dataclass
         class AcceptedRemoteCertificateRef(Ref):
-            dest: Optional[CryptoServiceCertificateSubtypesEnum] = field(
+            dest: CryptoServiceCertificateSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -318,7 +312,7 @@ class TlsIamRemoteSubject:
     @dataclass
     class IamRelevantTlsSecureComPropsRefs:
         iam_relevant_tls_secure_com_props_ref: list[
-            "TlsIamRemoteSubject.IamRelevantTlsSecureComPropsRefs.IamRelevantTlsSecureComPropsRef"
+            TlsIamRemoteSubject.IamRelevantTlsSecureComPropsRefs.IamRelevantTlsSecureComPropsRef
         ] = field(
             default_factory=list,
             metadata={
@@ -330,7 +324,7 @@ class TlsIamRemoteSubject:
 
         @dataclass
         class IamRelevantTlsSecureComPropsRef(Ref):
-            dest: Optional[TlsSecureComPropsSubtypesEnum] = field(
+            dest: TlsSecureComPropsSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

@@ -20,14 +20,14 @@ class ModeRef:
             "required": True,
         },
     )
-    priority: Optional[int] = field(
+    priority: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

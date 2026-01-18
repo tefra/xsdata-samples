@@ -34,7 +34,7 @@ class ApplicationCompositeDataTypeSubElementRef:
     class Meta:
         name = "APPLICATION-COMPOSITE-DATA-TYPE-SUB-ELEMENT-REF"
 
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -42,9 +42,7 @@ class ApplicationCompositeDataTypeSubElementRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    application_composite_element_iref: Optional[
-        ApplicationCompositeElementInPortInterfaceInstanceRef
-    ] = field(
+    application_composite_element_iref: ApplicationCompositeElementInPortInterfaceInstanceRef | None = field(
         default=None,
         metadata={
             "name": "APPLICATION-COMPOSITE-ELEMENT-IREF",
@@ -52,14 +50,14 @@ class ApplicationCompositeDataTypeSubElementRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

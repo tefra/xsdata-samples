@@ -21,7 +21,7 @@ class HierarchicalCodeBaseType(IdentifiableType):
         structures.
     """
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -22,7 +22,7 @@ class TpegGeometricArea(TpegAreaLocation):
     :ivar tpeg_geometric_area_extension:
     """
 
-    radius: Optional[int] = field(
+    radius: int | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -30,7 +30,7 @@ class TpegGeometricArea(TpegAreaLocation):
             "required": True,
         },
     )
-    centre_point: Optional[PointCoordinates] = field(
+    centre_point: PointCoordinates | None = field(
         default=None,
         metadata={
             "name": "centrePoint",
@@ -39,14 +39,14 @@ class TpegGeometricArea(TpegAreaLocation):
             "required": True,
         },
     )
-    name: Optional[TpegAreaDescriptor] = field(
+    name: TpegAreaDescriptor | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    tpeg_geometric_area_extension: Optional[ExtensionType] = field(
+    tpeg_geometric_area_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "tpegGeometricAreaExtension",

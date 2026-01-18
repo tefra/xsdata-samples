@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -43,7 +45,7 @@ class RuleBasedValueSpecification:
     class Meta:
         name = "RULE-BASED-VALUE-SPECIFICATION"
 
-    rule: Optional[Identifier] = field(
+    rule: Identifier | None = field(
         default=None,
         metadata={
             "name": "RULE",
@@ -51,7 +53,7 @@ class RuleBasedValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    argumentss: Optional["RuleBasedValueSpecification.Argumentss"] = field(
+    argumentss: RuleBasedValueSpecification.Argumentss | None = field(
         default=None,
         metadata={
             "name": "ARGUMENTSS",
@@ -59,7 +61,7 @@ class RuleBasedValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_size_to_fill: Optional[Integer] = field(
+    max_size_to_fill: Integer | None = field(
         default=None,
         metadata={
             "name": "MAX-SIZE-TO-FILL",
@@ -67,14 +69,14 @@ class RuleBasedValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

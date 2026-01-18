@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class AuthenticatedRequestStructure(AbstractRequestStructure):
-    account_id: Optional[str] = field(
+    account_id: str | None = field(
         default=None,
         metadata={
             "name": "AccountId",
@@ -16,7 +16,7 @@ class AuthenticatedRequestStructure(AbstractRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    account_key: Optional[str] = field(
+    account_key: str | None = field(
         default=None,
         metadata={
             "name": "AccountKey",

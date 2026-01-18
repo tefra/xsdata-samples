@@ -19,7 +19,7 @@ class SalesOfferPackageSubstitutionsRelStructure(
         name = "salesOfferPackageSubstitutions_RelStructure"
 
     sales_offer_package_substitution_ref_or_sales_offer_package_substitution: Iterable[
-        Union[SalesOfferPackageSubstitutionRef, SalesOfferPackageSubstitution]
+        SalesOfferPackageSubstitutionRef | SalesOfferPackageSubstitution
     ] = field(
         default_factory=list,
         metadata={

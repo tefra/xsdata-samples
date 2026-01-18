@@ -37,7 +37,7 @@ class DesignConfigurationInstantiationType:
     class Meta:
         name = "designConfigurationInstantiationType"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -45,7 +45,7 @@ class DesignConfigurationInstantiationType:
             "required": True,
         },
     )
-    display_name: Optional[DisplayName] = field(
+    display_name: DisplayName | None = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -53,7 +53,7 @@ class DesignConfigurationInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -61,21 +61,21 @@ class DesignConfigurationInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    language: Optional[LanguageType] = field(
+    language: LanguageType | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    design_configuration_ref: Optional[ConfigurableLibraryRefType] = field(
+    design_configuration_ref: ConfigurableLibraryRefType | None = field(
         default=None,
         metadata={
             "name": "designConfigurationRef",
@@ -84,14 +84,14 @@ class DesignConfigurationInstantiationType:
             "required": True,
         },
     )
-    parameters: Optional[Parameters] = field(
+    parameters: Parameters | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -99,7 +99,7 @@ class DesignConfigurationInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

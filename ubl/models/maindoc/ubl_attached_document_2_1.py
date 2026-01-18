@@ -33,7 +33,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class AttachedDocumentType:
-    ublextensions: Optional[Ublextensions] = field(
+    ublextensions: Ublextensions | None = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -41,7 +41,7 @@ class AttachedDocumentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: Optional[UblversionId] = field(
+    ublversion_id: UblversionId | None = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -49,7 +49,7 @@ class AttachedDocumentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: Optional[CustomizationId] = field(
+    customization_id: CustomizationId | None = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -57,7 +57,7 @@ class AttachedDocumentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: Optional[ProfileId] = field(
+    profile_id: ProfileId | None = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -65,7 +65,7 @@ class AttachedDocumentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: Optional[ProfileExecutionId] = field(
+    profile_execution_id: ProfileExecutionId | None = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -73,7 +73,7 @@ class AttachedDocumentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -82,7 +82,7 @@ class AttachedDocumentType:
             "required": True,
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -90,7 +90,7 @@ class AttachedDocumentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -99,7 +99,7 @@ class AttachedDocumentType:
             "required": True,
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -115,7 +115,7 @@ class AttachedDocumentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_type_code: Optional[DocumentTypeCode] = field(
+    document_type_code: DocumentTypeCode | None = field(
         default=None,
         metadata={
             "name": "DocumentTypeCode",
@@ -123,7 +123,7 @@ class AttachedDocumentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_type: Optional[DocumentType] = field(
+    document_type: DocumentType | None = field(
         default=None,
         metadata={
             "name": "DocumentType",
@@ -131,7 +131,7 @@ class AttachedDocumentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    parent_document_id: Optional[ParentDocumentId] = field(
+    parent_document_id: ParentDocumentId | None = field(
         default=None,
         metadata={
             "name": "ParentDocumentID",
@@ -140,7 +140,7 @@ class AttachedDocumentType:
             "required": True,
         },
     )
-    parent_document_type_code: Optional[ParentDocumentTypeCode] = field(
+    parent_document_type_code: ParentDocumentTypeCode | None = field(
         default=None,
         metadata={
             "name": "ParentDocumentTypeCode",
@@ -148,7 +148,7 @@ class AttachedDocumentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    parent_document_version_id: Optional[ParentDocumentVersionId] = field(
+    parent_document_version_id: ParentDocumentVersionId | None = field(
         default=None,
         metadata={
             "name": "ParentDocumentVersionID",
@@ -164,7 +164,7 @@ class AttachedDocumentType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sender_party: Optional[SenderParty] = field(
+    sender_party: SenderParty | None = field(
         default=None,
         metadata={
             "name": "SenderParty",
@@ -173,7 +173,7 @@ class AttachedDocumentType:
             "required": True,
         },
     )
-    receiver_party: Optional[ReceiverParty] = field(
+    receiver_party: ReceiverParty | None = field(
         default=None,
         metadata={
             "name": "ReceiverParty",
@@ -182,7 +182,7 @@ class AttachedDocumentType:
             "required": True,
         },
     )
-    attachment: Optional[Attachment] = field(
+    attachment: Attachment | None = field(
         default=None,
         metadata={
             "name": "Attachment",

@@ -72,7 +72,7 @@ class JournalMeta:
             "min_occurs": 1,
         },
     )
-    issn_l: Optional[IssnL] = field(
+    issn_l: IssnL | None = field(
         default=None,
         metadata={
             "name": "issn-l",
@@ -85,7 +85,7 @@ class JournalMeta:
             "type": "Element",
         },
     )
-    publisher: Optional[Publisher] = field(
+    publisher: Publisher | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -104,13 +104,13 @@ class JournalMeta:
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

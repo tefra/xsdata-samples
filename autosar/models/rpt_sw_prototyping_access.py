@@ -38,7 +38,7 @@ class RptSwPrototypingAccess:
     class Meta:
         name = "RPT-SW-PROTOTYPING-ACCESS"
 
-    rpt_hook_access: Optional[RptAccessEnum] = field(
+    rpt_hook_access: RptAccessEnum | None = field(
         default=None,
         metadata={
             "name": "RPT-HOOK-ACCESS",
@@ -46,7 +46,7 @@ class RptSwPrototypingAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_read_access: Optional[RptAccessEnum] = field(
+    rpt_read_access: RptAccessEnum | None = field(
         default=None,
         metadata={
             "name": "RPT-READ-ACCESS",
@@ -54,7 +54,7 @@ class RptSwPrototypingAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_write_access: Optional[RptAccessEnum] = field(
+    rpt_write_access: RptAccessEnum | None = field(
         default=None,
         metadata={
             "name": "RPT-WRITE-ACCESS",
@@ -62,14 +62,14 @@ class RptSwPrototypingAccess:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

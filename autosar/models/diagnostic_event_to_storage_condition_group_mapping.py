@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -90,7 +92,7 @@ class DiagnosticEventToStorageConditionGroupMapping:
     class Meta:
         name = "DIAGNOSTIC-EVENT-TO-STORAGE-CONDITION-GROUP-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -99,9 +101,7 @@ class DiagnosticEventToStorageConditionGroupMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticEventToStorageConditionGroupMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticEventToStorageConditionGroupMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -109,7 +109,7 @@ class DiagnosticEventToStorageConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -117,7 +117,7 @@ class DiagnosticEventToStorageConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -125,7 +125,7 @@ class DiagnosticEventToStorageConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -133,7 +133,7 @@ class DiagnosticEventToStorageConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -141,7 +141,7 @@ class DiagnosticEventToStorageConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -149,9 +149,7 @@ class DiagnosticEventToStorageConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "DiagnosticEventToStorageConditionGroupMapping.Annotations"
-    ] = field(
+    annotations: DiagnosticEventToStorageConditionGroupMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -159,7 +157,7 @@ class DiagnosticEventToStorageConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -167,9 +165,7 @@ class DiagnosticEventToStorageConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_event_ref: Optional[
-        "DiagnosticEventToStorageConditionGroupMapping.DiagnosticEventRef"
-    ] = field(
+    diagnostic_event_ref: DiagnosticEventToStorageConditionGroupMapping.DiagnosticEventRef | None = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EVENT-REF",
@@ -177,9 +173,7 @@ class DiagnosticEventToStorageConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    storage_condition_group_ref: Optional[
-        "DiagnosticEventToStorageConditionGroupMapping.StorageConditionGroupRef"
-    ] = field(
+    storage_condition_group_ref: DiagnosticEventToStorageConditionGroupMapping.StorageConditionGroupRef | None = field(
         default=None,
         metadata={
             "name": "STORAGE-CONDITION-GROUP-REF",
@@ -187,14 +181,14 @@ class DiagnosticEventToStorageConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -202,7 +196,7 @@ class DiagnosticEventToStorageConditionGroupMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -234,7 +228,7 @@ class DiagnosticEventToStorageConditionGroupMapping:
 
     @dataclass
     class DiagnosticEventRef(Ref):
-        dest: Optional[DiagnosticEventSubtypesEnum] = field(
+        dest: DiagnosticEventSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -245,7 +239,7 @@ class DiagnosticEventToStorageConditionGroupMapping:
 
     @dataclass
     class StorageConditionGroupRef(Ref):
-        dest: Optional[DiagnosticStorageConditionGroupSubtypesEnum] = field(
+        dest: DiagnosticStorageConditionGroupSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -117,7 +119,7 @@ class BurstPatternEventTriggering:
     class Meta:
         name = "BURST-PATTERN-EVENT-TRIGGERING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -126,9 +128,7 @@ class BurstPatternEventTriggering:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "BurstPatternEventTriggering.ShortNameFragments"
-    ] = field(
+    short_name_fragments: BurstPatternEventTriggering.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -136,7 +136,7 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -144,7 +144,7 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -152,7 +152,7 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -160,7 +160,7 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -168,7 +168,7 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -176,7 +176,7 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["BurstPatternEventTriggering.Annotations"] = field(
+    annotations: BurstPatternEventTriggering.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -184,7 +184,7 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace_refs: Optional["BurstPatternEventTriggering.TraceRefs"] = field(
+    trace_refs: BurstPatternEventTriggering.TraceRefs | None = field(
         default=None,
         metadata={
             "name": "TRACE-REFS",
@@ -192,9 +192,7 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_condition_ref: Optional[
-        "BurstPatternEventTriggering.TimingConditionRef"
-    ] = field(
+    timing_condition_ref: BurstPatternEventTriggering.TimingConditionRef | None = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
@@ -202,7 +200,7 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -210,7 +208,7 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_ref: Optional["BurstPatternEventTriggering.EventRef"] = field(
+    event_ref: BurstPatternEventTriggering.EventRef | None = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
@@ -218,7 +216,7 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_number_of_occurrences: Optional[PositiveInteger] = field(
+    max_number_of_occurrences: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-OF-OCCURRENCES",
@@ -226,7 +224,7 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_inter_arrival_time: Optional[MultidimensionalTime] = field(
+    minimum_inter_arrival_time: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "MINIMUM-INTER-ARRIVAL-TIME",
@@ -234,7 +232,7 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pattern_jitter: Optional[MultidimensionalTime] = field(
+    pattern_jitter: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "PATTERN-JITTER",
@@ -242,7 +240,7 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pattern_length: Optional[MultidimensionalTime] = field(
+    pattern_length: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "PATTERN-LENGTH",
@@ -250,7 +248,7 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pattern_period: Optional[MultidimensionalTime] = field(
+    pattern_period: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "PATTERN-PERIOD",
@@ -258,7 +256,7 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_number_of_occurrences: Optional[PositiveInteger] = field(
+    min_number_of_occurrences: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MIN-NUMBER-OF-OCCURRENCES",
@@ -266,14 +264,14 @@ class BurstPatternEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -281,7 +279,7 @@ class BurstPatternEventTriggering:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -313,7 +311,7 @@ class BurstPatternEventTriggering:
 
     @dataclass
     class TraceRefs:
-        trace_ref: list["BurstPatternEventTriggering.TraceRefs.TraceRef"] = (
+        trace_ref: list[BurstPatternEventTriggering.TraceRefs.TraceRef] = (
             field(
                 default_factory=list,
                 metadata={
@@ -326,7 +324,7 @@ class BurstPatternEventTriggering:
 
         @dataclass
         class TraceRef(Ref):
-            dest: Optional[TraceableSubtypesEnum] = field(
+            dest: TraceableSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -337,7 +335,7 @@ class BurstPatternEventTriggering:
 
     @dataclass
     class TimingConditionRef(Ref):
-        dest: Optional[TimingConditionSubtypesEnum] = field(
+        dest: TimingConditionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -348,7 +346,7 @@ class BurstPatternEventTriggering:
 
     @dataclass
     class EventRef(Ref):
-        dest: Optional[TimingDescriptionEventSubtypesEnum] = field(
+        dest: TimingDescriptionEventSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

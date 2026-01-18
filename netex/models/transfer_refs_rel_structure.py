@@ -17,9 +17,7 @@ class TransferRefsRelStructure(OneToManyRelationshipStructure):
         name = "transferRefs_RelStructure"
 
     connection_ref_or_transfer_ref: Iterable[
-        Union[
-            DefaultConnectionRef, SiteConnectionRef, ConnectionRef, AccessRef
-        ]
+        DefaultConnectionRef | SiteConnectionRef | ConnectionRef | AccessRef
     ] = field(
         default_factory=list,
         metadata={

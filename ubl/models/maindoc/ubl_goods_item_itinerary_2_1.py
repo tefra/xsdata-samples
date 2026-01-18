@@ -34,7 +34,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class GoodsItemItineraryType:
-    ublextensions: Optional[Ublextensions] = field(
+    ublextensions: Ublextensions | None = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -42,7 +42,7 @@ class GoodsItemItineraryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: Optional[UblversionId] = field(
+    ublversion_id: UblversionId | None = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -50,7 +50,7 @@ class GoodsItemItineraryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: Optional[CustomizationId] = field(
+    customization_id: CustomizationId | None = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -58,7 +58,7 @@ class GoodsItemItineraryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: Optional[ProfileId] = field(
+    profile_id: ProfileId | None = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -66,7 +66,7 @@ class GoodsItemItineraryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: Optional[ProfileExecutionId] = field(
+    profile_execution_id: ProfileExecutionId | None = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -74,7 +74,7 @@ class GoodsItemItineraryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -83,7 +83,7 @@ class GoodsItemItineraryType:
             "required": True,
         },
     )
-    copy_indicator: Optional[CopyIndicator] = field(
+    copy_indicator: CopyIndicator | None = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -91,7 +91,7 @@ class GoodsItemItineraryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -99,7 +99,7 @@ class GoodsItemItineraryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -108,7 +108,7 @@ class GoodsItemItineraryType:
             "required": True,
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -125,7 +125,7 @@ class GoodsItemItineraryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    version_id: Optional[VersionId] = field(
+    version_id: VersionId | None = field(
         default=None,
         metadata={
             "name": "VersionID",
@@ -134,9 +134,7 @@ class GoodsItemItineraryType:
             "required": True,
         },
     )
-    transport_execution_plan_reference_id: Optional[
-        TransportExecutionPlanReferenceId
-    ] = field(
+    transport_execution_plan_reference_id: TransportExecutionPlanReferenceId | None = field(
         default=None,
         metadata={
             "name": "TransportExecutionPlanReferenceID",
@@ -153,7 +151,7 @@ class GoodsItemItineraryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sender_party: Optional[SenderParty] = field(
+    sender_party: SenderParty | None = field(
         default=None,
         metadata={
             "name": "SenderParty",
@@ -161,7 +159,7 @@ class GoodsItemItineraryType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    receiver_party: Optional[ReceiverParty] = field(
+    receiver_party: ReceiverParty | None = field(
         default=None,
         metadata={
             "name": "ReceiverParty",

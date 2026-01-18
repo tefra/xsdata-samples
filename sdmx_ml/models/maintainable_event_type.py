@@ -14,7 +14,7 @@ class MaintainableEventType:
     potentially wild-carded reference fields.
     """
 
-    urn_or_ref: Optional[Union[str, MaintainableQueryType]] = field(
+    urn_or_ref: str | MaintainableQueryType | None = field(
         default=None,
         metadata={
             "type": "Elements",

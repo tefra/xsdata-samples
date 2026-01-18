@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class DiagnosticConnectionRefConditional:
     class Meta:
         name = "DIAGNOSTIC-CONNECTION-REF-CONDITIONAL"
 
-    diagnostic_connection_ref: Optional[
-        "DiagnosticConnectionRefConditional.DiagnosticConnectionRef"
-    ] = field(
+    diagnostic_connection_ref: DiagnosticConnectionRefConditional.DiagnosticConnectionRef | None = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-CONNECTION-REF",
@@ -43,7 +43,7 @@ class DiagnosticConnectionRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class DiagnosticConnectionRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class DiagnosticConnectionRefConditional:
 
     @dataclass
     class DiagnosticConnectionRef(Ref):
-        dest: Optional[DiagnosticConnectionSubtypesEnum] = field(
+        dest: DiagnosticConnectionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -30,7 +30,7 @@ class CoctMt070000Uv01LocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -67,7 +67,7 @@ class CoctMt070000Uv01LocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Optional[Cs] = field(
+    status_code: Cs | None = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -75,7 +75,7 @@ class CoctMt070000Uv01LocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -83,7 +83,7 @@ class CoctMt070000Uv01LocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    location: Optional[CoctMt710000Uv01Place] = field(
+    location: CoctMt710000Uv01Place | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -91,14 +91,14 @@ class CoctMt070000Uv01LocatedEntity:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[RoleClassLocatedEntity] = field(
+    class_code: RoleClassLocatedEntity | None = field(
         default=None,
         metadata={
             "name": "classCode",

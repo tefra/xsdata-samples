@@ -41,14 +41,14 @@ class VerbatimString:
             "white_space": "preserve",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -56,7 +56,7 @@ class VerbatimString:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    blueprint_value: Optional[str] = field(
+    blueprint_value: str | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-VALUE",

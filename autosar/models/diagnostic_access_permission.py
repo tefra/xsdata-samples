@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -100,7 +102,7 @@ class DiagnosticAccessPermission:
     class Meta:
         name = "DIAGNOSTIC-ACCESS-PERMISSION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,9 +111,7 @@ class DiagnosticAccessPermission:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticAccessPermission.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticAccessPermission.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -119,7 +119,7 @@ class DiagnosticAccessPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +127,7 @@ class DiagnosticAccessPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +135,7 @@ class DiagnosticAccessPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +143,7 @@ class DiagnosticAccessPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +151,7 @@ class DiagnosticAccessPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +159,7 @@ class DiagnosticAccessPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticAccessPermission.Annotations"] = field(
+    annotations: DiagnosticAccessPermission.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +167,7 @@ class DiagnosticAccessPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,9 +175,7 @@ class DiagnosticAccessPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_session_refs: Optional[
-        "DiagnosticAccessPermission.DiagnosticSessionRefs"
-    ] = field(
+    diagnostic_session_refs: DiagnosticAccessPermission.DiagnosticSessionRefs | None = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-SESSION-REFS",
@@ -185,9 +183,7 @@ class DiagnosticAccessPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    environmental_condition_ref: Optional[
-        "DiagnosticAccessPermission.EnvironmentalConditionRef"
-    ] = field(
+    environmental_condition_ref: DiagnosticAccessPermission.EnvironmentalConditionRef | None = field(
         default=None,
         metadata={
             "name": "ENVIRONMENTAL-CONDITION-REF",
@@ -195,9 +191,7 @@ class DiagnosticAccessPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_level_refs: Optional[
-        "DiagnosticAccessPermission.SecurityLevelRefs"
-    ] = field(
+    security_level_refs: DiagnosticAccessPermission.SecurityLevelRefs | None = field(
         default=None,
         metadata={
             "name": "SECURITY-LEVEL-REFS",
@@ -205,14 +199,14 @@ class DiagnosticAccessPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -220,7 +214,7 @@ class DiagnosticAccessPermission:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -253,7 +247,7 @@ class DiagnosticAccessPermission:
     @dataclass
     class DiagnosticSessionRefs:
         diagnostic_session_ref: list[
-            "DiagnosticAccessPermission.DiagnosticSessionRefs.DiagnosticSessionRef"
+            DiagnosticAccessPermission.DiagnosticSessionRefs.DiagnosticSessionRef
         ] = field(
             default_factory=list,
             metadata={
@@ -265,7 +259,7 @@ class DiagnosticAccessPermission:
 
         @dataclass
         class DiagnosticSessionRef(Ref):
-            dest: Optional[DiagnosticSessionSubtypesEnum] = field(
+            dest: DiagnosticSessionSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -276,7 +270,7 @@ class DiagnosticAccessPermission:
 
     @dataclass
     class EnvironmentalConditionRef(Ref):
-        dest: Optional[DiagnosticEnvironmentalConditionSubtypesEnum] = field(
+        dest: DiagnosticEnvironmentalConditionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -288,7 +282,7 @@ class DiagnosticAccessPermission:
     @dataclass
     class SecurityLevelRefs:
         security_level_ref: list[
-            "DiagnosticAccessPermission.SecurityLevelRefs.SecurityLevelRef"
+            DiagnosticAccessPermission.SecurityLevelRefs.SecurityLevelRef
         ] = field(
             default_factory=list,
             metadata={
@@ -300,7 +294,7 @@ class DiagnosticAccessPermission:
 
         @dataclass
         class SecurityLevelRef(Ref):
-            dest: Optional[DiagnosticSecurityLevelSubtypesEnum] = field(
+            dest: DiagnosticSecurityLevelSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

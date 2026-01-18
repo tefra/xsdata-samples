@@ -15,7 +15,7 @@ class ReliefOpportunitiesRelStructure(ContainmentAggregationStructure):
         name = "reliefOpportunities_RelStructure"
 
     relief_opportunity_ref_or_relief_opportunity: Iterable[
-        Union[ReliefOpportunityRef, ReliefOpportunity]
+        ReliefOpportunityRef | ReliefOpportunity
     ] = field(
         default_factory=list,
         metadata={

@@ -9,14 +9,14 @@ class Point:
     class Meta:
         namespace = "http://www.omg.org/spec/DD/20100524/DC"
 
-    x: Optional[float] = field(
+    x: float | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    y: Optional[float] = field(
+    y: float | None = field(
         default=None,
         metadata={
             "type": "Attribute",

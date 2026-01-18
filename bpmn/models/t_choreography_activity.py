@@ -31,7 +31,7 @@ class TChoreographyActivity(TFlowNode):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    initiating_participant_ref: Optional[QName] = field(
+    initiating_participant_ref: QName | None = field(
         default=None,
         metadata={
             "name": "initiatingParticipantRef",

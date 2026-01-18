@@ -15,7 +15,7 @@ class DistributionAssignmentsRelStructure(ContainmentAggregationStructure):
         name = "distributionAssignments_RelStructure"
 
     distribution_assignment_ref_or_distribution_assignment: Iterable[
-        Union[DistributionAssignmentRef, DistributionAssignment]
+        DistributionAssignmentRef | DistributionAssignment
     ] = field(
         default_factory=list,
         metadata={

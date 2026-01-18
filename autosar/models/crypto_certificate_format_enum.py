@@ -29,20 +29,20 @@ class CryptoCertificateFormatEnum:
     class Meta:
         name = "CRYPTO-CERTIFICATE-FORMAT-ENUM"
 
-    value: Optional[CryptoCertificateFormatEnumSimple] = field(
+    value: CryptoCertificateFormatEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

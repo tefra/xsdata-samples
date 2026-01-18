@@ -54,45 +54,7 @@ class UsageParameterPriceVersionedChildStructure(
     class Meta:
         name = "UsageParameterPrice_VersionedChildStructure"
 
-    choice: Optional[
-        Union[
-            AdditionalDriverOptionRef,
-            RentalOptionRef,
-            RentalPenaltyPolicyRef,
-            SalesOfferPackageEntitlementGivenRef,
-            SalesOfferPackageEntitlementRequiredRef,
-            MinimumStayRef,
-            InterchangingRef,
-            FrequencyOfUseRef,
-            SuspendingRef,
-            UsageValidityPeriodRef,
-            StepLimitRef,
-            RoutingRef,
-            RoundTripRef,
-            LuggageAllowanceRef,
-            EntitlementGivenRef,
-            EntitlementRequiredRef,
-            EligibilityChangePolicyRef,
-            GroupTicketRef,
-            CommercialProfileRef,
-            VehiclePoolerProfileRef,
-            CompanionProfileRef,
-            UserProfileRef,
-            ProfileParameterRef,
-            SubscribingRef,
-            PenaltyPolicyRef,
-            ChargingPolicyRef,
-            TransferabilityRef,
-            ReplacingRef,
-            RefundingRef,
-            ExchangingRef,
-            ResellingRef,
-            CancellingRef,
-            ReservingRef,
-            BookingPolicyRef,
-            PurchaseWindowRef,
-        ]
-    ] = field(
+    choice: AdditionalDriverOptionRef | RentalOptionRef | RentalPenaltyPolicyRef | SalesOfferPackageEntitlementGivenRef | SalesOfferPackageEntitlementRequiredRef | MinimumStayRef | InterchangingRef | FrequencyOfUseRef | SuspendingRef | UsageValidityPeriodRef | StepLimitRef | RoutingRef | RoundTripRef | LuggageAllowanceRef | EntitlementGivenRef | EntitlementRequiredRef | EligibilityChangePolicyRef | GroupTicketRef | CommercialProfileRef | VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef | ProfileParameterRef | SubscribingRef | PenaltyPolicyRef | ChargingPolicyRef | TransferabilityRef | ReplacingRef | RefundingRef | ExchangingRef | ResellingRef | CancellingRef | ReservingRef | BookingPolicyRef | PurchaseWindowRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

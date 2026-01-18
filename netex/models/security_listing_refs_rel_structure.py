@@ -25,14 +25,7 @@ class SecurityListingRefsRelStructure(OneToManyRelationshipStructure):
         name = "SecurityListingRefs_RelStructure"
 
     security_listing_ref: Iterable[
-        Union[
-            TravelDocumentSecurityListingRef,
-            MediumAccessDeviceSecurityListingRef,
-            RetailDeviceSecurityListingRef,
-            CustomerAccountSecurityListingRef,
-            FareContractSecurityListingRef,
-            CustomerSecurityListingRef,
-        ]
+        TravelDocumentSecurityListingRef | MediumAccessDeviceSecurityListingRef | RetailDeviceSecurityListingRef | CustomerAccountSecurityListingRef | FareContractSecurityListingRef | CustomerSecurityListingRef
     ] = field(
         default_factory=list,
         metadata={

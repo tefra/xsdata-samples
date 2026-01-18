@@ -25,20 +25,7 @@ class ProjectionsRelStructure(ContainmentAggregationStructure):
         name = "projections_RelStructure"
 
     projection_ref_or_projection: Iterable[
-        Union[
-            TopographicProjectionRef,
-            ComplexFeatureProjectionRef,
-            LinkSequenceProjectionRef,
-            ZoneProjectionRef,
-            LinkProjectionRef,
-            PointProjectionRef,
-            TopographicProjection,
-            ZoneProjection,
-            ComplexFeatureProjection,
-            LinkSequenceProjection,
-            LinkProjection,
-            PointProjection,
-        ]
+        TopographicProjectionRef | ComplexFeatureProjectionRef | LinkSequenceProjectionRef | ZoneProjectionRef | LinkProjectionRef | PointProjectionRef | TopographicProjection | ZoneProjection | ComplexFeatureProjection | LinkSequenceProjection | LinkProjection | PointProjection
     ] = field(
         default_factory=list,
         metadata={

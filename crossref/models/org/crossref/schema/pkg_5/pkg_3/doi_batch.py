@@ -20,14 +20,14 @@ class DoiBatch:
         name = "doi_batch"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    head: Optional[Head] = field(
+    head: Head | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    body: Optional[Body] = field(
+    body: Body | None = field(
         default=None,
         metadata={
             "type": "Element",

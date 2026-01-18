@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -91,7 +93,7 @@ class DiagnosticEnvironmentalCondition:
     class Meta:
         name = "DIAGNOSTIC-ENVIRONMENTAL-CONDITION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -100,9 +102,7 @@ class DiagnosticEnvironmentalCondition:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticEnvironmentalCondition.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticEnvironmentalCondition.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -110,7 +110,7 @@ class DiagnosticEnvironmentalCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -118,7 +118,7 @@ class DiagnosticEnvironmentalCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -126,7 +126,7 @@ class DiagnosticEnvironmentalCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -134,7 +134,7 @@ class DiagnosticEnvironmentalCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -142,7 +142,7 @@ class DiagnosticEnvironmentalCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -150,7 +150,7 @@ class DiagnosticEnvironmentalCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticEnvironmentalCondition.Annotations"] = (
+    annotations: DiagnosticEnvironmentalCondition.Annotations | None = (
         field(
             default=None,
             metadata={
@@ -160,7 +160,7 @@ class DiagnosticEnvironmentalCondition:
             },
         )
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -168,7 +168,7 @@ class DiagnosticEnvironmentalCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    formula: Optional[DiagnosticEnvConditionFormula] = field(
+    formula: DiagnosticEnvConditionFormula | None = field(
         default=None,
         metadata={
             "name": "FORMULA",
@@ -176,9 +176,7 @@ class DiagnosticEnvironmentalCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_elements: Optional[
-        "DiagnosticEnvironmentalCondition.ModeElements"
-    ] = field(
+    mode_elements: DiagnosticEnvironmentalCondition.ModeElements | None = field(
         default=None,
         metadata={
             "name": "MODE-ELEMENTS",
@@ -186,14 +184,14 @@ class DiagnosticEnvironmentalCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -201,7 +199,7 @@ class DiagnosticEnvironmentalCondition:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

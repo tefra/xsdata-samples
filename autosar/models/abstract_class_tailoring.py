@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -106,7 +108,7 @@ class AbstractClassTailoring:
     class Meta:
         name = "ABSTRACT-CLASS-TAILORING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -115,9 +117,7 @@ class AbstractClassTailoring:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "AbstractClassTailoring.ShortNameFragments"
-    ] = field(
+    short_name_fragments: AbstractClassTailoring.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -125,7 +125,7 @@ class AbstractClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -133,7 +133,7 @@ class AbstractClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -141,7 +141,7 @@ class AbstractClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -149,7 +149,7 @@ class AbstractClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -157,7 +157,7 @@ class AbstractClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -165,7 +165,7 @@ class AbstractClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["AbstractClassTailoring.Annotations"] = field(
+    annotations: AbstractClassTailoring.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -173,7 +173,7 @@ class AbstractClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    alternative_name: Optional[String] = field(
+    alternative_name: String | None = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-NAME",
@@ -181,7 +181,7 @@ class AbstractClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_restriction: Optional[MultiplicityRestrictionWithSeverity] = (
+    multiplicity_restriction: MultiplicityRestrictionWithSeverity | None = (
         field(
             default=None,
             metadata={
@@ -191,7 +191,7 @@ class AbstractClassTailoring:
             },
         )
     )
-    variation_restriction: Optional[VariationRestrictionWithSeverity] = field(
+    variation_restriction: VariationRestrictionWithSeverity | None = field(
         default=None,
         metadata={
             "name": "VARIATION-RESTRICTION",
@@ -199,7 +199,7 @@ class AbstractClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    class_contents: Optional["AbstractClassTailoring.ClassContents"] = field(
+    class_contents: AbstractClassTailoring.ClassContents | None = field(
         default=None,
         metadata={
             "name": "CLASS-CONTENTS",
@@ -207,14 +207,14 @@ class AbstractClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -222,7 +222,7 @@ class AbstractClassTailoring:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -254,7 +254,7 @@ class AbstractClassTailoring:
 
     @dataclass
     class ClassContents:
-        class_content_conditional: list["ClassContentConditional"] = field(
+        class_content_conditional: list[ClassContentConditional] = field(
             default_factory=list,
             metadata={
                 "name": "CLASS-CONTENT-CONDITIONAL",
@@ -338,7 +338,7 @@ class AggregationTailoring:
     class Meta:
         name = "AGGREGATION-TAILORING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -347,9 +347,7 @@ class AggregationTailoring:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "AggregationTailoring.ShortNameFragments"
-    ] = field(
+    short_name_fragments: AggregationTailoring.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -357,7 +355,7 @@ class AggregationTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -365,7 +363,7 @@ class AggregationTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -373,7 +371,7 @@ class AggregationTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -381,7 +379,7 @@ class AggregationTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -389,7 +387,7 @@ class AggregationTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -397,7 +395,7 @@ class AggregationTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["AggregationTailoring.Annotations"] = field(
+    annotations: AggregationTailoring.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -405,7 +403,7 @@ class AggregationTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    alternative_name: Optional[String] = field(
+    alternative_name: String | None = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-NAME",
@@ -413,7 +411,7 @@ class AggregationTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    in_scope: Optional[Boolean] = field(
+    in_scope: Boolean | None = field(
         default=None,
         metadata={
             "name": "IN-SCOPE",
@@ -421,7 +419,7 @@ class AggregationTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_restriction: Optional[MultiplicityRestrictionWithSeverity] = (
+    multiplicity_restriction: MultiplicityRestrictionWithSeverity | None = (
         field(
             default=None,
             metadata={
@@ -431,7 +429,7 @@ class AggregationTailoring:
             },
         )
     )
-    variation_restriction: Optional[VariationRestrictionWithSeverity] = field(
+    variation_restriction: VariationRestrictionWithSeverity | None = field(
         default=None,
         metadata={
             "name": "VARIATION-RESTRICTION",
@@ -439,7 +437,7 @@ class AggregationTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_tailorings: Optional["AggregationTailoring.TypeTailorings"] = field(
+    type_tailorings: AggregationTailoring.TypeTailorings | None = field(
         default=None,
         metadata={
             "name": "TYPE-TAILORINGS",
@@ -447,14 +445,14 @@ class AggregationTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -462,7 +460,7 @@ class AggregationTailoring:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -502,7 +500,7 @@ class AggregationTailoring:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        concrete_class_tailoring: list["ConcreteClassTailoring"] = field(
+        concrete_class_tailoring: list[ConcreteClassTailoring] = field(
             default_factory=list,
             metadata={
                 "name": "CONCRETE-CLASS-TAILORING",
@@ -585,7 +583,7 @@ class ClassContentConditional:
     class Meta:
         name = "CLASS-CONTENT-CONDITIONAL"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -594,9 +592,7 @@ class ClassContentConditional:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ClassContentConditional.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ClassContentConditional.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -604,7 +600,7 @@ class ClassContentConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -612,7 +608,7 @@ class ClassContentConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -620,7 +616,7 @@ class ClassContentConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -628,7 +624,7 @@ class ClassContentConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -636,7 +632,7 @@ class ClassContentConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -644,7 +640,7 @@ class ClassContentConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ClassContentConditional.Annotations"] = field(
+    annotations: ClassContentConditional.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -652,7 +648,7 @@ class ClassContentConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    condition: Optional["ClassContentConditional.Condition"] = field(
+    condition: ClassContentConditional.Condition | None = field(
         default=None,
         metadata={
             "name": "CONDITION",
@@ -660,9 +656,7 @@ class ClassContentConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    attribute_tailorings: Optional[
-        "ClassContentConditional.AttributeTailorings"
-    ] = field(
+    attribute_tailorings: ClassContentConditional.AttributeTailorings | None = field(
         default=None,
         metadata={
             "name": "ATTRIBUTE-TAILORINGS",
@@ -670,9 +664,7 @@ class ClassContentConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    constraint_tailorings: Optional[
-        "ClassContentConditional.ConstraintTailorings"
-    ] = field(
+    constraint_tailorings: ClassContentConditional.ConstraintTailorings | None = field(
         default=None,
         metadata={
             "name": "CONSTRAINT-TAILORINGS",
@@ -680,7 +672,7 @@ class ClassContentConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdg_tailorings: Optional["ClassContentConditional.SdgTailorings"] = field(
+    sdg_tailorings: ClassContentConditional.SdgTailorings | None = field(
         default=None,
         metadata={
             "name": "SDG-TAILORINGS",
@@ -688,14 +680,14 @@ class ClassContentConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -703,7 +695,7 @@ class ClassContentConditional:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -735,7 +727,7 @@ class ClassContentConditional:
 
     @dataclass
     class Condition:
-        aggregation_condition: Optional[AggregationCondition] = field(
+        aggregation_condition: AggregationCondition | None = field(
             default=None,
             metadata={
                 "name": "AGGREGATION-CONDITION",
@@ -743,7 +735,7 @@ class ClassContentConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        invert_condition: Optional[InvertCondition] = field(
+        invert_condition: InvertCondition | None = field(
             default=None,
             metadata={
                 "name": "INVERT-CONDITION",
@@ -751,9 +743,7 @@ class ClassContentConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        primitive_attribute_condition: Optional[
-            PrimitiveAttributeCondition
-        ] = field(
+        primitive_attribute_condition: PrimitiveAttributeCondition | None = field(
             default=None,
             metadata={
                 "name": "PRIMITIVE-ATTRIBUTE-CONDITION",
@@ -761,7 +751,7 @@ class ClassContentConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_condition: Optional[ReferenceCondition] = field(
+        reference_condition: ReferenceCondition | None = field(
             default=None,
             metadata={
                 "name": "REFERENCE-CONDITION",
@@ -769,7 +759,7 @@ class ClassContentConditional:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        textual_condition: Optional[TextualCondition] = field(
+        textual_condition: TextualCondition | None = field(
             default=None,
             metadata={
                 "name": "TEXTUAL-CONDITION",
@@ -798,7 +788,7 @@ class ClassContentConditional:
                 },
             )
         )
-        reference_tailoring: list["ReferenceTailoring"] = field(
+        reference_tailoring: list[ReferenceTailoring] = field(
             default_factory=list,
             metadata={
                 "name": "REFERENCE-TAILORING",
@@ -910,7 +900,7 @@ class ConcreteClassTailoring:
     class Meta:
         name = "CONCRETE-CLASS-TAILORING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -919,9 +909,7 @@ class ConcreteClassTailoring:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ConcreteClassTailoring.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ConcreteClassTailoring.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -929,7 +917,7 @@ class ConcreteClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -937,7 +925,7 @@ class ConcreteClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -945,7 +933,7 @@ class ConcreteClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -953,7 +941,7 @@ class ConcreteClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -961,7 +949,7 @@ class ConcreteClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -969,7 +957,7 @@ class ConcreteClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ConcreteClassTailoring.Annotations"] = field(
+    annotations: ConcreteClassTailoring.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -977,7 +965,7 @@ class ConcreteClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    alternative_name: Optional[String] = field(
+    alternative_name: String | None = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-NAME",
@@ -985,7 +973,7 @@ class ConcreteClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    in_scope: Optional[Boolean] = field(
+    in_scope: Boolean | None = field(
         default=None,
         metadata={
             "name": "IN-SCOPE",
@@ -993,7 +981,7 @@ class ConcreteClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_restriction: Optional[MultiplicityRestrictionWithSeverity] = (
+    multiplicity_restriction: MultiplicityRestrictionWithSeverity | None = (
         field(
             default=None,
             metadata={
@@ -1003,7 +991,7 @@ class ConcreteClassTailoring:
             },
         )
     )
-    variation_restriction: Optional[VariationRestrictionWithSeverity] = field(
+    variation_restriction: VariationRestrictionWithSeverity | None = field(
         default=None,
         metadata={
             "name": "VARIATION-RESTRICTION",
@@ -1011,7 +999,7 @@ class ConcreteClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    class_contents: Optional["ConcreteClassTailoring.ClassContents"] = field(
+    class_contents: ConcreteClassTailoring.ClassContents | None = field(
         default=None,
         metadata={
             "name": "CLASS-CONTENTS",
@@ -1019,7 +1007,7 @@ class ConcreteClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    validation_root: Optional[Boolean] = field(
+    validation_root: Boolean | None = field(
         default=None,
         metadata={
             "name": "VALIDATION-ROOT",
@@ -1027,14 +1015,14 @@ class ConcreteClassTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -1042,7 +1030,7 @@ class ConcreteClassTailoring:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -1160,7 +1148,7 @@ class ReferenceTailoring:
     class Meta:
         name = "REFERENCE-TAILORING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -1169,7 +1157,7 @@ class ReferenceTailoring:
             "required": True,
         },
     )
-    short_name_fragments: Optional["ReferenceTailoring.ShortNameFragments"] = (
+    short_name_fragments: ReferenceTailoring.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -1179,7 +1167,7 @@ class ReferenceTailoring:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -1187,7 +1175,7 @@ class ReferenceTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -1195,7 +1183,7 @@ class ReferenceTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -1203,7 +1191,7 @@ class ReferenceTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -1211,7 +1199,7 @@ class ReferenceTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -1219,7 +1207,7 @@ class ReferenceTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ReferenceTailoring.Annotations"] = field(
+    annotations: ReferenceTailoring.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -1227,7 +1215,7 @@ class ReferenceTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    alternative_name: Optional[String] = field(
+    alternative_name: String | None = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-NAME",
@@ -1235,7 +1223,7 @@ class ReferenceTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    in_scope: Optional[Boolean] = field(
+    in_scope: Boolean | None = field(
         default=None,
         metadata={
             "name": "IN-SCOPE",
@@ -1243,7 +1231,7 @@ class ReferenceTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_restriction: Optional[MultiplicityRestrictionWithSeverity] = (
+    multiplicity_restriction: MultiplicityRestrictionWithSeverity | None = (
         field(
             default=None,
             metadata={
@@ -1253,7 +1241,7 @@ class ReferenceTailoring:
             },
         )
     )
-    variation_restriction: Optional[VariationRestrictionWithSeverity] = field(
+    variation_restriction: VariationRestrictionWithSeverity | None = field(
         default=None,
         metadata={
             "name": "VARIATION-RESTRICTION",
@@ -1261,7 +1249,7 @@ class ReferenceTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_tailorings: Optional["ReferenceTailoring.TypeTailorings"] = field(
+    type_tailorings: ReferenceTailoring.TypeTailorings | None = field(
         default=None,
         metadata={
             "name": "TYPE-TAILORINGS",
@@ -1269,9 +1257,7 @@ class ReferenceTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unresolved_reference_restriction: Optional[
-        UnresolvedReferenceRestrictionWithSeverity
-    ] = field(
+    unresolved_reference_restriction: UnresolvedReferenceRestrictionWithSeverity | None = field(
         default=None,
         metadata={
             "name": "UNRESOLVED-REFERENCE-RESTRICTION",
@@ -1279,14 +1265,14 @@ class ReferenceTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -1294,7 +1280,7 @@ class ReferenceTailoring:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

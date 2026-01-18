@@ -14,7 +14,7 @@ class AccessSpaceVersionStructure(StopPlaceSpaceVersionStructure):
     class Meta:
         name = "AccessSpace_VersionStructure"
 
-    access_space_type: Optional[AccessSpaceTypeEnumeration] = field(
+    access_space_type: AccessSpaceTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "AccessSpaceType",
@@ -22,7 +22,7 @@ class AccessSpaceVersionStructure(StopPlaceSpaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passage_type: Optional[PassageTypeEnumeration] = field(
+    passage_type: PassageTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "PassageType",
@@ -30,7 +30,7 @@ class AccessSpaceVersionStructure(StopPlaceSpaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parent_access_space_ref: Optional[AccessSpaceRefStructure] = field(
+    parent_access_space_ref: AccessSpaceRefStructure | None = field(
         default=None,
         metadata={
             "name": "ParentAccessSpaceRef",

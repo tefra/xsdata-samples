@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -101,7 +103,7 @@ class DiagnosticCustomServiceClass:
     class Meta:
         name = "DIAGNOSTIC-CUSTOM-SERVICE-CLASS"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -110,9 +112,7 @@ class DiagnosticCustomServiceClass:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticCustomServiceClass.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticCustomServiceClass.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -120,7 +120,7 @@ class DiagnosticCustomServiceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -128,7 +128,7 @@ class DiagnosticCustomServiceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -136,7 +136,7 @@ class DiagnosticCustomServiceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -144,7 +144,7 @@ class DiagnosticCustomServiceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -152,7 +152,7 @@ class DiagnosticCustomServiceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -160,7 +160,7 @@ class DiagnosticCustomServiceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticCustomServiceClass.Annotations"] = field(
+    annotations: DiagnosticCustomServiceClass.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -168,7 +168,7 @@ class DiagnosticCustomServiceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -176,9 +176,7 @@ class DiagnosticCustomServiceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: Optional[
-        "DiagnosticCustomServiceClass.AccessPermissionRef"
-    ] = field(
+    access_permission_ref: DiagnosticCustomServiceClass.AccessPermissionRef | None = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -186,9 +184,7 @@ class DiagnosticCustomServiceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_validity: Optional[
-        DiagnosticAccessPermissionValidityEnum
-    ] = field(
+    access_permission_validity: DiagnosticAccessPermissionValidityEnum | None = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-VALIDITY",
@@ -196,7 +192,7 @@ class DiagnosticCustomServiceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    custom_service_id: Optional[PositiveInteger] = field(
+    custom_service_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "CUSTOM-SERVICE-ID",
@@ -204,14 +200,14 @@ class DiagnosticCustomServiceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -219,7 +215,7 @@ class DiagnosticCustomServiceClass:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -251,7 +247,7 @@ class DiagnosticCustomServiceClass:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: Optional[DiagnosticAccessPermissionSubtypesEnum] = field(
+        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -15,7 +15,7 @@ class ActivationAssignmentsRelStructure(ContainmentAggregationStructure):
         name = "activationAssignments_RelStructure"
 
     activation_assignment_ref_or_activation_assignment: Iterable[
-        Union[ActivationAssignmentRef, ActivationAssignment]
+        ActivationAssignmentRef | ActivationAssignment
     ] = field(
         default_factory=list,
         metadata={

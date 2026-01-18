@@ -16,9 +16,7 @@ class VehiclePoolingPlaceAssignmentRefsRelStructure(
     class Meta:
         name = "VehiclePoolingPlaceAssignmentRefs_RelStructure"
 
-    vehicle_pooling_place_assignment_ref: Optional[
-        VehiclePoolingPlaceAssignmentRef
-    ] = field(
+    vehicle_pooling_place_assignment_ref: VehiclePoolingPlaceAssignmentRef | None = field(
         default=None,
         metadata={
             "name": "VehiclePoolingPlaceAssignmentRef",

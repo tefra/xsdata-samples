@@ -27,26 +27,26 @@ class JournalVolume:
         name = "journal_volume"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    volume: Optional[Volume] = field(
+    volume: Volume | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    publisher_item: Optional[PublisherItem] = field(
+    publisher_item: PublisherItem | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    archive_locations: Optional[ArchiveLocations] = field(
+    archive_locations: ArchiveLocations | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    doi_data: Optional[DoiData] = field(
+    doi_data: DoiData | None = field(
         default=None,
         metadata={
             "type": "Element",

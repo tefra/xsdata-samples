@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -106,7 +108,7 @@ class GlobalTimeFrSlave:
     class Meta:
         name = "GLOBAL-TIME-FR-SLAVE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -115,7 +117,7 @@ class GlobalTimeFrSlave:
             "required": True,
         },
     )
-    short_name_fragments: Optional["GlobalTimeFrSlave.ShortNameFragments"] = (
+    short_name_fragments: GlobalTimeFrSlave.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -125,7 +127,7 @@ class GlobalTimeFrSlave:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -133,7 +135,7 @@ class GlobalTimeFrSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -141,7 +143,7 @@ class GlobalTimeFrSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -149,7 +151,7 @@ class GlobalTimeFrSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -157,7 +159,7 @@ class GlobalTimeFrSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -165,7 +167,7 @@ class GlobalTimeFrSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["GlobalTimeFrSlave.Annotations"] = field(
+    annotations: GlobalTimeFrSlave.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -173,9 +175,7 @@ class GlobalTimeFrSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_connector_ref: Optional[
-        "GlobalTimeFrSlave.CommunicationConnectorRef"
-    ] = field(
+    communication_connector_ref: GlobalTimeFrSlave.CommunicationConnectorRef | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONNECTOR-REF",
@@ -183,7 +183,7 @@ class GlobalTimeFrSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    follow_up_timeout_value: Optional[TimeValue] = field(
+    follow_up_timeout_value: TimeValue | None = field(
         default=None,
         metadata={
             "name": "FOLLOW-UP-TIMEOUT-VALUE",
@@ -191,7 +191,7 @@ class GlobalTimeFrSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_leap_future_threshold: Optional[TimeValue] = field(
+    time_leap_future_threshold: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIME-LEAP-FUTURE-THRESHOLD",
@@ -199,7 +199,7 @@ class GlobalTimeFrSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_leap_healing_counter: Optional[PositiveInteger] = field(
+    time_leap_healing_counter: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TIME-LEAP-HEALING-COUNTER",
@@ -207,7 +207,7 @@ class GlobalTimeFrSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_leap_past_threshold: Optional[TimeValue] = field(
+    time_leap_past_threshold: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIME-LEAP-PAST-THRESHOLD",
@@ -215,7 +215,7 @@ class GlobalTimeFrSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -223,7 +223,7 @@ class GlobalTimeFrSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crc_validated: Optional[GlobalTimeCrcValidationEnum] = field(
+    crc_validated: GlobalTimeCrcValidationEnum | None = field(
         default=None,
         metadata={
             "name": "CRC-VALIDATED",
@@ -231,7 +231,7 @@ class GlobalTimeFrSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sequence_counter_jump_width: Optional[PositiveInteger] = field(
+    sequence_counter_jump_width: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SEQUENCE-COUNTER-JUMP-WIDTH",
@@ -239,14 +239,14 @@ class GlobalTimeFrSlave:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -254,7 +254,7 @@ class GlobalTimeFrSlave:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -286,7 +286,7 @@ class GlobalTimeFrSlave:
 
     @dataclass
     class CommunicationConnectorRef(Ref):
-        dest: Optional[CommunicationConnectorSubtypesEnum] = field(
+        dest: CommunicationConnectorSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

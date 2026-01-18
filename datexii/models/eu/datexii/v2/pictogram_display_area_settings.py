@@ -33,7 +33,7 @@ class PictogramDisplayAreaSettings:
     :ivar pictogram_display_area_settings_extension:
     """
 
-    pictogram_lanterns_on: Optional[bool] = field(
+    pictogram_lanterns_on: bool | None = field(
         default=None,
         metadata={
             "name": "pictogramLanternsOn",
@@ -41,7 +41,7 @@ class PictogramDisplayAreaSettings:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_luminance_override: Optional[bool] = field(
+    pictogram_luminance_override: bool | None = field(
         default=None,
         metadata={
             "name": "pictogramLuminanceOverride",
@@ -49,7 +49,7 @@ class PictogramDisplayAreaSettings:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_luminance_level: Optional[int] = field(
+    pictogram_luminance_level: int | None = field(
         default=None,
         metadata={
             "name": "pictogramLuminanceLevel",
@@ -57,7 +57,7 @@ class PictogramDisplayAreaSettings:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_luminance_level_name: Optional[VmsLuminanceLevelEnum] = field(
+    pictogram_luminance_level_name: VmsLuminanceLevelEnum | None = field(
         default=None,
         metadata={
             "name": "pictogramLuminanceLevelName",
@@ -65,7 +65,7 @@ class PictogramDisplayAreaSettings:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_display_area_settings_extension: Optional[ExtensionType] = field(
+    pictogram_display_area_settings_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "pictogramDisplayAreaSettingsExtension",

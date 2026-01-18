@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -68,7 +70,7 @@ class ImplementationDataTypeElementInSystemRef:
     class Meta:
         name = "IMPLEMENTATION-DATA-TYPE-ELEMENT-IN-SYSTEM-REF"
 
-    tag_id: Optional[PositiveInteger] = field(
+    tag_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TAG-ID",
@@ -76,7 +78,7 @@ class ImplementationDataTypeElementInSystemRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_ref: Optional["ImplementationDataTypeElementInSystemRef.BaseRef"] = (
+    base_ref: ImplementationDataTypeElementInSystemRef.BaseRef | None = (
         field(
             default=None,
             metadata={
@@ -86,9 +88,7 @@ class ImplementationDataTypeElementInSystemRef:
             },
         )
     )
-    context_swc_prototype_refs: Optional[
-        "ImplementationDataTypeElementInSystemRef.ContextSwcPrototypeRefs"
-    ] = field(
+    context_swc_prototype_refs: ImplementationDataTypeElementInSystemRef.ContextSwcPrototypeRefs | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-SWC-PROTOTYPE-REFS",
@@ -96,9 +96,7 @@ class ImplementationDataTypeElementInSystemRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_port_prototype_ref: Optional[
-        "ImplementationDataTypeElementInSystemRef.ContextPortPrototypeRef"
-    ] = field(
+    context_port_prototype_ref: ImplementationDataTypeElementInSystemRef.ContextPortPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-PORT-PROTOTYPE-REF",
@@ -106,9 +104,7 @@ class ImplementationDataTypeElementInSystemRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_data_prototype_ref: Optional[
-        "ImplementationDataTypeElementInSystemRef.RootDataPrototypeRef"
-    ] = field(
+    root_data_prototype_ref: ImplementationDataTypeElementInSystemRef.RootDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "ROOT-DATA-PROTOTYPE-REF",
@@ -116,9 +112,7 @@ class ImplementationDataTypeElementInSystemRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_implementation_data_element_refs: Optional[
-        "ImplementationDataTypeElementInSystemRef.ContextImplementationDataElementRefs"
-    ] = field(
+    context_implementation_data_element_refs: ImplementationDataTypeElementInSystemRef.ContextImplementationDataElementRefs | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-IMPLEMENTATION-DATA-ELEMENT-REFS",
@@ -126,9 +120,7 @@ class ImplementationDataTypeElementInSystemRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_implementation_data_type_element_ref: Optional[
-        "ImplementationDataTypeElementInSystemRef.TargetImplementationDataTypeElementRef"
-    ] = field(
+    target_implementation_data_type_element_ref: ImplementationDataTypeElementInSystemRef.TargetImplementationDataTypeElementRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-IMPLEMENTATION-DATA-TYPE-ELEMENT-REF",
@@ -136,14 +128,14 @@ class ImplementationDataTypeElementInSystemRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -154,7 +146,7 @@ class ImplementationDataTypeElementInSystemRef:
 
     @dataclass
     class BaseRef(Ref):
-        dest: Optional[SystemSubtypesEnum] = field(
+        dest: SystemSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -166,7 +158,7 @@ class ImplementationDataTypeElementInSystemRef:
     @dataclass
     class ContextSwcPrototypeRefs:
         context_swc_prototype_ref: list[
-            "ImplementationDataTypeElementInSystemRef.ContextSwcPrototypeRefs.ContextSwcPrototypeRef"
+            ImplementationDataTypeElementInSystemRef.ContextSwcPrototypeRefs.ContextSwcPrototypeRef
         ] = field(
             default_factory=list,
             metadata={
@@ -178,7 +170,7 @@ class ImplementationDataTypeElementInSystemRef:
 
         @dataclass
         class ContextSwcPrototypeRef(Ref):
-            dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+            dest: SwComponentPrototypeSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -189,7 +181,7 @@ class ImplementationDataTypeElementInSystemRef:
 
     @dataclass
     class ContextPortPrototypeRef(Ref):
-        dest: Optional[PortPrototypeSubtypesEnum] = field(
+        dest: PortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -200,7 +192,7 @@ class ImplementationDataTypeElementInSystemRef:
 
     @dataclass
     class RootDataPrototypeRef(Ref):
-        dest: Optional[AutosarDataPrototypeSubtypesEnum] = field(
+        dest: AutosarDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -212,7 +204,7 @@ class ImplementationDataTypeElementInSystemRef:
     @dataclass
     class ContextImplementationDataElementRefs:
         context_implementation_data_element_ref: list[
-            "ImplementationDataTypeElementInSystemRef.ContextImplementationDataElementRefs.ContextImplementationDataElementRef"
+            ImplementationDataTypeElementInSystemRef.ContextImplementationDataElementRefs.ContextImplementationDataElementRef
         ] = field(
             default_factory=list,
             metadata={
@@ -224,7 +216,7 @@ class ImplementationDataTypeElementInSystemRef:
 
         @dataclass
         class ContextImplementationDataElementRef(Ref):
-            dest: Optional[ImplementationDataTypeElementSubtypesEnum] = field(
+            dest: ImplementationDataTypeElementSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -235,7 +227,7 @@ class ImplementationDataTypeElementInSystemRef:
 
     @dataclass
     class TargetImplementationDataTypeElementRef(Ref):
-        dest: Optional[ImplementationDataTypeElementSubtypesEnum] = field(
+        dest: ImplementationDataTypeElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

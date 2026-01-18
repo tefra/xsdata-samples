@@ -15,7 +15,7 @@ class CustomerPurchasePackagesRelStructure(OneToManyRelationshipStructure):
         name = "customerPurchasePackages_RelStructure"
 
     customer_purchase_package_or_customer_purchase_package_ref: Iterable[
-        Union[CustomerPurchasePackage, CustomerPurchasePackageRef]
+        CustomerPurchasePackage | CustomerPurchasePackageRef
     ] = field(
         default_factory=list,
         metadata={

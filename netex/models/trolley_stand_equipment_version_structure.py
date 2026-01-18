@@ -14,7 +14,7 @@ class TrolleyStandEquipmentVersionStructure(SiteEquipmentVersionStructure):
     class Meta:
         name = "TrolleyStandEquipment_VersionStructure"
 
-    free_to_use: Optional[bool] = field(
+    free_to_use: bool | None = field(
         default=None,
         metadata={
             "name": "FreeToUse",
@@ -22,7 +22,7 @@ class TrolleyStandEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    charge: Optional[Decimal] = field(
+    charge: Decimal | None = field(
         default=None,
         metadata={
             "name": "Charge",
@@ -30,7 +30,7 @@ class TrolleyStandEquipmentVersionStructure(SiteEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    currency: Optional[str] = field(
+    currency: str | None = field(
         default=None,
         metadata={
             "name": "Currency",

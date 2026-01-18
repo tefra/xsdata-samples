@@ -47,7 +47,7 @@ class ElectricCharging:
             "min_occurs": 1,
         },
     )
-    charging_station_model_type: Optional[MultilingualString] = field(
+    charging_station_model_type: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "chargingStationModelType",
@@ -55,7 +55,7 @@ class ElectricCharging:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    maximum_current: Optional[float] = field(
+    maximum_current: float | None = field(
         default=None,
         metadata={
             "name": "maximumCurrent",
@@ -78,7 +78,7 @@ class ElectricCharging:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    number_of_charging_points: Optional[int] = field(
+    number_of_charging_points: int | None = field(
         default=None,
         metadata={
             "name": "numberOfChargingPoints",
@@ -86,7 +86,7 @@ class ElectricCharging:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    electric_charging_extension: Optional[ExtensionType] = field(
+    electric_charging_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "electricChargingExtension",

@@ -147,14 +147,14 @@ class ApplicationIdentification:
             "required": True,
         }
     )
-    application_idextension: Optional[ApplicationIdextension] = field(
+    application_idextension: ApplicationIdextension | None = field(
         default=None,
         metadata={
             "name": "ApplicationIDExtension",
             "type": "Element",
         },
     )
-    application_instance: Optional[ApplicationInstance] = field(
+    application_instance: ApplicationInstance | None = field(
         default=None,
         metadata={
             "name": "ApplicationInstance",
@@ -205,7 +205,7 @@ class ItemReference:
             "required": True,
         }
     )
-    schedule_line_id: Optional[ScheduleLineId] = field(
+    schedule_line_id: ScheduleLineId | None = field(
         default=None,
         metadata={
             "name": "ScheduleLineID",
@@ -223,14 +223,14 @@ class ApplicationResponseDetail:
             "required": True,
         }
     )
-    error_type_coded_other: Optional[ErrorTypeCodedOther] = field(
+    error_type_coded_other: ErrorTypeCodedOther | None = field(
         default=None,
         metadata={
             "name": "ErrorTypeCodedOther",
             "type": "Element",
         },
     )
-    item_reference: Optional[ItemReference] = field(
+    item_reference: ItemReference | None = field(
         default=None,
         metadata={
             "name": "ItemReference",
@@ -244,7 +244,7 @@ class ApplicationResponseDetail:
             "required": True,
         }
     )
-    list_of_structured_note: Optional[ListOfStructuredNote] = field(
+    list_of_structured_note: ListOfStructuredNote | None = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
@@ -305,7 +305,7 @@ class ApplicationResponseHeader:
             "required": True,
         }
     )
-    sending_application: Optional[SendingApplication] = field(
+    sending_application: SendingApplication | None = field(
         default=None,
         metadata={
             "name": "SendingApplication",
@@ -319,7 +319,7 @@ class ApplicationResponseHeader:
             "required": True,
         }
     )
-    responding_application: Optional[RespondingApplication] = field(
+    responding_application: RespondingApplication | None = field(
         default=None,
         metadata={
             "name": "RespondingApplication",
@@ -333,9 +333,7 @@ class ApplicationResponseHeader:
             "required": True,
         }
     )
-    business_document_type_coded_other: Optional[
-        BusinessDocumentTypeCodedOther
-    ] = field(
+    business_document_type_coded_other: BusinessDocumentTypeCodedOther | None = field(
         default=None,
         metadata={
             "name": "BusinessDocumentTypeCodedOther",
@@ -356,28 +354,28 @@ class ApplicationResponseHeader:
             "required": True,
         }
     )
-    document_status_coded_other: Optional[DocumentStatusCodedOther] = field(
+    document_status_coded_other: DocumentStatusCodedOther | None = field(
         default=None,
         metadata={
             "name": "DocumentStatusCodedOther",
             "type": "Element",
         },
     )
-    application_response_note: Optional[ApplicationResponseNote] = field(
+    application_response_note: ApplicationResponseNote | None = field(
         default=None,
         metadata={
             "name": "ApplicationResponseNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: Optional[ListOfStructuredNote] = field(
+    list_of_structured_note: ListOfStructuredNote | None = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    list_of_name_value_set: Optional[ListOfNameValueSet] = field(
+    list_of_name_value_set: ListOfNameValueSet | None = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
@@ -407,9 +405,7 @@ class ApplicationResponse:
             "required": True,
         }
     )
-    list_of_application_response_detail: Optional[
-        ListOfApplicationResponseDetail
-    ] = field(
+    list_of_application_response_detail: ListOfApplicationResponseDetail | None = field(
         default=None,
         metadata={
             "name": "ListOfApplicationResponseDetail",

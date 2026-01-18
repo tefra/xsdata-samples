@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -202,7 +204,7 @@ class BswImplementation:
     class Meta:
         name = "BSW-IMPLEMENTATION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -211,7 +213,7 @@ class BswImplementation:
             "required": True,
         },
     )
-    short_name_fragments: Optional["BswImplementation.ShortNameFragments"] = (
+    short_name_fragments: BswImplementation.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -221,7 +223,7 @@ class BswImplementation:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -229,7 +231,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -237,7 +239,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -245,7 +247,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -253,7 +255,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -261,7 +263,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["BswImplementation.Annotations"] = field(
+    annotations: BswImplementation.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -269,7 +271,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -277,9 +279,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    build_action_manifests: Optional[
-        "BswImplementation.BuildActionManifests"
-    ] = field(
+    build_action_manifests: BswImplementation.BuildActionManifests | None = field(
         default=None,
         metadata={
             "name": "BUILD-ACTION-MANIFESTS",
@@ -287,7 +287,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    code_descriptors: Optional["BswImplementation.CodeDescriptors"] = field(
+    code_descriptors: BswImplementation.CodeDescriptors | None = field(
         default=None,
         metadata={
             "name": "CODE-DESCRIPTORS",
@@ -295,7 +295,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    compilers: Optional["BswImplementation.Compilers"] = field(
+    compilers: BswImplementation.Compilers | None = field(
         default=None,
         metadata={
             "name": "COMPILERS",
@@ -303,7 +303,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    generated_artifacts: Optional["BswImplementation.GeneratedArtifacts"] = (
+    generated_artifacts: BswImplementation.GeneratedArtifacts | None = (
         field(
             default=None,
             metadata={
@@ -313,7 +313,7 @@ class BswImplementation:
             },
         )
     )
-    hw_element_refs: Optional["BswImplementation.HwElementRefs"] = field(
+    hw_element_refs: BswImplementation.HwElementRefs | None = field(
         default=None,
         metadata={
             "name": "HW-ELEMENT-REFS",
@@ -321,7 +321,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    linkers: Optional["BswImplementation.Linkers"] = field(
+    linkers: BswImplementation.Linkers | None = field(
         default=None,
         metadata={
             "name": "LINKERS",
@@ -329,7 +329,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_support: Optional[McSupportData] = field(
+    mc_support: McSupportData | None = field(
         default=None,
         metadata={
             "name": "MC-SUPPORT",
@@ -337,7 +337,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    programming_language: Optional[ProgramminglanguageEnum] = field(
+    programming_language: ProgramminglanguageEnum | None = field(
         default=None,
         metadata={
             "name": "PROGRAMMING-LANGUAGE",
@@ -345,7 +345,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_artifacts: Optional["BswImplementation.RequiredArtifacts"] = (
+    required_artifacts: BswImplementation.RequiredArtifacts | None = (
         field(
             default=None,
             metadata={
@@ -355,9 +355,7 @@ class BswImplementation:
             },
         )
     )
-    required_generator_tools: Optional[
-        "BswImplementation.RequiredGeneratorTools"
-    ] = field(
+    required_generator_tools: BswImplementation.RequiredGeneratorTools | None = field(
         default=None,
         metadata={
             "name": "REQUIRED-GENERATOR-TOOLS",
@@ -365,7 +363,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_consumption: Optional[ResourceConsumption] = field(
+    resource_consumption: ResourceConsumption | None = field(
         default=None,
         metadata={
             "name": "RESOURCE-CONSUMPTION",
@@ -373,7 +371,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_version: Optional[RevisionLabelString] = field(
+    sw_version: RevisionLabelString | None = field(
         default=None,
         metadata={
             "name": "SW-VERSION",
@@ -381,7 +379,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_bsw_mapping_ref: Optional["BswImplementation.SwcBswMappingRef"] = (
+    swc_bsw_mapping_ref: BswImplementation.SwcBswMappingRef | None = (
         field(
             default=None,
             metadata={
@@ -391,7 +389,7 @@ class BswImplementation:
             },
         )
     )
-    used_code_generator: Optional[String] = field(
+    used_code_generator: String | None = field(
         default=None,
         metadata={
             "name": "USED-CODE-GENERATOR",
@@ -399,7 +397,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vendor_id: Optional[PositiveInteger] = field(
+    vendor_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "VENDOR-ID",
@@ -407,7 +405,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ar_release_version: Optional[RevisionLabelString] = field(
+    ar_release_version: RevisionLabelString | None = field(
         default=None,
         metadata={
             "name": "AR-RELEASE-VERSION",
@@ -415,7 +413,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    behavior_ref: Optional["BswImplementation.BehaviorRef"] = field(
+    behavior_ref: BswImplementation.BehaviorRef | None = field(
         default=None,
         metadata={
             "name": "BEHAVIOR-REF",
@@ -423,7 +421,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    debug_infos: Optional["BswImplementation.DebugInfos"] = field(
+    debug_infos: BswImplementation.DebugInfos | None = field(
         default=None,
         metadata={
             "name": "DEBUG-INFOS",
@@ -431,9 +429,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    preconfigured_configuration_refs: Optional[
-        "BswImplementation.PreconfiguredConfigurationRefs"
-    ] = field(
+    preconfigured_configuration_refs: BswImplementation.PreconfiguredConfigurationRefs | None = field(
         default=None,
         metadata={
             "name": "PRECONFIGURED-CONFIGURATION-REFS",
@@ -441,9 +437,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    recommended_configuration_refs: Optional[
-        "BswImplementation.RecommendedConfigurationRefs"
-    ] = field(
+    recommended_configuration_refs: BswImplementation.RecommendedConfigurationRefs | None = field(
         default=None,
         metadata={
             "name": "RECOMMENDED-CONFIGURATION-REFS",
@@ -451,7 +445,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vendor_api_infix: Optional[Identifier] = field(
+    vendor_api_infix: Identifier | None = field(
         default=None,
         metadata={
             "name": "VENDOR-API-INFIX",
@@ -459,9 +453,7 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vendor_specific_module_def_refs: Optional[
-        "BswImplementation.VendorSpecificModuleDefRefs"
-    ] = field(
+    vendor_specific_module_def_refs: BswImplementation.VendorSpecificModuleDefRefs | None = field(
         default=None,
         metadata={
             "name": "VENDOR-SPECIFIC-MODULE-DEF-REFS",
@@ -469,14 +461,14 @@ class BswImplementation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -484,7 +476,7 @@ class BswImplementation:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -563,7 +555,7 @@ class BswImplementation:
     @dataclass
     class HwElementRefs:
         hw_element_ref: list[
-            "BswImplementation.HwElementRefs.HwElementRef"
+            BswImplementation.HwElementRefs.HwElementRef
         ] = field(
             default_factory=list,
             metadata={
@@ -575,7 +567,7 @@ class BswImplementation:
 
         @dataclass
         class HwElementRef(Ref):
-            dest: Optional[HwElementSubtypesEnum] = field(
+            dest: HwElementSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -619,7 +611,7 @@ class BswImplementation:
 
     @dataclass
     class SwcBswMappingRef(Ref):
-        dest: Optional[SwcBswMappingSubtypesEnum] = field(
+        dest: SwcBswMappingSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -630,7 +622,7 @@ class BswImplementation:
 
     @dataclass
     class BehaviorRef(Ref):
-        dest: Optional[BswInternalBehaviorSubtypesEnum] = field(
+        dest: BswInternalBehaviorSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -653,7 +645,7 @@ class BswImplementation:
     @dataclass
     class PreconfiguredConfigurationRefs:
         preconfigured_configuration_ref: list[
-            "BswImplementation.PreconfiguredConfigurationRefs.PreconfiguredConfigurationRef"
+            BswImplementation.PreconfiguredConfigurationRefs.PreconfiguredConfigurationRef
         ] = field(
             default_factory=list,
             metadata={
@@ -665,7 +657,7 @@ class BswImplementation:
 
         @dataclass
         class PreconfiguredConfigurationRef(Ref):
-            dest: Optional[EcucModuleConfigurationValuesSubtypesEnum] = field(
+            dest: EcucModuleConfigurationValuesSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -677,7 +669,7 @@ class BswImplementation:
     @dataclass
     class RecommendedConfigurationRefs:
         recommended_configuration_ref: list[
-            "BswImplementation.RecommendedConfigurationRefs.RecommendedConfigurationRef"
+            BswImplementation.RecommendedConfigurationRefs.RecommendedConfigurationRef
         ] = field(
             default_factory=list,
             metadata={
@@ -689,7 +681,7 @@ class BswImplementation:
 
         @dataclass
         class RecommendedConfigurationRef(Ref):
-            dest: Optional[EcucModuleConfigurationValuesSubtypesEnum] = field(
+            dest: EcucModuleConfigurationValuesSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -701,7 +693,7 @@ class BswImplementation:
     @dataclass
     class VendorSpecificModuleDefRefs:
         vendor_specific_module_def_ref: list[
-            "BswImplementation.VendorSpecificModuleDefRefs.VendorSpecificModuleDefRef"
+            BswImplementation.VendorSpecificModuleDefRefs.VendorSpecificModuleDefRef
         ] = field(
             default_factory=list,
             metadata={
@@ -713,7 +705,7 @@ class BswImplementation:
 
         @dataclass
         class VendorSpecificModuleDefRef(Ref):
-            dest: Optional[EcucModuleDefSubtypesEnum] = field(
+            dest: EcucModuleDefSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

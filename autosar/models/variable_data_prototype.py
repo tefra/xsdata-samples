@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -117,7 +119,7 @@ class VariableDataPrototype:
     class Meta:
         name = "VARIABLE-DATA-PROTOTYPE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -126,9 +128,7 @@ class VariableDataPrototype:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "VariableDataPrototype.ShortNameFragments"
-    ] = field(
+    short_name_fragments: VariableDataPrototype.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -136,7 +136,7 @@ class VariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -144,7 +144,7 @@ class VariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -152,7 +152,7 @@ class VariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -160,7 +160,7 @@ class VariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -168,7 +168,7 @@ class VariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -176,7 +176,7 @@ class VariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["VariableDataPrototype.Annotations"] = field(
+    annotations: VariableDataPrototype.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -184,7 +184,7 @@ class VariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_data_def_props: Optional[SwDataDefProps] = field(
+    sw_data_def_props: SwDataDefProps | None = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEF-PROPS",
@@ -192,7 +192,7 @@ class VariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_tref: Optional["VariableDataPrototype.TypeTref"] = field(
+    type_tref: VariableDataPrototype.TypeTref | None = field(
         default=None,
         metadata={
             "name": "TYPE-TREF",
@@ -200,7 +200,7 @@ class VariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    init_value: Optional["VariableDataPrototype.InitValue"] = field(
+    init_value: VariableDataPrototype.InitValue | None = field(
         default=None,
         metadata={
             "name": "INIT-VALUE",
@@ -208,7 +208,7 @@ class VariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -216,14 +216,14 @@ class VariableDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -231,7 +231,7 @@ class VariableDataPrototype:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -263,7 +263,7 @@ class VariableDataPrototype:
 
     @dataclass
     class TypeTref(Ref):
-        dest: Optional[AutosarDataTypeSubtypesEnum] = field(
+        dest: AutosarDataTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -274,9 +274,7 @@ class VariableDataPrototype:
 
     @dataclass
     class InitValue:
-        application_assoc_map_value_specification: Optional[
-            ApplicationAssocMapValueSpecification
-        ] = field(
+        application_assoc_map_value_specification: ApplicationAssocMapValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-ASSOC-MAP-VALUE-SPECIFICATION",
@@ -284,9 +282,7 @@ class VariableDataPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_rule_based_value_specification: Optional[
-            ApplicationRuleBasedValueSpecification
-        ] = field(
+        application_rule_based_value_specification: ApplicationRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-RULE-BASED-VALUE-SPECIFICATION",
@@ -294,9 +290,7 @@ class VariableDataPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_value_specification: Optional[
-            ApplicationValueSpecification
-        ] = field(
+        application_value_specification: ApplicationValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-VALUE-SPECIFICATION",
@@ -304,7 +298,7 @@ class VariableDataPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        array_value_specification: Optional[ArrayValueSpecification] = field(
+        array_value_specification: ArrayValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "ARRAY-VALUE-SPECIFICATION",
@@ -312,9 +306,7 @@ class VariableDataPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        composite_rule_based_value_specification: Optional[
-            CompositeRuleBasedValueSpecification
-        ] = field(
+        composite_rule_based_value_specification: CompositeRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "COMPOSITE-RULE-BASED-VALUE-SPECIFICATION",
@@ -322,7 +314,7 @@ class VariableDataPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        constant_reference: Optional[ConstantReference] = field(
+        constant_reference: ConstantReference | None = field(
             default=None,
             metadata={
                 "name": "CONSTANT-REFERENCE",
@@ -330,9 +322,7 @@ class VariableDataPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        not_available_value_specification: Optional[
-            NotAvailableValueSpecification
-        ] = field(
+        not_available_value_specification: NotAvailableValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NOT-AVAILABLE-VALUE-SPECIFICATION",
@@ -340,9 +330,7 @@ class VariableDataPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_rule_based_value_specification: Optional[
-            NumericalRuleBasedValueSpecification
-        ] = field(
+        numerical_rule_based_value_specification: NumericalRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-RULE-BASED-VALUE-SPECIFICATION",
@@ -350,9 +338,7 @@ class VariableDataPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: Optional[
-            NumericalValueSpecification
-        ] = field(
+        numerical_value_specification: NumericalValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-VALUE-SPECIFICATION",
@@ -360,7 +346,7 @@ class VariableDataPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        record_value_specification: Optional[RecordValueSpecification] = field(
+        record_value_specification: RecordValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "RECORD-VALUE-SPECIFICATION",
@@ -368,9 +354,7 @@ class VariableDataPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: Optional[
-            ReferenceValueSpecification
-        ] = field(
+        reference_value_specification: ReferenceValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "REFERENCE-VALUE-SPECIFICATION",
@@ -378,7 +362,7 @@ class VariableDataPrototype:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        text_value_specification: Optional[TextValueSpecification] = field(
+        text_value_specification: TextValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "TEXT-VALUE-SPECIFICATION",

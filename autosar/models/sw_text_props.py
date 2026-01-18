@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -51,7 +53,7 @@ class SwTextProps:
     class Meta:
         name = "SW-TEXT-PROPS"
 
-    array_size_semantics: Optional[ArraySizeSemanticsEnum] = field(
+    array_size_semantics: ArraySizeSemanticsEnum | None = field(
         default=None,
         metadata={
             "name": "ARRAY-SIZE-SEMANTICS",
@@ -59,7 +61,7 @@ class SwTextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_max_text_size: Optional[IntegerValueVariationPoint] = field(
+    sw_max_text_size: IntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "SW-MAX-TEXT-SIZE",
@@ -67,7 +69,7 @@ class SwTextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_type_ref: Optional["SwTextProps.BaseTypeRef"] = field(
+    base_type_ref: SwTextProps.BaseTypeRef | None = field(
         default=None,
         metadata={
             "name": "BASE-TYPE-REF",
@@ -75,7 +77,7 @@ class SwTextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_fill_character: Optional[Integer] = field(
+    sw_fill_character: Integer | None = field(
         default=None,
         metadata={
             "name": "SW-FILL-CHARACTER",
@@ -83,14 +85,14 @@ class SwTextProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -101,7 +103,7 @@ class SwTextProps:
 
     @dataclass
     class BaseTypeRef(Ref):
-        dest: Optional[SwBaseTypeSubtypesEnum] = field(
+        dest: SwBaseTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

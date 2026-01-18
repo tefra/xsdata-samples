@@ -261,7 +261,7 @@ class QuotePricingDetail:
 
 @dataclass(kw_only=True)
 class QuoteSummary:
-    total_number_of_line_items: Optional[TotalNumberOfLineItems] = field(
+    total_number_of_line_items: TotalNumberOfLineItems | None = field(
         default=None,
         metadata={
             "name": "TotalNumberOfLineItems",
@@ -312,7 +312,7 @@ class QuoteType:
             "required": True,
         }
     )
-    quote_type_coded_other: Optional[QuoteTypeCodedOther] = field(
+    quote_type_coded_other: QuoteTypeCodedOther | None = field(
         default=None,
         metadata={
             "name": "QuoteTypeCodedOther",
@@ -330,9 +330,7 @@ class TaxReference:
             "required": True,
         }
     )
-    tax_function_qualifier_coded_other: Optional[
-        TaxFunctionQualifierCodedOther
-    ] = field(
+    tax_function_qualifier_coded_other: TaxFunctionQualifierCodedOther | None = field(
         default=None,
         metadata={
             "name": "TaxFunctionQualifierCodedOther",
@@ -346,21 +344,21 @@ class TaxReference:
             "required": True,
         }
     )
-    tax_category_coded_other: Optional[TaxCategoryCodedOther] = field(
+    tax_category_coded_other: TaxCategoryCodedOther | None = field(
         default=None,
         metadata={
             "name": "TaxCategoryCodedOther",
             "type": "Element",
         },
     )
-    reason_tax_exempt_coded: Optional[ReasonTaxExemptCoded] = field(
+    reason_tax_exempt_coded: ReasonTaxExemptCoded | None = field(
         default=None,
         metadata={
             "name": "ReasonTaxExemptCoded",
             "type": "Element",
         },
     )
-    reason_tax_exempt_coded_other: Optional[ReasonTaxExemptCodedOther] = field(
+    reason_tax_exempt_coded_other: ReasonTaxExemptCodedOther | None = field(
         default=None,
         metadata={
             "name": "ReasonTaxExemptCodedOther",
@@ -374,28 +372,28 @@ class TaxReference:
             "required": True,
         }
     )
-    tax_type_coded_other: Optional[TaxTypeCodedOther] = field(
+    tax_type_coded_other: TaxTypeCodedOther | None = field(
         default=None,
         metadata={
             "name": "TaxTypeCodedOther",
             "type": "Element",
         },
     )
-    tax_percent: Optional[TaxPercent] = field(
+    tax_percent: TaxPercent | None = field(
         default=None,
         metadata={
             "name": "TaxPercent",
             "type": "Element",
         },
     )
-    tax_payment_method_coded: Optional[TaxPaymentMethodCoded] = field(
+    tax_payment_method_coded: TaxPaymentMethodCoded | None = field(
         default=None,
         metadata={
             "name": "TaxPaymentMethodCoded",
             "type": "Element",
         },
     )
-    tax_payment_method_coded_other: Optional[TaxPaymentMethodCodedOther] = (
+    tax_payment_method_coded_other: TaxPaymentMethodCodedOther | None = (
         field(
             default=None,
             metadata={
@@ -404,16 +402,14 @@ class TaxReference:
             },
         )
     )
-    taxable_amount: Optional[TaxableAmount] = field(
+    taxable_amount: TaxableAmount | None = field(
         default=None,
         metadata={
             "name": "TaxableAmount",
             "type": "Element",
         },
     )
-    taxable_amount_in_tax_accounting_currency: Optional[
-        TaxableAmountInTaxAccountingCurrency
-    ] = field(
+    taxable_amount_in_tax_accounting_currency: TaxableAmountInTaxAccountingCurrency | None = field(
         default=None,
         metadata={
             "name": "TaxableAmountInTaxAccountingCurrency",
@@ -427,16 +423,14 @@ class TaxReference:
             "required": True,
         }
     )
-    tax_amount_in_tax_accounting_currency: Optional[
-        TaxAmountInTaxAccountingCurrency
-    ] = field(
+    tax_amount_in_tax_accounting_currency: TaxAmountInTaxAccountingCurrency | None = field(
         default=None,
         metadata={
             "name": "TaxAmountInTaxAccountingCurrency",
             "type": "Element",
         },
     )
-    tax_location: Optional[TaxLocation] = field(
+    tax_location: TaxLocation | None = field(
         default=None,
         metadata={
             "name": "TaxLocation",
@@ -450,7 +444,7 @@ class TaxReference:
             "required": True,
         }
     )
-    tax_treatment_coded_other: Optional[TaxTreatmentCodedOther] = field(
+    tax_treatment_coded_other: TaxTreatmentCodedOther | None = field(
         default=None,
         metadata={
             "name": "TaxTreatmentCodedOther",
@@ -468,7 +462,7 @@ class QuotationRequestReference:
             "required": True,
         }
     )
-    reference_release_number: Optional[ReferenceReleaseNumber] = field(
+    reference_release_number: ReferenceReleaseNumber | None = field(
         default=None,
         metadata={
             "name": "ReferenceReleaseNumber",
@@ -486,133 +480,133 @@ class QuoteItemDetail:
             "required": True,
         }
     )
-    line_item_type: Optional[LineItemType] = field(
+    line_item_type: LineItemType | None = field(
         default=None,
         metadata={
             "name": "LineItemType",
             "type": "Element",
         },
     )
-    parent_item_number: Optional[ParentItemNumber] = field(
+    parent_item_number: ParentItemNumber | None = field(
         default=None,
         metadata={
             "name": "ParentItemNumber",
             "type": "Element",
         },
     )
-    item_identifiers: Optional[ItemIdentifiers] = field(
+    item_identifiers: ItemIdentifiers | None = field(
         default=None,
         metadata={
             "name": "ItemIdentifiers",
             "type": "Element",
         },
     )
-    list_of_dimension: Optional[ListOfDimension] = field(
+    list_of_dimension: ListOfDimension | None = field(
         default=None,
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
         },
     )
-    total_quantity: Optional[TotalQuantity] = field(
+    total_quantity: TotalQuantity | None = field(
         default=None,
         metadata={
             "name": "TotalQuantity",
             "type": "Element",
         },
     )
-    max_back_order_quantity: Optional[MaxBackOrderQuantity] = field(
+    max_back_order_quantity: MaxBackOrderQuantity | None = field(
         default=None,
         metadata={
             "name": "MaxBackOrderQuantity",
             "type": "Element",
         },
     )
-    list_of_quantity_coded: Optional[ListOfQuantityCoded] = field(
+    list_of_quantity_coded: ListOfQuantityCoded | None = field(
         default=None,
         metadata={
             "name": "ListOfQuantityCoded",
             "type": "Element",
         },
     )
-    off_catalog_flag: Optional[OffCatalogFlag] = field(
+    off_catalog_flag: OffCatalogFlag | None = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
             "type": "Element",
         },
     )
-    catalog_reference: Optional[CatalogReference] = field(
+    catalog_reference: CatalogReference | None = field(
         default=None,
         metadata={
             "name": "CatalogReference",
             "type": "Element",
         },
     )
-    item_contract_references: Optional[ItemContractReferences] = field(
+    item_contract_references: ItemContractReferences | None = field(
         default=None,
         metadata={
             "name": "ItemContractReferences",
             "type": "Element",
         },
     )
-    list_of_item_references: Optional[ListOfItemReferences] = field(
+    list_of_item_references: ListOfItemReferences | None = field(
         default=None,
         metadata={
             "name": "ListOfItemReferences",
             "type": "Element",
         },
     )
-    country_of_origin: Optional[CountryOfOrigin] = field(
+    country_of_origin: CountryOfOrigin | None = field(
         default=None,
         metadata={
             "name": "CountryOfOrigin",
             "type": "Element",
         },
     )
-    country_of_destination: Optional[CountryOfDestination] = field(
+    country_of_destination: CountryOfDestination | None = field(
         default=None,
         metadata={
             "name": "CountryOfDestination",
             "type": "Element",
         },
     )
-    final_recipient: Optional[FinalRecipient] = field(
+    final_recipient: FinalRecipient | None = field(
         default=None,
         metadata={
             "name": "FinalRecipient",
             "type": "Element",
         },
     )
-    list_of_party_coded: Optional[ListOfPartyCoded] = field(
+    list_of_party_coded: ListOfPartyCoded | None = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
         },
     )
-    conditions_of_sale: Optional[ConditionsOfSale] = field(
+    conditions_of_sale: ConditionsOfSale | None = field(
         default=None,
         metadata={
             "name": "ConditionsOfSale",
             "type": "Element",
         },
     )
-    hazardous_materials: Optional[HazardousMaterials] = field(
+    hazardous_materials: HazardousMaterials | None = field(
         default=None,
         metadata={
             "name": "HazardousMaterials",
             "type": "Element",
         },
     )
-    quote_item_references: Optional[QuoteItemReferences] = field(
+    quote_item_references: QuoteItemReferences | None = field(
         default=None,
         metadata={
             "name": "QuoteItemReferences",
             "type": "Element",
         },
     )
-    quote_item_party: Optional[QuoteItemParty] = field(
+    quote_item_party: QuoteItemParty | None = field(
         default=None,
         metadata={
             "name": "QuoteItemParty",
@@ -659,28 +653,28 @@ class QuoteDetails:
             "required": True,
         }
     )
-    quote_pricing_detail: Optional[QuotePricingDetail] = field(
+    quote_pricing_detail: QuotePricingDetail | None = field(
         default=None,
         metadata={
             "name": "QuotePricingDetail",
             "type": "Element",
         },
     )
-    quote_delivery_detail: Optional[QuoteDeliveryDetail] = field(
+    quote_delivery_detail: QuoteDeliveryDetail | None = field(
         default=None,
         metadata={
             "name": "QuoteDeliveryDetail",
             "type": "Element",
         },
     )
-    list_of_structured_note: Optional[ListOfStructuredNote] = field(
+    list_of_structured_note: ListOfStructuredNote | None = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    quote_item_list_of_attachment: Optional[QuoteItemListOfAttachment] = field(
+    quote_item_list_of_attachment: QuoteItemListOfAttachment | None = field(
         default=None,
         metadata={
             "name": "QuoteItemListOfAttachment",
@@ -705,21 +699,21 @@ class QuoteHeader:
             "required": True,
         }
     )
-    quotation_request_reference: Optional[QuotationRequestReference] = field(
+    quotation_request_reference: QuotationRequestReference | None = field(
         default=None,
         metadata={
             "name": "QuotationRequestReference",
             "type": "Element",
         },
     )
-    quote_type: Optional[QuoteType] = field(
+    quote_type: QuoteType | None = field(
         default=None,
         metadata={
             "name": "QuoteType",
             "type": "Element",
         },
     )
-    purpose: Optional[Purpose] = field(
+    purpose: Purpose | None = field(
         default=None,
         metadata={
             "name": "Purpose",
@@ -733,35 +727,35 @@ class QuoteHeader:
             "required": True,
         }
     )
-    quote_transport: Optional[QuoteTransport] = field(
+    quote_transport: QuoteTransport | None = field(
         default=None,
         metadata={
             "name": "QuoteTransport",
             "type": "Element",
         },
     )
-    quote_currency: Optional[QuoteCurrency] = field(
+    quote_currency: QuoteCurrency | None = field(
         default=None,
         metadata={
             "name": "QuoteCurrency",
             "type": "Element",
         },
     )
-    quote_allowance_or_charge: Optional[QuoteAllowanceOrCharge] = field(
+    quote_allowance_or_charge: QuoteAllowanceOrCharge | None = field(
         default=None,
         metadata={
             "name": "QuoteAllowanceOrCharge",
             "type": "Element",
         },
     )
-    quote_terms_of_payment: Optional[QuoteTermsOfPayment] = field(
+    quote_terms_of_payment: QuoteTermsOfPayment | None = field(
         default=None,
         metadata={
             "name": "QuoteTermsOfPayment",
             "type": "Element",
         },
     )
-    quote_terms_of_delivery: Optional[QuoteTermsOfDelivery] = field(
+    quote_terms_of_delivery: QuoteTermsOfDelivery | None = field(
         default=None,
         metadata={
             "name": "QuoteTermsOfDelivery",
@@ -775,28 +769,28 @@ class QuoteHeader:
             "type": "Element",
         },
     )
-    quote_language: Optional[QuoteLanguage] = field(
+    quote_language: QuoteLanguage | None = field(
         default=None,
         metadata={
             "name": "QuoteLanguage",
             "type": "Element",
         },
     )
-    general_notes: Optional[GeneralNotes] = field(
+    general_notes: GeneralNotes | None = field(
         default=None,
         metadata={
             "name": "GeneralNotes",
             "type": "Element",
         },
     )
-    list_of_structured_note: Optional[ListOfStructuredNote] = field(
+    list_of_structured_note: ListOfStructuredNote | None = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    quote_list_of_attachment: Optional[QuoteListOfAttachment] = field(
+    quote_list_of_attachment: QuoteListOfAttachment | None = field(
         default=None,
         metadata={
             "name": "QuoteListOfAttachment",
@@ -826,21 +820,21 @@ class Quote:
             "required": True,
         }
     )
-    list_of_quote_details: Optional[ListOfQuoteDetails] = field(
+    list_of_quote_details: ListOfQuoteDetails | None = field(
         default=None,
         metadata={
             "name": "ListOfQuoteDetails",
             "type": "Element",
         },
     )
-    list_of_quote_package_detail: Optional[ListOfQuotePackageDetail] = field(
+    list_of_quote_package_detail: ListOfQuotePackageDetail | None = field(
         default=None,
         metadata={
             "name": "ListOfQuotePackageDetail",
             "type": "Element",
         },
     )
-    quote_summary: Optional[QuoteSummary] = field(
+    quote_summary: QuoteSummary | None = field(
         default=None,
         metadata={
             "name": "QuoteSummary",

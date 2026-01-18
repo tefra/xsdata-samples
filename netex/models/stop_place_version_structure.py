@@ -50,7 +50,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
     class Meta:
         name = "StopPlace_VersionStructure"
 
-    public_code: Optional[str] = field(
+    public_code: str | None = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -58,7 +58,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
+    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -66,20 +66,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice_1: Optional[
-        Union[
-            AirSubmode,
-            BusSubmode,
-            CoachSubmode,
-            FunicularSubmode,
-            MetroSubmode,
-            TramSubmode,
-            TelecabinSubmode,
-            RailSubmode,
-            WaterSubmode,
-            SnowAndIceSubmode,
-        ]
-    ] = field(
+    choice_1: AirSubmode | BusSubmode | CoachSubmode | FunicularSubmode | MetroSubmode | TramSubmode | TelecabinSubmode | RailSubmode | WaterSubmode | SnowAndIceSubmode | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -137,16 +124,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             ),
         },
     )
-    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: Optional[
-        Union[
-            PersonalModeOfOperationRef,
-            VehiclePoolingRef,
-            VehicleSharingRef,
-            VehicleRentalRef,
-            FlexibleModeOfOperationRef,
-            ScheduledModeOfOperationRef,
-        ]
-    ] = field(
+    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: PersonalModeOfOperationRef | VehiclePoolingRef | VehicleSharingRef | VehicleRentalRef | FlexibleModeOfOperationRef | ScheduledModeOfOperationRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -193,7 +171,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "tokens": True,
         },
     )
-    tariff_zones: Optional[TariffZoneRefsRelStructure] = field(
+    tariff_zones: TariffZoneRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "tariffZones",
@@ -201,7 +179,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_place_type: Optional[StopTypeEnumeration] = field(
+    stop_place_type: StopTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "StopPlaceType",
@@ -209,7 +187,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    border_crossing: Optional[bool] = field(
+    border_crossing: bool | None = field(
         default=None,
         metadata={
             "name": "BorderCrossing",
@@ -217,7 +195,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    unlocalised_equipments: Optional[ExplicitEquipmentsRelStructure] = field(
+    unlocalised_equipments: ExplicitEquipmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "unlocalisedEquipments",
@@ -225,7 +203,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    served_places: Optional[TopographicPlaceRefsRelStructure] = field(
+    served_places: TopographicPlaceRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "servedPlaces",
@@ -233,7 +211,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    main_terminus_for_places: Optional[TopographicPlaceRefsRelStructure] = (
+    main_terminus_for_places: TopographicPlaceRefsRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -243,7 +221,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             },
         )
     )
-    limited_use: Optional[LimitedUseTypeEnumeration] = field(
+    limited_use: LimitedUseTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "LimitedUse",
@@ -251,7 +229,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    weighting: Optional[InterchangeWeightingEnumeration] = field(
+    weighting: InterchangeWeightingEnumeration | None = field(
         default=None,
         metadata={
             "name": "Weighting",
@@ -259,7 +237,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_place_weight: Optional[StopPlaceWeightEnumeration] = field(
+    stop_place_weight: StopPlaceWeightEnumeration | None = field(
         default=None,
         metadata={
             "name": "StopPlaceWeight",
@@ -267,14 +245,14 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    quays: Optional[QuaysRelStructure] = field(
+    quays: QuaysRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    access_spaces: Optional[AccessSpacesRelStructure] = field(
+    access_spaces: AccessSpacesRelStructure | None = field(
         default=None,
         metadata={
             "name": "accessSpaces",
@@ -282,7 +260,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    path_links: Optional[SitePathLinksRelStructure] = field(
+    path_links: SitePathLinksRelStructure | None = field(
         default=None,
         metadata={
             "name": "pathLinks",
@@ -290,7 +268,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    path_junctions: Optional[PathJunctionsRelStructure] = field(
+    path_junctions: PathJunctionsRelStructure | None = field(
         default=None,
         metadata={
             "name": "pathJunctions",
@@ -298,14 +276,14 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accesses: Optional[AccessesRelStructure] = field(
+    accesses: AccessesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    navigation_paths: Optional[NavigationPathsRelStructure] = field(
+    navigation_paths: NavigationPathsRelStructure | None = field(
         default=None,
         metadata={
             "name": "navigationPaths",
@@ -313,7 +291,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_stopping_places: Optional[VehicleStoppingPlacesRelStructure] = (
+    vehicle_stopping_places: VehicleStoppingPlacesRelStructure | None = (
         field(
             default=None,
             metadata={

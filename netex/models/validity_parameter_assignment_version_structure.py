@@ -23,9 +23,7 @@ class ValidityParameterAssignmentVersionStructure(
     class Meta:
         name = "ValidityParameterAssignment_VersionStructure"
 
-    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref: Optional[
-        Union[TimeIntervalRef, ParkingChargeBandRef, TimeStructureFactorRef]
-    ] = field(
+    time_interval_ref_or_parking_charge_band_ref_or_time_structure_factor_ref: TimeIntervalRef | ParkingChargeBandRef | TimeStructureFactorRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -48,9 +46,7 @@ class ValidityParameterAssignmentVersionStructure(
             ),
         },
     )
-    geographical_interval_ref_or_geographical_structure_factor_ref: Optional[
-        Union[GeographicalIntervalRef, GeographicalStructureFactorRef]
-    ] = field(
+    geographical_interval_ref_or_geographical_structure_factor_ref: GeographicalIntervalRef | GeographicalStructureFactorRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -68,11 +64,7 @@ class ValidityParameterAssignmentVersionStructure(
             ),
         },
     )
-    quality_structure_factor_ref: Optional[
-        Union[
-            FareQuotaFactorRef, FareDemandFactorRef, QualityStructureFactorRef
-        ]
-    ] = field(
+    quality_structure_factor_ref: FareQuotaFactorRef | FareDemandFactorRef | QualityStructureFactorRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

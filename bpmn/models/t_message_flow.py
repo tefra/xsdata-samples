@@ -12,13 +12,13 @@ class TMessageFlow(TBaseElement):
     class Meta:
         name = "tMessageFlow"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    source_ref: Optional[QName] = field(
+    source_ref: QName | None = field(
         default=None,
         metadata={
             "name": "sourceRef",
@@ -26,7 +26,7 @@ class TMessageFlow(TBaseElement):
             "required": True,
         },
     )
-    target_ref: Optional[QName] = field(
+    target_ref: QName | None = field(
         default=None,
         metadata={
             "name": "targetRef",
@@ -34,7 +34,7 @@ class TMessageFlow(TBaseElement):
             "required": True,
         },
     )
-    message_ref: Optional[QName] = field(
+    message_ref: QName | None = field(
         default=None,
         metadata={
             "name": "messageRef",

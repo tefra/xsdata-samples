@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -68,7 +70,7 @@ class ComponentInstantiationType:
     class Meta:
         name = "componentInstantiationType"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -76,7 +78,7 @@ class ComponentInstantiationType:
             "required": True,
         },
     )
-    display_name: Optional[DisplayName] = field(
+    display_name: DisplayName | None = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -84,7 +86,7 @@ class ComponentInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -92,14 +94,14 @@ class ComponentInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    is_virtual: Optional[bool] = field(
+    is_virtual: bool | None = field(
         default=None,
         metadata={
             "name": "isVirtual",
@@ -107,14 +109,14 @@ class ComponentInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    language: Optional[LanguageType] = field(
+    language: LanguageType | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    library_name: Optional[str] = field(
+    library_name: str | None = field(
         default=None,
         metadata={
             "name": "libraryName",
@@ -122,7 +124,7 @@ class ComponentInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    package_name: Optional[str] = field(
+    package_name: str | None = field(
         default=None,
         metadata={
             "name": "packageName",
@@ -130,7 +132,7 @@ class ComponentInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    module_name: Optional[str] = field(
+    module_name: str | None = field(
         default=None,
         metadata={
             "name": "moduleName",
@@ -138,7 +140,7 @@ class ComponentInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    architecture_name: Optional[str] = field(
+    architecture_name: str | None = field(
         default=None,
         metadata={
             "name": "architectureName",
@@ -146,7 +148,7 @@ class ComponentInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    configuration_name: Optional[str] = field(
+    configuration_name: str | None = field(
         default=None,
         metadata={
             "name": "configurationName",
@@ -154,9 +156,7 @@ class ComponentInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    module_parameters: Optional[
-        "ComponentInstantiationType.ModuleParameters"
-    ] = field(
+    module_parameters: ComponentInstantiationType.ModuleParameters | None = field(
         default=None,
         metadata={
             "name": "moduleParameters",
@@ -188,9 +188,7 @@ class ComponentInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    clearbox_element_refs: Optional[
-        "ComponentInstantiationType.ClearboxElementRefs"
-    ] = field(
+    clearbox_element_refs: ComponentInstantiationType.ClearboxElementRefs | None = field(
         default=None,
         metadata={
             "name": "clearboxElementRefs",
@@ -198,14 +196,14 @@ class ComponentInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    parameters: Optional[Parameters] = field(
+    parameters: Parameters | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -213,7 +211,7 @@ class ComponentInstantiationType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

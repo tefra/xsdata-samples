@@ -30,7 +30,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class ApplicationResponseType:
-    ublextensions: Optional[Ublextensions] = field(
+    ublextensions: Ublextensions | None = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -38,7 +38,7 @@ class ApplicationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: Optional[UblversionId] = field(
+    ublversion_id: UblversionId | None = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -46,7 +46,7 @@ class ApplicationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: Optional[CustomizationId] = field(
+    customization_id: CustomizationId | None = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -54,7 +54,7 @@ class ApplicationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: Optional[ProfileId] = field(
+    profile_id: ProfileId | None = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -62,7 +62,7 @@ class ApplicationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: Optional[ProfileExecutionId] = field(
+    profile_execution_id: ProfileExecutionId | None = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -70,7 +70,7 @@ class ApplicationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -79,7 +79,7 @@ class ApplicationResponseType:
             "required": True,
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -87,7 +87,7 @@ class ApplicationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -96,7 +96,7 @@ class ApplicationResponseType:
             "required": True,
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -104,7 +104,7 @@ class ApplicationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    response_date: Optional[ResponseDate] = field(
+    response_date: ResponseDate | None = field(
         default=None,
         metadata={
             "name": "ResponseDate",
@@ -112,7 +112,7 @@ class ApplicationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    response_time: Optional[ResponseTime] = field(
+    response_time: ResponseTime | None = field(
         default=None,
         metadata={
             "name": "ResponseTime",
@@ -128,7 +128,7 @@ class ApplicationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    version_id: Optional[VersionId] = field(
+    version_id: VersionId | None = field(
         default=None,
         metadata={
             "name": "VersionID",
@@ -144,7 +144,7 @@ class ApplicationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sender_party: Optional[SenderParty] = field(
+    sender_party: SenderParty | None = field(
         default=None,
         metadata={
             "name": "SenderParty",
@@ -153,7 +153,7 @@ class ApplicationResponseType:
             "required": True,
         },
     )
-    receiver_party: Optional[ReceiverParty] = field(
+    receiver_party: ReceiverParty | None = field(
         default=None,
         metadata={
             "name": "ReceiverParty",

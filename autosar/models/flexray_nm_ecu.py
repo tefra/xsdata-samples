@@ -33,7 +33,7 @@ class FlexrayNmEcu:
     class Meta:
         name = "FLEXRAY-NM-ECU"
 
-    nm_hw_vote_enabled: Optional[Boolean] = field(
+    nm_hw_vote_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-HW-VOTE-ENABLED",
@@ -41,7 +41,7 @@ class FlexrayNmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_main_function_across_fr_cycle: Optional[Boolean] = field(
+    nm_main_function_across_fr_cycle: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-MAIN-FUNCTION-ACROSS-FR-CYCLE",
@@ -49,7 +49,7 @@ class FlexrayNmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_repeat_message_bit_enable: Optional[Boolean] = field(
+    nm_repeat_message_bit_enable: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-REPEAT-MESSAGE-BIT-ENABLE",
@@ -57,14 +57,14 @@ class FlexrayNmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

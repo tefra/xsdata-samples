@@ -67,7 +67,7 @@ class PaymentStatusRequestHeader:
             "required": True,
         }
     )
-    payer_party: Optional[PayerParty] = field(
+    payer_party: PayerParty | None = field(
         default=None,
         metadata={
             "name": "PayerParty",
@@ -81,7 +81,7 @@ class PaymentStatusRequestHeader:
             "required": True,
         }
     )
-    general_notes: Optional[GeneralNotes] = field(
+    general_notes: GeneralNotes | None = field(
         default=None,
         metadata={
             "name": "GeneralNotes",
@@ -92,51 +92,49 @@ class PaymentStatusRequestHeader:
 
 @dataclass(kw_only=True)
 class PaymentStatusRequestDetail:
-    sequence_number: Optional[SequenceNumber] = field(
+    sequence_number: SequenceNumber | None = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
             "type": "Element",
         },
     )
-    payment_request_id: Optional[PaymentRequestId] = field(
+    payment_request_id: PaymentRequestId | None = field(
         default=None,
         metadata={
             "name": "PaymentRequestID",
             "type": "Element",
         },
     )
-    confirmation_id: Optional[ConfirmationId] = field(
+    confirmation_id: ConfirmationId | None = field(
         default=None,
         metadata={
             "name": "ConfirmationID",
             "type": "Element",
         },
     )
-    payment_date_range: Optional[PaymentDateRange] = field(
+    payment_date_range: PaymentDateRange | None = field(
         default=None,
         metadata={
             "name": "PaymentDateRange",
             "type": "Element",
         },
     )
-    payment_dates: Optional[PaymentDates] = field(
+    payment_dates: PaymentDates | None = field(
         default=None,
         metadata={
             "name": "PaymentDates",
             "type": "Element",
         },
     )
-    settlement_amount: Optional[SettlementAmount] = field(
+    settlement_amount: SettlementAmount | None = field(
         default=None,
         metadata={
             "name": "SettlementAmount",
             "type": "Element",
         },
     )
-    list_of_payment_request_references: Optional[
-        ListOfPaymentRequestReferences
-    ] = field(
+    list_of_payment_request_references: ListOfPaymentRequestReferences | None = field(
         default=None,
         metadata={
             "name": "ListOfPaymentRequestReferences",

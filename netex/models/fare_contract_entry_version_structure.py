@@ -13,7 +13,7 @@ class FareContractEntryVersionStructure(LogEntryVersionStructure):
     class Meta:
         name = "FareContractEntry_VersionStructure"
 
-    is_valid: Optional[bool] = field(
+    is_valid: bool | None = field(
         default=None,
         metadata={
             "name": "IsValid",
@@ -21,7 +21,7 @@ class FareContractEntryVersionStructure(LogEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_fare_contract_entry_ref: Optional[TypeOfFareContractEntryRef] = (
+    type_of_fare_contract_entry_ref: TypeOfFareContractEntryRef | None = (
         field(
             default=None,
             metadata={
@@ -31,7 +31,7 @@ class FareContractEntryVersionStructure(LogEntryVersionStructure):
             },
         )
     )
-    fare_contract_ref: Optional[FareContractRef] = field(
+    fare_contract_ref: FareContractRef | None = field(
         default=None,
         metadata={
             "name": "FareContractRef",

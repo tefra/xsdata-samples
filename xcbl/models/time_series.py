@@ -11,18 +11,14 @@ from xcbl.models.time_series_response import (
 
 @dataclass(kw_only=True)
 class TimeSeriesDetail:
-    list_of_characteristic_combinations: Optional[
-        ListOfCharacteristicCombinations
-    ] = field(
+    list_of_characteristic_combinations: ListOfCharacteristicCombinations | None = field(
         default=None,
         metadata={
             "name": "ListOfCharacteristicCombinations",
             "type": "Element",
         },
     )
-    list_of_time_series_key_figure_data: Optional[
-        ListOfTimeSeriesKeyFigureData
-    ] = field(
+    list_of_time_series_key_figure_data: ListOfTimeSeriesKeyFigureData | None = field(
         default=None,
         metadata={
             "name": "ListOfTimeSeriesKeyFigureData",

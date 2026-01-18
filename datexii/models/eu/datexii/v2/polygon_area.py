@@ -21,7 +21,7 @@ class PolygonArea:
     :ivar polygon_area_extension:
     """
 
-    section_name: Optional[MultilingualString] = field(
+    section_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "sectionName",
@@ -37,7 +37,7 @@ class PolygonArea:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    polygon_area_extension: Optional[ExtensionType] = field(
+    polygon_area_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "polygonAreaExtension",

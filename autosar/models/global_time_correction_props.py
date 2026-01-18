@@ -40,7 +40,7 @@ class GlobalTimeCorrectionProps:
     class Meta:
         name = "GLOBAL-TIME-CORRECTION-PROPS"
 
-    offset_correction_adaption_interval: Optional[TimeValue] = field(
+    offset_correction_adaption_interval: TimeValue | None = field(
         default=None,
         metadata={
             "name": "OFFSET-CORRECTION-ADAPTION-INTERVAL",
@@ -48,7 +48,7 @@ class GlobalTimeCorrectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    offset_correction_jump_threshold: Optional[TimeValue] = field(
+    offset_correction_jump_threshold: TimeValue | None = field(
         default=None,
         metadata={
             "name": "OFFSET-CORRECTION-JUMP-THRESHOLD",
@@ -56,7 +56,7 @@ class GlobalTimeCorrectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rate_correction_measurement_duration: Optional[TimeValue] = field(
+    rate_correction_measurement_duration: TimeValue | None = field(
         default=None,
         metadata={
             "name": "RATE-CORRECTION-MEASUREMENT-DURATION",
@@ -64,7 +64,7 @@ class GlobalTimeCorrectionProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rate_corrections_per_measurement_duration: Optional[PositiveInteger] = (
+    rate_corrections_per_measurement_duration: PositiveInteger | None = (
         field(
             default=None,
             metadata={
@@ -74,14 +74,14 @@ class GlobalTimeCorrectionProps:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

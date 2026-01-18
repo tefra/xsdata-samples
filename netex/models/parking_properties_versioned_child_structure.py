@@ -24,7 +24,7 @@ class ParkingPropertiesVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "ParkingProperties_VersionedChildStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -32,7 +32,7 @@ class ParkingPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_ref: Optional[ParkingRef] = field(
+    parking_ref: ParkingRef | None = field(
         default=None,
         metadata={
             "name": "ParkingRef",
@@ -58,7 +58,7 @@ class ParkingPropertiesVersionedChildStructure(VersionedChildStructure):
             "tokens": True,
         },
     )
-    vehicle_types: Optional[TransportTypeRefsRelStructure] = field(
+    vehicle_types: TransportTypeRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "vehicleTypes",
@@ -75,7 +75,7 @@ class ParkingPropertiesVersionedChildStructure(VersionedChildStructure):
             "tokens": True,
         },
     )
-    maximum_stay: Optional[XmlDuration] = field(
+    maximum_stay: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MaximumStay",
@@ -83,7 +83,7 @@ class ParkingPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    secure_parking: Optional[bool] = field(
+    secure_parking: bool | None = field(
         default=None,
         metadata={
             "name": "SecureParking",
@@ -91,7 +91,7 @@ class ParkingPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    bay_geometry: Optional[BayGeometryEnumeration] = field(
+    bay_geometry: BayGeometryEnumeration | None = field(
         default=None,
         metadata={
             "name": "BayGeometry",
@@ -99,7 +99,7 @@ class ParkingPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_visibility: Optional[ParkingVisibilityEnumeration] = field(
+    parking_visibility: ParkingVisibilityEnumeration | None = field(
         default=None,
         metadata={
             "name": "ParkingVisibility",
@@ -107,14 +107,14 @@ class ParkingPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    areas: Optional[ParkingAreaRefsRelStructure] = field(
+    areas: ParkingAreaRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    spaces: Optional[ParkingCapacitiesRelStructure] = field(
+    spaces: ParkingCapacitiesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

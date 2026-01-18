@@ -15,7 +15,7 @@ class TimingLinkRefsRelStructure(OneToManyRelationshipStructure):
         name = "timingLinkRefs_RelStructure"
 
     timing_link_ref_or_timing_link_ref_by_value: Iterable[
-        Union[TimingLinkRef, TimingLinkRefByValue]
+        TimingLinkRef | TimingLinkRefByValue
     ] = field(
         default_factory=list,
         metadata={

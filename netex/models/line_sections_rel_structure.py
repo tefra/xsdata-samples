@@ -15,7 +15,7 @@ class LineSectionsRelStructure(ContainmentAggregationStructure):
         name = "lineSections_RelStructure"
 
     line_section_ref_or_line_section: Iterable[
-        Union[LineSectionRef, LineSection]
+        LineSectionRef | LineSection
     ] = field(
         default_factory=list,
         metadata={

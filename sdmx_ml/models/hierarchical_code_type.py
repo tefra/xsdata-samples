@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -42,7 +44,7 @@ class HierarchicalCodeType(HierarchicalCodeBaseType):
         be used to track the historicity of codes changing over time.
     """
 
-    code: Optional[str] = field(
+    code: str | None = field(
         default=None,
         metadata={
             "name": "Code",
@@ -52,7 +54,7 @@ class HierarchicalCodeType(HierarchicalCodeBaseType):
             "pattern": r".+\.codelist\.Code=.+",
         },
     )
-    hierarchical_code: tuple["HierarchicalCodeType", ...] = field(
+    hierarchical_code: tuple[HierarchicalCodeType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "HierarchicalCode",
@@ -60,7 +62,7 @@ class HierarchicalCodeType(HierarchicalCodeBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    level: Optional[str] = field(
+    level: str | None = field(
         default=None,
         metadata={
             "name": "Level",
@@ -69,14 +71,14 @@ class HierarchicalCodeType(HierarchicalCodeBaseType):
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    valid_from: Optional[XmlDateTime] = field(
+    valid_from: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "validFrom",
             "type": "Attribute",
         },
     )
-    valid_to: Optional[XmlDateTime] = field(
+    valid_to: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "validTo",

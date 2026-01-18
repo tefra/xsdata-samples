@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -43,7 +45,7 @@ class ModeInSwcInstanceRef:
     class Meta:
         name = "MODE-IN-SWC-INSTANCE-REF"
 
-    context_component_ref: list["ModeInSwcInstanceRef.ContextComponentRef"] = (
+    context_component_ref: list[ModeInSwcInstanceRef.ContextComponentRef] = (
         field(
             default_factory=list,
             metadata={
@@ -53,7 +55,7 @@ class ModeInSwcInstanceRef:
             },
         )
     )
-    context_port_ref: Optional["ModeInSwcInstanceRef.ContextPortRef"] = field(
+    context_port_ref: ModeInSwcInstanceRef.ContextPortRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-PORT-REF",
@@ -61,9 +63,7 @@ class ModeInSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_mode_declaration_group_prototype_ref: Optional[
-        "ModeInSwcInstanceRef.ContextModeDeclarationGroupPrototypeRef"
-    ] = field(
+    context_mode_declaration_group_prototype_ref: ModeInSwcInstanceRef.ContextModeDeclarationGroupPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF",
@@ -71,9 +71,7 @@ class ModeInSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_mode_declaration_ref: Optional[
-        "ModeInSwcInstanceRef.TargetModeDeclarationRef"
-    ] = field(
+    target_mode_declaration_ref: ModeInSwcInstanceRef.TargetModeDeclarationRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-MODE-DECLARATION-REF",
@@ -81,14 +79,14 @@ class ModeInSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -99,7 +97,7 @@ class ModeInSwcInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -110,7 +108,7 @@ class ModeInSwcInstanceRef:
 
     @dataclass
     class ContextPortRef(Ref):
-        dest: Optional[PortPrototypeSubtypesEnum] = field(
+        dest: PortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -121,7 +119,7 @@ class ModeInSwcInstanceRef:
 
     @dataclass
     class ContextModeDeclarationGroupPrototypeRef(Ref):
-        dest: Optional[ModeDeclarationGroupPrototypeSubtypesEnum] = field(
+        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -132,7 +130,7 @@ class ModeInSwcInstanceRef:
 
     @dataclass
     class TargetModeDeclarationRef(Ref):
-        dest: Optional[ModeDeclarationSubtypesEnum] = field(
+        dest: ModeDeclarationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

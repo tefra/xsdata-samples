@@ -51,7 +51,7 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
     class Meta:
         name = "DefaultConnection_VersionStructure"
 
-    from_value: Optional[DefaultConnectionEndStructure] = field(
+    from_value: DefaultConnectionEndStructure | None = field(
         default=None,
         metadata={
             "name": "From",
@@ -59,7 +59,7 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to: Optional[DefaultConnectionEndStructure] = field(
+    to: DefaultConnectionEndStructure | None = field(
         default=None,
         metadata={
             "name": "To",
@@ -67,7 +67,7 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    topographic_place_view: Optional[TopographicPlaceView] = field(
+    topographic_place_view: TopographicPlaceView | None = field(
         default=None,
         metadata={
             "name": "TopographicPlaceView",
@@ -75,7 +75,7 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_area_ref: Optional[StopAreaRef] = field(
+    stop_area_ref: StopAreaRef | None = field(
         default=None,
         metadata={
             "name": "StopAreaRef",
@@ -83,43 +83,7 @@ class DefaultConnectionVersionStructure(TransferVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
-        Union[
-            VehicleStoppingPositionRef,
-            VehicleStoppingPlaceRef,
-            BoardingPositionRef,
-            AccessSpaceRef,
-            TaxiStandRef,
-            QuayRef,
-            StopPlaceSpaceRef,
-            VehiclePoolingParkingBayRef,
-            MonitoredVehicleSharingParkingBayRef,
-            VehicleSharingParkingBayRef,
-            ParkingBayRef,
-            VehiclePoolingParkingAreaRef,
-            VehicleSharingParkingAreaRef,
-            TaxiParkingAreaRef,
-            ParkingAreaRef,
-            PointOfInterestSpaceRef,
-            StopPlaceVehicleEntranceRef,
-            StopPlaceEntranceRef,
-            ParkingEntranceForVehiclesRef,
-            ParkingPassengerEntranceRef,
-            ParkingEntranceRef,
-            PointOfInterestVehicleEntranceRef,
-            PointOfInterestEntranceRef,
-            VehicleEntranceRef,
-            EntranceRef,
-            SiteComponentRef,
-            TaxiRankRef,
-            StopPlaceRef,
-            ParkingRef,
-            PointOfInterestRef,
-            ServiceSiteRef,
-            SiteRef,
-            SiteElementRef,
-        ]
-    ] = field(
+    choice: VehicleStoppingPositionRef | VehicleStoppingPlaceRef | BoardingPositionRef | AccessSpaceRef | TaxiStandRef | QuayRef | StopPlaceSpaceRef | VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef | VehiclePoolingParkingAreaRef | VehicleSharingParkingAreaRef | TaxiParkingAreaRef | ParkingAreaRef | PointOfInterestSpaceRef | StopPlaceVehicleEntranceRef | StopPlaceEntranceRef | ParkingEntranceForVehiclesRef | ParkingPassengerEntranceRef | ParkingEntranceRef | PointOfInterestVehicleEntranceRef | PointOfInterestEntranceRef | VehicleEntranceRef | EntranceRef | SiteComponentRef | TaxiRankRef | StopPlaceRef | ParkingRef | PointOfInterestRef | ServiceSiteRef | SiteRef | SiteElementRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

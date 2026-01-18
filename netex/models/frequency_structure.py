@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class FrequencyStructure:
-    scheduled_headway_interval: Optional[XmlDuration] = field(
+    scheduled_headway_interval: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "ScheduledHeadwayInterval",
@@ -19,7 +19,7 @@ class FrequencyStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_headway_interval: Optional[XmlDuration] = field(
+    minimum_headway_interval: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MinimumHeadwayInterval",
@@ -27,7 +27,7 @@ class FrequencyStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_headway_interval: Optional[XmlDuration] = field(
+    maximum_headway_interval: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MaximumHeadwayInterval",
@@ -35,7 +35,7 @@ class FrequencyStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    headway_display: Optional[HeadwayUseEnumeration] = field(
+    headway_display: HeadwayUseEnumeration | None = field(
         default=None,
         metadata={
             "name": "HeadwayDisplay",
@@ -43,7 +43,7 @@ class FrequencyStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    frequency_regulated: Optional[bool] = field(
+    frequency_regulated: bool | None = field(
         default=None,
         metadata={
             "name": "FrequencyRegulated",
@@ -51,7 +51,7 @@ class FrequencyStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",

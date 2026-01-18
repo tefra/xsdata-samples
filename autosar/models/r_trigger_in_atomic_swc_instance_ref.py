@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -30,9 +32,7 @@ class RTriggerInAtomicSwcInstanceRef:
     class Meta:
         name = "R-TRIGGER-IN-ATOMIC-SWC-INSTANCE-REF"
 
-    context_r_port_ref: Optional[
-        "RTriggerInAtomicSwcInstanceRef.ContextRPortRef"
-    ] = field(
+    context_r_port_ref: RTriggerInAtomicSwcInstanceRef.ContextRPortRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-R-PORT-REF",
@@ -40,9 +40,7 @@ class RTriggerInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_trigger_ref: Optional[
-        "RTriggerInAtomicSwcInstanceRef.TargetTriggerRef"
-    ] = field(
+    target_trigger_ref: RTriggerInAtomicSwcInstanceRef.TargetTriggerRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-TRIGGER-REF",
@@ -50,14 +48,14 @@ class RTriggerInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -68,7 +66,7 @@ class RTriggerInAtomicSwcInstanceRef:
 
     @dataclass
     class ContextRPortRef(Ref):
-        dest: Optional[AbstractRequiredPortPrototypeSubtypesEnum] = field(
+        dest: AbstractRequiredPortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -79,7 +77,7 @@ class RTriggerInAtomicSwcInstanceRef:
 
     @dataclass
     class TargetTriggerRef(Ref):
-        dest: Optional[TriggerSubtypesEnum] = field(
+        dest: TriggerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

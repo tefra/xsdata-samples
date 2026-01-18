@@ -13,7 +13,7 @@ class ProcessStepBaseType(NameableType):
     ProcessStepType.
     """
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

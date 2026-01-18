@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
@@ -19,7 +21,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "CodespaceAssignment_VersionedChildStructure"
 
-    codespace_ref_or_codespace: Optional[Union[CodespaceRef, Codespace]] = (
+    codespace_ref_or_codespace: CodespaceRef | Codespace | None = (
         field(
             default=None,
             metadata={
@@ -39,7 +41,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             },
         )
     )
-    administrative_zone_ref: Optional[AdministrativeZoneRef] = field(
+    administrative_zone_ref: AdministrativeZoneRef | None = field(
         default=None,
         metadata={
             "name": "AdministrativeZoneRef",
@@ -47,7 +49,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_date: Optional[XmlDate] = field(
+    start_date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -55,7 +57,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_date: Optional[XmlDate] = field(
+    end_date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -63,7 +65,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name_of_class: Optional[str] = field(
+    name_of_class: str | None = field(
         default=None,
         metadata={
             "name": "NameOfClass",
@@ -80,10 +82,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
         },
     )
     start_value_or_end_value: Iterable[
-        Union[
-            "CodespaceAssignmentVersionedChildStructure.StartValue",
-            "CodespaceAssignmentVersionedChildStructure.EndValue",
-        ]
+        CodespaceAssignmentVersionedChildStructure.StartValue | CodespaceAssignmentVersionedChildStructure.EndValue
     ] = field(
         default_factory=list,
         metadata={
@@ -107,7 +106,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "max_occurs": 2,
         },
     )
-    maximum_length: Optional[int] = field(
+    maximum_length: int | None = field(
         default=None,
         metadata={
             "name": "MaximumLength",
@@ -115,7 +114,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -123,9 +122,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_codespace_assignment_ref: Optional[
-        TypeOfCodespaceAssignmentRef
-    ] = field(
+    type_of_codespace_assignment_ref: TypeOfCodespaceAssignmentRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfCodespaceAssignmentRef",
@@ -136,7 +133,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
 
     @dataclass
     class StartValue:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -145,7 +142,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
 
     @dataclass
     class EndValue:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,

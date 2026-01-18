@@ -17,9 +17,7 @@ class FlexibleQuaysRelStructure(ContainmentAggregationStructure):
         name = "flexibleQuays_RelStructure"
 
     choice: Iterable[
-        Union[
-            HailAndRideAreaRef, FlexibleAreaRef, FlexibleQuayRef, FlexibleQuay
-        ]
+        HailAndRideAreaRef | FlexibleAreaRef | FlexibleQuayRef | FlexibleQuay
     ] = field(
         default_factory=list,
         metadata={

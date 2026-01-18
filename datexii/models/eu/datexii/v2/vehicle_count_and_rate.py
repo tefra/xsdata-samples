@@ -46,9 +46,7 @@ class VehicleCountAndRate:
     :ivar vehicle_count_and_rate_extension:
     """
 
-    measurement_site_reference: Optional[
-        MeasurementSiteRecordVersionedReference
-    ] = field(
+    measurement_site_reference: MeasurementSiteRecordVersionedReference | None = field(
         default=None,
         metadata={
             "name": "measurementSiteReference",
@@ -56,7 +54,7 @@ class VehicleCountAndRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measured_value_index: Optional[int] = field(
+    measured_value_index: int | None = field(
         default=None,
         metadata={
             "name": "measuredValueIndex",
@@ -64,7 +62,7 @@ class VehicleCountAndRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    dedicated_access: Optional[ParkingAccessReference] = field(
+    dedicated_access: ParkingAccessReference | None = field(
         default=None,
         metadata={
             "name": "dedicatedAccess",
@@ -72,7 +70,7 @@ class VehicleCountAndRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_time_default: Optional[XmlDateTime] = field(
+    measurement_time_default: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "measurementTimeDefault",
@@ -80,7 +78,7 @@ class VehicleCountAndRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    last_calibration: Optional[XmlDateTime] = field(
+    last_calibration: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "lastCalibration",
@@ -88,7 +86,7 @@ class VehicleCountAndRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    covering_petrol_station_area: Optional[bool] = field(
+    covering_petrol_station_area: bool | None = field(
         default=None,
         metadata={
             "name": "coveringPetrolStationArea",
@@ -112,7 +110,7 @@ class VehicleCountAndRate:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_count_and_rate_extension: Optional[ExtensionType] = field(
+    vehicle_count_and_rate_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "vehicleCountAndRateExtension",

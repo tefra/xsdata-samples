@@ -21,9 +21,7 @@ class StructureTypeAbstract(MaintainableType):
     class Meta:
         name = "StructureType"
 
-    metadata_structure_components_or_data_structure_components: Optional[
-        Union[MetadataStructureComponents, DataStructureComponents]
-    ] = field(
+    metadata_structure_components_or_data_structure_components: MetadataStructureComponents | DataStructureComponents | None = field(
         default=None,
         metadata={
             "type": "Elements",

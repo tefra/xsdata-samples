@@ -24,7 +24,7 @@ class Temperature:
     :ivar temperature_extension:
     """
 
-    air_temperature: Optional[TemperatureValue] = field(
+    air_temperature: TemperatureValue | None = field(
         default=None,
         metadata={
             "name": "airTemperature",
@@ -32,7 +32,7 @@ class Temperature:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    dew_point_temperature: Optional[TemperatureValue] = field(
+    dew_point_temperature: TemperatureValue | None = field(
         default=None,
         metadata={
             "name": "dewPointTemperature",
@@ -40,7 +40,7 @@ class Temperature:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    maximum_temperature: Optional[TemperatureValue] = field(
+    maximum_temperature: TemperatureValue | None = field(
         default=None,
         metadata={
             "name": "maximumTemperature",
@@ -48,7 +48,7 @@ class Temperature:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    minimum_temperature: Optional[TemperatureValue] = field(
+    minimum_temperature: TemperatureValue | None = field(
         default=None,
         metadata={
             "name": "minimumTemperature",
@@ -56,7 +56,7 @@ class Temperature:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    temperature_extension: Optional[ExtensionType] = field(
+    temperature_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "temperatureExtension",

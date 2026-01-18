@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import Any, ForwardRef, Optional, Union
@@ -39,7 +41,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 @dataclass
 class EntityInVersionStructure(EntityStructure):
     validity_conditions_or_valid_between: Iterable[
-        Union["ValidityConditionsRelStructure", "ValidBetween"]
+        ValidityConditionsRelStructure | ValidBetween
     ] = field(
         default_factory=list,
         metadata={
@@ -58,7 +60,7 @@ class EntityInVersionStructure(EntityStructure):
             ),
         },
     )
-    alternative_texts: Optional["AlternativeTextsRelStructure"] = field(
+    alternative_texts: AlternativeTextsRelStructure | None = field(
         default=None,
         metadata={
             "name": "alternativeTexts",
@@ -66,20 +68,20 @@ class EntityInVersionStructure(EntityStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    data_source_ref_attribute: Optional[str] = field(
+    data_source_ref_attribute: str | None = field(
         default=None,
         metadata={
             "name": "dataSourceRef",
             "type": "Attribute",
         },
     )
-    created: Optional[XmlDateTime] = field(
+    created: XmlDateTime | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    changed: Optional[XmlDateTime] = field(
+    changed: XmlDateTime | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -91,7 +93,7 @@ class EntityInVersionStructure(EntityStructure):
             "type": "Attribute",
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -104,21 +106,21 @@ class EntityInVersionStructure(EntityStructure):
             "type": "Attribute",
         },
     )
-    derived_from_version_ref_attribute: Optional[str] = field(
+    derived_from_version_ref_attribute: str | None = field(
         default=None,
         metadata={
             "name": "derivedFromVersionRef",
             "type": "Attribute",
         },
     )
-    compatible_with_version_frame_version_ref: Optional[str] = field(
+    compatible_with_version_frame_version_ref: str | None = field(
         default=None,
         metadata={
             "name": "compatibleWithVersionFrameVersionRef",
             "type": "Attribute",
         },
     )
-    derived_from_object_ref: Optional[str] = field(
+    derived_from_object_ref: str | None = field(
         default=None,
         metadata={
             "name": "derivedFromObjectRef",
@@ -129,7 +131,7 @@ class EntityInVersionStructure(EntityStructure):
 
 @dataclass
 class DataManagedObjectStructure(EntityInVersionStructure):
-    key_list: Optional[KeyList] = field(
+    key_list: KeyList | None = field(
         default=None,
         metadata={
             "name": "keyList",
@@ -137,7 +139,7 @@ class DataManagedObjectStructure(EntityInVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    extensions: Optional[Extensions2] = field(
+    extensions: Extensions2 | None = field(
         default=None,
         metadata={
             "name": "Extensions",
@@ -145,7 +147,7 @@ class DataManagedObjectStructure(EntityInVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    branding_ref: Optional[BrandingRef] = field(
+    branding_ref: BrandingRef | None = field(
         default=None,
         metadata={
             "name": "BrandingRef",
@@ -153,7 +155,7 @@ class DataManagedObjectStructure(EntityInVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    responsibility_set_ref_attribute: Optional[str] = field(
+    responsibility_set_ref_attribute: str | None = field(
         default=None,
         metadata={
             "name": "responsibilitySetRef",
@@ -164,7 +166,7 @@ class DataManagedObjectStructure(EntityInVersionStructure):
 
 @dataclass
 class VersionedChildStructure(EntityInVersionStructure):
-    extensions: Optional[Extensions2] = field(
+    extensions: Extensions2 | None = field(
         default=None,
         metadata={
             "name": "Extensions",
@@ -179,7 +181,7 @@ class AlternativeTextVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "AlternativeText_VersionedChildStructure"
 
-    data_managed_object_ref: Optional[VersionOfObjectRefStructure] = field(
+    data_managed_object_ref: VersionOfObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "DataManagedObjectRef",
@@ -187,7 +189,7 @@ class AlternativeTextVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    text: Optional[MultilingualString] = field(
+    text: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Text",
@@ -196,21 +198,21 @@ class AlternativeTextVersionedChildStructure(VersionedChildStructure):
             "required": True,
         },
     )
-    attribute_name: Optional[str] = field(
+    attribute_name: str | None = field(
         default=None,
         metadata={
             "name": "attributeName",
             "type": "Attribute",
         },
     )
-    use_for_language: Optional[str] = field(
+    use_for_language: str | None = field(
         default=None,
         metadata={
             "name": "useForLanguage",
             "type": "Attribute",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -223,7 +225,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "OperatingDay_VersionStructure"
 
-    calendar_date: Optional[XmlDate] = field(
+    calendar_date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "CalendarDate",
@@ -232,7 +234,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "required": True,
         },
     )
-    service_calendar_ref: Optional[ServiceCalendarRef] = field(
+    service_calendar_ref: ServiceCalendarRef | None = field(
         default=None,
         metadata={
             "name": "ServiceCalendarRef",
@@ -240,7 +242,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -248,7 +250,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -256,7 +258,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_number: Optional[int] = field(
+    day_number: int | None = field(
         default=None,
         metadata={
             "name": "DayNumber",
@@ -264,7 +266,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -272,7 +274,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    earliest_time: Optional[XmlTime] = field(
+    earliest_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "EarliestTime",
@@ -280,7 +282,7 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_length: Optional[XmlDuration] = field(
+    day_length: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "DayLength",
@@ -295,7 +297,7 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
     class Meta:
         name = "Timeband_VersionedChildStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -303,9 +305,7 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_time_or_start_event: Optional[
-        Union[XmlTime, TimeOfDayEnumeration]
-    ] = field(
+    start_time_or_start_event: XmlTime | TimeOfDayEnumeration | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -324,7 +324,7 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
         },
     )
     choice: Iterable[
-        Union[XmlTime, TimeOfDayEnumeration, int, XmlDuration]
+        XmlTime | TimeOfDayEnumeration | int | XmlDuration
     ] = field(
         default_factory=list,
         metadata={
@@ -361,7 +361,7 @@ class ValidityConditionVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "ValidityCondition_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -369,7 +369,7 @@ class ValidityConditionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -377,7 +377,7 @@ class ValidityConditionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    conditioned_object_ref: Optional[VersionOfObjectRefStructure] = field(
+    conditioned_object_ref: VersionOfObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "ConditionedObjectRef",
@@ -385,7 +385,7 @@ class ValidityConditionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    with_condition_ref: Optional[ValidityConditionRefStructure] = field(
+    with_condition_ref: ValidityConditionRefStructure | None = field(
         default=None,
         metadata={
             "name": "WithConditionRef",
@@ -434,7 +434,7 @@ class ValidBetweenVersionStructure(ValidityConditionVersionStructure):
     class Meta:
         name = "ValidBetween_VersionStructure"
 
-    from_date: Optional[XmlDateTime] = field(
+    from_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "FromDate",
@@ -442,7 +442,7 @@ class ValidBetweenVersionStructure(ValidityConditionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_date: Optional[XmlDateTime] = field(
+    to_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "ToDate",
@@ -478,7 +478,7 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
     class Meta:
         name = "ValidityRuleParameter_VersionStructure"
 
-    rule_object_ref: Optional[VersionOfObjectRefStructure] = field(
+    rule_object_ref: VersionOfObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "RuleObjectRef",
@@ -487,13 +487,7 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
         },
     )
     choice: Iterable[
-        Union[
-            str,
-            RelativeOperatorEnumeration,
-            "ValidityRuleParameterVersionStructure.AttributeValue",
-            "ValidityRuleParameterVersionStructure.Method",
-            bool,
-        ]
+        str | RelativeOperatorEnumeration | ValidityRuleParameterVersionStructure.AttributeValue | ValidityRuleParameterVersionStructure.Method | bool
     ] = field(
         default_factory=list,
         metadata={
@@ -535,7 +529,7 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
 
     @dataclass
     class AttributeValue:
-        content: Optional[object] = field(
+        content: object | None = field(
             default=None,
             metadata={
                 "type": "Wildcard",
@@ -546,7 +540,7 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
 
     @dataclass
     class Method:
-        content: Optional[object] = field(
+        content: object | None = field(
             default=None,
             metadata={
                 "type": "Wildcard",
@@ -561,7 +555,7 @@ class ValidityTriggerVersionStructure(ValidityConditionVersionStructure):
     class Meta:
         name = "ValidityTrigger_VersionStructure"
 
-    trigger_object_ref: Optional[VersionOfObjectRefStructure] = field(
+    trigger_object_ref: VersionOfObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "TriggerObjectRef",
@@ -569,7 +563,7 @@ class ValidityTriggerVersionStructure(ValidityConditionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -585,7 +579,7 @@ class TimebandsRelStructure(ContainmentAggregationStructure):
         name = "timebands_RelStructure"
 
     timeband_ref_or_timeband: Iterable[
-        Union[TimebandRef, TimebandVersionedChildStructure]
+        TimebandRef | TimebandVersionedChildStructure
     ] = field(
         default_factory=list,
         metadata={
@@ -611,7 +605,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "DayType_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -619,7 +613,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -627,7 +621,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -635,7 +629,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -643,7 +637,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    earliest_time: Optional[XmlTime] = field(
+    earliest_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "EarliestTime",
@@ -651,7 +645,7 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_length: Optional[XmlDuration] = field(
+    day_length: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "DayLength",
@@ -659,14 +653,14 @@ class DayTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    properties: Optional[PropertiesOfDayRelStructure] = field(
+    properties: PropertiesOfDayRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timebands: Optional[TimebandsRelStructure] = field(
+    timebands: TimebandsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -750,9 +744,7 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
     class Meta:
         name = "ValidDuring_VersionStructure"
 
-    choice: Optional[
-        Union[FareDayTypeRef, DayTypeRef, Iterable[DayOfWeekEnumeration], str]
-    ] = field(
+    choice: FareDayTypeRef | DayTypeRef | Iterable[DayOfWeekEnumeration] | str | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -785,7 +777,7 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
             ),
         },
     )
-    timebands: Optional[TimebandsRelStructure] = field(
+    timebands: TimebandsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -858,7 +850,7 @@ class OperatingDaysRelStructure(ContainmentAggregationStructure):
         name = "operatingDays_RelStructure"
 
     operating_day_ref_or_operating_day: Iterable[
-        Union[OperatingDayRef, OperatingDay]
+        OperatingDayRef | OperatingDay
     ] = field(
         default_factory=list,
         metadata={
@@ -896,7 +888,7 @@ class OrganisationDayTypeVersionStructure(DayTypeVersionStructure):
     class Meta:
         name = "OrganisationDayType_VersionStructure"
 
-    is_service_day: Optional[bool] = field(
+    is_service_day: bool | None = field(
         default=None,
         metadata={
             "name": "IsServiceDay",
@@ -904,7 +896,7 @@ class OrganisationDayTypeVersionStructure(DayTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    serviced_organisation_ref: Optional[ServicedOrganisationRef] = field(
+    serviced_organisation_ref: ServicedOrganisationRef | None = field(
         default=None,
         metadata={
             "name": "ServicedOrganisationRef",
@@ -980,13 +972,7 @@ class DayTypesRelStructure(ContainmentAggregationStructure):
         name = "dayTypes_RelStructure"
 
     day_type_ref_or_day_type: Iterable[
-        Union[
-            FareDayTypeRef,
-            DayTypeRef,
-            FareDayType,
-            OrganisationDayType,
-            DayType,
-        ]
+        FareDayTypeRef | DayTypeRef | FareDayType | OrganisationDayType | DayType
     ] = field(
         default_factory=list,
         metadata={
@@ -1027,7 +1013,7 @@ class AvailabilityConditionVersionStructure(ValidBetweenVersionStructure):
     class Meta:
         name = "AvailabilityCondition_VersionStructure"
 
-    is_available: Optional[bool] = field(
+    is_available: bool | None = field(
         default=None,
         metadata={
             "name": "IsAvailable",
@@ -1035,7 +1021,7 @@ class AvailabilityConditionVersionStructure(ValidBetweenVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_types: Optional[DayTypesRelStructure] = field(
+    day_types: DayTypesRelStructure | None = field(
         default=None,
         metadata={
             "name": "dayTypes",
@@ -1043,7 +1029,7 @@ class AvailabilityConditionVersionStructure(ValidBetweenVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    valid_day_bits: Optional[str] = field(
+    valid_day_bits: str | None = field(
         default=None,
         metadata={
             "name": "ValidDayBits",
@@ -1051,14 +1037,14 @@ class AvailabilityConditionVersionStructure(ValidBetweenVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timebands: Optional[TimebandsRelStructure] = field(
+    timebands: TimebandsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operating_days: Optional[OperatingDaysRelStructure] = field(
+    operating_days: OperatingDaysRelStructure | None = field(
         default=None,
         metadata={
             "name": "operatingDays",
@@ -1095,19 +1081,7 @@ class ValidityConditionsRelStructure(ContainmentAggregationStructure):
         name = "validityConditions_RelStructure"
 
     choice: Iterable[
-        Union[
-            AvailabilityConditionRef,
-            ValidityRuleParameterRef,
-            ValidityTriggerRef,
-            ValidityConditionRef,
-            ValidBetween,
-            SimpleAvailabilityCondition,
-            ValidDuring,
-            AvailabilityCondition,
-            ValidityRuleParameter,
-            ValidityTrigger,
-            ValidityCondition,
-        ]
+        AvailabilityConditionRef | ValidityRuleParameterRef | ValidityTriggerRef | ValidityConditionRef | ValidBetween | SimpleAvailabilityCondition | ValidDuring | AvailabilityCondition | ValidityRuleParameter | ValidityTrigger | ValidityCondition
     ] = field(
         default_factory=list,
         metadata={

@@ -20,7 +20,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
     class Meta:
         name = "EntranceEquipment_VersionStructure"
 
-    door: Optional[bool] = field(
+    door: bool | None = field(
         default=None,
         metadata={
             "name": "Door",
@@ -28,7 +28,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    door_orientation: Optional[CompassBearing8Enumeration] = field(
+    door_orientation: CompassBearing8Enumeration | None = field(
         default=None,
         metadata={
             "name": "DoorOrientation",
@@ -36,7 +36,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    door_handle_outside: Optional[DoorHandleEnumeration] = field(
+    door_handle_outside: DoorHandleEnumeration | None = field(
         default=None,
         metadata={
             "name": "DoorHandleOutside",
@@ -44,7 +44,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    door_handle_inside: Optional[DoorHandleEnumeration] = field(
+    door_handle_inside: DoorHandleEnumeration | None = field(
         default=None,
         metadata={
             "name": "DoorHandleInside",
@@ -52,7 +52,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    kept_open: Optional[bool] = field(
+    kept_open: bool | None = field(
         default=None,
         metadata={
             "name": "KeptOpen",
@@ -60,7 +60,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    revolving_door: Optional[bool] = field(
+    revolving_door: bool | None = field(
         default=None,
         metadata={
             "name": "RevolvingDoor",
@@ -68,7 +68,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    barrier: Optional[bool] = field(
+    barrier: bool | None = field(
         default=None,
         metadata={
             "name": "Barrier",
@@ -76,7 +76,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_gates: Optional[int] = field(
+    number_of_gates: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfGates",
@@ -84,7 +84,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    staffing: Optional[StaffingEnumeration] = field(
+    staffing: StaffingEnumeration | None = field(
         default=None,
         metadata={
             "name": "Staffing",
@@ -92,7 +92,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entrance_requires_staffing: Optional[bool] = field(
+    entrance_requires_staffing: bool | None = field(
         default=None,
         metadata={
             "name": "EntranceRequiresStaffing",
@@ -100,7 +100,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entrance_requires_ticket: Optional[bool] = field(
+    entrance_requires_ticket: bool | None = field(
         default=None,
         metadata={
             "name": "EntranceRequiresTicket",
@@ -108,7 +108,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entrance_requires_passport: Optional[bool] = field(
+    entrance_requires_passport: bool | None = field(
         default=None,
         metadata={
             "name": "EntranceRequiresPassport",
@@ -116,7 +116,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    drop_kerb_outside: Optional[bool] = field(
+    drop_kerb_outside: bool | None = field(
         default=None,
         metadata={
             "name": "DropKerbOutside",
@@ -124,7 +124,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    acoustic_sensor: Optional[bool] = field(
+    acoustic_sensor: bool | None = field(
         default=None,
         metadata={
             "name": "AcousticSensor",
@@ -132,7 +132,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    automatic_door: Optional[bool] = field(
+    automatic_door: bool | None = field(
         default=None,
         metadata={
             "name": "AutomaticDoor",
@@ -140,7 +140,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    door_control_element_height: Optional[Decimal] = field(
+    door_control_element_height: Decimal | None = field(
         default=None,
         metadata={
             "name": "DoorControlElementHeight",
@@ -148,7 +148,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    glass_door: Optional[bool] = field(
+    glass_door: bool | None = field(
         default=None,
         metadata={
             "name": "GlassDoor",
@@ -156,7 +156,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    airlock: Optional[bool] = field(
+    airlock: bool | None = field(
         default=None,
         metadata={
             "name": "Airlock",
@@ -164,7 +164,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheelchair_passable: Optional[bool] = field(
+    wheelchair_passable: bool | None = field(
         default=None,
         metadata={
             "name": "WheelchairPassable",
@@ -172,7 +172,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheelchair_unaided: Optional[bool] = field(
+    wheelchair_unaided: bool | None = field(
         default=None,
         metadata={
             "name": "WheelchairUnaided",
@@ -180,7 +180,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    audio_or_video_intercom: Optional[bool] = field(
+    audio_or_video_intercom: bool | None = field(
         default=None,
         metadata={
             "name": "AudioOrVideoIntercom",
@@ -188,7 +188,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entrance_attention: Optional[EntranceAttentionEnumeration] = field(
+    entrance_attention: EntranceAttentionEnumeration | None = field(
         default=None,
         metadata={
             "name": "EntranceAttention",
@@ -196,7 +196,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    doorstep_mark: Optional[bool] = field(
+    doorstep_mark: bool | None = field(
         default=None,
         metadata={
             "name": "DoorstepMark",
@@ -204,7 +204,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    necessary_force_to_open: Optional[NecessaryForceEnumeration] = field(
+    necessary_force_to_open: NecessaryForceEnumeration | None = field(
         default=None,
         metadata={
             "name": "NecessaryForceToOpen",
@@ -212,7 +212,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    suitable_for_cycles: Optional[bool] = field(
+    suitable_for_cycles: bool | None = field(
         default=None,
         metadata={
             "name": "SuitableForCycles",
@@ -220,7 +220,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    audio_passthrough_indicator: Optional[bool] = field(
+    audio_passthrough_indicator: bool | None = field(
         default=None,
         metadata={
             "name": "AudioPassthroughIndicator",
@@ -228,7 +228,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ramp_doorbell: Optional[bool] = field(
+    ramp_doorbell: bool | None = field(
         default=None,
         metadata={
             "name": "RampDoorbell",
@@ -236,7 +236,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    recognizable: Optional[bool] = field(
+    recognizable: bool | None = field(
         default=None,
         metadata={
             "name": "Recognizable",
@@ -244,9 +244,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    turning_space_position: Optional[
-        EntranceTurningSpacePositionEnumeration
-    ] = field(
+    turning_space_position: EntranceTurningSpacePositionEnumeration | None = field(
         default=None,
         metadata={
             "name": "TurningSpacePosition",
@@ -254,7 +252,7 @@ class EntranceEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheelchair_turning_circle: Optional[Decimal] = field(
+    wheelchair_turning_circle: Decimal | None = field(
         default=None,
         metadata={
             "name": "WheelchairTurningCircle",

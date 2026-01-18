@@ -13,55 +13,55 @@ class Cores(DictMixin):
     class Meta:
         name = "cores"
 
-    core: Optional[str] = field(
+    core: str | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    flight: Optional[int] = field(
+    flight: int | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gridfins: Optional[bool] = field(
+    gridfins: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    legs: Optional[bool] = field(
+    legs: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reused: Optional[bool] = field(
+    reused: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    landing_attempt: Optional[bool] = field(
+    landing_attempt: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    landing_success: Optional[bool] = field(
+    landing_success: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    landing_type: Optional[str] = field(
+    landing_type: str | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    landpad: Optional[str] = field(
+    landpad: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -75,20 +75,20 @@ class Failures(DictMixin):
     class Meta:
         name = "failures"
 
-    time: Optional[int] = field(
+    time: int | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    altitude: Optional[int] = field(
+    altitude: int | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reason: Optional[str] = field(
+    reason: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -103,19 +103,19 @@ class Fairings(DictMixin):
     class Meta:
         name = "fairings"
 
-    reused: Optional[bool] = field(
+    reused: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    recovery_attempt: Optional[bool] = field(
+    recovery_attempt: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    recovered: Optional[bool] = field(
+    recovered: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -155,13 +155,13 @@ class Patch(DictMixin):
     class Meta:
         name = "patch"
 
-    small: Optional[str] = field(
+    small: str | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    large: Optional[str] = field(
+    large: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -175,25 +175,25 @@ class Reddit(DictMixin):
     class Meta:
         name = "reddit"
 
-    campaign: Optional[str] = field(
+    campaign: str | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    launch: Optional[str] = field(
+    launch: str | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    media: Optional[str] = field(
+    media: str | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    recovery: Optional[str] = field(
+    recovery: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -207,52 +207,52 @@ class Links(DictMixin):
     class Meta:
         name = "links"
 
-    patch: Optional[Patch] = field(
+    patch: Patch | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    reddit: Optional[Reddit] = field(
+    reddit: Reddit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    flickr: Optional[Flickr] = field(
+    flickr: Flickr | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    presskit: Optional[str] = field(
+    presskit: str | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    webcast: Optional[str] = field(
+    webcast: str | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    youtube_id: Optional[str] = field(
+    youtube_id: str | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    article: Optional[str] = field(
+    article: str | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    wikipedia: Optional[str] = field(
+    wikipedia: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -266,65 +266,65 @@ class Launches(DictMixin):
     class Meta:
         name = "launches"
 
-    fairings: Optional[Fairings] = field(
+    fairings: Fairings | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    links: Optional[Links] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-    static_fire_date_utc: Optional[XmlDateTime] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        },
-    )
-    static_fire_date_unix: Optional[int] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        },
-    )
-    tbd: Optional[bool] = field(
+    links: Links | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    net: Optional[bool] = field(
+    static_fire_date_utc: XmlDateTime | None = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        },
+    )
+    static_fire_date_unix: int | None = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        },
+    )
+    tbd: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    window: Optional[int] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        },
-    )
-    rocket: Optional[str] = field(
+    net: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    success: Optional[bool] = field(
+    window: int | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    details: Optional[str] = field(
+    rocket: str | None = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+    success: bool | None = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        },
+    )
+    details: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -355,21 +355,21 @@ class Launches(DictMixin):
             "min_occurs": 1,
         },
     )
-    launchpad: Optional[str] = field(
+    launchpad: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    auto_update: Optional[bool] = field(
+    auto_update: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    launch_library_id: Optional[str] = field(
+    launch_library_id: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -381,49 +381,49 @@ class Launches(DictMixin):
             "type": "Element",
         },
     )
-    flight_number: Optional[int] = field(
+    flight_number: int | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    date_utc: Optional[XmlDateTime] = field(
+    date_utc: XmlDateTime | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    date_unix: Optional[int] = field(
+    date_unix: int | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    date_local: Optional[XmlDateTime] = field(
+    date_local: XmlDateTime | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    date_precision: Optional[str] = field(
+    date_precision: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    upcoming: Optional[bool] = field(
+    upcoming: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -437,7 +437,7 @@ class Launches(DictMixin):
             "min_occurs": 1,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Element",

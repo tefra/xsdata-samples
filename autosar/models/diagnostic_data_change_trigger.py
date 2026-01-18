@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -37,7 +39,7 @@ class DiagnosticDataChangeTrigger:
     class Meta:
         name = "DIAGNOSTIC-DATA-CHANGE-TRIGGER"
 
-    initial_event_status: Optional[DiagnosticInitialEventStatusEnum] = field(
+    initial_event_status: DiagnosticInitialEventStatusEnum | None = field(
         default=None,
         metadata={
             "name": "INITIAL-EVENT-STATUS",
@@ -45,9 +47,7 @@ class DiagnosticDataChangeTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_identifier_ref: Optional[
-        "DiagnosticDataChangeTrigger.DataIdentifierRef"
-    ] = field(
+    data_identifier_ref: DiagnosticDataChangeTrigger.DataIdentifierRef | None = field(
         default=None,
         metadata={
             "name": "DATA-IDENTIFIER-REF",
@@ -55,14 +55,14 @@ class DiagnosticDataChangeTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -73,7 +73,7 @@ class DiagnosticDataChangeTrigger:
 
     @dataclass
     class DataIdentifierRef(Ref):
-        dest: Optional[DiagnosticDataIdentifierSubtypesEnum] = field(
+        dest: DiagnosticDataIdentifierSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

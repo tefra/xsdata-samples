@@ -60,7 +60,7 @@ class ParkingThresholds:
     :ivar parking_thresholds_extension:
     """
 
-    almost_full_decreasing: Optional[int] = field(
+    almost_full_decreasing: int | None = field(
         default=None,
         metadata={
             "name": "almostFullDecreasing",
@@ -68,7 +68,7 @@ class ParkingThresholds:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    almost_full_increasing: Optional[int] = field(
+    almost_full_increasing: int | None = field(
         default=None,
         metadata={
             "name": "almostFullIncreasing",
@@ -76,7 +76,7 @@ class ParkingThresholds:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    entrance_full: Optional[int] = field(
+    entrance_full: int | None = field(
         default=None,
         metadata={
             "name": "entranceFull",
@@ -84,7 +84,7 @@ class ParkingThresholds:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    full_decreasing: Optional[int] = field(
+    full_decreasing: int | None = field(
         default=None,
         metadata={
             "name": "fullDecreasing",
@@ -92,7 +92,7 @@ class ParkingThresholds:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    full_increasing: Optional[int] = field(
+    full_increasing: int | None = field(
         default=None,
         metadata={
             "name": "fullIncreasing",
@@ -100,14 +100,14 @@ class ParkingThresholds:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    overcrowding: Optional[int] = field(
+    overcrowding: int | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    overcrowding_level1: Optional[int] = field(
+    overcrowding_level1: int | None = field(
         default=None,
         metadata={
             "name": "overcrowdingLevel1",
@@ -115,7 +115,7 @@ class ParkingThresholds:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    overcrowding_level2: Optional[int] = field(
+    overcrowding_level2: int | None = field(
         default=None,
         metadata={
             "name": "overcrowdingLevel2",
@@ -123,7 +123,7 @@ class ParkingThresholds:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_last_maximum_occupancy: Optional[int] = field(
+    parking_last_maximum_occupancy: int | None = field(
         default=None,
         metadata={
             "name": "parkingLastMaximumOccupancy",
@@ -139,7 +139,7 @@ class ParkingThresholds:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_thresholds_extension: Optional[ExtensionType] = field(
+    parking_thresholds_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "parkingThresholdsExtension",

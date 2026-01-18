@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -30,7 +32,7 @@ class InvertCondition:
     class Meta:
         name = "INVERT-CONDITION"
 
-    condition: Optional["InvertCondition.Condition"] = field(
+    condition: InvertCondition.Condition | None = field(
         default=None,
         metadata={
             "name": "CONDITION",
@@ -38,14 +40,14 @@ class InvertCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -56,7 +58,7 @@ class InvertCondition:
 
     @dataclass
     class Condition:
-        aggregation_condition: Optional[AggregationCondition] = field(
+        aggregation_condition: AggregationCondition | None = field(
             default=None,
             metadata={
                 "name": "AGGREGATION-CONDITION",
@@ -64,7 +66,7 @@ class InvertCondition:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        invert_condition: Optional["InvertCondition"] = field(
+        invert_condition: InvertCondition | None = field(
             default=None,
             metadata={
                 "name": "INVERT-CONDITION",
@@ -72,9 +74,7 @@ class InvertCondition:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        primitive_attribute_condition: Optional[
-            PrimitiveAttributeCondition
-        ] = field(
+        primitive_attribute_condition: PrimitiveAttributeCondition | None = field(
             default=None,
             metadata={
                 "name": "PRIMITIVE-ATTRIBUTE-CONDITION",
@@ -82,7 +82,7 @@ class InvertCondition:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_condition: Optional[ReferenceCondition] = field(
+        reference_condition: ReferenceCondition | None = field(
             default=None,
             metadata={
                 "name": "REFERENCE-CONDITION",
@@ -90,7 +90,7 @@ class InvertCondition:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        textual_condition: Optional[TextualCondition] = field(
+        textual_condition: TextualCondition | None = field(
             default=None,
             metadata={
                 "name": "TEXTUAL-CONDITION",

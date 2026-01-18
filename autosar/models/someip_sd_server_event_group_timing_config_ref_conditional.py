@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class SomeipSdServerEventGroupTimingConfigRefConditional:
     class Meta:
         name = "SOMEIP-SD-SERVER-EVENT-GROUP-TIMING-CONFIG-REF-CONDITIONAL"
 
-    someip_sd_server_event_group_timing_config_ref: Optional[
-        "SomeipSdServerEventGroupTimingConfigRefConditional.SomeipSdServerEventGroupTimingConfigRef"
-    ] = field(
+    someip_sd_server_event_group_timing_config_ref: SomeipSdServerEventGroupTimingConfigRefConditional.SomeipSdServerEventGroupTimingConfigRef | None = field(
         default=None,
         metadata={
             "name": "SOMEIP-SD-SERVER-EVENT-GROUP-TIMING-CONFIG-REF",
@@ -43,7 +43,7 @@ class SomeipSdServerEventGroupTimingConfigRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class SomeipSdServerEventGroupTimingConfigRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class SomeipSdServerEventGroupTimingConfigRefConditional:
 
     @dataclass
     class SomeipSdServerEventGroupTimingConfigRef(Ref):
-        dest: Optional[SomeipSdServerEventGroupTimingConfigSubtypesEnum] = (
+        dest: SomeipSdServerEventGroupTimingConfigSubtypesEnum | None = (
             field(
                 default=None,
                 metadata={

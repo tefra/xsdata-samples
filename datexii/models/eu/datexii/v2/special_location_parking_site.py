@@ -24,7 +24,7 @@ class SpecialLocationParkingSite(ParkingSite):
     :ivar special_location_parking_site_extension:
     """
 
-    parking_special_location: Optional[ParkingSpecialLocationEnum] = field(
+    parking_special_location: ParkingSpecialLocationEnum | None = field(
         default=None,
         metadata={
             "name": "parkingSpecialLocation",
@@ -33,7 +33,7 @@ class SpecialLocationParkingSite(ParkingSite):
             "required": True,
         },
     )
-    parking_other_special_location: Optional[MultilingualString] = field(
+    parking_other_special_location: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "parkingOtherSpecialLocation",
@@ -41,7 +41,7 @@ class SpecialLocationParkingSite(ParkingSite):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    special_location_parking_site_extension: Optional[ExtensionType] = field(
+    special_location_parking_site_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "specialLocationParkingSiteExtension",

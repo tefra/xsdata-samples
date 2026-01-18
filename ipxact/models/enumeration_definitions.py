@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -20,7 +22,7 @@ class EnumerationDefinitions:
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
     enumeration_definition: list[
-        "EnumerationDefinitions.EnumerationDefinition"
+        EnumerationDefinitions.EnumerationDefinition
     ] = field(
         default_factory=list,
         metadata={
@@ -45,34 +47,34 @@ class EnumerationDefinitions:
         :ivar id:
         """
 
-        name: Optional[str] = field(
+        name: str | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        display_name: Optional[DisplayName] = field(
+        display_name: DisplayName | None = field(
             default=None,
             metadata={
                 "name": "displayName",
                 "type": "Element",
             },
         )
-        short_description: Optional[ShortDescription] = field(
+        short_description: ShortDescription | None = field(
             default=None,
             metadata={
                 "name": "shortDescription",
                 "type": "Element",
             },
         )
-        description: Optional[Description] = field(
+        description: Description | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        width: Optional[UnsignedPositiveIntExpression] = field(
+        width: UnsignedPositiveIntExpression | None = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -87,14 +89,14 @@ class EnumerationDefinitions:
                 "min_occurs": 1,
             },
         )
-        vendor_extensions: Optional[VendorExtensions] = field(
+        vendor_extensions: VendorExtensions | None = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

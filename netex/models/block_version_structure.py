@@ -25,7 +25,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Block_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -33,7 +33,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -41,7 +41,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -49,7 +49,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    preparation_duration: Optional[XmlDuration] = field(
+    preparation_duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "PreparationDuration",
@@ -57,7 +57,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_time: Optional[XmlTime] = field(
+    start_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "StartTime",
@@ -65,7 +65,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_time_day_offset: Optional[int] = field(
+    start_time_day_offset: int | None = field(
         default=None,
         metadata={
             "name": "StartTimeDayOffset",
@@ -73,7 +73,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    finishing_duration: Optional[XmlDuration] = field(
+    finishing_duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "FinishingDuration",
@@ -81,7 +81,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_time: Optional[XmlTime] = field(
+    end_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "EndTime",
@@ -89,7 +89,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_time_day_offset: Optional[int] = field(
+    end_time_day_offset: int | None = field(
         default=None,
         metadata={
             "name": "EndTimeDayOffset",
@@ -97,7 +97,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_types: Optional[DayTypeRefsRelStructure] = field(
+    day_types: DayTypeRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "dayTypes",
@@ -105,7 +105,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_service_part_ref: Optional[VehicleServicePartRef] = field(
+    vehicle_service_part_ref: VehicleServicePartRef | None = field(
         default=None,
         metadata={
             "name": "VehicleServicePartRef",
@@ -113,9 +113,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_type_ref: Optional[
-        Union[CompoundTrainRef, TrainRef, VehicleTypeRef]
-    ] = field(
+    vehicle_type_ref: CompoundTrainRef | TrainRef | VehicleTypeRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -138,7 +136,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    start_point_ref: Optional[PointRefStructure] = field(
+    start_point_ref: PointRefStructure | None = field(
         default=None,
         metadata={
             "name": "StartPointRef",
@@ -146,7 +144,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_point_ref: Optional[PointRefStructure] = field(
+    end_point_ref: PointRefStructure | None = field(
         default=None,
         metadata={
             "name": "EndPointRef",
@@ -154,14 +152,14 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journeys: Optional[JourneyRefsRelStructure] = field(
+    journeys: JourneyRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    courses_of_journeys: Optional[CoursesOfJourneysRelStructure] = field(
+    courses_of_journeys: CoursesOfJourneysRelStructure | None = field(
         default=None,
         metadata={
             "name": "coursesOfJourneys",
@@ -169,7 +167,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    block_parts: Optional[BlockPartsRelStructure] = field(
+    block_parts: BlockPartsRelStructure | None = field(
         default=None,
         metadata={
             "name": "blockParts",
@@ -177,7 +175,7 @@ class BlockVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    relief_opportunities: Optional[ReliefOpportunitiesRelStructure] = field(
+    relief_opportunities: ReliefOpportunitiesRelStructure | None = field(
         default=None,
         metadata={
             "name": "reliefOpportunities",

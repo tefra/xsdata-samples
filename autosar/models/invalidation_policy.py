@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class InvalidationPolicy:
     class Meta:
         name = "INVALIDATION-POLICY"
 
-    data_element_ref: Optional["InvalidationPolicy.DataElementRef"] = field(
+    data_element_ref: InvalidationPolicy.DataElementRef | None = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENT-REF",
@@ -47,7 +49,7 @@ class InvalidationPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    handle_invalid: Optional[HandleInvalidEnum] = field(
+    handle_invalid: HandleInvalidEnum | None = field(
         default=None,
         metadata={
             "name": "HANDLE-INVALID",
@@ -55,14 +57,14 @@ class InvalidationPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -73,7 +75,7 @@ class InvalidationPolicy:
 
     @dataclass
     class DataElementRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

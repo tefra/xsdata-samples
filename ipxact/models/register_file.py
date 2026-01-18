@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -58,47 +60,47 @@ class RegisterFile:
         name = "registerFile"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    display_name: Optional[DisplayName] = field(
+    display_name: DisplayName | None = field(
         default=None,
         metadata={
             "name": "displayName",
             "type": "Element",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
             "type": "Element",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    access_handles: Optional["RegisterFile.AccessHandles"] = field(
+    access_handles: RegisterFile.AccessHandles | None = field(
         default=None,
         metadata={
             "name": "accessHandles",
             "type": "Element",
         },
     )
-    array: Optional[Array] = field(
+    array: Array | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    address_offset: Optional[UnsignedLongintExpression] = field(
+    address_offset: UnsignedLongintExpression | None = field(
         default=None,
         metadata={
             "name": "addressOffset",
@@ -106,62 +108,60 @@ class RegisterFile:
             "required": True,
         },
     )
-    register_file_definition_ref: Optional[
-        "RegisterFile.RegisterFileDefinitionRef"
-    ] = field(
+    register_file_definition_ref: RegisterFile.RegisterFileDefinitionRef | None = field(
         default=None,
         metadata={
             "name": "registerFileDefinitionRef",
             "type": "Element",
         },
     )
-    type_identifier: Optional[str] = field(
+    type_identifier: str | None = field(
         default=None,
         metadata={
             "name": "typeIdentifier",
             "type": "Element",
         },
     )
-    range: Optional[UnsignedPositiveLongintExpression] = field(
+    range: UnsignedPositiveLongintExpression | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    access_policies: Optional[AccessPolicies] = field(
+    access_policies: AccessPolicies | None = field(
         default=None,
         metadata={
             "name": "accessPolicies",
             "type": "Element",
         },
     )
-    register: list["RegisterFile.Register"] = field(
+    register: list[RegisterFile.Register] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    register_file: list["RegisterFile"] = field(
+    register_file: list[RegisterFile] = field(
         default_factory=list,
         metadata={
             "name": "registerFile",
             "type": "Element",
         },
     )
-    parameters: Optional[Parameters] = field(
+    parameters: Parameters | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -188,7 +188,7 @@ class RegisterFile:
                 "required": True,
             },
         )
-        type_definitions: Optional[str] = field(
+        type_definitions: str | None = field(
             default=None,
             metadata={
                 "name": "typeDefinitions",
@@ -225,34 +225,34 @@ class RegisterFile:
         :ivar id:
         """
 
-        name: Optional[str] = field(
+        name: str | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        display_name: Optional[DisplayName] = field(
+        display_name: DisplayName | None = field(
             default=None,
             metadata={
                 "name": "displayName",
                 "type": "Element",
             },
         )
-        short_description: Optional[ShortDescription] = field(
+        short_description: ShortDescription | None = field(
             default=None,
             metadata={
                 "name": "shortDescription",
                 "type": "Element",
             },
         )
-        description: Optional[Description] = field(
+        description: Description | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        access_handles: Optional["RegisterFile.Register.AccessHandles"] = (
+        access_handles: RegisterFile.Register.AccessHandles | None = (
             field(
                 default=None,
                 metadata={
@@ -261,13 +261,13 @@ class RegisterFile:
                 },
             )
         )
-        array: Optional[Array] = field(
+        array: Array | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        address_offset: Optional[UnsignedLongintExpression] = field(
+        address_offset: UnsignedLongintExpression | None = field(
             default=None,
             metadata={
                 "name": "addressOffset",
@@ -275,35 +275,33 @@ class RegisterFile:
                 "required": True,
             },
         )
-        register_definition_ref: Optional[
-            "RegisterFile.Register.RegisterDefinitionRef"
-        ] = field(
+        register_definition_ref: RegisterFile.Register.RegisterDefinitionRef | None = field(
             default=None,
             metadata={
                 "name": "registerDefinitionRef",
                 "type": "Element",
             },
         )
-        type_identifier: Optional[str] = field(
+        type_identifier: str | None = field(
             default=None,
             metadata={
                 "name": "typeIdentifier",
                 "type": "Element",
             },
         )
-        size: Optional[UnsignedPositiveIntExpression] = field(
+        size: UnsignedPositiveIntExpression | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        volatile: Optional[Volatile] = field(
+        volatile: Volatile | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        access_policies: Optional[AccessPolicies] = field(
+        access_policies: AccessPolicies | None = field(
             default=None,
             metadata={
                 "name": "accessPolicies",
@@ -317,27 +315,27 @@ class RegisterFile:
                 "type": "Element",
             },
         )
-        alternate_registers: Optional[AlternateRegisters] = field(
+        alternate_registers: AlternateRegisters | None = field(
             default=None,
             metadata={
                 "name": "alternateRegisters",
                 "type": "Element",
             },
         )
-        parameters: Optional[Parameters] = field(
+        parameters: Parameters | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vendor_extensions: Optional[VendorExtensions] = field(
+        vendor_extensions: VendorExtensions | None = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -364,7 +362,7 @@ class RegisterFile:
                     "required": True,
                 },
             )
-            type_definitions: Optional[str] = field(
+            type_definitions: str | None = field(
                 default=None,
                 metadata={
                     "name": "typeDefinitions",

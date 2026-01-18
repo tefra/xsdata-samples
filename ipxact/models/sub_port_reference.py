@@ -18,14 +18,14 @@ class SubPortReference:
         name = "subPortReference"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    part_select: Optional[PartSelect] = field(
+    part_select: PartSelect | None = field(
         default=None,
         metadata={
             "name": "partSelect",
             "type": "Element",
         },
     )
-    sub_port_ref: Optional[str] = field(
+    sub_port_ref: str | None = field(
         default=None,
         metadata={
             "name": "subPortRef",
@@ -35,7 +35,7 @@ class SubPortReference:
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

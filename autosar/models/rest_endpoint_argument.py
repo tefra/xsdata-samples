@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -37,7 +39,7 @@ class RestEndpointArgument:
     class Meta:
         name = "REST-ENDPOINT-ARGUMENT"
 
-    mandatory: Optional[Boolean] = field(
+    mandatory: Boolean | None = field(
         default=None,
         metadata={
             "name": "MANDATORY",
@@ -45,7 +47,7 @@ class RestEndpointArgument:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter: Optional["RestEndpointArgument.Parameter"] = field(
+    parameter: RestEndpointArgument.Parameter | None = field(
         default=None,
         metadata={
             "name": "PARAMETER",
@@ -53,14 +55,14 @@ class RestEndpointArgument:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +73,7 @@ class RestEndpointArgument:
 
     @dataclass
     class Parameter:
-        rest_array_property_def: Optional[RestArrayPropertyDef] = field(
+        rest_array_property_def: RestArrayPropertyDef | None = field(
             default=None,
             metadata={
                 "name": "REST-ARRAY-PROPERTY-DEF",
@@ -79,7 +81,7 @@ class RestEndpointArgument:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_boolean_property_def: Optional[RestBooleanPropertyDef] = field(
+        rest_boolean_property_def: RestBooleanPropertyDef | None = field(
             default=None,
             metadata={
                 "name": "REST-BOOLEAN-PROPERTY-DEF",
@@ -87,7 +89,7 @@ class RestEndpointArgument:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_integer_property_def: Optional[RestIntegerPropertyDef] = field(
+        rest_integer_property_def: RestIntegerPropertyDef | None = field(
             default=None,
             metadata={
                 "name": "REST-INTEGER-PROPERTY-DEF",
@@ -95,7 +97,7 @@ class RestEndpointArgument:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_number_property_def: Optional[RestNumberPropertyDef] = field(
+        rest_number_property_def: RestNumberPropertyDef | None = field(
             default=None,
             metadata={
                 "name": "REST-NUMBER-PROPERTY-DEF",
@@ -103,7 +105,7 @@ class RestEndpointArgument:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_object_ref: Optional[RestObjectRef] = field(
+        rest_object_ref: RestObjectRef | None = field(
             default=None,
             metadata={
                 "name": "REST-OBJECT-REF",
@@ -111,7 +113,7 @@ class RestEndpointArgument:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        rest_string_property_def: Optional[RestStringPropertyDef] = field(
+        rest_string_property_def: RestStringPropertyDef | None = field(
             default=None,
             metadata={
                 "name": "REST-STRING-PROPERTY-DEF",

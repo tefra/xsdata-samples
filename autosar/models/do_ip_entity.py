@@ -28,7 +28,7 @@ class DoIpEntity:
     class Meta:
         name = "DO-IP-ENTITY"
 
-    do_ip_entity_role: Optional[DoIpEntityRoleEnum] = field(
+    do_ip_entity_role: DoIpEntityRoleEnum | None = field(
         default=None,
         metadata={
             "name": "DO-IP-ENTITY-ROLE",
@@ -36,14 +36,14 @@ class DoIpEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

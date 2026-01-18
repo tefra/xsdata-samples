@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -94,7 +96,7 @@ class DiagnosticRequestControlOfOnBoardDeviceClass:
     class Meta:
         name = "DIAGNOSTIC-REQUEST-CONTROL-OF-ON-BOARD-DEVICE-CLASS"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -103,9 +105,7 @@ class DiagnosticRequestControlOfOnBoardDeviceClass:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticRequestControlOfOnBoardDeviceClass.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticRequestControlOfOnBoardDeviceClass.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -113,7 +113,7 @@ class DiagnosticRequestControlOfOnBoardDeviceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class DiagnosticRequestControlOfOnBoardDeviceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class DiagnosticRequestControlOfOnBoardDeviceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class DiagnosticRequestControlOfOnBoardDeviceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class DiagnosticRequestControlOfOnBoardDeviceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,9 +153,7 @@ class DiagnosticRequestControlOfOnBoardDeviceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "DiagnosticRequestControlOfOnBoardDeviceClass.Annotations"
-    ] = field(
+    annotations: DiagnosticRequestControlOfOnBoardDeviceClass.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -163,7 +161,7 @@ class DiagnosticRequestControlOfOnBoardDeviceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -171,9 +169,7 @@ class DiagnosticRequestControlOfOnBoardDeviceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: Optional[
-        "DiagnosticRequestControlOfOnBoardDeviceClass.AccessPermissionRef"
-    ] = field(
+    access_permission_ref: DiagnosticRequestControlOfOnBoardDeviceClass.AccessPermissionRef | None = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -181,9 +177,7 @@ class DiagnosticRequestControlOfOnBoardDeviceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_validity: Optional[
-        DiagnosticAccessPermissionValidityEnum
-    ] = field(
+    access_permission_validity: DiagnosticAccessPermissionValidityEnum | None = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-VALIDITY",
@@ -191,14 +185,14 @@ class DiagnosticRequestControlOfOnBoardDeviceClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -206,7 +200,7 @@ class DiagnosticRequestControlOfOnBoardDeviceClass:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -238,7 +232,7 @@ class DiagnosticRequestControlOfOnBoardDeviceClass:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: Optional[DiagnosticAccessPermissionSubtypesEnum] = field(
+        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

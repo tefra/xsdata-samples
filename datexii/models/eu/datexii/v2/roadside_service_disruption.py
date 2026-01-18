@@ -34,7 +34,7 @@ class RoadsideServiceDisruption(NonRoadEventInformation):
             "min_occurs": 1,
         },
     )
-    roadside_service_disruption_extension: Optional[ExtensionType] = field(
+    roadside_service_disruption_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "roadsideServiceDisruptionExtension",

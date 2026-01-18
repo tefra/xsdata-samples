@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -106,7 +108,7 @@ class Unit:
     class Meta:
         name = "UNIT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -115,7 +117,7 @@ class Unit:
             "required": True,
         },
     )
-    short_name_fragments: Optional["Unit.ShortNameFragments"] = field(
+    short_name_fragments: Unit.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -123,7 +125,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -131,7 +133,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -139,7 +141,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -147,7 +149,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -155,7 +157,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -163,7 +165,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["Unit.Annotations"] = field(
+    annotations: Unit.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -171,7 +173,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -179,7 +181,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    display_name: Optional[SingleLanguageUnitNames] = field(
+    display_name: SingleLanguageUnitNames | None = field(
         default=None,
         metadata={
             "name": "DISPLAY-NAME",
@@ -187,7 +189,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    factor_si_to_unit: Optional[Float] = field(
+    factor_si_to_unit: Float | None = field(
         default=None,
         metadata={
             "name": "FACTOR-SI-TO-UNIT",
@@ -195,7 +197,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    offset_si_to_unit: Optional[Float] = field(
+    offset_si_to_unit: Float | None = field(
         default=None,
         metadata={
             "name": "OFFSET-SI-TO-UNIT",
@@ -203,7 +205,7 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_dimension_ref: Optional["Unit.PhysicalDimensionRef"] = field(
+    physical_dimension_ref: Unit.PhysicalDimensionRef | None = field(
         default=None,
         metadata={
             "name": "PHYSICAL-DIMENSION-REF",
@@ -211,14 +213,14 @@ class Unit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -226,7 +228,7 @@ class Unit:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -258,7 +260,7 @@ class Unit:
 
     @dataclass
     class PhysicalDimensionRef(Ref):
-        dest: Optional[PhysicalDimensionSubtypesEnum] = field(
+        dest: PhysicalDimensionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

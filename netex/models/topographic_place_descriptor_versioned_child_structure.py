@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -15,7 +17,7 @@ class TopographicPlaceDescriptorVersionedChildStructure(
     class Meta:
         name = "TopographicPlaceDescriptor_VersionedChildStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -24,7 +26,7 @@ class TopographicPlaceDescriptorVersionedChildStructure(
             "required": True,
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -32,9 +34,7 @@ class TopographicPlaceDescriptorVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    qualify: Optional[
-        "TopographicPlaceDescriptorVersionedChildStructure.Qualify"
-    ] = field(
+    qualify: TopographicPlaceDescriptorVersionedChildStructure.Qualify | None = field(
         default=None,
         metadata={
             "name": "Qualify",
@@ -45,7 +45,7 @@ class TopographicPlaceDescriptorVersionedChildStructure(
 
     @dataclass
     class Qualify:
-        qualifier_name: Optional[MultilingualString] = field(
+        qualifier_name: MultilingualString | None = field(
             default=None,
             metadata={
                 "name": "QualifierName",
@@ -54,7 +54,7 @@ class TopographicPlaceDescriptorVersionedChildStructure(
                 "required": True,
             },
         )
-        topographic_place_ref: Optional[TopographicPlaceRef] = field(
+        topographic_place_ref: TopographicPlaceRef | None = field(
             default=None,
             metadata={
                 "name": "TopographicPlaceRef",

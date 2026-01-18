@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -96,7 +98,7 @@ class DiagnosticResponseOnEventClass:
     class Meta:
         name = "DIAGNOSTIC-RESPONSE-ON-EVENT-CLASS"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,9 +107,7 @@ class DiagnosticResponseOnEventClass:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticResponseOnEventClass.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticResponseOnEventClass.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -115,7 +115,7 @@ class DiagnosticResponseOnEventClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -123,7 +123,7 @@ class DiagnosticResponseOnEventClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -131,7 +131,7 @@ class DiagnosticResponseOnEventClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -139,7 +139,7 @@ class DiagnosticResponseOnEventClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -147,7 +147,7 @@ class DiagnosticResponseOnEventClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -155,7 +155,7 @@ class DiagnosticResponseOnEventClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticResponseOnEventClass.Annotations"] = (
+    annotations: DiagnosticResponseOnEventClass.Annotations | None = (
         field(
             default=None,
             metadata={
@@ -165,7 +165,7 @@ class DiagnosticResponseOnEventClass:
             },
         )
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -173,9 +173,7 @@ class DiagnosticResponseOnEventClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: Optional[
-        "DiagnosticResponseOnEventClass.AccessPermissionRef"
-    ] = field(
+    access_permission_ref: DiagnosticResponseOnEventClass.AccessPermissionRef | None = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -183,9 +181,7 @@ class DiagnosticResponseOnEventClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_validity: Optional[
-        DiagnosticAccessPermissionValidityEnum
-    ] = field(
+    access_permission_validity: DiagnosticAccessPermissionValidityEnum | None = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-VALIDITY",
@@ -193,7 +189,7 @@ class DiagnosticResponseOnEventClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    inter_message_time: Optional[TimeValue] = field(
+    inter_message_time: TimeValue | None = field(
         default=None,
         metadata={
             "name": "INTER-MESSAGE-TIME",
@@ -201,14 +197,14 @@ class DiagnosticResponseOnEventClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -216,7 +212,7 @@ class DiagnosticResponseOnEventClass:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -248,7 +244,7 @@ class DiagnosticResponseOnEventClass:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: Optional[DiagnosticAccessPermissionSubtypesEnum] = field(
+        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -7,7 +7,7 @@ class Sncref:
     class Meta:
         name = "sncref"
 
-    ref: Optional[str] = field(
+    ref: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

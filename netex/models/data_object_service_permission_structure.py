@@ -6,7 +6,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class DataObjectServicePermissionStructure:
-    value: Optional[float] = field(
+    value: float | None = field(
         default=None,
         metadata={
             "required": True,

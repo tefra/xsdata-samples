@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -20,7 +22,7 @@ class ModeLinks:
         name = "modeLinks"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    mode_link: list["ModeLinks.ModeLink"] = field(
+    mode_link: list[ModeLinks.ModeLink] = field(
         default_factory=list,
         metadata={
             "name": "modeLink",
@@ -39,9 +41,7 @@ class ModeLinks:
         :ivar id:
         """
 
-        external_mode_reference: Optional[
-            "ModeLinks.ModeLink.ExternalModeReference"
-        ] = field(
+        external_mode_reference: ModeLinks.ModeLink.ExternalModeReference | None = field(
             default=None,
             metadata={
                 "name": "externalModeReference",
@@ -49,7 +49,7 @@ class ModeLinks:
                 "required": True,
             },
         )
-        mode_reference: Optional["ModeLinks.ModeLink.ModeReference"] = field(
+        mode_reference: ModeLinks.ModeLink.ModeReference | None = field(
             default=None,
             metadata={
                 "name": "modeReference",
@@ -57,14 +57,14 @@ class ModeLinks:
                 "required": True,
             },
         )
-        vendor_extensions: Optional[VendorExtensions] = field(
+        vendor_extensions: VendorExtensions | None = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -78,7 +78,7 @@ class ModeLinks:
             :ivar mode_ref: Reference to a specific mode.
             """
 
-            mode_ref: Optional[str] = field(
+            mode_ref: str | None = field(
                 default=None,
                 metadata={
                     "name": "modeRef",
@@ -93,7 +93,7 @@ class ModeLinks:
             :ivar mode_ref: Reference to a specific mode.
             """
 
-            mode_ref: Optional[str] = field(
+            mode_ref: str | None = field(
                 default=None,
                 metadata={
                     "name": "modeRef",

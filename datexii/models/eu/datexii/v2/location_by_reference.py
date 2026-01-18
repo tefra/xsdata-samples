@@ -20,9 +20,7 @@ class LocationByReference(Location):
     :ivar location_by_reference_extension:
     """
 
-    predefined_location_reference: Optional[
-        PredefinedLocationVersionedReference
-    ] = field(
+    predefined_location_reference: PredefinedLocationVersionedReference | None = field(
         default=None,
         metadata={
             "name": "predefinedLocationReference",
@@ -31,7 +29,7 @@ class LocationByReference(Location):
             "required": True,
         },
     )
-    location_by_reference_extension: Optional[ExtensionType] = field(
+    location_by_reference_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "locationByReferenceExtension",

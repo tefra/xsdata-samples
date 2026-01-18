@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -16,7 +18,7 @@ class ConfigurableArrays:
     class Meta:
         name = "configurableArrays"
 
-    array: list["ConfigurableArrays.Array"] = field(
+    array: list[ConfigurableArrays.Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -27,7 +29,7 @@ class ConfigurableArrays:
 
     @dataclass
     class Array:
-        left: Optional[Left] = field(
+        left: Left | None = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -35,7 +37,7 @@ class ConfigurableArrays:
                 "required": True,
             },
         )
-        right: Optional[Right] = field(
+        right: Right | None = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -43,7 +45,7 @@ class ConfigurableArrays:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

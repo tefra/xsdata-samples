@@ -24,20 +24,7 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "EntitlementRequired_VersionStructure"
 
-    choice: Optional[
-        Union[
-            EntitlementProductRef,
-            SupplementProductRef,
-            PreassignedFareProductRef,
-            AmountOfPriceUnitProductRef,
-            UsageDiscountRightRef,
-            ThirdPartyProductRef,
-            CappedDiscountRightRef,
-            SaleDiscountRightRef,
-            FareProductRef,
-            ServiceAccessRightRef,
-        ]
-    ] = field(
+    choice: EntitlementProductRef | SupplementProductRef | PreassignedFareProductRef | AmountOfPriceUnitProductRef | UsageDiscountRightRef | ThirdPartyProductRef | CappedDiscountRightRef | SaleDiscountRightRef | FareProductRef | ServiceAccessRightRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -95,7 +82,7 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
             ),
         },
     )
-    minimum_qualification_period: Optional[XmlDuration] = field(
+    minimum_qualification_period: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MinimumQualificationPeriod",
@@ -103,7 +90,7 @@ class EntitlementRequiredVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entitlement_constraint: Optional[EntitlementConstraintStructure] = field(
+    entitlement_constraint: EntitlementConstraintStructure | None = field(
         default=None,
         metadata={
             "name": "EntitlementConstraint",

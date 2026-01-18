@@ -48,7 +48,7 @@ class Vehicle:
     :ivar vehicle_extension:
     """
 
-    vehicle_colour: Optional[MultilingualString] = field(
+    vehicle_colour: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "vehicleColour",
@@ -56,7 +56,7 @@ class Vehicle:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_country_of_origin: Optional[MultilingualString] = field(
+    vehicle_country_of_origin: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "vehicleCountryOfOrigin",
@@ -64,7 +64,7 @@ class Vehicle:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_identifier: Optional[str] = field(
+    vehicle_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vehicleIdentifier",
@@ -73,7 +73,7 @@ class Vehicle:
             "max_length": 1024,
         },
     )
-    vehicle_manufacturer: Optional[str] = field(
+    vehicle_manufacturer: str | None = field(
         default=None,
         metadata={
             "name": "vehicleManufacturer",
@@ -82,7 +82,7 @@ class Vehicle:
             "max_length": 1024,
         },
     )
-    vehicle_model: Optional[str] = field(
+    vehicle_model: str | None = field(
         default=None,
         metadata={
             "name": "vehicleModel",
@@ -91,7 +91,7 @@ class Vehicle:
             "max_length": 1024,
         },
     )
-    vehicle_registration_plate_identifier: Optional[str] = field(
+    vehicle_registration_plate_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vehicleRegistrationPlateIdentifier",
@@ -100,7 +100,7 @@ class Vehicle:
             "max_length": 1024,
         },
     )
-    vehicle_status: Optional[VehicleStatusEnum] = field(
+    vehicle_status: VehicleStatusEnum | None = field(
         default=None,
         metadata={
             "name": "vehicleStatus",
@@ -108,7 +108,7 @@ class Vehicle:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_characteristics: Optional[VehicleCharacteristics] = field(
+    vehicle_characteristics: VehicleCharacteristics | None = field(
         default=None,
         metadata={
             "name": "vehicleCharacteristics",
@@ -132,7 +132,7 @@ class Vehicle:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    hazardous_goods_associated_with_vehicle: Optional[HazardousMaterials] = (
+    hazardous_goods_associated_with_vehicle: HazardousMaterials | None = (
         field(
             default=None,
             metadata={
@@ -142,7 +142,7 @@ class Vehicle:
             },
         )
     )
-    vehicle_extension: Optional[ExtensionType] = field(
+    vehicle_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "vehicleExtension",

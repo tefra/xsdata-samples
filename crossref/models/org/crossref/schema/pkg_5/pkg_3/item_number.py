@@ -23,7 +23,7 @@ class ItemNumber:
             "max_length": 32,
         },
     )
-    item_number_type: Optional[str] = field(
+    item_number_type: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

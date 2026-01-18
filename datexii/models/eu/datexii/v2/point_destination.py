@@ -15,7 +15,7 @@ class PointDestination(Destination):
     which is a point.
     """
 
-    point: Optional[Point] = field(
+    point: Point | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -23,7 +23,7 @@ class PointDestination(Destination):
             "required": True,
         },
     )
-    point_destination_extension: Optional[ExtensionType] = field(
+    point_destination_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "pointDestinationExtension",

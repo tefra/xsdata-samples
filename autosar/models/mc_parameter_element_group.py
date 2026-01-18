@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class McParameterElementGroup:
     class Meta:
         name = "MC-PARAMETER-ELEMENT-GROUP"
 
-    short_label: Optional[Identifier] = field(
+    short_label: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -47,7 +49,7 @@ class McParameterElementGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ram_location_ref: Optional["McParameterElementGroup.RamLocationRef"] = (
+    ram_location_ref: McParameterElementGroup.RamLocationRef | None = (
         field(
             default=None,
             metadata={
@@ -57,7 +59,7 @@ class McParameterElementGroup:
             },
         )
     )
-    rom_location_ref: Optional["McParameterElementGroup.RomLocationRef"] = (
+    rom_location_ref: McParameterElementGroup.RomLocationRef | None = (
         field(
             default=None,
             metadata={
@@ -67,14 +69,14 @@ class McParameterElementGroup:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -85,7 +87,7 @@ class McParameterElementGroup:
 
     @dataclass
     class RamLocationRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -96,7 +98,7 @@ class McParameterElementGroup:
 
     @dataclass
     class RomLocationRef(Ref):
-        dest: Optional[ParameterDataPrototypeSubtypesEnum] = field(
+        dest: ParameterDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -18,7 +18,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class ExpansiveStructureType(StructureType):
-    number: Optional[NumberType] = field(
+    number: NumberType | None = field(
         default=None,
         metadata={
             "name": "Number",
@@ -26,9 +26,7 @@ class ExpansiveStructureType(StructureType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    geographic_locations: Optional[
-        ExpansiveStructureTypeGeographicLocations
-    ] = field(
+    geographic_locations: ExpansiveStructureTypeGeographicLocations | None = field(
         default=None,
         metadata={
             "name": "GeographicLocations",

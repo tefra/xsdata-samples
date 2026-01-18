@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/org
 
 @dataclass
 class NationalIdType:
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -19,7 +19,7 @@ class NationalIdType:
             "required": True,
         },
     )
-    type_value: Optional[CodeType] = field(
+    type_value: CodeType | None = field(
         default=None,
         metadata={
             "name": "Type",

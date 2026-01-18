@@ -17,14 +17,14 @@ class PointExtended:
     :ivar junction:
     """
 
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    junction: Optional[Junction] = field(
+    junction: Junction | None = field(
         default=None,
         metadata={
             "type": "Element",

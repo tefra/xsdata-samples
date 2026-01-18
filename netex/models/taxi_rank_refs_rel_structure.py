@@ -12,7 +12,7 @@ class TaxiRankRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "taxiRankRefs_RelStructure"
 
-    taxi_stand_ref: Optional[TaxiStandRef] = field(
+    taxi_stand_ref: TaxiStandRef | None = field(
         default=None,
         metadata={
             "name": "TaxiStandRef",

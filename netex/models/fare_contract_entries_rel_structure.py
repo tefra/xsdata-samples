@@ -24,19 +24,7 @@ class FareContractEntriesRelStructure(ContainmentAggregationStructure):
         name = "fareContractEntries_RelStructure"
 
     choice: Iterable[
-        Union[
-            SalesTransactionRef,
-            OfferedTravelSpecificationRef,
-            RequestedTravelSpecificationRef,
-            TravelSpecificationRef,
-            FareContractEntryRef,
-            SalesTransaction,
-            OfferedTravelSpecification,
-            RequestedTravelSpecification,
-            TravelSpecification1,
-            TravelSpecification2,
-            FareContractEntry,
-        ]
+        SalesTransactionRef | OfferedTravelSpecificationRef | RequestedTravelSpecificationRef | TravelSpecificationRef | FareContractEntryRef | SalesTransaction | OfferedTravelSpecification | RequestedTravelSpecification | TravelSpecification1 | TravelSpecification2 | FareContractEntry
     ] = field(
         default_factory=list,
         metadata={

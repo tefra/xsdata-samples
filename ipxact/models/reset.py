@@ -25,27 +25,27 @@ class Reset:
         name = "reset"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: Optional[UnsignedBitVectorExpression] = field(
+    value: UnsignedBitVectorExpression | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    mask: Optional[UnsignedBitVectorExpression] = field(
+    mask: UnsignedBitVectorExpression | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reset_type_ref: Optional[str] = field(
+    reset_type_ref: str | None = field(
         default=None,
         metadata={
             "name": "resetTypeRef",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

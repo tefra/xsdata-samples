@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -38,7 +40,7 @@ class SignalTypeDef:
         name = "signalTypeDef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    signal_type: Optional[SignalTypeDefSignalType] = field(
+    signal_type: SignalTypeDefSignalType | None = field(
         default=None,
         metadata={
             "name": "signalType",
@@ -46,14 +48,14 @@ class SignalTypeDef:
             "required": True,
         },
     )
-    view_ref: list["SignalTypeDef.ViewRef"] = field(
+    view_ref: list[SignalTypeDef.ViewRef] = field(
         default_factory=list,
         metadata={
             "name": "viewRef",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -69,7 +71,7 @@ class SignalTypeDef:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

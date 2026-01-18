@@ -17,7 +17,7 @@ class OpenlrAreaLocationReference:
     for Area Locations.
     """
 
-    openlr_area_location_reference_extension: Optional[ExtensionType] = field(
+    openlr_area_location_reference_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "openlrAreaLocationReferenceExtension",

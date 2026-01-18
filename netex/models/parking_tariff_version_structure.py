@@ -47,7 +47,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "ParkingTariff_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -55,7 +55,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alternative_names: Optional[AlternativeNamesRelStructure] = field(
+    alternative_names: AlternativeNamesRelStructure | None = field(
         default=None,
         metadata={
             "name": "alternativeNames",
@@ -63,7 +63,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -71,7 +71,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -79,7 +79,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    document_links: Optional[InfoLinksRelStructure] = field(
+    document_links: InfoLinksRelStructure | None = field(
         default=None,
         metadata={
             "name": "documentLinks",
@@ -87,21 +87,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
-        Union[
-            RetailConsortiumRef,
-            OnlineServiceOperatorRef,
-            GeneralOrganisationRef,
-            ManagementAgentRef,
-            ServicedOrganisationRef,
-            TravelAgentRef,
-            OtherOrganisationRef,
-            AuthorityRef,
-            OperatorRef,
-            OrganisationRef,
-            GroupOfOperatorsRef,
-        ]
-    ] = field(
+    choice: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | GroupOfOperatorsRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -164,7 +150,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    time_unit_ref: Optional[TimeUnitRef] = field(
+    time_unit_ref: TimeUnitRef | None = field(
         default=None,
         metadata={
             "name": "TimeUnitRef",
@@ -172,7 +158,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_intervals: Optional[TimeIntervalsRelStructure] = field(
+    time_intervals: TimeIntervalsRelStructure | None = field(
         default=None,
         metadata={
             "name": "timeIntervals",
@@ -180,7 +166,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_structure_factors: Optional[TimeStructureFactorsRelStructure] = field(
+    time_structure_factors: TimeStructureFactorsRelStructure | None = field(
         default=None,
         metadata={
             "name": "timeStructureFactors",
@@ -188,9 +174,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    quality_structure_factors: Optional[
-        QualityStructureFactorsRelStructure
-    ] = field(
+    quality_structure_factors: QualityStructureFactorsRelStructure | None = field(
         default=None,
         metadata={
             "name": "qualityStructureFactors",
@@ -198,7 +182,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_user_type: Optional[ParkingUserEnumeration] = field(
+    parking_user_type: ParkingUserEnumeration | None = field(
         default=None,
         metadata={
             "name": "ParkingUserType",
@@ -206,7 +190,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_stay_type: Optional[ParkingStayEnumeration] = field(
+    parking_stay_type: ParkingStayEnumeration | None = field(
         default=None,
         metadata={
             "name": "ParkingStayType",
@@ -223,7 +207,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "tokens": True,
         },
     )
-    vehicle_types: Optional[TransportTypeRefsRelStructure] = field(
+    vehicle_types: TransportTypeRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "vehicleTypes",
@@ -231,7 +215,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    applies_to: Optional[ParkingRefsRelStructure] = field(
+    applies_to: ParkingRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "appliesTo",
@@ -239,7 +223,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_tariff_ref: Optional[TypeOfTariffRef] = field(
+    type_of_tariff_ref: TypeOfTariffRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfTariffRef",
@@ -247,7 +231,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    additional_tax: Optional[bool] = field(
+    additional_tax: bool | None = field(
         default=None,
         metadata={
             "name": "AdditionalTax",
@@ -255,7 +239,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_charge_bands: Optional[ParkingChargeBandsRelStructure] = field(
+    parking_charge_bands: ParkingChargeBandsRelStructure | None = field(
         default=None,
         metadata={
             "name": "parkingChargeBands",
@@ -263,7 +247,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    price_unit_ref: Optional[PriceUnitRef] = field(
+    price_unit_ref: PriceUnitRef | None = field(
         default=None,
         metadata={
             "name": "PriceUnitRef",
@@ -271,7 +255,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    price_groups: Optional[PriceGroupsRelStructure] = field(
+    price_groups: PriceGroupsRelStructure | None = field(
         default=None,
         metadata={
             "name": "priceGroups",
@@ -279,7 +263,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_tables: Optional[FareTablesRelStructure] = field(
+    fare_tables: FareTablesRelStructure | None = field(
         default=None,
         metadata={
             "name": "fareTables",

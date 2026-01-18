@@ -17,7 +17,7 @@ class VehicleTypesInFrameRelStructure(ContainmentAggregationStructure):
         name = "vehicleTypesInFrame_RelStructure"
 
     choice: Iterable[
-        Union[CompoundTrain, Train, VehicleType, SimpleVehicleType]
+        CompoundTrain | Train | VehicleType | SimpleVehicleType
     ] = field(
         default_factory=list,
         metadata={

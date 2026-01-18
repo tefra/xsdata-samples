@@ -6,7 +6,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class DataNameSpacesStructure:
-    stop_point_name_space: Optional[str] = field(
+    stop_point_name_space: str | None = field(
         default=None,
         metadata={
             "name": "StopPointNameSpace",
@@ -14,7 +14,7 @@ class DataNameSpacesStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    line_name_space: Optional[str] = field(
+    line_name_space: str | None = field(
         default=None,
         metadata={
             "name": "LineNameSpace",
@@ -22,7 +22,7 @@ class DataNameSpacesStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    product_category_name_space: Optional[str] = field(
+    product_category_name_space: str | None = field(
         default=None,
         metadata={
             "name": "ProductCategoryNameSpace",
@@ -30,7 +30,7 @@ class DataNameSpacesStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    service_feature_name_space: Optional[str] = field(
+    service_feature_name_space: str | None = field(
         default=None,
         metadata={
             "name": "ServiceFeatureNameSpace",
@@ -38,7 +38,7 @@ class DataNameSpacesStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    vehicle_feature_name_space: Optional[str] = field(
+    vehicle_feature_name_space: str | None = field(
         default=None,
         metadata={
             "name": "VehicleFeatureNameSpace",

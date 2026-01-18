@@ -29,34 +29,34 @@ class Assertion:
         name = "assertion"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    display_name: Optional[DisplayName] = field(
+    display_name: DisplayName | None = field(
         default=None,
         metadata={
             "name": "displayName",
             "type": "Element",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
             "type": "Element",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    assert_value: Optional[UnsignedBitExpression] = field(
+    assert_value: UnsignedBitExpression | None = field(
         default=None,
         metadata={
             "name": "assert",
@@ -64,7 +64,7 @@ class Assertion:
             "required": True,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

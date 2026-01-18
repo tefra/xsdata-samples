@@ -11,7 +11,7 @@ class VmsUnitRecordVmsIndexVmsRecord:
     class Meta:
         name = "_VmsUnitRecordVmsIndexVmsRecord"
 
-    vms_record: Optional[VmsRecord] = field(
+    vms_record: VmsRecord | None = field(
         default=None,
         metadata={
             "name": "vmsRecord",
@@ -20,7 +20,7 @@ class VmsUnitRecordVmsIndexVmsRecord:
             "required": True,
         },
     )
-    vms_index: Optional[int] = field(
+    vms_index: int | None = field(
         default=None,
         metadata={
             "name": "vmsIndex",

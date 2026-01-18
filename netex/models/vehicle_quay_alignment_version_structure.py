@@ -14,7 +14,7 @@ class VehicleQuayAlignmentVersionStructure(VersionedChildStructure):
     class Meta:
         name = "VehicleQuayAlignment_VersionStructure"
 
-    vehicle_stopping_place_ref: Optional[VehicleStoppingPlaceRef] = field(
+    vehicle_stopping_place_ref: VehicleStoppingPlaceRef | None = field(
         default=None,
         metadata={
             "name": "VehicleStoppingPlaceRef",
@@ -22,7 +22,7 @@ class VehicleQuayAlignmentVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    quay_ref: Optional[Union[TaxiStandRef, QuayRef]] = field(
+    quay_ref: TaxiStandRef | QuayRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -40,7 +40,7 @@ class VehicleQuayAlignmentVersionStructure(VersionedChildStructure):
             ),
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

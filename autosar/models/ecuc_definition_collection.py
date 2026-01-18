@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -100,7 +102,7 @@ class EcucDefinitionCollection:
     class Meta:
         name = "ECUC-DEFINITION-COLLECTION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,9 +111,7 @@ class EcucDefinitionCollection:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "EcucDefinitionCollection.ShortNameFragments"
-    ] = field(
+    short_name_fragments: EcucDefinitionCollection.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -119,7 +119,7 @@ class EcucDefinitionCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +127,7 @@ class EcucDefinitionCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +135,7 @@ class EcucDefinitionCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +143,7 @@ class EcucDefinitionCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +151,7 @@ class EcucDefinitionCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +159,7 @@ class EcucDefinitionCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["EcucDefinitionCollection.Annotations"] = field(
+    annotations: EcucDefinitionCollection.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +167,7 @@ class EcucDefinitionCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,9 +175,7 @@ class EcucDefinitionCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional[
-        "EcucDefinitionCollection.BlueprintPolicys"
-    ] = field(
+    blueprint_policys: EcucDefinitionCollection.BlueprintPolicys | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -185,7 +183,7 @@ class EcucDefinitionCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: Optional[String] = field(
+    short_name_pattern: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -193,7 +191,7 @@ class EcucDefinitionCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    module_refs: Optional["EcucDefinitionCollection.ModuleRefs"] = field(
+    module_refs: EcucDefinitionCollection.ModuleRefs | None = field(
         default=None,
         metadata={
             "name": "MODULE-REFS",
@@ -201,14 +199,14 @@ class EcucDefinitionCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -216,7 +214,7 @@ class EcucDefinitionCollection:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -277,7 +275,7 @@ class EcucDefinitionCollection:
 
     @dataclass
     class ModuleRefs:
-        module_ref: list["EcucDefinitionCollection.ModuleRefs.ModuleRef"] = (
+        module_ref: list[EcucDefinitionCollection.ModuleRefs.ModuleRef] = (
             field(
                 default_factory=list,
                 metadata={
@@ -290,7 +288,7 @@ class EcucDefinitionCollection:
 
         @dataclass
         class ModuleRef(Ref):
-            dest: Optional[EcucModuleDefSubtypesEnum] = field(
+            dest: EcucModuleDefSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

@@ -36,7 +36,7 @@ class PrmCharNumericalContents:
     class Meta:
         name = "PRM-CHAR-NUMERICAL-CONTENTS"
 
-    abs: Optional[NumericalValue] = field(
+    abs: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "ABS",
@@ -44,7 +44,7 @@ class PrmCharNumericalContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tol: Optional[NumericalValue] = field(
+    tol: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "TOL",
@@ -52,7 +52,7 @@ class PrmCharNumericalContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min: Optional[NumericalValue] = field(
+    min: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "MIN",
@@ -60,7 +60,7 @@ class PrmCharNumericalContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    typ: Optional[NumericalValue] = field(
+    typ: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "TYP",
@@ -68,7 +68,7 @@ class PrmCharNumericalContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max: Optional[NumericalValue] = field(
+    max: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "MAX",
@@ -76,7 +76,7 @@ class PrmCharNumericalContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    prm_unit: Optional[SingleLanguageUnitNames] = field(
+    prm_unit: SingleLanguageUnitNames | None = field(
         default=None,
         metadata={
             "name": "PRM-UNIT",
@@ -84,14 +84,14 @@ class PrmCharNumericalContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

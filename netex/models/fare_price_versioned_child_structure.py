@@ -49,7 +49,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "FarePrice_VersionedChildStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -57,7 +57,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -65,7 +65,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -73,7 +73,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_date: Optional[XmlDate] = field(
+    start_date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -81,7 +81,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_date: Optional[XmlDate] = field(
+    end_date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -89,7 +89,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    amount: Optional[Decimal] = field(
+    amount: Decimal | None = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -97,7 +97,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    currency: Optional[str] = field(
+    currency: str | None = field(
         default=None,
         metadata={
             "name": "Currency",
@@ -108,7 +108,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "pattern": r"[A-Z][A-Z][A-Z]",
         },
     )
-    price_unit_ref: Optional[PriceUnitRef] = field(
+    price_unit_ref: PriceUnitRef | None = field(
         default=None,
         metadata={
             "name": "PriceUnitRef",
@@ -116,7 +116,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    units: Optional[Decimal] = field(
+    units: Decimal | None = field(
         default=None,
         metadata={
             "name": "Units",
@@ -124,7 +124,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rule_step_results: Optional[PriceRuleStepResultsRelStructure] = field(
+    rule_step_results: PriceRuleStepResultsRelStructure | None = field(
         default=None,
         metadata={
             "name": "ruleStepResults",
@@ -132,7 +132,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_allowed: Optional[bool] = field(
+    is_allowed: bool | None = field(
         default=None,
         metadata={
             "name": "IsAllowed",
@@ -140,7 +140,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    pricing_service_ref: Optional[PricingServiceRef] = field(
+    pricing_service_ref: PricingServiceRef | None = field(
         default=None,
         metadata={
             "name": "PricingServiceRef",
@@ -148,28 +148,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_price_ref: Optional[
-        Union[
-            CustomerPurchasePackagePriceRef,
-            ParkingPriceRef,
-            TimeIntervalPriceRef,
-            TimeUnitPriceRef,
-            QualityStructureFactorPriceRef,
-            ControllableElementPriceRef,
-            ValidableElementPriceRef,
-            GeographicalIntervalPriceRef,
-            GeographicalUnitPriceRef,
-            UsageParameterPriceRef,
-            SeriesConstraintPriceRef,
-            SalesOfferPackagePriceRef,
-            DistanceMatrixElementPriceRef,
-            FareStructureElementPriceRef,
-            FulfilmentMethodPriceRef,
-            CappingRulePriceRef,
-            FareProductPriceRef,
-            FarePriceRef,
-        ]
-    ] = field(
+    fare_price_ref: CustomerPurchasePackagePriceRef | ParkingPriceRef | TimeIntervalPriceRef | TimeUnitPriceRef | QualityStructureFactorPriceRef | ControllableElementPriceRef | ValidableElementPriceRef | GeographicalIntervalPriceRef | GeographicalUnitPriceRef | UsageParameterPriceRef | SeriesConstraintPriceRef | SalesOfferPackagePriceRef | DistanceMatrixElementPriceRef | FareStructureElementPriceRef | FulfilmentMethodPriceRef | CappingRulePriceRef | FareProductPriceRef | FarePriceRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -267,17 +246,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule: Optional[
-        Union[
-            LimitingRuleRef,
-            DiscountingRuleRef,
-            PricingRuleRef,
-            LimitingRuleInContext,
-            LimitingRule,
-            DiscountingRule,
-            PricingRule,
-        ]
-    ] = field(
+    discounting_rule_ref_or_pricing_rule_ref_or_pricing_rule: LimitingRuleRef | DiscountingRuleRef | PricingRuleRef | LimitingRuleInContext | LimitingRule | DiscountingRule | PricingRule | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -320,7 +289,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    can_be_cumulative: Optional[bool] = field(
+    can_be_cumulative: bool | None = field(
         default=None,
         metadata={
             "name": "CanBeCumulative",
@@ -328,7 +297,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rounding_ref: Optional[RoundingRef] = field(
+    rounding_ref: RoundingRef | None = field(
         default=None,
         metadata={
             "name": "RoundingRef",
@@ -336,7 +305,7 @@ class FarePriceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ranking: Optional[int] = field(
+    ranking: int | None = field(
         default=None,
         metadata={
             "name": "Ranking",

@@ -30,7 +30,7 @@ class QupcMt040300Uv01CareProvisionCode:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -46,7 +46,7 @@ class QupcMt040300Uv01CareProvisionCode:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[Cd] = field(
+    value: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -54,7 +54,7 @@ class QupcMt040300Uv01CareProvisionCode:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -76,7 +76,7 @@ class QupcMt040300Uv01CareProvisionReason:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -92,7 +92,7 @@ class QupcMt040300Uv01CareProvisionReason:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[Cd] = field(
+    value: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -100,7 +100,7 @@ class QupcMt040300Uv01CareProvisionReason:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -122,7 +122,7 @@ class QupcMt040300Uv01CareRecordTimePeriod:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -138,7 +138,7 @@ class QupcMt040300Uv01CareRecordTimePeriod:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[IvlTsExplicit] = field(
+    value: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -146,7 +146,7 @@ class QupcMt040300Uv01CareRecordTimePeriod:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -168,7 +168,7 @@ class QupcMt040300Uv01ClinicalStatementTimePeriod:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -184,7 +184,7 @@ class QupcMt040300Uv01ClinicalStatementTimePeriod:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[IvlTsExplicit] = field(
+    value: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -192,7 +192,7 @@ class QupcMt040300Uv01ClinicalStatementTimePeriod:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -214,7 +214,7 @@ class QupcMt040300Uv01IncludeCarePlanAttachment:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -230,7 +230,7 @@ class QupcMt040300Uv01IncludeCarePlanAttachment:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[Bl] = field(
+    value: Bl | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -238,7 +238,7 @@ class QupcMt040300Uv01IncludeCarePlanAttachment:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -260,7 +260,7 @@ class QupcMt040300Uv01MaximumHistoryStatements:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -276,7 +276,7 @@ class QupcMt040300Uv01MaximumHistoryStatements:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[Int] = field(
+    value: Int | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -284,7 +284,7 @@ class QupcMt040300Uv01MaximumHistoryStatements:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -306,7 +306,7 @@ class QupcMt040300Uv01PatientAdministrativeGender:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -322,7 +322,7 @@ class QupcMt040300Uv01PatientAdministrativeGender:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[Ce] = field(
+    value: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -330,7 +330,7 @@ class QupcMt040300Uv01PatientAdministrativeGender:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -352,7 +352,7 @@ class QupcMt040300Uv01PatientBirthTime:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -368,7 +368,7 @@ class QupcMt040300Uv01PatientBirthTime:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[TsExplicit] = field(
+    value: TsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -376,7 +376,7 @@ class QupcMt040300Uv01PatientBirthTime:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -398,7 +398,7 @@ class QupcMt040300Uv01PatientId:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -414,7 +414,7 @@ class QupcMt040300Uv01PatientId:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[Ii] = field(
+    value: Ii | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -422,7 +422,7 @@ class QupcMt040300Uv01PatientId:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -444,7 +444,7 @@ class QupcMt040300Uv01PatientName:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -460,7 +460,7 @@ class QupcMt040300Uv01PatientName:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[PnExplicit] = field(
+    value: PnExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -468,7 +468,7 @@ class QupcMt040300Uv01PatientName:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -490,7 +490,7 @@ class QupcMt040300Uv01ParameterList:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -506,7 +506,7 @@ class QupcMt040300Uv01ParameterList:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    care_provision_code: Optional[QupcMt040300Uv01CareProvisionCode] = field(
+    care_provision_code: QupcMt040300Uv01CareProvisionCode | None = field(
         default=None,
         metadata={
             "name": "careProvisionCode",
@@ -524,7 +524,7 @@ class QupcMt040300Uv01ParameterList:
             "nillable": True,
         },
     )
-    care_record_time_period: Optional[QupcMt040300Uv01CareRecordTimePeriod] = (
+    care_record_time_period: QupcMt040300Uv01CareRecordTimePeriod | None = (
         field(
             default=None,
             metadata={
@@ -535,9 +535,7 @@ class QupcMt040300Uv01ParameterList:
             },
         )
     )
-    clinical_statement_time_period: Optional[
-        QupcMt040300Uv01ClinicalStatementTimePeriod
-    ] = field(
+    clinical_statement_time_period: QupcMt040300Uv01ClinicalStatementTimePeriod | None = field(
         default=None,
         metadata={
             "name": "clinicalStatementTimePeriod",
@@ -546,9 +544,7 @@ class QupcMt040300Uv01ParameterList:
             "nillable": True,
         },
     )
-    include_care_plan_attachment: Optional[
-        QupcMt040300Uv01IncludeCarePlanAttachment
-    ] = field(
+    include_care_plan_attachment: QupcMt040300Uv01IncludeCarePlanAttachment | None = field(
         default=None,
         metadata={
             "name": "includeCarePlanAttachment",
@@ -557,9 +553,7 @@ class QupcMt040300Uv01ParameterList:
             "nillable": True,
         },
     )
-    maximum_history_statements: Optional[
-        QupcMt040300Uv01MaximumHistoryStatements
-    ] = field(
+    maximum_history_statements: QupcMt040300Uv01MaximumHistoryStatements | None = field(
         default=None,
         metadata={
             "name": "maximumHistoryStatements",
@@ -568,9 +562,7 @@ class QupcMt040300Uv01ParameterList:
             "nillable": True,
         },
     )
-    patient_administrative_gender: Optional[
-        QupcMt040300Uv01PatientAdministrativeGender
-    ] = field(
+    patient_administrative_gender: QupcMt040300Uv01PatientAdministrativeGender | None = field(
         default=None,
         metadata={
             "name": "patientAdministrativeGender",
@@ -579,7 +571,7 @@ class QupcMt040300Uv01ParameterList:
             "nillable": True,
         },
     )
-    patient_birth_time: Optional[QupcMt040300Uv01PatientBirthTime] = field(
+    patient_birth_time: QupcMt040300Uv01PatientBirthTime | None = field(
         default=None,
         metadata={
             "name": "patientBirthTime",
@@ -588,7 +580,7 @@ class QupcMt040300Uv01ParameterList:
             "nillable": True,
         },
     )
-    patient_id: Optional[QupcMt040300Uv01PatientId] = field(
+    patient_id: QupcMt040300Uv01PatientId | None = field(
         default=None,
         metadata={
             "name": "patientId",
@@ -597,7 +589,7 @@ class QupcMt040300Uv01ParameterList:
             "required": True,
         },
     )
-    patient_name: Optional[QupcMt040300Uv01PatientName] = field(
+    patient_name: QupcMt040300Uv01PatientName | None = field(
         default=None,
         metadata={
             "name": "patientName",
@@ -606,7 +598,7 @@ class QupcMt040300Uv01ParameterList:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",

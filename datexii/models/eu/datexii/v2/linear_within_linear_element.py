@@ -45,7 +45,7 @@ class LinearWithinLinearElement:
     :ivar linear_within_linear_element_extension:
     """
 
-    administrative_area_of_linear_section: Optional[MultilingualString] = (
+    administrative_area_of_linear_section: MultilingualString | None = (
         field(
             default=None,
             metadata={
@@ -55,7 +55,7 @@ class LinearWithinLinearElement:
             },
         )
     )
-    direction_bound_on_linear_section: Optional[DirectionEnum] = field(
+    direction_bound_on_linear_section: DirectionEnum | None = field(
         default=None,
         metadata={
             "name": "directionBoundOnLinearSection",
@@ -63,9 +63,7 @@ class LinearWithinLinearElement:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    direction_relative_on_linear_section: Optional[
-        LinearReferencingDirectionEnum
-    ] = field(
+    direction_relative_on_linear_section: LinearReferencingDirectionEnum | None = field(
         default=None,
         metadata={
             "name": "directionRelativeOnLinearSection",
@@ -73,7 +71,7 @@ class LinearWithinLinearElement:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    height_grade_of_linear_section: Optional[HeightGradeEnum] = field(
+    height_grade_of_linear_section: HeightGradeEnum | None = field(
         default=None,
         metadata={
             "name": "heightGradeOfLinearSection",
@@ -81,7 +79,7 @@ class LinearWithinLinearElement:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    linear_element: Optional[LinearElement] = field(
+    linear_element: LinearElement | None = field(
         default=None,
         metadata={
             "name": "linearElement",
@@ -90,7 +88,7 @@ class LinearWithinLinearElement:
             "required": True,
         },
     )
-    from_point: Optional[DistanceAlongLinearElement] = field(
+    from_point: DistanceAlongLinearElement | None = field(
         default=None,
         metadata={
             "name": "fromPoint",
@@ -99,7 +97,7 @@ class LinearWithinLinearElement:
             "required": True,
         },
     )
-    to_point: Optional[DistanceAlongLinearElement] = field(
+    to_point: DistanceAlongLinearElement | None = field(
         default=None,
         metadata={
             "name": "toPoint",
@@ -108,7 +106,7 @@ class LinearWithinLinearElement:
             "required": True,
         },
     )
-    linear_within_linear_element_extension: Optional[ExtensionType] = field(
+    linear_within_linear_element_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "linearWithinLinearElementExtension",

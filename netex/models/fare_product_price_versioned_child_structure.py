@@ -23,18 +23,7 @@ class FareProductPriceVersionedChildStructure(
     class Meta:
         name = "FareProductPrice_VersionedChildStructure"
 
-    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: Optional[
-        Union[
-            SupplementProductRef,
-            PreassignedFareProductRef,
-            AmountOfPriceUnitProductRef,
-            UsageDiscountRightRef,
-            ThirdPartyProductRef,
-            CappedDiscountRightRef,
-            SaleDiscountRightRef,
-            FareProductRef,
-        ]
-    ] = field(
+    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: SupplementProductRef | PreassignedFareProductRef | AmountOfPriceUnitProductRef | UsageDiscountRightRef | ThirdPartyProductRef | CappedDiscountRightRef | SaleDiscountRightRef | FareProductRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

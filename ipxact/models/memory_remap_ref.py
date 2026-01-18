@@ -10,7 +10,7 @@ class MemoryRemapRef:
         name = "memoryRemapRef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    memory_remap_ref: Optional[str] = field(
+    memory_remap_ref: str | None = field(
         default=None,
         metadata={
             "name": "memoryRemapRef",

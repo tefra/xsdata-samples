@@ -42,7 +42,7 @@ class TravelTimeData(BasicData):
     :ivar travel_time_data_extension:
     """
 
-    travel_time_trend_type: Optional[TravelTimeTrendTypeEnum] = field(
+    travel_time_trend_type: TravelTimeTrendTypeEnum | None = field(
         default=None,
         metadata={
             "name": "travelTimeTrendType",
@@ -50,7 +50,7 @@ class TravelTimeData(BasicData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    travel_time_type: Optional[TravelTimeTypeEnum] = field(
+    travel_time_type: TravelTimeTypeEnum | None = field(
         default=None,
         metadata={
             "name": "travelTimeType",
@@ -66,7 +66,7 @@ class TravelTimeData(BasicData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    travel_time: Optional[DurationValue] = field(
+    travel_time: DurationValue | None = field(
         default=None,
         metadata={
             "name": "travelTime",
@@ -74,7 +74,7 @@ class TravelTimeData(BasicData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    free_flow_travel_time: Optional[DurationValue] = field(
+    free_flow_travel_time: DurationValue | None = field(
         default=None,
         metadata={
             "name": "freeFlowTravelTime",
@@ -82,7 +82,7 @@ class TravelTimeData(BasicData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    normally_expected_travel_time: Optional[DurationValue] = field(
+    normally_expected_travel_time: DurationValue | None = field(
         default=None,
         metadata={
             "name": "normallyExpectedTravelTime",
@@ -90,7 +90,7 @@ class TravelTimeData(BasicData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    free_flow_speed: Optional[SpeedValue] = field(
+    free_flow_speed: SpeedValue | None = field(
         default=None,
         metadata={
             "name": "freeFlowSpeed",
@@ -98,7 +98,7 @@ class TravelTimeData(BasicData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    travel_time_data_extension: Optional[ExtensionType] = field(
+    travel_time_data_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "travelTimeDataExtension",

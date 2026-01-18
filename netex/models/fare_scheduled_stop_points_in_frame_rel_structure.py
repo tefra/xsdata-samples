@@ -15,7 +15,7 @@ class FareScheduledStopPointsInFrameRelStructure(FrameContainmentStructure):
         name = "fareScheduledStopPointsInFrame_RelStructure"
 
     scheduled_stop_point_or_fare_scheduled_stop_point: Iterable[
-        Union[ScheduledStopPoint, FareScheduledStopPoint]
+        ScheduledStopPoint | FareScheduledStopPoint
     ] = field(
         default_factory=list,
         metadata={

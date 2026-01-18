@@ -21,7 +21,7 @@ class TpegAreaDescriptor(TpegDescriptor):
     :ivar tpeg_area_descriptor_extension:
     """
 
-    tpeg_area_descriptor_type: Optional[TpegLoc03AreaDescriptorSubtypeEnum] = (
+    tpeg_area_descriptor_type: TpegLoc03AreaDescriptorSubtypeEnum | None = (
         field(
             default=None,
             metadata={
@@ -32,7 +32,7 @@ class TpegAreaDescriptor(TpegDescriptor):
             },
         )
     )
-    tpeg_area_descriptor_extension: Optional[ExtensionType] = field(
+    tpeg_area_descriptor_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "tpegAreaDescriptorExtension",

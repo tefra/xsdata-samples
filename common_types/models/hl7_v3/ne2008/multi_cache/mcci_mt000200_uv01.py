@@ -45,7 +45,7 @@ class McciMt000200Uv01AcknowledgementDetail:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -61,14 +61,14 @@ class McciMt000200Uv01AcknowledgementDetail:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    text: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -82,14 +82,14 @@ class McciMt000200Uv01AcknowledgementDetail:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[AcknowledgementDetailType] = field(
+    type_code: AcknowledgementDetailType | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -111,7 +111,7 @@ class McciMt000200Uv01AttentionLine:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -127,7 +127,7 @@ class McciMt000200Uv01AttentionLine:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    key_word_text: Optional[Sc] = field(
+    key_word_text: Sc | None = field(
         default=None,
         metadata={
             "name": "keyWordText",
@@ -135,14 +135,14 @@ class McciMt000200Uv01AttentionLine:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[AnyType] = field(
+    value: AnyType | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -164,7 +164,7 @@ class McciMt000200Uv01EntityRsp:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -180,7 +180,7 @@ class McciMt000200Uv01EntityRsp:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: Optional[Ii] = field(
+    id: Ii | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -202,14 +202,14 @@ class McciMt000200Uv01EntityRsp:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[EntityClassRoot] = field(
+    class_code: EntityClassRoot | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -241,7 +241,7 @@ class McciMt000200Uv01Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -279,7 +279,7 @@ class McciMt000200Uv01Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    notification_party: Optional[CoctMt040203Uv01NotificationParty] = field(
+    notification_party: CoctMt040203Uv01NotificationParty | None = field(
         default=None,
         metadata={
             "name": "notificationParty",
@@ -288,14 +288,14 @@ class McciMt000200Uv01Organization:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[EntityClassOrganization] = field(
+    class_code: EntityClassOrganization | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -327,7 +327,7 @@ class McciMt000200Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -365,14 +365,14 @@ class McciMt000200Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[EntityClassPlace] = field(
+    class_code: EntityClassPlace | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -404,7 +404,7 @@ class McciMt000200Uv01TargetMessage:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -420,7 +420,7 @@ class McciMt000200Uv01TargetMessage:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: Optional[Ii] = field(
+    id: Ii | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -428,7 +428,7 @@ class McciMt000200Uv01TargetMessage:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -450,7 +450,7 @@ class McciMt000200Uv01Acknowledgement:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -466,7 +466,7 @@ class McciMt000200Uv01Acknowledgement:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_code: Optional[Cs] = field(
+    type_code: Cs | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -475,7 +475,7 @@ class McciMt000200Uv01Acknowledgement:
             "required": True,
         },
     )
-    expected_sequence_number: Optional[Int] = field(
+    expected_sequence_number: Int | None = field(
         default=None,
         metadata={
             "name": "expectedSequenceNumber",
@@ -483,7 +483,7 @@ class McciMt000200Uv01Acknowledgement:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    message_waiting_number: Optional[Int] = field(
+    message_waiting_number: Int | None = field(
         default=None,
         metadata={
             "name": "messageWaitingNumber",
@@ -491,7 +491,7 @@ class McciMt000200Uv01Acknowledgement:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    message_waiting_priority_code: Optional[Ce] = field(
+    message_waiting_priority_code: Ce | None = field(
         default=None,
         metadata={
             "name": "messageWaitingPriorityCode",
@@ -499,7 +499,7 @@ class McciMt000200Uv01Acknowledgement:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    target_message: Optional[McciMt000200Uv01TargetMessage] = field(
+    target_message: McciMt000200Uv01TargetMessage | None = field(
         default=None,
         metadata={
             "name": "targetMessage",
@@ -519,7 +519,7 @@ class McciMt000200Uv01Acknowledgement:
             },
         )
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -541,7 +541,7 @@ class McciMt000200Uv01Agent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -557,7 +557,7 @@ class McciMt000200Uv01Agent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    represented_organization: Optional[McciMt000200Uv01Organization] = field(
+    represented_organization: McciMt000200Uv01Organization | None = field(
         default=None,
         metadata={
             "name": "representedOrganization",
@@ -566,14 +566,14 @@ class McciMt000200Uv01Agent:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[RoleClassAgent] = field(
+    class_code: RoleClassAgent | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -596,7 +596,7 @@ class McciMt000200Uv01LocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -612,7 +612,7 @@ class McciMt000200Uv01LocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    location: Optional[McciMt000200Uv01Place] = field(
+    location: McciMt000200Uv01Place | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -620,14 +620,14 @@ class McciMt000200Uv01LocatedEntity:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[RoleClassLocatedEntity] = field(
+    class_code: RoleClassLocatedEntity | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -650,7 +650,7 @@ class McciMt000200Uv01RespondTo:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -666,7 +666,7 @@ class McciMt000200Uv01RespondTo:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: Optional[TelExplicit] = field(
+    telecom: TelExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -683,14 +683,14 @@ class McciMt000200Uv01RespondTo:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[CommunicationFunctionType] = field(
+    type_code: CommunicationFunctionType | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -713,7 +713,7 @@ class McciMt000200Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -744,14 +744,14 @@ class McciMt000200Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    desc: Optional[EdExplicit] = field(
+    desc: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    existence_time: Optional[IvlTsExplicit] = field(
+    existence_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "existenceTime",
@@ -766,7 +766,7 @@ class McciMt000200Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufacturer_model_name: Optional[Sc] = field(
+    manufacturer_model_name: Sc | None = field(
         default=None,
         metadata={
             "name": "manufacturerModelName",
@@ -774,7 +774,7 @@ class McciMt000200Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    software_name: Optional[Sc] = field(
+    software_name: Sc | None = field(
         default=None,
         metadata={
             "name": "softwareName",
@@ -782,7 +782,7 @@ class McciMt000200Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_agent: Optional[McciMt000200Uv01Agent] = field(
+    as_agent: McciMt000200Uv01Agent | None = field(
         default=None,
         metadata={
             "name": "asAgent",
@@ -800,14 +800,14 @@ class McciMt000200Uv01Device:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[EntityClassDevice] = field(
+    class_code: EntityClassDevice | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -839,7 +839,7 @@ class McciMt000200Uv01Receiver:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -855,14 +855,14 @@ class McciMt000200Uv01Receiver:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: Optional[TelExplicit] = field(
+    telecom: TelExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    device: Optional[McciMt000200Uv01Device] = field(
+    device: McciMt000200Uv01Device | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -870,14 +870,14 @@ class McciMt000200Uv01Receiver:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[CommunicationFunctionType] = field(
+    type_code: CommunicationFunctionType | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -900,7 +900,7 @@ class McciMt000200Uv01Sender:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -916,14 +916,14 @@ class McciMt000200Uv01Sender:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: Optional[TelExplicit] = field(
+    telecom: TelExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    device: Optional[McciMt000200Uv01Device] = field(
+    device: McciMt000200Uv01Device | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -931,14 +931,14 @@ class McciMt000200Uv01Sender:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[CommunicationFunctionType] = field(
+    type_code: CommunicationFunctionType | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -961,7 +961,7 @@ class McciMt000200Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -977,7 +977,7 @@ class McciMt000200Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: Optional[Ii] = field(
+    id: Ii | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -985,7 +985,7 @@ class McciMt000200Uv01Message:
             "required": True,
         },
     )
-    creation_time: Optional[TsExplicit] = field(
+    creation_time: TsExplicit | None = field(
         default=None,
         metadata={
             "name": "creationTime",
@@ -994,7 +994,7 @@ class McciMt000200Uv01Message:
             "required": True,
         },
     )
-    security_text: Optional[St] = field(
+    security_text: St | None = field(
         default=None,
         metadata={
             "name": "securityText",
@@ -1002,7 +1002,7 @@ class McciMt000200Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    version_code: Optional[Cs] = field(
+    version_code: Cs | None = field(
         default=None,
         metadata={
             "name": "versionCode",
@@ -1010,7 +1010,7 @@ class McciMt000200Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    interaction_id: Optional[Ii] = field(
+    interaction_id: Ii | None = field(
         default=None,
         metadata={
             "name": "interactionId",
@@ -1027,7 +1027,7 @@ class McciMt000200Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    processing_code: Optional[Cs] = field(
+    processing_code: Cs | None = field(
         default=None,
         metadata={
             "name": "processingCode",
@@ -1036,7 +1036,7 @@ class McciMt000200Uv01Message:
             "required": True,
         },
     )
-    processing_mode_code: Optional[Cs] = field(
+    processing_mode_code: Cs | None = field(
         default=None,
         metadata={
             "name": "processingModeCode",
@@ -1045,7 +1045,7 @@ class McciMt000200Uv01Message:
             "required": True,
         },
     )
-    accept_ack_code: Optional[Cs] = field(
+    accept_ack_code: Cs | None = field(
         default=None,
         metadata={
             "name": "acceptAckCode",
@@ -1079,7 +1079,7 @@ class McciMt000200Uv01Message:
             "nillable": True,
         },
     )
-    sender: Optional[McciMt000200Uv01Sender] = field(
+    sender: McciMt000200Uv01Sender | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1104,7 +1104,7 @@ class McciMt000200Uv01Message:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",

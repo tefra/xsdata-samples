@@ -15,7 +15,7 @@ class PathJunctionsRelStructure(ContainmentAggregationStructure):
         name = "pathJunctions_RelStructure"
 
     path_junction_ref_or_path_junction: Iterable[
-        Union[PathJunctionRef, PathJunction]
+        PathJunctionRef | PathJunction
     ] = field(
         default_factory=list,
         metadata={

@@ -12,7 +12,7 @@ class RentalAvailabilityVersionStructure(LogEntryVersionStructure):
     class Meta:
         name = "RentalAvailability_VersionStructure"
 
-    parking_ref: Optional[ParkingRef] = field(
+    parking_ref: ParkingRef | None = field(
         default=None,
         metadata={
             "name": "ParkingRef",
@@ -21,7 +21,7 @@ class RentalAvailabilityVersionStructure(LogEntryVersionStructure):
             "required": True,
         },
     )
-    is_operational: Optional[bool] = field(
+    is_operational: bool | None = field(
         default=None,
         metadata={
             "name": "IsOperational",
@@ -29,7 +29,7 @@ class RentalAvailabilityVersionStructure(LogEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_renting: Optional[bool] = field(
+    is_renting: bool | None = field(
         default=None,
         metadata={
             "name": "IsRenting",
@@ -37,7 +37,7 @@ class RentalAvailabilityVersionStructure(LogEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_accepting_returns: Optional[bool] = field(
+    is_accepting_returns: bool | None = field(
         default=None,
         metadata={
             "name": "IsAcceptingReturns",
@@ -45,7 +45,7 @@ class RentalAvailabilityVersionStructure(LogEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    available_vehicles: Optional[int] = field(
+    available_vehicles: int | None = field(
         default=None,
         metadata={
             "name": "AvailableVehicles",
@@ -53,7 +53,7 @@ class RentalAvailabilityVersionStructure(LogEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    disabled_vehicles: Optional[int] = field(
+    disabled_vehicles: int | None = field(
         default=None,
         metadata={
             "name": "DisabledVehicles",
@@ -61,7 +61,7 @@ class RentalAvailabilityVersionStructure(LogEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    available_docks: Optional[int] = field(
+    available_docks: int | None = field(
         default=None,
         metadata={
             "name": "AvailableDocks",
@@ -69,7 +69,7 @@ class RentalAvailabilityVersionStructure(LogEntryVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    disabled_docks: Optional[int] = field(
+    disabled_docks: int | None = field(
         default=None,
         metadata={
             "name": "DisabledDocks",

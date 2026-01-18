@@ -17,7 +17,7 @@ class TransfersInFrameRelStructure(ContainmentAggregationStructure):
         name = "transfersInFrame_RelStructure"
 
     transfer: Iterable[
-        Union[Connection, DefaultConnection, SiteConnection, Access]
+        Connection | DefaultConnection | SiteConnection | Access
     ] = field(
         default_factory=list,
         metadata={

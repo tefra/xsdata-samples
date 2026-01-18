@@ -17,7 +17,7 @@ class VtlDefinitionSchemeType(ItemSchemeType):
         reference definition schemes using the same VTL version.
     """
 
-    vtl_version: Optional[str] = field(
+    vtl_version: str | None = field(
         default=None,
         metadata={
             "name": "vtlVersion",

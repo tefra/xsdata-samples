@@ -173,7 +173,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         name = "validityParameters_RelStructure"
 
     vehicle_modes_or_transport_modes: Iterable[
-        Union[Iterable[VehicleModeEnumeration], Iterable[AllModesEnumeration]]
+        Iterable[VehicleModeEnumeration] | Iterable[AllModesEnumeration]
     ] = field(
         default_factory=list,
         metadata={
@@ -206,14 +206,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: Iterable[
-        Union[
-            PersonalModeOfOperationRef,
-            VehiclePoolingRef,
-            VehicleSharingRef,
-            VehicleRentalRef,
-            FlexibleModeOfOperationRef,
-            ScheduledModeOfOperationRef,
-        ]
+        PersonalModeOfOperationRef | VehiclePoolingRef | VehicleSharingRef | VehicleRentalRef | FlexibleModeOfOperationRef | ScheduledModeOfOperationRef
     ] = field(
         default_factory=list,
         metadata={
@@ -262,23 +255,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     choice: Iterable[
-        Union[
-            AllAuthoritiesRef,
-            AllOperatorsRef,
-            AllPublicTransportOrganisationsRef,
-            AllTransportOrganisationsRef,
-            AllOrganisationsRef,
-            RetailConsortiumRef,
-            OnlineServiceOperatorRef,
-            GeneralOrganisationRef,
-            ManagementAgentRef,
-            ServicedOrganisationRef,
-            TravelAgentRef,
-            OtherOrganisationRef,
-            AuthorityRef,
-            OperatorRef,
-            OrganisationRef,
-        ]
+        AllAuthoritiesRef | AllOperatorsRef | AllPublicTransportOrganisationsRef | AllTransportOrganisationsRef | AllOrganisationsRef | RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef
     ] = field(
         default_factory=list,
         metadata={
@@ -362,7 +339,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    group_of_lines_ref: Iterable[Union[NetworkRef, GroupOfLinesRef]] = field(
+    group_of_lines_ref: Iterable[NetworkRef | GroupOfLinesRef] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -380,7 +357,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
             ),
         },
     )
-    line_ref: Iterable[Union[FlexibleLineRef, LineRef]] = field(
+    line_ref: Iterable[FlexibleLineRef | LineRef] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -435,7 +412,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     scheduled_stop_point_ref: Iterable[
-        Union[FareScheduledStopPointRef, ScheduledStopPointRef]
+        FareScheduledStopPointRef | ScheduledStopPointRef
     ] = field(
         default_factory=list,
         metadata={
@@ -473,7 +450,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     vehicle_meeting_place_ref: Iterable[
-        Union[VehiclePoolingMeetingPlaceRef, VehicleMeetingPlaceRef]
+        VehiclePoolingMeetingPlaceRef | VehicleMeetingPlaceRef
     ] = field(
         default_factory=list,
         metadata={
@@ -511,7 +488,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     address_ref: Iterable[
-        Union[PostalAddressRef, RoadAddressRef, AddressRef]
+        PostalAddressRef | RoadAddressRef | AddressRef
     ] = field(
         default_factory=list,
         metadata={
@@ -536,41 +513,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     choice_1: Iterable[
-        Union[
-            VehicleStoppingPositionRef,
-            VehicleStoppingPlaceRef,
-            BoardingPositionRef,
-            AccessSpaceRef,
-            TaxiStandRef,
-            QuayRef,
-            StopPlaceSpaceRef,
-            VehiclePoolingParkingBayRef,
-            MonitoredVehicleSharingParkingBayRef,
-            VehicleSharingParkingBayRef,
-            ParkingBayRef,
-            VehiclePoolingParkingAreaRef,
-            VehicleSharingParkingAreaRef,
-            TaxiParkingAreaRef,
-            ParkingAreaRef,
-            PointOfInterestSpaceRef,
-            StopPlaceVehicleEntranceRef,
-            StopPlaceEntranceRef,
-            ParkingEntranceForVehiclesRef,
-            ParkingPassengerEntranceRef,
-            ParkingEntranceRef,
-            PointOfInterestVehicleEntranceRef,
-            PointOfInterestEntranceRef,
-            VehicleEntranceRef,
-            EntranceRef,
-            SiteComponentRef,
-            TaxiRankRef,
-            StopPlaceRef,
-            ParkingRef,
-            PointOfInterestRef,
-            ServiceSiteRef,
-            SiteRef,
-            SiteElementRef,
-        ]
+        VehicleStoppingPositionRef | VehicleStoppingPlaceRef | BoardingPositionRef | AccessSpaceRef | TaxiStandRef | QuayRef | StopPlaceSpaceRef | VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef | VehiclePoolingParkingAreaRef | VehicleSharingParkingAreaRef | TaxiParkingAreaRef | ParkingAreaRef | PointOfInterestSpaceRef | StopPlaceVehicleEntranceRef | StopPlaceEntranceRef | ParkingEntranceForVehiclesRef | ParkingPassengerEntranceRef | ParkingEntranceRef | PointOfInterestVehicleEntranceRef | PointOfInterestEntranceRef | VehicleEntranceRef | EntranceRef | SiteComponentRef | TaxiRankRef | StopPlaceRef | ParkingRef | PointOfInterestRef | ServiceSiteRef | SiteRef | SiteElementRef
     ] = field(
         default_factory=list,
         metadata={
@@ -830,7 +773,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     facility_set_ref: Iterable[
-        Union[ServiceFacilitySetRef, SiteFacilitySetRef, FacilitySetRef]
+        ServiceFacilitySetRef | SiteFacilitySetRef | FacilitySetRef
     ] = field(
         default_factory=list,
         metadata={
@@ -864,7 +807,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     service_journey_ref: Iterable[
-        Union[TemplateServiceJourneyRef, ServiceJourneyRef]
+        TemplateServiceJourneyRef | ServiceJourneyRef
     ] = field(
         default_factory=list,
         metadata={
@@ -920,13 +863,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     transport_type_ref_or_vehicle_type_ref: Iterable[
-        Union[
-            SimpleVehicleTypeRef,
-            CompoundTrainRef,
-            TrainRef,
-            VehicleTypeRef,
-            TransportTypeRef,
-        ]
+        SimpleVehicleTypeRef | CompoundTrainRef | TrainRef | VehicleTypeRef | TransportTypeRef
     ] = field(
         default_factory=list,
         metadata={
@@ -979,7 +916,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     vehicle_model_profile_ref: Iterable[
-        Union[CycleModelProfileRef, CarModelProfileRef]
+        CycleModelProfileRef | CarModelProfileRef
     ] = field(
         default_factory=list,
         metadata={
@@ -999,29 +936,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     choice_2: Iterable[
-        Union[
-            OnlineServiceRef,
-            VehicleRentalServiceRef,
-            VehicleSharingServiceRef,
-            ChauffeuredVehicleServiceRef,
-            TaxiServiceRef,
-            CarPoolingServiceRef,
-            AssistanceBookingServiceRef,
-            CateringServiceRef,
-            RetailServiceRef,
-            MoneyServiceRef,
-            HireServiceRef,
-            CommunicationServiceRef,
-            MeetingPointServiceRef,
-            LeftLuggageServiceRef,
-            LuggageServiceRef,
-            LostPropertyServiceRef,
-            ComplaintsServiceRef,
-            CustomerServiceRef,
-            AssistanceServiceRef,
-            TicketingServiceRef,
-            LocalServiceRef,
-        ]
+        OnlineServiceRef | VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | AssistanceBookingServiceRef | CateringServiceRef | RetailServiceRef | MoneyServiceRef | HireServiceRef | CommunicationServiceRef | MeetingPointServiceRef | LeftLuggageServiceRef | LuggageServiceRef | LostPropertyServiceRef | ComplaintsServiceRef | CustomerServiceRef | AssistanceServiceRef | TicketingServiceRef | LocalServiceRef
     ] = field(
         default_factory=list,
         metadata={
@@ -1205,7 +1120,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     discounting_rule_ref_or_pricing_rule_ref: Iterable[
-        Union[LimitingRuleRef, DiscountingRuleRef, PricingRuleRef]
+        LimitingRuleRef | DiscountingRuleRef | PricingRuleRef
     ] = field(
         default_factory=list,
         metadata={
@@ -1306,7 +1221,7 @@ class ValidityParametersRelStructure(OneToManyRelationshipStructure):
         )
     )
     distribution_channel_ref_or_group_of_distribution_channels_ref: Iterable[
-        Union[DistributionChannelRef, GroupOfDistributionChannelsRef]
+        DistributionChannelRef | GroupOfDistributionChannelsRef
     ] = field(
         default_factory=list,
         metadata={

@@ -12,13 +12,13 @@ class RegisterFileRef:
         name = "registerFileRef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    indices: Optional[Indices] = field(
+    indices: Indices | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    register_file_ref: Optional[str] = field(
+    register_file_ref: str | None = field(
         default=None,
         metadata={
             "name": "registerFileRef",
@@ -26,7 +26,7 @@ class RegisterFileRef:
             "required": True,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

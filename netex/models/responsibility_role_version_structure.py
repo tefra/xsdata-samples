@@ -13,7 +13,7 @@ class ResponsibilityRoleVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "ResponsibilityRole_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -21,7 +21,7 @@ class ResponsibilityRoleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -29,7 +29,7 @@ class ResponsibilityRoleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_responsibility_role_ref: Optional[TypeOfResponsibilityRoleRef] = (
+    type_of_responsibility_role_ref: TypeOfResponsibilityRoleRef | None = (
         field(
             default=None,
             metadata={

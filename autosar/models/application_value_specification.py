@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -50,7 +52,7 @@ class ApplicationValueSpecification:
     class Meta:
         name = "APPLICATION-VALUE-SPECIFICATION"
 
-    short_label: Optional[Identifier] = field(
+    short_label: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -58,7 +60,7 @@ class ApplicationValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -66,7 +68,7 @@ class ApplicationValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[Identifier] = field(
+    category: Identifier | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -74,7 +76,7 @@ class ApplicationValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_axis_conts: Optional["ApplicationValueSpecification.SwAxisConts"] = (
+    sw_axis_conts: ApplicationValueSpecification.SwAxisConts | None = (
         field(
             default=None,
             metadata={
@@ -84,7 +86,7 @@ class ApplicationValueSpecification:
             },
         )
     )
-    sw_value_cont: Optional[SwValueCont] = field(
+    sw_value_cont: SwValueCont | None = field(
         default=None,
         metadata={
             "name": "SW-VALUE-CONT",
@@ -92,14 +94,14 @@ class ApplicationValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

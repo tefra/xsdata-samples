@@ -103,7 +103,7 @@ class Entry:
     class Meta:
         name = "ENTRY"
 
-    bgcolor: Optional[String] = field(
+    bgcolor: String | None = field(
         default=None,
         metadata={
             "name": "BGCOLOR",
@@ -199,14 +199,14 @@ class Entry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -214,28 +214,28 @@ class Entry:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    align: Optional[AlignEnumSimple] = field(
+    align: AlignEnumSimple | None = field(
         default=None,
         metadata={
             "name": "ALIGN",
             "type": "Attribute",
         },
     )
-    bgcolor_attribute: Optional[str] = field(
+    bgcolor_attribute: str | None = field(
         default=None,
         metadata={
             "name": "BGCOLOR",
             "type": "Attribute",
         },
     )
-    colname: Optional[str] = field(
+    colname: str | None = field(
         default=None,
         metadata={
             "name": "COLNAME",
             "type": "Attribute",
         },
     )
-    colsep: Optional[str] = field(
+    colsep: str | None = field(
         default=None,
         metadata={
             "name": "COLSEP",
@@ -243,35 +243,35 @@ class Entry:
             "pattern": r"[0-1]",
         },
     )
-    morerows: Optional[str] = field(
+    morerows: str | None = field(
         default=None,
         metadata={
             "name": "MOREROWS",
             "type": "Attribute",
         },
     )
-    nameend: Optional[str] = field(
+    nameend: str | None = field(
         default=None,
         metadata={
             "name": "NAMEEND",
             "type": "Attribute",
         },
     )
-    namest: Optional[str] = field(
+    namest: str | None = field(
         default=None,
         metadata={
             "name": "NAMEST",
             "type": "Attribute",
         },
     )
-    rotate: Optional[str] = field(
+    rotate: str | None = field(
         default=None,
         metadata={
             "name": "ROTATE",
             "type": "Attribute",
         },
     )
-    rowsep: Optional[str] = field(
+    rowsep: str | None = field(
         default=None,
         metadata={
             "name": "ROWSEP",
@@ -279,14 +279,14 @@ class Entry:
             "pattern": r"[0-1]",
         },
     )
-    spanname: Optional[str] = field(
+    spanname: str | None = field(
         default=None,
         metadata={
             "name": "SPANNAME",
             "type": "Attribute",
         },
     )
-    valign: Optional[ValignEnumSimple] = field(
+    valign: ValignEnumSimple | None = field(
         default=None,
         metadata={
             "name": "VALIGN",

@@ -24,7 +24,7 @@ class StructureSpecificDataType:
     are not known.
     """
 
-    header: Optional[StructureSpecificDataHeaderType] = field(
+    header: StructureSpecificDataHeaderType | None = field(
         default=None,
         metadata={
             "name": "Header",
@@ -41,7 +41,7 @@ class StructureSpecificDataType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
         },
     )
-    footer: Optional[Footer] = field(
+    footer: Footer | None = field(
         default=None,
         metadata={
             "name": "Footer",

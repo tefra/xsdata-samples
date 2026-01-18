@@ -18,7 +18,7 @@ class TypeOfTravelDocumentVersionStructure(TypeOfEntityVersionStructure):
     class Meta:
         name = "TypeOfTravelDocument_VersionStructure"
 
-    is_card: Optional[bool] = field(
+    is_card: bool | None = field(
         default=None,
         metadata={
             "name": "IsCard",
@@ -26,7 +26,7 @@ class TypeOfTravelDocumentVersionStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_smart_card: Optional[bool] = field(
+    is_smart_card: bool | None = field(
         default=None,
         metadata={
             "name": "IsSmartCard",
@@ -34,7 +34,7 @@ class TypeOfTravelDocumentVersionStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_photo: Optional[bool] = field(
+    has_photo: bool | None = field(
         default=None,
         metadata={
             "name": "HasPhoto",
@@ -42,7 +42,7 @@ class TypeOfTravelDocumentVersionStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    media_type: Optional[MediaTypeEnumeration] = field(
+    media_type: MediaTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "MediaType",
@@ -59,9 +59,7 @@ class TypeOfTravelDocumentVersionStructure(TypeOfEntityVersionStructure):
             "tokens": True,
         },
     )
-    types_of_machine_readabilities: Optional[
-        TypesOfMachineReadabilitiesRelStructure
-    ] = field(
+    types_of_machine_readabilities: TypesOfMachineReadabilitiesRelStructure | None = field(
         default=None,
         metadata={
             "name": "typesOfMachineReadabilities",
@@ -69,7 +67,7 @@ class TypeOfTravelDocumentVersionStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alternative_names: Optional[AlternativeNamesRelStructure] = field(
+    alternative_names: AlternativeNamesRelStructure | None = field(
         default=None,
         metadata={
             "name": "alternativeNames",

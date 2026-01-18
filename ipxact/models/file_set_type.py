@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -43,7 +45,7 @@ class FileSetType:
     class Meta:
         name = "fileSetType"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -51,7 +53,7 @@ class FileSetType:
             "required": True,
         },
     )
-    display_name: Optional[DisplayName] = field(
+    display_name: DisplayName | None = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -59,7 +61,7 @@ class FileSetType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -67,14 +69,14 @@ class FileSetType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    group: list["FileSetType.Group"] = field(
+    group: list[FileSetType.Group] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -103,14 +105,14 @@ class FileSetType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    function: list["FileSetType.Function"] = field(
+    function: list[FileSetType.Function] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -118,7 +120,7 @@ class FileSetType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -134,7 +136,7 @@ class FileSetType:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -167,7 +169,7 @@ class FileSetType:
         :ivar id:
         """
 
-        entry_point: Optional[str] = field(
+        entry_point: str | None = field(
             default=None,
             metadata={
                 "name": "entryPoint",
@@ -175,7 +177,7 @@ class FileSetType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        file_ref: Optional[str] = field(
+        file_ref: str | None = field(
             default=None,
             metadata={
                 "name": "fileRef",
@@ -184,7 +186,7 @@ class FileSetType:
                 "required": True,
             },
         )
-        return_type: Optional[ReturnTypeType] = field(
+        return_type: ReturnTypeType | None = field(
             default=None,
             metadata={
                 "name": "returnType",
@@ -192,21 +194,21 @@ class FileSetType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        argument: list["FileSetType.Function.Argument"] = field(
+        argument: list[FileSetType.Function.Argument] = field(
             default_factory=list,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        disabled: Optional[UnsignedBitExpression] = field(
+        disabled: UnsignedBitExpression | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        source_file: list["FileSetType.Function.SourceFile"] = field(
+        source_file: list[FileSetType.Function.SourceFile] = field(
             default_factory=list,
             metadata={
                 "name": "sourceFile",
@@ -220,7 +222,7 @@ class FileSetType:
                 "type": "Attribute",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -235,7 +237,7 @@ class FileSetType:
                 to the language. Example: "int", "double", "char *".
             """
 
-            data_type: Optional[DataTypeType] = field(
+            data_type: DataTypeType | None = field(
                 default=None,
                 metadata={
                     "name": "dataType",
@@ -254,7 +256,7 @@ class FileSetType:
             :ivar id:
             """
 
-            source_name: Optional[IpxactUri] = field(
+            source_name: IpxactUri | None = field(
                 default=None,
                 metadata={
                     "name": "sourceName",
@@ -263,7 +265,7 @@ class FileSetType:
                     "required": True,
                 },
             )
-            file_type: Optional[FileType] = field(
+            file_type: FileType | None = field(
                 default=None,
                 metadata={
                     "name": "fileType",
@@ -272,7 +274,7 @@ class FileSetType:
                     "required": True,
                 },
             )
-            id: Optional[str] = field(
+            id: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

@@ -51,27 +51,27 @@ class AmountType:
         xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">string</ns1:PrimitiveType>
     """
 
-    value: Optional[Decimal] = field(
+    value: Decimal | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    currency_id: Optional[str] = field(
+    currency_id: str | None = field(
         default=None,
         metadata={
             "name": "currencyID",
             "type": "Attribute",
         },
     )
-    currency_code_list_version_id: Optional[str] = field(
+    currency_code_list_version_id: str | None = field(
         default=None,
         metadata={
             "name": "currencyCodeListVersionID",
             "type": "Attribute",
         },
     )
-    unit_code: Optional[str] = field(
+    unit_code: str | None = field(
         default=None,
         metadata={
             "name": "unitCode",

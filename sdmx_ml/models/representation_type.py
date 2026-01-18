@@ -26,7 +26,7 @@ class RepresentationType:
     """
 
     text_format_or_enumeration_or_enumeration_format: tuple[
-        Union[TextFormatType, str, CodedTextFormatType], ...
+        TextFormatType | str | CodedTextFormatType, ...
     ] = field(
         default_factory=tuple,
         metadata={
@@ -59,7 +59,7 @@ class RepresentationType:
             "type": "Attribute",
         },
     )
-    max_occurs: Optional[Union[int, UnboundedCodeType]] = field(
+    max_occurs: int | UnboundedCodeType | None = field(
         default=None,
         metadata={
             "name": "maxOccurs",

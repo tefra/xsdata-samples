@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -38,7 +40,7 @@ class UdpNmClusterCoupling:
     class Meta:
         name = "UDP-NM-CLUSTER-COUPLING"
 
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -46,9 +48,7 @@ class UdpNmClusterCoupling:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    coupled_cluster_refs: Optional[
-        "UdpNmClusterCoupling.CoupledClusterRefs"
-    ] = field(
+    coupled_cluster_refs: UdpNmClusterCoupling.CoupledClusterRefs | None = field(
         default=None,
         metadata={
             "name": "COUPLED-CLUSTER-REFS",
@@ -56,7 +56,7 @@ class UdpNmClusterCoupling:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_bus_load_reduction_enabled: Optional[Boolean] = field(
+    nm_bus_load_reduction_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-BUS-LOAD-REDUCTION-ENABLED",
@@ -64,7 +64,7 @@ class UdpNmClusterCoupling:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_immediate_restart_enabled: Optional[Boolean] = field(
+    nm_immediate_restart_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-IMMEDIATE-RESTART-ENABLED",
@@ -72,14 +72,14 @@ class UdpNmClusterCoupling:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -91,7 +91,7 @@ class UdpNmClusterCoupling:
     @dataclass
     class CoupledClusterRefs:
         coupled_cluster_ref: list[
-            "UdpNmClusterCoupling.CoupledClusterRefs.CoupledClusterRef"
+            UdpNmClusterCoupling.CoupledClusterRefs.CoupledClusterRef
         ] = field(
             default_factory=list,
             metadata={
@@ -103,7 +103,7 @@ class UdpNmClusterCoupling:
 
         @dataclass
         class CoupledClusterRef(Ref):
-            dest: Optional[UdpNmClusterSubtypesEnum] = field(
+            dest: UdpNmClusterSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

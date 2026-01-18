@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -127,7 +129,7 @@ class UdpNmNode:
     class Meta:
         name = "UDP-NM-NODE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -136,7 +138,7 @@ class UdpNmNode:
             "required": True,
         },
     )
-    short_name_fragments: Optional["UdpNmNode.ShortNameFragments"] = field(
+    short_name_fragments: UdpNmNode.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -144,7 +146,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -152,7 +154,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -160,7 +162,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -168,7 +170,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -176,7 +178,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -184,7 +186,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["UdpNmNode.Annotations"] = field(
+    annotations: UdpNmNode.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -192,7 +194,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    controller_ref: Optional["UdpNmNode.ControllerRef"] = field(
+    controller_ref: UdpNmNode.ControllerRef | None = field(
         default=None,
         metadata={
             "name": "CONTROLLER-REF",
@@ -200,7 +202,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    machine_ref: Optional["UdpNmNode.MachineRef"] = field(
+    machine_ref: UdpNmNode.MachineRef | None = field(
         default=None,
         metadata={
             "name": "MACHINE-REF",
@@ -208,7 +210,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_coord_cluster: Optional[PositiveInteger] = field(
+    nm_coord_cluster: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "NM-COORD-CLUSTER",
@@ -216,7 +218,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_coordinator_role: Optional[NmCoordinatorRoleEnum] = field(
+    nm_coordinator_role: NmCoordinatorRoleEnum | None = field(
         default=None,
         metadata={
             "name": "NM-COORDINATOR-ROLE",
@@ -224,7 +226,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_if_ecu_ref: Optional["UdpNmNode.NmIfEcuRef"] = field(
+    nm_if_ecu_ref: UdpNmNode.NmIfEcuRef | None = field(
         default=None,
         metadata={
             "name": "NM-IF-ECU-REF",
@@ -232,7 +234,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_node_id: Optional[Integer] = field(
+    nm_node_id: Integer | None = field(
         default=None,
         metadata={
             "name": "NM-NODE-ID",
@@ -240,7 +242,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_passive_mode_enabled: Optional[Boolean] = field(
+    nm_passive_mode_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-PASSIVE-MODE-ENABLED",
@@ -248,7 +250,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rx_nm_pdu_refs: Optional["UdpNmNode.RxNmPduRefs"] = field(
+    rx_nm_pdu_refs: UdpNmNode.RxNmPduRefs | None = field(
         default=None,
         metadata={
             "name": "RX-NM-PDU-REFS",
@@ -256,7 +258,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tx_nm_pdu_refs: Optional["UdpNmNode.TxNmPduRefs"] = field(
+    tx_nm_pdu_refs: UdpNmNode.TxNmPduRefs | None = field(
         default=None,
         metadata={
             "name": "TX-NM-PDU-REFS",
@@ -264,7 +266,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -272,7 +274,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    all_nm_messages_keep_awake: Optional[Boolean] = field(
+    all_nm_messages_keep_awake: Boolean | None = field(
         default=None,
         metadata={
             "name": "ALL-NM-MESSAGES-KEEP-AWAKE",
@@ -280,9 +282,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_connector_ref: Optional[
-        "UdpNmNode.CommunicationConnectorRef"
-    ] = field(
+    communication_connector_ref: UdpNmNode.CommunicationConnectorRef | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONNECTOR-REF",
@@ -290,7 +290,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_msg_cycle_offset: Optional[TimeValue] = field(
+    nm_msg_cycle_offset: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NM-MSG-CYCLE-OFFSET",
@@ -298,7 +298,7 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_pn_handle_multiple_network_requests: Optional[Boolean] = field(
+    nm_pn_handle_multiple_network_requests: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-PN-HANDLE-MULTIPLE-NETWORK-REQUESTS",
@@ -306,14 +306,14 @@ class UdpNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -321,7 +321,7 @@ class UdpNmNode:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -353,7 +353,7 @@ class UdpNmNode:
 
     @dataclass
     class ControllerRef(Ref):
-        dest: Optional[CommunicationControllerSubtypesEnum] = field(
+        dest: CommunicationControllerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -364,7 +364,7 @@ class UdpNmNode:
 
     @dataclass
     class MachineRef(Ref):
-        dest: Optional[MachineDesignSubtypesEnum] = field(
+        dest: MachineDesignSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -375,7 +375,7 @@ class UdpNmNode:
 
     @dataclass
     class NmIfEcuRef(Ref):
-        dest: Optional[NmEcuSubtypesEnum] = field(
+        dest: NmEcuSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -386,7 +386,7 @@ class UdpNmNode:
 
     @dataclass
     class RxNmPduRefs:
-        rx_nm_pdu_ref: list["UdpNmNode.RxNmPduRefs.RxNmPduRef"] = field(
+        rx_nm_pdu_ref: list[UdpNmNode.RxNmPduRefs.RxNmPduRef] = field(
             default_factory=list,
             metadata={
                 "name": "RX-NM-PDU-REF",
@@ -397,7 +397,7 @@ class UdpNmNode:
 
         @dataclass
         class RxNmPduRef(Ref):
-            dest: Optional[NmPduSubtypesEnum] = field(
+            dest: NmPduSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -408,7 +408,7 @@ class UdpNmNode:
 
     @dataclass
     class TxNmPduRefs:
-        tx_nm_pdu_ref: list["UdpNmNode.TxNmPduRefs.TxNmPduRef"] = field(
+        tx_nm_pdu_ref: list[UdpNmNode.TxNmPduRefs.TxNmPduRef] = field(
             default_factory=list,
             metadata={
                 "name": "TX-NM-PDU-REF",
@@ -419,7 +419,7 @@ class UdpNmNode:
 
         @dataclass
         class TxNmPduRef(Ref):
-            dest: Optional[NmPduSubtypesEnum] = field(
+            dest: NmPduSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -430,7 +430,7 @@ class UdpNmNode:
 
     @dataclass
     class CommunicationConnectorRef(Ref):
-        dest: Optional[EthernetCommunicationConnectorSubtypesEnum] = field(
+        dest: EthernetCommunicationConnectorSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

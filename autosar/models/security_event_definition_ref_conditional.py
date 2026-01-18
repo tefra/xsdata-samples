@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class SecurityEventDefinitionRefConditional:
     class Meta:
         name = "SECURITY-EVENT-DEFINITION-REF-CONDITIONAL"
 
-    security_event_definition_ref: Optional[
-        "SecurityEventDefinitionRefConditional.SecurityEventDefinitionRef"
-    ] = field(
+    security_event_definition_ref: SecurityEventDefinitionRefConditional.SecurityEventDefinitionRef | None = field(
         default=None,
         metadata={
             "name": "SECURITY-EVENT-DEFINITION-REF",
@@ -43,7 +43,7 @@ class SecurityEventDefinitionRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class SecurityEventDefinitionRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class SecurityEventDefinitionRefConditional:
 
     @dataclass
     class SecurityEventDefinitionRef(Ref):
-        dest: Optional[SecurityEventDefinitionSubtypesEnum] = field(
+        dest: SecurityEventDefinitionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

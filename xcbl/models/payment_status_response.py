@@ -285,7 +285,7 @@ class PaymentStatusRequestId:
 
 @dataclass(kw_only=True)
 class PaymentStatusRequestSummary:
-    total_number_payment_requests: Optional[TotalNumberPaymentRequests] = (
+    total_number_payment_requests: TotalNumberPaymentRequests | None = (
         field(
             default=None,
             metadata={
@@ -345,28 +345,28 @@ class OriginatingFinancialInstitution:
 
 @dataclass(kw_only=True)
 class PaymentDates:
-    payment_due_date: Optional[PaymentDueDate] = field(
+    payment_due_date: PaymentDueDate | None = field(
         default=None,
         metadata={
             "name": "PaymentDueDate",
             "type": "Element",
         },
     )
-    requested_payment_date: Optional[RequestedPaymentDate] = field(
+    requested_payment_date: RequestedPaymentDate | None = field(
         default=None,
         metadata={
             "name": "RequestedPaymentDate",
             "type": "Element",
         },
     )
-    pay_before_date: Optional[PayBeforeDate] = field(
+    pay_before_date: PayBeforeDate | None = field(
         default=None,
         metadata={
             "name": "PayBeforeDate",
             "type": "Element",
         },
     )
-    list_of_payment_dates: Optional[ListOfPaymentDates] = field(
+    list_of_payment_dates: ListOfPaymentDates | None = field(
         default=None,
         metadata={
             "name": "ListOfPaymentDates",
@@ -384,7 +384,7 @@ class PaymentException:
             "required": True,
         }
     )
-    payment_exception_coded_other: Optional[PaymentExceptionCodedOther] = (
+    payment_exception_coded_other: PaymentExceptionCodedOther | None = (
         field(
             default=None,
             metadata={
@@ -393,14 +393,14 @@ class PaymentException:
             },
         )
     )
-    payment_exception_note: Optional[PaymentExceptionNote] = field(
+    payment_exception_note: PaymentExceptionNote | None = field(
         default=None,
         metadata={
             "name": "PaymentExceptionNote",
             "type": "Element",
         },
     )
-    offending_payment_element: Optional[OffendingPaymentElement] = field(
+    offending_payment_element: OffendingPaymentElement | None = field(
         default=None,
         metadata={
             "name": "OffendingPaymentElement",
@@ -432,7 +432,7 @@ class PaymentStatusResponseHeader:
             "required": True,
         }
     )
-    sending_party: Optional[SendingParty] = field(
+    sending_party: SendingParty | None = field(
         default=None,
         metadata={
             "name": "SendingParty",
@@ -446,7 +446,7 @@ class PaymentStatusResponseHeader:
             "required": True,
         }
     )
-    general_note: Optional[GeneralNote] = field(
+    general_note: GeneralNote | None = field(
         default=None,
         metadata={
             "name": "GeneralNote",
@@ -516,123 +516,119 @@ class PaymentStatusResponseDetail:
             "required": True,
         }
     )
-    sequence_number: Optional[SequenceNumber] = field(
+    sequence_number: SequenceNumber | None = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
             "type": "Element",
         },
     )
-    payment_dates: Optional[PaymentDates] = field(
+    payment_dates: PaymentDates | None = field(
         default=None,
         metadata={
             "name": "PaymentDates",
             "type": "Element",
         },
     )
-    settlement_date: Optional[SettlementDate] = field(
+    settlement_date: SettlementDate | None = field(
         default=None,
         metadata={
             "name": "SettlementDate",
             "type": "Element",
         },
     )
-    fxvalue_date: Optional[FxvalueDate] = field(
+    fxvalue_date: FxvalueDate | None = field(
         default=None,
         metadata={
             "name": "FXValueDate",
             "type": "Element",
         },
     )
-    settlement_amount: Optional[SettlementAmount] = field(
+    settlement_amount: SettlementAmount | None = field(
         default=None,
         metadata={
             "name": "SettlementAmount",
             "type": "Element",
         },
     )
-    debit_amount: Optional[DebitAmount] = field(
+    debit_amount: DebitAmount | None = field(
         default=None,
         metadata={
             "name": "DebitAmount",
             "type": "Element",
         },
     )
-    credit_amount: Optional[CreditAmount] = field(
+    credit_amount: CreditAmount | None = field(
         default=None,
         metadata={
             "name": "CreditAmount",
             "type": "Element",
         },
     )
-    originating_financial_institution: Optional[
-        OriginatingFinancialInstitution
-    ] = field(
+    originating_financial_institution: OriginatingFinancialInstitution | None = field(
         default=None,
         metadata={
             "name": "OriginatingFinancialInstitution",
             "type": "Element",
         },
     )
-    receiving_financial_institution: Optional[
-        ReceivingFinancialInstitution
-    ] = field(
+    receiving_financial_institution: ReceivingFinancialInstitution | None = field(
         default=None,
         metadata={
             "name": "ReceivingFinancialInstitution",
             "type": "Element",
         },
     )
-    card_info: Optional[CardInfo] = field(
+    card_info: CardInfo | None = field(
         default=None,
         metadata={
             "name": "CardInfo",
             "type": "Element",
         },
     )
-    payment_party: Optional[PaymentParty] = field(
+    payment_party: PaymentParty | None = field(
         default=None,
         metadata={
             "name": "PaymentParty",
             "type": "Element",
         },
     )
-    participant_user_id: Optional[ParticipantUserId] = field(
+    participant_user_id: ParticipantUserId | None = field(
         default=None,
         metadata={
             "name": "ParticipantUserID",
             "type": "Element",
         },
     )
-    rate_of_exchange_detail: Optional[RateOfExchangeDetail] = field(
+    rate_of_exchange_detail: RateOfExchangeDetail | None = field(
         default=None,
         metadata={
             "name": "RateOfExchangeDetail",
             "type": "Element",
         },
     )
-    payment_system_coded: Optional[PaymentSystemCoded] = field(
+    payment_system_coded: PaymentSystemCoded | None = field(
         default=None,
         metadata={
             "name": "PaymentSystemCoded",
             "type": "Element",
         },
     )
-    payment_system_coded_other: Optional[PaymentSystemCodedOther] = field(
+    payment_system_coded_other: PaymentSystemCodedOther | None = field(
         default=None,
         metadata={
             "name": "PaymentSystemCodedOther",
             "type": "Element",
         },
     )
-    list_of_payment_references: Optional[ListOfPaymentReferences] = field(
+    list_of_payment_references: ListOfPaymentReferences | None = field(
         default=None,
         metadata={
             "name": "ListOfPaymentReferences",
             "type": "Element",
         },
     )
-    list_of_other_payment_info: Optional[ListOfOtherPaymentInfo] = field(
+    list_of_other_payment_info: ListOfOtherPaymentInfo | None = field(
         default=None,
         metadata={
             "name": "ListOfOtherPaymentInfo",

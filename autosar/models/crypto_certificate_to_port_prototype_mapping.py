@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -98,7 +100,7 @@ class CryptoCertificateToPortPrototypeMapping:
     class Meta:
         name = "CRYPTO-CERTIFICATE-TO-PORT-PROTOTYPE-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -107,9 +109,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "CryptoCertificateToPortPrototypeMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: CryptoCertificateToPortPrototypeMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -117,7 +117,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -125,7 +125,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -133,7 +133,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -141,7 +141,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -149,7 +149,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -157,9 +157,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "CryptoCertificateToPortPrototypeMapping.Annotations"
-    ] = field(
+    annotations: CryptoCertificateToPortPrototypeMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +165,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,9 +173,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_certificate_ref: Optional[
-        "CryptoCertificateToPortPrototypeMapping.CryptoCertificateRef"
-    ] = field(
+    crypto_certificate_ref: CryptoCertificateToPortPrototypeMapping.CryptoCertificateRef | None = field(
         default=None,
         metadata={
             "name": "CRYPTO-CERTIFICATE-REF",
@@ -185,7 +181,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_iref: Optional[PortPrototypeInExecutableInstanceRef] = (
+    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = (
         field(
             default=None,
             metadata={
@@ -195,9 +191,7 @@ class CryptoCertificateToPortPrototypeMapping:
             },
         )
     )
-    process_ref: Optional[
-        "CryptoCertificateToPortPrototypeMapping.ProcessRef"
-    ] = field(
+    process_ref: CryptoCertificateToPortPrototypeMapping.ProcessRef | None = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
@@ -205,7 +199,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    write_access: Optional[Boolean] = field(
+    write_access: Boolean | None = field(
         default=None,
         metadata={
             "name": "WRITE-ACCESS",
@@ -213,14 +207,14 @@ class CryptoCertificateToPortPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -228,7 +222,7 @@ class CryptoCertificateToPortPrototypeMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -260,7 +254,7 @@ class CryptoCertificateToPortPrototypeMapping:
 
     @dataclass
     class CryptoCertificateRef(Ref):
-        dest: Optional[CryptoCertificateSubtypesEnum] = field(
+        dest: CryptoCertificateSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -271,7 +265,7 @@ class CryptoCertificateToPortPrototypeMapping:
 
     @dataclass
     class ProcessRef(Ref):
-        dest: Optional[ProcessSubtypesEnum] = field(
+        dest: ProcessSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -12,21 +12,21 @@ class MappedValueType:
             "required": True,
         },
     )
-    is_reg_ex: Optional[bool] = field(
+    is_reg_ex: bool | None = field(
         default=None,
         metadata={
             "name": "isRegEx",
             "type": "Attribute",
         },
     )
-    start_index: Optional[int] = field(
+    start_index: int | None = field(
         default=None,
         metadata={
             "name": "startIndex",
             "type": "Attribute",
         },
     )
-    end_index: Optional[int] = field(
+    end_index: int | None = field(
         default=None,
         metadata={
             "name": "endIndex",

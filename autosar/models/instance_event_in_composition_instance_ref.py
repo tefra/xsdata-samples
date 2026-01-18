@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,7 +33,7 @@ class InstanceEventInCompositionInstanceRef:
         name = "INSTANCE-EVENT-IN-COMPOSITION-INSTANCE-REF"
 
     context_component_prototype_ref: list[
-        "InstanceEventInCompositionInstanceRef.ContextComponentPrototypeRef"
+        InstanceEventInCompositionInstanceRef.ContextComponentPrototypeRef
     ] = field(
         default_factory=list,
         metadata={
@@ -40,9 +42,7 @@ class InstanceEventInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_event_ref: Optional[
-        "InstanceEventInCompositionInstanceRef.TargetEventRef"
-    ] = field(
+    target_event_ref: InstanceEventInCompositionInstanceRef.TargetEventRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-EVENT-REF",
@@ -50,14 +50,14 @@ class InstanceEventInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -68,7 +68,7 @@ class InstanceEventInCompositionInstanceRef:
 
     @dataclass
     class ContextComponentPrototypeRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -79,7 +79,7 @@ class InstanceEventInCompositionInstanceRef:
 
     @dataclass
     class TargetEventRef(Ref):
-        dest: Optional[RteEventSubtypesEnum] = field(
+        dest: RteEventSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

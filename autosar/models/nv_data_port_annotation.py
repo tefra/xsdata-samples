@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class NvDataPortAnnotation:
     class Meta:
         name = "NV-DATA-PORT-ANNOTATION"
 
-    label: Optional[MultilanguageLongName] = field(
+    label: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -47,7 +49,7 @@ class NvDataPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_origin: Optional[String] = field(
+    annotation_origin: String | None = field(
         default=None,
         metadata={
             "name": "ANNOTATION-ORIGIN",
@@ -55,7 +57,7 @@ class NvDataPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_text: Optional[DocumentationBlock] = field(
+    annotation_text: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "ANNOTATION-TEXT",
@@ -63,7 +65,7 @@ class NvDataPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variable_ref: Optional["NvDataPortAnnotation.VariableRef"] = field(
+    variable_ref: NvDataPortAnnotation.VariableRef | None = field(
         default=None,
         metadata={
             "name": "VARIABLE-REF",
@@ -71,14 +73,14 @@ class NvDataPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -89,7 +91,7 @@ class NvDataPortAnnotation:
 
     @dataclass
     class VariableRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

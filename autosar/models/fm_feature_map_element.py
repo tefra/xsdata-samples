@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -97,7 +99,7 @@ class FmFeatureMapElement:
     class Meta:
         name = "FM-FEATURE-MAP-ELEMENT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -106,9 +108,7 @@ class FmFeatureMapElement:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "FmFeatureMapElement.ShortNameFragments"
-    ] = field(
+    short_name_fragments: FmFeatureMapElement.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -116,7 +116,7 @@ class FmFeatureMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -124,7 +124,7 @@ class FmFeatureMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -132,7 +132,7 @@ class FmFeatureMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -140,7 +140,7 @@ class FmFeatureMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -148,7 +148,7 @@ class FmFeatureMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -156,7 +156,7 @@ class FmFeatureMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["FmFeatureMapElement.Annotations"] = field(
+    annotations: FmFeatureMapElement.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -164,7 +164,7 @@ class FmFeatureMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assertions: Optional["FmFeatureMapElement.Assertions"] = field(
+    assertions: FmFeatureMapElement.Assertions | None = field(
         default=None,
         metadata={
             "name": "ASSERTIONS",
@@ -172,7 +172,7 @@ class FmFeatureMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    conditions: Optional["FmFeatureMapElement.Conditions"] = field(
+    conditions: FmFeatureMapElement.Conditions | None = field(
         default=None,
         metadata={
             "name": "CONDITIONS",
@@ -180,9 +180,7 @@ class FmFeatureMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    post_build_variant_criterion_value_set_refs: Optional[
-        "FmFeatureMapElement.PostBuildVariantCriterionValueSetRefs"
-    ] = field(
+    post_build_variant_criterion_value_set_refs: FmFeatureMapElement.PostBuildVariantCriterionValueSetRefs | None = field(
         default=None,
         metadata={
             "name": "POST-BUILD-VARIANT-CRITERION-VALUE-SET-REFS",
@@ -190,9 +188,7 @@ class FmFeatureMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_systemconstant_value_set_refs: Optional[
-        "FmFeatureMapElement.SwSystemconstantValueSetRefs"
-    ] = field(
+    sw_systemconstant_value_set_refs: FmFeatureMapElement.SwSystemconstantValueSetRefs | None = field(
         default=None,
         metadata={
             "name": "SW-SYSTEMCONSTANT-VALUE-SET-REFS",
@@ -200,14 +196,14 @@ class FmFeatureMapElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -215,7 +211,7 @@ class FmFeatureMapElement:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -270,7 +266,7 @@ class FmFeatureMapElement:
     @dataclass
     class PostBuildVariantCriterionValueSetRefs:
         post_build_variant_criterion_value_set_ref: list[
-            "FmFeatureMapElement.PostBuildVariantCriterionValueSetRefs.PostBuildVariantCriterionValueSetRef"
+            FmFeatureMapElement.PostBuildVariantCriterionValueSetRefs.PostBuildVariantCriterionValueSetRef
         ] = field(
             default_factory=list,
             metadata={
@@ -282,7 +278,7 @@ class FmFeatureMapElement:
 
         @dataclass
         class PostBuildVariantCriterionValueSetRef(Ref):
-            dest: Optional[PostBuildVariantCriterionValueSetSubtypesEnum] = (
+            dest: PostBuildVariantCriterionValueSetSubtypesEnum | None = (
                 field(
                     default=None,
                     metadata={
@@ -296,7 +292,7 @@ class FmFeatureMapElement:
     @dataclass
     class SwSystemconstantValueSetRefs:
         sw_systemconstant_value_set_ref: list[
-            "FmFeatureMapElement.SwSystemconstantValueSetRefs.SwSystemconstantValueSetRef"
+            FmFeatureMapElement.SwSystemconstantValueSetRefs.SwSystemconstantValueSetRef
         ] = field(
             default_factory=list,
             metadata={
@@ -308,7 +304,7 @@ class FmFeatureMapElement:
 
         @dataclass
         class SwSystemconstantValueSetRef(Ref):
-            dest: Optional[SwSystemconstantValueSetSubtypesEnum] = field(
+            dest: SwSystemconstantValueSetSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

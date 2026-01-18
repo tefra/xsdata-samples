@@ -30,7 +30,7 @@ class PersistencyCollectionLevelUpdateStrategyEnum:
     class Meta:
         name = "PERSISTENCY-COLLECTION-LEVEL-UPDATE-STRATEGY-ENUM"
 
-    value: Optional[PersistencyCollectionLevelUpdateStrategyEnumSimple] = (
+    value: PersistencyCollectionLevelUpdateStrategyEnumSimple | None = (
         field(
             default=None,
             metadata={
@@ -38,14 +38,14 @@ class PersistencyCollectionLevelUpdateStrategyEnum:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

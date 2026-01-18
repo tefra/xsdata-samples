@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -49,7 +51,7 @@ class SymbolProps:
     class Meta:
         name = "SYMBOL-PROPS"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -58,7 +60,7 @@ class SymbolProps:
             "required": True,
         },
     )
-    short_name_fragments: Optional["SymbolProps.ShortNameFragments"] = field(
+    short_name_fragments: SymbolProps.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -66,7 +68,7 @@ class SymbolProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbol: Optional[CIdentifier] = field(
+    symbol: CIdentifier | None = field(
         default=None,
         metadata={
             "name": "SYMBOL",
@@ -74,14 +76,14 @@ class SymbolProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

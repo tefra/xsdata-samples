@@ -19,9 +19,7 @@ class ParkingRouteByReference(ParkingRoute):
     :ivar parking_route_by_reference_extension:
     """
 
-    parking_route_reference: Optional[
-        ParkingRouteDetailsVersionedReference
-    ] = field(
+    parking_route_reference: ParkingRouteDetailsVersionedReference | None = field(
         default=None,
         metadata={
             "name": "parkingRouteReference",
@@ -30,7 +28,7 @@ class ParkingRouteByReference(ParkingRoute):
             "required": True,
         },
     )
-    parking_route_by_reference_extension: Optional[ExtensionType] = field(
+    parking_route_by_reference_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "parkingRouteByReferenceExtension",

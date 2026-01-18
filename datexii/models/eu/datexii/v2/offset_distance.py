@@ -20,7 +20,7 @@ class OffsetDistance:
     :ivar offset_distance_extension:
     """
 
-    offset_distance: Optional[int] = field(
+    offset_distance: int | None = field(
         default=None,
         metadata={
             "name": "offsetDistance",
@@ -29,7 +29,7 @@ class OffsetDistance:
             "required": True,
         },
     )
-    offset_distance_extension: Optional[ExtensionType] = field(
+    offset_distance_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "offsetDistanceExtension",

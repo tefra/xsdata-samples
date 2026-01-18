@@ -30,7 +30,7 @@ class Period:
     :ivar period_extension:
     """
 
-    start_of_period: Optional[XmlDateTime] = field(
+    start_of_period: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "startOfPeriod",
@@ -38,7 +38,7 @@ class Period:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    end_of_period: Optional[XmlDateTime] = field(
+    end_of_period: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "endOfPeriod",
@@ -46,7 +46,7 @@ class Period:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    period_name: Optional[MultilingualString] = field(
+    period_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "periodName",
@@ -70,7 +70,7 @@ class Period:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    period_extension: Optional[PeriodExtensionType] = field(
+    period_extension: PeriodExtensionType | None = field(
         default=None,
         metadata={
             "name": "periodExtension",

@@ -18,7 +18,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
     class Meta:
         name = "OnboardStay_VersionedChlldStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -26,7 +26,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_facility_set_ref: Optional[ServiceFacilitySetRef] = field(
+    service_facility_set_ref: ServiceFacilitySetRef | None = field(
         default=None,
         metadata={
             "name": "ServiceFacilitySetRef",
@@ -34,7 +34,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_class: Optional[FareClass] = field(
+    fare_class: FareClass | None = field(
         default=None,
         metadata={
             "name": "FareClass",
@@ -42,7 +42,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    class_of_use_ref: Optional[ClassOfUseRef] = field(
+    class_of_use_ref: ClassOfUseRef | None = field(
         default=None,
         metadata={
             "name": "ClassOfUseRef",
@@ -50,7 +50,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    boarding_permission: Optional[BoardingPermission] = field(
+    boarding_permission: BoardingPermission | None = field(
         default=None,
         metadata={
             "name": "BoardingPermission",
@@ -58,7 +58,7 @@ class OnboardStayVersionedChlldStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    period: Optional[XmlDuration] = field(
+    period: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "Period",

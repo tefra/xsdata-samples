@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -23,7 +25,7 @@ class CodelistExtensionType:
         codelist.
     """
 
-    codelist: Optional[str] = field(
+    codelist: str | None = field(
         default=None,
         metadata={
             "name": "Codelist",
@@ -33,12 +35,7 @@ class CodelistExtensionType:
             "pattern": r".+\.codelist\.Codelist=.+",
         },
     )
-    inclusive_code_selection_or_exclusive_code_selection: Optional[
-        Union[
-            "CodelistExtensionType.InclusiveCodeSelection",
-            "CodelistExtensionType.ExclusiveCodeSelection",
-        ]
-    ] = field(
+    inclusive_code_selection_or_exclusive_code_selection: CodelistExtensionType.InclusiveCodeSelection | CodelistExtensionType.ExclusiveCodeSelection | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -60,7 +57,7 @@ class CodelistExtensionType:
             ),
         },
     )
-    prefix: Optional[str] = field(
+    prefix: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

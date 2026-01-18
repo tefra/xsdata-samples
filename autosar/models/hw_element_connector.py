@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -68,7 +70,7 @@ class HwElementConnector:
     class Meta:
         name = "HW-ELEMENT-CONNECTOR"
 
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -76,7 +78,7 @@ class HwElementConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -84,7 +86,7 @@ class HwElementConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -92,7 +94,7 @@ class HwElementConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -100,7 +102,7 @@ class HwElementConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_element_refs: Optional["HwElementConnector.HwElementRefs"] = field(
+    hw_element_refs: HwElementConnector.HwElementRefs | None = field(
         default=None,
         metadata={
             "name": "HW-ELEMENT-REFS",
@@ -108,9 +110,7 @@ class HwElementConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_pin_group_connections: Optional[
-        "HwElementConnector.HwPinGroupConnections"
-    ] = field(
+    hw_pin_group_connections: HwElementConnector.HwPinGroupConnections | None = field(
         default=None,
         metadata={
             "name": "HW-PIN-GROUP-CONNECTIONS",
@@ -118,7 +118,7 @@ class HwElementConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_pin_connections: Optional["HwElementConnector.HwPinConnections"] = (
+    hw_pin_connections: HwElementConnector.HwPinConnections | None = (
         field(
             default=None,
             metadata={
@@ -128,7 +128,7 @@ class HwElementConnector:
             },
         )
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -136,14 +136,14 @@ class HwElementConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -155,7 +155,7 @@ class HwElementConnector:
     @dataclass
     class HwElementRefs:
         hw_element_ref: list[
-            "HwElementConnector.HwElementRefs.HwElementRef"
+            HwElementConnector.HwElementRefs.HwElementRef
         ] = field(
             default_factory=list,
             metadata={
@@ -168,7 +168,7 @@ class HwElementConnector:
 
         @dataclass
         class HwElementRef(Ref):
-            dest: Optional[HwElementSubtypesEnum] = field(
+            dest: HwElementSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

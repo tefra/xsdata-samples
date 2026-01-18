@@ -43,20 +43,20 @@ class DatabaseMetadata:
         name = "database_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    contributors: Optional[Contributors] = field(
+    contributors: Contributors | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    titles: Optional[Titles] = field(
+    titles: Titles | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -69,7 +69,7 @@ class DatabaseMetadata:
             "max_occurs": 10,
         },
     )
-    publisher: Optional[Publisher] = field(
+    publisher: Publisher | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -82,32 +82,32 @@ class DatabaseMetadata:
             "max_occurs": 10,
         },
     )
-    publisher_item: Optional[PublisherItem] = field(
+    publisher_item: PublisherItem | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    archive_locations: Optional[ArchiveLocations] = field(
+    archive_locations: ArchiveLocations | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    doi_data: Optional[DoiData] = field(
+    doi_data: DoiData | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    program: Optional[Program] = field(
+    program: Program | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/relations.xsd",
         },
     )
-    language: Optional[DatabaseMetadataLanguage] = field(
+    language: DatabaseMetadataLanguage | None = field(
         default=None,
         metadata={
             "type": "Attribute",

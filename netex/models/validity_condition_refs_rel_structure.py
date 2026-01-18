@@ -17,12 +17,7 @@ class ValidityConditionRefsRelStructure(OneToManyRelationshipStructure):
         name = "validityConditionRefs_RelStructure"
 
     validity_condition_ref: Iterable[
-        Union[
-            AvailabilityConditionRef,
-            ValidityRuleParameterRef,
-            ValidityTriggerRef,
-            ValidityConditionRef,
-        ]
+        AvailabilityConditionRef | ValidityRuleParameterRef | ValidityTriggerRef | ValidityConditionRef
     ] = field(
         default_factory=list,
         metadata={

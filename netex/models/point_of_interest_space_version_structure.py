@@ -28,9 +28,7 @@ class PointOfInterestSpaceVersionStructure(
     class Meta:
         name = "PointOfInterestSpace_VersionStructure"
 
-    access_space_type: Optional[
-        PointOfInterestSpaceVersionStructureAccessSpaceType
-    ] = field(
+    access_space_type: PointOfInterestSpaceVersionStructureAccessSpaceType | None = field(
         default=None,
         metadata={
             "name": "AccessSpaceType",
@@ -38,9 +36,7 @@ class PointOfInterestSpaceVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    point_of_interest_space_type: Optional[
-        PointOfInterestSpaceTypeEnumeration
-    ] = field(
+    point_of_interest_space_type: PointOfInterestSpaceTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "PointOfInterestSpaceType",
@@ -48,7 +44,7 @@ class PointOfInterestSpaceVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passage_type: Optional[PassageTypeEnumeration] = field(
+    passage_type: PassageTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "PassageType",
@@ -56,9 +52,7 @@ class PointOfInterestSpaceVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parent_point_of_interest_space_ref: Optional[
-        PointOfInterestSpaceRefStructure
-    ] = field(
+    parent_point_of_interest_space_ref: PointOfInterestSpaceRefStructure | None = field(
         default=None,
         metadata={
             "name": "ParentPointOfInterestSpaceRef",
@@ -66,7 +60,7 @@ class PointOfInterestSpaceVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entrances: Optional[PointOfInterestEntrancesRelStructure] = field(
+    entrances: PointOfInterestEntrancesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

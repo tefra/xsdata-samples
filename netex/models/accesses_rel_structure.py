@@ -14,7 +14,7 @@ class AccessesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "accesses_RelStructure"
 
-    access_ref_or_access: Iterable[Union[AccessRef, Access]] = field(
+    access_ref_or_access: Iterable[AccessRef | Access] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -38,9 +40,7 @@ class HwPortMapping:
     class Meta:
         name = "HW-PORT-MAPPING"
 
-    communication_connector_ref: Optional[
-        "HwPortMapping.CommunicationConnectorRef"
-    ] = field(
+    communication_connector_ref: HwPortMapping.CommunicationConnectorRef | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONNECTOR-REF",
@@ -48,9 +48,7 @@ class HwPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_communication_port_ref: Optional[
-        "HwPortMapping.HwCommunicationPortRef"
-    ] = field(
+    hw_communication_port_ref: HwPortMapping.HwCommunicationPortRef | None = field(
         default=None,
         metadata={
             "name": "HW-COMMUNICATION-PORT-REF",
@@ -58,14 +56,14 @@ class HwPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -76,7 +74,7 @@ class HwPortMapping:
 
     @dataclass
     class CommunicationConnectorRef(Ref):
-        dest: Optional[CommunicationConnectorSubtypesEnum] = field(
+        dest: CommunicationConnectorSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -87,7 +85,7 @@ class HwPortMapping:
 
     @dataclass
     class HwCommunicationPortRef(Ref):
-        dest: Optional[HwPinGroupSubtypesEnum] = field(
+        dest: HwPinGroupSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

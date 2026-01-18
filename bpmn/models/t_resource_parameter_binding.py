@@ -14,7 +14,7 @@ class TResourceParameterBinding(TBaseElement):
     class Meta:
         name = "tResourceParameterBinding"
 
-    formal_expression: Optional[FormalExpression] = field(
+    formal_expression: FormalExpression | None = field(
         default=None,
         metadata={
             "name": "formalExpression",
@@ -22,14 +22,14 @@ class TResourceParameterBinding(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    expression: Optional[Expression] = field(
+    expression: Expression | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    parameter_ref: Optional[QName] = field(
+    parameter_ref: QName | None = field(
         default=None,
         metadata={
             "name": "parameterRef",

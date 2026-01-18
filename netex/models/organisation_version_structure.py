@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import Any, Optional
@@ -32,7 +34,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Organisation_VersionStructure"
 
-    public_code: Optional[PrivateCodeStructure] = field(
+    public_code: PrivateCodeStructure | None = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -40,7 +42,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -48,7 +50,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    company_number: Optional[str] = field(
+    company_number: str | None = field(
         default=None,
         metadata={
             "name": "CompanyNumber",
@@ -56,7 +58,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vatnumber: Optional[str] = field(
+    vatnumber: str | None = field(
         default=None,
         metadata={
             "name": "VATNumber",
@@ -64,7 +66,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    external_operator_ref: Optional[ExternalObjectRefStructure] = field(
+    external_operator_ref: ExternalObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "ExternalOperatorRef",
@@ -72,7 +74,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -80,7 +82,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -88,7 +90,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    legal_name: Optional[MultilingualString] = field(
+    legal_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "LegalName",
@@ -96,7 +98,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    trading_name: Optional[MultilingualString] = field(
+    trading_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "TradingName",
@@ -104,7 +106,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alternative_names: Optional[AlternativeNamesRelStructure] = field(
+    alternative_names: AlternativeNamesRelStructure | None = field(
         default=None,
         metadata={
             "name": "alternativeNames",
@@ -112,7 +114,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -120,7 +122,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    remarks: Optional[MultilingualString] = field(
+    remarks: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Remarks",
@@ -128,7 +130,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    locale: Optional[Locale] = field(
+    locale: Locale | None = field(
         default=None,
         metadata={
             "name": "Locale",
@@ -136,7 +138,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    contact_details: Optional[ContactStructure] = field(
+    contact_details: ContactStructure | None = field(
         default=None,
         metadata={
             "name": "ContactDetails",
@@ -144,7 +146,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_contact_details: Optional[ContactStructure] = field(
+    private_contact_details: ContactStructure | None = field(
         default=None,
         metadata={
             "name": "PrivateContactDetails",
@@ -161,7 +163,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "tokens": True,
         },
     )
-    types_of_organisation: Optional[TypeOfOrganisationRefsRelStructure] = (
+    types_of_organisation: TypeOfOrganisationRefsRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -171,7 +173,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    status: Optional[bool] = field(
+    status: bool | None = field(
         default=None,
         metadata={
             "name": "Status",
@@ -179,9 +181,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_period: Optional[
-        "OrganisationVersionStructure.ValidityPeriod"
-    ] = field(
+    validity_period: OrganisationVersionStructure.ValidityPeriod | None = field(
         default=None,
         metadata={
             "name": "ValidityPeriod",
@@ -189,14 +189,14 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parts: Optional[OrganisationPartsRelStructure] = field(
+    parts: OrganisationPartsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    own_responsibility_sets: Optional[ResponsibilitySetsRelStructure] = field(
+    own_responsibility_sets: ResponsibilitySetsRelStructure | None = field(
         default=None,
         metadata={
             "name": "ownResponsibilitySets",
@@ -204,7 +204,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    delegated_responsibility_sets: Optional[ResponsibilitySetsRelStructure] = (
+    delegated_responsibility_sets: ResponsibilitySetsRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -214,7 +214,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    delegated_from: Optional[OrganisationRefsRelStructure] = field(
+    delegated_from: OrganisationRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "delegatedFrom",
@@ -222,7 +222,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    related_organisations: Optional[RelatedOrganisationsRelStructure] = field(
+    related_organisations: RelatedOrganisationsRelStructure | None = field(
         default=None,
         metadata={
             "name": "relatedOrganisations",

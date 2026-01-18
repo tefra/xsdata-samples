@@ -13,7 +13,7 @@ class VmsSetting:
     currently displayed.
     """
 
-    vms_setting_extension: Optional[ExtensionType] = field(
+    vms_setting_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "vmsSettingExtension",

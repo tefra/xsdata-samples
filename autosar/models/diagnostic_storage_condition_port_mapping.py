@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -106,7 +108,7 @@ class DiagnosticStorageConditionPortMapping:
     class Meta:
         name = "DIAGNOSTIC-STORAGE-CONDITION-PORT-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -115,9 +117,7 @@ class DiagnosticStorageConditionPortMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticStorageConditionPortMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticStorageConditionPortMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -125,7 +125,7 @@ class DiagnosticStorageConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -133,7 +133,7 @@ class DiagnosticStorageConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -141,7 +141,7 @@ class DiagnosticStorageConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -149,7 +149,7 @@ class DiagnosticStorageConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -157,7 +157,7 @@ class DiagnosticStorageConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -165,9 +165,7 @@ class DiagnosticStorageConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "DiagnosticStorageConditionPortMapping.Annotations"
-    ] = field(
+    annotations: DiagnosticStorageConditionPortMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -175,7 +173,7 @@ class DiagnosticStorageConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -183,9 +181,7 @@ class DiagnosticStorageConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_storage_condition_ref: Optional[
-        "DiagnosticStorageConditionPortMapping.DiagnosticStorageConditionRef"
-    ] = field(
+    diagnostic_storage_condition_ref: DiagnosticStorageConditionPortMapping.DiagnosticStorageConditionRef | None = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-STORAGE-CONDITION-REF",
@@ -193,9 +189,7 @@ class DiagnosticStorageConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_flat_service_dependency_ref: Optional[
-        "DiagnosticStorageConditionPortMapping.SwcFlatServiceDependencyRef"
-    ] = field(
+    swc_flat_service_dependency_ref: DiagnosticStorageConditionPortMapping.SwcFlatServiceDependencyRef | None = field(
         default=None,
         metadata={
             "name": "SWC-FLAT-SERVICE-DEPENDENCY-REF",
@@ -203,9 +197,7 @@ class DiagnosticStorageConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_service_dependency_in_system_iref: Optional[
-        SwcServiceDependencyInSystemInstanceRef
-    ] = field(
+    swc_service_dependency_in_system_iref: SwcServiceDependencyInSystemInstanceRef | None = field(
         default=None,
         metadata={
             "name": "SWC-SERVICE-DEPENDENCY-IN-SYSTEM-IREF",
@@ -213,9 +205,7 @@ class DiagnosticStorageConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_service_dependency_iref: Optional[
-        SwcServiceDependencyInCompositionInstanceRef
-    ] = field(
+    swc_service_dependency_iref: SwcServiceDependencyInCompositionInstanceRef | None = field(
         default=None,
         metadata={
             "name": "SWC-SERVICE-DEPENDENCY-IREF",
@@ -223,14 +213,14 @@ class DiagnosticStorageConditionPortMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -238,7 +228,7 @@ class DiagnosticStorageConditionPortMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -270,7 +260,7 @@ class DiagnosticStorageConditionPortMapping:
 
     @dataclass
     class DiagnosticStorageConditionRef(Ref):
-        dest: Optional[DiagnosticStorageConditionSubtypesEnum] = field(
+        dest: DiagnosticStorageConditionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -281,7 +271,7 @@ class DiagnosticStorageConditionPortMapping:
 
     @dataclass
     class SwcFlatServiceDependencyRef(Ref):
-        dest: Optional[SwcServiceDependencySubtypesEnum] = field(
+        dest: SwcServiceDependencySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

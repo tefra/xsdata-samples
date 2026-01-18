@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -36,7 +38,7 @@ class ModeSwitchEventTriggeredActivity:
     class Meta:
         name = "MODE-SWITCH-EVENT-TRIGGERED-ACTIVITY"
 
-    role: Optional[Identifier] = field(
+    role: Identifier | None = field(
         default=None,
         metadata={
             "name": "ROLE",
@@ -44,9 +46,7 @@ class ModeSwitchEventTriggeredActivity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_mode_switch_event_ref: Optional[
-        "ModeSwitchEventTriggeredActivity.SwcModeSwitchEventRef"
-    ] = field(
+    swc_mode_switch_event_ref: ModeSwitchEventTriggeredActivity.SwcModeSwitchEventRef | None = field(
         default=None,
         metadata={
             "name": "SWC-MODE-SWITCH-EVENT-REF",
@@ -54,7 +54,7 @@ class ModeSwitchEventTriggeredActivity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -62,14 +62,14 @@ class ModeSwitchEventTriggeredActivity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -80,7 +80,7 @@ class ModeSwitchEventTriggeredActivity:
 
     @dataclass
     class SwcModeSwitchEventRef(Ref):
-        dest: Optional[SwcModeSwitchEventSubtypesEnum] = field(
+        dest: SwcModeSwitchEventSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

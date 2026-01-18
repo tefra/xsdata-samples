@@ -25,7 +25,7 @@ class PredefinedLocation(PredefinedLocationContainer):
     :ivar version:
     """
 
-    predefined_location_name: Optional[MultilingualString] = field(
+    predefined_location_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "predefinedLocationName",
@@ -33,7 +33,7 @@ class PredefinedLocation(PredefinedLocationContainer):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    location: Optional[Location] = field(
+    location: Location | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -41,7 +41,7 @@ class PredefinedLocation(PredefinedLocationContainer):
             "required": True,
         },
     )
-    predefined_location_extension: Optional[ExtensionType] = field(
+    predefined_location_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "predefinedLocationExtension",
@@ -49,14 +49,14 @@ class PredefinedLocation(PredefinedLocationContainer):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

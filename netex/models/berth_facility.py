@@ -11,7 +11,7 @@ class BerthFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: Optional[BerthFacilityEnumeration] = field(
+    value: BerthFacilityEnumeration | None = field(
         default=None,
         metadata={
             "required": True,

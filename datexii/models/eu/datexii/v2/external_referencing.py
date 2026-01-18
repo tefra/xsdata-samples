@@ -19,7 +19,7 @@ class ExternalReferencing:
     :ivar external_referencing_extension:
     """
 
-    external_location_code: Optional[str] = field(
+    external_location_code: str | None = field(
         default=None,
         metadata={
             "name": "externalLocationCode",
@@ -29,7 +29,7 @@ class ExternalReferencing:
             "max_length": 1024,
         },
     )
-    external_referencing_system: Optional[str] = field(
+    external_referencing_system: str | None = field(
         default=None,
         metadata={
             "name": "externalReferencingSystem",
@@ -39,7 +39,7 @@ class ExternalReferencing:
             "max_length": 1024,
         },
     )
-    external_referencing_extension: Optional[ExtensionType] = field(
+    external_referencing_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "externalReferencingExtension",

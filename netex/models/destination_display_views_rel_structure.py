@@ -15,7 +15,7 @@ class DestinationDisplayViewsRelStructure(ContainmentAggregationStructure):
         name = "destinationDisplayViews_RelStructure"
 
     destination_display_ref_or_destination_display_view: Iterable[
-        Union[DestinationDisplayRef, DestinationDisplayView]
+        DestinationDisplayRef | DestinationDisplayView
     ] = field(
         default_factory=list,
         metadata={

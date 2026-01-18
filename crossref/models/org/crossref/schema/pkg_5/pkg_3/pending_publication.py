@@ -52,26 +52,26 @@ class PendingPublication:
         name = "pending_publication"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    contributors: Optional[Contributors] = field(
+    contributors: Contributors | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    publication: Optional[Publication] = field(
+    publication: Publication | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    titles: Optional[Titles] = field(
+    titles: Titles | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    acceptance_date: Optional[AcceptanceDate] = field(
+    acceptance_date: AcceptanceDate | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -92,7 +92,7 @@ class PendingPublication:
             "max_occurs": 3,
         },
     )
-    intent_statement: Optional[IntentStatement] = field(
+    intent_statement: IntentStatement | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -105,20 +105,20 @@ class PendingPublication:
             "namespace": "http://www.ncbi.nlm.nih.gov/JATS1",
         },
     )
-    crossmark: Optional[Crossmark] = field(
+    crossmark: Crossmark | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    program: Optional[FundrefProgram] = field(
+    program: FundrefProgram | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/fundref.xsd",
         },
     )
-    program_1: Optional[AccessIndicatorsProgram] = field(
+    program_1: AccessIndicatorsProgram | None = field(
         default=None,
         metadata={
             "name": "program",
@@ -126,7 +126,7 @@ class PendingPublication:
             "namespace": "http://www.crossref.org/AccessIndicators.xsd",
         },
     )
-    program_2: Optional[RelationsProgram] = field(
+    program_2: RelationsProgram | None = field(
         default=None,
         metadata={
             "name": "program",
@@ -134,14 +134,14 @@ class PendingPublication:
             "namespace": "http://www.crossref.org/relations.xsd",
         },
     )
-    doi: Optional[Doi] = field(
+    doi: Doi | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    language: Optional[PendingPublicationLanguage] = field(
+    language: PendingPublicationLanguage | None = field(
         default=None,
         metadata={
             "type": "Attribute",

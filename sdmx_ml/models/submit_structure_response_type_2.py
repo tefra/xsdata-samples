@@ -26,7 +26,7 @@ class SubmitStructureResponseType2(RegistryInterfaceType):
             "type": "Ignore",
         },
     )
-    submit_structure_response: Optional[SubmitStructureResponseType1] = field(
+    submit_structure_response: SubmitStructureResponseType1 | None = field(
         default=None,
         metadata={
             "name": "SubmitStructureResponse",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -92,7 +94,7 @@ class Graphic:
     class Meta:
         name = "GRAPHIC"
 
-    short_label: Optional[NmtokenString] = field(
+    short_label: NmtokenString | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -100,7 +102,7 @@ class Graphic:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[NmtokenString] = field(
+    category: NmtokenString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -108,7 +110,7 @@ class Graphic:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    revision_labels: Optional["Graphic.RevisionLabels"] = field(
+    revision_labels: Graphic.RevisionLabels | None = field(
         default=None,
         metadata={
             "name": "REVISION-LABELS",
@@ -116,7 +118,7 @@ class Graphic:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    domain: Optional[NmtokenString] = field(
+    domain: NmtokenString | None = field(
         default=None,
         metadata={
             "name": "DOMAIN",
@@ -124,14 +126,14 @@ class Graphic:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -139,105 +141,105 @@ class Graphic:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    edit_height: Optional[str] = field(
+    edit_height: str | None = field(
         default=None,
         metadata={
             "name": "EDIT-HEIGHT",
             "type": "Attribute",
         },
     )
-    edit_width: Optional[str] = field(
+    edit_width: str | None = field(
         default=None,
         metadata={
             "name": "EDIT-WIDTH",
             "type": "Attribute",
         },
     )
-    editfit: Optional[GraphicFitEnumSimple] = field(
+    editfit: GraphicFitEnumSimple | None = field(
         default=None,
         metadata={
             "name": "EDITFIT",
             "type": "Attribute",
         },
     )
-    editscale: Optional[str] = field(
+    editscale: str | None = field(
         default=None,
         metadata={
             "name": "EDITSCALE",
             "type": "Attribute",
         },
     )
-    filename: Optional[str] = field(
+    filename: str | None = field(
         default=None,
         metadata={
             "name": "FILENAME",
             "type": "Attribute",
         },
     )
-    fit: Optional[GraphicFitEnumSimple] = field(
+    fit: GraphicFitEnumSimple | None = field(
         default=None,
         metadata={
             "name": "FIT",
             "type": "Attribute",
         },
     )
-    generator: Optional[str] = field(
+    generator: str | None = field(
         default=None,
         metadata={
             "name": "GENERATOR",
             "type": "Attribute",
         },
     )
-    height: Optional[str] = field(
+    height: str | None = field(
         default=None,
         metadata={
             "name": "HEIGHT",
             "type": "Attribute",
         },
     )
-    html_fit: Optional[GraphicFitEnumSimple] = field(
+    html_fit: GraphicFitEnumSimple | None = field(
         default=None,
         metadata={
             "name": "HTML-FIT",
             "type": "Attribute",
         },
     )
-    html_height: Optional[str] = field(
+    html_height: str | None = field(
         default=None,
         metadata={
             "name": "HTML-HEIGHT",
             "type": "Attribute",
         },
     )
-    html_scale: Optional[str] = field(
+    html_scale: str | None = field(
         default=None,
         metadata={
             "name": "HTML-SCALE",
             "type": "Attribute",
         },
     )
-    html_width: Optional[str] = field(
+    html_width: str | None = field(
         default=None,
         metadata={
             "name": "HTML-WIDTH",
             "type": "Attribute",
         },
     )
-    notation: Optional[GraphicNotationEnumSimple] = field(
+    notation: GraphicNotationEnumSimple | None = field(
         default=None,
         metadata={
             "name": "NOTATION",
             "type": "Attribute",
         },
     )
-    scale: Optional[str] = field(
+    scale: str | None = field(
         default=None,
         metadata={
             "name": "SCALE",
             "type": "Attribute",
         },
     )
-    width: Optional[str] = field(
+    width: str | None = field(
         default=None,
         metadata={
             "name": "WIDTH",

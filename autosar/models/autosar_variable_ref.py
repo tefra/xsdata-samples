@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -60,9 +62,7 @@ class AutosarVariableRef:
     class Meta:
         name = "AUTOSAR-VARIABLE-REF"
 
-    autosar_variable_in_impl_datatype: Optional[
-        ArVariableInImplementationDataInstanceRef
-    ] = field(
+    autosar_variable_in_impl_datatype: ArVariableInImplementationDataInstanceRef | None = field(
         default=None,
         metadata={
             "name": "AUTOSAR-VARIABLE-IN-IMPL-DATATYPE",
@@ -70,7 +70,7 @@ class AutosarVariableRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    autosar_variable_iref: Optional[VariableInAtomicSwcTypeInstanceRef] = (
+    autosar_variable_iref: VariableInAtomicSwcTypeInstanceRef | None = (
         field(
             default=None,
             metadata={
@@ -80,7 +80,7 @@ class AutosarVariableRef:
             },
         )
     )
-    local_variable_ref: Optional["AutosarVariableRef.LocalVariableRef"] = (
+    local_variable_ref: AutosarVariableRef.LocalVariableRef | None = (
         field(
             default=None,
             metadata={
@@ -90,14 +90,14 @@ class AutosarVariableRef:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -108,7 +108,7 @@ class AutosarVariableRef:
 
     @dataclass
     class LocalVariableRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

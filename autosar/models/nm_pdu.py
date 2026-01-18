@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -110,7 +112,7 @@ class NmPdu:
     class Meta:
         name = "NM-PDU"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -119,7 +121,7 @@ class NmPdu:
             "required": True,
         },
     )
-    short_name_fragments: Optional["NmPdu.ShortNameFragments"] = field(
+    short_name_fragments: NmPdu.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -127,7 +129,7 @@ class NmPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -135,7 +137,7 @@ class NmPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -143,7 +145,7 @@ class NmPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -151,7 +153,7 @@ class NmPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -159,7 +161,7 @@ class NmPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -167,7 +169,7 @@ class NmPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["NmPdu.Annotations"] = field(
+    annotations: NmPdu.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -175,7 +177,7 @@ class NmPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -183,7 +185,7 @@ class NmPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    has_dynamic_length: Optional[Boolean] = field(
+    has_dynamic_length: Boolean | None = field(
         default=None,
         metadata={
             "name": "HAS-DYNAMIC-LENGTH",
@@ -191,7 +193,7 @@ class NmPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    length: Optional[Integer] = field(
+    length: Integer | None = field(
         default=None,
         metadata={
             "name": "LENGTH",
@@ -199,7 +201,7 @@ class NmPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    meta_data_length: Optional[PositiveInteger] = field(
+    meta_data_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "META-DATA-LENGTH",
@@ -207,7 +209,7 @@ class NmPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_to_i_pdu_mappings: Optional["NmPdu.ISignalToIPduMappings"] = (
+    i_signal_to_i_pdu_mappings: NmPdu.ISignalToIPduMappings | None = (
         field(
             default=None,
             metadata={
@@ -217,7 +219,7 @@ class NmPdu:
             },
         )
     )
-    nm_data_information: Optional[Boolean] = field(
+    nm_data_information: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-DATA-INFORMATION",
@@ -225,7 +227,7 @@ class NmPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_vote_information: Optional[Boolean] = field(
+    nm_vote_information: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-VOTE-INFORMATION",
@@ -233,7 +235,7 @@ class NmPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unused_bit_pattern: Optional[Integer] = field(
+    unused_bit_pattern: Integer | None = field(
         default=None,
         metadata={
             "name": "UNUSED-BIT-PATTERN",
@@ -241,14 +243,14 @@ class NmPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -256,7 +258,7 @@ class NmPdu:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

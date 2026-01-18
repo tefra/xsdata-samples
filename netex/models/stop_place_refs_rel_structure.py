@@ -14,7 +14,7 @@ class StopPlaceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "stopPlaceRefs_RelStructure"
 
-    stop_place_ref: Iterable[Union[TaxiRankRef, StopPlaceRef]] = field(
+    stop_place_ref: Iterable[TaxiRankRef | StopPlaceRef] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

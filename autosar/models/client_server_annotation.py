@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -40,7 +42,7 @@ class ClientServerAnnotation:
     class Meta:
         name = "CLIENT-SERVER-ANNOTATION"
 
-    label: Optional[MultilanguageLongName] = field(
+    label: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -48,7 +50,7 @@ class ClientServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_origin: Optional[String] = field(
+    annotation_origin: String | None = field(
         default=None,
         metadata={
             "name": "ANNOTATION-ORIGIN",
@@ -56,7 +58,7 @@ class ClientServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_text: Optional[DocumentationBlock] = field(
+    annotation_text: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "ANNOTATION-TEXT",
@@ -64,7 +66,7 @@ class ClientServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_ref: Optional["ClientServerAnnotation.OperationRef"] = field(
+    operation_ref: ClientServerAnnotation.OperationRef | None = field(
         default=None,
         metadata={
             "name": "OPERATION-REF",
@@ -72,14 +74,14 @@ class ClientServerAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -90,7 +92,7 @@ class ClientServerAnnotation:
 
     @dataclass
     class OperationRef(Ref):
-        dest: Optional[ClientServerOperationSubtypesEnum] = field(
+        dest: ClientServerOperationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

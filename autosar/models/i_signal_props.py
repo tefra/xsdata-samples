@@ -28,7 +28,7 @@ class ISignalProps:
     class Meta:
         name = "I-SIGNAL-PROPS"
 
-    handle_out_of_range: Optional[HandleOutOfRangeEnum] = field(
+    handle_out_of_range: HandleOutOfRangeEnum | None = field(
         default=None,
         metadata={
             "name": "HANDLE-OUT-OF-RANGE",
@@ -36,14 +36,14 @@ class ISignalProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

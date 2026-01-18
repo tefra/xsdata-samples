@@ -29,7 +29,7 @@ class BinaryManifestItemNumericalValue:
     class Meta:
         name = "BINARY-MANIFEST-ITEM-NUMERICAL-VALUE"
 
-    value: Optional[NumericalValue] = field(
+    value: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -37,14 +37,14 @@ class BinaryManifestItemNumericalValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

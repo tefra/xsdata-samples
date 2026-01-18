@@ -32,7 +32,7 @@ class Assertion:
             "type": "Attribute",
         },
     )
-    name: Optional[AssertionName] = field(
+    name: AssertionName | None = field(
         default=None,
         metadata={
             "type": "Attribute",

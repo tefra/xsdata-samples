@@ -77,7 +77,7 @@ class ParameterType:
     class Meta:
         name = "parameterType"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -85,7 +85,7 @@ class ParameterType:
             "required": True,
         },
     )
-    display_name: Optional[DisplayName] = field(
+    display_name: DisplayName | None = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -93,7 +93,7 @@ class ParameterType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -101,28 +101,28 @@ class ParameterType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vectors: Optional[Vectors] = field(
+    vectors: Vectors | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    arrays: Optional[ConfigurableArrays] = field(
+    arrays: ConfigurableArrays | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    value: Optional[Value] = field(
+    value: Value | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -130,7 +130,7 @@ class ParameterType:
             "required": True,
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -138,34 +138,34 @@ class ParameterType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    parameter_id: Optional[str] = field(
+    parameter_id: str | None = field(
         default=None,
         metadata={
             "name": "parameterId",
             "type": "Attribute",
         },
     )
-    prompt: Optional[str] = field(
+    prompt: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    choice_ref: Optional[str] = field(
+    choice_ref: str | None = field(
         default=None,
         metadata={
             "name": "choiceRef",
             "type": "Attribute",
         },
     )
-    order: Optional[float] = field(
+    order: float | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -179,13 +179,13 @@ class ParameterType:
             "tokens": True,
         },
     )
-    minimum: Optional[str] = field(
+    minimum: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    maximum: Optional[str] = field(
+    maximum: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -198,19 +198,19 @@ class ParameterType:
             "type": "Attribute",
         },
     )
-    sign: Optional[SignType] = field(
+    sign: SignType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    prefix: Optional[ParameterTypePrefix] = field(
+    prefix: ParameterTypePrefix | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    unit: Optional[ParameterTypeUnit] = field(
+    unit: ParameterTypeUnit | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -13,7 +13,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
     class Meta:
         name = "PostalAddress_VersionStructure"
 
-    house_number: Optional[str] = field(
+    house_number: str | None = field(
         default=None,
         metadata={
             "name": "HouseNumber",
@@ -21,7 +21,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    building_name: Optional[MultilingualString] = field(
+    building_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "BuildingName",
@@ -29,7 +29,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    address_line1: Optional[MultilingualString] = field(
+    address_line1: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "AddressLine1",
@@ -37,7 +37,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    address_line2: Optional[MultilingualString] = field(
+    address_line2: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "AddressLine2",
@@ -45,7 +45,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    street: Optional[MultilingualString] = field(
+    street: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Street",
@@ -53,7 +53,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    town: Optional[MultilingualString] = field(
+    town: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Town",
@@ -61,7 +61,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    suburb: Optional[MultilingualString] = field(
+    suburb: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Suburb",
@@ -69,7 +69,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    post_code: Optional[str] = field(
+    post_code: str | None = field(
         default=None,
         metadata={
             "name": "PostCode",
@@ -77,7 +77,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    post_code_extension: Optional[str] = field(
+    post_code_extension: str | None = field(
         default=None,
         metadata={
             "name": "PostCodeExtension",
@@ -85,7 +85,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    postal_region: Optional[str] = field(
+    postal_region: str | None = field(
         default=None,
         metadata={
             "name": "PostalRegion",
@@ -93,7 +93,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    province: Optional[MultilingualString] = field(
+    province: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Province",
@@ -101,7 +101,7 @@ class PostalAddressVersionStructure(AddressVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    road_address_ref: Optional[AddressRefStructure] = field(
+    road_address_ref: AddressRefStructure | None = field(
         default=None,
         metadata={
             "name": "RoadAddressRef",

@@ -19,7 +19,7 @@ class AlertCMethod4Point(AlertCPoint):
     has an associated direction of traffic flow.
     """
 
-    alert_cdirection: Optional[AlertCDirection] = field(
+    alert_cdirection: AlertCDirection | None = field(
         default=None,
         metadata={
             "name": "alertCDirection",
@@ -28,9 +28,7 @@ class AlertCMethod4Point(AlertCPoint):
             "required": True,
         },
     )
-    alert_cmethod4_primary_point_location: Optional[
-        AlertCMethod4PrimaryPointLocation
-    ] = field(
+    alert_cmethod4_primary_point_location: AlertCMethod4PrimaryPointLocation | None = field(
         default=None,
         metadata={
             "name": "alertCMethod4PrimaryPointLocation",
@@ -39,7 +37,7 @@ class AlertCMethod4Point(AlertCPoint):
             "required": True,
         },
     )
-    alert_cmethod4_point_extension: Optional[ExtensionType] = field(
+    alert_cmethod4_point_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "alertCMethod4PointExtension",

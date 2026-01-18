@@ -22,7 +22,7 @@ class Subjects:
     :ivar subjects_extension:
     """
 
-    subject_type_of_works: Optional[SubjectTypeOfWorksEnum] = field(
+    subject_type_of_works: SubjectTypeOfWorksEnum | None = field(
         default=None,
         metadata={
             "name": "subjectTypeOfWorks",
@@ -31,7 +31,7 @@ class Subjects:
             "required": True,
         },
     )
-    number_of_subjects: Optional[int] = field(
+    number_of_subjects: int | None = field(
         default=None,
         metadata={
             "name": "numberOfSubjects",
@@ -39,7 +39,7 @@ class Subjects:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    subjects_extension: Optional[ExtensionType] = field(
+    subjects_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "subjectsExtension",

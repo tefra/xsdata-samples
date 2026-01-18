@@ -21,7 +21,7 @@ class PhysicalObjectGroupType:
             "min_occurs": 1,
         },
     )
-    max_allowed: Optional[int] = field(
+    max_allowed: int | None = field(
         default=None,
         metadata={
             "name": "maxAllowed",

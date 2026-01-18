@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import Optional, Union
@@ -62,7 +64,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
-    network_ref: Optional[NetworkRef] = field(
+    network_ref: NetworkRef | None = field(
         default=None,
         metadata={
             "name": "NetworkRef",
@@ -70,7 +72,7 @@ class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    places: Optional["NetworkFilterByValueStructure.Places"] = field(
+    places: NetworkFilterByValueStructure.Places | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -81,56 +83,7 @@ class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
     @dataclass
     class Places:
         choice: Iterable[
-            Union[
-                HailAndRideAreaRef,
-                FlexibleAreaRef,
-                FlexibleQuayRef,
-                FlexibleStopPlaceRef,
-                PathJunctionRef,
-                EquipmentPlaceRef,
-                EquipmentPositionRef,
-                TopographicPlaceRef,
-                VehiclePoolingMeetingPlaceRef,
-                VehicleMeetingPlaceRef,
-                GarageRef,
-                VehicleStoppingPositionRef,
-                VehicleStoppingPlaceRef,
-                BoardingPositionRef,
-                AccessSpaceRef,
-                TaxiStandRef,
-                QuayRef,
-                StopPlaceSpaceRef,
-                VehiclePoolingParkingBayRef,
-                MonitoredVehicleSharingParkingBayRef,
-                VehicleSharingParkingBayRef,
-                ParkingBayRef,
-                VehiclePoolingParkingAreaRef,
-                VehicleSharingParkingAreaRef,
-                TaxiParkingAreaRef,
-                ParkingAreaRef,
-                PointOfInterestSpaceRef,
-                StopPlaceVehicleEntranceRef,
-                StopPlaceEntranceRef,
-                ParkingEntranceForVehiclesRef,
-                ParkingPassengerEntranceRef,
-                ParkingEntranceRef,
-                PointOfInterestVehicleEntranceRef,
-                PointOfInterestEntranceRef,
-                VehicleEntranceRef,
-                EntranceRef,
-                SiteComponentRef,
-                TaxiRankRef,
-                StopPlaceRef,
-                ParkingRef,
-                PointOfInterestRef,
-                ServiceSiteRef,
-                SiteRef,
-                SiteElementRef,
-                AddressablePlaceRef,
-                PostalAddressRef,
-                RoadAddressRef,
-                AddressRef,
-            ]
+            HailAndRideAreaRef | FlexibleAreaRef | FlexibleQuayRef | FlexibleStopPlaceRef | PathJunctionRef | EquipmentPlaceRef | EquipmentPositionRef | TopographicPlaceRef | VehiclePoolingMeetingPlaceRef | VehicleMeetingPlaceRef | GarageRef | VehicleStoppingPositionRef | VehicleStoppingPlaceRef | BoardingPositionRef | AccessSpaceRef | TaxiStandRef | QuayRef | StopPlaceSpaceRef | VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef | VehiclePoolingParkingAreaRef | VehicleSharingParkingAreaRef | TaxiParkingAreaRef | ParkingAreaRef | PointOfInterestSpaceRef | StopPlaceVehicleEntranceRef | StopPlaceEntranceRef | ParkingEntranceForVehiclesRef | ParkingPassengerEntranceRef | ParkingEntranceRef | PointOfInterestVehicleEntranceRef | PointOfInterestEntranceRef | VehicleEntranceRef | EntranceRef | SiteComponentRef | TaxiRankRef | StopPlaceRef | ParkingRef | PointOfInterestRef | ServiceSiteRef | SiteRef | SiteElementRef | AddressablePlaceRef | PostalAddressRef | RoadAddressRef | AddressRef
         ] = field(
             default_factory=list,
             metadata={

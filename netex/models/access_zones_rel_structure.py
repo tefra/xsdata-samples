@@ -15,7 +15,7 @@ class AccessZonesRelStructure(ContainmentAggregationStructure):
         name = "accessZones_RelStructure"
 
     access_zone_ref_or_access_zone: Iterable[
-        Union[AccessZoneRef, AccessZone]
+        AccessZoneRef | AccessZone
     ] = field(
         default_factory=list,
         metadata={

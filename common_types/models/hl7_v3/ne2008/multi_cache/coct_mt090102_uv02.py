@@ -32,7 +32,7 @@ class CoctMt090102Uv02Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -56,7 +56,7 @@ class CoctMt090102Uv02Person:
             "min_occurs": 1,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -96,7 +96,7 @@ class CoctMt090102Uv02AssignedPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -120,7 +120,7 @@ class CoctMt090102Uv02AssignedPerson:
             "min_occurs": 1,
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -134,7 +134,7 @@ class CoctMt090102Uv02AssignedPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_person: Optional[CoctMt090102Uv02Person] = field(
+    assigned_person: CoctMt090102Uv02Person | None = field(
         default=None,
         metadata={
             "name": "assignedPerson",
@@ -143,7 +143,7 @@ class CoctMt090102Uv02AssignedPerson:
             "nillable": True,
         },
     )
-    represented_organization: Optional[CoctMt150002Uv01Organization] = field(
+    represented_organization: CoctMt150002Uv01Organization | None = field(
         default=None,
         metadata={
             "name": "representedOrganization",
@@ -152,14 +152,14 @@ class CoctMt090102Uv02AssignedPerson:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[RoleClassAssignedEntity] = field(
+    class_code: RoleClassAssignedEntity | None = field(
         default=None,
         metadata={
             "name": "classCode",

@@ -29,7 +29,7 @@ class Subdrv:
     class Meta:
         name = "subdrv"
 
-    mrk: Optional[str] = field(
+    mrk: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

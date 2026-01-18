@@ -16,7 +16,7 @@ class ActivatedEquipmentVersionStructure(EquipmentVersionStructure):
     class Meta:
         name = "ActivatedEquipment_VersionStructure"
 
-    traffic_control_point_ref: Optional[TrafficControlPointRef] = field(
+    traffic_control_point_ref: TrafficControlPointRef | None = field(
         default=None,
         metadata={
             "name": "TrafficControlPointRef",
@@ -24,7 +24,7 @@ class ActivatedEquipmentVersionStructure(EquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_activation_ref: Optional[TypeOfActivationRef] = field(
+    type_of_activation_ref: TypeOfActivationRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfActivationRef",
@@ -32,7 +32,7 @@ class ActivatedEquipmentVersionStructure(EquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    assignments: Optional[ActivationAssignmentsRelStructure] = field(
+    assignments: ActivationAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

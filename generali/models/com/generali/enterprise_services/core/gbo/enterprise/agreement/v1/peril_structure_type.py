@@ -21,7 +21,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PerilStructureType(BaseIdentifiedComponentType):
-    limits: Optional[LimitsType] = field(
+    limits: LimitsType | None = field(
         default=None,
         metadata={
             "name": "Limits",
@@ -29,7 +29,7 @@ class PerilStructureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    deductibles: Optional[DeductiblesType] = field(
+    deductibles: DeductiblesType | None = field(
         default=None,
         metadata={
             "name": "Deductibles",
@@ -37,7 +37,7 @@ class PerilStructureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    peril: Optional[PerilType] = field(
+    peril: PerilType | None = field(
         default=None,
         metadata={
             "name": "Peril",
@@ -46,7 +46,7 @@ class PerilStructureType(BaseIdentifiedComponentType):
             "required": True,
         },
     )
-    worldwide_flag: Optional[str] = field(
+    worldwide_flag: str | None = field(
         default=None,
         metadata={
             "name": "WorldwideFlag",
@@ -54,7 +54,7 @@ class PerilStructureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    state_region_code: Optional[str] = field(
+    state_region_code: str | None = field(
         default=None,
         metadata={
             "name": "StateRegionCode",
@@ -62,7 +62,7 @@ class PerilStructureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    state_region_name: Optional[str] = field(
+    state_region_name: str | None = field(
         default=None,
         metadata={
             "name": "StateRegionName",
@@ -70,7 +70,7 @@ class PerilStructureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    country_of_peril_code: Optional[str] = field(
+    country_of_peril_code: str | None = field(
         default=None,
         metadata={
             "name": "CountryOfPerilCode",
@@ -79,7 +79,7 @@ class PerilStructureType(BaseIdentifiedComponentType):
             "pattern": r"[A-Z][A-Z]",
         },
     )
-    country_of_peril_name: Optional[str] = field(
+    country_of_peril_name: str | None = field(
         default=None,
         metadata={
             "name": "CountryOfPerilName",
@@ -87,7 +87,7 @@ class PerilStructureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    zip_code_of_peril: Optional[str] = field(
+    zip_code_of_peril: str | None = field(
         default=None,
         metadata={
             "name": "ZipCodeOfPeril",
@@ -95,7 +95,7 @@ class PerilStructureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    included: Optional[bool] = field(
+    included: bool | None = field(
         default=None,
         metadata={
             "name": "Included",

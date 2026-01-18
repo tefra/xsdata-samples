@@ -29,20 +29,20 @@ class DiagnosticOccurrenceCounterProcessingEnum:
     class Meta:
         name = "DIAGNOSTIC-OCCURRENCE-COUNTER-PROCESSING-ENUM"
 
-    value: Optional[DiagnosticOccurrenceCounterProcessingEnumSimple] = field(
+    value: DiagnosticOccurrenceCounterProcessingEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

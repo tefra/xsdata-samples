@@ -15,7 +15,7 @@ class VehicleStoppingPositionsRelStructure(ContainmentAggregationStructure):
         name = "vehicleStoppingPositions_RelStructure"
 
     vehicle_stopping_position_ref_or_vehicle_stopping_position: Iterable[
-        Union[VehicleStoppingPositionRef, VehicleStoppingPosition]
+        VehicleStoppingPositionRef | VehicleStoppingPosition
     ] = field(
         default_factory=list,
         metadata={

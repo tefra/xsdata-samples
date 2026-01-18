@@ -13,9 +13,7 @@ class SpecialServiceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "specialServiceRefs_RelStructure"
 
-    special_service_ref: Optional[
-        Union[DatedSpecialServiceRef, SpecialServiceRef]
-    ] = field(
+    special_service_ref: DatedSpecialServiceRef | SpecialServiceRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
@@ -20,15 +22,7 @@ class EstimatedPassingTimeVersionedChildStructure(
         name = "EstimatedPassingTime_VersionedChildStructure"
 
     choice_1: Iterable[
-        Union[
-            "EstimatedPassingTimeVersionedChildStructure.ExpectedArrivalTime",
-            "EstimatedPassingTimeVersionedChildStructure.ArrivalDayOffset",
-            "EstimatedPassingTimeVersionedChildStructure.ExpectedDepartureTime",
-            "EstimatedPassingTimeVersionedChildStructure.DepartureDayOffset",
-            XmlDuration,
-            "EstimatedPassingTimeVersionedChildStructure.ExpectedNonstopPassingTime",
-            "EstimatedPassingTimeVersionedChildStructure.PassingTimeDayOffset",
-        ]
+        EstimatedPassingTimeVersionedChildStructure.ExpectedArrivalTime | EstimatedPassingTimeVersionedChildStructure.ArrivalDayOffset | EstimatedPassingTimeVersionedChildStructure.ExpectedDepartureTime | EstimatedPassingTimeVersionedChildStructure.DepartureDayOffset | XmlDuration | EstimatedPassingTimeVersionedChildStructure.ExpectedNonstopPassingTime | EstimatedPassingTimeVersionedChildStructure.PassingTimeDayOffset
     ] = field(
         default_factory=list,
         metadata={
@@ -85,7 +79,7 @@ class EstimatedPassingTimeVersionedChildStructure(
             "max_occurs": 5,
         },
     )
-    expected_headway: Optional[HeadwayIntervalStructure] = field(
+    expected_headway: HeadwayIntervalStructure | None = field(
         default=None,
         metadata={
             "name": "ExpectedHeadway",
@@ -96,7 +90,7 @@ class EstimatedPassingTimeVersionedChildStructure(
 
     @dataclass
     class ExpectedArrivalTime:
-        value: Optional[XmlTime] = field(
+        value: XmlTime | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -105,7 +99,7 @@ class EstimatedPassingTimeVersionedChildStructure(
 
     @dataclass
     class ArrivalDayOffset:
-        value: Optional[int] = field(
+        value: int | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -114,7 +108,7 @@ class EstimatedPassingTimeVersionedChildStructure(
 
     @dataclass
     class ExpectedDepartureTime:
-        value: Optional[XmlTime] = field(
+        value: XmlTime | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -123,7 +117,7 @@ class EstimatedPassingTimeVersionedChildStructure(
 
     @dataclass
     class DepartureDayOffset:
-        value: Optional[int] = field(
+        value: int | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -132,7 +126,7 @@ class EstimatedPassingTimeVersionedChildStructure(
 
     @dataclass
     class ExpectedNonstopPassingTime:
-        value: Optional[XmlTime] = field(
+        value: XmlTime | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -141,7 +135,7 @@ class EstimatedPassingTimeVersionedChildStructure(
 
     @dataclass
     class PassingTimeDayOffset:
-        value: Optional[int] = field(
+        value: int | None = field(
             default=None,
             metadata={
                 "required": True,

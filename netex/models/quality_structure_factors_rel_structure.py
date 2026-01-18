@@ -23,14 +23,7 @@ class QualityStructureFactorsRelStructure(
         name = "qualityStructureFactors_RelStructure"
 
     quality_structure_factor_ref_or_quality_structure_factor: Iterable[
-        Union[
-            FareQuotaFactorRef,
-            FareDemandFactorRef,
-            QualityStructureFactorRef,
-            FareQuotaFactor,
-            FareDemandFactor,
-            QualityStructureFactor,
-        ]
+        FareQuotaFactorRef | FareDemandFactorRef | QualityStructureFactorRef | FareQuotaFactor | FareDemandFactor | QualityStructureFactor
     ] = field(
         default_factory=list,
         metadata={

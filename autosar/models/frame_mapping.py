@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -47,7 +49,7 @@ class FrameMapping:
     class Meta:
         name = "FRAME-MAPPING"
 
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -55,7 +57,7 @@ class FrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_frame_ref: Optional["FrameMapping.SourceFrameRef"] = field(
+    source_frame_ref: FrameMapping.SourceFrameRef | None = field(
         default=None,
         metadata={
             "name": "SOURCE-FRAME-REF",
@@ -63,7 +65,7 @@ class FrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_frame_ref: Optional["FrameMapping.TargetFrameRef"] = field(
+    target_frame_ref: FrameMapping.TargetFrameRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-FRAME-REF",
@@ -71,7 +73,7 @@ class FrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -79,14 +81,14 @@ class FrameMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -97,7 +99,7 @@ class FrameMapping:
 
     @dataclass
     class SourceFrameRef(Ref):
-        dest: Optional[FrameTriggeringSubtypesEnum] = field(
+        dest: FrameTriggeringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -108,7 +110,7 @@ class FrameMapping:
 
     @dataclass
     class TargetFrameRef(Ref):
-        dest: Optional[FrameTriggeringSubtypesEnum] = field(
+        dest: FrameTriggeringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

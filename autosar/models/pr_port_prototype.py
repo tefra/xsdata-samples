@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -131,7 +133,7 @@ class PrPortPrototype:
     class Meta:
         name = "PR-PORT-PROTOTYPE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -140,7 +142,7 @@ class PrPortPrototype:
             "required": True,
         },
     )
-    short_name_fragments: Optional["PrPortPrototype.ShortNameFragments"] = (
+    short_name_fragments: PrPortPrototype.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -150,7 +152,7 @@ class PrPortPrototype:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -158,7 +160,7 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -166,7 +168,7 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -174,7 +176,7 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -182,7 +184,7 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -190,7 +192,7 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["PrPortPrototype.Annotations"] = field(
+    annotations: PrPortPrototype.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -198,9 +200,7 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_server_annotations: Optional[
-        "PrPortPrototype.ClientServerAnnotations"
-    ] = field(
+    client_server_annotations: PrPortPrototype.ClientServerAnnotations | None = field(
         default=None,
         metadata={
             "name": "CLIENT-SERVER-ANNOTATIONS",
@@ -208,7 +208,7 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delegated_port_annotation: Optional[DelegatedPortAnnotation] = field(
+    delegated_port_annotation: DelegatedPortAnnotation | None = field(
         default=None,
         metadata={
             "name": "DELEGATED-PORT-ANNOTATION",
@@ -216,9 +216,7 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    io_hw_abstraction_server_annotations: Optional[
-        "PrPortPrototype.IoHwAbstractionServerAnnotations"
-    ] = field(
+    io_hw_abstraction_server_annotations: PrPortPrototype.IoHwAbstractionServerAnnotations | None = field(
         default=None,
         metadata={
             "name": "IO-HW-ABSTRACTION-SERVER-ANNOTATIONS",
@@ -226,7 +224,7 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_port_annotations: Optional["PrPortPrototype.ModePortAnnotations"] = (
+    mode_port_annotations: PrPortPrototype.ModePortAnnotations | None = (
         field(
             default=None,
             metadata={
@@ -236,9 +234,7 @@ class PrPortPrototype:
             },
         )
     )
-    nv_data_port_annotations: Optional[
-        "PrPortPrototype.NvDataPortAnnotations"
-    ] = field(
+    nv_data_port_annotations: PrPortPrototype.NvDataPortAnnotations | None = field(
         default=None,
         metadata={
             "name": "NV-DATA-PORT-ANNOTATIONS",
@@ -246,9 +242,7 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter_port_annotations: Optional[
-        "PrPortPrototype.ParameterPortAnnotations"
-    ] = field(
+    parameter_port_annotations: PrPortPrototype.ParameterPortAnnotations | None = field(
         default=None,
         metadata={
             "name": "PARAMETER-PORT-ANNOTATIONS",
@@ -256,7 +250,7 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_props: Optional[RPortPrototypeProps] = field(
+    port_prototype_props: RPortPrototypeProps | None = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-PROPS",
@@ -264,9 +258,7 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sender_receiver_annotations: Optional[
-        "PrPortPrototype.SenderReceiverAnnotations"
-    ] = field(
+    sender_receiver_annotations: PrPortPrototype.SenderReceiverAnnotations | None = field(
         default=None,
         metadata={
             "name": "SENDER-RECEIVER-ANNOTATIONS",
@@ -274,9 +266,7 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_port_annotations: Optional[
-        "PrPortPrototype.TriggerPortAnnotations"
-    ] = field(
+    trigger_port_annotations: PrPortPrototype.TriggerPortAnnotations | None = field(
         default=None,
         metadata={
             "name": "TRIGGER-PORT-ANNOTATIONS",
@@ -284,7 +274,7 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -292,7 +282,7 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provided_com_specs: Optional["PrPortPrototype.ProvidedComSpecs"] = field(
+    provided_com_specs: PrPortPrototype.ProvidedComSpecs | None = field(
         default=None,
         metadata={
             "name": "PROVIDED-COM-SPECS",
@@ -300,7 +290,7 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_com_specs: Optional["PrPortPrototype.RequiredComSpecs"] = field(
+    required_com_specs: PrPortPrototype.RequiredComSpecs | None = field(
         default=None,
         metadata={
             "name": "REQUIRED-COM-SPECS",
@@ -308,9 +298,7 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provided_required_interface_tref: Optional[
-        "PrPortPrototype.ProvidedRequiredInterfaceTref"
-    ] = field(
+    provided_required_interface_tref: PrPortPrototype.ProvidedRequiredInterfaceTref | None = field(
         default=None,
         metadata={
             "name": "PROVIDED-REQUIRED-INTERFACE-TREF",
@@ -318,14 +306,14 @@ class PrPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -333,7 +321,7 @@ class PrPortPrototype:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -580,7 +568,7 @@ class PrPortPrototype:
 
     @dataclass
     class ProvidedRequiredInterfaceTref(Ref):
-        dest: Optional[PortInterfaceSubtypesEnum] = field(
+        dest: PortInterfaceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

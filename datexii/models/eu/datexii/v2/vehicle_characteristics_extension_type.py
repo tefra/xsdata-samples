@@ -13,9 +13,7 @@ class VehicleCharacteristicsExtensionType:
     class Meta:
         name = "_VehicleCharacteristicsExtensionType"
 
-    vehicle_characteristics_extended: Optional[
-        VehicleCharacteristicsExtended
-    ] = field(
+    vehicle_characteristics_extended: VehicleCharacteristicsExtended | None = field(
         default=None,
         metadata={
             "name": "vehicleCharacteristicsExtended",

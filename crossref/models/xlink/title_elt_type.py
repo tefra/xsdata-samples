@@ -30,7 +30,7 @@ class TitleEltType:
             "required": True,
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",

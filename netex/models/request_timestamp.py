@@ -11,7 +11,7 @@ class RequestTimestamp:
     class Meta:
         namespace = "http://www.siri.org.uk/siri"
 
-    value: Optional[XmlDateTime] = field(
+    value: XmlDateTime | None = field(
         default=None,
         metadata={
             "required": True,

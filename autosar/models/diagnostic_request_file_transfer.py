@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -95,7 +97,7 @@ class DiagnosticRequestFileTransfer:
     class Meta:
         name = "DIAGNOSTIC-REQUEST-FILE-TRANSFER"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -104,9 +106,7 @@ class DiagnosticRequestFileTransfer:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticRequestFileTransfer.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticRequestFileTransfer.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -114,7 +114,7 @@ class DiagnosticRequestFileTransfer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +122,7 @@ class DiagnosticRequestFileTransfer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +130,7 @@ class DiagnosticRequestFileTransfer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +138,7 @@ class DiagnosticRequestFileTransfer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +146,7 @@ class DiagnosticRequestFileTransfer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +154,7 @@ class DiagnosticRequestFileTransfer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticRequestFileTransfer.Annotations"] = field(
+    annotations: DiagnosticRequestFileTransfer.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -162,7 +162,7 @@ class DiagnosticRequestFileTransfer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -170,9 +170,7 @@ class DiagnosticRequestFileTransfer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: Optional[
-        "DiagnosticRequestFileTransfer.AccessPermissionRef"
-    ] = field(
+    access_permission_ref: DiagnosticRequestFileTransfer.AccessPermissionRef | None = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -180,9 +178,7 @@ class DiagnosticRequestFileTransfer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    request_file_transfer_class_ref: Optional[
-        "DiagnosticRequestFileTransfer.RequestFileTransferClassRef"
-    ] = field(
+    request_file_transfer_class_ref: DiagnosticRequestFileTransfer.RequestFileTransferClassRef | None = field(
         default=None,
         metadata={
             "name": "REQUEST-FILE-TRANSFER-CLASS-REF",
@@ -190,14 +186,14 @@ class DiagnosticRequestFileTransfer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -205,7 +201,7 @@ class DiagnosticRequestFileTransfer:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -237,7 +233,7 @@ class DiagnosticRequestFileTransfer:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: Optional[DiagnosticAccessPermissionSubtypesEnum] = field(
+        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -248,7 +244,7 @@ class DiagnosticRequestFileTransfer:
 
     @dataclass
     class RequestFileTransferClassRef(Ref):
-        dest: Optional[DiagnosticRequestFileTransferClassSubtypesEnum] = field(
+        dest: DiagnosticRequestFileTransferClassSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

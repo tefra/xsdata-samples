@@ -30,7 +30,7 @@ class LocatorType:
             "required": True,
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -38,7 +38,7 @@ class LocatorType:
             "required": True,
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -46,14 +46,14 @@ class LocatorType:
             "min_length": 1,
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    label: Optional[str] = field(
+    label: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

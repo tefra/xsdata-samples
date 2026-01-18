@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,9 +33,7 @@ class PhysicalChannelRefConditional:
     class Meta:
         name = "PHYSICAL-CHANNEL-REF-CONDITIONAL"
 
-    physical_channel_ref: Optional[
-        "PhysicalChannelRefConditional.PhysicalChannelRef"
-    ] = field(
+    physical_channel_ref: PhysicalChannelRefConditional.PhysicalChannelRef | None = field(
         default=None,
         metadata={
             "name": "PHYSICAL-CHANNEL-REF",
@@ -41,7 +41,7 @@ class PhysicalChannelRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -49,14 +49,14 @@ class PhysicalChannelRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +67,7 @@ class PhysicalChannelRefConditional:
 
     @dataclass
     class PhysicalChannelRef(Ref):
-        dest: Optional[PhysicalChannelSubtypesEnum] = field(
+        dest: PhysicalChannelSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

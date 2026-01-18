@@ -16,7 +16,7 @@ class FulfilmentMethodPriceVersionedChildStructure(
     class Meta:
         name = "FulfilmentMethodPrice_VersionedChildStructure"
 
-    fulfilment_method_ref: Optional[FulfilmentMethodRef] = field(
+    fulfilment_method_ref: FulfilmentMethodRef | None = field(
         default=None,
         metadata={
             "name": "FulfilmentMethodRef",

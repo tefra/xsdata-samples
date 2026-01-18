@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -38,7 +40,7 @@ class SwSystemconstValue:
     class Meta:
         name = "SW-SYSTEMCONST-VALUE"
 
-    sw_systemconst_ref: Optional["SwSystemconstValue.SwSystemconstRef"] = (
+    sw_systemconst_ref: SwSystemconstValue.SwSystemconstRef | None = (
         field(
             default=None,
             metadata={
@@ -48,7 +50,7 @@ class SwSystemconstValue:
             },
         )
     )
-    value: Optional[NumericalValueVariationPoint] = field(
+    value: NumericalValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -56,7 +58,7 @@ class SwSystemconstValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SwSystemconstValue.Annotations"] = field(
+    annotations: SwSystemconstValue.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -64,14 +66,14 @@ class SwSystemconstValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +84,7 @@ class SwSystemconstValue:
 
     @dataclass
     class SwSystemconstRef(Ref):
-        dest: Optional[SwSystemconstSubtypesEnum] = field(
+        dest: SwSystemconstSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

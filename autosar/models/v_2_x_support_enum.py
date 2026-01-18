@@ -25,20 +25,20 @@ class V2XSupportEnum:
     class Meta:
         name = "V-2-X-SUPPORT-ENUM"
 
-    value: Optional[V2XSupportEnumSimple] = field(
+    value: V2XSupportEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

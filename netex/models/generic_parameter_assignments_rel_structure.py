@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
@@ -17,9 +19,7 @@ class GenericParameterAssignmentsRelStructure(ContainmentAggregationStructure):
         name = "genericParameterAssignments_RelStructure"
 
     generic_parameter_assignment_or_generic_parameter_assignment_in_context: Iterable[
-        Union[
-            "GenericParameterAssignment", "GenericParameterAssignmentInContext"
-        ]
+        GenericParameterAssignment | GenericParameterAssignmentInContext
     ] = field(
         default_factory=list,
         metadata={
@@ -47,7 +47,7 @@ class GenericParameterAssignmentVersionStructure(
     class Meta:
         name = "GenericParameterAssignment_VersionStructure"
 
-    includes_grouping_type: Optional[LogicalOperationEnumeration] = field(
+    includes_grouping_type: LogicalOperationEnumeration | None = field(
         default=None,
         metadata={
             "name": "IncludesGroupingType",
@@ -55,7 +55,7 @@ class GenericParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    includes: Optional[GenericParameterAssignmentsRelStructure] = field(
+    includes: GenericParameterAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

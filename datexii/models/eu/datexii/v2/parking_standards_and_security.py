@@ -52,7 +52,7 @@ class ParkingStandardsAndSecurity:
     :ivar parking_standards_and_security_extension:
     """
 
-    label_security_level: Optional[LABELSecurityLevelEnum] = field(
+    label_security_level: LABELSecurityLevelEnum | None = field(
         default=None,
         metadata={
             "name": "labelSecurityLevel",
@@ -60,7 +60,7 @@ class ParkingStandardsAndSecurity:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    label_service_level: Optional[LABELServiceLevelEnum] = field(
+    label_service_level: LABELServiceLevelEnum | None = field(
         default=None,
         metadata={
             "name": "labelServiceLevel",
@@ -68,7 +68,7 @@ class ParkingStandardsAndSecurity:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    label_security_level_self_assessment: Optional[LABELSecurityLevelEnum] = (
+    label_security_level_self_assessment: LABELSecurityLevelEnum | None = (
         field(
             default=None,
             metadata={
@@ -78,7 +78,7 @@ class ParkingStandardsAndSecurity:
             },
         )
     )
-    label_service_level_self_assessment: Optional[LABELServiceLevelEnum] = (
+    label_service_level_self_assessment: LABELServiceLevelEnum | None = (
         field(
             default=None,
             metadata={
@@ -112,7 +112,7 @@ class ParkingStandardsAndSecurity:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_security_national_classification: Optional[MultilingualString] = (
+    parking_security_national_classification: MultilingualString | None = (
         field(
             default=None,
             metadata={
@@ -122,7 +122,7 @@ class ParkingStandardsAndSecurity:
             },
         )
     )
-    certified_secure_parking: Optional[bool] = field(
+    certified_secure_parking: bool | None = field(
         default=None,
         metadata={
             "name": "certifiedSecureParking",
@@ -130,7 +130,7 @@ class ParkingStandardsAndSecurity:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    date_of_certification: Optional[XmlDate] = field(
+    date_of_certification: XmlDate | None = field(
         default=None,
         metadata={
             "name": "dateOfCertification",
@@ -138,7 +138,7 @@ class ParkingStandardsAndSecurity:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_standards_and_security_extension: Optional[ExtensionType] = field(
+    parking_standards_and_security_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "parkingStandardsAndSecurityExtension",

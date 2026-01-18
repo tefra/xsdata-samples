@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class DataObjectSubscriptionStructure(AbstractSubscriptionStructure):
-    data_object_request: Optional[DataObjectRequest] = field(
+    data_object_request: DataObjectRequest | None = field(
         default=None,
         metadata={
             "name": "DataObjectRequest",
@@ -22,7 +22,7 @@ class DataObjectSubscriptionStructure(AbstractSubscriptionStructure):
             "required": True,
         },
     )
-    subscription_policy: Optional[NetworkFrameSubscriptionPolicyStructure] = (
+    subscription_policy: NetworkFrameSubscriptionPolicyStructure | None = (
         field(
             default=None,
             metadata={
@@ -32,7 +32,7 @@ class DataObjectSubscriptionStructure(AbstractSubscriptionStructure):
             },
         )
     )
-    extensions: Optional[Extensions1] = field(
+    extensions: Extensions1 | None = field(
         default=None,
         metadata={
             "name": "Extensions",

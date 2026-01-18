@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -89,7 +91,7 @@ class TlsSecureComProps:
     class Meta:
         name = "TLS-SECURE-COM-PROPS"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -98,7 +100,7 @@ class TlsSecureComProps:
             "required": True,
         },
     )
-    short_name_fragments: Optional["TlsSecureComProps.ShortNameFragments"] = (
+    short_name_fragments: TlsSecureComProps.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -108,7 +110,7 @@ class TlsSecureComProps:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -116,7 +118,7 @@ class TlsSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -124,7 +126,7 @@ class TlsSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -132,7 +134,7 @@ class TlsSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -140,7 +142,7 @@ class TlsSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -148,7 +150,7 @@ class TlsSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["TlsSecureComProps.Annotations"] = field(
+    annotations: TlsSecureComProps.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -156,7 +158,7 @@ class TlsSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_exchange_refs: Optional["TlsSecureComProps.KeyExchangeRefs"] = field(
+    key_exchange_refs: TlsSecureComProps.KeyExchangeRefs | None = field(
         default=None,
         metadata={
             "name": "KEY-EXCHANGE-REFS",
@@ -164,7 +166,7 @@ class TlsSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tls_cipher_suites: Optional["TlsSecureComProps.TlsCipherSuites"] = field(
+    tls_cipher_suites: TlsSecureComProps.TlsCipherSuites | None = field(
         default=None,
         metadata={
             "name": "TLS-CIPHER-SUITES",
@@ -172,14 +174,14 @@ class TlsSecureComProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -187,7 +189,7 @@ class TlsSecureComProps:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -220,7 +222,7 @@ class TlsSecureComProps:
     @dataclass
     class KeyExchangeRefs:
         key_exchange_ref: list[
-            "TlsSecureComProps.KeyExchangeRefs.KeyExchangeRef"
+            TlsSecureComProps.KeyExchangeRefs.KeyExchangeRef
         ] = field(
             default_factory=list,
             metadata={
@@ -232,7 +234,7 @@ class TlsSecureComProps:
 
         @dataclass
         class KeyExchangeRef(Ref):
-            dest: Optional[CryptoServicePrimitiveSubtypesEnum] = field(
+            dest: CryptoServicePrimitiveSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

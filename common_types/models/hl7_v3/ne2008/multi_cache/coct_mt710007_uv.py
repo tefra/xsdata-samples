@@ -33,7 +33,7 @@ class CoctMt710007UvLocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -49,14 +49,14 @@ class CoctMt710007UvLocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[RoleClassLocatedEntity] = field(
+    class_code: RoleClassLocatedEntity | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -79,7 +79,7 @@ class CoctMt710007UvPlace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -102,7 +102,7 @@ class CoctMt710007UvPlace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -116,21 +116,21 @@ class CoctMt710007UvPlace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    desc: Optional[EdExplicit] = field(
+    desc: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: Optional[AdExplicit] = field(
+    addr: AdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    directions_text: Optional[Ed] = field(
+    directions_text: Ed | None = field(
         default=None,
         metadata={
             "name": "directionsText",
@@ -138,7 +138,7 @@ class CoctMt710007UvPlace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    position_text: Optional[Ed] = field(
+    position_text: Ed | None = field(
         default=None,
         metadata={
             "name": "positionText",
@@ -146,7 +146,7 @@ class CoctMt710007UvPlace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    located_entity: Optional[CoctMt710007UvLocatedEntity] = field(
+    located_entity: CoctMt710007UvLocatedEntity | None = field(
         default=None,
         metadata={
             "name": "locatedEntity",
@@ -155,14 +155,14 @@ class CoctMt710007UvPlace:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[EntityClassPlace] = field(
+    class_code: EntityClassPlace | None = field(
         default=None,
         metadata={
             "name": "classCode",

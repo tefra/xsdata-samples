@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -94,7 +96,7 @@ class PortInterfaceToDataTypeMapping:
     class Meta:
         name = "PORT-INTERFACE-TO-DATA-TYPE-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -103,9 +105,7 @@ class PortInterfaceToDataTypeMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "PortInterfaceToDataTypeMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: PortInterfaceToDataTypeMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -113,7 +113,7 @@ class PortInterfaceToDataTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class PortInterfaceToDataTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class PortInterfaceToDataTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class PortInterfaceToDataTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class PortInterfaceToDataTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +153,7 @@ class PortInterfaceToDataTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["PortInterfaceToDataTypeMapping.Annotations"] = (
+    annotations: PortInterfaceToDataTypeMapping.Annotations | None = (
         field(
             default=None,
             metadata={
@@ -163,7 +163,7 @@ class PortInterfaceToDataTypeMapping:
             },
         )
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -171,9 +171,7 @@ class PortInterfaceToDataTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_type_mapping_set_refs: Optional[
-        "PortInterfaceToDataTypeMapping.DataTypeMappingSetRefs"
-    ] = field(
+    data_type_mapping_set_refs: PortInterfaceToDataTypeMapping.DataTypeMappingSetRefs | None = field(
         default=None,
         metadata={
             "name": "DATA-TYPE-MAPPING-SET-REFS",
@@ -181,9 +179,7 @@ class PortInterfaceToDataTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_interface_ref: Optional[
-        "PortInterfaceToDataTypeMapping.PortInterfaceRef"
-    ] = field(
+    port_interface_ref: PortInterfaceToDataTypeMapping.PortInterfaceRef | None = field(
         default=None,
         metadata={
             "name": "PORT-INTERFACE-REF",
@@ -191,14 +187,14 @@ class PortInterfaceToDataTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -206,7 +202,7 @@ class PortInterfaceToDataTypeMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -239,7 +235,7 @@ class PortInterfaceToDataTypeMapping:
     @dataclass
     class DataTypeMappingSetRefs:
         data_type_mapping_set_ref: list[
-            "PortInterfaceToDataTypeMapping.DataTypeMappingSetRefs.DataTypeMappingSetRef"
+            PortInterfaceToDataTypeMapping.DataTypeMappingSetRefs.DataTypeMappingSetRef
         ] = field(
             default_factory=list,
             metadata={
@@ -251,7 +247,7 @@ class PortInterfaceToDataTypeMapping:
 
         @dataclass
         class DataTypeMappingSetRef(Ref):
-            dest: Optional[DataTypeMappingSetSubtypesEnum] = field(
+            dest: DataTypeMappingSetSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -262,7 +258,7 @@ class PortInterfaceToDataTypeMapping:
 
     @dataclass
     class PortInterfaceRef(Ref):
-        dest: Optional[PortInterfaceSubtypesEnum] = field(
+        dest: PortInterfaceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

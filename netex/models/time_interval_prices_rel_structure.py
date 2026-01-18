@@ -20,11 +20,7 @@ class TimeIntervalPricesRelStructure(StrictContainmentAggregationStructure):
         name = "timeIntervalPrices_RelStructure"
 
     time_interval_price_ref_or_time_interval_price_or_cell_ref: Iterable[
-        Union[
-            TimeIntervalPriceRef,
-            TimeIntervalPriceVersionedChildStructure,
-            CellRef,
-        ]
+        TimeIntervalPriceRef | TimeIntervalPriceVersionedChildStructure | CellRef
     ] = field(
         default_factory=list,
         metadata={

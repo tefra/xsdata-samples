@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -94,7 +96,7 @@ class ComManagementMapping:
     class Meta:
         name = "COM-MANAGEMENT-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -103,9 +105,7 @@ class ComManagementMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ComManagementMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ComManagementMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -113,7 +113,7 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +153,7 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ComManagementMapping.Annotations"] = field(
+    annotations: ComManagementMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,9 +161,7 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    com_management_group_refs: Optional[
-        "ComManagementMapping.ComManagementGroupRefs"
-    ] = field(
+    com_management_group_refs: ComManagementMapping.ComManagementGroupRefs | None = field(
         default=None,
         metadata={
             "name": "COM-MANAGEMENT-GROUP-REFS",
@@ -171,9 +169,7 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    com_management_port_group_irefs: Optional[
-        "ComManagementMapping.ComManagementPortGroupIrefs"
-    ] = field(
+    com_management_port_group_irefs: ComManagementMapping.ComManagementPortGroupIrefs | None = field(
         default=None,
         metadata={
             "name": "COM-MANAGEMENT-PORT-GROUP-IREFS",
@@ -181,9 +177,7 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channel_refs: Optional[
-        "ComManagementMapping.PhysicalChannelRefs"
-    ] = field(
+    physical_channel_refs: ComManagementMapping.PhysicalChannelRefs | None = field(
         default=None,
         metadata={
             "name": "PHYSICAL-CHANNEL-REFS",
@@ -191,7 +185,7 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -199,14 +193,14 @@ class ComManagementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -214,7 +208,7 @@ class ComManagementMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -247,7 +241,7 @@ class ComManagementMapping:
     @dataclass
     class ComManagementGroupRefs:
         com_management_group_ref: list[
-            "ComManagementMapping.ComManagementGroupRefs.ComManagementGroupRef"
+            ComManagementMapping.ComManagementGroupRefs.ComManagementGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -259,7 +253,7 @@ class ComManagementMapping:
 
         @dataclass
         class ComManagementGroupRef(Ref):
-            dest: Optional[ISignalIPduGroupSubtypesEnum] = field(
+            dest: ISignalIPduGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -284,7 +278,7 @@ class ComManagementMapping:
     @dataclass
     class PhysicalChannelRefs:
         physical_channel_ref: list[
-            "ComManagementMapping.PhysicalChannelRefs.PhysicalChannelRef"
+            ComManagementMapping.PhysicalChannelRefs.PhysicalChannelRef
         ] = field(
             default_factory=list,
             metadata={
@@ -296,7 +290,7 @@ class ComManagementMapping:
 
         @dataclass
         class PhysicalChannelRef(Ref):
-            dest: Optional[PhysicalChannelSubtypesEnum] = field(
+            dest: PhysicalChannelSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

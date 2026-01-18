@@ -37,7 +37,7 @@ class MemberSelectionType:
     """
 
     value_or_time_range: tuple[
-        Union[SimpleComponentValueType, TimeRangeValueType], ...
+        SimpleComponentValueType | TimeRangeValueType, ...
     ] = field(
         default_factory=tuple,
         metadata={
@@ -56,7 +56,7 @@ class MemberSelectionType:
             ),
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -70,14 +70,14 @@ class MemberSelectionType:
             "type": "Attribute",
         },
     )
-    remove_prefix: Optional[bool] = field(
+    remove_prefix: bool | None = field(
         default=None,
         metadata={
             "name": "removePrefix",
             "type": "Attribute",
         },
     )
-    valid_from: Optional[Union[XmlPeriod, XmlDate, XmlDateTime, str]] = field(
+    valid_from: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
         default=None,
         metadata={
             "name": "validFrom",
@@ -85,7 +85,7 @@ class MemberSelectionType:
             "pattern": r".{5}A1.*",
         },
     )
-    valid_to: Optional[Union[XmlPeriod, XmlDate, XmlDateTime, str]] = field(
+    valid_to: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
         default=None,
         metadata={
             "name": "validTo",

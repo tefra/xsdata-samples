@@ -13,7 +13,7 @@ class AddressablePlaceVersionStructure(PlaceVersionStructure):
     class Meta:
         name = "AddressablePlace_VersionStructure"
 
-    url: Optional[str] = field(
+    url: str | None = field(
         default=None,
         metadata={
             "name": "Url",
@@ -21,7 +21,7 @@ class AddressablePlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    image: Optional[str] = field(
+    image: str | None = field(
         default=None,
         metadata={
             "name": "Image",
@@ -29,7 +29,7 @@ class AddressablePlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    postal_address: Optional[PostalAddress] = field(
+    postal_address: PostalAddress | None = field(
         default=None,
         metadata={
             "name": "PostalAddress",
@@ -37,7 +37,7 @@ class AddressablePlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    road_address: Optional[RoadAddress] = field(
+    road_address: RoadAddress | None = field(
         default=None,
         metadata={
             "name": "RoadAddress",

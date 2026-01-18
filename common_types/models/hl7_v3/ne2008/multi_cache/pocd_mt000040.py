@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional, Union
 
@@ -126,7 +128,7 @@ class PocdMt000040InfrastructureRootTypeId(Ii):
             "pattern": r"[0-2](\.(0|[1-9][0-9]*))*",
         },
     )
-    extension: Optional[str] = field(
+    extension: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -162,7 +164,7 @@ class PocdMt000040Component5:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -178,7 +180,7 @@ class PocdMt000040Component5:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    section: Optional["PocdMt000040Section"] = field(
+    section: PocdMt000040Section | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -186,7 +188,7 @@ class PocdMt000040Component5:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -225,7 +227,7 @@ class PocdMt000040Consent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -248,14 +250,14 @@ class PocdMt000040Consent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Optional[Cs] = field(
+    status_code: Cs | None = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -264,7 +266,7 @@ class PocdMt000040Consent:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -302,7 +304,7 @@ class PocdMt000040Criterion:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -318,28 +320,28 @@ class PocdMt000040Criterion:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    text: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[AnyType] = field(
+    value: AnyType | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -376,7 +378,7 @@ class PocdMt000040CustodianOrganization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -400,28 +402,28 @@ class PocdMt000040CustodianOrganization:
             "min_occurs": 1,
         },
     )
-    name: Optional[OnExplicit] = field(
+    name: OnExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: Optional[TelExplicit] = field(
+    telecom: TelExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: Optional[AdExplicit] = field(
+    addr: AdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -459,7 +461,7 @@ class PocdMt000040Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -475,14 +477,14 @@ class PocdMt000040Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufacturer_model_name: Optional[ScExplicit] = field(
+    manufacturer_model_name: ScExplicit | None = field(
         default=None,
         metadata={
             "name": "manufacturerModelName",
@@ -490,7 +492,7 @@ class PocdMt000040Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    software_name: Optional[ScExplicit] = field(
+    software_name: ScExplicit | None = field(
         default=None,
         metadata={
             "name": "softwareName",
@@ -498,7 +500,7 @@ class PocdMt000040Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -535,7 +537,7 @@ class PocdMt000040Entity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -558,21 +560,21 @@ class PocdMt000040Entity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    desc: Optional[EdExplicit] = field(
+    desc: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -609,7 +611,7 @@ class PocdMt000040ExternalAct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -632,21 +634,21 @@ class PocdMt000040ExternalAct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    text: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -683,7 +685,7 @@ class PocdMt000040ExternalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -706,21 +708,21 @@ class PocdMt000040ExternalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    text: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    set_id: Optional[Ii] = field(
+    set_id: Ii | None = field(
         default=None,
         metadata={
             "name": "setId",
@@ -728,7 +730,7 @@ class PocdMt000040ExternalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    version_number: Optional[Int] = field(
+    version_number: Int | None = field(
         default=None,
         metadata={
             "name": "versionNumber",
@@ -736,7 +738,7 @@ class PocdMt000040ExternalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -773,7 +775,7 @@ class PocdMt000040ExternalObservation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -796,21 +798,21 @@ class PocdMt000040ExternalObservation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    text: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -847,7 +849,7 @@ class PocdMt000040ExternalProcedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -870,21 +872,21 @@ class PocdMt000040ExternalProcedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    text: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -922,7 +924,7 @@ class PocdMt000040LabeledDrug:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -938,21 +940,21 @@ class PocdMt000040LabeledDrug:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: Optional[EnExplicit] = field(
+    name: EnExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -990,7 +992,7 @@ class PocdMt000040LanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1006,7 +1008,7 @@ class PocdMt000040LanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: Optional[Cs] = field(
+    language_code: Cs | None = field(
         default=None,
         metadata={
             "name": "languageCode",
@@ -1014,7 +1016,7 @@ class PocdMt000040LanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    mode_code: Optional[Ce] = field(
+    mode_code: Ce | None = field(
         default=None,
         metadata={
             "name": "modeCode",
@@ -1022,7 +1024,7 @@ class PocdMt000040LanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    proficiency_level_code: Optional[Ce] = field(
+    proficiency_level_code: Ce | None = field(
         default=None,
         metadata={
             "name": "proficiencyLevelCode",
@@ -1030,7 +1032,7 @@ class PocdMt000040LanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    preference_ind: Optional[Bl] = field(
+    preference_ind: Bl | None = field(
         default=None,
         metadata={
             "name": "preferenceInd",
@@ -1038,7 +1040,7 @@ class PocdMt000040LanguageCommunication:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1060,7 +1062,7 @@ class PocdMt000040Material:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1076,21 +1078,21 @@ class PocdMt000040Material:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[CeExplicit] = field(
+    code: CeExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: Optional[EnExplicit] = field(
+    name: EnExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    lot_number_text: Optional[StExplicit] = field(
+    lot_number_text: StExplicit | None = field(
         default=None,
         metadata={
             "name": "lotNumberText",
@@ -1098,7 +1100,7 @@ class PocdMt000040Material:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1136,7 +1138,7 @@ class PocdMt000040NonXmlbody:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1152,7 +1154,7 @@ class PocdMt000040NonXmlbody:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    text: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1160,7 +1162,7 @@ class PocdMt000040NonXmlbody:
             "required": True,
         },
     )
-    confidentiality_code: Optional[Ce] = field(
+    confidentiality_code: Ce | None = field(
         default=None,
         metadata={
             "name": "confidentialityCode",
@@ -1168,7 +1170,7 @@ class PocdMt000040NonXmlbody:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: Optional[Cs] = field(
+    language_code: Cs | None = field(
         default=None,
         metadata={
             "name": "languageCode",
@@ -1176,7 +1178,7 @@ class PocdMt000040NonXmlbody:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1214,7 +1216,7 @@ class PocdMt000040ObservationRange:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1230,28 +1232,28 @@ class PocdMt000040ObservationRange:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    text: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[AnyType] = field(
+    value: AnyType | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    interpretation_code: Optional[Ce] = field(
+    interpretation_code: Ce | None = field(
         default=None,
         metadata={
             "name": "interpretationCode",
@@ -1259,7 +1261,7 @@ class PocdMt000040ObservationRange:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1296,7 +1298,7 @@ class PocdMt000040Order:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1320,14 +1322,14 @@ class PocdMt000040Order:
             "min_occurs": 1,
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    priority_code: Optional[Ce] = field(
+    priority_code: Ce | None = field(
         default=None,
         metadata={
             "name": "priorityCode",
@@ -1335,7 +1337,7 @@ class PocdMt000040Order:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1372,7 +1374,7 @@ class PocdMt000040Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1416,7 +1418,7 @@ class PocdMt000040Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    standard_industry_class_code: Optional[Ce] = field(
+    standard_industry_class_code: Ce | None = field(
         default=None,
         metadata={
             "name": "standardIndustryClassCode",
@@ -1424,7 +1426,7 @@ class PocdMt000040Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_organization_part_of: Optional["PocdMt000040OrganizationPartOf"] = (
+    as_organization_part_of: PocdMt000040OrganizationPartOf | None = (
         field(
             default=None,
             metadata={
@@ -1434,7 +1436,7 @@ class PocdMt000040Organization:
             },
         )
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1472,7 +1474,7 @@ class PocdMt000040ParentDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1496,21 +1498,21 @@ class PocdMt000040ParentDocument:
             "min_occurs": 1,
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    text: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    set_id: Optional[Ii] = field(
+    set_id: Ii | None = field(
         default=None,
         metadata={
             "name": "setId",
@@ -1518,7 +1520,7 @@ class PocdMt000040ParentDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    version_number: Optional[Int] = field(
+    version_number: Int | None = field(
         default=None,
         metadata={
             "name": "versionNumber",
@@ -1526,7 +1528,7 @@ class PocdMt000040ParentDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1564,7 +1566,7 @@ class PocdMt000040Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1587,7 +1589,7 @@ class PocdMt000040Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1625,7 +1627,7 @@ class PocdMt000040Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1641,21 +1643,21 @@ class PocdMt000040Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: Optional[EnExplicit] = field(
+    name: EnExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: Optional[AdExplicit] = field(
+    addr: AdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1693,7 +1695,7 @@ class PocdMt000040PlayingEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1709,7 +1711,7 @@ class PocdMt000040PlayingEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[CeExplicit] = field(
+    code: CeExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1730,7 +1732,7 @@ class PocdMt000040PlayingEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    birth_time: Optional[BirthTime] = field(
+    birth_time: BirthTime | None = field(
         default=None,
         metadata={
             "name": "birthTime",
@@ -1738,14 +1740,14 @@ class PocdMt000040PlayingEntity:
             "namespace": "urn:hl7-org:sdtc",
         },
     )
-    desc: Optional[StExplicit] = field(
+    desc: StExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1782,7 +1784,7 @@ class PocdMt000040SubjectPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1812,7 +1814,7 @@ class PocdMt000040SubjectPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    administrative_gender_code: Optional[Ce] = field(
+    administrative_gender_code: Ce | None = field(
         default=None,
         metadata={
             "name": "administrativeGenderCode",
@@ -1820,7 +1822,7 @@ class PocdMt000040SubjectPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    birth_time: Optional[TsExplicit] = field(
+    birth_time: TsExplicit | None = field(
         default=None,
         metadata={
             "name": "birthTime",
@@ -1828,7 +1830,7 @@ class PocdMt000040SubjectPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    deceased_ind: Optional[DeceasedInd] = field(
+    deceased_ind: DeceasedInd | None = field(
         default=None,
         metadata={
             "name": "deceasedInd",
@@ -1836,7 +1838,7 @@ class PocdMt000040SubjectPerson:
             "namespace": "urn:hl7-org:sdtc",
         },
     )
-    deceased_time: Optional[DeceasedTime] = field(
+    deceased_time: DeceasedTime | None = field(
         default=None,
         metadata={
             "name": "deceasedTime",
@@ -1844,7 +1846,7 @@ class PocdMt000040SubjectPerson:
             "namespace": "urn:hl7-org:sdtc",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1882,7 +1884,7 @@ class PocdMt000040AssignedCustodian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1898,9 +1900,7 @@ class PocdMt000040AssignedCustodian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    represented_custodian_organization: Optional[
-        PocdMt000040CustodianOrganization
-    ] = field(
+    represented_custodian_organization: PocdMt000040CustodianOrganization | None = field(
         default=None,
         metadata={
             "name": "representedCustodianOrganization",
@@ -1909,7 +1909,7 @@ class PocdMt000040AssignedCustodian:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -1939,7 +1939,7 @@ class PocdMt000040AssignedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -1963,7 +1963,7 @@ class PocdMt000040AssignedEntity:
             "min_occurs": 1,
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1984,7 +1984,7 @@ class PocdMt000040AssignedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_person: Optional[PocdMt000040Person] = field(
+    assigned_person: PocdMt000040Person | None = field(
         default=None,
         metadata={
             "name": "assignedPerson",
@@ -1992,7 +1992,7 @@ class PocdMt000040AssignedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    represented_organization: Optional[PocdMt000040Organization] = field(
+    represented_organization: PocdMt000040Organization | None = field(
         default=None,
         metadata={
             "name": "representedOrganization",
@@ -2000,7 +2000,7 @@ class PocdMt000040AssignedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -2030,7 +2030,7 @@ class PocdMt000040AssociatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -2053,7 +2053,7 @@ class PocdMt000040AssociatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2074,7 +2074,7 @@ class PocdMt000040AssociatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    associated_person: Optional[PocdMt000040Person] = field(
+    associated_person: PocdMt000040Person | None = field(
         default=None,
         metadata={
             "name": "associatedPerson",
@@ -2082,7 +2082,7 @@ class PocdMt000040AssociatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    scoping_organization: Optional[PocdMt000040Organization] = field(
+    scoping_organization: PocdMt000040Organization | None = field(
         default=None,
         metadata={
             "name": "scopingOrganization",
@@ -2090,16 +2090,14 @@ class PocdMt000040AssociatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[
-        Union[RoleClassMutualRelationship, RoleClassPassive, str]
-    ] = field(
+    class_code: RoleClassMutualRelationship | RoleClassPassive | str | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -2123,7 +2121,7 @@ class PocdMt000040Authorization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -2139,7 +2137,7 @@ class PocdMt000040Authorization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    consent: Optional[PocdMt000040Consent] = field(
+    consent: PocdMt000040Consent | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2147,34 +2145,14 @@ class PocdMt000040Authorization:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Union[
-        ActRelationshipConditional,
-        ActRelationshipHasComponent,
-        ActRelationshipOutcome,
-        ActRelationshipCostTracking,
-        ActRelationshipPosting,
-        str,
-        ActRelationshipHasSupport,
-        ActRelationshipTemporallyPertains,
-        ActRelationshipPertainsValue,
-        ActRelationshipSequel,
-        XActRelationshipDocument,
-        XActRelationshipEntry,
-        XActRelationshipEntryRelationship,
-        XActRelationshipExternalReference,
-        XActRelationshipPatientTransport,
-        XActRelationshipPertinentInfo,
-        XActRelationshipRelatedAuthorizations,
-        XActReplaceOrRevise,
-        XSuccReplPrev,
-    ] = field(
+    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
         init=False,
         default=ActRelationshipPertainsValue.AUTH,
         metadata={
@@ -2198,7 +2176,7 @@ class PocdMt000040Birthplace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -2214,7 +2192,7 @@ class PocdMt000040Birthplace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    place: Optional[PocdMt000040Place] = field(
+    place: PocdMt000040Place | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2222,30 +2200,14 @@ class PocdMt000040Birthplace:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Union[
-        RoleClassMutualRelationship,
-        RoleClassPassive,
-        str,
-        RoleClassOntological,
-        RoleClassPartitive,
-        RoleClassRootValue,
-        XAccommodationRequestorRole,
-        XDocumentEntrySubject,
-        XDocumentSubject,
-        XInformationRecipientRole,
-        XRoleClassAccommodationRequestor,
-        XRoleClassCoverage,
-        XRoleClassCoverageInvoice,
-        XRoleClassCredentialedEntity,
-        XRoleClassPayeePolicyRelationship,
-    ] = field(
+    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
         init=False,
         default=RoleClassPassive.BIRTHPL,
         metadata={
@@ -2269,7 +2231,7 @@ class PocdMt000040Guardian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -2292,7 +2254,7 @@ class PocdMt000040Guardian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2313,7 +2275,7 @@ class PocdMt000040Guardian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    guardian_person: Optional[PocdMt000040Person] = field(
+    guardian_person: PocdMt000040Person | None = field(
         default=None,
         metadata={
             "name": "guardianPerson",
@@ -2321,7 +2283,7 @@ class PocdMt000040Guardian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    guardian_organization: Optional[PocdMt000040Organization] = field(
+    guardian_organization: PocdMt000040Organization | None = field(
         default=None,
         metadata={
             "name": "guardianOrganization",
@@ -2329,30 +2291,14 @@ class PocdMt000040Guardian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Union[
-        RoleClassMutualRelationship,
-        RoleClassPassive,
-        str,
-        RoleClassOntological,
-        RoleClassPartitive,
-        RoleClassRootValue,
-        XAccommodationRequestorRole,
-        XDocumentEntrySubject,
-        XDocumentSubject,
-        XInformationRecipientRole,
-        XRoleClassAccommodationRequestor,
-        XRoleClassCoverage,
-        XRoleClassCoverageInvoice,
-        XRoleClassCredentialedEntity,
-        XRoleClassPayeePolicyRelationship,
-    ] = field(
+    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
         init=False,
         default=RoleClassMutualRelationship.GUARD,
         metadata={
@@ -2376,7 +2322,7 @@ class PocdMt000040HealthCareFacility:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -2399,21 +2345,21 @@ class PocdMt000040HealthCareFacility:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    location: Optional[PocdMt000040Place] = field(
+    location: PocdMt000040Place | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    service_provider_organization: Optional[PocdMt000040Organization] = field(
+    service_provider_organization: PocdMt000040Organization | None = field(
         default=None,
         metadata={
             "name": "serviceProviderOrganization",
@@ -2421,7 +2367,7 @@ class PocdMt000040HealthCareFacility:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -2450,7 +2396,7 @@ class PocdMt000040InFulfillmentOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -2466,7 +2412,7 @@ class PocdMt000040InFulfillmentOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    order: Optional[PocdMt000040Order] = field(
+    order: PocdMt000040Order | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2474,7 +2420,7 @@ class PocdMt000040InFulfillmentOf:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -2504,7 +2450,7 @@ class PocdMt000040IntendedRecipient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -2541,7 +2487,7 @@ class PocdMt000040IntendedRecipient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    information_recipient: Optional[PocdMt000040Person] = field(
+    information_recipient: PocdMt000040Person | None = field(
         default=None,
         metadata={
             "name": "informationRecipient",
@@ -2549,7 +2495,7 @@ class PocdMt000040IntendedRecipient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    received_organization: Optional[PocdMt000040Organization] = field(
+    received_organization: PocdMt000040Organization | None = field(
         default=None,
         metadata={
             "name": "receivedOrganization",
@@ -2557,7 +2503,7 @@ class PocdMt000040IntendedRecipient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -2586,7 +2532,7 @@ class PocdMt000040MaintainedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -2602,7 +2548,7 @@ class PocdMt000040MaintainedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -2610,7 +2556,7 @@ class PocdMt000040MaintainedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    maintaining_person: Optional[PocdMt000040Person] = field(
+    maintaining_person: PocdMt000040Person | None = field(
         default=None,
         metadata={
             "name": "maintainingPerson",
@@ -2619,30 +2565,14 @@ class PocdMt000040MaintainedEntity:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Union[
-        RoleClassMutualRelationship,
-        RoleClassPassive,
-        str,
-        RoleClassOntological,
-        RoleClassPartitive,
-        RoleClassRootValue,
-        XAccommodationRequestorRole,
-        XDocumentEntrySubject,
-        XDocumentSubject,
-        XInformationRecipientRole,
-        XRoleClassAccommodationRequestor,
-        XRoleClassCoverage,
-        XRoleClassCoverageInvoice,
-        XRoleClassCredentialedEntity,
-        XRoleClassPayeePolicyRelationship,
-    ] = field(
+    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
         init=False,
         default=RoleClassPassive.MNT,
         metadata={
@@ -2666,7 +2596,7 @@ class PocdMt000040ManufacturedProduct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -2689,7 +2619,7 @@ class PocdMt000040ManufacturedProduct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufactured_labeled_drug: Optional[PocdMt000040LabeledDrug] = field(
+    manufactured_labeled_drug: PocdMt000040LabeledDrug | None = field(
         default=None,
         metadata={
             "name": "manufacturedLabeledDrug",
@@ -2697,7 +2627,7 @@ class PocdMt000040ManufacturedProduct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufactured_material: Optional[PocdMt000040Material] = field(
+    manufactured_material: PocdMt000040Material | None = field(
         default=None,
         metadata={
             "name": "manufacturedMaterial",
@@ -2705,7 +2635,7 @@ class PocdMt000040ManufacturedProduct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufacturer_organization: Optional[PocdMt000040Organization] = field(
+    manufacturer_organization: PocdMt000040Organization | None = field(
         default=None,
         metadata={
             "name": "manufacturerOrganization",
@@ -2713,7 +2643,7 @@ class PocdMt000040ManufacturedProduct:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -2743,7 +2673,7 @@ class PocdMt000040OrganizationPartOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -2766,14 +2696,14 @@ class PocdMt000040OrganizationPartOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Optional[Cs] = field(
+    status_code: Cs | None = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -2781,7 +2711,7 @@ class PocdMt000040OrganizationPartOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -2789,7 +2719,7 @@ class PocdMt000040OrganizationPartOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    whole_organization: Optional[PocdMt000040Organization] = field(
+    whole_organization: PocdMt000040Organization | None = field(
         default=None,
         metadata={
             "name": "wholeOrganization",
@@ -2797,30 +2727,14 @@ class PocdMt000040OrganizationPartOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Union[
-        RoleClassMutualRelationship,
-        RoleClassPassive,
-        str,
-        RoleClassOntological,
-        RoleClassPartitive,
-        RoleClassRootValue,
-        XAccommodationRequestorRole,
-        XDocumentEntrySubject,
-        XDocumentSubject,
-        XInformationRecipientRole,
-        XRoleClassAccommodationRequestor,
-        XRoleClassCoverage,
-        XRoleClassCoverageInvoice,
-        XRoleClassCredentialedEntity,
-        XRoleClassPayeePolicyRelationship,
-    ] = field(
+    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
         init=False,
         default=RoleClassPartitive.PART,
         metadata={
@@ -2844,7 +2758,7 @@ class PocdMt000040ParticipantRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -2867,7 +2781,7 @@ class PocdMt000040ParticipantRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2888,7 +2802,7 @@ class PocdMt000040ParticipantRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    playing_device: Optional[PocdMt000040Device] = field(
+    playing_device: PocdMt000040Device | None = field(
         default=None,
         metadata={
             "name": "playingDevice",
@@ -2896,7 +2810,7 @@ class PocdMt000040ParticipantRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    playing_entity: Optional[PocdMt000040PlayingEntity] = field(
+    playing_entity: PocdMt000040PlayingEntity | None = field(
         default=None,
         metadata={
             "name": "playingEntity",
@@ -2904,7 +2818,7 @@ class PocdMt000040ParticipantRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    scoping_entity: Optional[PocdMt000040Entity] = field(
+    scoping_entity: PocdMt000040Entity | None = field(
         default=None,
         metadata={
             "name": "scopingEntity",
@@ -2912,21 +2826,14 @@ class PocdMt000040ParticipantRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Union[
-        RoleClassMutualRelationship,
-        RoleClassPassive,
-        str,
-        RoleClassOntological,
-        RoleClassPartitive,
-        RoleClassRootValue,
-    ] = field(
+    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue = field(
         default=RoleClassRootValue.ROL,
         metadata={
             "name": "classCode",
@@ -2949,7 +2856,7 @@ class PocdMt000040Precondition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -2965,7 +2872,7 @@ class PocdMt000040Precondition:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    criterion: Optional[PocdMt000040Criterion] = field(
+    criterion: PocdMt000040Criterion | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -2973,34 +2880,14 @@ class PocdMt000040Precondition:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Union[
-        ActRelationshipConditional,
-        ActRelationshipHasComponent,
-        ActRelationshipOutcome,
-        ActRelationshipCostTracking,
-        ActRelationshipPosting,
-        str,
-        ActRelationshipHasSupport,
-        ActRelationshipTemporallyPertains,
-        ActRelationshipPertainsValue,
-        ActRelationshipSequel,
-        XActRelationshipDocument,
-        XActRelationshipEntry,
-        XActRelationshipEntryRelationship,
-        XActRelationshipExternalReference,
-        XActRelationshipPatientTransport,
-        XActRelationshipPertinentInfo,
-        XActRelationshipRelatedAuthorizations,
-        XActReplaceOrRevise,
-        XSuccReplPrev,
-    ] = field(
+    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
         init=False,
         default=ActRelationshipConditional.PRCN,
         metadata={
@@ -3024,7 +2911,7 @@ class PocdMt000040Reference:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -3040,7 +2927,7 @@ class PocdMt000040Reference:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    seperatable_ind: Optional[Bl] = field(
+    seperatable_ind: Bl | None = field(
         default=None,
         metadata={
             "name": "seperatableInd",
@@ -3048,7 +2935,7 @@ class PocdMt000040Reference:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    external_act: Optional[PocdMt000040ExternalAct] = field(
+    external_act: PocdMt000040ExternalAct | None = field(
         default=None,
         metadata={
             "name": "externalAct",
@@ -3056,7 +2943,7 @@ class PocdMt000040Reference:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    external_observation: Optional[PocdMt000040ExternalObservation] = field(
+    external_observation: PocdMt000040ExternalObservation | None = field(
         default=None,
         metadata={
             "name": "externalObservation",
@@ -3064,7 +2951,7 @@ class PocdMt000040Reference:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    external_procedure: Optional[PocdMt000040ExternalProcedure] = field(
+    external_procedure: PocdMt000040ExternalProcedure | None = field(
         default=None,
         metadata={
             "name": "externalProcedure",
@@ -3072,7 +2959,7 @@ class PocdMt000040Reference:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    external_document: Optional[PocdMt000040ExternalDocument] = field(
+    external_document: PocdMt000040ExternalDocument | None = field(
         default=None,
         metadata={
             "name": "externalDocument",
@@ -3080,14 +2967,14 @@ class PocdMt000040Reference:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[XActRelationshipExternalReference] = field(
+    type_code: XActRelationshipExternalReference | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -3110,7 +2997,7 @@ class PocdMt000040ReferenceRange:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -3126,7 +3013,7 @@ class PocdMt000040ReferenceRange:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    observation_range: Optional[PocdMt000040ObservationRange] = field(
+    observation_range: PocdMt000040ObservationRange | None = field(
         default=None,
         metadata={
             "name": "observationRange",
@@ -3135,34 +3022,14 @@ class PocdMt000040ReferenceRange:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Union[
-        ActRelationshipConditional,
-        ActRelationshipHasComponent,
-        ActRelationshipOutcome,
-        ActRelationshipCostTracking,
-        ActRelationshipPosting,
-        str,
-        ActRelationshipHasSupport,
-        ActRelationshipTemporallyPertains,
-        ActRelationshipPertainsValue,
-        ActRelationshipSequel,
-        XActRelationshipDocument,
-        XActRelationshipEntry,
-        XActRelationshipEntryRelationship,
-        XActRelationshipExternalReference,
-        XActRelationshipPatientTransport,
-        XActRelationshipPertinentInfo,
-        XActRelationshipRelatedAuthorizations,
-        XActReplaceOrRevise,
-        XSuccReplPrev,
-    ] = field(
+    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
         init=False,
         default=ActRelationshipPertainsValue.REFV,
         metadata={
@@ -3186,7 +3053,7 @@ class PocdMt000040RelatedDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -3202,7 +3069,7 @@ class PocdMt000040RelatedDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    parent_document: Optional[PocdMt000040ParentDocument] = field(
+    parent_document: PocdMt000040ParentDocument | None = field(
         default=None,
         metadata={
             "name": "parentDocument",
@@ -3211,14 +3078,14 @@ class PocdMt000040RelatedDocument:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[XActRelationshipDocument] = field(
+    type_code: XActRelationshipDocument | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -3241,7 +3108,7 @@ class PocdMt000040RelatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -3257,7 +3124,7 @@ class PocdMt000040RelatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3278,7 +3145,7 @@ class PocdMt000040RelatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -3286,7 +3153,7 @@ class PocdMt000040RelatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    related_person: Optional[PocdMt000040Person] = field(
+    related_person: PocdMt000040Person | None = field(
         default=None,
         metadata={
             "name": "relatedPerson",
@@ -3294,14 +3161,14 @@ class PocdMt000040RelatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[RoleClassMutualRelationship] = field(
+    class_code: RoleClassMutualRelationship | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -3324,7 +3191,7 @@ class PocdMt000040RelatedSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -3340,7 +3207,7 @@ class PocdMt000040RelatedSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3361,14 +3228,14 @@ class PocdMt000040RelatedSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: Optional[PocdMt000040SubjectPerson] = field(
+    subject: PocdMt000040SubjectPerson | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -3397,7 +3264,7 @@ class PocdMt000040SpecimenRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -3420,7 +3287,7 @@ class PocdMt000040SpecimenRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    specimen_playing_entity: Optional[PocdMt000040PlayingEntity] = field(
+    specimen_playing_entity: PocdMt000040PlayingEntity | None = field(
         default=None,
         metadata={
             "name": "specimenPlayingEntity",
@@ -3428,7 +3295,7 @@ class PocdMt000040SpecimenRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -3458,7 +3325,7 @@ class PocdMt000040Authenticator:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -3474,7 +3341,7 @@ class PocdMt000040Authenticator:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: Optional[TsExplicit] = field(
+    time: TsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3482,7 +3349,7 @@ class PocdMt000040Authenticator:
             "required": True,
         },
     )
-    signature_code: Optional[Cs] = field(
+    signature_code: Cs | None = field(
         default=None,
         metadata={
             "name": "signatureCode",
@@ -3491,7 +3358,7 @@ class PocdMt000040Authenticator:
             "required": True,
         },
     )
-    assigned_entity: Optional[PocdMt000040AssignedEntity] = field(
+    assigned_entity: PocdMt000040AssignedEntity | None = field(
         default=None,
         metadata={
             "name": "assignedEntity",
@@ -3500,7 +3367,7 @@ class PocdMt000040Authenticator:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -3530,7 +3397,7 @@ class PocdMt000040AuthoringDevice:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -3546,14 +3413,14 @@ class PocdMt000040AuthoringDevice:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufacturer_model_name: Optional[ScExplicit] = field(
+    manufacturer_model_name: ScExplicit | None = field(
         default=None,
         metadata={
             "name": "manufacturerModelName",
@@ -3561,7 +3428,7 @@ class PocdMt000040AuthoringDevice:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    software_name: Optional[ScExplicit] = field(
+    software_name: ScExplicit | None = field(
         default=None,
         metadata={
             "name": "softwareName",
@@ -3577,7 +3444,7 @@ class PocdMt000040AuthoringDevice:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -3615,7 +3482,7 @@ class PocdMt000040Consumable:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -3631,7 +3498,7 @@ class PocdMt000040Consumable:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufactured_product: Optional[PocdMt000040ManufacturedProduct] = field(
+    manufactured_product: PocdMt000040ManufacturedProduct | None = field(
         default=None,
         metadata={
             "name": "manufacturedProduct",
@@ -3640,7 +3507,7 @@ class PocdMt000040Consumable:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -3670,7 +3537,7 @@ class PocdMt000040Custodian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -3686,7 +3553,7 @@ class PocdMt000040Custodian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_custodian: Optional[PocdMt000040AssignedCustodian] = field(
+    assigned_custodian: PocdMt000040AssignedCustodian | None = field(
         default=None,
         metadata={
             "name": "assignedCustodian",
@@ -3695,7 +3562,7 @@ class PocdMt000040Custodian:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -3725,7 +3592,7 @@ class PocdMt000040DataEnterer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -3741,14 +3608,14 @@ class PocdMt000040DataEnterer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: Optional[TsExplicit] = field(
+    time: TsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_entity: Optional[PocdMt000040AssignedEntity] = field(
+    assigned_entity: PocdMt000040AssignedEntity | None = field(
         default=None,
         metadata={
             "name": "assignedEntity",
@@ -3757,7 +3624,7 @@ class PocdMt000040DataEnterer:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -3795,7 +3662,7 @@ class PocdMt000040EncounterParticipant:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -3811,14 +3678,14 @@ class PocdMt000040EncounterParticipant:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: Optional[IvlTsExplicit] = field(
+    time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_entity: Optional[PocdMt000040AssignedEntity] = field(
+    assigned_entity: PocdMt000040AssignedEntity | None = field(
         default=None,
         metadata={
             "name": "assignedEntity",
@@ -3827,14 +3694,14 @@ class PocdMt000040EncounterParticipant:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[XEncounterParticipant] = field(
+    type_code: XEncounterParticipant | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -3857,7 +3724,7 @@ class PocdMt000040Informant12:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -3873,7 +3740,7 @@ class PocdMt000040Informant12:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_entity: Optional[PocdMt000040AssignedEntity] = field(
+    assigned_entity: PocdMt000040AssignedEntity | None = field(
         default=None,
         metadata={
             "name": "assignedEntity",
@@ -3881,7 +3748,7 @@ class PocdMt000040Informant12:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    related_entity: Optional[PocdMt000040RelatedEntity] = field(
+    related_entity: PocdMt000040RelatedEntity | None = field(
         default=None,
         metadata={
             "name": "relatedEntity",
@@ -3889,7 +3756,7 @@ class PocdMt000040Informant12:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -3927,7 +3794,7 @@ class PocdMt000040InformationRecipient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -3943,7 +3810,7 @@ class PocdMt000040InformationRecipient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    intended_recipient: Optional[PocdMt000040IntendedRecipient] = field(
+    intended_recipient: PocdMt000040IntendedRecipient | None = field(
         default=None,
         metadata={
             "name": "intendedRecipient",
@@ -3952,7 +3819,7 @@ class PocdMt000040InformationRecipient:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -3981,7 +3848,7 @@ class PocdMt000040LegalAuthenticator:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -3997,7 +3864,7 @@ class PocdMt000040LegalAuthenticator:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: Optional[TsExplicit] = field(
+    time: TsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -4005,7 +3872,7 @@ class PocdMt000040LegalAuthenticator:
             "required": True,
         },
     )
-    signature_code: Optional[Cs] = field(
+    signature_code: Cs | None = field(
         default=None,
         metadata={
             "name": "signatureCode",
@@ -4014,7 +3881,7 @@ class PocdMt000040LegalAuthenticator:
             "required": True,
         },
     )
-    assigned_entity: Optional[PocdMt000040AssignedEntity] = field(
+    assigned_entity: PocdMt000040AssignedEntity | None = field(
         default=None,
         metadata={
             "name": "assignedEntity",
@@ -4023,7 +3890,7 @@ class PocdMt000040LegalAuthenticator:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -4061,7 +3928,7 @@ class PocdMt000040Location:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -4077,7 +3944,7 @@ class PocdMt000040Location:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    health_care_facility: Optional[PocdMt000040HealthCareFacility] = field(
+    health_care_facility: PocdMt000040HealthCareFacility | None = field(
         default=None,
         metadata={
             "name": "healthCareFacility",
@@ -4086,7 +3953,7 @@ class PocdMt000040Location:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -4116,7 +3983,7 @@ class PocdMt000040Participant1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -4132,7 +3999,7 @@ class PocdMt000040Participant1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    function_code: Optional[Ce] = field(
+    function_code: Ce | None = field(
         default=None,
         metadata={
             "name": "functionCode",
@@ -4140,14 +4007,14 @@ class PocdMt000040Participant1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: Optional[IvlTsExplicit] = field(
+    time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    associated_entity: Optional[PocdMt000040AssociatedEntity] = field(
+    associated_entity: PocdMt000040AssociatedEntity | None = field(
         default=None,
         metadata={
             "name": "associatedEntity",
@@ -4156,14 +4023,14 @@ class PocdMt000040Participant1:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[ParticipationType] = field(
+    type_code: ParticipationType | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -4194,7 +4061,7 @@ class PocdMt000040Participant2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -4210,14 +4077,14 @@ class PocdMt000040Participant2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: Optional[IvlTsExplicit] = field(
+    time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    awareness_code: Optional[Ce] = field(
+    awareness_code: Ce | None = field(
         default=None,
         metadata={
             "name": "awarenessCode",
@@ -4225,7 +4092,7 @@ class PocdMt000040Participant2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    participant_role: Optional[PocdMt000040ParticipantRole] = field(
+    participant_role: PocdMt000040ParticipantRole | None = field(
         default=None,
         metadata={
             "name": "participantRole",
@@ -4234,14 +4101,14 @@ class PocdMt000040Participant2:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[ParticipationType] = field(
+    type_code: ParticipationType | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -4272,7 +4139,7 @@ class PocdMt000040Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -4288,7 +4155,7 @@ class PocdMt000040Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: Optional[Ii] = field(
+    id: Ii | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -4302,7 +4169,7 @@ class PocdMt000040Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    administrative_gender_code: Optional[Ce] = field(
+    administrative_gender_code: Ce | None = field(
         default=None,
         metadata={
             "name": "administrativeGenderCode",
@@ -4310,7 +4177,7 @@ class PocdMt000040Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    birth_time: Optional[TsExplicit] = field(
+    birth_time: TsExplicit | None = field(
         default=None,
         metadata={
             "name": "birthTime",
@@ -4318,7 +4185,7 @@ class PocdMt000040Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    marital_status_code: Optional[Ce] = field(
+    marital_status_code: Ce | None = field(
         default=None,
         metadata={
             "name": "maritalStatusCode",
@@ -4326,7 +4193,7 @@ class PocdMt000040Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    religious_affiliation_code: Optional[Ce] = field(
+    religious_affiliation_code: Ce | None = field(
         default=None,
         metadata={
             "name": "religiousAffiliationCode",
@@ -4334,7 +4201,7 @@ class PocdMt000040Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    race_code: Optional[Ce] = field(
+    race_code: Ce | None = field(
         default=None,
         metadata={
             "name": "raceCode",
@@ -4342,7 +4209,7 @@ class PocdMt000040Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    ethnic_group_code: Optional[Ce] = field(
+    ethnic_group_code: Ce | None = field(
         default=None,
         metadata={
             "name": "ethnicGroupCode",
@@ -4357,7 +4224,7 @@ class PocdMt000040Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    birthplace: Optional[PocdMt000040Birthplace] = field(
+    birthplace: PocdMt000040Birthplace | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -4372,7 +4239,7 @@ class PocdMt000040Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -4410,7 +4277,7 @@ class PocdMt000040Performer1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -4426,7 +4293,7 @@ class PocdMt000040Performer1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    function_code: Optional[Ce] = field(
+    function_code: Ce | None = field(
         default=None,
         metadata={
             "name": "functionCode",
@@ -4434,14 +4301,14 @@ class PocdMt000040Performer1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: Optional[IvlTsExplicit] = field(
+    time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_entity: Optional[PocdMt000040AssignedEntity] = field(
+    assigned_entity: PocdMt000040AssignedEntity | None = field(
         default=None,
         metadata={
             "name": "assignedEntity",
@@ -4450,14 +4317,14 @@ class PocdMt000040Performer1:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[XServiceEventPerformer] = field(
+    type_code: XServiceEventPerformer | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -4480,7 +4347,7 @@ class PocdMt000040Performer2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -4496,14 +4363,14 @@ class PocdMt000040Performer2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: Optional[IvlTsExplicit] = field(
+    time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    mode_code: Optional[Ce] = field(
+    mode_code: Ce | None = field(
         default=None,
         metadata={
             "name": "modeCode",
@@ -4511,7 +4378,7 @@ class PocdMt000040Performer2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_entity: Optional[PocdMt000040AssignedEntity] = field(
+    assigned_entity: PocdMt000040AssignedEntity | None = field(
         default=None,
         metadata={
             "name": "assignedEntity",
@@ -4520,7 +4387,7 @@ class PocdMt000040Performer2:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -4550,7 +4417,7 @@ class PocdMt000040Product:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -4566,7 +4433,7 @@ class PocdMt000040Product:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufactured_product: Optional[PocdMt000040ManufacturedProduct] = field(
+    manufactured_product: PocdMt000040ManufacturedProduct | None = field(
         default=None,
         metadata={
             "name": "manufacturedProduct",
@@ -4575,7 +4442,7 @@ class PocdMt000040Product:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -4605,7 +4472,7 @@ class PocdMt000040ResponsibleParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -4621,7 +4488,7 @@ class PocdMt000040ResponsibleParty:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_entity: Optional[PocdMt000040AssignedEntity] = field(
+    assigned_entity: PocdMt000040AssignedEntity | None = field(
         default=None,
         metadata={
             "name": "assignedEntity",
@@ -4630,7 +4497,7 @@ class PocdMt000040ResponsibleParty:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -4660,7 +4527,7 @@ class PocdMt000040Specimen:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -4676,7 +4543,7 @@ class PocdMt000040Specimen:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    specimen_role: Optional[PocdMt000040SpecimenRole] = field(
+    specimen_role: PocdMt000040SpecimenRole | None = field(
         default=None,
         metadata={
             "name": "specimenRole",
@@ -4685,7 +4552,7 @@ class PocdMt000040Specimen:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -4715,7 +4582,7 @@ class PocdMt000040Subject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -4731,7 +4598,7 @@ class PocdMt000040Subject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    awareness_code: Optional[Ce] = field(
+    awareness_code: Ce | None = field(
         default=None,
         metadata={
             "name": "awarenessCode",
@@ -4739,7 +4606,7 @@ class PocdMt000040Subject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    related_subject: Optional[PocdMt000040RelatedSubject] = field(
+    related_subject: PocdMt000040RelatedSubject | None = field(
         default=None,
         metadata={
             "name": "relatedSubject",
@@ -4748,7 +4615,7 @@ class PocdMt000040Subject:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -4786,7 +4653,7 @@ class PocdMt000040AssignedAuthor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -4810,7 +4677,7 @@ class PocdMt000040AssignedAuthor:
             "min_occurs": 1,
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -4831,7 +4698,7 @@ class PocdMt000040AssignedAuthor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_person: Optional[PocdMt000040Person] = field(
+    assigned_person: PocdMt000040Person | None = field(
         default=None,
         metadata={
             "name": "assignedPerson",
@@ -4839,7 +4706,7 @@ class PocdMt000040AssignedAuthor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_authoring_device: Optional[PocdMt000040AuthoringDevice] = field(
+    assigned_authoring_device: PocdMt000040AuthoringDevice | None = field(
         default=None,
         metadata={
             "name": "assignedAuthoringDevice",
@@ -4847,7 +4714,7 @@ class PocdMt000040AssignedAuthor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    represented_organization: Optional[PocdMt000040Organization] = field(
+    represented_organization: PocdMt000040Organization | None = field(
         default=None,
         metadata={
             "name": "representedOrganization",
@@ -4855,7 +4722,7 @@ class PocdMt000040AssignedAuthor:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -4885,7 +4752,7 @@ class PocdMt000040EncompassingEncounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -4908,14 +4775,14 @@ class PocdMt000040EncompassingEncounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -4924,7 +4791,7 @@ class PocdMt000040EncompassingEncounter:
             "required": True,
         },
     )
-    discharge_disposition_code: Optional[Ce] = field(
+    discharge_disposition_code: Ce | None = field(
         default=None,
         metadata={
             "name": "dischargeDispositionCode",
@@ -4932,7 +4799,7 @@ class PocdMt000040EncompassingEncounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    responsible_party: Optional[PocdMt000040ResponsibleParty] = field(
+    responsible_party: PocdMt000040ResponsibleParty | None = field(
         default=None,
         metadata={
             "name": "responsibleParty",
@@ -4948,14 +4815,14 @@ class PocdMt000040EncompassingEncounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    location: Optional[PocdMt000040Location] = field(
+    location: PocdMt000040Location | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -4993,7 +4860,7 @@ class PocdMt000040PatientRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -5031,14 +4898,14 @@ class PocdMt000040PatientRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    patient: Optional[PocdMt000040Patient] = field(
+    patient: PocdMt000040Patient | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    provider_organization: Optional[PocdMt000040Organization] = field(
+    provider_organization: PocdMt000040Organization | None = field(
         default=None,
         metadata={
             "name": "providerOrganization",
@@ -5046,30 +4913,14 @@ class PocdMt000040PatientRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Union[
-        RoleClassMutualRelationship,
-        RoleClassPassive,
-        str,
-        RoleClassOntological,
-        RoleClassPartitive,
-        RoleClassRootValue,
-        XAccommodationRequestorRole,
-        XDocumentEntrySubject,
-        XDocumentSubject,
-        XInformationRecipientRole,
-        XRoleClassAccommodationRequestor,
-        XRoleClassCoverage,
-        XRoleClassCoverageInvoice,
-        XRoleClassCredentialedEntity,
-        XRoleClassPayeePolicyRelationship,
-    ] = field(
+    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
         init=False,
         default=RoleClassMutualRelationship.PAT,
         metadata={
@@ -5093,7 +4944,7 @@ class PocdMt000040ServiceEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -5116,14 +4967,14 @@ class PocdMt000040ServiceEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -5138,7 +4989,7 @@ class PocdMt000040ServiceEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -5175,7 +5026,7 @@ class PocdMt000040Author:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -5191,7 +5042,7 @@ class PocdMt000040Author:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    function_code: Optional[Ce] = field(
+    function_code: Ce | None = field(
         default=None,
         metadata={
             "name": "functionCode",
@@ -5199,7 +5050,7 @@ class PocdMt000040Author:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: Optional[TsExplicit] = field(
+    time: TsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5207,7 +5058,7 @@ class PocdMt000040Author:
             "required": True,
         },
     )
-    assigned_author: Optional[PocdMt000040AssignedAuthor] = field(
+    assigned_author: PocdMt000040AssignedAuthor | None = field(
         default=None,
         metadata={
             "name": "assignedAuthor",
@@ -5216,7 +5067,7 @@ class PocdMt000040Author:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -5254,7 +5105,7 @@ class PocdMt000040Component1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -5270,7 +5121,7 @@ class PocdMt000040Component1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    encompassing_encounter: Optional[PocdMt000040EncompassingEncounter] = (
+    encompassing_encounter: PocdMt000040EncompassingEncounter | None = (
         field(
             default=None,
             metadata={
@@ -5281,7 +5132,7 @@ class PocdMt000040Component1:
             },
         )
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -5311,7 +5162,7 @@ class PocdMt000040DocumentationOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -5327,7 +5178,7 @@ class PocdMt000040DocumentationOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    service_event: Optional[PocdMt000040ServiceEvent] = field(
+    service_event: PocdMt000040ServiceEvent | None = field(
         default=None,
         metadata={
             "name": "serviceEvent",
@@ -5336,34 +5187,14 @@ class PocdMt000040DocumentationOf:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Union[
-        ActRelationshipConditional,
-        ActRelationshipHasComponent,
-        ActRelationshipOutcome,
-        ActRelationshipCostTracking,
-        ActRelationshipPosting,
-        str,
-        ActRelationshipHasSupport,
-        ActRelationshipTemporallyPertains,
-        ActRelationshipPertainsValue,
-        ActRelationshipSequel,
-        XActRelationshipDocument,
-        XActRelationshipEntry,
-        XActRelationshipEntryRelationship,
-        XActRelationshipExternalReference,
-        XActRelationshipPatientTransport,
-        XActRelationshipPertinentInfo,
-        XActRelationshipRelatedAuthorizations,
-        XActReplaceOrRevise,
-        XSuccReplPrev,
-    ] = field(
+    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
         init=False,
         default=ActRelationshipSequel.DOC,
         metadata={
@@ -5387,7 +5218,7 @@ class PocdMt000040RecordTarget:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -5403,7 +5234,7 @@ class PocdMt000040RecordTarget:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    patient_role: Optional[PocdMt000040PatientRole] = field(
+    patient_role: PocdMt000040PatientRole | None = field(
         default=None,
         metadata={
             "name": "patientRole",
@@ -5412,7 +5243,7 @@ class PocdMt000040RecordTarget:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -5450,7 +5281,7 @@ class PocdMt000040Act:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -5473,7 +5304,7 @@ class PocdMt000040Act:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5481,14 +5312,14 @@ class PocdMt000040Act:
             "required": True,
         },
     )
-    text: Optional[EdExplicit] = field(
+    text: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Optional[Cs] = field(
+    status_code: Cs | None = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -5496,7 +5327,7 @@ class PocdMt000040Act:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -5504,7 +5335,7 @@ class PocdMt000040Act:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    priority_code: Optional[Ce] = field(
+    priority_code: Ce | None = field(
         default=None,
         metadata={
             "name": "priorityCode",
@@ -5512,7 +5343,7 @@ class PocdMt000040Act:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: Optional[Cs] = field(
+    language_code: Cs | None = field(
         default=None,
         metadata={
             "name": "languageCode",
@@ -5520,7 +5351,7 @@ class PocdMt000040Act:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: Optional[PocdMt000040Subject] = field(
+    subject: PocdMt000040Subject | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5562,7 +5393,7 @@ class PocdMt000040Act:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entry_relationship: list["PocdMt000040EntryRelationship"] = field(
+    entry_relationship: list[PocdMt000040EntryRelationship] = field(
         default_factory=list,
         metadata={
             "name": "entryRelationship",
@@ -5584,14 +5415,14 @@ class PocdMt000040Act:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[XActClassDocumentEntryAct] = field(
+    class_code: XActClassDocumentEntryAct | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -5599,7 +5430,7 @@ class PocdMt000040Act:
             "required": True,
         },
     )
-    mood_code: Optional[XDocumentActMood] = field(
+    mood_code: XDocumentActMood | None = field(
         default=None,
         metadata={
             "name": "moodCode",
@@ -5607,7 +5438,7 @@ class PocdMt000040Act:
             "required": True,
         },
     )
-    negation_ind: Optional[str] = field(
+    negation_ind: str | None = field(
         default=None,
         metadata={
             "name": "negationInd",
@@ -5630,7 +5461,7 @@ class PocdMt000040Encounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -5653,21 +5484,21 @@ class PocdMt000040Encounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    text: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Optional[Cs] = field(
+    status_code: Cs | None = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -5675,7 +5506,7 @@ class PocdMt000040Encounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -5683,7 +5514,7 @@ class PocdMt000040Encounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    discharge_disposition_code: Optional[DischargeDispositionCode] = field(
+    discharge_disposition_code: DischargeDispositionCode | None = field(
         default=None,
         metadata={
             "name": "dischargeDispositionCode",
@@ -5691,7 +5522,7 @@ class PocdMt000040Encounter:
             "namespace": "urn:hl7-org:sdtc",
         },
     )
-    priority_code: Optional[Ce] = field(
+    priority_code: Ce | None = field(
         default=None,
         metadata={
             "name": "priorityCode",
@@ -5699,7 +5530,7 @@ class PocdMt000040Encounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: Optional[PocdMt000040Subject] = field(
+    subject: PocdMt000040Subject | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5741,7 +5572,7 @@ class PocdMt000040Encounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    entry_relationship: list["PocdMt000040EntryRelationship"] = field(
+    entry_relationship: list[PocdMt000040EntryRelationship] = field(
         default_factory=list,
         metadata={
             "name": "entryRelationship",
@@ -5763,14 +5594,14 @@ class PocdMt000040Encounter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[ActClass] = field(
+    class_code: ActClass | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -5778,7 +5609,7 @@ class PocdMt000040Encounter:
             "required": True,
         },
     )
-    mood_code: Optional[XDocumentEncounterMood] = field(
+    mood_code: XDocumentEncounterMood | None = field(
         default=None,
         metadata={
             "name": "moodCode",
@@ -5801,7 +5632,7 @@ class PocdMt000040Component4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -5817,7 +5648,7 @@ class PocdMt000040Component4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    sequence_number: Optional[Int] = field(
+    sequence_number: Int | None = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -5825,7 +5656,7 @@ class PocdMt000040Component4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    seperatable_ind: Optional[Bl] = field(
+    seperatable_ind: Bl | None = field(
         default=None,
         metadata={
             "name": "seperatableInd",
@@ -5833,28 +5664,28 @@ class PocdMt000040Component4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    act: Optional[PocdMt000040Act] = field(
+    act: PocdMt000040Act | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    encounter: Optional["PocdMt000040Encounter"] = field(
+    encounter: PocdMt000040Encounter | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    observation: Optional["PocdMt000040Observation"] = field(
+    observation: PocdMt000040Observation | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    observation_media: Optional["PocdMt000040ObservationMedia"] = field(
+    observation_media: PocdMt000040ObservationMedia | None = field(
         default=None,
         metadata={
             "name": "observationMedia",
@@ -5862,21 +5693,21 @@ class PocdMt000040Component4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    organizer: Optional["PocdMt000040Organizer"] = field(
+    organizer: PocdMt000040Organizer | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    procedure: Optional["PocdMt000040Procedure"] = field(
+    procedure: PocdMt000040Procedure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    region_of_interest: Optional["PocdMt000040RegionOfInterest"] = field(
+    region_of_interest: PocdMt000040RegionOfInterest | None = field(
         default=None,
         metadata={
             "name": "regionOfInterest",
@@ -5884,9 +5715,7 @@ class PocdMt000040Component4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    substance_administration: Optional[
-        "PocdMt000040SubstanceAdministration"
-    ] = field(
+    substance_administration: PocdMt000040SubstanceAdministration | None = field(
         default=None,
         metadata={
             "name": "substanceAdministration",
@@ -5894,14 +5723,14 @@ class PocdMt000040Component4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    supply: Optional["PocdMt000040Supply"] = field(
+    supply: PocdMt000040Supply | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -5940,7 +5769,7 @@ class PocdMt000040Organizer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -5963,14 +5792,14 @@ class PocdMt000040Organizer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Optional[Cs] = field(
+    status_code: Cs | None = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -5979,7 +5808,7 @@ class PocdMt000040Organizer:
             "required": True,
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -5987,7 +5816,7 @@ class PocdMt000040Organizer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: Optional[PocdMt000040Subject] = field(
+    subject: PocdMt000040Subject | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -6050,14 +5879,14 @@ class PocdMt000040Organizer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[XActClassDocumentEntryOrganizer] = field(
+    class_code: XActClassDocumentEntryOrganizer | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -6065,7 +5894,7 @@ class PocdMt000040Organizer:
             "required": True,
         },
     )
-    mood_code: Optional[ActMood] = field(
+    mood_code: ActMood | None = field(
         default=None,
         metadata={
             "name": "moodCode",
@@ -6088,7 +5917,7 @@ class PocdMt000040EntryRelationship:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -6104,7 +5933,7 @@ class PocdMt000040EntryRelationship:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    sequence_number: Optional[Int] = field(
+    sequence_number: Int | None = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -6112,7 +5941,7 @@ class PocdMt000040EntryRelationship:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    seperatable_ind: Optional[Bl] = field(
+    seperatable_ind: Bl | None = field(
         default=None,
         metadata={
             "name": "seperatableInd",
@@ -6120,28 +5949,28 @@ class PocdMt000040EntryRelationship:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    act: Optional[PocdMt000040Act] = field(
+    act: PocdMt000040Act | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    encounter: Optional[PocdMt000040Encounter] = field(
+    encounter: PocdMt000040Encounter | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    observation: Optional["PocdMt000040Observation"] = field(
+    observation: PocdMt000040Observation | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    observation_media: Optional["PocdMt000040ObservationMedia"] = field(
+    observation_media: PocdMt000040ObservationMedia | None = field(
         default=None,
         metadata={
             "name": "observationMedia",
@@ -6149,21 +5978,21 @@ class PocdMt000040EntryRelationship:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    organizer: Optional[PocdMt000040Organizer] = field(
+    organizer: PocdMt000040Organizer | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    procedure: Optional["PocdMt000040Procedure"] = field(
+    procedure: PocdMt000040Procedure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    region_of_interest: Optional["PocdMt000040RegionOfInterest"] = field(
+    region_of_interest: PocdMt000040RegionOfInterest | None = field(
         default=None,
         metadata={
             "name": "regionOfInterest",
@@ -6171,9 +6000,7 @@ class PocdMt000040EntryRelationship:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    substance_administration: Optional[
-        "PocdMt000040SubstanceAdministration"
-    ] = field(
+    substance_administration: PocdMt000040SubstanceAdministration | None = field(
         default=None,
         metadata={
             "name": "substanceAdministration",
@@ -6181,21 +6008,21 @@ class PocdMt000040EntryRelationship:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    supply: Optional["PocdMt000040Supply"] = field(
+    supply: PocdMt000040Supply | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[XActRelationshipEntryRelationship] = field(
+    type_code: XActRelationshipEntryRelationship | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -6203,7 +6030,7 @@ class PocdMt000040EntryRelationship:
             "required": True,
         },
     )
-    inversion_ind: Optional[str] = field(
+    inversion_ind: str | None = field(
         default=None,
         metadata={
             "name": "inversionInd",
@@ -6219,7 +6046,7 @@ class PocdMt000040EntryRelationship:
             "pattern": r"true|false",
         },
     )
-    negation_ind: Optional[str] = field(
+    negation_ind: str | None = field(
         default=None,
         metadata={
             "name": "negationInd",
@@ -6242,7 +6069,7 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -6265,7 +6092,7 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -6273,7 +6100,7 @@ class PocdMt000040Observation:
             "required": True,
         },
     )
-    derivation_expr: Optional[StExplicit] = field(
+    derivation_expr: StExplicit | None = field(
         default=None,
         metadata={
             "name": "derivationExpr",
@@ -6281,14 +6108,14 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    text: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Optional[Cs] = field(
+    status_code: Cs | None = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -6296,7 +6123,7 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -6304,7 +6131,7 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    priority_code: Optional[Ce] = field(
+    priority_code: Ce | None = field(
         default=None,
         metadata={
             "name": "priorityCode",
@@ -6312,7 +6139,7 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    repeat_number: Optional[IvlInt] = field(
+    repeat_number: IvlInt | None = field(
         default=None,
         metadata={
             "name": "repeatNumber",
@@ -6320,7 +6147,7 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: Optional[Cs] = field(
+    language_code: Cs | None = field(
         default=None,
         metadata={
             "name": "languageCode",
@@ -6359,7 +6186,7 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: Optional[PocdMt000040Subject] = field(
+    subject: PocdMt000040Subject | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -6431,14 +6258,14 @@ class PocdMt000040Observation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[ActClassObservation] = field(
+    class_code: ActClassObservation | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -6446,7 +6273,7 @@ class PocdMt000040Observation:
             "required": True,
         },
     )
-    mood_code: Optional[XActMoodDocumentObservation] = field(
+    mood_code: XActMoodDocumentObservation | None = field(
         default=None,
         metadata={
             "name": "moodCode",
@@ -6454,7 +6281,7 @@ class PocdMt000040Observation:
             "required": True,
         },
     )
-    negation_ind: Optional[str] = field(
+    negation_ind: str | None = field(
         default=None,
         metadata={
             "name": "negationInd",
@@ -6477,7 +6304,7 @@ class PocdMt000040ObservationMedia:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -6500,7 +6327,7 @@ class PocdMt000040ObservationMedia:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: Optional[Cs] = field(
+    language_code: Cs | None = field(
         default=None,
         metadata={
             "name": "languageCode",
@@ -6508,7 +6335,7 @@ class PocdMt000040ObservationMedia:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[EdExplicit] = field(
+    value: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -6516,7 +6343,7 @@ class PocdMt000040ObservationMedia:
             "required": True,
         },
     )
-    subject: Optional[PocdMt000040Subject] = field(
+    subject: PocdMt000040Subject | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -6580,21 +6407,21 @@ class PocdMt000040ObservationMedia:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id_attribute: Optional[str] = field(
+    id_attribute: str | None = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[ActClassObservation] = field(
+    class_code: ActClassObservation | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -6602,7 +6429,7 @@ class PocdMt000040ObservationMedia:
             "required": True,
         },
     )
-    mood_code: Optional[ActMood] = field(
+    mood_code: ActMood | None = field(
         default=None,
         metadata={
             "name": "moodCode",
@@ -6625,7 +6452,7 @@ class PocdMt000040Procedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -6648,21 +6475,21 @@ class PocdMt000040Procedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    text: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Optional[Cs] = field(
+    status_code: Cs | None = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -6670,7 +6497,7 @@ class PocdMt000040Procedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -6678,7 +6505,7 @@ class PocdMt000040Procedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    priority_code: Optional[Ce] = field(
+    priority_code: Ce | None = field(
         default=None,
         metadata={
             "name": "priorityCode",
@@ -6686,7 +6513,7 @@ class PocdMt000040Procedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: Optional[Cs] = field(
+    language_code: Cs | None = field(
         default=None,
         metadata={
             "name": "languageCode",
@@ -6718,7 +6545,7 @@ class PocdMt000040Procedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: Optional[PocdMt000040Subject] = field(
+    subject: PocdMt000040Subject | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -6782,14 +6609,14 @@ class PocdMt000040Procedure:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[ActClass] = field(
+    class_code: ActClass | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -6797,7 +6624,7 @@ class PocdMt000040Procedure:
             "required": True,
         },
     )
-    mood_code: Optional[XDocumentProcedureMood] = field(
+    mood_code: XDocumentProcedureMood | None = field(
         default=None,
         metadata={
             "name": "moodCode",
@@ -6805,7 +6632,7 @@ class PocdMt000040Procedure:
             "required": True,
         },
     )
-    negation_ind: Optional[str] = field(
+    negation_ind: str | None = field(
         default=None,
         metadata={
             "name": "negationInd",
@@ -6828,7 +6655,7 @@ class PocdMt000040RegionOfInterest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -6852,7 +6679,7 @@ class PocdMt000040RegionOfInterest:
             "min_occurs": 1,
         },
     )
-    code: Optional[Cs] = field(
+    code: Cs | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -6868,7 +6695,7 @@ class PocdMt000040RegionOfInterest:
             "min_occurs": 1,
         },
     )
-    subject: Optional[PocdMt000040Subject] = field(
+    subject: PocdMt000040Subject | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -6932,14 +6759,14 @@ class PocdMt000040RegionOfInterest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id_attribute: Optional[str] = field(
+    id_attribute: str | None = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -6979,7 +6806,7 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -7002,21 +6829,21 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    text: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Optional[Cs] = field(
+    status_code: Cs | None = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -7032,7 +6859,7 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    priority_code: Optional[Ce] = field(
+    priority_code: Ce | None = field(
         default=None,
         metadata={
             "name": "priorityCode",
@@ -7040,7 +6867,7 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    repeat_number: Optional[IvlInt] = field(
+    repeat_number: IvlInt | None = field(
         default=None,
         metadata={
             "name": "repeatNumber",
@@ -7048,7 +6875,7 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    route_code: Optional[Ce] = field(
+    route_code: Ce | None = field(
         default=None,
         metadata={
             "name": "routeCode",
@@ -7064,7 +6891,7 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    dose_quantity: Optional[IvlPq] = field(
+    dose_quantity: IvlPq | None = field(
         default=None,
         metadata={
             "name": "doseQuantity",
@@ -7072,7 +6899,7 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    rate_quantity: Optional[IvlPq] = field(
+    rate_quantity: IvlPq | None = field(
         default=None,
         metadata={
             "name": "rateQuantity",
@@ -7080,7 +6907,7 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    max_dose_quantity: Optional[RtoPqPq] = field(
+    max_dose_quantity: RtoPqPq | None = field(
         default=None,
         metadata={
             "name": "maxDoseQuantity",
@@ -7088,7 +6915,7 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    administration_unit_code: Optional[Ce] = field(
+    administration_unit_code: Ce | None = field(
         default=None,
         metadata={
             "name": "administrationUnitCode",
@@ -7096,7 +6923,7 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: Optional[PocdMt000040Subject] = field(
+    subject: PocdMt000040Subject | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -7110,7 +6937,7 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    consumable: Optional[PocdMt000040Consumable] = field(
+    consumable: PocdMt000040Consumable | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -7168,7 +6995,7 @@ class PocdMt000040SubstanceAdministration:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -7184,7 +7011,7 @@ class PocdMt000040SubstanceAdministration:
             "required": True,
         },
     )
-    mood_code: Optional[XDocumentSubstanceMood] = field(
+    mood_code: XDocumentSubstanceMood | None = field(
         default=None,
         metadata={
             "name": "moodCode",
@@ -7192,7 +7019,7 @@ class PocdMt000040SubstanceAdministration:
             "required": True,
         },
     )
-    negation_ind: Optional[str] = field(
+    negation_ind: str | None = field(
         default=None,
         metadata={
             "name": "negationInd",
@@ -7215,7 +7042,7 @@ class PocdMt000040Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -7238,21 +7065,21 @@ class PocdMt000040Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    text: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Optional[Cs] = field(
+    status_code: Cs | None = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -7276,7 +7103,7 @@ class PocdMt000040Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    repeat_number: Optional[IvlInt] = field(
+    repeat_number: IvlInt | None = field(
         default=None,
         metadata={
             "name": "repeatNumber",
@@ -7284,7 +7111,7 @@ class PocdMt000040Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    independent_ind: Optional[Bl] = field(
+    independent_ind: Bl | None = field(
         default=None,
         metadata={
             "name": "independentInd",
@@ -7292,14 +7119,14 @@ class PocdMt000040Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    quantity: Optional[Pq] = field(
+    quantity: Pq | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    expected_use_time: Optional[IvlTsExplicit] = field(
+    expected_use_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "expectedUseTime",
@@ -7307,7 +7134,7 @@ class PocdMt000040Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: Optional[PocdMt000040Subject] = field(
+    subject: PocdMt000040Subject | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -7321,7 +7148,7 @@ class PocdMt000040Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    product: Optional[PocdMt000040Product] = field(
+    product: PocdMt000040Product | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -7378,7 +7205,7 @@ class PocdMt000040Supply:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -7394,7 +7221,7 @@ class PocdMt000040Supply:
             "required": True,
         },
     )
-    mood_code: Optional[XDocumentSubstanceMood] = field(
+    mood_code: XDocumentSubstanceMood | None = field(
         default=None,
         metadata={
             "name": "moodCode",
@@ -7417,7 +7244,7 @@ class PocdMt000040Entry:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -7433,28 +7260,28 @@ class PocdMt000040Entry:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    act: Optional[PocdMt000040Act] = field(
+    act: PocdMt000040Act | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    encounter: Optional[PocdMt000040Encounter] = field(
+    encounter: PocdMt000040Encounter | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    observation: Optional[PocdMt000040Observation] = field(
+    observation: PocdMt000040Observation | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    observation_media: Optional[PocdMt000040ObservationMedia] = field(
+    observation_media: PocdMt000040ObservationMedia | None = field(
         default=None,
         metadata={
             "name": "observationMedia",
@@ -7462,21 +7289,21 @@ class PocdMt000040Entry:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    organizer: Optional[PocdMt000040Organizer] = field(
+    organizer: PocdMt000040Organizer | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    procedure: Optional[PocdMt000040Procedure] = field(
+    procedure: PocdMt000040Procedure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    region_of_interest: Optional[PocdMt000040RegionOfInterest] = field(
+    region_of_interest: PocdMt000040RegionOfInterest | None = field(
         default=None,
         metadata={
             "name": "regionOfInterest",
@@ -7484,7 +7311,7 @@ class PocdMt000040Entry:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    substance_administration: Optional[PocdMt000040SubstanceAdministration] = (
+    substance_administration: PocdMt000040SubstanceAdministration | None = (
         field(
             default=None,
             metadata={
@@ -7494,14 +7321,14 @@ class PocdMt000040Entry:
             },
         )
     )
-    supply: Optional[PocdMt000040Supply] = field(
+    supply: PocdMt000040Supply | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -7539,7 +7366,7 @@ class PocdMt000040Section:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -7555,35 +7382,35 @@ class PocdMt000040Section:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: Optional[Ii] = field(
+    id: Ii | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    title: Optional[StExplicit] = field(
+    title: StExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[StrucDocText] = field(
+    text: StrucDocText | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    confidentiality_code: Optional[Ce] = field(
+    confidentiality_code: Ce | None = field(
         default=None,
         metadata={
             "name": "confidentialityCode",
@@ -7591,7 +7418,7 @@ class PocdMt000040Section:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: Optional[Cs] = field(
+    language_code: Cs | None = field(
         default=None,
         metadata={
             "name": "languageCode",
@@ -7599,7 +7426,7 @@ class PocdMt000040Section:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    subject: Optional[PocdMt000040Subject] = field(
+    subject: PocdMt000040Subject | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -7634,14 +7461,14 @@ class PocdMt000040Section:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id_attribute: Optional[str] = field(
+    id_attribute: str | None = field(
         default=None,
         metadata={
             "name": "ID",
             "type": "Attribute",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -7679,7 +7506,7 @@ class PocdMt000040Component3:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -7695,7 +7522,7 @@ class PocdMt000040Component3:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    section: Optional[PocdMt000040Section] = field(
+    section: PocdMt000040Section | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -7703,7 +7530,7 @@ class PocdMt000040Component3:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -7742,7 +7569,7 @@ class PocdMt000040StructuredBody:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -7758,7 +7585,7 @@ class PocdMt000040StructuredBody:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    confidentiality_code: Optional[Ce] = field(
+    confidentiality_code: Ce | None = field(
         default=None,
         metadata={
             "name": "confidentialityCode",
@@ -7766,7 +7593,7 @@ class PocdMt000040StructuredBody:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: Optional[Cs] = field(
+    language_code: Cs | None = field(
         default=None,
         metadata={
             "name": "languageCode",
@@ -7782,7 +7609,7 @@ class PocdMt000040StructuredBody:
             "min_occurs": 1,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -7820,7 +7647,7 @@ class PocdMt000040Component2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -7836,7 +7663,7 @@ class PocdMt000040Component2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    non_xmlbody: Optional[PocdMt000040NonXmlbody] = field(
+    non_xmlbody: PocdMt000040NonXmlbody | None = field(
         default=None,
         metadata={
             "name": "nonXMLBody",
@@ -7844,7 +7671,7 @@ class PocdMt000040Component2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    structured_body: Optional[PocdMt000040StructuredBody] = field(
+    structured_body: PocdMt000040StructuredBody | None = field(
         default=None,
         metadata={
             "name": "structuredBody",
@@ -7852,7 +7679,7 @@ class PocdMt000040Component2:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -7891,7 +7718,7 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[PocdMt000040InfrastructureRootTypeId] = field(
+    type_id: PocdMt000040InfrastructureRootTypeId | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -7908,7 +7735,7 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: Optional[Ii] = field(
+    id: Ii | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -7916,7 +7743,7 @@ class PocdMt000040ClinicalDocument:
             "required": True,
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -7924,14 +7751,14 @@ class PocdMt000040ClinicalDocument:
             "required": True,
         },
     )
-    title: Optional[StExplicit] = field(
+    title: StExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[TsExplicit] = field(
+    effective_time: TsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -7940,7 +7767,7 @@ class PocdMt000040ClinicalDocument:
             "required": True,
         },
     )
-    confidentiality_code: Optional[Ce] = field(
+    confidentiality_code: Ce | None = field(
         default=None,
         metadata={
             "name": "confidentialityCode",
@@ -7949,7 +7776,7 @@ class PocdMt000040ClinicalDocument:
             "required": True,
         },
     )
-    language_code: Optional[Cs] = field(
+    language_code: Cs | None = field(
         default=None,
         metadata={
             "name": "languageCode",
@@ -7957,7 +7784,7 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    set_id: Optional[Ii] = field(
+    set_id: Ii | None = field(
         default=None,
         metadata={
             "name": "setId",
@@ -7965,7 +7792,7 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    version_number: Optional[Int] = field(
+    version_number: Int | None = field(
         default=None,
         metadata={
             "name": "versionNumber",
@@ -7973,7 +7800,7 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    copy_time: Optional[TsExplicit] = field(
+    copy_time: TsExplicit | None = field(
         default=None,
         metadata={
             "name": "copyTime",
@@ -7998,7 +7825,7 @@ class PocdMt000040ClinicalDocument:
             "min_occurs": 1,
         },
     )
-    data_enterer: Optional[PocdMt000040DataEnterer] = field(
+    data_enterer: PocdMt000040DataEnterer | None = field(
         default=None,
         metadata={
             "name": "dataEnterer",
@@ -8013,7 +7840,7 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    custodian: Optional[PocdMt000040Custodian] = field(
+    custodian: PocdMt000040Custodian | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -8029,7 +7856,7 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    legal_authenticator: Optional[PocdMt000040LegalAuthenticator] = field(
+    legal_authenticator: PocdMt000040LegalAuthenticator | None = field(
         default=None,
         metadata={
             "name": "legalAuthenticator",
@@ -8082,7 +7909,7 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    component_of: Optional[PocdMt000040Component1] = field(
+    component_of: PocdMt000040Component1 | None = field(
         default=None,
         metadata={
             "name": "componentOf",
@@ -8090,7 +7917,7 @@ class PocdMt000040ClinicalDocument:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    component: Optional[PocdMt000040Component2] = field(
+    component: PocdMt000040Component2 | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -8098,7 +7925,7 @@ class PocdMt000040ClinicalDocument:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",

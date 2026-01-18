@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -179,7 +181,7 @@ class EcucMultilineStringParamDef:
     class Meta:
         name = "ECUC-MULTILINE-STRING-PARAM-DEF"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -188,9 +190,7 @@ class EcucMultilineStringParamDef:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "EcucMultilineStringParamDef.ShortNameFragments"
-    ] = field(
+    short_name_fragments: EcucMultilineStringParamDef.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -198,7 +198,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -206,7 +206,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -214,7 +214,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -222,7 +222,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -230,7 +230,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -238,7 +238,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["EcucMultilineStringParamDef.Annotations"] = field(
+    annotations: EcucMultilineStringParamDef.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -246,9 +246,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    related_trace_item_ref: Optional[
-        "EcucMultilineStringParamDef.RelatedTraceItemRef"
-    ] = field(
+    related_trace_item_ref: EcucMultilineStringParamDef.RelatedTraceItemRef | None = field(
         default=None,
         metadata={
             "name": "RELATED-TRACE-ITEM-REF",
@@ -256,9 +254,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_validation_conds: Optional[
-        "EcucMultilineStringParamDef.EcucValidationConds"
-    ] = field(
+    ecuc_validation_conds: EcucMultilineStringParamDef.EcucValidationConds | None = field(
         default=None,
         metadata={
             "name": "ECUC-VALIDATION-CONDS",
@@ -266,7 +262,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_cond: Optional[EcucConditionSpecification] = field(
+    ecuc_cond: EcucConditionSpecification | None = field(
         default=None,
         metadata={
             "name": "ECUC-COND",
@@ -274,7 +270,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lower_multiplicity: Optional[PositiveIntegerValueVariationPoint] = field(
+    lower_multiplicity: PositiveIntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "LOWER-MULTIPLICITY",
@@ -282,7 +278,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity: Optional[PositiveIntegerValueVariationPoint] = field(
+    upper_multiplicity: PositiveIntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY",
@@ -290,7 +286,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity_infinite: Optional[BooleanValueVariationPoint] = field(
+    upper_multiplicity_infinite: BooleanValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY-INFINITE",
@@ -298,7 +294,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    scope: Optional[EcucScopeEnum] = field(
+    scope: EcucScopeEnum | None = field(
         default=None,
         metadata={
             "name": "SCOPE",
@@ -306,9 +302,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    configuration_class_affection: Optional[
-        EcucConfigurationClassAffection
-    ] = field(
+    configuration_class_affection: EcucConfigurationClassAffection | None = field(
         default=None,
         metadata={
             "name": "CONFIGURATION-CLASS-AFFECTION",
@@ -316,9 +310,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implementation_config_classes: Optional[
-        "EcucMultilineStringParamDef.ImplementationConfigClasses"
-    ] = field(
+    implementation_config_classes: EcucMultilineStringParamDef.ImplementationConfigClasses | None = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-CONFIG-CLASSES",
@@ -326,9 +318,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_config_classes: Optional[
-        "EcucMultilineStringParamDef.MultiplicityConfigClasses"
-    ] = field(
+    multiplicity_config_classes: EcucMultilineStringParamDef.MultiplicityConfigClasses | None = field(
         default=None,
         metadata={
             "name": "MULTIPLICITY-CONFIG-CLASSES",
@@ -336,7 +326,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    origin: Optional[String] = field(
+    origin: String | None = field(
         default=None,
         metadata={
             "name": "ORIGIN",
@@ -344,7 +334,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    post_build_variant_multiplicity: Optional[Boolean] = field(
+    post_build_variant_multiplicity: Boolean | None = field(
         default=None,
         metadata={
             "name": "POST-BUILD-VARIANT-MULTIPLICITY",
@@ -352,7 +342,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    post_build_variant_value: Optional[Boolean] = field(
+    post_build_variant_value: Boolean | None = field(
         default=None,
         metadata={
             "name": "POST-BUILD-VARIANT-VALUE",
@@ -360,7 +350,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    requires_index: Optional[Boolean] = field(
+    requires_index: Boolean | None = field(
         default=None,
         metadata={
             "name": "REQUIRES-INDEX",
@@ -368,9 +358,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_config_classes: Optional[
-        "EcucMultilineStringParamDef.ValueConfigClasses"
-    ] = field(
+    value_config_classes: EcucMultilineStringParamDef.ValueConfigClasses | None = field(
         default=None,
         metadata={
             "name": "VALUE-CONFIG-CLASSES",
@@ -378,7 +366,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    derivation: Optional[EcucDerivationSpecification] = field(
+    derivation: EcucDerivationSpecification | None = field(
         default=None,
         metadata={
             "name": "DERIVATION",
@@ -386,7 +374,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbolic_name_value: Optional[Boolean] = field(
+    symbolic_name_value: Boolean | None = field(
         default=None,
         metadata={
             "name": "SYMBOLIC-NAME-VALUE",
@@ -394,7 +382,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    with_auto: Optional[Boolean] = field(
+    with_auto: Boolean | None = field(
         default=None,
         metadata={
             "name": "WITH-AUTO",
@@ -402,9 +390,7 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_multiline_string_param_def_variants: Optional[
-        "EcucMultilineStringParamDef.EcucMultilineStringParamDefVariants"
-    ] = field(
+    ecuc_multiline_string_param_def_variants: EcucMultilineStringParamDef.EcucMultilineStringParamDefVariants | None = field(
         default=None,
         metadata={
             "name": "ECUC-MULTILINE-STRING-PARAM-DEF-VARIANTS",
@@ -412,14 +398,14 @@ class EcucMultilineStringParamDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -427,7 +413,7 @@ class EcucMultilineStringParamDef:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -459,7 +445,7 @@ class EcucMultilineStringParamDef:
 
     @dataclass
     class RelatedTraceItemRef(Ref):
-        dest: Optional[TraceableSubtypesEnum] = field(
+        dest: TraceableSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -19,7 +19,7 @@ class JourneyFrequencyGroupVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "JourneyFrequencyGroup_VersionStructure"
 
-    first_departure_time: Optional[XmlTime] = field(
+    first_departure_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "FirstDepartureTime",
@@ -28,7 +28,7 @@ class JourneyFrequencyGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "required": True,
         },
     )
-    first_day_offset: Optional[int] = field(
+    first_day_offset: int | None = field(
         default=None,
         metadata={
             "name": "FirstDayOffset",
@@ -36,7 +36,7 @@ class JourneyFrequencyGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    last_departure_time: Optional[XmlTime] = field(
+    last_departure_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "LastDepartureTime",
@@ -44,7 +44,7 @@ class JourneyFrequencyGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    last_day_offset: Optional[int] = field(
+    last_day_offset: int | None = field(
         default=None,
         metadata={
             "name": "LastDayOffset",
@@ -52,7 +52,7 @@ class JourneyFrequencyGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_types: Optional[TimeDemandTypeRefsRelStructure] = field(
+    time_demand_types: TimeDemandTypeRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "timeDemandTypes",
@@ -60,7 +60,7 @@ class JourneyFrequencyGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journeys: Optional[ExplicitJourneyRefsRelStructure] = field(
+    journeys: ExplicitJourneyRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

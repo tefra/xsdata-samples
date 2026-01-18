@@ -22,7 +22,7 @@ class VehicleObstruction(Obstruction):
     :ivar vehicle_obstruction_extension:
     """
 
-    vehicle_obstruction_type: Optional[VehicleObstructionTypeEnum] = field(
+    vehicle_obstruction_type: VehicleObstructionTypeEnum | None = field(
         default=None,
         metadata={
             "name": "vehicleObstructionType",
@@ -39,7 +39,7 @@ class VehicleObstruction(Obstruction):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_obstruction_extension: Optional[ExtensionType] = field(
+    vehicle_obstruction_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "vehicleObstructionExtension",

@@ -21,14 +21,7 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
         name = "securityListings_RelStructure"
 
     security_listing: Iterable[
-        Union[
-            MediumAccessDeviceSecurityListing,
-            TravelDocumentSecurityListing,
-            RetailDeviceSecurityListing,
-            FareContractSecurityListing,
-            CustomerSecurityListing,
-            CustomerAccountSecurityListing,
-        ]
+        MediumAccessDeviceSecurityListing | TravelDocumentSecurityListing | RetailDeviceSecurityListing | FareContractSecurityListing | CustomerSecurityListing | CustomerAccountSecurityListing
     ] = field(
         default_factory=list,
         metadata={

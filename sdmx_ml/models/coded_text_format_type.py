@@ -34,7 +34,7 @@ class CodedTextFormatType(SimpleComponentTextFormatType):
             "type": "Ignore",
         },
     )
-    text_type: Optional[CodeDataType] = field(
+    text_type: CodeDataType | None = field(
         default=None,
         metadata={
             "name": "textType",

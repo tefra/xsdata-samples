@@ -30,7 +30,7 @@ class BaseSimpleComponentType(BaseComponentType):
         characteristic.</description>
     """
 
-    name_text: Optional[TextType] = field(
+    name_text: TextType | None = field(
         default=None,
         metadata={
             "name": "NameText",
@@ -38,7 +38,7 @@ class BaseSimpleComponentType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    desc_text: Optional[TextType] = field(
+    desc_text: TextType | None = field(
         default=None,
         metadata={
             "name": "DescText",
@@ -46,7 +46,7 @@ class BaseSimpleComponentType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    full_name: Optional[TextType] = field(
+    full_name: TextType | None = field(
         default=None,
         metadata={
             "name": "FullName",
@@ -54,7 +54,7 @@ class BaseSimpleComponentType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    type_code: Optional[CodeType] = field(
+    type_code: CodeType | None = field(
         default=None,
         metadata={
             "name": "TypeCode",

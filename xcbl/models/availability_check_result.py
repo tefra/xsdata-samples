@@ -127,7 +127,7 @@ class AvailabilityCheckResultHeader:
             "required": True,
         }
     )
-    supplier_idreference_date: Optional[SupplierIdreferenceDate] = field(
+    supplier_idreference_date: SupplierIdreferenceDate | None = field(
         default=None,
         metadata={
             "name": "SupplierIDReferenceDate",
@@ -141,7 +141,7 @@ class AvailabilityCheckResultHeader:
             "required": True,
         }
     )
-    buyer_idreference_date: Optional[BuyerIdreferenceDate] = field(
+    buyer_idreference_date: BuyerIdreferenceDate | None = field(
         default=None,
         metadata={
             "name": "BuyerIDReferenceDate",
@@ -155,16 +155,14 @@ class AvailabilityCheckResultHeader:
             "required": True,
         }
     )
-    availability_check_result_language: Optional[
-        AvailabilityCheckResultLanguage
-    ] = field(
+    availability_check_result_language: AvailabilityCheckResultLanguage | None = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckResultLanguage",
             "type": "Element",
         },
     )
-    availability_check_result_note: Optional[AvailabilityCheckResultNote] = (
+    availability_check_result_note: AvailabilityCheckResultNote | None = (
         field(
             default=None,
             metadata={
@@ -173,7 +171,7 @@ class AvailabilityCheckResultHeader:
             },
         )
     )
-    result_list_of_attachment: Optional[ResultListOfAttachment] = field(
+    result_list_of_attachment: ResultListOfAttachment | None = field(
         default=None,
         metadata={
             "name": "ResultListOfAttachment",
@@ -198,28 +196,28 @@ class AvailabilityCheckResultItemDetail:
             "required": True,
         }
     )
-    delivery_date: Optional[DeliveryDate] = field(
+    delivery_date: DeliveryDate | None = field(
         default=None,
         metadata={
             "name": "DeliveryDate",
             "type": "Element",
         },
     )
-    availability_error_info: Optional[AvailabilityErrorInfo] = field(
+    availability_error_info: AvailabilityErrorInfo | None = field(
         default=None,
         metadata={
             "name": "AvailabilityErrorInfo",
             "type": "Element",
         },
     )
-    general_line_item_note: Optional[GeneralLineItemNote] = field(
+    general_line_item_note: GeneralLineItemNote | None = field(
         default=None,
         metadata={
             "name": "GeneralLineItemNote",
             "type": "Element",
         },
     )
-    line_item_attachment: Optional[LineItemAttachment] = field(
+    line_item_attachment: LineItemAttachment | None = field(
         default=None,
         metadata={
             "name": "LineItemAttachment",
@@ -237,14 +235,14 @@ class AvailabilityCheckResultSummary:
             "required": True,
         }
     )
-    summary_error_info: Optional[SummaryErrorInfo] = field(
+    summary_error_info: SummaryErrorInfo | None = field(
         default=None,
         metadata={
             "name": "SummaryErrorInfo",
             "type": "Element",
         },
     )
-    total_number_of_line_item: Optional[TotalNumberOfLineItem] = field(
+    total_number_of_line_item: TotalNumberOfLineItem | None = field(
         default=None,
         metadata={
             "name": "TotalNumberOfLineItem",
@@ -287,18 +285,14 @@ class AvailabilityCheckResult:
             "required": True,
         }
     )
-    availability_check_result_detail: Optional[
-        AvailabilityCheckResultDetail
-    ] = field(
+    availability_check_result_detail: AvailabilityCheckResultDetail | None = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckResultDetail",
             "type": "Element",
         },
     )
-    availability_check_result_summary: Optional[
-        AvailabilityCheckResultSummary
-    ] = field(
+    availability_check_result_summary: AvailabilityCheckResultSummary | None = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckResultSummary",

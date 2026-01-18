@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class TerminateSubscriptionRequestBodyStructure:
-    subscriber_ref: Optional[ParticipantRefStructure] = field(
+    subscriber_ref: ParticipantRefStructure | None = field(
         default=None,
         metadata={
             "name": "SubscriberRef",
@@ -20,7 +20,7 @@ class TerminateSubscriptionRequestBodyStructure:
         },
     )
     all_or_subscription_ref: Iterable[
-        Union[EmptyType1, SubscriptionQualifierStructure]
+        EmptyType1 | SubscriptionQualifierStructure
     ] = field(
         default_factory=list,
         metadata={

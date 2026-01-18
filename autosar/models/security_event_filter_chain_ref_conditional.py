@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class SecurityEventFilterChainRefConditional:
     class Meta:
         name = "SECURITY-EVENT-FILTER-CHAIN-REF-CONDITIONAL"
 
-    security_event_filter_chain_ref: Optional[
-        "SecurityEventFilterChainRefConditional.SecurityEventFilterChainRef"
-    ] = field(
+    security_event_filter_chain_ref: SecurityEventFilterChainRefConditional.SecurityEventFilterChainRef | None = field(
         default=None,
         metadata={
             "name": "SECURITY-EVENT-FILTER-CHAIN-REF",
@@ -43,7 +43,7 @@ class SecurityEventFilterChainRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class SecurityEventFilterChainRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class SecurityEventFilterChainRefConditional:
 
     @dataclass
     class SecurityEventFilterChainRef(Ref):
-        dest: Optional[SecurityEventFilterChainSubtypesEnum] = field(
+        dest: SecurityEventFilterChainSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

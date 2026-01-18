@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -187,7 +189,7 @@ class BswInterruptEntity:
     class Meta:
         name = "BSW-INTERRUPT-ENTITY"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -196,7 +198,7 @@ class BswInterruptEntity:
             "required": True,
         },
     )
-    short_name_fragments: Optional["BswInterruptEntity.ShortNameFragments"] = (
+    short_name_fragments: BswInterruptEntity.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -206,7 +208,7 @@ class BswInterruptEntity:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -214,7 +216,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -222,7 +224,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -230,7 +232,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -238,7 +240,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -246,7 +248,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["BswInterruptEntity.Annotations"] = field(
+    annotations: BswInterruptEntity.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -254,7 +256,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reasons: Optional["BswInterruptEntity.ActivationReasons"] = (
+    activation_reasons: BswInterruptEntity.ActivationReasons | None = (
         field(
             default=None,
             metadata={
@@ -264,9 +266,7 @@ class BswInterruptEntity:
             },
         )
     )
-    can_enter_exclusive_area_refs: Optional[
-        "BswInterruptEntity.CanEnterExclusiveAreaRefs"
-    ] = field(
+    can_enter_exclusive_area_refs: BswInterruptEntity.CanEnterExclusiveAreaRefs | None = field(
         default=None,
         metadata={
             "name": "CAN-ENTER-EXCLUSIVE-AREA-REFS",
@@ -274,9 +274,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_nesting_order_refs: Optional[
-        "BswInterruptEntity.ExclusiveAreaNestingOrderRefs"
-    ] = field(
+    exclusive_area_nesting_order_refs: BswInterruptEntity.ExclusiveAreaNestingOrderRefs | None = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-NESTING-ORDER-REFS",
@@ -284,7 +282,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_start_interval: Optional[TimeValue] = field(
+    minimum_start_interval: TimeValue | None = field(
         default=None,
         metadata={
             "name": "MINIMUM-START-INTERVAL",
@@ -292,7 +290,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reentrancy_level: Optional[ReentrancyLevelEnum] = field(
+    reentrancy_level: ReentrancyLevelEnum | None = field(
         default=None,
         metadata={
             "name": "REENTRANCY-LEVEL",
@@ -300,9 +298,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    runs_inside_exclusive_area_refs: Optional[
-        "BswInterruptEntity.RunsInsideExclusiveAreaRefs"
-    ] = field(
+    runs_inside_exclusive_area_refs: BswInterruptEntity.RunsInsideExclusiveAreaRefs | None = field(
         default=None,
         metadata={
             "name": "RUNS-INSIDE-EXCLUSIVE-AREA-REFS",
@@ -310,7 +306,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_addr_method_ref: Optional["BswInterruptEntity.SwAddrMethodRef"] = field(
+    sw_addr_method_ref: BswInterruptEntity.SwAddrMethodRef | None = field(
         default=None,
         metadata={
             "name": "SW-ADDR-METHOD-REF",
@@ -318,7 +314,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    accessed_mode_groups: Optional["BswInterruptEntity.AccessedModeGroups"] = (
+    accessed_mode_groups: BswInterruptEntity.AccessedModeGroups | None = (
         field(
             default=None,
             metadata={
@@ -328,7 +324,7 @@ class BswInterruptEntity:
             },
         )
     )
-    activation_points: Optional["BswInterruptEntity.ActivationPoints"] = field(
+    activation_points: BswInterruptEntity.ActivationPoints | None = field(
         default=None,
         metadata={
             "name": "ACTIVATION-POINTS",
@@ -336,7 +332,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    call_points: Optional["BswInterruptEntity.CallPoints"] = field(
+    call_points: BswInterruptEntity.CallPoints | None = field(
         default=None,
         metadata={
             "name": "CALL-POINTS",
@@ -344,7 +340,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    called_entrys: Optional["BswInterruptEntity.CalledEntrys"] = field(
+    called_entrys: BswInterruptEntity.CalledEntrys | None = field(
         default=None,
         metadata={
             "name": "CALLED-ENTRYS",
@@ -352,7 +348,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_receive_points: Optional["BswInterruptEntity.DataReceivePoints"] = (
+    data_receive_points: BswInterruptEntity.DataReceivePoints | None = (
         field(
             default=None,
             metadata={
@@ -362,7 +358,7 @@ class BswInterruptEntity:
             },
         )
     )
-    data_send_points: Optional["BswInterruptEntity.DataSendPoints"] = field(
+    data_send_points: BswInterruptEntity.DataSendPoints | None = field(
         default=None,
         metadata={
             "name": "DATA-SEND-POINTS",
@@ -370,9 +366,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implemented_entry_ref: Optional[
-        "BswInterruptEntity.ImplementedEntryRef"
-    ] = field(
+    implemented_entry_ref: BswInterruptEntity.ImplementedEntryRef | None = field(
         default=None,
         metadata={
             "name": "IMPLEMENTED-ENTRY-REF",
@@ -380,7 +374,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    issued_triggers: Optional["BswInterruptEntity.IssuedTriggers"] = field(
+    issued_triggers: BswInterruptEntity.IssuedTriggers | None = field(
         default=None,
         metadata={
             "name": "ISSUED-TRIGGERS",
@@ -388,7 +382,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    managed_mode_groups: Optional["BswInterruptEntity.ManagedModeGroups"] = (
+    managed_mode_groups: BswInterruptEntity.ManagedModeGroups | None = (
         field(
             default=None,
             metadata={
@@ -398,9 +392,7 @@ class BswInterruptEntity:
             },
         )
     )
-    scheduler_name_prefix_ref: Optional[
-        "BswInterruptEntity.SchedulerNamePrefixRef"
-    ] = field(
+    scheduler_name_prefix_ref: BswInterruptEntity.SchedulerNamePrefixRef | None = field(
         default=None,
         metadata={
             "name": "SCHEDULER-NAME-PREFIX-REF",
@@ -408,7 +400,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -416,7 +408,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    interrupt_category: Optional[BswInterruptCategory] = field(
+    interrupt_category: BswInterruptCategory | None = field(
         default=None,
         metadata={
             "name": "INTERRUPT-CATEGORY",
@@ -424,7 +416,7 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    interrupt_source: Optional[String] = field(
+    interrupt_source: String | None = field(
         default=None,
         metadata={
             "name": "INTERRUPT-SOURCE",
@@ -432,14 +424,14 @@ class BswInterruptEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -447,7 +439,7 @@ class BswInterruptEntity:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -493,7 +485,7 @@ class BswInterruptEntity:
     @dataclass
     class CanEnterExclusiveAreaRefs:
         can_enter_exclusive_area_ref: list[
-            "BswInterruptEntity.CanEnterExclusiveAreaRefs.CanEnterExclusiveAreaRef"
+            BswInterruptEntity.CanEnterExclusiveAreaRefs.CanEnterExclusiveAreaRef
         ] = field(
             default_factory=list,
             metadata={
@@ -505,7 +497,7 @@ class BswInterruptEntity:
 
         @dataclass
         class CanEnterExclusiveAreaRef(Ref):
-            dest: Optional[ExclusiveAreaSubtypesEnum] = field(
+            dest: ExclusiveAreaSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -517,7 +509,7 @@ class BswInterruptEntity:
     @dataclass
     class ExclusiveAreaNestingOrderRefs:
         exclusive_area_nesting_order_ref: list[
-            "BswInterruptEntity.ExclusiveAreaNestingOrderRefs.ExclusiveAreaNestingOrderRef"
+            BswInterruptEntity.ExclusiveAreaNestingOrderRefs.ExclusiveAreaNestingOrderRef
         ] = field(
             default_factory=list,
             metadata={
@@ -529,7 +521,7 @@ class BswInterruptEntity:
 
         @dataclass
         class ExclusiveAreaNestingOrderRef(Ref):
-            dest: Optional[ExclusiveAreaNestingOrderSubtypesEnum] = field(
+            dest: ExclusiveAreaNestingOrderSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -541,7 +533,7 @@ class BswInterruptEntity:
     @dataclass
     class RunsInsideExclusiveAreaRefs:
         runs_inside_exclusive_area_ref: list[
-            "BswInterruptEntity.RunsInsideExclusiveAreaRefs.RunsInsideExclusiveAreaRef"
+            BswInterruptEntity.RunsInsideExclusiveAreaRefs.RunsInsideExclusiveAreaRef
         ] = field(
             default_factory=list,
             metadata={
@@ -553,7 +545,7 @@ class BswInterruptEntity:
 
         @dataclass
         class RunsInsideExclusiveAreaRef(Ref):
-            dest: Optional[ExclusiveAreaSubtypesEnum] = field(
+            dest: ExclusiveAreaSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -564,7 +556,7 @@ class BswInterruptEntity:
 
     @dataclass
     class SwAddrMethodRef(Ref):
-        dest: Optional[SwAddrMethodSubtypesEnum] = field(
+        dest: SwAddrMethodSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -677,7 +669,7 @@ class BswInterruptEntity:
 
     @dataclass
     class ImplementedEntryRef(Ref):
-        dest: Optional[BswModuleEntrySubtypesEnum] = field(
+        dest: BswModuleEntrySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -712,7 +704,7 @@ class BswInterruptEntity:
 
     @dataclass
     class SchedulerNamePrefixRef(Ref):
-        dest: Optional[BswSchedulerNamePrefixSubtypesEnum] = field(
+        dest: BswSchedulerNamePrefixSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

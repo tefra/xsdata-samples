@@ -13,7 +13,7 @@ class ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus:
     class Meta:
         name = "_ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus"
 
-    parking_usage_scenario_status: Optional[ParkingUsageScenarioStatus] = (
+    parking_usage_scenario_status: ParkingUsageScenarioStatus | None = (
         field(
             default=None,
             metadata={
@@ -24,7 +24,7 @@ class ParkingRecordStatusScenarioIndexParkingUsageScenarioStatus:
             },
         )
     )
-    scenario_index: Optional[int] = field(
+    scenario_index: int | None = field(
         default=None,
         metadata={
             "name": "scenarioIndex",

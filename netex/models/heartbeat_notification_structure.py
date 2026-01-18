@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional, Union
 
@@ -17,7 +19,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
-    status: Optional[Status] = field(
+    status: Status | None = field(
         default=None,
         metadata={
             "name": "Status",
@@ -25,7 +27,7 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    data_ready: Optional[bool] = field(
+    data_ready: bool | None = field(
         default=None,
         metadata={
             "name": "DataReady",
@@ -33,9 +35,7 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: Optional[
-        "HeartbeatNotificationStructure.ErrorCondition"
-    ] = field(
+    error_condition: HeartbeatNotificationStructure.ErrorCondition | None = field(
         default=None,
         metadata={
             "name": "ErrorCondition",
@@ -43,7 +43,7 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    valid_until: Optional[XmlDateTime] = field(
+    valid_until: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "ValidUntil",
@@ -51,7 +51,7 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    shortest_possible_cycle: Optional[XmlDuration] = field(
+    shortest_possible_cycle: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "ShortestPossibleCycle",
@@ -59,7 +59,7 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    service_started_time: Optional[XmlDateTime] = field(
+    service_started_time: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "ServiceStartedTime",
@@ -67,7 +67,7 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    extensions: Optional[Extensions1] = field(
+    extensions: Extensions1 | None = field(
         default=None,
         metadata={
             "name": "Extensions",
@@ -78,9 +78,7 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
 
     @dataclass
     class ErrorCondition:
-        service_not_available_error_or_other_error: Optional[
-            Union[ServiceNotAvailableError, OtherError]
-        ] = field(
+        service_not_available_error_or_other_error: ServiceNotAvailableError | OtherError | None = field(
             default=None,
             metadata={
                 "type": "Elements",
@@ -98,7 +96,7 @@ class HeartbeatNotificationStructure(ProducerRequestEndpointStructure):
                 ),
             },
         )
-        description: Optional[ErrorDescriptionStructure] = field(
+        description: ErrorDescriptionStructure | None = field(
             default=None,
             metadata={
                 "name": "Description",

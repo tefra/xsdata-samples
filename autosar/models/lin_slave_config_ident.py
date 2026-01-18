@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,7 +35,7 @@ class LinSlaveConfigIdent:
     class Meta:
         name = "LIN-SLAVE-CONFIG-IDENT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -42,9 +44,7 @@ class LinSlaveConfigIdent:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "LinSlaveConfigIdent.ShortNameFragments"
-    ] = field(
+    short_name_fragments: LinSlaveConfigIdent.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -52,14 +52,14 @@ class LinSlaveConfigIdent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

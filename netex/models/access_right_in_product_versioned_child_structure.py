@@ -18,7 +18,7 @@ class AccessRightInProductVersionedChildStructure(
     class Meta:
         name = "AccessRightInProduct_VersionedChildStructure"
 
-    validable_element_ref: Optional[ValidableElementRef] = field(
+    validable_element_ref: ValidableElementRef | None = field(
         default=None,
         metadata={
             "name": "ValidableElementRef",
@@ -26,9 +26,7 @@ class AccessRightInProductVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    preassigned_fare_product_ref: Optional[
-        Union[SupplementProductRef, PreassignedFareProductRef]
-    ] = field(
+    preassigned_fare_product_ref: SupplementProductRef | PreassignedFareProductRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -25,7 +25,7 @@ class TransitionType(TransitionBaseType):
         for the transition within the process.
     """
 
-    target_step: Optional[str] = field(
+    target_step: str | None = field(
         default=None,
         metadata={
             "name": "TargetStep",
@@ -44,7 +44,7 @@ class TransitionType(TransitionBaseType):
             "min_occurs": 1,
         },
     )
-    local_id: Optional[str] = field(
+    local_id: str | None = field(
         default=None,
         metadata={
             "name": "localID",

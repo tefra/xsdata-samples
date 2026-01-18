@@ -31,7 +31,7 @@ class UdpNmEcu:
     class Meta:
         name = "UDP-NM-ECU"
 
-    nm_repeat_msg_indication_enabled: Optional[Boolean] = field(
+    nm_repeat_msg_indication_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-REPEAT-MSG-INDICATION-ENABLED",
@@ -39,7 +39,7 @@ class UdpNmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_synchronization_point_enabled: Optional[Boolean] = field(
+    nm_synchronization_point_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-SYNCHRONIZATION-POINT-ENABLED",
@@ -47,14 +47,14 @@ class UdpNmEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -276,7 +278,7 @@ class BswInternalBehavior:
     class Meta:
         name = "BSW-INTERNAL-BEHAVIOR"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -285,9 +287,7 @@ class BswInternalBehavior:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "BswInternalBehavior.ShortNameFragments"
-    ] = field(
+    short_name_fragments: BswInternalBehavior.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -295,7 +295,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -303,7 +303,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -311,7 +311,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -319,7 +319,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -327,7 +327,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -335,7 +335,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["BswInternalBehavior.Annotations"] = field(
+    annotations: BswInternalBehavior.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -343,7 +343,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    constant_memorys: Optional["BswInternalBehavior.ConstantMemorys"] = field(
+    constant_memorys: BswInternalBehavior.ConstantMemorys | None = field(
         default=None,
         metadata={
             "name": "CONSTANT-MEMORYS",
@@ -351,9 +351,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    constant_value_mapping_refs: Optional[
-        "BswInternalBehavior.ConstantValueMappingRefs"
-    ] = field(
+    constant_value_mapping_refs: BswInternalBehavior.ConstantValueMappingRefs | None = field(
         default=None,
         metadata={
             "name": "CONSTANT-VALUE-MAPPING-REFS",
@@ -361,9 +359,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_type_mapping_refs: Optional[
-        "BswInternalBehavior.DataTypeMappingRefs"
-    ] = field(
+    data_type_mapping_refs: BswInternalBehavior.DataTypeMappingRefs | None = field(
         default=None,
         metadata={
             "name": "DATA-TYPE-MAPPING-REFS",
@@ -371,7 +367,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_areas: Optional["BswInternalBehavior.ExclusiveAreas"] = field(
+    exclusive_areas: BswInternalBehavior.ExclusiveAreas | None = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREAS",
@@ -379,9 +375,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_nesting_orders: Optional[
-        "BswInternalBehavior.ExclusiveAreaNestingOrders"
-    ] = field(
+    exclusive_area_nesting_orders: BswInternalBehavior.ExclusiveAreaNestingOrders | None = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-NESTING-ORDERS",
@@ -389,7 +383,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    static_memorys: Optional["BswInternalBehavior.StaticMemorys"] = field(
+    static_memorys: BswInternalBehavior.StaticMemorys | None = field(
         default=None,
         metadata={
             "name": "STATIC-MEMORYS",
@@ -397,9 +391,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ar_typed_per_instance_memorys: Optional[
-        "BswInternalBehavior.ArTypedPerInstanceMemorys"
-    ] = field(
+    ar_typed_per_instance_memorys: BswInternalBehavior.ArTypedPerInstanceMemorys | None = field(
         default=None,
         metadata={
             "name": "AR-TYPED-PER-INSTANCE-MEMORYS",
@@ -407,9 +399,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_per_instance_memory_policys: Optional[
-        "BswInternalBehavior.BswPerInstanceMemoryPolicys"
-    ] = field(
+    bsw_per_instance_memory_policys: BswInternalBehavior.BswPerInstanceMemoryPolicys | None = field(
         default=None,
         metadata={
             "name": "BSW-PER-INSTANCE-MEMORY-POLICYS",
@@ -417,7 +407,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_policys: Optional["BswInternalBehavior.ClientPolicys"] = field(
+    client_policys: BswInternalBehavior.ClientPolicys | None = field(
         default=None,
         metadata={
             "name": "CLIENT-POLICYS",
@@ -425,9 +415,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_policys: Optional[
-        "BswInternalBehavior.ExclusiveAreaPolicys"
-    ] = field(
+    exclusive_area_policys: BswInternalBehavior.ExclusiveAreaPolicys | None = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-POLICYS",
@@ -435,9 +423,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    included_data_type_sets: Optional[
-        "BswInternalBehavior.IncludedDataTypeSets"
-    ] = field(
+    included_data_type_sets: BswInternalBehavior.IncludedDataTypeSets | None = field(
         default=None,
         metadata={
             "name": "INCLUDED-DATA-TYPE-SETS",
@@ -445,9 +431,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    internal_triggering_point_policys: Optional[
-        "BswInternalBehavior.InternalTriggeringPointPolicys"
-    ] = field(
+    internal_triggering_point_policys: BswInternalBehavior.InternalTriggeringPointPolicys | None = field(
         default=None,
         metadata={
             "name": "INTERNAL-TRIGGERING-POINT-POLICYS",
@@ -455,7 +439,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter_policys: Optional["BswInternalBehavior.ParameterPolicys"] = (
+    parameter_policys: BswInternalBehavior.ParameterPolicys | None = (
         field(
             default=None,
             metadata={
@@ -465,9 +449,7 @@ class BswInternalBehavior:
             },
         )
     )
-    released_trigger_policys: Optional[
-        "BswInternalBehavior.ReleasedTriggerPolicys"
-    ] = field(
+    released_trigger_policys: BswInternalBehavior.ReleasedTriggerPolicys | None = field(
         default=None,
         metadata={
             "name": "RELEASED-TRIGGER-POLICYS",
@@ -475,7 +457,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    send_policys: Optional["BswInternalBehavior.SendPolicys"] = field(
+    send_policys: BswInternalBehavior.SendPolicys | None = field(
         default=None,
         metadata={
             "name": "SEND-POLICYS",
@@ -483,9 +465,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point_proxys: Optional[
-        "BswInternalBehavior.VariationPointProxys"
-    ] = field(
+    variation_point_proxys: BswInternalBehavior.VariationPointProxys | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT-PROXYS",
@@ -493,9 +473,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    internal_triggering_points: Optional[
-        "BswInternalBehavior.InternalTriggeringPoints"
-    ] = field(
+    internal_triggering_points: BswInternalBehavior.InternalTriggeringPoints | None = field(
         default=None,
         metadata={
             "name": "INTERNAL-TRIGGERING-POINTS",
@@ -503,7 +481,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    entitys: Optional["BswInternalBehavior.Entitys"] = field(
+    entitys: BswInternalBehavior.Entitys | None = field(
         default=None,
         metadata={
             "name": "ENTITYS",
@@ -511,7 +489,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    events: Optional["BswInternalBehavior.Events"] = field(
+    events: BswInternalBehavior.Events | None = field(
         default=None,
         metadata={
             "name": "EVENTS",
@@ -519,9 +497,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_direct_implementations: Optional[
-        "BswInternalBehavior.TriggerDirectImplementations"
-    ] = field(
+    trigger_direct_implementations: BswInternalBehavior.TriggerDirectImplementations | None = field(
         default=None,
         metadata={
             "name": "TRIGGER-DIRECT-IMPLEMENTATIONS",
@@ -529,7 +505,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_sender_policys: Optional["BswInternalBehavior.ModeSenderPolicys"] = (
+    mode_sender_policys: BswInternalBehavior.ModeSenderPolicys | None = (
         field(
             default=None,
             metadata={
@@ -539,9 +515,7 @@ class BswInternalBehavior:
             },
         )
     )
-    mode_receiver_policys: Optional[
-        "BswInternalBehavior.ModeReceiverPolicys"
-    ] = field(
+    mode_receiver_policys: BswInternalBehavior.ModeReceiverPolicys | None = field(
         default=None,
         metadata={
             "name": "MODE-RECEIVER-POLICYS",
@@ -549,7 +523,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_dependencys: Optional["BswInternalBehavior.ServiceDependencys"] = (
+    service_dependencys: BswInternalBehavior.ServiceDependencys | None = (
         field(
             default=None,
             metadata={
@@ -559,9 +533,7 @@ class BswInternalBehavior:
             },
         )
     )
-    per_instance_parameters: Optional[
-        "BswInternalBehavior.PerInstanceParameters"
-    ] = field(
+    per_instance_parameters: BswInternalBehavior.PerInstanceParameters | None = field(
         default=None,
         metadata={
             "name": "PER-INSTANCE-PARAMETERS",
@@ -569,9 +541,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    scheduler_name_prefixs: Optional[
-        "BswInternalBehavior.SchedulerNamePrefixs"
-    ] = field(
+    scheduler_name_prefixs: BswInternalBehavior.SchedulerNamePrefixs | None = field(
         default=None,
         metadata={
             "name": "SCHEDULER-NAME-PREFIXS",
@@ -579,7 +549,7 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reception_policys: Optional["BswInternalBehavior.ReceptionPolicys"] = (
+    reception_policys: BswInternalBehavior.ReceptionPolicys | None = (
         field(
             default=None,
             metadata={
@@ -589,9 +559,7 @@ class BswInternalBehavior:
             },
         )
     )
-    distinguished_partitions: Optional[
-        "BswInternalBehavior.DistinguishedPartitions"
-    ] = field(
+    distinguished_partitions: BswInternalBehavior.DistinguishedPartitions | None = field(
         default=None,
         metadata={
             "name": "DISTINGUISHED-PARTITIONS",
@@ -599,14 +567,14 @@ class BswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -614,7 +582,7 @@ class BswInternalBehavior:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -658,7 +626,7 @@ class BswInternalBehavior:
     @dataclass
     class ConstantValueMappingRefs:
         constant_value_mapping_ref: list[
-            "BswInternalBehavior.ConstantValueMappingRefs.ConstantValueMappingRef"
+            BswInternalBehavior.ConstantValueMappingRefs.ConstantValueMappingRef
         ] = field(
             default_factory=list,
             metadata={
@@ -670,7 +638,7 @@ class BswInternalBehavior:
 
         @dataclass
         class ConstantValueMappingRef(Ref):
-            dest: Optional[ConstantSpecificationMappingSetSubtypesEnum] = (
+            dest: ConstantSpecificationMappingSetSubtypesEnum | None = (
                 field(
                     default=None,
                     metadata={
@@ -684,7 +652,7 @@ class BswInternalBehavior:
     @dataclass
     class DataTypeMappingRefs:
         data_type_mapping_ref: list[
-            "BswInternalBehavior.DataTypeMappingRefs.DataTypeMappingRef"
+            BswInternalBehavior.DataTypeMappingRefs.DataTypeMappingRef
         ] = field(
             default_factory=list,
             metadata={
@@ -696,7 +664,7 @@ class BswInternalBehavior:
 
         @dataclass
         class DataTypeMappingRef(Ref):
-            dest: Optional[DataTypeMappingSetSubtypesEnum] = field(
+            dest: DataTypeMappingSetSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -50,9 +52,7 @@ class PortInterfaceElementInImplementationDatatypeRef:
     class Meta:
         name = "PORT-INTERFACE-ELEMENT-IN-IMPLEMENTATION-DATATYPE-REF"
 
-    context_data_prototype_refs: Optional[
-        "PortInterfaceElementInImplementationDatatypeRef.ContextDataPrototypeRefs"
-    ] = field(
+    context_data_prototype_refs: PortInterfaceElementInImplementationDatatypeRef.ContextDataPrototypeRefs | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-DATA-PROTOTYPE-REFS",
@@ -60,9 +60,7 @@ class PortInterfaceElementInImplementationDatatypeRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_interface_ref: Optional[
-        "PortInterfaceElementInImplementationDatatypeRef.PortInterfaceRef"
-    ] = field(
+    port_interface_ref: PortInterfaceElementInImplementationDatatypeRef.PortInterfaceRef | None = field(
         default=None,
         metadata={
             "name": "PORT-INTERFACE-REF",
@@ -70,9 +68,7 @@ class PortInterfaceElementInImplementationDatatypeRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_data_prototype_ref: Optional[
-        "PortInterfaceElementInImplementationDatatypeRef.RootDataPrototypeRef"
-    ] = field(
+    root_data_prototype_ref: PortInterfaceElementInImplementationDatatypeRef.RootDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "ROOT-DATA-PROTOTYPE-REF",
@@ -80,9 +76,7 @@ class PortInterfaceElementInImplementationDatatypeRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_data_prototype_ref: Optional[
-        "PortInterfaceElementInImplementationDatatypeRef.TargetDataPrototypeRef"
-    ] = field(
+    target_data_prototype_ref: PortInterfaceElementInImplementationDatatypeRef.TargetDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-REF",
@@ -90,14 +84,14 @@ class PortInterfaceElementInImplementationDatatypeRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -109,7 +103,7 @@ class PortInterfaceElementInImplementationDatatypeRef:
     @dataclass
     class ContextDataPrototypeRefs:
         context_data_prototype_ref: list[
-            "PortInterfaceElementInImplementationDatatypeRef.ContextDataPrototypeRefs.ContextDataPrototypeRef"
+            PortInterfaceElementInImplementationDatatypeRef.ContextDataPrototypeRefs.ContextDataPrototypeRef
         ] = field(
             default_factory=list,
             metadata={
@@ -121,9 +115,7 @@ class PortInterfaceElementInImplementationDatatypeRef:
 
         @dataclass
         class ContextDataPrototypeRef(Ref):
-            dest: Optional[
-                CppImplementationDataTypeContextTargetSubtypesEnum
-            ] = field(
+            dest: CppImplementationDataTypeContextTargetSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -134,7 +126,7 @@ class PortInterfaceElementInImplementationDatatypeRef:
 
     @dataclass
     class PortInterfaceRef(Ref):
-        dest: Optional[PortInterfaceSubtypesEnum] = field(
+        dest: PortInterfaceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -145,7 +137,7 @@ class PortInterfaceElementInImplementationDatatypeRef:
 
     @dataclass
     class RootDataPrototypeRef(Ref):
-        dest: Optional[AutosarDataPrototypeSubtypesEnum] = field(
+        dest: AutosarDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -156,7 +148,7 @@ class PortInterfaceElementInImplementationDatatypeRef:
 
     @dataclass
     class TargetDataPrototypeRef(Ref):
-        dest: Optional[CppImplementationDataTypeContextTargetSubtypesEnum] = (
+        dest: CppImplementationDataTypeContextTargetSubtypesEnum | None = (
             field(
                 default=None,
                 metadata={

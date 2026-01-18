@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ResponseStructure:
-    response_timestamp: Optional[ResponseTimestamp] = field(
+    response_timestamp: ResponseTimestamp | None = field(
         default=None,
         metadata={
             "name": "ResponseTimestamp",

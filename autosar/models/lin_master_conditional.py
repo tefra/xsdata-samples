@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -52,7 +54,7 @@ class LinMasterConditional:
     class Meta:
         name = "LIN-MASTER-CONDITIONAL"
 
-    wake_up_by_controller_supported: Optional[Boolean] = field(
+    wake_up_by_controller_supported: Boolean | None = field(
         default=None,
         metadata={
             "name": "WAKE-UP-BY-CONTROLLER-SUPPORTED",
@@ -60,7 +62,7 @@ class LinMasterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    protocol_version: Optional[String] = field(
+    protocol_version: String | None = field(
         default=None,
         metadata={
             "name": "PROTOCOL-VERSION",
@@ -68,7 +70,7 @@ class LinMasterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lin_slaves: Optional["LinMasterConditional.LinSlaves"] = field(
+    lin_slaves: LinMasterConditional.LinSlaves | None = field(
         default=None,
         metadata={
             "name": "LIN-SLAVES",
@@ -76,7 +78,7 @@ class LinMasterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_base: Optional[TimeValue] = field(
+    time_base: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIME-BASE",
@@ -84,7 +86,7 @@ class LinMasterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_base_jitter: Optional[TimeValue] = field(
+    time_base_jitter: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIME-BASE-JITTER",
@@ -92,7 +94,7 @@ class LinMasterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -100,14 +102,14 @@ class LinMasterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

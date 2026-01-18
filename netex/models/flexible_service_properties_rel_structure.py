@@ -15,7 +15,7 @@ class FlexibleServicePropertiesRelStructure(OneToManyRelationshipStructure):
         name = "flexibleServiceProperties_RelStructure"
 
     flexible_service_properties_ref_or_flexible_service_properties: Iterable[
-        Union[FlexibleServicePropertiesRef, FlexibleServiceProperties]
+        FlexibleServicePropertiesRef | FlexibleServiceProperties
     ] = field(
         default_factory=list,
         metadata={

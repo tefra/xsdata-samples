@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -50,7 +52,7 @@ class File:
         name = "file"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: Optional[IpxactUri] = field(
+    name: IpxactUri | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -65,35 +67,35 @@ class File:
             "min_occurs": 1,
         },
     )
-    is_structural: Optional[bool] = field(
+    is_structural: bool | None = field(
         default=None,
         metadata={
             "name": "isStructural",
             "type": "Element",
         },
     )
-    is_include_file: Optional["File.IsIncludeFile"] = field(
+    is_include_file: File.IsIncludeFile | None = field(
         default=None,
         metadata={
             "name": "isIncludeFile",
             "type": "Element",
         },
     )
-    logical_name: Optional["File.LogicalName"] = field(
+    logical_name: File.LogicalName | None = field(
         default=None,
         metadata={
             "name": "logicalName",
             "type": "Element",
         },
     )
-    exported_name: list["File.ExportedName"] = field(
+    exported_name: list[File.ExportedName] = field(
         default_factory=list,
         metadata={
             "name": "exportedName",
             "type": "Element",
         },
     )
-    build_command: Optional["File.BuildCommand"] = field(
+    build_command: File.BuildCommand | None = field(
         default=None,
         metadata={
             "name": "buildCommand",
@@ -112,27 +114,27 @@ class File:
             "type": "Element",
         },
     )
-    image_type: list["File.ImageType"] = field(
+    image_type: list[File.ImageType] = field(
         default_factory=list,
         metadata={
             "name": "imageType",
             "type": "Element",
         },
     )
-    description: Optional[str] = field(
+    description: str | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    file_id: Optional[str] = field(
+    file_id: str | None = field(
         default=None,
         metadata={
             "name": "fileId",
@@ -146,7 +148,7 @@ class File:
             "namespace": "##other",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -162,7 +164,7 @@ class File:
             that are needed in top file
         """
 
-        value: Optional[bool] = field(
+        value: bool | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -205,7 +207,7 @@ class File:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -230,26 +232,26 @@ class File:
             from the source file.
         """
 
-        command: Optional[StringExpression] = field(
+        command: StringExpression | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        flags: Optional["File.BuildCommand.Flags"] = field(
+        flags: File.BuildCommand.Flags | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        replace_default_flags: Optional[UnsignedBitExpression] = field(
+        replace_default_flags: UnsignedBitExpression | None = field(
             default=None,
             metadata={
                 "name": "replaceDefaultFlags",
                 "type": "Element",
             },
         )
-        target_name: Optional[IpxactUri] = field(
+        target_name: IpxactUri | None = field(
             default=None,
             metadata={
                 "name": "targetName",
@@ -265,7 +267,7 @@ class File:
                 flags will replace any existing default flags.
             """
 
-            append: Optional[bool] = field(
+            append: bool | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
@@ -280,7 +282,7 @@ class File:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

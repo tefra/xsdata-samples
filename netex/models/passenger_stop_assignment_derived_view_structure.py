@@ -20,13 +20,7 @@ class PassengerStopAssignmentDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "PassengerStopAssignment_DerivedViewStructure"
 
-    passenger_stop_assignment_ref: Optional[
-        Union[
-            VehicleJourneyStopAssignmentRef,
-            DynamicStopAssignmentRef,
-            PassengerStopAssignmentRef,
-        ]
-    ] = field(
+    passenger_stop_assignment_ref: VehicleJourneyStopAssignmentRef | DynamicStopAssignmentRef | PassengerStopAssignmentRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -49,7 +43,7 @@ class PassengerStopAssignmentDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    stop_place_ref: Optional[Union[TaxiRankRef, StopPlaceRef]] = field(
+    stop_place_ref: TaxiRankRef | StopPlaceRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -67,7 +61,7 @@ class PassengerStopAssignmentDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    quay_ref: Optional[QuayRefStructure] = field(
+    quay_ref: QuayRefStructure | None = field(
         default=None,
         metadata={
             "name": "QuayRef",
@@ -75,7 +69,7 @@ class PassengerStopAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    quay_name: Optional[MultilingualString] = field(
+    quay_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "QuayName",
@@ -83,7 +77,7 @@ class PassengerStopAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    label: Optional[str] = field(
+    label: str | None = field(
         default=None,
         metadata={
             "name": "Label",
@@ -91,7 +85,7 @@ class PassengerStopAssignmentDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

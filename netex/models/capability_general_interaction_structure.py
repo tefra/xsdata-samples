@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -6,9 +8,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class CapabilityGeneralInteractionStructure:
-    interaction: Optional[
-        "CapabilityGeneralInteractionStructure.Interaction"
-    ] = field(
+    interaction: CapabilityGeneralInteractionStructure.Interaction | None = field(
         default=None,
         metadata={
             "name": "Interaction",
@@ -17,7 +17,7 @@ class CapabilityGeneralInteractionStructure:
             "required": True,
         },
     )
-    delivery: Optional["CapabilityGeneralInteractionStructure.Delivery"] = (
+    delivery: CapabilityGeneralInteractionStructure.Delivery | None = (
         field(
             default=None,
             metadata={
@@ -64,7 +64,7 @@ class CapabilityGeneralInteractionStructure:
             "required": True,
         },
     )
-    visit_numberis_order: Optional[bool] = field(
+    visit_numberis_order: bool | None = field(
         default=None,
         metadata={
             "name": "VisitNumberisOrder",
@@ -96,7 +96,7 @@ class CapabilityGeneralInteractionStructure:
 
     @dataclass
     class Delivery:
-        direct_delivery: Optional[bool] = field(
+        direct_delivery: bool | None = field(
             default=None,
             metadata={
                 "name": "DirectDelivery",
@@ -105,7 +105,7 @@ class CapabilityGeneralInteractionStructure:
                 "required": True,
             },
         )
-        fetched_delivery: Optional[bool] = field(
+        fetched_delivery: bool | None = field(
             default=None,
             metadata={
                 "name": "FetchedDelivery",

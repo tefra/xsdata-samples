@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -53,7 +55,7 @@ class EcucAddInfoParamValue:
     class Meta:
         name = "ECUC-ADD-INFO-PARAM-VALUE"
 
-    index: Optional[PositiveInteger] = field(
+    index: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "INDEX",
@@ -61,7 +63,7 @@ class EcucAddInfoParamValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    definition_ref: Optional["EcucAddInfoParamValue.DefinitionRef"] = field(
+    definition_ref: EcucAddInfoParamValue.DefinitionRef | None = field(
         default=None,
         metadata={
             "name": "DEFINITION-REF",
@@ -69,7 +71,7 @@ class EcucAddInfoParamValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["EcucAddInfoParamValue.Annotations"] = field(
+    annotations: EcucAddInfoParamValue.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -77,7 +79,7 @@ class EcucAddInfoParamValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_auto_value: Optional[Boolean] = field(
+    is_auto_value: Boolean | None = field(
         default=None,
         metadata={
             "name": "IS-AUTO-VALUE",
@@ -85,7 +87,7 @@ class EcucAddInfoParamValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -93,7 +95,7 @@ class EcucAddInfoParamValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: Optional[DocumentationBlock] = field(
+    value: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -101,14 +103,14 @@ class EcucAddInfoParamValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -119,7 +121,7 @@ class EcucAddInfoParamValue:
 
     @dataclass
     class DefinitionRef(Ref):
-        dest: Optional[EcucParameterDefSubtypesEnum] = field(
+        dest: EcucParameterDefSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

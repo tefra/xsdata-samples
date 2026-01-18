@@ -16,7 +16,7 @@ class VmsTablePublication(PayloadPublication):
     set of records which hold details of VMS units.
     """
 
-    header_information: Optional[HeaderInformation] = field(
+    header_information: HeaderInformation | None = field(
         default=None,
         metadata={
             "name": "headerInformation",
@@ -34,7 +34,7 @@ class VmsTablePublication(PayloadPublication):
             "min_occurs": 1,
         },
     )
-    vms_table_publication_extension: Optional[ExtensionType] = field(
+    vms_table_publication_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "vmsTablePublicationExtension",

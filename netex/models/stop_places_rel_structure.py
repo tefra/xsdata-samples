@@ -14,9 +14,7 @@ class StopPlacesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "stopPlaces_RelStructure"
 
-    taxi_rank_ref_or_stop_place_ref_or_stop_place: Optional[
-        Union[TaxiRankRef, StopPlaceRef, StopPlace]
-    ] = field(
+    taxi_rank_ref_or_stop_place_ref_or_stop_place: TaxiRankRef | StopPlaceRef | StopPlace | None = field(
         default=None,
         metadata={
             "type": "Elements",

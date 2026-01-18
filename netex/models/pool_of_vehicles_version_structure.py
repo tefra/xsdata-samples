@@ -27,16 +27,7 @@ class PoolOfVehiclesVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "PoolOfVehicles_VersionStructure"
 
-    mobility_service_ref_or_common_vehicle_service_ref_or_vehicle_pooling_service_ref: Optional[
-        Union[
-            OnlineServiceRef,
-            VehicleRentalServiceRef,
-            VehicleSharingServiceRef,
-            ChauffeuredVehicleServiceRef,
-            TaxiServiceRef,
-            CarPoolingServiceRef,
-        ]
-    ] = field(
+    mobility_service_ref_or_common_vehicle_service_ref_or_vehicle_pooling_service_ref: OnlineServiceRef | VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -74,9 +65,7 @@ class PoolOfVehiclesVersionStructure(GroupOfEntitiesVersionStructure):
             ),
         },
     )
-    mobility_service_constraint_zone_ref: Optional[
-        MobilityServiceConstraintZoneRef
-    ] = field(
+    mobility_service_constraint_zone_ref: MobilityServiceConstraintZoneRef | None = field(
         default=None,
         metadata={
             "name": "MobilityServiceConstraintZoneRef",
@@ -84,7 +73,7 @@ class PoolOfVehiclesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_ref: Optional[ParkingRef] = field(
+    parking_ref: ParkingRef | None = field(
         default=None,
         metadata={
             "name": "ParkingRef",
@@ -92,7 +81,7 @@ class PoolOfVehiclesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_components: Optional[ParkingComponentRefsRelStructure] = field(
+    parking_components: ParkingComponentRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "parkingComponents",
@@ -100,7 +89,7 @@ class PoolOfVehiclesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    must_return_to_same_bay: Optional[bool] = field(
+    must_return_to_same_bay: bool | None = field(
         default=None,
         metadata={
             "name": "MustReturnToSameBay",
@@ -108,7 +97,7 @@ class PoolOfVehiclesVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicles: Optional[VehicleRefsRelStructure] = field(
+    vehicles: VehicleRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

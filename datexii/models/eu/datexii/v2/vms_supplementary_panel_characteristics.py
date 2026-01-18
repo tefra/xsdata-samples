@@ -41,7 +41,7 @@ class VmsSupplementaryPanelCharacteristics:
     :ivar vms_supplementary_panel_characteristics_extension:
     """
 
-    supplementary_pictogram_code_list_identifier: Optional[str] = field(
+    supplementary_pictogram_code_list_identifier: str | None = field(
         default=None,
         metadata={
             "name": "supplementaryPictogramCodeListIdentifier",
@@ -50,7 +50,7 @@ class VmsSupplementaryPanelCharacteristics:
             "max_length": 1024,
         },
     )
-    supplementary_panel_pixels_across: Optional[int] = field(
+    supplementary_panel_pixels_across: int | None = field(
         default=None,
         metadata={
             "name": "supplementaryPanelPixelsAcross",
@@ -58,7 +58,7 @@ class VmsSupplementaryPanelCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    supplementary_panel_pixels_down: Optional[int] = field(
+    supplementary_panel_pixels_down: int | None = field(
         default=None,
         metadata={
             "name": "supplementaryPanelPixelsDown",
@@ -66,7 +66,7 @@ class VmsSupplementaryPanelCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    supplementary_panel_display_height: Optional[float] = field(
+    supplementary_panel_display_height: float | None = field(
         default=None,
         metadata={
             "name": "supplementaryPanelDisplayHeight",
@@ -74,7 +74,7 @@ class VmsSupplementaryPanelCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    supplementary_panel_display_width: Optional[float] = field(
+    supplementary_panel_display_width: float | None = field(
         default=None,
         metadata={
             "name": "supplementaryPanelDisplayWidth",
@@ -82,7 +82,7 @@ class VmsSupplementaryPanelCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    supplementary_panel_position_x: Optional[float] = field(
+    supplementary_panel_position_x: float | None = field(
         default=None,
         metadata={
             "name": "supplementaryPanelPositionX",
@@ -90,7 +90,7 @@ class VmsSupplementaryPanelCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    supplementary_panel_position_y: Optional[float] = field(
+    supplementary_panel_position_y: float | None = field(
         default=None,
         metadata={
             "name": "supplementaryPanelPositionY",
@@ -98,7 +98,7 @@ class VmsSupplementaryPanelCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    relative_position_to_pictogram_area: Optional[PositionRelativeEnum] = (
+    relative_position_to_pictogram_area: PositionRelativeEnum | None = (
         field(
             default=None,
             metadata={
@@ -108,9 +108,7 @@ class VmsSupplementaryPanelCharacteristics:
             },
         )
     )
-    vms_supplementary_panel_characteristics_extension: Optional[
-        ExtensionType
-    ] = field(
+    vms_supplementary_panel_characteristics_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "vmsSupplementaryPanelCharacteristicsExtension",

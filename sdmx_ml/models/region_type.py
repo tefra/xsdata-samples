@@ -90,7 +90,7 @@ class RegionType(AnnotableType):
             "type": "Attribute",
         },
     )
-    valid_from: Optional[Union[XmlPeriod, XmlDate, XmlDateTime, str]] = field(
+    valid_from: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
         default=None,
         metadata={
             "name": "validFrom",
@@ -98,7 +98,7 @@ class RegionType(AnnotableType):
             "pattern": r".{5}A1.*",
         },
     )
-    valid_to: Optional[Union[XmlPeriod, XmlDate, XmlDateTime, str]] = field(
+    valid_to: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
         default=None,
         metadata={
             "name": "validTo",

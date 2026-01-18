@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -52,7 +54,7 @@ class EndToEndProtectionISignalIPdu:
     class Meta:
         name = "END-TO-END-PROTECTION-I-SIGNAL-I-PDU"
 
-    data_offset: Optional[Integer] = field(
+    data_offset: Integer | None = field(
         default=None,
         metadata={
             "name": "DATA-OFFSET",
@@ -60,9 +62,7 @@ class EndToEndProtectionISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_group_ref: Optional[
-        "EndToEndProtectionISignalIPdu.ISignalGroupRef"
-    ] = field(
+    i_signal_group_ref: EndToEndProtectionISignalIPdu.ISignalGroupRef | None = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-GROUP-REF",
@@ -70,9 +70,7 @@ class EndToEndProtectionISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_i_pdu_ref: Optional[
-        "EndToEndProtectionISignalIPdu.ISignalIPduRef"
-    ] = field(
+    i_signal_i_pdu_ref: EndToEndProtectionISignalIPdu.ISignalIPduRef | None = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-I-PDU-REF",
@@ -80,7 +78,7 @@ class EndToEndProtectionISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -88,14 +86,14 @@ class EndToEndProtectionISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -106,7 +104,7 @@ class EndToEndProtectionISignalIPdu:
 
     @dataclass
     class ISignalGroupRef(Ref):
-        dest: Optional[ISignalGroupSubtypesEnum] = field(
+        dest: ISignalGroupSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -117,7 +115,7 @@ class EndToEndProtectionISignalIPdu:
 
     @dataclass
     class ISignalIPduRef(Ref):
-        dest: Optional[ISignalIPduSubtypesEnum] = field(
+        dest: ISignalIPduSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

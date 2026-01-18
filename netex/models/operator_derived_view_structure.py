@@ -14,7 +14,7 @@ class OperatorDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "Operator_DerivedViewStructure"
 
-    operator_ref: Optional[OperatorRef] = field(
+    operator_ref: OperatorRef | None = field(
         default=None,
         metadata={
             "name": "OperatorRef",
@@ -22,7 +22,7 @@ class OperatorDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -30,7 +30,7 @@ class OperatorDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -38,7 +38,7 @@ class OperatorDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    legal_name: Optional[MultilingualString] = field(
+    legal_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "LegalName",
@@ -46,7 +46,7 @@ class OperatorDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    trading_name: Optional[MultilingualString] = field(
+    trading_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "TradingName",
@@ -54,7 +54,7 @@ class OperatorDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alternative_names: Optional[AlternativeNamesRelStructure] = field(
+    alternative_names: AlternativeNamesRelStructure | None = field(
         default=None,
         metadata={
             "name": "alternativeNames",

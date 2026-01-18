@@ -43,7 +43,7 @@ class InstantiationTimingEventProps:
     class Meta:
         name = "INSTANTIATION-TIMING-EVENT-PROPS"
 
-    refined_event_iref: Optional[InstanceEventInCompositionInstanceRef] = (
+    refined_event_iref: InstanceEventInCompositionInstanceRef | None = (
         field(
             default=None,
             metadata={
@@ -53,7 +53,7 @@ class InstantiationTimingEventProps:
             },
         )
     )
-    short_label: Optional[Identifier] = field(
+    short_label: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -61,7 +61,7 @@ class InstantiationTimingEventProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -69,7 +69,7 @@ class InstantiationTimingEventProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    period: Optional[TimeValue] = field(
+    period: TimeValue | None = field(
         default=None,
         metadata={
             "name": "PERIOD",
@@ -77,14 +77,14 @@ class InstantiationTimingEventProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

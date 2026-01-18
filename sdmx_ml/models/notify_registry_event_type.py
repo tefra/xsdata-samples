@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -36,7 +38,7 @@ class NotifyRegistryEventType:
     :ivar structural_event_or_registration_event:
     """
 
-    event_time: Optional[XmlDateTime] = field(
+    event_time: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "EventTime",
@@ -45,12 +47,7 @@ class NotifyRegistryEventType:
             "required": True,
         },
     )
-    object_urn_or_registration_id: Optional[
-        Union[
-            "NotifyRegistryEventType.ObjectUrn",
-            "NotifyRegistryEventType.RegistrationId",
-        ]
-    ] = field(
+    object_urn_or_registration_id: NotifyRegistryEventType.ObjectUrn | NotifyRegistryEventType.RegistrationId | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -70,7 +67,7 @@ class NotifyRegistryEventType:
             ),
         },
     )
-    subscription_urn: Optional[str] = field(
+    subscription_urn: str | None = field(
         default=None,
         metadata={
             "name": "SubscriptionURN",
@@ -79,7 +76,7 @@ class NotifyRegistryEventType:
             "required": True,
         },
     )
-    event_action: Optional[ActionType] = field(
+    event_action: ActionType | None = field(
         default=None,
         metadata={
             "name": "EventAction",
@@ -88,9 +85,7 @@ class NotifyRegistryEventType:
             "required": True,
         },
     )
-    structural_event_or_registration_event: Optional[
-        Union[StructuralEventType, RegistrationEventType]
-    ] = field(
+    structural_event_or_registration_event: StructuralEventType | RegistrationEventType | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -111,7 +106,7 @@ class NotifyRegistryEventType:
 
     @dataclass(frozen=True)
     class ObjectUrn:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -120,7 +115,7 @@ class NotifyRegistryEventType:
 
     @dataclass(frozen=True)
     class RegistrationId:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,

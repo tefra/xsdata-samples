@@ -54,13 +54,13 @@ class SeriesMetadata:
         name = "series_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    contributors: Optional[Contributors] = field(
+    contributors: Contributors | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    titles: Optional[Titles] = field(
+    titles: Titles | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -82,40 +82,38 @@ class SeriesMetadata:
             "max_occurs": 6,
         },
     )
-    coden: Optional[Coden] = field(
+    coden: Coden | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    series_number: Optional[SeriesNumber] = field(
+    series_number: SeriesNumber | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    publisher_item: Optional[PublisherItem] = field(
+    publisher_item: PublisherItem | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    crossmark: Optional[Crossmark] = field(
+    crossmark: Crossmark | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    program: Optional[FundrefProgram] = field(
+    program: FundrefProgram | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/fundref.xsd",
         },
     )
-    crossref_org_access_indicators_program: Optional[
-        AccessIndicatorsProgram
-    ] = field(
+    crossref_org_access_indicators_program: AccessIndicatorsProgram | None = field(
         default=None,
         metadata={
             "name": "program",
@@ -123,13 +121,13 @@ class SeriesMetadata:
             "namespace": "http://www.crossref.org/AccessIndicators.xsd",
         },
     )
-    archive_locations: Optional[ArchiveLocations] = field(
+    archive_locations: ArchiveLocations | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    doi_data: Optional[DoiData] = field(
+    doi_data: DoiData | None = field(
         default=None,
         metadata={
             "type": "Element",

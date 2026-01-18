@@ -14,7 +14,7 @@ class TimeUnitsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timeUnits_RelStructure"
 
-    time_unit_ref_or_time_unit: Iterable[Union[TimeUnitRef, TimeUnit]] = field(
+    time_unit_ref_or_time_unit: Iterable[TimeUnitRef | TimeUnit] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

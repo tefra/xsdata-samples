@@ -32,27 +32,7 @@ class LinkSequenceRefsRelStructure(OneToManyRelationshipStructure):
         name = "linkSequenceRefs_RelStructure"
 
     choice: Iterable[
-        Union[
-            TripRef,
-            TripPatternTripRef,
-            SingleJourneyPathRef,
-            SingleJourneyRef,
-            DatedVehicleJourneyRef,
-            DatedSpecialServiceRef,
-            SpecialServiceRef,
-            TemplateServiceJourneyRef,
-            ServiceJourneyRef,
-            DeadRunRef,
-            VehicleJourneyRef,
-            ServiceJourneyPatternRef,
-            ServicePatternRef,
-            DeadRunJourneyPatternRef,
-            JourneyPatternRef,
-            TimingPatternRef,
-            NavigationPathRef,
-            RouteRef,
-            LinkSequenceRef,
-        ]
+        TripRef | TripPatternTripRef | SingleJourneyPathRef | SingleJourneyRef | DatedVehicleJourneyRef | DatedSpecialServiceRef | SpecialServiceRef | TemplateServiceJourneyRef | ServiceJourneyRef | DeadRunRef | VehicleJourneyRef | ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef | TimingPatternRef | NavigationPathRef | RouteRef | LinkSequenceRef
     ] = field(
         default_factory=list,
         metadata={

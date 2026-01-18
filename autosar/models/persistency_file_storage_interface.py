@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -139,7 +141,7 @@ class PersistencyFileStorageInterface:
     class Meta:
         name = "PERSISTENCY-FILE-STORAGE-INTERFACE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -148,9 +150,7 @@ class PersistencyFileStorageInterface:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "PersistencyFileStorageInterface.ShortNameFragments"
-    ] = field(
+    short_name_fragments: PersistencyFileStorageInterface.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -158,7 +158,7 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -166,7 +166,7 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -174,7 +174,7 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -182,7 +182,7 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -190,7 +190,7 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -198,7 +198,7 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["PersistencyFileStorageInterface.Annotations"] = (
+    annotations: PersistencyFileStorageInterface.Annotations | None = (
         field(
             default=None,
             metadata={
@@ -208,7 +208,7 @@ class PersistencyFileStorageInterface:
             },
         )
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -216,9 +216,7 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional[
-        "PersistencyFileStorageInterface.BlueprintPolicys"
-    ] = field(
+    blueprint_policys: PersistencyFileStorageInterface.BlueprintPolicys | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -226,7 +224,7 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: Optional[String] = field(
+    short_name_pattern: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -234,7 +232,7 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_service: Optional[Boolean] = field(
+    is_service: Boolean | None = field(
         default=None,
         metadata={
             "name": "IS-SERVICE",
@@ -242,7 +240,7 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    namespaces: Optional["PersistencyFileStorageInterface.Namespaces"] = field(
+    namespaces: PersistencyFileStorageInterface.Namespaces | None = field(
         default=None,
         metadata={
             "name": "NAMESPACES",
@@ -250,7 +248,7 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_kind: Optional[ServiceProviderEnum] = field(
+    service_kind: ServiceProviderEnum | None = field(
         default=None,
         metadata={
             "name": "SERVICE-KIND",
@@ -258,7 +256,7 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_sustained_size: Optional[PositiveInteger] = field(
+    minimum_sustained_size: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MINIMUM-SUSTAINED-SIZE",
@@ -266,7 +264,7 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    redundancy: Optional[PersistencyRedundancyEnum] = field(
+    redundancy: PersistencyRedundancyEnum | None = field(
         default=None,
         metadata={
             "name": "REDUNDANCY",
@@ -274,9 +272,7 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    redundancy_handlings: Optional[
-        "PersistencyFileStorageInterface.RedundancyHandlings"
-    ] = field(
+    redundancy_handlings: PersistencyFileStorageInterface.RedundancyHandlings | None = field(
         default=None,
         metadata={
             "name": "REDUNDANCY-HANDLINGS",
@@ -284,7 +280,7 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update_strategy: Optional[PersistencyCollectionLevelUpdateStrategyEnum] = (
+    update_strategy: PersistencyCollectionLevelUpdateStrategyEnum | None = (
         field(
             default=None,
             metadata={
@@ -294,7 +290,7 @@ class PersistencyFileStorageInterface:
             },
         )
     )
-    file_elements: Optional["PersistencyFileStorageInterface.FileElements"] = (
+    file_elements: PersistencyFileStorageInterface.FileElements | None = (
         field(
             default=None,
             metadata={
@@ -304,7 +300,7 @@ class PersistencyFileStorageInterface:
             },
         )
     )
-    max_number_of_files: Optional[PositiveInteger] = field(
+    max_number_of_files: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-OF-FILES",
@@ -312,14 +308,14 @@ class PersistencyFileStorageInterface:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -327,7 +323,7 @@ class PersistencyFileStorageInterface:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

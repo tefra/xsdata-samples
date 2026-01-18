@@ -64,7 +64,7 @@ class CompuScale:
     class Meta:
         name = "COMPU-SCALE"
 
-    short_label: Optional[Identifier] = field(
+    short_label: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -72,7 +72,7 @@ class CompuScale:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbol: Optional[CIdentifier] = field(
+    symbol: CIdentifier | None = field(
         default=None,
         metadata={
             "name": "SYMBOL",
@@ -80,7 +80,7 @@ class CompuScale:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -88,7 +88,7 @@ class CompuScale:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mask: Optional[PositiveInteger] = field(
+    mask: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MASK",
@@ -96,7 +96,7 @@ class CompuScale:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lower_limit: Optional[Limit] = field(
+    lower_limit: Limit | None = field(
         default=None,
         metadata={
             "name": "LOWER-LIMIT",
@@ -104,7 +104,7 @@ class CompuScale:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_limit: Optional[Limit] = field(
+    upper_limit: Limit | None = field(
         default=None,
         metadata={
             "name": "UPPER-LIMIT",
@@ -112,7 +112,7 @@ class CompuScale:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    compu_inverse_value: Optional[CompuConst] = field(
+    compu_inverse_value: CompuConst | None = field(
         default=None,
         metadata={
             "name": "COMPU-INVERSE-VALUE",
@@ -120,7 +120,7 @@ class CompuScale:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    compu_const: Optional[CompuConst] = field(
+    compu_const: CompuConst | None = field(
         default=None,
         metadata={
             "name": "COMPU-CONST",
@@ -128,7 +128,7 @@ class CompuScale:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    compu_rational_coeffs: Optional[CompuRationalCoeffs] = field(
+    compu_rational_coeffs: CompuRationalCoeffs | None = field(
         default=None,
         metadata={
             "name": "COMPU-RATIONAL-COEFFS",
@@ -136,7 +136,7 @@ class CompuScale:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -144,14 +144,14 @@ class CompuScale:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

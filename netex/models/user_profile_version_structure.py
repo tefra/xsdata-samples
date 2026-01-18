@@ -26,7 +26,7 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "UserProfile_VersionStructure"
 
-    base_user_profile_ref: Optional[UserProfileRefStructure] = field(
+    base_user_profile_ref: UserProfileRefStructure | None = field(
         default=None,
         metadata={
             "name": "BaseUserProfileRef",
@@ -34,7 +34,7 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_concession_ref: Optional[TypeOfConcessionRef] = field(
+    type_of_concession_ref: TypeOfConcessionRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfConcessionRef",
@@ -42,7 +42,7 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    user_type: Optional[UserTypeEnumeration] = field(
+    user_type: UserTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "UserType",
@@ -50,7 +50,7 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_age: Optional[int] = field(
+    minimum_age: int | None = field(
         default=None,
         metadata={
             "name": "MinimumAge",
@@ -58,7 +58,7 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_age: Optional[int] = field(
+    maximum_age: int | None = field(
         default=None,
         metadata={
             "name": "MaximumAge",
@@ -66,7 +66,7 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    month_day_on_which_age_applies: Optional[XmlPeriod] = field(
+    month_day_on_which_age_applies: XmlPeriod | None = field(
         default=None,
         metadata={
             "name": "MonthDayOnWhichAgeApplies",
@@ -74,7 +74,7 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_height: Optional[Decimal] = field(
+    minimum_height: Decimal | None = field(
         default=None,
         metadata={
             "name": "MinimumHeight",
@@ -82,7 +82,7 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_height: Optional[Decimal] = field(
+    maximum_height: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumHeight",
@@ -90,7 +90,7 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    local_resident: Optional[bool] = field(
+    local_resident: bool | None = field(
         default=None,
         metadata={
             "name": "LocalResident",
@@ -98,14 +98,14 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    resides: Optional[ResidentialQualificationsRelStructure] = field(
+    resides: ResidentialQualificationsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gender_limitation: Optional[GenderLimitation] = field(
+    gender_limitation: GenderLimitation | None = field(
         default=None,
         metadata={
             "name": "GenderLimitation",
@@ -122,7 +122,7 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "tokens": True,
         },
     )
-    types_of_proof_required_ref: Optional[TypesOfProofRefsRelStructure] = (
+    types_of_proof_required_ref: TypesOfProofRefsRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -132,7 +132,7 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             },
         )
     )
-    discount_basis: Optional[DiscountBasisEnumeration] = field(
+    discount_basis: DiscountBasisEnumeration | None = field(
         default=None,
         metadata={
             "name": "DiscountBasis",
@@ -140,7 +140,7 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    companion_profiles: Optional[CompanionProfilesRelStructure] = field(
+    companion_profiles: CompanionProfilesRelStructure | None = field(
         default=None,
         metadata={
             "name": "companionProfiles",

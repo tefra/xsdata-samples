@@ -14,7 +14,7 @@ class TimeDemandTypeAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "TimeDemandTypeAssignment_VersionStructure"
 
-    time_demand_type_ref: Optional[TimeDemandTypeRef] = field(
+    time_demand_type_ref: TimeDemandTypeRef | None = field(
         default=None,
         metadata={
             "name": "TimeDemandTypeRef",
@@ -22,7 +22,7 @@ class TimeDemandTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timeband_ref: Optional[TimebandRef] = field(
+    timeband_ref: TimebandRef | None = field(
         default=None,
         metadata={
             "name": "TimebandRef",
@@ -30,7 +30,7 @@ class TimeDemandTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    group_of_timing_links_ref: Optional[GroupOfTimingLinksRef] = field(
+    group_of_timing_links_ref: GroupOfTimingLinksRef | None = field(
         default=None,
         metadata={
             "name": "GroupOfTimingLinksRef",

@@ -15,7 +15,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class EngineeringPmType:
-    machinery_type: Optional[str] = field(
+    machinery_type: str | None = field(
         default=None,
         metadata={
             "name": "MachineryType",
@@ -23,7 +23,7 @@ class EngineeringPmType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    insured_values_cpm_cpe_machinery: Optional[AmountType] = field(
+    insured_values_cpm_cpe_machinery: AmountType | None = field(
         default=None,
         metadata={
             "name": "InsuredValuesCpmCpeMachinery",
@@ -31,7 +31,7 @@ class EngineeringPmType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_cpm_cpe_machinery: Optional[NumericType] = field(
+    rate_cpm_cpe_machinery: NumericType | None = field(
         default=None,
         metadata={
             "name": "RateCpmCpeMachinery",
@@ -39,7 +39,7 @@ class EngineeringPmType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    mflmachinery: Optional[NumericType] = field(
+    mflmachinery: NumericType | None = field(
         default=None,
         metadata={
             "name": "MFLMachinery",

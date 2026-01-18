@@ -161,7 +161,7 @@ class Reference:
             "required": True,
         }
     )
-    ref_date: Optional[RefDate] = field(
+    ref_date: RefDate | None = field(
         default=None,
         metadata={
             "name": "RefDate",
@@ -179,28 +179,28 @@ class SecondaryMessageInformation:
             "required": True,
         }
     )
-    message_type_coded_other: Optional[MessageTypeCodedOther] = field(
+    message_type_coded_other: MessageTypeCodedOther | None = field(
         default=None,
         metadata={
             "name": "MessageTypeCodedOther",
             "type": "Element",
         },
     )
-    message_class: Optional[MessageType] = field(
+    message_class: MessageType | None = field(
         default=None,
         metadata={
             "name": "MessageClass",
             "type": "Element",
         },
     )
-    message_number: Optional[MessageNumber] = field(
+    message_number: MessageNumber | None = field(
         default=None,
         metadata={
             "name": "MessageNumber",
             "type": "Element",
         },
     )
-    message_description: Optional[MessageDescription] = field(
+    message_description: MessageDescription | None = field(
         default=None,
         metadata={
             "name": "MessageDescription",
@@ -248,28 +248,28 @@ class MessageResponseIdentifier:
 
 @dataclass(kw_only=True)
 class ReturnedIdentification:
-    trading_partner_primary_id: Optional[TradingPartnerPrimaryId] = field(
+    trading_partner_primary_id: TradingPartnerPrimaryId | None = field(
         default=None,
         metadata={
             "name": "TradingPartnerPrimaryID",
             "type": "Element",
         },
     )
-    alternate_id: Optional[AlternateId] = field(
+    alternate_id: AlternateId | None = field(
         default=None,
         metadata={
             "name": "AlternateID",
             "type": "Element",
         },
     )
-    user_id: Optional[UserId] = field(
+    user_id: UserId | None = field(
         default=None,
         metadata={
             "name": "UserID",
             "type": "Element",
         },
     )
-    returned_identification_urn: Optional[ReturnedIdentificationUrn] = field(
+    returned_identification_urn: ReturnedIdentificationUrn | None = field(
         default=None,
         metadata={
             "name": "ReturnedIdentificationURN",
@@ -306,7 +306,7 @@ class PrimaryMessageInformation:
             "required": True,
         }
     )
-    primary_return_code_description: Optional[PrimaryReturnCodeDescription] = (
+    primary_return_code_description: PrimaryReturnCodeDescription | None = (
         field(
             default=None,
             metadata={
@@ -326,9 +326,7 @@ class ReturnMessageInformation:
             "required": True,
         }
     )
-    list_of_secondary_message_information: Optional[
-        ListOfSecondaryMessageInformation
-    ] = field(
+    list_of_secondary_message_information: ListOfSecondaryMessageInformation | None = field(
         default=None,
         metadata={
             "name": "ListOfSecondaryMessageInformation",
@@ -346,7 +344,7 @@ class TradingPartnerResponseInfo:
             "required": True,
         }
     )
-    list_of_returned_identification: Optional[ListOfReturnedIdentification] = (
+    list_of_returned_identification: ListOfReturnedIdentification | None = (
         field(
             default=None,
             metadata={
@@ -355,14 +353,14 @@ class TradingPartnerResponseInfo:
             },
         )
     )
-    redirect_url: Optional[RedirectUrl] = field(
+    redirect_url: RedirectUrl | None = field(
         default=None,
         metadata={
             "name": "RedirectURL",
             "type": "Element",
         },
     )
-    service_id: Optional[ServiceId] = field(
+    service_id: ServiceId | None = field(
         default=None,
         metadata={
             "name": "ServiceID",

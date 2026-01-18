@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -103,7 +105,7 @@ class ApplicationAssocMapDataType:
     class Meta:
         name = "APPLICATION-ASSOC-MAP-DATA-TYPE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -112,9 +114,7 @@ class ApplicationAssocMapDataType:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ApplicationAssocMapDataType.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ApplicationAssocMapDataType.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -122,7 +122,7 @@ class ApplicationAssocMapDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -130,7 +130,7 @@ class ApplicationAssocMapDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -138,7 +138,7 @@ class ApplicationAssocMapDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -146,7 +146,7 @@ class ApplicationAssocMapDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -154,7 +154,7 @@ class ApplicationAssocMapDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -162,7 +162,7 @@ class ApplicationAssocMapDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ApplicationAssocMapDataType.Annotations"] = field(
+    annotations: ApplicationAssocMapDataType.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -170,9 +170,7 @@ class ApplicationAssocMapDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional[
-        "ApplicationAssocMapDataType.BlueprintPolicys"
-    ] = field(
+    blueprint_policys: ApplicationAssocMapDataType.BlueprintPolicys | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -180,7 +178,7 @@ class ApplicationAssocMapDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: Optional[String] = field(
+    short_name_pattern: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -188,7 +186,7 @@ class ApplicationAssocMapDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -196,7 +194,7 @@ class ApplicationAssocMapDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_data_def_props: Optional[SwDataDefProps] = field(
+    sw_data_def_props: SwDataDefProps | None = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEF-PROPS",
@@ -204,7 +202,7 @@ class ApplicationAssocMapDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key: Optional[ApplicationAssocMapElement] = field(
+    key: ApplicationAssocMapElement | None = field(
         default=None,
         metadata={
             "name": "KEY",
@@ -212,7 +210,7 @@ class ApplicationAssocMapDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: Optional[ApplicationAssocMapElement] = field(
+    value: ApplicationAssocMapElement | None = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -220,14 +218,14 @@ class ApplicationAssocMapDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -235,7 +233,7 @@ class ApplicationAssocMapDataType:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

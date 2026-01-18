@@ -27,7 +27,7 @@ class Format:
             "max_length": 130,
         },
     )
-    mime_type: Optional[FormatMimeType] = field(
+    mime_type: FormatMimeType | None = field(
         default=None,
         metadata={
             "type": "Attribute",

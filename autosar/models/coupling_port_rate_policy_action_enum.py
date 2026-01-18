@@ -29,20 +29,20 @@ class CouplingPortRatePolicyActionEnum:
     class Meta:
         name = "COUPLING-PORT-RATE-POLICY-ACTION-ENUM"
 
-    value: Optional[CouplingPortRatePolicyActionEnumSimple] = field(
+    value: CouplingPortRatePolicyActionEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -10,7 +10,7 @@ class AttributedQnameType:
     class Meta:
         name = "AttributedQNameType"
 
-    value: Optional[QName] = field(
+    value: QName | None = field(
         default=None,
         metadata={
             "required": True,

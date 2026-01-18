@@ -21,7 +21,7 @@ class NumberOfAxlesCharacteristic:
     :ivar number_of_axles_characteristic_extension:
     """
 
-    comparison_operator: Optional[ComparisonOperatorEnum] = field(
+    comparison_operator: ComparisonOperatorEnum | None = field(
         default=None,
         metadata={
             "name": "comparisonOperator",
@@ -30,7 +30,7 @@ class NumberOfAxlesCharacteristic:
             "required": True,
         },
     )
-    number_of_axles: Optional[int] = field(
+    number_of_axles: int | None = field(
         default=None,
         metadata={
             "name": "numberOfAxles",
@@ -39,7 +39,7 @@ class NumberOfAxlesCharacteristic:
             "required": True,
         },
     )
-    number_of_axles_characteristic_extension: Optional[ExtensionType] = field(
+    number_of_axles_characteristic_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "numberOfAxlesCharacteristicExtension",

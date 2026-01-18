@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -101,7 +103,7 @@ class DiagnosticJ1939SpnMapping:
     class Meta:
         name = "DIAGNOSTIC-J-1939-SPN-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -110,9 +112,7 @@ class DiagnosticJ1939SpnMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticJ1939SpnMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticJ1939SpnMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -120,7 +120,7 @@ class DiagnosticJ1939SpnMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -128,7 +128,7 @@ class DiagnosticJ1939SpnMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -136,7 +136,7 @@ class DiagnosticJ1939SpnMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -144,7 +144,7 @@ class DiagnosticJ1939SpnMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -152,7 +152,7 @@ class DiagnosticJ1939SpnMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -160,7 +160,7 @@ class DiagnosticJ1939SpnMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticJ1939SpnMapping.Annotations"] = field(
+    annotations: DiagnosticJ1939SpnMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -168,7 +168,7 @@ class DiagnosticJ1939SpnMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -176,9 +176,7 @@ class DiagnosticJ1939SpnMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sending_node_refs: Optional[
-        "DiagnosticJ1939SpnMapping.SendingNodeRefs"
-    ] = field(
+    sending_node_refs: DiagnosticJ1939SpnMapping.SendingNodeRefs | None = field(
         default=None,
         metadata={
             "name": "SENDING-NODE-REFS",
@@ -186,7 +184,7 @@ class DiagnosticJ1939SpnMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    spn_ref: Optional["DiagnosticJ1939SpnMapping.SpnRef"] = field(
+    spn_ref: DiagnosticJ1939SpnMapping.SpnRef | None = field(
         default=None,
         metadata={
             "name": "SPN-REF",
@@ -194,9 +192,7 @@ class DiagnosticJ1939SpnMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_signal_ref: Optional[
-        "DiagnosticJ1939SpnMapping.SystemSignalRef"
-    ] = field(
+    system_signal_ref: DiagnosticJ1939SpnMapping.SystemSignalRef | None = field(
         default=None,
         metadata={
             "name": "SYSTEM-SIGNAL-REF",
@@ -204,14 +200,14 @@ class DiagnosticJ1939SpnMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -219,7 +215,7 @@ class DiagnosticJ1939SpnMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -252,7 +248,7 @@ class DiagnosticJ1939SpnMapping:
     @dataclass
     class SendingNodeRefs:
         sending_node_ref: list[
-            "DiagnosticJ1939SpnMapping.SendingNodeRefs.SendingNodeRef"
+            DiagnosticJ1939SpnMapping.SendingNodeRefs.SendingNodeRef
         ] = field(
             default_factory=list,
             metadata={
@@ -264,7 +260,7 @@ class DiagnosticJ1939SpnMapping:
 
         @dataclass
         class SendingNodeRef(Ref):
-            dest: Optional[DiagnosticJ1939NodeSubtypesEnum] = field(
+            dest: DiagnosticJ1939NodeSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -275,7 +271,7 @@ class DiagnosticJ1939SpnMapping:
 
     @dataclass
     class SpnRef(Ref):
-        dest: Optional[DiagnosticJ1939SpnSubtypesEnum] = field(
+        dest: DiagnosticJ1939SpnSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -286,7 +282,7 @@ class DiagnosticJ1939SpnMapping:
 
     @dataclass
     class SystemSignalRef(Ref):
-        dest: Optional[SystemSignalSubtypesEnum] = field(
+        dest: SystemSignalSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

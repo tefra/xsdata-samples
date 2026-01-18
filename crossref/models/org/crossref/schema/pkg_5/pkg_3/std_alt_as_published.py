@@ -26,7 +26,7 @@ class StdAltAsPublished(StdDesignatorT):
             "tokens": True,
         },
     )
-    approved_month: Optional[int] = field(
+    approved_month: int | None = field(
         default=None,
         metadata={
             "name": "approvedMonth",
@@ -36,7 +36,7 @@ class StdAltAsPublished(StdDesignatorT):
             "total_digits": 2,
         },
     )
-    approved_year: Optional[XmlPeriod] = field(
+    approved_year: XmlPeriod | None = field(
         default=None,
         metadata={
             "name": "approvedYear",

@@ -27,20 +27,20 @@ class OperationCycleTypeEnum:
     class Meta:
         name = "OPERATION-CYCLE-TYPE-ENUM"
 
-    value: Optional[OperationCycleTypeEnumSimple] = field(
+    value: OperationCycleTypeEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

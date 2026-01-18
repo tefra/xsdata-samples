@@ -23,7 +23,7 @@ class LocalPolicy:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    local_policy_id: Optional[str] = field(
+    local_policy_id: str | None = field(
         default=None,
         metadata={
             "name": "LocalPolicyID",
@@ -31,7 +31,7 @@ class LocalPolicy:
             "required": True,
         },
     )
-    status: Optional[str] = field(
+    status: str | None = field(
         default=None,
         metadata={
             "name": "Status",
@@ -39,7 +39,7 @@ class LocalPolicy:
             "required": True,
         },
     )
-    party_ids: Optional[PartyIds] = field(
+    party_ids: PartyIds | None = field(
         default=None,
         metadata={
             "name": "PartyIDs",
@@ -47,7 +47,7 @@ class LocalPolicy:
             "required": True,
         },
     )
-    risks: Optional[Risks] = field(
+    risks: Risks | None = field(
         default=None,
         metadata={
             "name": "Risks",
@@ -55,7 +55,7 @@ class LocalPolicy:
             "required": True,
         },
     )
-    reinsurance_agreements: Optional[ReinsuranceAgreements] = field(
+    reinsurance_agreements: ReinsuranceAgreements | None = field(
         default=None,
         metadata={
             "name": "ReinsuranceAgreements",
@@ -63,7 +63,7 @@ class LocalPolicy:
             "required": True,
         },
     )
-    inception_date: Optional[XmlDateTime] = field(
+    inception_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "InceptionDate",
@@ -71,7 +71,7 @@ class LocalPolicy:
             "required": True,
         },
     )
-    issuance_date: Optional[XmlDateTime] = field(
+    issuance_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "IssuanceDate",
@@ -79,7 +79,7 @@ class LocalPolicy:
             "required": True,
         },
     )
-    expiry_date: Optional[XmlDateTime] = field(
+    expiry_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "ExpiryDate",

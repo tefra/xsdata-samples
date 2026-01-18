@@ -12,7 +12,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class CyberExclusionType:
-    excluded: Optional[bool] = field(
+    excluded: bool | None = field(
         default=None,
         metadata={
             "name": "Excluded",
@@ -20,7 +20,7 @@ class CyberExclusionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "Type",
@@ -28,7 +28,7 @@ class CyberExclusionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    cover_type: Optional[str] = field(
+    cover_type: str | None = field(
         default=None,
         metadata={
             "name": "CoverType",
@@ -36,7 +36,7 @@ class CyberExclusionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    limit: Optional[LimitType] = field(
+    limit: LimitType | None = field(
         default=None,
         metadata={
             "name": "Limit",

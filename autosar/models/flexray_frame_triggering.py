@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -113,7 +115,7 @@ class FlexrayFrameTriggering:
     class Meta:
         name = "FLEXRAY-FRAME-TRIGGERING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -122,9 +124,7 @@ class FlexrayFrameTriggering:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "FlexrayFrameTriggering.ShortNameFragments"
-    ] = field(
+    short_name_fragments: FlexrayFrameTriggering.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -132,7 +132,7 @@ class FlexrayFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -140,7 +140,7 @@ class FlexrayFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -148,7 +148,7 @@ class FlexrayFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -156,7 +156,7 @@ class FlexrayFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -164,7 +164,7 @@ class FlexrayFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -172,7 +172,7 @@ class FlexrayFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["FlexrayFrameTriggering.Annotations"] = field(
+    annotations: FlexrayFrameTriggering.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -180,7 +180,7 @@ class FlexrayFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_port_refs: Optional["FlexrayFrameTriggering.FramePortRefs"] = field(
+    frame_port_refs: FlexrayFrameTriggering.FramePortRefs | None = field(
         default=None,
         metadata={
             "name": "FRAME-PORT-REFS",
@@ -188,7 +188,7 @@ class FlexrayFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_ref: Optional["FlexrayFrameTriggering.FrameRef"] = field(
+    frame_ref: FlexrayFrameTriggering.FrameRef | None = field(
         default=None,
         metadata={
             "name": "FRAME-REF",
@@ -196,7 +196,7 @@ class FlexrayFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggerings: Optional["FlexrayFrameTriggering.PduTriggerings"] = field(
+    pdu_triggerings: FlexrayFrameTriggering.PduTriggerings | None = field(
         default=None,
         metadata={
             "name": "PDU-TRIGGERINGS",
@@ -204,7 +204,7 @@ class FlexrayFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -212,9 +212,7 @@ class FlexrayFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    absolutely_scheduled_timings: Optional[
-        "FlexrayFrameTriggering.AbsolutelyScheduledTimings"
-    ] = field(
+    absolutely_scheduled_timings: FlexrayFrameTriggering.AbsolutelyScheduledTimings | None = field(
         default=None,
         metadata={
             "name": "ABSOLUTELY-SCHEDULED-TIMINGS",
@@ -222,7 +220,7 @@ class FlexrayFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    allow_dynamic_l_sdu_length: Optional[Boolean] = field(
+    allow_dynamic_l_sdu_length: Boolean | None = field(
         default=None,
         metadata={
             "name": "ALLOW-DYNAMIC-L-SDU-LENGTH",
@@ -230,7 +228,7 @@ class FlexrayFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    message_id: Optional[PositiveInteger] = field(
+    message_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MESSAGE-ID",
@@ -238,7 +236,7 @@ class FlexrayFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    payload_preamble_indicator: Optional[Boolean] = field(
+    payload_preamble_indicator: Boolean | None = field(
         default=None,
         metadata={
             "name": "PAYLOAD-PREAMBLE-INDICATOR",
@@ -246,14 +244,14 @@ class FlexrayFrameTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -261,7 +259,7 @@ class FlexrayFrameTriggering:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -294,7 +292,7 @@ class FlexrayFrameTriggering:
     @dataclass
     class FramePortRefs:
         frame_port_ref: list[
-            "FlexrayFrameTriggering.FramePortRefs.FramePortRef"
+            FlexrayFrameTriggering.FramePortRefs.FramePortRef
         ] = field(
             default_factory=list,
             metadata={
@@ -306,7 +304,7 @@ class FlexrayFrameTriggering:
 
         @dataclass
         class FramePortRef(Ref):
-            dest: Optional[FramePortSubtypesEnum] = field(
+            dest: FramePortSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -317,7 +315,7 @@ class FlexrayFrameTriggering:
 
     @dataclass
     class FrameRef(Ref):
-        dest: Optional[FrameSubtypesEnum] = field(
+        dest: FrameSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

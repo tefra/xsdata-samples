@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -14,7 +16,7 @@ class AccessPolicies:
         name = "accessPolicies"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    access_policy: list["AccessPolicies.AccessPolicy"] = field(
+    access_policy: list[AccessPolicies.AccessPolicy] = field(
         default_factory=list,
         metadata={
             "name": "accessPolicy",
@@ -32,20 +34,20 @@ class AccessPolicies:
                 "type": "Element",
             },
         )
-        access: Optional[AccessType] = field(
+        access: AccessType | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vendor_extensions: Optional[VendorExtensions] = field(
+        vendor_extensions: VendorExtensions | None = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

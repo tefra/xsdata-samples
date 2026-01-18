@@ -34,7 +34,7 @@ class Ipv4Props:
     class Meta:
         name = "IPV-4-PROPS"
 
-    arp_props: Optional[Ipv4ArpProps] = field(
+    arp_props: Ipv4ArpProps | None = field(
         default=None,
         metadata={
             "name": "ARP-PROPS",
@@ -42,7 +42,7 @@ class Ipv4Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    auto_ip_props: Optional[Ipv4AutoIpProps] = field(
+    auto_ip_props: Ipv4AutoIpProps | None = field(
         default=None,
         metadata={
             "name": "AUTO-IP-PROPS",
@@ -50,7 +50,7 @@ class Ipv4Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fragmentation_props: Optional[Ipv4FragmentationProps] = field(
+    fragmentation_props: Ipv4FragmentationProps | None = field(
         default=None,
         metadata={
             "name": "FRAGMENTATION-PROPS",
@@ -58,14 +58,14 @@ class Ipv4Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

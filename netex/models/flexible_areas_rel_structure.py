@@ -15,7 +15,7 @@ class FlexibleAreasRelStructure(ContainmentAggregationStructure):
         name = "flexibleAreas_RelStructure"
 
     flexible_area_ref_or_flexible_area: Iterable[
-        Union[FlexibleAreaRef, FlexibleArea]
+        FlexibleAreaRef | FlexibleArea
     ] = field(
         default_factory=list,
         metadata={

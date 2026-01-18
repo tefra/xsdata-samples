@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -50,7 +52,7 @@ class AliasNameAssignment:
     class Meta:
         name = "ALIAS-NAME-ASSIGNMENT"
 
-    short_label: Optional[String] = field(
+    short_label: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -58,7 +60,7 @@ class AliasNameAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    label: Optional[MultilanguageLongName] = field(
+    label: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -66,7 +68,7 @@ class AliasNameAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    identifiable_ref: Optional["AliasNameAssignment.IdentifiableRef"] = field(
+    identifiable_ref: AliasNameAssignment.IdentifiableRef | None = field(
         default=None,
         metadata={
             "name": "IDENTIFIABLE-REF",
@@ -74,7 +76,7 @@ class AliasNameAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flat_instance_ref: Optional["AliasNameAssignment.FlatInstanceRef"] = field(
+    flat_instance_ref: AliasNameAssignment.FlatInstanceRef | None = field(
         default=None,
         metadata={
             "name": "FLAT-INSTANCE-REF",
@@ -82,7 +84,7 @@ class AliasNameAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -90,14 +92,14 @@ class AliasNameAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -108,7 +110,7 @@ class AliasNameAssignment:
 
     @dataclass
     class IdentifiableRef(Ref):
-        dest: Optional[IdentifiableSubtypesEnum] = field(
+        dest: IdentifiableSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -119,7 +121,7 @@ class AliasNameAssignment:
 
     @dataclass
     class FlatInstanceRef(Ref):
-        dest: Optional[FlatInstanceDescriptorSubtypesEnum] = field(
+        dest: FlatInstanceDescriptorSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

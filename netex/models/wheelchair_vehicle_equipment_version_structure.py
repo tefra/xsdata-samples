@@ -16,7 +16,7 @@ class WheelchairVehicleEquipmentVersionStructure(
     class Meta:
         name = "WheelchairVehicleEquipment_VersionStructure"
 
-    has_wheelchair_spaces: Optional[bool] = field(
+    has_wheelchair_spaces: bool | None = field(
         default=None,
         metadata={
             "name": "HasWheelchairSpaces",
@@ -24,7 +24,7 @@ class WheelchairVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_wheelchair_areas: Optional[int] = field(
+    number_of_wheelchair_areas: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfWheelchairAreas",
@@ -32,7 +32,7 @@ class WheelchairVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    width_of_access_area: Optional[Decimal] = field(
+    width_of_access_area: Decimal | None = field(
         default=None,
         metadata={
             "name": "WidthOfAccessArea",
@@ -40,7 +40,7 @@ class WheelchairVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    length_of_access_area: Optional[Decimal] = field(
+    length_of_access_area: Decimal | None = field(
         default=None,
         metadata={
             "name": "LengthOfAccessArea",
@@ -48,7 +48,7 @@ class WheelchairVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    height_of_access_area: Optional[Decimal] = field(
+    height_of_access_area: Decimal | None = field(
         default=None,
         metadata={
             "name": "HeightOfAccessArea",
@@ -56,7 +56,7 @@ class WheelchairVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheelchair_turning_circle: Optional[Decimal] = field(
+    wheelchair_turning_circle: Decimal | None = field(
         default=None,
         metadata={
             "name": "WheelchairTurningCircle",
@@ -64,7 +64,7 @@ class WheelchairVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    companion_seat: Optional[bool] = field(
+    companion_seat: bool | None = field(
         default=None,
         metadata={
             "name": "CompanionSeat",

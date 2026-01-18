@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -144,7 +146,7 @@ class FlexrayTpConnectionControl:
     class Meta:
         name = "FLEXRAY-TP-CONNECTION-CONTROL"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -153,9 +155,7 @@ class FlexrayTpConnectionControl:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "FlexrayTpConnectionControl.ShortNameFragments"
-    ] = field(
+    short_name_fragments: FlexrayTpConnectionControl.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -163,7 +163,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -171,7 +171,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -179,7 +179,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -187,7 +187,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -195,7 +195,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -203,7 +203,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["FlexrayTpConnectionControl.Annotations"] = field(
+    annotations: FlexrayTpConnectionControl.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -211,7 +211,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ack_type: Optional[TpAckType] = field(
+    ack_type: TpAckType | None = field(
         default=None,
         metadata={
             "name": "ACK-TYPE",
@@ -219,7 +219,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_ar: Optional[Integer] = field(
+    max_ar: Integer | None = field(
         default=None,
         metadata={
             "name": "MAX-AR",
@@ -227,7 +227,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_as: Optional[Integer] = field(
+    max_as: Integer | None = field(
         default=None,
         metadata={
             "name": "MAX-AS",
@@ -235,7 +235,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_buffer_size: Optional[Integer] = field(
+    max_buffer_size: Integer | None = field(
         default=None,
         metadata={
             "name": "MAX-BUFFER-SIZE",
@@ -243,7 +243,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_fc_wait: Optional[Integer] = field(
+    max_fc_wait: Integer | None = field(
         default=None,
         metadata={
             "name": "MAX-FC-WAIT",
@@ -251,7 +251,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_fr_if: Optional[Integer] = field(
+    max_fr_if: Integer | None = field(
         default=None,
         metadata={
             "name": "MAX-FR-IF",
@@ -259,7 +259,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_number_of_npdu_per_cycle: Optional[Integer] = field(
+    max_number_of_npdu_per_cycle: Integer | None = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-OF-NPDU-PER-CYCLE",
@@ -267,7 +267,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_retries: Optional[Integer] = field(
+    max_retries: Integer | None = field(
         default=None,
         metadata={
             "name": "MAX-RETRIES",
@@ -275,7 +275,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    separation_cycle_exponent: Optional[Integer] = field(
+    separation_cycle_exponent: Integer | None = field(
         default=None,
         metadata={
             "name": "SEPARATION-CYCLE-EXPONENT",
@@ -283,7 +283,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_br: Optional[TimeValue] = field(
+    time_br: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIME-BR",
@@ -291,7 +291,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_buffer: Optional[TimeValue] = field(
+    time_buffer: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIME-BUFFER",
@@ -299,7 +299,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_cs: Optional[TimeValue] = field(
+    time_cs: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIME-CS",
@@ -307,7 +307,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_fr_if: Optional[TimeValue] = field(
+    time_fr_if: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIME-FR-IF",
@@ -315,7 +315,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_ar: Optional[TimeValue] = field(
+    timeout_ar: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIMEOUT-AR",
@@ -323,7 +323,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_as: Optional[TimeValue] = field(
+    timeout_as: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIMEOUT-AS",
@@ -331,7 +331,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_br: Optional[TimeValue] = field(
+    timeout_br: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIMEOUT-BR",
@@ -339,7 +339,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_bs: Optional[TimeValue] = field(
+    timeout_bs: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIMEOUT-BS",
@@ -347,7 +347,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_cr: Optional[TimeValue] = field(
+    timeout_cr: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIMEOUT-CR",
@@ -355,7 +355,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_cs: Optional[TimeValue] = field(
+    timeout_cs: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIMEOUT-CS",
@@ -363,7 +363,7 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -371,14 +371,14 @@ class FlexrayTpConnectionControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -386,7 +386,7 @@ class FlexrayTpConnectionControl:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

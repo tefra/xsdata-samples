@@ -22,7 +22,7 @@ class ChargingEquipmentProfileVersionStructure(
     class Meta:
         name = "ChargingEquipmentProfile_VersionStructure"
 
-    coupling_type: Optional[CouplingTypeEnumeration] = field(
+    coupling_type: CouplingTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "CouplingType",
@@ -30,7 +30,7 @@ class ChargingEquipmentProfileVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    plug_type: Optional[PlugTypeEnumeration] = field(
+    plug_type: PlugTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "PlugType",
@@ -38,7 +38,7 @@ class ChargingEquipmentProfileVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_plug_ref: Optional[TypeOfPlugRef] = field(
+    type_of_plug_ref: TypeOfPlugRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfPlugRef",
@@ -46,7 +46,7 @@ class ChargingEquipmentProfileVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    current_type: Optional[CurrentTypeEnumeration] = field(
+    current_type: CurrentTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "CurrentType",
@@ -54,7 +54,7 @@ class ChargingEquipmentProfileVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    charging_voltage: Optional[Decimal] = field(
+    charging_voltage: Decimal | None = field(
         default=None,
         metadata={
             "name": "ChargingVoltage",
@@ -62,7 +62,7 @@ class ChargingEquipmentProfileVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_charging_power: Optional[Decimal] = field(
+    maximum_charging_power: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumChargingPower",
@@ -70,7 +70,7 @@ class ChargingEquipmentProfileVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    preparation_duration: Optional[XmlDuration] = field(
+    preparation_duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "PreparationDuration",
@@ -78,7 +78,7 @@ class ChargingEquipmentProfileVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    finalisation_duration: Optional[XmlDuration] = field(
+    finalisation_duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "FinalisationDuration",

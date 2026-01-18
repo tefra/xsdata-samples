@@ -16,7 +16,7 @@ class RhythmicalJourneyGroupVersionStructure(
     class Meta:
         name = "RhythmicalJourneyGroup_VersionStructure"
 
-    timebands: Optional[TimebandRefsRelStructure] = field(
+    timebands: TimebandRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

@@ -40,7 +40,7 @@ class Subscription:
     :ivar subscription_extension:
     """
 
-    delete_subscription: Optional[bool] = field(
+    delete_subscription: bool | None = field(
         default=None,
         metadata={
             "name": "deleteSubscription",
@@ -48,7 +48,7 @@ class Subscription:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    delivery_interval: Optional[float] = field(
+    delivery_interval: float | None = field(
         default=None,
         metadata={
             "name": "deliveryInterval",
@@ -56,7 +56,7 @@ class Subscription:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    operating_mode: Optional[OperatingModeEnum] = field(
+    operating_mode: OperatingModeEnum | None = field(
         default=None,
         metadata={
             "name": "operatingMode",
@@ -65,7 +65,7 @@ class Subscription:
             "required": True,
         },
     )
-    subscription_start_time: Optional[XmlDateTime] = field(
+    subscription_start_time: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "subscriptionStartTime",
@@ -74,7 +74,7 @@ class Subscription:
             "required": True,
         },
     )
-    subscription_state: Optional[SubscriptionStateEnum] = field(
+    subscription_state: SubscriptionStateEnum | None = field(
         default=None,
         metadata={
             "name": "subscriptionState",
@@ -83,7 +83,7 @@ class Subscription:
             "required": True,
         },
     )
-    subscription_stop_time: Optional[XmlDateTime] = field(
+    subscription_stop_time: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "subscriptionStopTime",
@@ -91,7 +91,7 @@ class Subscription:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    update_method: Optional[UpdateMethodEnum] = field(
+    update_method: UpdateMethodEnum | None = field(
         default=None,
         metadata={
             "name": "updateMethod",
@@ -108,7 +108,7 @@ class Subscription:
             "min_occurs": 1,
         },
     )
-    filter_reference: Optional[FilterReference] = field(
+    filter_reference: FilterReference | None = field(
         default=None,
         metadata={
             "name": "filterReference",
@@ -116,7 +116,7 @@ class Subscription:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    catalogue_reference: Optional[CatalogueReference] = field(
+    catalogue_reference: CatalogueReference | None = field(
         default=None,
         metadata={
             "name": "catalogueReference",
@@ -124,7 +124,7 @@ class Subscription:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    subscription_extension: Optional[ExtensionType] = field(
+    subscription_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "subscriptionExtension",

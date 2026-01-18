@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -92,7 +94,7 @@ class SomeipTpConfig:
     class Meta:
         name = "SOMEIP-TP-CONFIG"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -101,7 +103,7 @@ class SomeipTpConfig:
             "required": True,
         },
     )
-    short_name_fragments: Optional["SomeipTpConfig.ShortNameFragments"] = (
+    short_name_fragments: SomeipTpConfig.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -111,7 +113,7 @@ class SomeipTpConfig:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -119,7 +121,7 @@ class SomeipTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -127,7 +129,7 @@ class SomeipTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -135,7 +137,7 @@ class SomeipTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -143,7 +145,7 @@ class SomeipTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -151,7 +153,7 @@ class SomeipTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SomeipTpConfig.Annotations"] = field(
+    annotations: SomeipTpConfig.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -159,7 +161,7 @@ class SomeipTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -167,9 +169,7 @@ class SomeipTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_cluster_ref: Optional[
-        "SomeipTpConfig.CommunicationClusterRef"
-    ] = field(
+    communication_cluster_ref: SomeipTpConfig.CommunicationClusterRef | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CLUSTER-REF",
@@ -177,7 +177,7 @@ class SomeipTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_channels: Optional["SomeipTpConfig.TpChannels"] = field(
+    tp_channels: SomeipTpConfig.TpChannels | None = field(
         default=None,
         metadata={
             "name": "TP-CHANNELS",
@@ -185,7 +185,7 @@ class SomeipTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_connections: Optional["SomeipTpConfig.TpConnections"] = field(
+    tp_connections: SomeipTpConfig.TpConnections | None = field(
         default=None,
         metadata={
             "name": "TP-CONNECTIONS",
@@ -193,14 +193,14 @@ class SomeipTpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -208,7 +208,7 @@ class SomeipTpConfig:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -240,7 +240,7 @@ class SomeipTpConfig:
 
     @dataclass
     class CommunicationClusterRef(Ref):
-        dest: Optional[CommunicationClusterSubtypesEnum] = field(
+        dest: CommunicationClusterSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

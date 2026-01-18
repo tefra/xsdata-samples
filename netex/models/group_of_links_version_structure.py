@@ -14,7 +14,7 @@ class GroupOfLinksVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "GroupOfLinks_VersionStructure"
 
-    members: Optional[LinkRefsRelStructure] = field(
+    members: LinkRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

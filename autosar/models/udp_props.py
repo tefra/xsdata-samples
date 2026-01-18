@@ -28,7 +28,7 @@ class UdpProps:
     class Meta:
         name = "UDP-PROPS"
 
-    udp_ttl: Optional[PositiveInteger] = field(
+    udp_ttl: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "UDP-TTL",
@@ -36,14 +36,14 @@ class UdpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -17,14 +17,14 @@ class Models:
     class Meta:
         name = "models"
 
-    schema_location: Optional[str] = field(
+    schema_location: str | None = field(
         default=None,
         metadata={
             "name": "@schemaLocation",
             "type": "Element",
         },
     )
-    links: Optional[Links] = field(
+    links: Links | None = field(
         default=None,
         metadata={
             "name": "_links",
@@ -44,33 +44,33 @@ class Models:
             "type": "Element",
         },
     )
-    schema: Optional[str] = field(
+    schema: str | None = field(
         default=None,
         metadata={
             "name": "$schema",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    description: Optional[str] = field(
+    description: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    fault_cause: Optional[FaultCause] = field(
+    fault_cause: FaultCause | None = field(
         default=None,
         metadata={
             "name": "fault-cause",
@@ -89,14 +89,14 @@ class Models:
             "type": "Element",
         },
     )
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Element",
         },
     )
-    properties: Optional[Properties] = field(
+    properties: Properties | None = field(
         default=None,
         metadata={
             "type": "Element",

@@ -18,7 +18,7 @@ class GroupTicketVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "GroupTicket_VersionStructure"
 
-    type_of_concession_ref: Optional[TypeOfConcessionRef] = field(
+    type_of_concession_ref: TypeOfConcessionRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfConcessionRef",
@@ -26,7 +26,7 @@ class GroupTicketVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_number_of_persons: Optional[int] = field(
+    minimum_number_of_persons: int | None = field(
         default=None,
         metadata={
             "name": "MinimumNumberOfPersons",
@@ -34,7 +34,7 @@ class GroupTicketVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_number_of_persons: Optional[int] = field(
+    maximum_number_of_persons: int | None = field(
         default=None,
         metadata={
             "name": "MaximumNumberOfPersons",
@@ -42,7 +42,7 @@ class GroupTicketVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_number_of_card_holders: Optional[int] = field(
+    minimum_number_of_card_holders: int | None = field(
         default=None,
         metadata={
             "name": "MinimumNumberOfCardHolders",
@@ -50,7 +50,7 @@ class GroupTicketVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    companion_profiles: Optional[CompanionProfilesRelStructure] = field(
+    companion_profiles: CompanionProfilesRelStructure | None = field(
         default=None,
         metadata={
             "name": "companionProfiles",
@@ -58,7 +58,7 @@ class GroupTicketVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    pricing_basis: Optional[PerBasisEnumeration] = field(
+    pricing_basis: PerBasisEnumeration | None = field(
         default=None,
         metadata={
             "name": "PricingBasis",
@@ -66,7 +66,7 @@ class GroupTicketVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_persons_free: Optional[int] = field(
+    maximum_persons_free: int | None = field(
         default=None,
         metadata={
             "name": "MaximumPersonsFree",
@@ -74,7 +74,7 @@ class GroupTicketVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_persons_discounted: Optional[int] = field(
+    maximum_persons_discounted: int | None = field(
         default=None,
         metadata={
             "name": "MaximumPersonsDiscounted",
@@ -82,7 +82,7 @@ class GroupTicketVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    discount_only_for_first_person: Optional[bool] = field(
+    discount_only_for_first_person: bool | None = field(
         default=None,
         metadata={
             "name": "DiscountOnlyForFirstPerson",
@@ -90,7 +90,7 @@ class GroupTicketVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    one_for_npersons: Optional[int] = field(
+    one_for_npersons: int | None = field(
         default=None,
         metadata={
             "name": "OneForNPersons",
@@ -98,7 +98,7 @@ class GroupTicketVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    group_size_changes: Optional[GroupSizeChangesEnumeration] = field(
+    group_size_changes: GroupSizeChangesEnumeration | None = field(
         default=None,
         metadata={
             "name": "GroupSizeChanges",
@@ -106,7 +106,7 @@ class GroupTicketVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ticketing: Optional[GroupTicketingEnumeration] = field(
+    ticketing: GroupTicketingEnumeration | None = field(
         default=None,
         metadata={
             "name": "Ticketing",
@@ -114,7 +114,7 @@ class GroupTicketVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    joint_check_in: Optional[GroupCheckInEnumeration] = field(
+    joint_check_in: GroupCheckInEnumeration | None = field(
         default=None,
         metadata={
             "name": "JointCheckIn",
@@ -122,7 +122,7 @@ class GroupTicketVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    group_booking_facility: Optional[GroupBookingFacility] = field(
+    group_booking_facility: GroupBookingFacility | None = field(
         default=None,
         metadata={
             "name": "GroupBookingFacility",

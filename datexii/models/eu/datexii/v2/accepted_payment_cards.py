@@ -62,7 +62,7 @@ class AcceptedPaymentCards:
             "max_length": 1024,
         },
     )
-    accepted_payment_cards_extension: Optional[ExtensionType] = field(
+    accepted_payment_cards_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "acceptedPaymentCardsExtension",

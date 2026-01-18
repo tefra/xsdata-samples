@@ -16,7 +16,7 @@ class FareStructureElementPriceVersionedChildStructure(
     class Meta:
         name = "FareStructureElementPrice_VersionedChildStructure"
 
-    fare_structure_element_ref: Optional[FareStructureElementRef] = field(
+    fare_structure_element_ref: FareStructureElementRef | None = field(
         default=None,
         metadata={
             "name": "FareStructureElementRef",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -23,35 +25,35 @@ class AuctionCreateDetail:
             "required": True,
         }
     )
-    list_of_mvbvariables: Optional[ListOfMvbvariables] = field(
+    list_of_mvbvariables: ListOfMvbvariables | None = field(
         default=None,
         metadata={
             "name": "ListOfMVBVariables",
             "type": "Element",
         },
     )
-    auction_pricing_detail: Optional[AuctionPricingDetail] = field(
+    auction_pricing_detail: AuctionPricingDetail | None = field(
         default=None,
         metadata={
             "name": "AuctionPricingDetail",
             "type": "Element",
         },
     )
-    auction_item_dates: Optional[AuctionItemDates] = field(
+    auction_item_dates: AuctionItemDates | None = field(
         default=None,
         metadata={
             "name": "AuctionItemDates",
             "type": "Element",
         },
     )
-    auction_delivery_detail: Optional[AuctionDeliveryDetail] = field(
+    auction_delivery_detail: AuctionDeliveryDetail | None = field(
         default=None,
         metadata={
             "name": "AuctionDeliveryDetail",
             "type": "Element",
         },
     )
-    list_of_attachment: Optional[ListOfAttachment] = field(
+    list_of_attachment: ListOfAttachment | None = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
@@ -65,9 +67,7 @@ class AuctionCreateDetail:
             "required": True,
         }
     )
-    list_of_auction_item_components: Optional[
-        "ListOfAuctionItemComponents"
-    ] = field(
+    list_of_auction_item_components: ListOfAuctionItemComponents | None = field(
         default=None,
         metadata={
             "name": "ListOfAuctionItemComponents",

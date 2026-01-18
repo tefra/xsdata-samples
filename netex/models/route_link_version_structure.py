@@ -16,7 +16,7 @@ class RouteLinkVersionStructure(LinkVersionStructure):
     class Meta:
         name = "RouteLink_VersionStructure"
 
-    from_point_ref: Optional[RoutePointRefStructure] = field(
+    from_point_ref: RoutePointRefStructure | None = field(
         default=None,
         metadata={
             "name": "FromPointRef",
@@ -25,7 +25,7 @@ class RouteLinkVersionStructure(LinkVersionStructure):
             "required": True,
         },
     )
-    to_point_ref: Optional[RoutePointRefStructure] = field(
+    to_point_ref: RoutePointRefStructure | None = field(
         default=None,
         metadata={
             "name": "ToPointRef",
@@ -34,7 +34,7 @@ class RouteLinkVersionStructure(LinkVersionStructure):
             "required": True,
         },
     )
-    operational_context_ref: Optional[OperationalContextRef] = field(
+    operational_context_ref: OperationalContextRef | None = field(
         default=None,
         metadata={
             "name": "OperationalContextRef",
@@ -42,9 +42,7 @@ class RouteLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mode_restriction_assessments: Optional[
-        ModeRestrictionAssessmentsRelStructure
-    ] = field(
+    mode_restriction_assessments: ModeRestrictionAssessmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "modeRestrictionAssessments",

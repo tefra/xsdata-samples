@@ -27,9 +27,7 @@ class GeneralInstructionOrMessageToRoadUsers(NetworkManagement):
     :ivar general_instruction_or_message_to_road_users_extension:
     """
 
-    general_instruction_to_road_users_type: Optional[
-        GeneralInstructionToRoadUsersTypeEnum
-    ] = field(
+    general_instruction_to_road_users_type: GeneralInstructionToRoadUsersTypeEnum | None = field(
         default=None,
         metadata={
             "name": "generalInstructionToRoadUsersType",
@@ -37,7 +35,7 @@ class GeneralInstructionOrMessageToRoadUsers(NetworkManagement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    general_message_to_road_users: Optional[MultilingualString] = field(
+    general_message_to_road_users: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "generalMessageToRoadUsers",
@@ -45,9 +43,7 @@ class GeneralInstructionOrMessageToRoadUsers(NetworkManagement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    general_instruction_or_message_to_road_users_extension: Optional[
-        ExtensionType
-    ] = field(
+    general_instruction_or_message_to_road_users_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "generalInstructionOrMessageToRoadUsersExtension",

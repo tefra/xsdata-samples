@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ProducerRequestEndpointStructure(AuthenticatedRequestStructure):
-    address: Optional[str] = field(
+    address: str | None = field(
         default=None,
         metadata={
             "name": "Address",
@@ -18,7 +18,7 @@ class ProducerRequestEndpointStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    producer_ref: Optional[ParticipantRefStructure] = field(
+    producer_ref: ParticipantRefStructure | None = field(
         default=None,
         metadata={
             "name": "ProducerRef",
@@ -26,7 +26,7 @@ class ProducerRequestEndpointStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    message_identifier: Optional[MessageQualifierStructure] = field(
+    message_identifier: MessageQualifierStructure | None = field(
         default=None,
         metadata={
             "name": "MessageIdentifier",
@@ -34,7 +34,7 @@ class ProducerRequestEndpointStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_address: Optional[str] = field(
+    delegator_address: str | None = field(
         default=None,
         metadata={
             "name": "DelegatorAddress",
@@ -42,7 +42,7 @@ class ProducerRequestEndpointStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: Optional[ParticipantRefStructure] = field(
+    delegator_ref: ParticipantRefStructure | None = field(
         default=None,
         metadata={
             "name": "DelegatorRef",

@@ -11,7 +11,7 @@ class SanitaryFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: Optional[SanitaryFacilityEnumeration] = field(
+    value: SanitaryFacilityEnumeration | None = field(
         default=None,
         metadata={
             "required": True,

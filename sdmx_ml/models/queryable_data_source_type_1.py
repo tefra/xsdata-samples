@@ -27,7 +27,7 @@ class QueryableDataSourceType1:
     class Meta:
         name = "QueryableDataSourceType"
 
-    data_url: Optional[str] = field(
+    data_url: str | None = field(
         default=None,
         metadata={
             "name": "DataURL",
@@ -36,7 +36,7 @@ class QueryableDataSourceType1:
             "required": True,
         },
     )
-    wsdlurl: Optional[str] = field(
+    wsdlurl: str | None = field(
         default=None,
         metadata={
             "name": "WSDLURL",
@@ -44,7 +44,7 @@ class QueryableDataSourceType1:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
         },
     )
-    wadlurl: Optional[str] = field(
+    wadlurl: str | None = field(
         default=None,
         metadata={
             "name": "WADLURL",
@@ -52,7 +52,7 @@ class QueryableDataSourceType1:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
         },
     )
-    is_restdatasource: Optional[bool] = field(
+    is_restdatasource: bool | None = field(
         default=None,
         metadata={
             "name": "isRESTDatasource",
@@ -60,7 +60,7 @@ class QueryableDataSourceType1:
             "required": True,
         },
     )
-    is_web_service_datasource: Optional[bool] = field(
+    is_web_service_datasource: bool | None = field(
         default=None,
         metadata={
             "name": "isWebServiceDatasource",

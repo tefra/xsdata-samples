@@ -19,7 +19,7 @@ class RoutingConstraintZoneVersionStructure(ZoneVersionStructure):
     class Meta:
         name = "RoutingConstraintZone_VersionStructure"
 
-    zone_use: Optional[ZoneUseEnumeration] = field(
+    zone_use: ZoneUseEnumeration | None = field(
         default=None,
         metadata={
             "name": "ZoneUse",
@@ -27,7 +27,7 @@ class RoutingConstraintZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_speed: Optional[Decimal] = field(
+    maximum_speed: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumSpeed",
@@ -35,7 +35,7 @@ class RoutingConstraintZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    points_in_pattern: Optional[PointsInJourneyPatternRelStructure] = field(
+    points_in_pattern: PointsInJourneyPatternRelStructure | None = field(
         default=None,
         metadata={
             "name": "pointsInPattern",
@@ -43,14 +43,14 @@ class RoutingConstraintZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    lines: Optional[LineRefsRelStructure] = field(
+    lines: LineRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    group_of_lines_ref: Optional[Union[NetworkRef, GroupOfLinesRef]] = field(
+    group_of_lines_ref: NetworkRef | GroupOfLinesRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

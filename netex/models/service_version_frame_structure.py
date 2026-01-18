@@ -97,7 +97,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "Service_VersionFrameStructure"
 
-    network: Optional[Network] = field(
+    network: Network | None = field(
         default=None,
         metadata={
             "name": "Network",
@@ -105,7 +105,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    additional_networks: Optional[NetworksInFrameRelStructure] = field(
+    additional_networks: NetworksInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "additionalNetworks",
@@ -113,14 +113,14 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    directions: Optional[DirectionsInFrameRelStructure] = field(
+    directions: DirectionsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    route_points: Optional[RoutePointsInFrameRelStructure] = field(
+    route_points: RoutePointsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "routePoints",
@@ -128,7 +128,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    route_links: Optional[RouteLinksInFrameRelStructure] = field(
+    route_links: RouteLinksInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "routeLinks",
@@ -136,16 +136,14 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    routes: Optional[RoutesInFrameRelStructure] = field(
+    routes: RoutesInFrameRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_point_properties: Optional[
-        FlexiblePointPropertiesRelStructure
-    ] = field(
+    flexible_point_properties: FlexiblePointPropertiesRelStructure | None = field(
         default=None,
         metadata={
             "name": "flexiblePointProperties",
@@ -153,7 +151,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_link_properties: Optional[FlexibleLinkPropertiesRelStructure] = (
+    flexible_link_properties: FlexibleLinkPropertiesRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -163,7 +161,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    common_sections: Optional[CommonSectionsInFrameRelStructure] = field(
+    common_sections: CommonSectionsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "commonSections",
@@ -171,7 +169,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    general_sections: Optional[GeneralSectionsInFrameRelStructure] = field(
+    general_sections: GeneralSectionsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "generalSections",
@@ -179,7 +177,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    groups_of_links: Optional[GroupOfLinksRelStructure] = field(
+    groups_of_links: GroupOfLinksRelStructure | None = field(
         default=None,
         metadata={
             "name": "groupsOfLinks",
@@ -187,7 +185,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    groups_of_points: Optional[GroupOfPointsRelStructure] = field(
+    groups_of_points: GroupOfPointsRelStructure | None = field(
         default=None,
         metadata={
             "name": "groupsOfPoints",
@@ -195,14 +193,14 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    lines: Optional[LinesInFrameRelStructure] = field(
+    lines: LinesInFrameRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    groups_of_lines: Optional[GroupsOfLinesInFrameRelStructure] = field(
+    groups_of_lines: GroupsOfLinesInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "groupsOfLines",
@@ -210,7 +208,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination_displays: Optional[DestinationDisplaysInFrameRelStructure] = (
+    destination_displays: DestinationDisplaysInFrameRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -220,7 +218,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    line_networks: Optional[LineNetworksInFrameRelStructure] = field(
+    line_networks: LineNetworksInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "lineNetworks",
@@ -228,7 +226,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    scheduled_stop_points: Optional[ScheduledStopPointsInFrameRelStructure] = (
+    scheduled_stop_points: ScheduledStopPointsInFrameRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -238,7 +236,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    service_links: Optional[ServiceLinksInFrameRelStructure] = field(
+    service_links: ServiceLinksInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "serviceLinks",
@@ -246,7 +244,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_patterns: Optional[ServicePatternsInFrameRelStructure] = field(
+    service_patterns: ServicePatternsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "servicePatterns",
@@ -254,7 +252,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_areas: Optional[StopAreasInFrameRelStructure] = field(
+    stop_areas: StopAreasInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "stopAreas",
@@ -262,14 +260,14 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    connections: Optional[TransfersInFrameRelStructure] = field(
+    connections: TransfersInFrameRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariff_zones: Optional[TariffZonesInFrameRelStructure] = field(
+    tariff_zones: TariffZonesInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "tariffZones",
@@ -277,7 +275,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_assignments: Optional[StopAssignmentsInFrameRelStructure] = field(
+    stop_assignments: StopAssignmentsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "stopAssignments",
@@ -285,7 +283,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timing_points: Optional[TimingPointsInFrameRelStructure] = field(
+    timing_points: TimingPointsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "timingPoints",
@@ -293,7 +291,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timing_links: Optional[TimingLinksInFrameRelStructure] = field(
+    timing_links: TimingLinksInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "timingLinks",
@@ -301,7 +299,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timing_patterns: Optional[TimingPatternsInFrameRelStructure] = field(
+    timing_patterns: TimingPatternsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "timingPatterns",
@@ -309,7 +307,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_patterns: Optional[JourneyPatternsInFrameRelStructure] = field(
+    journey_patterns: JourneyPatternsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "journeyPatterns",
@@ -317,9 +315,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transfer_restrictions: Optional[
-        TransferRestrictionsInFrameRelStructure
-    ] = field(
+    transfer_restrictions: TransferRestrictionsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "transferRestrictions",
@@ -327,9 +323,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    routing_constraint_zones: Optional[
-        RoutingConstraintZonesInFrameRelStructure
-    ] = field(
+    routing_constraint_zones: RoutingConstraintZonesInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "routingConstraintZones",
@@ -337,7 +331,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_exclusions: Optional[ServiceExclusionsInFrameRelStructure] = field(
+    service_exclusions: ServiceExclusionsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "serviceExclusions",
@@ -345,7 +339,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_types: Optional[TimeDemandTypesInFrameRelStructure] = field(
+    time_demand_types: TimeDemandTypesInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "timeDemandTypes",
@@ -353,9 +347,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_type_assignments: Optional[
-        TimeDemandTypeAssignmentsInFrameRelStructure
-    ] = field(
+    time_demand_type_assignments: TimeDemandTypeAssignmentsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "timeDemandTypeAssignments",
@@ -363,7 +355,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timing_link_groups: Optional[GroupOfLinksInFrameRelStructure] = field(
+    timing_link_groups: GroupOfLinksInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "timingLinkGroups",
@@ -371,14 +363,14 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notices: Optional[NoticesInFrameRelStructure] = field(
+    notices: NoticesInFrameRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsInFrameRelStructure] = field(
+    notice_assignments: NoticeAssignmentsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -386,7 +378,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    logical_displays: Optional[LogicalDisplaysInFrameRelStructure] = field(
+    logical_displays: LogicalDisplaysInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "logicalDisplays",
@@ -394,7 +386,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    display_assignments: Optional[DisplayAssignmentsInFrameRelStructure] = (
+    display_assignments: DisplayAssignmentsInFrameRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -404,9 +396,7 @@ class ServiceVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    passenger_information_equipments: Optional[
-        PassengerInformationEquipmentsInFrameRelStructure
-    ] = field(
+    passenger_information_equipments: PassengerInformationEquipmentsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "passengerInformationEquipments",

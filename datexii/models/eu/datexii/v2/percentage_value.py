@@ -16,7 +16,7 @@ class PercentageValue(DataValue):
     :ivar percentage_value_extension:
     """
 
-    percentage: Optional[float] = field(
+    percentage: float | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -24,7 +24,7 @@ class PercentageValue(DataValue):
             "required": True,
         },
     )
-    percentage_value_extension: Optional[ExtensionType] = field(
+    percentage_value_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "percentageValueExtension",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -91,7 +93,7 @@ class LogicalSupervision:
     class Meta:
         name = "LOGICAL-SUPERVISION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -100,7 +102,7 @@ class LogicalSupervision:
             "required": True,
         },
     )
-    short_name_fragments: Optional["LogicalSupervision.ShortNameFragments"] = (
+    short_name_fragments: LogicalSupervision.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -110,7 +112,7 @@ class LogicalSupervision:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -118,7 +120,7 @@ class LogicalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -126,7 +128,7 @@ class LogicalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -134,7 +136,7 @@ class LogicalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -142,7 +144,7 @@ class LogicalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -150,7 +152,7 @@ class LogicalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["LogicalSupervision.Annotations"] = field(
+    annotations: LogicalSupervision.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -158,9 +160,7 @@ class LogicalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_checkpoint_refs: Optional[
-        "LogicalSupervision.InitialCheckpointRefs"
-    ] = field(
+    initial_checkpoint_refs: LogicalSupervision.InitialCheckpointRefs | None = field(
         default=None,
         metadata={
             "name": "INITIAL-CHECKPOINT-REFS",
@@ -168,9 +168,7 @@ class LogicalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    final_checkpoint_refs: Optional[
-        "LogicalSupervision.FinalCheckpointRefs"
-    ] = field(
+    final_checkpoint_refs: LogicalSupervision.FinalCheckpointRefs | None = field(
         default=None,
         metadata={
             "name": "FINAL-CHECKPOINT-REFS",
@@ -178,7 +176,7 @@ class LogicalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transition_refs: Optional["LogicalSupervision.TransitionRefs"] = field(
+    transition_refs: LogicalSupervision.TransitionRefs | None = field(
         default=None,
         metadata={
             "name": "TRANSITION-REFS",
@@ -186,14 +184,14 @@ class LogicalSupervision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -201,7 +199,7 @@ class LogicalSupervision:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -234,7 +232,7 @@ class LogicalSupervision:
     @dataclass
     class InitialCheckpointRefs:
         initial_checkpoint_ref: list[
-            "LogicalSupervision.InitialCheckpointRefs.InitialCheckpointRef"
+            LogicalSupervision.InitialCheckpointRefs.InitialCheckpointRef
         ] = field(
             default_factory=list,
             metadata={
@@ -246,7 +244,7 @@ class LogicalSupervision:
 
         @dataclass
         class InitialCheckpointRef(Ref):
-            dest: Optional[SupervisionCheckpointSubtypesEnum] = field(
+            dest: SupervisionCheckpointSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -258,7 +256,7 @@ class LogicalSupervision:
     @dataclass
     class FinalCheckpointRefs:
         final_checkpoint_ref: list[
-            "LogicalSupervision.FinalCheckpointRefs.FinalCheckpointRef"
+            LogicalSupervision.FinalCheckpointRefs.FinalCheckpointRef
         ] = field(
             default_factory=list,
             metadata={
@@ -270,7 +268,7 @@ class LogicalSupervision:
 
         @dataclass
         class FinalCheckpointRef(Ref):
-            dest: Optional[SupervisionCheckpointSubtypesEnum] = field(
+            dest: SupervisionCheckpointSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -282,7 +280,7 @@ class LogicalSupervision:
     @dataclass
     class TransitionRefs:
         transition_ref: list[
-            "LogicalSupervision.TransitionRefs.TransitionRef"
+            LogicalSupervision.TransitionRefs.TransitionRef
         ] = field(
             default_factory=list,
             metadata={
@@ -294,7 +292,7 @@ class LogicalSupervision:
 
         @dataclass
         class TransitionRef(Ref):
-            dest: Optional[CheckpointTransitionSubtypesEnum] = field(
+            dest: CheckpointTransitionSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

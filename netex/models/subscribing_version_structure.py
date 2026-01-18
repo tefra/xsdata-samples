@@ -23,7 +23,7 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "Subscribing_VersionStructure"
 
-    subscription_term_type: Optional[SubscriptionTermTypeEnumeration] = field(
+    subscription_term_type: SubscriptionTermTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "SubscriptionTermType",
@@ -31,7 +31,7 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_subscription_period: Optional[XmlDuration] = field(
+    minimum_subscription_period: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MinimumSubscriptionPeriod",
@@ -39,7 +39,7 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_subscription_period: Optional[XmlDuration] = field(
+    maximum_subscription_period: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MaximumSubscriptionPeriod",
@@ -47,9 +47,7 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    subscription_renewal_policy: Optional[
-        SubscriptionRenewalPolicyEnumeration
-    ] = field(
+    subscription_renewal_policy: SubscriptionRenewalPolicyEnumeration | None = field(
         default=None,
         metadata={
             "name": "SubscriptionRenewalPolicy",
@@ -57,7 +55,7 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    possible_installmentt_intervals: Optional[TimeIntervalRefsRelStructure] = (
+    possible_installmentt_intervals: TimeIntervalRefsRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -76,9 +74,7 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
             "tokens": True,
         },
     )
-    installment_types_of_payment_method: Optional[
-        TypeOfPaymentMethodRefsRelStructure
-    ] = field(
+    installment_types_of_payment_method: TypeOfPaymentMethodRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "installmentTypesOfPaymentMethod",

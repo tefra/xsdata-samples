@@ -29,7 +29,7 @@ class LinearElementByPoints(LinearElement):
     :ivar linear_element_by_points_extension:
     """
 
-    start_point_of_linear_element: Optional[Referent] = field(
+    start_point_of_linear_element: Referent | None = field(
         default=None,
         metadata={
             "name": "startPointOfLinearElement",
@@ -48,7 +48,7 @@ class LinearElementByPoints(LinearElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    end_point_of_linear_element: Optional[Referent] = field(
+    end_point_of_linear_element: Referent | None = field(
         default=None,
         metadata={
             "name": "endPointOfLinearElement",
@@ -57,7 +57,7 @@ class LinearElementByPoints(LinearElement):
             "required": True,
         },
     )
-    linear_element_by_points_extension: Optional[ExtensionType] = field(
+    linear_element_by_points_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "linearElementByPointsExtension",

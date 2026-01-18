@@ -42,7 +42,7 @@ class NotAvailableValueSpecification:
     class Meta:
         name = "NOT-AVAILABLE-VALUE-SPECIFICATION"
 
-    short_label: Optional[Identifier] = field(
+    short_label: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -50,7 +50,7 @@ class NotAvailableValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -58,7 +58,7 @@ class NotAvailableValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_pattern: Optional[PositiveInteger] = field(
+    default_pattern: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "DEFAULT-PATTERN",
@@ -66,14 +66,14 @@ class NotAvailableValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

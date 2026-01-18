@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -36,7 +38,7 @@ class EcucDerivationSpecification:
     class Meta:
         name = "ECUC-DERIVATION-SPECIFICATION"
 
-    calculation_formula: Optional[EcucParameterDerivationFormula] = field(
+    calculation_formula: EcucParameterDerivationFormula | None = field(
         default=None,
         metadata={
             "name": "CALCULATION-FORMULA",
@@ -44,7 +46,7 @@ class EcucDerivationSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_querys: Optional["EcucDerivationSpecification.EcucQuerys"] = field(
+    ecuc_querys: EcucDerivationSpecification.EcucQuerys | None = field(
         default=None,
         metadata={
             "name": "ECUC-QUERYS",
@@ -52,7 +54,7 @@ class EcucDerivationSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    informal_formula: Optional[MlFormula] = field(
+    informal_formula: MlFormula | None = field(
         default=None,
         metadata={
             "name": "INFORMAL-FORMULA",
@@ -60,14 +62,14 @@ class EcucDerivationSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

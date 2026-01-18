@@ -18,7 +18,7 @@ class SupplementProductVersionStructure(
     class Meta:
         name = "SupplementProduct_VersionStructure"
 
-    supplement_product_type: Optional[SupplementProductEnumeration] = field(
+    supplement_product_type: SupplementProductEnumeration | None = field(
         default=None,
         metadata={
             "name": "SupplementProductType",
@@ -26,9 +26,7 @@ class SupplementProductVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    supplement_to_fare_product_ref_or_supplement_to: Optional[
-        Union[FareProductRefStructure, FareProductRefsRelStructure]
-    ] = field(
+    supplement_to_fare_product_ref_or_supplement_to: FareProductRefStructure | FareProductRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",

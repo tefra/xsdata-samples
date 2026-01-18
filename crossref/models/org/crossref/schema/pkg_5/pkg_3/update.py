@@ -36,7 +36,7 @@ class Update:
         name = "update"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    type_value: Optional[CmUpdateType] = field(
+    type_value: CmUpdateType | None = field(
         default=None,
         metadata={
             "name": "type",
@@ -44,7 +44,7 @@ class Update:
             "required": True,
         },
     )
-    date: Optional[XmlDate] = field(
+    date: XmlDate | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -14,7 +14,7 @@ class LogEntryVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "LogEntry_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -22,7 +22,7 @@ class LogEntryVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -30,7 +30,7 @@ class LogEntryVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    date: Optional[XmlDateTime] = field(
+    date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "Date",

@@ -16,7 +16,7 @@ class InfrastructureLinkRestrictionVersionStructure(
     class Meta:
         name = "InfrastructureLinkRestriction_VersionStructure"
 
-    from_link_ref: Optional[LinkRefStructure] = field(
+    from_link_ref: LinkRefStructure | None = field(
         default=None,
         metadata={
             "name": "FromLinkRef",
@@ -25,7 +25,7 @@ class InfrastructureLinkRestrictionVersionStructure(
             "required": True,
         },
     )
-    to_link_ref: Optional[LinkRefStructure] = field(
+    to_link_ref: LinkRefStructure | None = field(
         default=None,
         metadata={
             "name": "ToLinkRef",

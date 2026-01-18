@@ -16,7 +16,7 @@ class MediumAccessDevicesInFrameRelStructure(FrameContainmentStructure):
         name = "mediumAccessDevicesInFrame_RelStructure"
 
     emv_card_or_smartcard_or_mobile_device: Iterable[
-        Union[EmvCard, Smartcard, MobileDevice]
+        EmvCard | Smartcard | MobileDevice
     ] = field(
         default_factory=list,
         metadata={

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -87,7 +89,7 @@ class MethodMapping:
     class Meta:
         name = "METHOD-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -96,7 +98,7 @@ class MethodMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional["MethodMapping.ShortNameFragments"] = field(
+    short_name_fragments: MethodMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -104,7 +106,7 @@ class MethodMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -112,7 +114,7 @@ class MethodMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -120,7 +122,7 @@ class MethodMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -128,7 +130,7 @@ class MethodMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -136,7 +138,7 @@ class MethodMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -144,7 +146,7 @@ class MethodMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["MethodMapping.Annotations"] = field(
+    annotations: MethodMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -152,9 +154,7 @@ class MethodMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_server_operation_ref: Optional[
-        "MethodMapping.ClientServerOperationRef"
-    ] = field(
+    client_server_operation_ref: MethodMapping.ClientServerOperationRef | None = field(
         default=None,
         metadata={
             "name": "CLIENT-SERVER-OPERATION-REF",
@@ -162,7 +162,7 @@ class MethodMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_ref: Optional["MethodMapping.MethodRef"] = field(
+    method_ref: MethodMapping.MethodRef | None = field(
         default=None,
         metadata={
             "name": "METHOD-REF",
@@ -170,14 +170,14 @@ class MethodMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -185,7 +185,7 @@ class MethodMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -217,7 +217,7 @@ class MethodMapping:
 
     @dataclass
     class ClientServerOperationRef(Ref):
-        dest: Optional[ClientServerOperationSubtypesEnum] = field(
+        dest: ClientServerOperationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -228,7 +228,7 @@ class MethodMapping:
 
     @dataclass
     class MethodRef(Ref):
-        dest: Optional[ClientServerOperationSubtypesEnum] = field(
+        dest: ClientServerOperationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

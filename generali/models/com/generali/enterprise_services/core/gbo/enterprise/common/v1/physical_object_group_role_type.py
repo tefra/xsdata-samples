@@ -12,7 +12,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PhysicalObjectGroupRoleType:
-    physical_object_group: Optional[PhysicalObjectGroupType] = field(
+    physical_object_group: PhysicalObjectGroupType | None = field(
         default=None,
         metadata={
             "name": "PhysicalObjectGroup",

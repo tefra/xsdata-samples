@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,9 +33,7 @@ class TimeSyncClientConfiguration:
     class Meta:
         name = "TIME-SYNC-CLIENT-CONFIGURATION"
 
-    ordered_master_list: Optional[
-        "TimeSyncClientConfiguration.OrderedMasterList"
-    ] = field(
+    ordered_master_list: TimeSyncClientConfiguration.OrderedMasterList | None = field(
         default=None,
         metadata={
             "name": "ORDERED-MASTER-LIST",
@@ -41,7 +41,7 @@ class TimeSyncClientConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_sync_technology: Optional[TimeSyncTechnologyEnum] = field(
+    time_sync_technology: TimeSyncTechnologyEnum | None = field(
         default=None,
         metadata={
             "name": "TIME-SYNC-TECHNOLOGY",
@@ -49,14 +49,14 @@ class TimeSyncClientConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

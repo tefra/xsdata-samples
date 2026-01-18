@@ -12,7 +12,7 @@ class SimpleObjectRefStructure:
             "required": True,
         },
     )
-    ref: Optional[str] = field(
+    ref: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -22,7 +22,7 @@ class VehicleScheduleVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "VehicleSchedule_VersionFrameStructure"
 
-    service_calendar_frame_ref: Optional[ServiceCalendarFrameRef] = field(
+    service_calendar_frame_ref: ServiceCalendarFrameRef | None = field(
         default=None,
         metadata={
             "name": "ServiceCalendarFrameRef",
@@ -30,14 +30,14 @@ class VehicleScheduleVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    blocks: Optional[BlocksInFrameRelStructure] = field(
+    blocks: BlocksInFrameRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    courses_of_journeys: Optional[CoursesOfJourneysInFrameRelStructure] = (
+    courses_of_journeys: CoursesOfJourneysInFrameRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -47,7 +47,7 @@ class VehicleScheduleVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    vehicle_services: Optional[VehicleServicesInFrameRelStructure] = field(
+    vehicle_services: VehicleServicesInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "vehicleServices",
@@ -55,7 +55,7 @@ class VehicleScheduleVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    relief_opportunities: Optional[ReliefOpportunitiesInFrameRelStructure] = (
+    relief_opportunities: ReliefOpportunitiesInFrameRelStructure | None = (
         field(
             default=None,
             metadata={

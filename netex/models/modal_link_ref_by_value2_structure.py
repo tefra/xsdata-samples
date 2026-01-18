@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ModalLinkRefByValue2Structure:
-    from_point_ref: Optional[PointRefStructure] = field(
+    from_point_ref: PointRefStructure | None = field(
         default=None,
         metadata={
             "name": "FromPointRef",
@@ -21,7 +21,7 @@ class ModalLinkRefByValue2Structure:
             "required": True,
         },
     )
-    to_point_ref: Optional[PointRefStructure] = field(
+    to_point_ref: PointRefStructure | None = field(
         default=None,
         metadata={
             "name": "ToPointRef",
@@ -30,7 +30,7 @@ class ModalLinkRefByValue2Structure:
             "required": True,
         },
     )
-    type_of_link_ref: Optional[TypeOfLinkRef] = field(
+    type_of_link_ref: TypeOfLinkRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfLinkRef",
@@ -38,7 +38,7 @@ class ModalLinkRefByValue2Structure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_mode: Optional[VehicleMode] = field(
+    vehicle_mode: VehicleMode | None = field(
         default=None,
         metadata={
             "name": "VehicleMode",
@@ -46,26 +46,26 @@ class ModalLinkRefByValue2Structure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name_of_class: Optional[str] = field(
+    name_of_class: str | None = field(
         default=None,
         metadata={
             "name": "nameOfClass",
             "type": "Attribute",
         },
     )
-    created: Optional[XmlDateTime] = field(
+    created: XmlDateTime | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    changed: Optional[XmlDateTime] = field(
+    changed: XmlDateTime | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

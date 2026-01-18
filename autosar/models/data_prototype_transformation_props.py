@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -54,9 +56,7 @@ class DataPrototypeTransformationProps:
     class Meta:
         name = "DATA-PROTOTYPE-TRANSFORMATION-PROPS"
 
-    data_protototype_in_port_interface_ref: Optional[
-        "DataPrototypeTransformationProps.DataProtototypeInPortInterfaceRef"
-    ] = field(
+    data_protototype_in_port_interface_ref: DataPrototypeTransformationProps.DataProtototypeInPortInterfaceRef | None = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTOTYPE-IN-PORT-INTERFACE-REF",
@@ -64,9 +64,7 @@ class DataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_prototype_in_port_interface_ref: Optional[
-        "DataPrototypeTransformationProps.DataPrototypeInPortInterfaceRef"
-    ] = field(
+    data_prototype_in_port_interface_ref: DataPrototypeTransformationProps.DataPrototypeInPortInterfaceRef | None = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-IN-PORT-INTERFACE-REF",
@@ -74,9 +72,7 @@ class DataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_prototype_ref: Optional[
-        "DataPrototypeTransformationProps.DataPrototypeRef"
-    ] = field(
+    data_prototype_ref: DataPrototypeTransformationProps.DataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-REF",
@@ -84,7 +80,7 @@ class DataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_representation_props: Optional[SwDataDefProps] = field(
+    network_representation_props: SwDataDefProps | None = field(
         default=None,
         metadata={
             "name": "NETWORK-REPRESENTATION-PROPS",
@@ -92,9 +88,7 @@ class DataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformation_props_ref: Optional[
-        "DataPrototypeTransformationProps.TransformationPropsRef"
-    ] = field(
+    transformation_props_ref: DataPrototypeTransformationProps.TransformationPropsRef | None = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-PROPS-REF",
@@ -102,14 +96,14 @@ class DataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -120,9 +114,7 @@ class DataPrototypeTransformationProps:
 
     @dataclass
     class DataProtototypeInPortInterfaceRef:
-        data_prototype_in_port_interface_ref: Optional[
-            DataPrototypeInPortInterfaceRef
-        ] = field(
+        data_prototype_in_port_interface_ref: DataPrototypeInPortInterfaceRef | None = field(
             default=None,
             metadata={
                 "name": "DATA-PROTOTYPE-IN-PORT-INTERFACE-REF",
@@ -130,9 +122,7 @@ class DataPrototypeTransformationProps:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        implementation_data_type_element_in_port_interface_ref: Optional[
-            ImplementationDataTypeElementInPortInterfaceRef
-        ] = field(
+        implementation_data_type_element_in_port_interface_ref: ImplementationDataTypeElementInPortInterfaceRef | None = field(
             default=None,
             metadata={
                 "name": "IMPLEMENTATION-DATA-TYPE-ELEMENT-IN-PORT-INTERFACE-REF",
@@ -143,9 +133,7 @@ class DataPrototypeTransformationProps:
 
     @dataclass
     class DataPrototypeInPortInterfaceRef:
-        data_prototype_in_port_interface_ref: Optional[
-            DataPrototypeInPortInterfaceRef
-        ] = field(
+        data_prototype_in_port_interface_ref: DataPrototypeInPortInterfaceRef | None = field(
             default=None,
             metadata={
                 "name": "DATA-PROTOTYPE-IN-PORT-INTERFACE-REF",
@@ -153,9 +141,7 @@ class DataPrototypeTransformationProps:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        implementation_data_type_element_in_port_interface_ref: Optional[
-            ImplementationDataTypeElementInPortInterfaceRef
-        ] = field(
+        implementation_data_type_element_in_port_interface_ref: ImplementationDataTypeElementInPortInterfaceRef | None = field(
             default=None,
             metadata={
                 "name": "IMPLEMENTATION-DATA-TYPE-ELEMENT-IN-PORT-INTERFACE-REF",
@@ -166,9 +152,7 @@ class DataPrototypeTransformationProps:
 
     @dataclass
     class DataPrototypeRef:
-        data_prototype_with_application_data_type_in_system_ref: Optional[
-            DataPrototypeWithApplicationDataTypeInSystemRef
-        ] = field(
+        data_prototype_with_application_data_type_in_system_ref: DataPrototypeWithApplicationDataTypeInSystemRef | None = field(
             default=None,
             metadata={
                 "name": "DATA-PROTOTYPE-WITH-APPLICATION-DATA-TYPE-IN-SYSTEM-REF",
@@ -176,9 +160,7 @@ class DataPrototypeTransformationProps:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        implementation_data_type_element_in_system_ref: Optional[
-            ImplementationDataTypeElementInSystemRef
-        ] = field(
+        implementation_data_type_element_in_system_ref: ImplementationDataTypeElementInSystemRef | None = field(
             default=None,
             metadata={
                 "name": "IMPLEMENTATION-DATA-TYPE-ELEMENT-IN-SYSTEM-REF",
@@ -189,7 +171,7 @@ class DataPrototypeTransformationProps:
 
     @dataclass
     class TransformationPropsRef(Ref):
-        dest: Optional[TransformationPropsSubtypesEnum] = field(
+        dest: TransformationPropsSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

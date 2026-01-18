@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -184,7 +186,7 @@ class BswSchedulableEntity:
     class Meta:
         name = "BSW-SCHEDULABLE-ENTITY"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -193,9 +195,7 @@ class BswSchedulableEntity:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "BswSchedulableEntity.ShortNameFragments"
-    ] = field(
+    short_name_fragments: BswSchedulableEntity.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -203,7 +203,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -211,7 +211,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -219,7 +219,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -227,7 +227,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -235,7 +235,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -243,7 +243,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["BswSchedulableEntity.Annotations"] = field(
+    annotations: BswSchedulableEntity.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -251,7 +251,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reasons: Optional["BswSchedulableEntity.ActivationReasons"] = (
+    activation_reasons: BswSchedulableEntity.ActivationReasons | None = (
         field(
             default=None,
             metadata={
@@ -261,9 +261,7 @@ class BswSchedulableEntity:
             },
         )
     )
-    can_enter_exclusive_area_refs: Optional[
-        "BswSchedulableEntity.CanEnterExclusiveAreaRefs"
-    ] = field(
+    can_enter_exclusive_area_refs: BswSchedulableEntity.CanEnterExclusiveAreaRefs | None = field(
         default=None,
         metadata={
             "name": "CAN-ENTER-EXCLUSIVE-AREA-REFS",
@@ -271,9 +269,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_nesting_order_refs: Optional[
-        "BswSchedulableEntity.ExclusiveAreaNestingOrderRefs"
-    ] = field(
+    exclusive_area_nesting_order_refs: BswSchedulableEntity.ExclusiveAreaNestingOrderRefs | None = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-NESTING-ORDER-REFS",
@@ -281,7 +277,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_start_interval: Optional[TimeValue] = field(
+    minimum_start_interval: TimeValue | None = field(
         default=None,
         metadata={
             "name": "MINIMUM-START-INTERVAL",
@@ -289,7 +285,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reentrancy_level: Optional[ReentrancyLevelEnum] = field(
+    reentrancy_level: ReentrancyLevelEnum | None = field(
         default=None,
         metadata={
             "name": "REENTRANCY-LEVEL",
@@ -297,9 +293,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    runs_inside_exclusive_area_refs: Optional[
-        "BswSchedulableEntity.RunsInsideExclusiveAreaRefs"
-    ] = field(
+    runs_inside_exclusive_area_refs: BswSchedulableEntity.RunsInsideExclusiveAreaRefs | None = field(
         default=None,
         metadata={
             "name": "RUNS-INSIDE-EXCLUSIVE-AREA-REFS",
@@ -307,7 +301,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_addr_method_ref: Optional["BswSchedulableEntity.SwAddrMethodRef"] = (
+    sw_addr_method_ref: BswSchedulableEntity.SwAddrMethodRef | None = (
         field(
             default=None,
             metadata={
@@ -317,9 +311,7 @@ class BswSchedulableEntity:
             },
         )
     )
-    accessed_mode_groups: Optional[
-        "BswSchedulableEntity.AccessedModeGroups"
-    ] = field(
+    accessed_mode_groups: BswSchedulableEntity.AccessedModeGroups | None = field(
         default=None,
         metadata={
             "name": "ACCESSED-MODE-GROUPS",
@@ -327,7 +319,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_points: Optional["BswSchedulableEntity.ActivationPoints"] = (
+    activation_points: BswSchedulableEntity.ActivationPoints | None = (
         field(
             default=None,
             metadata={
@@ -337,7 +329,7 @@ class BswSchedulableEntity:
             },
         )
     )
-    call_points: Optional["BswSchedulableEntity.CallPoints"] = field(
+    call_points: BswSchedulableEntity.CallPoints | None = field(
         default=None,
         metadata={
             "name": "CALL-POINTS",
@@ -345,7 +337,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    called_entrys: Optional["BswSchedulableEntity.CalledEntrys"] = field(
+    called_entrys: BswSchedulableEntity.CalledEntrys | None = field(
         default=None,
         metadata={
             "name": "CALLED-ENTRYS",
@@ -353,7 +345,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_receive_points: Optional["BswSchedulableEntity.DataReceivePoints"] = (
+    data_receive_points: BswSchedulableEntity.DataReceivePoints | None = (
         field(
             default=None,
             metadata={
@@ -363,7 +355,7 @@ class BswSchedulableEntity:
             },
         )
     )
-    data_send_points: Optional["BswSchedulableEntity.DataSendPoints"] = field(
+    data_send_points: BswSchedulableEntity.DataSendPoints | None = field(
         default=None,
         metadata={
             "name": "DATA-SEND-POINTS",
@@ -371,9 +363,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implemented_entry_ref: Optional[
-        "BswSchedulableEntity.ImplementedEntryRef"
-    ] = field(
+    implemented_entry_ref: BswSchedulableEntity.ImplementedEntryRef | None = field(
         default=None,
         metadata={
             "name": "IMPLEMENTED-ENTRY-REF",
@@ -381,7 +371,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    issued_triggers: Optional["BswSchedulableEntity.IssuedTriggers"] = field(
+    issued_triggers: BswSchedulableEntity.IssuedTriggers | None = field(
         default=None,
         metadata={
             "name": "ISSUED-TRIGGERS",
@@ -389,7 +379,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    managed_mode_groups: Optional["BswSchedulableEntity.ManagedModeGroups"] = (
+    managed_mode_groups: BswSchedulableEntity.ManagedModeGroups | None = (
         field(
             default=None,
             metadata={
@@ -399,9 +389,7 @@ class BswSchedulableEntity:
             },
         )
     )
-    scheduler_name_prefix_ref: Optional[
-        "BswSchedulableEntity.SchedulerNamePrefixRef"
-    ] = field(
+    scheduler_name_prefix_ref: BswSchedulableEntity.SchedulerNamePrefixRef | None = field(
         default=None,
         metadata={
             "name": "SCHEDULER-NAME-PREFIX-REF",
@@ -409,7 +397,7 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -417,14 +405,14 @@ class BswSchedulableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -432,7 +420,7 @@ class BswSchedulableEntity:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -478,7 +466,7 @@ class BswSchedulableEntity:
     @dataclass
     class CanEnterExclusiveAreaRefs:
         can_enter_exclusive_area_ref: list[
-            "BswSchedulableEntity.CanEnterExclusiveAreaRefs.CanEnterExclusiveAreaRef"
+            BswSchedulableEntity.CanEnterExclusiveAreaRefs.CanEnterExclusiveAreaRef
         ] = field(
             default_factory=list,
             metadata={
@@ -490,7 +478,7 @@ class BswSchedulableEntity:
 
         @dataclass
         class CanEnterExclusiveAreaRef(Ref):
-            dest: Optional[ExclusiveAreaSubtypesEnum] = field(
+            dest: ExclusiveAreaSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -502,7 +490,7 @@ class BswSchedulableEntity:
     @dataclass
     class ExclusiveAreaNestingOrderRefs:
         exclusive_area_nesting_order_ref: list[
-            "BswSchedulableEntity.ExclusiveAreaNestingOrderRefs.ExclusiveAreaNestingOrderRef"
+            BswSchedulableEntity.ExclusiveAreaNestingOrderRefs.ExclusiveAreaNestingOrderRef
         ] = field(
             default_factory=list,
             metadata={
@@ -514,7 +502,7 @@ class BswSchedulableEntity:
 
         @dataclass
         class ExclusiveAreaNestingOrderRef(Ref):
-            dest: Optional[ExclusiveAreaNestingOrderSubtypesEnum] = field(
+            dest: ExclusiveAreaNestingOrderSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -526,7 +514,7 @@ class BswSchedulableEntity:
     @dataclass
     class RunsInsideExclusiveAreaRefs:
         runs_inside_exclusive_area_ref: list[
-            "BswSchedulableEntity.RunsInsideExclusiveAreaRefs.RunsInsideExclusiveAreaRef"
+            BswSchedulableEntity.RunsInsideExclusiveAreaRefs.RunsInsideExclusiveAreaRef
         ] = field(
             default_factory=list,
             metadata={
@@ -538,7 +526,7 @@ class BswSchedulableEntity:
 
         @dataclass
         class RunsInsideExclusiveAreaRef(Ref):
-            dest: Optional[ExclusiveAreaSubtypesEnum] = field(
+            dest: ExclusiveAreaSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -549,7 +537,7 @@ class BswSchedulableEntity:
 
     @dataclass
     class SwAddrMethodRef(Ref):
-        dest: Optional[SwAddrMethodSubtypesEnum] = field(
+        dest: SwAddrMethodSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -662,7 +650,7 @@ class BswSchedulableEntity:
 
     @dataclass
     class ImplementedEntryRef(Ref):
-        dest: Optional[BswModuleEntrySubtypesEnum] = field(
+        dest: BswModuleEntrySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -697,7 +685,7 @@ class BswSchedulableEntity:
 
     @dataclass
     class SchedulerNamePrefixRef(Ref):
-        dest: Optional[BswSchedulerNamePrefixSubtypesEnum] = field(
+        dest: BswSchedulerNamePrefixSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

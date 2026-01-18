@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -48,7 +50,7 @@ class UserDefinedClusterConditional:
     class Meta:
         name = "USER-DEFINED-CLUSTER-CONDITIONAL"
 
-    baudrate: Optional[PositiveUnlimitedInteger] = field(
+    baudrate: PositiveUnlimitedInteger | None = field(
         default=None,
         metadata={
             "name": "BAUDRATE",
@@ -56,9 +58,7 @@ class UserDefinedClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channels: Optional[
-        "UserDefinedClusterConditional.PhysicalChannels"
-    ] = field(
+    physical_channels: UserDefinedClusterConditional.PhysicalChannels | None = field(
         default=None,
         metadata={
             "name": "PHYSICAL-CHANNELS",
@@ -66,7 +66,7 @@ class UserDefinedClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    protocol_name: Optional[String] = field(
+    protocol_name: String | None = field(
         default=None,
         metadata={
             "name": "PROTOCOL-NAME",
@@ -74,7 +74,7 @@ class UserDefinedClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    protocol_version: Optional[String] = field(
+    protocol_version: String | None = field(
         default=None,
         metadata={
             "name": "PROTOCOL-VERSION",
@@ -82,7 +82,7 @@ class UserDefinedClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    speed: Optional[Integer] = field(
+    speed: Integer | None = field(
         default=None,
         metadata={
             "name": "SPEED",
@@ -90,7 +90,7 @@ class UserDefinedClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -98,14 +98,14 @@ class UserDefinedClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

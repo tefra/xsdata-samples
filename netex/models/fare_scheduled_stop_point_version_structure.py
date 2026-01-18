@@ -22,9 +22,7 @@ class FareScheduledStopPointVersionStructure(
     class Meta:
         name = "FareScheduledStopPoint_VersionStructure"
 
-    site_facility_set_ref_or_site_facility_set: Optional[
-        Union[SiteFacilitySetRef, SiteFacilitySet]
-    ] = field(
+    site_facility_set_ref_or_site_facility_set: SiteFacilitySetRef | SiteFacilitySet | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -42,7 +40,7 @@ class FareScheduledStopPointVersionStructure(
             ),
         },
     )
-    name_on_routing: Optional[MultilingualString] = field(
+    name_on_routing: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "NameOnRouting",
@@ -50,7 +48,7 @@ class FareScheduledStopPointVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accounting_stop_point_ref: Optional[FareScheduledStopPointRefStructure] = (
+    accounting_stop_point_ref: FareScheduledStopPointRefStructure | None = (
         field(
             default=None,
             metadata={
@@ -60,7 +58,7 @@ class FareScheduledStopPointVersionStructure(
             },
         )
     )
-    border_point_ref: Optional[BorderPointRef] = field(
+    border_point_ref: BorderPointRef | None = field(
         default=None,
         metadata={
             "name": "BorderPointRef",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -147,7 +149,7 @@ class DiagnosticTroubleCodeProps:
     class Meta:
         name = "DIAGNOSTIC-TROUBLE-CODE-PROPS"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -156,9 +158,7 @@ class DiagnosticTroubleCodeProps:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticTroubleCodeProps.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticTroubleCodeProps.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -166,7 +166,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -174,7 +174,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -182,7 +182,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -190,7 +190,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -198,7 +198,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -206,7 +206,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticTroubleCodeProps.Annotations"] = field(
+    annotations: DiagnosticTroubleCodeProps.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -214,7 +214,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -222,7 +222,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    aging_allowed: Optional[Boolean] = field(
+    aging_allowed: Boolean | None = field(
         default=None,
         metadata={
             "name": "AGING-ALLOWED",
@@ -230,7 +230,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    aging_ref: Optional["DiagnosticTroubleCodeProps.AgingRef"] = field(
+    aging_ref: DiagnosticTroubleCodeProps.AgingRef | None = field(
         default=None,
         metadata={
             "name": "AGING-REF",
@@ -238,9 +238,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    environment_capture_to_reporting: Optional[
-        EnvironmentCaptureToReportingEnum
-    ] = field(
+    environment_capture_to_reporting: EnvironmentCaptureToReportingEnum | None = field(
         default=None,
         metadata={
             "name": "ENVIRONMENT-CAPTURE-TO-REPORTING",
@@ -248,9 +246,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    extended_data_records: Optional[
-        "DiagnosticTroubleCodeProps.ExtendedDataRecords"
-    ] = field(
+    extended_data_records: DiagnosticTroubleCodeProps.ExtendedDataRecords | None = field(
         default=None,
         metadata={
             "name": "EXTENDED-DATA-RECORDS",
@@ -258,7 +254,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fdc_threshold_storage_value: Optional[PositiveInteger] = field(
+    fdc_threshold_storage_value: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "FDC-THRESHOLD-STORAGE-VALUE",
@@ -266,7 +262,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freeze_frames: Optional["DiagnosticTroubleCodeProps.FreezeFrames"] = field(
+    freeze_frames: DiagnosticTroubleCodeProps.FreezeFrames | None = field(
         default=None,
         metadata={
             "name": "FREEZE-FRAMES",
@@ -274,9 +270,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freeze_frame_content_ref: Optional[
-        "DiagnosticTroubleCodeProps.FreezeFrameContentRef"
-    ] = field(
+    freeze_frame_content_ref: DiagnosticTroubleCodeProps.FreezeFrameContentRef | None = field(
         default=None,
         metadata={
             "name": "FREEZE-FRAME-CONTENT-REF",
@@ -284,9 +278,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freeze_frame_content_wwh_obd_ref: Optional[
-        "DiagnosticTroubleCodeProps.FreezeFrameContentWwhObdRef"
-    ] = field(
+    freeze_frame_content_wwh_obd_ref: DiagnosticTroubleCodeProps.FreezeFrameContentWwhObdRef | None = field(
         default=None,
         metadata={
             "name": "FREEZE-FRAME-CONTENT-WWH-OBD-REF",
@@ -294,7 +286,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    immediate_nv_data_storage: Optional[Boolean] = field(
+    immediate_nv_data_storage: Boolean | None = field(
         default=None,
         metadata={
             "name": "IMMEDIATE-NV-DATA-STORAGE",
@@ -302,9 +294,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    legislated_freeze_frame_content_wwh_obds: Optional[
-        "DiagnosticTroubleCodeProps.LegislatedFreezeFrameContentWwhObds"
-    ] = field(
+    legislated_freeze_frame_content_wwh_obds: DiagnosticTroubleCodeProps.LegislatedFreezeFrameContentWwhObds | None = field(
         default=None,
         metadata={
             "name": "LEGISLATED-FREEZE-FRAME-CONTENT-WWH-OBDS",
@@ -312,7 +302,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_number_freeze_frame_records: Optional[PositiveInteger] = field(
+    max_number_freeze_frame_records: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-FREEZE-FRAME-RECORDS",
@@ -320,9 +310,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_destination_refs: Optional[
-        "DiagnosticTroubleCodeProps.MemoryDestinationRefs"
-    ] = field(
+    memory_destination_refs: DiagnosticTroubleCodeProps.MemoryDestinationRefs | None = field(
         default=None,
         metadata={
             "name": "MEMORY-DESTINATION-REFS",
@@ -330,7 +318,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    priority: Optional[PositiveIntegerValueVariationPoint] = field(
+    priority: PositiveIntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "PRIORITY",
@@ -338,7 +326,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    significance: Optional[DiagnosticSignificanceEnum] = field(
+    significance: DiagnosticSignificanceEnum | None = field(
         default=None,
         metadata={
             "name": "SIGNIFICANCE",
@@ -346,9 +334,7 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    snapshot_record_contents: Optional[
-        "DiagnosticTroubleCodeProps.SnapshotRecordContents"
-    ] = field(
+    snapshot_record_contents: DiagnosticTroubleCodeProps.SnapshotRecordContents | None = field(
         default=None,
         metadata={
             "name": "SNAPSHOT-RECORD-CONTENTS",
@@ -356,14 +342,14 @@ class DiagnosticTroubleCodeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -371,7 +357,7 @@ class DiagnosticTroubleCodeProps:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -403,7 +389,7 @@ class DiagnosticTroubleCodeProps:
 
     @dataclass
     class AgingRef(Ref):
-        dest: Optional[DiagnosticAgingSubtypesEnum] = field(
+        dest: DiagnosticAgingSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -440,7 +426,7 @@ class DiagnosticTroubleCodeProps:
 
     @dataclass
     class FreezeFrameContentRef(Ref):
-        dest: Optional[DiagnosticDataIdentifierSetSubtypesEnum] = field(
+        dest: DiagnosticDataIdentifierSetSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -451,7 +437,7 @@ class DiagnosticTroubleCodeProps:
 
     @dataclass
     class FreezeFrameContentWwhObdRef(Ref):
-        dest: Optional[DiagnosticDataIdentifierSetSubtypesEnum] = field(
+        dest: DiagnosticDataIdentifierSetSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -476,7 +462,7 @@ class DiagnosticTroubleCodeProps:
     @dataclass
     class MemoryDestinationRefs:
         memory_destination_ref: list[
-            "DiagnosticTroubleCodeProps.MemoryDestinationRefs.MemoryDestinationRef"
+            DiagnosticTroubleCodeProps.MemoryDestinationRefs.MemoryDestinationRef
         ] = field(
             default_factory=list,
             metadata={
@@ -488,7 +474,7 @@ class DiagnosticTroubleCodeProps:
 
         @dataclass
         class MemoryDestinationRef(Ref):
-            dest: Optional[DiagnosticMemoryDestinationSubtypesEnum] = field(
+            dest: DiagnosticMemoryDestinationSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

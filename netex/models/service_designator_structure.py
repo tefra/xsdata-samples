@@ -17,7 +17,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ServiceDesignatorStructure:
-    from_point_ref: Optional[ScheduledStopPointRefStructure] = field(
+    from_point_ref: ScheduledStopPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "FromPointRef",
@@ -25,7 +25,7 @@ class ServiceDesignatorStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_point_ref: Optional[ScheduledStopPointRefStructure] = field(
+    to_point_ref: ScheduledStopPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "ToPointRef",
@@ -33,7 +33,7 @@ class ServiceDesignatorStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    date: Optional[XmlDate] = field(
+    date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "Date",
@@ -41,7 +41,7 @@ class ServiceDesignatorStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    departure_time: Optional[XmlTime] = field(
+    departure_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "DepartureTime",
@@ -49,7 +49,7 @@ class ServiceDesignatorStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    departure_day_offset: Optional[int] = field(
+    departure_day_offset: int | None = field(
         default=None,
         metadata={
             "name": "DepartureDayOffset",
@@ -57,7 +57,7 @@ class ServiceDesignatorStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    arrival_time: Optional[XmlTime] = field(
+    arrival_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
@@ -65,7 +65,7 @@ class ServiceDesignatorStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    arrival_day_offset: Optional[int] = field(
+    arrival_day_offset: int | None = field(
         default=None,
         metadata={
             "name": "ArrivalDayOffset",
@@ -73,7 +73,7 @@ class ServiceDesignatorStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_type_ref: Optional[Union[FareDayTypeRef, DayTypeRef]] = field(
+    day_type_ref: FareDayTypeRef | DayTypeRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -91,7 +91,7 @@ class ServiceDesignatorStructure:
             ),
         },
     )
-    transport_organisation_ref: Optional[Union[AuthorityRef, OperatorRef]] = (
+    transport_organisation_ref: AuthorityRef | OperatorRef | None = (
         field(
             default=None,
             metadata={
@@ -111,7 +111,7 @@ class ServiceDesignatorStructure:
             },
         )
     )
-    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
+    line_ref: FlexibleLineRef | LineRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -129,7 +129,7 @@ class ServiceDesignatorStructure:
             ),
         },
     )
-    direction_ref: Optional[DirectionRef] = field(
+    direction_ref: DirectionRef | None = field(
         default=None,
         metadata={
             "name": "DirectionRef",
@@ -137,7 +137,7 @@ class ServiceDesignatorStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alternative_journey_ref: Optional[str] = field(
+    alternative_journey_ref: str | None = field(
         default=None,
         metadata={
             "name": "AlternativeJourneyRef",

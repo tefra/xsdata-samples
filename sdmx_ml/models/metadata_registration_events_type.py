@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -26,15 +28,7 @@ class MetadataRegistrationEventsType:
     """
 
     choice: tuple[
-        Union[
-            EmptyType,
-            "MetadataRegistrationEventsType.RegistrationId",
-            "MetadataRegistrationEventsType.ProvisionAgreement",
-            "MetadataRegistrationEventsType.DataProvider",
-            "MetadataRegistrationEventsType.MetadataflowReference",
-            "MetadataRegistrationEventsType.MetadataStructureDefinitionReference",
-            "MetadataRegistrationEventsType.Category",
-        ],
+        EmptyType | MetadataRegistrationEventsType.RegistrationId | MetadataRegistrationEventsType.ProvisionAgreement | MetadataRegistrationEventsType.DataProvider | MetadataRegistrationEventsType.MetadataflowReference | MetadataRegistrationEventsType.MetadataStructureDefinitionReference | MetadataRegistrationEventsType.Category,
         ...,
     ] = field(
         default_factory=tuple,
@@ -102,7 +96,7 @@ class MetadataRegistrationEventsType:
 
     @dataclass(frozen=True)
     class RegistrationId:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -112,7 +106,7 @@ class MetadataRegistrationEventsType:
 
     @dataclass(frozen=True)
     class ProvisionAgreement:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -122,7 +116,7 @@ class MetadataRegistrationEventsType:
 
     @dataclass(frozen=True)
     class DataProvider:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -140,7 +134,7 @@ class MetadataRegistrationEventsType:
 
     @dataclass(frozen=True)
     class Category:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,

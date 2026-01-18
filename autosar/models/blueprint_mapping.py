@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -32,7 +34,7 @@ class BlueprintMapping:
     class Meta:
         name = "BLUEPRINT-MAPPING"
 
-    blueprint_ref: Optional["BlueprintMapping.BlueprintRef"] = field(
+    blueprint_ref: BlueprintMapping.BlueprintRef | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-REF",
@@ -40,7 +42,7 @@ class BlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    derived_object_ref: Optional["BlueprintMapping.DerivedObjectRef"] = field(
+    derived_object_ref: BlueprintMapping.DerivedObjectRef | None = field(
         default=None,
         metadata={
             "name": "DERIVED-OBJECT-REF",
@@ -48,14 +50,14 @@ class BlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -66,7 +68,7 @@ class BlueprintMapping:
 
     @dataclass
     class BlueprintRef(Ref):
-        dest: Optional[AtpBlueprintSubtypesEnum] = field(
+        dest: AtpBlueprintSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -77,7 +79,7 @@ class BlueprintMapping:
 
     @dataclass
     class DerivedObjectRef(Ref):
-        dest: Optional[AtpBlueprintableSubtypesEnum] = field(
+        dest: AtpBlueprintableSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

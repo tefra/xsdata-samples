@@ -36,7 +36,7 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "DistributionChannel_VersionStructure"
 
-    alternative_names: Optional[AlternativeNamesRelStructure] = field(
+    alternative_names: AlternativeNamesRelStructure | None = field(
         default=None,
         metadata={
             "name": "alternativeNames",
@@ -44,7 +44,7 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distribution_channel_type: Optional[DistributionChannelTypeEnumeration] = (
+    distribution_channel_type: DistributionChannelTypeEnumeration | None = (
         field(
             default=None,
             metadata={
@@ -54,7 +54,7 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             },
         )
     )
-    is_obligatory: Optional[bool] = field(
+    is_obligatory: bool | None = field(
         default=None,
         metadata={
             "name": "IsObligatory",
@@ -62,7 +62,7 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    requires_email_address: Optional[bool] = field(
+    requires_email_address: bool | None = field(
         default=None,
         metadata={
             "name": "RequiresEmailAddress",
@@ -70,7 +70,7 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    contact_details: Optional[ContactStructure] = field(
+    contact_details: ContactStructure | None = field(
         default=None,
         metadata={
             "name": "ContactDetails",
@@ -78,20 +78,7 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: Optional[
-        Union[
-            RetailConsortiumRef,
-            OnlineServiceOperatorRef,
-            GeneralOrganisationRef,
-            ManagementAgentRef,
-            ServicedOrganisationRef,
-            TravelAgentRef,
-            OtherOrganisationRef,
-            AuthorityRef,
-            OperatorRef,
-            OrganisationRef,
-        ]
-    ] = field(
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -158,7 +145,7 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             "tokens": True,
         },
     )
-    types_of_payment_method: Optional[TypeOfPaymentMethodRefsRelStructure] = (
+    types_of_payment_method: TypeOfPaymentMethodRefsRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -177,9 +164,7 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             "tokens": True,
         },
     )
-    distribution_points_or_distribution_group_ref: Optional[
-        Union[PointRefsRelStructure, GeneralGroupOfEntitiesRefStructure]
-    ] = field(
+    distribution_points_or_distribution_group_ref: PointRefsRelStructure | GeneralGroupOfEntitiesRefStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",

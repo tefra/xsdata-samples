@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -35,7 +37,7 @@ class HealthChannelExternalReportedStatus:
     class Meta:
         name = "HEALTH-CHANNEL-EXTERNAL-REPORTED-STATUS"
 
-    status_id: Optional[PositiveInteger] = field(
+    status_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "STATUS-ID",
@@ -43,7 +45,7 @@ class HealthChannelExternalReportedStatus:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    status_ref: Optional["HealthChannelExternalReportedStatus.StatusRef"] = (
+    status_ref: HealthChannelExternalReportedStatus.StatusRef | None = (
         field(
             default=None,
             metadata={
@@ -53,14 +55,14 @@ class HealthChannelExternalReportedStatus:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +73,7 @@ class HealthChannelExternalReportedStatus:
 
     @dataclass
     class StatusRef(Ref):
-        dest: Optional[PhmHealthChannelStatusSubtypesEnum] = field(
+        dest: PhmHealthChannelStatusSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

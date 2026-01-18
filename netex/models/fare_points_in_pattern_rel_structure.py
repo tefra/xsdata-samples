@@ -15,7 +15,7 @@ class FarePointsInPatternRelStructure(ContainmentAggregationStructure):
         name = "farePointsInPattern_RelStructure"
 
     fare_point_in_pattern_ref_or_fare_point_in_pattern: Iterable[
-        Union[FarePointInPatternRef, FarePointInPattern]
+        FarePointInPatternRef | FarePointInPattern
     ] = field(
         default_factory=list,
         metadata={

@@ -15,7 +15,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class EngineeringCarEarType:
-    insured_values_md: Optional[AmountType] = field(
+    insured_values_md: AmountType | None = field(
         default=None,
         metadata={
             "name": "InsuredValuesMD",
@@ -23,7 +23,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_md: Optional[NumericType] = field(
+    rate_md: NumericType | None = field(
         default=None,
         metadata={
             "name": "RateMD",
@@ -31,7 +31,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    insured_values_cpm_cpe_mb: Optional[AmountType] = field(
+    insured_values_cpm_cpe_mb: AmountType | None = field(
         default=None,
         metadata={
             "name": "InsuredValuesCpmCpeMB",
@@ -39,7 +39,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_cpm_cpe_mb: Optional[NumericType] = field(
+    rate_cpm_cpe_mb: NumericType | None = field(
         default=None,
         metadata={
             "name": "RateCpmCpeMB",
@@ -47,7 +47,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    insured_values_mdother: Optional[AmountType] = field(
+    insured_values_mdother: AmountType | None = field(
         default=None,
         metadata={
             "name": "InsuredValuesMDOther",
@@ -55,7 +55,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_mdother: Optional[NumericType] = field(
+    rate_mdother: NumericType | None = field(
         default=None,
         metadata={
             "name": "RateMDOther",
@@ -63,7 +63,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    insured_values_alop_dsu: Optional[AmountType] = field(
+    insured_values_alop_dsu: AmountType | None = field(
         default=None,
         metadata={
             "name": "InsuredValuesAlopDsu",
@@ -71,7 +71,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    months_alop_dsu: Optional[NumericType] = field(
+    months_alop_dsu: NumericType | None = field(
         default=None,
         metadata={
             "name": "MonthsAlopDsu",
@@ -79,7 +79,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    calc_basis_alop_dsu_value: Optional[AmountType] = field(
+    calc_basis_alop_dsu_value: AmountType | None = field(
         default=None,
         metadata={
             "name": "CalcBasisAlopDsuValue",
@@ -87,7 +87,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    calc_basis_alop_dsu_pc: Optional[AmountType] = field(
+    calc_basis_alop_dsu_pc: AmountType | None = field(
         default=None,
         metadata={
             "name": "CalcBasisAlopDsuPC",
@@ -95,7 +95,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    rate_alop_dsu: Optional[NumericType] = field(
+    rate_alop_dsu: NumericType | None = field(
         default=None,
         metadata={
             "name": "RateAlopDsu",
@@ -103,7 +103,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    mflalop_dsu_pc: Optional[AmountType] = field(
+    mflalop_dsu_pc: AmountType | None = field(
         default=None,
         metadata={
             "name": "MFLAlopDsuPC",
@@ -111,7 +111,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    deductible_mdother_value: Optional[AmountType] = field(
+    deductible_mdother_value: AmountType | None = field(
         default=None,
         metadata={
             "name": "DeductibleMDOtherValue",
@@ -119,7 +119,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    deductible_days_alop_dsu: Optional[NumericType] = field(
+    deductible_days_alop_dsu: NumericType | None = field(
         default=None,
         metadata={
             "name": "DeductibleDaysAlopDsu",
@@ -127,7 +127,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    mflmachinery: Optional[AmountType] = field(
+    mflmachinery: AmountType | None = field(
         default=None,
         metadata={
             "name": "MFLMachinery",
@@ -135,7 +135,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    mflproject_pc: Optional[AmountType] = field(
+    mflproject_pc: AmountType | None = field(
         default=None,
         metadata={
             "name": "MFLProjectPC",
@@ -143,7 +143,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    mflmdother_value: Optional[AmountType] = field(
+    mflmdother_value: AmountType | None = field(
         default=None,
         metadata={
             "name": "MFLMDOtherValue",
@@ -151,7 +151,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    mflmdother_pc: Optional[AmountType] = field(
+    mflmdother_pc: AmountType | None = field(
         default=None,
         metadata={
             "name": "MFLMDOtherPC",
@@ -159,7 +159,7 @@ class EngineeringCarEarType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    deductible_project: Optional[AmountType] = field(
+    deductible_project: AmountType | None = field(
         default=None,
         metadata={
             "name": "DeductibleProject",

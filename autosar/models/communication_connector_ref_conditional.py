@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class CommunicationConnectorRefConditional:
     class Meta:
         name = "COMMUNICATION-CONNECTOR-REF-CONDITIONAL"
 
-    communication_connector_ref: Optional[
-        "CommunicationConnectorRefConditional.CommunicationConnectorRef"
-    ] = field(
+    communication_connector_ref: CommunicationConnectorRefConditional.CommunicationConnectorRef | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONNECTOR-REF",
@@ -43,7 +43,7 @@ class CommunicationConnectorRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class CommunicationConnectorRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class CommunicationConnectorRefConditional:
 
     @dataclass
     class CommunicationConnectorRef(Ref):
-        dest: Optional[CommunicationConnectorSubtypesEnum] = field(
+        dest: CommunicationConnectorSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

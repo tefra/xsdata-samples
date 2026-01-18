@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -38,9 +40,7 @@ class PhmHealthChannelInExecutableInstanceRef:
     class Meta:
         name = "PHM-HEALTH-CHANNEL-IN-EXECUTABLE-INSTANCE-REF"
 
-    context_root_sw_component_prototype_ref: Optional[
-        "PhmHealthChannelInExecutableInstanceRef.ContextRootSwComponentPrototypeRef"
-    ] = field(
+    context_root_sw_component_prototype_ref: PhmHealthChannelInExecutableInstanceRef.ContextRootSwComponentPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF",
@@ -49,7 +49,7 @@ class PhmHealthChannelInExecutableInstanceRef:
         },
     )
     context_component_prototype_ref: list[
-        "PhmHealthChannelInExecutableInstanceRef.ContextComponentPrototypeRef"
+        PhmHealthChannelInExecutableInstanceRef.ContextComponentPrototypeRef
     ] = field(
         default_factory=list,
         metadata={
@@ -58,9 +58,7 @@ class PhmHealthChannelInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_r_port_prototype_ref: Optional[
-        "PhmHealthChannelInExecutableInstanceRef.ContextRPortPrototypeRef"
-    ] = field(
+    context_r_port_prototype_ref: PhmHealthChannelInExecutableInstanceRef.ContextRPortPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-R-PORT-PROTOTYPE-REF",
@@ -68,9 +66,7 @@ class PhmHealthChannelInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_health_channel_ref: Optional[
-        "PhmHealthChannelInExecutableInstanceRef.TargetHealthChannelRef"
-    ] = field(
+    target_health_channel_ref: PhmHealthChannelInExecutableInstanceRef.TargetHealthChannelRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-HEALTH-CHANNEL-REF",
@@ -78,14 +74,14 @@ class PhmHealthChannelInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -96,7 +92,7 @@ class PhmHealthChannelInExecutableInstanceRef:
 
     @dataclass
     class ContextRootSwComponentPrototypeRef(Ref):
-        dest: Optional[RootSwComponentPrototypeSubtypesEnum] = field(
+        dest: RootSwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -107,7 +103,7 @@ class PhmHealthChannelInExecutableInstanceRef:
 
     @dataclass
     class ContextComponentPrototypeRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -118,7 +114,7 @@ class PhmHealthChannelInExecutableInstanceRef:
 
     @dataclass
     class ContextRPortPrototypeRef(Ref):
-        dest: Optional[RPortPrototypeSubtypesEnum] = field(
+        dest: RPortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -129,7 +125,7 @@ class PhmHealthChannelInExecutableInstanceRef:
 
     @dataclass
     class TargetHealthChannelRef(Ref):
-        dest: Optional[PhmHealthChannelInterfaceSubtypesEnum] = field(
+        dest: PhmHealthChannelInterfaceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

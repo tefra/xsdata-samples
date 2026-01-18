@@ -33,21 +33,21 @@ class SimpleComponentValueType:
             "required": True,
         },
     )
-    cascade_values: Union[bool, ExcludeRootType] = field(
+    cascade_values: bool | ExcludeRootType = field(
         default=False,
         metadata={
             "name": "cascadeValues",
             "type": "Attribute",
         },
     )
-    lang: Optional[str] = field(
+    lang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    valid_from: Optional[Union[XmlPeriod, XmlDate, XmlDateTime, str]] = field(
+    valid_from: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
         default=None,
         metadata={
             "name": "validFrom",
@@ -55,7 +55,7 @@ class SimpleComponentValueType:
             "pattern": r".{5}A1.*",
         },
     )
-    valid_to: Optional[Union[XmlPeriod, XmlDate, XmlDateTime, str]] = field(
+    valid_to: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
         default=None,
         metadata={
             "name": "validTo",

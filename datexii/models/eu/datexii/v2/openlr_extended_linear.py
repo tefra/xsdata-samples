@@ -19,7 +19,7 @@ class OpenlrExtendedLinear:
         in the opposite direction against firstDirection.
     """
 
-    first_direction: Optional[OpenlrLineLocationReference] = field(
+    first_direction: OpenlrLineLocationReference | None = field(
         default=None,
         metadata={
             "name": "firstDirection",
@@ -28,7 +28,7 @@ class OpenlrExtendedLinear:
             "required": True,
         },
     )
-    opposite_direction: Optional[OpenlrLineLocationReference] = field(
+    opposite_direction: OpenlrLineLocationReference | None = field(
         default=None,
         metadata={
             "name": "oppositeDirection",

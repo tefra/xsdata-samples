@@ -36,7 +36,7 @@ class QueryType:
         different from the VBO then it must be ignored.</description>
     """
 
-    identification: Optional[BaseIdentifiedComponentType] = field(
+    identification: BaseIdentifiedComponentType | None = field(
         default=None,
         metadata={
             "name": "Identification",
@@ -44,7 +44,7 @@ class QueryType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    criteria: Optional[QueryCriteriaType] = field(
+    criteria: QueryCriteriaType | None = field(
         default=None,
         metadata={
             "name": "Criteria",
@@ -52,7 +52,7 @@ class QueryType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    sort_expression: Optional[SortExpressionType] = field(
+    sort_expression: SortExpressionType | None = field(
         default=None,
         metadata={
             "name": "SortExpression",
@@ -60,7 +60,7 @@ class QueryType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    business_object: Optional[str] = field(
+    business_object: str | None = field(
         default=None,
         metadata={
             "name": "businessObject",

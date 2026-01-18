@@ -12,7 +12,7 @@ class Frm:
     class Meta:
         name = "frm"
 
-    am: Optional[str] = field(
+    am: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

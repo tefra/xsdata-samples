@@ -15,7 +15,7 @@ class LinkSequenceProjectionVersionStructure(ProjectionVersionStructure):
     class Meta:
         name = "LinkSequenceProjection_VersionStructure"
 
-    projected_link_sequence_ref: Optional[LinkSequenceRefStructure] = field(
+    projected_link_sequence_ref: LinkSequenceRefStructure | None = field(
         default=None,
         metadata={
             "name": "ProjectedLinkSequenceRef",
@@ -23,7 +23,7 @@ class LinkSequenceProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distance: Optional[Decimal] = field(
+    distance: Decimal | None = field(
         default=None,
         metadata={
             "name": "Distance",
@@ -31,9 +31,7 @@ class LinkSequenceProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    points_or_line_string: Optional[
-        Union[PointRefsRelStructure, LineString]
-    ] = field(
+    points_or_line_string: PointRefsRelStructure | LineString | None = field(
         default=None,
         metadata={
             "type": "Elements",

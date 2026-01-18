@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -125,7 +127,7 @@ class RptContainer:
     class Meta:
         name = "RPT-CONTAINER"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -134,7 +136,7 @@ class RptContainer:
             "required": True,
         },
     )
-    short_name_fragments: Optional["RptContainer.ShortNameFragments"] = field(
+    short_name_fragments: RptContainer.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -142,7 +144,7 @@ class RptContainer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -150,7 +152,7 @@ class RptContainer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -158,7 +160,7 @@ class RptContainer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -166,7 +168,7 @@ class RptContainer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -174,7 +176,7 @@ class RptContainer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -182,7 +184,7 @@ class RptContainer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["RptContainer.Annotations"] = field(
+    annotations: RptContainer.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -190,7 +192,7 @@ class RptContainer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    by_pass_point_irefs: Optional["RptContainer.ByPassPointIrefs"] = field(
+    by_pass_point_irefs: RptContainer.ByPassPointIrefs | None = field(
         default=None,
         metadata={
             "name": "BY-PASS-POINT-IREFS",
@@ -198,9 +200,7 @@ class RptContainer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    explicit_rpt_profile_selection_refs: Optional[
-        "RptContainer.ExplicitRptProfileSelectionRefs"
-    ] = field(
+    explicit_rpt_profile_selection_refs: RptContainer.ExplicitRptProfileSelectionRefs | None = field(
         default=None,
         metadata={
             "name": "EXPLICIT-RPT-PROFILE-SELECTION-REFS",
@@ -208,7 +208,7 @@ class RptContainer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_containers: Optional["RptContainer.RptContainers"] = field(
+    rpt_containers: RptContainer.RptContainers | None = field(
         default=None,
         metadata={
             "name": "RPT-CONTAINERS",
@@ -216,9 +216,7 @@ class RptContainer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_executable_entity_properties: Optional[
-        RptExecutableEntityProperties
-    ] = field(
+    rpt_executable_entity_properties: RptExecutableEntityProperties | None = field(
         default=None,
         metadata={
             "name": "RPT-EXECUTABLE-ENTITY-PROPERTIES",
@@ -226,7 +224,7 @@ class RptContainer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_hooks: Optional["RptContainer.RptHooks"] = field(
+    rpt_hooks: RptContainer.RptHooks | None = field(
         default=None,
         metadata={
             "name": "RPT-HOOKS",
@@ -234,7 +232,7 @@ class RptContainer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_impl_policy: Optional[RptImplPolicy] = field(
+    rpt_impl_policy: RptImplPolicy | None = field(
         default=None,
         metadata={
             "name": "RPT-IMPL-POLICY",
@@ -242,7 +240,7 @@ class RptContainer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_sw_prototyping_access: Optional[RptSwPrototypingAccess] = field(
+    rpt_sw_prototyping_access: RptSwPrototypingAccess | None = field(
         default=None,
         metadata={
             "name": "RPT-SW-PROTOTYPING-ACCESS",
@@ -250,7 +248,7 @@ class RptContainer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -258,14 +256,14 @@ class RptContainer:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -273,7 +271,7 @@ class RptContainer:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -317,7 +315,7 @@ class RptContainer:
     @dataclass
     class ExplicitRptProfileSelectionRefs:
         explicit_rpt_profile_selection_ref: list[
-            "RptContainer.ExplicitRptProfileSelectionRefs.ExplicitRptProfileSelectionRef"
+            RptContainer.ExplicitRptProfileSelectionRefs.ExplicitRptProfileSelectionRef
         ] = field(
             default_factory=list,
             metadata={
@@ -329,7 +327,7 @@ class RptContainer:
 
         @dataclass
         class ExplicitRptProfileSelectionRef(Ref):
-            dest: Optional[RptProfileSubtypesEnum] = field(
+            dest: RptProfileSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -340,7 +338,7 @@ class RptContainer:
 
     @dataclass
     class RptContainers:
-        rpt_container: list["RptContainer"] = field(
+        rpt_container: list[RptContainer] = field(
             default_factory=list,
             metadata={
                 "name": "RPT-CONTAINER",

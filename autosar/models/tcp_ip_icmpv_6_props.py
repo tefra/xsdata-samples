@@ -45,7 +45,7 @@ class TcpIpIcmpv6Props:
     class Meta:
         name = "TCP-IP-ICMPV-6-PROPS"
 
-    tcp_ip_icmp_v_6_echo_reply_avoid_fragmentation: Optional[Boolean] = field(
+    tcp_ip_icmp_v_6_echo_reply_avoid_fragmentation: Boolean | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-ICMP-V-6-ECHO-REPLY-AVOID-FRAGMENTATION",
@@ -53,7 +53,7 @@ class TcpIpIcmpv6Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_icmp_v_6_echo_reply_enabled: Optional[Boolean] = field(
+    tcp_ip_icmp_v_6_echo_reply_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-ICMP-V-6-ECHO-REPLY-ENABLED",
@@ -61,7 +61,7 @@ class TcpIpIcmpv6Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_icmp_v_6_hop_limit: Optional[PositiveInteger] = field(
+    tcp_ip_icmp_v_6_hop_limit: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-ICMP-V-6-HOP-LIMIT",
@@ -69,7 +69,7 @@ class TcpIpIcmpv6Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_icmp_v_6_msg_destination_unreachable_enabled: Optional[Boolean] = (
+    tcp_ip_icmp_v_6_msg_destination_unreachable_enabled: Boolean | None = (
         field(
             default=None,
             metadata={
@@ -79,7 +79,7 @@ class TcpIpIcmpv6Props:
             },
         )
     )
-    tcp_ip_icmp_v_6_msg_parameter_problem_enabled: Optional[Boolean] = field(
+    tcp_ip_icmp_v_6_msg_parameter_problem_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-ICMP-V-6-MSG-PARAMETER-PROBLEM-ENABLED",
@@ -87,14 +87,14 @@ class TcpIpIcmpv6Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -11,7 +11,7 @@ class RoutingVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "Routing_VersionStructure"
 
-    is_restricted: Optional[bool] = field(
+    is_restricted: bool | None = field(
         default=None,
         metadata={
             "name": "IsRestricted",
@@ -19,7 +19,7 @@ class RoutingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    return_route_identical: Optional[bool] = field(
+    return_route_identical: bool | None = field(
         default=None,
         metadata={
             "name": "ReturnRouteIdentical",
@@ -27,7 +27,7 @@ class RoutingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    forwards_only: Optional[bool] = field(
+    forwards_only: bool | None = field(
         default=None,
         metadata={
             "name": "ForwardsOnly",
@@ -35,7 +35,7 @@ class RoutingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    cross_border: Optional[bool] = field(
+    cross_border: bool | None = field(
         default=None,
         metadata={
             "name": "CrossBorder",

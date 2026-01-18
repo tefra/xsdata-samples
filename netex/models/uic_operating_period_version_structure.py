@@ -13,7 +13,7 @@ class UicOperatingPeriodVersionStructure(OperatingPeriodVersionStructure):
     class Meta:
         name = "UicOperatingPeriod_VersionStructure"
 
-    valid_day_bits: Optional[str] = field(
+    valid_day_bits: str | None = field(
         default=None,
         metadata={
             "name": "ValidDayBits",

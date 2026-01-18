@@ -16,7 +16,7 @@ class RelatesToType:
             "required": True,
         },
     )
-    relationship_type: Union[RelationshipType, str] = field(
+    relationship_type: RelationshipType | str = field(
         default=RelationshipType.HTTP_WWW_W3_ORG_2005_08_ADDRESSING_REPLY,
         metadata={
             "name": "RelationshipType",

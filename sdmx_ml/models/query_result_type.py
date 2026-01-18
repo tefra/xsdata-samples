@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -26,9 +28,7 @@ class QueryResultType:
         the source of a metadata set.
     """
 
-    data_result_or_metadata_result: Optional[
-        Union["QueryResultType.DataResult", "QueryResultType.MetadataResult"]
-    ] = field(
+    data_result_or_metadata_result: QueryResultType.DataResult | QueryResultType.MetadataResult | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -46,7 +46,7 @@ class QueryResultType:
             ),
         },
     )
-    time_series_match: Optional[bool] = field(
+    time_series_match: bool | None = field(
         default=None,
         metadata={
             "name": "timeSeriesMatch",

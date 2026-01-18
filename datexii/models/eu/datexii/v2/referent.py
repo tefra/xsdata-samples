@@ -25,7 +25,7 @@ class Referent:
     :ivar referent_extension:
     """
 
-    referent_identifier: Optional[str] = field(
+    referent_identifier: str | None = field(
         default=None,
         metadata={
             "name": "referentIdentifier",
@@ -35,7 +35,7 @@ class Referent:
             "max_length": 1024,
         },
     )
-    referent_name: Optional[str] = field(
+    referent_name: str | None = field(
         default=None,
         metadata={
             "name": "referentName",
@@ -44,7 +44,7 @@ class Referent:
             "max_length": 1024,
         },
     )
-    referent_type: Optional[ReferentTypeEnum] = field(
+    referent_type: ReferentTypeEnum | None = field(
         default=None,
         metadata={
             "name": "referentType",
@@ -53,7 +53,7 @@ class Referent:
             "required": True,
         },
     )
-    referent_description: Optional[MultilingualString] = field(
+    referent_description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "referentDescription",
@@ -61,7 +61,7 @@ class Referent:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    point_coordinates: Optional[PointCoordinates] = field(
+    point_coordinates: PointCoordinates | None = field(
         default=None,
         metadata={
             "name": "pointCoordinates",
@@ -69,7 +69,7 @@ class Referent:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    referent_extension: Optional[ExtensionType] = field(
+    referent_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "referentExtension",

@@ -27,7 +27,7 @@ class DateType:
     xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">date</ns1:PrimitiveType>.
     """
 
-    value: Optional[XmlDate] = field(
+    value: XmlDate | None = field(
         default=None,
         metadata={
             "required": True,

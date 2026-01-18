@@ -14,7 +14,7 @@ class SeatingEquipmentVersionStructure(WaitingEquipmentVersionStructure):
     class Meta:
         name = "SeatingEquipment_VersionStructure"
 
-    arm_rest: Optional[bool] = field(
+    arm_rest: bool | None = field(
         default=None,
         metadata={
             "name": "ArmRest",
@@ -22,7 +22,7 @@ class SeatingEquipmentVersionStructure(WaitingEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    back_rest: Optional[bool] = field(
+    back_rest: bool | None = field(
         default=None,
         metadata={
             "name": "BackRest",
@@ -30,7 +30,7 @@ class SeatingEquipmentVersionStructure(WaitingEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    seat_height: Optional[Decimal] = field(
+    seat_height: Decimal | None = field(
         default=None,
         metadata={
             "name": "SeatHeight",

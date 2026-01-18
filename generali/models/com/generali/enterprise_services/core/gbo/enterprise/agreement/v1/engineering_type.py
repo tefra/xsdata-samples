@@ -18,7 +18,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class EngineeringType:
-    signoff_date: Optional[DateTimeType] = field(
+    signoff_date: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "SignoffDate",
@@ -26,7 +26,7 @@ class EngineeringType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    test_commission_days: Optional[NumberType] = field(
+    test_commission_days: NumberType | None = field(
         default=None,
         metadata={
             "name": "TestCommissionDays",
@@ -34,7 +34,7 @@ class EngineeringType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    maintenance_record: Optional[EngineeringMaintenanceType] = field(
+    maintenance_record: EngineeringMaintenanceType | None = field(
         default=None,
         metadata={
             "name": "MaintenanceRecord",

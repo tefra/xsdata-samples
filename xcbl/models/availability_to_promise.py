@@ -106,7 +106,7 @@ class AvailabilityToPromiseListOfAttachment:
 
 @dataclass(kw_only=True)
 class AvailabilityToPromiseSummary:
-    total_number_of_line_items: Optional[TotalNumberOfLineItems] = field(
+    total_number_of_line_items: TotalNumberOfLineItems | None = field(
         default=None,
         metadata={
             "name": "TotalNumberOfLineItems",
@@ -142,7 +142,7 @@ class AvailabilityToPromiseHeader:
             "required": True,
         }
     )
-    list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
+    list_of_reference_coded: ListOfReferenceCoded | None = field(
         default=None,
         metadata={
             "name": "ListOfReferenceCoded",
@@ -163,14 +163,14 @@ class AvailabilityToPromiseHeader:
             "required": True,
         }
     )
-    atpcheck_type: Optional[AtpcheckType] = field(
+    atpcheck_type: AtpcheckType | None = field(
         default=None,
         metadata={
             "name": "ATPCheckType",
             "type": "Element",
         },
     )
-    atpresponse: Optional[Atpresponse] = field(
+    atpresponse: Atpresponse | None = field(
         default=None,
         metadata={
             "name": "ATPResponse",
@@ -184,39 +184,35 @@ class AvailabilityToPromiseHeader:
             "required": True,
         }
     )
-    responding_party: Optional[RespondingParty] = field(
+    responding_party: RespondingParty | None = field(
         default=None,
         metadata={
             "name": "RespondingParty",
             "type": "Element",
         },
     )
-    availability_ship_to_party: Optional[AvailabilityShipToParty] = field(
+    availability_ship_to_party: AvailabilityShipToParty | None = field(
         default=None,
         metadata={
             "name": "AvailabilityShipToParty",
             "type": "Element",
         },
     )
-    availability_to_promise_header_transport: Optional[
-        AvailabilityToPromiseHeaderTransport
-    ] = field(
+    availability_to_promise_header_transport: AvailabilityToPromiseHeaderTransport | None = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseHeaderTransport",
             "type": "Element",
         },
     )
-    general_note: Optional[GeneralNote] = field(
+    general_note: GeneralNote | None = field(
         default=None,
         metadata={
             "name": "GeneralNote",
             "type": "Element",
         },
     )
-    availability_to_promise_list_of_attachment: Optional[
-        AvailabilityToPromiseListOfAttachment
-    ] = field(
+    availability_to_promise_list_of_attachment: AvailabilityToPromiseListOfAttachment | None = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseListOfAttachment",
@@ -234,34 +230,28 @@ class AvailabilityToPromiseItemDetail:
             "required": True,
         }
     )
-    availability_to_promise_delivery_detail: Optional[
-        AvailabilityToPromiseDeliveryDetail
-    ] = field(
+    availability_to_promise_delivery_detail: AvailabilityToPromiseDeliveryDetail | None = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseDeliveryDetail",
             "type": "Element",
         },
     )
-    availability_to_promise_transport_detail: Optional[
-        AvailabilityToPromiseTransportDetail
-    ] = field(
+    availability_to_promise_transport_detail: AvailabilityToPromiseTransportDetail | None = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseTransportDetail",
             "type": "Element",
         },
     )
-    availability_to_promise_item_list_of_attachment: Optional[
-        AvailabilityToPromiseItemListOfAttachment
-    ] = field(
+    availability_to_promise_item_list_of_attachment: AvailabilityToPromiseItemListOfAttachment | None = field(
         default=None,
         metadata={
             "name": "AvailabilityToPromiseItemListOfAttachment",
             "type": "Element",
         },
     )
-    general_note: Optional[GeneralNote] = field(
+    general_note: GeneralNote | None = field(
         default=None,
         metadata={
             "name": "GeneralNote",
@@ -286,9 +276,7 @@ class ListOfAvailabilityToPromiseItemDetail:
 
 @dataclass(kw_only=True)
 class AvailabilityToPromiseDetail:
-    list_of_availability_to_promise_item_detail: Optional[
-        ListOfAvailabilityToPromiseItemDetail
-    ] = field(
+    list_of_availability_to_promise_item_detail: ListOfAvailabilityToPromiseItemDetail | None = field(
         default=None,
         metadata={
             "name": "ListOfAvailabilityToPromiseItemDetail",
@@ -306,7 +294,7 @@ class AvailabilityToPromise:
             "required": True,
         }
     )
-    availability_to_promise_detail: Optional[AvailabilityToPromiseDetail] = (
+    availability_to_promise_detail: AvailabilityToPromiseDetail | None = (
         field(
             default=None,
             metadata={
@@ -315,7 +303,7 @@ class AvailabilityToPromise:
             },
         )
     )
-    availability_to_promise_summary: Optional[AvailabilityToPromiseSummary] = (
+    availability_to_promise_summary: AvailabilityToPromiseSummary | None = (
         field(
             default=None,
             metadata={

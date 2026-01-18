@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -27,28 +29,28 @@ class WireTypeDef:
         name = "wireTypeDef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    type_name: Optional["WireTypeDef.TypeName"] = field(
+    type_name: WireTypeDef.TypeName | None = field(
         default=None,
         metadata={
             "name": "typeName",
             "type": "Element",
         },
     )
-    type_definition: list["WireTypeDef.TypeDefinition"] = field(
+    type_definition: list[WireTypeDef.TypeDefinition] = field(
         default_factory=list,
         metadata={
             "name": "typeDefinition",
             "type": "Element",
         },
     )
-    view_ref: list["WireTypeDef.ViewRef"] = field(
+    view_ref: list[WireTypeDef.ViewRef] = field(
         default_factory=list,
         metadata={
             "name": "viewRef",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -86,7 +88,7 @@ class WireTypeDef:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -102,7 +104,7 @@ class WireTypeDef:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

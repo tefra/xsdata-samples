@@ -72,20 +72,20 @@ class PeerReview:
         name = "peer_review"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    contributors: Optional[Contributors] = field(
+    contributors: Contributors | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    titles: Optional[Titles] = field(
+    titles: Titles | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    review_date: Optional[ReviewDate] = field(
+    review_date: ReviewDate | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -99,26 +99,26 @@ class PeerReview:
             "max_occurs": 5,
         },
     )
-    competing_interest_statement: Optional[CompetingInterestStatement] = field(
+    competing_interest_statement: CompetingInterestStatement | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    running_number: Optional[RunningNumber] = field(
+    running_number: RunningNumber | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    program: Optional[AccessIndicatorsProgram] = field(
+    program: AccessIndicatorsProgram | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/AccessIndicators.xsd",
         },
     )
-    crossref_org_relations_program: Optional[RelationsProgram] = field(
+    crossref_org_relations_program: RelationsProgram | None = field(
         default=None,
         metadata={
             "name": "program",
@@ -127,46 +127,46 @@ class PeerReview:
             "required": True,
         },
     )
-    scn_policies: Optional[ScnPolicies] = field(
+    scn_policies: ScnPolicies | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    doi_data: Optional[DoiData] = field(
+    doi_data: DoiData | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    stage: Optional[PeerReviewStage] = field(
+    stage: PeerReviewStage | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    type_value: Optional[PeerReviewType] = field(
+    type_value: PeerReviewType | None = field(
         default=None,
         metadata={
             "name": "type",
             "type": "Attribute",
         },
     )
-    recommendation: Optional[PeerReviewRecommendation] = field(
+    recommendation: PeerReviewRecommendation | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    revision_round: Optional[int] = field(
+    revision_round: int | None = field(
         default=None,
         metadata={
             "name": "revision-round",
             "type": "Attribute",
         },
     )
-    language: Optional[PeerReviewLanguage] = field(
+    language: PeerReviewLanguage | None = field(
         default=None,
         metadata={
             "type": "Attribute",

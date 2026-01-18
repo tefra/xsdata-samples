@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -43,7 +45,7 @@ class IncludedDataTypeSet:
     class Meta:
         name = "INCLUDED-DATA-TYPE-SET"
 
-    data_type_refs: Optional["IncludedDataTypeSet.DataTypeRefs"] = field(
+    data_type_refs: IncludedDataTypeSet.DataTypeRefs | None = field(
         default=None,
         metadata={
             "name": "DATA-TYPE-REFS",
@@ -51,7 +53,7 @@ class IncludedDataTypeSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    literal_prefix: Optional[Identifier] = field(
+    literal_prefix: Identifier | None = field(
         default=None,
         metadata={
             "name": "LITERAL-PREFIX",
@@ -59,14 +61,14 @@ class IncludedDataTypeSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -77,7 +79,7 @@ class IncludedDataTypeSet:
 
     @dataclass
     class DataTypeRefs:
-        data_type_ref: list["IncludedDataTypeSet.DataTypeRefs.DataTypeRef"] = (
+        data_type_ref: list[IncludedDataTypeSet.DataTypeRefs.DataTypeRef] = (
             field(
                 default_factory=list,
                 metadata={
@@ -90,7 +92,7 @@ class IncludedDataTypeSet:
 
         @dataclass
         class DataTypeRef(Ref):
-            dest: Optional[AutosarDataTypeSubtypesEnum] = field(
+            dest: AutosarDataTypeSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

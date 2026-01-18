@@ -12,7 +12,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class RiskType:
-    global_risk_id: Optional[str] = field(
+    global_risk_id: str | None = field(
         default=None,
         metadata={
             "name": "GlobalRiskID",
@@ -21,7 +21,7 @@ class RiskType:
             "required": True,
         },
     )
-    local_risk_id: Optional[str] = field(
+    local_risk_id: str | None = field(
         default=None,
         metadata={
             "name": "LocalRiskID",
@@ -30,7 +30,7 @@ class RiskType:
             "required": True,
         },
     )
-    reinsurance_agreement: Optional[str] = field(
+    reinsurance_agreement: str | None = field(
         default=None,
         metadata={
             "name": "ReinsuranceAgreement",
@@ -38,7 +38,7 @@ class RiskType:
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
         },
     )
-    locations: Optional[RiskTypeLocations] = field(
+    locations: RiskTypeLocations | None = field(
         default=None,
         metadata={
             "name": "Locations",

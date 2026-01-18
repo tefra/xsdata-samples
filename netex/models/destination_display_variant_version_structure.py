@@ -19,7 +19,7 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "DestinationDisplayVariant_VersionStructure"
 
-    destination_display_ref: Optional[DestinationDisplayRef] = field(
+    destination_display_ref: DestinationDisplayRef | None = field(
         default=None,
         metadata={
             "name": "DestinationDisplayRef",
@@ -27,9 +27,7 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination_display_context: Optional[
-        DestinationDisplayContextEnumeration
-    ] = field(
+    destination_display_context: DestinationDisplayContextEnumeration | None = field(
         default=None,
         metadata={
             "name": "DestinationDisplayContext",
@@ -48,7 +46,7 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -56,7 +54,7 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -64,7 +62,7 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    side_text: Optional[MultilingualString] = field(
+    side_text: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "SideText",
@@ -72,7 +70,7 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    front_text: Optional[MultilingualString] = field(
+    front_text: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "FrontText",
@@ -80,7 +78,7 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    driver_display_text: Optional[MultilingualString] = field(
+    driver_display_text: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "DriverDisplayText",
@@ -88,7 +86,7 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    presentation: Optional[PresentationStructure] = field(
+    presentation: PresentationStructure | None = field(
         default=None,
         metadata={
             "name": "Presentation",
@@ -96,7 +94,7 @@ class DestinationDisplayVariantVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vias: Optional[ViasRelStructure] = field(
+    vias: ViasRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

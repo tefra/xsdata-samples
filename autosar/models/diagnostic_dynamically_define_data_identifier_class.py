@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -111,7 +113,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
     class Meta:
         name = "DIAGNOSTIC-DYNAMICALLY-DEFINE-DATA-IDENTIFIER-CLASS"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -120,9 +122,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticDynamicallyDefineDataIdentifierClass.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticDynamicallyDefineDataIdentifierClass.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -130,7 +130,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -138,7 +138,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -146,7 +146,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -154,7 +154,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -162,7 +162,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -170,9 +170,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "DiagnosticDynamicallyDefineDataIdentifierClass.Annotations"
-    ] = field(
+    annotations: DiagnosticDynamicallyDefineDataIdentifierClass.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -180,7 +178,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -188,9 +186,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: Optional[
-        "DiagnosticDynamicallyDefineDataIdentifierClass.AccessPermissionRef"
-    ] = field(
+    access_permission_ref: DiagnosticDynamicallyDefineDataIdentifierClass.AccessPermissionRef | None = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -198,9 +194,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_validity: Optional[
-        DiagnosticAccessPermissionValidityEnum
-    ] = field(
+    access_permission_validity: DiagnosticAccessPermissionValidityEnum | None = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-VALIDITY",
@@ -208,7 +202,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    check_per_source_id: Optional[Boolean] = field(
+    check_per_source_id: Boolean | None = field(
         default=None,
         metadata={
             "name": "CHECK-PER-SOURCE-ID",
@@ -216,7 +210,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    configuration_handling: Optional[DiagnosticHandleDddiConfigurationEnum] = (
+    configuration_handling: DiagnosticHandleDddiConfigurationEnum | None = (
         field(
             default=None,
             metadata={
@@ -226,9 +220,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             },
         )
     )
-    subfunctions: Optional[
-        "DiagnosticDynamicallyDefineDataIdentifierClass.Subfunctions"
-    ] = field(
+    subfunctions: DiagnosticDynamicallyDefineDataIdentifierClass.Subfunctions | None = field(
         default=None,
         metadata={
             "name": "SUBFUNCTIONS",
@@ -236,14 +228,14 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -251,7 +243,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -283,7 +275,7 @@ class DiagnosticDynamicallyDefineDataIdentifierClass:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: Optional[DiagnosticAccessPermissionSubtypesEnum] = field(
+        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

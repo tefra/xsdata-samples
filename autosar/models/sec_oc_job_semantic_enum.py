@@ -27,20 +27,20 @@ class SecOcJobSemanticEnum:
     class Meta:
         name = "SEC-OC-JOB-SEMANTIC-ENUM"
 
-    value: Optional[SecOcJobSemanticEnumSimple] = field(
+    value: SecOcJobSemanticEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

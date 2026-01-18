@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -47,7 +49,7 @@ class PhysConstrs:
     class Meta:
         name = "PHYS-CONSTRS"
 
-    lower_limit: Optional[Limit] = field(
+    lower_limit: Limit | None = field(
         default=None,
         metadata={
             "name": "LOWER-LIMIT",
@@ -55,7 +57,7 @@ class PhysConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_limit: Optional[Limit] = field(
+    upper_limit: Limit | None = field(
         default=None,
         metadata={
             "name": "UPPER-LIMIT",
@@ -63,7 +65,7 @@ class PhysConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    scale_constrs: Optional["PhysConstrs.ScaleConstrs"] = field(
+    scale_constrs: PhysConstrs.ScaleConstrs | None = field(
         default=None,
         metadata={
             "name": "SCALE-CONSTRS",
@@ -71,7 +73,7 @@ class PhysConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_gradient: Optional[NumericalValue] = field(
+    max_gradient: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "MAX-GRADIENT",
@@ -79,7 +81,7 @@ class PhysConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_diff: Optional[NumericalValue] = field(
+    max_diff: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "MAX-DIFF",
@@ -87,7 +89,7 @@ class PhysConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    monotony: Optional[MonotonyEnum] = field(
+    monotony: MonotonyEnum | None = field(
         default=None,
         metadata={
             "name": "MONOTONY",
@@ -95,7 +97,7 @@ class PhysConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_ref: Optional["PhysConstrs.UnitRef"] = field(
+    unit_ref: PhysConstrs.UnitRef | None = field(
         default=None,
         metadata={
             "name": "UNIT-REF",
@@ -103,14 +105,14 @@ class PhysConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -132,7 +134,7 @@ class PhysConstrs:
 
     @dataclass
     class UnitRef(Ref):
-        dest: Optional[UnitSubtypesEnum] = field(
+        dest: UnitSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

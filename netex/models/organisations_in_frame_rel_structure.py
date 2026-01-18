@@ -22,17 +22,7 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
         name = "organisationsInFrame_RelStructure"
 
     organisation_or_transport_organisation: Iterable[
-        Union[
-            RetailConsortium,
-            ServicedOrganisation,
-            GeneralOrganisation,
-            ManagementAgent,
-            TravelAgent,
-            OtherOrganisation,
-            OnlineServiceOperator,
-            Authority,
-            Operator,
-        ]
+        RetailConsortium | ServicedOrganisation | GeneralOrganisation | ManagementAgent | TravelAgent | OtherOrganisation | OnlineServiceOperator | Authority | Operator
     ] = field(
         default_factory=list,
         metadata={

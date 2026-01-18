@@ -14,7 +14,7 @@ class CodespacesRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "codespaces_RelStructure"
 
-    codespace_ref_or_codespace: Iterable[Union[CodespaceRef, Codespace]] = (
+    codespace_ref_or_codespace: Iterable[CodespaceRef | Codespace] = (
         field(
             default_factory=list,
             metadata={

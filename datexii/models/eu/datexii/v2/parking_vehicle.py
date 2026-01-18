@@ -36,7 +36,7 @@ class ParkingVehicle:
     :ivar version:
     """
 
-    parking_record_reference: Optional[ParkingRecordVersionedReference] = (
+    parking_record_reference: ParkingRecordVersionedReference | None = (
         field(
             default=None,
             metadata={
@@ -47,7 +47,7 @@ class ParkingVehicle:
             },
         )
     )
-    parking_space_reference: Optional[str] = field(
+    parking_space_reference: str | None = field(
         default=None,
         metadata={
             "name": "parkingSpaceReference",
@@ -73,7 +73,7 @@ class ParkingVehicle:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle: Optional[Vehicle] = field(
+    vehicle: Vehicle | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -81,7 +81,7 @@ class ParkingVehicle:
             "required": True,
         },
     )
-    individual_charge: Optional[IndividualCharge] = field(
+    individual_charge: IndividualCharge | None = field(
         default=None,
         metadata={
             "name": "individualCharge",
@@ -89,7 +89,7 @@ class ParkingVehicle:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_period: Optional[OverallPeriod] = field(
+    parking_period: OverallPeriod | None = field(
         default=None,
         metadata={
             "name": "parkingPeriod",
@@ -97,7 +97,7 @@ class ParkingVehicle:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_vehicle_extension: Optional[ExtensionType] = field(
+    parking_vehicle_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "parkingVehicleExtension",
@@ -105,14 +105,14 @@ class ParkingVehicle:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

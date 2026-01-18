@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Optional
@@ -2322,14 +2324,14 @@ class WinningQuoteIndicator:
 
 @dataclass(kw_only=True)
 class Attachment:
-    attachment_action_coded: Optional[AttachmentActionCoded] = field(
+    attachment_action_coded: AttachmentActionCoded | None = field(
         default=None,
         metadata={
             "name": "AttachmentActionCoded",
             "type": "Element",
         },
     )
-    attachment_action_coded_other: Optional[AttachmentActionCodedOther] = (
+    attachment_action_coded_other: AttachmentActionCodedOther | None = (
         field(
             default=None,
             metadata={
@@ -2345,42 +2347,42 @@ class Attachment:
             "required": True,
         }
     )
-    file_name: Optional[FileName] = field(
+    file_name: FileName | None = field(
         default=None,
         metadata={
             "name": "FileName",
             "type": "Element",
         },
     )
-    attachment_title: Optional[AttachmentTitle] = field(
+    attachment_title: AttachmentTitle | None = field(
         default=None,
         metadata={
             "name": "AttachmentTitle",
             "type": "Element",
         },
     )
-    attachment_description: Optional[AttachmentDescription] = field(
+    attachment_description: AttachmentDescription | None = field(
         default=None,
         metadata={
             "name": "AttachmentDescription",
             "type": "Element",
         },
     )
-    language: Optional[Language] = field(
+    language: Language | None = field(
         default=None,
         metadata={
             "name": "Language",
             "type": "Element",
         },
     )
-    mimetype: Optional[Mimetype] = field(
+    mimetype: Mimetype | None = field(
         default=None,
         metadata={
             "name": "MIMEType",
             "type": "Element",
         },
     )
-    replacement_file: Optional[ReplacementFile] = field(
+    replacement_file: ReplacementFile | None = field(
         default=None,
         metadata={
             "name": "ReplacementFile",
@@ -2441,14 +2443,14 @@ class CatalogReference:
             "required": True,
         }
     )
-    catalog_id: Optional[CatalogId] = field(
+    catalog_id: CatalogId | None = field(
         default=None,
         metadata={
             "name": "CatalogID",
             "type": "Element",
         },
     )
-    catalog_item_id: Optional[CatalogItemId] = field(
+    catalog_item_id: CatalogItemId | None = field(
         default=None,
         metadata={
             "name": "CatalogItemID",
@@ -2491,7 +2493,7 @@ class ContractType:
             "required": True,
         }
     )
-    contract_type_coded_other: Optional[ContractTypeCodedOther] = field(
+    contract_type_coded_other: ContractTypeCodedOther | None = field(
         default=None,
         metadata={
             "name": "ContractTypeCodedOther",
@@ -2531,7 +2533,7 @@ class DateQualifier:
             "required": True,
         }
     )
-    date_qualifier_coded_other: Optional[DateQualifierCodedOther] = field(
+    date_qualifier_coded_other: DateQualifierCodedOther | None = field(
         default=None,
         metadata={
             "name": "DateQualifierCodedOther",
@@ -2589,44 +2591,42 @@ class HazardousIdentifiers:
             "required": True,
         }
     )
-    hazardous_regulations_coded_other: Optional[
-        HazardousRegulationsCodedOther
-    ] = field(
+    hazardous_regulations_coded_other: HazardousRegulationsCodedOther | None = field(
         default=None,
         metadata={
             "name": "HazardousRegulationsCodedOther",
             "type": "Element",
         },
     )
-    hazard_code: Optional[HazardCode] = field(
+    hazard_code: HazardCode | None = field(
         default=None,
         metadata={
             "name": "HazardCode",
             "type": "Element",
         },
     )
-    code_extension: Optional[CodeExtension] = field(
+    code_extension: CodeExtension | None = field(
         default=None,
         metadata={
             "name": "CodeExtension",
             "type": "Element",
         },
     )
-    code_version: Optional[CodeVersion] = field(
+    code_version: CodeVersion | None = field(
         default=None,
         metadata={
             "name": "CodeVersion",
             "type": "Element",
         },
     )
-    hazard_official_text: Optional[HazardOfficialText] = field(
+    hazard_official_text: HazardOfficialText | None = field(
         default=None,
         metadata={
             "name": "HazardOfficialText",
             "type": "Element",
         },
     )
-    trem_card_num: Optional[TremCardNum] = field(
+    trem_card_num: TremCardNum | None = field(
         default=None,
         metadata={
             "name": "TremCardNum",
@@ -2637,16 +2637,14 @@ class HazardousIdentifiers:
 
 @dataclass(kw_only=True)
 class HazardousPlacardInformation:
-    hazardous_placard_identification: Optional[
-        HazardousPlacardIdentification
-    ] = field(
+    hazardous_placard_identification: HazardousPlacardIdentification | None = field(
         default=None,
         metadata={
             "name": "HazardousPlacardIdentification",
             "type": "Element",
         },
     )
-    hazardous_placard_text: Optional[HazardousPlacardText] = field(
+    hazardous_placard_text: HazardousPlacardText | None = field(
         default=None,
         metadata={
             "name": "HazardousPlacardText",
@@ -2657,28 +2655,28 @@ class HazardousPlacardInformation:
 
 @dataclass(kw_only=True)
 class HazardousShipmentInformation:
-    hazard_packing_coded: Optional[HazardPackingCoded] = field(
+    hazard_packing_coded: HazardPackingCoded | None = field(
         default=None,
         metadata={
             "name": "HazardPackingCoded",
             "type": "Element",
         },
     )
-    hazard_packing_coded_other: Optional[HazardPackingCodedOther] = field(
+    hazard_packing_coded_other: HazardPackingCodedOther | None = field(
         default=None,
         metadata={
             "name": "HazardPackingCodedOther",
             "type": "Element",
         },
     )
-    hazardous_shipment_coded: Optional[HazardousShipmentCoded] = field(
+    hazardous_shipment_coded: HazardousShipmentCoded | None = field(
         default=None,
         metadata={
             "name": "HazardousShipmentCoded",
             "type": "Element",
         },
     )
-    hazardous_shipment_coded_other: Optional[HazardousShipmentCodedOther] = (
+    hazardous_shipment_coded_other: HazardousShipmentCodedOther | None = (
         field(
             default=None,
             metadata={
@@ -2687,21 +2685,21 @@ class HazardousShipmentInformation:
             },
         )
     )
-    hazardous_shipment_note: Optional[HazardousShipmentNote] = field(
+    hazardous_shipment_note: HazardousShipmentNote | None = field(
         default=None,
         metadata={
             "name": "HazardousShipmentNote",
             "type": "Element",
         },
     )
-    hazardous_zone_coded: Optional[HazardousZoneCoded] = field(
+    hazardous_zone_coded: HazardousZoneCoded | None = field(
         default=None,
         metadata={
             "name": "HazardousZoneCoded",
             "type": "Element",
         },
     )
-    hazardous_zone_coded_other: Optional[HazardousZoneCodedOther] = field(
+    hazardous_zone_coded_other: HazardousZoneCodedOther | None = field(
         default=None,
         metadata={
             "name": "HazardousZoneCodedOther",
@@ -2723,14 +2721,14 @@ class InitiatingParty:
 
 @dataclass(kw_only=True)
 class ItemCharacteristic:
-    item_characteristic_coded: Optional[ItemCharacteristicCoded] = field(
+    item_characteristic_coded: ItemCharacteristicCoded | None = field(
         default=None,
         metadata={
             "name": "ItemCharacteristicCoded",
             "type": "Element",
         },
     )
-    item_characteristic_coded_other: Optional[ItemCharacteristicCodedOther] = (
+    item_characteristic_coded_other: ItemCharacteristicCodedOther | None = (
         field(
             default=None,
             metadata={
@@ -2739,16 +2737,14 @@ class ItemCharacteristic:
             },
         )
     )
-    surface_layer_position_coded: Optional[SurfaceLayerPositionCoded] = field(
+    surface_layer_position_coded: SurfaceLayerPositionCoded | None = field(
         default=None,
         metadata={
             "name": "SurfaceLayerPositionCoded",
             "type": "Element",
         },
     )
-    surface_layer_position_coded_other: Optional[
-        SurfaceLayerPositionCodedOther
-    ] = field(
+    surface_layer_position_coded_other: SurfaceLayerPositionCodedOther | None = field(
         default=None,
         metadata={
             "name": "SurfaceLayerPositionCodedOther",
@@ -2762,21 +2758,21 @@ class ItemCharacteristic:
             "required": True,
         }
     )
-    identifier: Optional[Identifier] = field(
+    identifier: Identifier | None = field(
         default=None,
         metadata={
             "name": "Identifier",
             "type": "Element",
         },
     )
-    unit_of_measurement: Optional[UnitOfMeasurement] = field(
+    unit_of_measurement: UnitOfMeasurement | None = field(
         default=None,
         metadata={
             "name": "UnitOfMeasurement",
             "type": "Element",
         },
     )
-    list_of_dimension: Optional[ListOfDimension] = field(
+    list_of_dimension: ListOfDimension | None = field(
         default=None,
         metadata={
             "name": "ListOfDimension",
@@ -2794,7 +2790,7 @@ class LineItemNum:
             "required": True,
         }
     )
-    seller_line_item_num: Optional[SellerLineItemNum] = field(
+    seller_line_item_num: SellerLineItemNum | None = field(
         default=None,
         metadata={
             "name": "SellerLineItemNum",
@@ -2832,7 +2828,7 @@ class LineItemType:
             "required": True,
         }
     )
-    line_item_type_coded_other: Optional[LineItemTypeCodedOther] = field(
+    line_item_type_coded_other: LineItemTypeCodedOther | None = field(
         default=None,
         metadata={
             "name": "LineItemTypeCodedOther",
@@ -2924,14 +2920,14 @@ class MaterialIssuer:
 
 @dataclass(kw_only=True)
 class MonetaryLimit:
-    significance_coded: Optional[MonetaryLimitSignificanceCoded] = field(
+    significance_coded: MonetaryLimitSignificanceCoded | None = field(
         default=None,
         metadata={
             "name": "SignificanceCoded",
             "type": "Attribute",
         },
     )
-    significance_coded_other: Optional[str] = field(
+    significance_coded_other: str | None = field(
         default=None,
         metadata={
             "name": "SignificanceCodedOther",
@@ -2995,7 +2991,7 @@ class NameValuePair:
             "required": True,
         }
     )
-    datatype: Optional[Datatype] = field(
+    datatype: Datatype | None = field(
         default=None,
         metadata={
             "name": "Datatype",
@@ -3024,14 +3020,14 @@ class PartNum:
             "required": True,
         }
     )
-    part_idext: Optional[PartIdext] = field(
+    part_idext: PartIdext | None = field(
         default=None,
         metadata={
             "name": "PartIDExt",
             "type": "Element",
         },
     )
-    revision_number: Optional[RevisionNumber] = field(
+    revision_number: RevisionNumber | None = field(
         default=None,
         metadata={
             "name": "RevisionNumber",
@@ -3049,7 +3045,7 @@ class PercentQualifier:
             "required": True,
         }
     )
-    percent_qualifier_coded_other: Optional[PercentQualifierCodedOther] = (
+    percent_qualifier_coded_other: PercentQualifierCodedOther | None = (
         field(
             default=None,
             metadata={
@@ -3069,7 +3065,7 @@ class PriceMultiplier:
             "required": True,
         }
     )
-    price_multiplier_coded_other: Optional[PriceMultiplierCodedOther] = field(
+    price_multiplier_coded_other: PriceMultiplierCodedOther | None = field(
         default=None,
         metadata={
             "name": "PriceMultiplierCodedOther",
@@ -3094,7 +3090,7 @@ class PricingType:
             "required": True,
         }
     )
-    price_type_coded_other: Optional[PriceTypeCodedOther] = field(
+    price_type_coded_other: PriceTypeCodedOther | None = field(
         default=None,
         metadata={
             "name": "PriceTypeCodedOther",
@@ -3125,9 +3121,7 @@ class ProductIdentifierCoded:
             }
         )
     )
-    product_identifier_qualifier_coded_other: Optional[
-        ProductIdentifierQualifierCodedOther
-    ] = field(
+    product_identifier_qualifier_coded_other: ProductIdentifierQualifierCodedOther | None = field(
         default=None,
         metadata={
             "name": "ProductIdentifierQualifierCodedOther",
@@ -3141,7 +3135,7 @@ class ProductIdentifierCoded:
             "required": True,
         }
     )
-    product_identifier_ext: Optional[ProductIdentifierExt] = field(
+    product_identifier_ext: ProductIdentifierExt | None = field(
         default=None,
         metadata={
             "name": "ProductIdentifierExt",
@@ -3170,28 +3164,28 @@ class QuantityRange:
 
 @dataclass(kw_only=True)
 class QuantityValue:
-    significance_coded: Optional[QuantityValueSignificanceCoded] = field(
+    significance_coded: QuantityValueSignificanceCoded | None = field(
         default=None,
         metadata={
             "name": "SignificanceCoded",
             "type": "Attribute",
         },
     )
-    conditions_coded_other: Optional[str] = field(
+    conditions_coded_other: str | None = field(
         default=None,
         metadata={
             "name": "ConditionsCodedOther",
             "type": "Attribute",
         },
     )
-    conditions_coded: Optional[QuantityValueConditionsCoded] = field(
+    conditions_coded: QuantityValueConditionsCoded | None = field(
         default=None,
         metadata={
             "name": "ConditionsCoded",
             "type": "Attribute",
         },
     )
-    significance_coded_other: Optional[str] = field(
+    significance_coded_other: str | None = field(
         default=None,
         metadata={
             "name": "SignificanceCodedOther",
@@ -3264,21 +3258,21 @@ class RoundTripInformation:
             "required": True,
         },
     )
-    immutable: Optional[Immutable] = field(
+    immutable: Immutable | None = field(
         default=None,
         metadata={
             "name": "Immutable",
             "type": "Element",
         },
     )
-    re_link: Optional[ReLink] = field(
+    re_link: ReLink | None = field(
         default=None,
         metadata={
             "name": "ReLink",
             "type": "Element",
         },
     )
-    supplier_shopping_cart_id: Optional[SupplierShoppingCartId] = field(
+    supplier_shopping_cart_id: SupplierShoppingCartId | None = field(
         default=None,
         metadata={
             "name": "SupplierShoppingCartID",
@@ -3296,7 +3290,7 @@ class SalesRequirement:
             "required": True,
         }
     )
-    sales_requirement_coded_other: Optional[SalesRequirementCodedOther] = (
+    sales_requirement_coded_other: SalesRequirementCodedOther | None = (
         field(
             default=None,
             metadata={
@@ -3316,7 +3310,7 @@ class SealIssuer:
             "required": True,
         }
     )
-    seal_issuer_coded_other: Optional[SealIssuerCodedOther] = field(
+    seal_issuer_coded_other: SealIssuerCodedOther | None = field(
         default=None,
         metadata={
             "name": "SealIssuerCodedOther",
@@ -3327,21 +3321,21 @@ class SealIssuer:
 
 @dataclass(kw_only=True)
 class SealStatusDescription:
-    seal_status_coded: Optional[SealStatusCoded] = field(
+    seal_status_coded: SealStatusCoded | None = field(
         default=None,
         metadata={
             "name": "SealStatusCoded",
             "type": "Element",
         },
     )
-    seal_status_coded_other: Optional[SealStatusCodedOther] = field(
+    seal_status_coded_other: SealStatusCodedOther | None = field(
         default=None,
         metadata={
             "name": "SealStatusCodedOther",
             "type": "Element",
         },
     )
-    seal_status_info: Optional[SealStatusInfo] = field(
+    seal_status_info: SealStatusInfo | None = field(
         default=None,
         metadata={
             "name": "SealStatusInfo",
@@ -3496,7 +3490,7 @@ class StandardCategoryId:
             "required": True,
         }
     )
-    technical_id: Optional[TechnicalId] = field(
+    technical_id: TechnicalId | None = field(
         default=None,
         metadata={
             "name": "TechnicalID",
@@ -3514,7 +3508,7 @@ class StatusReason:
             "required": True,
         }
     )
-    status_reason_coded_other: Optional[StatusReasonCodedOther] = field(
+    status_reason_coded_other: StatusReasonCodedOther | None = field(
         default=None,
         metadata={
             "name": "StatusReasonCodedOther",
@@ -3525,42 +3519,42 @@ class StatusReason:
 
 @dataclass(kw_only=True)
 class StructuredNote:
-    general_note: Optional[GeneralNote] = field(
+    general_note: GeneralNote | None = field(
         default=None,
         metadata={
             "name": "GeneralNote",
             "type": "Element",
         },
     )
-    note_id: Optional[NoteId] = field(
+    note_id: NoteId | None = field(
         default=None,
         metadata={
             "name": "NoteID",
             "type": "Element",
         },
     )
-    agency: Optional[Agency] = field(
+    agency: Agency | None = field(
         default=None,
         metadata={
             "name": "Agency",
             "type": "Element",
         },
     )
-    note_url: Optional[NoteUrl] = field(
+    note_url: NoteUrl | None = field(
         default=None,
         metadata={
             "name": "NoteURL",
             "type": "Element",
         },
     )
-    text_type_coded: Optional[TextTypeCoded] = field(
+    text_type_coded: TextTypeCoded | None = field(
         default=None,
         metadata={
             "name": "TextTypeCoded",
             "type": "Element",
         },
     )
-    text_type_coded_other: Optional[TextTypeCodedOther] = field(
+    text_type_coded_other: TextTypeCodedOther | None = field(
         default=None,
         metadata={
             "name": "TextTypeCodedOther",
@@ -3644,23 +3638,21 @@ class TermsOfDelivery:
             "required": True,
         }
     )
-    terms_of_delivery_function_coded_other: Optional[
-        TermsOfDeliveryFunctionCodedOther
-    ] = field(
+    terms_of_delivery_function_coded_other: TermsOfDeliveryFunctionCodedOther | None = field(
         default=None,
         metadata={
             "name": "TermsOfDeliveryFunctionCodedOther",
             "type": "Element",
         },
     )
-    transport_terms_coded: Optional[TransportTermsCoded] = field(
+    transport_terms_coded: TransportTermsCoded | None = field(
         default=None,
         metadata={
             "name": "TransportTermsCoded",
             "type": "Element",
         },
     )
-    transport_terms_coded_other: Optional[TransportTermsCodedOther] = field(
+    transport_terms_coded_other: TransportTermsCodedOther | None = field(
         default=None,
         metadata={
             "name": "TransportTermsCodedOther",
@@ -3674,23 +3666,21 @@ class TermsOfDelivery:
             "required": True,
         }
     )
-    shipment_method_of_payment_coded_other: Optional[
-        ShipmentMethodOfPaymentCodedOther
-    ] = field(
+    shipment_method_of_payment_coded_other: ShipmentMethodOfPaymentCodedOther | None = field(
         default=None,
         metadata={
             "name": "ShipmentMethodOfPaymentCodedOther",
             "type": "Element",
         },
     )
-    location: Optional[Location] = field(
+    location: Location | None = field(
         default=None,
         metadata={
             "name": "Location",
             "type": "Element",
         },
     )
-    terms_of_delivery_description: Optional[TermsOfDeliveryDescription] = (
+    terms_of_delivery_description: TermsOfDeliveryDescription | None = (
         field(
             default=None,
             metadata={
@@ -3699,28 +3689,28 @@ class TermsOfDelivery:
             },
         )
     )
-    transport_description: Optional[TransportDescription] = field(
+    transport_description: TransportDescription | None = field(
         default=None,
         metadata={
             "name": "TransportDescription",
             "type": "Element",
         },
     )
-    risk_of_loss_coded: Optional[RiskOfLossCoded] = field(
+    risk_of_loss_coded: RiskOfLossCoded | None = field(
         default=None,
         metadata={
             "name": "RiskOfLossCoded",
             "type": "Element",
         },
     )
-    risk_of_loss_coded_other: Optional[RiskOfLossCodedOther] = field(
+    risk_of_loss_coded_other: RiskOfLossCodedOther | None = field(
         default=None,
         metadata={
             "name": "RiskOfLossCodedOther",
             "type": "Element",
         },
     )
-    risk_of_loss_description: Optional[RiskOfLossDescription] = field(
+    risk_of_loss_description: RiskOfLossDescription | None = field(
         default=None,
         metadata={
             "name": "RiskOfLossDescription",
@@ -3738,7 +3728,7 @@ class TransitDirection:
             "required": True,
         }
     )
-    transit_direction_coded_other: Optional[TransitDirectionCodedOther] = (
+    transit_direction_coded_other: TransitDirectionCodedOther | None = (
         field(
             default=None,
             metadata={
@@ -3747,23 +3737,21 @@ class TransitDirection:
             },
         )
     )
-    transit_time_qualifier_coded: Optional[TransitTimeQualifierCoded] = field(
+    transit_time_qualifier_coded: TransitTimeQualifierCoded | None = field(
         default=None,
         metadata={
             "name": "TransitTimeQualifierCoded",
             "type": "Element",
         },
     )
-    transit_time_qualifier_coded_other: Optional[
-        TransitTimeQualifierCodedOther
-    ] = field(
+    transit_time_qualifier_coded_other: TransitTimeQualifierCodedOther | None = field(
         default=None,
         metadata={
             "name": "TransitTimeQualifierCodedOther",
             "type": "Element",
         },
     )
-    transit_time: Optional[TransitTime] = field(
+    transit_time: TransitTime | None = field(
         default=None,
         metadata={
             "name": "TransitTime",
@@ -3781,7 +3769,7 @@ class TransportMeans:
             "required": True,
         }
     )
-    transport_means_coded_other: Optional[TransportMeansCodedOther] = field(
+    transport_means_coded_other: TransportMeansCodedOther | None = field(
         default=None,
         metadata={
             "name": "TransportMeansCodedOther",
@@ -3799,7 +3787,7 @@ class TransportMode:
             "required": True,
         }
     )
-    transport_mode_coded_other: Optional[TransportModeCodedOther] = field(
+    transport_mode_coded_other: TransportModeCodedOther | None = field(
         default=None,
         metadata={
             "name": "TransportModeCodedOther",
@@ -3817,14 +3805,14 @@ class UnitPrice:
             "required": True,
         }
     )
-    currency: Optional[Currency] = field(
+    currency: Currency | None = field(
         default=None,
         metadata={
             "name": "Currency",
             "type": "Element",
         },
     )
-    unit_of_measurement: Optional[UnitOfMeasurement] = field(
+    unit_of_measurement: UnitOfMeasurement | None = field(
         default=None,
         metadata={
             "name": "UnitOfMeasurement",
@@ -3846,14 +3834,14 @@ class WarehouseParty:
 
 @dataclass(kw_only=True)
 class BasisMonetaryRange:
-    monetary_range: Optional[MonetaryRange] = field(
+    monetary_range: MonetaryRange | None = field(
         default=None,
         metadata={
             "name": "MonetaryRange",
             "type": "Element",
         },
     )
-    monetary_limit: Optional[MonetaryLimit] = field(
+    monetary_limit: MonetaryLimit | None = field(
         default=None,
         metadata={
             "name": "MonetaryLimit",
@@ -3878,28 +3866,28 @@ class CargoTypeification:
     class Meta:
         name = "CargoClassification"
 
-    nature_of_goods: Optional[NatureOfGoods] = field(
+    nature_of_goods: NatureOfGoods | None = field(
         default=None,
         metadata={
             "name": "NatureOfGoods",
             "type": "Element",
         },
     )
-    operational_type_coded: Optional[OperationalTypeCoded] = field(
+    operational_type_coded: OperationalTypeCoded | None = field(
         default=None,
         metadata={
             "name": "OperationalTypeCoded",
             "type": "Element",
         },
     )
-    operational_type_coded_other: Optional[OperationalTypeCodedOther] = field(
+    operational_type_coded_other: OperationalTypeCodedOther | None = field(
         default=None,
         metadata={
             "name": "OperationalTypeCodedOther",
             "type": "Element",
         },
     )
-    type_of_cargo: Optional[TypeOfCargo] = field(
+    type_of_cargo: TypeOfCargo | None = field(
         default=None,
         metadata={
             "name": "TypeOfCargo",
@@ -3910,14 +3898,14 @@ class CargoTypeification:
 
 @dataclass(kw_only=True)
 class Category:
-    category_id: Optional[CategoryId] = field(
+    category_id: CategoryId | None = field(
         default=None,
         metadata={
             "name": "CategoryID",
             "type": "Element",
         },
     )
-    standard_category_id: Optional[StandardCategoryId] = field(
+    standard_category_id: StandardCategoryId | None = field(
         default=None,
         metadata={
             "name": "StandardCategoryID",
@@ -3928,21 +3916,21 @@ class Category:
 
 @dataclass(kw_only=True)
 class Conditions:
-    refrigeration_on: Optional[RefrigerationOn] = field(
+    refrigeration_on: RefrigerationOn | None = field(
         default=None,
         metadata={
             "name": "RefrigerationOn",
             "type": "Element",
         },
     )
-    residue: Optional[Residue] = field(
+    residue: Residue | None = field(
         default=None,
         metadata={
             "name": "Residue",
             "type": "Element",
         },
     )
-    list_of_conditions: Optional[ListOfConditions] = field(
+    list_of_conditions: ListOfConditions | None = field(
         default=None,
         metadata={
             "name": "ListOfConditions",
@@ -3961,21 +3949,21 @@ class ConditionsOfSale:
             "min_occurs": 1,
         },
     )
-    sales_action_coded: Optional[SalesActionCoded] = field(
+    sales_action_coded: SalesActionCoded | None = field(
         default=None,
         metadata={
             "name": "SalesActionCoded",
             "type": "Element",
         },
     )
-    sales_action_coded_other: Optional[SalesActionCodedOther] = field(
+    sales_action_coded_other: SalesActionCodedOther | None = field(
         default=None,
         metadata={
             "name": "SalesActionCodedOther",
             "type": "Element",
         },
     )
-    sales_action_value: Optional[SalesActionValue] = field(
+    sales_action_value: SalesActionValue | None = field(
         default=None,
         metadata={
             "name": "SalesActionValue",
@@ -3993,21 +3981,21 @@ class Contract:
             "required": True,
         }
     )
-    contract_type: Optional[ContractType] = field(
+    contract_type: ContractType | None = field(
         default=None,
         metadata={
             "name": "ContractType",
             "type": "Element",
         },
     )
-    validity_dates: Optional[ValidityDates] = field(
+    validity_dates: ValidityDates | None = field(
         default=None,
         metadata={
             "name": "ValidityDates",
             "type": "Element",
         },
     )
-    system_id: Optional[SystemId] = field(
+    system_id: SystemId | None = field(
         default=None,
         metadata={
             "name": "SystemID",
@@ -4150,28 +4138,28 @@ class ManufacturerPartNumber:
             "required": True,
         }
     )
-    part_idext: Optional[PartIdext] = field(
+    part_idext: PartIdext | None = field(
         default=None,
         metadata={
             "name": "PartIDExt",
             "type": "Element",
         },
     )
-    revision_number: Optional[RevisionNumber] = field(
+    revision_number: RevisionNumber | None = field(
         default=None,
         metadata={
             "name": "RevisionNumber",
             "type": "Element",
         },
     )
-    manufacturer_id: Optional[ManufacturerId] = field(
+    manufacturer_id: ManufacturerId | None = field(
         default=None,
         metadata={
             "name": "ManufacturerID",
             "type": "Element",
         },
     )
-    manufacturer_name: Optional[ManufacturerName] = field(
+    manufacturer_name: ManufacturerName | None = field(
         default=None,
         metadata={
             "name": "ManufacturerName",
@@ -4193,35 +4181,35 @@ class ParentItemNumber:
 
 @dataclass(kw_only=True)
 class PartyTaxInformation:
-    tax_identifier: Optional[TaxIdentifier] = field(
+    tax_identifier: TaxIdentifier | None = field(
         default=None,
         metadata={
             "name": "TaxIdentifier",
             "type": "Element",
         },
     )
-    registered_name: Optional[RegisteredName] = field(
+    registered_name: RegisteredName | None = field(
         default=None,
         metadata={
             "name": "RegisteredName",
             "type": "Element",
         },
     )
-    registered_office: Optional[RegisteredOffice] = field(
+    registered_office: RegisteredOffice | None = field(
         default=None,
         metadata={
             "name": "RegisteredOffice",
             "type": "Element",
         },
     )
-    tax_location: Optional[TaxLocation] = field(
+    tax_location: TaxLocation | None = field(
         default=None,
         metadata={
             "name": "TaxLocation",
             "type": "Element",
         },
     )
-    company_registration_number: Optional[CompanyRegistrationNumber] = field(
+    company_registration_number: CompanyRegistrationNumber | None = field(
         default=None,
         metadata={
             "name": "CompanyRegistrationNumber",
@@ -4232,14 +4220,14 @@ class PartyTaxInformation:
 
 @dataclass(kw_only=True)
 class Quantity:
-    quantity_value: Optional[QuantityValue] = field(
+    quantity_value: QuantityValue | None = field(
         default=None,
         metadata={
             "name": "QuantityValue",
             "type": "Element",
         },
     )
-    quantity_range: Optional[QuantityRange] = field(
+    quantity_range: QuantityRange | None = field(
         default=None,
         metadata={
             "name": "QuantityRange",
@@ -4257,14 +4245,14 @@ class Quantity:
 
 @dataclass(kw_only=True)
 class QuantityCoded:
-    quantity_value: Optional[QuantityValue] = field(
+    quantity_value: QuantityValue | None = field(
         default=None,
         metadata={
             "name": "QuantityValue",
             "type": "Element",
         },
     )
-    quantity_range: Optional[QuantityRange] = field(
+    quantity_range: QuantityRange | None = field(
         default=None,
         metadata={
             "name": "QuantityRange",
@@ -4285,7 +4273,7 @@ class QuantityCoded:
             "required": True,
         }
     )
-    quantity_qualifier_coded_other: Optional[QuantityQualifierCodedOther] = (
+    quantity_qualifier_coded_other: QuantityQualifierCodedOther | None = (
         field(
             default=None,
             metadata={
@@ -4316,7 +4304,7 @@ class ReferenceCoded:
             "required": True,
         }
     )
-    reference_type_coded_other: Optional[ReferenceTypeCodedOther] = field(
+    reference_type_coded_other: ReferenceTypeCodedOther | None = field(
         default=None,
         metadata={
             "name": "ReferenceTypeCodedOther",
@@ -4330,21 +4318,21 @@ class ReferenceCoded:
             "required": True,
         }
     )
-    supporting_reference: Optional[SupportingReference] = field(
+    supporting_reference: SupportingReference | None = field(
         default=None,
         metadata={
             "name": "SupportingReference",
             "type": "Element",
         },
     )
-    supporting_sub_reference: Optional[SupportingSubReference] = field(
+    supporting_sub_reference: SupportingSubReference | None = field(
         default=None,
         metadata={
             "name": "SupportingSubReference",
             "type": "Element",
         },
     )
-    reference_description: Optional[ReferenceDescription] = field(
+    reference_description: ReferenceDescription | None = field(
         default=None,
         metadata={
             "name": "ReferenceDescription",
@@ -4362,14 +4350,14 @@ class SealInfo:
             "required": True,
         }
     )
-    seal_issuer: Optional[SealIssuer] = field(
+    seal_issuer: SealIssuer | None = field(
         default=None,
         metadata={
             "name": "SealIssuer",
             "type": "Element",
         },
     )
-    seal_status_description: Optional[SealStatusDescription] = field(
+    seal_status_description: SealStatusDescription | None = field(
         default=None,
         metadata={
             "name": "SealStatusDescription",
@@ -4391,14 +4379,14 @@ class SellerPartNumber:
 
 @dataclass(kw_only=True)
 class SourcingResultSummary:
-    total_num_sourcing_results: Optional[TotalNumSourcingResults] = field(
+    total_num_sourcing_results: TotalNumSourcingResults | None = field(
         default=None,
         metadata={
             "name": "TotalNumSourcingResults",
             "type": "Element",
         },
     )
-    total_num_winning_quotes: Optional[TotalNumWinningQuotes] = field(
+    total_num_winning_quotes: TotalNumWinningQuotes | None = field(
         default=None,
         metadata={
             "name": "TotalNumWinningQuotes",
@@ -4412,7 +4400,7 @@ class SourcingResultSummary:
             "type": "Element",
         },
     )
-    total_num_participants: Optional[TotalNumParticipants] = field(
+    total_num_participants: TotalNumParticipants | None = field(
         default=None,
         metadata={
             "name": "TotalNumParticipants",
@@ -4441,9 +4429,7 @@ class Tax:
             "required": True,
         }
     )
-    tax_function_qualifier_coded_other: Optional[
-        TaxFunctionQualifierCodedOther
-    ] = field(
+    tax_function_qualifier_coded_other: TaxFunctionQualifierCodedOther | None = field(
         default=None,
         metadata={
             "name": "TaxFunctionQualifierCodedOther",
@@ -4457,21 +4443,21 @@ class Tax:
             "required": True,
         }
     )
-    tax_category_coded_other: Optional[TaxCategoryCodedOther] = field(
+    tax_category_coded_other: TaxCategoryCodedOther | None = field(
         default=None,
         metadata={
             "name": "TaxCategoryCodedOther",
             "type": "Element",
         },
     )
-    reason_tax_exempt_coded: Optional[ReasonTaxExemptCoded] = field(
+    reason_tax_exempt_coded: ReasonTaxExemptCoded | None = field(
         default=None,
         metadata={
             "name": "ReasonTaxExemptCoded",
             "type": "Element",
         },
     )
-    reason_tax_exempt_coded_other: Optional[ReasonTaxExemptCodedOther] = field(
+    reason_tax_exempt_coded_other: ReasonTaxExemptCodedOther | None = field(
         default=None,
         metadata={
             "name": "ReasonTaxExemptCodedOther",
@@ -4485,28 +4471,28 @@ class Tax:
             "required": True,
         }
     )
-    tax_type_coded_other: Optional[TaxTypeCodedOther] = field(
+    tax_type_coded_other: TaxTypeCodedOther | None = field(
         default=None,
         metadata={
             "name": "TaxTypeCodedOther",
             "type": "Element",
         },
     )
-    tax_percent: Optional[TaxPercent] = field(
+    tax_percent: TaxPercent | None = field(
         default=None,
         metadata={
             "name": "TaxPercent",
             "type": "Element",
         },
     )
-    tax_payment_method_coded: Optional[TaxPaymentMethodCoded] = field(
+    tax_payment_method_coded: TaxPaymentMethodCoded | None = field(
         default=None,
         metadata={
             "name": "TaxPaymentMethodCoded",
             "type": "Element",
         },
     )
-    tax_payment_method_coded_other: Optional[TaxPaymentMethodCodedOther] = (
+    tax_payment_method_coded_other: TaxPaymentMethodCodedOther | None = (
         field(
             default=None,
             metadata={
@@ -4515,16 +4501,14 @@ class Tax:
             },
         )
     )
-    taxable_amount: Optional[TaxableAmount] = field(
+    taxable_amount: TaxableAmount | None = field(
         default=None,
         metadata={
             "name": "TaxableAmount",
             "type": "Element",
         },
     )
-    taxable_amount_in_tax_accounting_currency: Optional[
-        TaxableAmountInTaxAccountingCurrency
-    ] = field(
+    taxable_amount_in_tax_accounting_currency: TaxableAmountInTaxAccountingCurrency | None = field(
         default=None,
         metadata={
             "name": "TaxableAmountInTaxAccountingCurrency",
@@ -4538,16 +4522,14 @@ class Tax:
             "required": True,
         }
     )
-    tax_amount_in_tax_accounting_currency: Optional[
-        TaxAmountInTaxAccountingCurrency
-    ] = field(
+    tax_amount_in_tax_accounting_currency: TaxAmountInTaxAccountingCurrency | None = field(
         default=None,
         metadata={
             "name": "TaxAmountInTaxAccountingCurrency",
             "type": "Element",
         },
     )
-    tax_location: Optional[TaxLocation] = field(
+    tax_location: TaxLocation | None = field(
         default=None,
         metadata={
             "name": "TaxLocation",
@@ -4558,14 +4540,14 @@ class Tax:
 
 @dataclass(kw_only=True)
 class AllowOrChgDesc:
-    ref_id: Optional[RefId] = field(
+    ref_id: RefId | None = field(
         default=None,
         metadata={
             "name": "RefID",
             "type": "Element",
         },
     )
-    list_of_description: Optional[ListOfDescription] = field(
+    list_of_description: ListOfDescription | None = field(
         default=None,
         metadata={
             "name": "ListOfDescription",
@@ -4579,7 +4561,7 @@ class AllowOrChgDesc:
             "required": True,
         }
     )
-    service_coded_other: Optional[ServiceCodedOther] = field(
+    service_coded_other: ServiceCodedOther | None = field(
         default=None,
         metadata={
             "name": "ServiceCodedOther",
@@ -4630,7 +4612,7 @@ class ContractItem:
             "required": True,
         }
     )
-    contract_item_number: Optional[ContractItemNumber] = field(
+    contract_item_number: ContractItemNumber | None = field(
         default=None,
         metadata={
             "name": "ContractItemNumber",
@@ -4762,7 +4744,7 @@ class NameValueSet:
             "required": True,
         }
     )
-    set_id: Optional[SetId] = field(
+    set_id: SetId | None = field(
         default=None,
         metadata={
             "name": "SetID",
@@ -4791,7 +4773,7 @@ class OtherItemIdentifiers:
 
 @dataclass(kw_only=True)
 class PackageReference:
-    quantity: Optional[Quantity] = field(
+    quantity: Quantity | None = field(
         default=None,
         metadata={
             "name": "Quantity",
@@ -4805,7 +4787,7 @@ class PackageReference:
             "required": True,
         }
     )
-    package_reference: Optional["PackageReference"] = field(
+    package_reference: PackageReference | None = field(
         default=None,
         metadata={
             "name": "PackageReference",
@@ -4852,7 +4834,7 @@ class Rate:
             "required": True,
         }
     )
-    unit_of_measurement: Optional[UnitOfMeasurement] = field(
+    unit_of_measurement: UnitOfMeasurement | None = field(
         default=None,
         metadata={
             "name": "UnitOfMeasurement",
@@ -4884,23 +4866,21 @@ class RateOfExchangeDetail:
             "required": True,
         }
     )
-    inverse_rate_of_exchange: Optional[InverseRateOfExchange] = field(
+    inverse_rate_of_exchange: InverseRateOfExchange | None = field(
         default=None,
         metadata={
             "name": "InverseRateOfExchange",
             "type": "Element",
         },
     )
-    date_of_rate_of_exchange: Optional[DateOfRateOfExchange] = field(
+    date_of_rate_of_exchange: DateOfRateOfExchange | None = field(
         default=None,
         metadata={
             "name": "DateOfRateOfExchange",
             "type": "Element",
         },
     )
-    list_of_rate_of_exchange_reference: Optional[
-        ListOfRateOfExchangeReference
-    ] = field(
+    list_of_rate_of_exchange_reference: ListOfRateOfExchangeReference | None = field(
         default=None,
         metadata={
             "name": "ListOfRateOfExchangeReference",
@@ -4999,28 +4979,28 @@ class HazardousReferences:
 
 @dataclass(kw_only=True)
 class HazardousTemperatures:
-    flashpoint: Optional[Flashpoint] = field(
+    flashpoint: Flashpoint | None = field(
         default=None,
         metadata={
             "name": "Flashpoint",
             "type": "Element",
         },
     )
-    emergency: Optional[Emergency] = field(
+    emergency: Emergency | None = field(
         default=None,
         metadata={
             "name": "Emergency",
             "type": "Element",
         },
     )
-    control: Optional[Control] = field(
+    control: Control | None = field(
         default=None,
         metadata={
             "name": "Control",
             "type": "Element",
         },
     )
-    list_of_temperature_coded: Optional[ListOfTemperatureCoded] = field(
+    list_of_temperature_coded: ListOfTemperatureCoded | None = field(
         default=None,
         metadata={
             "name": "ListOfTemperatureCoded",
@@ -5096,14 +5076,14 @@ class MonetaryValue:
             "required": True,
         }
     )
-    currency: Optional[Currency] = field(
+    currency: Currency | None = field(
         default=None,
         metadata={
             "name": "Currency",
             "type": "Element",
         },
     )
-    rate_of_exchange_detail: Optional[RateOfExchangeDetail] = field(
+    rate_of_exchange_detail: RateOfExchangeDetail | None = field(
         default=None,
         metadata={
             "name": "RateOfExchangeDetail",
@@ -5114,42 +5094,42 @@ class MonetaryValue:
 
 @dataclass(kw_only=True)
 class OrderDates:
-    requested_ship_by_date: Optional[RequestedShipByDate] = field(
+    requested_ship_by_date: RequestedShipByDate | None = field(
         default=None,
         metadata={
             "name": "RequestedShipByDate",
             "type": "Element",
         },
     )
-    requested_deliver_by_date: Optional[RequestedDeliverByDate] = field(
+    requested_deliver_by_date: RequestedDeliverByDate | None = field(
         default=None,
         metadata={
             "name": "RequestedDeliverByDate",
             "type": "Element",
         },
     )
-    promise_date: Optional[PromiseDate] = field(
+    promise_date: PromiseDate | None = field(
         default=None,
         metadata={
             "name": "PromiseDate",
             "type": "Element",
         },
     )
-    validity_dates: Optional[ValidityDates] = field(
+    validity_dates: ValidityDates | None = field(
         default=None,
         metadata={
             "name": "ValidityDates",
             "type": "Element",
         },
     )
-    cancel_by_date: Optional[CancelByDate] = field(
+    cancel_by_date: CancelByDate | None = field(
         default=None,
         metadata={
             "name": "CancelByDate",
             "type": "Element",
         },
     )
-    list_of_date_coded: Optional[ListOfDateCoded] = field(
+    list_of_date_coded: ListOfDateCoded | None = field(
         default=None,
         metadata={
             "name": "ListOfDateCoded",
@@ -5167,7 +5147,7 @@ class OrderParty:
             "required": True,
         }
     )
-    buyer_tax_information: Optional[BuyerTaxInformation] = field(
+    buyer_tax_information: BuyerTaxInformation | None = field(
         default=None,
         metadata={
             "name": "BuyerTaxInformation",
@@ -5181,70 +5161,70 @@ class OrderParty:
             "required": True,
         }
     )
-    seller_tax_information: Optional[SellerTaxInformation] = field(
+    seller_tax_information: SellerTaxInformation | None = field(
         default=None,
         metadata={
             "name": "SellerTaxInformation",
             "type": "Element",
         },
     )
-    ship_to_party: Optional[ShipToParty] = field(
+    ship_to_party: ShipToParty | None = field(
         default=None,
         metadata={
             "name": "ShipToParty",
             "type": "Element",
         },
     )
-    bill_to_party: Optional[BillToParty] = field(
+    bill_to_party: BillToParty | None = field(
         default=None,
         metadata={
             "name": "BillToParty",
             "type": "Element",
         },
     )
-    remit_to_party: Optional[RemitToParty] = field(
+    remit_to_party: RemitToParty | None = field(
         default=None,
         metadata={
             "name": "RemitToParty",
             "type": "Element",
         },
     )
-    ship_from_party: Optional[ShipFromParty] = field(
+    ship_from_party: ShipFromParty | None = field(
         default=None,
         metadata={
             "name": "ShipFromParty",
             "type": "Element",
         },
     )
-    warehouse_party: Optional[WarehouseParty] = field(
+    warehouse_party: WarehouseParty | None = field(
         default=None,
         metadata={
             "name": "WarehouseParty",
             "type": "Element",
         },
     )
-    sold_to_party: Optional[SoldToParty] = field(
+    sold_to_party: SoldToParty | None = field(
         default=None,
         metadata={
             "name": "SoldToParty",
             "type": "Element",
         },
     )
-    manufacturing_to_party: Optional[ManufacturingToParty] = field(
+    manufacturing_to_party: ManufacturingToParty | None = field(
         default=None,
         metadata={
             "name": "ManufacturingToParty",
             "type": "Element",
         },
     )
-    material_issuer: Optional[MaterialIssuer] = field(
+    material_issuer: MaterialIssuer | None = field(
         default=None,
         metadata={
             "name": "MaterialIssuer",
             "type": "Element",
         },
     )
-    list_of_party_coded: Optional[ListOfPartyCoded] = field(
+    list_of_party_coded: ListOfPartyCoded | None = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
@@ -5255,42 +5235,42 @@ class OrderParty:
 
 @dataclass(kw_only=True)
 class PartNumbers:
-    seller_part_number: Optional[SellerPartNumber] = field(
+    seller_part_number: SellerPartNumber | None = field(
         default=None,
         metadata={
             "name": "SellerPartNumber",
             "type": "Element",
         },
     )
-    buyer_part_number: Optional[BuyerPartNumber] = field(
+    buyer_part_number: BuyerPartNumber | None = field(
         default=None,
         metadata={
             "name": "BuyerPartNumber",
             "type": "Element",
         },
     )
-    manufacturer_part_number: Optional[ManufacturerPartNumber] = field(
+    manufacturer_part_number: ManufacturerPartNumber | None = field(
         default=None,
         metadata={
             "name": "ManufacturerPartNumber",
             "type": "Element",
         },
     )
-    standard_part_number: Optional[StandardPartNumber] = field(
+    standard_part_number: StandardPartNumber | None = field(
         default=None,
         metadata={
             "name": "StandardPartNumber",
             "type": "Element",
         },
     )
-    substitute_part_numbers: Optional[SubstitutePartNumbers] = field(
+    substitute_part_numbers: SubstitutePartNumbers | None = field(
         default=None,
         metadata={
             "name": "SubstitutePartNumbers",
             "type": "Element",
         },
     )
-    other_item_identifiers: Optional[OtherItemIdentifiers] = field(
+    other_item_identifiers: OtherItemIdentifiers | None = field(
         default=None,
         metadata={
             "name": "OtherItemIdentifiers",
@@ -5301,7 +5281,7 @@ class PartNumbers:
 
 @dataclass(kw_only=True)
 class Price:
-    pricing_type: Optional[PricingType] = field(
+    pricing_type: PricingType | None = field(
         default=None,
         metadata={
             "name": "PricingType",
@@ -5315,14 +5295,14 @@ class Price:
             "required": True,
         }
     )
-    price_basis_quantity: Optional[PriceBasisQuantity] = field(
+    price_basis_quantity: PriceBasisQuantity | None = field(
         default=None,
         metadata={
             "name": "PriceBasisQuantity",
             "type": "Element",
         },
     )
-    calculated_price_basis_quantity: Optional[CalculatedPriceBasisQuantity] = (
+    calculated_price_basis_quantity: CalculatedPriceBasisQuantity | None = (
         field(
             default=None,
             metadata={
@@ -5331,21 +5311,21 @@ class Price:
             },
         )
     )
-    validity_dates: Optional[ValidityDates] = field(
+    validity_dates: ValidityDates | None = field(
         default=None,
         metadata={
             "name": "ValidityDates",
             "type": "Element",
         },
     )
-    price_quantity_range: Optional[PriceQuantityRange] = field(
+    price_quantity_range: PriceQuantityRange | None = field(
         default=None,
         metadata={
             "name": "PriceQuantityRange",
             "type": "Element",
         },
     )
-    price_multiplier: Optional[PriceMultiplier] = field(
+    price_multiplier: PriceMultiplier | None = field(
         default=None,
         metadata={
             "name": "PriceMultiplier",
@@ -5391,7 +5371,7 @@ class SourcingResultHeader:
             "required": True,
         }
     )
-    initiating_party: Optional[InitiatingParty] = field(
+    initiating_party: InitiatingParty | None = field(
         default=None,
         metadata={
             "name": "InitiatingParty",
@@ -5405,23 +5385,21 @@ class SourcingResultHeader:
             "required": True,
         }
     )
-    list_of_reference_coded: Optional[ListOfReferenceCoded] = field(
+    list_of_reference_coded: ListOfReferenceCoded | None = field(
         default=None,
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
         },
     )
-    sourcing_result_list_of_attachment: Optional[
-        SourcingResultListOfAttachment
-    ] = field(
+    sourcing_result_list_of_attachment: SourcingResultListOfAttachment | None = field(
         default=None,
         metadata={
             "name": "SourcingResultListOfAttachment",
             "type": "Element",
         },
     )
-    sourcing_result_general_note: Optional[SourcingResultGeneralNote] = field(
+    sourcing_result_general_note: SourcingResultGeneralNote | None = field(
         default=None,
         metadata={
             "name": "SourcingResultGeneralNote",
@@ -5432,14 +5410,14 @@ class SourcingResultHeader:
 
 @dataclass(kw_only=True)
 class TransportEquipment:
-    equipment_provider_coded: Optional[EquipmentProviderCoded] = field(
+    equipment_provider_coded: EquipmentProviderCoded | None = field(
         default=None,
         metadata={
             "name": "EquipmentProviderCoded",
             "type": "Element",
         },
     )
-    equipment_provider_coded_other: Optional[EquipmentProviderCodedOther] = (
+    equipment_provider_coded_other: EquipmentProviderCodedOther | None = (
         field(
             default=None,
             metadata={
@@ -5448,14 +5426,14 @@ class TransportEquipment:
             },
         )
     )
-    equipment_owner_coded: Optional[EquipmentOwnerCoded] = field(
+    equipment_owner_coded: EquipmentOwnerCoded | None = field(
         default=None,
         metadata={
             "name": "EquipmentOwnerCoded",
             "type": "Element",
         },
     )
-    equipment_owner_coded_other: Optional[EquipmentOwnerCodedOther] = field(
+    equipment_owner_coded_other: EquipmentOwnerCodedOther | None = field(
         default=None,
         metadata={
             "name": "EquipmentOwnerCodedOther",
@@ -5469,72 +5447,70 @@ class TransportEquipment:
             "required": True,
         }
     )
-    equipment_size_type_coded: Optional[EquipmentSizeTypeCoded] = field(
+    equipment_size_type_coded: EquipmentSizeTypeCoded | None = field(
         default=None,
         metadata={
             "name": "EquipmentSizeTypeCoded",
             "type": "Element",
         },
     )
-    equipement_size_type_coded_other: Optional[
-        EquipementSizeTypeCodedOther
-    ] = field(
+    equipement_size_type_coded_other: EquipementSizeTypeCodedOther | None = field(
         default=None,
         metadata={
             "name": "EquipementSizeTypeCodedOther",
             "type": "Element",
         },
     )
-    equipment_status_coded: Optional[EquipmentStatusCoded] = field(
+    equipment_status_coded: EquipmentStatusCoded | None = field(
         default=None,
         metadata={
             "name": "EquipmentStatusCoded",
             "type": "Element",
         },
     )
-    equipment_status_coded_other: Optional[EquipmentStatusCodedOther] = field(
+    equipment_status_coded_other: EquipmentStatusCodedOther | None = field(
         default=None,
         metadata={
             "name": "EquipmentStatusCodedOther",
             "type": "Element",
         },
     )
-    full_indicator_coded: Optional[FullIndicatorCoded] = field(
+    full_indicator_coded: FullIndicatorCoded | None = field(
         default=None,
         metadata={
             "name": "FullIndicatorCoded",
             "type": "Element",
         },
     )
-    full_indicator_coded_other: Optional[FullIndicatorCodedOther] = field(
+    full_indicator_coded_other: FullIndicatorCodedOther | None = field(
         default=None,
         metadata={
             "name": "FullIndicatorCodedOther",
             "type": "Element",
         },
     )
-    conditions: Optional[Conditions] = field(
+    conditions: Conditions | None = field(
         default=None,
         metadata={
             "name": "Conditions",
             "type": "Element",
         },
     )
-    equipment_note: Optional[EquipmentNote] = field(
+    equipment_note: EquipmentNote | None = field(
         default=None,
         metadata={
             "name": "EquipmentNote",
             "type": "Element",
         },
     )
-    list_of_seal_info: Optional[ListOfSealInfo] = field(
+    list_of_seal_info: ListOfSealInfo | None = field(
         default=None,
         metadata={
             "name": "ListOfSealInfo",
             "type": "Element",
         },
     )
-    list_of_equipment_measurements: Optional[ListOfEquipmentMeasurements] = (
+    list_of_equipment_measurements: ListOfEquipmentMeasurements | None = (
         field(
             default=None,
             metadata={
@@ -5547,7 +5523,7 @@ class TransportEquipment:
 
 @dataclass(kw_only=True)
 class Hazardous:
-    list_of_hazardous_identifiers: Optional[ListOfHazardousIdentifiers] = (
+    list_of_hazardous_identifiers: ListOfHazardousIdentifiers | None = (
         field(
             default=None,
             metadata={
@@ -5556,21 +5532,21 @@ class Hazardous:
             },
         )
     )
-    hazard_class_coded: Optional[HazardTypeCoded] = field(
+    hazard_class_coded: HazardTypeCoded | None = field(
         default=None,
         metadata={
             "name": "HazardClassCoded",
             "type": "Element",
         },
     )
-    hazard_class_coded_other: Optional[HazardTypeCodedOther] = field(
+    hazard_class_coded_other: HazardTypeCodedOther | None = field(
         default=None,
         metadata={
             "name": "HazardClassCodedOther",
             "type": "Element",
         },
     )
-    hazardous_placard_information: Optional[HazardousPlacardInformation] = (
+    hazardous_placard_information: HazardousPlacardInformation | None = (
         field(
             default=None,
             metadata={
@@ -5579,42 +5555,42 @@ class Hazardous:
             },
         )
     )
-    hazardous_references: Optional[HazardousReferences] = field(
+    hazardous_references: HazardousReferences | None = field(
         default=None,
         metadata={
             "name": "HazardousReferences",
             "type": "Element",
         },
     )
-    hazardous_contact: Optional[HazardousContact] = field(
+    hazardous_contact: HazardousContact | None = field(
         default=None,
         metadata={
             "name": "HazardousContact",
             "type": "Element",
         },
     )
-    hazard_note: Optional[HazardNote] = field(
+    hazard_note: HazardNote | None = field(
         default=None,
         metadata={
             "name": "HazardNote",
             "type": "Element",
         },
     )
-    undgnum: Optional[Undgnum] = field(
+    undgnum: Undgnum | None = field(
         default=None,
         metadata={
             "name": "UNDGNum",
             "type": "Element",
         },
     )
-    hazardous_temperatures: Optional[HazardousTemperatures] = field(
+    hazardous_temperatures: HazardousTemperatures | None = field(
         default=None,
         metadata={
             "name": "HazardousTemperatures",
             "type": "Element",
         },
     )
-    hazardous_shipment_information: Optional[HazardousShipmentInformation] = (
+    hazardous_shipment_information: HazardousShipmentInformation | None = (
         field(
             default=None,
             metadata={
@@ -5623,14 +5599,14 @@ class Hazardous:
             },
         )
     )
-    emsnum: Optional[Emsnum] = field(
+    emsnum: Emsnum | None = field(
         default=None,
         metadata={
             "name": "EMSNum",
             "type": "Element",
         },
     )
-    mfag: Optional[Mfag] = field(
+    mfag: Mfag | None = field(
         default=None,
         metadata={
             "name": "Mfag",
@@ -5652,42 +5628,42 @@ class ItemContractReferences:
 
 @dataclass(kw_only=True)
 class ItemIdentifiers:
-    part_numbers: Optional[PartNumbers] = field(
+    part_numbers: PartNumbers | None = field(
         default=None,
         metadata={
             "name": "PartNumbers",
             "type": "Element",
         },
     )
-    service: Optional[Service] = field(
+    service: Service | None = field(
         default=None,
         metadata={
             "name": "Service",
             "type": "Element",
         },
     )
-    item_description: Optional[ItemDescription] = field(
+    item_description: ItemDescription | None = field(
         default=None,
         metadata={
             "name": "ItemDescription",
             "type": "Element",
         },
     )
-    list_of_item_characteristic: Optional[ListOfItemCharacteristic] = field(
+    list_of_item_characteristic: ListOfItemCharacteristic | None = field(
         default=None,
         metadata={
             "name": "ListOfItemCharacteristic",
             "type": "Element",
         },
     )
-    commodity_code: Optional[CommodityCode] = field(
+    commodity_code: CommodityCode | None = field(
         default=None,
         metadata={
             "name": "CommodityCode",
             "type": "Element",
         },
     )
-    category: Optional[Category] = field(
+    category: Category | None = field(
         default=None,
         metadata={
             "name": "Category",
@@ -5813,7 +5789,7 @@ class PercentageAllowanceOrCharge:
             "required": True,
         }
     )
-    percentage_monetary_value: Optional[PercentageMonetaryValue] = field(
+    percentage_monetary_value: PercentageMonetaryValue | None = field(
         default=None,
         metadata={
             "name": "PercentageMonetaryValue",
@@ -5838,7 +5814,7 @@ class QuantityAllowanceOrCharge:
             "required": True,
         }
     )
-    quantity_monetary_value: Optional[QuantityMonetaryValue] = field(
+    quantity_monetary_value: QuantityMonetaryValue | None = field(
         default=None,
         metadata={
             "name": "QuantityMonetaryValue",
@@ -5863,9 +5839,7 @@ class ShipToSubInformation:
             "required": True,
         }
     )
-    sub_location_item_packaging_reference: Optional[
-        SubLocationItemPackagingReference
-    ] = field(
+    sub_location_item_packaging_reference: SubLocationItemPackagingReference | None = field(
         default=None,
         metadata={
             "name": "SubLocationItemPackagingReference",
@@ -5883,91 +5857,91 @@ class Transport:
             "required": True,
         }
     )
-    transport_mode: Optional[TransportMode] = field(
+    transport_mode: TransportMode | None = field(
         default=None,
         metadata={
             "name": "TransportMode",
             "type": "Element",
         },
     )
-    transport_means: Optional[TransportMeans] = field(
+    transport_means: TransportMeans | None = field(
         default=None,
         metadata={
             "name": "TransportMeans",
             "type": "Element",
         },
     )
-    carrier_name: Optional[CarrierName] = field(
+    carrier_name: CarrierName | None = field(
         default=None,
         metadata={
             "name": "CarrierName",
             "type": "Element",
         },
     )
-    carrier_id: Optional[CarrierId] = field(
+    carrier_id: CarrierId | None = field(
         default=None,
         metadata={
             "name": "CarrierID",
             "type": "Element",
         },
     )
-    cust_shipping_contract_num: Optional[CustShippingContractNum] = field(
+    cust_shipping_contract_num: CustShippingContractNum | None = field(
         default=None,
         metadata={
             "name": "CustShippingContractNum",
             "type": "Element",
         },
     )
-    service_level_coded: Optional[ServiceLevelCoded] = field(
+    service_level_coded: ServiceLevelCoded | None = field(
         default=None,
         metadata={
             "name": "ServiceLevelCoded",
             "type": "Element",
         },
     )
-    service_level_coded_other: Optional[ServiceLevelCodedOther] = field(
+    service_level_coded_other: ServiceLevelCodedOther | None = field(
         default=None,
         metadata={
             "name": "ServiceLevelCodedOther",
             "type": "Element",
         },
     )
-    shipping_instructions: Optional[ShippingInstructions] = field(
+    shipping_instructions: ShippingInstructions | None = field(
         default=None,
         metadata={
             "name": "ShippingInstructions",
             "type": "Element",
         },
     )
-    transport_leg_coded: Optional[TransportLegCoded] = field(
+    transport_leg_coded: TransportLegCoded | None = field(
         default=None,
         metadata={
             "name": "TransportLegCoded",
             "type": "Element",
         },
     )
-    transport_leg_coded_other: Optional[TransportLegCodedOther] = field(
+    transport_leg_coded_other: TransportLegCodedOther | None = field(
         default=None,
         metadata={
             "name": "TransportLegCodedOther",
             "type": "Element",
         },
     )
-    list_of_transport_equipment: Optional[ListOfTransportEquipment] = field(
+    list_of_transport_equipment: ListOfTransportEquipment | None = field(
         default=None,
         metadata={
             "name": "ListOfTransportEquipment",
             "type": "Element",
         },
     )
-    transit_direction: Optional[TransitDirection] = field(
+    transit_direction: TransitDirection | None = field(
         default=None,
         metadata={
             "name": "TransitDirection",
             "type": "Element",
         },
     )
-    transport_note: Optional[TransportNote] = field(
+    transport_note: TransportNote | None = field(
         default=None,
         metadata={
             "name": "TransportNote",
@@ -5985,119 +5959,119 @@ class BaseItemDetail:
             "required": True,
         }
     )
-    line_item_type: Optional[LineItemType] = field(
+    line_item_type: LineItemType | None = field(
         default=None,
         metadata={
             "name": "LineItemType",
             "type": "Element",
         },
     )
-    parent_item_number: Optional[ParentItemNumber] = field(
+    parent_item_number: ParentItemNumber | None = field(
         default=None,
         metadata={
             "name": "ParentItemNumber",
             "type": "Element",
         },
     )
-    item_identifiers: Optional[ItemIdentifiers] = field(
+    item_identifiers: ItemIdentifiers | None = field(
         default=None,
         metadata={
             "name": "ItemIdentifiers",
             "type": "Element",
         },
     )
-    list_of_dimension: Optional[ListOfDimension] = field(
+    list_of_dimension: ListOfDimension | None = field(
         default=None,
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
         },
     )
-    total_quantity: Optional[TotalQuantity] = field(
+    total_quantity: TotalQuantity | None = field(
         default=None,
         metadata={
             "name": "TotalQuantity",
             "type": "Element",
         },
     )
-    max_back_order_quantity: Optional[MaxBackOrderQuantity] = field(
+    max_back_order_quantity: MaxBackOrderQuantity | None = field(
         default=None,
         metadata={
             "name": "MaxBackOrderQuantity",
             "type": "Element",
         },
     )
-    list_of_quantity_coded: Optional[ListOfQuantityCoded] = field(
+    list_of_quantity_coded: ListOfQuantityCoded | None = field(
         default=None,
         metadata={
             "name": "ListOfQuantityCoded",
             "type": "Element",
         },
     )
-    off_catalog_flag: Optional[OffCatalogFlag] = field(
+    off_catalog_flag: OffCatalogFlag | None = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
             "type": "Element",
         },
     )
-    catalog_reference: Optional[CatalogReference] = field(
+    catalog_reference: CatalogReference | None = field(
         default=None,
         metadata={
             "name": "CatalogReference",
             "type": "Element",
         },
     )
-    item_contract_references: Optional[ItemContractReferences] = field(
+    item_contract_references: ItemContractReferences | None = field(
         default=None,
         metadata={
             "name": "ItemContractReferences",
             "type": "Element",
         },
     )
-    list_of_item_references: Optional[ListOfItemReferences] = field(
+    list_of_item_references: ListOfItemReferences | None = field(
         default=None,
         metadata={
             "name": "ListOfItemReferences",
             "type": "Element",
         },
     )
-    country_of_origin: Optional[CountryOfOrigin] = field(
+    country_of_origin: CountryOfOrigin | None = field(
         default=None,
         metadata={
             "name": "CountryOfOrigin",
             "type": "Element",
         },
     )
-    country_of_destination: Optional[CountryOfDestination] = field(
+    country_of_destination: CountryOfDestination | None = field(
         default=None,
         metadata={
             "name": "CountryOfDestination",
             "type": "Element",
         },
     )
-    final_recipient: Optional[FinalRecipient] = field(
+    final_recipient: FinalRecipient | None = field(
         default=None,
         metadata={
             "name": "FinalRecipient",
             "type": "Element",
         },
     )
-    list_of_party_coded: Optional[ListOfPartyCoded] = field(
+    list_of_party_coded: ListOfPartyCoded | None = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
         },
     )
-    conditions_of_sale: Optional[ConditionsOfSale] = field(
+    conditions_of_sale: ConditionsOfSale | None = field(
         default=None,
         metadata={
             "name": "ConditionsOfSale",
             "type": "Element",
         },
     )
-    hazardous_materials: Optional[HazardousMaterials] = field(
+    hazardous_materials: HazardousMaterials | None = field(
         default=None,
         metadata={
             "name": "HazardousMaterials",
@@ -6120,14 +6094,14 @@ class ListOfShipToSubInformation:
 
 @dataclass(kw_only=True)
 class TypeOfAllowanceOrCharge:
-    quantity_allowance_or_charge: Optional[QuantityAllowanceOrCharge] = field(
+    quantity_allowance_or_charge: QuantityAllowanceOrCharge | None = field(
         default=None,
         metadata={
             "name": "QuantityAllowanceOrCharge",
             "type": "Element",
         },
     )
-    percentage_allowance_or_charge: Optional[PercentageAllowanceOrCharge] = (
+    percentage_allowance_or_charge: PercentageAllowanceOrCharge | None = (
         field(
             default=None,
             metadata={
@@ -6136,7 +6110,7 @@ class TypeOfAllowanceOrCharge:
             },
         )
     )
-    monetary_value: Optional[MonetaryValue] = field(
+    monetary_value: MonetaryValue | None = field(
         default=None,
         metadata={
             "name": "MonetaryValue",
@@ -6162,21 +6136,21 @@ class AllowOrCharge:
             "required": True,
         }
     )
-    indicator_coded_other: Optional[IndicatorCodedOther] = field(
+    indicator_coded_other: IndicatorCodedOther | None = field(
         default=None,
         metadata={
             "name": "IndicatorCodedOther",
             "type": "Element",
         },
     )
-    basis_coded: Optional[BasisCoded] = field(
+    basis_coded: BasisCoded | None = field(
         default=None,
         metadata={
             "name": "BasisCoded",
             "type": "Element",
         },
     )
-    basis_coded_other: Optional[BasisCodedOther] = field(
+    basis_coded_other: BasisCodedOther | None = field(
         default=None,
         metadata={
             "name": "BasisCodedOther",
@@ -6190,7 +6164,7 @@ class AllowOrCharge:
             "required": True,
         }
     )
-    method_of_handling_coded_other: Optional[MethodOfHandlingCodedOther] = (
+    method_of_handling_coded_other: MethodOfHandlingCodedOther | None = (
         field(
             default=None,
             metadata={
@@ -6206,21 +6180,21 @@ class AllowOrCharge:
             "required": True,
         }
     )
-    validity_dates: Optional[ValidityDates] = field(
+    validity_dates: ValidityDates | None = field(
         default=None,
         metadata={
             "name": "ValidityDates",
             "type": "Element",
         },
     )
-    basis_quantity_range: Optional[BasisQuantityRange] = field(
+    basis_quantity_range: BasisQuantityRange | None = field(
         default=None,
         metadata={
             "name": "BasisQuantityRange",
             "type": "Element",
         },
     )
-    basis_monetary_range: Optional[BasisMonetaryRange] = field(
+    basis_monetary_range: BasisMonetaryRange | None = field(
         default=None,
         metadata={
             "name": "BasisMonetaryRange",
@@ -6245,30 +6219,28 @@ class AllowOrCharge:
 
 @dataclass(kw_only=True)
 class ScheduleLine:
-    schedule_line_id: Optional[ScheduleLineId] = field(
+    schedule_line_id: ScheduleLineId | None = field(
         default=None,
         metadata={
             "name": "ScheduleLineID",
             "type": "Element",
         },
     )
-    shipment_status_event_coded: Optional[ShipmentStatusEventCoded] = field(
+    shipment_status_event_coded: ShipmentStatusEventCoded | None = field(
         default=None,
         metadata={
             "name": "ShipmentStatusEventCoded",
             "type": "Element",
         },
     )
-    shipment_status_event_coded_other: Optional[
-        ShipmentStatusEventCodedOther
-    ] = field(
+    shipment_status_event_coded_other: ShipmentStatusEventCodedOther | None = field(
         default=None,
         metadata={
             "name": "ShipmentStatusEventCodedOther",
             "type": "Element",
         },
     )
-    shipment_status_reasons: Optional[ShipmentStatusReasons] = field(
+    shipment_status_reasons: ShipmentStatusReasons | None = field(
         default=None,
         metadata={
             "name": "ShipmentStatusReasons",
@@ -6282,42 +6254,42 @@ class ScheduleLine:
             "required": True,
         }
     )
-    requested_delivery_date: Optional[RequestedDeliveryDate] = field(
+    requested_delivery_date: RequestedDeliveryDate | None = field(
         default=None,
         metadata={
             "name": "RequestedDeliveryDate",
             "type": "Element",
         },
     )
-    list_of_other_delivery_date: Optional[ListOfOtherDeliveryDate] = field(
+    list_of_other_delivery_date: ListOfOtherDeliveryDate | None = field(
         default=None,
         metadata={
             "name": "ListOfOtherDeliveryDate",
             "type": "Element",
         },
     )
-    schedule_line_note: Optional[ScheduleLineNote] = field(
+    schedule_line_note: ScheduleLineNote | None = field(
         default=None,
         metadata={
             "name": "ScheduleLineNote",
             "type": "Element",
         },
     )
-    transport: Optional[Transport] = field(
+    transport: Transport | None = field(
         default=None,
         metadata={
             "name": "Transport",
             "type": "Element",
         },
     )
-    transport_reference: Optional[TransportReference] = field(
+    transport_reference: TransportReference | None = field(
         default=None,
         metadata={
             "name": "TransportReference",
             "type": "Element",
         },
     )
-    list_of_ship_to_sub_information: Optional[ListOfShipToSubInformation] = (
+    list_of_ship_to_sub_information: ListOfShipToSubInformation | None = (
         field(
             default=None,
             metadata={
@@ -6354,35 +6326,35 @@ class ListOfScheduleLine:
 
 @dataclass(kw_only=True)
 class DeliveryDetail:
-    ship_to_location: Optional[ShipToLocation] = field(
+    ship_to_location: ShipToLocation | None = field(
         default=None,
         metadata={
             "name": "ShipToLocation",
             "type": "Element",
         },
     )
-    ship_from_location: Optional[ShipFromLocation] = field(
+    ship_from_location: ShipFromLocation | None = field(
         default=None,
         metadata={
             "name": "ShipFromLocation",
             "type": "Element",
         },
     )
-    list_of_schedule_line: Optional[ListOfScheduleLine] = field(
+    list_of_schedule_line: ListOfScheduleLine | None = field(
         default=None,
         metadata={
             "name": "ListOfScheduleLine",
             "type": "Element",
         },
     )
-    item_packaging_reference: Optional[ItemPackagingReference] = field(
+    item_packaging_reference: ItemPackagingReference | None = field(
         default=None,
         metadata={
             "name": "ItemPackagingReference",
             "type": "Element",
         },
     )
-    simple_package_note: Optional[SimplePackageNote] = field(
+    simple_package_note: SimplePackageNote | None = field(
         default=None,
         metadata={
             "name": "SimplePackageNote",
@@ -6396,7 +6368,7 @@ class DeliveryDetail:
             "type": "Element",
         },
     )
-    cargo_classification: Optional[CargoTypeification] = field(
+    cargo_classification: CargoTypeification | None = field(
         default=None,
         metadata={
             "name": "CargoClassification",
@@ -6432,14 +6404,14 @@ class PricingDetail:
             "type": "Element",
         },
     )
-    item_allowances_or_charges: Optional[ItemAllowancesOrCharges] = field(
+    item_allowances_or_charges: ItemAllowancesOrCharges | None = field(
         default=None,
         metadata={
             "name": "ItemAllowancesOrCharges",
             "type": "Element",
         },
     )
-    total_value: Optional[TotalValue] = field(
+    total_value: TotalValue | None = field(
         default=None,
         metadata={
             "name": "TotalValue",
@@ -6457,49 +6429,49 @@ class ItemDetail:
             "required": True,
         }
     )
-    pricing_detail: Optional[PricingDetail] = field(
+    pricing_detail: PricingDetail | None = field(
         default=None,
         metadata={
             "name": "PricingDetail",
             "type": "Element",
         },
     )
-    delivery_detail: Optional[DeliveryDetail] = field(
+    delivery_detail: DeliveryDetail | None = field(
         default=None,
         metadata={
             "name": "DeliveryDetail",
             "type": "Element",
         },
     )
-    round_trip_information: Optional[RoundTripInformation] = field(
+    round_trip_information: RoundTripInformation | None = field(
         default=None,
         metadata={
             "name": "RoundTripInformation",
             "type": "Element",
         },
     )
-    line_item_note: Optional[LineItemNote] = field(
+    line_item_note: LineItemNote | None = field(
         default=None,
         metadata={
             "name": "LineItemNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: Optional[ListOfStructuredNote] = field(
+    list_of_structured_note: ListOfStructuredNote | None = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    list_of_name_value_set: Optional[ListOfNameValueSet] = field(
+    list_of_name_value_set: ListOfNameValueSet | None = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
         },
     )
-    line_item_attachments: Optional[LineItemAttachments] = field(
+    line_item_attachments: LineItemAttachments | None = field(
         default=None,
         metadata={
             "name": "LineItemAttachments",
@@ -6554,14 +6526,14 @@ class SourcingResultDetail:
             "required": True,
         }
     )
-    sourcing_result_dates: Optional[SourcingResultDates] = field(
+    sourcing_result_dates: SourcingResultDates | None = field(
         default=None,
         metadata={
             "name": "SourcingResultDates",
             "type": "Element",
         },
     )
-    sourcing_result_currency: Optional[SourcingResultCurrency] = field(
+    sourcing_result_currency: SourcingResultCurrency | None = field(
         default=None,
         metadata={
             "name": "SourcingResultCurrency",
@@ -6575,16 +6547,14 @@ class SourcingResultDetail:
             "required": True,
         }
     )
-    sourcing_result_detail_notes: Optional[SourcingResultDetailNotes] = field(
+    sourcing_result_detail_notes: SourcingResultDetailNotes | None = field(
         default=None,
         metadata={
             "name": "SourcingResultDetailNotes",
             "type": "Element",
         },
     )
-    list_of_sourcing_result_detail_attachment: Optional[
-        ListOfSourcingResultDetailAttachment
-    ] = field(
+    list_of_sourcing_result_detail_attachment: ListOfSourcingResultDetailAttachment | None = field(
         default=None,
         metadata={
             "name": "ListOfSourcingResultDetailAttachment",

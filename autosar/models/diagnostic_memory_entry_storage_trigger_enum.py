@@ -29,20 +29,20 @@ class DiagnosticMemoryEntryStorageTriggerEnum:
     class Meta:
         name = "DIAGNOSTIC-MEMORY-ENTRY-STORAGE-TRIGGER-ENUM"
 
-    value: Optional[DiagnosticMemoryEntryStorageTriggerEnumSimple] = field(
+    value: DiagnosticMemoryEntryStorageTriggerEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -27,7 +27,7 @@ class CoctMt090001Uv01AssignedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -51,21 +51,21 @@ class CoctMt090001Uv01AssignedEntity:
             "min_occurs": 1,
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[RoleClassAssignedEntity] = field(
+    class_code: RoleClassAssignedEntity | None = field(
         default=None,
         metadata={
             "name": "classCode",

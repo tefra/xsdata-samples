@@ -20,7 +20,7 @@ class AssistanceServiceVersionStructure(LocalServiceVersionStructure):
     class Meta:
         name = "AssistanceService_VersionStructure"
 
-    assistance_facility_list: Optional[AssistanceFacilityList] = field(
+    assistance_facility_list: AssistanceFacilityList | None = field(
         default=None,
         metadata={
             "name": "AssistanceFacilityList",
@@ -28,7 +28,7 @@ class AssistanceServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    assistance_availability: Optional[AssistanceAvailabilityEnumeration] = (
+    assistance_availability: AssistanceAvailabilityEnumeration | None = (
         field(
             default=None,
             metadata={
@@ -38,7 +38,7 @@ class AssistanceServiceVersionStructure(LocalServiceVersionStructure):
             },
         )
     )
-    staffing: Optional[StaffingEnumeration] = field(
+    staffing: StaffingEnumeration | None = field(
         default=None,
         metadata={
             "name": "Staffing",
@@ -64,7 +64,7 @@ class AssistanceServiceVersionStructure(LocalServiceVersionStructure):
             "tokens": True,
         },
     )
-    accessibility_trained_staff: Optional[bool] = field(
+    accessibility_trained_staff: bool | None = field(
         default=None,
         metadata={
             "name": "AccessibilityTrainedStaff",

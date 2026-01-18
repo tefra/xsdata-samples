@@ -21,14 +21,14 @@ class Depositor:
         name = "depositor"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    depositor_name: Optional[DepositorName] = field(
+    depositor_name: DepositorName | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    email_address: Optional[EmailAddress] = field(
+    email_address: EmailAddress | None = field(
         default=None,
         metadata={
             "type": "Element",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from voko.models.ekz import (
@@ -17,7 +19,7 @@ class Var:
     class Meta:
         name = "var"
 
-    kap: "Kap" = field(
+    kap: Kap = field(
         metadata={
             "type": "Element",
             "required": True,

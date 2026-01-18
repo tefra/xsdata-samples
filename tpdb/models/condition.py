@@ -10,14 +10,14 @@ class Condition:
     class Meta:
         name = "condition"
 
-    lhs: Optional[Lhs] = field(
+    lhs: Lhs | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    rhs: Optional[Rhs] = field(
+    rhs: Rhs | None = field(
         default=None,
         metadata={
             "type": "Element",

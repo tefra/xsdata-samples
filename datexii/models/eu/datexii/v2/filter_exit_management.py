@@ -21,7 +21,7 @@ class FilterExitManagement:
     :ivar filter_exit_management_extension:
     """
 
-    filter_end: Optional[bool] = field(
+    filter_end: bool | None = field(
         default=None,
         metadata={
             "name": "filterEnd",
@@ -30,7 +30,7 @@ class FilterExitManagement:
             "required": True,
         },
     )
-    filter_out_of_range: Optional[bool] = field(
+    filter_out_of_range: bool | None = field(
         default=None,
         metadata={
             "name": "filterOutOfRange",
@@ -39,7 +39,7 @@ class FilterExitManagement:
             "required": True,
         },
     )
-    filter_exit_management_extension: Optional[ExtensionType] = field(
+    filter_exit_management_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "filterExitManagementExtension",

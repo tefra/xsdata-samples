@@ -12,7 +12,7 @@ class AbstractGroupMemberVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "AbstractGroupMember_VersionedChildStructure"
 
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -20,7 +20,7 @@ class AbstractGroupMemberVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

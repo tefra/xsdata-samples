@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -34,9 +36,7 @@ class RPortPrototypeInSoftwareClusterDesignInstanceRef:
     class Meta:
         name = "R-PORT-PROTOTYPE-IN-SOFTWARE-CLUSTER-DESIGN-INSTANCE-REF"
 
-    context_root_sw_cluster_design_component_prototype_ref: Optional[
-        "RPortPrototypeInSoftwareClusterDesignInstanceRef.ContextRootSwClusterDesignComponentPrototypeRef"
-    ] = field(
+    context_root_sw_cluster_design_component_prototype_ref: RPortPrototypeInSoftwareClusterDesignInstanceRef.ContextRootSwClusterDesignComponentPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-CLUSTER-DESIGN-COMPONENT-PROTOTYPE-REF",
@@ -45,7 +45,7 @@ class RPortPrototypeInSoftwareClusterDesignInstanceRef:
         },
     )
     context_sw_component_prototype_ref: list[
-        "RPortPrototypeInSoftwareClusterDesignInstanceRef.ContextSwComponentPrototypeRef"
+        RPortPrototypeInSoftwareClusterDesignInstanceRef.ContextSwComponentPrototypeRef
     ] = field(
         default_factory=list,
         metadata={
@@ -54,9 +54,7 @@ class RPortPrototypeInSoftwareClusterDesignInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_r_port_prototype_ref: Optional[
-        "RPortPrototypeInSoftwareClusterDesignInstanceRef.TargetRPortPrototypeRef"
-    ] = field(
+    target_r_port_prototype_ref: RPortPrototypeInSoftwareClusterDesignInstanceRef.TargetRPortPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-R-PORT-PROTOTYPE-REF",
@@ -64,14 +62,14 @@ class RPortPrototypeInSoftwareClusterDesignInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +80,7 @@ class RPortPrototypeInSoftwareClusterDesignInstanceRef:
 
     @dataclass
     class ContextRootSwClusterDesignComponentPrototypeRef(Ref):
-        dest: Optional[RootSwClusterDesignComponentPrototypeSubtypesEnum] = (
+        dest: RootSwClusterDesignComponentPrototypeSubtypesEnum | None = (
             field(
                 default=None,
                 metadata={
@@ -95,7 +93,7 @@ class RPortPrototypeInSoftwareClusterDesignInstanceRef:
 
     @dataclass
     class ContextSwComponentPrototypeRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -106,7 +104,7 @@ class RPortPrototypeInSoftwareClusterDesignInstanceRef:
 
     @dataclass
     class TargetRPortPrototypeRef(Ref):
-        dest: Optional[RPortPrototypeSubtypesEnum] = field(
+        dest: RPortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

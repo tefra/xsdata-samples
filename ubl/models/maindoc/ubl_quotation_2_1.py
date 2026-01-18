@@ -41,7 +41,7 @@ __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:Quotation-2"
 
 @dataclass(frozen=True)
 class QuotationType:
-    ublextensions: Optional[Ublextensions] = field(
+    ublextensions: Ublextensions | None = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -49,7 +49,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: Optional[UblversionId] = field(
+    ublversion_id: UblversionId | None = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -57,7 +57,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: Optional[CustomizationId] = field(
+    customization_id: CustomizationId | None = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -65,7 +65,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: Optional[ProfileId] = field(
+    profile_id: ProfileId | None = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -73,7 +73,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: Optional[ProfileExecutionId] = field(
+    profile_execution_id: ProfileExecutionId | None = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -81,7 +81,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -89,7 +89,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    copy_indicator: Optional[CopyIndicator] = field(
+    copy_indicator: CopyIndicator | None = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -97,7 +97,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -105,7 +105,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -114,7 +114,7 @@ class QuotationType:
             "required": True,
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -130,7 +130,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    pricing_currency_code: Optional[PricingCurrencyCode] = field(
+    pricing_currency_code: PricingCurrencyCode | None = field(
         default=None,
         metadata={
             "name": "PricingCurrencyCode",
@@ -138,7 +138,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_count_numeric: Optional[LineCountNumeric] = field(
+    line_count_numeric: LineCountNumeric | None = field(
         default=None,
         metadata={
             "name": "LineCountNumeric",
@@ -146,7 +146,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    validity_period: Optional[ValidityPeriod] = field(
+    validity_period: ValidityPeriod | None = field(
         default=None,
         metadata={
             "name": "ValidityPeriod",
@@ -154,9 +154,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    request_for_quotation_document_reference: Optional[
-        RequestForQuotationDocumentReference
-    ] = field(
+    request_for_quotation_document_reference: RequestForQuotationDocumentReference | None = field(
         default=None,
         metadata={
             "name": "RequestForQuotationDocumentReference",
@@ -190,7 +188,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_supplier_party: Optional[SellerSupplierParty] = field(
+    seller_supplier_party: SellerSupplierParty | None = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",
@@ -199,7 +197,7 @@ class QuotationType:
             "required": True,
         },
     )
-    buyer_customer_party: Optional[BuyerCustomerParty] = field(
+    buyer_customer_party: BuyerCustomerParty | None = field(
         default=None,
         metadata={
             "name": "BuyerCustomerParty",
@@ -207,7 +205,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    originator_customer_party: Optional[OriginatorCustomerParty] = field(
+    originator_customer_party: OriginatorCustomerParty | None = field(
         default=None,
         metadata={
             "name": "OriginatorCustomerParty",
@@ -223,7 +221,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    delivery_terms: Optional[DeliveryTerms] = field(
+    delivery_terms: DeliveryTerms | None = field(
         default=None,
         metadata={
             "name": "DeliveryTerms",
@@ -231,7 +229,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_means: Optional[PaymentMeans] = field(
+    payment_means: PaymentMeans | None = field(
         default=None,
         metadata={
             "name": "PaymentMeans",
@@ -239,7 +237,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transaction_conditions: Optional[TransactionConditions] = field(
+    transaction_conditions: TransactionConditions | None = field(
         default=None,
         metadata={
             "name": "TransactionConditions",
@@ -255,7 +253,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    destination_country: Optional[DestinationCountry] = field(
+    destination_country: DestinationCountry | None = field(
         default=None,
         metadata={
             "name": "DestinationCountry",
@@ -271,7 +269,7 @@ class QuotationType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    quoted_monetary_total: Optional[QuotedMonetaryTotal] = field(
+    quoted_monetary_total: QuotedMonetaryTotal | None = field(
         default=None,
         metadata={
             "name": "QuotedMonetaryTotal",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -95,7 +97,7 @@ class ConstraintTailoring:
     class Meta:
         name = "CONSTRAINT-TAILORING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -104,9 +106,7 @@ class ConstraintTailoring:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ConstraintTailoring.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ConstraintTailoring.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -114,7 +114,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +122,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +130,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +138,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +146,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +154,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ConstraintTailoring.Annotations"] = field(
+    annotations: ConstraintTailoring.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -162,7 +162,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    alternative_name: Optional[String] = field(
+    alternative_name: String | None = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-NAME",
@@ -170,7 +170,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    in_scope: Optional[Boolean] = field(
+    in_scope: Boolean | None = field(
         default=None,
         metadata={
             "name": "IN-SCOPE",
@@ -178,7 +178,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    severity: Optional[SeverityEnum] = field(
+    severity: SeverityEnum | None = field(
         default=None,
         metadata={
             "name": "SEVERITY",
@@ -186,7 +186,7 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    constraint_ref: Optional["ConstraintTailoring.ConstraintRef"] = field(
+    constraint_ref: ConstraintTailoring.ConstraintRef | None = field(
         default=None,
         metadata={
             "name": "CONSTRAINT-REF",
@@ -194,14 +194,14 @@ class ConstraintTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -209,7 +209,7 @@ class ConstraintTailoring:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -241,7 +241,7 @@ class ConstraintTailoring:
 
     @dataclass
     class ConstraintRef(Ref):
-        dest: Optional[TraceableTextSubtypesEnum] = field(
+        dest: TraceableTextSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -57,7 +59,7 @@ class ConditionalChangeNad:
     class Meta:
         name = "CONDITIONAL-CHANGE-NAD"
 
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -65,7 +67,7 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delay: Optional[TimeValue] = field(
+    delay: TimeValue | None = field(
         default=None,
         metadata={
             "name": "DELAY",
@@ -73,7 +75,7 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    position_in_table: Optional[Integer] = field(
+    position_in_table: Integer | None = field(
         default=None,
         metadata={
             "name": "POSITION-IN-TABLE",
@@ -81,9 +83,7 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_controller_ref: Optional[
-        "ConditionalChangeNad.AssignedControllerRef"
-    ] = field(
+    assigned_controller_ref: ConditionalChangeNad.AssignedControllerRef | None = field(
         default=None,
         metadata={
             "name": "ASSIGNED-CONTROLLER-REF",
@@ -91,9 +91,7 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_lin_slave_config_ref: Optional[
-        "ConditionalChangeNad.AssignedLinSlaveConfigRef"
-    ] = field(
+    assigned_lin_slave_config_ref: ConditionalChangeNad.AssignedLinSlaveConfigRef | None = field(
         default=None,
         metadata={
             "name": "ASSIGNED-LIN-SLAVE-CONFIG-REF",
@@ -101,7 +99,7 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    byte: Optional[Integer] = field(
+    byte: Integer | None = field(
         default=None,
         metadata={
             "name": "BYTE",
@@ -109,7 +107,7 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    id: Optional[PositiveInteger] = field(
+    id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -117,7 +115,7 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    invert: Optional[Integer] = field(
+    invert: Integer | None = field(
         default=None,
         metadata={
             "name": "INVERT",
@@ -125,7 +123,7 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mask: Optional[Integer] = field(
+    mask: Integer | None = field(
         default=None,
         metadata={
             "name": "MASK",
@@ -133,7 +131,7 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    new_nad: Optional[Integer] = field(
+    new_nad: Integer | None = field(
         default=None,
         metadata={
             "name": "NEW-NAD",
@@ -141,14 +139,14 @@ class ConditionalChangeNad:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -159,7 +157,7 @@ class ConditionalChangeNad:
 
     @dataclass
     class AssignedControllerRef(Ref):
-        dest: Optional[LinSlaveSubtypesEnum] = field(
+        dest: LinSlaveSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -170,7 +168,7 @@ class ConditionalChangeNad:
 
     @dataclass
     class AssignedLinSlaveConfigRef(Ref):
-        dest: Optional[LinSlaveConfigIdentSubtypesEnum] = field(
+        dest: LinSlaveConfigIdentSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

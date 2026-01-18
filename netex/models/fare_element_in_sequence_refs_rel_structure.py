@@ -20,11 +20,7 @@ class FareElementInSequenceRefsRelStructure(OneToManyRelationshipStructure):
         name = "fareElementInSequenceRefs_RelStructure"
 
     fare_element_in_sequence_ref: Iterable[
-        Union[
-            ControllableElementInSequenceRef,
-            FareStructureElementInSequenceRef,
-            AccessRightInProductRef,
-        ]
+        ControllableElementInSequenceRef | FareStructureElementInSequenceRef | AccessRightInProductRef
     ] = field(
         default_factory=list,
         metadata={

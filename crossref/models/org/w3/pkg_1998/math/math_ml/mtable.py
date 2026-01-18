@@ -45,13 +45,13 @@ class Mtable:
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: Optional[object] = field(
+    xref: object | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -65,19 +65,19 @@ class Mtable:
             "tokens": True,
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: Optional[object] = field(
+    other: object | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -90,21 +90,21 @@ class Mtable:
             "namespace": "##other",
         },
     )
-    mathcolor: Optional[str] = field(
+    mathcolor: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: Optional[Union[str, MtableValue]] = field(
+    mathbackground: str | MtableValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    align: Optional[str] = field(
+    align: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -125,7 +125,7 @@ class Mtable:
             "tokens": True,
         },
     )
-    groupalign: Optional[str] = field(
+    groupalign: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -146,7 +146,7 @@ class Mtable:
             "tokens": True,
         },
     )
-    width: Optional[Union[str, MtableValue]] = field(
+    width: str | MtableValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -185,7 +185,7 @@ class Mtable:
             "tokens": True,
         },
     )
-    frame: Optional[Linestyle] = field(
+    frame: Linestyle | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -199,31 +199,31 @@ class Mtable:
             "tokens": True,
         },
     )
-    equalrows: Optional[MtableEqualrows] = field(
+    equalrows: MtableEqualrows | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    equalcolumns: Optional[MtableEqualcolumns] = field(
+    equalcolumns: MtableEqualcolumns | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    displaystyle: Optional[MtableDisplaystyle] = field(
+    displaystyle: MtableDisplaystyle | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    side: Optional[MtableSide] = field(
+    side: MtableSide | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    minlabelspacing: Optional[str] = field(
+    minlabelspacing: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -47,7 +47,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "tokens": True,
         },
     )
-    ticket_counter_service: Optional[bool] = field(
+    ticket_counter_service: bool | None = field(
         default=None,
         metadata={
             "name": "TicketCounterService",
@@ -55,7 +55,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    online_purchase_for_collection: Optional[bool] = field(
+    online_purchase_for_collection: bool | None = field(
         default=None,
         metadata={
             "name": "OnlinePurchaseForCollection",
@@ -63,7 +63,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    online_purchase_for_eticket: Optional[bool] = field(
+    online_purchase_for_eticket: bool | None = field(
         default=None,
         metadata={
             "name": "OnlinePurchaseForETicket",
@@ -71,7 +71,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    online_purchase_for_self_print_ticket: Optional[bool] = field(
+    online_purchase_for_self_print_ticket: bool | None = field(
         default=None,
         metadata={
             "name": "OnlinePurchaseForSelfPrintTicket",
@@ -79,7 +79,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mobile_device_tickets: Optional[bool] = field(
+    mobile_device_tickets: bool | None = field(
         default=None,
         metadata={
             "name": "MobileDeviceTickets",

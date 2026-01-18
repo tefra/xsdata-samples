@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -36,7 +38,7 @@ class TlsPskIdentity:
     class Meta:
         name = "TLS-PSK-IDENTITY"
 
-    pre_shared_key_ref: Optional["TlsPskIdentity.PreSharedKeyRef"] = field(
+    pre_shared_key_ref: TlsPskIdentity.PreSharedKeyRef | None = field(
         default=None,
         metadata={
             "name": "PRE-SHARED-KEY-REF",
@@ -44,7 +46,7 @@ class TlsPskIdentity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    psk_identity: Optional[String] = field(
+    psk_identity: String | None = field(
         default=None,
         metadata={
             "name": "PSK-IDENTITY",
@@ -52,7 +54,7 @@ class TlsPskIdentity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    psk_identity_hint: Optional[String] = field(
+    psk_identity_hint: String | None = field(
         default=None,
         metadata={
             "name": "PSK-IDENTITY-HINT",
@@ -60,14 +62,14 @@ class TlsPskIdentity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -78,7 +80,7 @@ class TlsPskIdentity:
 
     @dataclass
     class PreSharedKeyRef(Ref):
-        dest: Optional[CryptoServiceKeySubtypesEnum] = field(
+        dest: CryptoServiceKeySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

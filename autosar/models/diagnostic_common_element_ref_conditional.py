@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class DiagnosticCommonElementRefConditional:
     class Meta:
         name = "DIAGNOSTIC-COMMON-ELEMENT-REF-CONDITIONAL"
 
-    diagnostic_common_element_ref: Optional[
-        "DiagnosticCommonElementRefConditional.DiagnosticCommonElementRef"
-    ] = field(
+    diagnostic_common_element_ref: DiagnosticCommonElementRefConditional.DiagnosticCommonElementRef | None = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-COMMON-ELEMENT-REF",
@@ -43,7 +43,7 @@ class DiagnosticCommonElementRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class DiagnosticCommonElementRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class DiagnosticCommonElementRefConditional:
 
     @dataclass
     class DiagnosticCommonElementRef(Ref):
-        dest: Optional[DiagnosticCommonElementSubtypesEnum] = field(
+        dest: DiagnosticCommonElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

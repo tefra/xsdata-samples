@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ClassRelationshipInFrameStructure:
-    relationship_ref: Optional[RelationshipRef] = field(
+    relationship_ref: RelationshipRef | None = field(
         default=None,
         metadata={
             "name": "RelationshipRef",
@@ -21,7 +21,7 @@ class ClassRelationshipInFrameStructure:
             "required": True,
         },
     )
-    mandatory: Optional[MandatoryEnumeration] = field(
+    mandatory: MandatoryEnumeration | None = field(
         default=None,
         metadata={
             "name": "Mandatory",
@@ -29,7 +29,7 @@ class ClassRelationshipInFrameStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    containment: Optional[ContainmentEnumeration] = field(
+    containment: ContainmentEnumeration | None = field(
         default=None,
         metadata={
             "name": "Containment",
@@ -37,7 +37,7 @@ class ClassRelationshipInFrameStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    modification_set: Optional[ModificationSetEnumeration] = field(
+    modification_set: ModificationSetEnumeration | None = field(
         default=None,
         metadata={
             "name": "ModificationSet",
@@ -45,7 +45,7 @@ class ClassRelationshipInFrameStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: Optional[QName] = field(
+    name: QName | None = field(
         default=None,
         metadata={
             "type": "Attribute",

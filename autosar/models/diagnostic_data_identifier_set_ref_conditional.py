@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class DiagnosticDataIdentifierSetRefConditional:
     class Meta:
         name = "DIAGNOSTIC-DATA-IDENTIFIER-SET-REF-CONDITIONAL"
 
-    diagnostic_data_identifier_set_ref: Optional[
-        "DiagnosticDataIdentifierSetRefConditional.DiagnosticDataIdentifierSetRef"
-    ] = field(
+    diagnostic_data_identifier_set_ref: DiagnosticDataIdentifierSetRefConditional.DiagnosticDataIdentifierSetRef | None = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-DATA-IDENTIFIER-SET-REF",
@@ -43,7 +43,7 @@ class DiagnosticDataIdentifierSetRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class DiagnosticDataIdentifierSetRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class DiagnosticDataIdentifierSetRefConditional:
 
     @dataclass
     class DiagnosticDataIdentifierSetRef(Ref):
-        dest: Optional[DiagnosticDataIdentifierSetSubtypesEnum] = field(
+        dest: DiagnosticDataIdentifierSetSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

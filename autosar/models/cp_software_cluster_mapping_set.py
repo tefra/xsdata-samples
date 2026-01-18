@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -114,7 +116,7 @@ class CpSoftwareClusterMappingSet:
     class Meta:
         name = "CP-SOFTWARE-CLUSTER-MAPPING-SET"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -123,9 +125,7 @@ class CpSoftwareClusterMappingSet:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "CpSoftwareClusterMappingSet.ShortNameFragments"
-    ] = field(
+    short_name_fragments: CpSoftwareClusterMappingSet.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -133,7 +133,7 @@ class CpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -141,7 +141,7 @@ class CpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -149,7 +149,7 @@ class CpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -157,7 +157,7 @@ class CpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -165,7 +165,7 @@ class CpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -173,7 +173,7 @@ class CpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["CpSoftwareClusterMappingSet.Annotations"] = field(
+    annotations: CpSoftwareClusterMappingSet.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -181,7 +181,7 @@ class CpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -189,9 +189,7 @@ class CpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_element_to_com_resource_mappings: Optional[
-        "CpSoftwareClusterMappingSet.PortElementToComResourceMappings"
-    ] = field(
+    port_element_to_com_resource_mappings: CpSoftwareClusterMappingSet.PortElementToComResourceMappings | None = field(
         default=None,
         metadata={
             "name": "PORT-ELEMENT-TO-COM-RESOURCE-MAPPINGS",
@@ -199,9 +197,7 @@ class CpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_to_application_partition_mappings: Optional[
-        "CpSoftwareClusterMappingSet.ResourceToApplicationPartitionMappings"
-    ] = field(
+    resource_to_application_partition_mappings: CpSoftwareClusterMappingSet.ResourceToApplicationPartitionMappings | None = field(
         default=None,
         metadata={
             "name": "RESOURCE-TO-APPLICATION-PARTITION-MAPPINGS",
@@ -209,9 +205,7 @@ class CpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_cluster_to_resource_mappings: Optional[
-        "CpSoftwareClusterMappingSet.SoftwareClusterToResourceMappings"
-    ] = field(
+    software_cluster_to_resource_mappings: CpSoftwareClusterMappingSet.SoftwareClusterToResourceMappings | None = field(
         default=None,
         metadata={
             "name": "SOFTWARE-CLUSTER-TO-RESOURCE-MAPPINGS",
@@ -219,9 +213,7 @@ class CpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_to_application_partition_mappings: Optional[
-        "CpSoftwareClusterMappingSet.SwcToApplicationPartitionMappings"
-    ] = field(
+    swc_to_application_partition_mappings: CpSoftwareClusterMappingSet.SwcToApplicationPartitionMappings | None = field(
         default=None,
         metadata={
             "name": "SWC-TO-APPLICATION-PARTITION-MAPPINGS",
@@ -229,14 +221,14 @@ class CpSoftwareClusterMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -244,7 +236,7 @@ class CpSoftwareClusterMappingSet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

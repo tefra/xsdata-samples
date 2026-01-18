@@ -13,7 +13,7 @@ class EquipmentPlaceVersionStructure(SiteElementVersionStructure):
     class Meta:
         name = "EquipmentPlace_VersionStructure"
 
-    equipment_positions: Optional[EquipmentPositionsRelStructure] = field(
+    equipment_positions: EquipmentPositionsRelStructure | None = field(
         default=None,
         metadata={
             "name": "equipmentPositions",
@@ -21,7 +21,7 @@ class EquipmentPlaceVersionStructure(SiteElementVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    place_equipments: Optional[EquipmentsRelStructure] = field(
+    place_equipments: EquipmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "placeEquipments",

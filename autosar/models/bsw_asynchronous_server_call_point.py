@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -46,7 +48,7 @@ class BswAsynchronousServerCallPoint:
     class Meta:
         name = "BSW-ASYNCHRONOUS-SERVER-CALL-POINT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -55,9 +57,7 @@ class BswAsynchronousServerCallPoint:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "BswAsynchronousServerCallPoint.ShortNameFragments"
-    ] = field(
+    short_name_fragments: BswAsynchronousServerCallPoint.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -65,9 +65,7 @@ class BswAsynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_limitation_refs: Optional[
-        "BswAsynchronousServerCallPoint.ContextLimitationRefs"
-    ] = field(
+    context_limitation_refs: BswAsynchronousServerCallPoint.ContextLimitationRefs | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-LIMITATION-REFS",
@@ -75,7 +73,7 @@ class BswAsynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -83,9 +81,7 @@ class BswAsynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    called_entry_ref: Optional[
-        "BswAsynchronousServerCallPoint.CalledEntryRef"
-    ] = field(
+    called_entry_ref: BswAsynchronousServerCallPoint.CalledEntryRef | None = field(
         default=None,
         metadata={
             "name": "CALLED-ENTRY-REF",
@@ -93,14 +89,14 @@ class BswAsynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -123,7 +119,7 @@ class BswAsynchronousServerCallPoint:
     @dataclass
     class ContextLimitationRefs:
         context_limitation_ref: list[
-            "BswAsynchronousServerCallPoint.ContextLimitationRefs.ContextLimitationRef"
+            BswAsynchronousServerCallPoint.ContextLimitationRefs.ContextLimitationRef
         ] = field(
             default_factory=list,
             metadata={
@@ -135,7 +131,7 @@ class BswAsynchronousServerCallPoint:
 
         @dataclass
         class ContextLimitationRef(Ref):
-            dest: Optional[BswDistinguishedPartitionSubtypesEnum] = field(
+            dest: BswDistinguishedPartitionSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -146,7 +142,7 @@ class BswAsynchronousServerCallPoint:
 
     @dataclass
     class CalledEntryRef(Ref):
-        dest: Optional[BswModuleClientServerEntrySubtypesEnum] = field(
+        dest: BswModuleClientServerEntrySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

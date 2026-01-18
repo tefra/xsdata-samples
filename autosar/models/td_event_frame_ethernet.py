@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -113,7 +115,7 @@ class TdEventFrameEthernet:
     class Meta:
         name = "TD-EVENT-FRAME-ETHERNET"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -122,9 +124,7 @@ class TdEventFrameEthernet:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "TdEventFrameEthernet.ShortNameFragments"
-    ] = field(
+    short_name_fragments: TdEventFrameEthernet.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -132,7 +132,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -140,7 +140,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -148,7 +148,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -156,7 +156,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -164,7 +164,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -172,7 +172,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["TdEventFrameEthernet.Annotations"] = field(
+    annotations: TdEventFrameEthernet.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -180,7 +180,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -188,7 +188,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    occurrence_expression: Optional[TdEventOccurrenceExpression] = field(
+    occurrence_expression: TdEventOccurrenceExpression | None = field(
         default=None,
         metadata={
             "name": "OCCURRENCE-EXPRESSION",
@@ -196,7 +196,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: Optional["TdEventFrameEthernet.EcuInstanceRef"] = field(
+    ecu_instance_ref: TdEventFrameEthernet.EcuInstanceRef | None = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
@@ -204,9 +204,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    socket_connection_bundle_ref: Optional[
-        "TdEventFrameEthernet.SocketConnectionBundleRef"
-    ] = field(
+    socket_connection_bundle_ref: TdEventFrameEthernet.SocketConnectionBundleRef | None = field(
         default=None,
         metadata={
             "name": "SOCKET-CONNECTION-BUNDLE-REF",
@@ -214,9 +212,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    static_socket_connection_ref: Optional[
-        "TdEventFrameEthernet.StaticSocketConnectionRef"
-    ] = field(
+    static_socket_connection_ref: TdEventFrameEthernet.StaticSocketConnectionRef | None = field(
         default=None,
         metadata={
             "name": "STATIC-SOCKET-CONNECTION-REF",
@@ -224,7 +220,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_event_type: Optional[TdEventFrameEthernetTypeEnum] = field(
+    td_event_type: TdEventFrameEthernetTypeEnum | None = field(
         default=None,
         metadata={
             "name": "TD-EVENT-TYPE",
@@ -232,9 +228,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_header_id_filters: Optional[
-        "TdEventFrameEthernet.TdHeaderIdFilters"
-    ] = field(
+    td_header_id_filters: TdEventFrameEthernet.TdHeaderIdFilters | None = field(
         default=None,
         metadata={
             "name": "TD-HEADER-ID-FILTERS",
@@ -242,9 +236,7 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_pdu_triggering_filter_refs: Optional[
-        "TdEventFrameEthernet.TdPduTriggeringFilterRefs"
-    ] = field(
+    td_pdu_triggering_filter_refs: TdEventFrameEthernet.TdPduTriggeringFilterRefs | None = field(
         default=None,
         metadata={
             "name": "TD-PDU-TRIGGERING-FILTER-REFS",
@@ -252,14 +244,14 @@ class TdEventFrameEthernet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -267,7 +259,7 @@ class TdEventFrameEthernet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -299,7 +291,7 @@ class TdEventFrameEthernet:
 
     @dataclass
     class EcuInstanceRef(Ref):
-        dest: Optional[EcuInstanceSubtypesEnum] = field(
+        dest: EcuInstanceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -310,7 +302,7 @@ class TdEventFrameEthernet:
 
     @dataclass
     class SocketConnectionBundleRef(Ref):
-        dest: Optional[SocketConnectionBundleSubtypesEnum] = field(
+        dest: SocketConnectionBundleSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -321,7 +313,7 @@ class TdEventFrameEthernet:
 
     @dataclass
     class StaticSocketConnectionRef(Ref):
-        dest: Optional[StaticSocketConnectionSubtypesEnum] = field(
+        dest: StaticSocketConnectionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -344,7 +336,7 @@ class TdEventFrameEthernet:
     @dataclass
     class TdPduTriggeringFilterRefs:
         td_pdu_triggering_filter_ref: list[
-            "TdEventFrameEthernet.TdPduTriggeringFilterRefs.TdPduTriggeringFilterRef"
+            TdEventFrameEthernet.TdPduTriggeringFilterRefs.TdPduTriggeringFilterRef
         ] = field(
             default_factory=list,
             metadata={
@@ -356,7 +348,7 @@ class TdEventFrameEthernet:
 
         @dataclass
         class TdPduTriggeringFilterRef(Ref):
-            dest: Optional[PduTriggeringSubtypesEnum] = field(
+            dest: PduTriggeringSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

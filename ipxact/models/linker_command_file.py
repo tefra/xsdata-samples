@@ -28,14 +28,14 @@ class LinkerCommandFile:
         name = "linkerCommandFile"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: Optional[StringExpression] = field(
+    name: StringExpression | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    command_line_switch: Optional[StringExpression] = field(
+    command_line_switch: StringExpression | None = field(
         default=None,
         metadata={
             "name": "commandLineSwitch",
@@ -43,7 +43,7 @@ class LinkerCommandFile:
             "required": True,
         },
     )
-    enable: Optional[UnsignedBitExpression] = field(
+    enable: UnsignedBitExpression | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -57,14 +57,14 @@ class LinkerCommandFile:
             "type": "Element",
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

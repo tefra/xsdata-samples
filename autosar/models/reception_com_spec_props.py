@@ -35,7 +35,7 @@ class ReceptionComSpecProps:
     class Meta:
         name = "RECEPTION-COM-SPEC-PROPS"
 
-    data_update_period: Optional[TimeValue] = field(
+    data_update_period: TimeValue | None = field(
         default=None,
         metadata={
             "name": "DATA-UPDATE-PERIOD",
@@ -43,7 +43,7 @@ class ReceptionComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout: Optional[TimeValue] = field(
+    timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIMEOUT",
@@ -51,14 +51,14 @@ class ReceptionComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

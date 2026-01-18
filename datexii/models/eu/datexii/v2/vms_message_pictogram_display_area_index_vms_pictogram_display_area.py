@@ -13,7 +13,7 @@ class VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea:
     class Meta:
         name = "_VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea"
 
-    vms_pictogram_display_area: Optional[VmsPictogramDisplayArea] = field(
+    vms_pictogram_display_area: VmsPictogramDisplayArea | None = field(
         default=None,
         metadata={
             "name": "vmsPictogramDisplayArea",
@@ -22,7 +22,7 @@ class VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea:
             "required": True,
         },
     )
-    pictogram_display_area_index: Optional[int] = field(
+    pictogram_display_area_index: int | None = field(
         default=None,
         metadata={
             "name": "pictogramDisplayAreaIndex",

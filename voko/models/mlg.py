@@ -7,7 +7,7 @@ class Mlg:
     class Meta:
         name = "mlg"
 
-    kod: Optional[str] = field(
+    kod: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

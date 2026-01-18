@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -102,7 +104,7 @@ class AsynchronousServerCallReturnsEvent:
     class Meta:
         name = "ASYNCHRONOUS-SERVER-CALL-RETURNS-EVENT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -111,9 +113,7 @@ class AsynchronousServerCallReturnsEvent:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "AsynchronousServerCallReturnsEvent.ShortNameFragments"
-    ] = field(
+    short_name_fragments: AsynchronousServerCallReturnsEvent.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -121,7 +121,7 @@ class AsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -129,7 +129,7 @@ class AsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -137,7 +137,7 @@ class AsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -145,7 +145,7 @@ class AsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -153,7 +153,7 @@ class AsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -161,7 +161,7 @@ class AsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["AsynchronousServerCallReturnsEvent.Annotations"] = (
+    annotations: AsynchronousServerCallReturnsEvent.Annotations | None = (
         field(
             default=None,
             metadata={
@@ -171,9 +171,7 @@ class AsynchronousServerCallReturnsEvent:
             },
         )
     )
-    activation_reason_representation_ref: Optional[
-        "AsynchronousServerCallReturnsEvent.ActivationReasonRepresentationRef"
-    ] = field(
+    activation_reason_representation_ref: AsynchronousServerCallReturnsEvent.ActivationReasonRepresentationRef | None = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
@@ -181,9 +179,7 @@ class AsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_mode_irefs: Optional[
-        "AsynchronousServerCallReturnsEvent.DisabledModeIrefs"
-    ] = field(
+    disabled_mode_irefs: AsynchronousServerCallReturnsEvent.DisabledModeIrefs | None = field(
         default=None,
         metadata={
             "name": "DISABLED-MODE-IREFS",
@@ -191,9 +187,7 @@ class AsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    start_on_event_ref: Optional[
-        "AsynchronousServerCallReturnsEvent.StartOnEventRef"
-    ] = field(
+    start_on_event_ref: AsynchronousServerCallReturnsEvent.StartOnEventRef | None = field(
         default=None,
         metadata={
             "name": "START-ON-EVENT-REF",
@@ -201,7 +195,7 @@ class AsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -209,9 +203,7 @@ class AsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_source_ref: Optional[
-        "AsynchronousServerCallReturnsEvent.EventSourceRef"
-    ] = field(
+    event_source_ref: AsynchronousServerCallReturnsEvent.EventSourceRef | None = field(
         default=None,
         metadata={
             "name": "EVENT-SOURCE-REF",
@@ -219,14 +211,14 @@ class AsynchronousServerCallReturnsEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -234,7 +226,7 @@ class AsynchronousServerCallReturnsEvent:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -266,7 +258,7 @@ class AsynchronousServerCallReturnsEvent:
 
     @dataclass
     class ActivationReasonRepresentationRef(Ref):
-        dest: Optional[ExecutableEntityActivationReasonSubtypesEnum] = field(
+        dest: ExecutableEntityActivationReasonSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -288,7 +280,7 @@ class AsynchronousServerCallReturnsEvent:
 
     @dataclass
     class StartOnEventRef(Ref):
-        dest: Optional[RunnableEntitySubtypesEnum] = field(
+        dest: RunnableEntitySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -299,7 +291,7 @@ class AsynchronousServerCallReturnsEvent:
 
     @dataclass
     class EventSourceRef(Ref):
-        dest: Optional[AsynchronousServerCallResultPointSubtypesEnum] = field(
+        dest: AsynchronousServerCallResultPointSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

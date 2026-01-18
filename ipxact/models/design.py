@@ -42,100 +42,100 @@ class Design:
         name = "design"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    vendor: Optional[str] = field(
+    vendor: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    library: Optional[str] = field(
+    library: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    display_name: Optional[str] = field(
+    display_name: str | None = field(
         default=None,
         metadata={
             "name": "displayName",
             "type": "Element",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
             "type": "Element",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    component_instances: Optional[ComponentInstances] = field(
+    component_instances: ComponentInstances | None = field(
         default=None,
         metadata={
             "name": "componentInstances",
             "type": "Element",
         },
     )
-    interconnections: Optional[Interconnections] = field(
+    interconnections: Interconnections | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ad_hoc_connections: Optional[AdHocConnections] = field(
+    ad_hoc_connections: AdHocConnections | None = field(
         default=None,
         metadata={
             "name": "adHocConnections",
             "type": "Element",
         },
     )
-    choices: Optional[Choices] = field(
+    choices: Choices | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    parameters: Optional[Parameters] = field(
+    parameters: Parameters | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    assertions: Optional[Assertions] = field(
+    assertions: Assertions | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -40,7 +40,7 @@ class QuqiMt020001Uv01AuthorOrPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -56,7 +56,7 @@ class QuqiMt020001Uv01AuthorOrPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    note_text: Optional[EdExplicit] = field(
+    note_text: EdExplicit | None = field(
         default=None,
         metadata={
             "name": "noteText",
@@ -64,14 +64,14 @@ class QuqiMt020001Uv01AuthorOrPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: Optional[IvlTsExplicit] = field(
+    time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    mode_code: Optional[Ce] = field(
+    mode_code: Ce | None = field(
         default=None,
         metadata={
             "name": "modeCode",
@@ -79,7 +79,7 @@ class QuqiMt020001Uv01AuthorOrPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    signature_code: Optional[Ce] = field(
+    signature_code: Ce | None = field(
         default=None,
         metadata={
             "name": "signatureCode",
@@ -87,7 +87,7 @@ class QuqiMt020001Uv01AuthorOrPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    signature_text: Optional[EdExplicit] = field(
+    signature_text: EdExplicit | None = field(
         default=None,
         metadata={
             "name": "signatureText",
@@ -95,7 +95,7 @@ class QuqiMt020001Uv01AuthorOrPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_device: Optional[CoctMt090300Uv01AssignedDevice] = field(
+    assigned_device: CoctMt090300Uv01AssignedDevice | None = field(
         default=None,
         metadata={
             "name": "assignedDevice",
@@ -104,7 +104,7 @@ class QuqiMt020001Uv01AuthorOrPerformer:
             "nillable": True,
         },
     )
-    assigned_person: Optional[CoctMt090100Uv01AssignedPerson] = field(
+    assigned_person: CoctMt090100Uv01AssignedPerson | None = field(
         default=None,
         metadata={
             "name": "assignedPerson",
@@ -113,14 +113,14 @@ class QuqiMt020001Uv01AuthorOrPerformer:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[XParticipationAuthorPerformer] = field(
+    type_code: XParticipationAuthorPerformer | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -150,7 +150,7 @@ class QuqiMt020001Uv01DataEnterer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -166,14 +166,14 @@ class QuqiMt020001Uv01DataEnterer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: Optional[IvlTs] = field(
+    time: IvlTs | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_person: Optional[CoctMt090100Uv01AssignedPerson] = field(
+    assigned_person: CoctMt090100Uv01AssignedPerson | None = field(
         default=None,
         metadata={
             "name": "assignedPerson",
@@ -182,7 +182,7 @@ class QuqiMt020001Uv01DataEnterer:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -220,7 +220,7 @@ class QuqiMt020001Uv01InformationRecipient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -236,14 +236,14 @@ class QuqiMt020001Uv01InformationRecipient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: Optional[IvlTsExplicit] = field(
+    time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_person: Optional[CoctMt090100Uv01AssignedPerson] = field(
+    assigned_person: CoctMt090100Uv01AssignedPerson | None = field(
         default=None,
         metadata={
             "name": "assignedPerson",
@@ -252,14 +252,14 @@ class QuqiMt020001Uv01InformationRecipient:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[ParticipationInformationRecipient] = field(
+    type_code: ParticipationInformationRecipient | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -289,7 +289,7 @@ class QuqiMt020001Uv01Overseer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -305,7 +305,7 @@ class QuqiMt020001Uv01Overseer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    note_text: Optional[EdExplicit] = field(
+    note_text: EdExplicit | None = field(
         default=None,
         metadata={
             "name": "noteText",
@@ -313,14 +313,14 @@ class QuqiMt020001Uv01Overseer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: Optional[IvlTsExplicit] = field(
+    time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    mode_code: Optional[Ce] = field(
+    mode_code: Ce | None = field(
         default=None,
         metadata={
             "name": "modeCode",
@@ -328,7 +328,7 @@ class QuqiMt020001Uv01Overseer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    signature_code: Optional[Ce] = field(
+    signature_code: Ce | None = field(
         default=None,
         metadata={
             "name": "signatureCode",
@@ -336,7 +336,7 @@ class QuqiMt020001Uv01Overseer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    signature_text: Optional[EdExplicit] = field(
+    signature_text: EdExplicit | None = field(
         default=None,
         metadata={
             "name": "signatureText",
@@ -344,7 +344,7 @@ class QuqiMt020001Uv01Overseer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_person: Optional[CoctMt090100Uv01AssignedPerson] = field(
+    assigned_person: CoctMt090100Uv01AssignedPerson | None = field(
         default=None,
         metadata={
             "name": "assignedPerson",
@@ -353,14 +353,14 @@ class QuqiMt020001Uv01Overseer:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[XParticipationVrfRespSprfWit] = field(
+    type_code: XParticipationVrfRespSprfWit | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -390,7 +390,7 @@ class QuqiMt020001Uv01Reason:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -406,7 +406,7 @@ class QuqiMt020001Uv01Reason:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    detected_issue_event: Optional[McaiMt900001Uv01DetectedIssueEvent] = field(
+    detected_issue_event: McaiMt900001Uv01DetectedIssueEvent | None = field(
         default=None,
         metadata={
             "name": "detectedIssueEvent",
@@ -415,14 +415,14 @@ class QuqiMt020001Uv01Reason:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[ActRelationshipReason] = field(
+    type_code: ActRelationshipReason | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -430,7 +430,7 @@ class QuqiMt020001Uv01Reason:
             "required": True,
         },
     )
-    context_conduction_ind: Optional[str] = field(
+    context_conduction_ind: str | None = field(
         default=None,
         metadata={
             "name": "contextConductionInd",
@@ -453,7 +453,7 @@ class QuqiMt020001Uv01SortControl:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -469,7 +469,7 @@ class QuqiMt020001Uv01SortControl:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    sequence_number: Optional[Int] = field(
+    sequence_number: Int | None = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -477,7 +477,7 @@ class QuqiMt020001Uv01SortControl:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    element_name: Optional[Sc] = field(
+    element_name: Sc | None = field(
         default=None,
         metadata={
             "name": "elementName",
@@ -485,7 +485,7 @@ class QuqiMt020001Uv01SortControl:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    direction_code: Optional[Cs] = field(
+    direction_code: Cs | None = field(
         default=None,
         metadata={
             "name": "directionCode",
@@ -493,7 +493,7 @@ class QuqiMt020001Uv01SortControl:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",

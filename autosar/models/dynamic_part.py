@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class DynamicPart:
     class Meta:
         name = "DYNAMIC-PART"
 
-    segment_positions: Optional["DynamicPart.SegmentPositions"] = field(
+    segment_positions: DynamicPart.SegmentPositions | None = field(
         default=None,
         metadata={
             "name": "SEGMENT-POSITIONS",
@@ -47,9 +49,7 @@ class DynamicPart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dynamic_part_alternatives: Optional[
-        "DynamicPart.DynamicPartAlternatives"
-    ] = field(
+    dynamic_part_alternatives: DynamicPart.DynamicPartAlternatives | None = field(
         default=None,
         metadata={
             "name": "DYNAMIC-PART-ALTERNATIVES",
@@ -57,7 +57,7 @@ class DynamicPart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -65,14 +65,14 @@ class DynamicPart:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

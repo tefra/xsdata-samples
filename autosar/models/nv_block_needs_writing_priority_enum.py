@@ -30,20 +30,20 @@ class NvBlockNeedsWritingPriorityEnum:
     class Meta:
         name = "NV-BLOCK-NEEDS-WRITING-PRIORITY-ENUM"
 
-    value: Optional[NvBlockNeedsWritingPriorityEnumSimple] = field(
+    value: NvBlockNeedsWritingPriorityEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

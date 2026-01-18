@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -89,7 +91,7 @@ class DoIpRoutingActivation:
     class Meta:
         name = "DO-IP-ROUTING-ACTIVATION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -98,9 +100,7 @@ class DoIpRoutingActivation:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DoIpRoutingActivation.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DoIpRoutingActivation.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -108,7 +108,7 @@ class DoIpRoutingActivation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -116,7 +116,7 @@ class DoIpRoutingActivation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -124,7 +124,7 @@ class DoIpRoutingActivation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -132,7 +132,7 @@ class DoIpRoutingActivation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -140,7 +140,7 @@ class DoIpRoutingActivation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -148,7 +148,7 @@ class DoIpRoutingActivation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DoIpRoutingActivation.Annotations"] = field(
+    annotations: DoIpRoutingActivation.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -156,9 +156,7 @@ class DoIpRoutingActivation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    do_ip_target_address_refs: Optional[
-        "DoIpRoutingActivation.DoIpTargetAddressRefs"
-    ] = field(
+    do_ip_target_address_refs: DoIpRoutingActivation.DoIpTargetAddressRefs | None = field(
         default=None,
         metadata={
             "name": "DO-IP-TARGET-ADDRESS-REFS",
@@ -166,14 +164,14 @@ class DoIpRoutingActivation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -181,7 +179,7 @@ class DoIpRoutingActivation:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -214,7 +212,7 @@ class DoIpRoutingActivation:
     @dataclass
     class DoIpTargetAddressRefs:
         do_ip_target_address_ref: list[
-            "DoIpRoutingActivation.DoIpTargetAddressRefs.DoIpTargetAddressRef"
+            DoIpRoutingActivation.DoIpTargetAddressRefs.DoIpTargetAddressRef
         ] = field(
             default_factory=list,
             metadata={
@@ -226,7 +224,7 @@ class DoIpRoutingActivation:
 
         @dataclass
         class DoIpTargetAddressRef(Ref):
-            dest: Optional[DoIpLogicTargetAddressPropsSubtypesEnum] = field(
+            dest: DoIpLogicTargetAddressPropsSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

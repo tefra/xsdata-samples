@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -108,7 +110,7 @@ class SynchronizationPointConstraint:
     class Meta:
         name = "SYNCHRONIZATION-POINT-CONSTRAINT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -117,9 +119,7 @@ class SynchronizationPointConstraint:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SynchronizationPointConstraint.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SynchronizationPointConstraint.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -127,7 +127,7 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -135,7 +135,7 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -143,7 +143,7 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -151,7 +151,7 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -159,7 +159,7 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -167,7 +167,7 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SynchronizationPointConstraint.Annotations"] = (
+    annotations: SynchronizationPointConstraint.Annotations | None = (
         field(
             default=None,
             metadata={
@@ -177,7 +177,7 @@ class SynchronizationPointConstraint:
             },
         )
     )
-    trace_refs: Optional["SynchronizationPointConstraint.TraceRefs"] = field(
+    trace_refs: SynchronizationPointConstraint.TraceRefs | None = field(
         default=None,
         metadata={
             "name": "TRACE-REFS",
@@ -185,9 +185,7 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_condition_ref: Optional[
-        "SynchronizationPointConstraint.TimingConditionRef"
-    ] = field(
+    timing_condition_ref: SynchronizationPointConstraint.TimingConditionRef | None = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
@@ -195,7 +193,7 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -203,9 +201,7 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_eec_refs: Optional[
-        "SynchronizationPointConstraint.SourceEecRefs"
-    ] = field(
+    source_eec_refs: SynchronizationPointConstraint.SourceEecRefs | None = field(
         default=None,
         metadata={
             "name": "SOURCE-EEC-REFS",
@@ -213,9 +209,7 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_event_refs: Optional[
-        "SynchronizationPointConstraint.SourceEventRefs"
-    ] = field(
+    source_event_refs: SynchronizationPointConstraint.SourceEventRefs | None = field(
         default=None,
         metadata={
             "name": "SOURCE-EVENT-REFS",
@@ -223,9 +217,7 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_eec_refs: Optional[
-        "SynchronizationPointConstraint.TargetEecRefs"
-    ] = field(
+    target_eec_refs: SynchronizationPointConstraint.TargetEecRefs | None = field(
         default=None,
         metadata={
             "name": "TARGET-EEC-REFS",
@@ -233,9 +225,7 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_event_refs: Optional[
-        "SynchronizationPointConstraint.TargetEventRefs"
-    ] = field(
+    target_event_refs: SynchronizationPointConstraint.TargetEventRefs | None = field(
         default=None,
         metadata={
             "name": "TARGET-EVENT-REFS",
@@ -243,14 +233,14 @@ class SynchronizationPointConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -258,7 +248,7 @@ class SynchronizationPointConstraint:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -291,7 +281,7 @@ class SynchronizationPointConstraint:
     @dataclass
     class TraceRefs:
         trace_ref: list[
-            "SynchronizationPointConstraint.TraceRefs.TraceRef"
+            SynchronizationPointConstraint.TraceRefs.TraceRef
         ] = field(
             default_factory=list,
             metadata={
@@ -303,7 +293,7 @@ class SynchronizationPointConstraint:
 
         @dataclass
         class TraceRef(Ref):
-            dest: Optional[TraceableSubtypesEnum] = field(
+            dest: TraceableSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -314,7 +304,7 @@ class SynchronizationPointConstraint:
 
     @dataclass
     class TimingConditionRef(Ref):
-        dest: Optional[TimingConditionSubtypesEnum] = field(
+        dest: TimingConditionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -326,7 +316,7 @@ class SynchronizationPointConstraint:
     @dataclass
     class SourceEecRefs:
         source_eec_ref: list[
-            "SynchronizationPointConstraint.SourceEecRefs.SourceEecRef"
+            SynchronizationPointConstraint.SourceEecRefs.SourceEecRef
         ] = field(
             default_factory=list,
             metadata={
@@ -338,7 +328,7 @@ class SynchronizationPointConstraint:
 
         @dataclass
         class SourceEecRef(Ref):
-            dest: Optional[EocExecutableEntityRefGroupSubtypesEnum] = field(
+            dest: EocExecutableEntityRefGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -350,7 +340,7 @@ class SynchronizationPointConstraint:
     @dataclass
     class SourceEventRefs:
         source_event_ref: list[
-            "SynchronizationPointConstraint.SourceEventRefs.SourceEventRef"
+            SynchronizationPointConstraint.SourceEventRefs.SourceEventRef
         ] = field(
             default_factory=list,
             metadata={
@@ -362,7 +352,7 @@ class SynchronizationPointConstraint:
 
         @dataclass
         class SourceEventRef(Ref):
-            dest: Optional[AbstractEventSubtypesEnum] = field(
+            dest: AbstractEventSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -374,7 +364,7 @@ class SynchronizationPointConstraint:
     @dataclass
     class TargetEecRefs:
         target_eec_ref: list[
-            "SynchronizationPointConstraint.TargetEecRefs.TargetEecRef"
+            SynchronizationPointConstraint.TargetEecRefs.TargetEecRef
         ] = field(
             default_factory=list,
             metadata={
@@ -386,7 +376,7 @@ class SynchronizationPointConstraint:
 
         @dataclass
         class TargetEecRef(Ref):
-            dest: Optional[EocExecutableEntityRefGroupSubtypesEnum] = field(
+            dest: EocExecutableEntityRefGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -398,7 +388,7 @@ class SynchronizationPointConstraint:
     @dataclass
     class TargetEventRefs:
         target_event_ref: list[
-            "SynchronizationPointConstraint.TargetEventRefs.TargetEventRef"
+            SynchronizationPointConstraint.TargetEventRefs.TargetEventRef
         ] = field(
             default_factory=list,
             metadata={
@@ -410,7 +400,7 @@ class SynchronizationPointConstraint:
 
         @dataclass
         class TargetEventRef(Ref):
-            dest: Optional[AbstractEventSubtypesEnum] = field(
+            dest: AbstractEventSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

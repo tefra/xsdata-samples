@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 @dataclass
 class LineStringType(AbstractCurveType):
     pos_or_point_property_or_pos_list: Iterable[
-        Union[Pos, PointProperty, PosList]
+        Pos | PointProperty | PosList
     ] = field(
         default_factory=list,
         metadata={

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -85,7 +87,7 @@ class ProcessToMachineMappingSet:
     class Meta:
         name = "PROCESS-TO-MACHINE-MAPPING-SET"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -94,9 +96,7 @@ class ProcessToMachineMappingSet:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ProcessToMachineMappingSet.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ProcessToMachineMappingSet.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -104,7 +104,7 @@ class ProcessToMachineMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -112,7 +112,7 @@ class ProcessToMachineMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -120,7 +120,7 @@ class ProcessToMachineMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -128,7 +128,7 @@ class ProcessToMachineMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -136,7 +136,7 @@ class ProcessToMachineMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -144,7 +144,7 @@ class ProcessToMachineMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ProcessToMachineMappingSet.Annotations"] = field(
+    annotations: ProcessToMachineMappingSet.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -152,7 +152,7 @@ class ProcessToMachineMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -160,9 +160,7 @@ class ProcessToMachineMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_to_machine_mappings: Optional[
-        "ProcessToMachineMappingSet.ProcessToMachineMappings"
-    ] = field(
+    process_to_machine_mappings: ProcessToMachineMappingSet.ProcessToMachineMappings | None = field(
         default=None,
         metadata={
             "name": "PROCESS-TO-MACHINE-MAPPINGS",
@@ -170,14 +168,14 @@ class ProcessToMachineMappingSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -185,7 +183,7 @@ class ProcessToMachineMappingSet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

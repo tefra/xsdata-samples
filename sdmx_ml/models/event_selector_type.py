@@ -25,11 +25,7 @@ class EventSelectorType:
     """
 
     structural_repository_events_or_data_registration_events_or_metadata_registration_events: tuple[
-        Union[
-            StructuralRepositoryEventsType,
-            DataRegistrationEventsType,
-            MetadataRegistrationEventsType,
-        ],
+        StructuralRepositoryEventsType | DataRegistrationEventsType | MetadataRegistrationEventsType,
         ...,
     ] = field(
         default_factory=tuple,

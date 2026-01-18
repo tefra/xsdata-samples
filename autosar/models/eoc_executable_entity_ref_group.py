@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -109,7 +111,7 @@ class EocExecutableEntityRefGroup:
     class Meta:
         name = "EOC-EXECUTABLE-ENTITY-REF-GROUP"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -118,9 +120,7 @@ class EocExecutableEntityRefGroup:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "EocExecutableEntityRefGroup.ShortNameFragments"
-    ] = field(
+    short_name_fragments: EocExecutableEntityRefGroup.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -128,7 +128,7 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -136,7 +136,7 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -144,7 +144,7 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -152,7 +152,7 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -160,7 +160,7 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -168,7 +168,7 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["EocExecutableEntityRefGroup.Annotations"] = field(
+    annotations: EocExecutableEntityRefGroup.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -176,9 +176,7 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    direct_successor_refs: Optional[
-        "EocExecutableEntityRefGroup.DirectSuccessorRefs"
-    ] = field(
+    direct_successor_refs: EocExecutableEntityRefGroup.DirectSuccessorRefs | None = field(
         default=None,
         metadata={
             "name": "DIRECT-SUCCESSOR-REFS",
@@ -186,9 +184,7 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    let_interval_refs: Optional[
-        "EocExecutableEntityRefGroup.LetIntervalRefs"
-    ] = field(
+    let_interval_refs: EocExecutableEntityRefGroup.LetIntervalRefs | None = field(
         default=None,
         metadata={
             "name": "LET-INTERVAL-REFS",
@@ -196,7 +192,7 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_cycles: Optional[Integer] = field(
+    max_cycles: Integer | None = field(
         default=None,
         metadata={
             "name": "MAX-CYCLES",
@@ -204,7 +200,7 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_slots: Optional[Integer] = field(
+    max_slots: Integer | None = field(
         default=None,
         metadata={
             "name": "MAX-SLOTS",
@@ -212,9 +208,7 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nested_element_refs: Optional[
-        "EocExecutableEntityRefGroup.NestedElementRefs"
-    ] = field(
+    nested_element_refs: EocExecutableEntityRefGroup.NestedElementRefs | None = field(
         default=None,
         metadata={
             "name": "NESTED-ELEMENT-REFS",
@@ -222,7 +216,7 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    successor_refs: Optional["EocExecutableEntityRefGroup.SuccessorRefs"] = (
+    successor_refs: EocExecutableEntityRefGroup.SuccessorRefs | None = (
         field(
             default=None,
             metadata={
@@ -232,9 +226,7 @@ class EocExecutableEntityRefGroup:
             },
         )
     )
-    triggering_event_ref: Optional[
-        "EocExecutableEntityRefGroup.TriggeringEventRef"
-    ] = field(
+    triggering_event_ref: EocExecutableEntityRefGroup.TriggeringEventRef | None = field(
         default=None,
         metadata={
             "name": "TRIGGERING-EVENT-REF",
@@ -242,14 +234,14 @@ class EocExecutableEntityRefGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -257,7 +249,7 @@ class EocExecutableEntityRefGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -290,7 +282,7 @@ class EocExecutableEntityRefGroup:
     @dataclass
     class DirectSuccessorRefs:
         direct_successor_ref: list[
-            "EocExecutableEntityRefGroup.DirectSuccessorRefs.DirectSuccessorRef"
+            EocExecutableEntityRefGroup.DirectSuccessorRefs.DirectSuccessorRef
         ] = field(
             default_factory=list,
             metadata={
@@ -302,7 +294,7 @@ class EocExecutableEntityRefGroup:
 
         @dataclass
         class DirectSuccessorRef(Ref):
-            dest: Optional[EocExecutableEntityRefAbstractSubtypesEnum] = field(
+            dest: EocExecutableEntityRefAbstractSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -314,7 +306,7 @@ class EocExecutableEntityRefGroup:
     @dataclass
     class LetIntervalRefs:
         let_interval_ref: list[
-            "EocExecutableEntityRefGroup.LetIntervalRefs.LetIntervalRef"
+            EocExecutableEntityRefGroup.LetIntervalRefs.LetIntervalRef
         ] = field(
             default_factory=list,
             metadata={
@@ -326,7 +318,7 @@ class EocExecutableEntityRefGroup:
 
         @dataclass
         class LetIntervalRef(Ref):
-            dest: Optional[TimingDescriptionEventChainSubtypesEnum] = field(
+            dest: TimingDescriptionEventChainSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -338,7 +330,7 @@ class EocExecutableEntityRefGroup:
     @dataclass
     class NestedElementRefs:
         nested_element_ref: list[
-            "EocExecutableEntityRefGroup.NestedElementRefs.NestedElementRef"
+            EocExecutableEntityRefGroup.NestedElementRefs.NestedElementRef
         ] = field(
             default_factory=list,
             metadata={
@@ -350,7 +342,7 @@ class EocExecutableEntityRefGroup:
 
         @dataclass
         class NestedElementRef(Ref):
-            dest: Optional[EocExecutableEntityRefAbstractSubtypesEnum] = field(
+            dest: EocExecutableEntityRefAbstractSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -362,7 +354,7 @@ class EocExecutableEntityRefGroup:
     @dataclass
     class SuccessorRefs:
         successor_ref: list[
-            "EocExecutableEntityRefGroup.SuccessorRefs.SuccessorRef"
+            EocExecutableEntityRefGroup.SuccessorRefs.SuccessorRef
         ] = field(
             default_factory=list,
             metadata={
@@ -374,7 +366,7 @@ class EocExecutableEntityRefGroup:
 
         @dataclass
         class SuccessorRef(Ref):
-            dest: Optional[EocExecutableEntityRefAbstractSubtypesEnum] = field(
+            dest: EocExecutableEntityRefAbstractSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -385,7 +377,7 @@ class EocExecutableEntityRefGroup:
 
     @dataclass
     class TriggeringEventRef(Ref):
-        dest: Optional[TimingDescriptionEventSubtypesEnum] = field(
+        dest: TimingDescriptionEventSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class TrainSizeStructure:
-    number_of_cars: Optional[int] = field(
+    number_of_cars: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfCars",
@@ -16,7 +16,7 @@ class TrainSizeStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_size_type: Optional[TrainSizeEnumeration] = field(
+    train_size_type: TrainSizeEnumeration | None = field(
         default=None,
         metadata={
             "name": "TrainSizeType",

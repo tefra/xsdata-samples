@@ -15,7 +15,7 @@ class DistanceMatrixElementsRelStructure(ContainmentAggregationStructure):
         name = "distanceMatrixElements_RelStructure"
 
     distance_matrix_element_ref_or_distance_matrix_element: Iterable[
-        Union[DistanceMatrixElementRef, DistanceMatrixElement]
+        DistanceMatrixElementRef | DistanceMatrixElement
     ] = field(
         default_factory=list,
         metadata={

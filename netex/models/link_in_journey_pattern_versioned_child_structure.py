@@ -17,9 +17,7 @@ class LinkInJourneyPatternVersionedChildStructure(
     class Meta:
         name = "LinkInJourneyPattern_VersionedChildStructure"
 
-    service_link_ref_or_timing_link_ref: Optional[
-        Union[ServiceLinkRef, TimingLinkRef]
-    ] = field(
+    service_link_ref_or_timing_link_ref: ServiceLinkRef | TimingLinkRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

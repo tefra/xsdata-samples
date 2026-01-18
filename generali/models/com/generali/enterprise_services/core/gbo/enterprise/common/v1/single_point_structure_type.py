@@ -15,7 +15,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class SinglePointStructureType(StructureType):
-    geographic_location: Optional[GeographyType] = field(
+    geographic_location: GeographyType | None = field(
         default=None,
         metadata={
             "name": "GeographicLocation",

@@ -37,7 +37,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class GuaranteeCertificateType:
-    ublextensions: Optional[Ublextensions] = field(
+    ublextensions: Ublextensions | None = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -45,7 +45,7 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: Optional[UblversionId] = field(
+    ublversion_id: UblversionId | None = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -53,7 +53,7 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: Optional[CustomizationId] = field(
+    customization_id: CustomizationId | None = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -61,7 +61,7 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: Optional[ProfileId] = field(
+    profile_id: ProfileId | None = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -69,7 +69,7 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: Optional[ProfileExecutionId] = field(
+    profile_execution_id: ProfileExecutionId | None = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -77,7 +77,7 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -85,7 +85,7 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    copy_indicator: Optional[CopyIndicator] = field(
+    copy_indicator: CopyIndicator | None = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -93,7 +93,7 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -101,7 +101,7 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contract_folder_id: Optional[ContractFolderId] = field(
+    contract_folder_id: ContractFolderId | None = field(
         default=None,
         metadata={
             "name": "ContractFolderID",
@@ -110,7 +110,7 @@ class GuaranteeCertificateType:
             "required": True,
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -119,7 +119,7 @@ class GuaranteeCertificateType:
             "required": True,
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -127,7 +127,7 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    guarantee_type_code: Optional[GuaranteeTypeCode] = field(
+    guarantee_type_code: GuaranteeTypeCode | None = field(
         default=None,
         metadata={
             "name": "GuaranteeTypeCode",
@@ -143,7 +143,7 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    liability_amount: Optional[LiabilityAmount] = field(
+    liability_amount: LiabilityAmount | None = field(
         default=None,
         metadata={
             "name": "LiabilityAmount",
@@ -152,7 +152,7 @@ class GuaranteeCertificateType:
             "required": True,
         },
     )
-    constitution_code: Optional[ConstitutionCode] = field(
+    constitution_code: ConstitutionCode | None = field(
         default=None,
         metadata={
             "name": "ConstitutionCode",
@@ -168,7 +168,7 @@ class GuaranteeCertificateType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    applicable_period: Optional[ApplicablePeriod] = field(
+    applicable_period: ApplicablePeriod | None = field(
         default=None,
         metadata={
             "name": "ApplicablePeriod",
@@ -211,7 +211,7 @@ class GuaranteeCertificateType:
             "min_occurs": 1,
         },
     )
-    guarantor_party: Optional[GuarantorParty] = field(
+    guarantor_party: GuarantorParty | None = field(
         default=None,
         metadata={
             "name": "GuarantorParty",
@@ -220,7 +220,7 @@ class GuaranteeCertificateType:
             "required": True,
         },
     )
-    interested_party: Optional[InterestedParty] = field(
+    interested_party: InterestedParty | None = field(
         default=None,
         metadata={
             "name": "InterestedParty",
@@ -229,7 +229,7 @@ class GuaranteeCertificateType:
             "required": True,
         },
     )
-    beneficiary_party: Optional[BeneficiaryParty] = field(
+    beneficiary_party: BeneficiaryParty | None = field(
         default=None,
         metadata={
             "name": "BeneficiaryParty",

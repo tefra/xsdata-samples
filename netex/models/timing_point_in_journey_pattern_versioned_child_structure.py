@@ -32,17 +32,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(
     class Meta:
         name = "TimingPointInJourneyPattern_VersionedChildStructure"
 
-    choice_1: Optional[
-        Union[
-            BorderPointRef,
-            FareScheduledStopPointRef,
-            ScheduledStopPointRef,
-            GaragePointRef,
-            ParkingPointRef,
-            ReliefPointRef,
-            TimingPointRef,
-        ]
-    ] = field(
+    choice_1: BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -85,7 +75,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(
             ),
         },
     )
-    onward_timing_link_ref: Optional[TimingLinkRefStructure] = field(
+    onward_timing_link_ref: TimingLinkRefStructure | None = field(
         default=None,
         metadata={
             "name": "OnwardTimingLinkRef",
@@ -93,7 +83,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_wait_point: Optional[bool] = field(
+    is_wait_point: bool | None = field(
         default=None,
         metadata={
             "name": "IsWaitPoint",
@@ -101,9 +91,7 @@ class TimingPointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wait_time_or_wait_times: Optional[
-        Union[XmlDuration, JourneyPatternWaitTimesRelStructure]
-    ] = field(
+    wait_time_or_wait_times: XmlDuration | JourneyPatternWaitTimesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -121,14 +109,14 @@ class TimingPointInJourneyPatternVersionedChildStructure(
             ),
         },
     )
-    headways: Optional[JourneyPatternHeadwaysRelStructure] = field(
+    headways: JourneyPatternHeadwaysRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",

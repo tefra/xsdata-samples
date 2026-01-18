@@ -17,7 +17,7 @@ class ValidableElementsRelStructure(StrictContainmentAggregationStructure):
         name = "validableElements_RelStructure"
 
     validable_element_ref_or_validable_element: Iterable[
-        Union[ValidableElementRef, ValidableElement]
+        ValidableElementRef | ValidableElement
     ] = field(
         default_factory=list,
         metadata={

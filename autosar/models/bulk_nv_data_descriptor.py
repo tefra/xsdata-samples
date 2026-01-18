@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -96,7 +98,7 @@ class BulkNvDataDescriptor:
     class Meta:
         name = "BULK-NV-DATA-DESCRIPTOR"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,9 +107,7 @@ class BulkNvDataDescriptor:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "BulkNvDataDescriptor.ShortNameFragments"
-    ] = field(
+    short_name_fragments: BulkNvDataDescriptor.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -115,7 +115,7 @@ class BulkNvDataDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -123,7 +123,7 @@ class BulkNvDataDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -131,7 +131,7 @@ class BulkNvDataDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -139,7 +139,7 @@ class BulkNvDataDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -147,7 +147,7 @@ class BulkNvDataDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -155,7 +155,7 @@ class BulkNvDataDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["BulkNvDataDescriptor.Annotations"] = field(
+    annotations: BulkNvDataDescriptor.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -163,7 +163,7 @@ class BulkNvDataDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bulk_nv_block: Optional[VariableDataPrototype] = field(
+    bulk_nv_block: VariableDataPrototype | None = field(
         default=None,
         metadata={
             "name": "BULK-NV-BLOCK",
@@ -171,9 +171,7 @@ class BulkNvDataDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nv_block_data_mappings: Optional[
-        "BulkNvDataDescriptor.NvBlockDataMappings"
-    ] = field(
+    nv_block_data_mappings: BulkNvDataDescriptor.NvBlockDataMappings | None = field(
         default=None,
         metadata={
             "name": "NV-BLOCK-DATA-MAPPINGS",
@@ -181,7 +179,7 @@ class BulkNvDataDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -189,14 +187,14 @@ class BulkNvDataDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -204,7 +202,7 @@ class BulkNvDataDescriptor:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

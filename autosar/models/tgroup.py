@@ -53,7 +53,7 @@ class Tgroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    thead: Optional[Tbody] = field(
+    thead: Tbody | None = field(
         default=None,
         metadata={
             "name": "THEAD",
@@ -61,7 +61,7 @@ class Tgroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tfoot: Optional[Tbody] = field(
+    tfoot: Tbody | None = field(
         default=None,
         metadata={
             "name": "TFOOT",
@@ -69,7 +69,7 @@ class Tgroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tbody: Optional[Tbody] = field(
+    tbody: Tbody | None = field(
         default=None,
         metadata={
             "name": "TBODY",
@@ -77,14 +77,14 @@ class Tgroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -92,14 +92,14 @@ class Tgroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    align: Optional[AlignEnumSimple] = field(
+    align: AlignEnumSimple | None = field(
         default=None,
         metadata={
             "name": "ALIGN",
             "type": "Attribute",
         },
     )
-    cols: Optional[str] = field(
+    cols: str | None = field(
         default=None,
         metadata={
             "name": "COLS",
@@ -107,7 +107,7 @@ class Tgroup:
             "pattern": r"0|[\+\-]?[1-9][0-9]*|0[xX][0-9a-fA-F]+|0[bB][0-1]+|0[0-7]+",
         },
     )
-    colsep: Optional[str] = field(
+    colsep: str | None = field(
         default=None,
         metadata={
             "name": "COLSEP",
@@ -115,7 +115,7 @@ class Tgroup:
             "pattern": r"[0-1]",
         },
     )
-    rowsep: Optional[str] = field(
+    rowsep: str | None = field(
         default=None,
         metadata={
             "name": "ROWSEP",

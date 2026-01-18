@@ -13,7 +13,7 @@ class Bpmnlabel(Label):
         name = "BPMNLabel"
         namespace = "http://www.omg.org/spec/BPMN/20100524/DI"
 
-    label_style: Optional[QName] = field(
+    label_style: QName | None = field(
         default=None,
         metadata={
             "name": "labelStyle",

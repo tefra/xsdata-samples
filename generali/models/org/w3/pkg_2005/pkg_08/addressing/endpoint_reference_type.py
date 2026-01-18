@@ -14,7 +14,7 @@ __NAMESPACE__ = "http://www.w3.org/2005/08/addressing"
 
 @dataclass
 class EndpointReferenceType:
-    address: Optional[AttributedUritype] = field(
+    address: AttributedUritype | None = field(
         default=None,
         metadata={
             "name": "Address",
@@ -23,7 +23,7 @@ class EndpointReferenceType:
             "required": True,
         },
     )
-    reference_parameters: Optional[ReferenceParameters] = field(
+    reference_parameters: ReferenceParameters | None = field(
         default=None,
         metadata={
             "name": "ReferenceParameters",
@@ -31,7 +31,7 @@ class EndpointReferenceType:
             "namespace": "http://www.w3.org/2005/08/addressing",
         },
     )
-    metadata: Optional[Metadata] = field(
+    metadata: Metadata | None = field(
         default=None,
         metadata={
             "name": "Metadata",

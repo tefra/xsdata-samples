@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class EcucModuleConfigurationValuesRefConditional:
     class Meta:
         name = "ECUC-MODULE-CONFIGURATION-VALUES-REF-CONDITIONAL"
 
-    ecuc_module_configuration_values_ref: Optional[
-        "EcucModuleConfigurationValuesRefConditional.EcucModuleConfigurationValuesRef"
-    ] = field(
+    ecuc_module_configuration_values_ref: EcucModuleConfigurationValuesRefConditional.EcucModuleConfigurationValuesRef | None = field(
         default=None,
         metadata={
             "name": "ECUC-MODULE-CONFIGURATION-VALUES-REF",
@@ -43,7 +43,7 @@ class EcucModuleConfigurationValuesRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class EcucModuleConfigurationValuesRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class EcucModuleConfigurationValuesRefConditional:
 
     @dataclass
     class EcucModuleConfigurationValuesRef(Ref):
-        dest: Optional[EcucModuleConfigurationValuesSubtypesEnum] = field(
+        dest: EcucModuleConfigurationValuesSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

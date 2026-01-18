@@ -25,7 +25,7 @@ class FromVtlMappingType:
         Unpivot for multi-meausre VTL data structures.
     """
 
-    from_vtl_super_space: Optional[SpaceKeyType] = field(
+    from_vtl_super_space: SpaceKeyType | None = field(
         default=None,
         metadata={
             "name": "FromVtlSuperSpace",
@@ -33,7 +33,7 @@ class FromVtlMappingType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    method: Optional[Union[StandardFromVtlMappingMethodType, str]] = field(
+    method: StandardFromVtlMappingMethodType | str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

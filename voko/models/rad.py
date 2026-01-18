@@ -7,7 +7,7 @@ class Rad:
     class Meta:
         name = "rad"
 
-    var: Optional[str] = field(
+    var: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

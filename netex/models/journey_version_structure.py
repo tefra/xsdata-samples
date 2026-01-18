@@ -23,7 +23,7 @@ class JourneyVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "Journey_VersionStructure"
 
-    transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
+    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -31,7 +31,7 @@ class JourneyVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_submode: Optional[TransportSubmode] = field(
+    transport_submode: TransportSubmode | None = field(
         default=None,
         metadata={
             "name": "TransportSubmode",
@@ -39,7 +39,7 @@ class JourneyVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    external_vehicle_journey_ref: Optional[ExternalObjectRefStructure] = field(
+    external_vehicle_journey_ref: ExternalObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "ExternalVehicleJourneyRef",
@@ -47,7 +47,7 @@ class JourneyVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_product_category_ref: Optional[TypeOfProductCategoryRef] = field(
+    type_of_product_category_ref: TypeOfProductCategoryRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfProductCategoryRef",
@@ -55,7 +55,7 @@ class JourneyVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_service_ref: Optional[TypeOfServiceRef] = field(
+    type_of_service_ref: TypeOfServiceRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfServiceRef",
@@ -63,9 +63,7 @@ class JourneyVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    link_sequence_projection_ref_or_link_sequence_projection: Optional[
-        Union[LinkSequenceProjectionRef, LinkSequenceProjection]
-    ] = field(
+    link_sequence_projection_ref_or_link_sequence_projection: LinkSequenceProjectionRef | LinkSequenceProjection | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -83,7 +81,7 @@ class JourneyVersionStructure(LinkSequenceVersionStructure):
             ),
         },
     )
-    monitored: Optional[bool] = field(
+    monitored: bool | None = field(
         default=None,
         metadata={
             "name": "Monitored",
@@ -91,7 +89,7 @@ class JourneyVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accessibility_assessment: Optional[AccessibilityAssessment] = field(
+    accessibility_assessment: AccessibilityAssessment | None = field(
         default=None,
         metadata={
             "name": "AccessibilityAssessment",
@@ -99,7 +97,7 @@ class JourneyVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_accountings: Optional[JourneyAccountingsRelStructure] = field(
+    journey_accountings: JourneyAccountingsRelStructure | None = field(
         default=None,
         metadata={
             "name": "journeyAccountings",
@@ -107,7 +105,7 @@ class JourneyVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",

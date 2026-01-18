@@ -19,12 +19,7 @@ class VehicleMeetingPointAssignmentRefsRelStructure(
     class Meta:
         name = "vehicleMeetingPointAssignmentRefs_RelStructure"
 
-    vehicle_meeting_point_assignment_ref: Optional[
-        Union[
-            DynamicVehicleMeetingPointAssignmentRef,
-            VehicleMeetingPointAssignmentRef,
-        ]
-    ] = field(
+    vehicle_meeting_point_assignment_ref: DynamicVehicleMeetingPointAssignmentRef | VehicleMeetingPointAssignmentRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

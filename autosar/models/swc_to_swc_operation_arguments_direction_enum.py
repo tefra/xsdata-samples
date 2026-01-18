@@ -29,20 +29,20 @@ class SwcToSwcOperationArgumentsDirectionEnum:
     class Meta:
         name = "SWC-TO-SWC-OPERATION-ARGUMENTS-DIRECTION-ENUM"
 
-    value: Optional[SwcToSwcOperationArgumentsDirectionEnumSimple] = field(
+    value: SwcToSwcOperationArgumentsDirectionEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

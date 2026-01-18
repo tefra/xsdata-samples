@@ -23,9 +23,7 @@ class TpegJunctionPointDescriptor(TpegPointDescriptor):
     :ivar tpeg_junction_point_descriptor_extension:
     """
 
-    tpeg_junction_point_descriptor_type: Optional[
-        TpegLoc03JunctionPointDescriptorSubtypeEnum
-    ] = field(
+    tpeg_junction_point_descriptor_type: TpegLoc03JunctionPointDescriptorSubtypeEnum | None = field(
         default=None,
         metadata={
             "name": "tpegJunctionPointDescriptorType",
@@ -34,7 +32,7 @@ class TpegJunctionPointDescriptor(TpegPointDescriptor):
             "required": True,
         },
     )
-    tpeg_junction_point_descriptor_extension: Optional[ExtensionType] = field(
+    tpeg_junction_point_descriptor_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "tpegJunctionPointDescriptorExtension",

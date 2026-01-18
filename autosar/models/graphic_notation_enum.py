@@ -28,20 +28,20 @@ class GraphicNotationEnum:
     class Meta:
         name = "GRAPHIC-NOTATION-ENUM"
 
-    value: Optional[GraphicNotationEnumSimple] = field(
+    value: GraphicNotationEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

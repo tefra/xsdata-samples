@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -143,7 +145,7 @@ class ProvidedServiceInstance:
     class Meta:
         name = "PROVIDED-SERVICE-INSTANCE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -152,9 +154,7 @@ class ProvidedServiceInstance:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ProvidedServiceInstance.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ProvidedServiceInstance.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -162,7 +162,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -170,7 +170,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -178,7 +178,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -186,7 +186,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -194,7 +194,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -202,7 +202,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ProvidedServiceInstance.Annotations"] = field(
+    annotations: ProvidedServiceInstance.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -210,9 +210,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    capability_records: Optional[
-        "ProvidedServiceInstance.CapabilityRecords"
-    ] = field(
+    capability_records: ProvidedServiceInstance.CapabilityRecords | None = field(
         default=None,
         metadata={
             "name": "CAPABILITY-RECORDS",
@@ -220,7 +218,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    major_version: Optional[PositiveInteger] = field(
+    major_version: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAJOR-VERSION",
@@ -228,9 +226,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_activation_routing_groups: Optional[
-        "ProvidedServiceInstance.MethodActivationRoutingGroups"
-    ] = field(
+    method_activation_routing_groups: ProvidedServiceInstance.MethodActivationRoutingGroups | None = field(
         default=None,
         metadata={
             "name": "METHOD-ACTIVATION-ROUTING-GROUPS",
@@ -238,9 +234,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    routing_group_refs: Optional[
-        "ProvidedServiceInstance.RoutingGroupRefs"
-    ] = field(
+    routing_group_refs: ProvidedServiceInstance.RoutingGroupRefs | None = field(
         default=None,
         metadata={
             "name": "ROUTING-GROUP-REFS",
@@ -248,7 +242,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -256,7 +250,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    auto_available: Optional[Boolean] = field(
+    auto_available: Boolean | None = field(
         default=None,
         metadata={
             "name": "AUTO-AVAILABLE",
@@ -264,7 +258,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_handlers: Optional["ProvidedServiceInstance.EventHandlers"] = field(
+    event_handlers: ProvidedServiceInstance.EventHandlers | None = field(
         default=None,
         metadata={
             "name": "EVENT-HANDLERS",
@@ -272,7 +266,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    instance_identifier: Optional[PositiveInteger] = field(
+    instance_identifier: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "INSTANCE-IDENTIFIER",
@@ -280,7 +274,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    load_balancing_priority: Optional[PositiveInteger] = field(
+    load_balancing_priority: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "LOAD-BALANCING-PRIORITY",
@@ -288,7 +282,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    load_balancing_weight: Optional[PositiveInteger] = field(
+    load_balancing_weight: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "LOAD-BALANCING-WEIGHT",
@@ -296,9 +290,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    local_unicast_addresss: Optional[
-        "ProvidedServiceInstance.LocalUnicastAddresss"
-    ] = field(
+    local_unicast_addresss: ProvidedServiceInstance.LocalUnicastAddresss | None = field(
         default=None,
         metadata={
             "name": "LOCAL-UNICAST-ADDRESSS",
@@ -306,7 +298,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minor_version: Optional[PositiveInteger] = field(
+    minor_version: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MINOR-VERSION",
@@ -314,7 +306,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    priority: Optional[PositiveInteger] = field(
+    priority: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "PRIORITY",
@@ -322,9 +314,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_unicast_addresss: Optional[
-        "ProvidedServiceInstance.RemoteUnicastAddresss"
-    ] = field(
+    remote_unicast_addresss: ProvidedServiceInstance.RemoteUnicastAddresss | None = field(
         default=None,
         metadata={
             "name": "REMOTE-UNICAST-ADDRESSS",
@@ -332,7 +322,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sd_server_config: Optional[SdServerConfig] = field(
+    sd_server_config: SdServerConfig | None = field(
         default=None,
         metadata={
             "name": "SD-SERVER-CONFIG",
@@ -340,9 +330,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sd_server_timer_configs: Optional[
-        "ProvidedServiceInstance.SdServerTimerConfigs"
-    ] = field(
+    sd_server_timer_configs: ProvidedServiceInstance.SdServerTimerConfigs | None = field(
         default=None,
         metadata={
             "name": "SD-SERVER-TIMER-CONFIGS",
@@ -350,7 +338,7 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_identifier: Optional[PositiveInteger] = field(
+    service_identifier: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SERVICE-IDENTIFIER",
@@ -358,14 +346,14 @@ class ProvidedServiceInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -373,7 +361,7 @@ class ProvidedServiceInstance:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -428,7 +416,7 @@ class ProvidedServiceInstance:
     @dataclass
     class RoutingGroupRefs:
         routing_group_ref: list[
-            "ProvidedServiceInstance.RoutingGroupRefs.RoutingGroupRef"
+            ProvidedServiceInstance.RoutingGroupRefs.RoutingGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -440,7 +428,7 @@ class ProvidedServiceInstance:
 
         @dataclass
         class RoutingGroupRef(Ref):
-            dest: Optional[SoAdRoutingGroupSubtypesEnum] = field(
+            dest: SoAdRoutingGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

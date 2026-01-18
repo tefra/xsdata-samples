@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -42,46 +44,46 @@ class ConstraintSet:
         name = "constraintSet"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    display_name: Optional[DisplayName] = field(
+    display_name: DisplayName | None = field(
         default=None,
         metadata={
             "name": "displayName",
             "type": "Element",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
             "type": "Element",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vector: Optional["ConstraintSet.Vector"] = field(
+    vector: ConstraintSet.Vector | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    drive_constraint: Optional[DriveConstraint] = field(
+    drive_constraint: DriveConstraint | None = field(
         default=None,
         metadata={
             "name": "driveConstraint",
             "type": "Element",
         },
     )
-    load_constraint: Optional[LoadConstraint] = field(
+    load_constraint: LoadConstraint | None = field(
         default=None,
         metadata={
             "name": "loadConstraint",
@@ -102,7 +104,7 @@ class ConstraintSet:
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -119,14 +121,14 @@ class ConstraintSet:
             select a bit-slice of a vector.
         """
 
-        left: Optional[UnsignedIntExpression] = field(
+        left: UnsignedIntExpression | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        right: Optional[UnsignedIntExpression] = field(
+        right: UnsignedIntExpression | None = field(
             default=None,
             metadata={
                 "type": "Element",

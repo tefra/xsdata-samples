@@ -15,7 +15,7 @@ class TypesOfSalesOfferPackageRelStructure(ContainmentAggregationStructure):
         name = "typesOfSalesOfferPackage_RelStructure"
 
     type_of_sales_offer_package_ref_or_type_of_sales_offer_package: Iterable[
-        Union[TypeOfSalesOfferPackageRef, TypeOfSalesOfferPackage]
+        TypeOfSalesOfferPackageRef | TypeOfSalesOfferPackage
     ] = field(
         default_factory=list,
         metadata={

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -53,7 +55,7 @@ class AssignFrameIdRange:
     class Meta:
         name = "ASSIGN-FRAME-ID-RANGE"
 
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -61,7 +63,7 @@ class AssignFrameIdRange:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delay: Optional[TimeValue] = field(
+    delay: TimeValue | None = field(
         default=None,
         metadata={
             "name": "DELAY",
@@ -69,7 +71,7 @@ class AssignFrameIdRange:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    position_in_table: Optional[Integer] = field(
+    position_in_table: Integer | None = field(
         default=None,
         metadata={
             "name": "POSITION-IN-TABLE",
@@ -77,9 +79,7 @@ class AssignFrameIdRange:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_controller_ref: Optional[
-        "AssignFrameIdRange.AssignedControllerRef"
-    ] = field(
+    assigned_controller_ref: AssignFrameIdRange.AssignedControllerRef | None = field(
         default=None,
         metadata={
             "name": "ASSIGNED-CONTROLLER-REF",
@@ -87,9 +87,7 @@ class AssignFrameIdRange:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_lin_slave_config_ref: Optional[
-        "AssignFrameIdRange.AssignedLinSlaveConfigRef"
-    ] = field(
+    assigned_lin_slave_config_ref: AssignFrameIdRange.AssignedLinSlaveConfigRef | None = field(
         default=None,
         metadata={
             "name": "ASSIGNED-LIN-SLAVE-CONFIG-REF",
@@ -97,7 +95,7 @@ class AssignFrameIdRange:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_pids: Optional["AssignFrameIdRange.FramePids"] = field(
+    frame_pids: AssignFrameIdRange.FramePids | None = field(
         default=None,
         metadata={
             "name": "FRAME-PIDS",
@@ -105,7 +103,7 @@ class AssignFrameIdRange:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    start_index: Optional[Integer] = field(
+    start_index: Integer | None = field(
         default=None,
         metadata={
             "name": "START-INDEX",
@@ -113,14 +111,14 @@ class AssignFrameIdRange:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -131,7 +129,7 @@ class AssignFrameIdRange:
 
     @dataclass
     class AssignedControllerRef(Ref):
-        dest: Optional[LinSlaveSubtypesEnum] = field(
+        dest: LinSlaveSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -142,7 +140,7 @@ class AssignFrameIdRange:
 
     @dataclass
     class AssignedLinSlaveConfigRef(Ref):
-        dest: Optional[LinSlaveConfigIdentSubtypesEnum] = field(
+        dest: LinSlaveConfigIdentSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

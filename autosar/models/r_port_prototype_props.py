@@ -33,7 +33,7 @@ class RPortPrototypeProps:
     class Meta:
         name = "R-PORT-PROTOTYPE-PROPS"
 
-    search_intention: Optional[SearchIntentionEnum] = field(
+    search_intention: SearchIntentionEnum | None = field(
         default=None,
         metadata={
             "name": "SEARCH-INTENTION",
@@ -41,14 +41,14 @@ class RPortPrototypeProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

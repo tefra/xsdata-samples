@@ -27,20 +27,20 @@ class XmlSpaceEnum:
     class Meta:
         name = "XML-SPACE-ENUM"
 
-    value: Optional[XmlSpaceEnumSimple] = field(
+    value: XmlSpaceEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -24,7 +24,7 @@ class AlertCMethod2Linear(AlertCLinear):
     Primary point is downstream of the Secondary point.
     """
 
-    alert_cdirection: Optional[AlertCDirection] = field(
+    alert_cdirection: AlertCDirection | None = field(
         default=None,
         metadata={
             "name": "alertCDirection",
@@ -33,9 +33,7 @@ class AlertCMethod2Linear(AlertCLinear):
             "required": True,
         },
     )
-    alert_cmethod2_primary_point_location: Optional[
-        AlertCMethod2PrimaryPointLocation
-    ] = field(
+    alert_cmethod2_primary_point_location: AlertCMethod2PrimaryPointLocation | None = field(
         default=None,
         metadata={
             "name": "alertCMethod2PrimaryPointLocation",
@@ -44,9 +42,7 @@ class AlertCMethod2Linear(AlertCLinear):
             "required": True,
         },
     )
-    alert_cmethod2_secondary_point_location: Optional[
-        AlertCMethod2SecondaryPointLocation
-    ] = field(
+    alert_cmethod2_secondary_point_location: AlertCMethod2SecondaryPointLocation | None = field(
         default=None,
         metadata={
             "name": "alertCMethod2SecondaryPointLocation",
@@ -55,7 +51,7 @@ class AlertCMethod2Linear(AlertCLinear):
             "required": True,
         },
     )
-    alert_cmethod2_linear_extension: Optional[ExtensionType] = field(
+    alert_cmethod2_linear_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "alertCMethod2LinearExtension",

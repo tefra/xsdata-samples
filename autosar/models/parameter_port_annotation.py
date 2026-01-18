@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -41,7 +43,7 @@ class ParameterPortAnnotation:
     class Meta:
         name = "PARAMETER-PORT-ANNOTATION"
 
-    label: Optional[MultilanguageLongName] = field(
+    label: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -49,7 +51,7 @@ class ParameterPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_origin: Optional[String] = field(
+    annotation_origin: String | None = field(
         default=None,
         metadata={
             "name": "ANNOTATION-ORIGIN",
@@ -57,7 +59,7 @@ class ParameterPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_text: Optional[DocumentationBlock] = field(
+    annotation_text: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "ANNOTATION-TEXT",
@@ -65,7 +67,7 @@ class ParameterPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter_ref: Optional["ParameterPortAnnotation.ParameterRef"] = field(
+    parameter_ref: ParameterPortAnnotation.ParameterRef | None = field(
         default=None,
         metadata={
             "name": "PARAMETER-REF",
@@ -73,14 +75,14 @@ class ParameterPortAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -91,7 +93,7 @@ class ParameterPortAnnotation:
 
     @dataclass
     class ParameterRef(Ref):
-        dest: Optional[ParameterDataPrototypeSubtypesEnum] = field(
+        dest: ParameterDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

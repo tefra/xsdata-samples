@@ -16,9 +16,7 @@ class PointOfInterestClassificationVersionStructure(
     class Meta:
         name = "PointOfInterestClassification_VersionStructure"
 
-    alternative_descriptors: Optional[
-        ClassificationDescriptorsRelStructure
-    ] = field(
+    alternative_descriptors: ClassificationDescriptorsRelStructure | None = field(
         default=None,
         metadata={
             "name": "alternativeDescriptors",

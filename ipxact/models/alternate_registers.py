@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -28,7 +30,7 @@ class AlternateRegisters:
         name = "alternateRegisters"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    alternate_register: list["AlternateRegisters.AlternateRegister"] = field(
+    alternate_register: list[AlternateRegisters.AlternateRegister] = field(
         default_factory=list,
         metadata={
             "name": "alternateRegister",
@@ -59,36 +61,34 @@ class AlternateRegisters:
         :ivar id:
         """
 
-        name: Optional[str] = field(
+        name: str | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        display_name: Optional[DisplayName] = field(
+        display_name: DisplayName | None = field(
             default=None,
             metadata={
                 "name": "displayName",
                 "type": "Element",
             },
         )
-        short_description: Optional[ShortDescription] = field(
+        short_description: ShortDescription | None = field(
             default=None,
             metadata={
                 "name": "shortDescription",
                 "type": "Element",
             },
         )
-        description: Optional[Description] = field(
+        description: Description | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        access_handles: Optional[
-            "AlternateRegisters.AlternateRegister.AccessHandles"
-        ] = field(
+        access_handles: AlternateRegisters.AlternateRegister.AccessHandles | None = field(
             default=None,
             metadata={
                 "name": "accessHandles",
@@ -103,20 +103,20 @@ class AlternateRegisters:
                 "min_occurs": 1,
             },
         )
-        type_identifier: Optional[str] = field(
+        type_identifier: str | None = field(
             default=None,
             metadata={
                 "name": "typeIdentifier",
                 "type": "Element",
             },
         )
-        volatile: Optional[Volatile] = field(
+        volatile: Volatile | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        access_policies: Optional[AccessPolicies] = field(
+        access_policies: AccessPolicies | None = field(
             default=None,
             metadata={
                 "name": "accessPolicies",
@@ -131,20 +131,20 @@ class AlternateRegisters:
                 "min_occurs": 1,
             },
         )
-        parameters: Optional[Parameters] = field(
+        parameters: Parameters | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        vendor_extensions: Optional[VendorExtensions] = field(
+        vendor_extensions: VendorExtensions | None = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

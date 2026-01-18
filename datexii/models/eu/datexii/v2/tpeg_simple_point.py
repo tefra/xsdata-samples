@@ -23,9 +23,7 @@ class TpegSimplePoint(TpegPointLocation):
     :ivar tpeg_simple_point_extension:
     """
 
-    tpeg_simple_point_location_type: Optional[
-        TpegLoc01SimplePointLocationSubtypeEnum
-    ] = field(
+    tpeg_simple_point_location_type: TpegLoc01SimplePointLocationSubtypeEnum | None = field(
         default=None,
         metadata={
             "name": "tpegSimplePointLocationType",
@@ -34,7 +32,7 @@ class TpegSimplePoint(TpegPointLocation):
             "required": True,
         },
     )
-    point: Optional[TpegPoint] = field(
+    point: TpegPoint | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -42,7 +40,7 @@ class TpegSimplePoint(TpegPointLocation):
             "required": True,
         },
     )
-    tpeg_simple_point_extension: Optional[ExtensionType] = field(
+    tpeg_simple_point_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "tpegSimplePointExtension",

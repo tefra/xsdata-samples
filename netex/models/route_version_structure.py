@@ -17,7 +17,7 @@ class RouteVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "Route_VersionStructure"
 
-    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
+    line_ref: FlexibleLineRef | LineRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -35,7 +35,7 @@ class RouteVersionStructure(LinkSequenceVersionStructure):
             ),
         },
     )
-    direction_type: Optional[DirectionType] = field(
+    direction_type: DirectionType | None = field(
         default=None,
         metadata={
             "name": "DirectionType",
@@ -43,7 +43,7 @@ class RouteVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_ref: Optional[DirectionRef] = field(
+    direction_ref: DirectionRef | None = field(
         default=None,
         metadata={
             "name": "DirectionRef",
@@ -51,7 +51,7 @@ class RouteVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    points_in_sequence: Optional[PointsOnRouteRelStructure] = field(
+    points_in_sequence: PointsOnRouteRelStructure | None = field(
         default=None,
         metadata={
             "name": "pointsInSequence",
@@ -59,7 +59,7 @@ class RouteVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    inverse_route_ref: Optional[RouteRefStructure] = field(
+    inverse_route_ref: RouteRefStructure | None = field(
         default=None,
         metadata={
             "name": "InverseRouteRef",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -40,7 +42,7 @@ class DoIpTpConnection:
     class Meta:
         name = "DO-IP-TP-CONNECTION"
 
-    ident: Optional[TpConnectionIdent] = field(
+    ident: TpConnectionIdent | None = field(
         default=None,
         metadata={
             "name": "IDENT",
@@ -48,9 +50,7 @@ class DoIpTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    do_ip_source_address_ref: Optional[
-        "DoIpTpConnection.DoIpSourceAddressRef"
-    ] = field(
+    do_ip_source_address_ref: DoIpTpConnection.DoIpSourceAddressRef | None = field(
         default=None,
         metadata={
             "name": "DO-IP-SOURCE-ADDRESS-REF",
@@ -58,9 +58,7 @@ class DoIpTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    do_ip_target_address_ref: Optional[
-        "DoIpTpConnection.DoIpTargetAddressRef"
-    ] = field(
+    do_ip_target_address_ref: DoIpTpConnection.DoIpTargetAddressRef | None = field(
         default=None,
         metadata={
             "name": "DO-IP-TARGET-ADDRESS-REF",
@@ -68,7 +66,7 @@ class DoIpTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_sdu_ref: Optional["DoIpTpConnection.TpSduRef"] = field(
+    tp_sdu_ref: DoIpTpConnection.TpSduRef | None = field(
         default=None,
         metadata={
             "name": "TP-SDU-REF",
@@ -76,14 +74,14 @@ class DoIpTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -94,7 +92,7 @@ class DoIpTpConnection:
 
     @dataclass
     class DoIpSourceAddressRef(Ref):
-        dest: Optional[DoIpLogicAddressSubtypesEnum] = field(
+        dest: DoIpLogicAddressSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -105,7 +103,7 @@ class DoIpTpConnection:
 
     @dataclass
     class DoIpTargetAddressRef(Ref):
-        dest: Optional[DoIpLogicAddressSubtypesEnum] = field(
+        dest: DoIpLogicAddressSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -116,7 +114,7 @@ class DoIpTpConnection:
 
     @dataclass
     class TpSduRef(Ref):
-        dest: Optional[PduTriggeringSubtypesEnum] = field(
+        dest: PduTriggeringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

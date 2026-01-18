@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -95,7 +97,7 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
     class Meta:
         name = "PERSISTENCY-PORT-PROTOTYPE-TO-KEY-VALUE-STORAGE-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -104,9 +106,7 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "PersistencyPortPrototypeToKeyValueStorageMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: PersistencyPortPrototypeToKeyValueStorageMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -114,7 +114,7 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +122,7 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +130,7 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +138,7 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +146,7 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,9 +154,7 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "PersistencyPortPrototypeToKeyValueStorageMapping.Annotations"
-    ] = field(
+    annotations: PersistencyPortPrototypeToKeyValueStorageMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -164,7 +162,7 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -172,7 +170,7 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_iref: Optional[PortPrototypeInExecutableInstanceRef] = (
+    port_prototype_iref: PortPrototypeInExecutableInstanceRef | None = (
         field(
             default=None,
             metadata={
@@ -182,9 +180,7 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
             },
         )
     )
-    process_ref: Optional[
-        "PersistencyPortPrototypeToKeyValueStorageMapping.ProcessRef"
-    ] = field(
+    process_ref: PersistencyPortPrototypeToKeyValueStorageMapping.ProcessRef | None = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
@@ -192,9 +188,7 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_value_storage_ref: Optional[
-        "PersistencyPortPrototypeToKeyValueStorageMapping.KeyValueStorageRef"
-    ] = field(
+    key_value_storage_ref: PersistencyPortPrototypeToKeyValueStorageMapping.KeyValueStorageRef | None = field(
         default=None,
         metadata={
             "name": "KEY-VALUE-STORAGE-REF",
@@ -202,14 +196,14 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -217,7 +211,7 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -249,7 +243,7 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
 
     @dataclass
     class ProcessRef(Ref):
-        dest: Optional[ProcessSubtypesEnum] = field(
+        dest: ProcessSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -260,7 +254,7 @@ class PersistencyPortPrototypeToKeyValueStorageMapping:
 
     @dataclass
     class KeyValueStorageRef(Ref):
-        dest: Optional[PersistencyKeyValueStorageSubtypesEnum] = field(
+        dest: PersistencyKeyValueStorageSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

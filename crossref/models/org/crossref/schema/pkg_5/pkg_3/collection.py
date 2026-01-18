@@ -44,14 +44,14 @@ class Collection:
             "type": "Element",
         },
     )
-    property: Optional[CollectionProperty] = field(
+    property: CollectionProperty | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    multi_resolution: Optional[CollectionMultiResolution] = field(
+    multi_resolution: CollectionMultiResolution | None = field(
         default=None,
         metadata={
             "name": "multi-resolution",

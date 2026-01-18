@@ -17,14 +17,14 @@ class Range:
         name = "range"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    left: Optional[Left] = field(
+    left: Left | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    right: Optional[Right] = field(
+    right: Right | None = field(
         default=None,
         metadata={
             "type": "Element",

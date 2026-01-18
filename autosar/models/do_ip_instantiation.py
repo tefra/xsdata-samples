@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -113,7 +115,7 @@ class DoIpInstantiation:
     class Meta:
         name = "DO-IP-INSTANTIATION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -122,7 +124,7 @@ class DoIpInstantiation:
             "required": True,
         },
     )
-    short_name_fragments: Optional["DoIpInstantiation.ShortNameFragments"] = (
+    short_name_fragments: DoIpInstantiation.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -132,7 +134,7 @@ class DoIpInstantiation:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -140,7 +142,7 @@ class DoIpInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -148,7 +150,7 @@ class DoIpInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -156,7 +158,7 @@ class DoIpInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -164,7 +166,7 @@ class DoIpInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -172,7 +174,7 @@ class DoIpInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DoIpInstantiation.Annotations"] = field(
+    annotations: DoIpInstantiation.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -180,7 +182,7 @@ class DoIpInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    eid: Optional[PositiveUnlimitedInteger] = field(
+    eid: PositiveUnlimitedInteger | None = field(
         default=None,
         metadata={
             "name": "EID",
@@ -188,7 +190,7 @@ class DoIpInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    entity_status_max_byte_field_use: Optional[Boolean] = field(
+    entity_status_max_byte_field_use: Boolean | None = field(
         default=None,
         metadata={
             "name": "ENTITY-STATUS-MAX-BYTE-FIELD-USE",
@@ -196,7 +198,7 @@ class DoIpInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    gid: Optional[PositiveUnlimitedInteger] = field(
+    gid: PositiveUnlimitedInteger | None = field(
         default=None,
         metadata={
             "name": "GID",
@@ -204,7 +206,7 @@ class DoIpInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    gid_invalidity_pattern: Optional[PositiveInteger] = field(
+    gid_invalidity_pattern: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "GID-INVALIDITY-PATTERN",
@@ -212,7 +214,7 @@ class DoIpInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    logical_address: Optional[PositiveInteger] = field(
+    logical_address: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "LOGICAL-ADDRESS",
@@ -220,7 +222,7 @@ class DoIpInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_request_bytes: Optional[PositiveInteger] = field(
+    max_request_bytes: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-REQUEST-BYTES",
@@ -228,7 +230,7 @@ class DoIpInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_interfaces: Optional["DoIpInstantiation.NetworkInterfaces"] = (
+    network_interfaces: DoIpInstantiation.NetworkInterfaces | None = (
         field(
             default=None,
             metadata={
@@ -238,9 +240,7 @@ class DoIpInstantiation:
             },
         )
     )
-    request_configurations: Optional[
-        "DoIpInstantiation.RequestConfigurations"
-    ] = field(
+    request_configurations: DoIpInstantiation.RequestConfigurations | None = field(
         default=None,
         metadata={
             "name": "REQUEST-CONFIGURATIONS",
@@ -248,7 +248,7 @@ class DoIpInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vin_invalidity_pattern: Optional[PositiveInteger] = field(
+    vin_invalidity_pattern: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "VIN-INVALIDITY-PATTERN",
@@ -256,14 +256,14 @@ class DoIpInstantiation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -271,7 +271,7 @@ class DoIpInstantiation:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

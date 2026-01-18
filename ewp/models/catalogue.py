@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from enum import Enum
 from typing import Optional, Union
@@ -157,7 +159,7 @@ class OtherHeiId:
             "required": True,
         },
     )
-    type_value: Optional[OtherHeiIdValue] = field(
+    type_value: OtherHeiIdValue | None = field(
         default=None,
         metadata={
             "name": "type",
@@ -196,7 +198,7 @@ class HttpwithOptionalLang:
             "pattern": r"https?://.+",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -221,7 +223,7 @@ class MultilineStringWithOptionalLang(MultilineString):
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -260,7 +262,7 @@ class StringWithOptionalLang:
             "required": True,
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -334,7 +336,7 @@ class Hei:
             "min_occurs": 1,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -390,7 +392,7 @@ class ManifestApiEntryBase:
             "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
         },
     )
-    admin_notes: Optional[AdminNotes] = field(
+    admin_notes: AdminNotes | None = field(
         default=None,
         metadata={
             "name": "admin-notes",
@@ -398,7 +400,7 @@ class ManifestApiEntryBase:
             "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -445,7 +447,7 @@ class ErrorResponse:
         name = "error-response"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    developer_message: Optional[MultilineString] = field(
+    developer_message: MultilineString | None = field(
         default=None,
         metadata={
             "name": "developer-message",
@@ -578,7 +580,7 @@ class Host:
             "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
         },
     )
-    admin_notes: Optional[AdminNotes] = field(
+    admin_notes: AdminNotes | None = field(
         default=None,
         metadata={
             "name": "admin-notes",
@@ -586,7 +588,7 @@ class Host:
             "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
         },
     )
-    apis_implemented: Optional[ApisImplemented] = field(
+    apis_implemented: ApisImplemented | None = field(
         default=None,
         metadata={
             "name": "apis-implemented",
@@ -594,21 +596,21 @@ class Host:
             "namespace": "https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1",
         },
     )
-    institutions_covered: Optional["Host.InstitutionsCovered"] = field(
+    institutions_covered: Host.InstitutionsCovered | None = field(
         default=None,
         metadata={
             "name": "institutions-covered",
             "type": "Element",
         },
     )
-    client_credentials_in_use: Optional["Host.ClientCredentialsInUse"] = field(
+    client_credentials_in_use: Host.ClientCredentialsInUse | None = field(
         default=None,
         metadata={
             "name": "client-credentials-in-use",
             "type": "Element",
         },
     )
-    server_credentials_in_use: Optional["Host.ServerCredentialsInUse"] = field(
+    server_credentials_in_use: Host.ServerCredentialsInUse | None = field(
         default=None,
         metadata={
             "name": "server-credentials-in-use",
@@ -709,21 +711,21 @@ class Catalogue:
         name = "catalogue"
         namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
 
-    host: list["Catalogue.Host"] = field(
+    host: list[Catalogue.Host] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "min_occurs": 1,
         },
     )
-    institutions: Optional["Catalogue.Institutions"] = field(
+    institutions: Catalogue.Institutions | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    binaries: Optional["Catalogue.Binaries"] = field(
+    binaries: Catalogue.Binaries | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -778,7 +780,7 @@ class Catalogue:
                 "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
             },
         )
-        admin_notes: Optional[AdminNotes] = field(
+        admin_notes: AdminNotes | None = field(
             default=None,
             metadata={
                 "name": "admin-notes",
@@ -786,34 +788,28 @@ class Catalogue:
                 "namespace": "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd",
             },
         )
-        apis_implemented: Optional[ApisImplemented] = field(
+        apis_implemented: ApisImplemented | None = field(
             default=None,
             metadata={
                 "name": "apis-implemented",
                 "type": "Element",
             },
         )
-        institutions_covered: Optional[
-            "Catalogue.Host.InstitutionsCovered"
-        ] = field(
+        institutions_covered: Catalogue.Host.InstitutionsCovered | None = field(
             default=None,
             metadata={
                 "name": "institutions-covered",
                 "type": "Element",
             },
         )
-        client_credentials_in_use: Optional[
-            "Catalogue.Host.ClientCredentialsInUse"
-        ] = field(
+        client_credentials_in_use: Catalogue.Host.ClientCredentialsInUse | None = field(
             default=None,
             metadata={
                 "name": "client-credentials-in-use",
                 "type": "Element",
             },
         )
-        server_credentials_in_use: Optional[
-            "Catalogue.Host.ServerCredentialsInUse"
-        ] = field(
+        server_credentials_in_use: Catalogue.Host.ServerCredentialsInUse | None = field(
             default=None,
             metadata={
                 "name": "server-credentials-in-use",
@@ -868,7 +864,7 @@ class Catalogue:
             """
 
             certificate: list[
-                "Catalogue.Host.ClientCredentialsInUse.Certificate"
+                Catalogue.Host.ClientCredentialsInUse.Certificate
             ] = field(
                 default_factory=list,
                 metadata={
@@ -876,7 +872,7 @@ class Catalogue:
                 },
             )
             rsa_public_key: list[
-                "Catalogue.Host.ClientCredentialsInUse.RsaPublicKey"
+                Catalogue.Host.ClientCredentialsInUse.RsaPublicKey
             ] = field(
                 default_factory=list,
                 metadata={
@@ -891,7 +887,7 @@ class Catalogue:
                 :ivar sha_256: Certificate's SHA-256 digest (in HEX).
                 """
 
-                sha_256: Optional[str] = field(
+                sha_256: str | None = field(
                     default=None,
                     metadata={
                         "name": "sha-256",
@@ -907,7 +903,7 @@ class Catalogue:
                 :ivar sha_256: Public key's SHA-256 digest (in HEX).
                 """
 
-                sha_256: Optional[str] = field(
+                sha_256: str | None = field(
                     default=None,
                     metadata={
                         "name": "sha-256",
@@ -940,7 +936,7 @@ class Catalogue:
             """
 
             rsa_public_key: list[
-                "Catalogue.Host.ServerCredentialsInUse.RsaPublicKey"
+                Catalogue.Host.ServerCredentialsInUse.RsaPublicKey
             ] = field(
                 default_factory=list,
                 metadata={
@@ -955,7 +951,7 @@ class Catalogue:
                 :ivar sha_256: Public key's SHA-256 digest (in HEX).
                 """
 
-                sha_256: Optional[str] = field(
+                sha_256: str | None = field(
                     default=None,
                     metadata={
                         "name": "sha-256",
@@ -981,7 +977,7 @@ class Catalogue:
             RSA public key.
         """
 
-        rsa_public_key: list["Catalogue.Binaries.RsaPublicKey"] = field(
+        rsa_public_key: list[Catalogue.Binaries.RsaPublicKey] = field(
             default_factory=list,
             metadata={
                 "name": "rsa-public-key",
@@ -1002,14 +998,14 @@ class Catalogue:
                 matching by humans when debugging XML).
             """
 
-            value: Optional[bytes] = field(
+            value: bytes | None = field(
                 default=None,
                 metadata={
                     "required": True,
                     "format": "base64",
                 },
             )
-            sha_256: Optional[str] = field(
+            sha_256: str | None = field(
                 default=None,
                 metadata={
                     "name": "sha-256",

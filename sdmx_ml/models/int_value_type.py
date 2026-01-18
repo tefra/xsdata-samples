@@ -24,4 +24,4 @@ class IntValueType(ValueType):
             "type": "Ignore",
         },
     )
-    value: Optional[int] = field(default=None)
+    value: int | None = field(default=None)

@@ -20,7 +20,7 @@ class ValidableElementPricesRelStructure(
         name = "validableElementPrices_RelStructure"
 
     validable_element_price_ref_or_validable_element_price_or_cell_ref: Iterable[
-        Union[ValidableElementPriceRef, ValidableElementPrice, CellRef]
+        ValidableElementPriceRef | ValidableElementPrice | CellRef
     ] = field(
         default_factory=list,
         metadata={

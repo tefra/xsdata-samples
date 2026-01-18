@@ -19,22 +19,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class AllSubmodeStructure:
-    choice: Optional[
-        Union[
-            AirSubmode,
-            BusSubmode,
-            CoachSubmode,
-            FunicularSubmode,
-            MetroSubmode,
-            TramSubmode,
-            TelecabinSubmode,
-            RailSubmode,
-            WaterSubmode,
-            SnowAndIceSubmode,
-            TaxiSubmode,
-            SelfDriveSubmode,
-        ]
-    ] = field(
+    choice: AirSubmode | BusSubmode | CoachSubmode | FunicularSubmode | MetroSubmode | TramSubmode | TelecabinSubmode | RailSubmode | WaterSubmode | SnowAndIceSubmode | TaxiSubmode | SelfDriveSubmode | None = field(
         default=None,
         metadata={
             "type": "Elements",

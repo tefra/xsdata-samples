@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
@@ -19,7 +21,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class PropertyOfDayStructure:
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -27,7 +29,7 @@ class PropertyOfDayStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -53,13 +55,7 @@ class PropertyOfDayStructure:
             "tokens": True,
         },
     )
-    month_of_year_or_day_of_month_or_day_of_year: Optional[
-        Union[
-            "PropertyOfDayStructure.MonthOfYear",
-            "PropertyOfDayStructure.DayOfMonth",
-            "PropertyOfDayStructure.DayOfYear",
-        ]
-    ] = field(
+    month_of_year_or_day_of_month_or_day_of_year: PropertyOfDayStructure.MonthOfYear | PropertyOfDayStructure.DayOfMonth | PropertyOfDayStructure.DayOfYear | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -82,7 +78,7 @@ class PropertyOfDayStructure:
             ),
         },
     )
-    country_ref: Optional[CountryRefStructure] = field(
+    country_ref: CountryRefStructure | None = field(
         default=None,
         metadata={
             "name": "CountryRef",
@@ -117,7 +113,7 @@ class PropertyOfDayStructure:
             "tokens": True,
         },
     )
-    day_event: Optional[DayEventEnumeration] = field(
+    day_event: DayEventEnumeration | None = field(
         default=None,
         metadata={
             "name": "DayEvent",
@@ -125,7 +121,7 @@ class PropertyOfDayStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    crowding: Optional[CrowdingEnumeration] = field(
+    crowding: CrowdingEnumeration | None = field(
         default=None,
         metadata={
             "name": "Crowding",
@@ -136,7 +132,7 @@ class PropertyOfDayStructure:
 
     @dataclass
     class MonthOfYear:
-        value: Optional[XmlPeriod] = field(
+        value: XmlPeriod | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -145,7 +141,7 @@ class PropertyOfDayStructure:
 
     @dataclass
     class DayOfMonth:
-        value: Optional[XmlPeriod] = field(
+        value: XmlPeriod | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -154,7 +150,7 @@ class PropertyOfDayStructure:
 
     @dataclass
     class DayOfYear:
-        value: Optional[XmlPeriod] = field(
+        value: XmlPeriod | None = field(
             default=None,
             metadata={
                 "required": True,

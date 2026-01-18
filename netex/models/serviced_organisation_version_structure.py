@@ -17,7 +17,7 @@ class ServicedOrganisationVersionStructure(OtherOrganisationVersionStructure):
     class Meta:
         name = "ServicedOrganisation_VersionStructure"
 
-    service_calendar_ref: Optional[ServiceCalendarRef] = field(
+    service_calendar_ref: ServiceCalendarRef | None = field(
         default=None,
         metadata={
             "name": "ServiceCalendarRef",
@@ -25,9 +25,7 @@ class ServicedOrganisationVersionStructure(OtherOrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    serviced_organisation_type: Optional[
-        ServicedOrganisationTypeEnumeration
-    ] = field(
+    serviced_organisation_type: ServicedOrganisationTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "ServicedOrganisationType",

@@ -41,7 +41,7 @@ class Roadworks(OperatorAction):
     :ivar roadworks_extension:
     """
 
-    roadworks_duration: Optional[RoadworksDurationEnum] = field(
+    roadworks_duration: RoadworksDurationEnum | None = field(
         default=None,
         metadata={
             "name": "roadworksDuration",
@@ -49,7 +49,7 @@ class Roadworks(OperatorAction):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    roadworks_scale: Optional[RoadworksScaleEnum] = field(
+    roadworks_scale: RoadworksScaleEnum | None = field(
         default=None,
         metadata={
             "name": "roadworksScale",
@@ -57,7 +57,7 @@ class Roadworks(OperatorAction):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    under_traffic: Optional[bool] = field(
+    under_traffic: bool | None = field(
         default=None,
         metadata={
             "name": "underTraffic",
@@ -65,7 +65,7 @@ class Roadworks(OperatorAction):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    urgent_roadworks: Optional[bool] = field(
+    urgent_roadworks: bool | None = field(
         default=None,
         metadata={
             "name": "urgentRoadworks",
@@ -73,21 +73,21 @@ class Roadworks(OperatorAction):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    mobility: Optional[Mobility] = field(
+    mobility: Mobility | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    subjects: Optional[Subjects] = field(
+    subjects: Subjects | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    maintenance_vehicles: Optional[MaintenanceVehicles] = field(
+    maintenance_vehicles: MaintenanceVehicles | None = field(
         default=None,
         metadata={
             "name": "maintenanceVehicles",
@@ -95,7 +95,7 @@ class Roadworks(OperatorAction):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    roadworks_extension: Optional[ExtensionType] = field(
+    roadworks_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "roadworksExtension",

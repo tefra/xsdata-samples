@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import Optional, Union
@@ -22,7 +24,7 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
     class Meta:
         name = "FlexibleStopPlace_VersionStructure"
 
-    name_suffix: Optional[MultilingualString] = field(
+    name_suffix: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "NameSuffix",
@@ -30,7 +32,7 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alternative_names: Optional[AlternativeNamesRelStructure] = field(
+    alternative_names: AlternativeNamesRelStructure | None = field(
         default=None,
         metadata={
             "name": "alternativeNames",
@@ -38,7 +40,7 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
+    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -46,7 +48,7 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_code: Optional[str] = field(
+    public_code: str | None = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -54,14 +56,14 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    areas: Optional["FlexibleStopPlaceVersionStructure.Areas"] = field(
+    areas: FlexibleStopPlaceVersionStructure.Areas | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    lines: Optional[LineRefsRelStructure] = field(
+    lines: LineRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -72,12 +74,7 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
     @dataclass
     class Areas:
         choice: Iterable[
-            Union[
-                FlexibleArea,
-                FlexibleAreaRef,
-                HailAndRideArea,
-                HailAndRideAreaRef,
-            ]
+            FlexibleArea | FlexibleAreaRef | HailAndRideArea | HailAndRideAreaRef
         ] = field(
             default_factory=list,
             metadata={

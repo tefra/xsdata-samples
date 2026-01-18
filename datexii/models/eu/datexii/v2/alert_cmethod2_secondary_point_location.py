@@ -17,7 +17,7 @@ class AlertCMethod2SecondaryPointLocation:
     ALERT-C location table.
     """
 
-    alert_clocation: Optional[AlertCLocation] = field(
+    alert_clocation: AlertCLocation | None = field(
         default=None,
         metadata={
             "name": "alertCLocation",
@@ -26,9 +26,7 @@ class AlertCMethod2SecondaryPointLocation:
             "required": True,
         },
     )
-    alert_cmethod2_secondary_point_location_extension: Optional[
-        ExtensionType
-    ] = field(
+    alert_cmethod2_secondary_point_location_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "alertCMethod2SecondaryPointLocationExtension",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -158,7 +160,7 @@ class EcucInstanceReferenceDef:
     class Meta:
         name = "ECUC-INSTANCE-REFERENCE-DEF"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -167,9 +169,7 @@ class EcucInstanceReferenceDef:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "EcucInstanceReferenceDef.ShortNameFragments"
-    ] = field(
+    short_name_fragments: EcucInstanceReferenceDef.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -177,7 +177,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -185,7 +185,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -193,7 +193,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -201,7 +201,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -209,7 +209,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -217,7 +217,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["EcucInstanceReferenceDef.Annotations"] = field(
+    annotations: EcucInstanceReferenceDef.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -225,9 +225,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    related_trace_item_ref: Optional[
-        "EcucInstanceReferenceDef.RelatedTraceItemRef"
-    ] = field(
+    related_trace_item_ref: EcucInstanceReferenceDef.RelatedTraceItemRef | None = field(
         default=None,
         metadata={
             "name": "RELATED-TRACE-ITEM-REF",
@@ -235,9 +233,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_validation_conds: Optional[
-        "EcucInstanceReferenceDef.EcucValidationConds"
-    ] = field(
+    ecuc_validation_conds: EcucInstanceReferenceDef.EcucValidationConds | None = field(
         default=None,
         metadata={
             "name": "ECUC-VALIDATION-CONDS",
@@ -245,7 +241,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_cond: Optional[EcucConditionSpecification] = field(
+    ecuc_cond: EcucConditionSpecification | None = field(
         default=None,
         metadata={
             "name": "ECUC-COND",
@@ -253,7 +249,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lower_multiplicity: Optional[PositiveIntegerValueVariationPoint] = field(
+    lower_multiplicity: PositiveIntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "LOWER-MULTIPLICITY",
@@ -261,7 +257,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity: Optional[PositiveIntegerValueVariationPoint] = field(
+    upper_multiplicity: PositiveIntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY",
@@ -269,7 +265,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity_infinite: Optional[BooleanValueVariationPoint] = field(
+    upper_multiplicity_infinite: BooleanValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY-INFINITE",
@@ -277,7 +273,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    scope: Optional[EcucScopeEnum] = field(
+    scope: EcucScopeEnum | None = field(
         default=None,
         metadata={
             "name": "SCOPE",
@@ -285,9 +281,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    configuration_class_affection: Optional[
-        EcucConfigurationClassAffection
-    ] = field(
+    configuration_class_affection: EcucConfigurationClassAffection | None = field(
         default=None,
         metadata={
             "name": "CONFIGURATION-CLASS-AFFECTION",
@@ -295,9 +289,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implementation_config_classes: Optional[
-        "EcucInstanceReferenceDef.ImplementationConfigClasses"
-    ] = field(
+    implementation_config_classes: EcucInstanceReferenceDef.ImplementationConfigClasses | None = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-CONFIG-CLASSES",
@@ -305,9 +297,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_config_classes: Optional[
-        "EcucInstanceReferenceDef.MultiplicityConfigClasses"
-    ] = field(
+    multiplicity_config_classes: EcucInstanceReferenceDef.MultiplicityConfigClasses | None = field(
         default=None,
         metadata={
             "name": "MULTIPLICITY-CONFIG-CLASSES",
@@ -315,7 +305,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    origin: Optional[String] = field(
+    origin: String | None = field(
         default=None,
         metadata={
             "name": "ORIGIN",
@@ -323,7 +313,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    post_build_variant_multiplicity: Optional[Boolean] = field(
+    post_build_variant_multiplicity: Boolean | None = field(
         default=None,
         metadata={
             "name": "POST-BUILD-VARIANT-MULTIPLICITY",
@@ -331,7 +321,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    post_build_variant_value: Optional[Boolean] = field(
+    post_build_variant_value: Boolean | None = field(
         default=None,
         metadata={
             "name": "POST-BUILD-VARIANT-VALUE",
@@ -339,7 +329,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    requires_index: Optional[Boolean] = field(
+    requires_index: Boolean | None = field(
         default=None,
         metadata={
             "name": "REQUIRES-INDEX",
@@ -347,9 +337,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_config_classes: Optional[
-        "EcucInstanceReferenceDef.ValueConfigClasses"
-    ] = field(
+    value_config_classes: EcucInstanceReferenceDef.ValueConfigClasses | None = field(
         default=None,
         metadata={
             "name": "VALUE-CONFIG-CLASSES",
@@ -357,7 +345,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    destination_context: Optional[String] = field(
+    destination_context: String | None = field(
         default=None,
         metadata={
             "name": "DESTINATION-CONTEXT",
@@ -365,7 +353,7 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    destination_type: Optional[String] = field(
+    destination_type: String | None = field(
         default=None,
         metadata={
             "name": "DESTINATION-TYPE",
@@ -373,14 +361,14 @@ class EcucInstanceReferenceDef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -388,7 +376,7 @@ class EcucInstanceReferenceDef:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -420,7 +408,7 @@ class EcucInstanceReferenceDef:
 
     @dataclass
     class RelatedTraceItemRef(Ref):
-        dest: Optional[TraceableSubtypesEnum] = field(
+        dest: TraceableSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

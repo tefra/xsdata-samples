@@ -25,7 +25,7 @@ class MobilityServiceConstraintZoneVersionStructure(ZoneVersionStructure):
     class Meta:
         name = "MobilityServiceConstraintZone_VersionStructure"
 
-    rule_applicability: Optional[ZoneRuleApplicabilityEnumeration] = field(
+    rule_applicability: ZoneRuleApplicabilityEnumeration | None = field(
         default=None,
         metadata={
             "name": "RuleApplicability",
@@ -33,7 +33,7 @@ class MobilityServiceConstraintZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    zone_use: Optional[TransportZoneUseEnumeration] = field(
+    zone_use: TransportZoneUseEnumeration | None = field(
         default=None,
         metadata={
             "name": "ZoneUse",
@@ -41,7 +41,7 @@ class MobilityServiceConstraintZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_speed: Optional[Decimal] = field(
+    maximum_speed: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumSpeed",
@@ -49,16 +49,7 @@ class MobilityServiceConstraintZoneVersionStructure(ZoneVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mobility_service_ref_or_common_vehicle_service_ref_or_vehicle_pooling_service_ref: Optional[
-        Union[
-            OnlineServiceRef,
-            VehicleRentalServiceRef,
-            VehicleSharingServiceRef,
-            ChauffeuredVehicleServiceRef,
-            TaxiServiceRef,
-            CarPoolingServiceRef,
-        ]
-    ] = field(
+    mobility_service_ref_or_common_vehicle_service_ref_or_vehicle_pooling_service_ref: OnlineServiceRef | VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -96,7 +87,7 @@ class MobilityServiceConstraintZoneVersionStructure(ZoneVersionStructure):
             ),
         },
     )
-    vehicle_restrictions: Optional[VehicleTypeZoneRestrictionsRelStructure] = (
+    vehicle_restrictions: VehicleTypeZoneRestrictionsRelStructure | None = (
         field(
             default=None,
             metadata={

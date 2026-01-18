@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -44,7 +46,7 @@ class FmFeatureDecomposition:
     class Meta:
         name = "FM-FEATURE-DECOMPOSITION"
 
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -52,7 +54,7 @@ class FmFeatureDecomposition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    feature_refs: Optional["FmFeatureDecomposition.FeatureRefs"] = field(
+    feature_refs: FmFeatureDecomposition.FeatureRefs | None = field(
         default=None,
         metadata={
             "name": "FEATURE-REFS",
@@ -60,7 +62,7 @@ class FmFeatureDecomposition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max: Optional[PositiveInteger] = field(
+    max: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX",
@@ -68,7 +70,7 @@ class FmFeatureDecomposition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min: Optional[PositiveInteger] = field(
+    min: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MIN",
@@ -76,14 +78,14 @@ class FmFeatureDecomposition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -94,7 +96,7 @@ class FmFeatureDecomposition:
 
     @dataclass
     class FeatureRefs:
-        feature_ref: list["FmFeatureDecomposition.FeatureRefs.FeatureRef"] = (
+        feature_ref: list[FmFeatureDecomposition.FeatureRefs.FeatureRef] = (
             field(
                 default_factory=list,
                 metadata={
@@ -107,7 +109,7 @@ class FmFeatureDecomposition:
 
         @dataclass
         class FeatureRef(Ref):
-            dest: Optional[FmFeatureSubtypesEnum] = field(
+            dest: FmFeatureSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

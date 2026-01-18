@@ -18,7 +18,7 @@ class InfrastructureJunctionsInFrameRelStructure(
         name = "infrastructureJunctionsInFrame_RelStructure"
 
     railway_junction_or_road_junction_or_wire_junction: Iterable[
-        Union[RailwayJunction, RoadJunction, WireJunction]
+        RailwayJunction | RoadJunction | WireJunction
     ] = field(
         default_factory=list,
         metadata={

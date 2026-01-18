@@ -31,14 +31,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
     class Meta:
         name = "ParkingBay_VersionStructure"
 
-    parking_area_ref: Optional[
-        Union[
-            VehiclePoolingParkingAreaRef,
-            VehicleSharingParkingAreaRef,
-            TaxiParkingAreaRef,
-            ParkingAreaRef,
-        ]
-    ] = field(
+    parking_area_ref: VehiclePoolingParkingAreaRef | VehicleSharingParkingAreaRef | TaxiParkingAreaRef | ParkingAreaRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -75,7 +68,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "tokens": True,
         },
     )
-    parking_vehicle_type: Optional[ParkingVehicleEnumeration] = field(
+    parking_vehicle_type: ParkingVehicleEnumeration | None = field(
         default=None,
         metadata={
             "name": "ParkingVehicleType",
@@ -83,15 +76,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_type_ref_or_vehicle_type_ref: Optional[
-        Union[
-            SimpleVehicleTypeRef,
-            CompoundTrainRef,
-            TrainRef,
-            VehicleTypeRef,
-            TransportTypeRef,
-        ]
-    ] = field(
+    transport_type_ref_or_vehicle_type_ref: SimpleVehicleTypeRef | CompoundTrainRef | TrainRef | VehicleTypeRef | TransportTypeRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -133,7 +118,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "tokens": True,
         },
     )
-    maximum_stay: Optional[XmlDuration] = field(
+    maximum_stay: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MaximumStay",
@@ -141,7 +126,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    secure_parking: Optional[bool] = field(
+    secure_parking: bool | None = field(
         default=None,
         metadata={
             "name": "SecureParking",
@@ -149,7 +134,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    bay_geometry: Optional[BayGeometryEnumeration] = field(
+    bay_geometry: BayGeometryEnumeration | None = field(
         default=None,
         metadata={
             "name": "BayGeometry",
@@ -157,7 +142,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_visibility: Optional[ParkingVisibilityEnumeration] = field(
+    parking_visibility: ParkingVisibilityEnumeration | None = field(
         default=None,
         metadata={
             "name": "ParkingVisibility",
@@ -165,7 +150,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    length: Optional[Decimal] = field(
+    length: Decimal | None = field(
         default=None,
         metadata={
             "name": "Length",
@@ -173,7 +158,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    width: Optional[Decimal] = field(
+    width: Decimal | None = field(
         default=None,
         metadata={
             "name": "Width",
@@ -181,7 +166,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    height: Optional[Decimal] = field(
+    height: Decimal | None = field(
         default=None,
         metadata={
             "name": "Height",
@@ -189,7 +174,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    weight: Optional[Decimal] = field(
+    weight: Decimal | None = field(
         default=None,
         metadata={
             "name": "Weight",
@@ -197,7 +182,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    recharging_available: Optional[bool] = field(
+    recharging_available: bool | None = field(
         default=None,
         metadata={
             "name": "RechargingAvailable",

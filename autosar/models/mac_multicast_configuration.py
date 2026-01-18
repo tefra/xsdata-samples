@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -28,9 +30,7 @@ class MacMulticastConfiguration:
     class Meta:
         name = "MAC-MULTICAST-CONFIGURATION"
 
-    mac_multicast_group_ref: Optional[
-        "MacMulticastConfiguration.MacMulticastGroupRef"
-    ] = field(
+    mac_multicast_group_ref: MacMulticastConfiguration.MacMulticastGroupRef | None = field(
         default=None,
         metadata={
             "name": "MAC-MULTICAST-GROUP-REF",
@@ -38,14 +38,14 @@ class MacMulticastConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -56,7 +56,7 @@ class MacMulticastConfiguration:
 
     @dataclass
     class MacMulticastGroupRef(Ref):
-        dest: Optional[MacMulticastGroupSubtypesEnum] = field(
+        dest: MacMulticastGroupSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

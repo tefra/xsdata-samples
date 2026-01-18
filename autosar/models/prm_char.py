@@ -47,7 +47,7 @@ class PrmChar:
     class Meta:
         name = "PRM-CHAR"
 
-    cond: Optional[DocumentationBlock] = field(
+    cond: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "COND",
@@ -55,7 +55,7 @@ class PrmChar:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    abs: Optional[NumericalValue] = field(
+    abs: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "ABS",
@@ -63,7 +63,7 @@ class PrmChar:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tol: Optional[NumericalValue] = field(
+    tol: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "TOL",
@@ -71,7 +71,7 @@ class PrmChar:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min: Optional[NumericalValue] = field(
+    min: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "MIN",
@@ -79,7 +79,7 @@ class PrmChar:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    typ: Optional[NumericalValue] = field(
+    typ: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "TYP",
@@ -87,7 +87,7 @@ class PrmChar:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max: Optional[NumericalValue] = field(
+    max: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "MAX",
@@ -95,7 +95,7 @@ class PrmChar:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    prm_unit: Optional[SingleLanguageUnitNames] = field(
+    prm_unit: SingleLanguageUnitNames | None = field(
         default=None,
         metadata={
             "name": "PRM-UNIT",
@@ -103,7 +103,7 @@ class PrmChar:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    text: Optional[String] = field(
+    text: String | None = field(
         default=None,
         metadata={
             "name": "TEXT",
@@ -111,7 +111,7 @@ class PrmChar:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remark: Optional[DocumentationBlock] = field(
+    remark: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "REMARK",
@@ -119,14 +119,14 @@ class PrmChar:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

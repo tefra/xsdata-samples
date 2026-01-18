@@ -15,7 +15,7 @@ class GeographicalUnitsRelStructure(ContainmentAggregationStructure):
         name = "geographicalUnits_RelStructure"
 
     geographical_unit_ref_or_geographical_unit: Iterable[
-        Union[GeographicalUnitRef, GeographicalUnit]
+        GeographicalUnitRef | GeographicalUnit
     ] = field(
         default_factory=list,
         metadata={

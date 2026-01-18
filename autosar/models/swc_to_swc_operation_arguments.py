@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -43,7 +45,7 @@ class SwcToSwcOperationArguments:
     class Meta:
         name = "SWC-TO-SWC-OPERATION-ARGUMENTS"
 
-    direction: Optional[SwcToSwcOperationArgumentsDirectionEnum] = field(
+    direction: SwcToSwcOperationArgumentsDirectionEnum | None = field(
         default=None,
         metadata={
             "name": "DIRECTION",
@@ -51,7 +53,7 @@ class SwcToSwcOperationArguments:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_irefs: Optional["SwcToSwcOperationArguments.OperationIrefs"] = (
+    operation_irefs: SwcToSwcOperationArguments.OperationIrefs | None = (
         field(
             default=None,
             metadata={
@@ -61,14 +63,14 @@ class SwcToSwcOperationArguments:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

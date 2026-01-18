@@ -14,7 +14,7 @@ class MeasureBaseType(ComponentType):
     measure.
     """
 
-    concept_identity: Optional[str] = field(
+    concept_identity: str | None = field(
         default=None,
         metadata={
             "name": "ConceptIdentity",

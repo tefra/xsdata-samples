@@ -40,14 +40,14 @@ class EmphasisText:
     class Meta:
         name = "EMPHASIS-TEXT"
 
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -55,21 +55,21 @@ class EmphasisText:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    color: Optional[str] = field(
+    color: str | None = field(
         default=None,
         metadata={
             "name": "COLOR",
             "type": "Attribute",
         },
     )
-    font: Optional[EEnumFontSimple] = field(
+    font: EEnumFontSimple | None = field(
         default=None,
         metadata={
             "name": "FONT",
             "type": "Attribute",
         },
     )
-    type_value: Optional[EEnumSimple] = field(
+    type_value: EEnumSimple | None = field(
         default=None,
         metadata={
             "name": "TYPE",

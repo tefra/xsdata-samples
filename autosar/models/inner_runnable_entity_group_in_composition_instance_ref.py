@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -41,7 +43,7 @@ class InnerRunnableEntityGroupInCompositionInstanceRef:
         name = "INNER-RUNNABLE-ENTITY-GROUP-IN-COMPOSITION-INSTANCE-REF"
 
     context_sw_component_prototype_ref: list[
-        "InnerRunnableEntityGroupInCompositionInstanceRef.ContextSwComponentPrototypeRef"
+        InnerRunnableEntityGroupInCompositionInstanceRef.ContextSwComponentPrototypeRef
     ] = field(
         default_factory=list,
         metadata={
@@ -50,9 +52,7 @@ class InnerRunnableEntityGroupInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_runnable_entity_group_ref: Optional[
-        "InnerRunnableEntityGroupInCompositionInstanceRef.TargetRunnableEntityGroupRef"
-    ] = field(
+    target_runnable_entity_group_ref: InnerRunnableEntityGroupInCompositionInstanceRef.TargetRunnableEntityGroupRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-RUNNABLE-ENTITY-GROUP-REF",
@@ -60,7 +60,7 @@ class InnerRunnableEntityGroupInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -68,14 +68,14 @@ class InnerRunnableEntityGroupInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -86,7 +86,7 @@ class InnerRunnableEntityGroupInCompositionInstanceRef:
 
     @dataclass
     class ContextSwComponentPrototypeRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -97,7 +97,7 @@ class InnerRunnableEntityGroupInCompositionInstanceRef:
 
     @dataclass
     class TargetRunnableEntityGroupRef(Ref):
-        dest: Optional[RunnableEntityGroupSubtypesEnum] = field(
+        dest: RunnableEntityGroupSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

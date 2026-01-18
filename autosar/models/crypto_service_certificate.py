@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -99,7 +101,7 @@ class CryptoServiceCertificate:
     class Meta:
         name = "CRYPTO-SERVICE-CERTIFICATE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -108,9 +110,7 @@ class CryptoServiceCertificate:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "CryptoServiceCertificate.ShortNameFragments"
-    ] = field(
+    short_name_fragments: CryptoServiceCertificate.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -118,7 +118,7 @@ class CryptoServiceCertificate:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -126,7 +126,7 @@ class CryptoServiceCertificate:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -134,7 +134,7 @@ class CryptoServiceCertificate:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -142,7 +142,7 @@ class CryptoServiceCertificate:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -150,7 +150,7 @@ class CryptoServiceCertificate:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -158,7 +158,7 @@ class CryptoServiceCertificate:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["CryptoServiceCertificate.Annotations"] = field(
+    annotations: CryptoServiceCertificate.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -166,7 +166,7 @@ class CryptoServiceCertificate:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -174,7 +174,7 @@ class CryptoServiceCertificate:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    algorithm_family: Optional[CryptoCertificateAlgorithmFamilyEnum] = field(
+    algorithm_family: CryptoCertificateAlgorithmFamilyEnum | None = field(
         default=None,
         metadata={
             "name": "ALGORITHM-FAMILY",
@@ -182,7 +182,7 @@ class CryptoServiceCertificate:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    format: Optional[CryptoCertificateFormatEnum] = field(
+    format: CryptoCertificateFormatEnum | None = field(
         default=None,
         metadata={
             "name": "FORMAT",
@@ -190,7 +190,7 @@ class CryptoServiceCertificate:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum_length: Optional[PositiveInteger] = field(
+    maximum_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAXIMUM-LENGTH",
@@ -198,9 +198,7 @@ class CryptoServiceCertificate:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    next_higher_certificate_ref: Optional[
-        "CryptoServiceCertificate.NextHigherCertificateRef"
-    ] = field(
+    next_higher_certificate_ref: CryptoServiceCertificate.NextHigherCertificateRef | None = field(
         default=None,
         metadata={
             "name": "NEXT-HIGHER-CERTIFICATE-REF",
@@ -208,14 +206,14 @@ class CryptoServiceCertificate:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -223,7 +221,7 @@ class CryptoServiceCertificate:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -255,7 +253,7 @@ class CryptoServiceCertificate:
 
     @dataclass
     class NextHigherCertificateRef(Ref):
-        dest: Optional[CryptoServiceCertificateSubtypesEnum] = field(
+        dest: CryptoServiceCertificateSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

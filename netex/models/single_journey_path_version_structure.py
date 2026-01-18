@@ -15,7 +15,7 @@ class SingleJourneyPathVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "SingleJourneyPath_VersionStructure"
 
-    route_ref: Optional[RouteRef] = field(
+    route_ref: RouteRef | None = field(
         default=None,
         metadata={
             "name": "RouteRef",
@@ -23,9 +23,7 @@ class SingleJourneyPathVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    points_in_sequence: Optional[
-        VehicleMeetingPointsInSequenceRelStructure
-    ] = field(
+    points_in_sequence: VehicleMeetingPointsInSequenceRelStructure | None = field(
         default=None,
         metadata={
             "name": "pointsInSequence",

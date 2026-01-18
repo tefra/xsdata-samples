@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -32,7 +34,7 @@ class BusMirrorLinPidToCanIdMapping:
     class Meta:
         name = "BUS-MIRROR-LIN-PID-TO-CAN-ID-MAPPING"
 
-    remapped_can_id: Optional[PositiveInteger] = field(
+    remapped_can_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "REMAPPED-CAN-ID",
@@ -40,9 +42,7 @@ class BusMirrorLinPidToCanIdMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_lin_pid_ref: Optional[
-        "BusMirrorLinPidToCanIdMapping.SourceLinPidRef"
-    ] = field(
+    source_lin_pid_ref: BusMirrorLinPidToCanIdMapping.SourceLinPidRef | None = field(
         default=None,
         metadata={
             "name": "SOURCE-LIN-PID-REF",
@@ -50,14 +50,14 @@ class BusMirrorLinPidToCanIdMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -68,7 +68,7 @@ class BusMirrorLinPidToCanIdMapping:
 
     @dataclass
     class SourceLinPidRef(Ref):
-        dest: Optional[LinFrameTriggeringSubtypesEnum] = field(
+        dest: LinFrameTriggeringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

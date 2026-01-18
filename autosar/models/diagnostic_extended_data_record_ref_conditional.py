@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class DiagnosticExtendedDataRecordRefConditional:
     class Meta:
         name = "DIAGNOSTIC-EXTENDED-DATA-RECORD-REF-CONDITIONAL"
 
-    diagnostic_extended_data_record_ref: Optional[
-        "DiagnosticExtendedDataRecordRefConditional.DiagnosticExtendedDataRecordRef"
-    ] = field(
+    diagnostic_extended_data_record_ref: DiagnosticExtendedDataRecordRefConditional.DiagnosticExtendedDataRecordRef | None = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-EXTENDED-DATA-RECORD-REF",
@@ -43,7 +43,7 @@ class DiagnosticExtendedDataRecordRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class DiagnosticExtendedDataRecordRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class DiagnosticExtendedDataRecordRefConditional:
 
     @dataclass
     class DiagnosticExtendedDataRecordRef(Ref):
-        dest: Optional[DiagnosticExtendedDataRecordSubtypesEnum] = field(
+        dest: DiagnosticExtendedDataRecordSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -30,7 +30,7 @@ __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:TendererQualificat
 
 @dataclass(frozen=True)
 class TendererQualificationResponseType:
-    ublextensions: Optional[Ublextensions] = field(
+    ublextensions: Ublextensions | None = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -38,7 +38,7 @@ class TendererQualificationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: Optional[UblversionId] = field(
+    ublversion_id: UblversionId | None = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -46,7 +46,7 @@ class TendererQualificationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: Optional[CustomizationId] = field(
+    customization_id: CustomizationId | None = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -54,7 +54,7 @@ class TendererQualificationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: Optional[ProfileId] = field(
+    profile_id: ProfileId | None = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -62,7 +62,7 @@ class TendererQualificationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: Optional[ProfileExecutionId] = field(
+    profile_execution_id: ProfileExecutionId | None = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -70,7 +70,7 @@ class TendererQualificationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -78,7 +78,7 @@ class TendererQualificationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    copy_indicator: Optional[CopyIndicator] = field(
+    copy_indicator: CopyIndicator | None = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -86,7 +86,7 @@ class TendererQualificationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -94,7 +94,7 @@ class TendererQualificationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    contract_folder_id: Optional[ContractFolderId] = field(
+    contract_folder_id: ContractFolderId | None = field(
         default=None,
         metadata={
             "name": "ContractFolderID",
@@ -111,7 +111,7 @@ class TendererQualificationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -120,7 +120,7 @@ class TendererQualificationResponseType:
             "required": True,
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -136,7 +136,7 @@ class TendererQualificationResponseType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    sender_party: Optional[SenderParty] = field(
+    sender_party: SenderParty | None = field(
         default=None,
         metadata={
             "name": "SenderParty",
@@ -145,7 +145,7 @@ class TendererQualificationResponseType:
             "required": True,
         },
     )
-    receiver_party: Optional[ReceiverParty] = field(
+    receiver_party: ReceiverParty | None = field(
         default=None,
         metadata={
             "name": "ReceiverParty",
@@ -154,7 +154,7 @@ class TendererQualificationResponseType:
             "required": True,
         },
     )
-    resolution_document_reference: Optional[ResolutionDocumentReference] = (
+    resolution_document_reference: ResolutionDocumentReference | None = (
         field(
             default=None,
             metadata={
@@ -173,7 +173,7 @@ class TendererQualificationResponseType:
             "min_occurs": 1,
         },
     )
-    appeal_terms: Optional[AppealTerms] = field(
+    appeal_terms: AppealTerms | None = field(
         default=None,
         metadata={
             "name": "AppealTerms",

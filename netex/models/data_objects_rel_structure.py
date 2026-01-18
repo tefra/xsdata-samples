@@ -28,22 +28,7 @@ class DataObjectsRelStructure:
         name = "dataObjects_RelStructure"
 
     choice: Iterable[
-        Union[
-            CompositeFrame,
-            MobilityJourneyFrame,
-            MobilityServiceFrame,
-            SalesTransactionFrame,
-            FareFrame,
-            DriverScheduleFrame,
-            VehicleScheduleFrame,
-            ServiceFrame,
-            TimetableFrame,
-            SiteFrame,
-            InfrastructureFrame,
-            GeneralFrame,
-            ResourceFrame,
-            ServiceCalendarFrame,
-        ]
+        CompositeFrame | MobilityJourneyFrame | MobilityServiceFrame | SalesTransactionFrame | FareFrame | DriverScheduleFrame | VehicleScheduleFrame | ServiceFrame | TimetableFrame | SiteFrame | InfrastructureFrame | GeneralFrame | ResourceFrame | ServiceCalendarFrame
     ] = field(
         default_factory=list,
         metadata={

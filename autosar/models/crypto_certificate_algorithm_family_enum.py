@@ -30,20 +30,20 @@ class CryptoCertificateAlgorithmFamilyEnum:
     class Meta:
         name = "CRYPTO-CERTIFICATE-ALGORITHM-FAMILY-ENUM"
 
-    value: Optional[CryptoCertificateAlgorithmFamilyEnumSimple] = field(
+    value: CryptoCertificateAlgorithmFamilyEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

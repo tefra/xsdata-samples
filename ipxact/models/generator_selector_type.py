@@ -11,7 +11,7 @@ class GeneratorSelectorType:
     class Meta:
         name = "generatorSelectorType"
 
-    group_selector: Optional[GroupSelector] = field(
+    group_selector: GroupSelector | None = field(
         default=None,
         metadata={
             "name": "groupSelector",
@@ -20,7 +20,7 @@ class GeneratorSelectorType:
             "required": True,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

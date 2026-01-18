@@ -13,7 +13,7 @@ class ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus:
     class Meta:
         name = "_ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus"
 
-    group_of_parking_spaces_status: Optional[GroupOfParkingSpacesStatus] = (
+    group_of_parking_spaces_status: GroupOfParkingSpacesStatus | None = (
         field(
             default=None,
             metadata={
@@ -24,7 +24,7 @@ class ParkingRecordStatusGroupIndexGroupOfParkingSpacesStatus:
             },
         )
     )
-    group_index: Optional[int] = field(
+    group_index: int | None = field(
         default=None,
         metadata={
             "name": "groupIndex",

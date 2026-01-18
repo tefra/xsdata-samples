@@ -18,11 +18,7 @@ class VehicleServicePlaceAssignmentsRelStructure(
         name = "vehicleServicePlaceAssignments_RelStructure"
 
     vehicle_sharing_place_assignment_or_vehicle_pooling_place_assignment_or_taxi_service_place_assignment: Iterable[
-        Union[
-            VehicleSharingPlaceAssignment,
-            VehiclePoolingPlaceAssignment,
-            TaxiServicePlaceAssignment,
-        ]
+        VehicleSharingPlaceAssignment | VehiclePoolingPlaceAssignment | TaxiServicePlaceAssignment
     ] = field(
         default_factory=list,
         metadata={

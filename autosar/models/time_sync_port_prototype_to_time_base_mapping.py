@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -101,7 +103,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
     class Meta:
         name = "TIME-SYNC-PORT-PROTOTYPE-TO-TIME-BASE-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -110,9 +112,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "TimeSyncPortPrototypeToTimeBaseMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: TimeSyncPortPrototypeToTimeBaseMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -120,7 +120,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -128,7 +128,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -136,7 +136,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -144,7 +144,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -152,7 +152,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -160,9 +160,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "TimeSyncPortPrototypeToTimeBaseMapping.Annotations"
-    ] = field(
+    annotations: TimeSyncPortPrototypeToTimeBaseMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -170,7 +168,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -178,9 +176,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_ref: Optional[
-        "TimeSyncPortPrototypeToTimeBaseMapping.ProcessRef"
-    ] = field(
+    process_ref: TimeSyncPortPrototypeToTimeBaseMapping.ProcessRef | None = field(
         default=None,
         metadata={
             "name": "PROCESS-REF",
@@ -188,9 +184,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_base_resource_ref: Optional[
-        "TimeSyncPortPrototypeToTimeBaseMapping.TimeBaseResourceRef"
-    ] = field(
+    time_base_resource_ref: TimeSyncPortPrototypeToTimeBaseMapping.TimeBaseResourceRef | None = field(
         default=None,
         metadata={
             "name": "TIME-BASE-RESOURCE-REF",
@@ -198,9 +192,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_sync_p_port_prototype_iref: Optional[
-        PPortPrototypeInExecutableInstanceRef
-    ] = field(
+    time_sync_p_port_prototype_iref: PPortPrototypeInExecutableInstanceRef | None = field(
         default=None,
         metadata={
             "name": "TIME-SYNC-P-PORT-PROTOTYPE-IREF",
@@ -208,9 +200,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_sync_r_port_prototype_iref: Optional[
-        RPortPrototypeInExecutableInstanceRef
-    ] = field(
+    time_sync_r_port_prototype_iref: RPortPrototypeInExecutableInstanceRef | None = field(
         default=None,
         metadata={
             "name": "TIME-SYNC-R-PORT-PROTOTYPE-IREF",
@@ -218,14 +208,14 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -233,7 +223,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -265,7 +255,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
 
     @dataclass
     class ProcessRef(Ref):
-        dest: Optional[ProcessSubtypesEnum] = field(
+        dest: ProcessSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -276,7 +266,7 @@ class TimeSyncPortPrototypeToTimeBaseMapping:
 
     @dataclass
     class TimeBaseResourceRef(Ref):
-        dest: Optional[TimeBaseResourceSubtypesEnum] = field(
+        dest: TimeBaseResourceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

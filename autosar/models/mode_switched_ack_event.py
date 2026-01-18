@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -99,7 +101,7 @@ class ModeSwitchedAckEvent:
     class Meta:
         name = "MODE-SWITCHED-ACK-EVENT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -108,9 +110,7 @@ class ModeSwitchedAckEvent:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ModeSwitchedAckEvent.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ModeSwitchedAckEvent.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -118,7 +118,7 @@ class ModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -126,7 +126,7 @@ class ModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -134,7 +134,7 @@ class ModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -142,7 +142,7 @@ class ModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -150,7 +150,7 @@ class ModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -158,7 +158,7 @@ class ModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ModeSwitchedAckEvent.Annotations"] = field(
+    annotations: ModeSwitchedAckEvent.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -166,9 +166,7 @@ class ModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reason_representation_ref: Optional[
-        "ModeSwitchedAckEvent.ActivationReasonRepresentationRef"
-    ] = field(
+    activation_reason_representation_ref: ModeSwitchedAckEvent.ActivationReasonRepresentationRef | None = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
@@ -176,7 +174,7 @@ class ModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_mode_irefs: Optional["ModeSwitchedAckEvent.DisabledModeIrefs"] = (
+    disabled_mode_irefs: ModeSwitchedAckEvent.DisabledModeIrefs | None = (
         field(
             default=None,
             metadata={
@@ -186,7 +184,7 @@ class ModeSwitchedAckEvent:
             },
         )
     )
-    start_on_event_ref: Optional["ModeSwitchedAckEvent.StartOnEventRef"] = (
+    start_on_event_ref: ModeSwitchedAckEvent.StartOnEventRef | None = (
         field(
             default=None,
             metadata={
@@ -196,7 +194,7 @@ class ModeSwitchedAckEvent:
             },
         )
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -204,7 +202,7 @@ class ModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_source_ref: Optional["ModeSwitchedAckEvent.EventSourceRef"] = field(
+    event_source_ref: ModeSwitchedAckEvent.EventSourceRef | None = field(
         default=None,
         metadata={
             "name": "EVENT-SOURCE-REF",
@@ -212,14 +210,14 @@ class ModeSwitchedAckEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -227,7 +225,7 @@ class ModeSwitchedAckEvent:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -259,7 +257,7 @@ class ModeSwitchedAckEvent:
 
     @dataclass
     class ActivationReasonRepresentationRef(Ref):
-        dest: Optional[ExecutableEntityActivationReasonSubtypesEnum] = field(
+        dest: ExecutableEntityActivationReasonSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -281,7 +279,7 @@ class ModeSwitchedAckEvent:
 
     @dataclass
     class StartOnEventRef(Ref):
-        dest: Optional[RunnableEntitySubtypesEnum] = field(
+        dest: RunnableEntitySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -292,7 +290,7 @@ class ModeSwitchedAckEvent:
 
     @dataclass
     class EventSourceRef(Ref):
-        dest: Optional[ModeSwitchPointSubtypesEnum] = field(
+        dest: ModeSwitchPointSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

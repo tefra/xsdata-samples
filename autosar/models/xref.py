@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -78,7 +80,7 @@ class Xref:
     class Meta:
         name = "XREF"
 
-    label_1: Optional[SingleLanguageLongName] = field(
+    label_1: SingleLanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LABEL-1",
@@ -86,7 +88,7 @@ class Xref:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    referrable_ref: Optional["Xref.ReferrableRef"] = field(
+    referrable_ref: Xref.ReferrableRef | None = field(
         default=None,
         metadata={
             "name": "REFERRABLE-REF",
@@ -94,14 +96,14 @@ class Xref:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -109,21 +111,21 @@ class Xref:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    resolution_policy: Optional[ResolutionPolicyEnumSimple] = field(
+    resolution_policy: ResolutionPolicyEnumSimple | None = field(
         default=None,
         metadata={
             "name": "RESOLUTION-POLICY",
             "type": "Attribute",
         },
     )
-    show_content: Optional[ShowContentEnumSimple] = field(
+    show_content: ShowContentEnumSimple | None = field(
         default=None,
         metadata={
             "name": "SHOW-CONTENT",
             "type": "Attribute",
         },
     )
-    show_resource_alias_name: Optional[ShowResourceAliasNameEnumSimple] = (
+    show_resource_alias_name: ShowResourceAliasNameEnumSimple | None = (
         field(
             default=None,
             metadata={
@@ -132,35 +134,35 @@ class Xref:
             },
         )
     )
-    show_resource_category: Optional[ShowResourceCategoryEnumSimple] = field(
+    show_resource_category: ShowResourceCategoryEnumSimple | None = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-CATEGORY",
             "type": "Attribute",
         },
     )
-    show_resource_long_name: Optional[ShowResourceLongNameEnumSimple] = field(
+    show_resource_long_name: ShowResourceLongNameEnumSimple | None = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-LONG-NAME",
             "type": "Attribute",
         },
     )
-    show_resource_number: Optional[ShowResourceNumberEnumSimple] = field(
+    show_resource_number: ShowResourceNumberEnumSimple | None = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-NUMBER",
             "type": "Attribute",
         },
     )
-    show_resource_page: Optional[ShowResourcePageEnumSimple] = field(
+    show_resource_page: ShowResourcePageEnumSimple | None = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-PAGE",
             "type": "Attribute",
         },
     )
-    show_resource_short_name: Optional[ShowResourceShortNameEnumSimple] = (
+    show_resource_short_name: ShowResourceShortNameEnumSimple | None = (
         field(
             default=None,
             metadata={
@@ -169,14 +171,14 @@ class Xref:
             },
         )
     )
-    show_resource_type: Optional[ShowResourceTypeEnumSimple] = field(
+    show_resource_type: ShowResourceTypeEnumSimple | None = field(
         default=None,
         metadata={
             "name": "SHOW-RESOURCE-TYPE",
             "type": "Attribute",
         },
     )
-    show_see: Optional[ShowSeeEnumSimple] = field(
+    show_see: ShowSeeEnumSimple | None = field(
         default=None,
         metadata={
             "name": "SHOW-SEE",
@@ -186,7 +188,7 @@ class Xref:
 
     @dataclass
     class ReferrableRef(Ref):
-        dest: Optional[ReferrableSubtypesEnum] = field(
+        dest: ReferrableSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

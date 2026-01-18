@@ -17,14 +17,14 @@ class Order:
             "required": True,
         }
     )
-    order_detail: Optional[OrderDetail] = field(
+    order_detail: OrderDetail | None = field(
         default=None,
         metadata={
             "name": "OrderDetail",
             "type": "Element",
         },
     )
-    order_summary: Optional[OrderSummary] = field(
+    order_summary: OrderSummary | None = field(
         default=None,
         metadata={
             "name": "OrderSummary",

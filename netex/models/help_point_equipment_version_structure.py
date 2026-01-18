@@ -17,7 +17,7 @@ class HelpPointEquipmentVersionStructure(PassengerEquipmentVersionStructure):
     class Meta:
         name = "HelpPointEquipment_VersionStructure"
 
-    accessibility_assessment: Optional[AccessibilityAssessment] = field(
+    accessibility_assessment: AccessibilityAssessment | None = field(
         default=None,
         metadata={
             "name": "AccessibilityAssessment",
@@ -25,7 +25,7 @@ class HelpPointEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    height_from_ground: Optional[Decimal] = field(
+    height_from_ground: Decimal | None = field(
         default=None,
         metadata={
             "name": "HeightFromGround",
@@ -33,7 +33,7 @@ class HelpPointEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    phone: Optional[bool] = field(
+    phone: bool | None = field(
         default=None,
         metadata={
             "name": "Phone",
@@ -41,7 +41,7 @@ class HelpPointEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    induction_loop: Optional[bool] = field(
+    induction_loop: bool | None = field(
         default=None,
         metadata={
             "name": "InductionLoop",
@@ -49,7 +49,7 @@ class HelpPointEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    induction_loop_sign: Optional[bool] = field(
+    induction_loop_sign: bool | None = field(
         default=None,
         metadata={
             "name": "InductionLoopSign",
@@ -57,7 +57,7 @@ class HelpPointEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_request_button: Optional[bool] = field(
+    stop_request_button: bool | None = field(
         default=None,
         metadata={
             "name": "StopRequestButton",
@@ -65,7 +65,7 @@ class HelpPointEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_request_timeout: Optional[XmlDuration] = field(
+    stop_request_timeout: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "StopRequestTimeout",

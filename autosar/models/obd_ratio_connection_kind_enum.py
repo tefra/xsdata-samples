@@ -31,20 +31,20 @@ class ObdRatioConnectionKindEnum:
     class Meta:
         name = "OBD-RATIO-CONNECTION-KIND-ENUM"
 
-    value: Optional[ObdRatioConnectionKindEnumSimple] = field(
+    value: ObdRatioConnectionKindEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

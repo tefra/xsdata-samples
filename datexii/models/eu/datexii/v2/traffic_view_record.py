@@ -28,7 +28,7 @@ class TrafficViewRecord:
     :ivar id:
     """
 
-    record_sequence_number: Optional[int] = field(
+    record_sequence_number: int | None = field(
         default=None,
         metadata={
             "name": "recordSequenceNumber",
@@ -37,7 +37,7 @@ class TrafficViewRecord:
             "required": True,
         },
     )
-    traffic_element: Optional[TrafficElement] = field(
+    traffic_element: TrafficElement | None = field(
         default=None,
         metadata={
             "name": "trafficElement",
@@ -45,7 +45,7 @@ class TrafficViewRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    operator_action: Optional[OperatorAction] = field(
+    operator_action: OperatorAction | None = field(
         default=None,
         metadata={
             "name": "operatorAction",
@@ -53,7 +53,7 @@ class TrafficViewRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    elaborated_data: Optional[ElaboratedData] = field(
+    elaborated_data: ElaboratedData | None = field(
         default=None,
         metadata={
             "name": "elaboratedData",
@@ -69,7 +69,7 @@ class TrafficViewRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    traffic_view_record_extension: Optional[ExtensionType] = field(
+    traffic_view_record_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "trafficViewRecordExtension",
@@ -77,7 +77,7 @@ class TrafficViewRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

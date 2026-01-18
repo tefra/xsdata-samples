@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -35,7 +37,7 @@ class FreeFormat:
     class Meta:
         name = "FREE-FORMAT"
 
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -43,7 +45,7 @@ class FreeFormat:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delay: Optional[TimeValue] = field(
+    delay: TimeValue | None = field(
         default=None,
         metadata={
             "name": "DELAY",
@@ -51,7 +53,7 @@ class FreeFormat:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    position_in_table: Optional[Integer] = field(
+    position_in_table: Integer | None = field(
         default=None,
         metadata={
             "name": "POSITION-IN-TABLE",
@@ -59,7 +61,7 @@ class FreeFormat:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    byte_values: Optional["FreeFormat.ByteValues"] = field(
+    byte_values: FreeFormat.ByteValues | None = field(
         default=None,
         metadata={
             "name": "BYTE-VALUES",
@@ -67,14 +69,14 @@ class FreeFormat:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

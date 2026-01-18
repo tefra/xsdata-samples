@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -108,7 +110,7 @@ class SecurityEventContextMappingCommConnector:
     class Meta:
         name = "SECURITY-EVENT-CONTEXT-MAPPING-COMM-CONNECTOR"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -117,9 +119,7 @@ class SecurityEventContextMappingCommConnector:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SecurityEventContextMappingCommConnector.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SecurityEventContextMappingCommConnector.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -127,7 +127,7 @@ class SecurityEventContextMappingCommConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -135,7 +135,7 @@ class SecurityEventContextMappingCommConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -143,7 +143,7 @@ class SecurityEventContextMappingCommConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -151,7 +151,7 @@ class SecurityEventContextMappingCommConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -159,7 +159,7 @@ class SecurityEventContextMappingCommConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -167,9 +167,7 @@ class SecurityEventContextMappingCommConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "SecurityEventContextMappingCommConnector.Annotations"
-    ] = field(
+    annotations: SecurityEventContextMappingCommConnector.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -177,7 +175,7 @@ class SecurityEventContextMappingCommConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -185,9 +183,7 @@ class SecurityEventContextMappingCommConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    filter_chains: Optional[
-        "SecurityEventContextMappingCommConnector.FilterChains"
-    ] = field(
+    filter_chains: SecurityEventContextMappingCommConnector.FilterChains | None = field(
         default=None,
         metadata={
             "name": "FILTER-CHAINS",
@@ -195,9 +191,7 @@ class SecurityEventContextMappingCommConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    idsm_instances: Optional[
-        "SecurityEventContextMappingCommConnector.IdsmInstances"
-    ] = field(
+    idsm_instances: SecurityEventContextMappingCommConnector.IdsmInstances | None = field(
         default=None,
         metadata={
             "name": "IDSM-INSTANCES",
@@ -205,9 +199,7 @@ class SecurityEventContextMappingCommConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapped_security_events: Optional[
-        "SecurityEventContextMappingCommConnector.MappedSecurityEvents"
-    ] = field(
+    mapped_security_events: SecurityEventContextMappingCommConnector.MappedSecurityEvents | None = field(
         default=None,
         metadata={
             "name": "MAPPED-SECURITY-EVENTS",
@@ -215,9 +207,7 @@ class SecurityEventContextMappingCommConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_connectors: Optional[
-        "SecurityEventContextMappingCommConnector.CommConnectors"
-    ] = field(
+    comm_connectors: SecurityEventContextMappingCommConnector.CommConnectors | None = field(
         default=None,
         metadata={
             "name": "COMM-CONNECTORS",
@@ -225,14 +215,14 @@ class SecurityEventContextMappingCommConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -240,7 +230,7 @@ class SecurityEventContextMappingCommConnector:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

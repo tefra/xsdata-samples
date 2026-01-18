@@ -10,19 +10,19 @@ class Parto:
     class Meta:
         name = "parto"
 
-    lng: Optional[str] = field(
+    lng: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    sekcio: Optional[Sekcio] = field(
+    sekcio: Sekcio | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    art: Optional[Art] = field(
+    art: Art | None = field(
         default=None,
         metadata={
             "type": "Element",

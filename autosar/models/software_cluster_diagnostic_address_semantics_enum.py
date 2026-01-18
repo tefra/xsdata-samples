@@ -30,7 +30,7 @@ class SoftwareClusterDiagnosticAddressSemanticsEnum:
     class Meta:
         name = "SOFTWARE-CLUSTER-DIAGNOSTIC-ADDRESS-SEMANTICS-ENUM"
 
-    value: Optional[SoftwareClusterDiagnosticAddressSemanticsEnumSimple] = (
+    value: SoftwareClusterDiagnosticAddressSemanticsEnumSimple | None = (
         field(
             default=None,
             metadata={
@@ -38,14 +38,14 @@ class SoftwareClusterDiagnosticAddressSemanticsEnum:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -21,7 +21,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "OperationalContext_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -29,7 +29,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -37,7 +37,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -45,14 +45,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_part_ref: Optional[
-        Union[
-            ControlCentreRef,
-            OrganisationalUnitRef,
-            DepartmentRef,
-            OrganisationPartRef,
-        ]
-    ] = field(
+    organisation_part_ref: ControlCentreRef | OrganisationalUnitRef | DepartmentRef | OrganisationPartRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -80,7 +73,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    vehicle_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
+    vehicle_mode: AllVehicleModesOfTransportEnumeration | None = field(
         default=None,
         metadata={
             "name": "VehicleMode",
@@ -88,7 +81,7 @@ class OperationalContextVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_submode: Optional[TransportSubmode] = field(
+    transport_submode: TransportSubmode | None = field(
         default=None,
         metadata={
             "name": "TransportSubmode",

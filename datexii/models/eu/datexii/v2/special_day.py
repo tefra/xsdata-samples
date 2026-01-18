@@ -31,7 +31,7 @@ class SpecialDay:
     :ivar special_day_extension:
     """
 
-    intersect_with_applicable_days: Optional[bool] = field(
+    intersect_with_applicable_days: bool | None = field(
         default=None,
         metadata={
             "name": "intersectWithApplicableDays",
@@ -40,7 +40,7 @@ class SpecialDay:
             "required": True,
         },
     )
-    special_day_type: Optional[SpecialDayTypeEnum] = field(
+    special_day_type: SpecialDayTypeEnum | None = field(
         default=None,
         metadata={
             "name": "specialDayType",
@@ -49,7 +49,7 @@ class SpecialDay:
             "required": True,
         },
     )
-    special_day_name: Optional[MultilingualString] = field(
+    special_day_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "specialDayName",
@@ -65,7 +65,7 @@ class SpecialDay:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    special_day_extension: Optional[ExtensionType] = field(
+    special_day_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "specialDayExtension",

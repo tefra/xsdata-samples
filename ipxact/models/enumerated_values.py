@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -23,9 +25,7 @@ class EnumeratedValues:
         name = "enumeratedValues"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    enumeration_definition_ref: Optional[
-        "EnumeratedValues.EnumerationDefinitionRef"
-    ] = field(
+    enumeration_definition_ref: EnumeratedValues.EnumerationDefinitionRef | None = field(
         default=None,
         metadata={
             "name": "enumerationDefinitionRef",
@@ -48,7 +48,7 @@ class EnumeratedValues:
                 "required": True,
             },
         )
-        type_definitions: Optional[str] = field(
+        type_definitions: str | None = field(
             default=None,
             metadata={
                 "name": "typeDefinitions",

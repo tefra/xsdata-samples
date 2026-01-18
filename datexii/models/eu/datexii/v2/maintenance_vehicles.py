@@ -22,7 +22,7 @@ class MaintenanceVehicles:
     :ivar maintenance_vehicles_extension:
     """
 
-    number_of_maintenance_vehicles: Optional[int] = field(
+    number_of_maintenance_vehicles: int | None = field(
         default=None,
         metadata={
             "name": "numberOfMaintenanceVehicles",
@@ -38,7 +38,7 @@ class MaintenanceVehicles:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    maintenance_vehicles_extension: Optional[ExtensionType] = field(
+    maintenance_vehicles_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "maintenanceVehiclesExtension",

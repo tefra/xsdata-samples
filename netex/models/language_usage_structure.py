@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class LanguageUsageStructure:
-    language: Optional[str] = field(
+    language: str | None = field(
         default=None,
         metadata={
             "name": "Language",

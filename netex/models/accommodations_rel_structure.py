@@ -15,7 +15,7 @@ class AccommodationsRelStructure(ContainmentAggregationStructure):
         name = "accommodations_RelStructure"
 
     accommodation_ref_or_accommodation: Iterable[
-        Union[AccommodationRef, Accommodation]
+        AccommodationRef | Accommodation
     ] = field(
         default_factory=list,
         metadata={

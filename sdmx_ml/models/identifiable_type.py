@@ -29,21 +29,21 @@ class IdentifiableType(AnnotableType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    urn: Optional[str] = field(
+    urn: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r".+\)(\.[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*)?",
         },
     )
-    uri: Optional[str] = field(
+    uri: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

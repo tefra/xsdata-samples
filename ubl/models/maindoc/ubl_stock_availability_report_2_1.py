@@ -32,7 +32,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class StockAvailabilityReportType:
-    ublextensions: Optional[Ublextensions] = field(
+    ublextensions: Ublextensions | None = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -40,7 +40,7 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: Optional[UblversionId] = field(
+    ublversion_id: UblversionId | None = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -48,7 +48,7 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: Optional[CustomizationId] = field(
+    customization_id: CustomizationId | None = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -56,7 +56,7 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: Optional[ProfileId] = field(
+    profile_id: ProfileId | None = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -64,7 +64,7 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: Optional[ProfileExecutionId] = field(
+    profile_execution_id: ProfileExecutionId | None = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -72,7 +72,7 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -81,7 +81,7 @@ class StockAvailabilityReportType:
             "required": True,
         },
     )
-    copy_indicator: Optional[CopyIndicator] = field(
+    copy_indicator: CopyIndicator | None = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -89,7 +89,7 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -97,7 +97,7 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -106,7 +106,7 @@ class StockAvailabilityReportType:
             "required": True,
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -122,7 +122,7 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_currency_code: Optional[DocumentCurrencyCode] = field(
+    document_currency_code: DocumentCurrencyCode | None = field(
         default=None,
         metadata={
             "name": "DocumentCurrencyCode",
@@ -130,7 +130,7 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    inventory_period: Optional[InventoryPeriod] = field(
+    inventory_period: InventoryPeriod | None = field(
         default=None,
         metadata={
             "name": "InventoryPeriod",
@@ -154,7 +154,7 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_supplier_party: Optional[SellerSupplierParty] = field(
+    seller_supplier_party: SellerSupplierParty | None = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",
@@ -163,7 +163,7 @@ class StockAvailabilityReportType:
             "required": True,
         },
     )
-    retailer_customer_party: Optional[RetailerCustomerParty] = field(
+    retailer_customer_party: RetailerCustomerParty | None = field(
         default=None,
         metadata={
             "name": "RetailerCustomerParty",
@@ -171,7 +171,7 @@ class StockAvailabilityReportType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    inventory_reporting_party: Optional[InventoryReportingParty] = field(
+    inventory_reporting_party: InventoryReportingParty | None = field(
         default=None,
         metadata={
             "name": "InventoryReportingParty",

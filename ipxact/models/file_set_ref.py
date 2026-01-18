@@ -21,7 +21,7 @@ class FileSetRef:
         name = "fileSetRef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    local_name: Optional[str] = field(
+    local_name: str | None = field(
         default=None,
         metadata={
             "name": "localName",
@@ -29,14 +29,14 @@ class FileSetRef:
             "required": True,
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

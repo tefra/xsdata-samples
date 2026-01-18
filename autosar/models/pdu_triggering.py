@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -119,7 +121,7 @@ class PduTriggering:
     class Meta:
         name = "PDU-TRIGGERING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -128,7 +130,7 @@ class PduTriggering:
             "required": True,
         },
     )
-    short_name_fragments: Optional["PduTriggering.ShortNameFragments"] = field(
+    short_name_fragments: PduTriggering.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -136,7 +138,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -144,7 +146,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -152,7 +154,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -160,7 +162,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -168,7 +170,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -176,7 +178,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["PduTriggering.Annotations"] = field(
+    annotations: PduTriggering.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -184,7 +186,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_pdu_port_refs: Optional["PduTriggering.IPduPortRefs"] = field(
+    i_pdu_port_refs: PduTriggering.IPduPortRefs | None = field(
         default=None,
         metadata={
             "name": "I-PDU-PORT-REFS",
@@ -192,7 +194,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_pdu_ref: Optional["PduTriggering.IPduRef"] = field(
+    i_pdu_ref: PduTriggering.IPduRef | None = field(
         default=None,
         metadata={
             "name": "I-PDU-REF",
@@ -200,7 +202,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_triggerings: Optional["PduTriggering.ISignalTriggerings"] = field(
+    i_signal_triggerings: PduTriggering.ISignalTriggerings | None = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-TRIGGERINGS",
@@ -208,9 +210,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sec_oc_crypto_mapping_ref: Optional[
-        "PduTriggering.SecOcCryptoMappingRef"
-    ] = field(
+    sec_oc_crypto_mapping_ref: PduTriggering.SecOcCryptoMappingRef | None = field(
         default=None,
         metadata={
             "name": "SEC-OC-CRYPTO-MAPPING-REF",
@@ -218,9 +218,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_i_pdu_send_conditions: Optional[
-        "PduTriggering.TriggerIPduSendConditions"
-    ] = field(
+    trigger_i_pdu_send_conditions: PduTriggering.TriggerIPduSendConditions | None = field(
         default=None,
         metadata={
             "name": "TRIGGER-I-PDU-SEND-CONDITIONS",
@@ -228,7 +226,7 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -236,14 +234,14 @@ class PduTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -251,7 +249,7 @@ class PduTriggering:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -283,7 +281,7 @@ class PduTriggering:
 
     @dataclass
     class IPduPortRefs:
-        i_pdu_port_ref: list["PduTriggering.IPduPortRefs.IPduPortRef"] = field(
+        i_pdu_port_ref: list[PduTriggering.IPduPortRefs.IPduPortRef] = field(
             default_factory=list,
             metadata={
                 "name": "I-PDU-PORT-REF",
@@ -294,7 +292,7 @@ class PduTriggering:
 
         @dataclass
         class IPduPortRef(Ref):
-            dest: Optional[IPduPortSubtypesEnum] = field(
+            dest: IPduPortSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -305,7 +303,7 @@ class PduTriggering:
 
     @dataclass
     class IPduRef(Ref):
-        dest: Optional[PduSubtypesEnum] = field(
+        dest: PduSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -329,7 +327,7 @@ class PduTriggering:
 
     @dataclass
     class SecOcCryptoMappingRef(Ref):
-        dest: Optional[SecOcCryptoServiceMappingSubtypesEnum] = field(
+        dest: SecOcCryptoServiceMappingSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

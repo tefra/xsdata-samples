@@ -12,13 +12,13 @@ class TConversationLink(TBaseElement):
     class Meta:
         name = "tConversationLink"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    source_ref: Optional[QName] = field(
+    source_ref: QName | None = field(
         default=None,
         metadata={
             "name": "sourceRef",
@@ -26,7 +26,7 @@ class TConversationLink(TBaseElement):
             "required": True,
         },
     )
-    target_ref: Optional[QName] = field(
+    target_ref: QName | None = field(
         default=None,
         metadata={
             "name": "targetRef",

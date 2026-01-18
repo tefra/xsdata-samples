@@ -39,76 +39,76 @@ class Component:
         name = "component"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    titles: Optional[Titles] = field(
+    titles: Titles | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    contributors: Optional[Contributors] = field(
+    contributors: Contributors | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    publication_date: Optional[PublicationDate] = field(
+    publication_date: PublicationDate | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    format: Optional[Format] = field(
+    format: Format | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    program: Optional[Program] = field(
+    program: Program | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/AccessIndicators.xsd",
         },
     )
-    doi_data: Optional[DoiData] = field(
+    doi_data: DoiData | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    doi: Optional[Doi] = field(
+    doi: Doi | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    parent_relation: Optional[ComponentParentRelation] = field(
+    parent_relation: ComponentParentRelation | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    reg_agency: Optional[str] = field(
+    reg_agency: str | None = field(
         default=None,
         metadata={
             "name": "reg-agency",
             "type": "Attribute",
         },
     )
-    language: Optional[ComponentLanguage] = field(
+    language: ComponentLanguage | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    component_size: Optional[int] = field(
+    component_size: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

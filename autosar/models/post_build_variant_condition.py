@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -40,9 +42,7 @@ class PostBuildVariantCondition:
     class Meta:
         name = "POST-BUILD-VARIANT-CONDITION"
 
-    matching_criterion_ref: Optional[
-        "PostBuildVariantCondition.MatchingCriterionRef"
-    ] = field(
+    matching_criterion_ref: PostBuildVariantCondition.MatchingCriterionRef | None = field(
         default=None,
         metadata={
             "name": "MATCHING-CRITERION-REF",
@@ -50,7 +50,7 @@ class PostBuildVariantCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: Optional[IntegerValueVariationPoint] = field(
+    value: IntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -58,14 +58,14 @@ class PostBuildVariantCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -76,7 +76,7 @@ class PostBuildVariantCondition:
 
     @dataclass
     class MatchingCriterionRef(Ref):
-        dest: Optional[PostBuildVariantCriterionSubtypesEnum] = field(
+        dest: PostBuildVariantCriterionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

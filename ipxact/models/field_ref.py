@@ -12,13 +12,13 @@ class FieldRef:
         name = "fieldRef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    indices: Optional[Indices] = field(
+    indices: Indices | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    field_ref: Optional[str] = field(
+    field_ref: str | None = field(
         default=None,
         metadata={
             "name": "fieldRef",

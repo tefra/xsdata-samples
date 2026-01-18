@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -41,9 +43,7 @@ class PostBuildVariantCriterionValue:
     class Meta:
         name = "POST-BUILD-VARIANT-CRITERION-VALUE"
 
-    variant_criterion_ref: Optional[
-        "PostBuildVariantCriterionValue.VariantCriterionRef"
-    ] = field(
+    variant_criterion_ref: PostBuildVariantCriterionValue.VariantCriterionRef | None = field(
         default=None,
         metadata={
             "name": "VARIANT-CRITERION-REF",
@@ -51,7 +51,7 @@ class PostBuildVariantCriterionValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: Optional[IntegerValueVariationPoint] = field(
+    value: IntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -59,7 +59,7 @@ class PostBuildVariantCriterionValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["PostBuildVariantCriterionValue.Annotations"] = (
+    annotations: PostBuildVariantCriterionValue.Annotations | None = (
         field(
             default=None,
             metadata={
@@ -69,14 +69,14 @@ class PostBuildVariantCriterionValue:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -87,7 +87,7 @@ class PostBuildVariantCriterionValue:
 
     @dataclass
     class VariantCriterionRef(Ref):
-        dest: Optional[PostBuildVariantCriterionSubtypesEnum] = field(
+        dest: PostBuildVariantCriterionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

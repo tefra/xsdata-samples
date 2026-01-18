@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -93,7 +95,7 @@ class SwcToImplMapping:
     class Meta:
         name = "SWC-TO-IMPL-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -102,7 +104,7 @@ class SwcToImplMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional["SwcToImplMapping.ShortNameFragments"] = (
+    short_name_fragments: SwcToImplMapping.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -112,7 +114,7 @@ class SwcToImplMapping:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -120,7 +122,7 @@ class SwcToImplMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -128,7 +130,7 @@ class SwcToImplMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -136,7 +138,7 @@ class SwcToImplMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -144,7 +146,7 @@ class SwcToImplMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -152,7 +154,7 @@ class SwcToImplMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SwcToImplMapping.Annotations"] = field(
+    annotations: SwcToImplMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -160,9 +162,7 @@ class SwcToImplMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    component_implementation_ref: Optional[
-        "SwcToImplMapping.ComponentImplementationRef"
-    ] = field(
+    component_implementation_ref: SwcToImplMapping.ComponentImplementationRef | None = field(
         default=None,
         metadata={
             "name": "COMPONENT-IMPLEMENTATION-REF",
@@ -170,7 +170,7 @@ class SwcToImplMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    component_irefs: Optional["SwcToImplMapping.ComponentIrefs"] = field(
+    component_irefs: SwcToImplMapping.ComponentIrefs | None = field(
         default=None,
         metadata={
             "name": "COMPONENT-IREFS",
@@ -178,7 +178,7 @@ class SwcToImplMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -186,14 +186,14 @@ class SwcToImplMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -201,7 +201,7 @@ class SwcToImplMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -233,7 +233,7 @@ class SwcToImplMapping:
 
     @dataclass
     class ComponentImplementationRef(Ref):
-        dest: Optional[SwcImplementationSubtypesEnum] = field(
+        dest: SwcImplementationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

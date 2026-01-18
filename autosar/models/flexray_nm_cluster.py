@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -169,7 +171,7 @@ class FlexrayNmCluster:
     class Meta:
         name = "FLEXRAY-NM-CLUSTER"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -178,7 +180,7 @@ class FlexrayNmCluster:
             "required": True,
         },
     )
-    short_name_fragments: Optional["FlexrayNmCluster.ShortNameFragments"] = (
+    short_name_fragments: FlexrayNmCluster.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -188,7 +190,7 @@ class FlexrayNmCluster:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -196,7 +198,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -204,7 +206,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -212,7 +214,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -220,7 +222,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -228,7 +230,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["FlexrayNmCluster.Annotations"] = field(
+    annotations: FlexrayNmCluster.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -236,9 +238,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_cluster_ref: Optional[
-        "FlexrayNmCluster.CommunicationClusterRef"
-    ] = field(
+    communication_cluster_ref: FlexrayNmCluster.CommunicationClusterRef | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CLUSTER-REF",
@@ -246,7 +246,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_channel_id: Optional[PositiveInteger] = field(
+    nm_channel_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "NM-CHANNEL-ID",
@@ -254,7 +254,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_channel_sleep_master: Optional[Boolean] = field(
+    nm_channel_sleep_master: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-CHANNEL-SLEEP-MASTER",
@@ -262,7 +262,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_nodes: Optional["FlexrayNmCluster.NmNodes"] = field(
+    nm_nodes: FlexrayNmCluster.NmNodes | None = field(
         default=None,
         metadata={
             "name": "NM-NODES",
@@ -270,7 +270,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_node_detection_enabled: Optional[Boolean] = field(
+    nm_node_detection_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-NODE-DETECTION-ENABLED",
@@ -278,7 +278,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_node_id_enabled: Optional[Boolean] = field(
+    nm_node_id_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-NODE-ID-ENABLED",
@@ -286,7 +286,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_pnc_participation: Optional[Boolean] = field(
+    nm_pnc_participation: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-PNC-PARTICIPATION",
@@ -294,7 +294,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_repeat_msg_ind_enabled: Optional[Boolean] = field(
+    nm_repeat_msg_ind_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-REPEAT-MSG-IND-ENABLED",
@@ -302,7 +302,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_synchronizing_network: Optional[Boolean] = field(
+    nm_synchronizing_network: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-SYNCHRONIZING-NETWORK",
@@ -310,7 +310,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -318,7 +318,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_car_wake_up_bit_position: Optional[PositiveInteger] = field(
+    nm_car_wake_up_bit_position: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "NM-CAR-WAKE-UP-BIT-POSITION",
@@ -326,7 +326,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_car_wake_up_filter_enabled: Optional[Boolean] = field(
+    nm_car_wake_up_filter_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-CAR-WAKE-UP-FILTER-ENABLED",
@@ -334,7 +334,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_car_wake_up_filter_node_id: Optional[PositiveInteger] = field(
+    nm_car_wake_up_filter_node_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "NM-CAR-WAKE-UP-FILTER-NODE-ID",
@@ -342,7 +342,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_car_wake_up_rx_enabled: Optional[Boolean] = field(
+    nm_car_wake_up_rx_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-CAR-WAKE-UP-RX-ENABLED",
@@ -350,7 +350,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_control_bit_vector_active: Optional[Boolean] = field(
+    nm_control_bit_vector_active: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-CONTROL-BIT-VECTOR-ACTIVE",
@@ -358,7 +358,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_data_cycle: Optional[Integer] = field(
+    nm_data_cycle: Integer | None = field(
         default=None,
         metadata={
             "name": "NM-DATA-CYCLE",
@@ -366,7 +366,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_data_enabled: Optional[Boolean] = field(
+    nm_data_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-DATA-ENABLED",
@@ -374,7 +374,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_detection_lock: Optional[TimeValue] = field(
+    nm_detection_lock: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NM-DETECTION-LOCK",
@@ -382,7 +382,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_main_function_period: Optional[TimeValue] = field(
+    nm_main_function_period: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NM-MAIN-FUNCTION-PERIOD",
@@ -390,7 +390,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_message_timeout_time: Optional[TimeValue] = field(
+    nm_message_timeout_time: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NM-MESSAGE-TIMEOUT-TIME",
@@ -398,7 +398,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_ready_sleep_count: Optional[Integer] = field(
+    nm_ready_sleep_count: Integer | None = field(
         default=None,
         metadata={
             "name": "NM-READY-SLEEP-COUNT",
@@ -406,7 +406,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_remote_sleep_indication_time: Optional[TimeValue] = field(
+    nm_remote_sleep_indication_time: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NM-REMOTE-SLEEP-INDICATION-TIME",
@@ -414,7 +414,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_repeat_message_bit_active: Optional[Boolean] = field(
+    nm_repeat_message_bit_active: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-REPEAT-MESSAGE-BIT-ACTIVE",
@@ -422,7 +422,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_repeat_message_time: Optional[TimeValue] = field(
+    nm_repeat_message_time: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NM-REPEAT-MESSAGE-TIME",
@@ -430,7 +430,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_repetition_cycle: Optional[Integer] = field(
+    nm_repetition_cycle: Integer | None = field(
         default=None,
         metadata={
             "name": "NM-REPETITION-CYCLE",
@@ -438,7 +438,7 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_voting_cycle: Optional[Integer] = field(
+    nm_voting_cycle: Integer | None = field(
         default=None,
         metadata={
             "name": "NM-VOTING-CYCLE",
@@ -446,14 +446,14 @@ class FlexrayNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -461,7 +461,7 @@ class FlexrayNmCluster:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -493,7 +493,7 @@ class FlexrayNmCluster:
 
     @dataclass
     class CommunicationClusterRef(Ref):
-        dest: Optional[CommunicationClusterSubtypesEnum] = field(
+        dest: CommunicationClusterSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

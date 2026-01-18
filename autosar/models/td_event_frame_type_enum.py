@@ -27,20 +27,20 @@ class TdEventFrameTypeEnum:
     class Meta:
         name = "TD-EVENT-FRAME-TYPE-ENUM"
 
-    value: Optional[TdEventFrameTypeEnumSimple] = field(
+    value: TdEventFrameTypeEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

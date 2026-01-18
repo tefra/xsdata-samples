@@ -25,7 +25,7 @@ class TopographicPlaceVersionStructure(PlaceVersionStructure):
     class Meta:
         name = "TopographicPlace_VersionStructure"
 
-    iso_code: Optional[str] = field(
+    iso_code: str | None = field(
         default=None,
         metadata={
             "name": "IsoCode",
@@ -33,7 +33,7 @@ class TopographicPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    descriptor: Optional[TopographicPlaceDescriptorVersionedChildStructure] = (
+    descriptor: TopographicPlaceDescriptorVersionedChildStructure | None = (
         field(
             default=None,
             metadata={
@@ -44,9 +44,7 @@ class TopographicPlaceVersionStructure(PlaceVersionStructure):
             },
         )
     )
-    alternative_descriptors: Optional[
-        TopographicPlaceDescriptorsRelStructure
-    ] = field(
+    alternative_descriptors: TopographicPlaceDescriptorsRelStructure | None = field(
         default=None,
         metadata={
             "name": "alternativeDescriptors",
@@ -54,7 +52,7 @@ class TopographicPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    topographic_place_type: Optional[TopographicPlaceTypeEnumeration] = field(
+    topographic_place_type: TopographicPlaceTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "TopographicPlaceType",
@@ -62,7 +60,7 @@ class TopographicPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    place_centre: Optional[bool] = field(
+    place_centre: bool | None = field(
         default=None,
         metadata={
             "name": "PlaceCentre",
@@ -70,7 +68,7 @@ class TopographicPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    post_code: Optional[str] = field(
+    post_code: str | None = field(
         default=None,
         metadata={
             "name": "PostCode",
@@ -78,7 +76,7 @@ class TopographicPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    country_ref: Optional[CountryRef] = field(
+    country_ref: CountryRef | None = field(
         default=None,
         metadata={
             "name": "CountryRef",
@@ -86,7 +84,7 @@ class TopographicPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    other_countries: Optional[CountryRefsRelStructure] = field(
+    other_countries: CountryRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "otherCountries",
@@ -94,7 +92,7 @@ class TopographicPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parent_topographic_place_ref: Optional[TopographicPlaceRefStructure] = (
+    parent_topographic_place_ref: TopographicPlaceRefStructure | None = (
         field(
             default=None,
             metadata={
@@ -104,7 +102,7 @@ class TopographicPlaceVersionStructure(PlaceVersionStructure):
             },
         )
     )
-    adjacent_places: Optional[TopographicPlaceRefsRelStructure] = field(
+    adjacent_places: TopographicPlaceRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "adjacentPlaces",
@@ -112,7 +110,7 @@ class TopographicPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    contained_in: Optional[TopographicPlaceRefsRelStructure] = field(
+    contained_in: TopographicPlaceRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "containedIn",
@@ -120,7 +118,7 @@ class TopographicPlaceVersionStructure(PlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accesses: Optional[AccessesRelStructure] = field(
+    accesses: AccessesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

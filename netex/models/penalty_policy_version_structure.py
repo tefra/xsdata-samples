@@ -17,7 +17,7 @@ class PenaltyPolicyVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "PenaltyPolicy_VersionStructure"
 
-    penalty_policy_type: Optional[PenaltyPolicyTypeEnumeration] = field(
+    penalty_policy_type: PenaltyPolicyTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "PenaltyPolicyType",
@@ -25,9 +25,7 @@ class PenaltyPolicyVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    same_station_rentry_policy: Optional[
-        SameStationReentryPolicyEnumeration
-    ] = field(
+    same_station_rentry_policy: SameStationReentryPolicyEnumeration | None = field(
         default=None,
         metadata={
             "name": "SameStationRentryPolicy",
@@ -35,7 +33,7 @@ class PenaltyPolicyVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_time_before_reentry: Optional[XmlDuration] = field(
+    minimum_time_before_reentry: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MinimumTimeBeforeReentry",
@@ -43,7 +41,7 @@ class PenaltyPolicyVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_number_of_fail_to_check_out_events: Optional[int] = field(
+    maximum_number_of_fail_to_check_out_events: int | None = field(
         default=None,
         metadata={
             "name": "MaximumNumberOfFailToCheckOutEvents",

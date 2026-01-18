@@ -23,7 +23,7 @@ class InfoLinkStructure:
             "tokens": True,
         },
     )
-    target_platform: Optional[object] = field(
+    target_platform: object | None = field(
         default=None,
         metadata={
             "name": "targetPlatform",

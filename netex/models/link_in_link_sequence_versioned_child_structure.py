@@ -33,29 +33,7 @@ class LinkInLinkSequenceVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "LinkInLinkSequence_VersionedChildStructure"
 
-    choice: Optional[
-        Union[
-            TripRef,
-            TripPatternTripRef,
-            SingleJourneyPathRef,
-            SingleJourneyRef,
-            DatedVehicleJourneyRef,
-            DatedSpecialServiceRef,
-            SpecialServiceRef,
-            TemplateServiceJourneyRef,
-            ServiceJourneyRef,
-            DeadRunRef,
-            VehicleJourneyRef,
-            ServiceJourneyPatternRef,
-            ServicePatternRef,
-            DeadRunJourneyPatternRef,
-            JourneyPatternRef,
-            TimingPatternRef,
-            NavigationPathRef,
-            RouteRef,
-            LinkSequenceRef,
-        ]
-    ] = field(
+    choice: TripRef | TripPatternTripRef | SingleJourneyPathRef | SingleJourneyRef | DatedVehicleJourneyRef | DatedSpecialServiceRef | SpecialServiceRef | TemplateServiceJourneyRef | ServiceJourneyRef | DeadRunRef | VehicleJourneyRef | ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef | TimingPatternRef | NavigationPathRef | RouteRef | LinkSequenceRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -158,7 +136,7 @@ class LinkInLinkSequenceVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    projections: Optional[ProjectionsRelStructure] = field(
+    projections: ProjectionsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -173,7 +151,7 @@ class LinkInLinkSequenceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

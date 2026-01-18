@@ -94,7 +94,7 @@ class DataSetType(AnnotableType):
     :ivar local_attributes:
     """
 
-    data_provider: Optional[str] = field(
+    data_provider: str | None = field(
         default=None,
         metadata={
             "name": "DataProvider",
@@ -104,7 +104,7 @@ class DataSetType(AnnotableType):
         },
     )
     choice: tuple[
-        Union[AttsType, GroupTypeAbstract, SeriesType, ObsType], ...
+        AttsType | GroupTypeAbstract | SeriesType | ObsType, ...
     ] = field(
         default_factory=tuple,
         metadata={
@@ -133,7 +133,7 @@ class DataSetType(AnnotableType):
             ),
         },
     )
-    metadata: Optional[MetadataSetType] = field(
+    metadata: MetadataSetType | None = field(
         default=None,
         metadata={
             "name": "Metadata",
@@ -141,7 +141,7 @@ class DataSetType(AnnotableType):
             "namespace": "",
         },
     )
-    structure_ref: Optional[str] = field(
+    structure_ref: str | None = field(
         default=None,
         metadata={
             "name": "structureRef",
@@ -150,7 +150,7 @@ class DataSetType(AnnotableType):
             "required": True,
         },
     )
-    set_id: Optional[str] = field(
+    set_id: str | None = field(
         default=None,
         metadata={
             "name": "setID",
@@ -159,14 +159,14 @@ class DataSetType(AnnotableType):
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    action: Optional[ActionType] = field(
+    action: ActionType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
         },
     )
-    reporting_begin_date: Optional[Union[XmlPeriod, XmlDate, XmlDateTime]] = (
+    reporting_begin_date: XmlPeriod | XmlDate | XmlDateTime | None = (
         field(
             default=None,
             metadata={
@@ -176,7 +176,7 @@ class DataSetType(AnnotableType):
             },
         )
     )
-    reporting_end_date: Optional[Union[XmlPeriod, XmlDate, XmlDateTime]] = (
+    reporting_end_date: XmlPeriod | XmlDate | XmlDateTime | None = (
         field(
             default=None,
             metadata={
@@ -186,7 +186,7 @@ class DataSetType(AnnotableType):
             },
         )
     )
-    valid_from_date: Optional[XmlDateTime] = field(
+    valid_from_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "validFromDate",
@@ -194,7 +194,7 @@ class DataSetType(AnnotableType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
         },
     )
-    valid_to_date: Optional[XmlDateTime] = field(
+    valid_to_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "validToDate",
@@ -202,7 +202,7 @@ class DataSetType(AnnotableType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
         },
     )
-    publication_year: Optional[XmlPeriod] = field(
+    publication_year: XmlPeriod | None = field(
         default=None,
         metadata={
             "name": "publicationYear",
@@ -210,9 +210,7 @@ class DataSetType(AnnotableType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
         },
     )
-    publication_period: Optional[
-        Union[XmlPeriod, XmlDate, XmlDateTime, str]
-    ] = field(
+    publication_period: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
         default=None,
         metadata={
             "name": "publicationPeriod",

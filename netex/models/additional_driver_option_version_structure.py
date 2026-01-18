@@ -13,7 +13,7 @@ class AdditionalDriverOptionVersionStructure(RentalOptionVersionStructure):
     class Meta:
         name = "AdditionalDriverOption_VersionStructure"
 
-    additional_driver: Optional[AdditionalDriverTypeEnumeration] = field(
+    additional_driver: AdditionalDriverTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "AdditionalDriver",
@@ -21,7 +21,7 @@ class AdditionalDriverOptionVersionStructure(RentalOptionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    driver_fee_basis: Optional[DriverTypeFeeBasisEnumeration] = field(
+    driver_fee_basis: DriverTypeFeeBasisEnumeration | None = field(
         default=None,
         metadata={
             "name": "DriverFeeBasis",
@@ -29,7 +29,7 @@ class AdditionalDriverOptionVersionStructure(RentalOptionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_ofdrivers: Optional[int] = field(
+    number_ofdrivers: int | None = field(
         default=None,
         metadata={
             "name": "NumberOFDrivers",

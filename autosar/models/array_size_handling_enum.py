@@ -28,20 +28,20 @@ class ArraySizeHandlingEnum:
     class Meta:
         name = "ARRAY-SIZE-HANDLING-ENUM"
 
-    value: Optional[ArraySizeHandlingEnumSimple] = field(
+    value: ArraySizeHandlingEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

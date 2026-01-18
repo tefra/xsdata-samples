@@ -15,7 +15,7 @@ class TypesOfTravelDocumentsRelStructure(ContainmentAggregationStructure):
         name = "typesOfTravelDocuments_RelStructure"
 
     type_of_travel_document_ref_or_type_of_travel_document: Iterable[
-        Union[TypeOfTravelDocumentRef, TypeOfTravelDocument]
+        TypeOfTravelDocumentRef | TypeOfTravelDocument
     ] = field(
         default_factory=list,
         metadata={

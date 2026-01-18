@@ -53,7 +53,7 @@ class RepcMt000700Uv01LocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -76,7 +76,7 @@ class RepcMt000700Uv01LocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTs] = field(
+    effective_time: IvlTs | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -84,7 +84,7 @@ class RepcMt000700Uv01LocatedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    location: Optional[CoctMt710000Uv01Place] = field(
+    location: CoctMt710000Uv01Place | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -92,14 +92,14 @@ class RepcMt000700Uv01LocatedEntity:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[RoleClassLocatedEntity] = field(
+    class_code: RoleClassLocatedEntity | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -122,7 +122,7 @@ class RepcMt000700Uv01Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -166,14 +166,14 @@ class RepcMt000700Uv01Organization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[EntityClassOrganization] = field(
+    class_code: EntityClassOrganization | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -205,7 +205,7 @@ class RepcMt000700Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -228,14 +228,14 @@ class RepcMt000700Uv01Device:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    desc: Optional[EdExplicit] = field(
+    desc: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    manufacturer_model_name: Optional[Sc] = field(
+    manufacturer_model_name: Sc | None = field(
         default=None,
         metadata={
             "name": "manufacturerModelName",
@@ -252,14 +252,14 @@ class RepcMt000700Uv01Device:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[EntityClassDevice] = field(
+    class_code: EntityClassDevice | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -291,7 +291,7 @@ class RepcMt000700Uv01MaintainedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -314,7 +314,7 @@ class RepcMt000700Uv01MaintainedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -335,7 +335,7 @@ class RepcMt000700Uv01MaintainedEntity:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    maintained_device: Optional[RepcMt000700Uv01Device] = field(
+    maintained_device: RepcMt000700Uv01Device | None = field(
         default=None,
         metadata={
             "name": "maintainedDevice",
@@ -344,7 +344,7 @@ class RepcMt000700Uv01MaintainedEntity:
             "nillable": True,
         },
     )
-    maintained_place: Optional[CoctMt710000Uv01Place] = field(
+    maintained_place: CoctMt710000Uv01Place | None = field(
         default=None,
         metadata={
             "name": "maintainedPlace",
@@ -353,7 +353,7 @@ class RepcMt000700Uv01MaintainedEntity:
             "nillable": True,
         },
     )
-    maintaining_organization: Optional[RepcMt000700Uv01Organization] = field(
+    maintaining_organization: RepcMt000700Uv01Organization | None = field(
         default=None,
         metadata={
             "name": "maintainingOrganization",
@@ -362,30 +362,14 @@ class RepcMt000700Uv01MaintainedEntity:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Union[
-        RoleClassMutualRelationship,
-        RoleClassPassive,
-        str,
-        RoleClassOntological,
-        RoleClassPartitive,
-        RoleClassRootValue,
-        XAccommodationRequestorRole,
-        XDocumentEntrySubject,
-        XDocumentSubject,
-        XInformationRecipientRole,
-        XRoleClassAccommodationRequestor,
-        XRoleClassCoverage,
-        XRoleClassCoverageInvoice,
-        XRoleClassCredentialedEntity,
-        XRoleClassPayeePolicyRelationship,
-    ] = field(
+    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
         init=False,
         default=RoleClassPassive.MNT,
         metadata={

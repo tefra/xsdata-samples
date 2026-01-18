@@ -12,7 +12,7 @@ class TErrorEventDefinition(TEventDefinition):
     class Meta:
         name = "tErrorEventDefinition"
 
-    error_ref: Optional[QName] = field(
+    error_ref: QName | None = field(
         default=None,
         metadata={
             "name": "errorRef",

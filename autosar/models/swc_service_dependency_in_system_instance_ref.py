@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -38,7 +40,7 @@ class SwcServiceDependencyInSystemInstanceRef:
     class Meta:
         name = "SWC-SERVICE-DEPENDENCY-IN-SYSTEM-INSTANCE-REF"
 
-    base_ref: Optional["SwcServiceDependencyInSystemInstanceRef.BaseRef"] = (
+    base_ref: SwcServiceDependencyInSystemInstanceRef.BaseRef | None = (
         field(
             default=None,
             metadata={
@@ -48,9 +50,7 @@ class SwcServiceDependencyInSystemInstanceRef:
             },
         )
     )
-    context_root_sw_composition_ref: Optional[
-        "SwcServiceDependencyInSystemInstanceRef.ContextRootSwCompositionRef"
-    ] = field(
+    context_root_sw_composition_ref: SwcServiceDependencyInSystemInstanceRef.ContextRootSwCompositionRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-COMPOSITION-REF",
@@ -59,7 +59,7 @@ class SwcServiceDependencyInSystemInstanceRef:
         },
     )
     context_sw_component_prototype_ref: list[
-        "SwcServiceDependencyInSystemInstanceRef.ContextSwComponentPrototypeRef"
+        SwcServiceDependencyInSystemInstanceRef.ContextSwComponentPrototypeRef
     ] = field(
         default_factory=list,
         metadata={
@@ -68,9 +68,7 @@ class SwcServiceDependencyInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_swc_service_dependency_ref: Optional[
-        "SwcServiceDependencyInSystemInstanceRef.TargetSwcServiceDependencyRef"
-    ] = field(
+    target_swc_service_dependency_ref: SwcServiceDependencyInSystemInstanceRef.TargetSwcServiceDependencyRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-SWC-SERVICE-DEPENDENCY-REF",
@@ -78,14 +76,14 @@ class SwcServiceDependencyInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -96,7 +94,7 @@ class SwcServiceDependencyInSystemInstanceRef:
 
     @dataclass
     class BaseRef(Ref):
-        dest: Optional[SystemSubtypesEnum] = field(
+        dest: SystemSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -107,7 +105,7 @@ class SwcServiceDependencyInSystemInstanceRef:
 
     @dataclass
     class ContextRootSwCompositionRef(Ref):
-        dest: Optional[RootSwCompositionPrototypeSubtypesEnum] = field(
+        dest: RootSwCompositionPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -118,7 +116,7 @@ class SwcServiceDependencyInSystemInstanceRef:
 
     @dataclass
     class ContextSwComponentPrototypeRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -129,7 +127,7 @@ class SwcServiceDependencyInSystemInstanceRef:
 
     @dataclass
     class TargetSwcServiceDependencyRef(Ref):
-        dest: Optional[SwcServiceDependencySubtypesEnum] = field(
+        dest: SwcServiceDependencySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

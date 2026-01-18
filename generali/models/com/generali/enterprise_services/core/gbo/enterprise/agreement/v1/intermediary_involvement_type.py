@@ -18,7 +18,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class IntermediaryInvolvementType(OrganisationInvolvementType):
-    organisation_role: Optional[IntermediaryRoleType] = field(
+    organisation_role: IntermediaryRoleType | None = field(
         default=None,
         metadata={
             "name": "OrganisationRole",
@@ -27,7 +27,7 @@ class IntermediaryInvolvementType(OrganisationInvolvementType):
             "required": True,
         },
     )
-    intermediary_type: Optional[IntermediaryTypeEnum] = field(
+    intermediary_type: IntermediaryTypeEnum | None = field(
         default=None,
         metadata={
             "name": "IntermediaryType",

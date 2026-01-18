@@ -24,7 +24,7 @@ class ObservationalTimePeriodValueType(ValueType):
             "type": "Ignore",
         },
     )
-    value: Union[XmlPeriod, XmlDate, XmlDateTime, str] = field(
+    value: XmlPeriod | XmlDate | XmlDateTime | str = field(
         default="",
         metadata={
             "pattern": r".{5}A1.*",

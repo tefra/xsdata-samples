@@ -30,7 +30,7 @@ class TpPort:
     class Meta:
         name = "TP-PORT"
 
-    dynamically_assigned: Optional[Boolean] = field(
+    dynamically_assigned: Boolean | None = field(
         default=None,
         metadata={
             "name": "DYNAMICALLY-ASSIGNED",
@@ -38,7 +38,7 @@ class TpPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_number: Optional[PositiveInteger] = field(
+    port_number: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "PORT-NUMBER",
@@ -46,14 +46,14 @@ class TpPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

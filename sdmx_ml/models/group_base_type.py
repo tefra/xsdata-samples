@@ -27,7 +27,7 @@ class GroupBaseType(ComponentListType):
             "type": "Ignore",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

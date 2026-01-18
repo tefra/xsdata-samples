@@ -22,7 +22,7 @@ class AddrSpaceRefType:
     class Meta:
         name = "addrSpaceRefType"
 
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -30,7 +30,7 @@ class AddrSpaceRefType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    address_space_ref: Optional[str] = field(
+    address_space_ref: str | None = field(
         default=None,
         metadata={
             "name": "addressSpaceRef",
@@ -38,7 +38,7 @@ class AddrSpaceRefType:
             "required": True,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

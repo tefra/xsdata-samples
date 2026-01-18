@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -115,7 +117,7 @@ class Process:
     class Meta:
         name = "PROCESS"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -124,7 +126,7 @@ class Process:
             "required": True,
         },
     )
-    short_name_fragments: Optional["Process.ShortNameFragments"] = field(
+    short_name_fragments: Process.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -132,7 +134,7 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -140,7 +142,7 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -148,7 +150,7 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -156,7 +158,7 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -164,7 +166,7 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -172,7 +174,7 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["Process.Annotations"] = field(
+    annotations: Process.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -180,7 +182,7 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -188,7 +190,7 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    design_ref: Optional["Process.DesignRef"] = field(
+    design_ref: Process.DesignRef | None = field(
         default=None,
         metadata={
             "name": "DESIGN-REF",
@@ -196,7 +198,7 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    deterministic_client_ref: Optional["Process.DeterministicClientRef"] = (
+    deterministic_client_ref: Process.DeterministicClientRef | None = (
         field(
             default=None,
             metadata={
@@ -206,7 +208,7 @@ class Process:
             },
         )
     )
-    executable_ref: Optional["Process.ExecutableRef"] = field(
+    executable_ref: Process.ExecutableRef | None = field(
         default=None,
         metadata={
             "name": "EXECUTABLE-REF",
@@ -214,7 +216,7 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    function_cluster_affiliation: Optional[String] = field(
+    function_cluster_affiliation: String | None = field(
         default=None,
         metadata={
             "name": "FUNCTION-CLUSTER-AFFILIATION",
@@ -222,7 +224,7 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    number_of_restart_attempts: Optional[PositiveInteger] = field(
+    number_of_restart_attempts: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "NUMBER-OF-RESTART-ATTEMPTS",
@@ -230,7 +232,7 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pre_mapping: Optional[Boolean] = field(
+    pre_mapping: Boolean | None = field(
         default=None,
         metadata={
             "name": "PRE-MAPPING",
@@ -238,7 +240,7 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_state_machine: Optional[ModeDeclarationGroupPrototype] = field(
+    process_state_machine: ModeDeclarationGroupPrototype | None = field(
         default=None,
         metadata={
             "name": "PROCESS-STATE-MACHINE",
@@ -246,7 +248,7 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    security_event_refs: Optional["Process.SecurityEventRefs"] = field(
+    security_event_refs: Process.SecurityEventRefs | None = field(
         default=None,
         metadata={
             "name": "SECURITY-EVENT-REFS",
@@ -254,9 +256,7 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    state_dependent_startup_configs: Optional[
-        "Process.StateDependentStartupConfigs"
-    ] = field(
+    state_dependent_startup_configs: Process.StateDependentStartupConfigs | None = field(
         default=None,
         metadata={
             "name": "STATE-DEPENDENT-STARTUP-CONFIGS",
@@ -264,14 +264,14 @@ class Process:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -279,7 +279,7 @@ class Process:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -311,7 +311,7 @@ class Process:
 
     @dataclass
     class DesignRef(Ref):
-        dest: Optional[ProcessDesignSubtypesEnum] = field(
+        dest: ProcessDesignSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -322,7 +322,7 @@ class Process:
 
     @dataclass
     class DeterministicClientRef(Ref):
-        dest: Optional[DeterministicClientSubtypesEnum] = field(
+        dest: DeterministicClientSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -333,7 +333,7 @@ class Process:
 
     @dataclass
     class ExecutableRef(Ref):
-        dest: Optional[ExecutableSubtypesEnum] = field(
+        dest: ExecutableSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -345,7 +345,7 @@ class Process:
     @dataclass
     class SecurityEventRefs:
         security_event_ref: list[
-            "Process.SecurityEventRefs.SecurityEventRef"
+            Process.SecurityEventRefs.SecurityEventRef
         ] = field(
             default_factory=list,
             metadata={
@@ -357,7 +357,7 @@ class Process:
 
         @dataclass
         class SecurityEventRef(Ref):
-            dest: Optional[SecurityEventDefinitionSubtypesEnum] = field(
+            dest: SecurityEventDefinitionSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

@@ -12,7 +12,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PricingPremiumType:
-    gross: Optional[NumericType] = field(
+    gross: NumericType | None = field(
         default=None,
         metadata={
             "name": "Gross",
@@ -20,7 +20,7 @@ class PricingPremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    actual: Optional[NumericType] = field(
+    actual: NumericType | None = field(
         default=None,
         metadata={
             "name": "Actual",
@@ -28,7 +28,7 @@ class PricingPremiumType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    minimum_acceptable: Optional[NumericType] = field(
+    minimum_acceptable: NumericType | None = field(
         default=None,
         metadata={
             "name": "MinimumAcceptable",

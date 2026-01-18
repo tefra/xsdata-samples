@@ -30,20 +30,20 @@ class TdEventFrameEthernetTypeEnum:
     class Meta:
         name = "TD-EVENT-FRAME-ETHERNET-TYPE-ENUM"
 
-    value: Optional[TdEventFrameEthernetTypeEnumSimple] = field(
+    value: TdEventFrameEthernetTypeEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -51,7 +53,7 @@ class GeneratorType:
     class Meta:
         name = "generatorType"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -59,7 +61,7 @@ class GeneratorType:
             "required": True,
         },
     )
-    display_name: Optional[DisplayName] = field(
+    display_name: DisplayName | None = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -67,7 +69,7 @@ class GeneratorType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -75,28 +77,28 @@ class GeneratorType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    phase: Optional[Phase] = field(
+    phase: Phase | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    parameters: Optional[Parameters] = field(
+    parameters: Parameters | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    api_type: Optional["GeneratorType.ApiType"] = field(
+    api_type: GeneratorType.ApiType | None = field(
         default=None,
         metadata={
             "name": "apiType",
@@ -104,7 +106,7 @@ class GeneratorType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    api_service: Optional[GeneratorTypeApiService] = field(
+    api_service: GeneratorTypeApiService | None = field(
         default=None,
         metadata={
             "name": "apiService",
@@ -112,7 +114,7 @@ class GeneratorType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    transport_methods: Optional["GeneratorType.TransportMethods"] = field(
+    transport_methods: GeneratorType.TransportMethods | None = field(
         default=None,
         metadata={
             "name": "transportMethods",
@@ -120,7 +122,7 @@ class GeneratorType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    generator_exe: Optional[IpxactUri] = field(
+    generator_exe: IpxactUri | None = field(
         default=None,
         metadata={
             "name": "generatorExe",
@@ -129,7 +131,7 @@ class GeneratorType:
             "required": True,
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -143,7 +145,7 @@ class GeneratorType:
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -153,13 +155,13 @@ class GeneratorType:
 
     @dataclass
     class ApiType:
-        value: Optional[ApiType] = field(
+        value: ApiType | None = field(
             default=None,
             metadata={
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -176,9 +178,7 @@ class GeneratorType:
         :ivar id:
         """
 
-        transport_method: Optional[
-            "GeneratorType.TransportMethods.TransportMethod"
-        ] = field(
+        transport_method: GeneratorType.TransportMethods.TransportMethod | None = field(
             default=None,
             metadata={
                 "name": "transportMethod",
@@ -187,7 +187,7 @@ class GeneratorType:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -197,13 +197,13 @@ class GeneratorType:
 
         @dataclass
         class TransportMethod:
-            value: Optional[TransportMethodType] = field(
+            value: TransportMethodType | None = field(
                 default=None,
                 metadata={
                     "required": True,
                 },
             )
-            id: Optional[str] = field(
+            id: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

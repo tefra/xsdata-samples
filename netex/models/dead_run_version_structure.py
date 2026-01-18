@@ -21,7 +21,7 @@ class DeadRunVersionStructure(VehicleJourneyVersionStructure):
     class Meta:
         name = "DeadRun_VersionStructure"
 
-    operator_ref: Optional[OperatorRef] = field(
+    operator_ref: OperatorRef | None = field(
         default=None,
         metadata={
             "name": "OperatorRef",
@@ -29,7 +29,7 @@ class DeadRunVersionStructure(VehicleJourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
+    line_ref: FlexibleLineRef | LineRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -47,7 +47,7 @@ class DeadRunVersionStructure(VehicleJourneyVersionStructure):
             ),
         },
     )
-    direction_type: Optional[DirectionType] = field(
+    direction_type: DirectionType | None = field(
         default=None,
         metadata={
             "name": "DirectionType",
@@ -55,7 +55,7 @@ class DeadRunVersionStructure(VehicleJourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    groups_of_services: Optional[GroupOfServicesRefsRelStructure] = field(
+    groups_of_services: GroupOfServicesRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "groupsOfServices",
@@ -63,7 +63,7 @@ class DeadRunVersionStructure(VehicleJourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_numbers: Optional[TrainNumberRefsRelStructure] = field(
+    train_numbers: TrainNumberRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "trainNumbers",
@@ -71,7 +71,7 @@ class DeadRunVersionStructure(VehicleJourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    origin: Optional[DeadRunEndpointStructure] = field(
+    origin: DeadRunEndpointStructure | None = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -79,7 +79,7 @@ class DeadRunVersionStructure(VehicleJourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination: Optional[DeadRunEndpointStructure] = field(
+    destination: DeadRunEndpointStructure | None = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -87,7 +87,7 @@ class DeadRunVersionStructure(VehicleJourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    dead_run_type: Optional[DeadRunTypeEnumeration] = field(
+    dead_run_type: DeadRunTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "DeadRunType",

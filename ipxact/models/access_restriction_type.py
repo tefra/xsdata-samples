@@ -35,7 +35,7 @@ class AccessRestrictionType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    read_access_mask: Optional[UnsignedBitVectorExpression] = field(
+    read_access_mask: UnsignedBitVectorExpression | None = field(
         default=None,
         metadata={
             "name": "readAccessMask",
@@ -43,7 +43,7 @@ class AccessRestrictionType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    write_access_mask: Optional[UnsignedBitVectorExpression] = field(
+    write_access_mask: UnsignedBitVectorExpression | None = field(
         default=None,
         metadata={
             "name": "writeAccessMask",
@@ -51,7 +51,7 @@ class AccessRestrictionType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

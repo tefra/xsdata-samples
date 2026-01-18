@@ -28,20 +28,20 @@ class ShowSeeEnum:
     class Meta:
         name = "SHOW-SEE-ENUM"
 
-    value: Optional[ShowSeeEnumSimple] = field(
+    value: ShowSeeEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

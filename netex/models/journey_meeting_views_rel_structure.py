@@ -17,7 +17,7 @@ class JourneyMeetingViewsRelStructure(StrictContainmentAggregationStructure):
         name = "journeyMeetingViews_RelStructure"
 
     journey_meeting_ref_or_journey_meeting_view: Iterable[
-        Union[JourneyMeetingRef, JourneyMeetingView]
+        JourneyMeetingRef | JourneyMeetingView
     ] = field(
         default_factory=list,
         metadata={

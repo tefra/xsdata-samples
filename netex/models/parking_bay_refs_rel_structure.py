@@ -19,12 +19,7 @@ class ParkingBayRefsRelStructure(OneToManyRelationshipStructure):
         name = "parkingBayRefs_RelStructure"
 
     parking_bay_ref_or_vehicle_sharing_parking_bay_ref: Iterable[
-        Union[
-            VehiclePoolingParkingBayRef,
-            MonitoredVehicleSharingParkingBayRef,
-            VehicleSharingParkingBayRef,
-            ParkingBayRef,
-        ]
+        VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef
     ] = field(
         default_factory=list,
         metadata={

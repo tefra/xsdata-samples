@@ -14,7 +14,7 @@ class TransportOrganisationRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "transportOrganisationRefs_RelStructure"
 
-    transport_organisation_ref: Iterable[Union[AuthorityRef, OperatorRef]] = (
+    transport_organisation_ref: Iterable[AuthorityRef | OperatorRef] = (
         field(
             default_factory=list,
             metadata={

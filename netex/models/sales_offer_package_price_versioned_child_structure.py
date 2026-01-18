@@ -17,9 +17,7 @@ class SalesOfferPackagePriceVersionedChildStructure(
     class Meta:
         name = "SalesOfferPackagePrice_VersionedChildStructure"
 
-    sales_offer_package_ref_or_sales_offer_package_element_ref: Optional[
-        Union[SalesOfferPackageRef, SalesOfferPackageElementRef]
-    ] = field(
+    sales_offer_package_ref_or_sales_offer_package_element_ref: SalesOfferPackageRef | SalesOfferPackageElementRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

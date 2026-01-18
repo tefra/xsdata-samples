@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class GeometryArrayPropertyType:
-    choice: Iterable[Union[MultiSurface, Polygon, LineString, Point1]] = field(
+    choice: Iterable[MultiSurface | Polygon | LineString | Point1] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

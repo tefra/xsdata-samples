@@ -16,7 +16,7 @@ class DutyVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Duty_VersionStructure"
 
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -24,7 +24,7 @@ class DutyVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    finishing_duration: Optional[XmlDuration] = field(
+    finishing_duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "FinishingDuration",
@@ -32,7 +32,7 @@ class DutyVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    preparation_duration: Optional[XmlDuration] = field(
+    preparation_duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "PreparationDuration",
@@ -40,7 +40,7 @@ class DutyVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timetable_frame_ref: Optional[TimetableFrameRef] = field(
+    timetable_frame_ref: TimetableFrameRef | None = field(
         default=None,
         metadata={
             "name": "TimetableFrameRef",
@@ -48,7 +48,7 @@ class DutyVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    duty_parts: Optional[DutyPartsRelStructure] = field(
+    duty_parts: DutyPartsRelStructure | None = field(
         default=None,
         metadata={
             "name": "dutyParts",

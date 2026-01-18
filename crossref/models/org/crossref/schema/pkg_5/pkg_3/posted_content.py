@@ -57,33 +57,33 @@ class PostedContent:
         name = "posted_content"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    group_title: Optional[GroupTitle] = field(
+    group_title: GroupTitle | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    contributors: Optional[Contributors] = field(
+    contributors: Contributors | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    titles: Optional[Titles] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-            "required": True,
-        },
-    )
-    posted_date: Optional[PostedDate] = field(
+    titles: Titles | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    acceptance_date: Optional[AcceptanceDate] = field(
+    posted_date: PostedDate | None = field(
+        default=None,
+        metadata={
+            "type": "Element",
+            "required": True,
+        },
+    )
+    acceptance_date: AcceptanceDate | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -110,14 +110,14 @@ class PostedContent:
             "namespace": "http://www.ncbi.nlm.nih.gov/JATS1",
         },
     )
-    program: Optional[FundrefProgram] = field(
+    program: FundrefProgram | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/fundref.xsd",
         },
     )
-    program_1: Optional[AccessIndicatorsProgram] = field(
+    program_1: AccessIndicatorsProgram | None = field(
         default=None,
         metadata={
             "name": "program",
@@ -125,7 +125,7 @@ class PostedContent:
             "namespace": "http://www.crossref.org/AccessIndicators.xsd",
         },
     )
-    program_2: Optional[RelationsProgram] = field(
+    program_2: RelationsProgram | None = field(
         default=None,
         metadata={
             "name": "program",
@@ -133,20 +133,20 @@ class PostedContent:
             "namespace": "http://www.crossref.org/relations.xsd",
         },
     )
-    scn_policies: Optional[ScnPolicies] = field(
+    scn_policies: ScnPolicies | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    doi_data: Optional[DoiData] = field(
+    doi_data: DoiData | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    citation_list: Optional[CitationList] = field(
+    citation_list: CitationList | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -159,7 +159,7 @@ class PostedContent:
             "type": "Attribute",
         },
     )
-    language: Optional[PostedContentLanguage] = field(
+    language: PostedContentLanguage | None = field(
         default=None,
         metadata={
             "type": "Attribute",

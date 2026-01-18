@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -100,7 +102,7 @@ class NPdu:
     class Meta:
         name = "N-PDU"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,7 +111,7 @@ class NPdu:
             "required": True,
         },
     )
-    short_name_fragments: Optional["NPdu.ShortNameFragments"] = field(
+    short_name_fragments: NPdu.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -117,7 +119,7 @@ class NPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -125,7 +127,7 @@ class NPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -133,7 +135,7 @@ class NPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -141,7 +143,7 @@ class NPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -149,7 +151,7 @@ class NPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -157,7 +159,7 @@ class NPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["NPdu.Annotations"] = field(
+    annotations: NPdu.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -165,7 +167,7 @@ class NPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -173,7 +175,7 @@ class NPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    has_dynamic_length: Optional[Boolean] = field(
+    has_dynamic_length: Boolean | None = field(
         default=None,
         metadata={
             "name": "HAS-DYNAMIC-LENGTH",
@@ -181,7 +183,7 @@ class NPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    length: Optional[Integer] = field(
+    length: Integer | None = field(
         default=None,
         metadata={
             "name": "LENGTH",
@@ -189,7 +191,7 @@ class NPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    meta_data_length: Optional[PositiveInteger] = field(
+    meta_data_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "META-DATA-LENGTH",
@@ -197,7 +199,7 @@ class NPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_i_pdu_props: Optional[ContainedIPduProps] = field(
+    contained_i_pdu_props: ContainedIPduProps | None = field(
         default=None,
         metadata={
             "name": "CONTAINED-I-PDU-PROPS",
@@ -205,14 +207,14 @@ class NPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -220,7 +222,7 @@ class NPdu:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

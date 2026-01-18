@@ -29,7 +29,7 @@ class FailureType:
         failure.</description>
     """
 
-    code: Optional[str] = field(
+    code: str | None = field(
         default=None,
         metadata={
             "name": "Code",
@@ -37,7 +37,7 @@ class FailureType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
         },
     )
-    text: Optional[str] = field(
+    text: str | None = field(
         default=None,
         metadata={
             "name": "Text",
@@ -46,7 +46,7 @@ class FailureType:
             "required": True,
         },
     )
-    data_ref: Optional[DataRefType] = field(
+    data_ref: DataRefType | None = field(
         default=None,
         metadata={
             "name": "DataRef",

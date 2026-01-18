@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -51,9 +53,7 @@ class EndToEndProtectionVariablePrototype:
     class Meta:
         name = "END-TO-END-PROTECTION-VARIABLE-PROTOTYPE"
 
-    receiver_irefs: Optional[
-        "EndToEndProtectionVariablePrototype.ReceiverIrefs"
-    ] = field(
+    receiver_irefs: EndToEndProtectionVariablePrototype.ReceiverIrefs | None = field(
         default=None,
         metadata={
             "name": "RECEIVER-IREFS",
@@ -61,7 +61,7 @@ class EndToEndProtectionVariablePrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sender_iref: Optional[VariableDataPrototypeInSystemInstanceRef] = field(
+    sender_iref: VariableDataPrototypeInSystemInstanceRef | None = field(
         default=None,
         metadata={
             "name": "SENDER-IREF",
@@ -69,7 +69,7 @@ class EndToEndProtectionVariablePrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_label: Optional[Identifier] = field(
+    short_label: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -77,7 +77,7 @@ class EndToEndProtectionVariablePrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -85,14 +85,14 @@ class EndToEndProtectionVariablePrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

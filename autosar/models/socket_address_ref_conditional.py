@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,9 +33,7 @@ class SocketAddressRefConditional:
     class Meta:
         name = "SOCKET-ADDRESS-REF-CONDITIONAL"
 
-    socket_address_ref: Optional[
-        "SocketAddressRefConditional.SocketAddressRef"
-    ] = field(
+    socket_address_ref: SocketAddressRefConditional.SocketAddressRef | None = field(
         default=None,
         metadata={
             "name": "SOCKET-ADDRESS-REF",
@@ -41,7 +41,7 @@ class SocketAddressRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -49,14 +49,14 @@ class SocketAddressRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +67,7 @@ class SocketAddressRefConditional:
 
     @dataclass
     class SocketAddressRef(Ref):
-        dest: Optional[SocketAddressSubtypesEnum] = field(
+        dest: SocketAddressSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

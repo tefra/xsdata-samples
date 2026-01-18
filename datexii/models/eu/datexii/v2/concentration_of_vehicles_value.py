@@ -18,7 +18,7 @@ class ConcentrationOfVehiclesValue(DataValue):
     :ivar concentration_of_vehicles_value_extension:
     """
 
-    concentration_of_vehicles: Optional[int] = field(
+    concentration_of_vehicles: int | None = field(
         default=None,
         metadata={
             "name": "concentrationOfVehicles",
@@ -27,7 +27,7 @@ class ConcentrationOfVehiclesValue(DataValue):
             "required": True,
         },
     )
-    concentration_of_vehicles_value_extension: Optional[ExtensionType] = field(
+    concentration_of_vehicles_value_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "concentrationOfVehiclesValueExtension",

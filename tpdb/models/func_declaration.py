@@ -10,14 +10,14 @@ class FuncDeclaration:
     class Meta:
         name = "funcDeclaration"
 
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    type_declaration: Optional[TypeDeclaration] = field(
+    type_declaration: TypeDeclaration | None = field(
         default=None,
         metadata={
             "name": "typeDeclaration",

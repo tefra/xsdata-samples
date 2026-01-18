@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -43,9 +45,7 @@ class SomeipServiceDiscovery:
     class Meta:
         name = "SOMEIP-SERVICE-DISCOVERY"
 
-    multicast_sd_ip_address_ref: Optional[
-        "SomeipServiceDiscovery.MulticastSdIpAddressRef"
-    ] = field(
+    multicast_sd_ip_address_ref: SomeipServiceDiscovery.MulticastSdIpAddressRef | None = field(
         default=None,
         metadata={
             "name": "MULTICAST-SD-IP-ADDRESS-REF",
@@ -53,9 +53,7 @@ class SomeipServiceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multicast_secure_com_props_ref: Optional[
-        "SomeipServiceDiscovery.MulticastSecureComPropsRef"
-    ] = field(
+    multicast_secure_com_props_ref: SomeipServiceDiscovery.MulticastSecureComPropsRef | None = field(
         default=None,
         metadata={
             "name": "MULTICAST-SECURE-COM-PROPS-REF",
@@ -63,7 +61,7 @@ class SomeipServiceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    someip_service_discovery_port: Optional[PositiveInteger] = field(
+    someip_service_discovery_port: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SOMEIP-SERVICE-DISCOVERY-PORT",
@@ -71,9 +69,7 @@ class SomeipServiceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unicast_secure_com_props_refs: Optional[
-        "SomeipServiceDiscovery.UnicastSecureComPropsRefs"
-    ] = field(
+    unicast_secure_com_props_refs: SomeipServiceDiscovery.UnicastSecureComPropsRefs | None = field(
         default=None,
         metadata={
             "name": "UNICAST-SECURE-COM-PROPS-REFS",
@@ -81,14 +77,14 @@ class SomeipServiceDiscovery:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -99,7 +95,7 @@ class SomeipServiceDiscovery:
 
     @dataclass
     class MulticastSdIpAddressRef(Ref):
-        dest: Optional[NetworkEndpointSubtypesEnum] = field(
+        dest: NetworkEndpointSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -110,7 +106,7 @@ class SomeipServiceDiscovery:
 
     @dataclass
     class MulticastSecureComPropsRef(Ref):
-        dest: Optional[SecureComPropsSubtypesEnum] = field(
+        dest: SecureComPropsSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -122,7 +118,7 @@ class SomeipServiceDiscovery:
     @dataclass
     class UnicastSecureComPropsRefs:
         unicast_secure_com_props_ref: list[
-            "SomeipServiceDiscovery.UnicastSecureComPropsRefs.UnicastSecureComPropsRef"
+            SomeipServiceDiscovery.UnicastSecureComPropsRefs.UnicastSecureComPropsRef
         ] = field(
             default_factory=list,
             metadata={
@@ -134,7 +130,7 @@ class SomeipServiceDiscovery:
 
         @dataclass
         class UnicastSecureComPropsRef(Ref):
-            dest: Optional[SecureComPropsSubtypesEnum] = field(
+            dest: SecureComPropsSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

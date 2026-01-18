@@ -55,7 +55,7 @@ class ContainedIPduProps:
     class Meta:
         name = "CONTAINED-I-PDU-PROPS"
 
-    collection_semantics: Optional[ContainedIPduCollectionSemanticsEnum] = (
+    collection_semantics: ContainedIPduCollectionSemanticsEnum | None = (
         field(
             default=None,
             metadata={
@@ -65,7 +65,7 @@ class ContainedIPduProps:
             },
         )
     )
-    header_id_long_header: Optional[PositiveInteger] = field(
+    header_id_long_header: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "HEADER-ID-LONG-HEADER",
@@ -73,7 +73,7 @@ class ContainedIPduProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    header_id_short_header: Optional[PositiveInteger] = field(
+    header_id_short_header: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "HEADER-ID-SHORT-HEADER",
@@ -81,7 +81,7 @@ class ContainedIPduProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    offset: Optional[PositiveInteger] = field(
+    offset: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "OFFSET",
@@ -89,7 +89,7 @@ class ContainedIPduProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    priority: Optional[PositiveInteger] = field(
+    priority: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "PRIORITY",
@@ -97,7 +97,7 @@ class ContainedIPduProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout: Optional[TimeValue] = field(
+    timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIMEOUT",
@@ -105,7 +105,7 @@ class ContainedIPduProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger: Optional[PduCollectionTriggerEnum] = field(
+    trigger: PduCollectionTriggerEnum | None = field(
         default=None,
         metadata={
             "name": "TRIGGER",
@@ -113,7 +113,7 @@ class ContainedIPduProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update_indication_bit_position: Optional[PositiveInteger] = field(
+    update_indication_bit_position: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "UPDATE-INDICATION-BIT-POSITION",
@@ -121,14 +121,14 @@ class ContainedIPduProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

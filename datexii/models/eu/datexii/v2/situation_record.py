@@ -76,7 +76,7 @@ class SituationRecord:
     :ivar version:
     """
 
-    situation_record_creation_reference: Optional[str] = field(
+    situation_record_creation_reference: str | None = field(
         default=None,
         metadata={
             "name": "situationRecordCreationReference",
@@ -85,7 +85,7 @@ class SituationRecord:
             "max_length": 1024,
         },
     )
-    situation_record_creation_time: Optional[XmlDateTime] = field(
+    situation_record_creation_time: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "situationRecordCreationTime",
@@ -94,7 +94,7 @@ class SituationRecord:
             "required": True,
         },
     )
-    situation_record_observation_time: Optional[XmlDateTime] = field(
+    situation_record_observation_time: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "situationRecordObservationTime",
@@ -102,7 +102,7 @@ class SituationRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    situation_record_version_time: Optional[XmlDateTime] = field(
+    situation_record_version_time: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "situationRecordVersionTime",
@@ -111,7 +111,7 @@ class SituationRecord:
             "required": True,
         },
     )
-    situation_record_first_supplier_version_time: Optional[XmlDateTime] = (
+    situation_record_first_supplier_version_time: XmlDateTime | None = (
         field(
             default=None,
             metadata={
@@ -121,7 +121,7 @@ class SituationRecord:
             },
         )
     )
-    confidentiality_override: Optional[ConfidentialityValueEnum] = field(
+    confidentiality_override: ConfidentialityValueEnum | None = field(
         default=None,
         metadata={
             "name": "confidentialityOverride",
@@ -129,7 +129,7 @@ class SituationRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    probability_of_occurrence: Optional[ProbabilityOfOccurrenceEnum] = field(
+    probability_of_occurrence: ProbabilityOfOccurrenceEnum | None = field(
         default=None,
         metadata={
             "name": "probabilityOfOccurrence",
@@ -138,21 +138,21 @@ class SituationRecord:
             "required": True,
         },
     )
-    severity: Optional[SeverityEnum] = field(
+    severity: SeverityEnum | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    source: Optional[Source] = field(
+    source: Source | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    validity: Optional[Validity] = field(
+    validity: Validity | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -160,14 +160,14 @@ class SituationRecord:
             "required": True,
         },
     )
-    impact: Optional[Impact] = field(
+    impact: Impact | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    cause: Optional[Cause] = field(
+    cause: Cause | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -198,7 +198,7 @@ class SituationRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    group_of_locations: Optional[GroupOfLocations] = field(
+    group_of_locations: GroupOfLocations | None = field(
         default=None,
         metadata={
             "name": "groupOfLocations",
@@ -207,14 +207,14 @@ class SituationRecord:
             "required": True,
         },
     )
-    management: Optional[Management] = field(
+    management: Management | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    situation_record_extension: Optional[SituationRecordExtensionType] = field(
+    situation_record_extension: SituationRecordExtensionType | None = field(
         default=None,
         metadata={
             "name": "situationRecordExtension",
@@ -222,14 +222,14 @@ class SituationRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

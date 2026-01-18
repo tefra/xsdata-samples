@@ -14,7 +14,7 @@ class BitStride(UnsignedPositiveLongintExpression):
         name = "bitStride"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

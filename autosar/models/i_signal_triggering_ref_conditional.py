@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,9 +33,7 @@ class ISignalTriggeringRefConditional:
     class Meta:
         name = "I-SIGNAL-TRIGGERING-REF-CONDITIONAL"
 
-    i_signal_triggering_ref: Optional[
-        "ISignalTriggeringRefConditional.ISignalTriggeringRef"
-    ] = field(
+    i_signal_triggering_ref: ISignalTriggeringRefConditional.ISignalTriggeringRef | None = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-TRIGGERING-REF",
@@ -41,7 +41,7 @@ class ISignalTriggeringRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -49,14 +49,14 @@ class ISignalTriggeringRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +67,7 @@ class ISignalTriggeringRefConditional:
 
     @dataclass
     class ISignalTriggeringRef(Ref):
-        dest: Optional[ISignalTriggeringSubtypesEnum] = field(
+        dest: ISignalTriggeringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

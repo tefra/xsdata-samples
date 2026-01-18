@@ -37,7 +37,7 @@ class ActorRoleReferenceType(BaseReferenceComponentType):
     :ivar contact_points:
     """
 
-    organisation: Optional[OrganisationActorType] = field(
+    organisation: OrganisationActorType | None = field(
         default=None,
         metadata={
             "name": "Organisation",
@@ -45,7 +45,7 @@ class ActorRoleReferenceType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    individual: Optional[IndividualActorType] = field(
+    individual: IndividualActorType | None = field(
         default=None,
         metadata={
             "name": "Individual",
@@ -53,7 +53,7 @@ class ActorRoleReferenceType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    thing: Optional[ThingActorType] = field(
+    thing: ThingActorType | None = field(
         default=None,
         metadata={
             "name": "Thing",
@@ -61,7 +61,7 @@ class ActorRoleReferenceType(BaseReferenceComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    contact_points: Optional[ActorRoleReferenceTypeContactPoints] = field(
+    contact_points: ActorRoleReferenceTypeContactPoints | None = field(
         default=None,
         metadata={
             "name": "ContactPoints",

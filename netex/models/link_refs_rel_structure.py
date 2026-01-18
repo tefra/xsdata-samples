@@ -35,30 +35,7 @@ class LinkRefsRelStructure(OneToManyRelationshipStructure):
         name = "linkRefs_RelStructure"
 
     link_ref_or_infrastructure_link_ref_or_link_ref_by_value: Iterable[
-        Union[
-            OnwardVehicleMeetingLinkRef,
-            VehicleMeetingLinkRef,
-            ServiceLinkRef,
-            LineLinkRef,
-            TimingLinkRef,
-            WireLinkRef,
-            RoadLinkRef,
-            RailwayLinkRef,
-            ActivationLinkRef,
-            PathLinkRef,
-            RouteLinkRef,
-            ServiceLinkRefByValue,
-            LineLinkRefByValue,
-            TimingLinkRefByValue,
-            WireLinkRefByValue,
-            RoadLinkRefByValue,
-            RailwayLinkRefByValue,
-            ActivationLinkRefByValue,
-            ModalLinkRefByValue,
-            PathLinkRefByValue,
-            RouteLinkRefByValue,
-            LinkRefByValue,
-        ]
+        OnwardVehicleMeetingLinkRef | VehicleMeetingLinkRef | ServiceLinkRef | LineLinkRef | TimingLinkRef | WireLinkRef | RoadLinkRef | RailwayLinkRef | ActivationLinkRef | PathLinkRef | RouteLinkRef | ServiceLinkRefByValue | LineLinkRefByValue | TimingLinkRefByValue | WireLinkRefByValue | RoadLinkRefByValue | RailwayLinkRefByValue | ActivationLinkRefByValue | ModalLinkRefByValue | PathLinkRefByValue | RouteLinkRefByValue | LinkRefByValue
     ] = field(
         default_factory=list,
         metadata={

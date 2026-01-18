@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import ForwardRef, Optional, Union
@@ -20,7 +22,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "TransportType_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -28,7 +30,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -36,7 +38,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -44,7 +46,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -52,7 +54,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    euro_class: Optional[str] = field(
+    euro_class: str | None = field(
         default=None,
         metadata={
             "name": "EuroClass",
@@ -60,7 +62,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    reversing_direction: Optional[bool] = field(
+    reversing_direction: bool | None = field(
         default=None,
         metadata={
             "name": "ReversingDirection",
@@ -68,7 +70,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    self_propelled: Optional[bool] = field(
+    self_propelled: bool | None = field(
         default=None,
         metadata={
             "name": "SelfPropelled",
@@ -76,7 +78,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    propulsion_type: Optional[PropulsionTypeEnumeration] = field(
+    propulsion_type: PropulsionTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "PropulsionType",
@@ -84,12 +86,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fuel_type_or_type_of_fuel: Optional[
-        Union[
-            "TransportTypeVersionStructure.FuelType",
-            "TransportTypeVersionStructure.TypeOfFuel",
-        ]
-    ] = field(
+    fuel_type_or_type_of_fuel: TransportTypeVersionStructure.FuelType | TransportTypeVersionStructure.TypeOfFuel | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -111,7 +108,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    maximum_range: Optional[Decimal] = field(
+    maximum_range: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumRange",
@@ -119,7 +116,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
+    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -127,7 +124,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_capacity: Optional[PassengerCapacityStructure] = field(
+    passenger_capacity: PassengerCapacityStructure | None = field(
         default=None,
         metadata={
             "name": "PassengerCapacity",
@@ -138,7 +135,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
 
     @dataclass
     class FuelType:
-        value: Optional[FuelTypeEnumeration] = field(
+        value: FuelTypeEnumeration | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -147,7 +144,7 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
 
     @dataclass
     class TypeOfFuel:
-        value: Optional[FuelTypeEnumeration] = field(
+        value: FuelTypeEnumeration | None = field(
             default=None,
             metadata={
                 "required": True,

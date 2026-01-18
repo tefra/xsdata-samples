@@ -38,7 +38,7 @@ class DataConstrRule:
     class Meta:
         name = "DATA-CONSTR-RULE"
 
-    constr_level: Optional[Integer] = field(
+    constr_level: Integer | None = field(
         default=None,
         metadata={
             "name": "CONSTR-LEVEL",
@@ -46,7 +46,7 @@ class DataConstrRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    phys_constrs: Optional[PhysConstrs] = field(
+    phys_constrs: PhysConstrs | None = field(
         default=None,
         metadata={
             "name": "PHYS-CONSTRS",
@@ -54,7 +54,7 @@ class DataConstrRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    internal_constrs: Optional[InternalConstrs] = field(
+    internal_constrs: InternalConstrs | None = field(
         default=None,
         metadata={
             "name": "INTERNAL-CONSTRS",
@@ -62,14 +62,14 @@ class DataConstrRule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

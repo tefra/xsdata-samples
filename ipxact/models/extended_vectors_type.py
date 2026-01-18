@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -16,7 +18,7 @@ class ExtendedVectorsType:
     class Meta:
         name = "extendedVectorsType"
 
-    vector: list["ExtendedVectorsType.Vector"] = field(
+    vector: list[ExtendedVectorsType.Vector] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -27,7 +29,7 @@ class ExtendedVectorsType:
 
     @dataclass
     class Vector:
-        left: Optional[Left] = field(
+        left: Left | None = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -35,7 +37,7 @@ class ExtendedVectorsType:
                 "required": True,
             },
         )
-        right: Optional[Right] = field(
+        right: Right | None = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -43,14 +45,14 @@ class ExtendedVectorsType:
                 "required": True,
             },
         )
-        vector_id: Optional[str] = field(
+        vector_id: str | None = field(
             default=None,
             metadata={
                 "name": "vectorId",
                 "type": "Attribute",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

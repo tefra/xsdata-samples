@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -135,7 +137,7 @@ class SomeipServiceInstanceToMachineMapping:
     class Meta:
         name = "SOMEIP-SERVICE-INSTANCE-TO-MACHINE-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -144,9 +146,7 @@ class SomeipServiceInstanceToMachineMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SomeipServiceInstanceToMachineMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SomeipServiceInstanceToMachineMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -154,7 +154,7 @@ class SomeipServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -162,7 +162,7 @@ class SomeipServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -170,7 +170,7 @@ class SomeipServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -178,7 +178,7 @@ class SomeipServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -186,7 +186,7 @@ class SomeipServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -194,9 +194,7 @@ class SomeipServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "SomeipServiceInstanceToMachineMapping.Annotations"
-    ] = field(
+    annotations: SomeipServiceInstanceToMachineMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -204,7 +202,7 @@ class SomeipServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -212,9 +210,7 @@ class SomeipServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_connector_ref: Optional[
-        "SomeipServiceInstanceToMachineMapping.CommunicationConnectorRef"
-    ] = field(
+    communication_connector_ref: SomeipServiceInstanceToMachineMapping.CommunicationConnectorRef | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONNECTOR-REF",
@@ -222,9 +218,7 @@ class SomeipServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sec_oc_com_props_for_multicast_refs: Optional[
-        "SomeipServiceInstanceToMachineMapping.SecOcComPropsForMulticastRefs"
-    ] = field(
+    sec_oc_com_props_for_multicast_refs: SomeipServiceInstanceToMachineMapping.SecOcComPropsForMulticastRefs | None = field(
         default=None,
         metadata={
             "name": "SEC-OC-COM-PROPS-FOR-MULTICAST-REFS",
@@ -232,9 +226,7 @@ class SomeipServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    secure_com_props_for_tcp_refs: Optional[
-        "SomeipServiceInstanceToMachineMapping.SecureComPropsForTcpRefs"
-    ] = field(
+    secure_com_props_for_tcp_refs: SomeipServiceInstanceToMachineMapping.SecureComPropsForTcpRefs | None = field(
         default=None,
         metadata={
             "name": "SECURE-COM-PROPS-FOR-TCP-REFS",
@@ -242,9 +234,7 @@ class SomeipServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    secure_com_props_for_udp_refs: Optional[
-        "SomeipServiceInstanceToMachineMapping.SecureComPropsForUdpRefs"
-    ] = field(
+    secure_com_props_for_udp_refs: SomeipServiceInstanceToMachineMapping.SecureComPropsForUdpRefs | None = field(
         default=None,
         metadata={
             "name": "SECURE-COM-PROPS-FOR-UDP-REFS",
@@ -252,9 +242,7 @@ class SomeipServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_refs: Optional[
-        "SomeipServiceInstanceToMachineMapping.ServiceInstanceRefs"
-    ] = field(
+    service_instance_refs: SomeipServiceInstanceToMachineMapping.ServiceInstanceRefs | None = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REFS",
@@ -262,7 +250,7 @@ class SomeipServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_port: Optional[PositiveInteger] = field(
+    tcp_port: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TCP-PORT",
@@ -270,7 +258,7 @@ class SomeipServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    udp_collection_buffer_size_threshold: Optional[PositiveInteger] = field(
+    udp_collection_buffer_size_threshold: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "UDP-COLLECTION-BUFFER-SIZE-THRESHOLD",
@@ -278,7 +266,7 @@ class SomeipServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    udp_port: Optional[PositiveInteger] = field(
+    udp_port: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "UDP-PORT",
@@ -286,14 +274,14 @@ class SomeipServiceInstanceToMachineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -301,7 +289,7 @@ class SomeipServiceInstanceToMachineMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -333,7 +321,7 @@ class SomeipServiceInstanceToMachineMapping:
 
     @dataclass
     class CommunicationConnectorRef(Ref):
-        dest: Optional[CommunicationConnectorSubtypesEnum] = field(
+        dest: CommunicationConnectorSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -345,7 +333,7 @@ class SomeipServiceInstanceToMachineMapping:
     @dataclass
     class SecOcComPropsForMulticastRefs:
         sec_oc_com_props_for_multicast_ref: list[
-            "SomeipServiceInstanceToMachineMapping.SecOcComPropsForMulticastRefs.SecOcComPropsForMulticastRef"
+            SomeipServiceInstanceToMachineMapping.SecOcComPropsForMulticastRefs.SecOcComPropsForMulticastRef
         ] = field(
             default_factory=list,
             metadata={
@@ -357,7 +345,7 @@ class SomeipServiceInstanceToMachineMapping:
 
         @dataclass
         class SecOcComPropsForMulticastRef(Ref):
-            dest: Optional[SecOcSecureComPropsSubtypesEnum] = field(
+            dest: SecOcSecureComPropsSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -369,7 +357,7 @@ class SomeipServiceInstanceToMachineMapping:
     @dataclass
     class SecureComPropsForTcpRefs:
         secure_com_props_for_tcp_ref: list[
-            "SomeipServiceInstanceToMachineMapping.SecureComPropsForTcpRefs.SecureComPropsForTcpRef"
+            SomeipServiceInstanceToMachineMapping.SecureComPropsForTcpRefs.SecureComPropsForTcpRef
         ] = field(
             default_factory=list,
             metadata={
@@ -381,7 +369,7 @@ class SomeipServiceInstanceToMachineMapping:
 
         @dataclass
         class SecureComPropsForTcpRef(Ref):
-            dest: Optional[SecureComPropsSubtypesEnum] = field(
+            dest: SecureComPropsSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -393,7 +381,7 @@ class SomeipServiceInstanceToMachineMapping:
     @dataclass
     class SecureComPropsForUdpRefs:
         secure_com_props_for_udp_ref: list[
-            "SomeipServiceInstanceToMachineMapping.SecureComPropsForUdpRefs.SecureComPropsForUdpRef"
+            SomeipServiceInstanceToMachineMapping.SecureComPropsForUdpRefs.SecureComPropsForUdpRef
         ] = field(
             default_factory=list,
             metadata={
@@ -405,7 +393,7 @@ class SomeipServiceInstanceToMachineMapping:
 
         @dataclass
         class SecureComPropsForUdpRef(Ref):
-            dest: Optional[SecureComPropsSubtypesEnum] = field(
+            dest: SecureComPropsSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -417,7 +405,7 @@ class SomeipServiceInstanceToMachineMapping:
     @dataclass
     class ServiceInstanceRefs:
         service_instance_ref: list[
-            "SomeipServiceInstanceToMachineMapping.ServiceInstanceRefs.ServiceInstanceRef"
+            SomeipServiceInstanceToMachineMapping.ServiceInstanceRefs.ServiceInstanceRef
         ] = field(
             default_factory=list,
             metadata={
@@ -429,7 +417,7 @@ class SomeipServiceInstanceToMachineMapping:
 
         @dataclass
         class ServiceInstanceRef(Ref):
-            dest: Optional[AdaptivePlatformServiceInstanceSubtypesEnum] = (
+            dest: AdaptivePlatformServiceInstanceSubtypesEnum | None = (
                 field(
                     default=None,
                     metadata={

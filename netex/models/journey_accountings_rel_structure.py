@@ -15,7 +15,7 @@ class JourneyAccountingsRelStructure(ContainmentAggregationStructure):
         name = "journeyAccountings_RelStructure"
 
     journey_accounting_ref_or_journey_accounting: Iterable[
-        Union[JourneyAccountingRef, JourneyAccounting]
+        JourneyAccountingRef | JourneyAccounting
     ] = field(
         default_factory=list,
         metadata={

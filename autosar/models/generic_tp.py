@@ -28,7 +28,7 @@ class GenericTp:
     class Meta:
         name = "GENERIC-TP"
 
-    tp_address: Optional[String] = field(
+    tp_address: String | None = field(
         default=None,
         metadata={
             "name": "TP-ADDRESS",
@@ -36,7 +36,7 @@ class GenericTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_technology: Optional[String] = field(
+    tp_technology: String | None = field(
         default=None,
         metadata={
             "name": "TP-TECHNOLOGY",
@@ -44,14 +44,14 @@ class GenericTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

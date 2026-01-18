@@ -17,7 +17,7 @@ class GroupOfTimebandsRelStructure(ContainmentAggregationStructure):
         name = "groupOfTimebands_RelStructure"
 
     group_of_timebands_ref_or_group_of_timebands: Iterable[
-        Union[GroupOfTimebandsRef, GroupOfTimebandsVersionedChildStructure]
+        GroupOfTimebandsRef | GroupOfTimebandsVersionedChildStructure
     ] = field(
         default_factory=list,
         metadata={

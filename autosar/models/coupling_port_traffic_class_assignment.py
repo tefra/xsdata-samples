@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -36,7 +38,7 @@ class CouplingPortTrafficClassAssignment:
     class Meta:
         name = "COUPLING-PORT-TRAFFIC-CLASS-ASSIGNMENT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -45,9 +47,7 @@ class CouplingPortTrafficClassAssignment:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "CouplingPortTrafficClassAssignment.ShortNameFragments"
-    ] = field(
+    short_name_fragments: CouplingPortTrafficClassAssignment.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -55,7 +55,7 @@ class CouplingPortTrafficClassAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    prioritys: Optional["CouplingPortTrafficClassAssignment.Prioritys"] = (
+    prioritys: CouplingPortTrafficClassAssignment.Prioritys | None = (
         field(
             default=None,
             metadata={
@@ -65,7 +65,7 @@ class CouplingPortTrafficClassAssignment:
             },
         )
     )
-    traffic_class: Optional[PositiveInteger] = field(
+    traffic_class: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TRAFFIC-CLASS",
@@ -73,14 +73,14 @@ class CouplingPortTrafficClassAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

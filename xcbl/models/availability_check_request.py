@@ -90,7 +90,7 @@ class AvailabilityCheckRequestLanguage:
 
 @dataclass(kw_only=True)
 class AvailabilityCheckRequestSummary:
-    total_number_of_line_item: Optional[TotalNumberOfLineItem] = field(
+    total_number_of_line_item: TotalNumberOfLineItem | None = field(
         default=None,
         metadata={
             "name": "TotalNumberOfLineItem",
@@ -119,126 +119,126 @@ class AvailabilityCheckRequestBaseItemDetail:
             "required": True,
         }
     )
-    line_item_type: Optional[LineItemType] = field(
+    line_item_type: LineItemType | None = field(
         default=None,
         metadata={
             "name": "LineItemType",
             "type": "Element",
         },
     )
-    parent_item_number: Optional[ParentItemNumber] = field(
+    parent_item_number: ParentItemNumber | None = field(
         default=None,
         metadata={
             "name": "ParentItemNumber",
             "type": "Element",
         },
     )
-    item_identifiers: Optional[ItemIdentifiers] = field(
+    item_identifiers: ItemIdentifiers | None = field(
         default=None,
         metadata={
             "name": "ItemIdentifiers",
             "type": "Element",
         },
     )
-    list_of_dimension: Optional[ListOfDimension] = field(
+    list_of_dimension: ListOfDimension | None = field(
         default=None,
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
         },
     )
-    total_quantity: Optional[TotalQuantity] = field(
+    total_quantity: TotalQuantity | None = field(
         default=None,
         metadata={
             "name": "TotalQuantity",
             "type": "Element",
         },
     )
-    max_back_order_quantity: Optional[MaxBackOrderQuantity] = field(
+    max_back_order_quantity: MaxBackOrderQuantity | None = field(
         default=None,
         metadata={
             "name": "MaxBackOrderQuantity",
             "type": "Element",
         },
     )
-    list_of_quantity_coded: Optional[ListOfQuantityCoded] = field(
+    list_of_quantity_coded: ListOfQuantityCoded | None = field(
         default=None,
         metadata={
             "name": "ListOfQuantityCoded",
             "type": "Element",
         },
     )
-    off_catalog_flag: Optional[OffCatalogFlag] = field(
+    off_catalog_flag: OffCatalogFlag | None = field(
         default=None,
         metadata={
             "name": "OffCatalogFlag",
             "type": "Element",
         },
     )
-    catalog_reference: Optional[CatalogReference] = field(
+    catalog_reference: CatalogReference | None = field(
         default=None,
         metadata={
             "name": "CatalogReference",
             "type": "Element",
         },
     )
-    item_contract_references: Optional[ItemContractReferences] = field(
+    item_contract_references: ItemContractReferences | None = field(
         default=None,
         metadata={
             "name": "ItemContractReferences",
             "type": "Element",
         },
     )
-    list_of_item_references: Optional[ListOfItemReferences] = field(
+    list_of_item_references: ListOfItemReferences | None = field(
         default=None,
         metadata={
             "name": "ListOfItemReferences",
             "type": "Element",
         },
     )
-    country_of_origin: Optional[CountryOfOrigin] = field(
+    country_of_origin: CountryOfOrigin | None = field(
         default=None,
         metadata={
             "name": "CountryOfOrigin",
             "type": "Element",
         },
     )
-    country_of_destination: Optional[CountryOfDestination] = field(
+    country_of_destination: CountryOfDestination | None = field(
         default=None,
         metadata={
             "name": "CountryOfDestination",
             "type": "Element",
         },
     )
-    final_recipient: Optional[FinalRecipient] = field(
+    final_recipient: FinalRecipient | None = field(
         default=None,
         metadata={
             "name": "FinalRecipient",
             "type": "Element",
         },
     )
-    list_of_party_coded: Optional[ListOfPartyCoded] = field(
+    list_of_party_coded: ListOfPartyCoded | None = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
             "type": "Element",
         },
     )
-    conditions_of_sale: Optional[ConditionsOfSale] = field(
+    conditions_of_sale: ConditionsOfSale | None = field(
         default=None,
         metadata={
             "name": "ConditionsOfSale",
             "type": "Element",
         },
     )
-    hazardous_materials: Optional[HazardousMaterials] = field(
+    hazardous_materials: HazardousMaterials | None = field(
         default=None,
         metadata={
             "name": "HazardousMaterials",
             "type": "Element",
         },
     )
-    delivery_date: Optional[DeliveryDate] = field(
+    delivery_date: DeliveryDate | None = field(
         default=None,
         metadata={
             "name": "DeliveryDate",
@@ -280,7 +280,7 @@ class AvailabilityCheckRequestHeader:
             "required": True,
         }
     )
-    supplier_idreference_date: Optional[SupplierIdreferenceDate] = field(
+    supplier_idreference_date: SupplierIdreferenceDate | None = field(
         default=None,
         metadata={
             "name": "SupplierIDReferenceDate",
@@ -294,14 +294,14 @@ class AvailabilityCheckRequestHeader:
             "required": True,
         }
     )
-    buyer_idreference_date: Optional[BuyerIdreferenceDate] = field(
+    buyer_idreference_date: BuyerIdreferenceDate | None = field(
         default=None,
         metadata={
             "name": "BuyerIDReferenceDate",
             "type": "Element",
         },
     )
-    account_code: Optional[AccountCode] = field(
+    account_code: AccountCode | None = field(
         default=None,
         metadata={
             "name": "AccountCode",
@@ -315,16 +315,14 @@ class AvailabilityCheckRequestHeader:
             "required": True,
         }
     )
-    availability_check_request_language: Optional[
-        AvailabilityCheckRequestLanguage
-    ] = field(
+    availability_check_request_language: AvailabilityCheckRequestLanguage | None = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckRequestLanguage",
             "type": "Element",
         },
     )
-    availability_check_request_note: Optional[AvailabilityCheckRequestNote] = (
+    availability_check_request_note: AvailabilityCheckRequestNote | None = (
         field(
             default=None,
             metadata={
@@ -333,7 +331,7 @@ class AvailabilityCheckRequestHeader:
             },
         )
     )
-    request_list_of_attachment: Optional[RequestListOfAttachment] = field(
+    request_list_of_attachment: RequestListOfAttachment | None = field(
         default=None,
         metadata={
             "name": "RequestListOfAttachment",
@@ -351,14 +349,14 @@ class AvailabilityCheckRequestItemDetail:
             "required": True,
         }
     )
-    general_line_item_note: Optional[GeneralLineItemNote] = field(
+    general_line_item_note: GeneralLineItemNote | None = field(
         default=None,
         metadata={
             "name": "GeneralLineItemNote",
             "type": "Element",
         },
     )
-    line_item_attachment: Optional[LineItemAttachment] = field(
+    line_item_attachment: LineItemAttachment | None = field(
         default=None,
         metadata={
             "name": "LineItemAttachment",
@@ -401,18 +399,14 @@ class AvailabilityCheckRequest:
             "required": True,
         }
     )
-    availability_check_request_detail: Optional[
-        AvailabilityCheckRequestDetail
-    ] = field(
+    availability_check_request_detail: AvailabilityCheckRequestDetail | None = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckRequestDetail",
             "type": "Element",
         },
     )
-    availability_check_request_summary: Optional[
-        AvailabilityCheckRequestSummary
-    ] = field(
+    availability_check_request_summary: AvailabilityCheckRequestSummary | None = field(
         default=None,
         metadata={
             "name": "AvailabilityCheckRequestSummary",

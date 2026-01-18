@@ -56,7 +56,7 @@ class VehicleCharacteristics:
     :ivar vehicle_characteristics_extension:
     """
 
-    fuel_type: Optional[FuelTypeEnum] = field(
+    fuel_type: FuelTypeEnum | None = field(
         default=None,
         metadata={
             "name": "fuelType",
@@ -64,7 +64,7 @@ class VehicleCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    load_type: Optional[LoadTypeEnum] = field(
+    load_type: LoadTypeEnum | None = field(
         default=None,
         metadata={
             "name": "loadType",
@@ -72,7 +72,7 @@ class VehicleCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_equipment: Optional[VehicleEquipmentEnum] = field(
+    vehicle_equipment: VehicleEquipmentEnum | None = field(
         default=None,
         metadata={
             "name": "vehicleEquipment",
@@ -88,7 +88,7 @@ class VehicleCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_usage: Optional[VehicleUsageEnum] = field(
+    vehicle_usage: VehicleUsageEnum | None = field(
         default=None,
         metadata={
             "name": "vehicleUsage",
@@ -152,9 +152,7 @@ class VehicleCharacteristics:
             "max_occurs": 2,
         },
     )
-    vehicle_characteristics_extension: Optional[
-        VehicleCharacteristicsExtensionType
-    ] = field(
+    vehicle_characteristics_extension: VehicleCharacteristicsExtensionType | None = field(
         default=None,
         metadata={
             "name": "vehicleCharacteristicsExtension",

@@ -30,7 +30,7 @@ class PrmCharMinTypMax:
     class Meta:
         name = "PRM-CHAR-MIN-TYP-MAX"
 
-    min: Optional[NumericalValue] = field(
+    min: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "MIN",
@@ -38,7 +38,7 @@ class PrmCharMinTypMax:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    typ: Optional[NumericalValue] = field(
+    typ: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "TYP",
@@ -46,7 +46,7 @@ class PrmCharMinTypMax:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max: Optional[NumericalValue] = field(
+    max: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "MAX",
@@ -54,14 +54,14 @@ class PrmCharMinTypMax:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

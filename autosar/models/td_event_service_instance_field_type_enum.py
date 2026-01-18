@@ -30,20 +30,20 @@ class TdEventServiceInstanceFieldTypeEnum:
     class Meta:
         name = "TD-EVENT-SERVICE-INSTANCE-FIELD-TYPE-ENUM"
 
-    value: Optional[TdEventServiceInstanceFieldTypeEnumSimple] = field(
+    value: TdEventServiceInstanceFieldTypeEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
@@ -20,15 +22,7 @@ class TargetPassingTimeVersionedChildStructure(
         name = "TargetPassingTime_VersionedChildStructure"
 
     choice_1: Iterable[
-        Union[
-            "TargetPassingTimeVersionedChildStructure.AimedArrivalTime",
-            "TargetPassingTimeVersionedChildStructure.ArrivalDayOffset",
-            "TargetPassingTimeVersionedChildStructure.AimedDepartureTime",
-            "TargetPassingTimeVersionedChildStructure.DepartureDayOffset",
-            XmlDuration,
-            "TargetPassingTimeVersionedChildStructure.AimedNonstopPassingTime",
-            "TargetPassingTimeVersionedChildStructure.PassingDayOffset",
-        ]
+        TargetPassingTimeVersionedChildStructure.AimedArrivalTime | TargetPassingTimeVersionedChildStructure.ArrivalDayOffset | TargetPassingTimeVersionedChildStructure.AimedDepartureTime | TargetPassingTimeVersionedChildStructure.DepartureDayOffset | XmlDuration | TargetPassingTimeVersionedChildStructure.AimedNonstopPassingTime | TargetPassingTimeVersionedChildStructure.PassingDayOffset
     ] = field(
         default_factory=list,
         metadata={
@@ -85,7 +79,7 @@ class TargetPassingTimeVersionedChildStructure(
             "max_occurs": 5,
         },
     )
-    aimed_headway: Optional[HeadwayIntervalStructure] = field(
+    aimed_headway: HeadwayIntervalStructure | None = field(
         default=None,
         metadata={
             "name": "AimedHeadway",
@@ -96,7 +90,7 @@ class TargetPassingTimeVersionedChildStructure(
 
     @dataclass
     class AimedArrivalTime:
-        value: Optional[XmlTime] = field(
+        value: XmlTime | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -105,7 +99,7 @@ class TargetPassingTimeVersionedChildStructure(
 
     @dataclass
     class ArrivalDayOffset:
-        value: Optional[int] = field(
+        value: int | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -114,7 +108,7 @@ class TargetPassingTimeVersionedChildStructure(
 
     @dataclass
     class AimedDepartureTime:
-        value: Optional[XmlTime] = field(
+        value: XmlTime | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -123,7 +117,7 @@ class TargetPassingTimeVersionedChildStructure(
 
     @dataclass
     class DepartureDayOffset:
-        value: Optional[int] = field(
+        value: int | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -132,7 +126,7 @@ class TargetPassingTimeVersionedChildStructure(
 
     @dataclass
     class AimedNonstopPassingTime:
-        value: Optional[XmlTime] = field(
+        value: XmlTime | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -141,7 +135,7 @@ class TargetPassingTimeVersionedChildStructure(
 
     @dataclass
     class PassingDayOffset:
-        value: Optional[int] = field(
+        value: int | None = field(
             default=None,
             metadata={
                 "required": True,

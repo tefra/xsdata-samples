@@ -27,7 +27,7 @@ class VmsSupplementaryPanel:
     :ivar vms_supplementary_panel_extension:
     """
 
-    supplementary_message_description: Optional[MultilingualString] = field(
+    supplementary_message_description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "supplementaryMessageDescription",
@@ -35,7 +35,7 @@ class VmsSupplementaryPanel:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_supplementary_pictogram: Optional[VmsSupplementaryPictogram] = field(
+    vms_supplementary_pictogram: VmsSupplementaryPictogram | None = field(
         default=None,
         metadata={
             "name": "vmsSupplementaryPictogram",
@@ -43,7 +43,7 @@ class VmsSupplementaryPanel:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_supplementary_text: Optional[VmsTextLine] = field(
+    vms_supplementary_text: VmsTextLine | None = field(
         default=None,
         metadata={
             "name": "vmsSupplementaryText",
@@ -51,7 +51,7 @@ class VmsSupplementaryPanel:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_supplementary_panel_extension: Optional[ExtensionType] = field(
+    vms_supplementary_panel_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "vmsSupplementaryPanelExtension",

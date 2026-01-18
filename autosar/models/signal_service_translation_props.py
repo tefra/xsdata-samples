@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -99,7 +101,7 @@ class SignalServiceTranslationProps:
     class Meta:
         name = "SIGNAL-SERVICE-TRANSLATION-PROPS"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -108,9 +110,7 @@ class SignalServiceTranslationProps:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SignalServiceTranslationProps.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SignalServiceTranslationProps.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -118,7 +118,7 @@ class SignalServiceTranslationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -126,7 +126,7 @@ class SignalServiceTranslationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -134,7 +134,7 @@ class SignalServiceTranslationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -142,7 +142,7 @@ class SignalServiceTranslationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -150,7 +150,7 @@ class SignalServiceTranslationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -158,7 +158,7 @@ class SignalServiceTranslationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SignalServiceTranslationProps.Annotations"] = field(
+    annotations: SignalServiceTranslationProps.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -166,9 +166,7 @@ class SignalServiceTranslationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    control_consumed_event_group_refs: Optional[
-        "SignalServiceTranslationProps.ControlConsumedEventGroupRefs"
-    ] = field(
+    control_consumed_event_group_refs: SignalServiceTranslationProps.ControlConsumedEventGroupRefs | None = field(
         default=None,
         metadata={
             "name": "CONTROL-CONSUMED-EVENT-GROUP-REFS",
@@ -176,9 +174,7 @@ class SignalServiceTranslationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    control_pnc_refs: Optional[
-        "SignalServiceTranslationProps.ControlPncRefs"
-    ] = field(
+    control_pnc_refs: SignalServiceTranslationProps.ControlPncRefs | None = field(
         default=None,
         metadata={
             "name": "CONTROL-PNC-REFS",
@@ -186,9 +182,7 @@ class SignalServiceTranslationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    control_provided_event_group_refs: Optional[
-        "SignalServiceTranslationProps.ControlProvidedEventGroupRefs"
-    ] = field(
+    control_provided_event_group_refs: SignalServiceTranslationProps.ControlProvidedEventGroupRefs | None = field(
         default=None,
         metadata={
             "name": "CONTROL-PROVIDED-EVENT-GROUP-REFS",
@@ -196,7 +190,7 @@ class SignalServiceTranslationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_control: Optional[SignalServiceTranslationControlEnum] = field(
+    service_control: SignalServiceTranslationControlEnum | None = field(
         default=None,
         metadata={
             "name": "SERVICE-CONTROL",
@@ -204,9 +198,7 @@ class SignalServiceTranslationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    signal_service_translation_event_propss: Optional[
-        "SignalServiceTranslationProps.SignalServiceTranslationEventPropss"
-    ] = field(
+    signal_service_translation_event_propss: SignalServiceTranslationProps.SignalServiceTranslationEventPropss | None = field(
         default=None,
         metadata={
             "name": "SIGNAL-SERVICE-TRANSLATION-EVENT-PROPSS",
@@ -214,14 +206,14 @@ class SignalServiceTranslationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -229,7 +221,7 @@ class SignalServiceTranslationProps:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -262,7 +254,7 @@ class SignalServiceTranslationProps:
     @dataclass
     class ControlConsumedEventGroupRefs:
         control_consumed_event_group_ref: list[
-            "SignalServiceTranslationProps.ControlConsumedEventGroupRefs.ControlConsumedEventGroupRef"
+            SignalServiceTranslationProps.ControlConsumedEventGroupRefs.ControlConsumedEventGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -274,7 +266,7 @@ class SignalServiceTranslationProps:
 
         @dataclass
         class ControlConsumedEventGroupRef(Ref):
-            dest: Optional[ConsumedEventGroupSubtypesEnum] = field(
+            dest: ConsumedEventGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -286,7 +278,7 @@ class SignalServiceTranslationProps:
     @dataclass
     class ControlPncRefs:
         control_pnc_ref: list[
-            "SignalServiceTranslationProps.ControlPncRefs.ControlPncRef"
+            SignalServiceTranslationProps.ControlPncRefs.ControlPncRef
         ] = field(
             default_factory=list,
             metadata={
@@ -298,7 +290,7 @@ class SignalServiceTranslationProps:
 
         @dataclass
         class ControlPncRef(Ref):
-            dest: Optional[PncMappingIdentSubtypesEnum] = field(
+            dest: PncMappingIdentSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -310,7 +302,7 @@ class SignalServiceTranslationProps:
     @dataclass
     class ControlProvidedEventGroupRefs:
         control_provided_event_group_ref: list[
-            "SignalServiceTranslationProps.ControlProvidedEventGroupRefs.ControlProvidedEventGroupRef"
+            SignalServiceTranslationProps.ControlProvidedEventGroupRefs.ControlProvidedEventGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -322,7 +314,7 @@ class SignalServiceTranslationProps:
 
         @dataclass
         class ControlProvidedEventGroupRef(Ref):
-            dest: Optional[EventHandlerSubtypesEnum] = field(
+            dest: EventHandlerSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

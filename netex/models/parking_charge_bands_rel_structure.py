@@ -15,7 +15,7 @@ class ParkingChargeBandsRelStructure(ContainmentAggregationStructure):
         name = "parkingChargeBands_RelStructure"
 
     parking_charge_band_ref_or_parking_charge_band: Iterable[
-        Union[ParkingChargeBandRef, ParkingChargeBand]
+        ParkingChargeBandRef | ParkingChargeBand
     ] = field(
         default_factory=list,
         metadata={

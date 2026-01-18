@@ -31,7 +31,7 @@ class BusMirrorCanIdRangeMapping:
     class Meta:
         name = "BUS-MIRROR-CAN-ID-RANGE-MAPPING"
 
-    destination_base_id: Optional[PositiveInteger] = field(
+    destination_base_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "DESTINATION-BASE-ID",
@@ -39,7 +39,7 @@ class BusMirrorCanIdRangeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_can_id_code: Optional[PositiveInteger] = field(
+    source_can_id_code: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SOURCE-CAN-ID-CODE",
@@ -47,7 +47,7 @@ class BusMirrorCanIdRangeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_can_id_mask: Optional[PositiveInteger] = field(
+    source_can_id_mask: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SOURCE-CAN-ID-MASK",
@@ -55,14 +55,14 @@ class BusMirrorCanIdRangeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

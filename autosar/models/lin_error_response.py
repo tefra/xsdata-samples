@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -46,7 +48,7 @@ class LinErrorResponse:
     class Meta:
         name = "LIN-ERROR-RESPONSE"
 
-    frame_triggering_ref: Optional["LinErrorResponse.FrameTriggeringRef"] = (
+    frame_triggering_ref: LinErrorResponse.FrameTriggeringRef | None = (
         field(
             default=None,
             metadata={
@@ -56,7 +58,7 @@ class LinErrorResponse:
             },
         )
     )
-    response_error_position: Optional[Integer] = field(
+    response_error_position: Integer | None = field(
         default=None,
         metadata={
             "name": "RESPONSE-ERROR-POSITION",
@@ -64,7 +66,7 @@ class LinErrorResponse:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    response_error_ref: Optional["LinErrorResponse.ResponseErrorRef"] = field(
+    response_error_ref: LinErrorResponse.ResponseErrorRef | None = field(
         default=None,
         metadata={
             "name": "RESPONSE-ERROR-REF",
@@ -72,14 +74,14 @@ class LinErrorResponse:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -90,7 +92,7 @@ class LinErrorResponse:
 
     @dataclass
     class FrameTriggeringRef(Ref):
-        dest: Optional[LinFrameTriggeringSubtypesEnum] = field(
+        dest: LinFrameTriggeringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -101,7 +103,7 @@ class LinErrorResponse:
 
     @dataclass
     class ResponseErrorRef(Ref):
-        dest: Optional[ISignalTriggeringSubtypesEnum] = field(
+        dest: ISignalTriggeringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

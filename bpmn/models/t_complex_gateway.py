@@ -12,7 +12,7 @@ class TComplexGateway(TGateway):
     class Meta:
         name = "tComplexGateway"
 
-    activation_condition: Optional[TExpression] = field(
+    activation_condition: TExpression | None = field(
         default=None,
         metadata={
             "name": "activationCondition",
@@ -20,7 +20,7 @@ class TComplexGateway(TGateway):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    default: Optional[str] = field(
+    default: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

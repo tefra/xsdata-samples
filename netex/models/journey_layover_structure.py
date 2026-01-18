@@ -28,7 +28,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
-    layover: Optional[XmlDuration] = field(
+    layover: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "Layover",
@@ -37,26 +37,7 @@ class JourneyLayoverStructure(JourneyTimingVersionedChildStructure):
             "required": True,
         },
     )
-    choice: Optional[
-        Union[
-            VehicleMeetingPointRef,
-            WirePointRef,
-            RoadPointRef,
-            RailwayPointRef,
-            TrafficControlPointRef,
-            BeaconPointRef,
-            ActivationPointRef,
-            BorderPointRef,
-            FareScheduledStopPointRef,
-            ScheduledStopPointRef,
-            GaragePointRef,
-            ParkingPointRef,
-            ReliefPointRef,
-            TimingPointRef,
-            RoutePointRef,
-            PointRef,
-        ]
-    ] = field(
+    choice: VehicleMeetingPointRef | WirePointRef | RoadPointRef | RailwayPointRef | TrafficControlPointRef | BeaconPointRef | ActivationPointRef | BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | RoutePointRef | PointRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

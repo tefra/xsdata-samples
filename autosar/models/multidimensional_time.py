@@ -37,7 +37,7 @@ class MultidimensionalTime:
     class Meta:
         name = "MULTIDIMENSIONAL-TIME"
 
-    cse_code: Optional[CseCodeTypeString] = field(
+    cse_code: CseCodeTypeString | None = field(
         default=None,
         metadata={
             "name": "CSE-CODE",
@@ -45,7 +45,7 @@ class MultidimensionalTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cse_code_factor: Optional[Integer] = field(
+    cse_code_factor: Integer | None = field(
         default=None,
         metadata={
             "name": "CSE-CODE-FACTOR",
@@ -53,14 +53,14 @@ class MultidimensionalTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

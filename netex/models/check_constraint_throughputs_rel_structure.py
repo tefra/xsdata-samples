@@ -19,7 +19,7 @@ class CheckConstraintThroughputsRelStructure(
         name = "checkConstraintThroughputs_RelStructure"
 
     check_constraint_throughput_ref_or_check_constraint_throughput: Iterable[
-        Union[CheckConstraintThroughputRef, CheckConstraintThroughput]
+        CheckConstraintThroughputRef | CheckConstraintThroughput
     ] = field(
         default_factory=list,
         metadata={

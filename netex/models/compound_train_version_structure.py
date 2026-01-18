@@ -14,7 +14,7 @@ class CompoundTrainVersionStructure(VehicleTypeVersionStructure):
     class Meta:
         name = "CompoundTrain_VersionStructure"
 
-    components: Optional[TrainsInCompoundTrainRelStructure] = field(
+    components: TrainsInCompoundTrainRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

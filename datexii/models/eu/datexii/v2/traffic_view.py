@@ -30,7 +30,7 @@ class TrafficView:
     :ivar id:
     """
 
-    traffic_view_time: Optional[XmlDateTime] = field(
+    traffic_view_time: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "trafficViewTime",
@@ -39,9 +39,7 @@ class TrafficView:
             "required": True,
         },
     )
-    predefined_non_ordered_location_group_reference: Optional[
-        PredefinedNonOrderedLocationGroupVersionedReference
-    ] = field(
+    predefined_non_ordered_location_group_reference: PredefinedNonOrderedLocationGroupVersionedReference | None = field(
         default=None,
         metadata={
             "name": "predefinedNonOrderedLocationGroupReference",
@@ -59,7 +57,7 @@ class TrafficView:
             "min_occurs": 1,
         },
     )
-    traffic_view_extension: Optional[ExtensionType] = field(
+    traffic_view_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "trafficViewExtension",
@@ -67,7 +65,7 @@ class TrafficView:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

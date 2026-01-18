@@ -19,7 +19,7 @@ class MobilityServiceConstraintZonesRelStructure(
         name = "mobilityServiceConstraintZones_RelStructure"
 
     mobility_service_constraint_zone_ref_or_mobility_service_constraint_zone: Iterable[
-        Union[MobilityServiceConstraintZoneRef, MobilityServiceConstraintZone]
+        MobilityServiceConstraintZoneRef | MobilityServiceConstraintZone
     ] = field(
         default_factory=list,
         metadata={

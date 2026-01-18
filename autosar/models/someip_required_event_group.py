@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -44,7 +46,7 @@ class SomeipRequiredEventGroup:
     class Meta:
         name = "SOMEIP-REQUIRED-EVENT-GROUP"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -53,9 +55,7 @@ class SomeipRequiredEventGroup:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SomeipRequiredEventGroup.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SomeipRequiredEventGroup.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -63,7 +63,7 @@ class SomeipRequiredEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_ref: Optional["SomeipRequiredEventGroup.EventGroupRef"] = (
+    event_group_ref: SomeipRequiredEventGroup.EventGroupRef | None = (
         field(
             default=None,
             metadata={
@@ -73,9 +73,7 @@ class SomeipRequiredEventGroup:
             },
         )
     )
-    sd_client_event_group_timing_config_ref: Optional[
-        "SomeipRequiredEventGroup.SdClientEventGroupTimingConfigRef"
-    ] = field(
+    sd_client_event_group_timing_config_ref: SomeipRequiredEventGroup.SdClientEventGroupTimingConfigRef | None = field(
         default=None,
         metadata={
             "name": "SD-CLIENT-EVENT-GROUP-TIMING-CONFIG-REF",
@@ -83,14 +81,14 @@ class SomeipRequiredEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -112,7 +110,7 @@ class SomeipRequiredEventGroup:
 
     @dataclass
     class EventGroupRef(Ref):
-        dest: Optional[SomeipEventGroupSubtypesEnum] = field(
+        dest: SomeipEventGroupSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -123,7 +121,7 @@ class SomeipRequiredEventGroup:
 
     @dataclass
     class SdClientEventGroupTimingConfigRef(Ref):
-        dest: Optional[SomeipSdClientEventGroupTimingConfigSubtypesEnum] = (
+        dest: SomeipSdClientEventGroupTimingConfigSubtypesEnum | None = (
             field(
                 default=None,
                 metadata={

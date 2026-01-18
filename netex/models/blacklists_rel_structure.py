@@ -14,7 +14,7 @@ class BlacklistsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "blacklists_RelStructure"
 
-    blacklist_ref_or_blacklist: Iterable[Union[BlacklistRef, Blacklist]] = (
+    blacklist_ref_or_blacklist: Iterable[BlacklistRef | Blacklist] = (
         field(
             default_factory=list,
             metadata={

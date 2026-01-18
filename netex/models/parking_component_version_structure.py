@@ -13,7 +13,7 @@ class ParkingComponentVersionStructure(SiteComponentVersionStructure):
     class Meta:
         name = "ParkingComponent_VersionStructure"
 
-    parking_payment_code: Optional[str] = field(
+    parking_payment_code: str | None = field(
         default=None,
         metadata={
             "name": "ParkingPaymentCode",
@@ -21,7 +21,7 @@ class ParkingComponentVersionStructure(SiteComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    label: Optional[MultilingualString] = field(
+    label: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Label",
@@ -29,7 +29,7 @@ class ParkingComponentVersionStructure(SiteComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_length: Optional[Decimal] = field(
+    maximum_length: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumLength",
@@ -37,7 +37,7 @@ class ParkingComponentVersionStructure(SiteComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_width: Optional[Decimal] = field(
+    maximum_width: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumWidth",
@@ -45,7 +45,7 @@ class ParkingComponentVersionStructure(SiteComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_height: Optional[Decimal] = field(
+    maximum_height: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumHeight",
@@ -53,7 +53,7 @@ class ParkingComponentVersionStructure(SiteComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_weight: Optional[Decimal] = field(
+    maximum_weight: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumWeight",

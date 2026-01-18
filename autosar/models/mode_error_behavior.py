@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -35,7 +37,7 @@ class ModeErrorBehavior:
     class Meta:
         name = "MODE-ERROR-BEHAVIOR"
 
-    default_mode_ref: Optional["ModeErrorBehavior.DefaultModeRef"] = field(
+    default_mode_ref: ModeErrorBehavior.DefaultModeRef | None = field(
         default=None,
         metadata={
             "name": "DEFAULT-MODE-REF",
@@ -43,7 +45,7 @@ class ModeErrorBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    error_reaction_policy: Optional[ModeErrorReactionPolicyEnum] = field(
+    error_reaction_policy: ModeErrorReactionPolicyEnum | None = field(
         default=None,
         metadata={
             "name": "ERROR-REACTION-POLICY",
@@ -51,14 +53,14 @@ class ModeErrorBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +71,7 @@ class ModeErrorBehavior:
 
     @dataclass
     class DefaultModeRef(Ref):
-        dest: Optional[ModeDeclarationSubtypesEnum] = field(
+        dest: ModeDeclarationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

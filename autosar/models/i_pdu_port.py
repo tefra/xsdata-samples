@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -111,7 +113,7 @@ class IPduPort:
     class Meta:
         name = "I-PDU-PORT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -120,7 +122,7 @@ class IPduPort:
             "required": True,
         },
     )
-    short_name_fragments: Optional["IPduPort.ShortNameFragments"] = field(
+    short_name_fragments: IPduPort.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -128,7 +130,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -136,7 +138,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -144,7 +146,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -152,7 +154,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -160,7 +162,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -168,7 +170,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["IPduPort.Annotations"] = field(
+    annotations: IPduPort.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -176,7 +178,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_direction: Optional[CommunicationDirectionType] = field(
+    communication_direction: CommunicationDirectionType | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-DIRECTION",
@@ -184,7 +186,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -192,7 +194,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_pdu_signal_processing: Optional[IPduSignalProcessingEnum] = field(
+    i_pdu_signal_processing: IPduSignalProcessingEnum | None = field(
         default=None,
         metadata={
             "name": "I-PDU-SIGNAL-PROCESSING",
@@ -200,7 +202,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_id: Optional[PositiveInteger] = field(
+    key_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "KEY-ID",
@@ -208,7 +210,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rx_security_verification: Optional[Boolean] = field(
+    rx_security_verification: Boolean | None = field(
         default=None,
         metadata={
             "name": "RX-SECURITY-VERIFICATION",
@@ -216,7 +218,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timestamp_rx_acceptance_window: Optional[TimeValue] = field(
+    timestamp_rx_acceptance_window: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIMESTAMP-RX-ACCEPTANCE-WINDOW",
@@ -224,7 +226,7 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    use_auth_data_freshness: Optional[Boolean] = field(
+    use_auth_data_freshness: Boolean | None = field(
         default=None,
         metadata={
             "name": "USE-AUTH-DATA-FRESHNESS",
@@ -232,14 +234,14 @@ class IPduPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -247,7 +249,7 @@ class IPduPort:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

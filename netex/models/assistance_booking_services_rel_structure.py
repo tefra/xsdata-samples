@@ -15,7 +15,7 @@ class AssistanceBookingServicesRelStructure(ContainmentAggregationStructure):
         name = "assistanceBookingServices_RelStructure"
 
     assistance_booking_service_ref_or_assistance_booking_service: Iterable[
-        Union[AssistanceBookingServiceRef, AssistanceBookingService]
+        AssistanceBookingServiceRef | AssistanceBookingService
     ] = field(
         default_factory=list,
         metadata={

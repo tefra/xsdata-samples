@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import Any, ForwardRef, Optional, Union
@@ -290,7 +292,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "PriceableObject_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -298,7 +300,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -306,7 +308,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    url: Optional[str] = field(
+    url: str | None = field(
         default=None,
         metadata={
             "name": "Url",
@@ -314,7 +316,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    info_links: Optional[InfoLinksRelStructure] = field(
+    info_links: InfoLinksRelStructure | None = field(
         default=None,
         metadata={
             "name": "infoLinks",
@@ -322,7 +324,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alternative_names: Optional[AlternativeNamesRelStructure] = field(
+    alternative_names: AlternativeNamesRelStructure | None = field(
         default=None,
         metadata={
             "name": "alternativeNames",
@@ -330,7 +332,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -338,7 +340,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    pricing_service_ref: Optional[PricingServiceRef] = field(
+    pricing_service_ref: PricingServiceRef | None = field(
         default=None,
         metadata={
             "name": "PricingServiceRef",
@@ -346,9 +348,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    discounting_rule_ref_or_pricing_rule_ref: Optional[
-        Union[LimitingRuleRef, DiscountingRuleRef, PricingRuleRef]
-    ] = field(
+    discounting_rule_ref_or_pricing_rule_ref: LimitingRuleRef | DiscountingRuleRef | PricingRuleRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -371,7 +371,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    price_groups: Optional["PriceGroupsRelStructure"] = field(
+    price_groups: PriceGroupsRelStructure | None = field(
         default=None,
         metadata={
             "name": "priceGroups",
@@ -379,7 +379,7 @@ class PriceableObjectVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_tables: Optional["FareTablesRelStructure"] = field(
+    fare_tables: FareTablesRelStructure | None = field(
         default=None,
         metadata={
             "name": "fareTables",
@@ -395,44 +395,7 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
         name = "farePrices_RelStructure"
 
     fare_price_ref_or_cell_ref_or_fare_price: Iterable[
-        Union[
-            CustomerPurchasePackagePriceRef,
-            ParkingPriceRef,
-            TimeIntervalPriceRef,
-            TimeUnitPriceRef,
-            QualityStructureFactorPriceRef,
-            ControllableElementPriceRef,
-            ValidableElementPriceRef,
-            GeographicalIntervalPriceRef,
-            GeographicalUnitPriceRef,
-            UsageParameterPriceRef,
-            SeriesConstraintPriceRef,
-            SalesOfferPackagePriceRef,
-            DistanceMatrixElementPriceRef,
-            FareStructureElementPriceRef,
-            FulfilmentMethodPriceRef,
-            CappingRulePriceRef,
-            FareProductPriceRef,
-            FarePriceRef,
-            CellRef,
-            CustomerPurchasePackagePrice,
-            "ParkingPrice",
-            SalesOfferPackagePrice,
-            FulfilmentMethodPrice,
-            CappingRulePrice,
-            FareProductPrice,
-            FareStructureElementPrice,
-            TimeIntervalPrice,
-            TimeUnitPrice,
-            QualityStructureFactorPrice,
-            ControllableElementPrice,
-            ValidableElementPrice,
-            UsageParameterPrice,
-            DistanceMatrixElementPrice,
-            GeographicalIntervalPrice,
-            GeographicalUnitPrice,
-            SeriesConstraintPrice,
-        ]
+        CustomerPurchasePackagePriceRef | ParkingPriceRef | TimeIntervalPriceRef | TimeUnitPriceRef | QualityStructureFactorPriceRef | ControllableElementPriceRef | ValidableElementPriceRef | GeographicalIntervalPriceRef | GeographicalUnitPriceRef | UsageParameterPriceRef | SeriesConstraintPriceRef | SalesOfferPackagePriceRef | DistanceMatrixElementPriceRef | FareStructureElementPriceRef | FulfilmentMethodPriceRef | CappingRulePriceRef | FareProductPriceRef | FarePriceRef | CellRef | CustomerPurchasePackagePrice | ParkingPrice | SalesOfferPackagePrice | FulfilmentMethodPrice | CappingRulePrice | FareProductPrice | FareStructureElementPrice | TimeIntervalPrice | TimeUnitPrice | QualityStructureFactorPrice | ControllableElementPrice | ValidableElementPrice | UsageParameterPrice | DistanceMatrixElementPrice | GeographicalIntervalPrice | GeographicalUnitPrice | SeriesConstraintPrice
     ] = field(
         default_factory=list,
         metadata={
@@ -629,13 +592,7 @@ class FareTablesRelStructure(StrictContainmentAggregationStructure):
         name = "fareTables_RelStructure"
 
     fare_table_ref_or_fare_table: Iterable[
-        Union[
-            StandardFareTableRef,
-            FareTableRef,
-            StandardFareTable,
-            "FareTableInContext",
-            "FareTable",
-        ]
+        StandardFareTableRef | FareTableRef | StandardFareTable | FareTableInContext | FareTable
     ] = field(
         default_factory=list,
         metadata={
@@ -676,7 +633,7 @@ class FareStructureFactorVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "FareStructureFactor_VersionStructure"
 
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -684,9 +641,7 @@ class FareStructureFactorVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_fare_structure_factor_ref: Optional[
-        TypeOfFareStructureFactorRef
-    ] = field(
+    type_of_fare_structure_factor_ref: TypeOfFareStructureFactorRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfFareStructureFactorRef",
@@ -694,7 +649,7 @@ class FareStructureFactorVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    factor: Optional[object] = field(
+    factor: object | None = field(
         default=None,
         metadata={
             "name": "Factor",
@@ -709,7 +664,7 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "PriceGroup_VersionStructure"
 
-    start_date: Optional[XmlDate] = field(
+    start_date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -717,7 +672,7 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_date: Optional[XmlDate] = field(
+    end_date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -725,7 +680,7 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rounding_ref: Optional[RoundingRef] = field(
+    rounding_ref: RoundingRef | None = field(
         default=None,
         metadata={
             "name": "RoundingRef",
@@ -733,35 +688,14 @@ class PriceGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    members: Optional[FarePricesRelStructure] = field(
+    members: FarePricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_price_ref: Optional[
-        Union[
-            CustomerPurchasePackagePriceRef,
-            ParkingPriceRef,
-            TimeIntervalPriceRef,
-            TimeUnitPriceRef,
-            QualityStructureFactorPriceRef,
-            ControllableElementPriceRef,
-            ValidableElementPriceRef,
-            GeographicalIntervalPriceRef,
-            GeographicalUnitPriceRef,
-            UsageParameterPriceRef,
-            SeriesConstraintPriceRef,
-            SalesOfferPackagePriceRef,
-            DistanceMatrixElementPriceRef,
-            FareStructureElementPriceRef,
-            FulfilmentMethodPriceRef,
-            CappingRulePriceRef,
-            FareProductPriceRef,
-            FarePriceRef,
-        ]
-    ] = field(
+    fare_price_ref: CustomerPurchasePackagePriceRef | ParkingPriceRef | TimeIntervalPriceRef | TimeUnitPriceRef | QualityStructureFactorPriceRef | ControllableElementPriceRef | ValidableElementPriceRef | GeographicalIntervalPriceRef | GeographicalUnitPriceRef | UsageParameterPriceRef | SeriesConstraintPriceRef | SalesOfferPackagePriceRef | DistanceMatrixElementPriceRef | FareStructureElementPriceRef | FulfilmentMethodPriceRef | CappingRulePriceRef | FareProductPriceRef | FarePriceRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -872,7 +806,7 @@ class TimeStructureFactorVersionStructure(FareStructureFactorVersionStructure):
     class Meta:
         name = "TimeStructureFactor_VersionStructure"
 
-    tariff_ref: Optional[Union[ParkingTariffRef, TariffRef]] = field(
+    tariff_ref: ParkingTariffRef | TariffRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -890,7 +824,7 @@ class TimeStructureFactorVersionStructure(FareStructureFactorVersionStructure):
             ),
         },
     )
-    time_interval_ref: Optional[TimeIntervalRef] = field(
+    time_interval_ref: TimeIntervalRef | None = field(
         default=None,
         metadata={
             "name": "TimeIntervalRef",
@@ -898,7 +832,7 @@ class TimeStructureFactorVersionStructure(FareStructureFactorVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_unit_ref: Optional[TimeUnitRef] = field(
+    time_unit_ref: TimeUnitRef | None = field(
         default=None,
         metadata={
             "name": "TimeUnitRef",
@@ -906,11 +840,7 @@ class TimeStructureFactorVersionStructure(FareStructureFactorVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    quality_structure_factor_ref: Optional[
-        Union[
-            FareQuotaFactorRef, FareDemandFactorRef, QualityStructureFactorRef
-        ]
-    ] = field(
+    quality_structure_factor_ref: FareQuotaFactorRef | FareDemandFactorRef | QualityStructureFactorRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -940,7 +870,7 @@ class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
     class Meta:
         name = "ParkingChargeBand_VersionStructure"
 
-    parking_properties_ref: Optional[ParkingPropertiesRef] = field(
+    parking_properties_ref: ParkingPropertiesRef | None = field(
         default=None,
         metadata={
             "name": "ParkingPropertiesRef",
@@ -948,7 +878,7 @@ class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_vehicle_type: Optional[ParkingVehicleEnumeration] = field(
+    parking_vehicle_type: ParkingVehicleEnumeration | None = field(
         default=None,
         metadata={
             "name": "ParkingVehicleType",
@@ -956,15 +886,7 @@ class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_type_ref_or_vehicle_type_ref: Optional[
-        Union[
-            SimpleVehicleTypeRef,
-            CompoundTrainRef,
-            TrainRef,
-            VehicleTypeRef,
-            TransportTypeRef,
-        ]
-    ] = field(
+    transport_type_ref_or_vehicle_type_ref: SimpleVehicleTypeRef | CompoundTrainRef | TrainRef | VehicleTypeRef | TransportTypeRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -997,7 +919,7 @@ class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
             ),
         },
     )
-    maximum_stay: Optional[XmlDuration] = field(
+    maximum_stay: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MaximumStay",
@@ -1005,7 +927,7 @@ class ParkingChargeBandVersionStructure(TimeStructureFactorVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: Optional[FarePricesRelStructure] = field(
+    prices: FarePricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1020,7 +942,7 @@ class PriceGroupsRelStructure(StrictContainmentAggregationStructure):
         name = "priceGroups_RelStructure"
 
     price_group_ref_or_price_group: Iterable[
-        Union[PriceGroupRef, PriceGroup]
+        PriceGroupRef | PriceGroup
     ] = field(
         default_factory=list,
         metadata={
@@ -1052,9 +974,7 @@ class ParkingPriceVersionedChildStructure(FarePriceVersionedChildStructure):
     class Meta:
         name = "ParkingPrice_VersionedChildStructure"
 
-    parking_tariff_ref_or_parking_charge_band: Optional[
-        Union[ParkingTariffRef, ParkingChargeBand]
-    ] = field(
+    parking_tariff_ref_or_parking_charge_band: ParkingTariffRef | ParkingChargeBand | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -1085,7 +1005,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "Cell_VersionedChildStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -1093,7 +1013,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -1101,47 +1021,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
-        Union[
-            FarePriceVersionedChildStructure,
-            CustomerPurchasePackagePriceRef,
-            ParkingPriceRef,
-            TimeIntervalPriceRef,
-            TimeUnitPriceRef,
-            QualityStructureFactorPriceRef,
-            ControllableElementPriceRef,
-            ValidableElementPriceRef,
-            GeographicalIntervalPriceRef,
-            GeographicalUnitPriceRef,
-            UsageParameterPriceRef,
-            SeriesConstraintPriceRef,
-            SalesOfferPackagePriceRef,
-            DistanceMatrixElementPriceRef,
-            FareStructureElementPriceRef,
-            FulfilmentMethodPriceRef,
-            CappingRulePriceRef,
-            FareProductPriceRef,
-            FarePriceRef,
-            CustomerPurchasePackagePrice,
-            ParkingPrice,
-            SalesOfferPackagePrice,
-            FulfilmentMethodPrice,
-            CappingRulePrice,
-            FareProductPrice,
-            FareStructureElementPrice,
-            TimeIntervalPrice,
-            TimeUnitPrice,
-            QualityStructureFactorPrice,
-            ControllableElementPrice,
-            ValidableElementPrice,
-            UsageParameterPrice,
-            DistanceMatrixElementPrice,
-            GeographicalIntervalPrice,
-            GeographicalUnitPrice,
-            SeriesConstraintPrice,
-            PriceGroupRef,
-        ]
-    ] = field(
+    choice: FarePriceVersionedChildStructure | CustomerPurchasePackagePriceRef | ParkingPriceRef | TimeIntervalPriceRef | TimeUnitPriceRef | QualityStructureFactorPriceRef | ControllableElementPriceRef | ValidableElementPriceRef | GeographicalIntervalPriceRef | GeographicalUnitPriceRef | UsageParameterPriceRef | SeriesConstraintPriceRef | SalesOfferPackagePriceRef | DistanceMatrixElementPriceRef | FareStructureElementPriceRef | FulfilmentMethodPriceRef | CappingRulePriceRef | FareProductPriceRef | FarePriceRef | CustomerPurchasePackagePrice | ParkingPrice | SalesOfferPackagePrice | FulfilmentMethodPrice | CappingRulePrice | FareProductPrice | FareStructureElementPrice | TimeIntervalPrice | TimeUnitPrice | QualityStructureFactorPrice | ControllableElementPrice | ValidableElementPrice | UsageParameterPrice | DistanceMatrixElementPrice | GeographicalIntervalPrice | GeographicalUnitPrice | SeriesConstraintPrice | PriceGroupRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -1335,74 +1215,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
         },
     )
     choice_1: Iterable[
-        Union[
-            CustomerPurchasePackageElementRef,
-            CustomerPurchasePackageRef,
-            ControllableElementRef,
-            ValidableElementRef,
-            AdditionalDriverOptionRef,
-            RentalOptionRef,
-            RentalPenaltyPolicyRef,
-            SalesOfferPackageEntitlementGivenRef,
-            SalesOfferPackageEntitlementRequiredRef,
-            MinimumStayRef,
-            InterchangingRef,
-            FrequencyOfUseRef,
-            SuspendingRef,
-            UsageValidityPeriodRef,
-            StepLimitRef,
-            RoutingRef,
-            RoundTripRef,
-            LuggageAllowanceRef,
-            EntitlementGivenRef,
-            EntitlementRequiredRef,
-            EligibilityChangePolicyRef,
-            GroupTicketRef,
-            CommercialProfileRef,
-            VehiclePoolerProfileRef,
-            CompanionProfileRef,
-            UserProfileRef,
-            ProfileParameterRef,
-            SubscribingRef,
-            PenaltyPolicyRef,
-            ChargingPolicyRef,
-            TransferabilityRef,
-            ReplacingRef,
-            RefundingRef,
-            ExchangingRef,
-            ResellingRef,
-            CancellingRef,
-            ReservingRef,
-            BookingPolicyRef,
-            PurchaseWindowRef,
-            SeriesConstraintRef,
-            SalesOfferPackageElementRef,
-            SalesOfferPackageRef,
-            DistanceMatrixElementInverseRef,
-            DistanceMatrixElementRef,
-            FareStructureElementRef,
-            FulfilmentMethodRef,
-            CappingRuleRef,
-            EntitlementProductRef,
-            SupplementProductRef,
-            PreassignedFareProductRef,
-            AmountOfPriceUnitProductRef,
-            UsageDiscountRightRef,
-            ThirdPartyProductRef,
-            CappedDiscountRightRef,
-            SaleDiscountRightRef,
-            FareProductRef,
-            ServiceAccessRightRef,
-            TimeIntervalRef,
-            GeographicalIntervalRef,
-            ParkingChargeBandRef,
-            TimeStructureFactorRef,
-            FareQuotaFactorRef,
-            FareDemandFactorRef,
-            QualityStructureFactorRef,
-            GeographicalStructureFactorRef,
-            PriceableObjectRef,
-        ]
+        CustomerPurchasePackageElementRef | CustomerPurchasePackageRef | ControllableElementRef | ValidableElementRef | AdditionalDriverOptionRef | RentalOptionRef | RentalPenaltyPolicyRef | SalesOfferPackageEntitlementGivenRef | SalesOfferPackageEntitlementRequiredRef | MinimumStayRef | InterchangingRef | FrequencyOfUseRef | SuspendingRef | UsageValidityPeriodRef | StepLimitRef | RoutingRef | RoundTripRef | LuggageAllowanceRef | EntitlementGivenRef | EntitlementRequiredRef | EligibilityChangePolicyRef | GroupTicketRef | CommercialProfileRef | VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef | ProfileParameterRef | SubscribingRef | PenaltyPolicyRef | ChargingPolicyRef | TransferabilityRef | ReplacingRef | RefundingRef | ExchangingRef | ResellingRef | CancellingRef | ReservingRef | BookingPolicyRef | PurchaseWindowRef | SeriesConstraintRef | SalesOfferPackageElementRef | SalesOfferPackageRef | DistanceMatrixElementInverseRef | DistanceMatrixElementRef | FareStructureElementRef | FulfilmentMethodRef | CappingRuleRef | EntitlementProductRef | SupplementProductRef | PreassignedFareProductRef | AmountOfPriceUnitProductRef | UsageDiscountRightRef | ThirdPartyProductRef | CappedDiscountRightRef | SaleDiscountRightRef | FareProductRef | ServiceAccessRightRef | TimeIntervalRef | GeographicalIntervalRef | ParkingChargeBandRef | TimeStructureFactorRef | FareQuotaFactorRef | FareDemandFactorRef | QualityStructureFactorRef | GeographicalStructureFactorRef | PriceableObjectRef
     ] = field(
         default_factory=list,
         metadata={
@@ -1741,9 +1554,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    group_of_distance_matrix_elements_ref: Optional[
-        GroupOfDistanceMatrixElementsRef
-    ] = field(
+    group_of_distance_matrix_elements_ref: GroupOfDistanceMatrixElementsRef | None = field(
         default=None,
         metadata={
             "name": "GroupOfDistanceMatrixElementsRef",
@@ -1751,7 +1562,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_type: Optional[RelativeDirectionEnumeration] = field(
+    direction_type: RelativeDirectionEnumeration | None = field(
         default=None,
         metadata={
             "name": "DirectionType",
@@ -1759,7 +1570,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    routing_type: Optional[RoutingTypeEnumeration] = field(
+    routing_type: RoutingTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "RoutingType",
@@ -1767,7 +1578,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_organisation_ref: Optional[Union[AuthorityRef, OperatorRef]] = (
+    transport_organisation_ref: AuthorityRef | OperatorRef | None = (
         field(
             default=None,
             metadata={
@@ -1787,7 +1598,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             },
         )
     )
-    group_of_lines_ref: Optional[Union[NetworkRef, GroupOfLinesRef]] = field(
+    group_of_lines_ref: NetworkRef | GroupOfLinesRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -1805,7 +1616,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
+    line_ref: FlexibleLineRef | LineRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -1823,16 +1634,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    stop_place_ref_or_site_ref: Optional[
-        Union[
-            TaxiRankRef,
-            StopPlaceRef,
-            ParkingRef,
-            PointOfInterestRef,
-            ServiceSiteRef,
-            SiteRef,
-        ]
-    ] = field(
+    stop_place_ref_or_site_ref: TaxiRankRef | StopPlaceRef | ParkingRef | PointOfInterestRef | ServiceSiteRef | SiteRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -1870,9 +1672,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    vehicle_meeting_place_ref: Optional[
-        Union[VehiclePoolingMeetingPlaceRef, VehicleMeetingPlaceRef]
-    ] = field(
+    vehicle_meeting_place_ref: VehiclePoolingMeetingPlaceRef | VehicleMeetingPlaceRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -1890,7 +1690,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    type_of_parking_ref: Optional[TypeOfParkingRef] = field(
+    type_of_parking_ref: TypeOfParkingRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfParkingRef",
@@ -1898,7 +1698,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariff_zone_ref: Optional[TariffZoneRef] = field(
+    tariff_zone_ref: TariffZoneRef | None = field(
         default=None,
         metadata={
             "name": "TariffZoneRef",
@@ -1906,7 +1706,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_section_ref: Optional[FareSectionRef] = field(
+    fare_section_ref: FareSectionRef | None = field(
         default=None,
         metadata={
             "name": "FareSectionRef",
@@ -1914,7 +1714,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_class: Optional[FareClass] = field(
+    fare_class: FareClass | None = field(
         default=None,
         metadata={
             "name": "FareClass",
@@ -1922,7 +1722,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    class_of_use_ref: Optional[ClassOfUseRef] = field(
+    class_of_use_ref: ClassOfUseRef | None = field(
         default=None,
         metadata={
             "name": "ClassOfUseRef",
@@ -1930,9 +1730,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    facility_set_ref: Optional[
-        Union[ServiceFacilitySetRef, SiteFacilitySetRef, FacilitySetRef]
-    ] = field(
+    facility_set_ref: ServiceFacilitySetRef | SiteFacilitySetRef | FacilitySetRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -1955,7 +1753,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    type_of_product_category_ref: Optional[TypeOfProductCategoryRef] = field(
+    type_of_product_category_ref: TypeOfProductCategoryRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfProductCategoryRef",
@@ -1963,7 +1761,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_service_ref: Optional[TypeOfServiceRef] = field(
+    type_of_service_ref: TypeOfServiceRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfServiceRef",
@@ -1971,16 +1769,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice_2: Optional[
-        Union[
-            TemplateServiceJourneyRef,
-            ServiceJourneyRef,
-            SingleJourneyRef,
-            TrainNumberRef,
-            GroupOfServicesRef,
-            GroupOfSingleJourneysRef,
-        ]
-    ] = field(
+    choice_2: TemplateServiceJourneyRef | ServiceJourneyRef | SingleJourneyRef | TrainNumberRef | GroupOfServicesRef | GroupOfSingleJourneysRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -2018,15 +1807,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    transport_type_ref_or_vehicle_type_ref: Optional[
-        Union[
-            SimpleVehicleTypeRef,
-            CompoundTrainRef,
-            TrainRef,
-            VehicleTypeRef,
-            TransportTypeRef,
-        ]
-    ] = field(
+    transport_type_ref_or_vehicle_type_ref: SimpleVehicleTypeRef | CompoundTrainRef | TrainRef | VehicleTypeRef | TransportTypeRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -2059,7 +1840,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    vehicle_model_ref: Optional[VehicleModelRef] = field(
+    vehicle_model_ref: VehicleModelRef | None = field(
         default=None,
         metadata={
             "name": "VehicleModelRef",
@@ -2067,9 +1848,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_model_profile_ref: Optional[
-        Union[CycleModelProfileRef, CarModelProfileRef]
-    ] = field(
+    vehicle_model_profile_ref: CycleModelProfileRef | CarModelProfileRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -2087,73 +1866,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    choice_3: Optional[
-        Union[
-            RetailDeviceRef,
-            OnlineServiceRef,
-            VehicleRentalServiceRef,
-            VehicleSharingServiceRef,
-            ChauffeuredVehicleServiceRef,
-            TaxiServiceRef,
-            CarPoolingServiceRef,
-            ActivatedEquipmentRef,
-            BatteryEquipmentRef,
-            RefuellingEquipmentRef,
-            VehicleChargingEquipmentRef,
-            AssistanceBookingServiceRef,
-            CateringServiceRef,
-            RetailServiceRef,
-            MoneyServiceRef,
-            HireServiceRef,
-            CommunicationServiceRef,
-            MeetingPointServiceRef,
-            LeftLuggageServiceRef,
-            LuggageServiceRef,
-            LostPropertyServiceRef,
-            ComplaintsServiceRef,
-            CustomerServiceRef,
-            AssistanceServiceRef,
-            TicketingServiceRef,
-            LocalServiceRef,
-            VehicleReleaseEquipmentRef,
-            TicketValidatorEquipmentRef,
-            TicketingEquipmentRef,
-            PassengerInformationEquipmentRef,
-            CycleStorageEquipmentRef,
-            TrolleyStandEquipmentRef,
-            SeatingEquipmentRef,
-            ShelterEquipmentRef,
-            LuggageLockerEquipmentRef,
-            WaitingRoomEquipmentRef,
-            WaitingEquipmentRef,
-            SiteEquipmentRef,
-            PlaceLightingEquipmentRef,
-            RoughSurfaceRef,
-            StaircaseEquipmentRef,
-            QueueingEquipmentRef,
-            TravelatorEquipmentRef,
-            EscalatorEquipmentRef,
-            LiftCallEquipmentRef,
-            LiftEquipmentRef,
-            CrossingEquipmentRef,
-            RampEquipmentRef,
-            EntranceEquipmentRef,
-            HeadingSignRef,
-            GeneralSignRef,
-            PlaceSignRef,
-            SignEquipmentRef,
-            RubbishDisposalEquipmentRef,
-            PassengerBeaconEquipmentRef,
-            HelpPointEquipmentRef,
-            PassengerSafetyEquipmentRef,
-            SanitaryEquipmentRef,
-            WheelchairVehicleRef,
-            AccessVehicleEquipmentRef,
-            VehicleEquipmentRef,
-            PassengerEquipmentRef,
-            EquipmentRef,
-        ]
-    ] = field(
+    choice_3: RetailDeviceRef | OnlineServiceRef | VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | ActivatedEquipmentRef | BatteryEquipmentRef | RefuellingEquipmentRef | VehicleChargingEquipmentRef | AssistanceBookingServiceRef | CateringServiceRef | RetailServiceRef | MoneyServiceRef | HireServiceRef | CommunicationServiceRef | MeetingPointServiceRef | LeftLuggageServiceRef | LuggageServiceRef | LostPropertyServiceRef | ComplaintsServiceRef | CustomerServiceRef | AssistanceServiceRef | TicketingServiceRef | LocalServiceRef | VehicleReleaseEquipmentRef | TicketValidatorEquipmentRef | TicketingEquipmentRef | PassengerInformationEquipmentRef | CycleStorageEquipmentRef | TrolleyStandEquipmentRef | SeatingEquipmentRef | ShelterEquipmentRef | LuggageLockerEquipmentRef | WaitingRoomEquipmentRef | WaitingEquipmentRef | SiteEquipmentRef | PlaceLightingEquipmentRef | RoughSurfaceRef | StaircaseEquipmentRef | QueueingEquipmentRef | TravelatorEquipmentRef | EscalatorEquipmentRef | LiftCallEquipmentRef | LiftEquipmentRef | CrossingEquipmentRef | RampEquipmentRef | EntranceEquipmentRef | HeadingSignRef | GeneralSignRef | PlaceSignRef | SignEquipmentRef | RubbishDisposalEquipmentRef | PassengerBeaconEquipmentRef | HelpPointEquipmentRef | PassengerSafetyEquipmentRef | SanitaryEquipmentRef | WheelchairVehicleRef | AccessVehicleEquipmentRef | VehicleEquipmentRef | PassengerEquipmentRef | EquipmentRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -2476,7 +2189,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    type_of_fare_product_ref: Optional[TypeOfFareProductRef] = field(
+    type_of_fare_product_ref: TypeOfFareProductRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfFareProductRef",
@@ -2484,9 +2197,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distribution_channel_ref_or_group_of_distribution_channels_ref: Optional[
-        Union[DistributionChannelRef, GroupOfDistributionChannelsRef]
-    ] = field(
+    distribution_channel_ref_or_group_of_distribution_channels_ref: DistributionChannelRef | GroupOfDistributionChannelsRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -2504,7 +2215,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    payment_method: Optional[PaymentMethodEnumeration] = field(
+    payment_method: PaymentMethodEnumeration | None = field(
         default=None,
         metadata={
             "name": "PaymentMethod",
@@ -2512,7 +2223,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_payment_method_ref: Optional[TypeOfPaymentMethodRef] = field(
+    type_of_payment_method_ref: TypeOfPaymentMethodRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfPaymentMethodRef",
@@ -2520,7 +2231,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_travel_document_ref: Optional[TypeOfTravelDocumentRef] = field(
+    type_of_travel_document_ref: TypeOfTravelDocumentRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfTravelDocumentRef",
@@ -2528,7 +2239,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_table_ref: Optional[Union[StandardFareTableRef, FareTableRef]] = (
+    fare_table_ref: StandardFareTableRef | FareTableRef | None = (
         field(
             default=None,
             metadata={
@@ -2548,7 +2259,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             },
         )
     )
-    column_ref: Optional[FareTableColumnRefStructure] = field(
+    column_ref: FareTableColumnRefStructure | None = field(
         default=None,
         metadata={
             "name": "ColumnRef",
@@ -2556,7 +2267,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    row_ref: Optional[FareTableRowRefStructure] = field(
+    row_ref: FareTableRowRefStructure | None = field(
         default=None,
         metadata={
             "name": "RowRef",
@@ -2564,7 +2275,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -2572,7 +2283,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2607,46 +2318,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
         name = "cells_RelStructure"
 
     choice: Iterable[
-        Union[
-            Cell,
-            "CellsRelStructure.CellInContext",
-            CustomerPurchasePackagePrice,
-            ParkingPrice,
-            SalesOfferPackagePrice,
-            FulfilmentMethodPrice,
-            CappingRulePrice,
-            FareProductPrice,
-            FareStructureElementPrice,
-            TimeIntervalPrice,
-            TimeUnitPrice,
-            QualityStructureFactorPrice,
-            ControllableElementPrice,
-            ValidableElementPrice,
-            UsageParameterPrice,
-            DistanceMatrixElementPrice,
-            GeographicalIntervalPrice,
-            GeographicalUnitPrice,
-            SeriesConstraintPrice,
-            CustomerPurchasePackagePriceRef,
-            ParkingPriceRef,
-            TimeIntervalPriceRef,
-            TimeUnitPriceRef,
-            QualityStructureFactorPriceRef,
-            ControllableElementPriceRef,
-            ValidableElementPriceRef,
-            GeographicalIntervalPriceRef,
-            GeographicalUnitPriceRef,
-            UsageParameterPriceRef,
-            SeriesConstraintPriceRef,
-            SalesOfferPackagePriceRef,
-            DistanceMatrixElementPriceRef,
-            FareStructureElementPriceRef,
-            FulfilmentMethodPriceRef,
-            CappingRulePriceRef,
-            FareProductPriceRef,
-            FarePriceRef,
-            CellRef,
-        ]
+        Cell | CellsRelStructure.CellInContext | CustomerPurchasePackagePrice | ParkingPrice | SalesOfferPackagePrice | FulfilmentMethodPrice | CappingRulePrice | FareProductPrice | FareStructureElementPrice | TimeIntervalPrice | TimeUnitPrice | QualityStructureFactorPrice | ControllableElementPrice | ValidableElementPrice | UsageParameterPrice | DistanceMatrixElementPrice | GeographicalIntervalPrice | GeographicalUnitPrice | SeriesConstraintPrice | CustomerPurchasePackagePriceRef | ParkingPriceRef | TimeIntervalPriceRef | TimeUnitPriceRef | QualityStructureFactorPriceRef | ControllableElementPriceRef | ValidableElementPriceRef | GeographicalIntervalPriceRef | GeographicalUnitPriceRef | UsageParameterPriceRef | SeriesConstraintPriceRef | SalesOfferPackagePriceRef | DistanceMatrixElementPriceRef | FareStructureElementPriceRef | FulfilmentMethodPriceRef | CappingRulePriceRef | FareProductPriceRef | FarePriceRef | CellRef
     ] = field(
         default_factory=list,
         metadata={
@@ -2869,7 +2541,7 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "FareTable_VersionStructure"
 
-    start_date: Optional[XmlDate] = field(
+    start_date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -2877,7 +2549,7 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_date: Optional[XmlDate] = field(
+    end_date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -2885,7 +2557,7 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rounding_ref: Optional[RoundingRef] = field(
+    rounding_ref: RoundingRef | None = field(
         default=None,
         metadata={
             "name": "RoundingRef",
@@ -2893,7 +2565,7 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_fare_table_ref: Optional[TypeOfFareTableRef] = field(
+    type_of_fare_table_ref: TypeOfFareTableRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfFareTableRef",
@@ -2901,7 +2573,7 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices_for: Optional[PriceableObjectRefsRelStructure] = field(
+    prices_for: PriceableObjectRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "pricesFor",
@@ -2909,7 +2581,7 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    used_in: Optional[UsedInRefsRelStructure] = field(
+    used_in: UsedInRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "usedIn",
@@ -2917,20 +2589,7 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: Optional[
-        Union[
-            RetailConsortiumRef,
-            OnlineServiceOperatorRef,
-            GeneralOrganisationRef,
-            ManagementAgentRef,
-            ServicedOrganisationRef,
-            TravelAgentRef,
-            OtherOrganisationRef,
-            AuthorityRef,
-            OperatorRef,
-            OrganisationRef,
-        ]
-    ] = field(
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -2988,42 +2647,42 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             ),
         },
     )
-    limitations: Optional[UsageParameterRefsRelStructure] = field(
+    limitations: UsageParameterRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    specifics: Optional[FareTableSpecificsStructure] = field(
+    specifics: FareTableSpecificsStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    columns: Optional[FareTableColumnsRelStructure] = field(
+    columns: FareTableColumnsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rows: Optional[FareTableRowsRelStructure] = field(
+    rows: FareTableRowsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    includes: Optional[FareTablesRelStructure] = field(
+    includes: FareTablesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    embargo_until: Optional[XmlDateTime] = field(
+    embargo_until: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "EmbargoUntil",
@@ -3031,21 +2690,21 @@ class FareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: Optional[FarePricesRelStructure] = field(
+    prices: FarePricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    cells: Optional[CellsRelStructure] = field(
+    cells: CellsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",

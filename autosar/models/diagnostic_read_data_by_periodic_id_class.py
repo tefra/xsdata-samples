@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -102,7 +104,7 @@ class DiagnosticReadDataByPeriodicIdClass:
     class Meta:
         name = "DIAGNOSTIC-READ-DATA-BY-PERIODIC-ID-CLASS"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -111,9 +113,7 @@ class DiagnosticReadDataByPeriodicIdClass:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticReadDataByPeriodicIdClass.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticReadDataByPeriodicIdClass.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -121,7 +121,7 @@ class DiagnosticReadDataByPeriodicIdClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -129,7 +129,7 @@ class DiagnosticReadDataByPeriodicIdClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -137,7 +137,7 @@ class DiagnosticReadDataByPeriodicIdClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -145,7 +145,7 @@ class DiagnosticReadDataByPeriodicIdClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -153,7 +153,7 @@ class DiagnosticReadDataByPeriodicIdClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -161,9 +161,7 @@ class DiagnosticReadDataByPeriodicIdClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "DiagnosticReadDataByPeriodicIdClass.Annotations"
-    ] = field(
+    annotations: DiagnosticReadDataByPeriodicIdClass.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -171,7 +169,7 @@ class DiagnosticReadDataByPeriodicIdClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -179,9 +177,7 @@ class DiagnosticReadDataByPeriodicIdClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: Optional[
-        "DiagnosticReadDataByPeriodicIdClass.AccessPermissionRef"
-    ] = field(
+    access_permission_ref: DiagnosticReadDataByPeriodicIdClass.AccessPermissionRef | None = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -189,9 +185,7 @@ class DiagnosticReadDataByPeriodicIdClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_validity: Optional[
-        DiagnosticAccessPermissionValidityEnum
-    ] = field(
+    access_permission_validity: DiagnosticAccessPermissionValidityEnum | None = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-VALIDITY",
@@ -199,7 +193,7 @@ class DiagnosticReadDataByPeriodicIdClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_periodic_did_to_read: Optional[PositiveInteger] = field(
+    max_periodic_did_to_read: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-PERIODIC-DID-TO-READ",
@@ -207,9 +201,7 @@ class DiagnosticReadDataByPeriodicIdClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    periodic_rates: Optional[
-        "DiagnosticReadDataByPeriodicIdClass.PeriodicRates"
-    ] = field(
+    periodic_rates: DiagnosticReadDataByPeriodicIdClass.PeriodicRates | None = field(
         default=None,
         metadata={
             "name": "PERIODIC-RATES",
@@ -217,7 +209,7 @@ class DiagnosticReadDataByPeriodicIdClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    scheduler_max_number: Optional[PositiveInteger] = field(
+    scheduler_max_number: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SCHEDULER-MAX-NUMBER",
@@ -225,14 +217,14 @@ class DiagnosticReadDataByPeriodicIdClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -240,7 +232,7 @@ class DiagnosticReadDataByPeriodicIdClass:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -272,7 +264,7 @@ class DiagnosticReadDataByPeriodicIdClass:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: Optional[DiagnosticAccessPermissionSubtypesEnum] = field(
+        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

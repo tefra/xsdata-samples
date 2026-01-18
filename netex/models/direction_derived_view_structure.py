@@ -13,7 +13,7 @@ class DirectionDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "Direction_DerivedViewStructure"
 
-    direction_ref: Optional[DirectionRef] = field(
+    direction_ref: DirectionRef | None = field(
         default=None,
         metadata={
             "name": "DirectionRef",
@@ -21,7 +21,7 @@ class DirectionDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",

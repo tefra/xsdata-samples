@@ -18,7 +18,7 @@ class DestinationDisplayVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "DestinationDisplay_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -26,7 +26,7 @@ class DestinationDisplayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -34,7 +34,7 @@ class DestinationDisplayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    side_text: Optional[MultilingualString] = field(
+    side_text: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "SideText",
@@ -42,7 +42,7 @@ class DestinationDisplayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    front_text: Optional[MultilingualString] = field(
+    front_text: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "FrontText",
@@ -50,7 +50,7 @@ class DestinationDisplayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    driver_display_text: Optional[MultilingualString] = field(
+    driver_display_text: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "DriverDisplayText",
@@ -58,7 +58,7 @@ class DestinationDisplayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_code: Optional[str] = field(
+    short_code: str | None = field(
         default=None,
         metadata={
             "name": "ShortCode",
@@ -66,7 +66,7 @@ class DestinationDisplayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_code: Optional[str] = field(
+    public_code: str | None = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -74,7 +74,7 @@ class DestinationDisplayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -82,7 +82,7 @@ class DestinationDisplayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    presentation: Optional[PresentationStructure] = field(
+    presentation: PresentationStructure | None = field(
         default=None,
         metadata={
             "name": "Presentation",
@@ -90,14 +90,14 @@ class DestinationDisplayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vias: Optional[ViasRelStructure] = field(
+    vias: ViasRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    variants: Optional[DestinationDisplayVariantsRelStructure] = field(
+    variants: DestinationDisplayVariantsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

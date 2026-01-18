@@ -34,7 +34,7 @@ class TagWithOptionalValue:
     class Meta:
         name = "TAG-WITH-OPTIONAL-VALUE"
 
-    key: Optional[String] = field(
+    key: String | None = field(
         default=None,
         metadata={
             "name": "KEY",
@@ -42,7 +42,7 @@ class TagWithOptionalValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: Optional[String] = field(
+    value: String | None = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -50,7 +50,7 @@ class TagWithOptionalValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -58,14 +58,14 @@ class TagWithOptionalValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

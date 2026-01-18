@@ -17,7 +17,7 @@ class DayTypesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dayTypesInFrame_RelStructure"
 
-    day_type: Iterable[Union[FareDayType, OrganisationDayType, DayType]] = (
+    day_type: Iterable[FareDayType | OrganisationDayType | DayType] = (
         field(
             default_factory=list,
             metadata={

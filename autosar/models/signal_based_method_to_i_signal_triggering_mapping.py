@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -91,7 +93,7 @@ class SignalBasedMethodToISignalTriggeringMapping:
     class Meta:
         name = "SIGNAL-BASED-METHOD-TO-I-SIGNAL-TRIGGERING-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -100,9 +102,7 @@ class SignalBasedMethodToISignalTriggeringMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SignalBasedMethodToISignalTriggeringMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SignalBasedMethodToISignalTriggeringMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -110,7 +110,7 @@ class SignalBasedMethodToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -118,7 +118,7 @@ class SignalBasedMethodToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -126,7 +126,7 @@ class SignalBasedMethodToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -134,7 +134,7 @@ class SignalBasedMethodToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -142,7 +142,7 @@ class SignalBasedMethodToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -150,9 +150,7 @@ class SignalBasedMethodToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "SignalBasedMethodToISignalTriggeringMapping.Annotations"
-    ] = field(
+    annotations: SignalBasedMethodToISignalTriggeringMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -160,9 +158,7 @@ class SignalBasedMethodToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    call_signal_triggering_ref: Optional[
-        "SignalBasedMethodToISignalTriggeringMapping.CallSignalTriggeringRef"
-    ] = field(
+    call_signal_triggering_ref: SignalBasedMethodToISignalTriggeringMapping.CallSignalTriggeringRef | None = field(
         default=None,
         metadata={
             "name": "CALL-SIGNAL-TRIGGERING-REF",
@@ -170,9 +166,7 @@ class SignalBasedMethodToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_ref: Optional[
-        "SignalBasedMethodToISignalTriggeringMapping.MethodRef"
-    ] = field(
+    method_ref: SignalBasedMethodToISignalTriggeringMapping.MethodRef | None = field(
         default=None,
         metadata={
             "name": "METHOD-REF",
@@ -180,9 +174,7 @@ class SignalBasedMethodToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    return_signal_triggering_ref: Optional[
-        "SignalBasedMethodToISignalTriggeringMapping.ReturnSignalTriggeringRef"
-    ] = field(
+    return_signal_triggering_ref: SignalBasedMethodToISignalTriggeringMapping.ReturnSignalTriggeringRef | None = field(
         default=None,
         metadata={
             "name": "RETURN-SIGNAL-TRIGGERING-REF",
@@ -190,14 +182,14 @@ class SignalBasedMethodToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -205,7 +197,7 @@ class SignalBasedMethodToISignalTriggeringMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -237,7 +229,7 @@ class SignalBasedMethodToISignalTriggeringMapping:
 
     @dataclass
     class CallSignalTriggeringRef(Ref):
-        dest: Optional[ISignalTriggeringSubtypesEnum] = field(
+        dest: ISignalTriggeringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -248,7 +240,7 @@ class SignalBasedMethodToISignalTriggeringMapping:
 
     @dataclass
     class MethodRef(Ref):
-        dest: Optional[ClientServerOperationSubtypesEnum] = field(
+        dest: ClientServerOperationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -259,7 +251,7 @@ class SignalBasedMethodToISignalTriggeringMapping:
 
     @dataclass
     class ReturnSignalTriggeringRef(Ref):
-        dest: Optional[ISignalTriggeringSubtypesEnum] = field(
+        dest: ISignalTriggeringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

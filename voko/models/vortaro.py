@@ -12,26 +12,26 @@ class Vortaro:
     class Meta:
         name = "vortaro"
 
-    prologo: Optional[Prologo] = field(
+    prologo: Prologo | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    precipa_parto: Optional[PrecipaParto] = field(
+    precipa_parto: PrecipaParto | None = field(
         default=None,
         metadata={
             "name": "precipa-parto",
             "type": "Element",
         },
     )
-    epilogo: Optional[Epilogo] = field(
+    epilogo: Epilogo | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    art: Optional[Art] = field(
+    art: Art | None = field(
         default=None,
         metadata={
             "type": "Element",

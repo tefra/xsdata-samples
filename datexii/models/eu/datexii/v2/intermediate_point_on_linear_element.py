@@ -11,7 +11,7 @@ class IntermediatePointOnLinearElement:
     class Meta:
         name = "_IntermediatePointOnLinearElement"
 
-    referent: Optional[Referent] = field(
+    referent: Referent | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -19,7 +19,7 @@ class IntermediatePointOnLinearElement:
             "required": True,
         },
     )
-    index: Optional[int] = field(
+    index: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

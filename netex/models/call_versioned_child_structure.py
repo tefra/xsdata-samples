@@ -42,7 +42,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "Call_VersionedChildStructure"
 
-    visit_number: Optional[int] = field(
+    visit_number: int | None = field(
         default=None,
         metadata={
             "name": "VisitNumber",
@@ -50,13 +50,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: Optional[
-        Union[
-            FareScheduledStopPointRef,
-            ScheduledStopPointRef,
-            ScheduledStopPointView,
-        ]
-    ] = field(
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point_view: FareScheduledStopPointRef | ScheduledStopPointRef | ScheduledStopPointView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -79,7 +73,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    onward_timing_link_view: Optional[OnwardTimingLinkView] = field(
+    onward_timing_link_view: OnwardTimingLinkView | None = field(
         default=None,
         metadata={
             "name": "OnwardTimingLinkView",
@@ -87,9 +81,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    onward_service_link_ref_or_onward_service_link_view: Optional[
-        Union[ServiceLinkRefStructure, OnwardServiceLinkView]
-    ] = field(
+    onward_service_link_ref_or_onward_service_link_view: ServiceLinkRefStructure | OnwardServiceLinkView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -107,7 +99,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    timing_point_status: Optional[TimingPointStatusEnumeration] = field(
+    timing_point_status: TimingPointStatusEnumeration | None = field(
         default=None,
         metadata={
             "name": "TimingPointStatus",
@@ -115,9 +107,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_journey_ref: Optional[
-        Union[TemplateServiceJourneyRef, ServiceJourneyRef]
-    ] = field(
+    service_journey_ref: TemplateServiceJourneyRef | ServiceJourneyRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -135,9 +125,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    point_in_journey_pattern_ref: Optional[
-        PointInJourneyPatternRefStructure
-    ] = field(
+    point_in_journey_pattern_ref: PointInJourneyPatternRefStructure | None = field(
         default=None,
         metadata={
             "name": "PointInJourneyPatternRef",
@@ -145,7 +133,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    arrival: Optional[ArrivalStructure] = field(
+    arrival: ArrivalStructure | None = field(
         default=None,
         metadata={
             "name": "Arrival",
@@ -153,7 +141,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    departure: Optional[DepartureStructure] = field(
+    departure: DepartureStructure | None = field(
         default=None,
         metadata={
             "name": "Departure",
@@ -161,7 +149,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    frequency: Optional[FrequencyStructure] = field(
+    frequency: FrequencyStructure | None = field(
         default=None,
         metadata={
             "name": "Frequency",
@@ -169,9 +157,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination_display_ref_or_destination_display_view: Optional[
-        Union[DestinationDisplayRef, DestinationDisplayView]
-    ] = field(
+    destination_display_ref_or_destination_display_view: DestinationDisplayRef | DestinationDisplayView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -189,14 +175,14 @@ class CallVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    vias: Optional[ViasRelStructure] = field(
+    vias: ViasRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_point_properties: Optional[FlexiblePointProperties] = field(
+    flexible_point_properties: FlexiblePointProperties | None = field(
         default=None,
         metadata={
             "name": "FlexiblePointProperties",
@@ -204,7 +190,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    change_of_destination_display: Optional[bool] = field(
+    change_of_destination_display: bool | None = field(
         default=None,
         metadata={
             "name": "ChangeOfDestinationDisplay",
@@ -212,7 +198,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    change_of_service_requirements: Optional[bool] = field(
+    change_of_service_requirements: bool | None = field(
         default=None,
         metadata={
             "name": "ChangeOfServiceRequirements",
@@ -220,7 +206,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -228,7 +214,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    request_stop: Optional[bool] = field(
+    request_stop: bool | None = field(
         default=None,
         metadata={
             "name": "RequestStop",
@@ -236,7 +222,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    request_method: Optional[RequestMethodTypeEnumeration] = field(
+    request_method: RequestMethodTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "RequestMethod",
@@ -244,7 +230,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_use: Optional[StopUseEnumeration] = field(
+    stop_use: StopUseEnumeration | None = field(
         default=None,
         metadata={
             "name": "StopUse",
@@ -252,7 +238,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_arrangements: Optional[BookingArrangementsStructure] = field(
+    booking_arrangements: BookingArrangementsStructure | None = field(
         default=None,
         metadata={
             "name": "BookingArrangements",
@@ -260,7 +246,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    print: Optional[bool] = field(
+    print: bool | None = field(
         default=None,
         metadata={
             "name": "Print",
@@ -268,7 +254,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    dynamic: Optional[DynamicAdvertisementEnumeration] = field(
+    dynamic: DynamicAdvertisementEnumeration | None = field(
         default=None,
         metadata={
             "name": "Dynamic",
@@ -276,11 +262,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: Optional[
-        Union[
-            PassengerCarryingRequirementRef, PassengerCarryingRequirementsView
-        ]
-    ] = field(
+    passenger_carrying_requirement_ref_or_passenger_carrying_requirements_view: PassengerCarryingRequirementRef | PassengerCarryingRequirementsView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -298,7 +280,7 @@ class CallVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    train_size: Optional[TrainSize] = field(
+    train_size: TrainSize | None = field(
         default=None,
         metadata={
             "name": "TrainSize",
@@ -306,14 +288,14 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    equipments: Optional[VehicleEquipmentsRelStructure] = field(
+    equipments: VehicleEquipmentsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    note: Optional[MultilingualString] = field(
+    note: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Note",
@@ -321,13 +303,13 @@ class CallVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    constrained: Optional[bool] = field(
+    constrained: bool | None = field(
         default=None,
         metadata={
             "type": "Attribute",

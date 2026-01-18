@@ -15,7 +15,7 @@ class GeographicalIntervalsRelStructure(ContainmentAggregationStructure):
         name = "geographicalIntervals_RelStructure"
 
     geographical_interval_ref_or_geographical_interval: Iterable[
-        Union[GeographicalIntervalRef, GeographicalInterval]
+        GeographicalIntervalRef | GeographicalInterval
     ] = field(
         default_factory=list,
         metadata={

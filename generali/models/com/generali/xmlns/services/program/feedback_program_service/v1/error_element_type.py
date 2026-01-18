@@ -15,7 +15,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class ErrorElementType:
-    code: Optional[str] = field(
+    code: str | None = field(
         default=None,
         metadata={
             "name": "Code",
@@ -24,7 +24,7 @@ class ErrorElementType:
             "required": True,
         },
     )
-    description: Optional[str] = field(
+    description: str | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -33,7 +33,7 @@ class ErrorElementType:
             "required": True,
         },
     )
-    type_value: Optional[ErrorElementTypeType] = field(
+    type_value: ErrorElementTypeType | None = field(
         default=None,
         metadata={
             "name": "Type",
@@ -42,7 +42,7 @@ class ErrorElementType:
             "required": True,
         },
     )
-    level: Optional[ErrorElementTypeLevel] = field(
+    level: ErrorElementTypeLevel | None = field(
         default=None,
         metadata={
             "name": "Level",

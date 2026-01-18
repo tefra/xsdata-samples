@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -40,9 +42,7 @@ class ParameterInAtomicSwcTypeInstanceRef:
     class Meta:
         name = "PARAMETER-IN-ATOMIC-SWC-TYPE-INSTANCE-REF"
 
-    port_prototype_ref: Optional[
-        "ParameterInAtomicSwcTypeInstanceRef.PortPrototypeRef"
-    ] = field(
+    port_prototype_ref: ParameterInAtomicSwcTypeInstanceRef.PortPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-REF",
@@ -50,9 +50,7 @@ class ParameterInAtomicSwcTypeInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_parameter_data_prototype_ref: Optional[
-        "ParameterInAtomicSwcTypeInstanceRef.RootParameterDataPrototypeRef"
-    ] = field(
+    root_parameter_data_prototype_ref: ParameterInAtomicSwcTypeInstanceRef.RootParameterDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "ROOT-PARAMETER-DATA-PROTOTYPE-REF",
@@ -61,7 +59,7 @@ class ParameterInAtomicSwcTypeInstanceRef:
         },
     )
     context_data_prototype_ref: list[
-        "ParameterInAtomicSwcTypeInstanceRef.ContextDataPrototypeRef"
+        ParameterInAtomicSwcTypeInstanceRef.ContextDataPrototypeRef
     ] = field(
         default_factory=list,
         metadata={
@@ -70,9 +68,7 @@ class ParameterInAtomicSwcTypeInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_data_prototype_ref: Optional[
-        "ParameterInAtomicSwcTypeInstanceRef.TargetDataPrototypeRef"
-    ] = field(
+    target_data_prototype_ref: ParameterInAtomicSwcTypeInstanceRef.TargetDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-REF",
@@ -80,14 +76,14 @@ class ParameterInAtomicSwcTypeInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -98,7 +94,7 @@ class ParameterInAtomicSwcTypeInstanceRef:
 
     @dataclass
     class PortPrototypeRef(Ref):
-        dest: Optional[PortPrototypeSubtypesEnum] = field(
+        dest: PortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -109,7 +105,7 @@ class ParameterInAtomicSwcTypeInstanceRef:
 
     @dataclass
     class RootParameterDataPrototypeRef(Ref):
-        dest: Optional[DataPrototypeSubtypesEnum] = field(
+        dest: DataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -120,9 +116,7 @@ class ParameterInAtomicSwcTypeInstanceRef:
 
     @dataclass
     class ContextDataPrototypeRef(Ref):
-        dest: Optional[
-            ApplicationCompositeElementDataPrototypeSubtypesEnum
-        ] = field(
+        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -133,7 +127,7 @@ class ParameterInAtomicSwcTypeInstanceRef:
 
     @dataclass
     class TargetDataPrototypeRef(Ref):
-        dest: Optional[DataPrototypeSubtypesEnum] = field(
+        dest: DataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -19,7 +19,7 @@ class FareDemandFactorVersionStructure(QualityStructureFactorVersionStructure):
     class Meta:
         name = "FareDemandFactor_VersionStructure"
 
-    fare_demand_type: Optional[FareDemandTypeEnumeration] = field(
+    fare_demand_type: FareDemandTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "FareDemandType",
@@ -27,7 +27,7 @@ class FareDemandFactorVersionStructure(QualityStructureFactorVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_type_ref: Optional[TimeDemandTypeRef] = field(
+    time_demand_type_ref: TimeDemandTypeRef | None = field(
         default=None,
         metadata={
             "name": "TimeDemandTypeRef",
@@ -35,7 +35,7 @@ class FareDemandFactorVersionStructure(QualityStructureFactorVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_use_constraint: Optional[StopUseConstraintEnumeration] = field(
+    stop_use_constraint: StopUseConstraintEnumeration | None = field(
         default=None,
         metadata={
             "name": "StopUseConstraint",
@@ -43,7 +43,7 @@ class FareDemandFactorVersionStructure(QualityStructureFactorVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_times_at_stop_points: Optional[StartTimeAtStopPointsRelStructure] = (
+    start_times_at_stop_points: StartTimeAtStopPointsRelStructure | None = (
         field(
             default=None,
             metadata={

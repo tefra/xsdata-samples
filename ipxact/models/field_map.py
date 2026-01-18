@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,7 +33,7 @@ class FieldMap:
         name = "fieldMap"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    field_slice: Optional["FieldMap.FieldSlice"] = field(
+    field_slice: FieldMap.FieldSlice | None = field(
         default=None,
         metadata={
             "name": "fieldSlice",
@@ -46,21 +48,21 @@ class FieldMap:
             "type": "Element",
         },
     )
-    part_select: Optional[PartSelect] = field(
+    part_select: PartSelect | None = field(
         default=None,
         metadata={
             "name": "partSelect",
             "type": "Element",
         },
     )
-    mode_ref: list["FieldMap.ModeRef"] = field(
+    mode_ref: list[FieldMap.ModeRef] = field(
         default_factory=list,
         metadata={
             "name": "modeRef",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -70,7 +72,7 @@ class FieldMap:
 
     @dataclass
     class FieldSlice:
-        address_space_ref: Optional["FieldMap.FieldSlice.AddressSpaceRef"] = (
+        address_space_ref: FieldMap.FieldSlice.AddressSpaceRef | None = (
             field(
                 default=None,
                 metadata={
@@ -79,14 +81,14 @@ class FieldMap:
                 },
             )
         )
-        memory_map_ref: Optional["FieldMap.FieldSlice.MemoryMapRef"] = field(
+        memory_map_ref: FieldMap.FieldSlice.MemoryMapRef | None = field(
             default=None,
             metadata={
                 "name": "memoryMapRef",
                 "type": "Element",
             },
         )
-        memory_remap_ref: Optional[MemoryRemapRef] = field(
+        memory_remap_ref: MemoryRemapRef | None = field(
             default=None,
             metadata={
                 "name": "memoryRemapRef",
@@ -100,7 +102,7 @@ class FieldMap:
                 "type": "Element",
             },
         )
-        address_block_ref: Optional[AddressBlockRef] = field(
+        address_block_ref: AddressBlockRef | None = field(
             default=None,
             metadata={
                 "name": "addressBlockRef",
@@ -115,7 +117,7 @@ class FieldMap:
                 "type": "Element",
             },
         )
-        register_ref: Optional[RegisterRef] = field(
+        register_ref: RegisterRef | None = field(
             default=None,
             metadata={
                 "name": "registerRef",
@@ -123,14 +125,14 @@ class FieldMap:
                 "required": True,
             },
         )
-        alternate_register_ref: Optional[AlternateRegisterRef] = field(
+        alternate_register_ref: AlternateRegisterRef | None = field(
             default=None,
             metadata={
                 "name": "alternateRegisterRef",
                 "type": "Element",
             },
         )
-        field_ref: Optional[FieldRef] = field(
+        field_ref: FieldRef | None = field(
             default=None,
             metadata={
                 "name": "fieldRef",
@@ -138,7 +140,7 @@ class FieldMap:
                 "required": True,
             },
         )
-        range: Optional[Range] = field(
+        range: Range | None = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -147,7 +149,7 @@ class FieldMap:
 
         @dataclass
         class AddressSpaceRef:
-            address_space_ref: Optional[str] = field(
+            address_space_ref: str | None = field(
                 default=None,
                 metadata={
                     "name": "addressSpaceRef",
@@ -158,7 +160,7 @@ class FieldMap:
 
         @dataclass
         class MemoryMapRef:
-            memory_map_ref: Optional[str] = field(
+            memory_map_ref: str | None = field(
                 default=None,
                 metadata={
                     "name": "memoryMapRef",
@@ -175,14 +177,14 @@ class FieldMap:
                 "required": True,
             },
         )
-        priority: Optional[int] = field(
+        priority: int | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

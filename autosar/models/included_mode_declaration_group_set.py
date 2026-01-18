@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,9 +41,7 @@ class IncludedModeDeclarationGroupSet:
     class Meta:
         name = "INCLUDED-MODE-DECLARATION-GROUP-SET"
 
-    mode_declaration_group_refs: Optional[
-        "IncludedModeDeclarationGroupSet.ModeDeclarationGroupRefs"
-    ] = field(
+    mode_declaration_group_refs: IncludedModeDeclarationGroupSet.ModeDeclarationGroupRefs | None = field(
         default=None,
         metadata={
             "name": "MODE-DECLARATION-GROUP-REFS",
@@ -49,7 +49,7 @@ class IncludedModeDeclarationGroupSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    prefix: Optional[Identifier] = field(
+    prefix: Identifier | None = field(
         default=None,
         metadata={
             "name": "PREFIX",
@@ -57,14 +57,14 @@ class IncludedModeDeclarationGroupSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -76,7 +76,7 @@ class IncludedModeDeclarationGroupSet:
     @dataclass
     class ModeDeclarationGroupRefs:
         mode_declaration_group_ref: list[
-            "IncludedModeDeclarationGroupSet.ModeDeclarationGroupRefs.ModeDeclarationGroupRef"
+            IncludedModeDeclarationGroupSet.ModeDeclarationGroupRefs.ModeDeclarationGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -88,7 +88,7 @@ class IncludedModeDeclarationGroupSet:
 
         @dataclass
         class ModeDeclarationGroupRef(Ref):
-            dest: Optional[ModeDeclarationGroupSubtypesEnum] = field(
+            dest: ModeDeclarationGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

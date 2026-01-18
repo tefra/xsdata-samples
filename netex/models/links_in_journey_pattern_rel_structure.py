@@ -17,7 +17,7 @@ class LinksInJourneyPatternRelStructure(StrictContainmentAggregationStructure):
         name = "linksInJourneyPattern_RelStructure"
 
     service_link_in_journey_pattern_or_timing_link_in_journey_pattern: Iterable[
-        Union[ServiceLinkInJourneyPattern, TimingLinkInJourneyPattern]
+        ServiceLinkInJourneyPattern | TimingLinkInJourneyPattern
     ] = field(
         default_factory=list,
         metadata={

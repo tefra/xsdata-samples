@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -22,7 +24,7 @@ class SlicedAccessHandle:
     class Meta:
         name = "slicedAccessHandle"
 
-    view_ref: list["SlicedAccessHandle.ViewRef"] = field(
+    view_ref: list[SlicedAccessHandle.ViewRef] = field(
         default_factory=list,
         metadata={
             "name": "viewRef",
@@ -30,7 +32,7 @@ class SlicedAccessHandle:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    slices: Optional[SlicesType] = field(
+    slices: SlicesType | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -38,7 +40,7 @@ class SlicedAccessHandle:
             "required": True,
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -52,7 +54,7 @@ class SlicedAccessHandle:
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -68,7 +70,7 @@ class SlicedAccessHandle:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

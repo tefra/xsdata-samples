@@ -7,7 +7,7 @@ class SchemeAgencyName:
     class Meta:
         name = "@scheme-agency-name"
 
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "type",

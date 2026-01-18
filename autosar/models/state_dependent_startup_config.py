@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -46,9 +48,7 @@ class StateDependentStartupConfig:
     class Meta:
         name = "STATE-DEPENDENT-STARTUP-CONFIG"
 
-    execution_dependencys: Optional[
-        "StateDependentStartupConfig.ExecutionDependencys"
-    ] = field(
+    execution_dependencys: StateDependentStartupConfig.ExecutionDependencys | None = field(
         default=None,
         metadata={
             "name": "EXECUTION-DEPENDENCYS",
@@ -56,9 +56,7 @@ class StateDependentStartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    function_group_state_irefs: Optional[
-        "StateDependentStartupConfig.FunctionGroupStateIrefs"
-    ] = field(
+    function_group_state_irefs: StateDependentStartupConfig.FunctionGroupStateIrefs | None = field(
         default=None,
         metadata={
             "name": "FUNCTION-GROUP-STATE-IREFS",
@@ -66,7 +64,7 @@ class StateDependentStartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_consumption: Optional[ResourceConsumption] = field(
+    resource_consumption: ResourceConsumption | None = field(
         default=None,
         metadata={
             "name": "RESOURCE-CONSUMPTION",
@@ -74,9 +72,7 @@ class StateDependentStartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_group_ref: Optional[
-        "StateDependentStartupConfig.ResourceGroupRef"
-    ] = field(
+    resource_group_ref: StateDependentStartupConfig.ResourceGroupRef | None = field(
         default=None,
         metadata={
             "name": "RESOURCE-GROUP-REF",
@@ -84,9 +80,7 @@ class StateDependentStartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    startup_config_ref: Optional[
-        "StateDependentStartupConfig.StartupConfigRef"
-    ] = field(
+    startup_config_ref: StateDependentStartupConfig.StartupConfigRef | None = field(
         default=None,
         metadata={
             "name": "STARTUP-CONFIG-REF",
@@ -94,14 +88,14 @@ class StateDependentStartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -136,7 +130,7 @@ class StateDependentStartupConfig:
 
     @dataclass
     class ResourceGroupRef(Ref):
-        dest: Optional[ResourceGroupSubtypesEnum] = field(
+        dest: ResourceGroupSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -147,7 +141,7 @@ class StateDependentStartupConfig:
 
     @dataclass
     class StartupConfigRef(Ref):
-        dest: Optional[StartupConfigSubtypesEnum] = field(
+        dest: StartupConfigSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

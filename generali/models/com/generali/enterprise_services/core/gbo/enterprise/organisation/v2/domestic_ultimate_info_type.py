@@ -14,7 +14,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/enterprise/org
 
 @dataclass
 class DomesticUltimateInfoType:
-    gunsnumber_du: Optional[str] = field(
+    gunsnumber_du: str | None = field(
         default=None,
         metadata={
             "name": "GUNSNumberDU",
@@ -24,7 +24,7 @@ class DomesticUltimateInfoType:
             "pattern": r"G([0-9]{9})",
         },
     )
-    full_name_du: Optional[str] = field(
+    full_name_du: str | None = field(
         default=None,
         metadata={
             "name": "FullNameDU",
@@ -32,7 +32,7 @@ class DomesticUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    dunsnumber_du: Optional[str] = field(
+    dunsnumber_du: str | None = field(
         default=None,
         metadata={
             "name": "DUNSNumberDU",
@@ -42,7 +42,7 @@ class DomesticUltimateInfoType:
             "pattern": r"([0-9]{9})",
         },
     )
-    assigned_turnover_domestic_group: Optional[AmountType] = field(
+    assigned_turnover_domestic_group: AmountType | None = field(
         default=None,
         metadata={
             "name": "AssignedTurnoverDomesticGroup",
@@ -51,7 +51,7 @@ class DomesticUltimateInfoType:
             "nillable": True,
         },
     )
-    assigned_number_of_employees_domestic_group: Optional[Decimal] = field(
+    assigned_number_of_employees_domestic_group: Decimal | None = field(
         default=None,
         metadata={
             "name": "AssignedNumberOfEmployeesDomesticGroup",
@@ -59,7 +59,7 @@ class DomesticUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    assigned_sicdu: Optional[str] = field(
+    assigned_sicdu: str | None = field(
         default=None,
         metadata={
             "name": "AssignedSICDU",
@@ -67,7 +67,7 @@ class DomesticUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    assigned_sicname_du: Optional[str] = field(
+    assigned_sicname_du: str | None = field(
         default=None,
         metadata={
             "name": "AssignedSICNameDU",
@@ -75,7 +75,7 @@ class DomesticUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    assigned_sicduproportion_code: Optional[CodeType] = field(
+    assigned_sicduproportion_code: CodeType | None = field(
         default=None,
         metadata={
             "name": "AssignedSICDUProportionCode",
@@ -83,7 +83,7 @@ class DomesticUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    number_of_sites_dugroup: Optional[int] = field(
+    number_of_sites_dugroup: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfSitesDUGroup",
@@ -91,7 +91,7 @@ class DomesticUltimateInfoType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
         },
     )
-    number_of_sites_dugroup_exc_branches: Optional[int] = field(
+    number_of_sites_dugroup_exc_branches: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfSitesDUGroupExcBranches",

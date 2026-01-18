@@ -16,7 +16,7 @@ class ReliefOpportunityVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "ReliefOpportunity_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -24,7 +24,7 @@ class ReliefOpportunityVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -32,7 +32,7 @@ class ReliefOpportunityVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time: Optional[XmlTime] = field(
+    time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "Time",
@@ -41,7 +41,7 @@ class ReliefOpportunityVersionStructure(DataManagedObjectStructure):
             "required": True,
         },
     )
-    day_offset: Optional[int] = field(
+    day_offset: int | None = field(
         default=None,
         metadata={
             "name": "DayOffset",
@@ -49,7 +49,7 @@ class ReliefOpportunityVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    block_ref: Optional[Union[TrainBlockRef, BlockRef]] = field(
+    block_ref: TrainBlockRef | BlockRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

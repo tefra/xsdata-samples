@@ -34,7 +34,7 @@ class ItineraryByIndexedLocations(Itinerary):
             },
         )
     )
-    itinerary_by_indexed_locations_extension: Optional[ExtensionType] = field(
+    itinerary_by_indexed_locations_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "itineraryByIndexedLocationsExtension",

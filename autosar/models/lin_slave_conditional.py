@@ -55,7 +55,7 @@ class LinSlaveConditional:
     class Meta:
         name = "LIN-SLAVE-CONDITIONAL"
 
-    wake_up_by_controller_supported: Optional[Boolean] = field(
+    wake_up_by_controller_supported: Boolean | None = field(
         default=None,
         metadata={
             "name": "WAKE-UP-BY-CONTROLLER-SUPPORTED",
@@ -63,7 +63,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    protocol_version: Optional[String] = field(
+    protocol_version: String | None = field(
         default=None,
         metadata={
             "name": "PROTOCOL-VERSION",
@@ -71,7 +71,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assign_nad: Optional[Boolean] = field(
+    assign_nad: Boolean | None = field(
         default=None,
         metadata={
             "name": "ASSIGN-NAD",
@@ -79,7 +79,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    configured_nad: Optional[Integer] = field(
+    configured_nad: Integer | None = field(
         default=None,
         metadata={
             "name": "CONFIGURED-NAD",
@@ -87,7 +87,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    function_id: Optional[PositiveInteger] = field(
+    function_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "FUNCTION-ID",
@@ -95,7 +95,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_nad: Optional[Integer] = field(
+    initial_nad: Integer | None = field(
         default=None,
         metadata={
             "name": "INITIAL-NAD",
@@ -103,7 +103,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    lin_error_response: Optional[LinErrorResponse] = field(
+    lin_error_response: LinErrorResponse | None = field(
         default=None,
         metadata={
             "name": "LIN-ERROR-RESPONSE",
@@ -111,7 +111,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nas_timeout: Optional[TimeValue] = field(
+    nas_timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NAS-TIMEOUT",
@@ -119,7 +119,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    save_configuration: Optional[Boolean] = field(
+    save_configuration: Boolean | None = field(
         default=None,
         metadata={
             "name": "SAVE-CONFIGURATION",
@@ -127,7 +127,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    supplier_id: Optional[PositiveInteger] = field(
+    supplier_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SUPPLIER-ID",
@@ -135,7 +135,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variant_id: Optional[PositiveInteger] = field(
+    variant_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "VARIANT-ID",
@@ -143,7 +143,7 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -151,14 +151,14 @@ class LinSlaveConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

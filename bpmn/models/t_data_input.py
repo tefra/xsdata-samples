@@ -13,7 +13,7 @@ class TDataInput(TBaseElement):
     class Meta:
         name = "tDataInput"
 
-    data_state: Optional[DataState] = field(
+    data_state: DataState | None = field(
         default=None,
         metadata={
             "name": "dataState",
@@ -21,13 +21,13 @@ class TDataInput(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    item_subject_ref: Optional[QName] = field(
+    item_subject_ref: QName | None = field(
         default=None,
         metadata={
             "name": "itemSubjectRef",

@@ -32,9 +32,7 @@ class VmsSupplementaryPictogram:
     :ivar vms_supplementary_pictogram_extension:
     """
 
-    supplementary_pictogram_description: Optional[
-        VmsDatexSupplementalPictogramEnum
-    ] = field(
+    supplementary_pictogram_description: VmsDatexSupplementalPictogramEnum | None = field(
         default=None,
         metadata={
             "name": "supplementaryPictogramDescription",
@@ -42,7 +40,7 @@ class VmsSupplementaryPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    supplementary_pictogram_code: Optional[str] = field(
+    supplementary_pictogram_code: str | None = field(
         default=None,
         metadata={
             "name": "supplementaryPictogramCode",
@@ -51,7 +49,7 @@ class VmsSupplementaryPictogram:
             "max_length": 1024,
         },
     )
-    supplementary_pictogram_url: Optional[str] = field(
+    supplementary_pictogram_url: str | None = field(
         default=None,
         metadata={
             "name": "supplementaryPictogramUrl",
@@ -59,9 +57,7 @@ class VmsSupplementaryPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    additional_supplementary_pictogram_description: Optional[
-        MultilingualString
-    ] = field(
+    additional_supplementary_pictogram_description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "additionalSupplementaryPictogramDescription",
@@ -69,7 +65,7 @@ class VmsSupplementaryPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pictogram_flashing: Optional[bool] = field(
+    pictogram_flashing: bool | None = field(
         default=None,
         metadata={
             "name": "pictogramFlashing",
@@ -77,7 +73,7 @@ class VmsSupplementaryPictogram:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_supplementary_pictogram_extension: Optional[ExtensionType] = field(
+    vms_supplementary_pictogram_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "vmsSupplementaryPictogramExtension",

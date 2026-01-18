@@ -13,7 +13,7 @@ class AccessibilityInfoFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: Optional[AccessibilityInfoFacilityEnumeration] = field(
+    value: AccessibilityInfoFacilityEnumeration | None = field(
         default=None,
         metadata={
             "required": True,

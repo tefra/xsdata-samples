@@ -30,21 +30,21 @@ class ExternalPortReference:
             "type": "Element",
         },
     )
-    part_select: Optional[PartSelect] = field(
+    part_select: PartSelect | None = field(
         default=None,
         metadata={
             "name": "partSelect",
             "type": "Element",
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    port_ref: Optional[str] = field(
+    port_ref: str | None = field(
         default=None,
         metadata={
             "name": "portRef",
@@ -54,7 +54,7 @@ class ExternalPortReference:
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

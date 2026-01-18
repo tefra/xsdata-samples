@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Union
 
@@ -51,7 +53,7 @@ class StructuralRepositoryEventsType:
         referenced in a uniqueness constraint.
     """
 
-    agency_id: tuple[Union[str, WildCardValueType], ...] = field(
+    agency_id: tuple[str | WildCardValueType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "AgencyID",
@@ -62,33 +64,7 @@ class StructuralRepositoryEventsType:
         },
     )
     choice: tuple[
-        Union[
-            EmptyType,
-            "StructuralRepositoryEventsType.AgencyScheme",
-            "StructuralRepositoryEventsType.DataConsmerScheme",
-            "StructuralRepositoryEventsType.DataProviderScheme",
-            "StructuralRepositoryEventsType.OrganisationUnitScheme",
-            "StructuralRepositoryEventsType.Dataflow",
-            "StructuralRepositoryEventsType.Metadataflow",
-            "StructuralRepositoryEventsType.CategoryScheme",
-            IdentifiableObjectEventType,
-            "StructuralRepositoryEventsType.Codelist",
-            "StructuralRepositoryEventsType.HierarchicalCodelist",
-            "StructuralRepositoryEventsType.ConceptScheme",
-            "StructuralRepositoryEventsType.MetadataStructureDefinition",
-            "StructuralRepositoryEventsType.KeyFamily",
-            "StructuralRepositoryEventsType.StructureSet",
-            "StructuralRepositoryEventsType.ReportingTaxonomy",
-            "StructuralRepositoryEventsType.Process",
-            "StructuralRepositoryEventsType.AttachmentConstraint",
-            "StructuralRepositoryEventsType.ContentConstraint",
-            "StructuralRepositoryEventsType.ProvisionAgreement",
-            "StructuralRepositoryEventsType.TransformationScheme",
-            "StructuralRepositoryEventsType.NameAliasScheme",
-            "StructuralRepositoryEventsType.NamePersonalisationScheme",
-            "StructuralRepositoryEventsType.RulesetScheme",
-            "StructuralRepositoryEventsType.UserDefinedOperatorScheme",
-        ],
+        EmptyType | StructuralRepositoryEventsType.AgencyScheme | StructuralRepositoryEventsType.DataConsmerScheme | StructuralRepositoryEventsType.DataProviderScheme | StructuralRepositoryEventsType.OrganisationUnitScheme | StructuralRepositoryEventsType.Dataflow | StructuralRepositoryEventsType.Metadataflow | StructuralRepositoryEventsType.CategoryScheme | IdentifiableObjectEventType | StructuralRepositoryEventsType.Codelist | StructuralRepositoryEventsType.HierarchicalCodelist | StructuralRepositoryEventsType.ConceptScheme | StructuralRepositoryEventsType.MetadataStructureDefinition | StructuralRepositoryEventsType.KeyFamily | StructuralRepositoryEventsType.StructureSet | StructuralRepositoryEventsType.ReportingTaxonomy | StructuralRepositoryEventsType.Process | StructuralRepositoryEventsType.AttachmentConstraint | StructuralRepositoryEventsType.ContentConstraint | StructuralRepositoryEventsType.ProvisionAgreement | StructuralRepositoryEventsType.TransformationScheme | StructuralRepositoryEventsType.NameAliasScheme | StructuralRepositoryEventsType.NamePersonalisationScheme | StructuralRepositoryEventsType.RulesetScheme | StructuralRepositoryEventsType.UserDefinedOperatorScheme,
         ...,
     ] = field(
         default_factory=tuple,

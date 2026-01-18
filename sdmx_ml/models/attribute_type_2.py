@@ -56,7 +56,7 @@ class AttributeType2(AttributeBaseType):
             "pattern": r".+\.conceptscheme\.Concept=.+",
         },
     )
-    attribute_relationship: Optional[AttributeRelationshipType] = field(
+    attribute_relationship: AttributeRelationshipType | None = field(
         default=None,
         metadata={
             "name": "AttributeRelationship",
@@ -65,7 +65,7 @@ class AttributeType2(AttributeBaseType):
             "required": True,
         },
     )
-    measure_relationship: Optional[MeasureRelationshipType] = field(
+    measure_relationship: MeasureRelationshipType | None = field(
         default=None,
         metadata={
             "name": "MeasureRelationship",

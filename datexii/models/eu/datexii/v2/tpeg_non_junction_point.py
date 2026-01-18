@@ -24,7 +24,7 @@ class TpegNonJunctionPoint(TpegPoint):
     :ivar tpeg_non_junction_point_extension:
     """
 
-    point_coordinates: Optional[PointCoordinates] = field(
+    point_coordinates: PointCoordinates | None = field(
         default=None,
         metadata={
             "name": "pointCoordinates",
@@ -41,7 +41,7 @@ class TpegNonJunctionPoint(TpegPoint):
             "min_occurs": 1,
         },
     )
-    tpeg_non_junction_point_extension: Optional[ExtensionType] = field(
+    tpeg_non_junction_point_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "tpegNonJunctionPointExtension",

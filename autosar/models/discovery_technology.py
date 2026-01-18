@@ -33,7 +33,7 @@ class DiscoveryTechnology:
     class Meta:
         name = "DISCOVERY-TECHNOLOGY"
 
-    name: Optional[DiscoveryTechnologyEnum] = field(
+    name: DiscoveryTechnologyEnum | None = field(
         default=None,
         metadata={
             "name": "NAME",
@@ -41,7 +41,7 @@ class DiscoveryTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    version: Optional[String] = field(
+    version: String | None = field(
         default=None,
         metadata={
             "name": "VERSION",
@@ -49,14 +49,14 @@ class DiscoveryTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

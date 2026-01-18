@@ -18,7 +18,7 @@ class PointVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Point_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -26,7 +26,7 @@ class PointVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    location: Optional[LocationStructure2] = field(
+    location: LocationStructure2 | None = field(
         default=None,
         metadata={
             "name": "Location",
@@ -34,7 +34,7 @@ class PointVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    point_number: Optional[str] = field(
+    point_number: str | None = field(
         default=None,
         metadata={
             "name": "PointNumber",
@@ -42,21 +42,21 @@ class PointVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    types: Optional[TypeOfPointRefsRelStructure] = field(
+    types: TypeOfPointRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    projections: Optional[ProjectionsRelStructure] = field(
+    projections: ProjectionsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    group_memberships: Optional[GroupMembershipRefsRelStructure] = field(
+    group_memberships: GroupMembershipRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "groupMemberships",

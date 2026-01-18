@@ -20,11 +20,7 @@ class PointsInJourneyPatternRelStructure(
         name = "pointsInJourneyPattern_RelStructure"
 
     point_in_journey_pattern_or_stop_point_in_journey_pattern_or_timing_point_in_journey_pattern: Iterable[
-        Union[
-            PointInJourneyPattern,
-            StopPointInJourneyPattern,
-            TimingPointInJourneyPattern,
-        ]
+        PointInJourneyPattern | StopPointInJourneyPattern | TimingPointInJourneyPattern
     ] = field(
         default_factory=list,
         metadata={

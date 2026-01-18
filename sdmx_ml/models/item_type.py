@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any, ForwardRef, Optional, Union
 
@@ -23,26 +25,7 @@ class ItemType(ItemBaseType):
     """
 
     choice: tuple[
-        Union[
-            str,
-            "CustomType",
-            "UserDefinedOperator",
-            "Ruleset",
-            "NamePersonalisation",
-            "VtlMapping",
-            "Transformation",
-            "ReportingCategory",
-            "OrganisationUnit",
-            "MetadataProvider",
-            "DataProvider",
-            "DataConsumer",
-            "Agency",
-            "Concept",
-            "GeoGridCode",
-            "GeoFeatureSetCode",
-            "Code",
-            "Category",
-        ],
+        str | CustomType | UserDefinedOperator | Ruleset | NamePersonalisation | VtlMapping | Transformation | ReportingCategory | OrganisationUnit | MetadataProvider | DataProvider | DataConsumer | Agency | Concept | GeoGridCode | GeoFeatureSetCode | Code | Category,
         ...,
     ] = field(
         default_factory=tuple,
@@ -294,7 +277,7 @@ class ConceptType(ConceptBaseType):
         concept.
     """
 
-    core_representation: Optional[ConceptRepresentation] = field(
+    core_representation: ConceptRepresentation | None = field(
         default=None,
         metadata={
             "name": "CoreRepresentation",
@@ -302,7 +285,7 @@ class ConceptType(ConceptBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    isoconcept_reference: Optional[IsoconceptReferenceType] = field(
+    isoconcept_reference: IsoconceptReferenceType | None = field(
         default=None,
         metadata={
             "name": "ISOConceptReference",
@@ -388,10 +371,7 @@ class ReportingCategoryType(ReportingCategoryBaseType):
     """
 
     structural_metadata_or_provisioning_metadata: tuple[
-        Union[
-            "ReportingCategoryType.StructuralMetadata",
-            "ReportingCategoryType.ProvisioningMetadata",
-        ],
+        ReportingCategoryType.StructuralMetadata | ReportingCategoryType.ProvisioningMetadata,
         ...,
     ] = field(
         default_factory=tuple,
@@ -418,7 +398,7 @@ class ReportingCategoryType(ReportingCategoryBaseType):
 
     @dataclass(frozen=True)
     class StructuralMetadata:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -428,7 +408,7 @@ class ReportingCategoryType(ReportingCategoryBaseType):
 
     @dataclass(frozen=True)
     class ProvisioningMetadata:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -563,7 +543,7 @@ class CustomTypeType(CustomTypeBaseType):
         conversion when a component has a null value.
     """
 
-    vtl_scalar_type: Optional[str] = field(
+    vtl_scalar_type: str | None = field(
         default=None,
         metadata={
             "name": "VtlScalarType",
@@ -572,7 +552,7 @@ class CustomTypeType(CustomTypeBaseType):
             "required": True,
         },
     )
-    data_type: Optional[Union[SimpleDataType, str]] = field(
+    data_type: SimpleDataType | str | None = field(
         default=None,
         metadata={
             "name": "DataType",
@@ -581,7 +561,7 @@ class CustomTypeType(CustomTypeBaseType):
             "required": True,
         },
     )
-    vtl_literal_format: Optional[str] = field(
+    vtl_literal_format: str | None = field(
         default=None,
         metadata={
             "name": "VtlLiteralFormat",
@@ -589,7 +569,7 @@ class CustomTypeType(CustomTypeBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    output_format: Optional[str] = field(
+    output_format: str | None = field(
         default=None,
         metadata={
             "name": "OutputFormat",
@@ -597,7 +577,7 @@ class CustomTypeType(CustomTypeBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    null_value: Optional[str] = field(
+    null_value: str | None = field(
         default=None,
         metadata={
             "name": "NullValue",
@@ -653,7 +633,7 @@ class GeoFeatureSetCodeType(GeoRefCodeType):
         pattern (see section 6).
     """
 
-    value: Optional[str] = field(
+    value: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -671,7 +651,7 @@ class GeoGridCodeType(GeoRefCodeType):
         grid.
     """
 
-    geo_cell: Optional[str] = field(
+    geo_cell: str | None = field(
         default=None,
         metadata={
             "name": "GeoCell",
@@ -720,7 +700,7 @@ class NamePersonalisationType(NamePersonalisationBaseType):
         variable.
     """
 
-    vtl_default_name: Optional[str] = field(
+    vtl_default_name: str | None = field(
         default=None,
         metadata={
             "name": "VtlDefaultName",
@@ -729,7 +709,7 @@ class NamePersonalisationType(NamePersonalisationBaseType):
             "required": True,
         },
     )
-    personalised_name: Optional[str] = field(
+    personalised_name: str | None = field(
         default=None,
         metadata={
             "name": "PersonalisedName",
@@ -738,7 +718,7 @@ class NamePersonalisationType(NamePersonalisationBaseType):
             "required": True,
         },
     )
-    vtl_artefact: Optional[str] = field(
+    vtl_artefact: str | None = field(
         default=None,
         metadata={
             "name": "vtlArtefact",
@@ -798,7 +778,7 @@ class RulesetType(RulesetBaseType):
         defined. In VTL 2.0, this is value domain or variable.
     """
 
-    ruleset_definition: Optional[str] = field(
+    ruleset_definition: str | None = field(
         default=None,
         metadata={
             "name": "RulesetDefinition",
@@ -807,7 +787,7 @@ class RulesetType(RulesetBaseType):
             "required": True,
         },
     )
-    ruleset_type: Optional[str] = field(
+    ruleset_type: str | None = field(
         default=None,
         metadata={
             "name": "rulesetType",
@@ -815,7 +795,7 @@ class RulesetType(RulesetBaseType):
             "required": True,
         },
     )
-    ruleset_scope: Optional[str] = field(
+    ruleset_scope: str | None = field(
         default=None,
         metadata={
             "name": "rulesetScope",
@@ -851,7 +831,7 @@ class TransformationType(TransformationBaseType):
         transformations within the same transformation scheme.
     """
 
-    expression: Optional[str] = field(
+    expression: str | None = field(
         default=None,
         metadata={
             "name": "Expression",
@@ -860,7 +840,7 @@ class TransformationType(TransformationBaseType):
             "required": True,
         },
     )
-    result: Optional[str] = field(
+    result: str | None = field(
         default=None,
         metadata={
             "name": "Result",
@@ -869,7 +849,7 @@ class TransformationType(TransformationBaseType):
             "required": True,
         },
     )
-    is_persistent: Optional[bool] = field(
+    is_persistent: bool | None = field(
         default=None,
         metadata={
             "name": "isPersistent",
@@ -895,7 +875,7 @@ class UserDefinedOperatorType(UserDefinedOperatorBaseType):
         their data types, the VTL expression that defines its behaviour.
     """
 
-    operator_definition: Optional[str] = field(
+    operator_definition: str | None = field(
         default=None,
         metadata={
             "name": "OperatorDefinition",
@@ -932,14 +912,7 @@ class VtlMappingType(VtlMappingBaseType):
     """
 
     choice_1: tuple[
-        Union[
-            "VtlMappingType.Dataflow",
-            EmptyType,
-            ToVtlMappingType,
-            FromVtlMappingType,
-            "VtlMappingType.Codelist",
-            "VtlMappingType.Concept",
-        ],
+        VtlMappingType.Dataflow | EmptyType | ToVtlMappingType | FromVtlMappingType | VtlMappingType.Codelist | VtlMappingType.Concept,
         ...,
     ] = field(
         default_factory=tuple,
@@ -980,7 +953,7 @@ class VtlMappingType(VtlMappingBaseType):
             "max_occurs": 3,
         },
     )
-    alias: Optional[str] = field(
+    alias: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -990,7 +963,7 @@ class VtlMappingType(VtlMappingBaseType):
 
     @dataclass(frozen=True)
     class Dataflow:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -1000,7 +973,7 @@ class VtlMappingType(VtlMappingBaseType):
 
     @dataclass(frozen=True)
     class Codelist:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -1010,7 +983,7 @@ class VtlMappingType(VtlMappingBaseType):
 
     @dataclass(frozen=True)
     class Concept:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,

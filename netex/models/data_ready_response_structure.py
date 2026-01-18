@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional, Union
 
@@ -14,7 +16,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class DataReadyResponseStructure(ConsumerResponseEndpointStructure):
-    status: Optional[Status] = field(
+    status: Status | None = field(
         default=None,
         metadata={
             "name": "Status",
@@ -22,7 +24,7 @@ class DataReadyResponseStructure(ConsumerResponseEndpointStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: Optional["DataReadyResponseStructure.ErrorCondition"] = (
+    error_condition: DataReadyResponseStructure.ErrorCondition | None = (
         field(
             default=None,
             metadata={
@@ -35,9 +37,7 @@ class DataReadyResponseStructure(ConsumerResponseEndpointStructure):
 
     @dataclass
     class ErrorCondition:
-        unknown_subscription_error_or_other_error: Optional[
-            Union[UnknownSubscriptionError, OtherError]
-        ] = field(
+        unknown_subscription_error_or_other_error: UnknownSubscriptionError | OtherError | None = field(
             default=None,
             metadata={
                 "type": "Elements",
@@ -55,7 +55,7 @@ class DataReadyResponseStructure(ConsumerResponseEndpointStructure):
                 ),
             },
         )
-        description: Optional[ErrorDescriptionStructure] = field(
+        description: ErrorDescriptionStructure | None = field(
             default=None,
             metadata={
                 "name": "Description",

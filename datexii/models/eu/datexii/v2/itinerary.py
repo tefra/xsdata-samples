@@ -27,7 +27,7 @@ class Itinerary(GroupOfLocations):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    itinerary_extension: Optional[ExtensionType] = field(
+    itinerary_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "itineraryExtension",

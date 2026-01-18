@@ -19,7 +19,7 @@ class GroupsOfDistanceMatrixElementsRelStructure(
         name = "groupsOfDistanceMatrixElements_RelStructure"
 
     group_of_distance_matrix_elements_ref_or_group_of_distance_matrix_elements: Iterable[
-        Union[GroupOfDistanceMatrixElementsRef, GroupOfDistanceMatrixElements]
+        GroupOfDistanceMatrixElementsRef | GroupOfDistanceMatrixElements
     ] = field(
         default_factory=list,
         metadata={

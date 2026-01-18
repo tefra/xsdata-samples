@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class BswDataSendPolicy:
     class Meta:
         name = "BSW-DATA-SEND-POLICY"
 
-    enable_take_address: Optional[Boolean] = field(
+    enable_take_address: Boolean | None = field(
         default=None,
         metadata={
             "name": "ENABLE-TAKE-ADDRESS",
@@ -47,7 +49,7 @@ class BswDataSendPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provided_data_ref: Optional["BswDataSendPolicy.ProvidedDataRef"] = field(
+    provided_data_ref: BswDataSendPolicy.ProvidedDataRef | None = field(
         default=None,
         metadata={
             "name": "PROVIDED-DATA-REF",
@@ -55,7 +57,7 @@ class BswDataSendPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    proviede_data_ref: Optional["BswDataSendPolicy.ProviedeDataRef"] = field(
+    proviede_data_ref: BswDataSendPolicy.ProviedeDataRef | None = field(
         default=None,
         metadata={
             "name": "PROVIEDE-DATA-REF",
@@ -63,7 +65,7 @@ class BswDataSendPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -71,14 +73,14 @@ class BswDataSendPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -89,7 +91,7 @@ class BswDataSendPolicy:
 
     @dataclass
     class ProvidedDataRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -100,7 +102,7 @@ class BswDataSendPolicy:
 
     @dataclass
     class ProviedeDataRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

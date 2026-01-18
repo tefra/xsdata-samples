@@ -22,7 +22,7 @@ class TimeDemandTypeVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "TimeDemandType_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -30,7 +30,7 @@ class TimeDemandTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -38,7 +38,7 @@ class TimeDemandTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -46,7 +46,7 @@ class TimeDemandTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_time_demand_type_ref: Optional[TypeOfTimeDemandTypeRef] = field(
+    type_of_time_demand_type_ref: TypeOfTimeDemandTypeRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfTimeDemandTypeRef",
@@ -54,7 +54,7 @@ class TimeDemandTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    presentation: Optional[PresentationStructure] = field(
+    presentation: PresentationStructure | None = field(
         default=None,
         metadata={
             "name": "Presentation",
@@ -62,7 +62,7 @@ class TimeDemandTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    run_times: Optional[JourneyRunTimesRelStructure] = field(
+    run_times: JourneyRunTimesRelStructure | None = field(
         default=None,
         metadata={
             "name": "runTimes",
@@ -70,7 +70,7 @@ class TimeDemandTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wait_times: Optional[JourneyWaitTimesRelStructure] = field(
+    wait_times: JourneyWaitTimesRelStructure | None = field(
         default=None,
         metadata={
             "name": "waitTimes",
@@ -78,21 +78,21 @@ class TimeDemandTypeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    layovers: Optional[JourneyLayoversRelStructure] = field(
+    layovers: JourneyLayoversRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    headways: Optional[JourneyHeadwaysRelStructure] = field(
+    headways: JourneyHeadwaysRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_preferences: Optional[VehicleTypePreferencesRelStructure] = field(
+    vehicle_preferences: VehicleTypePreferencesRelStructure | None = field(
         default=None,
         metadata={
             "name": "vehiclePreferences",

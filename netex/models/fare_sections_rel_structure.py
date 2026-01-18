@@ -15,7 +15,7 @@ class FareSectionsRelStructure(ContainmentAggregationStructure):
         name = "fareSections_RelStructure"
 
     fare_section_ref_or_fare_section: Iterable[
-        Union[FareSectionRef, FareSection]
+        FareSectionRef | FareSection
     ] = field(
         default_factory=list,
         metadata={

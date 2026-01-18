@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -17,7 +19,7 @@ class Arrays:
         name = "arrays"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    array: list["Arrays.Array"] = field(
+    array: list[Arrays.Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -27,28 +29,28 @@ class Arrays:
 
     @dataclass
     class Array:
-        left: Optional[Left] = field(
+        left: Left | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        right: Optional[Right] = field(
+        right: Right | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        array_id: Optional[str] = field(
+        array_id: str | None = field(
             default=None,
             metadata={
                 "name": "arrayId",
                 "type": "Attribute",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

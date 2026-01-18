@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -89,7 +91,7 @@ class UserDefinedFieldDeployment:
     class Meta:
         name = "USER-DEFINED-FIELD-DEPLOYMENT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -98,9 +100,7 @@ class UserDefinedFieldDeployment:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "UserDefinedFieldDeployment.ShortNameFragments"
-    ] = field(
+    short_name_fragments: UserDefinedFieldDeployment.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -108,7 +108,7 @@ class UserDefinedFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -116,7 +116,7 @@ class UserDefinedFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -124,7 +124,7 @@ class UserDefinedFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -132,7 +132,7 @@ class UserDefinedFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -140,7 +140,7 @@ class UserDefinedFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -148,7 +148,7 @@ class UserDefinedFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["UserDefinedFieldDeployment.Annotations"] = field(
+    annotations: UserDefinedFieldDeployment.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -156,7 +156,7 @@ class UserDefinedFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    field_ref: Optional["UserDefinedFieldDeployment.FieldRef"] = field(
+    field_ref: UserDefinedFieldDeployment.FieldRef | None = field(
         default=None,
         metadata={
             "name": "FIELD-REF",
@@ -164,7 +164,7 @@ class UserDefinedFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    get: Optional[UserDefinedMethodDeployment] = field(
+    get: UserDefinedMethodDeployment | None = field(
         default=None,
         metadata={
             "name": "GET",
@@ -172,7 +172,7 @@ class UserDefinedFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    notifier: Optional[UserDefinedEventDeployment] = field(
+    notifier: UserDefinedEventDeployment | None = field(
         default=None,
         metadata={
             "name": "NOTIFIER",
@@ -180,7 +180,7 @@ class UserDefinedFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    set: Optional[UserDefinedMethodDeployment] = field(
+    set: UserDefinedMethodDeployment | None = field(
         default=None,
         metadata={
             "name": "SET",
@@ -188,14 +188,14 @@ class UserDefinedFieldDeployment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -203,7 +203,7 @@ class UserDefinedFieldDeployment:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -235,7 +235,7 @@ class UserDefinedFieldDeployment:
 
     @dataclass
     class FieldRef(Ref):
-        dest: Optional[FieldSubtypesEnum] = field(
+        dest: FieldSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

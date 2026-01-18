@@ -18,7 +18,7 @@ class StatusHistoryTypeStateTransitionReasonsReasonCode(CodeType):
     class Meta:
         global_type = False
 
-    list_hierarchy_id: Optional[str] = field(
+    list_hierarchy_id: str | None = field(
         default=None,
         metadata={
             "name": "listHierarchyID",

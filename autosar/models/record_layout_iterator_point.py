@@ -37,14 +37,14 @@ class RecordLayoutIteratorPoint:
             "pattern": r"-?([0-9]+|MAX-TEXT-SIZE|ARRAY-SIZE)",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

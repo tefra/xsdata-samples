@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -32,7 +34,7 @@ class RtpTp:
     class Meta:
         name = "RTP-TP"
 
-    ssrc: Optional[PositiveInteger] = field(
+    ssrc: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SSRC",
@@ -40,7 +42,7 @@ class RtpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_udp_config: Optional["RtpTp.TcpUdpConfig"] = field(
+    tcp_udp_config: RtpTp.TcpUdpConfig | None = field(
         default=None,
         metadata={
             "name": "TCP-UDP-CONFIG",
@@ -48,14 +50,14 @@ class RtpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -66,7 +68,7 @@ class RtpTp:
 
     @dataclass
     class TcpUdpConfig:
-        tcp_tp: Optional[TcpTp] = field(
+        tcp_tp: TcpTp | None = field(
             default=None,
             metadata={
                 "name": "TCP-TP",
@@ -74,7 +76,7 @@ class RtpTp:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        udp_tp: Optional[UdpTp] = field(
+        udp_tp: UdpTp | None = field(
             default=None,
             metadata={
                 "name": "UDP-TP",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -108,7 +110,7 @@ class TdEventOperation:
     class Meta:
         name = "TD-EVENT-OPERATION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -117,7 +119,7 @@ class TdEventOperation:
             "required": True,
         },
     )
-    short_name_fragments: Optional["TdEventOperation.ShortNameFragments"] = (
+    short_name_fragments: TdEventOperation.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -127,7 +129,7 @@ class TdEventOperation:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -135,7 +137,7 @@ class TdEventOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -143,7 +145,7 @@ class TdEventOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -151,7 +153,7 @@ class TdEventOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -159,7 +161,7 @@ class TdEventOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -167,7 +169,7 @@ class TdEventOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["TdEventOperation.Annotations"] = field(
+    annotations: TdEventOperation.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -175,7 +177,7 @@ class TdEventOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -183,7 +185,7 @@ class TdEventOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    occurrence_expression: Optional[TdEventOccurrenceExpression] = field(
+    occurrence_expression: TdEventOccurrenceExpression | None = field(
         default=None,
         metadata={
             "name": "OCCURRENCE-EXPRESSION",
@@ -191,7 +193,7 @@ class TdEventOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    component_iref: Optional[ComponentInCompositionInstanceRef] = field(
+    component_iref: ComponentInCompositionInstanceRef | None = field(
         default=None,
         metadata={
             "name": "COMPONENT-IREF",
@@ -199,7 +201,7 @@ class TdEventOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_external: Optional[Boolean] = field(
+    is_external: Boolean | None = field(
         default=None,
         metadata={
             "name": "IS-EXTERNAL",
@@ -207,9 +209,7 @@ class TdEventOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_blueprint_ref: Optional[
-        "TdEventOperation.PortPrototypeBlueprintRef"
-    ] = field(
+    port_prototype_blueprint_ref: TdEventOperation.PortPrototypeBlueprintRef | None = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-BLUEPRINT-REF",
@@ -217,7 +217,7 @@ class TdEventOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_ref: Optional["TdEventOperation.PortRef"] = field(
+    port_ref: TdEventOperation.PortRef | None = field(
         default=None,
         metadata={
             "name": "PORT-REF",
@@ -225,7 +225,7 @@ class TdEventOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_ref: Optional["TdEventOperation.OperationRef"] = field(
+    operation_ref: TdEventOperation.OperationRef | None = field(
         default=None,
         metadata={
             "name": "OPERATION-REF",
@@ -233,7 +233,7 @@ class TdEventOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_event_operation_type: Optional[TdEventOperationTypeEnum] = field(
+    td_event_operation_type: TdEventOperationTypeEnum | None = field(
         default=None,
         metadata={
             "name": "TD-EVENT-OPERATION-TYPE",
@@ -241,14 +241,14 @@ class TdEventOperation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -256,7 +256,7 @@ class TdEventOperation:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -288,7 +288,7 @@ class TdEventOperation:
 
     @dataclass
     class PortPrototypeBlueprintRef(Ref):
-        dest: Optional[PortPrototypeBlueprintSubtypesEnum] = field(
+        dest: PortPrototypeBlueprintSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -299,7 +299,7 @@ class TdEventOperation:
 
     @dataclass
     class PortRef(Ref):
-        dest: Optional[PortPrototypeSubtypesEnum] = field(
+        dest: PortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -310,7 +310,7 @@ class TdEventOperation:
 
     @dataclass
     class OperationRef(Ref):
-        dest: Optional[ClientServerOperationSubtypesEnum] = field(
+        dest: ClientServerOperationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

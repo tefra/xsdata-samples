@@ -13,9 +13,7 @@ class VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics:
     class Meta:
         name = "_VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics"
 
-    vms_pictogram_display_characteristics: Optional[
-        VmsPictogramDisplayCharacteristics
-    ] = field(
+    vms_pictogram_display_characteristics: VmsPictogramDisplayCharacteristics | None = field(
         default=None,
         metadata={
             "name": "vmsPictogramDisplayCharacteristics",
@@ -24,7 +22,7 @@ class VmsRecordPictogramDisplayAreaIndexVmsPictogramDisplayCharacteristics:
             "required": True,
         },
     )
-    pictogram_display_area_index: Optional[int] = field(
+    pictogram_display_area_index: int | None = field(
         default=None,
         metadata={
             "name": "pictogramDisplayAreaIndex",

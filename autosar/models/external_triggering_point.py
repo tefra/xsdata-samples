@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -42,7 +44,7 @@ class ExternalTriggeringPoint:
     class Meta:
         name = "EXTERNAL-TRIGGERING-POINT"
 
-    ident: Optional[ExternalTriggeringPointIdent] = field(
+    ident: ExternalTriggeringPointIdent | None = field(
         default=None,
         metadata={
             "name": "IDENT",
@@ -50,7 +52,7 @@ class ExternalTriggeringPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_iref: Optional["ExternalTriggeringPoint.TriggerIref"] = field(
+    trigger_iref: ExternalTriggeringPoint.TriggerIref | None = field(
         default=None,
         metadata={
             "name": "TRIGGER-IREF",
@@ -58,7 +60,7 @@ class ExternalTriggeringPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -66,14 +68,14 @@ class ExternalTriggeringPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -84,9 +86,7 @@ class ExternalTriggeringPoint:
 
     @dataclass
     class TriggerIref:
-        p_trigger_in_atomic_swc_type_instance_ref: Optional[
-            PTriggerInAtomicSwcTypeInstanceRef
-        ] = field(
+        p_trigger_in_atomic_swc_type_instance_ref: PTriggerInAtomicSwcTypeInstanceRef | None = field(
             default=None,
             metadata={
                 "name": "P-TRIGGER-IN-ATOMIC-SWC-TYPE-INSTANCE-REF",

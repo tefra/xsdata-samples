@@ -9,40 +9,40 @@ class Font:
     class Meta:
         namespace = "http://www.omg.org/spec/DD/20100524/DC"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    size: Optional[float] = field(
+    size: float | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    is_bold: Optional[bool] = field(
+    is_bold: bool | None = field(
         default=None,
         metadata={
             "name": "isBold",
             "type": "Attribute",
         },
     )
-    is_italic: Optional[bool] = field(
+    is_italic: bool | None = field(
         default=None,
         metadata={
             "name": "isItalic",
             "type": "Attribute",
         },
     )
-    is_underline: Optional[bool] = field(
+    is_underline: bool | None = field(
         default=None,
         metadata={
             "name": "isUnderline",
             "type": "Attribute",
         },
     )
-    is_strike_through: Optional[bool] = field(
+    is_strike_through: bool | None = field(
         default=None,
         metadata={
             "name": "isStrikeThrough",

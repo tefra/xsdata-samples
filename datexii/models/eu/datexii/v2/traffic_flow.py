@@ -31,7 +31,7 @@ class TrafficFlow(TrafficData):
     :ivar traffic_flow_extension:
     """
 
-    axle_flow: Optional[AxleFlowValue] = field(
+    axle_flow: AxleFlowValue | None = field(
         default=None,
         metadata={
             "name": "axleFlow",
@@ -39,7 +39,7 @@ class TrafficFlow(TrafficData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pcu_flow: Optional[PcuFlowValue] = field(
+    pcu_flow: PcuFlowValue | None = field(
         default=None,
         metadata={
             "name": "pcuFlow",
@@ -47,7 +47,7 @@ class TrafficFlow(TrafficData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    percentage_long_vehicles: Optional[PercentageValue] = field(
+    percentage_long_vehicles: PercentageValue | None = field(
         default=None,
         metadata={
             "name": "percentageLongVehicles",
@@ -55,7 +55,7 @@ class TrafficFlow(TrafficData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_flow: Optional[VehicleFlowValue] = field(
+    vehicle_flow: VehicleFlowValue | None = field(
         default=None,
         metadata={
             "name": "vehicleFlow",
@@ -63,7 +63,7 @@ class TrafficFlow(TrafficData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    traffic_flow_extension: Optional[ExtensionType] = field(
+    traffic_flow_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "trafficFlowExtension",

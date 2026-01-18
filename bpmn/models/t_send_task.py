@@ -13,20 +13,20 @@ class TSendTask(TTask):
     class Meta:
         name = "tSendTask"
 
-    implementation: Union[str, TImplementationValue] = field(
+    implementation: str | TImplementationValue = field(
         default=TImplementationValue.WEB_SERVICE,
         metadata={
             "type": "Attribute",
         },
     )
-    message_ref: Optional[QName] = field(
+    message_ref: QName | None = field(
         default=None,
         metadata={
             "name": "messageRef",
             "type": "Attribute",
         },
     )
-    operation_ref: Optional[QName] = field(
+    operation_ref: QName | None = field(
         default=None,
         metadata={
             "name": "operationRef",

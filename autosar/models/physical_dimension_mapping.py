@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -32,9 +34,7 @@ class PhysicalDimensionMapping:
     class Meta:
         name = "PHYSICAL-DIMENSION-MAPPING"
 
-    first_physical_dimension_ref: Optional[
-        "PhysicalDimensionMapping.FirstPhysicalDimensionRef"
-    ] = field(
+    first_physical_dimension_ref: PhysicalDimensionMapping.FirstPhysicalDimensionRef | None = field(
         default=None,
         metadata={
             "name": "FIRST-PHYSICAL-DIMENSION-REF",
@@ -42,9 +42,7 @@ class PhysicalDimensionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_physical_dimension_ref: Optional[
-        "PhysicalDimensionMapping.SecondPhysicalDimensionRef"
-    ] = field(
+    second_physical_dimension_ref: PhysicalDimensionMapping.SecondPhysicalDimensionRef | None = field(
         default=None,
         metadata={
             "name": "SECOND-PHYSICAL-DIMENSION-REF",
@@ -52,14 +50,14 @@ class PhysicalDimensionMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +68,7 @@ class PhysicalDimensionMapping:
 
     @dataclass
     class FirstPhysicalDimensionRef(Ref):
-        dest: Optional[PhysicalDimensionSubtypesEnum] = field(
+        dest: PhysicalDimensionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -81,7 +79,7 @@ class PhysicalDimensionMapping:
 
     @dataclass
     class SecondPhysicalDimensionRef(Ref):
-        dest: Optional[PhysicalDimensionSubtypesEnum] = field(
+        dest: PhysicalDimensionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

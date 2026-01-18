@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -87,7 +89,7 @@ class ProcessExecutionError:
     class Meta:
         name = "PROCESS-EXECUTION-ERROR"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -96,9 +98,7 @@ class ProcessExecutionError:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ProcessExecutionError.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ProcessExecutionError.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -106,7 +106,7 @@ class ProcessExecutionError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -114,7 +114,7 @@ class ProcessExecutionError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -122,7 +122,7 @@ class ProcessExecutionError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -130,7 +130,7 @@ class ProcessExecutionError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -138,7 +138,7 @@ class ProcessExecutionError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -146,7 +146,7 @@ class ProcessExecutionError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ProcessExecutionError.Annotations"] = field(
+    annotations: ProcessExecutionError.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -154,7 +154,7 @@ class ProcessExecutionError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -162,7 +162,7 @@ class ProcessExecutionError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    execution_error: Optional[PositiveInteger] = field(
+    execution_error: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "EXECUTION-ERROR",
@@ -170,14 +170,14 @@ class ProcessExecutionError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -185,7 +185,7 @@ class ProcessExecutionError:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

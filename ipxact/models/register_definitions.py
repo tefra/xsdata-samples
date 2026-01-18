@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -21,7 +23,7 @@ class RegisterDefinitions:
         name = "registerDefinitions"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    register_definition: list["RegisterDefinitions.RegisterDefinition"] = (
+    register_definition: list[RegisterDefinitions.RegisterDefinition] = (
         field(
             default_factory=list,
             metadata={
@@ -51,54 +53,54 @@ class RegisterDefinitions:
         :ivar id:
         """
 
-        name: Optional[str] = field(
+        name: str | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        display_name: Optional[DisplayName] = field(
+        display_name: DisplayName | None = field(
             default=None,
             metadata={
                 "name": "displayName",
                 "type": "Element",
             },
         )
-        short_description: Optional[ShortDescription] = field(
+        short_description: ShortDescription | None = field(
             default=None,
             metadata={
                 "name": "shortDescription",
                 "type": "Element",
             },
         )
-        description: Optional[Description] = field(
+        description: Description | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        type_identifier: Optional[str] = field(
+        type_identifier: str | None = field(
             default=None,
             metadata={
                 "name": "typeIdentifier",
                 "type": "Element",
             },
         )
-        size: Optional[UnsignedPositiveIntExpression] = field(
+        size: UnsignedPositiveIntExpression | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        volatile: Optional[Volatile] = field(
+        volatile: Volatile | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        access_policies: Optional[AccessPolicies] = field(
+        access_policies: AccessPolicies | None = field(
             default=None,
             metadata={
                 "name": "accessPolicies",
@@ -113,14 +115,14 @@ class RegisterDefinitions:
                 "min_occurs": 1,
             },
         )
-        vendor_extensions: Optional[VendorExtensions] = field(
+        vendor_extensions: VendorExtensions | None = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

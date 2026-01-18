@@ -34,29 +34,7 @@ class ExplicitPlaceEquipmentsRelStructure(ContainmentAggregationStructure):
         name = "explicitPlaceEquipments_RelStructure"
 
     choice: Iterable[
-        Union[
-            OtherPlaceEquipment,
-            RoughSurface,
-            EntranceEquipment,
-            StaircaseEquipment,
-            LiftEquipment,
-            LiftCallEquipment,
-            EscalatorEquipment,
-            TravelatorEquipment,
-            RampEquipment,
-            QueueingEquipment,
-            CrossingEquipment,
-            PlaceLighting,
-            PlaceSignStructure,
-            HeadingSignStructure,
-            GeneralSignStructure,
-            HelpPointEquipment,
-            PassengerSafetyEquipment,
-            RubbishDisposalEquipment,
-            SanitaryEquipment,
-            TicketingEquipment,
-            TicketValidatorEquipment,
-        ]
+        OtherPlaceEquipment | RoughSurface | EntranceEquipment | StaircaseEquipment | LiftEquipment | LiftCallEquipment | EscalatorEquipment | TravelatorEquipment | RampEquipment | QueueingEquipment | CrossingEquipment | PlaceLighting | PlaceSignStructure | HeadingSignStructure | GeneralSignStructure | HelpPointEquipment | PassengerSafetyEquipment | RubbishDisposalEquipment | SanitaryEquipment | TicketingEquipment | TicketValidatorEquipment
     ] = field(
         default_factory=list,
         metadata={

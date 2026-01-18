@@ -16,7 +16,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class CompoundBlockStructure(DataManagedObjectStructure):
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -24,7 +24,7 @@ class CompoundBlockStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -32,9 +32,7 @@ class CompoundBlockStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_type_ref: Optional[
-        Union[CompoundTrainRef, TrainRef, VehicleTypeRef]
-    ] = field(
+    vehicle_type_ref: CompoundTrainRef | TrainRef | VehicleTypeRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -57,7 +55,7 @@ class CompoundBlockStructure(DataManagedObjectStructure):
             ),
         },
     )
-    start_point_ref: Optional[TimingPointInJourneyPatternRefStructure] = field(
+    start_point_ref: TimingPointInJourneyPatternRefStructure | None = field(
         default=None,
         metadata={
             "name": "StartPointRef",
@@ -65,7 +63,7 @@ class CompoundBlockStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_point_ref: Optional[TimingPointInJourneyPatternRefStructure] = field(
+    end_point_ref: TimingPointInJourneyPatternRefStructure | None = field(
         default=None,
         metadata={
             "name": "EndPointRef",
@@ -73,7 +71,7 @@ class CompoundBlockStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parts: Optional[BlockPartsRelStructure] = field(
+    parts: BlockPartsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

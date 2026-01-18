@@ -13,7 +13,7 @@ class AreaExtended:
     Extension class for area used in parking publication extension.
     """
 
-    named_area: Optional[NamedArea] = field(
+    named_area: NamedArea | None = field(
         default=None,
         metadata={
             "name": "namedArea",

@@ -23,9 +23,7 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
     class Meta:
         name = "VehicleStoppingPlace_VersionStructure"
 
-    infrastructure_link_ref: Optional[
-        Union[WireLinkRef, RoadLinkRef, RailwayLinkRef]
-    ] = field(
+    infrastructure_link_ref: WireLinkRef | RoadLinkRef | RailwayLinkRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -48,9 +46,7 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
             ),
         },
     )
-    infrastructure_point_ref: Optional[
-        Union[WirePointRef, RoadPointRef, RailwayPointRef]
-    ] = field(
+    infrastructure_point_ref: WirePointRef | RoadPointRef | RailwayPointRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -73,9 +69,7 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
             ),
         },
     )
-    vehicle_stopping_positions: Optional[
-        VehicleStoppingPositionsRelStructure
-    ] = field(
+    vehicle_stopping_positions: VehicleStoppingPositionsRelStructure | None = field(
         default=None,
         metadata={
             "name": "vehicleStoppingPositions",
@@ -83,7 +77,7 @@ class VehicleStoppingPlaceVersionStructure(StopPlaceSpaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    quay_alignments: Optional[VehicleQuayAlignmentsRelStructure] = field(
+    quay_alignments: VehicleQuayAlignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "quayAlignments",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -23,7 +25,7 @@ class PortSliceType:
     class Meta:
         name = "portSliceType"
 
-    path_segments: Optional["PortSliceType.PathSegments"] = field(
+    path_segments: PortSliceType.PathSegments | None = field(
         default=None,
         metadata={
             "name": "pathSegments",
@@ -32,14 +34,14 @@ class PortSliceType:
             "required": True,
         },
     )
-    range: Optional[Range] = field(
+    range: Range | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

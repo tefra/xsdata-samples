@@ -97,14 +97,14 @@ class Area:
     class Meta:
         name = "AREA"
 
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -112,154 +112,154 @@ class Area:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    accesskey: Optional[str] = field(
+    accesskey: str | None = field(
         default=None,
         metadata={
             "name": "ACCESSKEY",
             "type": "Attribute",
         },
     )
-    alt: Optional[str] = field(
+    alt: str | None = field(
         default=None,
         metadata={
             "name": "ALT",
             "type": "Attribute",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "CLASS",
             "type": "Attribute",
         },
     )
-    coords: Optional[str] = field(
+    coords: str | None = field(
         default=None,
         metadata={
             "name": "COORDS",
             "type": "Attribute",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "name": "HREF",
             "type": "Attribute",
         },
     )
-    nohref: Optional[AreaEnumNohrefSimple] = field(
+    nohref: AreaEnumNohrefSimple | None = field(
         default=None,
         metadata={
             "name": "NOHREF",
             "type": "Attribute",
         },
     )
-    onblur: Optional[str] = field(
+    onblur: str | None = field(
         default=None,
         metadata={
             "name": "ONBLUR",
             "type": "Attribute",
         },
     )
-    onclick: Optional[str] = field(
+    onclick: str | None = field(
         default=None,
         metadata={
             "name": "ONCLICK",
             "type": "Attribute",
         },
     )
-    ondblclick: Optional[str] = field(
+    ondblclick: str | None = field(
         default=None,
         metadata={
             "name": "ONDBLCLICK",
             "type": "Attribute",
         },
     )
-    onfocus: Optional[str] = field(
+    onfocus: str | None = field(
         default=None,
         metadata={
             "name": "ONFOCUS",
             "type": "Attribute",
         },
     )
-    onkeydown: Optional[str] = field(
+    onkeydown: str | None = field(
         default=None,
         metadata={
             "name": "ONKEYDOWN",
             "type": "Attribute",
         },
     )
-    onkeypress: Optional[str] = field(
+    onkeypress: str | None = field(
         default=None,
         metadata={
             "name": "ONKEYPRESS",
             "type": "Attribute",
         },
     )
-    onkeyup: Optional[str] = field(
+    onkeyup: str | None = field(
         default=None,
         metadata={
             "name": "ONKEYUP",
             "type": "Attribute",
         },
     )
-    onmousedown: Optional[str] = field(
+    onmousedown: str | None = field(
         default=None,
         metadata={
             "name": "ONMOUSEDOWN",
             "type": "Attribute",
         },
     )
-    onmousemove: Optional[str] = field(
+    onmousemove: str | None = field(
         default=None,
         metadata={
             "name": "ONMOUSEMOVE",
             "type": "Attribute",
         },
     )
-    onmouseout: Optional[str] = field(
+    onmouseout: str | None = field(
         default=None,
         metadata={
             "name": "ONMOUSEOUT",
             "type": "Attribute",
         },
     )
-    onmouseover: Optional[str] = field(
+    onmouseover: str | None = field(
         default=None,
         metadata={
             "name": "ONMOUSEOVER",
             "type": "Attribute",
         },
     )
-    onmouseup: Optional[str] = field(
+    onmouseup: str | None = field(
         default=None,
         metadata={
             "name": "ONMOUSEUP",
             "type": "Attribute",
         },
     )
-    shape: Optional[AreaEnumShapeSimple] = field(
+    shape: AreaEnumShapeSimple | None = field(
         default=None,
         metadata={
             "name": "SHAPE",
             "type": "Attribute",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "name": "STYLE",
             "type": "Attribute",
         },
     )
-    tabindex: Optional[str] = field(
+    tabindex: str | None = field(
         default=None,
         metadata={
             "name": "TABINDEX",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "name": "TITLE",

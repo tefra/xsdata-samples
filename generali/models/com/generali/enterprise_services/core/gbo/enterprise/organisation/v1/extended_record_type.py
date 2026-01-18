@@ -107,7 +107,7 @@ class ExtendedRecordType:
     :ivar party_local_ids:
     """
 
-    domestic_ultimate_dunsnumber: Optional[str] = field(
+    domestic_ultimate_dunsnumber: str | None = field(
         default=None,
         metadata={
             "name": "DomesticUltimateDUNSNumber",
@@ -117,7 +117,7 @@ class ExtendedRecordType:
             "pattern": r"([0-9]{9})",
         },
     )
-    domestic_ultimate_gunsnumber: Optional[str] = field(
+    domestic_ultimate_gunsnumber: str | None = field(
         default=None,
         metadata={
             "name": "DomesticUltimateGUNSNumber",
@@ -127,7 +127,7 @@ class ExtendedRecordType:
             "pattern": r"G([0-9]{9})",
         },
     )
-    domestic_ultimate_gunsname: Optional[str] = field(
+    domestic_ultimate_gunsname: str | None = field(
         default=None,
         metadata={
             "name": "DomesticUltimateGUNSName",
@@ -135,7 +135,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    global_ultimate_country_code: Optional[str] = field(
+    global_ultimate_country_code: str | None = field(
         default=None,
         metadata={
             "name": "GlobalUltimateCountryCode",
@@ -144,7 +144,7 @@ class ExtendedRecordType:
             "pattern": r"[A-Z][A-Z]",
         },
     )
-    company_levels: Optional[ExtendedRecordTypeCompanyLevels] = field(
+    company_levels: ExtendedRecordTypeCompanyLevels | None = field(
         default=None,
         metadata={
             "name": "CompanyLevels",
@@ -152,7 +152,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    company_legal_status: Optional[LegalStatusCodeType] = field(
+    company_legal_status: LegalStatusCodeType | None = field(
         default=None,
         metadata={
             "name": "CompanyLegalStatus",
@@ -160,7 +160,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    year_started: Optional[int] = field(
+    year_started: int | None = field(
         default=None,
         metadata={
             "name": "YearStarted",
@@ -168,7 +168,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    turnover: Optional[AmountType] = field(
+    turnover: AmountType | None = field(
         default=None,
         metadata={
             "name": "Turnover",
@@ -176,7 +176,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    turnover_currency: Optional[str] = field(
+    turnover_currency: str | None = field(
         default=None,
         metadata={
             "name": "TurnoverCurrency",
@@ -184,7 +184,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    turnover_accuracy: Optional[int] = field(
+    turnover_accuracy: int | None = field(
         default=None,
         metadata={
             "name": "TurnoverAccuracy",
@@ -192,7 +192,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    number_of_employees: Optional[int] = field(
+    number_of_employees: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfEmployees",
@@ -200,7 +200,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    employee_accuracy: Optional[int] = field(
+    employee_accuracy: int | None = field(
         default=None,
         metadata={
             "name": "EmployeeAccuracy",
@@ -208,7 +208,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    assigned_turnover_tree_below_eur: Optional[AmountType] = field(
+    assigned_turnover_tree_below_eur: AmountType | None = field(
         default=None,
         metadata={
             "name": "AssignedTurnoverTreeBelowEUR",
@@ -217,7 +217,7 @@ class ExtendedRecordType:
             "nillable": True,
         },
     )
-    assigned_turnover_domestic_group_eur: Optional[AmountType] = field(
+    assigned_turnover_domestic_group_eur: AmountType | None = field(
         default=None,
         metadata={
             "name": "AssignedTurnoverDomesticGroupEUR",
@@ -226,7 +226,7 @@ class ExtendedRecordType:
             "nillable": True,
         },
     )
-    assigned_turnover_global_group_eur: Optional[AmountType] = field(
+    assigned_turnover_global_group_eur: AmountType | None = field(
         default=None,
         metadata={
             "name": "AssignedTurnoverGlobalGroupEUR",
@@ -235,7 +235,7 @@ class ExtendedRecordType:
             "nillable": True,
         },
     )
-    assigned_number_of_employees_tree_below: Optional[Decimal] = field(
+    assigned_number_of_employees_tree_below: Decimal | None = field(
         default=None,
         metadata={
             "name": "AssignedNumberOfEmployeesTreeBelow",
@@ -243,7 +243,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    assigned_number_of_employees_domestic_group: Optional[Decimal] = field(
+    assigned_number_of_employees_domestic_group: Decimal | None = field(
         default=None,
         metadata={
             "name": "AssignedNumberOfEmployeesDomesticGroup",
@@ -251,7 +251,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    assigned_number_of_employees_global_group: Optional[Decimal] = field(
+    assigned_number_of_employees_global_group: Decimal | None = field(
         default=None,
         metadata={
             "name": "AssignedNumberOfEmployeesGlobalGroup",
@@ -259,7 +259,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    assigned_sic4_du: Optional[str] = field(
+    assigned_sic4_du: str | None = field(
         default=None,
         metadata={
             "name": "AssignedSIC4DU",
@@ -267,7 +267,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    assigned_sic4_name_du: Optional[str] = field(
+    assigned_sic4_name_du: str | None = field(
         default=None,
         metadata={
             "name": "AssignedSIC4NameDU",
@@ -275,7 +275,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    assigned_sic2_du: Optional[str] = field(
+    assigned_sic2_du: str | None = field(
         default=None,
         metadata={
             "name": "AssignedSIC2DU",
@@ -283,7 +283,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    assigned_sic2_name_du: Optional[str] = field(
+    assigned_sic2_name_du: str | None = field(
         default=None,
         metadata={
             "name": "AssignedSIC2NameDU",
@@ -291,7 +291,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    assigned_sicduproportion_code: Optional[int] = field(
+    assigned_sicduproportion_code: int | None = field(
         default=None,
         metadata={
             "name": "AssignedSICDUProportionCode",
@@ -299,7 +299,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    assigned_sic4_gu: Optional[str] = field(
+    assigned_sic4_gu: str | None = field(
         default=None,
         metadata={
             "name": "AssignedSIC4GU",
@@ -307,7 +307,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    assigned_sic4_name_gu: Optional[str] = field(
+    assigned_sic4_name_gu: str | None = field(
         default=None,
         metadata={
             "name": "AssignedSIC4NameGU",
@@ -315,7 +315,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    assigned_sic2_gu: Optional[str] = field(
+    assigned_sic2_gu: str | None = field(
         default=None,
         metadata={
             "name": "AssignedSIC2GU",
@@ -323,7 +323,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    assigned_sic2_name_gu: Optional[str] = field(
+    assigned_sic2_name_gu: str | None = field(
         default=None,
         metadata={
             "name": "AssignedSIC2NameGU",
@@ -331,7 +331,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    assigned_sicguproportion_code: Optional[int] = field(
+    assigned_sicguproportion_code: int | None = field(
         default=None,
         metadata={
             "name": "AssignedSICGUProportionCode",
@@ -339,7 +339,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    is_part_of_corporate_tree: Optional[bool] = field(
+    is_part_of_corporate_tree: bool | None = field(
         default=None,
         metadata={
             "name": "IsPartOfCorporateTree",
@@ -347,7 +347,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    is_standalone: Optional[bool] = field(
+    is_standalone: bool | None = field(
         default=None,
         metadata={
             "name": "IsStandalone",
@@ -355,7 +355,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    this_level_in_corporate_tree: Optional[int] = field(
+    this_level_in_corporate_tree: int | None = field(
         default=None,
         metadata={
             "name": "ThisLevelInCorporateTree",
@@ -363,7 +363,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    number_of_level_in_corporate_tree: Optional[int] = field(
+    number_of_level_in_corporate_tree: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfLevelInCorporateTree",
@@ -371,7 +371,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    number_of_countries_in_group: Optional[int] = field(
+    number_of_countries_in_group: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfCountriesInGroup",
@@ -379,7 +379,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    national_or_multinational_code: Optional[int] = field(
+    national_or_multinational_code: int | None = field(
         default=None,
         metadata={
             "name": "NationalOrMultinationalCode",
@@ -387,7 +387,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    national_or_multinational_code_exc_branches: Optional[int] = field(
+    national_or_multinational_code_exc_branches: int | None = field(
         default=None,
         metadata={
             "name": "NationalOrMultinationalCodeExcBranches",
@@ -395,7 +395,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    tree_below_sites: Optional[Decimal] = field(
+    tree_below_sites: Decimal | None = field(
         default=None,
         metadata={
             "name": "TreeBelowSites",
@@ -403,7 +403,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    tree_below_sites_excluding_branch: Optional[Decimal] = field(
+    tree_below_sites_excluding_branch: Decimal | None = field(
         default=None,
         metadata={
             "name": "TreeBelowSitesExcludingBranch",
@@ -411,7 +411,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    number_of_sites_gugroup: Optional[int] = field(
+    number_of_sites_gugroup: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfSitesGUGroup",
@@ -419,7 +419,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    number_of_sites_gugroup_exc_branches: Optional[int] = field(
+    number_of_sites_gugroup_exc_branches: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfSitesGUGroupExcBranches",
@@ -427,7 +427,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    number_of_sites_gugroup_in_this_country: Optional[int] = field(
+    number_of_sites_gugroup_in_this_country: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfSitesGUGroupInThisCountry",
@@ -435,7 +435,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    number_of_sites_gugroup_in_this_country_exc_branches: Optional[int] = (
+    number_of_sites_gugroup_in_this_country_exc_branches: int | None = (
         field(
             default=None,
             metadata={
@@ -445,7 +445,7 @@ class ExtendedRecordType:
             },
         )
     )
-    number_of_sites_dugroup: Optional[int] = field(
+    number_of_sites_dugroup: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfSitesDUGroup",
@@ -453,7 +453,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    number_of_sites_dugroup_exc_branches: Optional[int] = field(
+    number_of_sites_dugroup_exc_branches: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfSitesDUGroupExcBranches",
@@ -461,7 +461,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    number_of_eusites_gugroup: Optional[int] = field(
+    number_of_eusites_gugroup: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfEUSitesGUGroup",
@@ -469,7 +469,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    number_of_eusites_gugroup_exc_branches: Optional[int] = field(
+    number_of_eusites_gugroup_exc_branches: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfEUSitesGUGroupExcBranches",
@@ -477,7 +477,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    business_lines: Optional[ExtendedRecordTypeBusinessLines] = field(
+    business_lines: ExtendedRecordTypeBusinessLines | None = field(
         default=None,
         metadata={
             "name": "BusinessLines",
@@ -485,7 +485,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    domestic_ultimate: Optional[bool] = field(
+    domestic_ultimate: bool | None = field(
         default=None,
         metadata={
             "name": "DomesticUltimate",
@@ -493,7 +493,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    global_ultimate: Optional[bool] = field(
+    global_ultimate: bool | None = field(
         default=None,
         metadata={
             "name": "GlobalUltimate",
@@ -501,7 +501,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    senders: Optional[ExtendedRecordTypeSenders] = field(
+    senders: ExtendedRecordTypeSenders | None = field(
         default=None,
         metadata={
             "name": "Senders",
@@ -509,9 +509,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    duplicated_gunsnumbers: Optional[
-        ExtendedRecordTypeDuplicatedGunsnumbers
-    ] = field(
+    duplicated_gunsnumbers: ExtendedRecordTypeDuplicatedGunsnumbers | None = field(
         default=None,
         metadata={
             "name": "DuplicatedGUNSNumbers",
@@ -519,7 +517,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    acquired_from_dn_b: Optional[XmlDateTime] = field(
+    acquired_from_dn_b: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "AcquiredFromDnB",
@@ -527,7 +525,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    refreshed_by_dand_b: Optional[XmlDateTime] = field(
+    refreshed_by_dand_b: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "RefreshedByDandB",
@@ -535,7 +533,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    refresh_count: Optional[int] = field(
+    refresh_count: int | None = field(
         default=None,
         metadata={
             "name": "RefreshCount",
@@ -543,7 +541,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    user_created_by: Optional[str] = field(
+    user_created_by: str | None = field(
         default=None,
         metadata={
             "name": "UserCreatedBy",
@@ -551,7 +549,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    exported_date: Optional[XmlDateTime] = field(
+    exported_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "ExportedDate",
@@ -559,7 +557,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    local_ids: Optional[ExtendedRecordTypeLocalIds] = field(
+    local_ids: ExtendedRecordTypeLocalIds | None = field(
         default=None,
         metadata={
             "name": "LocalIds",
@@ -567,7 +565,7 @@ class ExtendedRecordType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
         },
     )
-    party_local_ids: Optional[ExtendedRecordTypePartyLocalIds] = field(
+    party_local_ids: ExtendedRecordTypePartyLocalIds | None = field(
         default=None,
         metadata={
             "name": "PartyLocalIds",

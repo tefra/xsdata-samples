@@ -21,7 +21,7 @@ class ControllableElementsInSequenceRelStructure(
         name = "controllableElementsInSequence_RelStructure"
 
     controllable_element_in_sequence_ref_or_controllable_element_in_sequence: Iterable[
-        Union[ControllableElementInSequenceRef, ControllableElementInSequence]
+        ControllableElementInSequenceRef | ControllableElementInSequence
     ] = field(
         default_factory=list,
         metadata={

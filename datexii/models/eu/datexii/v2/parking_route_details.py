@@ -47,7 +47,7 @@ class ParkingRouteDetails(ParkingRoute):
     :ivar version:
     """
 
-    parking_route_name: Optional[MultilingualString] = field(
+    parking_route_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "parkingRouteName",
@@ -55,7 +55,7 @@ class ParkingRouteDetails(ParkingRoute):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_route_type: Optional[ParkingRouteTypeEnum] = field(
+    parking_route_type: ParkingRouteTypeEnum | None = field(
         default=None,
         metadata={
             "name": "parkingRouteType",
@@ -63,7 +63,7 @@ class ParkingRouteDetails(ParkingRoute):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    dynamic_route_management: Optional[bool] = field(
+    dynamic_route_management: bool | None = field(
         default=None,
         metadata={
             "name": "dynamicRouteManagement",
@@ -71,7 +71,7 @@ class ParkingRouteDetails(ParkingRoute):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_route_icon_index: Optional[str] = field(
+    parking_route_icon_index: str | None = field(
         default=None,
         metadata={
             "name": "parkingRouteIconIndex",
@@ -80,7 +80,7 @@ class ParkingRouteDetails(ParkingRoute):
             "max_length": 1024,
         },
     )
-    parking_route_direction: Optional[DirectionEnum] = field(
+    parking_route_direction: DirectionEnum | None = field(
         default=None,
         metadata={
             "name": "parkingRouteDirection",
@@ -88,7 +88,7 @@ class ParkingRouteDetails(ParkingRoute):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_route_direction2: Optional[ParkingRouteDirectionEnum] = field(
+    parking_route_direction2: ParkingRouteDirectionEnum | None = field(
         default=None,
         metadata={
             "name": "parkingRouteDirection2",
@@ -96,7 +96,7 @@ class ParkingRouteDetails(ParkingRoute):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    group_of_locations: Optional[GroupOfLocations] = field(
+    group_of_locations: GroupOfLocations | None = field(
         default=None,
         metadata={
             "name": "groupOfLocations",
@@ -104,7 +104,7 @@ class ParkingRouteDetails(ParkingRoute):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_route_details_extension: Optional[ExtensionType] = field(
+    parking_route_details_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "parkingRouteDetailsExtension",
@@ -112,14 +112,14 @@ class ParkingRouteDetails(ParkingRoute):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

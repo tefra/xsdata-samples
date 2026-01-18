@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -30,21 +32,21 @@ class ModelType:
     class Meta:
         name = "modelType"
 
-    views: Optional["ModelType.Views"] = field(
+    views: ModelType.Views | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    instantiations: Optional["ModelType.Instantiations"] = field(
+    instantiations: ModelType.Instantiations | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    ports: Optional["ModelType.Ports"] = field(
+    ports: ModelType.Ports | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -58,7 +60,7 @@ class ModelType:
         :ivar view: Single view of a component
         """
 
-        view: list["ModelType.Views.View"] = field(
+        view: list[ModelType.Views.View] = field(
             default_factory=list,
             metadata={
                 "type": "Element",
@@ -91,7 +93,7 @@ class ModelType:
             :ivar id:
             """
 
-            name: Optional[str] = field(
+            name: str | None = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -99,7 +101,7 @@ class ModelType:
                     "required": True,
                 },
             )
-            display_name: Optional[DisplayName] = field(
+            display_name: DisplayName | None = field(
                 default=None,
                 metadata={
                     "name": "displayName",
@@ -107,7 +109,7 @@ class ModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            short_description: Optional[ShortDescription] = field(
+            short_description: ShortDescription | None = field(
                 default=None,
                 metadata={
                     "name": "shortDescription",
@@ -115,14 +117,14 @@ class ModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            description: Optional[Description] = field(
+            description: Description | None = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            env_identifier: list["ModelType.Views.View.EnvIdentifier"] = field(
+            env_identifier: list[ModelType.Views.View.EnvIdentifier] = field(
                 default_factory=list,
                 metadata={
                     "name": "envIdentifier",
@@ -130,7 +132,7 @@ class ModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            component_instantiation_ref: Optional[str] = field(
+            component_instantiation_ref: str | None = field(
                 default=None,
                 metadata={
                     "name": "componentInstantiationRef",
@@ -138,7 +140,7 @@ class ModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            design_instantiation_ref: Optional[str] = field(
+            design_instantiation_ref: str | None = field(
                 default=None,
                 metadata={
                     "name": "designInstantiationRef",
@@ -146,7 +148,7 @@ class ModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            design_configuration_instantiation_ref: Optional[str] = field(
+            design_configuration_instantiation_ref: str | None = field(
                 default=None,
                 metadata={
                     "name": "designConfigurationInstantiationRef",
@@ -154,7 +156,7 @@ class ModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            vendor_extensions: Optional[VendorExtensions] = field(
+            vendor_extensions: VendorExtensions | None = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
@@ -162,7 +164,7 @@ class ModelType:
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
                 },
             )
-            id: Optional[str] = field(
+            id: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
@@ -179,7 +181,7 @@ class ModelType:
                         "pattern": r"[a-zA-Z0-9_+\*\.]*:[a-zA-Z0-9_+\*\.]*:[a-zA-Z0-9_+\*\.]*",
                     },
                 )
-                id: Optional[str] = field(
+                id: str | None = field(
                     default=None,
                     metadata={
                         "type": "Attribute",

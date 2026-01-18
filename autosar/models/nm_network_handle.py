@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -42,7 +44,7 @@ class NmNetworkHandle:
     class Meta:
         name = "NM-NETWORK-HANDLE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -51,7 +53,7 @@ class NmNetworkHandle:
             "required": True,
         },
     )
-    short_name_fragments: Optional["NmNetworkHandle.ShortNameFragments"] = (
+    short_name_fragments: NmNetworkHandle.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -61,7 +63,7 @@ class NmNetworkHandle:
             },
         )
     )
-    partial_network_refs: Optional["NmNetworkHandle.PartialNetworkRefs"] = (
+    partial_network_refs: NmNetworkHandle.PartialNetworkRefs | None = (
         field(
             default=None,
             metadata={
@@ -71,7 +73,7 @@ class NmNetworkHandle:
             },
         )
     )
-    vlan_refs: Optional["NmNetworkHandle.VlanRefs"] = field(
+    vlan_refs: NmNetworkHandle.VlanRefs | None = field(
         default=None,
         metadata={
             "name": "VLAN-REFS",
@@ -79,14 +81,14 @@ class NmNetworkHandle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -109,7 +111,7 @@ class NmNetworkHandle:
     @dataclass
     class PartialNetworkRefs:
         partial_network_ref: list[
-            "NmNetworkHandle.PartialNetworkRefs.PartialNetworkRef"
+            NmNetworkHandle.PartialNetworkRefs.PartialNetworkRef
         ] = field(
             default_factory=list,
             metadata={
@@ -121,7 +123,7 @@ class NmNetworkHandle:
 
         @dataclass
         class PartialNetworkRef(Ref):
-            dest: Optional[PncMappingIdentSubtypesEnum] = field(
+            dest: PncMappingIdentSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -132,7 +134,7 @@ class NmNetworkHandle:
 
     @dataclass
     class VlanRefs:
-        vlan_ref: list["NmNetworkHandle.VlanRefs.VlanRef"] = field(
+        vlan_ref: list[NmNetworkHandle.VlanRefs.VlanRef] = field(
             default_factory=list,
             metadata={
                 "name": "VLAN-REF",
@@ -143,7 +145,7 @@ class NmNetworkHandle:
 
         @dataclass
         class VlanRef(Ref):
-            dest: Optional[EthernetCommunicationConnectorSubtypesEnum] = field(
+            dest: EthernetCommunicationConnectorSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

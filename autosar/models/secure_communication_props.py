@@ -99,7 +99,7 @@ class SecureCommunicationProps:
     class Meta:
         name = "SECURE-COMMUNICATION-PROPS"
 
-    auth_algorithm: Optional[String] = field(
+    auth_algorithm: String | None = field(
         default=None,
         metadata={
             "name": "AUTH-ALGORITHM",
@@ -107,7 +107,7 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    auth_data_freshness_length: Optional[PositiveInteger] = field(
+    auth_data_freshness_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "AUTH-DATA-FRESHNESS-LENGTH",
@@ -115,7 +115,7 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    auth_data_freshness_start_position: Optional[PositiveInteger] = field(
+    auth_data_freshness_start_position: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "AUTH-DATA-FRESHNESS-START-POSITION",
@@ -123,7 +123,7 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    auth_info_tx_length: Optional[PositiveInteger] = field(
+    auth_info_tx_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "AUTH-INFO-TX-LENGTH",
@@ -131,7 +131,7 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    authentication_build_attempts: Optional[PositiveInteger] = field(
+    authentication_build_attempts: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "AUTHENTICATION-BUILD-ATTEMPTS",
@@ -139,7 +139,7 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    authentication_retries: Optional[PositiveInteger] = field(
+    authentication_retries: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "AUTHENTICATION-RETRIES",
@@ -147,7 +147,7 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_id: Optional[PositiveInteger] = field(
+    data_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "DATA-ID",
@@ -155,7 +155,7 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freshness_counter_sync_attempts: Optional[PositiveInteger] = field(
+    freshness_counter_sync_attempts: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "FRESHNESS-COUNTER-SYNC-ATTEMPTS",
@@ -163,7 +163,7 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freshness_timestamp_time_period_factor: Optional[PositiveInteger] = field(
+    freshness_timestamp_time_period_factor: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "FRESHNESS-TIMESTAMP-TIME-PERIOD-FACTOR",
@@ -171,7 +171,7 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freshness_value_id: Optional[PositiveInteger] = field(
+    freshness_value_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "FRESHNESS-VALUE-ID",
@@ -179,7 +179,7 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freshness_value_length: Optional[PositiveInteger] = field(
+    freshness_value_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "FRESHNESS-VALUE-LENGTH",
@@ -187,7 +187,7 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    freshness_value_tx_length: Optional[PositiveInteger] = field(
+    freshness_value_tx_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "FRESHNESS-VALUE-TX-LENGTH",
@@ -195,7 +195,7 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    message_link_length: Optional[PositiveInteger] = field(
+    message_link_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MESSAGE-LINK-LENGTH",
@@ -203,7 +203,7 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    message_link_position: Optional[PositiveInteger] = field(
+    message_link_position: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MESSAGE-LINK-POSITION",
@@ -211,7 +211,7 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    secondary_freshness_value_id: Optional[PositiveInteger] = field(
+    secondary_freshness_value_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SECONDARY-FRESHNESS-VALUE-ID",
@@ -219,7 +219,7 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    secured_area_length: Optional[PositiveInteger] = field(
+    secured_area_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SECURED-AREA-LENGTH",
@@ -227,7 +227,7 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    secured_area_offset: Optional[PositiveInteger] = field(
+    secured_area_offset: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SECURED-AREA-OFFSET",
@@ -235,7 +235,7 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    use_freshness_timestamp: Optional[Boolean] = field(
+    use_freshness_timestamp: Boolean | None = field(
         default=None,
         metadata={
             "name": "USE-FRESHNESS-TIMESTAMP",
@@ -243,14 +243,14 @@ class SecureCommunicationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

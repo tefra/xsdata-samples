@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional
 
@@ -94,7 +96,7 @@ class AdminData:
     class Meta:
         name = "ADMIN-DATA"
 
-    language: Optional[LEnum] = field(
+    language: LEnum | None = field(
         default=None,
         metadata={
             "name": "LANGUAGE",
@@ -102,7 +104,7 @@ class AdminData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    used_languages: Optional[MultiLanguagePlainText] = field(
+    used_languages: MultiLanguagePlainText | None = field(
         default=None,
         metadata={
             "name": "USED-LANGUAGES",
@@ -110,7 +112,7 @@ class AdminData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    doc_revisions: Optional["AdminData.DocRevisions"] = field(
+    doc_revisions: AdminData.DocRevisions | None = field(
         default=None,
         metadata={
             "name": "DOC-REVISIONS",
@@ -118,7 +120,7 @@ class AdminData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdgs: Optional["AdminData.Sdgs"] = field(
+    sdgs: AdminData.Sdgs | None = field(
         default=None,
         metadata={
             "name": "SDGS",
@@ -126,14 +128,14 @@ class AdminData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -155,7 +157,7 @@ class AdminData:
 
     @dataclass
     class Sdgs:
-        sdg: list["Sdg"] = field(
+        sdg: list[Sdg] = field(
             default_factory=list,
             metadata={
                 "name": "SDG",
@@ -191,7 +193,7 @@ class Annotation:
     class Meta:
         name = "ANNOTATION"
 
-    label: Optional[MultilanguageLongName] = field(
+    label: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -199,7 +201,7 @@ class Annotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_origin: Optional[String] = field(
+    annotation_origin: String | None = field(
         default=None,
         metadata={
             "name": "ANNOTATION-ORIGIN",
@@ -207,7 +209,7 @@ class Annotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_text: Optional["DocumentationBlock"] = field(
+    annotation_text: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "ANNOTATION-TEXT",
@@ -215,14 +217,14 @@ class Annotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -254,14 +256,14 @@ class BlueprintFormula:
     class Meta:
         name = "BLUEPRINT-FORMULA"
 
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -307,7 +309,7 @@ class BlueprintFormula:
 
     @dataclass
     class SyscStringRef(Ref):
-        dest: Optional[SwSystemconstSubtypesEnum] = field(
+        dest: SwSystemconstSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -318,7 +320,7 @@ class BlueprintFormula:
 
     @dataclass
     class SyscRef(Ref):
-        dest: Optional[SwSystemconstSubtypesEnum] = field(
+        dest: SwSystemconstSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -329,7 +331,7 @@ class BlueprintFormula:
 
     @dataclass
     class EcucQueryRef(Ref):
-        dest: Optional[EcucQuerySubtypesEnum] = field(
+        dest: EcucQuerySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -340,7 +342,7 @@ class BlueprintFormula:
 
     @dataclass
     class EcucRef(Ref):
-        dest: Optional[EcucDefinitionElementSubtypesEnum] = field(
+        dest: EcucDefinitionElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -376,7 +378,7 @@ class BlueprintGenerator:
     class Meta:
         name = "BLUEPRINT-GENERATOR"
 
-    introduction: Optional["DocumentationBlock"] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -384,7 +386,7 @@ class BlueprintGenerator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    expression: Optional[VerbatimString] = field(
+    expression: VerbatimString | None = field(
         default=None,
         metadata={
             "name": "EXPRESSION",
@@ -392,14 +394,14 @@ class BlueprintGenerator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -457,7 +459,7 @@ class DefItem:
     class Meta:
         name = "DEF-ITEM"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -466,7 +468,7 @@ class DefItem:
             "required": True,
         },
     )
-    short_name_fragments: Optional["DefItem.ShortNameFragments"] = field(
+    short_name_fragments: DefItem.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -474,7 +476,7 @@ class DefItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -482,7 +484,7 @@ class DefItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    def_value: Optional["DocumentationBlock"] = field(
+    def_value: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "DEF",
@@ -490,7 +492,7 @@ class DefItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional["VariationPoint"] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -498,14 +500,14 @@ class DefItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -521,7 +523,7 @@ class DefItem:
             "tokens": True,
         },
     )
-    view: Optional[str] = field(
+    view: str | None = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -529,21 +531,21 @@ class DefItem:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: Optional[ChapterEnumBreakSimple] = field(
+    break_value: ChapterEnumBreakSimple | None = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
+    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
         },
     )
-    help_entry: Optional[str] = field(
+    help_entry: str | None = field(
         default=None,
         metadata={
             "name": "HELP-ENTRY",
@@ -586,7 +588,7 @@ class ReferrableRefConditional:
     class Meta:
         name = "REFERRABLE-REF-CONDITIONAL"
 
-    referrable_ref: Optional["ReferrableRefConditional.ReferrableRef"] = field(
+    referrable_ref: ReferrableRefConditional.ReferrableRef | None = field(
         default=None,
         metadata={
             "name": "REFERRABLE-REF",
@@ -594,7 +596,7 @@ class ReferrableRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional["VariationPoint"] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -602,14 +604,14 @@ class ReferrableRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -620,7 +622,7 @@ class ReferrableRefConditional:
 
     @dataclass
     class ReferrableRef(Ref):
-        dest: Optional[ReferrableSubtypesEnum] = field(
+        dest: ReferrableSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -679,7 +681,7 @@ class DefList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional["VariationPoint"] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -687,14 +689,14 @@ class DefList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -710,7 +712,7 @@ class DefList:
             "tokens": True,
         },
     )
-    view: Optional[str] = field(
+    view: str | None = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -718,14 +720,14 @@ class DefList:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: Optional[ChapterEnumBreakSimple] = field(
+    break_value: ChapterEnumBreakSimple | None = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
+    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
@@ -785,7 +787,7 @@ class Sdg:
     class Meta:
         name = "SDG"
 
-    sdg_caption: Optional[SdgCaption] = field(
+    sdg_caption: SdgCaption | None = field(
         default=None,
         metadata={
             "name": "SDG-CAPTION",
@@ -793,7 +795,7 @@ class Sdg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdg_caption_ref: Optional["Sdg.SdgCaptionRef"] = field(
+    sdg_caption_ref: Sdg.SdgCaptionRef | None = field(
         default=None,
         metadata={
             "name": "SDG-CAPTION-REF",
@@ -801,7 +803,7 @@ class Sdg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdx_ref: list["Sdg.SdxRef"] = field(
+    sdx_ref: list[Sdg.SdxRef] = field(
         default_factory=list,
         metadata={
             "name": "SDX-REF",
@@ -825,7 +827,7 @@ class Sdg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdg: list["Sdg"] = field(
+    sdg: list[Sdg] = field(
         default_factory=list,
         metadata={
             "name": "SDG",
@@ -841,7 +843,7 @@ class Sdg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional["VariationPoint"] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -849,14 +851,14 @@ class Sdg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -864,7 +866,7 @@ class Sdg:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    gid: Optional[str] = field(
+    gid: str | None = field(
         default=None,
         metadata={
             "name": "GID",
@@ -874,7 +876,7 @@ class Sdg:
 
     @dataclass
     class SdgCaptionRef(Ref):
-        dest: Optional[SdgCaptionSubtypesEnum] = field(
+        dest: SdgCaptionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -885,7 +887,7 @@ class Sdg:
 
     @dataclass
     class SdxRef(Ref):
-        dest: Optional[ReferrableSubtypesEnum] = field(
+        dest: ReferrableSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -957,7 +959,7 @@ class DocumentationBlock:
     class Meta:
         name = "DOCUMENTATION-BLOCK"
 
-    msr_query_p_2: list["MsrQueryP2"] = field(
+    msr_query_p_2: list[MsrQueryP2] = field(
         default_factory=list,
         metadata={
             "name": "MSR-QUERY-P-2",
@@ -965,7 +967,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    p: list["MultiLanguageParagraph"] = field(
+    p: list[MultiLanguageParagraph] = field(
         default_factory=list,
         metadata={
             "name": "P",
@@ -973,7 +975,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    verbatim: list["MultiLanguageVerbatim"] = field(
+    verbatim: list[MultiLanguageVerbatim] = field(
         default_factory=list,
         metadata={
             "name": "VERBATIM",
@@ -981,7 +983,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    list_value: list["List"] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "LIST",
@@ -997,7 +999,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    labeled_list: list["LabeledList"] = field(
+    labeled_list: list[LabeledList] = field(
         default_factory=list,
         metadata={
             "name": "LABELED-LIST",
@@ -1005,7 +1007,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    formula: list["MlFormula"] = field(
+    formula: list[MlFormula] = field(
         default_factory=list,
         metadata={
             "name": "FORMULA",
@@ -1013,7 +1015,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    figure: list["MlFigure"] = field(
+    figure: list[MlFigure] = field(
         default_factory=list,
         metadata={
             "name": "FIGURE",
@@ -1021,7 +1023,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    note: list["Note"] = field(
+    note: list[Note] = field(
         default_factory=list,
         metadata={
             "name": "NOTE",
@@ -1029,7 +1031,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace: list["TraceableText"] = field(
+    trace: list[TraceableText] = field(
         default_factory=list,
         metadata={
             "name": "TRACE",
@@ -1037,7 +1039,7 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    structured_req: list["StructuredReq"] = field(
+    structured_req: list[StructuredReq] = field(
         default_factory=list,
         metadata={
             "name": "STRUCTURED-REQ",
@@ -1045,14 +1047,14 @@ class DocumentationBlock:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -1086,7 +1088,7 @@ class MsrQueryP2:
     class Meta:
         name = "MSR-QUERY-P-2"
 
-    msr_query_props: Optional[MsrQueryProps] = field(
+    msr_query_props: MsrQueryProps | None = field(
         default=None,
         metadata={
             "name": "MSR-QUERY-PROPS",
@@ -1094,7 +1096,7 @@ class MsrQueryP2:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    msr_query_result_p_2: Optional[DocumentationBlock] = field(
+    msr_query_result_p_2: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "MSR-QUERY-RESULT-P-2",
@@ -1102,14 +1104,14 @@ class MsrQueryP2:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -1176,7 +1178,7 @@ class VariationPoint:
     class Meta:
         name = "VARIATION-POINT"
 
-    short_label: Optional[Identifier] = field(
+    short_label: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -1184,7 +1186,7 @@ class VariationPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -1192,7 +1194,7 @@ class VariationPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_condition: Optional[DocumentationBlock] = field(
+    blueprint_condition: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-CONDITION",
@@ -1200,7 +1202,7 @@ class VariationPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    formal_blueprint_condition: Optional[BlueprintFormula] = field(
+    formal_blueprint_condition: BlueprintFormula | None = field(
         default=None,
         metadata={
             "name": "FORMAL-BLUEPRINT-CONDITION",
@@ -1208,7 +1210,7 @@ class VariationPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    formal_blueprint_generator: Optional[BlueprintGenerator] = field(
+    formal_blueprint_generator: BlueprintGenerator | None = field(
         default=None,
         metadata={
             "name": "FORMAL-BLUEPRINT-GENERATOR",
@@ -1216,7 +1218,7 @@ class VariationPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_syscond: Optional[ConditionByFormula] = field(
+    sw_syscond: ConditionByFormula | None = field(
         default=None,
         metadata={
             "name": "SW-SYSCOND",
@@ -1224,9 +1226,7 @@ class VariationPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    post_build_variant_conditions: Optional[
-        "VariationPoint.PostBuildVariantConditions"
-    ] = field(
+    post_build_variant_conditions: VariationPoint.PostBuildVariantConditions | None = field(
         default=None,
         metadata={
             "name": "POST-BUILD-VARIANT-CONDITIONS",
@@ -1234,7 +1234,7 @@ class VariationPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdg: Optional[Sdg] = field(
+    sdg: Sdg | None = field(
         default=None,
         metadata={
             "name": "SDG",
@@ -1242,14 +1242,14 @@ class VariationPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -1319,7 +1319,7 @@ class MultiLanguageParagraph:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -1327,14 +1327,14 @@ class MultiLanguageParagraph:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -1350,7 +1350,7 @@ class MultiLanguageParagraph:
             "tokens": True,
         },
     )
-    view: Optional[str] = field(
+    view: str | None = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -1358,21 +1358,21 @@ class MultiLanguageParagraph:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: Optional[ChapterEnumBreakSimple] = field(
+    break_value: ChapterEnumBreakSimple | None = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
+    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
         },
     )
-    help_entry: Optional[str] = field(
+    help_entry: str | None = field(
         default=None,
         metadata={
             "name": "HELP-ENTRY",
@@ -1439,7 +1439,7 @@ class MultiLanguageVerbatim:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -1447,14 +1447,14 @@ class MultiLanguageVerbatim:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -1470,7 +1470,7 @@ class MultiLanguageVerbatim:
             "tokens": True,
         },
     )
-    view: Optional[str] = field(
+    view: str | None = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -1478,42 +1478,42 @@ class MultiLanguageVerbatim:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: Optional[ChapterEnumBreakSimple] = field(
+    break_value: ChapterEnumBreakSimple | None = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
+    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
         },
     )
-    allow_break: Optional[str] = field(
+    allow_break: str | None = field(
         default=None,
         metadata={
             "name": "ALLOW-BREAK",
             "type": "Attribute",
         },
     )
-    float_value: Optional[FloatEnumSimple] = field(
+    float_value: FloatEnumSimple | None = field(
         default=None,
         metadata={
             "name": "FLOAT",
             "type": "Attribute",
         },
     )
-    help_entry: Optional[str] = field(
+    help_entry: str | None = field(
         default=None,
         metadata={
             "name": "HELP-ENTRY",
             "type": "Attribute",
         },
     )
-    pgwide: Optional[PgwideEnumSimple] = field(
+    pgwide: PgwideEnumSimple | None = field(
         default=None,
         metadata={
             "name": "PGWIDE",
@@ -1634,7 +1634,7 @@ class StructuredReq:
     class Meta:
         name = "STRUCTURED-REQ"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -1643,7 +1643,7 @@ class StructuredReq:
             "required": True,
         },
     )
-    short_name_fragments: Optional["StructuredReq.ShortNameFragments"] = field(
+    short_name_fragments: StructuredReq.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -1651,7 +1651,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -1659,7 +1659,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -1667,7 +1667,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -1675,7 +1675,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -1683,7 +1683,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -1691,7 +1691,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["StructuredReq.Annotations"] = field(
+    annotations: StructuredReq.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -1699,7 +1699,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace_refs: Optional["StructuredReq.TraceRefs"] = field(
+    trace_refs: StructuredReq.TraceRefs | None = field(
         default=None,
         metadata={
             "name": "TRACE-REFS",
@@ -1707,7 +1707,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    date: Optional[Date] = field(
+    date: Date | None = field(
         default=None,
         metadata={
             "name": "DATE",
@@ -1715,7 +1715,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    issued_by: Optional[String] = field(
+    issued_by: String | None = field(
         default=None,
         metadata={
             "name": "ISSUED-BY",
@@ -1723,7 +1723,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_value: Optional[String] = field(
+    type_value: String | None = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -1731,7 +1731,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    importance: Optional[String] = field(
+    importance: String | None = field(
         default=None,
         metadata={
             "name": "IMPORTANCE",
@@ -1739,7 +1739,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    description: Optional[DocumentationBlock] = field(
+    description: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "DESCRIPTION",
@@ -1747,7 +1747,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rationale: Optional[DocumentationBlock] = field(
+    rationale: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "RATIONALE",
@@ -1755,9 +1755,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    applies_to_dependencies: Optional[
-        "StructuredReq.AppliesToDependencies"
-    ] = field(
+    applies_to_dependencies: StructuredReq.AppliesToDependencies | None = field(
         default=None,
         metadata={
             "name": "APPLIES-TO-DEPENDENCIES",
@@ -1765,7 +1763,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dependencies: Optional[DocumentationBlock] = field(
+    dependencies: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "DEPENDENCIES",
@@ -1773,7 +1771,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    use_case: Optional[DocumentationBlock] = field(
+    use_case: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "USE-CASE",
@@ -1781,7 +1779,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    conflicts: Optional[DocumentationBlock] = field(
+    conflicts: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "CONFLICTS",
@@ -1789,7 +1787,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    supporting_material: Optional[DocumentationBlock] = field(
+    supporting_material: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "SUPPORTING-MATERIAL",
@@ -1797,7 +1795,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remark: Optional[DocumentationBlock] = field(
+    remark: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "REMARK",
@@ -1805,7 +1803,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tested_item_refs: Optional["StructuredReq.TestedItemRefs"] = field(
+    tested_item_refs: StructuredReq.TestedItemRefs | None = field(
         default=None,
         metadata={
             "name": "TESTED-ITEM-REFS",
@@ -1813,7 +1811,7 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -1821,14 +1819,14 @@ class StructuredReq:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -1836,7 +1834,7 @@ class StructuredReq:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -1851,7 +1849,7 @@ class StructuredReq:
             "tokens": True,
         },
     )
-    view: Optional[str] = field(
+    view: str | None = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -1859,14 +1857,14 @@ class StructuredReq:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: Optional[ChapterEnumBreakSimple] = field(
+    break_value: ChapterEnumBreakSimple | None = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
+    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
@@ -1898,7 +1896,7 @@ class StructuredReq:
 
     @dataclass
     class TraceRefs:
-        trace_ref: list["StructuredReq.TraceRefs.TraceRef"] = field(
+        trace_ref: list[StructuredReq.TraceRefs.TraceRef] = field(
             default_factory=list,
             metadata={
                 "name": "TRACE-REF",
@@ -1909,7 +1907,7 @@ class StructuredReq:
 
         @dataclass
         class TraceRef(Ref):
-            dest: Optional[TraceableSubtypesEnum] = field(
+            dest: TraceableSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -1936,7 +1934,7 @@ class StructuredReq:
 
     @dataclass
     class TestedItemRefs:
-        tested_item_ref: list["StructuredReq.TestedItemRefs.TestedItemRef"] = (
+        tested_item_ref: list[StructuredReq.TestedItemRefs.TestedItemRef] = (
             field(
                 default_factory=list,
                 metadata={
@@ -1949,7 +1947,7 @@ class StructuredReq:
 
         @dataclass
         class TestedItemRef(Ref):
-            dest: Optional[TraceableSubtypesEnum] = field(
+            dest: TraceableSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -2014,7 +2012,7 @@ class MlFigure:
     class Meta:
         name = "ML-FIGURE"
 
-    figure_caption: Optional[Caption] = field(
+    figure_caption: Caption | None = field(
         default=None,
         metadata={
             "name": "FIGURE-CAPTION",
@@ -2030,7 +2028,7 @@ class MlFigure:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    verbatim: Optional[MultiLanguageVerbatim] = field(
+    verbatim: MultiLanguageVerbatim | None = field(
         default=None,
         metadata={
             "name": "VERBATIM",
@@ -2038,7 +2036,7 @@ class MlFigure:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -2046,14 +2044,14 @@ class MlFigure:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -2069,7 +2067,7 @@ class MlFigure:
             "tokens": True,
         },
     )
-    view: Optional[str] = field(
+    view: str | None = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -2077,35 +2075,35 @@ class MlFigure:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: Optional[ChapterEnumBreakSimple] = field(
+    break_value: ChapterEnumBreakSimple | None = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
+    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
         },
     )
-    frame: Optional[FrameEnumSimple] = field(
+    frame: FrameEnumSimple | None = field(
         default=None,
         metadata={
             "name": "FRAME",
             "type": "Attribute",
         },
     )
-    help_entry: Optional[str] = field(
+    help_entry: str | None = field(
         default=None,
         metadata={
             "name": "HELP-ENTRY",
             "type": "Attribute",
         },
     )
-    pgwide: Optional[PgwideEnumSimple] = field(
+    pgwide: PgwideEnumSimple | None = field(
         default=None,
         metadata={
             "name": "PGWIDE",
@@ -2163,7 +2161,7 @@ class MlFormula:
     class Meta:
         name = "ML-FORMULA"
 
-    formula_caption: Optional[Caption] = field(
+    formula_caption: Caption | None = field(
         default=None,
         metadata={
             "name": "FORMULA-CAPTION",
@@ -2179,7 +2177,7 @@ class MlFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    verbatim: Optional[MultiLanguageVerbatim] = field(
+    verbatim: MultiLanguageVerbatim | None = field(
         default=None,
         metadata={
             "name": "VERBATIM",
@@ -2187,7 +2185,7 @@ class MlFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tex_math: Optional[MultiLanguagePlainText] = field(
+    tex_math: MultiLanguagePlainText | None = field(
         default=None,
         metadata={
             "name": "TEX-MATH",
@@ -2195,7 +2193,7 @@ class MlFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    generic_math: Optional[MultiLanguagePlainText] = field(
+    generic_math: MultiLanguagePlainText | None = field(
         default=None,
         metadata={
             "name": "GENERIC-MATH",
@@ -2203,7 +2201,7 @@ class MlFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -2211,14 +2209,14 @@ class MlFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -2234,7 +2232,7 @@ class MlFormula:
             "tokens": True,
         },
     )
-    view: Optional[str] = field(
+    view: str | None = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -2242,14 +2240,14 @@ class MlFormula:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: Optional[ChapterEnumBreakSimple] = field(
+    break_value: ChapterEnumBreakSimple | None = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
+    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
@@ -2355,7 +2353,7 @@ class Item:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    list_value: list["List"] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "LIST",
@@ -2371,7 +2369,7 @@ class Item:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    labeled_list: list["LabeledList"] = field(
+    labeled_list: list[LabeledList] = field(
         default_factory=list,
         metadata={
             "name": "LABELED-LIST",
@@ -2395,7 +2393,7 @@ class Item:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    note: list["Note"] = field(
+    note: list[Note] = field(
         default_factory=list,
         metadata={
             "name": "NOTE",
@@ -2403,7 +2401,7 @@ class Item:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace: list["TraceableText"] = field(
+    trace: list[TraceableText] = field(
         default_factory=list,
         metadata={
             "name": "TRACE",
@@ -2419,7 +2417,7 @@ class Item:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -2427,14 +2425,14 @@ class Item:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -2450,7 +2448,7 @@ class Item:
             "tokens": True,
         },
     )
-    view: Optional[str] = field(
+    view: str | None = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -2458,14 +2456,14 @@ class Item:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: Optional[ChapterEnumBreakSimple] = field(
+    break_value: ChapterEnumBreakSimple | None = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
+    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
@@ -2525,7 +2523,7 @@ class List:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -2533,14 +2531,14 @@ class List:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -2556,7 +2554,7 @@ class List:
             "tokens": True,
         },
     )
-    view: Optional[str] = field(
+    view: str | None = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -2564,21 +2562,21 @@ class List:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: Optional[ChapterEnumBreakSimple] = field(
+    break_value: ChapterEnumBreakSimple | None = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
+    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
         },
     )
-    type_value: Optional[ListEnumSimple] = field(
+    type_value: ListEnumSimple | None = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -2665,7 +2663,7 @@ class LabeledItem:
     class Meta:
         name = "LABELED-ITEM"
 
-    item_label: Optional[MultiLanguageOverviewParagraph] = field(
+    item_label: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "ITEM-LABEL",
@@ -2713,7 +2711,7 @@ class LabeledItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    labeled_list: list["LabeledList"] = field(
+    labeled_list: list[LabeledList] = field(
         default_factory=list,
         metadata={
             "name": "LABELED-LIST",
@@ -2737,7 +2735,7 @@ class LabeledItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    note: list["Note"] = field(
+    note: list[Note] = field(
         default_factory=list,
         metadata={
             "name": "NOTE",
@@ -2745,7 +2743,7 @@ class LabeledItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace: list["TraceableText"] = field(
+    trace: list[TraceableText] = field(
         default_factory=list,
         metadata={
             "name": "TRACE",
@@ -2761,7 +2759,7 @@ class LabeledItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -2769,14 +2767,14 @@ class LabeledItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -2792,7 +2790,7 @@ class LabeledItem:
             "tokens": True,
         },
     )
-    view: Optional[str] = field(
+    view: str | None = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -2800,21 +2798,21 @@ class LabeledItem:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: Optional[ChapterEnumBreakSimple] = field(
+    break_value: ChapterEnumBreakSimple | None = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
+    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
         },
     )
-    help_entry: Optional[str] = field(
+    help_entry: str | None = field(
         default=None,
         metadata={
             "name": "HELP-ENTRY",
@@ -2868,7 +2866,7 @@ class LabeledList:
     class Meta:
         name = "LABELED-LIST"
 
-    indent_sample: Optional[IndentSample] = field(
+    indent_sample: IndentSample | None = field(
         default=None,
         metadata={
             "name": "INDENT-SAMPLE",
@@ -2884,7 +2882,7 @@ class LabeledList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -2892,14 +2890,14 @@ class LabeledList:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -2915,7 +2913,7 @@ class LabeledList:
             "tokens": True,
         },
     )
-    view: Optional[str] = field(
+    view: str | None = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -2923,14 +2921,14 @@ class LabeledList:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: Optional[ChapterEnumBreakSimple] = field(
+    break_value: ChapterEnumBreakSimple | None = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
+    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
@@ -3021,7 +3019,7 @@ class Note:
     class Meta:
         name = "NOTE"
 
-    label: Optional[MultilanguageLongName] = field(
+    label: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -3093,7 +3091,7 @@ class Note:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    note: list["Note"] = field(
+    note: list[Note] = field(
         default_factory=list,
         metadata={
             "name": "NOTE",
@@ -3101,7 +3099,7 @@ class Note:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace: list["TraceableText"] = field(
+    trace: list[TraceableText] = field(
         default_factory=list,
         metadata={
             "name": "TRACE",
@@ -3117,7 +3115,7 @@ class Note:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -3125,14 +3123,14 @@ class Note:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -3148,7 +3146,7 @@ class Note:
             "tokens": True,
         },
     )
-    view: Optional[str] = field(
+    view: str | None = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -3156,21 +3154,21 @@ class Note:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: Optional[ChapterEnumBreakSimple] = field(
+    break_value: ChapterEnumBreakSimple | None = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
+    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
             "type": "Attribute",
         },
     )
-    note_type: Optional[NoteTypeEnumSimple] = field(
+    note_type: NoteTypeEnumSimple | None = field(
         default=None,
         metadata={
             "name": "NOTE-TYPE",
@@ -3303,7 +3301,7 @@ class TraceableText:
     class Meta:
         name = "TRACEABLE-TEXT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -3312,7 +3310,7 @@ class TraceableText:
             "required": True,
         },
     )
-    short_name_fragments: Optional["TraceableText.ShortNameFragments"] = field(
+    short_name_fragments: TraceableText.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -3320,7 +3318,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -3328,7 +3326,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -3336,7 +3334,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -3344,7 +3342,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -3352,7 +3350,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -3360,7 +3358,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["TraceableText.Annotations"] = field(
+    annotations: TraceableText.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -3368,7 +3366,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace_refs: Optional["TraceableText.TraceRefs"] = field(
+    trace_refs: TraceableText.TraceRefs | None = field(
         default=None,
         metadata={
             "name": "TRACE-REFS",
@@ -3448,7 +3446,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace: list["TraceableText"] = field(
+    trace: list[TraceableText] = field(
         default_factory=list,
         metadata={
             "name": "TRACE",
@@ -3464,7 +3462,7 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -3472,14 +3470,14 @@ class TraceableText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -3487,7 +3485,7 @@ class TraceableText:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -3502,7 +3500,7 @@ class TraceableText:
             "tokens": True,
         },
     )
-    view: Optional[str] = field(
+    view: str | None = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -3510,14 +3508,14 @@ class TraceableText:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: Optional[ChapterEnumBreakSimple] = field(
+    break_value: ChapterEnumBreakSimple | None = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
+    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
@@ -3549,7 +3547,7 @@ class TraceableText:
 
     @dataclass
     class TraceRefs:
-        trace_ref: list["TraceableText.TraceRefs.TraceRef"] = field(
+        trace_ref: list[TraceableText.TraceRefs.TraceRef] = field(
             default_factory=list,
             metadata={
                 "name": "TRACE-REF",
@@ -3560,7 +3558,7 @@ class TraceableText:
 
         @dataclass
         class TraceRef(Ref):
-            dest: Optional[TraceableSubtypesEnum] = field(
+            dest: TraceableSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

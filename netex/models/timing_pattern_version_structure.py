@@ -20,7 +20,7 @@ class TimingPatternVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "TimingPattern_VersionStructure"
 
-    route_ref: Optional[RouteRefStructure] = field(
+    route_ref: RouteRefStructure | None = field(
         default=None,
         metadata={
             "name": "RouteRef",
@@ -28,7 +28,7 @@ class TimingPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_type: Optional[DirectionType] = field(
+    direction_type: DirectionType | None = field(
         default=None,
         metadata={
             "name": "DirectionType",
@@ -36,9 +36,7 @@ class TimingPatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_type_ref_or_timeband_ref: Optional[
-        Union[TimeDemandTypeRef, TimebandRef]
-    ] = field(
+    time_demand_type_ref_or_timeband_ref: TimeDemandTypeRef | TimebandRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -56,7 +54,7 @@ class TimingPatternVersionStructure(LinkSequenceVersionStructure):
             ),
         },
     )
-    points_in_sequence: Optional[TimingPointsInJourneyPatternRelStructure] = (
+    points_in_sequence: TimingPointsInJourneyPatternRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -66,14 +64,14 @@ class TimingPatternVersionStructure(LinkSequenceVersionStructure):
             },
         )
     )
-    points: Optional[TimingPointsRelStructure] = field(
+    points: TimingPointsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    links: Optional[TimingLinksRelStructure] = field(
+    links: TimingLinksRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

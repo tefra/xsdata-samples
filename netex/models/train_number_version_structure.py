@@ -12,7 +12,7 @@ class TrainNumberVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "TrainNumber_VersionStructure"
 
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -20,7 +20,7 @@ class TrainNumberVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    for_advertisement: Optional[str] = field(
+    for_advertisement: str | None = field(
         default=None,
         metadata={
             "name": "ForAdvertisement",
@@ -28,7 +28,7 @@ class TrainNumberVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    for_production: Optional[str] = field(
+    for_production: str | None = field(
         default=None,
         metadata={
             "name": "ForProduction",

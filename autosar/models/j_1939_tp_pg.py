@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -53,7 +55,7 @@ class J1939TpPg:
     class Meta:
         name = "J-1939-TP-PG"
 
-    direct_pdu_ref: Optional["J1939TpPg.DirectPduRef"] = field(
+    direct_pdu_ref: J1939TpPg.DirectPduRef | None = field(
         default=None,
         metadata={
             "name": "DIRECT-PDU-REF",
@@ -61,7 +63,7 @@ class J1939TpPg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pgn: Optional[Integer] = field(
+    pgn: Integer | None = field(
         default=None,
         metadata={
             "name": "PGN",
@@ -69,7 +71,7 @@ class J1939TpPg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    requestable: Optional[Boolean] = field(
+    requestable: Boolean | None = field(
         default=None,
         metadata={
             "name": "REQUESTABLE",
@@ -77,7 +79,7 @@ class J1939TpPg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdu_refs: Optional["J1939TpPg.SduRefs"] = field(
+    sdu_refs: J1939TpPg.SduRefs | None = field(
         default=None,
         metadata={
             "name": "SDU-REFS",
@@ -85,7 +87,7 @@ class J1939TpPg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_sdu_ref: Optional["J1939TpPg.TpSduRef"] = field(
+    tp_sdu_ref: J1939TpPg.TpSduRef | None = field(
         default=None,
         metadata={
             "name": "TP-SDU-REF",
@@ -93,14 +95,14 @@ class J1939TpPg:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -111,7 +113,7 @@ class J1939TpPg:
 
     @dataclass
     class DirectPduRef(Ref):
-        dest: Optional[NPduSubtypesEnum] = field(
+        dest: NPduSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -122,7 +124,7 @@ class J1939TpPg:
 
     @dataclass
     class SduRefs:
-        sdu_ref: list["J1939TpPg.SduRefs.SduRef"] = field(
+        sdu_ref: list[J1939TpPg.SduRefs.SduRef] = field(
             default_factory=list,
             metadata={
                 "name": "SDU-REF",
@@ -133,7 +135,7 @@ class J1939TpPg:
 
         @dataclass
         class SduRef(Ref):
-            dest: Optional[IPduSubtypesEnum] = field(
+            dest: IPduSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -144,7 +146,7 @@ class J1939TpPg:
 
     @dataclass
     class TpSduRef(Ref):
-        dest: Optional[IPduSubtypesEnum] = field(
+        dest: IPduSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

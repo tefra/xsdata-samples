@@ -37,7 +37,7 @@ class DataPrototypeWithApplicationDataTypeInSystemRef:
     class Meta:
         name = "DATA-PROTOTYPE-WITH-APPLICATION-DATA-TYPE-IN-SYSTEM-REF"
 
-    tag_id: Optional[PositiveInteger] = field(
+    tag_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TAG-ID",
@@ -45,9 +45,7 @@ class DataPrototypeWithApplicationDataTypeInSystemRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_prototype_iref: Optional[
-        ApplicationDataPrototypeInSystemInstanceRef
-    ] = field(
+    data_prototype_iref: ApplicationDataPrototypeInSystemInstanceRef | None = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-IREF",
@@ -55,14 +53,14 @@ class DataPrototypeWithApplicationDataTypeInSystemRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

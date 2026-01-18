@@ -34,7 +34,7 @@ class InfrastructureServices:
     class Meta:
         name = "INFRASTRUCTURE-SERVICES"
 
-    dhcp_server_configuration: Optional[DhcpServerConfiguration] = field(
+    dhcp_server_configuration: DhcpServerConfiguration | None = field(
         default=None,
         metadata={
             "name": "DHCP-SERVER-CONFIGURATION",
@@ -42,7 +42,7 @@ class InfrastructureServices:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    do_ip_entity: Optional[DoIpEntity] = field(
+    do_ip_entity: DoIpEntity | None = field(
         default=None,
         metadata={
             "name": "DO-IP-ENTITY",
@@ -50,7 +50,7 @@ class InfrastructureServices:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_synchronization: Optional[TimeSynchronization] = field(
+    time_synchronization: TimeSynchronization | None = field(
         default=None,
         metadata={
             "name": "TIME-SYNCHRONIZATION",
@@ -58,14 +58,14 @@ class InfrastructureServices:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -11,7 +11,7 @@ class GroupOfEntitiesRefStructure2(VersionOfObjectRefStructure):
     class Meta:
         name = "GroupOfEntitiesRefStructure_"
 
-    name_of_member_class: Optional[str] = field(
+    name_of_member_class: str | None = field(
         default=None,
         metadata={
             "name": "nameOfMemberClass",

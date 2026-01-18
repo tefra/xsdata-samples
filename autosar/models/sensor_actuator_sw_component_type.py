@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -141,7 +143,7 @@ class SensorActuatorSwComponentType:
     class Meta:
         name = "SENSOR-ACTUATOR-SW-COMPONENT-TYPE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -150,9 +152,7 @@ class SensorActuatorSwComponentType:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SensorActuatorSwComponentType.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SensorActuatorSwComponentType.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -160,7 +160,7 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -168,7 +168,7 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -176,7 +176,7 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -184,7 +184,7 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -192,7 +192,7 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -200,7 +200,7 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SensorActuatorSwComponentType.Annotations"] = field(
+    annotations: SensorActuatorSwComponentType.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -208,7 +208,7 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -216,9 +216,7 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional[
-        "SensorActuatorSwComponentType.BlueprintPolicys"
-    ] = field(
+    blueprint_policys: SensorActuatorSwComponentType.BlueprintPolicys | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -226,7 +224,7 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: Optional[String] = field(
+    short_name_pattern: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -234,9 +232,7 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_documentations: Optional[
-        "SensorActuatorSwComponentType.SwComponentDocumentations"
-    ] = field(
+    sw_component_documentations: SensorActuatorSwComponentType.SwComponentDocumentations | None = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-DOCUMENTATIONS",
@@ -244,9 +240,7 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consistency_needss: Optional[
-        "SensorActuatorSwComponentType.ConsistencyNeedss"
-    ] = field(
+    consistency_needss: SensorActuatorSwComponentType.ConsistencyNeedss | None = field(
         default=None,
         metadata={
             "name": "CONSISTENCY-NEEDSS",
@@ -254,7 +248,7 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ports: Optional["SensorActuatorSwComponentType.Ports"] = field(
+    ports: SensorActuatorSwComponentType.Ports | None = field(
         default=None,
         metadata={
             "name": "PORTS",
@@ -262,7 +256,7 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_groups: Optional["SensorActuatorSwComponentType.PortGroups"] = field(
+    port_groups: SensorActuatorSwComponentType.PortGroups | None = field(
         default=None,
         metadata={
             "name": "PORT-GROUPS",
@@ -270,9 +264,7 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_group_refs: Optional[
-        "SensorActuatorSwComponentType.UnitGroupRefs"
-    ] = field(
+    unit_group_refs: SensorActuatorSwComponentType.UnitGroupRefs | None = field(
         default=None,
         metadata={
             "name": "UNIT-GROUP-REFS",
@@ -280,9 +272,7 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    internal_behaviors: Optional[
-        "SensorActuatorSwComponentType.InternalBehaviors"
-    ] = field(
+    internal_behaviors: SensorActuatorSwComponentType.InternalBehaviors | None = field(
         default=None,
         metadata={
             "name": "INTERNAL-BEHAVIORS",
@@ -290,7 +280,7 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbol_props: Optional[SymbolProps] = field(
+    symbol_props: SymbolProps | None = field(
         default=None,
         metadata={
             "name": "SYMBOL-PROPS",
@@ -298,9 +288,7 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sensor_actuator_ref: Optional[
-        "SensorActuatorSwComponentType.SensorActuatorRef"
-    ] = field(
+    sensor_actuator_ref: SensorActuatorSwComponentType.SensorActuatorRef | None = field(
         default=None,
         metadata={
             "name": "SENSOR-ACTUATOR-REF",
@@ -308,14 +296,14 @@ class SensorActuatorSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -323,7 +311,7 @@ class SensorActuatorSwComponentType:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -445,7 +433,7 @@ class SensorActuatorSwComponentType:
     @dataclass
     class UnitGroupRefs:
         unit_group_ref: list[
-            "SensorActuatorSwComponentType.UnitGroupRefs.UnitGroupRef"
+            SensorActuatorSwComponentType.UnitGroupRefs.UnitGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -457,7 +445,7 @@ class SensorActuatorSwComponentType:
 
         @dataclass
         class UnitGroupRef(Ref):
-            dest: Optional[UnitGroupSubtypesEnum] = field(
+            dest: UnitGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -479,7 +467,7 @@ class SensorActuatorSwComponentType:
 
     @dataclass
     class SensorActuatorRef(Ref):
-        dest: Optional[HwDescriptionEntitySubtypesEnum] = field(
+        dest: HwDescriptionEntitySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

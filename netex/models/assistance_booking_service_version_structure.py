@@ -29,7 +29,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
     class Meta:
         name = "AssistanceBookingService_VersionStructure"
 
-    assistance_availability: Optional[AssistanceAvailabilityEnumeration] = (
+    assistance_availability: AssistanceAvailabilityEnumeration | None = (
         field(
             default=None,
             metadata={
@@ -39,7 +39,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             },
         )
     )
-    wheelchair_booking_required: Optional[bool] = field(
+    wheelchair_booking_required: bool | None = field(
         default=None,
         metadata={
             "name": "WheelchairBookingRequired",
@@ -47,7 +47,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_contact: Optional[ContactStructure] = field(
+    booking_contact: ContactStructure | None = field(
         default=None,
         metadata={
             "name": "BookingContact",
@@ -55,7 +55,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_arrangements: Optional[BookingArrangementsStructure] = field(
+    booking_arrangements: BookingArrangementsStructure | None = field(
         default=None,
         metadata={
             "name": "BookingArrangements",
@@ -63,7 +63,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_mode: Optional[VehicleMode] = field(
+    vehicle_mode: VehicleMode | None = field(
         default=None,
         metadata={
             "name": "VehicleMode",
@@ -71,16 +71,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: Optional[
-        Union[
-            PersonalModeOfOperationRef,
-            VehiclePoolingRef,
-            VehicleSharingRef,
-            VehicleRentalRef,
-            FlexibleModeOfOperationRef,
-            ScheduledModeOfOperationRef,
-        ]
-    ] = field(
+    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: PersonalModeOfOperationRef | VehiclePoolingRef | VehicleSharingRef | VehicleRentalRef | FlexibleModeOfOperationRef | ScheduledModeOfOperationRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -118,7 +109,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             ),
         },
     )
-    transport_organisation_ref: Optional[Union[AuthorityRef, OperatorRef]] = (
+    transport_organisation_ref: AuthorityRef | OperatorRef | None = (
         field(
             default=None,
             metadata={
@@ -138,7 +129,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             },
         )
     )
-    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
+    line_ref: FlexibleLineRef | LineRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -156,7 +147,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             ),
         },
     )
-    booked_object_ref: Optional[VersionOfObjectRefStructure] = field(
+    booked_object_ref: VersionOfObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "BookedObjectRef",
@@ -164,7 +155,7 @@ class AssistanceBookingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",

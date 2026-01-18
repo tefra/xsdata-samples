@@ -14,7 +14,7 @@ class SituationRecordExtendedApproved:
         Commission Delegated Regulation (EU) No 886/2013.
     """
 
-    safety_related_message: Optional[bool] = field(
+    safety_related_message: bool | None = field(
         default=None,
         metadata={
             "name": "safetyRelatedMessage",

@@ -12,13 +12,13 @@ class AddressBlockRef:
         name = "addressBlockRef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    indices: Optional[Indices] = field(
+    indices: Indices | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    address_block_ref: Optional[str] = field(
+    address_block_ref: str | None = field(
         default=None,
         metadata={
             "name": "addressBlockRef",

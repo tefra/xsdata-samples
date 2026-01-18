@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -91,7 +93,7 @@ class ComSecOcToCryptoKeySlotMapping:
     class Meta:
         name = "COM-SEC-OC-TO-CRYPTO-KEY-SLOT-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -100,9 +102,7 @@ class ComSecOcToCryptoKeySlotMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ComSecOcToCryptoKeySlotMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ComSecOcToCryptoKeySlotMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -110,7 +110,7 @@ class ComSecOcToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -118,7 +118,7 @@ class ComSecOcToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -126,7 +126,7 @@ class ComSecOcToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -134,7 +134,7 @@ class ComSecOcToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -142,7 +142,7 @@ class ComSecOcToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -150,7 +150,7 @@ class ComSecOcToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ComSecOcToCryptoKeySlotMapping.Annotations"] = (
+    annotations: ComSecOcToCryptoKeySlotMapping.Annotations | None = (
         field(
             default=None,
             metadata={
@@ -160,7 +160,7 @@ class ComSecOcToCryptoKeySlotMapping:
             },
         )
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -168,9 +168,7 @@ class ComSecOcToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_key_slot_ref: Optional[
-        "ComSecOcToCryptoKeySlotMapping.CryptoKeySlotRef"
-    ] = field(
+    crypto_key_slot_ref: ComSecOcToCryptoKeySlotMapping.CryptoKeySlotRef | None = field(
         default=None,
         metadata={
             "name": "CRYPTO-KEY-SLOT-REF",
@@ -178,9 +176,7 @@ class ComSecOcToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_element_secure_com_config_ref: Optional[
-        "ComSecOcToCryptoKeySlotMapping.ServiceElementSecureComConfigRef"
-    ] = field(
+    service_element_secure_com_config_ref: ComSecOcToCryptoKeySlotMapping.ServiceElementSecureComConfigRef | None = field(
         default=None,
         metadata={
             "name": "SERVICE-ELEMENT-SECURE-COM-CONFIG-REF",
@@ -188,14 +184,14 @@ class ComSecOcToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -203,7 +199,7 @@ class ComSecOcToCryptoKeySlotMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -235,7 +231,7 @@ class ComSecOcToCryptoKeySlotMapping:
 
     @dataclass
     class CryptoKeySlotRef(Ref):
-        dest: Optional[CryptoKeySlotSubtypesEnum] = field(
+        dest: CryptoKeySlotSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -246,7 +242,7 @@ class ComSecOcToCryptoKeySlotMapping:
 
     @dataclass
     class ServiceElementSecureComConfigRef(Ref):
-        dest: Optional[ServiceInterfaceElementSecureComConfigSubtypesEnum] = (
+        dest: ServiceInterfaceElementSecureComConfigSubtypesEnum | None = (
             field(
                 default=None,
                 metadata={

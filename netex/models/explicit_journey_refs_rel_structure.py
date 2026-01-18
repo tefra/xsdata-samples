@@ -17,12 +17,7 @@ class ExplicitJourneyRefsRelStructure(OneToManyRelationshipStructure):
         name = "explicitJourneyRefs_RelStructure"
 
     service_journey_ref_or_vehicle_journey_ref: Iterable[
-        Union[
-            TemplateServiceJourneyRef,
-            ServiceJourneyRef,
-            DeadRunRef,
-            VehicleJourneyRef,
-        ]
+        TemplateServiceJourneyRef | ServiceJourneyRef | DeadRunRef | VehicleJourneyRef
     ] = field(
         default_factory=list,
         metadata={

@@ -23,21 +23,7 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "FlexibleLinkProperties_VersionedChildStructure"
 
-    link_ref_or_infrastructure_link_ref: Optional[
-        Union[
-            OnwardVehicleMeetingLinkRef,
-            VehicleMeetingLinkRef,
-            ServiceLinkRef,
-            LineLinkRef,
-            TimingLinkRef,
-            WireLinkRef,
-            RoadLinkRef,
-            RailwayLinkRef,
-            ActivationLinkRef,
-            PathLinkRef,
-            RouteLinkRef,
-        ]
-    ] = field(
+    link_ref_or_infrastructure_link_ref: OnwardVehicleMeetingLinkRef | VehicleMeetingLinkRef | ServiceLinkRef | LineLinkRef | TimingLinkRef | WireLinkRef | RoadLinkRef | RailwayLinkRef | ActivationLinkRef | PathLinkRef | RouteLinkRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -100,7 +86,7 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    may_be_skipped: Optional[bool] = field(
+    may_be_skipped: bool | None = field(
         default=None,
         metadata={
             "name": "MayBeSkipped",
@@ -108,7 +94,7 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    on_main_route: Optional[bool] = field(
+    on_main_route: bool | None = field(
         default=None,
         metadata={
             "name": "OnMainRoute",
@@ -116,7 +102,7 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    unscheduled_path: Optional[bool] = field(
+    unscheduled_path: bool | None = field(
         default=None,
         metadata={
             "name": "UnscheduledPath",
@@ -124,7 +110,7 @@ class FlexibleLinkPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_link_type: Optional[FlexibleLinkTypeEnumeration] = field(
+    flexible_link_type: FlexibleLinkTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "FlexibleLinkType",

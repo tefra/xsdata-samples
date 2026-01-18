@@ -15,7 +15,7 @@ class PassengerCapacitiesRelStructure(OneToManyRelationshipStructure):
         name = "passengerCapacities_RelStructure"
 
     passenger_capacity_ref_or_passenger_capacity: Iterable[
-        Union[PassengerCapacityRef, PassengerCapacity]
+        PassengerCapacityRef | PassengerCapacity
     ] = field(
         default_factory=list,
         metadata={

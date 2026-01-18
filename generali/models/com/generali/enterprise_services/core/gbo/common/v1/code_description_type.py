@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class CodeDescriptionType:
-    code: Optional[CodeType] = field(
+    code: CodeType | None = field(
         default=None,
         metadata={
             "name": "Code",
@@ -22,7 +22,7 @@ class CodeDescriptionType:
             "required": True,
         },
     )
-    description: Optional[TextType] = field(
+    description: TextType | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -30,7 +30,7 @@ class CodeDescriptionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    subtype: Optional[TextType] = field(
+    subtype: TextType | None = field(
         default=None,
         metadata={
             "name": "Subtype",

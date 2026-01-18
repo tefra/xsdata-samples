@@ -16,9 +16,7 @@ class DiscountRightRefsRelStructure(OneToManyRelationshipStructure):
         name = "discountRightRefs_RelStructure"
 
     capped_discount_right_ref_or_sale_discount_right_ref_or_usage_discount_right_ref: Iterable[
-        Union[
-            CappedDiscountRightRef, SaleDiscountRightRef, UsageDiscountRightRef
-        ]
+        CappedDiscountRightRef | SaleDiscountRightRef | UsageDiscountRightRef
     ] = field(
         default_factory=list,
         metadata={

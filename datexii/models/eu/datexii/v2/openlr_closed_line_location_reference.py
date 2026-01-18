@@ -35,7 +35,7 @@ class OpenlrClosedLineLocationReference(OpenlrAreaLocationReference):
             },
         )
     )
-    openlr_last_line: Optional[OpenlrLineAttributes] = field(
+    openlr_last_line: OpenlrLineAttributes | None = field(
         default=None,
         metadata={
             "name": "openlrLastLine",
@@ -44,9 +44,7 @@ class OpenlrClosedLineLocationReference(OpenlrAreaLocationReference):
             "required": True,
         },
     )
-    openlr_closed_line_location_reference_extension: Optional[
-        ExtensionType
-    ] = field(
+    openlr_closed_line_location_reference_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "openlrClosedLineLocationReferenceExtension",

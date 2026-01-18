@@ -15,14 +15,14 @@ class AccessPropertiesType:
     class Meta:
         name = "accessPropertiesType"
 
-    access_entry_type_ref: Optional[str] = field(
+    access_entry_type_ref: str | None = field(
         default=None,
         metadata={
             "name": "accessEntryTypeRef",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

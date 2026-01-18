@@ -16,7 +16,7 @@ class GenericMetadataType:
     GenericMetadataType defines the contents of a generic metadata message.
     """
 
-    header: Optional[GenericMetadataHeaderType] = field(
+    header: GenericMetadataHeaderType | None = field(
         default=None,
         metadata={
             "name": "Header",
@@ -33,7 +33,7 @@ class GenericMetadataType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
         },
     )
-    footer: Optional[Footer] = field(
+    footer: Footer | None = field(
         default=None,
         metadata={
             "name": "Footer",

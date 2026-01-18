@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class AbstractorPortTransactionalType:
     class Meta:
         name = "abstractorPortTransactionalType"
 
-    initiative: Optional[Initiative] = field(
+    initiative: Initiative | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -47,14 +49,14 @@ class AbstractorPortTransactionalType:
             "required": True,
         },
     )
-    kind: Optional[Kind] = field(
+    kind: Kind | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bus_width: Optional[BusWidth] = field(
+    bus_width: BusWidth | None = field(
         default=None,
         metadata={
             "name": "busWidth",
@@ -62,21 +64,21 @@ class AbstractorPortTransactionalType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    qualifier: Optional[QualifierType] = field(
+    qualifier: QualifierType | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    protocol: Optional[Protocol] = field(
+    protocol: Protocol | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    trans_type_defs: Optional[TransTypeDefs] = field(
+    trans_type_defs: TransTypeDefs | None = field(
         default=None,
         metadata={
             "name": "transTypeDefs",
@@ -84,7 +86,7 @@ class AbstractorPortTransactionalType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    connection: Optional["AbstractorPortTransactionalType.Connection"] = field(
+    connection: AbstractorPortTransactionalType.Connection | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -111,7 +113,7 @@ class AbstractorPortTransactionalType:
             present, the minimum number of allowed connections is 1.
         """
 
-        max_connections: Optional[UnsignedIntExpression] = field(
+        max_connections: UnsignedIntExpression | None = field(
             default=None,
             metadata={
                 "name": "maxConnections",
@@ -119,7 +121,7 @@ class AbstractorPortTransactionalType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        min_connections: Optional[UnsignedIntExpression] = field(
+        min_connections: UnsignedIntExpression | None = field(
             default=None,
             metadata={
                 "name": "minConnections",

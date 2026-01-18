@@ -28,7 +28,7 @@ class VmsUnitRecord:
     :ivar version:
     """
 
-    number_of_vms: Optional[int] = field(
+    number_of_vms: int | None = field(
         default=None,
         metadata={
             "name": "numberOfVms",
@@ -36,7 +36,7 @@ class VmsUnitRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_unit_identifier: Optional[str] = field(
+    vms_unit_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vmsUnitIdentifier",
@@ -45,7 +45,7 @@ class VmsUnitRecord:
             "max_length": 1024,
         },
     )
-    vms_unit_ipaddress: Optional[str] = field(
+    vms_unit_ipaddress: str | None = field(
         default=None,
         metadata={
             "name": "vmsUnitIPAddress",
@@ -54,7 +54,7 @@ class VmsUnitRecord:
             "max_length": 1024,
         },
     )
-    vms_unit_electronic_address: Optional[str] = field(
+    vms_unit_electronic_address: str | None = field(
         default=None,
         metadata={
             "name": "vmsUnitElectronicAddress",
@@ -71,7 +71,7 @@ class VmsUnitRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_unit_record_extension: Optional[ExtensionType] = field(
+    vms_unit_record_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "vmsUnitRecordExtension",
@@ -79,14 +79,14 @@ class VmsUnitRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

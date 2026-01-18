@@ -31,7 +31,7 @@ class Ipv4AutoIpProps:
     class Meta:
         name = "IPV-4-AUTO-IP-PROPS"
 
-    tcp_ip_auto_ip_init_timeout: Optional[TimeValue] = field(
+    tcp_ip_auto_ip_init_timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-AUTO-IP-INIT-TIMEOUT",
@@ -39,14 +39,14 @@ class Ipv4AutoIpProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

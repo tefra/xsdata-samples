@@ -23,16 +23,7 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
         name = "groupMembershipRefs_RelStructure"
 
     zone_ref_or_tariff_zone_ref: Iterable[
-        Union[
-            MobilityServiceConstraintZoneRef,
-            StopAreaRef,
-            TransportAdministrativeZoneRef,
-            AccessZoneRef,
-            AdministrativeZoneRef,
-            FareZoneRef,
-            TariffZoneRef,
-            ZoneRef,
-        ]
+        MobilityServiceConstraintZoneRef | StopAreaRef | TransportAdministrativeZoneRef | AccessZoneRef | AdministrativeZoneRef | FareZoneRef | TariffZoneRef | ZoneRef
     ] = field(
         default_factory=list,
         metadata={

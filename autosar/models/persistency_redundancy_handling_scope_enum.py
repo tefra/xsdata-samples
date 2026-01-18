@@ -30,20 +30,20 @@ class PersistencyRedundancyHandlingScopeEnum:
     class Meta:
         name = "PERSISTENCY-REDUNDANCY-HANDLING-SCOPE-ENUM"
 
-    value: Optional[PersistencyRedundancyHandlingScopeEnumSimple] = field(
+    value: PersistencyRedundancyHandlingScopeEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -29,7 +29,7 @@ class CryptoKeySlotContentAllowedUsage:
     class Meta:
         name = "CRYPTO-KEY-SLOT-CONTENT-ALLOWED-USAGE"
 
-    allowed_keyslot_usage: Optional[String] = field(
+    allowed_keyslot_usage: String | None = field(
         default=None,
         metadata={
             "name": "ALLOWED-KEYSLOT-USAGE",
@@ -37,14 +37,14 @@ class CryptoKeySlotContentAllowedUsage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

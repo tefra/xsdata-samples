@@ -20,7 +20,7 @@ class ModeRestrictionAssessmentVersionStructure(
     class Meta:
         name = "ModeRestrictionAssessment_VersionStructure"
 
-    exclude: Optional[bool] = field(
+    exclude: bool | None = field(
         default=None,
         metadata={
             "name": "Exclude",
@@ -28,7 +28,7 @@ class ModeRestrictionAssessmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_modes: Optional[TransportModesRelStructure] = field(
+    transport_modes: TransportModesRelStructure | None = field(
         default=None,
         metadata={
             "name": "transportModes",
@@ -36,16 +36,7 @@ class ModeRestrictionAssessmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: Optional[
-        Union[
-            PersonalModeOfOperationRef,
-            VehiclePoolingRef,
-            VehicleSharingRef,
-            VehicleRentalRef,
-            FlexibleModeOfOperationRef,
-            ScheduledModeOfOperationRef,
-        ]
-    ] = field(
+    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: PersonalModeOfOperationRef | VehiclePoolingRef | VehicleSharingRef | VehicleRentalRef | FlexibleModeOfOperationRef | ScheduledModeOfOperationRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -83,7 +74,7 @@ class ModeRestrictionAssessmentVersionStructure(
             ),
         },
     )
-    minimum_number_of_passengers: Optional[int] = field(
+    minimum_number_of_passengers: int | None = field(
         default=None,
         metadata={
             "name": "MinimumNumberOfPassengers",

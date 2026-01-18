@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -68,7 +70,7 @@ class SenderReceiverCompositeElementToSignalMapping:
     class Meta:
         name = "SENDER-RECEIVER-COMPOSITE-ELEMENT-TO-SIGNAL-MAPPING"
 
-    communication_direction: Optional[CommunicationDirectionType] = field(
+    communication_direction: CommunicationDirectionType | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-DIRECTION",
@@ -76,9 +78,7 @@ class SenderReceiverCompositeElementToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_refs: Optional[
-        "SenderReceiverCompositeElementToSignalMapping.EventGroupRefs"
-    ] = field(
+    event_group_refs: SenderReceiverCompositeElementToSignalMapping.EventGroupRefs | None = field(
         default=None,
         metadata={
             "name": "EVENT-GROUP-REFS",
@@ -86,9 +86,7 @@ class SenderReceiverCompositeElementToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_handler_refs: Optional[
-        "SenderReceiverCompositeElementToSignalMapping.EventHandlerRefs"
-    ] = field(
+    event_handler_refs: SenderReceiverCompositeElementToSignalMapping.EventHandlerRefs | None = field(
         default=None,
         metadata={
             "name": "EVENT-HANDLER-REFS",
@@ -96,7 +94,7 @@ class SenderReceiverCompositeElementToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -104,9 +102,7 @@ class SenderReceiverCompositeElementToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_refs: Optional[
-        "SenderReceiverCompositeElementToSignalMapping.ServiceInstanceRefs"
-    ] = field(
+    service_instance_refs: SenderReceiverCompositeElementToSignalMapping.ServiceInstanceRefs | None = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REFS",
@@ -114,7 +110,7 @@ class SenderReceiverCompositeElementToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -122,7 +118,7 @@ class SenderReceiverCompositeElementToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_iref: Optional[VariableDataPrototypeInSystemInstanceRef] = (
+    data_element_iref: VariableDataPrototypeInSystemInstanceRef | None = (
         field(
             default=None,
             metadata={
@@ -132,9 +128,7 @@ class SenderReceiverCompositeElementToSignalMapping:
             },
         )
     )
-    system_signal_ref: Optional[
-        "SenderReceiverCompositeElementToSignalMapping.SystemSignalRef"
-    ] = field(
+    system_signal_ref: SenderReceiverCompositeElementToSignalMapping.SystemSignalRef | None = field(
         default=None,
         metadata={
             "name": "SYSTEM-SIGNAL-REF",
@@ -142,9 +136,7 @@ class SenderReceiverCompositeElementToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_mapping: Optional[
-        "SenderReceiverCompositeElementToSignalMapping.TypeMapping"
-    ] = field(
+    type_mapping: SenderReceiverCompositeElementToSignalMapping.TypeMapping | None = field(
         default=None,
         metadata={
             "name": "TYPE-MAPPING",
@@ -152,14 +144,14 @@ class SenderReceiverCompositeElementToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -171,7 +163,7 @@ class SenderReceiverCompositeElementToSignalMapping:
     @dataclass
     class EventGroupRefs:
         event_group_ref: list[
-            "SenderReceiverCompositeElementToSignalMapping.EventGroupRefs.EventGroupRef"
+            SenderReceiverCompositeElementToSignalMapping.EventGroupRefs.EventGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -183,7 +175,7 @@ class SenderReceiverCompositeElementToSignalMapping:
 
         @dataclass
         class EventGroupRef(Ref):
-            dest: Optional[ConsumedEventGroupSubtypesEnum] = field(
+            dest: ConsumedEventGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -195,7 +187,7 @@ class SenderReceiverCompositeElementToSignalMapping:
     @dataclass
     class EventHandlerRefs:
         event_handler_ref: list[
-            "SenderReceiverCompositeElementToSignalMapping.EventHandlerRefs.EventHandlerRef"
+            SenderReceiverCompositeElementToSignalMapping.EventHandlerRefs.EventHandlerRef
         ] = field(
             default_factory=list,
             metadata={
@@ -207,7 +199,7 @@ class SenderReceiverCompositeElementToSignalMapping:
 
         @dataclass
         class EventHandlerRef(Ref):
-            dest: Optional[EventHandlerSubtypesEnum] = field(
+            dest: EventHandlerSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -219,7 +211,7 @@ class SenderReceiverCompositeElementToSignalMapping:
     @dataclass
     class ServiceInstanceRefs:
         service_instance_ref: list[
-            "SenderReceiverCompositeElementToSignalMapping.ServiceInstanceRefs.ServiceInstanceRef"
+            SenderReceiverCompositeElementToSignalMapping.ServiceInstanceRefs.ServiceInstanceRef
         ] = field(
             default_factory=list,
             metadata={
@@ -231,7 +223,7 @@ class SenderReceiverCompositeElementToSignalMapping:
 
         @dataclass
         class ServiceInstanceRef(Ref):
-            dest: Optional[AbstractServiceInstanceSubtypesEnum] = field(
+            dest: AbstractServiceInstanceSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -242,7 +234,7 @@ class SenderReceiverCompositeElementToSignalMapping:
 
     @dataclass
     class SystemSignalRef(Ref):
-        dest: Optional[SystemSignalSubtypesEnum] = field(
+        dest: SystemSignalSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -253,7 +245,7 @@ class SenderReceiverCompositeElementToSignalMapping:
 
     @dataclass
     class TypeMapping:
-        sender_rec_array_type_mapping: Optional[SenderRecArrayTypeMapping] = (
+        sender_rec_array_type_mapping: SenderRecArrayTypeMapping | None = (
             field(
                 default=None,
                 metadata={
@@ -263,9 +255,7 @@ class SenderReceiverCompositeElementToSignalMapping:
                 },
             )
         )
-        sender_rec_record_type_mapping: Optional[
-            SenderRecRecordTypeMapping
-        ] = field(
+        sender_rec_record_type_mapping: SenderRecRecordTypeMapping | None = field(
             default=None,
             metadata={
                 "name": "SENDER-REC-RECORD-TYPE-MAPPING",

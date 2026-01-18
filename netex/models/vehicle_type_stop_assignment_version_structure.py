@@ -20,7 +20,7 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "VehicleTypeStopAssignment_VersionStructure"
 
-    vehicle_orientation: Optional[VehicleOrientationEnumeration] = field(
+    vehicle_orientation: VehicleOrientationEnumeration | None = field(
         default=None,
         metadata={
             "name": "VehicleOrientation",
@@ -28,7 +28,7 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_stopping_position_ref: Optional[VehicleStoppingPositionRef] = (
+    vehicle_stopping_position_ref: VehicleStoppingPositionRef | None = (
         field(
             default=None,
             metadata={
@@ -38,7 +38,7 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
             },
         )
     )
-    vehicle_journey_ref: Optional[Union[DeadRunRef, VehicleJourneyRef]] = (
+    vehicle_journey_ref: DeadRunRef | VehicleJourneyRef | None = (
         field(
             default=None,
             metadata={
@@ -58,15 +58,7 @@ class VehicleTypeStopAssignmentVersionStructure(AssignmentVersionStructure1):
             },
         )
     )
-    transport_type_ref_or_vehicle_type_ref: Optional[
-        Union[
-            SimpleVehicleTypeRef,
-            CompoundTrainRef,
-            TrainRef,
-            VehicleTypeRef,
-            TransportTypeRef,
-        ]
-    ] = field(
+    transport_type_ref_or_vehicle_type_ref: SimpleVehicleTypeRef | CompoundTrainRef | TrainRef | VehicleTypeRef | TransportTypeRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

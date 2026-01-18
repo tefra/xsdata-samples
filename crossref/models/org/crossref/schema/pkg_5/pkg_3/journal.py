@@ -30,14 +30,14 @@ class Journal:
         name = "journal"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    journal_metadata: Optional[JournalMetadata] = field(
+    journal_metadata: JournalMetadata | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    journal_issue: Optional[JournalIssue] = field(
+    journal_issue: JournalIssue | None = field(
         default=None,
         metadata={
             "type": "Element",

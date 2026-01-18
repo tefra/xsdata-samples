@@ -16,7 +16,7 @@ class GroupMemberVersionedChildStructure(
     class Meta:
         name = "GroupMember_VersionedChildStructure"
 
-    group_ref: Optional[VersionOfObjectRefStructure] = field(
+    group_ref: VersionOfObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "GroupRef",
@@ -24,7 +24,7 @@ class GroupMemberVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    member_object_ref: Optional[VersionOfObjectRefStructure] = field(
+    member_object_ref: VersionOfObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "MemberObjectRef",

@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class UnknownEndpointErrorStructure(ErrorCodeStructure):
-    endpoint: Optional[str] = field(
+    endpoint: str | None = field(
         default=None,
         metadata={
             "name": "Endpoint",

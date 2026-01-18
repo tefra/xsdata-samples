@@ -41,7 +41,7 @@ class AbnormalTraffic(TrafficElement):
     :ivar abnormal_traffic_extension:
     """
 
-    abnormal_traffic_type: Optional[AbnormalTrafficTypeEnum] = field(
+    abnormal_traffic_type: AbnormalTrafficTypeEnum | None = field(
         default=None,
         metadata={
             "name": "abnormalTrafficType",
@@ -49,7 +49,7 @@ class AbnormalTraffic(TrafficElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    number_of_vehicles_waiting: Optional[int] = field(
+    number_of_vehicles_waiting: int | None = field(
         default=None,
         metadata={
             "name": "numberOfVehiclesWaiting",
@@ -57,7 +57,7 @@ class AbnormalTraffic(TrafficElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    queue_length: Optional[int] = field(
+    queue_length: int | None = field(
         default=None,
         metadata={
             "name": "queueLength",
@@ -65,7 +65,7 @@ class AbnormalTraffic(TrafficElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    relative_traffic_flow: Optional[RelativeTrafficFlowEnum] = field(
+    relative_traffic_flow: RelativeTrafficFlowEnum | None = field(
         default=None,
         metadata={
             "name": "relativeTrafficFlow",
@@ -73,7 +73,7 @@ class AbnormalTraffic(TrafficElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    traffic_flow_characteristics: Optional[TrafficFlowCharacteristicsEnum] = (
+    traffic_flow_characteristics: TrafficFlowCharacteristicsEnum | None = (
         field(
             default=None,
             metadata={
@@ -83,7 +83,7 @@ class AbnormalTraffic(TrafficElement):
             },
         )
     )
-    traffic_trend_type: Optional[TrafficTrendTypeEnum] = field(
+    traffic_trend_type: TrafficTrendTypeEnum | None = field(
         default=None,
         metadata={
             "name": "trafficTrendType",
@@ -91,7 +91,7 @@ class AbnormalTraffic(TrafficElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    abnormal_traffic_extension: Optional[ExtensionType] = field(
+    abnormal_traffic_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "abnormalTrafficExtension",

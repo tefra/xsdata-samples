@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -43,7 +45,7 @@ class RoleBasedDataTypeAssignment:
     class Meta:
         name = "ROLE-BASED-DATA-TYPE-ASSIGNMENT"
 
-    role: Optional[Identifier] = field(
+    role: Identifier | None = field(
         default=None,
         metadata={
             "name": "ROLE",
@@ -51,9 +53,7 @@ class RoleBasedDataTypeAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    used_implementation_data_type_ref: Optional[
-        "RoleBasedDataTypeAssignment.UsedImplementationDataTypeRef"
-    ] = field(
+    used_implementation_data_type_ref: RoleBasedDataTypeAssignment.UsedImplementationDataTypeRef | None = field(
         default=None,
         metadata={
             "name": "USED-IMPLEMENTATION-DATA-TYPE-REF",
@@ -61,7 +61,7 @@ class RoleBasedDataTypeAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -69,14 +69,14 @@ class RoleBasedDataTypeAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -87,7 +87,7 @@ class RoleBasedDataTypeAssignment:
 
     @dataclass
     class UsedImplementationDataTypeRef(Ref):
-        dest: Optional[ImplementationDataTypeSubtypesEnum] = field(
+        dest: ImplementationDataTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

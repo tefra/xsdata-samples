@@ -28,20 +28,20 @@ class SwImplPolicyEnum:
     class Meta:
         name = "SW-IMPL-POLICY-ENUM"
 
-    value: Optional[SwImplPolicyEnumSimple] = field(
+    value: SwImplPolicyEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

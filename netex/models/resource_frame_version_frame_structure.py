@@ -65,7 +65,7 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "ResourceFrame_VersionFrameStructure"
 
-    data_sources: Optional[DataSourcesInFrameRelStructure] = field(
+    data_sources: DataSourcesInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "dataSources",
@@ -73,7 +73,7 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    responsibility_roles: Optional[ResponsibilityRolesInFrameRelStructure] = (
+    responsibility_roles: ResponsibilityRolesInFrameRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -83,7 +83,7 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    responsibility_sets: Optional[ResponsibilitySetsInFrameRelStructure] = (
+    responsibility_sets: ResponsibilitySetsInFrameRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -93,7 +93,7 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    types_of_value: Optional[TypesOfValueInFrameRelStructure] = field(
+    types_of_value: TypesOfValueInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "typesOfValue",
@@ -101,21 +101,21 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    contacts: Optional[ContactsRelStructure] = field(
+    contacts: ContactsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisations: Optional[OrganisationsInFrameRelStructure] = field(
+    organisations: OrganisationsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    groups_of_operators: Optional[GroupsOfOperatorsInFrameRelStructure] = (
+    groups_of_operators: GroupsOfOperatorsInFrameRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -125,7 +125,7 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    operational_contexts: Optional[OperationalContextsInFrameRelStructure] = (
+    operational_contexts: OperationalContextsInFrameRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -135,7 +135,7 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    control_centres: Optional[ControlCentresInFrameRelStructure] = field(
+    control_centres: ControlCentresInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "controlCentres",
@@ -143,7 +143,7 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    open_modes: Optional[OpenModesRelStructure] = field(
+    open_modes: OpenModesRelStructure | None = field(
         default=None,
         metadata={
             "name": "openModes",
@@ -151,7 +151,7 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    modes_of_operation: Optional[ModesOfOperationRelStructure] = field(
+    modes_of_operation: ModesOfOperationRelStructure | None = field(
         default=None,
         metadata={
             "name": "modesOfOperation",
@@ -159,14 +159,14 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    equipments: Optional[EquipmentsInFrameRelStructure] = field(
+    equipments: EquipmentsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    site_facility_sets: Optional[SiteFacilitySetsInFrameRelStructure] = field(
+    site_facility_sets: SiteFacilitySetsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "siteFacilitySets",
@@ -174,7 +174,7 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_facility_sets: Optional[ServiceFacilitySetsInFrameRelStructure] = (
+    service_facility_sets: ServiceFacilitySetsInFrameRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -184,7 +184,7 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    vehicle_types: Optional[VehicleTypesInFrameRelStructure] = field(
+    vehicle_types: VehicleTypesInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "vehicleTypes",
@@ -192,7 +192,7 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_models: Optional[VehicleModelsInFrameRelStructure] = field(
+    vehicle_models: VehicleModelsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "vehicleModels",
@@ -200,9 +200,7 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_equipment_profiles: Optional[
-        VehicleEquipmenProfilesInFrameRelStructure
-    ] = field(
+    vehicle_equipment_profiles: VehicleEquipmenProfilesInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "vehicleEquipmentProfiles",
@@ -210,9 +208,7 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_model_profiles: Optional[
-        VehicleModelProfilesInFrameRelStructure
-    ] = field(
+    vehicle_model_profiles: VehicleModelProfilesInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "vehicleModelProfiles",
@@ -220,14 +216,14 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicles: Optional[VehiclesInFrameRelStructure] = field(
+    vehicles: VehiclesInFrameRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    schematic_maps: Optional[SchematicMapsInFrameRelStructure] = field(
+    schematic_maps: SchematicMapsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "schematicMaps",
@@ -235,7 +231,7 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    groups_of_entities: Optional[GroupOfEntitiesInFrameRelStructure] = field(
+    groups_of_entities: GroupOfEntitiesInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "groupsOfEntities",
@@ -243,21 +239,21 @@ class ResourceFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    zones: Optional[ZonesInFrameRelStructure] = field(
+    zones: ZonesInFrameRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    blacklists: Optional[BlacklistsInFrameRelStructure] = field(
+    blacklists: BlacklistsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    whitelists: Optional[WhitelistsInFrameRelStructure] = field(
+    whitelists: WhitelistsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

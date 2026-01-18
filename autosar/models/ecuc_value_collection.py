@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -92,7 +94,7 @@ class EcucValueCollection:
     class Meta:
         name = "ECUC-VALUE-COLLECTION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -101,9 +103,7 @@ class EcucValueCollection:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "EcucValueCollection.ShortNameFragments"
-    ] = field(
+    short_name_fragments: EcucValueCollection.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -111,7 +111,7 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -119,7 +119,7 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -127,7 +127,7 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -135,7 +135,7 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -143,7 +143,7 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -151,7 +151,7 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["EcucValueCollection.Annotations"] = field(
+    annotations: EcucValueCollection.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -159,7 +159,7 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -167,7 +167,7 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_extract_ref: Optional["EcucValueCollection.EcuExtractRef"] = field(
+    ecu_extract_ref: EcucValueCollection.EcuExtractRef | None = field(
         default=None,
         metadata={
             "name": "ECU-EXTRACT-REF",
@@ -175,7 +175,7 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_values: Optional["EcucValueCollection.EcucValues"] = field(
+    ecuc_values: EcucValueCollection.EcucValues | None = field(
         default=None,
         metadata={
             "name": "ECUC-VALUES",
@@ -183,14 +183,14 @@ class EcucValueCollection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -198,7 +198,7 @@ class EcucValueCollection:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -230,7 +230,7 @@ class EcucValueCollection:
 
     @dataclass
     class EcuExtractRef(Ref):
-        dest: Optional[SystemSubtypesEnum] = field(
+        dest: SystemSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -21,7 +23,7 @@ class FieldAccessPolicyDefinitions:
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
     field_access_policy_definition: list[
-        "FieldAccessPolicyDefinitions.FieldAccessPolicyDefinition"
+        FieldAccessPolicyDefinitions.FieldAccessPolicyDefinition
     ] = field(
         default_factory=list,
         metadata={
@@ -47,75 +49,75 @@ class FieldAccessPolicyDefinitions:
         :ivar id:
         """
 
-        name: Optional[str] = field(
+        name: str | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        display_name: Optional[DisplayName] = field(
+        display_name: DisplayName | None = field(
             default=None,
             metadata={
                 "name": "displayName",
                 "type": "Element",
             },
         )
-        short_description: Optional[ShortDescription] = field(
+        short_description: ShortDescription | None = field(
             default=None,
             metadata={
                 "name": "shortDescription",
                 "type": "Element",
             },
         )
-        description: Optional[Description] = field(
+        description: Description | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        access: Optional[Access] = field(
+        access: Access | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        modified_write_value: Optional[ModifiedWriteValue] = field(
+        modified_write_value: ModifiedWriteValue | None = field(
             default=None,
             metadata={
                 "name": "modifiedWriteValue",
                 "type": "Element",
             },
         )
-        write_value_constraint: Optional[WriteValueConstraint] = field(
+        write_value_constraint: WriteValueConstraint | None = field(
             default=None,
             metadata={
                 "name": "writeValueConstraint",
                 "type": "Element",
             },
         )
-        read_action: Optional[ReadAction] = field(
+        read_action: ReadAction | None = field(
             default=None,
             metadata={
                 "name": "readAction",
                 "type": "Element",
             },
         )
-        read_response: Optional[ReadResponse] = field(
+        read_response: ReadResponse | None = field(
             default=None,
             metadata={
                 "name": "readResponse",
                 "type": "Element",
             },
         )
-        vendor_extensions: Optional[VendorExtensions] = field(
+        vendor_extensions: VendorExtensions | None = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

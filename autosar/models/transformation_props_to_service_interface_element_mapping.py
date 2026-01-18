@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -104,7 +106,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
     class Meta:
         name = "TRANSFORMATION-PROPS-TO-SERVICE-INTERFACE-ELEMENT-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -113,9 +115,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "TransformationPropsToServiceInterfaceElementMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: TransformationPropsToServiceInterfaceElementMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -123,7 +123,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -131,7 +131,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -139,7 +139,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -147,7 +147,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -155,7 +155,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -163,9 +163,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "TransformationPropsToServiceInterfaceElementMapping.Annotations"
-    ] = field(
+    annotations: TransformationPropsToServiceInterfaceElementMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -173,9 +171,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_refs: Optional[
-        "TransformationPropsToServiceInterfaceElementMapping.EventRefs"
-    ] = field(
+    event_refs: TransformationPropsToServiceInterfaceElementMapping.EventRefs | None = field(
         default=None,
         metadata={
             "name": "EVENT-REFS",
@@ -183,9 +179,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    field_refs: Optional[
-        "TransformationPropsToServiceInterfaceElementMapping.FieldRefs"
-    ] = field(
+    field_refs: TransformationPropsToServiceInterfaceElementMapping.FieldRefs | None = field(
         default=None,
         metadata={
             "name": "FIELD-REFS",
@@ -193,9 +187,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_refs: Optional[
-        "TransformationPropsToServiceInterfaceElementMapping.MethodRefs"
-    ] = field(
+    method_refs: TransformationPropsToServiceInterfaceElementMapping.MethodRefs | None = field(
         default=None,
         metadata={
             "name": "METHOD-REFS",
@@ -203,9 +195,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tlv_data_id_definition_refs: Optional[
-        "TransformationPropsToServiceInterfaceElementMapping.TlvDataIdDefinitionRefs"
-    ] = field(
+    tlv_data_id_definition_refs: TransformationPropsToServiceInterfaceElementMapping.TlvDataIdDefinitionRefs | None = field(
         default=None,
         metadata={
             "name": "TLV-DATA-ID-DEFINITION-REFS",
@@ -213,9 +203,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformation_props_ref: Optional[
-        "TransformationPropsToServiceInterfaceElementMapping.TransformationPropsRef"
-    ] = field(
+    transformation_props_ref: TransformationPropsToServiceInterfaceElementMapping.TransformationPropsRef | None = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-PROPS-REF",
@@ -223,14 +211,14 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -238,7 +226,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -271,7 +259,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
     @dataclass
     class EventRefs:
         event_ref: list[
-            "TransformationPropsToServiceInterfaceElementMapping.EventRefs.EventRef"
+            TransformationPropsToServiceInterfaceElementMapping.EventRefs.EventRef
         ] = field(
             default_factory=list,
             metadata={
@@ -283,7 +271,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
 
         @dataclass
         class EventRef(Ref):
-            dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+            dest: VariableDataPrototypeSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -295,7 +283,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
     @dataclass
     class FieldRefs:
         field_ref: list[
-            "TransformationPropsToServiceInterfaceElementMapping.FieldRefs.FieldRef"
+            TransformationPropsToServiceInterfaceElementMapping.FieldRefs.FieldRef
         ] = field(
             default_factory=list,
             metadata={
@@ -307,7 +295,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
 
         @dataclass
         class FieldRef(Ref):
-            dest: Optional[FieldSubtypesEnum] = field(
+            dest: FieldSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -319,7 +307,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
     @dataclass
     class MethodRefs:
         method_ref: list[
-            "TransformationPropsToServiceInterfaceElementMapping.MethodRefs.MethodRef"
+            TransformationPropsToServiceInterfaceElementMapping.MethodRefs.MethodRef
         ] = field(
             default_factory=list,
             metadata={
@@ -331,7 +319,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
 
         @dataclass
         class MethodRef(Ref):
-            dest: Optional[ClientServerOperationSubtypesEnum] = field(
+            dest: ClientServerOperationSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -343,7 +331,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
     @dataclass
     class TlvDataIdDefinitionRefs:
         tlv_data_id_definition_ref: list[
-            "TransformationPropsToServiceInterfaceElementMapping.TlvDataIdDefinitionRefs.TlvDataIdDefinitionRef"
+            TransformationPropsToServiceInterfaceElementMapping.TlvDataIdDefinitionRefs.TlvDataIdDefinitionRef
         ] = field(
             default_factory=list,
             metadata={
@@ -355,7 +343,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
 
         @dataclass
         class TlvDataIdDefinitionRef(Ref):
-            dest: Optional[TlvDataIdDefinitionSetSubtypesEnum] = field(
+            dest: TlvDataIdDefinitionSetSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -366,7 +354,7 @@ class TransformationPropsToServiceInterfaceElementMapping:
 
     @dataclass
     class TransformationPropsRef(Ref):
-        dest: Optional[TransformationPropsSubtypesEnum] = field(
+        dest: TransformationPropsSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

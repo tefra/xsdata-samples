@@ -14,7 +14,7 @@ class OpenlrExtendedPoint:
     Extension class for OpenLR point.
     """
 
-    openlr_point_location_reference: Optional[OpenlrPointLocationReference] = (
+    openlr_point_location_reference: OpenlrPointLocationReference | None = (
         field(
             default=None,
             metadata={

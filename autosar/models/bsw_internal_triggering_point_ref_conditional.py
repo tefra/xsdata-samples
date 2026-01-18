@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class BswInternalTriggeringPointRefConditional:
     class Meta:
         name = "BSW-INTERNAL-TRIGGERING-POINT-REF-CONDITIONAL"
 
-    bsw_internal_triggering_point_ref: Optional[
-        "BswInternalTriggeringPointRefConditional.BswInternalTriggeringPointRef"
-    ] = field(
+    bsw_internal_triggering_point_ref: BswInternalTriggeringPointRefConditional.BswInternalTriggeringPointRef | None = field(
         default=None,
         metadata={
             "name": "BSW-INTERNAL-TRIGGERING-POINT-REF",
@@ -43,7 +43,7 @@ class BswInternalTriggeringPointRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class BswInternalTriggeringPointRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class BswInternalTriggeringPointRefConditional:
 
     @dataclass
     class BswInternalTriggeringPointRef(Ref):
-        dest: Optional[BswInternalTriggeringPointSubtypesEnum] = field(
+        dest: BswInternalTriggeringPointSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

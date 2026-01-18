@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,9 +41,7 @@ class ModeInBswInstanceRef:
     class Meta:
         name = "MODE-IN-BSW-INSTANCE-REF"
 
-    context_bsw_implementation_ref: Optional[
-        "ModeInBswInstanceRef.ContextBswImplementationRef"
-    ] = field(
+    context_bsw_implementation_ref: ModeInBswInstanceRef.ContextBswImplementationRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-BSW-IMPLEMENTATION-REF",
@@ -49,9 +49,7 @@ class ModeInBswInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_mode_declaration_group_prototype_ref: Optional[
-        "ModeInBswInstanceRef.ContextModeDeclarationGroupPrototypeRef"
-    ] = field(
+    context_mode_declaration_group_prototype_ref: ModeInBswInstanceRef.ContextModeDeclarationGroupPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF",
@@ -59,9 +57,7 @@ class ModeInBswInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_mode_declaration_ref: Optional[
-        "ModeInBswInstanceRef.TargetModeDeclarationRef"
-    ] = field(
+    target_mode_declaration_ref: ModeInBswInstanceRef.TargetModeDeclarationRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-MODE-DECLARATION-REF",
@@ -69,14 +65,14 @@ class ModeInBswInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -87,7 +83,7 @@ class ModeInBswInstanceRef:
 
     @dataclass
     class ContextBswImplementationRef(Ref):
-        dest: Optional[BswImplementationSubtypesEnum] = field(
+        dest: BswImplementationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -98,7 +94,7 @@ class ModeInBswInstanceRef:
 
     @dataclass
     class ContextModeDeclarationGroupPrototypeRef(Ref):
-        dest: Optional[ModeDeclarationGroupPrototypeSubtypesEnum] = field(
+        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -109,7 +105,7 @@ class ModeInBswInstanceRef:
 
     @dataclass
     class TargetModeDeclarationRef(Ref):
-        dest: Optional[ModeDeclarationSubtypesEnum] = field(
+        dest: ModeDeclarationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

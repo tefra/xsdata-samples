@@ -15,7 +15,7 @@ class OrganisationalUnitsRelStructure(ContainmentAggregationStructure):
         name = "organisationalUnits_RelStructure"
 
     organisational_unit_ref_or_organisational_unit: Iterable[
-        Union[OrganisationalUnitRef, OrganisationalUnit]
+        OrganisationalUnitRef | OrganisationalUnit
     ] = field(
         default_factory=list,
         metadata={

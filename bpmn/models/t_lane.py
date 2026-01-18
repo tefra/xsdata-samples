@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 from xml.etree.ElementTree import QName
@@ -12,7 +14,7 @@ class TLane(TBaseElement):
     class Meta:
         name = "tLane"
 
-    partition_element: Optional[TBaseElement] = field(
+    partition_element: TBaseElement | None = field(
         default=None,
         metadata={
             "name": "partitionElement",
@@ -28,7 +30,7 @@ class TLane(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    child_lane_set: Optional["TLaneSet"] = field(
+    child_lane_set: TLaneSet | None = field(
         default=None,
         metadata={
             "name": "childLaneSet",
@@ -36,13 +38,13 @@ class TLane(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    partition_element_ref: Optional[QName] = field(
+    partition_element_ref: QName | None = field(
         default=None,
         metadata={
             "name": "partitionElementRef",
@@ -70,7 +72,7 @@ class TLaneSet(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

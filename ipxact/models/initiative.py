@@ -17,7 +17,7 @@ class Initiative:
         name = "initiative"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: Optional[InitiativeType] = field(
+    value: InitiativeType | None = field(
         default=None,
         metadata={
             "required": True,

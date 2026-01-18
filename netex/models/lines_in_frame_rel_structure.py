@@ -14,7 +14,7 @@ class LinesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "linesInFrame_RelStructure"
 
-    line: Iterable[Union[FlexibleLine, Line]] = field(
+    line: Iterable[FlexibleLine | Line] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

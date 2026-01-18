@@ -28,7 +28,7 @@ class BaseFaultType:
             "namespace": "##other",
         },
     )
-    timestamp: Optional[XmlDateTime] = field(
+    timestamp: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "Timestamp",
@@ -37,7 +37,7 @@ class BaseFaultType:
             "required": True,
         },
     )
-    originator: Optional[EndpointReferenceType] = field(
+    originator: EndpointReferenceType | None = field(
         default=None,
         metadata={
             "name": "Originator",
@@ -45,7 +45,7 @@ class BaseFaultType:
             "namespace": "http://docs.oasis-open.org/wsrf/bf-2",
         },
     )
-    error_code: Optional[BaseFaultTypeErrorCode] = field(
+    error_code: BaseFaultTypeErrorCode | None = field(
         default=None,
         metadata={
             "name": "ErrorCode",
@@ -61,7 +61,7 @@ class BaseFaultType:
             "namespace": "http://docs.oasis-open.org/wsrf/bf-2",
         },
     )
-    fault_cause: Optional[BaseFaultTypeFaultCause] = field(
+    fault_cause: BaseFaultTypeFaultCause | None = field(
         default=None,
         metadata={
             "name": "FaultCause",

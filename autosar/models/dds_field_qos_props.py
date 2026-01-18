@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -35,7 +37,7 @@ class DdsFieldQosProps:
     class Meta:
         name = "DDS-FIELD-QOS-PROPS"
 
-    qos_profile: Optional[String] = field(
+    qos_profile: String | None = field(
         default=None,
         metadata={
             "name": "QOS-PROFILE",
@@ -43,7 +45,7 @@ class DdsFieldQosProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    field_ref: Optional["DdsFieldQosProps.FieldRef"] = field(
+    field_ref: DdsFieldQosProps.FieldRef | None = field(
         default=None,
         metadata={
             "name": "FIELD-REF",
@@ -51,14 +53,14 @@ class DdsFieldQosProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +71,7 @@ class DdsFieldQosProps:
 
     @dataclass
     class FieldRef(Ref):
-        dest: Optional[ServiceFieldDeploymentSubtypesEnum] = field(
+        dest: ServiceFieldDeploymentSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

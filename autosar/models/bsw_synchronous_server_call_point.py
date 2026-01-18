@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -52,7 +54,7 @@ class BswSynchronousServerCallPoint:
     class Meta:
         name = "BSW-SYNCHRONOUS-SERVER-CALL-POINT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -61,9 +63,7 @@ class BswSynchronousServerCallPoint:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "BswSynchronousServerCallPoint.ShortNameFragments"
-    ] = field(
+    short_name_fragments: BswSynchronousServerCallPoint.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -71,9 +71,7 @@ class BswSynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_limitation_refs: Optional[
-        "BswSynchronousServerCallPoint.ContextLimitationRefs"
-    ] = field(
+    context_limitation_refs: BswSynchronousServerCallPoint.ContextLimitationRefs | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-LIMITATION-REFS",
@@ -81,7 +79,7 @@ class BswSynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -89,9 +87,7 @@ class BswSynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    called_entry_ref: Optional[
-        "BswSynchronousServerCallPoint.CalledEntryRef"
-    ] = field(
+    called_entry_ref: BswSynchronousServerCallPoint.CalledEntryRef | None = field(
         default=None,
         metadata={
             "name": "CALLED-ENTRY-REF",
@@ -99,9 +95,7 @@ class BswSynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    called_from_within_exclusive_area_ref: Optional[
-        "BswSynchronousServerCallPoint.CalledFromWithinExclusiveAreaRef"
-    ] = field(
+    called_from_within_exclusive_area_ref: BswSynchronousServerCallPoint.CalledFromWithinExclusiveAreaRef | None = field(
         default=None,
         metadata={
             "name": "CALLED-FROM-WITHIN-EXCLUSIVE-AREA-REF",
@@ -109,14 +103,14 @@ class BswSynchronousServerCallPoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -139,7 +133,7 @@ class BswSynchronousServerCallPoint:
     @dataclass
     class ContextLimitationRefs:
         context_limitation_ref: list[
-            "BswSynchronousServerCallPoint.ContextLimitationRefs.ContextLimitationRef"
+            BswSynchronousServerCallPoint.ContextLimitationRefs.ContextLimitationRef
         ] = field(
             default_factory=list,
             metadata={
@@ -151,7 +145,7 @@ class BswSynchronousServerCallPoint:
 
         @dataclass
         class ContextLimitationRef(Ref):
-            dest: Optional[BswDistinguishedPartitionSubtypesEnum] = field(
+            dest: BswDistinguishedPartitionSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -162,7 +156,7 @@ class BswSynchronousServerCallPoint:
 
     @dataclass
     class CalledEntryRef(Ref):
-        dest: Optional[BswModuleClientServerEntrySubtypesEnum] = field(
+        dest: BswModuleClientServerEntrySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -173,7 +167,7 @@ class BswSynchronousServerCallPoint:
 
     @dataclass
     class CalledFromWithinExclusiveAreaRef(Ref):
-        dest: Optional[ExclusiveAreaNestingOrderSubtypesEnum] = field(
+        dest: ExclusiveAreaNestingOrderSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

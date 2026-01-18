@@ -42,37 +42,7 @@ class LocalServicesRelStructure(ContainmentAggregationStructure):
         name = "localServices_RelStructure"
 
     local_service_ref_or_local_service_or_customer_service: Iterable[
-        Union[
-            AssistanceBookingServiceRef,
-            CateringServiceRef,
-            RetailServiceRef,
-            MoneyServiceRef,
-            HireServiceRef,
-            CommunicationServiceRef,
-            MeetingPointServiceRef,
-            LeftLuggageServiceRef,
-            LuggageServiceRef,
-            LostPropertyServiceRef,
-            ComplaintsServiceRef,
-            CustomerServiceRef,
-            AssistanceServiceRef,
-            TicketingServiceRef,
-            LocalServiceRef,
-            AssistanceBookingService,
-            CateringService,
-            RetailService,
-            MoneyService,
-            HireService,
-            CommunicationService,
-            MeetingPointService,
-            LostPropertyService,
-            LeftLuggageService,
-            ComplaintsService,
-            CustomerService,
-            LuggageService,
-            AssistanceService,
-            TicketingService,
-        ]
+        AssistanceBookingServiceRef | CateringServiceRef | RetailServiceRef | MoneyServiceRef | HireServiceRef | CommunicationServiceRef | MeetingPointServiceRef | LeftLuggageServiceRef | LuggageServiceRef | LostPropertyServiceRef | ComplaintsServiceRef | CustomerServiceRef | AssistanceServiceRef | TicketingServiceRef | LocalServiceRef | AssistanceBookingService | CateringService | RetailService | MoneyService | HireService | CommunicationService | MeetingPointService | LostPropertyService | LeftLuggageService | ComplaintsService | CustomerService | LuggageService | AssistanceService | TicketingService
     ] = field(
         default_factory=list,
         metadata={

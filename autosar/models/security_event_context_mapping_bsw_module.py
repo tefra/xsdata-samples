@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -106,7 +108,7 @@ class SecurityEventContextMappingBswModule:
     class Meta:
         name = "SECURITY-EVENT-CONTEXT-MAPPING-BSW-MODULE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -115,9 +117,7 @@ class SecurityEventContextMappingBswModule:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SecurityEventContextMappingBswModule.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SecurityEventContextMappingBswModule.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -125,7 +125,7 @@ class SecurityEventContextMappingBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -133,7 +133,7 @@ class SecurityEventContextMappingBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -141,7 +141,7 @@ class SecurityEventContextMappingBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -149,7 +149,7 @@ class SecurityEventContextMappingBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -157,7 +157,7 @@ class SecurityEventContextMappingBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -165,9 +165,7 @@ class SecurityEventContextMappingBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "SecurityEventContextMappingBswModule.Annotations"
-    ] = field(
+    annotations: SecurityEventContextMappingBswModule.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -175,7 +173,7 @@ class SecurityEventContextMappingBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -183,9 +181,7 @@ class SecurityEventContextMappingBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    filter_chains: Optional[
-        "SecurityEventContextMappingBswModule.FilterChains"
-    ] = field(
+    filter_chains: SecurityEventContextMappingBswModule.FilterChains | None = field(
         default=None,
         metadata={
             "name": "FILTER-CHAINS",
@@ -193,9 +189,7 @@ class SecurityEventContextMappingBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    idsm_instances: Optional[
-        "SecurityEventContextMappingBswModule.IdsmInstances"
-    ] = field(
+    idsm_instances: SecurityEventContextMappingBswModule.IdsmInstances | None = field(
         default=None,
         metadata={
             "name": "IDSM-INSTANCES",
@@ -203,9 +197,7 @@ class SecurityEventContextMappingBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapped_security_events: Optional[
-        "SecurityEventContextMappingBswModule.MappedSecurityEvents"
-    ] = field(
+    mapped_security_events: SecurityEventContextMappingBswModule.MappedSecurityEvents | None = field(
         default=None,
         metadata={
             "name": "MAPPED-SECURITY-EVENTS",
@@ -213,7 +205,7 @@ class SecurityEventContextMappingBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    affected_bsw_module: Optional[String] = field(
+    affected_bsw_module: String | None = field(
         default=None,
         metadata={
             "name": "AFFECTED-BSW-MODULE",
@@ -221,14 +213,14 @@ class SecurityEventContextMappingBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -236,7 +228,7 @@ class SecurityEventContextMappingBswModule:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

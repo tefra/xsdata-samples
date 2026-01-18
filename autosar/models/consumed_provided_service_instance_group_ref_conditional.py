@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class ConsumedProvidedServiceInstanceGroupRefConditional:
     class Meta:
         name = "CONSUMED-PROVIDED-SERVICE-INSTANCE-GROUP-REF-CONDITIONAL"
 
-    consumed_provided_service_instance_group_ref: Optional[
-        "ConsumedProvidedServiceInstanceGroupRefConditional.ConsumedProvidedServiceInstanceGroupRef"
-    ] = field(
+    consumed_provided_service_instance_group_ref: ConsumedProvidedServiceInstanceGroupRefConditional.ConsumedProvidedServiceInstanceGroupRef | None = field(
         default=None,
         metadata={
             "name": "CONSUMED-PROVIDED-SERVICE-INSTANCE-GROUP-REF",
@@ -43,7 +43,7 @@ class ConsumedProvidedServiceInstanceGroupRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class ConsumedProvidedServiceInstanceGroupRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class ConsumedProvidedServiceInstanceGroupRefConditional:
 
     @dataclass
     class ConsumedProvidedServiceInstanceGroupRef(Ref):
-        dest: Optional[ConsumedProvidedServiceInstanceGroupSubtypesEnum] = (
+        dest: ConsumedProvidedServiceInstanceGroupSubtypesEnum | None = (
             field(
                 default=None,
                 metadata={

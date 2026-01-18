@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,9 +33,7 @@ class AutosarDataTypeRefConditional:
     class Meta:
         name = "AUTOSAR-DATA-TYPE-REF-CONDITIONAL"
 
-    autosar_data_type_ref: Optional[
-        "AutosarDataTypeRefConditional.AutosarDataTypeRef"
-    ] = field(
+    autosar_data_type_ref: AutosarDataTypeRefConditional.AutosarDataTypeRef | None = field(
         default=None,
         metadata={
             "name": "AUTOSAR-DATA-TYPE-REF",
@@ -41,7 +41,7 @@ class AutosarDataTypeRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -49,14 +49,14 @@ class AutosarDataTypeRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +67,7 @@ class AutosarDataTypeRefConditional:
 
     @dataclass
     class AutosarDataTypeRef(Ref):
-        dest: Optional[AutosarDataTypeSubtypesEnum] = field(
+        dest: AutosarDataTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

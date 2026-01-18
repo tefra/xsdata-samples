@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -44,9 +46,7 @@ class EthGlobalTimeManagedCouplingPort:
     class Meta:
         name = "ETH-GLOBAL-TIME-MANAGED-COUPLING-PORT"
 
-    coupling_port_ref: Optional[
-        "EthGlobalTimeManagedCouplingPort.CouplingPortRef"
-    ] = field(
+    coupling_port_ref: EthGlobalTimeManagedCouplingPort.CouplingPortRef | None = field(
         default=None,
         metadata={
             "name": "COUPLING-PORT-REF",
@@ -54,7 +54,7 @@ class EthGlobalTimeManagedCouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdelay_latency_threshold: Optional[TimeValue] = field(
+    pdelay_latency_threshold: TimeValue | None = field(
         default=None,
         metadata={
             "name": "PDELAY-LATENCY-THRESHOLD",
@@ -62,7 +62,7 @@ class EthGlobalTimeManagedCouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdelay_request_period: Optional[TimeValue] = field(
+    pdelay_request_period: TimeValue | None = field(
         default=None,
         metadata={
             "name": "PDELAY-REQUEST-PERIOD",
@@ -70,7 +70,7 @@ class EthGlobalTimeManagedCouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdelay_resp_and_resp_follow_up_timeout: Optional[TimeValue] = field(
+    pdelay_resp_and_resp_follow_up_timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "PDELAY-RESP-AND-RESP-FOLLOW-UP-TIMEOUT",
@@ -78,7 +78,7 @@ class EthGlobalTimeManagedCouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdelay_response_enabled: Optional[Boolean] = field(
+    pdelay_response_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "PDELAY-RESPONSE-ENABLED",
@@ -86,14 +86,14 @@ class EthGlobalTimeManagedCouplingPort:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -104,7 +104,7 @@ class EthGlobalTimeManagedCouplingPort:
 
     @dataclass
     class CouplingPortRef(Ref):
-        dest: Optional[CouplingPortSubtypesEnum] = field(
+        dest: CouplingPortSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

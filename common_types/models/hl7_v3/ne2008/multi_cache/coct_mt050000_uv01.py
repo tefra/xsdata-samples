@@ -48,7 +48,7 @@ class CoctMt050000Uv01Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -86,7 +86,7 @@ class CoctMt050000Uv01Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Optional[Cs] = field(
+    status_code: Cs | None = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -95,7 +95,7 @@ class CoctMt050000Uv01Patient:
             "required": True,
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -103,7 +103,7 @@ class CoctMt050000Uv01Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    confidentiality_code: Optional[Ce] = field(
+    confidentiality_code: Ce | None = field(
         default=None,
         metadata={
             "name": "confidentialityCode",
@@ -111,7 +111,7 @@ class CoctMt050000Uv01Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    very_important_person_code: Optional[Ce] = field(
+    very_important_person_code: Ce | None = field(
         default=None,
         metadata={
             "name": "veryImportantPersonCode",
@@ -119,7 +119,7 @@ class CoctMt050000Uv01Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    patient_person: Optional[CoctMt030000Uv04Person] = field(
+    patient_person: CoctMt030000Uv04Person | None = field(
         default=None,
         metadata={
             "name": "patientPerson",
@@ -128,9 +128,7 @@ class CoctMt050000Uv01Patient:
             "nillable": True,
         },
     )
-    patient_non_person_living_subject: Optional[
-        CoctMt030000Uv04NonPersonLivingSubject
-    ] = field(
+    patient_non_person_living_subject: CoctMt030000Uv04NonPersonLivingSubject | None = field(
         default=None,
         metadata={
             "name": "patientNonPersonLivingSubject",
@@ -139,7 +137,7 @@ class CoctMt050000Uv01Patient:
             "nillable": True,
         },
     )
-    provider_organization: Optional[CoctMt150000Uv02Organization] = field(
+    provider_organization: CoctMt150000Uv02Organization | None = field(
         default=None,
         metadata={
             "name": "providerOrganization",
@@ -148,30 +146,14 @@ class CoctMt050000Uv01Patient:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Union[
-        RoleClassMutualRelationship,
-        RoleClassPassive,
-        str,
-        RoleClassOntological,
-        RoleClassPartitive,
-        RoleClassRootValue,
-        XAccommodationRequestorRole,
-        XDocumentEntrySubject,
-        XDocumentSubject,
-        XInformationRecipientRole,
-        XRoleClassAccommodationRequestor,
-        XRoleClassCoverage,
-        XRoleClassCoverageInvoice,
-        XRoleClassCredentialedEntity,
-        XRoleClassPayeePolicyRelationship,
-    ] = field(
+    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
         init=False,
         default=RoleClassMutualRelationship.PAT,
         metadata={

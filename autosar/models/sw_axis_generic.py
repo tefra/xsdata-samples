@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -45,7 +47,7 @@ class SwAxisGeneric:
     class Meta:
         name = "SW-AXIS-GENERIC"
 
-    sw_axis_type_ref: Optional["SwAxisGeneric.SwAxisTypeRef"] = field(
+    sw_axis_type_ref: SwAxisGeneric.SwAxisTypeRef | None = field(
         default=None,
         metadata={
             "name": "SW-AXIS-TYPE-REF",
@@ -53,7 +55,7 @@ class SwAxisGeneric:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_number_of_axis_points: Optional[IntegerValueVariationPoint] = field(
+    sw_number_of_axis_points: IntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "SW-NUMBER-OF-AXIS-POINTS",
@@ -61,7 +63,7 @@ class SwAxisGeneric:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_generic_axis_params: Optional["SwAxisGeneric.SwGenericAxisParams"] = (
+    sw_generic_axis_params: SwAxisGeneric.SwGenericAxisParams | None = (
         field(
             default=None,
             metadata={
@@ -71,14 +73,14 @@ class SwAxisGeneric:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -89,7 +91,7 @@ class SwAxisGeneric:
 
     @dataclass
     class SwAxisTypeRef(Ref):
-        dest: Optional[SwAxisTypeSubtypesEnum] = field(
+        dest: SwAxisTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

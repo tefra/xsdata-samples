@@ -16,7 +16,7 @@ class ReliefPointsInFrameRelStructure(ContainmentAggregationStructure):
         name = "reliefPointsInFrame_RelStructure"
 
     relief_point_or_parking_point: Iterable[
-        Union[ParkingPoint, GaragePoint, ReliefPoint]
+        ParkingPoint | GaragePoint | ReliefPoint
     ] = field(
         default_factory=list,
         metadata={

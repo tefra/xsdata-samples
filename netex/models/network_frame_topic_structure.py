@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
@@ -37,15 +39,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class NetworkFrameTopicStructure(TopicStructure):
-    choice: Optional[
-        Union[
-            EmptyType2,
-            "NetworkFrameTopicStructure.ChangedSince",
-            "NetworkFrameTopicStructure.CurrentAt",
-            ClosedTimestampRangeStructure,
-            "NetworkFrameTopicStructure.SelectionValidityConditions",
-        ]
-    ] = field(
+    choice: EmptyType2 | NetworkFrameTopicStructure.ChangedSince | NetworkFrameTopicStructure.CurrentAt | ClosedTimestampRangeStructure | NetworkFrameTopicStructure.SelectionValidityConditions | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -82,7 +76,7 @@ class NetworkFrameTopicStructure(TopicStructure):
             ),
         },
     )
-    type_of_frame_ref: Optional[TypeOfFrameRef] = field(
+    type_of_frame_ref: TypeOfFrameRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfFrameRef",
@@ -91,23 +85,7 @@ class NetworkFrameTopicStructure(TopicStructure):
         },
     )
     choice_1: Iterable[
-        Union[
-            MobilityJourneyFrameRef,
-            MobilityServiceFrameRef,
-            SalesTransactionFrameRef,
-            FareFrameRef,
-            ServiceFrameRef,
-            DriverScheduleFrameRef,
-            VehicleScheduleFrameRef,
-            TimetableFrameRef,
-            SiteFrameRef,
-            InfrastructureFrameRef,
-            GeneralFrameRef,
-            ResourceFrameRef,
-            ServiceCalendarFrameRef,
-            CompositeFrameRef,
-            NetworkFilterByValueStructure,
-        ]
+        MobilityJourneyFrameRef | MobilityServiceFrameRef | SalesTransactionFrameRef | FareFrameRef | ServiceFrameRef | DriverScheduleFrameRef | VehicleScheduleFrameRef | TimetableFrameRef | SiteFrameRef | InfrastructureFrameRef | GeneralFrameRef | ResourceFrameRef | ServiceCalendarFrameRef | CompositeFrameRef | NetworkFilterByValueStructure
     ] = field(
         default_factory=list,
         metadata={
@@ -195,14 +173,7 @@ class NetworkFrameTopicStructure(TopicStructure):
     @dataclass
     class SelectionValidityConditions:
         validity_condition: Iterable[
-            Union[
-                SimpleAvailabilityCondition,
-                ValidDuring,
-                AvailabilityCondition,
-                ValidityRuleParameter,
-                ValidityTrigger,
-                ValidityCondition,
-            ]
+            SimpleAvailabilityCondition | ValidDuring | AvailabilityCondition | ValidityRuleParameter | ValidityTrigger | ValidityCondition
         ] = field(
             default_factory=list,
             metadata={
@@ -244,7 +215,7 @@ class NetworkFrameTopicStructure(TopicStructure):
 
     @dataclass
     class ChangedSince:
-        value: Optional[XmlDateTime] = field(
+        value: XmlDateTime | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -253,7 +224,7 @@ class NetworkFrameTopicStructure(TopicStructure):
 
     @dataclass
     class CurrentAt:
-        value: Optional[XmlDateTime] = field(
+        value: XmlDateTime | None = field(
             default=None,
             metadata={
                 "required": True,

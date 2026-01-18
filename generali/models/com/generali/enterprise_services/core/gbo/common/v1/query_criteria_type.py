@@ -30,7 +30,7 @@ class QueryCriteriaType:
         default is Strict, i.e. match strings exactly.</description>
     """
 
-    query_expression: Optional[QueryCriteriaTypeQueryExpression] = field(
+    query_expression: QueryCriteriaTypeQueryExpression | None = field(
         default=None,
         metadata={
             "name": "QueryExpression",
@@ -39,21 +39,21 @@ class QueryCriteriaType:
             "required": True,
         },
     )
-    start_index: Optional[int] = field(
+    start_index: int | None = field(
         default=None,
         metadata={
             "name": "startIndex",
             "type": "Attribute",
         },
     )
-    index_per_page: Optional[int] = field(
+    index_per_page: int | None = field(
         default=None,
         metadata={
             "name": "indexPerPage",
             "type": "Attribute",
         },
     )
-    matching_algorithm: Optional[QueryAlgorithmCodeType] = field(
+    matching_algorithm: QueryAlgorithmCodeType | None = field(
         default=None,
         metadata={
             "name": "matchingAlgorithm",

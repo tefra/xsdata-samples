@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -102,7 +104,7 @@ class DiagnosticRequestDownload:
     class Meta:
         name = "DIAGNOSTIC-REQUEST-DOWNLOAD"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -111,9 +113,7 @@ class DiagnosticRequestDownload:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticRequestDownload.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticRequestDownload.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -121,7 +121,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -129,7 +129,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -137,7 +137,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -145,7 +145,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -153,7 +153,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -161,7 +161,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticRequestDownload.Annotations"] = field(
+    annotations: DiagnosticRequestDownload.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -169,7 +169,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -177,9 +177,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: Optional[
-        "DiagnosticRequestDownload.AccessPermissionRef"
-    ] = field(
+    access_permission_ref: DiagnosticRequestDownload.AccessPermissionRef | None = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -187,9 +185,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_range_refs: Optional[
-        "DiagnosticRequestDownload.MemoryRangeRefs"
-    ] = field(
+    memory_range_refs: DiagnosticRequestDownload.MemoryRangeRefs | None = field(
         default=None,
         metadata={
             "name": "MEMORY-RANGE-REFS",
@@ -197,9 +193,7 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    request_download_class_ref: Optional[
-        "DiagnosticRequestDownload.RequestDownloadClassRef"
-    ] = field(
+    request_download_class_ref: DiagnosticRequestDownload.RequestDownloadClassRef | None = field(
         default=None,
         metadata={
             "name": "REQUEST-DOWNLOAD-CLASS-REF",
@@ -207,14 +201,14 @@ class DiagnosticRequestDownload:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -222,7 +216,7 @@ class DiagnosticRequestDownload:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -254,7 +248,7 @@ class DiagnosticRequestDownload:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: Optional[DiagnosticAccessPermissionSubtypesEnum] = field(
+        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -266,7 +260,7 @@ class DiagnosticRequestDownload:
     @dataclass
     class MemoryRangeRefs:
         memory_range_ref: list[
-            "DiagnosticRequestDownload.MemoryRangeRefs.MemoryRangeRef"
+            DiagnosticRequestDownload.MemoryRangeRefs.MemoryRangeRef
         ] = field(
             default_factory=list,
             metadata={
@@ -278,7 +272,7 @@ class DiagnosticRequestDownload:
 
         @dataclass
         class MemoryRangeRef(Ref):
-            dest: Optional[DiagnosticMemoryIdentifierSubtypesEnum] = field(
+            dest: DiagnosticMemoryIdentifierSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -289,7 +283,7 @@ class DiagnosticRequestDownload:
 
     @dataclass
     class RequestDownloadClassRef(Ref):
-        dest: Optional[DiagnosticRequestDownloadClassSubtypesEnum] = field(
+        dest: DiagnosticRequestDownloadClassSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

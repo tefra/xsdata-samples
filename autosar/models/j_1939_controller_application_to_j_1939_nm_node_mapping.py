@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -40,9 +42,7 @@ class J1939ControllerApplicationToJ1939NmNodeMapping:
     class Meta:
         name = "J-1939-CONTROLLER-APPLICATION-TO-J-1939-NM-NODE-MAPPING"
 
-    j_1939_controller_application_ref: Optional[
-        "J1939ControllerApplicationToJ1939NmNodeMapping.J1939ControllerApplicationRef"
-    ] = field(
+    j_1939_controller_application_ref: J1939ControllerApplicationToJ1939NmNodeMapping.J1939ControllerApplicationRef | None = field(
         default=None,
         metadata={
             "name": "J-1939-CONTROLLER-APPLICATION-REF",
@@ -50,9 +50,7 @@ class J1939ControllerApplicationToJ1939NmNodeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    j_1939_nm_node_ref: Optional[
-        "J1939ControllerApplicationToJ1939NmNodeMapping.J1939NmNodeRef"
-    ] = field(
+    j_1939_nm_node_ref: J1939ControllerApplicationToJ1939NmNodeMapping.J1939NmNodeRef | None = field(
         default=None,
         metadata={
             "name": "J-1939-NM-NODE-REF",
@@ -60,14 +58,14 @@ class J1939ControllerApplicationToJ1939NmNodeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -78,7 +76,7 @@ class J1939ControllerApplicationToJ1939NmNodeMapping:
 
     @dataclass
     class J1939ControllerApplicationRef(Ref):
-        dest: Optional[J1939ControllerApplicationSubtypesEnum] = field(
+        dest: J1939ControllerApplicationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -89,7 +87,7 @@ class J1939ControllerApplicationToJ1939NmNodeMapping:
 
     @dataclass
     class J1939NmNodeRef(Ref):
-        dest: Optional[J1939NmNodeSubtypesEnum] = field(
+        dest: J1939NmNodeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

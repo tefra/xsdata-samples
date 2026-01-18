@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -100,7 +102,7 @@ class BusMirrorChannelMappingIp:
     class Meta:
         name = "BUS-MIRROR-CHANNEL-MAPPING-IP"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,9 +111,7 @@ class BusMirrorChannelMappingIp:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "BusMirrorChannelMappingIp.ShortNameFragments"
-    ] = field(
+    short_name_fragments: BusMirrorChannelMappingIp.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -119,7 +119,7 @@ class BusMirrorChannelMappingIp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +127,7 @@ class BusMirrorChannelMappingIp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +135,7 @@ class BusMirrorChannelMappingIp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +143,7 @@ class BusMirrorChannelMappingIp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +151,7 @@ class BusMirrorChannelMappingIp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +159,7 @@ class BusMirrorChannelMappingIp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["BusMirrorChannelMappingIp.Annotations"] = field(
+    annotations: BusMirrorChannelMappingIp.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +167,7 @@ class BusMirrorChannelMappingIp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,7 +175,7 @@ class BusMirrorChannelMappingIp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_channel: Optional[BusMirrorChannel] = field(
+    source_channel: BusMirrorChannel | None = field(
         default=None,
         metadata={
             "name": "SOURCE-CHANNEL",
@@ -183,7 +183,7 @@ class BusMirrorChannelMappingIp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_channel: Optional[BusMirrorChannel] = field(
+    target_channel: BusMirrorChannel | None = field(
         default=None,
         metadata={
             "name": "TARGET-CHANNEL",
@@ -191,9 +191,7 @@ class BusMirrorChannelMappingIp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_pdu_triggerings: Optional[
-        "BusMirrorChannelMappingIp.TargetPduTriggerings"
-    ] = field(
+    target_pdu_triggerings: BusMirrorChannelMappingIp.TargetPduTriggerings | None = field(
         default=None,
         metadata={
             "name": "TARGET-PDU-TRIGGERINGS",
@@ -201,7 +199,7 @@ class BusMirrorChannelMappingIp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_deadline: Optional[TimeValue] = field(
+    transmission_deadline: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TRANSMISSION-DEADLINE",
@@ -209,14 +207,14 @@ class BusMirrorChannelMappingIp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -224,7 +222,7 @@ class BusMirrorChannelMappingIp:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

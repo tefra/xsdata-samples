@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -93,7 +95,7 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
     class Meta:
         name = "DIAGNOSTIC-TROUBLE-CODE-UDS-TO-CLEAR-CONDITION-GROUP-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -102,9 +104,7 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticTroubleCodeUdsToClearConditionGroupMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticTroubleCodeUdsToClearConditionGroupMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -112,7 +112,7 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -120,7 +120,7 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -128,7 +128,7 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -136,7 +136,7 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -144,7 +144,7 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -152,9 +152,7 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "DiagnosticTroubleCodeUdsToClearConditionGroupMapping.Annotations"
-    ] = field(
+    annotations: DiagnosticTroubleCodeUdsToClearConditionGroupMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -162,7 +160,7 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -170,9 +168,7 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    clear_condition_group_ref: Optional[
-        "DiagnosticTroubleCodeUdsToClearConditionGroupMapping.ClearConditionGroupRef"
-    ] = field(
+    clear_condition_group_ref: DiagnosticTroubleCodeUdsToClearConditionGroupMapping.ClearConditionGroupRef | None = field(
         default=None,
         metadata={
             "name": "CLEAR-CONDITION-GROUP-REF",
@@ -180,9 +176,7 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trouble_code_uds_ref: Optional[
-        "DiagnosticTroubleCodeUdsToClearConditionGroupMapping.TroubleCodeUdsRef"
-    ] = field(
+    trouble_code_uds_ref: DiagnosticTroubleCodeUdsToClearConditionGroupMapping.TroubleCodeUdsRef | None = field(
         default=None,
         metadata={
             "name": "TROUBLE-CODE-UDS-REF",
@@ -190,14 +184,14 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -205,7 +199,7 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -237,7 +231,7 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
 
     @dataclass
     class ClearConditionGroupRef(Ref):
-        dest: Optional[DiagnosticClearConditionGroupSubtypesEnum] = field(
+        dest: DiagnosticClearConditionGroupSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -248,7 +242,7 @@ class DiagnosticTroubleCodeUdsToClearConditionGroupMapping:
 
     @dataclass
     class TroubleCodeUdsRef(Ref):
-        dest: Optional[DiagnosticTroubleCodeUdsSubtypesEnum] = field(
+        dest: DiagnosticTroubleCodeUdsSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

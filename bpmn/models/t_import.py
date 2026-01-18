@@ -9,21 +9,21 @@ class TImport:
     class Meta:
         name = "tImport"
 
-    namespace: Optional[str] = field(
+    namespace: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    location: Optional[str] = field(
+    location: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    import_type: Optional[str] = field(
+    import_type: str | None = field(
         default=None,
         metadata={
             "name": "importType",

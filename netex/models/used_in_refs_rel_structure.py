@@ -19,12 +19,7 @@ class UsedInRefsRelStructure(OneToManyRelationshipStructure):
         name = "usedInRefs_RelStructure"
 
     choice: Iterable[
-        Union[
-            ParkingTariffRef,
-            TariffRef,
-            GroupOfDistanceMatrixElementsRef,
-            GroupOfSalesOfferPackagesRef,
-        ]
+        ParkingTariffRef | TariffRef | GroupOfDistanceMatrixElementsRef | GroupOfSalesOfferPackagesRef
     ] = field(
         default_factory=list,
         metadata={

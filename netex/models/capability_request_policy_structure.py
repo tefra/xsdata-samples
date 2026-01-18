@@ -18,7 +18,7 @@ class CapabilityRequestPolicyStructure:
             "min_occurs": 1,
         },
     )
-    translations: Optional[bool] = field(
+    translations: bool | None = field(
         default=None,
         metadata={
             "name": "Translations",
@@ -26,9 +26,7 @@ class CapabilityRequestPolicyStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    gml_coordinate_format_or_wgs_decimal_degrees: Optional[
-        Union[str, EmptyType1]
-    ] = field(
+    gml_coordinate_format_or_wgs_decimal_degrees: str | EmptyType1 | None = field(
         default=None,
         metadata={
             "type": "Elements",

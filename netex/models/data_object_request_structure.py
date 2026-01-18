@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -15,7 +17,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class DataObjectRequestStructure(AbstractFunctionalServiceRequestStructure):
-    topics: Optional["DataObjectRequestStructure.Topics"] = field(
+    topics: DataObjectRequestStructure.Topics | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -23,7 +25,7 @@ class DataObjectRequestStructure(AbstractFunctionalServiceRequestStructure):
             "required": True,
         },
     )
-    policy: Optional[NetworkFrameRequestPolicyStructure] = field(
+    policy: NetworkFrameRequestPolicyStructure | None = field(
         default=None,
         metadata={
             "name": "Policy",
@@ -31,7 +33,7 @@ class DataObjectRequestStructure(AbstractFunctionalServiceRequestStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    extensions: Optional[Extensions1] = field(
+    extensions: Extensions1 | None = field(
         default=None,
         metadata={
             "name": "Extensions",
@@ -42,7 +44,7 @@ class DataObjectRequestStructure(AbstractFunctionalServiceRequestStructure):
 
     @dataclass
     class Topics:
-        network_frame_topic: Optional[NetworkFrameTopic] = field(
+        network_frame_topic: NetworkFrameTopic | None = field(
             default=None,
             metadata={
                 "name": "NetworkFrameTopic",

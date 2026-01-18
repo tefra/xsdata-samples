@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class PublicationDeliveryStructure:
-    publication_timestamp: Optional[XmlDateTime] = field(
+    publication_timestamp: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "PublicationTimestamp",
@@ -22,7 +22,7 @@ class PublicationDeliveryStructure:
             "required": True,
         },
     )
-    participant_ref: Optional[ParticipantRef] = field(
+    participant_ref: ParticipantRef | None = field(
         default=None,
         metadata={
             "name": "ParticipantRef",
@@ -31,7 +31,7 @@ class PublicationDeliveryStructure:
             "required": True,
         },
     )
-    publication_request: Optional[PublicationRequestStructure] = field(
+    publication_request: PublicationRequestStructure | None = field(
         default=None,
         metadata={
             "name": "PublicationRequest",
@@ -39,7 +39,7 @@ class PublicationDeliveryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    publication_refresh_interval: Optional[XmlDuration] = field(
+    publication_refresh_interval: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "PublicationRefreshInterval",
@@ -47,7 +47,7 @@ class PublicationDeliveryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -55,7 +55,7 @@ class PublicationDeliveryStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    data_objects: Optional[DataObjectsRelStructure] = field(
+    data_objects: DataObjectsRelStructure | None = field(
         default=None,
         metadata={
             "name": "dataObjects",

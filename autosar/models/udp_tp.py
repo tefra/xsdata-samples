@@ -27,7 +27,7 @@ class UdpTp:
     class Meta:
         name = "UDP-TP"
 
-    udp_tp_port: Optional[TpPort] = field(
+    udp_tp_port: TpPort | None = field(
         default=None,
         metadata={
             "name": "UDP-TP-PORT",
@@ -35,14 +35,14 @@ class UdpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

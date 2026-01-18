@@ -15,7 +15,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class InsurerRoleType(OrganisationRoleType):
-    insurer_capabilities: Optional[InsurerRoleTypeInsurerCapabilities] = field(
+    insurer_capabilities: InsurerRoleTypeInsurerCapabilities | None = field(
         default=None,
         metadata={
             "name": "InsurerCapabilities",

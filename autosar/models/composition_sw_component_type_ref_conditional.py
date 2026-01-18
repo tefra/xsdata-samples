@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class CompositionSwComponentTypeRefConditional:
     class Meta:
         name = "COMPOSITION-SW-COMPONENT-TYPE-REF-CONDITIONAL"
 
-    composition_sw_component_type_ref: Optional[
-        "CompositionSwComponentTypeRefConditional.CompositionSwComponentTypeRef"
-    ] = field(
+    composition_sw_component_type_ref: CompositionSwComponentTypeRefConditional.CompositionSwComponentTypeRef | None = field(
         default=None,
         metadata={
             "name": "COMPOSITION-SW-COMPONENT-TYPE-REF",
@@ -43,7 +43,7 @@ class CompositionSwComponentTypeRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class CompositionSwComponentTypeRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class CompositionSwComponentTypeRefConditional:
 
     @dataclass
     class CompositionSwComponentTypeRef(Ref):
-        dest: Optional[CompositionSwComponentTypeSubtypesEnum] = field(
+        dest: CompositionSwComponentTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

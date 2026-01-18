@@ -13,7 +13,7 @@ class ValueSetVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "ValueSet_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -21,14 +21,14 @@ class ValueSetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    values: Optional[TypesOfValueStructure] = field(
+    values: TypesOfValueStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    class_of_values: Optional[str] = field(
+    class_of_values: str | None = field(
         default=None,
         metadata={
             "name": "classOfValues",

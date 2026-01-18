@@ -16,7 +16,7 @@ class BlocksInFrameRelStructure(ContainmentAggregationStructure):
         name = "blocksInFrame_RelStructure"
 
     block_or_compound_block_or_train_block: Iterable[
-        Union[Block, CompoundBlock, TrainBlock]
+        Block | CompoundBlock | TrainBlock
     ] = field(
         default_factory=list,
         metadata={

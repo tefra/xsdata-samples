@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -42,7 +44,7 @@ class DiagnosticParameter:
     class Meta:
         name = "DIAGNOSTIC-PARAMETER"
 
-    bit_offset: Optional[PositiveInteger] = field(
+    bit_offset: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "BIT-OFFSET",
@@ -50,7 +52,7 @@ class DiagnosticParameter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_elements: Optional["DiagnosticParameter.DataElements"] = field(
+    data_elements: DiagnosticParameter.DataElements | None = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENTS",
@@ -58,7 +60,7 @@ class DiagnosticParameter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    support_info: Optional[DiagnosticParameterSupportInfo] = field(
+    support_info: DiagnosticParameterSupportInfo | None = field(
         default=None,
         metadata={
             "name": "SUPPORT-INFO",
@@ -66,7 +68,7 @@ class DiagnosticParameter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -74,14 +76,14 @@ class DiagnosticParameter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

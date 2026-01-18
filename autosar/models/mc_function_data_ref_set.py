@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -37,9 +39,7 @@ class McFunctionDataRefSet:
     class Meta:
         name = "MC-FUNCTION-DATA-REF-SET"
 
-    mc_function_data_ref_set_variants: Optional[
-        "McFunctionDataRefSet.McFunctionDataRefSetVariants"
-    ] = field(
+    mc_function_data_ref_set_variants: McFunctionDataRefSet.McFunctionDataRefSetVariants | None = field(
         default=None,
         metadata={
             "name": "MC-FUNCTION-DATA-REF-SET-VARIANTS",
@@ -47,14 +47,14 @@ class McFunctionDataRefSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

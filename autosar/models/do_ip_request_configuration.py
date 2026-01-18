@@ -33,7 +33,7 @@ class DoIpRequestConfiguration:
     class Meta:
         name = "DO-IP-REQUEST-CONFIGURATION"
 
-    end_address: Optional[PositiveInteger] = field(
+    end_address: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "END-ADDRESS",
@@ -41,7 +41,7 @@ class DoIpRequestConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    request_type: Optional[RequestTypeEnum] = field(
+    request_type: RequestTypeEnum | None = field(
         default=None,
         metadata={
             "name": "REQUEST-TYPE",
@@ -49,7 +49,7 @@ class DoIpRequestConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    start_address: Optional[PositiveInteger] = field(
+    start_address: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "START-ADDRESS",
@@ -57,14 +57,14 @@ class DoIpRequestConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

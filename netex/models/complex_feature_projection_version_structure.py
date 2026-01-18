@@ -30,7 +30,7 @@ class ComplexFeatureProjectionVersionStructure(ProjectionVersionStructure):
     class Meta:
         name = "ComplexFeatureProjection_VersionStructure"
 
-    projected_fearture_ref: Optional[ComplexFeatureRefStructure] = field(
+    projected_fearture_ref: ComplexFeatureRefStructure | None = field(
         default=None,
         metadata={
             "name": "ProjectedFeartureRef",
@@ -38,7 +38,7 @@ class ComplexFeatureProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    onto_feature_ref: Optional[ComplexFeatureRefStructure] = field(
+    onto_feature_ref: ComplexFeatureRefStructure | None = field(
         default=None,
         metadata={
             "name": "OntoFeatureRef",
@@ -47,24 +47,7 @@ class ComplexFeatureProjectionVersionStructure(ProjectionVersionStructure):
         },
     )
     choice: Iterable[
-        Union[
-            VehicleMeetingPointRef,
-            WirePointRef,
-            RoadPointRef,
-            RailwayPointRef,
-            TrafficControlPointRef,
-            BeaconPointRef,
-            ActivationPointRef,
-            BorderPointRef,
-            FareScheduledStopPointRef,
-            ScheduledStopPointRef,
-            GaragePointRef,
-            ParkingPointRef,
-            ReliefPointRef,
-            TimingPointRef,
-            RoutePointRef,
-            PointRef,
-        ]
+        VehicleMeetingPointRef | WirePointRef | RoadPointRef | RailwayPointRef | TrafficControlPointRef | BeaconPointRef | ActivationPointRef | BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | RoutePointRef | PointRef
     ] = field(
         default_factory=list,
         metadata={
@@ -153,7 +136,7 @@ class ComplexFeatureProjectionVersionStructure(ProjectionVersionStructure):
             ),
         },
     )
-    features: Optional[ComplexFeatureRefsRelStructure] = field(
+    features: ComplexFeatureRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

@@ -21,7 +21,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "Route_DerivedViewStructure"
 
-    route_ref: Optional[RouteRef] = field(
+    route_ref: RouteRef | None = field(
         default=None,
         metadata={
             "name": "RouteRef",
@@ -29,7 +29,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
+    vehicle_mode: AllVehicleModesOfTransportEnumeration | None = field(
         default=None,
         metadata={
             "name": "VehicleMode",
@@ -37,7 +37,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -45,9 +45,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_line_ref_or_line_ref_or_line_view: Optional[
-        Union[FlexibleLineRef, LineRef, LineView]
-    ] = field(
+    flexible_line_ref_or_line_ref_or_line_view: FlexibleLineRef | LineRef | LineView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -70,7 +68,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    direction_view: Optional[DirectionView] = field(
+    direction_view: DirectionView | None = field(
         default=None,
         metadata={
             "name": "DirectionView",
@@ -78,7 +76,7 @@ class RouteDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    link_sequence_projection_ref: Optional[LinkSequenceProjectionRef] = field(
+    link_sequence_projection_ref: LinkSequenceProjectionRef | None = field(
         default=None,
         metadata={
             "name": "LinkSequenceProjectionRef",

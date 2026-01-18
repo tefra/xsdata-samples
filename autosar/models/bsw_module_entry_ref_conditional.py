@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,9 +33,7 @@ class BswModuleEntryRefConditional:
     class Meta:
         name = "BSW-MODULE-ENTRY-REF-CONDITIONAL"
 
-    bsw_module_entry_ref: Optional[
-        "BswModuleEntryRefConditional.BswModuleEntryRef"
-    ] = field(
+    bsw_module_entry_ref: BswModuleEntryRefConditional.BswModuleEntryRef | None = field(
         default=None,
         metadata={
             "name": "BSW-MODULE-ENTRY-REF",
@@ -41,7 +41,7 @@ class BswModuleEntryRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -49,14 +49,14 @@ class BswModuleEntryRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +67,7 @@ class BswModuleEntryRefConditional:
 
     @dataclass
     class BswModuleEntryRef(Ref):
-        dest: Optional[BswModuleEntrySubtypesEnum] = field(
+        dest: BswModuleEntrySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

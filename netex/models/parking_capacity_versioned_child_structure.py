@@ -22,7 +22,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "ParkingCapacity_VersionedChildStructure"
 
-    parking_ref: Optional[ParkingRef] = field(
+    parking_ref: ParkingRef | None = field(
         default=None,
         metadata={
             "name": "ParkingRef",
@@ -30,7 +30,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parent_ref: Optional[ParkingPropertiesRefStructure] = field(
+    parent_ref: ParkingPropertiesRefStructure | None = field(
         default=None,
         metadata={
             "name": "ParentRef",
@@ -38,7 +38,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_properties_ref: Optional[ParkingPropertiesRef] = field(
+    parking_properties_ref: ParkingPropertiesRef | None = field(
         default=None,
         metadata={
             "name": "ParkingPropertiesRef",
@@ -46,7 +46,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_user_type: Optional[ParkingUserEnumeration] = field(
+    parking_user_type: ParkingUserEnumeration | None = field(
         default=None,
         metadata={
             "name": "ParkingUserType",
@@ -54,7 +54,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_vehicle_type: Optional[ParkingVehicleEnumeration] = field(
+    parking_vehicle_type: ParkingVehicleEnumeration | None = field(
         default=None,
         metadata={
             "name": "ParkingVehicleType",
@@ -62,15 +62,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_type_ref_or_vehicle_type_ref: Optional[
-        Union[
-            SimpleVehicleTypeRef,
-            CompoundTrainRef,
-            TrainRef,
-            VehicleTypeRef,
-            TransportTypeRef,
-        ]
-    ] = field(
+    transport_type_ref_or_vehicle_type_ref: SimpleVehicleTypeRef | CompoundTrainRef | TrainRef | VehicleTypeRef | TransportTypeRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -103,7 +95,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    parking_stay_type: Optional[ParkingStayEnumeration] = field(
+    parking_stay_type: ParkingStayEnumeration | None = field(
         default=None,
         metadata={
             "name": "ParkingStayType",
@@ -111,7 +103,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_spaces: Optional[int] = field(
+    number_of_spaces: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfSpaces",
@@ -119,7 +111,7 @@ class ParkingCapacityVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_spaces_with_recharge_point: Optional[int] = field(
+    number_of_spaces_with_recharge_point: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfSpacesWithRechargePoint",

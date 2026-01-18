@@ -13,7 +13,7 @@ class TrainBlockPartVersionStructure(BlockPartVersionStructure):
     class Meta:
         name = "TrainBlockPart_VersionStructure"
 
-    start_time: Optional[XmlTime] = field(
+    start_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "StartTime",
@@ -21,7 +21,7 @@ class TrainBlockPartVersionStructure(BlockPartVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_time_day_offset: Optional[int] = field(
+    start_time_day_offset: int | None = field(
         default=None,
         metadata={
             "name": "StartTimeDayOffset",
@@ -29,7 +29,7 @@ class TrainBlockPartVersionStructure(BlockPartVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_time: Optional[XmlTime] = field(
+    end_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "EndTime",
@@ -37,7 +37,7 @@ class TrainBlockPartVersionStructure(BlockPartVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_time_day_offset: Optional[int] = field(
+    end_time_day_offset: int | None = field(
         default=None,
         metadata={
             "name": "EndTimeDayOffset",
@@ -45,7 +45,7 @@ class TrainBlockPartVersionStructure(BlockPartVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_coupling: Optional[str] = field(
+    type_of_coupling: str | None = field(
         default=None,
         metadata={
             "name": "TypeOfCoupling",

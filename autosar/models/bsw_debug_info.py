@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -96,7 +98,7 @@ class BswDebugInfo:
     class Meta:
         name = "BSW-DEBUG-INFO"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,7 +107,7 @@ class BswDebugInfo:
             "required": True,
         },
     )
-    short_name_fragments: Optional["BswDebugInfo.ShortNameFragments"] = field(
+    short_name_fragments: BswDebugInfo.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -113,7 +115,7 @@ class BswDebugInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +123,7 @@ class BswDebugInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +131,7 @@ class BswDebugInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +139,7 @@ class BswDebugInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +147,7 @@ class BswDebugInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +155,7 @@ class BswDebugInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["BswDebugInfo.Annotations"] = field(
+    annotations: BswDebugInfo.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,7 +163,7 @@ class BswDebugInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    local_debug_datas: Optional["BswDebugInfo.LocalDebugDatas"] = field(
+    local_debug_datas: BswDebugInfo.LocalDebugDatas | None = field(
         default=None,
         metadata={
             "name": "LOCAL-DEBUG-DATAS",
@@ -169,9 +171,7 @@ class BswDebugInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter_accessed_for_debug_refs: Optional[
-        "BswDebugInfo.ParameterAccessedForDebugRefs"
-    ] = field(
+    parameter_accessed_for_debug_refs: BswDebugInfo.ParameterAccessedForDebugRefs | None = field(
         default=None,
         metadata={
             "name": "PARAMETER-ACCESSED-FOR-DEBUG-REFS",
@@ -179,9 +179,7 @@ class BswDebugInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variable_accessed_for_debug_refs: Optional[
-        "BswDebugInfo.VariableAccessedForDebugRefs"
-    ] = field(
+    variable_accessed_for_debug_refs: BswDebugInfo.VariableAccessedForDebugRefs | None = field(
         default=None,
         metadata={
             "name": "VARIABLE-ACCESSED-FOR-DEBUG-REFS",
@@ -189,7 +187,7 @@ class BswDebugInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -197,14 +195,14 @@ class BswDebugInfo:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -212,7 +210,7 @@ class BswDebugInfo:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -258,7 +256,7 @@ class BswDebugInfo:
     @dataclass
     class ParameterAccessedForDebugRefs:
         parameter_accessed_for_debug_ref: list[
-            "BswDebugInfo.ParameterAccessedForDebugRefs.ParameterAccessedForDebugRef"
+            BswDebugInfo.ParameterAccessedForDebugRefs.ParameterAccessedForDebugRef
         ] = field(
             default_factory=list,
             metadata={
@@ -270,7 +268,7 @@ class BswDebugInfo:
 
         @dataclass
         class ParameterAccessedForDebugRef(Ref):
-            dest: Optional[ParameterDataPrototypeSubtypesEnum] = field(
+            dest: ParameterDataPrototypeSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -282,7 +280,7 @@ class BswDebugInfo:
     @dataclass
     class VariableAccessedForDebugRefs:
         variable_accessed_for_debug_ref: list[
-            "BswDebugInfo.VariableAccessedForDebugRefs.VariableAccessedForDebugRef"
+            BswDebugInfo.VariableAccessedForDebugRefs.VariableAccessedForDebugRef
         ] = field(
             default_factory=list,
             metadata={
@@ -294,7 +292,7 @@ class BswDebugInfo:
 
         @dataclass
         class VariableAccessedForDebugRef(Ref):
-            dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+            dest: VariableDataPrototypeSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

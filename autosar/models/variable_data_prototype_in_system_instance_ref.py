@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class VariableDataPrototypeInSystemInstanceRef:
         name = "VARIABLE-DATA-PROTOTYPE-IN-SYSTEM-INSTANCE-REF"
 
     context_component_ref: list[
-        "VariableDataPrototypeInSystemInstanceRef.ContextComponentRef"
+        VariableDataPrototypeInSystemInstanceRef.ContextComponentRef
     ] = field(
         default_factory=list,
         metadata={
@@ -48,9 +50,7 @@ class VariableDataPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_composition_ref: Optional[
-        "VariableDataPrototypeInSystemInstanceRef.ContextCompositionRef"
-    ] = field(
+    context_composition_ref: VariableDataPrototypeInSystemInstanceRef.ContextCompositionRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-COMPOSITION-REF",
@@ -58,9 +58,7 @@ class VariableDataPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_port_ref: Optional[
-        "VariableDataPrototypeInSystemInstanceRef.ContextPortRef"
-    ] = field(
+    context_port_ref: VariableDataPrototypeInSystemInstanceRef.ContextPortRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-PORT-REF",
@@ -68,9 +66,7 @@ class VariableDataPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_data_prototype_ref: Optional[
-        "VariableDataPrototypeInSystemInstanceRef.TargetDataPrototypeRef"
-    ] = field(
+    target_data_prototype_ref: VariableDataPrototypeInSystemInstanceRef.TargetDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-REF",
@@ -78,14 +74,14 @@ class VariableDataPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -96,7 +92,7 @@ class VariableDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -107,7 +103,7 @@ class VariableDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextCompositionRef(Ref):
-        dest: Optional[RootSwCompositionPrototypeSubtypesEnum] = field(
+        dest: RootSwCompositionPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -118,7 +114,7 @@ class VariableDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextPortRef(Ref):
-        dest: Optional[PortPrototypeSubtypesEnum] = field(
+        dest: PortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -129,7 +125,7 @@ class VariableDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class TargetDataPrototypeRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

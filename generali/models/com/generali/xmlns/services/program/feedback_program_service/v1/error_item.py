@@ -11,7 +11,7 @@ class ErrorItem:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    code: Optional[str] = field(
+    code: str | None = field(
         default=None,
         metadata={
             "name": "Code",
@@ -19,7 +19,7 @@ class ErrorItem:
             "required": True,
         },
     )
-    description: Optional[str] = field(
+    description: str | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -27,7 +27,7 @@ class ErrorItem:
             "required": True,
         },
     )
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "Type",
@@ -35,7 +35,7 @@ class ErrorItem:
             "required": True,
         },
     )
-    level: Optional[str] = field(
+    level: str | None = field(
         default=None,
         metadata={
             "name": "Level",

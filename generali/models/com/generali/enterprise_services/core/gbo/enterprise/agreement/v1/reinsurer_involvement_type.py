@@ -39,7 +39,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class ReinsurerInvolvementType(OrganisationInvolvementType):
-    organisation_role: Optional[InsurerRoleType] = field(
+    organisation_role: InsurerRoleType | None = field(
         default=None,
         metadata={
             "name": "OrganisationRole",
@@ -48,7 +48,7 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "required": True,
         },
     )
-    policy_identifier: Optional[Idtype] = field(
+    policy_identifier: Idtype | None = field(
         default=None,
         metadata={
             "name": "PolicyIdentifier",
@@ -56,7 +56,7 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    sequence_number: Optional[NumericType] = field(
+    sequence_number: NumericType | None = field(
         default=None,
         metadata={
             "name": "SequenceNumber",
@@ -65,7 +65,7 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "required": True,
         },
     )
-    parent_sequence_number: Optional[NumericType] = field(
+    parent_sequence_number: NumericType | None = field(
         default=None,
         metadata={
             "name": "ParentSequenceNumber",
@@ -73,7 +73,7 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    risk_share: Optional[PercentType] = field(
+    risk_share: PercentType | None = field(
         default=None,
         metadata={
             "name": "RiskShare",
@@ -82,7 +82,7 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "required": True,
         },
     )
-    retained_risk_share: Optional[PercentType] = field(
+    retained_risk_share: PercentType | None = field(
         default=None,
         metadata={
             "name": "RetainedRiskShare",
@@ -91,7 +91,7 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "required": True,
         },
     )
-    overrider_percentage: Optional[PercentType] = field(
+    overrider_percentage: PercentType | None = field(
         default=None,
         metadata={
             "name": "OverriderPercentage",
@@ -100,7 +100,7 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "required": True,
         },
     )
-    cover_type: Optional[CoverTypeEnum] = field(
+    cover_type: CoverTypeEnum | None = field(
         default=None,
         metadata={
             "name": "CoverType",
@@ -108,7 +108,7 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    local_ceded_share: Optional[PercentType] = field(
+    local_ceded_share: PercentType | None = field(
         default=None,
         metadata={
             "name": "LocalCededShare",
@@ -116,7 +116,7 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    ritaxes: Optional[ValueType] = field(
+    ritaxes: ValueType | None = field(
         default=None,
         metadata={
             "name": "RITaxes",
@@ -124,7 +124,7 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    ritaxes_apply_to: Optional[ReinsurerInvolvementTypeRitaxesApplyTo] = field(
+    ritaxes_apply_to: ReinsurerInvolvementTypeRitaxesApplyTo | None = field(
         default=None,
         metadata={
             "name": "RITaxesApplyTo",
@@ -132,7 +132,7 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    reinsurance_nature: Optional[ReinsurerInvolvementTypeReinsuranceNature] = (
+    reinsurance_nature: ReinsurerInvolvementTypeReinsuranceNature | None = (
         field(
             default=None,
             metadata={
@@ -142,7 +142,7 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             },
         )
     )
-    reinsurance_type: Optional[ReinsurerInvolvementTypeReinsuranceType] = (
+    reinsurance_type: ReinsurerInvolvementTypeReinsuranceType | None = (
         field(
             default=None,
             metadata={

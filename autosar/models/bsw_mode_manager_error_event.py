@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -110,7 +112,7 @@ class BswModeManagerErrorEvent:
     class Meta:
         name = "BSW-MODE-MANAGER-ERROR-EVENT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -119,9 +121,7 @@ class BswModeManagerErrorEvent:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "BswModeManagerErrorEvent.ShortNameFragments"
-    ] = field(
+    short_name_fragments: BswModeManagerErrorEvent.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -129,7 +129,7 @@ class BswModeManagerErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -137,7 +137,7 @@ class BswModeManagerErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -145,7 +145,7 @@ class BswModeManagerErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -153,7 +153,7 @@ class BswModeManagerErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -161,7 +161,7 @@ class BswModeManagerErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -169,7 +169,7 @@ class BswModeManagerErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["BswModeManagerErrorEvent.Annotations"] = field(
+    annotations: BswModeManagerErrorEvent.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -177,9 +177,7 @@ class BswModeManagerErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reason_representation_ref: Optional[
-        "BswModeManagerErrorEvent.ActivationReasonRepresentationRef"
-    ] = field(
+    activation_reason_representation_ref: BswModeManagerErrorEvent.ActivationReasonRepresentationRef | None = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
@@ -187,9 +185,7 @@ class BswModeManagerErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_limitation_refs: Optional[
-        "BswModeManagerErrorEvent.ContextLimitationRefs"
-    ] = field(
+    context_limitation_refs: BswModeManagerErrorEvent.ContextLimitationRefs | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-LIMITATION-REFS",
@@ -197,9 +193,7 @@ class BswModeManagerErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_in_mode_irefs: Optional[
-        "BswModeManagerErrorEvent.DisabledInModeIrefs"
-    ] = field(
+    disabled_in_mode_irefs: BswModeManagerErrorEvent.DisabledInModeIrefs | None = field(
         default=None,
         metadata={
             "name": "DISABLED-IN-MODE-IREFS",
@@ -207,9 +201,7 @@ class BswModeManagerErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    starts_on_event_ref: Optional[
-        "BswModeManagerErrorEvent.StartsOnEventRef"
-    ] = field(
+    starts_on_event_ref: BswModeManagerErrorEvent.StartsOnEventRef | None = field(
         default=None,
         metadata={
             "name": "STARTS-ON-EVENT-REF",
@@ -217,7 +209,7 @@ class BswModeManagerErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -225,7 +217,7 @@ class BswModeManagerErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_group_ref: Optional["BswModeManagerErrorEvent.ModeGroupRef"] = field(
+    mode_group_ref: BswModeManagerErrorEvent.ModeGroupRef | None = field(
         default=None,
         metadata={
             "name": "MODE-GROUP-REF",
@@ -233,14 +225,14 @@ class BswModeManagerErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -248,7 +240,7 @@ class BswModeManagerErrorEvent:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -280,7 +272,7 @@ class BswModeManagerErrorEvent:
 
     @dataclass
     class ActivationReasonRepresentationRef(Ref):
-        dest: Optional[ExecutableEntityActivationReasonSubtypesEnum] = field(
+        dest: ExecutableEntityActivationReasonSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -292,7 +284,7 @@ class BswModeManagerErrorEvent:
     @dataclass
     class ContextLimitationRefs:
         context_limitation_ref: list[
-            "BswModeManagerErrorEvent.ContextLimitationRefs.ContextLimitationRef"
+            BswModeManagerErrorEvent.ContextLimitationRefs.ContextLimitationRef
         ] = field(
             default_factory=list,
             metadata={
@@ -304,7 +296,7 @@ class BswModeManagerErrorEvent:
 
         @dataclass
         class ContextLimitationRef(Ref):
-            dest: Optional[BswDistinguishedPartitionSubtypesEnum] = field(
+            dest: BswDistinguishedPartitionSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -328,7 +320,7 @@ class BswModeManagerErrorEvent:
 
     @dataclass
     class StartsOnEventRef(Ref):
-        dest: Optional[BswModuleEntitySubtypesEnum] = field(
+        dest: BswModuleEntitySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -339,7 +331,7 @@ class BswModeManagerErrorEvent:
 
     @dataclass
     class ModeGroupRef(Ref):
-        dest: Optional[ModeDeclarationGroupPrototypeSubtypesEnum] = field(
+        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

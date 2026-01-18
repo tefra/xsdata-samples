@@ -14,7 +14,7 @@ class DayTypeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "dayTypeRefs_RelStructure"
 
-    day_type_ref: Iterable[Union[FareDayTypeRef, DayTypeRef]] = field(
+    day_type_ref: Iterable[FareDayTypeRef | DayTypeRef] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

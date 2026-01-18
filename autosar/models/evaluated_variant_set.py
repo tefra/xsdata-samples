@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -111,7 +113,7 @@ class EvaluatedVariantSet:
     class Meta:
         name = "EVALUATED-VARIANT-SET"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -120,9 +122,7 @@ class EvaluatedVariantSet:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "EvaluatedVariantSet.ShortNameFragments"
-    ] = field(
+    short_name_fragments: EvaluatedVariantSet.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -130,7 +130,7 @@ class EvaluatedVariantSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -138,7 +138,7 @@ class EvaluatedVariantSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -146,7 +146,7 @@ class EvaluatedVariantSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -154,7 +154,7 @@ class EvaluatedVariantSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -162,7 +162,7 @@ class EvaluatedVariantSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -170,7 +170,7 @@ class EvaluatedVariantSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["EvaluatedVariantSet.Annotations"] = field(
+    annotations: EvaluatedVariantSet.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -178,7 +178,7 @@ class EvaluatedVariantSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -186,7 +186,7 @@ class EvaluatedVariantSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    approval_status: Optional[NmtokenString] = field(
+    approval_status: NmtokenString | None = field(
         default=None,
         metadata={
             "name": "APPROVAL-STATUS",
@@ -194,9 +194,7 @@ class EvaluatedVariantSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    evaluated_element_refs: Optional[
-        "EvaluatedVariantSet.EvaluatedElementRefs"
-    ] = field(
+    evaluated_element_refs: EvaluatedVariantSet.EvaluatedElementRefs | None = field(
         default=None,
         metadata={
             "name": "EVALUATED-ELEMENT-REFS",
@@ -204,9 +202,7 @@ class EvaluatedVariantSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    evaluated_variant_refs: Optional[
-        "EvaluatedVariantSet.EvaluatedVariantRefs"
-    ] = field(
+    evaluated_variant_refs: EvaluatedVariantSet.EvaluatedVariantRefs | None = field(
         default=None,
         metadata={
             "name": "EVALUATED-VARIANT-REFS",
@@ -214,14 +210,14 @@ class EvaluatedVariantSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -229,7 +225,7 @@ class EvaluatedVariantSet:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -262,7 +258,7 @@ class EvaluatedVariantSet:
     @dataclass
     class EvaluatedElementRefs:
         evaluated_element_ref: list[
-            "EvaluatedVariantSet.EvaluatedElementRefs.EvaluatedElementRef"
+            EvaluatedVariantSet.EvaluatedElementRefs.EvaluatedElementRef
         ] = field(
             default_factory=list,
             metadata={
@@ -274,7 +270,7 @@ class EvaluatedVariantSet:
 
         @dataclass
         class EvaluatedElementRef(Ref):
-            dest: Optional[CollectableElementSubtypesEnum] = field(
+            dest: CollectableElementSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -286,7 +282,7 @@ class EvaluatedVariantSet:
     @dataclass
     class EvaluatedVariantRefs:
         evaluated_variant_ref: list[
-            "EvaluatedVariantSet.EvaluatedVariantRefs.EvaluatedVariantRef"
+            EvaluatedVariantSet.EvaluatedVariantRefs.EvaluatedVariantRef
         ] = field(
             default_factory=list,
             metadata={
@@ -298,7 +294,7 @@ class EvaluatedVariantSet:
 
         @dataclass
         class EvaluatedVariantRef(Ref):
-            dest: Optional[PredefinedVariantSubtypesEnum] = field(
+            dest: PredefinedVariantSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

@@ -15,7 +15,7 @@ class TypesOfCustomerAccountRelStructure(ContainmentAggregationStructure):
         name = "typesOfCustomerAccount_RelStructure"
 
     type_of_customer_account_ref_or_type_of_customer_account: Iterable[
-        Union[TypeOfCustomerAccountRef, TypeOfCustomerAccount]
+        TypeOfCustomerAccountRef | TypeOfCustomerAccount
     ] = field(
         default_factory=list,
         metadata={

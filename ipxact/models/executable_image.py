@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -48,61 +50,61 @@ class ExecutableImage:
         name = "executableImage"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    display_name: Optional[DisplayName] = field(
+    display_name: DisplayName | None = field(
         default=None,
         metadata={
             "name": "displayName",
             "type": "Element",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
             "type": "Element",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    parameters: Optional[Parameters] = field(
+    parameters: Parameters | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    language_tools: Optional["ExecutableImage.LanguageTools"] = field(
+    language_tools: ExecutableImage.LanguageTools | None = field(
         default=None,
         metadata={
             "name": "languageTools",
             "type": "Element",
         },
     )
-    file_set_ref_group: Optional["ExecutableImage.FileSetRefGroup"] = field(
+    file_set_ref_group: ExecutableImage.FileSetRefGroup | None = field(
         default=None,
         metadata={
             "name": "fileSetRefGroup",
             "type": "Element",
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    image_id: Optional[str] = field(
+    image_id: str | None = field(
         default=None,
         metadata={
             "name": "imageId",
@@ -110,14 +112,14 @@ class ExecutableImage:
             "required": True,
         },
     )
-    image_type: Optional[str] = field(
+    image_type: str | None = field(
         default=None,
         metadata={
             "name": "imageType",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -137,7 +139,7 @@ class ExecutableImage:
         :ivar linker_command_file:
         """
 
-        file_builder: list["ExecutableImage.LanguageTools.FileBuilder"] = (
+        file_builder: list[ExecutableImage.LanguageTools.FileBuilder] = (
             field(
                 default_factory=list,
                 metadata={
@@ -146,13 +148,13 @@ class ExecutableImage:
                 },
             )
         )
-        linker: Optional[StringExpression] = field(
+        linker: StringExpression | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        linker_flags: Optional[StringExpression] = field(
+        linker_flags: StringExpression | None = field(
             default=None,
             metadata={
                 "name": "linkerFlags",
@@ -187,7 +189,7 @@ class ExecutableImage:
             :ivar id:
             """
 
-            file_type: Optional[FileType] = field(
+            file_type: FileType | None = field(
                 default=None,
                 metadata={
                     "name": "fileType",
@@ -195,34 +197,34 @@ class ExecutableImage:
                     "required": True,
                 },
             )
-            command: Optional[StringExpression] = field(
+            command: StringExpression | None = field(
                 default=None,
                 metadata={
                     "type": "Element",
                     "required": True,
                 },
             )
-            flags: Optional[StringExpression] = field(
+            flags: StringExpression | None = field(
                 default=None,
                 metadata={
                     "type": "Element",
                 },
             )
-            replace_default_flags: Optional[UnsignedBitExpression] = field(
+            replace_default_flags: UnsignedBitExpression | None = field(
                 default=None,
                 metadata={
                     "name": "replaceDefaultFlags",
                     "type": "Element",
                 },
             )
-            vendor_extensions: Optional[VendorExtensions] = field(
+            vendor_extensions: VendorExtensions | None = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
                     "type": "Element",
                 },
             )
-            id: Optional[str] = field(
+            id: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

@@ -38,7 +38,7 @@ class ParkingEquipmentOrServiceFacilityStatus:
     :ivar parking_equipment_or_service_facility_status_extension:
     """
 
-    number_of_equipment_or_service_facility_override: Optional[int] = field(
+    number_of_equipment_or_service_facility_override: int | None = field(
         default=None,
         metadata={
             "name": "numberOfEquipmentOrServiceFacilityOverride",
@@ -46,7 +46,7 @@ class ParkingEquipmentOrServiceFacilityStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    number_of_subitems_override: Optional[int] = field(
+    number_of_subitems_override: int | None = field(
         default=None,
         metadata={
             "name": "numberOfSubitemsOverride",
@@ -54,7 +54,7 @@ class ParkingEquipmentOrServiceFacilityStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vacant_equipment_or_service_facility_subitems: Optional[int] = field(
+    vacant_equipment_or_service_facility_subitems: int | None = field(
         default=None,
         metadata={
             "name": "vacantEquipmentOrServiceFacilitySubitems",
@@ -62,7 +62,7 @@ class ParkingEquipmentOrServiceFacilityStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    service_facility_opening_status: Optional[OpeningStatusEnum] = field(
+    service_facility_opening_status: OpeningStatusEnum | None = field(
         default=None,
         metadata={
             "name": "serviceFacilityOpeningStatus",
@@ -70,7 +70,7 @@ class ParkingEquipmentOrServiceFacilityStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    equipment_operation_status: Optional[OperationStatusEnum] = field(
+    equipment_operation_status: OperationStatusEnum | None = field(
         default=None,
         metadata={
             "name": "equipmentOperationStatus",
@@ -78,9 +78,7 @@ class ParkingEquipmentOrServiceFacilityStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_equipment_or_service_facility_status_extension: Optional[
-        ExtensionType
-    ] = field(
+    parking_equipment_or_service_facility_status_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "parkingEquipmentOrServiceFacilityStatusExtension",

@@ -33,7 +33,7 @@ class StopPlaceComponentVersionStructure(SiteComponentVersionStructure):
     class Meta:
         name = "StopPlaceComponent_VersionStructure"
 
-    transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
+    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -41,20 +41,7 @@ class StopPlaceComponentVersionStructure(SiteComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
-        Union[
-            AirSubmode,
-            BusSubmode,
-            CoachSubmode,
-            FunicularSubmode,
-            MetroSubmode,
-            TramSubmode,
-            TelecabinSubmode,
-            RailSubmode,
-            WaterSubmode,
-            SnowAndIceSubmode,
-        ]
-    ] = field(
+    choice: AirSubmode | BusSubmode | CoachSubmode | FunicularSubmode | MetroSubmode | TramSubmode | TelecabinSubmode | RailSubmode | WaterSubmode | SnowAndIceSubmode | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -112,16 +99,7 @@ class StopPlaceComponentVersionStructure(SiteComponentVersionStructure):
             ),
         },
     )
-    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: Optional[
-        Union[
-            PersonalModeOfOperationRef,
-            VehiclePoolingRef,
-            VehicleSharingRef,
-            VehicleRentalRef,
-            FlexibleModeOfOperationRef,
-            ScheduledModeOfOperationRef,
-        ]
-    ] = field(
+    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: PersonalModeOfOperationRef | VehiclePoolingRef | VehicleSharingRef | VehicleRentalRef | FlexibleModeOfOperationRef | ScheduledModeOfOperationRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -168,7 +146,7 @@ class StopPlaceComponentVersionStructure(SiteComponentVersionStructure):
             "tokens": True,
         },
     )
-    tariff_zones: Optional[TariffZoneRefsRelStructure] = field(
+    tariff_zones: TariffZoneRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "tariffZones",

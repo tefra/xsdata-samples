@@ -34,7 +34,7 @@ class CoctMt440001UvValuedItem:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -57,14 +57,14 @@ class CoctMt440001UvValuedItem:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -72,7 +72,7 @@ class CoctMt440001UvValuedItem:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    unit_quantity: Optional[RtoPqPq] = field(
+    unit_quantity: RtoPqPq | None = field(
         default=None,
         metadata={
             "name": "unitQuantity",
@@ -80,7 +80,7 @@ class CoctMt440001UvValuedItem:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    unit_price_amt: Optional[RtoMoPq] = field(
+    unit_price_amt: RtoMoPq | None = field(
         default=None,
         metadata={
             "name": "unitPriceAmt",
@@ -89,7 +89,7 @@ class CoctMt440001UvValuedItem:
             "required": True,
         },
     )
-    net_amt: Optional[Mo] = field(
+    net_amt: Mo | None = field(
         default=None,
         metadata={
             "name": "netAmt",
@@ -97,7 +97,7 @@ class CoctMt440001UvValuedItem:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",

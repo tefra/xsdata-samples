@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ClosedTimestampRangeStructure:
-    start_time: Optional[XmlDateTime] = field(
+    start_time: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "StartTime",
@@ -17,7 +17,7 @@ class ClosedTimestampRangeStructure:
             "required": True,
         },
     )
-    end_time: Optional[XmlDateTime] = field(
+    end_time: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "EndTime",

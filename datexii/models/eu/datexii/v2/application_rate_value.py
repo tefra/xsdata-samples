@@ -17,7 +17,7 @@ class ApplicationRateValue(DataValue):
     :ivar application_rate_value_extension:
     """
 
-    application_rate: Optional[float] = field(
+    application_rate: float | None = field(
         default=None,
         metadata={
             "name": "applicationRate",
@@ -26,7 +26,7 @@ class ApplicationRateValue(DataValue):
             "required": True,
         },
     )
-    application_rate_value_extension: Optional[ExtensionType] = field(
+    application_rate_value_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "applicationRateValueExtension",

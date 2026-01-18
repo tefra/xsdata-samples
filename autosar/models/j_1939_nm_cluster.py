@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -119,7 +121,7 @@ class J1939NmCluster:
     class Meta:
         name = "J-1939-NM-CLUSTER"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -128,7 +130,7 @@ class J1939NmCluster:
             "required": True,
         },
     )
-    short_name_fragments: Optional["J1939NmCluster.ShortNameFragments"] = (
+    short_name_fragments: J1939NmCluster.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -138,7 +140,7 @@ class J1939NmCluster:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -146,7 +148,7 @@ class J1939NmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -154,7 +156,7 @@ class J1939NmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -162,7 +164,7 @@ class J1939NmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -170,7 +172,7 @@ class J1939NmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -178,7 +180,7 @@ class J1939NmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["J1939NmCluster.Annotations"] = field(
+    annotations: J1939NmCluster.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -186,9 +188,7 @@ class J1939NmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_cluster_ref: Optional[
-        "J1939NmCluster.CommunicationClusterRef"
-    ] = field(
+    communication_cluster_ref: J1939NmCluster.CommunicationClusterRef | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CLUSTER-REF",
@@ -196,7 +196,7 @@ class J1939NmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_channel_id: Optional[PositiveInteger] = field(
+    nm_channel_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "NM-CHANNEL-ID",
@@ -204,7 +204,7 @@ class J1939NmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_channel_sleep_master: Optional[Boolean] = field(
+    nm_channel_sleep_master: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-CHANNEL-SLEEP-MASTER",
@@ -212,7 +212,7 @@ class J1939NmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_nodes: Optional["J1939NmCluster.NmNodes"] = field(
+    nm_nodes: J1939NmCluster.NmNodes | None = field(
         default=None,
         metadata={
             "name": "NM-NODES",
@@ -220,7 +220,7 @@ class J1939NmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_node_detection_enabled: Optional[Boolean] = field(
+    nm_node_detection_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-NODE-DETECTION-ENABLED",
@@ -228,7 +228,7 @@ class J1939NmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_node_id_enabled: Optional[Boolean] = field(
+    nm_node_id_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-NODE-ID-ENABLED",
@@ -236,7 +236,7 @@ class J1939NmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_pnc_participation: Optional[Boolean] = field(
+    nm_pnc_participation: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-PNC-PARTICIPATION",
@@ -244,7 +244,7 @@ class J1939NmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_repeat_msg_ind_enabled: Optional[Boolean] = field(
+    nm_repeat_msg_ind_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-REPEAT-MSG-IND-ENABLED",
@@ -252,7 +252,7 @@ class J1939NmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_synchronizing_network: Optional[Boolean] = field(
+    nm_synchronizing_network: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-SYNCHRONIZING-NETWORK",
@@ -260,7 +260,7 @@ class J1939NmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -268,7 +268,7 @@ class J1939NmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    address_claim_enabled: Optional[Boolean] = field(
+    address_claim_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "ADDRESS-CLAIM-ENABLED",
@@ -276,14 +276,14 @@ class J1939NmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -291,7 +291,7 @@ class J1939NmCluster:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -323,7 +323,7 @@ class J1939NmCluster:
 
     @dataclass
     class CommunicationClusterRef(Ref):
-        dest: Optional[CommunicationClusterSubtypesEnum] = field(
+        dest: CommunicationClusterSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

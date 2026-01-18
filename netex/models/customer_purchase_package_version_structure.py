@@ -44,7 +44,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "CustomerPurchasePackage_VersionStructure"
 
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -52,7 +52,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sales_offer_package_ref: Optional[SalesOfferPackageRef] = field(
+    sales_offer_package_ref: SalesOfferPackageRef | None = field(
         default=None,
         metadata={
             "name": "SalesOfferPackageRef",
@@ -60,7 +60,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_ref: Optional[CustomerRef] = field(
+    customer_ref: CustomerRef | None = field(
         default=None,
         metadata={
             "name": "CustomerRef",
@@ -68,7 +68,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_account_ref: Optional[CustomerAccountRef] = field(
+    customer_account_ref: CustomerAccountRef | None = field(
         default=None,
         metadata={
             "name": "CustomerAccountRef",
@@ -76,7 +76,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_contract_ref: Optional[FareContractRef] = field(
+    fare_contract_ref: FareContractRef | None = field(
         default=None,
         metadata={
             "name": "FareContractRef",
@@ -84,9 +84,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_purchase_package_status: Optional[
-        CustomerPurchasePackageStatusEnumeration
-    ] = field(
+    customer_purchase_package_status: CustomerPurchasePackageStatusEnumeration | None = field(
         default=None,
         metadata={
             "name": "CustomerPurchasePackageStatus",
@@ -94,9 +92,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    travel_specification_summary_view: Optional[
-        TravelSpecificationSummaryView
-    ] = field(
+    travel_specification_summary_view: TravelSpecificationSummaryView | None = field(
         default=None,
         metadata={
             "name": "TravelSpecificationSummaryView",
@@ -104,7 +100,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    travel_specifications: Optional[TravelSpecificationsRelStructure] = field(
+    travel_specifications: TravelSpecificationsRelStructure | None = field(
         default=None,
         metadata={
             "name": "travelSpecifications",
@@ -112,9 +108,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_parameter_assignments: Optional[
-        CustomerPurchaseParameterAssignmentsRelStructure
-    ] = field(
+    validity_parameter_assignments: CustomerPurchaseParameterAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "validityParameterAssignments",
@@ -122,7 +116,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distribution_assignments: Optional[DistributionAssignmentsRelStructure] = (
+    distribution_assignments: DistributionAssignmentsRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -132,9 +126,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             },
         )
     )
-    customer_purchase_package_elements: Optional[
-        CustomerPurchasePackageElementsRelStructure
-    ] = field(
+    customer_purchase_package_elements: CustomerPurchasePackageElementsRelStructure | None = field(
         default=None,
         metadata={
             "name": "customerPurchasePackageElements",
@@ -142,7 +134,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sales_transaction_ref: Optional[SalesTransactionRef] = field(
+    sales_transaction_ref: SalesTransactionRef | None = field(
         default=None,
         metadata={
             "name": "SalesTransactionRef",
@@ -150,7 +142,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sales_transactions: Optional[SalesTransactionRefsRelStructure] = field(
+    sales_transactions: SalesTransactionRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "salesTransactions",
@@ -158,14 +150,14 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: Optional[CustomerPurchasePackagePricesRelStructure] = field(
+    prices: CustomerPurchasePackagePricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    travel_documents: Optional[TravelDocumentsRelStructure] = field(
+    travel_documents: TravelDocumentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "travelDocuments",
@@ -173,9 +165,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    medium_access_device_ref: Optional[
-        Union[MobileDeviceRef, EmvCardRef, SmartcardRef]
-    ] = field(
+    medium_access_device_ref: MobileDeviceRef | EmvCardRef | SmartcardRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -198,7 +188,7 @@ class CustomerPurchasePackageVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    medium_application_instance_ref: Optional[MediumApplicationInstanceRef] = (
+    medium_application_instance_ref: MediumApplicationInstanceRef | None = (
         field(
             default=None,
             metadata={

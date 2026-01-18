@@ -56,7 +56,7 @@ class BaseTypeDirectDefinition:
     class Meta:
         name = "BASE-TYPE-DIRECT-DEFINITION"
 
-    base_type_size: Optional[PositiveInteger] = field(
+    base_type_size: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "BASE-TYPE-SIZE",
@@ -64,7 +64,7 @@ class BaseTypeDirectDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_base_type_size: Optional[PositiveInteger] = field(
+    max_base_type_size: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-BASE-TYPE-SIZE",
@@ -72,7 +72,7 @@ class BaseTypeDirectDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_type_encoding: Optional[BaseTypeEncodingString] = field(
+    base_type_encoding: BaseTypeEncodingString | None = field(
         default=None,
         metadata={
             "name": "BASE-TYPE-ENCODING",
@@ -80,7 +80,7 @@ class BaseTypeDirectDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mem_alignment: Optional[PositiveInteger] = field(
+    mem_alignment: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MEM-ALIGNMENT",
@@ -88,7 +88,7 @@ class BaseTypeDirectDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    byte_order: Optional[ByteOrderEnum] = field(
+    byte_order: ByteOrderEnum | None = field(
         default=None,
         metadata={
             "name": "BYTE-ORDER",
@@ -96,7 +96,7 @@ class BaseTypeDirectDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    native_declaration: Optional[NativeDeclarationString] = field(
+    native_declaration: NativeDeclarationString | None = field(
         default=None,
         metadata={
             "name": "NATIVE-DECLARATION",
@@ -104,14 +104,14 @@ class BaseTypeDirectDefinition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

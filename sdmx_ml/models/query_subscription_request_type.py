@@ -16,7 +16,7 @@ class QuerySubscriptionRequestType:
         consumer for which the subscription details should be returned.
     """
 
-    organisation: Optional[str] = field(
+    organisation: str | None = field(
         default=None,
         metadata={
             "name": "Organisation",

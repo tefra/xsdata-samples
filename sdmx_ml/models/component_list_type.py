@@ -23,15 +23,7 @@ class ComponentListType(IdentifiableType):
     """
 
     choice: tuple[
-        Union[
-            MetadataAttribute,
-            Measure,
-            GroupDimension,
-            TimeDimension,
-            Dimension,
-            MetadataAttributeUsage,
-            Attribute2,
-        ],
+        MetadataAttribute | Measure | GroupDimension | TimeDimension | Dimension | MetadataAttributeUsage | Attribute2,
         ...,
     ] = field(
         default_factory=tuple,

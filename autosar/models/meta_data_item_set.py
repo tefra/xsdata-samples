@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -35,7 +37,7 @@ class MetaDataItemSet:
     class Meta:
         name = "META-DATA-ITEM-SET"
 
-    data_element_refs: Optional["MetaDataItemSet.DataElementRefs"] = field(
+    data_element_refs: MetaDataItemSet.DataElementRefs | None = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENT-REFS",
@@ -43,7 +45,7 @@ class MetaDataItemSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    meta_data_items: Optional["MetaDataItemSet.MetaDataItems"] = field(
+    meta_data_items: MetaDataItemSet.MetaDataItems | None = field(
         default=None,
         metadata={
             "name": "META-DATA-ITEMS",
@@ -51,14 +53,14 @@ class MetaDataItemSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +72,7 @@ class MetaDataItemSet:
     @dataclass
     class DataElementRefs:
         data_element_ref: list[
-            "MetaDataItemSet.DataElementRefs.DataElementRef"
+            MetaDataItemSet.DataElementRefs.DataElementRef
         ] = field(
             default_factory=list,
             metadata={
@@ -82,7 +84,7 @@ class MetaDataItemSet:
 
         @dataclass
         class DataElementRef(Ref):
-            dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+            dest: VariableDataPrototypeSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

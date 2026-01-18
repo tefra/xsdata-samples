@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -56,7 +58,7 @@ class AutosarParameterRef:
     class Meta:
         name = "AUTOSAR-PARAMETER-REF"
 
-    autosar_parameter_iref: Optional[ParameterInAtomicSwcTypeInstanceRef] = (
+    autosar_parameter_iref: ParameterInAtomicSwcTypeInstanceRef | None = (
         field(
             default=None,
             metadata={
@@ -66,7 +68,7 @@ class AutosarParameterRef:
             },
         )
     )
-    local_parameter_ref: Optional["AutosarParameterRef.LocalParameterRef"] = (
+    local_parameter_ref: AutosarParameterRef.LocalParameterRef | None = (
         field(
             default=None,
             metadata={
@@ -76,14 +78,14 @@ class AutosarParameterRef:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -94,7 +96,7 @@ class AutosarParameterRef:
 
     @dataclass
     class LocalParameterRef(Ref):
-        dest: Optional[DataPrototypeSubtypesEnum] = field(
+        dest: DataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

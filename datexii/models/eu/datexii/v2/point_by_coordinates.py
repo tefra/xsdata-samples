@@ -20,14 +20,14 @@ class PointByCoordinates:
     :ivar point_by_coordinates_extension:
     """
 
-    bearing: Optional[int] = field(
+    bearing: int | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    point_coordinates: Optional[PointCoordinates] = field(
+    point_coordinates: PointCoordinates | None = field(
         default=None,
         metadata={
             "name": "pointCoordinates",
@@ -36,7 +36,7 @@ class PointByCoordinates:
             "required": True,
         },
     )
-    point_by_coordinates_extension: Optional[ExtensionType] = field(
+    point_by_coordinates_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "pointByCoordinatesExtension",

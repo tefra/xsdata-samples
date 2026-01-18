@@ -15,7 +15,7 @@ class TransportModesRelStructure(ContainmentAggregationStructure):
         name = "transportModes_RelStructure"
 
     open_transport_mode_ref_or_transport_mode: Iterable[
-        Union[OpenTransportModeRef, TransportModeStructure]
+        OpenTransportModeRef | TransportModeStructure
     ] = field(
         default_factory=list,
         metadata={

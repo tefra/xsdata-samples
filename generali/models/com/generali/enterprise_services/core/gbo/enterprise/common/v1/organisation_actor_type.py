@@ -33,7 +33,7 @@ class OrganisationActorType(BaseComponentType):
     :ivar national_id:
     """
 
-    legal_name: Optional[TextType] = field(
+    legal_name: TextType | None = field(
         default=None,
         metadata={
             "name": "LegalName",
@@ -42,7 +42,7 @@ class OrganisationActorType(BaseComponentType):
             "required": True,
         },
     )
-    gunsnumber: Optional[str] = field(
+    gunsnumber: str | None = field(
         default=None,
         metadata={
             "name": "GUNSNumber",
@@ -53,7 +53,7 @@ class OrganisationActorType(BaseComponentType):
             "pattern": r"G([0-9]{9})",
         },
     )
-    dunsnumber: Optional[str] = field(
+    dunsnumber: str | None = field(
         default=None,
         metadata={
             "name": "DUNSNumber",
@@ -64,7 +64,7 @@ class OrganisationActorType(BaseComponentType):
             "pattern": r"([0-9]{9})",
         },
     )
-    national_id: Optional[Idtype] = field(
+    national_id: Idtype | None = field(
         default=None,
         metadata={
             "name": "NationalId",

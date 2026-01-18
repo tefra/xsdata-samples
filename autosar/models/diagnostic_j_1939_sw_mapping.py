@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -94,7 +96,7 @@ class DiagnosticJ1939SwMapping:
     class Meta:
         name = "DIAGNOSTIC-J-1939-SW-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -103,9 +105,7 @@ class DiagnosticJ1939SwMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticJ1939SwMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticJ1939SwMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -113,7 +113,7 @@ class DiagnosticJ1939SwMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class DiagnosticJ1939SwMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class DiagnosticJ1939SwMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class DiagnosticJ1939SwMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class DiagnosticJ1939SwMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +153,7 @@ class DiagnosticJ1939SwMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticJ1939SwMapping.Annotations"] = field(
+    annotations: DiagnosticJ1939SwMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,7 +161,7 @@ class DiagnosticJ1939SwMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -169,7 +169,7 @@ class DiagnosticJ1939SwMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    node_ref: Optional["DiagnosticJ1939SwMapping.NodeRef"] = field(
+    node_ref: DiagnosticJ1939SwMapping.NodeRef | None = field(
         default=None,
         metadata={
             "name": "NODE-REF",
@@ -177,9 +177,7 @@ class DiagnosticJ1939SwMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_prototype_iref: Optional[
-        ComponentInCompositionInstanceRef
-    ] = field(
+    sw_component_prototype_iref: ComponentInCompositionInstanceRef | None = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-PROTOTYPE-IREF",
@@ -187,14 +185,14 @@ class DiagnosticJ1939SwMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -202,7 +200,7 @@ class DiagnosticJ1939SwMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -234,7 +232,7 @@ class DiagnosticJ1939SwMapping:
 
     @dataclass
     class NodeRef(Ref):
-        dest: Optional[DiagnosticJ1939NodeSubtypesEnum] = field(
+        dest: DiagnosticJ1939NodeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -13,7 +13,7 @@ class Bpmnplane(Plane):
         name = "BPMNPlane"
         namespace = "http://www.omg.org/spec/BPMN/20100524/DI"
 
-    bpmn_element: Optional[QName] = field(
+    bpmn_element: QName | None = field(
         default=None,
         metadata={
             "name": "bpmnElement",

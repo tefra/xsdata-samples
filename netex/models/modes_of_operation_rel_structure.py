@@ -20,15 +20,7 @@ class ModesOfOperationRelStructure(ContainmentAggregationStructure):
         name = "modesOfOperationRelStructure"
 
     mode_of_operation_or_alternative_mode_of_operation_or_conventional_mode_of_operation: Iterable[
-        Union[
-            PersonalModeOfOperation,
-            AlternativeModeOfOperation,
-            VehiclePooling,
-            VehicleSharing,
-            VehicleRental,
-            FlexibleOperation,
-            ScheduledOperation,
-        ]
+        PersonalModeOfOperation | AlternativeModeOfOperation | VehiclePooling | VehicleSharing | VehicleRental | FlexibleOperation | ScheduledOperation
     ] = field(
         default_factory=list,
         metadata={

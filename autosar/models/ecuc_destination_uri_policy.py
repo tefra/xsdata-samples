@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -61,7 +63,7 @@ class EcucDestinationUriPolicy:
     class Meta:
         name = "ECUC-DESTINATION-URI-POLICY"
 
-    containers: Optional["EcucDestinationUriPolicy.Containers"] = field(
+    containers: EcucDestinationUriPolicy.Containers | None = field(
         default=None,
         metadata={
             "name": "CONTAINERS",
@@ -69,9 +71,7 @@ class EcucDestinationUriPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    destination_uri_nesting_contract: Optional[
-        EcucDestinationUriNestingContractEnum
-    ] = field(
+    destination_uri_nesting_contract: EcucDestinationUriNestingContractEnum | None = field(
         default=None,
         metadata={
             "name": "DESTINATION-URI-NESTING-CONTRACT",
@@ -79,7 +79,7 @@ class EcucDestinationUriPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameters: Optional["EcucDestinationUriPolicy.Parameters"] = field(
+    parameters: EcucDestinationUriPolicy.Parameters | None = field(
         default=None,
         metadata={
             "name": "PARAMETERS",
@@ -87,7 +87,7 @@ class EcucDestinationUriPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    references: Optional["EcucDestinationUriPolicy.References"] = field(
+    references: EcucDestinationUriPolicy.References | None = field(
         default=None,
         metadata={
             "name": "REFERENCES",
@@ -95,14 +95,14 @@ class EcucDestinationUriPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

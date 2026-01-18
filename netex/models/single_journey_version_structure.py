@@ -25,15 +25,7 @@ class SingleJourneyVersionStructure(JourneyVersionStructure):
     class Meta:
         name = "SingleJourney_VersionStructure"
 
-    common_vehicle_service_ref_or_vehicle_pooling_service_ref: Optional[
-        Union[
-            VehicleRentalServiceRef,
-            VehicleSharingServiceRef,
-            ChauffeuredVehicleServiceRef,
-            TaxiServiceRef,
-            CarPoolingServiceRef,
-        ]
-    ] = field(
+    common_vehicle_service_ref_or_vehicle_pooling_service_ref: VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -66,7 +58,7 @@ class SingleJourneyVersionStructure(JourneyVersionStructure):
             ),
         },
     )
-    vehicle_ref: Optional[VehicleRef] = field(
+    vehicle_ref: VehicleRef | None = field(
         default=None,
         metadata={
             "name": "VehicleRef",
@@ -74,7 +66,7 @@ class SingleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    single_journey_path_ref: Optional[SingleJourneyPathRef] = field(
+    single_journey_path_ref: SingleJourneyPathRef | None = field(
         default=None,
         metadata={
             "name": "SingleJourneyPathRef",
@@ -82,7 +74,7 @@ class SingleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    departure_time: Optional[XmlTime] = field(
+    departure_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "DepartureTime",
@@ -90,7 +82,7 @@ class SingleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    departure_day_offset: Optional[int] = field(
+    departure_day_offset: int | None = field(
         default=None,
         metadata={
             "name": "DepartureDayOffset",
@@ -98,7 +90,7 @@ class SingleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operating_day_ref: Optional[OperatingDayRef] = field(
+    operating_day_ref: OperatingDayRef | None = field(
         default=None,
         metadata={
             "name": "OperatingDayRef",
@@ -106,7 +98,7 @@ class SingleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    dated_passing_times: Optional[TargetPassingTimesRelStructure] = field(
+    dated_passing_times: TargetPassingTimesRelStructure | None = field(
         default=None,
         metadata={
             "name": "datedPassingTimes",
@@ -114,9 +106,7 @@ class SingleJourneyVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    meeting_point_assignments: Optional[
-        VehicleMeetingPointAssignmentsRelStructure
-    ] = field(
+    meeting_point_assignments: VehicleMeetingPointAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "meetingPointAssignments",

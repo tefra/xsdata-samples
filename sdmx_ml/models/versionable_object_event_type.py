@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -19,12 +21,7 @@ class VersionableObjectEventType:
     """
 
     choice: tuple[
-        Union[
-            EmptyType,
-            "VersionableObjectEventType.Urn",
-            "VersionableObjectEventType.Id",
-            "VersionableObjectEventType.Version",
-        ],
+        EmptyType | VersionableObjectEventType.Urn | VersionableObjectEventType.Id | VersionableObjectEventType.Version,
         ...,
     ] = field(
         default_factory=tuple,
@@ -58,7 +55,7 @@ class VersionableObjectEventType:
 
     @dataclass(frozen=True)
     class Urn:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -67,7 +64,7 @@ class VersionableObjectEventType:
 
     @dataclass(frozen=True)
     class Id:
-        value: Optional[Union[str, WildCardValueType]] = field(
+        value: str | WildCardValueType | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -77,7 +74,7 @@ class VersionableObjectEventType:
 
     @dataclass(frozen=True)
     class Version:
-        value: Optional[Union[str, WildcardType, WildCardValueType]] = field(
+        value: str | WildcardType | WildCardValueType | None = field(
             default=None,
             metadata={
                 "required": True,

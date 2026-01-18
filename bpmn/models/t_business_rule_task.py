@@ -12,7 +12,7 @@ class TBusinessRuleTask(TTask):
     class Meta:
         name = "tBusinessRuleTask"
 
-    implementation: Union[str, TImplementationValue] = field(
+    implementation: str | TImplementationValue = field(
         default=TImplementationValue.UNSPECIFIED,
         metadata={
             "type": "Attribute",

@@ -19,7 +19,7 @@ class CubeRegionKeyType(MemberSelectionType):
     """
 
     value_or_time_range: tuple[
-        Union[CubeKeyValueType, TimeRangeValueType], ...
+        CubeKeyValueType | TimeRangeValueType, ...
     ] = field(
         default_factory=tuple,
         metadata={

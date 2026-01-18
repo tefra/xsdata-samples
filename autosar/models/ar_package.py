@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -840,7 +842,7 @@ class ArPackage:
     class Meta:
         name = "AR-PACKAGE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -849,7 +851,7 @@ class ArPackage:
             "required": True,
         },
     )
-    short_name_fragments: Optional["ArPackage.ShortNameFragments"] = field(
+    short_name_fragments: ArPackage.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -857,7 +859,7 @@ class ArPackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -865,7 +867,7 @@ class ArPackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -873,7 +875,7 @@ class ArPackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -881,7 +883,7 @@ class ArPackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -889,7 +891,7 @@ class ArPackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -897,7 +899,7 @@ class ArPackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ArPackage.Annotations"] = field(
+    annotations: ArPackage.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -905,7 +907,7 @@ class ArPackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional["ArPackage.BlueprintPolicys"] = field(
+    blueprint_policys: ArPackage.BlueprintPolicys | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -913,7 +915,7 @@ class ArPackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: Optional[String] = field(
+    short_name_pattern: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -921,7 +923,7 @@ class ArPackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reference_bases: Optional["ArPackage.ReferenceBases"] = field(
+    reference_bases: ArPackage.ReferenceBases | None = field(
         default=None,
         metadata={
             "name": "REFERENCE-BASES",
@@ -929,7 +931,7 @@ class ArPackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    elements: Optional["ArPackage.Elements"] = field(
+    elements: ArPackage.Elements | None = field(
         default=None,
         metadata={
             "name": "ELEMENTS",
@@ -937,7 +939,7 @@ class ArPackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ar_packages: Optional["ArPackage.ArPackages"] = field(
+    ar_packages: ArPackage.ArPackages | None = field(
         default=None,
         metadata={
             "name": "AR-PACKAGES",
@@ -945,7 +947,7 @@ class ArPackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -953,14 +955,14 @@ class ArPackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -968,7 +970,7 @@ class ArPackage:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -5273,7 +5275,7 @@ class ArPackage:
 
     @dataclass
     class ArPackages:
-        ar_package: list["ArPackage"] = field(
+        ar_package: list[ArPackage] = field(
             default_factory=list,
             metadata={
                 "name": "AR-PACKAGE",

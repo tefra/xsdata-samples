@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -148,7 +150,7 @@ class SocketAddress:
     class Meta:
         name = "SOCKET-ADDRESS"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -157,7 +159,7 @@ class SocketAddress:
             "required": True,
         },
     )
-    short_name_fragments: Optional["SocketAddress.ShortNameFragments"] = field(
+    short_name_fragments: SocketAddress.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -165,7 +167,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -173,7 +175,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -181,7 +183,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -189,7 +191,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -197,7 +199,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -205,7 +207,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SocketAddress.Annotations"] = field(
+    annotations: SocketAddress.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -213,9 +215,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    allowed_i_pv_6_ext_headers_ref: Optional[
-        "SocketAddress.AllowedIPv6ExtHeadersRef"
-    ] = field(
+    allowed_i_pv_6_ext_headers_ref: SocketAddress.AllowedIPv6ExtHeadersRef | None = field(
         default=None,
         metadata={
             "name": "ALLOWED-I-PV-6-EXT-HEADERS-REF",
@@ -223,7 +223,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    allowed_tcp_options_ref: Optional["SocketAddress.AllowedTcpOptionsRef"] = (
+    allowed_tcp_options_ref: SocketAddress.AllowedTcpOptionsRef | None = (
         field(
             default=None,
             metadata={
@@ -233,7 +233,7 @@ class SocketAddress:
             },
         )
     )
-    application_endpoint: Optional[ApplicationEndpoint] = field(
+    application_endpoint: ApplicationEndpoint | None = field(
         default=None,
         metadata={
             "name": "APPLICATION-ENDPOINT",
@@ -241,7 +241,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    connector_ref: Optional["SocketAddress.ConnectorRef"] = field(
+    connector_ref: SocketAddress.ConnectorRef | None = field(
         default=None,
         metadata={
             "name": "CONNECTOR-REF",
@@ -249,7 +249,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    differentiated_service_field: Optional[PositiveInteger] = field(
+    differentiated_service_field: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "DIFFERENTIATED-SERVICE-FIELD",
@@ -257,7 +257,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flow_label: Optional[PositiveInteger] = field(
+    flow_label: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "FLOW-LABEL",
@@ -265,7 +265,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ip_address: Optional[String] = field(
+    ip_address: String | None = field(
         default=None,
         metadata={
             "name": "IP-ADDRESS",
@@ -273,9 +273,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multicast_connector_refs: Optional[
-        "SocketAddress.MulticastConnectorRefs"
-    ] = field(
+    multicast_connector_refs: SocketAddress.MulticastConnectorRefs | None = field(
         default=None,
         metadata={
             "name": "MULTICAST-CONNECTOR-REFS",
@@ -283,7 +281,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    path_mtu_discovery_enabled: Optional[Boolean] = field(
+    path_mtu_discovery_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "PATH-MTU-DISCOVERY-ENABLED",
@@ -291,7 +289,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_collection_max_buffer_size: Optional[PositiveInteger] = field(
+    pdu_collection_max_buffer_size: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "PDU-COLLECTION-MAX-BUFFER-SIZE",
@@ -299,7 +297,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_collection_timeout: Optional[TimeValue] = field(
+    pdu_collection_timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "PDU-COLLECTION-TIMEOUT",
@@ -307,7 +305,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_address: Optional[Integer] = field(
+    port_address: Integer | None = field(
         default=None,
         metadata={
             "name": "PORT-ADDRESS",
@@ -315,9 +313,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    static_socket_connections: Optional[
-        "SocketAddress.StaticSocketConnections"
-    ] = field(
+    static_socket_connections: SocketAddress.StaticSocketConnections | None = field(
         default=None,
         metadata={
             "name": "STATIC-SOCKET-CONNECTIONS",
@@ -325,7 +321,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    udp_checksum_handling: Optional[UdpChecksumCalculationEnum] = field(
+    udp_checksum_handling: UdpChecksumCalculationEnum | None = field(
         default=None,
         metadata={
             "name": "UDP-CHECKSUM-HANDLING",
@@ -333,7 +329,7 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -341,14 +337,14 @@ class SocketAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -356,7 +352,7 @@ class SocketAddress:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -388,7 +384,7 @@ class SocketAddress:
 
     @dataclass
     class AllowedIPv6ExtHeadersRef(Ref):
-        dest: Optional[IPv6ExtHeaderFilterListSubtypesEnum] = field(
+        dest: IPv6ExtHeaderFilterListSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -399,7 +395,7 @@ class SocketAddress:
 
     @dataclass
     class AllowedTcpOptionsRef(Ref):
-        dest: Optional[TcpOptionFilterListSubtypesEnum] = field(
+        dest: TcpOptionFilterListSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -410,7 +406,7 @@ class SocketAddress:
 
     @dataclass
     class ConnectorRef(Ref):
-        dest: Optional[EthernetCommunicationConnectorSubtypesEnum] = field(
+        dest: EthernetCommunicationConnectorSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -422,7 +418,7 @@ class SocketAddress:
     @dataclass
     class MulticastConnectorRefs:
         multicast_connector_ref: list[
-            "SocketAddress.MulticastConnectorRefs.MulticastConnectorRef"
+            SocketAddress.MulticastConnectorRefs.MulticastConnectorRef
         ] = field(
             default_factory=list,
             metadata={
@@ -434,7 +430,7 @@ class SocketAddress:
 
         @dataclass
         class MulticastConnectorRef(Ref):
-            dest: Optional[EthernetCommunicationConnectorSubtypesEnum] = field(
+            dest: EthernetCommunicationConnectorSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

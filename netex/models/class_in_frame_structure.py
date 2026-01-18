@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import Optional
@@ -13,7 +15,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ClassInFrameStructure:
-    class_ref_type: Optional[ClassRefTypeEnumeration] = field(
+    class_ref_type: ClassRefTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "ClassRefType",
@@ -21,7 +23,7 @@ class ClassInFrameStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_frame_ref: Optional[TypeOfFrameRef] = field(
+    type_of_frame_ref: TypeOfFrameRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfFrameRef",
@@ -29,7 +31,7 @@ class ClassInFrameStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mandatory: Optional[MandatoryEnumeration] = field(
+    mandatory: MandatoryEnumeration | None = field(
         default=None,
         metadata={
             "name": "Mandatory",
@@ -37,21 +39,21 @@ class ClassInFrameStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    attributes: Optional["ClassInFrameStructure.Attributes"] = field(
+    attributes: ClassInFrameStructure.Attributes | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    relationships: Optional["ClassInFrameStructure.Relationships"] = field(
+    relationships: ClassInFrameStructure.Relationships | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name_of_class: Optional[str] = field(
+    name_of_class: str | None = field(
         default=None,
         metadata={
             "name": "nameOfClass",

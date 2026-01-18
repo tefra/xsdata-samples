@@ -14,20 +14,20 @@ class IndexTermRangeEnd:
         name = "index-term-range-end"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    rid: Optional[str] = field(
+    rid: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

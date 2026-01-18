@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -44,7 +46,7 @@ class TimeSyncServerConfiguration:
     class Meta:
         name = "TIME-SYNC-SERVER-CONFIGURATION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -53,9 +55,7 @@ class TimeSyncServerConfiguration:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "TimeSyncServerConfiguration.ShortNameFragments"
-    ] = field(
+    short_name_fragments: TimeSyncServerConfiguration.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -63,7 +63,7 @@ class TimeSyncServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    priority: Optional[PositiveInteger] = field(
+    priority: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "PRIORITY",
@@ -71,7 +71,7 @@ class TimeSyncServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sync_interval: Optional[TimeValue] = field(
+    sync_interval: TimeValue | None = field(
         default=None,
         metadata={
             "name": "SYNC-INTERVAL",
@@ -79,7 +79,7 @@ class TimeSyncServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_sync_server_identifier: Optional[String] = field(
+    time_sync_server_identifier: String | None = field(
         default=None,
         metadata={
             "name": "TIME-SYNC-SERVER-IDENTIFIER",
@@ -87,7 +87,7 @@ class TimeSyncServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_sync_technology: Optional[TimeSyncTechnologyEnum] = field(
+    time_sync_technology: TimeSyncTechnologyEnum | None = field(
         default=None,
         metadata={
             "name": "TIME-SYNC-TECHNOLOGY",
@@ -95,14 +95,14 @@ class TimeSyncServerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

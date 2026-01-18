@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -38,7 +40,7 @@ class SwcToSwcSignal:
     class Meta:
         name = "SWC-TO-SWC-SIGNAL"
 
-    data_element_irefs: Optional["SwcToSwcSignal.DataElementIrefs"] = field(
+    data_element_irefs: SwcToSwcSignal.DataElementIrefs | None = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENT-IREFS",
@@ -46,14 +48,14 @@ class SwcToSwcSignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -17,7 +17,7 @@ class MeasurementSiteTablePublication(PayloadPublication):
     A publication containing one or more Measurment Site Tables.
     """
 
-    header_information: Optional[HeaderInformation] = field(
+    header_information: HeaderInformation | None = field(
         default=None,
         metadata={
             "name": "headerInformation",
@@ -35,7 +35,7 @@ class MeasurementSiteTablePublication(PayloadPublication):
             "min_occurs": 1,
         },
     )
-    measurement_site_table_publication_extension: Optional[ExtensionType] = (
+    measurement_site_table_publication_extension: ExtensionType | None = (
         field(
             default=None,
             metadata={

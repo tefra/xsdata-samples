@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -37,7 +39,7 @@ class TransmissionModeCondition:
     class Meta:
         name = "TRANSMISSION-MODE-CONDITION"
 
-    data_filter: Optional[DataFilter] = field(
+    data_filter: DataFilter | None = field(
         default=None,
         metadata={
             "name": "DATA-FILTER",
@@ -45,9 +47,7 @@ class TransmissionModeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_in_i_pdu_ref: Optional[
-        "TransmissionModeCondition.ISignalInIPduRef"
-    ] = field(
+    i_signal_in_i_pdu_ref: TransmissionModeCondition.ISignalInIPduRef | None = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-IN-I-PDU-REF",
@@ -55,14 +55,14 @@ class TransmissionModeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -73,7 +73,7 @@ class TransmissionModeCondition:
 
     @dataclass
     class ISignalInIPduRef(Ref):
-        dest: Optional[ISignalToIPduMappingSubtypesEnum] = field(
+        dest: ISignalToIPduMappingSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

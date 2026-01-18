@@ -13,7 +13,7 @@ class AcceptedDriverPermitVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "AcceptedDriverPermit_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -21,7 +21,7 @@ class AcceptedDriverPermitVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_driver_permit_ref: Optional[TypeOfDriverPermitRef] = field(
+    type_of_driver_permit_ref: TypeOfDriverPermitRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfDriverPermitRef",

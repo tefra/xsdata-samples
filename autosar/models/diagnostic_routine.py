@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -98,7 +100,7 @@ class DiagnosticRoutine:
     class Meta:
         name = "DIAGNOSTIC-ROUTINE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -107,7 +109,7 @@ class DiagnosticRoutine:
             "required": True,
         },
     )
-    short_name_fragments: Optional["DiagnosticRoutine.ShortNameFragments"] = (
+    short_name_fragments: DiagnosticRoutine.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -117,7 +119,7 @@ class DiagnosticRoutine:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -125,7 +127,7 @@ class DiagnosticRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -133,7 +135,7 @@ class DiagnosticRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -141,7 +143,7 @@ class DiagnosticRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -149,7 +151,7 @@ class DiagnosticRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -157,7 +159,7 @@ class DiagnosticRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticRoutine.Annotations"] = field(
+    annotations: DiagnosticRoutine.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -165,7 +167,7 @@ class DiagnosticRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -173,7 +175,7 @@ class DiagnosticRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    id: Optional[PositiveIntegerValueVariationPoint] = field(
+    id: PositiveIntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -181,7 +183,7 @@ class DiagnosticRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    request_result: Optional[DiagnosticRequestRoutineResults] = field(
+    request_result: DiagnosticRequestRoutineResults | None = field(
         default=None,
         metadata={
             "name": "REQUEST-RESULT",
@@ -189,7 +191,7 @@ class DiagnosticRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    routine_info: Optional[PositiveInteger] = field(
+    routine_info: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "ROUTINE-INFO",
@@ -197,7 +199,7 @@ class DiagnosticRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    start: Optional[DiagnosticStartRoutine] = field(
+    start: DiagnosticStartRoutine | None = field(
         default=None,
         metadata={
             "name": "START",
@@ -205,7 +207,7 @@ class DiagnosticRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    stop: Optional[DiagnosticStopRoutine] = field(
+    stop: DiagnosticStopRoutine | None = field(
         default=None,
         metadata={
             "name": "STOP",
@@ -213,14 +215,14 @@ class DiagnosticRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -228,7 +230,7 @@ class DiagnosticRoutine:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -100,7 +102,7 @@ class CpSoftwareCluster:
     class Meta:
         name = "CP-SOFTWARE-CLUSTER"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,7 +111,7 @@ class CpSoftwareCluster:
             "required": True,
         },
     )
-    short_name_fragments: Optional["CpSoftwareCluster.ShortNameFragments"] = (
+    short_name_fragments: CpSoftwareCluster.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -119,7 +121,7 @@ class CpSoftwareCluster:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +129,7 @@ class CpSoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +137,7 @@ class CpSoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +145,7 @@ class CpSoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +153,7 @@ class CpSoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +161,7 @@ class CpSoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["CpSoftwareCluster.Annotations"] = field(
+    annotations: CpSoftwareCluster.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +169,7 @@ class CpSoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,9 +177,7 @@ class CpSoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_assignments: Optional[
-        "CpSoftwareCluster.SwComponentAssignments"
-    ] = field(
+    sw_component_assignments: CpSoftwareCluster.SwComponentAssignments | None = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-ASSIGNMENTS",
@@ -185,7 +185,7 @@ class CpSoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_compositions: Optional["CpSoftwareCluster.SwCompositions"] = field(
+    sw_compositions: CpSoftwareCluster.SwCompositions | None = field(
         default=None,
         metadata={
             "name": "SW-COMPOSITIONS",
@@ -193,14 +193,14 @@ class CpSoftwareCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -208,7 +208,7 @@ class CpSoftwareCluster:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

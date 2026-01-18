@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -171,7 +173,7 @@ class UdpNmCluster:
     class Meta:
         name = "UDP-NM-CLUSTER"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -180,7 +182,7 @@ class UdpNmCluster:
             "required": True,
         },
     )
-    short_name_fragments: Optional["UdpNmCluster.ShortNameFragments"] = field(
+    short_name_fragments: UdpNmCluster.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -188,7 +190,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -196,7 +198,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -204,7 +206,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -212,7 +214,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -220,7 +222,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -228,7 +230,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["UdpNmCluster.Annotations"] = field(
+    annotations: UdpNmCluster.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -236,9 +238,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_cluster_ref: Optional[
-        "UdpNmCluster.CommunicationClusterRef"
-    ] = field(
+    communication_cluster_ref: UdpNmCluster.CommunicationClusterRef | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CLUSTER-REF",
@@ -246,7 +246,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_channel_id: Optional[PositiveInteger] = field(
+    nm_channel_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "NM-CHANNEL-ID",
@@ -254,7 +254,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_channel_sleep_master: Optional[Boolean] = field(
+    nm_channel_sleep_master: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-CHANNEL-SLEEP-MASTER",
@@ -262,7 +262,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_nodes: Optional["UdpNmCluster.NmNodes"] = field(
+    nm_nodes: UdpNmCluster.NmNodes | None = field(
         default=None,
         metadata={
             "name": "NM-NODES",
@@ -270,7 +270,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_node_detection_enabled: Optional[Boolean] = field(
+    nm_node_detection_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-NODE-DETECTION-ENABLED",
@@ -278,7 +278,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_node_id_enabled: Optional[Boolean] = field(
+    nm_node_id_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-NODE-ID-ENABLED",
@@ -286,7 +286,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_pnc_participation: Optional[Boolean] = field(
+    nm_pnc_participation: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-PNC-PARTICIPATION",
@@ -294,7 +294,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_repeat_msg_ind_enabled: Optional[Boolean] = field(
+    nm_repeat_msg_ind_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-REPEAT-MSG-IND-ENABLED",
@@ -302,7 +302,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_synchronizing_network: Optional[Boolean] = field(
+    nm_synchronizing_network: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-SYNCHRONIZING-NETWORK",
@@ -310,7 +310,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -318,7 +318,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_configuration: Optional[UdpNmNetworkConfiguration] = field(
+    network_configuration: UdpNmNetworkConfiguration | None = field(
         default=None,
         metadata={
             "name": "NETWORK-CONFIGURATION",
@@ -326,7 +326,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_cbv_position: Optional[Integer] = field(
+    nm_cbv_position: Integer | None = field(
         default=None,
         metadata={
             "name": "NM-CBV-POSITION",
@@ -334,7 +334,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_channel_active: Optional[Boolean] = field(
+    nm_channel_active: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-CHANNEL-ACTIVE",
@@ -342,7 +342,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_immediate_nm_cycle_time: Optional[TimeValue] = field(
+    nm_immediate_nm_cycle_time: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NM-IMMEDIATE-NM-CYCLE-TIME",
@@ -350,7 +350,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_immediate_nm_transmissions: Optional[PositiveInteger] = field(
+    nm_immediate_nm_transmissions: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "NM-IMMEDIATE-NM-TRANSMISSIONS",
@@ -358,7 +358,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_message_timeout_time: Optional[TimeValue] = field(
+    nm_message_timeout_time: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NM-MESSAGE-TIMEOUT-TIME",
@@ -366,7 +366,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_msg_cycle_time: Optional[TimeValue] = field(
+    nm_msg_cycle_time: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NM-MSG-CYCLE-TIME",
@@ -374,7 +374,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_network_timeout: Optional[TimeValue] = field(
+    nm_network_timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NM-NETWORK-TIMEOUT",
@@ -382,7 +382,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_nid_position: Optional[Integer] = field(
+    nm_nid_position: Integer | None = field(
         default=None,
         metadata={
             "name": "NM-NID-POSITION",
@@ -390,7 +390,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_remote_sleep_indication_time: Optional[TimeValue] = field(
+    nm_remote_sleep_indication_time: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NM-REMOTE-SLEEP-INDICATION-TIME",
@@ -398,7 +398,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_repeat_message_time: Optional[TimeValue] = field(
+    nm_repeat_message_time: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NM-REPEAT-MESSAGE-TIME",
@@ -406,7 +406,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_user_data_length: Optional[Integer] = field(
+    nm_user_data_length: Integer | None = field(
         default=None,
         metadata={
             "name": "NM-USER-DATA-LENGTH",
@@ -414,7 +414,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_user_data_offset: Optional[PositiveInteger] = field(
+    nm_user_data_offset: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "NM-USER-DATA-OFFSET",
@@ -422,7 +422,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_wait_bus_sleep_time: Optional[TimeValue] = field(
+    nm_wait_bus_sleep_time: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NM-WAIT-BUS-SLEEP-TIME",
@@ -430,7 +430,7 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vlan_ref: Optional["UdpNmCluster.VlanRef"] = field(
+    vlan_ref: UdpNmCluster.VlanRef | None = field(
         default=None,
         metadata={
             "name": "VLAN-REF",
@@ -438,14 +438,14 @@ class UdpNmCluster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -453,7 +453,7 @@ class UdpNmCluster:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -485,7 +485,7 @@ class UdpNmCluster:
 
     @dataclass
     class CommunicationClusterRef(Ref):
-        dest: Optional[CommunicationClusterSubtypesEnum] = field(
+        dest: CommunicationClusterSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -531,7 +531,7 @@ class UdpNmCluster:
 
     @dataclass
     class VlanRef(Ref):
-        dest: Optional[EthernetPhysicalChannelSubtypesEnum] = field(
+        dest: EthernetPhysicalChannelSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

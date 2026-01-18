@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -30,9 +32,7 @@ class ModeInProcessInstanceRef:
     class Meta:
         name = "MODE-IN-PROCESS-INSTANCE-REF"
 
-    context_mode_declaration_group_prototype_ref: Optional[
-        "ModeInProcessInstanceRef.ContextModeDeclarationGroupPrototypeRef"
-    ] = field(
+    context_mode_declaration_group_prototype_ref: ModeInProcessInstanceRef.ContextModeDeclarationGroupPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF",
@@ -40,9 +40,7 @@ class ModeInProcessInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_mode_declaration_ref: Optional[
-        "ModeInProcessInstanceRef.TargetModeDeclarationRef"
-    ] = field(
+    target_mode_declaration_ref: ModeInProcessInstanceRef.TargetModeDeclarationRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-MODE-DECLARATION-REF",
@@ -50,14 +48,14 @@ class ModeInProcessInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -68,7 +66,7 @@ class ModeInProcessInstanceRef:
 
     @dataclass
     class ContextModeDeclarationGroupPrototypeRef(Ref):
-        dest: Optional[ModeDeclarationGroupPrototypeSubtypesEnum] = field(
+        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -79,7 +77,7 @@ class ModeInProcessInstanceRef:
 
     @dataclass
     class TargetModeDeclarationRef(Ref):
-        dest: Optional[ModeDeclarationSubtypesEnum] = field(
+        dest: ModeDeclarationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

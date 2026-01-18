@@ -23,7 +23,7 @@ class Point(NetworkLocation):
     A single geospatial point.
     """
 
-    tpeg_point_location: Optional[TpegPointLocation] = field(
+    tpeg_point_location: TpegPointLocation | None = field(
         default=None,
         metadata={
             "name": "tpegPointLocation",
@@ -31,7 +31,7 @@ class Point(NetworkLocation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    alert_cpoint: Optional[AlertCPoint] = field(
+    alert_cpoint: AlertCPoint | None = field(
         default=None,
         metadata={
             "name": "alertCPoint",
@@ -39,7 +39,7 @@ class Point(NetworkLocation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    point_along_linear_element: Optional[PointAlongLinearElement] = field(
+    point_along_linear_element: PointAlongLinearElement | None = field(
         default=None,
         metadata={
             "name": "pointAlongLinearElement",
@@ -47,7 +47,7 @@ class Point(NetworkLocation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    point_by_coordinates: Optional[PointByCoordinates] = field(
+    point_by_coordinates: PointByCoordinates | None = field(
         default=None,
         metadata={
             "name": "pointByCoordinates",
@@ -55,7 +55,7 @@ class Point(NetworkLocation):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    point_extension: Optional[PointExtensionType] = field(
+    point_extension: PointExtensionType | None = field(
         default=None,
         metadata={
             "name": "pointExtension",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -76,7 +78,7 @@ class CoverageType:
     :ivar claims_trigger:
     """
 
-    limits: Optional[LimitsType] = field(
+    limits: LimitsType | None = field(
         default=None,
         metadata={
             "name": "Limits",
@@ -84,7 +86,7 @@ class CoverageType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    deductibles: Optional[DeductiblesType] = field(
+    deductibles: DeductiblesType | None = field(
         default=None,
         metadata={
             "name": "Deductibles",
@@ -92,7 +94,7 @@ class CoverageType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    exposures: Optional["ExposuresType"] = field(
+    exposures: ExposuresType | None = field(
         default=None,
         metadata={
             "name": "Exposures",
@@ -100,7 +102,7 @@ class CoverageType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    premium: Optional[PremiumType] = field(
+    premium: PremiumType | None = field(
         default=None,
         metadata={
             "name": "Premium",
@@ -108,7 +110,7 @@ class CoverageType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    coverage_code: Optional[CodeType] = field(
+    coverage_code: CodeType | None = field(
         default=None,
         metadata={
             "name": "CoverageCode",
@@ -117,7 +119,7 @@ class CoverageType:
             "required": True,
         },
     )
-    clauses: Optional[ClausesType] = field(
+    clauses: ClausesType | None = field(
         default=None,
         metadata={
             "name": "Clauses",
@@ -125,7 +127,7 @@ class CoverageType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    effective_date: Optional[DateTimeType] = field(
+    effective_date: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "EffectiveDate",
@@ -133,7 +135,7 @@ class CoverageType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    end_date: Optional[DateTimeType] = field(
+    end_date: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -141,7 +143,7 @@ class CoverageType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    retroactive_date: Optional[DateTimeType] = field(
+    retroactive_date: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "RetroactiveDate",
@@ -149,7 +151,7 @@ class CoverageType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    term_date: Optional[DateTimeType] = field(
+    term_date: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "TermDate",
@@ -157,7 +159,7 @@ class CoverageType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    geographical_scope: Optional[GeographicalScope] = field(
+    geographical_scope: GeographicalScope | None = field(
         default=None,
         metadata={
             "name": "GeographicalScope",
@@ -165,7 +167,7 @@ class CoverageType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    claims_trigger: Optional[str] = field(
+    claims_trigger: str | None = field(
         default=None,
         metadata={
             "name": "ClaimsTrigger",
@@ -177,7 +179,7 @@ class CoverageType:
 
 @dataclass
 class ExposureType(BaseIdentifiedComponentType):
-    annual_rate: Optional[AmountType] = field(
+    annual_rate: AmountType | None = field(
         default=None,
         metadata={
             "name": "AnnualRate",
@@ -186,7 +188,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "required": True,
         },
     )
-    estimated_value: Optional[AmountOrQuantityType] = field(
+    estimated_value: AmountOrQuantityType | None = field(
         default=None,
         metadata={
             "name": "EstimatedValue",
@@ -195,7 +197,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "required": True,
         },
     )
-    premium: Optional[PremiumType] = field(
+    premium: PremiumType | None = field(
         default=None,
         metadata={
             "name": "Premium",
@@ -203,7 +205,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    calculation_factor: Optional[NumericType] = field(
+    calculation_factor: NumericType | None = field(
         default=None,
         metadata={
             "name": "CalculationFactor",
@@ -211,7 +213,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    apply_rate_type: Optional[ExposureTypeApplyRateType] = field(
+    apply_rate_type: ExposureTypeApplyRateType | None = field(
         default=None,
         metadata={
             "name": "ApplyRateType",
@@ -220,7 +222,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "required": True,
         },
     )
-    unit: Optional[CodeDescriptionType] = field(
+    unit: CodeDescriptionType | None = field(
         default=None,
         metadata={
             "name": "Unit",
@@ -228,7 +230,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    item: Optional[CodeDescriptionType] = field(
+    item: CodeDescriptionType | None = field(
         default=None,
         metadata={
             "name": "Item",
@@ -236,7 +238,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    basis: Optional[ExposureTypeBasis] = field(
+    basis: ExposureTypeBasis | None = field(
         default=None,
         metadata={
             "name": "Basis",
@@ -244,7 +246,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    calculation_rate_type: Optional[ExposureTypeCalculationRateType] = field(
+    calculation_rate_type: ExposureTypeCalculationRateType | None = field(
         default=None,
         metadata={
             "name": "CalculationRateType",
@@ -252,7 +254,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    coverage: Optional[CoverageType] = field(
+    coverage: CoverageType | None = field(
         default=None,
         metadata={
             "name": "Coverage",
@@ -260,7 +262,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    mfl: Optional[PercValueType] = field(
+    mfl: PercValueType | None = field(
         default=None,
         metadata={
             "name": "MFL",
@@ -268,7 +270,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    unit_price: Optional[AmountType] = field(
+    unit_price: AmountType | None = field(
         default=None,
         metadata={
             "name": "UnitPrice",
@@ -276,7 +278,7 @@ class ExposureType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    indemnity: Optional[IndemnityType] = field(
+    indemnity: IndemnityType | None = field(
         default=None,
         metadata={
             "name": "Indemnity",

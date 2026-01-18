@@ -35,7 +35,7 @@ __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2"
 
 @dataclass(frozen=True)
 class DespatchAdviceType:
-    ublextensions: Optional[Ublextensions] = field(
+    ublextensions: Ublextensions | None = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -43,7 +43,7 @@ class DespatchAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: Optional[UblversionId] = field(
+    ublversion_id: UblversionId | None = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -51,7 +51,7 @@ class DespatchAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: Optional[CustomizationId] = field(
+    customization_id: CustomizationId | None = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -59,7 +59,7 @@ class DespatchAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: Optional[ProfileId] = field(
+    profile_id: ProfileId | None = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -67,7 +67,7 @@ class DespatchAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: Optional[ProfileExecutionId] = field(
+    profile_execution_id: ProfileExecutionId | None = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -75,7 +75,7 @@ class DespatchAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -84,7 +84,7 @@ class DespatchAdviceType:
             "required": True,
         },
     )
-    copy_indicator: Optional[CopyIndicator] = field(
+    copy_indicator: CopyIndicator | None = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -92,7 +92,7 @@ class DespatchAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -100,7 +100,7 @@ class DespatchAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -109,7 +109,7 @@ class DespatchAdviceType:
             "required": True,
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -117,7 +117,7 @@ class DespatchAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_status_code: Optional[DocumentStatusCode] = field(
+    document_status_code: DocumentStatusCode | None = field(
         default=None,
         metadata={
             "name": "DocumentStatusCode",
@@ -125,7 +125,7 @@ class DespatchAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    despatch_advice_type_code: Optional[DespatchAdviceTypeCode] = field(
+    despatch_advice_type_code: DespatchAdviceTypeCode | None = field(
         default=None,
         metadata={
             "name": "DespatchAdviceTypeCode",
@@ -141,7 +141,7 @@ class DespatchAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_count_numeric: Optional[LineCountNumeric] = field(
+    line_count_numeric: LineCountNumeric | None = field(
         default=None,
         metadata={
             "name": "LineCountNumeric",
@@ -175,7 +175,7 @@ class DespatchAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    despatch_supplier_party: Optional[DespatchSupplierParty] = field(
+    despatch_supplier_party: DespatchSupplierParty | None = field(
         default=None,
         metadata={
             "name": "DespatchSupplierParty",
@@ -184,7 +184,7 @@ class DespatchAdviceType:
             "required": True,
         },
     )
-    delivery_customer_party: Optional[DeliveryCustomerParty] = field(
+    delivery_customer_party: DeliveryCustomerParty | None = field(
         default=None,
         metadata={
             "name": "DeliveryCustomerParty",
@@ -193,7 +193,7 @@ class DespatchAdviceType:
             "required": True,
         },
     )
-    buyer_customer_party: Optional[BuyerCustomerParty] = field(
+    buyer_customer_party: BuyerCustomerParty | None = field(
         default=None,
         metadata={
             "name": "BuyerCustomerParty",
@@ -201,7 +201,7 @@ class DespatchAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    seller_supplier_party: Optional[SellerSupplierParty] = field(
+    seller_supplier_party: SellerSupplierParty | None = field(
         default=None,
         metadata={
             "name": "SellerSupplierParty",
@@ -209,7 +209,7 @@ class DespatchAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    originator_customer_party: Optional[OriginatorCustomerParty] = field(
+    originator_customer_party: OriginatorCustomerParty | None = field(
         default=None,
         metadata={
             "name": "OriginatorCustomerParty",
@@ -217,7 +217,7 @@ class DespatchAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    shipment: Optional[Shipment] = field(
+    shipment: Shipment | None = field(
         default=None,
         metadata={
             "name": "Shipment",

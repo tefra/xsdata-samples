@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -100,7 +102,7 @@ class RapidPrototypingScenario:
     class Meta:
         name = "RAPID-PROTOTYPING-SCENARIO"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,9 +111,7 @@ class RapidPrototypingScenario:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "RapidPrototypingScenario.ShortNameFragments"
-    ] = field(
+    short_name_fragments: RapidPrototypingScenario.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -119,7 +119,7 @@ class RapidPrototypingScenario:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +127,7 @@ class RapidPrototypingScenario:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +135,7 @@ class RapidPrototypingScenario:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +143,7 @@ class RapidPrototypingScenario:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +151,7 @@ class RapidPrototypingScenario:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +159,7 @@ class RapidPrototypingScenario:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["RapidPrototypingScenario.Annotations"] = field(
+    annotations: RapidPrototypingScenario.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +167,7 @@ class RapidPrototypingScenario:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,7 +175,7 @@ class RapidPrototypingScenario:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    host_system_ref: Optional["RapidPrototypingScenario.HostSystemRef"] = (
+    host_system_ref: RapidPrototypingScenario.HostSystemRef | None = (
         field(
             default=None,
             metadata={
@@ -185,7 +185,7 @@ class RapidPrototypingScenario:
             },
         )
     )
-    rpt_containers: Optional["RapidPrototypingScenario.RptContainers"] = field(
+    rpt_containers: RapidPrototypingScenario.RptContainers | None = field(
         default=None,
         metadata={
             "name": "RPT-CONTAINERS",
@@ -193,7 +193,7 @@ class RapidPrototypingScenario:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_profiles: Optional["RapidPrototypingScenario.RptProfiles"] = field(
+    rpt_profiles: RapidPrototypingScenario.RptProfiles | None = field(
         default=None,
         metadata={
             "name": "RPT-PROFILES",
@@ -201,7 +201,7 @@ class RapidPrototypingScenario:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_system_ref: Optional["RapidPrototypingScenario.RptSystemRef"] = field(
+    rpt_system_ref: RapidPrototypingScenario.RptSystemRef | None = field(
         default=None,
         metadata={
             "name": "RPT-SYSTEM-REF",
@@ -209,14 +209,14 @@ class RapidPrototypingScenario:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -224,7 +224,7 @@ class RapidPrototypingScenario:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -256,7 +256,7 @@ class RapidPrototypingScenario:
 
     @dataclass
     class HostSystemRef(Ref):
-        dest: Optional[SystemSubtypesEnum] = field(
+        dest: SystemSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -289,7 +289,7 @@ class RapidPrototypingScenario:
 
     @dataclass
     class RptSystemRef(Ref):
-        dest: Optional[SystemSubtypesEnum] = field(
+        dest: SystemSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class UnknownSubscriptionErrorStructure(ErrorCodeStructure):
-    subscription_code: Optional[SubscriptionQualifierStructure] = field(
+    subscription_code: SubscriptionQualifierStructure | None = field(
         default=None,
         metadata={
             "name": "SubscriptionCode",

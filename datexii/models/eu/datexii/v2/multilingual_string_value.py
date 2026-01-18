@@ -13,7 +13,7 @@ class MultilingualStringValue:
             "max_length": 1024,
         },
     )
-    lang: Optional[str] = field(
+    lang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

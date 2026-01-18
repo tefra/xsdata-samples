@@ -17,7 +17,7 @@ class RouteInstructionsRelStructure(StrictContainmentAggregationStructure):
         name = "routeInstructions_RelStructure"
 
     route_instruction_ref_or_route_instruction: Iterable[
-        Union[RouteInstructionRef, RouteInstruction]
+        RouteInstructionRef | RouteInstruction
     ] = field(
         default_factory=list,
         metadata={

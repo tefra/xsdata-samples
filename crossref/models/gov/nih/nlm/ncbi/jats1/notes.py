@@ -59,20 +59,20 @@ class Notes:
         name = "notes"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    sec_meta: Optional[SecMeta] = field(
+    sec_meta: SecMeta | None = field(
         default=None,
         metadata={
             "name": "sec-meta",
             "type": "Element",
         },
     )
-    label: Optional[Label] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional[Title] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -328,34 +328,34 @@ class Notes:
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    notes_type: Optional[str] = field(
+    notes_type: str | None = field(
         default=None,
         metadata={
             "name": "notes-type",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",

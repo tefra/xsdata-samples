@@ -40,7 +40,7 @@ class ChargeBand:
     :ivar version:
     """
 
-    charge_currency: Optional[CurrencyEnum] = field(
+    charge_currency: CurrencyEnum | None = field(
         default=None,
         metadata={
             "name": "chargeCurrency",
@@ -49,7 +49,7 @@ class ChargeBand:
             "required": True,
         },
     )
-    maximum_duration: Optional[float] = field(
+    maximum_duration: float | None = field(
         default=None,
         metadata={
             "name": "maximumDuration",
@@ -57,7 +57,7 @@ class ChargeBand:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    charge_band_name: Optional[MultilingualString] = field(
+    charge_band_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "chargeBandName",
@@ -81,7 +81,7 @@ class ChargeBand:
             "min_occurs": 1,
         },
     )
-    applicable_for_period: Optional[OverallPeriod] = field(
+    applicable_for_period: OverallPeriod | None = field(
         default=None,
         metadata={
             "name": "applicableForPeriod",
@@ -105,7 +105,7 @@ class ChargeBand:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    charge_band_extension: Optional[ExtensionType] = field(
+    charge_band_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "chargeBandExtension",
@@ -113,14 +113,14 @@ class ChargeBand:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

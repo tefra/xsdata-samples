@@ -19,14 +19,7 @@ class MobilityServicesRelStructure(ContainmentAggregationStructure):
         name = "mobilityServices_RelStructure"
 
     mobility_service_or_common_vehicle_service_or_vehicle_pooling_service: Iterable[
-        Union[
-            OnlineService,
-            VehicleRentalService,
-            VehicleSharingService,
-            ChauffeuredVehicleService,
-            CarPoolingService,
-            TaxiService,
-        ]
+        OnlineService | VehicleRentalService | VehicleSharingService | ChauffeuredVehicleService | CarPoolingService | TaxiService
     ] = field(
         default_factory=list,
         metadata={

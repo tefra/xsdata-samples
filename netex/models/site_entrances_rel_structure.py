@@ -31,24 +31,7 @@ class SiteEntrancesRelStructure(ContainmentAggregationStructure):
         name = "siteEntrances_RelStructure"
 
     entrance_ref_or_parking_entrance_ref_or_entrance: Iterable[
-        Union[
-            StopPlaceVehicleEntranceRef,
-            StopPlaceEntranceRef,
-            ParkingEntranceForVehiclesRef,
-            ParkingPassengerEntranceRef,
-            ParkingEntranceRef,
-            PointOfInterestVehicleEntranceRef,
-            PointOfInterestEntranceRef,
-            VehicleEntranceRef,
-            EntranceRef,
-            PointOfInterestVehicleEntrance,
-            PointOfInterestEntrance,
-            ParkingPassengerEntrance,
-            ParkingEntranceForVehicles,
-            StopPlaceVehicleEntrance,
-            StopPlaceEntrance,
-            Entrance,
-        ]
+        StopPlaceVehicleEntranceRef | StopPlaceEntranceRef | ParkingEntranceForVehiclesRef | ParkingPassengerEntranceRef | ParkingEntranceRef | PointOfInterestVehicleEntranceRef | PointOfInterestEntranceRef | VehicleEntranceRef | EntranceRef | PointOfInterestVehicleEntrance | PointOfInterestEntrance | ParkingPassengerEntrance | ParkingEntranceForVehicles | StopPlaceVehicleEntrance | StopPlaceEntrance | Entrance
     ] = field(
         default_factory=list,
         metadata={

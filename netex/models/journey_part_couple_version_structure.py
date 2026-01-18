@@ -20,7 +20,7 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "JourneyPartCouple_VersionStructure"
 
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -28,7 +28,7 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_time: Optional[XmlTime] = field(
+    start_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "StartTime",
@@ -37,7 +37,7 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "required": True,
         },
     )
-    start_time_day_offset: Optional[int] = field(
+    start_time_day_offset: int | None = field(
         default=None,
         metadata={
             "name": "StartTimeDayOffset",
@@ -45,7 +45,7 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_time: Optional[XmlTime] = field(
+    end_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "EndTime",
@@ -54,7 +54,7 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "required": True,
         },
     )
-    end_time_day_offset: Optional[int] = field(
+    end_time_day_offset: int | None = field(
         default=None,
         metadata={
             "name": "EndTimeDayOffset",
@@ -62,7 +62,7 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_stop_point_ref: Optional[ScheduledStopPointRefStructure] = field(
+    from_stop_point_ref: ScheduledStopPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "FromStopPointRef",
@@ -71,7 +71,7 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "required": True,
         },
     )
-    to_stop_point_ref: Optional[ScheduledStopPointRefStructure] = field(
+    to_stop_point_ref: ScheduledStopPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "ToStopPointRef",
@@ -80,7 +80,7 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "required": True,
         },
     )
-    main_part_ref: Optional[JourneyPartRefStructure] = field(
+    main_part_ref: JourneyPartRefStructure | None = field(
         default=None,
         metadata={
             "name": "MainPartRef",
@@ -89,7 +89,7 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "required": True,
         },
     )
-    block_ref: Optional[Union[TrainBlockRef, BlockRef]] = field(
+    block_ref: TrainBlockRef | BlockRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -107,7 +107,7 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    journey_parts: Optional[JourneyPartRefsRelStructure] = field(
+    journey_parts: JourneyPartRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "journeyParts",
@@ -115,7 +115,7 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_number_ref: Optional[TrainNumberRef] = field(
+    train_number_ref: TrainNumberRef | None = field(
         default=None,
         metadata={
             "name": "TrainNumberRef",
@@ -123,7 +123,7 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

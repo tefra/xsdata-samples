@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -45,9 +47,7 @@ class RoleBasedPortAssignment:
     class Meta:
         name = "ROLE-BASED-PORT-ASSIGNMENT"
 
-    port_prototype_ref: Optional[
-        "RoleBasedPortAssignment.PortPrototypeRef"
-    ] = field(
+    port_prototype_ref: RoleBasedPortAssignment.PortPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-REF",
@@ -55,7 +55,7 @@ class RoleBasedPortAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    role: Optional[Identifier] = field(
+    role: Identifier | None = field(
         default=None,
         metadata={
             "name": "ROLE",
@@ -63,7 +63,7 @@ class RoleBasedPortAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -71,14 +71,14 @@ class RoleBasedPortAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -89,7 +89,7 @@ class RoleBasedPortAssignment:
 
     @dataclass
     class PortPrototypeRef(Ref):
-        dest: Optional[PortPrototypeSubtypesEnum] = field(
+        dest: PortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

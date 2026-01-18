@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -25,15 +27,7 @@ class DataRegistrationEventsType:
     """
 
     choice: tuple[
-        Union[
-            EmptyType,
-            "DataRegistrationEventsType.RegistrationId",
-            "DataRegistrationEventsType.ProvisionAgreement",
-            "DataRegistrationEventsType.DataProvider",
-            "DataRegistrationEventsType.DataflowReference",
-            "DataRegistrationEventsType.KeyFamilyReference",
-            "DataRegistrationEventsType.Category",
-        ],
+        EmptyType | DataRegistrationEventsType.RegistrationId | DataRegistrationEventsType.ProvisionAgreement | DataRegistrationEventsType.DataProvider | DataRegistrationEventsType.DataflowReference | DataRegistrationEventsType.KeyFamilyReference | DataRegistrationEventsType.Category,
         ...,
     ] = field(
         default_factory=tuple,
@@ -99,7 +93,7 @@ class DataRegistrationEventsType:
 
     @dataclass(frozen=True)
     class RegistrationId:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -109,7 +103,7 @@ class DataRegistrationEventsType:
 
     @dataclass(frozen=True)
     class ProvisionAgreement:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -119,7 +113,7 @@ class DataRegistrationEventsType:
 
     @dataclass(frozen=True)
     class DataProvider:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -137,7 +131,7 @@ class DataRegistrationEventsType:
 
     @dataclass(frozen=True)
     class Category:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,

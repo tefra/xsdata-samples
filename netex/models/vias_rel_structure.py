@@ -16,7 +16,7 @@ class ViasRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "vias_RelStructure"
 
-    none_or_via: Iterable[Union[EmptyType2, ViaVersionedChildStructure]] = (
+    none_or_via: Iterable[EmptyType2 | ViaVersionedChildStructure] = (
         field(
             default_factory=list,
             metadata={

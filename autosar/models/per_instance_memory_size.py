@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -47,7 +49,7 @@ class PerInstanceMemorySize:
     class Meta:
         name = "PER-INSTANCE-MEMORY-SIZE"
 
-    alignment: Optional[PositiveInteger] = field(
+    alignment: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "ALIGNMENT",
@@ -55,9 +57,7 @@ class PerInstanceMemorySize:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    per_instance_memory_ref: Optional[
-        "PerInstanceMemorySize.PerInstanceMemoryRef"
-    ] = field(
+    per_instance_memory_ref: PerInstanceMemorySize.PerInstanceMemoryRef | None = field(
         default=None,
         metadata={
             "name": "PER-INSTANCE-MEMORY-REF",
@@ -65,7 +65,7 @@ class PerInstanceMemorySize:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    size: Optional[PositiveIntegerValueVariationPoint] = field(
+    size: PositiveIntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "SIZE",
@@ -73,7 +73,7 @@ class PerInstanceMemorySize:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -81,14 +81,14 @@ class PerInstanceMemorySize:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -99,7 +99,7 @@ class PerInstanceMemorySize:
 
     @dataclass
     class PerInstanceMemoryRef(Ref):
-        dest: Optional[PerInstanceMemorySubtypesEnum] = field(
+        dest: PerInstanceMemorySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

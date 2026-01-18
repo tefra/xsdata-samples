@@ -115,7 +115,7 @@ class UblextensionType:
     class Meta:
         name = "UBLExtensionType"
 
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -123,7 +123,7 @@ class UblextensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -131,7 +131,7 @@ class UblextensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    extension_agency_id: Optional[ExtensionAgencyId] = field(
+    extension_agency_id: ExtensionAgencyId | None = field(
         default=None,
         metadata={
             "name": "ExtensionAgencyID",
@@ -139,7 +139,7 @@ class UblextensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    extension_agency_name: Optional[ExtensionAgencyName] = field(
+    extension_agency_name: ExtensionAgencyName | None = field(
         default=None,
         metadata={
             "name": "ExtensionAgencyName",
@@ -147,7 +147,7 @@ class UblextensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    extension_version_id: Optional[ExtensionVersionId] = field(
+    extension_version_id: ExtensionVersionId | None = field(
         default=None,
         metadata={
             "name": "ExtensionVersionID",
@@ -155,7 +155,7 @@ class UblextensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    extension_agency_uri: Optional[ExtensionAgencyUri] = field(
+    extension_agency_uri: ExtensionAgencyUri | None = field(
         default=None,
         metadata={
             "name": "ExtensionAgencyURI",
@@ -163,7 +163,7 @@ class UblextensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    extension_uri: Optional[ExtensionUri] = field(
+    extension_uri: ExtensionUri | None = field(
         default=None,
         metadata={
             "name": "ExtensionURI",
@@ -171,7 +171,7 @@ class UblextensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    extension_reason_code: Optional[ExtensionReasonCode] = field(
+    extension_reason_code: ExtensionReasonCode | None = field(
         default=None,
         metadata={
             "name": "ExtensionReasonCode",
@@ -179,7 +179,7 @@ class UblextensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    extension_reason: Optional[ExtensionReason] = field(
+    extension_reason: ExtensionReason | None = field(
         default=None,
         metadata={
             "name": "ExtensionReason",
@@ -187,7 +187,7 @@ class UblextensionType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    extension_content: Optional[ExtensionContent] = field(
+    extension_content: ExtensionContent | None = field(
         default=None,
         metadata={
             "name": "ExtensionContent",

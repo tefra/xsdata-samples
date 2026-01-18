@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -32,9 +34,7 @@ class RVariableInAtomicSwcInstanceRef:
     class Meta:
         name = "R-VARIABLE-IN-ATOMIC-SWC-INSTANCE-REF"
 
-    context_r_port_ref: Optional[
-        "RVariableInAtomicSwcInstanceRef.ContextRPortRef"
-    ] = field(
+    context_r_port_ref: RVariableInAtomicSwcInstanceRef.ContextRPortRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-R-PORT-REF",
@@ -42,9 +42,7 @@ class RVariableInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_data_element_ref: Optional[
-        "RVariableInAtomicSwcInstanceRef.TargetDataElementRef"
-    ] = field(
+    target_data_element_ref: RVariableInAtomicSwcInstanceRef.TargetDataElementRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-ELEMENT-REF",
@@ -52,14 +50,14 @@ class RVariableInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +68,7 @@ class RVariableInAtomicSwcInstanceRef:
 
     @dataclass
     class ContextRPortRef(Ref):
-        dest: Optional[AbstractRequiredPortPrototypeSubtypesEnum] = field(
+        dest: AbstractRequiredPortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -81,7 +79,7 @@ class RVariableInAtomicSwcInstanceRef:
 
     @dataclass
     class TargetDataElementRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

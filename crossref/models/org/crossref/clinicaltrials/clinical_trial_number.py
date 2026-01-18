@@ -22,7 +22,7 @@ class ClinicalTrialNumber:
         name = "clinical-trial-number"
         namespace = "http://www.crossref.org/clinicaltrials.xsd"
 
-    registry: Optional[str] = field(
+    registry: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -32,7 +32,7 @@ class ClinicalTrialNumber:
             "pattern": r"10.18810/[a-z-]+",
         },
     )
-    type_value: Optional[ClinicalTrialNumberType] = field(
+    type_value: ClinicalTrialNumberType | None = field(
         default=None,
         metadata={
             "name": "type",

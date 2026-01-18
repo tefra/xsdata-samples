@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -104,7 +106,7 @@ class EcucContainerValue:
     class Meta:
         name = "ECUC-CONTAINER-VALUE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -113,7 +115,7 @@ class EcucContainerValue:
             "required": True,
         },
     )
-    short_name_fragments: Optional["EcucContainerValue.ShortNameFragments"] = (
+    short_name_fragments: EcucContainerValue.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -123,7 +125,7 @@ class EcucContainerValue:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -131,7 +133,7 @@ class EcucContainerValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -139,7 +141,7 @@ class EcucContainerValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -147,7 +149,7 @@ class EcucContainerValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -155,7 +157,7 @@ class EcucContainerValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -163,7 +165,7 @@ class EcucContainerValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["EcucContainerValue.Annotations"] = field(
+    annotations: EcucContainerValue.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -171,7 +173,7 @@ class EcucContainerValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    index: Optional[PositiveInteger] = field(
+    index: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "INDEX",
@@ -179,7 +181,7 @@ class EcucContainerValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    definition_ref: Optional["EcucContainerValue.DefinitionRef"] = field(
+    definition_ref: EcucContainerValue.DefinitionRef | None = field(
         default=None,
         metadata={
             "name": "DEFINITION-REF",
@@ -187,7 +189,7 @@ class EcucContainerValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter_values: Optional["EcucContainerValue.ParameterValues"] = field(
+    parameter_values: EcucContainerValue.ParameterValues | None = field(
         default=None,
         metadata={
             "name": "PARAMETER-VALUES",
@@ -195,7 +197,7 @@ class EcucContainerValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reference_values: Optional["EcucContainerValue.ReferenceValues"] = field(
+    reference_values: EcucContainerValue.ReferenceValues | None = field(
         default=None,
         metadata={
             "name": "REFERENCE-VALUES",
@@ -203,7 +205,7 @@ class EcucContainerValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_containers: Optional["EcucContainerValue.SubContainers"] = field(
+    sub_containers: EcucContainerValue.SubContainers | None = field(
         default=None,
         metadata={
             "name": "SUB-CONTAINERS",
@@ -211,7 +213,7 @@ class EcucContainerValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -219,14 +221,14 @@ class EcucContainerValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -234,7 +236,7 @@ class EcucContainerValue:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -266,7 +268,7 @@ class EcucContainerValue:
 
     @dataclass
     class DefinitionRef(Ref):
-        dest: Optional[EcucContainerDefSubtypesEnum] = field(
+        dest: EcucContainerDefSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -325,7 +327,7 @@ class EcucContainerValue:
 
     @dataclass
     class SubContainers:
-        ecuc_container_value: list["EcucContainerValue"] = field(
+        ecuc_container_value: list[EcucContainerValue] = field(
             default_factory=list,
             metadata={
                 "name": "ECUC-CONTAINER-VALUE",

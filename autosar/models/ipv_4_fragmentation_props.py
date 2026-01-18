@@ -39,7 +39,7 @@ class Ipv4FragmentationProps:
     class Meta:
         name = "IPV-4-FRAGMENTATION-PROPS"
 
-    tcp_ip_ip_fragmentation_rx_enabled: Optional[Boolean] = field(
+    tcp_ip_ip_fragmentation_rx_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-IP-FRAGMENTATION-RX-ENABLED",
@@ -47,7 +47,7 @@ class Ipv4FragmentationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ip_num_fragments: Optional[PositiveInteger] = field(
+    tcp_ip_ip_num_fragments: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-IP-NUM-FRAGMENTS",
@@ -55,7 +55,7 @@ class Ipv4FragmentationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ip_num_reass_dgrams: Optional[PositiveInteger] = field(
+    tcp_ip_ip_num_reass_dgrams: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-IP-NUM-REASS-DGRAMS",
@@ -63,7 +63,7 @@ class Ipv4FragmentationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_ip_reass_timeout: Optional[TimeValue] = field(
+    tcp_ip_ip_reass_timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-IP-REASS-TIMEOUT",
@@ -71,14 +71,14 @@ class Ipv4FragmentationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

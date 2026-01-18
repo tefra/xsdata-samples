@@ -21,7 +21,7 @@ class StructureUsageType(MaintainableType):
         metadata structure definition reference).
     """
 
-    structure: Optional[str] = field(
+    structure: str | None = field(
         default=None,
         metadata={
             "name": "Structure",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -29,7 +31,7 @@ class AbstractionTypes:
         name = "abstractionTypes"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    abstraction_type: list["AbstractionTypes.AbstractionType"] = field(
+    abstraction_type: list[AbstractionTypes.AbstractionType] = field(
         default_factory=list,
         metadata={
             "name": "abstractionType",
@@ -57,7 +59,7 @@ class AbstractionTypes:
                 "type": "Element",
             },
         )
-        abstraction_ref: Optional[ConfigurableLibraryRefType] = field(
+        abstraction_ref: ConfigurableLibraryRefType | None = field(
             default=None,
             metadata={
                 "name": "abstractionRef",
@@ -65,7 +67,7 @@ class AbstractionTypes:
                 "required": True,
             },
         )
-        port_maps: Optional["AbstractionTypes.AbstractionType.PortMaps"] = (
+        port_maps: AbstractionTypes.AbstractionType.PortMaps | None = (
             field(
                 default=None,
                 metadata={
@@ -74,7 +76,7 @@ class AbstractionTypes:
                 },
             )
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -92,7 +94,7 @@ class AbstractionTypes:
             """
 
             port_map: list[
-                "AbstractionTypes.AbstractionType.PortMaps.PortMap"
+                AbstractionTypes.AbstractionType.PortMaps.PortMap
             ] = field(
                 default_factory=list,
                 metadata={
@@ -119,9 +121,7 @@ class AbstractionTypes:
                     inversion.
                 """
 
-                logical_port: Optional[
-                    "AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort"
-                ] = field(
+                logical_port: AbstractionTypes.AbstractionType.PortMaps.PortMap.LogicalPort | None = field(
                     default=None,
                     metadata={
                         "name": "logicalPort",
@@ -129,37 +129,35 @@ class AbstractionTypes:
                         "required": True,
                     },
                 )
-                physical_port: Optional[
-                    "AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort"
-                ] = field(
+                physical_port: AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort | None = field(
                     default=None,
                     metadata={
                         "name": "physicalPort",
                         "type": "Element",
                     },
                 )
-                logical_tie_off: Optional[UnsignedBitVectorExpression] = field(
+                logical_tie_off: UnsignedBitVectorExpression | None = field(
                     default=None,
                     metadata={
                         "name": "logicalTieOff",
                         "type": "Element",
                     },
                 )
-                is_informative: Optional[bool] = field(
+                is_informative: bool | None = field(
                     default=None,
                     metadata={
                         "name": "isInformative",
                         "type": "Element",
                     },
                 )
-                vendor_extensions: Optional[VendorExtensions] = field(
+                vendor_extensions: VendorExtensions | None = field(
                     default=None,
                     metadata={
                         "name": "vendorExtensions",
                         "type": "Element",
                     },
                 )
-                id: Optional[str] = field(
+                id: str | None = field(
                     default=None,
                     metadata={
                         "type": "Attribute",
@@ -182,20 +180,20 @@ class AbstractionTypes:
                     :ivar id:
                     """
 
-                    name: Optional[str] = field(
+                    name: str | None = field(
                         default=None,
                         metadata={
                             "type": "Element",
                             "required": True,
                         },
                     )
-                    range: Optional[Range] = field(
+                    range: Range | None = field(
                         default=None,
                         metadata={
                             "type": "Element",
                         },
                     )
-                    id: Optional[str] = field(
+                    id: str | None = field(
                         default=None,
                         metadata={
                             "type": "Attribute",
@@ -213,7 +211,7 @@ class AbstractionTypes:
                     :ivar id:
                     """
 
-                    name: Optional[str] = field(
+                    name: str | None = field(
                         default=None,
                         metadata={
                             "type": "Element",
@@ -222,7 +220,7 @@ class AbstractionTypes:
                             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
                         },
                     )
-                    part_select: Optional[PartSelect] = field(
+                    part_select: PartSelect | None = field(
                         default=None,
                         metadata={
                             "name": "partSelect",
@@ -230,7 +228,7 @@ class AbstractionTypes:
                         },
                     )
                     sub_port: list[
-                        "AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort.SubPort"
+                        AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort.SubPort
                     ] = field(
                         default_factory=list,
                         metadata={
@@ -238,7 +236,7 @@ class AbstractionTypes:
                             "type": "Element",
                         },
                     )
-                    id: Optional[str] = field(
+                    id: str | None = field(
                         default=None,
                         metadata={
                             "type": "Attribute",
@@ -255,7 +253,7 @@ class AbstractionTypes:
                         :ivar id:
                         """
 
-                        name: Optional[str] = field(
+                        name: str | None = field(
                             default=None,
                             metadata={
                                 "type": "Element",
@@ -264,14 +262,14 @@ class AbstractionTypes:
                                 "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
                             },
                         )
-                        part_select: Optional[PartSelect] = field(
+                        part_select: PartSelect | None = field(
                             default=None,
                             metadata={
                                 "name": "partSelect",
                                 "type": "Element",
                             },
                         )
-                        id: Optional[str] = field(
+                        id: str | None = field(
                             default=None,
                             metadata={
                                 "type": "Attribute",

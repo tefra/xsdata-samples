@@ -21,7 +21,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class AircraftType(VehicleType):
-    crew_seat_count: Optional[NumberType] = field(
+    crew_seat_count: NumberType | None = field(
         default=None,
         metadata={
             "name": "CrewSeatCount",
@@ -29,7 +29,7 @@ class AircraftType(VehicleType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    pilot_seat_count: Optional[NumberType] = field(
+    pilot_seat_count: NumberType | None = field(
         default=None,
         metadata={
             "name": "PilotSeatCount",
@@ -37,7 +37,7 @@ class AircraftType(VehicleType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    primary_hangar: Optional[TextType] = field(
+    primary_hangar: TextType | None = field(
         default=None,
         metadata={
             "name": "PrimaryHangar",
@@ -45,7 +45,7 @@ class AircraftType(VehicleType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    seat_capacity: Optional[NumberType] = field(
+    seat_capacity: NumberType | None = field(
         default=None,
         metadata={
             "name": "SeatCapacity",
@@ -53,7 +53,7 @@ class AircraftType(VehicleType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    aircarft_type: Optional[AircraftTypeAircarftType] = field(
+    aircarft_type: AircraftTypeAircarftType | None = field(
         default=None,
         metadata={
             "name": "AircarftType",

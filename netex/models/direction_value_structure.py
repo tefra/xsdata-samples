@@ -14,7 +14,7 @@ class DirectionValueStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "Direction_ValueStructure"
 
-    external_direction_ref: Optional[ExternalObjectRefStructure] = field(
+    external_direction_ref: ExternalObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "ExternalDirectionRef",
@@ -22,7 +22,7 @@ class DirectionValueStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_type: Optional[DirectionType] = field(
+    direction_type: DirectionType | None = field(
         default=None,
         metadata={
             "name": "DirectionType",
@@ -30,7 +30,7 @@ class DirectionValueStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    opposite_direction_ref: Optional[DirectionRefStructure] = field(
+    opposite_direction_ref: DirectionRefStructure | None = field(
         default=None,
         metadata={
             "name": "OppositeDirectionRef",

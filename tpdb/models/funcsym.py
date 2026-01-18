@@ -12,27 +12,27 @@ class Funcsym:
     class Meta:
         name = "funcsym"
 
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    arity: Optional[Arity] = field(
+    arity: Arity | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    theory: Optional[Theory] = field(
+    theory: Theory | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    replacementmap: Optional[Replacementmap] = field(
+    replacementmap: Replacementmap | None = field(
         default=None,
         metadata={
             "type": "Element",

@@ -14,7 +14,7 @@ class VehiclesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehicles_RelStructure"
 
-    vehicle_ref_or_vehicle: Iterable[Union[VehicleRef, Vehicle]] = field(
+    vehicle_ref_or_vehicle: Iterable[VehicleRef | Vehicle] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

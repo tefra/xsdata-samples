@@ -17,7 +17,7 @@ class ResidentialQualificationVersionStructure(VersionedChildStructure):
     class Meta:
         name = "ResidentialQualification_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -25,7 +25,7 @@ class ResidentialQualificationVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -33,7 +33,7 @@ class ResidentialQualificationVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parent_ref: Optional[UsageParameterRefStructure] = field(
+    parent_ref: UsageParameterRefStructure | None = field(
         default=None,
         metadata={
             "name": "ParentRef",
@@ -41,7 +41,7 @@ class ResidentialQualificationVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    must_reside: Optional[bool] = field(
+    must_reside: bool | None = field(
         default=None,
         metadata={
             "name": "MustReside",
@@ -49,7 +49,7 @@ class ResidentialQualificationVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    topographic_place_ref: Optional[TopographicPlaceRef] = field(
+    topographic_place_ref: TopographicPlaceRef | None = field(
         default=None,
         metadata={
             "name": "TopographicPlaceRef",
@@ -57,7 +57,7 @@ class ResidentialQualificationVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    residence_type: Optional[ResidenceTypeEnumeration] = field(
+    residence_type: ResidenceTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "ResidenceType",
@@ -65,7 +65,7 @@ class ResidentialQualificationVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_duration: Optional[XmlDuration] = field(
+    minimum_duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MinimumDuration",

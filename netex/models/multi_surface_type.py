@@ -19,7 +19,7 @@ class MultiSurfaceType(AbstractGeometricAggregateType):
             "namespace": "http://www.opengis.net/gml/3.2",
         },
     )
-    surface_members: Optional[SurfaceMembers] = field(
+    surface_members: SurfaceMembers | None = field(
         default=None,
         metadata={
             "name": "surfaceMembers",

@@ -23,18 +23,7 @@ class ServiceAccessRightRefsRelStructure(OneToManyRelationshipStructure):
         name = "serviceAccessRightRefs_RelStructure"
 
     choice: Iterable[
-        Union[
-            EntitlementProductRef,
-            SupplementProductRef,
-            PreassignedFareProductRef,
-            AmountOfPriceUnitProductRef,
-            UsageDiscountRightRef,
-            ThirdPartyProductRef,
-            CappedDiscountRightRef,
-            SaleDiscountRightRef,
-            FareProductRef,
-            ServiceAccessRightRef,
-        ]
+        EntitlementProductRef | SupplementProductRef | PreassignedFareProductRef | AmountOfPriceUnitProductRef | UsageDiscountRightRef | ThirdPartyProductRef | CappedDiscountRightRef | SaleDiscountRightRef | FareProductRef | ServiceAccessRightRef
     ] = field(
         default_factory=list,
         metadata={

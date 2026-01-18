@@ -27,13 +27,13 @@ class Mlabeledtr:
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: Optional[object] = field(
+    xref: object | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -47,19 +47,19 @@ class Mlabeledtr:
             "tokens": True,
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: Optional[object] = field(
+    other: object | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -72,21 +72,21 @@ class Mlabeledtr:
             "namespace": "##other",
         },
     )
-    mathcolor: Optional[str] = field(
+    mathcolor: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: Optional[Union[str, MlabeledtrValue]] = field(
+    mathbackground: str | MlabeledtrValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    rowalign: Optional[MlabeledtrRowalign] = field(
+    rowalign: MlabeledtrRowalign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -99,7 +99,7 @@ class Mlabeledtr:
             "tokens": True,
         },
     )
-    groupalign: Optional[str] = field(
+    groupalign: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

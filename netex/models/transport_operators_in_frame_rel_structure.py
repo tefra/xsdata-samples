@@ -14,7 +14,7 @@ class TransportOperatorsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "transportOperatorsInFrame_RelStructure"
 
-    authority_or_operator: Iterable[Union[Authority, Operator]] = field(
+    authority_or_operator: Iterable[Authority | Operator] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

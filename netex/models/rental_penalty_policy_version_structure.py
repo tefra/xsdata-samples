@@ -14,9 +14,7 @@ class RentalPenaltyPolicyVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "RentalPenaltyPolicy_VersionStructure"
 
-    rental_penalty_policy_type: Optional[
-        RentalPenaltyPolicyTypeEnumeration
-    ] = field(
+    rental_penalty_policy_type: RentalPenaltyPolicyTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "RentalPenaltyPolicyType",
@@ -24,7 +22,7 @@ class RentalPenaltyPolicyVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    penalty_fee: Optional[bool] = field(
+    penalty_fee: bool | None = field(
         default=None,
         metadata={
             "name": "PenaltyFee",
@@ -32,7 +30,7 @@ class RentalPenaltyPolicyVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    immobilisation: Optional[bool] = field(
+    immobilisation: bool | None = field(
         default=None,
         metadata={
             "name": "Immobilisation",
@@ -40,7 +38,7 @@ class RentalPenaltyPolicyVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    disbarring: Optional[bool] = field(
+    disbarring: bool | None = field(
         default=None,
         metadata={
             "name": "Disbarring",
@@ -48,7 +46,7 @@ class RentalPenaltyPolicyVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    suspension: Optional[bool] = field(
+    suspension: bool | None = field(
         default=None,
         metadata={
             "name": "Suspension",

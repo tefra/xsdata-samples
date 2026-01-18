@@ -23,7 +23,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(
     class Meta:
         name = "ResponsibilityRoleAssignment_VersionedChildStructure"
 
-    responsibility_set_ref: Optional[ResponsibilitySetRef] = field(
+    responsibility_set_ref: ResponsibilitySetRef | None = field(
         default=None,
         metadata={
             "name": "ResponsibilitySetRef",
@@ -31,7 +31,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -57,9 +57,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(
             "tokens": True,
         },
     )
-    type_of_responsibility_role_ref_or_responsibility_role_ref: Optional[
-        Union[TypeOfResponsibilityRoleRef, ResponsibilityRoleRef]
-    ] = field(
+    type_of_responsibility_role_ref_or_responsibility_role_ref: TypeOfResponsibilityRoleRef | ResponsibilityRoleRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -77,7 +75,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(
             ),
         },
     )
-    responsible_organisation_ref: Optional[OrganisationRefStructure] = field(
+    responsible_organisation_ref: OrganisationRefStructure | None = field(
         default=None,
         metadata={
             "name": "ResponsibleOrganisationRef",
@@ -85,7 +83,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    responsible_part_ref: Optional[OrganisationPartRefStructure] = field(
+    responsible_part_ref: OrganisationPartRefStructure | None = field(
         default=None,
         metadata={
             "name": "ResponsiblePartRef",
@@ -93,7 +91,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    responsible_area_ref: Optional[VersionOfObjectRefStructure] = field(
+    responsible_area_ref: VersionOfObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "ResponsibleAreaRef",

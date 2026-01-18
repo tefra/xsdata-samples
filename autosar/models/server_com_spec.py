@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -59,7 +61,7 @@ class ServerComSpec:
     class Meta:
         name = "SERVER-COM-SPEC"
 
-    getter_ref: Optional["ServerComSpec.GetterRef"] = field(
+    getter_ref: ServerComSpec.GetterRef | None = field(
         default=None,
         metadata={
             "name": "GETTER-REF",
@@ -67,7 +69,7 @@ class ServerComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_ref: Optional["ServerComSpec.OperationRef"] = field(
+    operation_ref: ServerComSpec.OperationRef | None = field(
         default=None,
         metadata={
             "name": "OPERATION-REF",
@@ -75,7 +77,7 @@ class ServerComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    queue_length: Optional[PositiveInteger] = field(
+    queue_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "QUEUE-LENGTH",
@@ -83,7 +85,7 @@ class ServerComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    setter_ref: Optional["ServerComSpec.SetterRef"] = field(
+    setter_ref: ServerComSpec.SetterRef | None = field(
         default=None,
         metadata={
             "name": "SETTER-REF",
@@ -91,9 +93,7 @@ class ServerComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformation_com_spec_propss: Optional[
-        "ServerComSpec.TransformationComSpecPropss"
-    ] = field(
+    transformation_com_spec_propss: ServerComSpec.TransformationComSpecPropss | None = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-COM-SPEC-PROPSS",
@@ -101,14 +101,14 @@ class ServerComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -119,7 +119,7 @@ class ServerComSpec:
 
     @dataclass
     class GetterRef(Ref):
-        dest: Optional[FieldSubtypesEnum] = field(
+        dest: FieldSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -130,7 +130,7 @@ class ServerComSpec:
 
     @dataclass
     class OperationRef(Ref):
-        dest: Optional[ClientServerOperationSubtypesEnum] = field(
+        dest: ClientServerOperationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -141,7 +141,7 @@ class ServerComSpec:
 
     @dataclass
     class SetterRef(Ref):
-        dest: Optional[FieldSubtypesEnum] = field(
+        dest: FieldSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

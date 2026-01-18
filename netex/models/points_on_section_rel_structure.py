@@ -16,7 +16,7 @@ class PointsOnSectionRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "pointsOnSection_RelStructure"
 
-    point_on_section: Iterable[Union[PointOnLineSection, PointOnSection]] = (
+    point_on_section: Iterable[PointOnLineSection | PointOnSection] = (
         field(
             default_factory=list,
             metadata={

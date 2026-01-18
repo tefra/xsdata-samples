@@ -24,7 +24,7 @@ class TaxiServicePlaceAssignmentVersionStructure(
     class Meta:
         name = "TaxiServicePlaceAssignment_VersionStructure"
 
-    taxi_service_ref: Optional[TaxiServiceRef] = field(
+    taxi_service_ref: TaxiServiceRef | None = field(
         default=None,
         metadata={
             "name": "TaxiServiceRef",
@@ -33,7 +33,7 @@ class TaxiServicePlaceAssignmentVersionStructure(
             "required": True,
         },
     )
-    taxi_parking_area_ref: Optional[TaxiParkingAreaRef] = field(
+    taxi_parking_area_ref: TaxiParkingAreaRef | None = field(
         default=None,
         metadata={
             "name": "TaxiParkingAreaRef",
@@ -41,7 +41,7 @@ class TaxiServicePlaceAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    taxi_stand_ref: Optional[TaxiStandRef] = field(
+    taxi_stand_ref: TaxiStandRef | None = field(
         default=None,
         metadata={
             "name": "TaxiStandRef",
@@ -49,14 +49,7 @@ class TaxiServicePlaceAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_bay_ref_or_vehicle_sharing_parking_bay_ref: Optional[
-        Union[
-            VehiclePoolingParkingBayRef,
-            MonitoredVehicleSharingParkingBayRef,
-            VehicleSharingParkingBayRef,
-            ParkingBayRef,
-        ]
-    ] = field(
+    parking_bay_ref_or_vehicle_sharing_parking_bay_ref: VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -24,7 +24,7 @@ class RelatedOrganisationVersionStructure(VersionedChildStructure):
     class Meta:
         name = "RelatedOrganisation_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -32,7 +32,7 @@ class RelatedOrganisationVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -40,20 +40,7 @@ class RelatedOrganisationVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: Optional[
-        Union[
-            RetailConsortiumRef,
-            OnlineServiceOperatorRef,
-            GeneralOrganisationRef,
-            ManagementAgentRef,
-            ServicedOrganisationRef,
-            TravelAgentRef,
-            OtherOrganisationRef,
-            AuthorityRef,
-            OperatorRef,
-            OrganisationRef,
-        ]
-    ] = field(
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -111,7 +98,7 @@ class RelatedOrganisationVersionStructure(VersionedChildStructure):
             ),
         },
     )
-    organisation_role_type: Optional[OrganisationRoleEnumeration] = field(
+    organisation_role_type: OrganisationRoleEnumeration | None = field(
         default=None,
         metadata={
             "name": "OrganisationRoleType",
@@ -119,7 +106,7 @@ class RelatedOrganisationVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    responsibility_role_ref: Optional[ResponsibilityRoleRef] = field(
+    responsibility_role_ref: ResponsibilityRoleRef | None = field(
         default=None,
         metadata={
             "name": "ResponsibilityRoleRef",

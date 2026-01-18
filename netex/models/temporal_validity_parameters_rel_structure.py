@@ -22,7 +22,7 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "temporalValidityParameters_RelStructure"
 
-    day_type_ref: Iterable[Union[FareDayTypeRef, DayTypeRef]] = field(
+    day_type_ref: Iterable[FareDayTypeRef | DayTypeRef] = field(
         default_factory=list,
         metadata={
             "type": "Elements",
@@ -59,7 +59,7 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     operating_period_ref: Iterable[
-        Union[UicOperatingPeriodRef, OperatingPeriodRef]
+        UicOperatingPeriodRef | OperatingPeriodRef
     ] = field(
         default_factory=list,
         metadata={
@@ -79,12 +79,7 @@ class TemporalValidityParametersRelStructure(OneToManyRelationshipStructure):
         },
     )
     validity_condition_ref: Iterable[
-        Union[
-            AvailabilityConditionRef,
-            ValidityRuleParameterRef,
-            ValidityTriggerRef,
-            ValidityConditionRef,
-        ]
+        AvailabilityConditionRef | ValidityRuleParameterRef | ValidityTriggerRef | ValidityConditionRef
     ] = field(
         default_factory=list,
         metadata={

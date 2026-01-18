@@ -21,7 +21,7 @@ class FlexibleLineDerivedViewStructure(LineDerivedViewStructure):
     class Meta:
         name = "FlexibleLine_DerivedViewStructure"
 
-    flexible_line_type: Optional[FlexibleLineTypeEnumeration] = field(
+    flexible_line_type: FlexibleLineTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "FlexibleLineType",
@@ -29,7 +29,7 @@ class FlexibleLineDerivedViewStructure(LineDerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_contact: Optional[ContactStructure] = field(
+    booking_contact: ContactStructure | None = field(
         default=None,
         metadata={
             "name": "BookingContact",
@@ -46,7 +46,7 @@ class FlexibleLineDerivedViewStructure(LineDerivedViewStructure):
             "tokens": True,
         },
     )
-    booking_access: Optional[BookingAccessEnumeration] = field(
+    booking_access: BookingAccessEnumeration | None = field(
         default=None,
         metadata={
             "name": "BookingAccess",
@@ -54,7 +54,7 @@ class FlexibleLineDerivedViewStructure(LineDerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    book_when: Optional[PurchaseWhenEnumeration] = field(
+    book_when: PurchaseWhenEnumeration | None = field(
         default=None,
         metadata={
             "name": "BookWhen",
@@ -71,7 +71,7 @@ class FlexibleLineDerivedViewStructure(LineDerivedViewStructure):
             "tokens": True,
         },
     )
-    latest_booking_time: Optional[XmlTime] = field(
+    latest_booking_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "LatestBookingTime",
@@ -79,7 +79,7 @@ class FlexibleLineDerivedViewStructure(LineDerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_booking_period: Optional[XmlDuration] = field(
+    minimum_booking_period: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MinimumBookingPeriod",
@@ -87,7 +87,7 @@ class FlexibleLineDerivedViewStructure(LineDerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_booking_period: Optional[XmlDuration] = field(
+    maximum_booking_period: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MaximumBookingPeriod",
@@ -95,7 +95,7 @@ class FlexibleLineDerivedViewStructure(LineDerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_url: Optional[str] = field(
+    booking_url: str | None = field(
         default=None,
         metadata={
             "name": "BookingUrl",
@@ -103,7 +103,7 @@ class FlexibleLineDerivedViewStructure(LineDerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_note: Optional[MultilingualString] = field(
+    booking_note: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "BookingNote",

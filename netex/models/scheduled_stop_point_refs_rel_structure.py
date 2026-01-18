@@ -13,9 +13,7 @@ class ScheduledStopPointRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "scheduledStopPointRefs_RelStructure"
 
-    scheduled_stop_point_ref: Optional[
-        Union[FareScheduledStopPointRef, ScheduledStopPointRef]
-    ] = field(
+    scheduled_stop_point_ref: FareScheduledStopPointRef | ScheduledStopPointRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -15,7 +15,7 @@ class ParkingCapacitiesRelStructure(ContainmentAggregationStructure):
         name = "parkingCapacities_RelStructure"
 
     parking_capacity_ref_or_parking_capacity: Iterable[
-        Union[ParkingCapacityRef, ParkingCapacity]
+        ParkingCapacityRef | ParkingCapacity
     ] = field(
         default_factory=list,
         metadata={

@@ -14,7 +14,7 @@ class SecurityListingVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "SecurityListing_VersionedChildStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -22,7 +22,7 @@ class SecurityListingVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    security_list_ref: Optional[Union[WhitelistRef, BlacklistRef]] = field(
+    security_list_ref: WhitelistRef | BlacklistRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -40,7 +40,7 @@ class SecurityListingVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

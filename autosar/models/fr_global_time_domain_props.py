@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,7 +33,7 @@ class FrGlobalTimeDomainProps:
     class Meta:
         name = "FR-GLOBAL-TIME-DOMAIN-PROPS"
 
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -39,7 +41,7 @@ class FrGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ofs_data_id_lists: Optional["FrGlobalTimeDomainProps.OfsDataIdLists"] = (
+    ofs_data_id_lists: FrGlobalTimeDomainProps.OfsDataIdLists | None = (
         field(
             default=None,
             metadata={
@@ -49,7 +51,7 @@ class FrGlobalTimeDomainProps:
             },
         )
     )
-    sync_data_id_lists: Optional["FrGlobalTimeDomainProps.SyncDataIdLists"] = (
+    sync_data_id_lists: FrGlobalTimeDomainProps.SyncDataIdLists | None = (
         field(
             default=None,
             metadata={
@@ -59,14 +61,14 @@ class FrGlobalTimeDomainProps:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

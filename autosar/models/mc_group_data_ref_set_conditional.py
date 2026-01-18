@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,9 +41,7 @@ class McGroupDataRefSetConditional:
     class Meta:
         name = "MC-GROUP-DATA-REF-SET-CONDITIONAL"
 
-    flat_map_entry_refs: Optional[
-        "McGroupDataRefSetConditional.FlatMapEntryRefs"
-    ] = field(
+    flat_map_entry_refs: McGroupDataRefSetConditional.FlatMapEntryRefs | None = field(
         default=None,
         metadata={
             "name": "FLAT-MAP-ENTRY-REFS",
@@ -49,9 +49,7 @@ class McGroupDataRefSetConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_data_instance_refs: Optional[
-        "McGroupDataRefSetConditional.McDataInstanceRefs"
-    ] = field(
+    mc_data_instance_refs: McGroupDataRefSetConditional.McDataInstanceRefs | None = field(
         default=None,
         metadata={
             "name": "MC-DATA-INSTANCE-REFS",
@@ -59,7 +57,7 @@ class McGroupDataRefSetConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -67,14 +65,14 @@ class McGroupDataRefSetConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -86,7 +84,7 @@ class McGroupDataRefSetConditional:
     @dataclass
     class FlatMapEntryRefs:
         flat_map_entry_ref: list[
-            "McGroupDataRefSetConditional.FlatMapEntryRefs.FlatMapEntryRef"
+            McGroupDataRefSetConditional.FlatMapEntryRefs.FlatMapEntryRef
         ] = field(
             default_factory=list,
             metadata={
@@ -98,7 +96,7 @@ class McGroupDataRefSetConditional:
 
         @dataclass
         class FlatMapEntryRef(Ref):
-            dest: Optional[FlatInstanceDescriptorSubtypesEnum] = field(
+            dest: FlatInstanceDescriptorSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -110,7 +108,7 @@ class McGroupDataRefSetConditional:
     @dataclass
     class McDataInstanceRefs:
         mc_data_instance_ref: list[
-            "McGroupDataRefSetConditional.McDataInstanceRefs.McDataInstanceRef"
+            McGroupDataRefSetConditional.McDataInstanceRefs.McDataInstanceRef
         ] = field(
             default_factory=list,
             metadata={
@@ -122,7 +120,7 @@ class McGroupDataRefSetConditional:
 
         @dataclass
         class McDataInstanceRef(Ref):
-            dest: Optional[McDataInstanceSubtypesEnum] = field(
+            dest: McDataInstanceSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

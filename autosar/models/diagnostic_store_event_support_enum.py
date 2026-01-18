@@ -30,20 +30,20 @@ class DiagnosticStoreEventSupportEnum:
     class Meta:
         name = "DIAGNOSTIC-STORE-EVENT-SUPPORT-ENUM"
 
-    value: Optional[DiagnosticStoreEventSupportEnumSimple] = field(
+    value: DiagnosticStoreEventSupportEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

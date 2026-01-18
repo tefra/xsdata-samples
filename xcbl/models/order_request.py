@@ -128,14 +128,14 @@ class OrderRequestNumber:
             "required": True,
         }
     )
-    seller_order_request_number: Optional[SellerOrderRequestNumber] = field(
+    seller_order_request_number: SellerOrderRequestNumber | None = field(
         default=None,
         metadata={
             "name": "SellerOrderRequestNumber",
             "type": "Element",
         },
     )
-    list_of_message_id: Optional[ListOfMessageId] = field(
+    list_of_message_id: ListOfMessageId | None = field(
         default=None,
         metadata={
             "name": "ListOfMessageID",
@@ -146,14 +146,14 @@ class OrderRequestNumber:
 
 @dataclass(kw_only=True)
 class OrderRequestParty:
-    buyer_party: Optional[BuyerParty] = field(
+    buyer_party: BuyerParty | None = field(
         default=None,
         metadata={
             "name": "BuyerParty",
             "type": "Element",
         },
     )
-    buyer_tax_information: Optional[BuyerTaxInformation] = field(
+    buyer_tax_information: BuyerTaxInformation | None = field(
         default=None,
         metadata={
             "name": "BuyerTaxInformation",
@@ -167,42 +167,42 @@ class OrderRequestParty:
             "required": True,
         }
     )
-    seller_tax_information: Optional[SellerTaxInformation] = field(
+    seller_tax_information: SellerTaxInformation | None = field(
         default=None,
         metadata={
             "name": "SellerTaxInformation",
             "type": "Element",
         },
     )
-    ship_to_party: Optional[ShipToParty] = field(
+    ship_to_party: ShipToParty | None = field(
         default=None,
         metadata={
             "name": "ShipToParty",
             "type": "Element",
         },
     )
-    bill_to_party: Optional[BillToParty] = field(
+    bill_to_party: BillToParty | None = field(
         default=None,
         metadata={
             "name": "BillToParty",
             "type": "Element",
         },
     )
-    remit_to_party: Optional[RemitToParty] = field(
+    remit_to_party: RemitToParty | None = field(
         default=None,
         metadata={
             "name": "RemitToParty",
             "type": "Element",
         },
     )
-    ship_from_party: Optional[ShipFromParty] = field(
+    ship_from_party: ShipFromParty | None = field(
         default=None,
         metadata={
             "name": "ShipFromParty",
             "type": "Element",
         },
     )
-    list_of_party_coded: Optional[ListOfPartyCoded] = field(
+    list_of_party_coded: ListOfPartyCoded | None = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
@@ -253,7 +253,7 @@ class OrderDetail:
             "required": True,
         }
     )
-    list_of_package_detail: Optional[ListOfPackageDetail] = field(
+    list_of_package_detail: ListOfPackageDetail | None = field(
         default=None,
         metadata={
             "name": "ListOfPackageDetail",
@@ -264,7 +264,7 @@ class OrderDetail:
 
 @dataclass(kw_only=True)
 class OrderRequestHeader:
-    order_request_number: Optional[OrderRequestNumber] = field(
+    order_request_number: OrderRequestNumber | None = field(
         default=None,
         metadata={
             "name": "OrderRequestNumber",
@@ -278,21 +278,21 @@ class OrderRequestHeader:
             "required": True,
         }
     )
-    order_request_references: Optional[OrderRequestReferences] = field(
+    order_request_references: OrderRequestReferences | None = field(
         default=None,
         metadata={
             "name": "OrderRequestReferences",
             "type": "Element",
         },
     )
-    purpose: Optional[Purpose] = field(
+    purpose: Purpose | None = field(
         default=None,
         metadata={
             "name": "Purpose",
             "type": "Element",
         },
     )
-    requested_response: Optional[RequestedResponse] = field(
+    requested_response: RequestedResponse | None = field(
         default=None,
         metadata={
             "name": "RequestedResponse",
@@ -306,7 +306,7 @@ class OrderRequestHeader:
             "required": True,
         }
     )
-    tax_accounting_currency: Optional[TaxAccountingCurrency] = field(
+    tax_accounting_currency: TaxAccountingCurrency | None = field(
         default=None,
         metadata={
             "name": "TaxAccountingCurrency",
@@ -320,14 +320,14 @@ class OrderRequestHeader:
             "required": True,
         }
     )
-    order_request_tax_reference: Optional[OrderRequestTaxReference] = field(
+    order_request_tax_reference: OrderRequestTaxReference | None = field(
         default=None,
         metadata={
             "name": "OrderRequestTaxReference",
             "type": "Element",
         },
     )
-    order_invoice_medium_type_coded: Optional[OrderInvoiceMediumTypeCoded] = (
+    order_invoice_medium_type_coded: OrderInvoiceMediumTypeCoded | None = (
         field(
             default=None,
             metadata={
@@ -336,23 +336,21 @@ class OrderRequestHeader:
             },
         )
     )
-    order_invoice_medium_type_coded_other: Optional[
-        OrderInvoiceMediumTypeCodedOther
-    ] = field(
+    order_invoice_medium_type_coded_other: OrderInvoiceMediumTypeCodedOther | None = field(
         default=None,
         metadata={
             "name": "OrderInvoiceMediumTypeCodedOther",
             "type": "Element",
         },
     )
-    order_request_dates: Optional[OrderRequestDates] = field(
+    order_request_dates: OrderRequestDates | None = field(
         default=None,
         metadata={
             "name": "OrderRequestDates",
             "type": "Element",
         },
     )
-    partial_shipment_allowed: Optional[PartialShipmentAllowed] = field(
+    partial_shipment_allowed: PartialShipmentAllowed | None = field(
         default=None,
         metadata={
             "name": "PartialShipmentAllowed",
@@ -366,7 +364,7 @@ class OrderRequestHeader:
             "required": True,
         }
     )
-    list_of_transport: Optional[ListOfTransport] = field(
+    list_of_transport: ListOfTransport | None = field(
         default=None,
         metadata={
             "name": "ListOfTransport",
@@ -380,49 +378,49 @@ class OrderRequestHeader:
             "type": "Element",
         },
     )
-    order_header_price: Optional[OrderHeaderPrice] = field(
+    order_header_price: OrderHeaderPrice | None = field(
         default=None,
         metadata={
             "name": "OrderHeaderPrice",
             "type": "Element",
         },
     )
-    order_payment_instructions: Optional[OrderPaymentInstructions] = field(
+    order_payment_instructions: OrderPaymentInstructions | None = field(
         default=None,
         metadata={
             "name": "OrderPaymentInstructions",
             "type": "Element",
         },
     )
-    order_allowances_or_charges: Optional[OrderAllowancesOrCharges] = field(
+    order_allowances_or_charges: OrderAllowancesOrCharges | None = field(
         default=None,
         metadata={
             "name": "OrderAllowancesOrCharges",
             "type": "Element",
         },
     )
-    round_trip_information: Optional[RoundTripInformation] = field(
+    round_trip_information: RoundTripInformation | None = field(
         default=None,
         metadata={
             "name": "RoundTripInformation",
             "type": "Element",
         },
     )
-    order_header_note: Optional[OrderHeaderNote] = field(
+    order_header_note: OrderHeaderNote | None = field(
         default=None,
         metadata={
             "name": "OrderHeaderNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: Optional[ListOfStructuredNote] = field(
+    list_of_structured_note: ListOfStructuredNote | None = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    order_header_attachments: Optional[OrderHeaderAttachments] = field(
+    order_header_attachments: OrderHeaderAttachments | None = field(
         default=None,
         metadata={
             "name": "OrderHeaderAttachments",
@@ -451,14 +449,14 @@ class OrderRequest:
             "required": True,
         }
     )
-    order_request_detail: Optional[OrderRequestDetail] = field(
+    order_request_detail: OrderRequestDetail | None = field(
         default=None,
         metadata={
             "name": "OrderRequestDetail",
             "type": "Element",
         },
     )
-    order_request_summary: Optional[OrderRequestSummary] = field(
+    order_request_summary: OrderRequestSummary | None = field(
         default=None,
         metadata={
             "name": "OrderRequestSummary",

@@ -52,43 +52,7 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
         name = "usageParameterRefs_RelStructure"
 
     choice: Iterable[
-        Union[
-            AdditionalDriverOptionRef,
-            RentalOptionRef,
-            RentalPenaltyPolicyRef,
-            SalesOfferPackageEntitlementGivenRef,
-            SalesOfferPackageEntitlementRequiredRef,
-            MinimumStayRef,
-            InterchangingRef,
-            FrequencyOfUseRef,
-            SuspendingRef,
-            UsageValidityPeriodRef,
-            StepLimitRef,
-            RoutingRef,
-            RoundTripRef,
-            LuggageAllowanceRef,
-            EntitlementGivenRef,
-            EntitlementRequiredRef,
-            EligibilityChangePolicyRef,
-            GroupTicketRef,
-            CommercialProfileRef,
-            VehiclePoolerProfileRef,
-            CompanionProfileRef,
-            UserProfileRef,
-            ProfileParameterRef,
-            SubscribingRef,
-            PenaltyPolicyRef,
-            ChargingPolicyRef,
-            TransferabilityRef,
-            ReplacingRef,
-            RefundingRef,
-            ExchangingRef,
-            ResellingRef,
-            CancellingRef,
-            ReservingRef,
-            BookingPolicyRef,
-            PurchaseWindowRef,
-        ]
+        AdditionalDriverOptionRef | RentalOptionRef | RentalPenaltyPolicyRef | SalesOfferPackageEntitlementGivenRef | SalesOfferPackageEntitlementRequiredRef | MinimumStayRef | InterchangingRef | FrequencyOfUseRef | SuspendingRef | UsageValidityPeriodRef | StepLimitRef | RoutingRef | RoundTripRef | LuggageAllowanceRef | EntitlementGivenRef | EntitlementRequiredRef | EligibilityChangePolicyRef | GroupTicketRef | CommercialProfileRef | VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef | ProfileParameterRef | SubscribingRef | PenaltyPolicyRef | ChargingPolicyRef | TransferabilityRef | ReplacingRef | RefundingRef | ExchangingRef | ResellingRef | CancellingRef | ReservingRef | BookingPolicyRef | PurchaseWindowRef
     ] = field(
         default_factory=list,
         metadata={

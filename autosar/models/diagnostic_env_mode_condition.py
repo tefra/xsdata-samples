@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -44,7 +46,7 @@ class DiagnosticEnvModeCondition:
     class Meta:
         name = "DIAGNOSTIC-ENV-MODE-CONDITION"
 
-    compare_type: Optional[DiagnosticCompareTypeEnum] = field(
+    compare_type: DiagnosticCompareTypeEnum | None = field(
         default=None,
         metadata={
             "name": "COMPARE-TYPE",
@@ -52,7 +54,7 @@ class DiagnosticEnvModeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_element_ref: Optional["DiagnosticEnvModeCondition.ModeElementRef"] = (
+    mode_element_ref: DiagnosticEnvModeCondition.ModeElementRef | None = (
         field(
             default=None,
             metadata={
@@ -62,14 +64,14 @@ class DiagnosticEnvModeCondition:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -80,7 +82,7 @@ class DiagnosticEnvModeCondition:
 
     @dataclass
     class ModeElementRef(Ref):
-        dest: Optional[DiagnosticEnvModeElementSubtypesEnum] = field(
+        dest: DiagnosticEnvModeElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -123,7 +125,7 @@ class FlexrayCommunicationConnector:
     class Meta:
         name = "FLEXRAY-COMMUNICATION-CONNECTOR"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -132,9 +134,7 @@ class FlexrayCommunicationConnector:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "FlexrayCommunicationConnector.ShortNameFragments"
-    ] = field(
+    short_name_fragments: FlexrayCommunicationConnector.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -142,7 +142,7 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -150,7 +150,7 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -158,7 +158,7 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -166,7 +166,7 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -174,7 +174,7 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -182,7 +182,7 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["FlexrayCommunicationConnector.Annotations"] = field(
+    annotations: FlexrayCommunicationConnector.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -190,9 +190,7 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_controller_ref: Optional[
-        "FlexrayCommunicationConnector.CommControllerRef"
-    ] = field(
+    comm_controller_ref: FlexrayCommunicationConnector.CommControllerRef | None = field(
         default=None,
         metadata={
             "name": "COMM-CONTROLLER-REF",
@@ -200,7 +198,7 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    create_ecu_wakeup_source: Optional[Boolean] = field(
+    create_ecu_wakeup_source: Boolean | None = field(
         default=None,
         metadata={
             "name": "CREATE-ECU-WAKEUP-SOURCE",
@@ -208,7 +206,7 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dynamic_pnc_to_channel_mapping_enabled: Optional[Boolean] = field(
+    dynamic_pnc_to_channel_mapping_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "DYNAMIC-PNC-TO-CHANNEL-MAPPING-ENABLED",
@@ -216,9 +214,7 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_comm_port_instances: Optional[
-        "FlexrayCommunicationConnector.EcuCommPortInstances"
-    ] = field(
+    ecu_comm_port_instances: FlexrayCommunicationConnector.EcuCommPortInstances | None = field(
         default=None,
         metadata={
             "name": "ECU-COMM-PORT-INSTANCES",
@@ -226,7 +222,7 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_gateway_type: Optional[PncGatewayTypeEnum] = field(
+    pnc_gateway_type: PncGatewayTypeEnum | None = field(
         default=None,
         metadata={
             "name": "PNC-GATEWAY-TYPE",
@@ -234,7 +230,7 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -242,7 +238,7 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_ready_sleep_time: Optional[Float] = field(
+    nm_ready_sleep_time: Float | None = field(
         default=None,
         metadata={
             "name": "NM-READY-SLEEP-TIME",
@@ -250,7 +246,7 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_filter_data_mask: Optional[PositiveUnlimitedInteger] = field(
+    pnc_filter_data_mask: PositiveUnlimitedInteger | None = field(
         default=None,
         metadata={
             "name": "PNC-FILTER-DATA-MASK",
@@ -258,7 +254,7 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    wake_up_channel: Optional[Boolean] = field(
+    wake_up_channel: Boolean | None = field(
         default=None,
         metadata={
             "name": "WAKE-UP-CHANNEL",
@@ -266,14 +262,14 @@ class FlexrayCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -281,7 +277,7 @@ class FlexrayCommunicationConnector:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -313,7 +309,7 @@ class FlexrayCommunicationConnector:
 
     @dataclass
     class CommControllerRef(Ref):
-        dest: Optional[CommunicationControllerSubtypesEnum] = field(
+        dest: CommunicationControllerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

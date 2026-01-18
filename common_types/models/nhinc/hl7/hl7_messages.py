@@ -25,7 +25,7 @@ __NAMESPACE__ = "urn:hl7-org:v3"
 
 @dataclass
 class CreateFault201310RequestType:
-    sender_oid: Optional[str] = field(
+    sender_oid: str | None = field(
         default=None,
         metadata={
             "name": "senderOID",
@@ -34,7 +34,7 @@ class CreateFault201310RequestType:
             "required": True,
         },
     )
-    receiver_oid: Optional[str] = field(
+    receiver_oid: str | None = field(
         default=None,
         metadata={
             "name": "receiverOID",
@@ -47,7 +47,7 @@ class CreateFault201310RequestType:
 
 @dataclass
 class Create201302RequestType:
-    prpa201310_patient: Optional[PrpaMt201310Uv02Patient] = field(
+    prpa201310_patient: PrpaMt201310Uv02Patient | None = field(
         default=None,
         metadata={
             "name": "PRPA201310Patient",
@@ -55,7 +55,7 @@ class Create201302RequestType:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    prpa201301_patient: Optional[PrpaMt201301Uv02Patient] = field(
+    prpa201301_patient: PrpaMt201301Uv02Patient | None = field(
         default=None,
         metadata={
             "name": "PRPA201301Patient",
@@ -63,7 +63,7 @@ class Create201302RequestType:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    remote_patient_id: Optional[str] = field(
+    remote_patient_id: str | None = field(
         default=None,
         metadata={
             "name": "remotePatientId",
@@ -72,7 +72,7 @@ class Create201302RequestType:
             "required": True,
         },
     )
-    remote_device_id: Optional[str] = field(
+    remote_device_id: str | None = field(
         default=None,
         metadata={
             "name": "remoteDeviceId",
@@ -81,7 +81,7 @@ class Create201302RequestType:
             "required": True,
         },
     )
-    sender_oid: Optional[str] = field(
+    sender_oid: str | None = field(
         default=None,
         metadata={
             "name": "senderOID",
@@ -90,7 +90,7 @@ class Create201302RequestType:
             "required": True,
         },
     )
-    receiver_oid: Optional[str] = field(
+    receiver_oid: str | None = field(
         default=None,
         metadata={
             "name": "receiverOID",
@@ -103,7 +103,7 @@ class Create201302RequestType:
 
 @dataclass
 class Create201305RequestType:
-    prpa201301_patient: Optional[PrpaMt201301Uv02Patient] = field(
+    prpa201301_patient: PrpaMt201301Uv02Patient | None = field(
         default=None,
         metadata={
             "name": "PRPA201301Patient",
@@ -112,7 +112,7 @@ class Create201305RequestType:
             "required": True,
         },
     )
-    local_device_id: Optional[str] = field(
+    local_device_id: str | None = field(
         default=None,
         metadata={
             "name": "localDeviceId",
@@ -121,7 +121,7 @@ class Create201305RequestType:
             "required": True,
         },
     )
-    sender_oid: Optional[str] = field(
+    sender_oid: str | None = field(
         default=None,
         metadata={
             "name": "senderOID",
@@ -130,7 +130,7 @@ class Create201305RequestType:
             "required": True,
         },
     )
-    receiver_oid: Optional[str] = field(
+    receiver_oid: str | None = field(
         default=None,
         metadata={
             "name": "receiverOID",
@@ -143,7 +143,7 @@ class Create201305RequestType:
 
 @dataclass
 class Create201310RequestType:
-    pseudo_patient_id: Optional[str] = field(
+    pseudo_patient_id: str | None = field(
         default=None,
         metadata={
             "name": "pseudoPatientId",
@@ -152,7 +152,7 @@ class Create201310RequestType:
             "required": True,
         },
     )
-    pseudo_assigning_authority_id: Optional[str] = field(
+    pseudo_assigning_authority_id: str | None = field(
         default=None,
         metadata={
             "name": "pseudoAssigningAuthorityId",
@@ -161,7 +161,7 @@ class Create201310RequestType:
             "required": True,
         },
     )
-    local_device_id: Optional[str] = field(
+    local_device_id: str | None = field(
         default=None,
         metadata={
             "name": "localDeviceId",
@@ -170,7 +170,7 @@ class Create201310RequestType:
             "required": True,
         },
     )
-    sender_oid: Optional[str] = field(
+    sender_oid: str | None = field(
         default=None,
         metadata={
             "name": "senderOID",
@@ -179,7 +179,7 @@ class Create201310RequestType:
             "required": True,
         },
     )
-    receiver_oid: Optional[str] = field(
+    receiver_oid: str | None = field(
         default=None,
         metadata={
             "name": "receiverOID",
@@ -188,9 +188,7 @@ class Create201310RequestType:
             "required": True,
         },
     )
-    prpa201307_query_by_parameter: Optional[
-        PrpaMt201307Uv02QueryByParameter
-    ] = field(
+    prpa201307_query_by_parameter: PrpaMt201307Uv02QueryByParameter | None = field(
         default=None,
         metadata={
             "name": "PRPA201307QueryByParameter",
@@ -203,7 +201,7 @@ class Create201310RequestType:
 
 @dataclass
 class CreateAckMsgRequestType:
-    local_device_id: Optional[str] = field(
+    local_device_id: str | None = field(
         default=None,
         metadata={
             "name": "localDeviceId",
@@ -212,7 +210,7 @@ class CreateAckMsgRequestType:
             "required": True,
         },
     )
-    orig_msg_id: Optional[Ii] = field(
+    orig_msg_id: Ii | None = field(
         default=None,
         metadata={
             "name": "origMsgId",
@@ -221,7 +219,7 @@ class CreateAckMsgRequestType:
             "required": True,
         },
     )
-    msg_text: Optional[str] = field(
+    msg_text: str | None = field(
         default=None,
         metadata={
             "name": "msgText",
@@ -230,7 +228,7 @@ class CreateAckMsgRequestType:
             "required": True,
         },
     )
-    sender_oid: Optional[str] = field(
+    sender_oid: str | None = field(
         default=None,
         metadata={
             "name": "senderOID",
@@ -239,7 +237,7 @@ class CreateAckMsgRequestType:
             "required": True,
         },
     )
-    receiver_oid: Optional[str] = field(
+    receiver_oid: str | None = field(
         default=None,
         metadata={
             "name": "receiverOID",
@@ -261,7 +259,7 @@ class PixconsumerMcciIn000002Uv01RequestType:
     class Meta:
         name = "PIXConsumer_MCCI_IN000002UV01RequestType"
 
-    mcci_in000002_uv01: Optional[McciIn000002Uv01] = field(
+    mcci_in000002_uv01: McciIn000002Uv01 | None = field(
         default=None,
         metadata={
             "name": "MCCI_IN000002UV01",
@@ -270,7 +268,7 @@ class PixconsumerMcciIn000002Uv01RequestType:
             "required": True,
         },
     )
-    assertion: Optional[AssertionType] = field(
+    assertion: AssertionType | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -285,7 +283,7 @@ class PixconsumerPrpaIn201304UvrequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201304UVRequestType"
 
-    prpa_in201304_uv02: Optional[PrpaIn201304Uv02] = field(
+    prpa_in201304_uv02: PrpaIn201304Uv02 | None = field(
         default=None,
         metadata={
             "name": "PRPA_IN201304UV02",
@@ -294,7 +292,7 @@ class PixconsumerPrpaIn201304UvrequestType:
             "required": True,
         },
     )
-    assertion: Optional[AssertionType] = field(
+    assertion: AssertionType | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -302,7 +300,7 @@ class PixconsumerPrpaIn201304UvrequestType:
             "required": True,
         },
     )
-    nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
+    nhin_target_communities: NhinTargetCommunitiesType | None = field(
         default=None,
         metadata={
             "name": "NhinTargetCommunities",
@@ -317,7 +315,7 @@ class PixconsumerPrpaIn201304UvsecuredRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201304UVSecuredRequestType"
 
-    prpa_in201304_uv02: Optional[PrpaIn201304Uv02] = field(
+    prpa_in201304_uv02: PrpaIn201304Uv02 | None = field(
         default=None,
         metadata={
             "name": "PRPA_IN201304UV02",
@@ -326,7 +324,7 @@ class PixconsumerPrpaIn201304UvsecuredRequestType:
             "required": True,
         },
     )
-    nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
+    nhin_target_communities: NhinTargetCommunitiesType | None = field(
         default=None,
         metadata={
             "name": "NhinTargetCommunities",
@@ -341,7 +339,7 @@ class PixconsumerPrpaIn201309UvrequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201309UVRequestType"
 
-    prpa_in201309_uv02: Optional[PrpaIn201309Uv02] = field(
+    prpa_in201309_uv02: PrpaIn201309Uv02 | None = field(
         default=None,
         metadata={
             "name": "PRPA_IN201309UV02",
@@ -350,7 +348,7 @@ class PixconsumerPrpaIn201309UvrequestType:
             "required": True,
         },
     )
-    assertion: Optional[AssertionType] = field(
+    assertion: AssertionType | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -358,7 +356,7 @@ class PixconsumerPrpaIn201309UvrequestType:
             "required": True,
         },
     )
-    nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
+    nhin_target_communities: NhinTargetCommunitiesType | None = field(
         default=None,
         metadata={
             "name": "NhinTargetCommunities",
@@ -373,7 +371,7 @@ class PixconsumerPrpaIn201309UvresponseType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201309UVResponseType"
 
-    prpa_in201310_uv02: Optional[PrpaIn201310Uv02] = field(
+    prpa_in201310_uv02: PrpaIn201310Uv02 | None = field(
         default=None,
         metadata={
             "name": "PRPA_IN201310UV02",
@@ -389,7 +387,7 @@ class PixconsumerPrpaIn201309UvsecuredRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201309UVSecuredRequestType"
 
-    prpa_in201309_uv02: Optional[PrpaIn201309Uv02] = field(
+    prpa_in201309_uv02: PrpaIn201309Uv02 | None = field(
         default=None,
         metadata={
             "name": "PRPA_IN201309UV02",
@@ -398,7 +396,7 @@ class PixconsumerPrpaIn201309UvsecuredRequestType:
             "required": True,
         },
     )
-    nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
+    nhin_target_communities: NhinTargetCommunitiesType | None = field(
         default=None,
         metadata={
             "name": "NhinTargetCommunities",
@@ -413,7 +411,7 @@ class PixconsumerPrpaIn201310UvrequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201310UVRequestType"
 
-    prpa_in201310_uv02: Optional[PrpaIn201310Uv02] = field(
+    prpa_in201310_uv02: PrpaIn201310Uv02 | None = field(
         default=None,
         metadata={
             "name": "PRPA_IN201310UV02",
@@ -422,7 +420,7 @@ class PixconsumerPrpaIn201310UvrequestType:
             "required": True,
         },
     )
-    assertion: Optional[AssertionType] = field(
+    assertion: AssertionType | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -437,7 +435,7 @@ class PixconsumerPrpaIn201310UvsecuredRequestType:
     class Meta:
         name = "PIXConsumer_PRPA_IN201310UVSecuredRequestType"
 
-    prpa_in201310_uv02: Optional[PrpaIn201310Uv02] = field(
+    prpa_in201310_uv02: PrpaIn201310Uv02 | None = field(
         default=None,
         metadata={
             "name": "PRPA_IN201310UV02",

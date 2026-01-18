@@ -16,7 +16,7 @@ class VehicleMeetingPointInPathVersionStructure(
     class Meta:
         name = "VehicleMeetingPointInPath_VersionStructure"
 
-    onward_vehicle_meeting_link_ref: Optional[OnwardVehicleMeetingLinkRef] = (
+    onward_vehicle_meeting_link_ref: OnwardVehicleMeetingLinkRef | None = (
         field(
             default=None,
             metadata={

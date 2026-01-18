@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -6,7 +8,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class SubdivisionsType:
-    subdivision: list["SubDivisionType"] = field(
+    subdivision: list[SubDivisionType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -18,7 +20,7 @@ class SubdivisionsType:
 
 @dataclass
 class SubDivisionType:
-    subdivision_code: Optional[str] = field(
+    subdivision_code: str | None = field(
         default=None,
         metadata={
             "name": "subdivisionCode",
@@ -26,14 +28,14 @@ class SubDivisionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    subdivision_category: Optional[str] = field(
+    subdivision_category: str | None = field(
         default=None,
         metadata={
             "name": "subdivisionCategory",
@@ -41,7 +43,7 @@ class SubDivisionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    subdivisions: Optional[SubdivisionsType] = field(
+    subdivisions: SubdivisionsType | None = field(
         default=None,
         metadata={
             "type": "Element",

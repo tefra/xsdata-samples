@@ -20,7 +20,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class TransportModeStructure:
-    transport_mode: Optional[AllModesEnumeration] = field(
+    transport_mode: AllModesEnumeration | None = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -29,22 +29,7 @@ class TransportModeStructure:
             "required": True,
         },
     )
-    choice: Optional[
-        Union[
-            AirSubmode,
-            BusSubmode,
-            CoachSubmode,
-            FunicularSubmode,
-            MetroSubmode,
-            TramSubmode,
-            TelecabinSubmode,
-            RailSubmode,
-            WaterSubmode,
-            SnowAndIceSubmode,
-            TaxiSubmode,
-            SelfDriveSubmode,
-        ]
-    ] = field(
+    choice: AirSubmode | BusSubmode | CoachSubmode | FunicularSubmode | MetroSubmode | TramSubmode | TelecabinSubmode | RailSubmode | WaterSubmode | SnowAndIceSubmode | TaxiSubmode | SelfDriveSubmode | None = field(
         default=None,
         metadata={
             "type": "Elements",

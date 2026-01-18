@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class FlexrayNmClusterCoupling:
     class Meta:
         name = "FLEXRAY-NM-CLUSTER-COUPLING"
 
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -47,9 +49,7 @@ class FlexrayNmClusterCoupling:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    coupled_cluster_refs: Optional[
-        "FlexrayNmClusterCoupling.CoupledClusterRefs"
-    ] = field(
+    coupled_cluster_refs: FlexrayNmClusterCoupling.CoupledClusterRefs | None = field(
         default=None,
         metadata={
             "name": "COUPLED-CLUSTER-REFS",
@@ -57,7 +57,7 @@ class FlexrayNmClusterCoupling:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_control_bit_vector_enabled: Optional[Boolean] = field(
+    nm_control_bit_vector_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-CONTROL-BIT-VECTOR-ENABLED",
@@ -65,7 +65,7 @@ class FlexrayNmClusterCoupling:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_data_disabled: Optional[Boolean] = field(
+    nm_data_disabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-DATA-DISABLED",
@@ -73,7 +73,7 @@ class FlexrayNmClusterCoupling:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_schedule_variant: Optional[FlexrayNmScheduleVariant] = field(
+    nm_schedule_variant: FlexrayNmScheduleVariant | None = field(
         default=None,
         metadata={
             "name": "NM-SCHEDULE-VARIANT",
@@ -81,14 +81,14 @@ class FlexrayNmClusterCoupling:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -100,7 +100,7 @@ class FlexrayNmClusterCoupling:
     @dataclass
     class CoupledClusterRefs:
         coupled_cluster_ref: list[
-            "FlexrayNmClusterCoupling.CoupledClusterRefs.CoupledClusterRef"
+            FlexrayNmClusterCoupling.CoupledClusterRefs.CoupledClusterRef
         ] = field(
             default_factory=list,
             metadata={
@@ -112,7 +112,7 @@ class FlexrayNmClusterCoupling:
 
         @dataclass
         class CoupledClusterRef(Ref):
-            dest: Optional[FlexrayNmClusterSubtypesEnum] = field(
+            dest: FlexrayNmClusterSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

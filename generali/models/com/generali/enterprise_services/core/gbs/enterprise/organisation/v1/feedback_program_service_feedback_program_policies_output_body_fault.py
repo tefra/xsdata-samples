@@ -9,28 +9,28 @@ class FeedbackProgramServiceFeedbackProgramPoliciesOutputBodyFault:
     class Meta:
         global_type = False
 
-    faultcode: Optional[str] = field(
+    faultcode: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "",
         },
     )
-    faultstring: Optional[str] = field(
+    faultstring: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "",
         },
     )
-    faultactor: Optional[str] = field(
+    faultactor: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "",
         },
     )
-    detail: Optional[str] = field(
+    detail: str | None = field(
         default=None,
         metadata={
             "type": "Element",

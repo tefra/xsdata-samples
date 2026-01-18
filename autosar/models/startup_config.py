@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -106,7 +108,7 @@ class StartupConfig:
     class Meta:
         name = "STARTUP-CONFIG"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -115,7 +117,7 @@ class StartupConfig:
             "required": True,
         },
     )
-    short_name_fragments: Optional["StartupConfig.ShortNameFragments"] = field(
+    short_name_fragments: StartupConfig.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -123,7 +125,7 @@ class StartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -131,7 +133,7 @@ class StartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -139,7 +141,7 @@ class StartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -147,7 +149,7 @@ class StartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -155,7 +157,7 @@ class StartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -163,7 +165,7 @@ class StartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["StartupConfig.Annotations"] = field(
+    annotations: StartupConfig.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -171,7 +173,7 @@ class StartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    environment_variables: Optional["StartupConfig.EnvironmentVariables"] = (
+    environment_variables: StartupConfig.EnvironmentVariables | None = (
         field(
             default=None,
             metadata={
@@ -181,7 +183,7 @@ class StartupConfig:
             },
         )
     )
-    execution_error_ref: Optional["StartupConfig.ExecutionErrorRef"] = field(
+    execution_error_ref: StartupConfig.ExecutionErrorRef | None = field(
         default=None,
         metadata={
             "name": "EXECUTION-ERROR-REF",
@@ -189,7 +191,7 @@ class StartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_arguments: Optional["StartupConfig.ProcessArguments"] = field(
+    process_arguments: StartupConfig.ProcessArguments | None = field(
         default=None,
         metadata={
             "name": "PROCESS-ARGUMENTS",
@@ -197,7 +199,7 @@ class StartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    scheduling_policy: Optional[String] = field(
+    scheduling_policy: String | None = field(
         default=None,
         metadata={
             "name": "SCHEDULING-POLICY",
@@ -205,7 +207,7 @@ class StartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    scheduling_priority: Optional[Integer] = field(
+    scheduling_priority: Integer | None = field(
         default=None,
         metadata={
             "name": "SCHEDULING-PRIORITY",
@@ -213,7 +215,7 @@ class StartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    termination_behavior: Optional[TerminationBehaviorEnum] = field(
+    termination_behavior: TerminationBehaviorEnum | None = field(
         default=None,
         metadata={
             "name": "TERMINATION-BEHAVIOR",
@@ -221,7 +223,7 @@ class StartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout: Optional[EnterExitTimeout] = field(
+    timeout: EnterExitTimeout | None = field(
         default=None,
         metadata={
             "name": "TIMEOUT",
@@ -229,14 +231,14 @@ class StartupConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -244,7 +246,7 @@ class StartupConfig:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -287,7 +289,7 @@ class StartupConfig:
 
     @dataclass
     class ExecutionErrorRef(Ref):
-        dest: Optional[ProcessExecutionErrorSubtypesEnum] = field(
+        dest: ProcessExecutionErrorSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

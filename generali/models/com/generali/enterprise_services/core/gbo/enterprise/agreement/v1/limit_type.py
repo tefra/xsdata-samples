@@ -33,7 +33,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class LimitType(BaseIdentifiedComponentType):
-    value: Optional[ValueType] = field(
+    value: ValueType | None = field(
         default=None,
         metadata={
             "name": "Value",
@@ -42,7 +42,7 @@ class LimitType(BaseIdentifiedComponentType):
             "required": True,
         },
     )
-    maximum: Optional[AmountType] = field(
+    maximum: AmountType | None = field(
         default=None,
         metadata={
             "name": "Maximum",
@@ -50,7 +50,7 @@ class LimitType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    minimum: Optional[AmountType] = field(
+    minimum: AmountType | None = field(
         default=None,
         metadata={
             "name": "Minimum",
@@ -58,7 +58,7 @@ class LimitType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    basis: Optional[CodeDescriptionType] = field(
+    basis: CodeDescriptionType | None = field(
         default=None,
         metadata={
             "name": "Basis",
@@ -67,7 +67,7 @@ class LimitType(BaseIdentifiedComponentType):
             "required": True,
         },
     )
-    time_specification: Optional[NumericType] = field(
+    time_specification: NumericType | None = field(
         default=None,
         metadata={
             "name": "TimeSpecification",
@@ -75,7 +75,7 @@ class LimitType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    restricted_to_geography: Optional[LimitTypeRestrictedToGeography] = field(
+    restricted_to_geography: LimitTypeRestrictedToGeography | None = field(
         default=None,
         metadata={
             "name": "RestrictedToGeography",
@@ -83,7 +83,7 @@ class LimitType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    value_applies_to: Optional[CodeDescriptionType] = field(
+    value_applies_to: CodeDescriptionType | None = field(
         default=None,
         metadata={
             "name": "ValueAppliesTo",
@@ -92,7 +92,7 @@ class LimitType(BaseIdentifiedComponentType):
             "required": True,
         },
     )
-    type_value: Optional[LimitTypeType] = field(
+    type_value: LimitTypeType | None = field(
         default=None,
         metadata={
             "name": "Type",
@@ -101,7 +101,7 @@ class LimitType(BaseIdentifiedComponentType):
             "required": True,
         },
     )
-    indemnity: Optional[IndemnityType] = field(
+    indemnity: IndemnityType | None = field(
         default=None,
         metadata={
             "name": "Indemnity",

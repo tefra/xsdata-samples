@@ -43,14 +43,14 @@ class KeyFigurePurposeCodedOther:
 
 @dataclass(kw_only=True)
 class KeyFigureData:
-    key_figure_purpose_coded: Optional[KeyFigurePurposeCoded] = field(
+    key_figure_purpose_coded: KeyFigurePurposeCoded | None = field(
         default=None,
         metadata={
             "name": "KeyFigurePurposeCoded",
             "type": "Element",
         },
     )
-    key_figure_purpose_coded_other: Optional[KeyFigurePurposeCodedOther] = (
+    key_figure_purpose_coded_other: KeyFigurePurposeCodedOther | None = (
         field(
             default=None,
             metadata={
@@ -59,7 +59,7 @@ class KeyFigureData:
             },
         )
     )
-    characteristic_combination_id: Optional[CharacteristicCombinationId] = (
+    characteristic_combination_id: CharacteristicCombinationId | None = (
         field(
             default=None,
             metadata={
@@ -82,7 +82,7 @@ class KeyFigureData:
             "required": True,
         }
     )
-    key_figure_notes: Optional[KeyFigureNotes] = field(
+    key_figure_notes: KeyFigureNotes | None = field(
         default=None,
         metadata={
             "name": "KeyFigureNotes",
@@ -127,16 +127,14 @@ class ListOfKeyFigureData:
 
 @dataclass(kw_only=True)
 class TimeSeriesRequestDetail:
-    list_of_characteristic_combinations: Optional[
-        ListOfCharacteristicCombinations
-    ] = field(
+    list_of_characteristic_combinations: ListOfCharacteristicCombinations | None = field(
         default=None,
         metadata={
             "name": "ListOfCharacteristicCombinations",
             "type": "Element",
         },
     )
-    list_of_key_figure_data: Optional[ListOfKeyFigureData] = field(
+    list_of_key_figure_data: ListOfKeyFigureData | None = field(
         default=None,
         metadata={
             "name": "ListOfKeyFigureData",

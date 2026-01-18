@@ -15,7 +15,7 @@ class LevelBaseType(NameableType):
     It requires a name and id.
     """
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

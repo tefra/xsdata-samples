@@ -15,7 +15,7 @@ class VehicleServiceVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "VehicleService_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -23,7 +23,7 @@ class VehicleServiceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -31,7 +31,7 @@ class VehicleServiceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_service_parts: Optional[VehicleServicePartsRelStructure] = field(
+    vehicle_service_parts: VehicleServicePartsRelStructure | None = field(
         default=None,
         metadata={
             "name": "vehicleServiceParts",

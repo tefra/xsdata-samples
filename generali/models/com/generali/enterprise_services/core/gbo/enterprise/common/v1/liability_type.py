@@ -21,7 +21,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class LiabilityType(RiskElementType):
-    rating: Optional[CodeType] = field(
+    rating: CodeType | None = field(
         default=None,
         metadata={
             "name": "Rating",
@@ -29,7 +29,7 @@ class LiabilityType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    share_capital: Optional[NumericType] = field(
+    share_capital: NumericType | None = field(
         default=None,
         metadata={
             "name": "ShareCapital",
@@ -37,7 +37,7 @@ class LiabilityType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    liablity_type: Optional[CodeDescriptionType] = field(
+    liablity_type: CodeDescriptionType | None = field(
         default=None,
         metadata={
             "name": "LiablityType",

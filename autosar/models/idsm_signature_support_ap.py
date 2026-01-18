@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -37,7 +39,7 @@ class IdsmSignatureSupportAp:
     class Meta:
         name = "IDSM-SIGNATURE-SUPPORT-AP"
 
-    crypto_primitive: Optional[String] = field(
+    crypto_primitive: String | None = field(
         default=None,
         metadata={
             "name": "CRYPTO-PRIMITIVE",
@@ -45,7 +47,7 @@ class IdsmSignatureSupportAp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    key_slot_ref: Optional["IdsmSignatureSupportAp.KeySlotRef"] = field(
+    key_slot_ref: IdsmSignatureSupportAp.KeySlotRef | None = field(
         default=None,
         metadata={
             "name": "KEY-SLOT-REF",
@@ -53,14 +55,14 @@ class IdsmSignatureSupportAp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +73,7 @@ class IdsmSignatureSupportAp:
 
     @dataclass
     class KeySlotRef(Ref):
-        dest: Optional[CryptoKeySlotSubtypesEnum] = field(
+        dest: CryptoKeySlotSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

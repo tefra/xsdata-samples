@@ -31,7 +31,7 @@ class EnterExitTimeout:
     class Meta:
         name = "ENTER-EXIT-TIMEOUT"
 
-    enter_timeout_value: Optional[TimeValue] = field(
+    enter_timeout_value: TimeValue | None = field(
         default=None,
         metadata={
             "name": "ENTER-TIMEOUT-VALUE",
@@ -39,7 +39,7 @@ class EnterExitTimeout:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exit_timeout_value: Optional[TimeValue] = field(
+    exit_timeout_value: TimeValue | None = field(
         default=None,
         metadata={
             "name": "EXIT-TIMEOUT-VALUE",
@@ -47,14 +47,14 @@ class EnterExitTimeout:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -28,20 +28,20 @@ class ReportBehaviorEnum:
     class Meta:
         name = "REPORT-BEHAVIOR-ENUM"
 
-    value: Optional[ReportBehaviorEnumSimple] = field(
+    value: ReportBehaviorEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -153,7 +155,7 @@ class NvBlockDescriptor:
     class Meta:
         name = "NV-BLOCK-DESCRIPTOR"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -162,7 +164,7 @@ class NvBlockDescriptor:
             "required": True,
         },
     )
-    short_name_fragments: Optional["NvBlockDescriptor.ShortNameFragments"] = (
+    short_name_fragments: NvBlockDescriptor.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -172,7 +174,7 @@ class NvBlockDescriptor:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -180,7 +182,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -188,7 +190,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -196,7 +198,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -204,7 +206,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -212,7 +214,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["NvBlockDescriptor.Annotations"] = field(
+    annotations: NvBlockDescriptor.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -220,7 +222,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_server_ports: Optional["NvBlockDescriptor.ClientServerPorts"] = (
+    client_server_ports: NvBlockDescriptor.ClientServerPorts | None = (
         field(
             default=None,
             metadata={
@@ -230,9 +232,7 @@ class NvBlockDescriptor:
             },
         )
     )
-    constant_value_mapping_refs: Optional[
-        "NvBlockDescriptor.ConstantValueMappingRefs"
-    ] = field(
+    constant_value_mapping_refs: NvBlockDescriptor.ConstantValueMappingRefs | None = field(
         default=None,
         metadata={
             "name": "CONSTANT-VALUE-MAPPING-REFS",
@@ -240,9 +240,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_type_mapping_refs: Optional[
-        "NvBlockDescriptor.DataTypeMappingRefs"
-    ] = field(
+    data_type_mapping_refs: NvBlockDescriptor.DataTypeMappingRefs | None = field(
         default=None,
         metadata={
             "name": "DATA-TYPE-MAPPING-REFS",
@@ -250,9 +248,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    instantiation_data_def_propss: Optional[
-        "NvBlockDescriptor.InstantiationDataDefPropss"
-    ] = field(
+    instantiation_data_def_propss: NvBlockDescriptor.InstantiationDataDefPropss | None = field(
         default=None,
         metadata={
             "name": "INSTANTIATION-DATA-DEF-PROPSS",
@@ -260,9 +256,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_switch_event_triggered_activitys: Optional[
-        "NvBlockDescriptor.ModeSwitchEventTriggeredActivitys"
-    ] = field(
+    mode_switch_event_triggered_activitys: NvBlockDescriptor.ModeSwitchEventTriggeredActivitys | None = field(
         default=None,
         metadata={
             "name": "MODE-SWITCH-EVENT-TRIGGERED-ACTIVITYS",
@@ -270,9 +264,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nv_block_data_mappings: Optional[
-        "NvBlockDescriptor.NvBlockDataMappings"
-    ] = field(
+    nv_block_data_mappings: NvBlockDescriptor.NvBlockDataMappings | None = field(
         default=None,
         metadata={
             "name": "NV-BLOCK-DATA-MAPPINGS",
@@ -280,7 +272,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nv_block_needs: Optional[NvBlockNeeds] = field(
+    nv_block_needs: NvBlockNeeds | None = field(
         default=None,
         metadata={
             "name": "NV-BLOCK-NEEDS",
@@ -288,7 +280,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ram_block: Optional[VariableDataPrototype] = field(
+    ram_block: VariableDataPrototype | None = field(
         default=None,
         metadata={
             "name": "RAM-BLOCK",
@@ -296,7 +288,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rom_block: Optional[ParameterDataPrototype] = field(
+    rom_block: ParameterDataPrototype | None = field(
         default=None,
         metadata={
             "name": "ROM-BLOCK",
@@ -304,7 +296,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    support_dirty_flag: Optional[Boolean] = field(
+    support_dirty_flag: Boolean | None = field(
         default=None,
         metadata={
             "name": "SUPPORT-DIRTY-FLAG",
@@ -312,7 +304,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_event_ref: Optional["NvBlockDescriptor.TimingEventRef"] = field(
+    timing_event_ref: NvBlockDescriptor.TimingEventRef | None = field(
         default=None,
         metadata={
             "name": "TIMING-EVENT-REF",
@@ -320,7 +312,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    writing_strategy_role: Optional[RoleBasedDataAssignment] = field(
+    writing_strategy_role: RoleBasedDataAssignment | None = field(
         default=None,
         metadata={
             "name": "WRITING-STRATEGY-ROLE",
@@ -328,7 +320,7 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -336,14 +328,14 @@ class NvBlockDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -351,7 +343,7 @@ class NvBlockDescriptor:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -395,7 +387,7 @@ class NvBlockDescriptor:
     @dataclass
     class ConstantValueMappingRefs:
         constant_value_mapping_ref: list[
-            "NvBlockDescriptor.ConstantValueMappingRefs.ConstantValueMappingRef"
+            NvBlockDescriptor.ConstantValueMappingRefs.ConstantValueMappingRef
         ] = field(
             default_factory=list,
             metadata={
@@ -407,7 +399,7 @@ class NvBlockDescriptor:
 
         @dataclass
         class ConstantValueMappingRef(Ref):
-            dest: Optional[ConstantSpecificationMappingSetSubtypesEnum] = (
+            dest: ConstantSpecificationMappingSetSubtypesEnum | None = (
                 field(
                     default=None,
                     metadata={
@@ -421,7 +413,7 @@ class NvBlockDescriptor:
     @dataclass
     class DataTypeMappingRefs:
         data_type_mapping_ref: list[
-            "NvBlockDescriptor.DataTypeMappingRefs.DataTypeMappingRef"
+            NvBlockDescriptor.DataTypeMappingRefs.DataTypeMappingRef
         ] = field(
             default_factory=list,
             metadata={
@@ -433,7 +425,7 @@ class NvBlockDescriptor:
 
         @dataclass
         class DataTypeMappingRef(Ref):
-            dest: Optional[DataTypeMappingSetSubtypesEnum] = field(
+            dest: DataTypeMappingSetSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -479,7 +471,7 @@ class NvBlockDescriptor:
 
     @dataclass
     class TimingEventRef(Ref):
-        dest: Optional[TimingEventSubtypesEnum] = field(
+        dest: TimingEventSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

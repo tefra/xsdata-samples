@@ -15,7 +15,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class ContactInvolvement(ContactInvolvementContactInvolvement):
-    contact_involvement_type: Optional[ContactInvolvementEnum] = field(
+    contact_involvement_type: ContactInvolvementEnum | None = field(
         default=None,
         metadata={
             "name": "ContactInvolvementType",

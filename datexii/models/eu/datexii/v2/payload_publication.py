@@ -32,7 +32,7 @@ class PayloadPublication:
         publication.
     """
 
-    feed_description: Optional[MultilingualString] = field(
+    feed_description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "feedDescription",
@@ -40,7 +40,7 @@ class PayloadPublication:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    feed_type: Optional[str] = field(
+    feed_type: str | None = field(
         default=None,
         metadata={
             "name": "feedType",
@@ -49,7 +49,7 @@ class PayloadPublication:
             "max_length": 1024,
         },
     )
-    publication_time: Optional[XmlDateTime] = field(
+    publication_time: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "publicationTime",
@@ -58,7 +58,7 @@ class PayloadPublication:
             "required": True,
         },
     )
-    publication_creator: Optional[InternationalIdentifier] = field(
+    publication_creator: InternationalIdentifier | None = field(
         default=None,
         metadata={
             "name": "publicationCreator",
@@ -67,7 +67,7 @@ class PayloadPublication:
             "required": True,
         },
     )
-    payload_publication_extension: Optional[ExtensionType] = field(
+    payload_publication_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "payloadPublicationExtension",
@@ -75,7 +75,7 @@ class PayloadPublication:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    lang: Optional[str] = field(
+    lang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

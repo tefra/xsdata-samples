@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -42,9 +44,7 @@ class IndexedArrayElement:
     class Meta:
         name = "INDEXED-ARRAY-ELEMENT"
 
-    application_array_element_ref: Optional[
-        "IndexedArrayElement.ApplicationArrayElementRef"
-    ] = field(
+    application_array_element_ref: IndexedArrayElement.ApplicationArrayElementRef | None = field(
         default=None,
         metadata={
             "name": "APPLICATION-ARRAY-ELEMENT-REF",
@@ -52,9 +52,7 @@ class IndexedArrayElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implementation_array_element_ref: Optional[
-        "IndexedArrayElement.ImplementationArrayElementRef"
-    ] = field(
+    implementation_array_element_ref: IndexedArrayElement.ImplementationArrayElementRef | None = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-ARRAY-ELEMENT-REF",
@@ -62,7 +60,7 @@ class IndexedArrayElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    index: Optional[Integer] = field(
+    index: Integer | None = field(
         default=None,
         metadata={
             "name": "INDEX",
@@ -70,14 +68,14 @@ class IndexedArrayElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -88,7 +86,7 @@ class IndexedArrayElement:
 
     @dataclass
     class ApplicationArrayElementRef(Ref):
-        dest: Optional[ApplicationArrayElementSubtypesEnum] = field(
+        dest: ApplicationArrayElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -99,7 +97,7 @@ class IndexedArrayElement:
 
     @dataclass
     class ImplementationArrayElementRef(Ref):
-        dest: Optional[ImplementationDataTypeElementSubtypesEnum] = field(
+        dest: ImplementationDataTypeElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

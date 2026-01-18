@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class FrequencyFormatMappingType(FrequencyFormatMappingBaseType):
-    frequency_id: Optional[str] = field(
+    frequency_id: str | None = field(
         default=None,
         metadata={
             "name": "FrequencyId",
@@ -20,7 +20,7 @@ class FrequencyFormatMappingType(FrequencyFormatMappingBaseType):
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    date_pattern: Optional[str] = field(
+    date_pattern: str | None = field(
         default=None,
         metadata={
             "name": "DatePattern",

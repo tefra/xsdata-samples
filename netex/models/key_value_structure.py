@@ -6,7 +6,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class KeyValueStructure:
-    key: Optional[str] = field(
+    key: str | None = field(
         default=None,
         metadata={
             "name": "Key",
@@ -15,7 +15,7 @@ class KeyValueStructure:
             "required": True,
         },
     )
-    value: Optional[str] = field(
+    value: str | None = field(
         default=None,
         metadata={
             "name": "Value",
@@ -24,7 +24,7 @@ class KeyValueStructure:
             "required": True,
         },
     )
-    type_of_key: Optional[str] = field(
+    type_of_key: str | None = field(
         default=None,
         metadata={
             "name": "typeOfKey",

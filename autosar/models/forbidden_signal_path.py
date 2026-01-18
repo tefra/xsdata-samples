@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -49,7 +51,7 @@ class ForbiddenSignalPath:
     class Meta:
         name = "FORBIDDEN-SIGNAL-PATH"
 
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -57,7 +59,7 @@ class ForbiddenSignalPath:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -65,7 +67,7 @@ class ForbiddenSignalPath:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operations: Optional["ForbiddenSignalPath.Operations"] = field(
+    operations: ForbiddenSignalPath.Operations | None = field(
         default=None,
         metadata={
             "name": "OPERATIONS",
@@ -73,9 +75,7 @@ class ForbiddenSignalPath:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channel_refs: Optional[
-        "ForbiddenSignalPath.PhysicalChannelRefs"
-    ] = field(
+    physical_channel_refs: ForbiddenSignalPath.PhysicalChannelRefs | None = field(
         default=None,
         metadata={
             "name": "PHYSICAL-CHANNEL-REFS",
@@ -83,7 +83,7 @@ class ForbiddenSignalPath:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    signals: Optional["ForbiddenSignalPath.Signals"] = field(
+    signals: ForbiddenSignalPath.Signals | None = field(
         default=None,
         metadata={
             "name": "SIGNALS",
@@ -91,14 +91,14 @@ class ForbiddenSignalPath:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -123,7 +123,7 @@ class ForbiddenSignalPath:
     @dataclass
     class PhysicalChannelRefs:
         physical_channel_ref: list[
-            "ForbiddenSignalPath.PhysicalChannelRefs.PhysicalChannelRef"
+            ForbiddenSignalPath.PhysicalChannelRefs.PhysicalChannelRef
         ] = field(
             default_factory=list,
             metadata={
@@ -135,7 +135,7 @@ class ForbiddenSignalPath:
 
         @dataclass
         class PhysicalChannelRef(Ref):
-            dest: Optional[PhysicalChannelSubtypesEnum] = field(
+            dest: PhysicalChannelSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

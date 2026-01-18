@@ -14,7 +14,7 @@ class SaleDiscountRightVersionStructure(FareProductVersionStructure):
     class Meta:
         name = "SaleDiscountRight_VersionStructure"
 
-    product_type: Optional[SaleDiscountRightEnumeration] = field(
+    product_type: SaleDiscountRightEnumeration | None = field(
         default=None,
         metadata={
             "name": "ProductType",
@@ -22,9 +22,7 @@ class SaleDiscountRightVersionStructure(FareProductVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    general_group_of_entities_ref_or_general_group_of_entities: Optional[
-        Union[GeneralGroupOfEntitiesRef, GeneralGroupOfEntities]
-    ] = field(
+    general_group_of_entities_ref_or_general_group_of_entities: GeneralGroupOfEntitiesRef | GeneralGroupOfEntities | None = field(
         default=None,
         metadata={
             "type": "Elements",

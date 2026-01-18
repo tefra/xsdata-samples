@@ -48,7 +48,7 @@ class CoctMt030202Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -71,14 +71,14 @@ class CoctMt030202Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: Optional[AdExplicit] = field(
+    addr: AdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    directions_text: Optional[EdExplicit] = field(
+    directions_text: EdExplicit | None = field(
         default=None,
         metadata={
             "name": "directionsText",
@@ -86,7 +86,7 @@ class CoctMt030202Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    position_text: Optional[EdExplicit] = field(
+    position_text: EdExplicit | None = field(
         default=None,
         metadata={
             "name": "positionText",
@@ -94,7 +94,7 @@ class CoctMt030202Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    gps_text: Optional[St] = field(
+    gps_text: St | None = field(
         default=None,
         metadata={
             "name": "gpsText",
@@ -102,14 +102,14 @@ class CoctMt030202Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[EntityClassPlace] = field(
+    class_code: EntityClassPlace | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -141,7 +141,7 @@ class CoctMt030202Uv01Birthplace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -157,7 +157,7 @@ class CoctMt030202Uv01Birthplace:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    birthplace: Optional[CoctMt030202Uv01Place] = field(
+    birthplace: CoctMt030202Uv01Place | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -165,30 +165,14 @@ class CoctMt030202Uv01Birthplace:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Union[
-        RoleClassMutualRelationship,
-        RoleClassPassive,
-        str,
-        RoleClassOntological,
-        RoleClassPartitive,
-        RoleClassRootValue,
-        XAccommodationRequestorRole,
-        XDocumentEntrySubject,
-        XDocumentSubject,
-        XInformationRecipientRole,
-        XRoleClassAccommodationRequestor,
-        XRoleClassCoverage,
-        XRoleClassCoverageInvoice,
-        XRoleClassCredentialedEntity,
-        XRoleClassPayeePolicyRelationship,
-    ] = field(
+    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
         init=False,
         default=RoleClassPassive.BIRTHPL,
         metadata={
@@ -213,7 +197,7 @@ class CoctMt030202Uv01Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -244,7 +228,7 @@ class CoctMt030202Uv01Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    administrative_gender_code: Optional[Ce] = field(
+    administrative_gender_code: Ce | None = field(
         default=None,
         metadata={
             "name": "administrativeGenderCode",
@@ -252,7 +236,7 @@ class CoctMt030202Uv01Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    birth_time: Optional[TsExplicit] = field(
+    birth_time: TsExplicit | None = field(
         default=None,
         metadata={
             "name": "birthTime",
@@ -260,7 +244,7 @@ class CoctMt030202Uv01Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    birthplace: Optional[CoctMt030202Uv01Birthplace] = field(
+    birthplace: CoctMt030202Uv01Birthplace | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -268,7 +252,7 @@ class CoctMt030202Uv01Person:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",

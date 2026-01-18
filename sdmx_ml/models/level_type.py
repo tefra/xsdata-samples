@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -22,7 +24,7 @@ class LevelType(LevelBaseType):
     :ivar level: Level describes the next level down in the hierarchy.
     """
 
-    coding_format: Optional[CodingTextFormatType] = field(
+    coding_format: CodingTextFormatType | None = field(
         default=None,
         metadata={
             "name": "CodingFormat",
@@ -30,7 +32,7 @@ class LevelType(LevelBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    level: Optional["LevelType"] = field(
+    level: LevelType | None = field(
         default=None,
         metadata={
             "name": "Level",

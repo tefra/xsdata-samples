@@ -14,7 +14,7 @@ class VisibilityInformation(WeatherData):
     Measurements of atmospheric visibility.
     """
 
-    visibility: Optional[Visibility] = field(
+    visibility: Visibility | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -22,7 +22,7 @@ class VisibilityInformation(WeatherData):
             "required": True,
         },
     )
-    visibility_information_extension: Optional[ExtensionType] = field(
+    visibility_information_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "visibilityInformationExtension",

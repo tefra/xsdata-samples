@@ -11,7 +11,7 @@ class VmsMessageIndexVmsMessage:
     class Meta:
         name = "_VmsMessageIndexVmsMessage"
 
-    vms_message: Optional[VmsMessage] = field(
+    vms_message: VmsMessage | None = field(
         default=None,
         metadata={
             "name": "vmsMessage",
@@ -20,7 +20,7 @@ class VmsMessageIndexVmsMessage:
             "required": True,
         },
     )
-    message_index: Optional[int] = field(
+    message_index: int | None = field(
         default=None,
         metadata={
             "name": "messageIndex",

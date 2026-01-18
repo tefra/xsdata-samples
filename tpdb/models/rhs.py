@@ -22,26 +22,26 @@ class Rhs:
     class Meta:
         name = "rhs"
 
-    funapp: Optional[RhsFunapp] = field(
+    funapp: RhsFunapp | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    var: Optional[Var] = field(
+    var: Var | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: Optional[RhsLambda] = field(
+    lambda_value: RhsLambda | None = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    application: Optional[RhsApplication] = field(
+    application: RhsApplication | None = field(
         default=None,
         metadata={
             "type": "Element",

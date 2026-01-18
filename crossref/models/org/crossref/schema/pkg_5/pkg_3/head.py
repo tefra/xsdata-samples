@@ -27,28 +27,28 @@ class Head:
         name = "head"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    doi_batch_id: Optional[DoiBatchId] = field(
+    doi_batch_id: DoiBatchId | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    timestamp: Optional[Timestamp] = field(
+    timestamp: Timestamp | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    depositor: Optional[Depositor] = field(
+    depositor: Depositor | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    registrant: Optional[Registrant] = field(
+    registrant: Registrant | None = field(
         default=None,
         metadata={
             "type": "Element",

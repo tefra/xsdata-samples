@@ -20,7 +20,7 @@ class RoadsideAssistance(OperatorAction):
     :ivar roadside_assistance_extension:
     """
 
-    roadside_assistance_type: Optional[RoadsideAssistanceTypeEnum] = field(
+    roadside_assistance_type: RoadsideAssistanceTypeEnum | None = field(
         default=None,
         metadata={
             "name": "roadsideAssistanceType",
@@ -29,7 +29,7 @@ class RoadsideAssistance(OperatorAction):
             "required": True,
         },
     )
-    roadside_assistance_extension: Optional[ExtensionType] = field(
+    roadside_assistance_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "roadsideAssistanceExtension",

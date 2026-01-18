@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -150,7 +152,7 @@ class BswModuleTiming:
     class Meta:
         name = "BSW-MODULE-TIMING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -159,7 +161,7 @@ class BswModuleTiming:
             "required": True,
         },
     )
-    short_name_fragments: Optional["BswModuleTiming.ShortNameFragments"] = (
+    short_name_fragments: BswModuleTiming.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -169,7 +171,7 @@ class BswModuleTiming:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -177,7 +179,7 @@ class BswModuleTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -185,7 +187,7 @@ class BswModuleTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -193,7 +195,7 @@ class BswModuleTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -201,7 +203,7 @@ class BswModuleTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -209,7 +211,7 @@ class BswModuleTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["BswModuleTiming.Annotations"] = field(
+    annotations: BswModuleTiming.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -217,7 +219,7 @@ class BswModuleTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -225,7 +227,7 @@ class BswModuleTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_conditions: Optional["BswModuleTiming.TimingConditions"] = field(
+    timing_conditions: BswModuleTiming.TimingConditions | None = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITIONS",
@@ -233,7 +235,7 @@ class BswModuleTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_descriptions: Optional["BswModuleTiming.TimingDescriptions"] = (
+    timing_descriptions: BswModuleTiming.TimingDescriptions | None = (
         field(
             default=None,
             metadata={
@@ -243,7 +245,7 @@ class BswModuleTiming:
             },
         )
     )
-    timing_guarantees: Optional["BswModuleTiming.TimingGuarantees"] = field(
+    timing_guarantees: BswModuleTiming.TimingGuarantees | None = field(
         default=None,
         metadata={
             "name": "TIMING-GUARANTEES",
@@ -251,7 +253,7 @@ class BswModuleTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_requirements: Optional["BswModuleTiming.TimingRequirements"] = (
+    timing_requirements: BswModuleTiming.TimingRequirements | None = (
         field(
             default=None,
             metadata={
@@ -261,7 +263,7 @@ class BswModuleTiming:
             },
         )
     )
-    timing_resource: Optional[TimingExtensionResource] = field(
+    timing_resource: TimingExtensionResource | None = field(
         default=None,
         metadata={
             "name": "TIMING-RESOURCE",
@@ -269,7 +271,7 @@ class BswModuleTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    behavior_ref: Optional["BswModuleTiming.BehaviorRef"] = field(
+    behavior_ref: BswModuleTiming.BehaviorRef | None = field(
         default=None,
         metadata={
             "name": "BEHAVIOR-REF",
@@ -277,14 +279,14 @@ class BswModuleTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -292,7 +294,7 @@ class BswModuleTiming:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -748,7 +750,7 @@ class BswModuleTiming:
 
     @dataclass
     class BehaviorRef(Ref):
-        dest: Optional[BswInternalBehaviorSubtypesEnum] = field(
+        dest: BswInternalBehaviorSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -14,7 +14,7 @@ class NoticesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "notices_RelStructure"
 
-    notice_ref_or_notice: Iterable[Union[NoticeRef, Notice]] = field(
+    notice_ref_or_notice: Iterable[NoticeRef | Notice] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

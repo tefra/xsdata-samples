@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -11,14 +13,14 @@ class RhsFunapp:
     class Meta:
         global_type = False
 
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    arg: list["RhsFunappArg"] = field(
+    arg: list[RhsFunappArg] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -48,7 +50,7 @@ class RhsLambda:
             "max_occurs": 2,
         },
     )
-    type_value: Optional[Type] = field(
+    type_value: Type | None = field(
         default=None,
         metadata={
             "name": "type",
@@ -56,20 +58,20 @@ class RhsLambda:
             "required": True,
         },
     )
-    funapp: Optional[RhsFunapp] = field(
+    funapp: RhsFunapp | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: Optional["RhsLambda"] = field(
+    lambda_value: RhsLambda | None = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    application: Optional["RhsApplication"] = field(
+    application: RhsApplication | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -118,7 +120,7 @@ class RhsApplication:
             "sequence": 1,
         },
     )
-    application: list["RhsApplication"] = field(
+    application: list[RhsApplication] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -142,26 +144,26 @@ class RhsFunappArg:
     class Meta:
         global_type = False
 
-    funapp: Optional[RhsFunapp] = field(
+    funapp: RhsFunapp | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    var: Optional[Var] = field(
+    var: Var | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: Optional[RhsLambda] = field(
+    lambda_value: RhsLambda | None = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    application: Optional[RhsApplication] = field(
+    application: RhsApplication | None = field(
         default=None,
         metadata={
             "type": "Element",

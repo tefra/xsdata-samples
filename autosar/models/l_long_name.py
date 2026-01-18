@@ -41,14 +41,14 @@ class LLongName:
     class Meta:
         name = "L-LONG-NAME"
 
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -56,7 +56,7 @@ class LLongName:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    l: Optional[LEnumSimple] = field(
+    l: LEnumSimple | None = field(
         default=None,
         metadata={
             "name": "L",
@@ -64,7 +64,7 @@ class LLongName:
             "required": True,
         },
     )
-    blueprint_value: Optional[str] = field(
+    blueprint_value: str | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-VALUE",

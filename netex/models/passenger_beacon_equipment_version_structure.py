@@ -19,7 +19,7 @@ class PassengerBeaconEquipmentVersionStructure(
     class Meta:
         name = "PassengerBeaconEquipment_VersionStructure"
 
-    accessibility_assessment: Optional[AccessibilityAssessment] = field(
+    accessibility_assessment: AccessibilityAssessment | None = field(
         default=None,
         metadata={
             "name": "AccessibilityAssessment",
@@ -27,7 +27,7 @@ class PassengerBeaconEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    beacon_type: Optional[BeaconTypeEnumeration] = field(
+    beacon_type: BeaconTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "BeaconType",
@@ -35,7 +35,7 @@ class PassengerBeaconEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    beacon_direction: Optional[BeaconDirectionEnumeration] = field(
+    beacon_direction: BeaconDirectionEnumeration | None = field(
         default=None,
         metadata={
             "name": "BeaconDirection",
@@ -43,7 +43,7 @@ class PassengerBeaconEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    beacon_protocol: Optional[BeaconProtocolEnumeration] = field(
+    beacon_protocol: BeaconProtocolEnumeration | None = field(
         default=None,
         metadata={
             "name": "BeaconProtocol",
@@ -51,7 +51,7 @@ class PassengerBeaconEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    beacon_backend_url: Optional[str] = field(
+    beacon_backend_url: str | None = field(
         default=None,
         metadata={
             "name": "BeaconBackendUrl",

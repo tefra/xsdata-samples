@@ -36,7 +36,7 @@ class RoadSurfaceConditionMeasurements:
     :ivar road_surface_condition_measurements_extension:
     """
 
-    road_surface_temperature: Optional[TemperatureValue] = field(
+    road_surface_temperature: TemperatureValue | None = field(
         default=None,
         metadata={
             "name": "roadSurfaceTemperature",
@@ -44,7 +44,7 @@ class RoadSurfaceConditionMeasurements:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    protection_temperature: Optional[TemperatureValue] = field(
+    protection_temperature: TemperatureValue | None = field(
         default=None,
         metadata={
             "name": "protectionTemperature",
@@ -52,7 +52,7 @@ class RoadSurfaceConditionMeasurements:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    de_icing_application_rate: Optional[ApplicationRateValue] = field(
+    de_icing_application_rate: ApplicationRateValue | None = field(
         default=None,
         metadata={
             "name": "deIcingApplicationRate",
@@ -60,7 +60,7 @@ class RoadSurfaceConditionMeasurements:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    de_icing_concentration: Optional[KilogramsConcentrationValue] = field(
+    de_icing_concentration: KilogramsConcentrationValue | None = field(
         default=None,
         metadata={
             "name": "deIcingConcentration",
@@ -68,7 +68,7 @@ class RoadSurfaceConditionMeasurements:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    depth_of_snow: Optional[FloatingPointMetreDistanceValue] = field(
+    depth_of_snow: FloatingPointMetreDistanceValue | None = field(
         default=None,
         metadata={
             "name": "depthOfSnow",
@@ -76,7 +76,7 @@ class RoadSurfaceConditionMeasurements:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    water_film_thickness: Optional[FloatingPointMetreDistanceValue] = field(
+    water_film_thickness: FloatingPointMetreDistanceValue | None = field(
         default=None,
         metadata={
             "name": "waterFilmThickness",
@@ -84,7 +84,7 @@ class RoadSurfaceConditionMeasurements:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    road_surface_condition_measurements_extension: Optional[ExtensionType] = (
+    road_surface_condition_measurements_extension: ExtensionType | None = (
         field(
             default=None,
             metadata={

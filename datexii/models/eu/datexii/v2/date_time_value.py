@@ -18,7 +18,7 @@ class DateTimeValue(DataValue):
     :ivar date_time_value_extension:
     """
 
-    date_time: Optional[XmlDateTime] = field(
+    date_time: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "dateTime",
@@ -27,7 +27,7 @@ class DateTimeValue(DataValue):
             "required": True,
         },
     )
-    date_time_value_extension: Optional[ExtensionType] = field(
+    date_time_value_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "dateTimeValueExtension",

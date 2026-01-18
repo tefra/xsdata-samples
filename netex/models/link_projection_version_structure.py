@@ -14,7 +14,7 @@ class LinkProjectionVersionStructure(ProjectionVersionStructure):
     class Meta:
         name = "LinkProjection_VersionStructure"
 
-    projected_link_ref: Optional[LinkRefStructure] = field(
+    projected_link_ref: LinkRefStructure | None = field(
         default=None,
         metadata={
             "name": "ProjectedLinkRef",
@@ -22,7 +22,7 @@ class LinkProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    project_to_link_ref: Optional[LinkRefStructure] = field(
+    project_to_link_ref: LinkRefStructure | None = field(
         default=None,
         metadata={
             "name": "ProjectToLinkRef",
@@ -30,9 +30,7 @@ class LinkProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_point_on_link_ref_or_start_point_on_link_by_value: Optional[
-        Union[PointOnLinkRefStructure1, PointOnLinkByValueStructure]
-    ] = field(
+    start_point_on_link_ref_or_start_point_on_link_by_value: PointOnLinkRefStructure1 | PointOnLinkByValueStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -50,9 +48,7 @@ class LinkProjectionVersionStructure(ProjectionVersionStructure):
             ),
         },
     )
-    end_point_on_link_ref_or_end_point_on_link_by_value: Optional[
-        Union[PointOnLinkRefStructure1, PointOnLinkByValueStructure]
-    ] = field(
+    end_point_on_link_ref_or_end_point_on_link_by_value: PointOnLinkRefStructure1 | PointOnLinkByValueStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",

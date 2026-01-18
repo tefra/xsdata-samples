@@ -18,13 +18,13 @@ class Kind:
         name = "kind"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: Optional[KindType] = field(
+    value: KindType | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    custom: Optional[str] = field(
+    custom: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -18,7 +18,7 @@ class JourneyRunTimeVersionedChildStructure(
     class Meta:
         name = "JourneyRunTime_VersionedChildStructure"
 
-    timing_link_ref: Optional[TimingLinkRef] = field(
+    timing_link_ref: TimingLinkRef | None = field(
         default=None,
         metadata={
             "name": "TimingLinkRef",
@@ -26,7 +26,7 @@ class JourneyRunTimeVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    run_time: Optional[XmlDuration] = field(
+    run_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "RunTime",

@@ -30,20 +30,20 @@ class DiagnosticWwhObdDtcClassEnum:
     class Meta:
         name = "DIAGNOSTIC-WWH-OBD-DTC-CLASS-ENUM"
 
-    value: Optional[DiagnosticWwhObdDtcClassEnumSimple] = field(
+    value: DiagnosticWwhObdDtcClassEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

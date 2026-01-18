@@ -15,7 +15,7 @@ class IndividualTravellersRelStructure(ContainmentAggregationStructure):
         name = "individualTravellers_RelStructure"
 
     individual_traveller_ref_or_individual_traveller: Iterable[
-        Union[IndividualTravellerRef, IndividualTraveller]
+        IndividualTravellerRef | IndividualTraveller
     ] = field(
         default_factory=list,
         metadata={

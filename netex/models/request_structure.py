@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class RequestStructure(AuthenticatedRequestStructure):
-    address: Optional[str] = field(
+    address: str | None = field(
         default=None,
         metadata={
             "name": "Address",
@@ -19,7 +19,7 @@ class RequestStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    requestor_ref: Optional[RequestorRef] = field(
+    requestor_ref: RequestorRef | None = field(
         default=None,
         metadata={
             "name": "RequestorRef",
@@ -28,7 +28,7 @@ class RequestStructure(AuthenticatedRequestStructure):
             "required": True,
         },
     )
-    message_identifier: Optional[MessageQualifierStructure] = field(
+    message_identifier: MessageQualifierStructure | None = field(
         default=None,
         metadata={
             "name": "MessageIdentifier",
@@ -36,7 +36,7 @@ class RequestStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_address: Optional[str] = field(
+    delegator_address: str | None = field(
         default=None,
         metadata={
             "name": "DelegatorAddress",
@@ -44,7 +44,7 @@ class RequestStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: Optional[ParticipantRefStructure] = field(
+    delegator_ref: ParticipantRefStructure | None = field(
         default=None,
         metadata={
             "name": "DelegatorRef",

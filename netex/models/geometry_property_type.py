@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class GeometryPropertyType:
-    choice: Optional[Union[MultiSurface, Polygon, LineString, Point1]] = field(
+    choice: MultiSurface | Polygon | LineString | Point1 | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -40,7 +40,7 @@ class GeometryPropertyType:
             ),
         },
     )
-    nil_reason: Optional[Union[str, NilReasonEnumerationValue]] = field(
+    nil_reason: str | NilReasonEnumerationValue | None = field(
         default=None,
         metadata={
             "name": "nilReason",

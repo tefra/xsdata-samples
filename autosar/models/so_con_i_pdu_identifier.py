@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -57,7 +59,7 @@ class SoConIPduIdentifier:
     class Meta:
         name = "SO-CON-I-PDU-IDENTIFIER"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -66,9 +68,7 @@ class SoConIPduIdentifier:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SoConIPduIdentifier.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SoConIPduIdentifier.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -76,7 +76,7 @@ class SoConIPduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    header_id: Optional[PositiveInteger] = field(
+    header_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "HEADER-ID",
@@ -84,7 +84,7 @@ class SoConIPduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_collection_pdu_timeout: Optional[TimeValue] = field(
+    pdu_collection_pdu_timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "PDU-COLLECTION-PDU-TIMEOUT",
@@ -92,7 +92,7 @@ class SoConIPduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_collection_semantics: Optional[PduCollectionSemanticsEnum] = field(
+    pdu_collection_semantics: PduCollectionSemanticsEnum | None = field(
         default=None,
         metadata={
             "name": "PDU-COLLECTION-SEMANTICS",
@@ -100,7 +100,7 @@ class SoConIPduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_collection_trigger: Optional[PduCollectionTriggerEnum] = field(
+    pdu_collection_trigger: PduCollectionTriggerEnum | None = field(
         default=None,
         metadata={
             "name": "PDU-COLLECTION-TRIGGER",
@@ -108,7 +108,7 @@ class SoConIPduIdentifier:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggering_ref: Optional["SoConIPduIdentifier.PduTriggeringRef"] = (
+    pdu_triggering_ref: SoConIPduIdentifier.PduTriggeringRef | None = (
         field(
             default=None,
             metadata={
@@ -118,14 +118,14 @@ class SoConIPduIdentifier:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -147,7 +147,7 @@ class SoConIPduIdentifier:
 
     @dataclass
     class PduTriggeringRef(Ref):
-        dest: Optional[PduTriggeringSubtypesEnum] = field(
+        dest: PduTriggeringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

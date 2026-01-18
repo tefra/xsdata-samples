@@ -42,7 +42,7 @@ class DataFilter:
     class Meta:
         name = "DATA-FILTER"
 
-    data_filter_type: Optional[DataFilterTypeEnum] = field(
+    data_filter_type: DataFilterTypeEnum | None = field(
         default=None,
         metadata={
             "name": "DATA-FILTER-TYPE",
@@ -50,7 +50,7 @@ class DataFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mask: Optional[UnlimitedInteger] = field(
+    mask: UnlimitedInteger | None = field(
         default=None,
         metadata={
             "name": "MASK",
@@ -58,7 +58,7 @@ class DataFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max: Optional[UnlimitedInteger] = field(
+    max: UnlimitedInteger | None = field(
         default=None,
         metadata={
             "name": "MAX",
@@ -66,7 +66,7 @@ class DataFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min: Optional[UnlimitedInteger] = field(
+    min: UnlimitedInteger | None = field(
         default=None,
         metadata={
             "name": "MIN",
@@ -74,7 +74,7 @@ class DataFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    offset: Optional[PositiveInteger] = field(
+    offset: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "OFFSET",
@@ -82,7 +82,7 @@ class DataFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    period: Optional[PositiveInteger] = field(
+    period: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "PERIOD",
@@ -90,7 +90,7 @@ class DataFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    x: Optional[UnlimitedInteger] = field(
+    x: UnlimitedInteger | None = field(
         default=None,
         metadata={
             "name": "X",
@@ -98,14 +98,14 @@ class DataFilter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

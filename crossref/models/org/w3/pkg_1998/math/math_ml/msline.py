@@ -14,13 +14,13 @@ class Msline:
         name = "msline"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: Optional[object] = field(
+    xref: object | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -34,19 +34,19 @@ class Msline:
             "tokens": True,
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: Optional[object] = field(
+    other: object | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -59,47 +59,47 @@ class Msline:
             "namespace": "##other",
         },
     )
-    mathcolor: Optional[str] = field(
+    mathcolor: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    mathbackground: Optional[Union[str, MslineValue]] = field(
+    mathbackground: str | MslineValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((#[0-9a-fA-F]{3}([0-9a-fA-F]{3})?)|[aA][qQ][uU][aA]|[bB][lL][aA][cC][kK]|[bB][lL][uU][eE]|[fF][uU][cC][hH][sS][iI][aA]|[gG][rR][aA][yY]|[gG][rR][eE][eE][nN]|[lL][iI][mM][eE]|[mM][aA][rR][oO][oO][nN]|[nN][aA][vV][yY]|[oO][lL][iI][vV][eE]|[pP][uU][rR][pP][lL][eE]|[rR][eE][dD]|[sS][iI][lL][vV][eE][rR]|[tT][eE][aA][lL]|[wW][hH][iI][tT][eE]|[yY][eE][lL][lL][oO][wW])\s*",
         },
     )
-    position: Optional[int] = field(
+    position: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    length: Optional[int] = field(
+    length: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    leftoverhang: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
-        },
-    )
-    rightoverhang: Optional[str] = field(
+    leftoverhang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
         },
     )
-    mslinethickness: Optional[Union[str, MslineValue]] = field(
+    rightoverhang: str | None = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "pattern": r"\s*((-?[0-9]*([0-9]\.?|\.[0-9])[0-9]*(e[mx]|in|cm|mm|p[xtc]|%)?)|(negative)?((very){0,2}thi(n|ck)|medium)mathspace)\s*",
+        },
+    )
+    mslinethickness: str | MslineValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",

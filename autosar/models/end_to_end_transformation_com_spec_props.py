@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -106,7 +108,7 @@ class EndToEndTransformationComSpecProps:
     class Meta:
         name = "END-TO-END-TRANSFORMATION-COM-SPEC-PROPS"
 
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -114,7 +116,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -122,7 +124,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -130,7 +132,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -138,7 +140,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    clear_from_valid_to_invalid: Optional[Boolean] = field(
+    clear_from_valid_to_invalid: Boolean | None = field(
         default=None,
         metadata={
             "name": "CLEAR-FROM-VALID-TO-INVALID",
@@ -146,7 +148,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disable_end_to_end_check: Optional[Boolean] = field(
+    disable_end_to_end_check: Boolean | None = field(
         default=None,
         metadata={
             "name": "DISABLE-END-TO-END-CHECK",
@@ -154,7 +156,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disable_end_to_end_state_machine: Optional[Boolean] = field(
+    disable_end_to_end_state_machine: Boolean | None = field(
         default=None,
         metadata={
             "name": "DISABLE-END-TO-END-STATE-MACHINE",
@@ -162,9 +164,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    e_2_e_profile_compatibility_props_ref: Optional[
-        "EndToEndTransformationComSpecProps.E2EProfileCompatibilityPropsRef"
-    ] = field(
+    e_2_e_profile_compatibility_props_ref: EndToEndTransformationComSpecProps.E2EProfileCompatibilityPropsRef | None = field(
         default=None,
         metadata={
             "name": "E-2-E-PROFILE-COMPATIBILITY-PROPS-REF",
@@ -172,7 +172,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_delta_counter: Optional[PositiveInteger] = field(
+    max_delta_counter: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-DELTA-COUNTER",
@@ -180,7 +180,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_error_state_init: Optional[PositiveInteger] = field(
+    max_error_state_init: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-ERROR-STATE-INIT",
@@ -188,7 +188,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_error_state_invalid: Optional[PositiveInteger] = field(
+    max_error_state_invalid: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-ERROR-STATE-INVALID",
@@ -196,7 +196,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_error_state_valid: Optional[PositiveInteger] = field(
+    max_error_state_valid: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-ERROR-STATE-VALID",
@@ -204,7 +204,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_no_new_or_repeated_data: Optional[PositiveInteger] = field(
+    max_no_new_or_repeated_data: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-NO-NEW-OR-REPEATED-DATA",
@@ -212,7 +212,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_ok_state_init: Optional[PositiveInteger] = field(
+    min_ok_state_init: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MIN-OK-STATE-INIT",
@@ -220,7 +220,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_ok_state_invalid: Optional[PositiveInteger] = field(
+    min_ok_state_invalid: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MIN-OK-STATE-INVALID",
@@ -228,7 +228,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_ok_state_valid: Optional[PositiveInteger] = field(
+    min_ok_state_valid: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MIN-OK-STATE-VALID",
@@ -236,7 +236,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sync_counter_init: Optional[PositiveInteger] = field(
+    sync_counter_init: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SYNC-COUNTER-INIT",
@@ -244,7 +244,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    window_size: Optional[PositiveInteger] = field(
+    window_size: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "WINDOW-SIZE",
@@ -252,7 +252,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    window_size_init: Optional[PositiveInteger] = field(
+    window_size_init: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "WINDOW-SIZE-INIT",
@@ -260,7 +260,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    window_size_invalid: Optional[PositiveInteger] = field(
+    window_size_invalid: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "WINDOW-SIZE-INVALID",
@@ -268,7 +268,7 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    window_size_valid: Optional[PositiveInteger] = field(
+    window_size_valid: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "WINDOW-SIZE-VALID",
@@ -276,14 +276,14 @@ class EndToEndTransformationComSpecProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -294,7 +294,7 @@ class EndToEndTransformationComSpecProps:
 
     @dataclass
     class E2EProfileCompatibilityPropsRef(Ref):
-        dest: Optional[E2EProfileCompatibilityPropsSubtypesEnum] = field(
+        dest: E2EProfileCompatibilityPropsSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

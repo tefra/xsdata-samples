@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -50,7 +52,7 @@ class NmCoordinator:
     class Meta:
         name = "NM-COORDINATOR"
 
-    index: Optional[Integer] = field(
+    index: Integer | None = field(
         default=None,
         metadata={
             "name": "INDEX",
@@ -58,7 +60,7 @@ class NmCoordinator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_active_coordinator: Optional[Boolean] = field(
+    nm_active_coordinator: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-ACTIVE-COORDINATOR",
@@ -66,7 +68,7 @@ class NmCoordinator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_coord_sync_support: Optional[Boolean] = field(
+    nm_coord_sync_support: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-COORD-SYNC-SUPPORT",
@@ -74,7 +76,7 @@ class NmCoordinator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_global_coordinator_time: Optional[TimeValue] = field(
+    nm_global_coordinator_time: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NM-GLOBAL-COORDINATOR-TIME",
@@ -82,7 +84,7 @@ class NmCoordinator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_node_refs: Optional["NmCoordinator.NmNodeRefs"] = field(
+    nm_node_refs: NmCoordinator.NmNodeRefs | None = field(
         default=None,
         metadata={
             "name": "NM-NODE-REFS",
@@ -90,7 +92,7 @@ class NmCoordinator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_shutdown_delay_timer: Optional[TimeValue] = field(
+    nm_shutdown_delay_timer: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NM-SHUTDOWN-DELAY-TIMER",
@@ -98,14 +100,14 @@ class NmCoordinator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -116,7 +118,7 @@ class NmCoordinator:
 
     @dataclass
     class NmNodeRefs:
-        nm_node_ref: list["NmCoordinator.NmNodeRefs.NmNodeRef"] = field(
+        nm_node_ref: list[NmCoordinator.NmNodeRefs.NmNodeRef] = field(
             default_factory=list,
             metadata={
                 "name": "NM-NODE-REF",
@@ -127,7 +129,7 @@ class NmCoordinator:
 
         @dataclass
         class NmNodeRef(Ref):
-            dest: Optional[NmNodeSubtypesEnum] = field(
+            dest: NmNodeSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

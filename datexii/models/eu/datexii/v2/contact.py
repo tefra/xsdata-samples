@@ -23,7 +23,7 @@ class Contact:
     :ivar contact_extension:
     """
 
-    contact_unknown: Optional[bool] = field(
+    contact_unknown: bool | None = field(
         default=None,
         metadata={
             "name": "contactUnknown",
@@ -31,7 +31,7 @@ class Contact:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    contact_not_defined: Optional[bool] = field(
+    contact_not_defined: bool | None = field(
         default=None,
         metadata={
             "name": "contactNotDefined",
@@ -39,7 +39,7 @@ class Contact:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    validity_of_contact: Optional[OverallPeriod] = field(
+    validity_of_contact: OverallPeriod | None = field(
         default=None,
         metadata={
             "name": "validityOfContact",
@@ -47,7 +47,7 @@ class Contact:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    contact_extension: Optional[ExtensionType] = field(
+    contact_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "contactExtension",

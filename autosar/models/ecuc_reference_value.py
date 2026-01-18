@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -49,7 +51,7 @@ class EcucReferenceValue:
     class Meta:
         name = "ECUC-REFERENCE-VALUE"
 
-    index: Optional[PositiveInteger] = field(
+    index: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "INDEX",
@@ -57,7 +59,7 @@ class EcucReferenceValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    definition_ref: Optional["EcucReferenceValue.DefinitionRef"] = field(
+    definition_ref: EcucReferenceValue.DefinitionRef | None = field(
         default=None,
         metadata={
             "name": "DEFINITION-REF",
@@ -65,7 +67,7 @@ class EcucReferenceValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["EcucReferenceValue.Annotations"] = field(
+    annotations: EcucReferenceValue.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -73,7 +75,7 @@ class EcucReferenceValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -81,7 +83,7 @@ class EcucReferenceValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_ref: Optional["EcucReferenceValue.ValueRef"] = field(
+    value_ref: EcucReferenceValue.ValueRef | None = field(
         default=None,
         metadata={
             "name": "VALUE-REF",
@@ -89,14 +91,14 @@ class EcucReferenceValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -107,7 +109,7 @@ class EcucReferenceValue:
 
     @dataclass
     class DefinitionRef(Ref):
-        dest: Optional[EcucAbstractReferenceDefSubtypesEnum] = field(
+        dest: EcucAbstractReferenceDefSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -129,7 +131,7 @@ class EcucReferenceValue:
 
     @dataclass
     class ValueRef(Ref):
-        dest: Optional[ReferrableSubtypesEnum] = field(
+        dest: ReferrableSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

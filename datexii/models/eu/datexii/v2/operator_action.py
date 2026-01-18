@@ -30,7 +30,7 @@ class OperatorAction(SituationRecord):
     :ivar operator_action_extension:
     """
 
-    action_origin: Optional[OperatorActionOriginEnum] = field(
+    action_origin: OperatorActionOriginEnum | None = field(
         default=None,
         metadata={
             "name": "actionOrigin",
@@ -38,7 +38,7 @@ class OperatorAction(SituationRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    action_plan_identifier: Optional[str] = field(
+    action_plan_identifier: str | None = field(
         default=None,
         metadata={
             "name": "actionPlanIdentifier",
@@ -47,7 +47,7 @@ class OperatorAction(SituationRecord):
             "max_length": 1024,
         },
     )
-    operator_action_status: Optional[OperatorActionStatusEnum] = field(
+    operator_action_status: OperatorActionStatusEnum | None = field(
         default=None,
         metadata={
             "name": "operatorActionStatus",
@@ -55,7 +55,7 @@ class OperatorAction(SituationRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    operator_action_extension: Optional[ExtensionType] = field(
+    operator_action_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "operatorActionExtension",

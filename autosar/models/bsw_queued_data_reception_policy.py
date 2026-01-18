@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class BswQueuedDataReceptionPolicy:
     class Meta:
         name = "BSW-QUEUED-DATA-RECEPTION-POLICY"
 
-    enable_take_address: Optional[Boolean] = field(
+    enable_take_address: Boolean | None = field(
         default=None,
         metadata={
             "name": "ENABLE-TAKE-ADDRESS",
@@ -47,9 +49,7 @@ class BswQueuedDataReceptionPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    received_data_ref: Optional[
-        "BswQueuedDataReceptionPolicy.ReceivedDataRef"
-    ] = field(
+    received_data_ref: BswQueuedDataReceptionPolicy.ReceivedDataRef | None = field(
         default=None,
         metadata={
             "name": "RECEIVED-DATA-REF",
@@ -57,7 +57,7 @@ class BswQueuedDataReceptionPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -65,7 +65,7 @@ class BswQueuedDataReceptionPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    queue_length: Optional[PositiveInteger] = field(
+    queue_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "QUEUE-LENGTH",
@@ -73,14 +73,14 @@ class BswQueuedDataReceptionPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -91,7 +91,7 @@ class BswQueuedDataReceptionPolicy:
 
     @dataclass
     class ReceivedDataRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -114,7 +116,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
     class Meta:
         name = "CP-SOFTWARE-CLUSTER-BINARY-MANIFEST-DESCRIPTOR"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -123,9 +125,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "CpSoftwareClusterBinaryManifestDescriptor.ShortNameFragments"
-    ] = field(
+    short_name_fragments: CpSoftwareClusterBinaryManifestDescriptor.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -133,7 +133,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -141,7 +141,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -149,7 +149,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -157,7 +157,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -165,7 +165,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -173,9 +173,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "CpSoftwareClusterBinaryManifestDescriptor.Annotations"
-    ] = field(
+    annotations: CpSoftwareClusterBinaryManifestDescriptor.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -183,7 +181,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -191,9 +189,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cp_software_cluster_ref: Optional[
-        "CpSoftwareClusterBinaryManifestDescriptor.CpSoftwareClusterRef"
-    ] = field(
+    cp_software_cluster_ref: CpSoftwareClusterBinaryManifestDescriptor.CpSoftwareClusterRef | None = field(
         default=None,
         metadata={
             "name": "CP-SOFTWARE-CLUSTER-REF",
@@ -201,9 +197,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    meta_data_fields: Optional[
-        "CpSoftwareClusterBinaryManifestDescriptor.MetaDataFields"
-    ] = field(
+    meta_data_fields: CpSoftwareClusterBinaryManifestDescriptor.MetaDataFields | None = field(
         default=None,
         metadata={
             "name": "META-DATA-FIELDS",
@@ -211,9 +205,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provide_resources: Optional[
-        "CpSoftwareClusterBinaryManifestDescriptor.ProvideResources"
-    ] = field(
+    provide_resources: CpSoftwareClusterBinaryManifestDescriptor.ProvideResources | None = field(
         default=None,
         metadata={
             "name": "PROVIDE-RESOURCES",
@@ -221,9 +213,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    require_resources: Optional[
-        "CpSoftwareClusterBinaryManifestDescriptor.RequireResources"
-    ] = field(
+    require_resources: CpSoftwareClusterBinaryManifestDescriptor.RequireResources | None = field(
         default=None,
         metadata={
             "name": "REQUIRE-RESOURCES",
@@ -231,9 +221,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    resource_definitions: Optional[
-        "CpSoftwareClusterBinaryManifestDescriptor.ResourceDefinitions"
-    ] = field(
+    resource_definitions: CpSoftwareClusterBinaryManifestDescriptor.ResourceDefinitions | None = field(
         default=None,
         metadata={
             "name": "RESOURCE-DEFINITIONS",
@@ -241,7 +229,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_cluster_id: Optional[PositiveInteger] = field(
+    software_cluster_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SOFTWARE-CLUSTER-ID",
@@ -249,14 +237,14 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -264,7 +252,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -296,7 +284,7 @@ class CpSoftwareClusterBinaryManifestDescriptor:
 
     @dataclass
     class CpSoftwareClusterRef(Ref):
-        dest: Optional[CpSoftwareClusterSubtypesEnum] = field(
+        dest: CpSoftwareClusterSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

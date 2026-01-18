@@ -17,7 +17,7 @@ class JourneyInterchangesInFrameRelStructure(ContainmentAggregationStructure):
         name = "journeyInterchangesInFrame_RelStructure"
 
     service_journey_pattern_interchange_or_service_journey_interchange: Iterable[
-        Union[ServiceJourneyPatternInterchange, ServiceJourneyInterchange]
+        ServiceJourneyPatternInterchange | ServiceJourneyInterchange
     ] = field(
         default_factory=list,
         metadata={

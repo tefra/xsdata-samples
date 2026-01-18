@@ -27,20 +27,20 @@ class OrientEnum:
     class Meta:
         name = "ORIENT-ENUM"
 
-    value: Optional[OrientEnumSimple] = field(
+    value: OrientEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -39,21 +39,21 @@ class MeasurementSpecificCharacteristics:
     :ivar measurement_specific_characteristics_extension:
     """
 
-    accuracy: Optional[float] = field(
+    accuracy: float | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    period: Optional[float] = field(
+    period: float | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    smoothing_factor: Optional[float] = field(
+    smoothing_factor: float | None = field(
         default=None,
         metadata={
             "name": "smoothingFactor",
@@ -61,7 +61,7 @@ class MeasurementSpecificCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    specific_lane: Optional[LaneEnum] = field(
+    specific_lane: LaneEnum | None = field(
         default=None,
         metadata={
             "name": "specificLane",
@@ -69,9 +69,7 @@ class MeasurementSpecificCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    specific_measurement_value_type: Optional[
-        MeasuredOrDerivedDataTypeEnum
-    ] = field(
+    specific_measurement_value_type: MeasuredOrDerivedDataTypeEnum | None = field(
         default=None,
         metadata={
             "name": "specificMeasurementValueType",
@@ -80,7 +78,7 @@ class MeasurementSpecificCharacteristics:
             "required": True,
         },
     )
-    specific_vehicle_characteristics: Optional[VehicleCharacteristics] = field(
+    specific_vehicle_characteristics: VehicleCharacteristics | None = field(
         default=None,
         metadata={
             "name": "specificVehicleCharacteristics",
@@ -88,7 +86,7 @@ class MeasurementSpecificCharacteristics:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_specific_characteristics_extension: Optional[ExtensionType] = (
+    measurement_specific_characteristics_extension: ExtensionType | None = (
         field(
             default=None,
             metadata={

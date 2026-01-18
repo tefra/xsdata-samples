@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -94,7 +96,7 @@ class TdEventVfbReference:
     class Meta:
         name = "TD-EVENT-VFB-REFERENCE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -103,9 +105,7 @@ class TdEventVfbReference:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "TdEventVfbReference.ShortNameFragments"
-    ] = field(
+    short_name_fragments: TdEventVfbReference.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -113,7 +113,7 @@ class TdEventVfbReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class TdEventVfbReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class TdEventVfbReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class TdEventVfbReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class TdEventVfbReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +153,7 @@ class TdEventVfbReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["TdEventVfbReference.Annotations"] = field(
+    annotations: TdEventVfbReference.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,7 +161,7 @@ class TdEventVfbReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -169,7 +169,7 @@ class TdEventVfbReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    occurrence_expression: Optional[TdEventOccurrenceExpression] = field(
+    occurrence_expression: TdEventOccurrenceExpression | None = field(
         default=None,
         metadata={
             "name": "OCCURRENCE-EXPRESSION",
@@ -177,7 +177,7 @@ class TdEventVfbReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    component_iref: Optional[ComponentInCompositionInstanceRef] = field(
+    component_iref: ComponentInCompositionInstanceRef | None = field(
         default=None,
         metadata={
             "name": "COMPONENT-IREF",
@@ -185,9 +185,7 @@ class TdEventVfbReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    referenced_td_event_vfb_ref: Optional[
-        "TdEventVfbReference.ReferencedTdEventVfbRef"
-    ] = field(
+    referenced_td_event_vfb_ref: TdEventVfbReference.ReferencedTdEventVfbRef | None = field(
         default=None,
         metadata={
             "name": "REFERENCED-TD-EVENT-VFB-REF",
@@ -195,14 +193,14 @@ class TdEventVfbReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -210,7 +208,7 @@ class TdEventVfbReference:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -242,7 +240,7 @@ class TdEventVfbReference:
 
     @dataclass
     class ReferencedTdEventVfbRef(Ref):
-        dest: Optional[TdEventVfbSubtypesEnum] = field(
+        dest: TdEventVfbSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

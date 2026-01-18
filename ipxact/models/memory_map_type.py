@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -42,7 +44,7 @@ class MemoryMapType:
     class Meta:
         name = "memoryMapType"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -50,7 +52,7 @@ class MemoryMapType:
             "required": True,
         },
     )
-    display_name: Optional[DisplayName] = field(
+    display_name: DisplayName | None = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -58,7 +60,7 @@ class MemoryMapType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -66,16 +68,14 @@ class MemoryMapType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    memory_map_definition_ref: Optional[
-        "MemoryMapType.MemoryMapDefinitionRef"
-    ] = field(
+    memory_map_definition_ref: MemoryMapType.MemoryMapDefinitionRef | None = field(
         default=None,
         metadata={
             "name": "memoryMapDefinitionRef",
@@ -114,7 +114,7 @@ class MemoryMapType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    address_unit_bits: Optional[AddressUnitBits] = field(
+    address_unit_bits: AddressUnitBits | None = field(
         default=None,
         metadata={
             "name": "addressUnitBits",
@@ -122,14 +122,14 @@ class MemoryMapType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    shared: Optional[SharedType] = field(
+    shared: SharedType | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -137,7 +137,7 @@ class MemoryMapType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -153,7 +153,7 @@ class MemoryMapType:
                 "required": True,
             },
         )
-        type_definitions: Optional[str] = field(
+        type_definitions: str | None = field(
             default=None,
             metadata={
                 "name": "typeDefinitions",

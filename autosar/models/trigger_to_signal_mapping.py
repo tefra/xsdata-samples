@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -60,7 +62,7 @@ class TriggerToSignalMapping:
     class Meta:
         name = "TRIGGER-TO-SIGNAL-MAPPING"
 
-    communication_direction: Optional[CommunicationDirectionType] = field(
+    communication_direction: CommunicationDirectionType | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-DIRECTION",
@@ -68,7 +70,7 @@ class TriggerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_refs: Optional["TriggerToSignalMapping.EventGroupRefs"] = (
+    event_group_refs: TriggerToSignalMapping.EventGroupRefs | None = (
         field(
             default=None,
             metadata={
@@ -78,7 +80,7 @@ class TriggerToSignalMapping:
             },
         )
     )
-    event_handler_refs: Optional["TriggerToSignalMapping.EventHandlerRefs"] = (
+    event_handler_refs: TriggerToSignalMapping.EventHandlerRefs | None = (
         field(
             default=None,
             metadata={
@@ -88,7 +90,7 @@ class TriggerToSignalMapping:
             },
         )
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -96,9 +98,7 @@ class TriggerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_refs: Optional[
-        "TriggerToSignalMapping.ServiceInstanceRefs"
-    ] = field(
+    service_instance_refs: TriggerToSignalMapping.ServiceInstanceRefs | None = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REFS",
@@ -106,7 +106,7 @@ class TriggerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -114,7 +114,7 @@ class TriggerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_iref: Optional[TriggerInSystemInstanceRef] = field(
+    trigger_iref: TriggerInSystemInstanceRef | None = field(
         default=None,
         metadata={
             "name": "TRIGGER-IREF",
@@ -122,7 +122,7 @@ class TriggerToSignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_signal_ref: Optional["TriggerToSignalMapping.SystemSignalRef"] = (
+    system_signal_ref: TriggerToSignalMapping.SystemSignalRef | None = (
         field(
             default=None,
             metadata={
@@ -132,14 +132,14 @@ class TriggerToSignalMapping:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -151,7 +151,7 @@ class TriggerToSignalMapping:
     @dataclass
     class EventGroupRefs:
         event_group_ref: list[
-            "TriggerToSignalMapping.EventGroupRefs.EventGroupRef"
+            TriggerToSignalMapping.EventGroupRefs.EventGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -163,7 +163,7 @@ class TriggerToSignalMapping:
 
         @dataclass
         class EventGroupRef(Ref):
-            dest: Optional[ConsumedEventGroupSubtypesEnum] = field(
+            dest: ConsumedEventGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -175,7 +175,7 @@ class TriggerToSignalMapping:
     @dataclass
     class EventHandlerRefs:
         event_handler_ref: list[
-            "TriggerToSignalMapping.EventHandlerRefs.EventHandlerRef"
+            TriggerToSignalMapping.EventHandlerRefs.EventHandlerRef
         ] = field(
             default_factory=list,
             metadata={
@@ -187,7 +187,7 @@ class TriggerToSignalMapping:
 
         @dataclass
         class EventHandlerRef(Ref):
-            dest: Optional[EventHandlerSubtypesEnum] = field(
+            dest: EventHandlerSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -199,7 +199,7 @@ class TriggerToSignalMapping:
     @dataclass
     class ServiceInstanceRefs:
         service_instance_ref: list[
-            "TriggerToSignalMapping.ServiceInstanceRefs.ServiceInstanceRef"
+            TriggerToSignalMapping.ServiceInstanceRefs.ServiceInstanceRef
         ] = field(
             default_factory=list,
             metadata={
@@ -211,7 +211,7 @@ class TriggerToSignalMapping:
 
         @dataclass
         class ServiceInstanceRef(Ref):
-            dest: Optional[AbstractServiceInstanceSubtypesEnum] = field(
+            dest: AbstractServiceInstanceSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -222,7 +222,7 @@ class TriggerToSignalMapping:
 
     @dataclass
     class SystemSignalRef(Ref):
-        dest: Optional[SystemSignalSubtypesEnum] = field(
+        dest: SystemSignalSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

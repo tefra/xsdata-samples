@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -40,7 +42,7 @@ class SignalIPduReplication:
     class Meta:
         name = "SIGNAL-I-PDU-REPLICATION"
 
-    pdu_replication_voting: Optional[Integer] = field(
+    pdu_replication_voting: Integer | None = field(
         default=None,
         metadata={
             "name": "PDU-REPLICATION-VOTING",
@@ -48,7 +50,7 @@ class SignalIPduReplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    replica_pdus_refs: Optional["SignalIPduReplication.ReplicaPdusRefs"] = (
+    replica_pdus_refs: SignalIPduReplication.ReplicaPdusRefs | None = (
         field(
             default=None,
             metadata={
@@ -58,7 +60,7 @@ class SignalIPduReplication:
             },
         )
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -66,14 +68,14 @@ class SignalIPduReplication:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -85,7 +87,7 @@ class SignalIPduReplication:
     @dataclass
     class ReplicaPdusRefs:
         replica_pdus_ref: list[
-            "SignalIPduReplication.ReplicaPdusRefs.ReplicaPdusRef"
+            SignalIPduReplication.ReplicaPdusRefs.ReplicaPdusRef
         ] = field(
             default_factory=list,
             metadata={
@@ -98,7 +100,7 @@ class SignalIPduReplication:
 
         @dataclass
         class ReplicaPdusRef(Ref):
-            dest: Optional[ISignalIPduSubtypesEnum] = field(
+            dest: ISignalIPduSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

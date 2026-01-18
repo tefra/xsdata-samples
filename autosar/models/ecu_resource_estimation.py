@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -48,7 +50,7 @@ class EcuResourceEstimation:
     class Meta:
         name = "ECU-RESOURCE-ESTIMATION"
 
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -56,7 +58,7 @@ class EcuResourceEstimation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_resource_estimation: Optional[ResourceConsumption] = field(
+    bsw_resource_estimation: ResourceConsumption | None = field(
         default=None,
         metadata={
             "name": "BSW-RESOURCE-ESTIMATION",
@@ -64,7 +66,7 @@ class EcuResourceEstimation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: Optional["EcuResourceEstimation.EcuInstanceRef"] = field(
+    ecu_instance_ref: EcuResourceEstimation.EcuInstanceRef | None = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
@@ -72,7 +74,7 @@ class EcuResourceEstimation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rte_resource_estimation: Optional[ResourceConsumption] = field(
+    rte_resource_estimation: ResourceConsumption | None = field(
         default=None,
         metadata={
             "name": "RTE-RESOURCE-ESTIMATION",
@@ -80,9 +82,7 @@ class EcuResourceEstimation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_comp_to_ecu_mapping_refs: Optional[
-        "EcuResourceEstimation.SwCompToEcuMappingRefs"
-    ] = field(
+    sw_comp_to_ecu_mapping_refs: EcuResourceEstimation.SwCompToEcuMappingRefs | None = field(
         default=None,
         metadata={
             "name": "SW-COMP-TO-ECU-MAPPING-REFS",
@@ -90,7 +90,7 @@ class EcuResourceEstimation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -98,14 +98,14 @@ class EcuResourceEstimation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -116,7 +116,7 @@ class EcuResourceEstimation:
 
     @dataclass
     class EcuInstanceRef(Ref):
-        dest: Optional[EcuInstanceSubtypesEnum] = field(
+        dest: EcuInstanceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -128,7 +128,7 @@ class EcuResourceEstimation:
     @dataclass
     class SwCompToEcuMappingRefs:
         sw_comp_to_ecu_mapping_ref: list[
-            "EcuResourceEstimation.SwCompToEcuMappingRefs.SwCompToEcuMappingRef"
+            EcuResourceEstimation.SwCompToEcuMappingRefs.SwCompToEcuMappingRef
         ] = field(
             default_factory=list,
             metadata={
@@ -140,7 +140,7 @@ class EcuResourceEstimation:
 
         @dataclass
         class SwCompToEcuMappingRef(Ref):
-            dest: Optional[SwcToEcuMappingSubtypesEnum] = field(
+            dest: SwcToEcuMappingSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

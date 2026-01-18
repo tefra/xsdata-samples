@@ -27,22 +27,7 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
         name = "versionFrameRefs_RelStructure"
 
     version_frame_ref: Iterable[
-        Union[
-            MobilityJourneyFrameRef,
-            MobilityServiceFrameRef,
-            SalesTransactionFrameRef,
-            FareFrameRef,
-            ServiceFrameRef,
-            DriverScheduleFrameRef,
-            VehicleScheduleFrameRef,
-            TimetableFrameRef,
-            SiteFrameRef,
-            InfrastructureFrameRef,
-            GeneralFrameRef,
-            ResourceFrameRef,
-            ServiceCalendarFrameRef,
-            CompositeFrameRef,
-        ]
+        MobilityJourneyFrameRef | MobilityServiceFrameRef | SalesTransactionFrameRef | FareFrameRef | ServiceFrameRef | DriverScheduleFrameRef | VehicleScheduleFrameRef | TimetableFrameRef | SiteFrameRef | InfrastructureFrameRef | GeneralFrameRef | ResourceFrameRef | ServiceCalendarFrameRef | CompositeFrameRef
     ] = field(
         default_factory=list,
         metadata={

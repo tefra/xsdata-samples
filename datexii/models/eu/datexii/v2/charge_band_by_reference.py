@@ -18,7 +18,7 @@ class ChargeBandByReference:
     :ivar charge_band_by_reference_extension:
     """
 
-    charge_band_reference: Optional[ChargeBandVersionedReference] = field(
+    charge_band_reference: ChargeBandVersionedReference | None = field(
         default=None,
         metadata={
             "name": "chargeBandReference",
@@ -27,7 +27,7 @@ class ChargeBandByReference:
             "required": True,
         },
     )
-    charge_band_by_reference_extension: Optional[ExtensionType] = field(
+    charge_band_by_reference_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "chargeBandByReferenceExtension",

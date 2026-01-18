@@ -33,26 +33,7 @@ class PointOnRouteVersionedChildStructure(
     class Meta:
         name = "PointOnRoute_VersionedChildStructure"
 
-    choice_1: Optional[
-        Union[
-            VehicleMeetingPointRef,
-            WirePointRef,
-            RoadPointRef,
-            RailwayPointRef,
-            TrafficControlPointRef,
-            BeaconPointRef,
-            ActivationPointRef,
-            BorderPointRef,
-            FareScheduledStopPointRef,
-            ScheduledStopPointRef,
-            GaragePointRef,
-            ParkingPointRef,
-            ReliefPointRef,
-            TimingPointRef,
-            RoutePointRef,
-            PointRef,
-        ]
-    ] = field(
+    choice_1: VehicleMeetingPointRef | WirePointRef | RoadPointRef | RailwayPointRef | TrafficControlPointRef | BeaconPointRef | ActivationPointRef | BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | RoutePointRef | PointRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -140,7 +121,7 @@ class PointOnRouteVersionedChildStructure(
             ),
         },
     )
-    onward_route_link_ref: Optional[RouteLinkRefStructure] = field(
+    onward_route_link_ref: RouteLinkRefStructure | None = field(
         default=None,
         metadata={
             "name": "OnwardRouteLinkRef",
@@ -148,7 +129,7 @@ class PointOnRouteVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    route_instructions: Optional[RouteInstructionsRelStructure] = field(
+    route_instructions: RouteInstructionsRelStructure | None = field(
         default=None,
         metadata={
             "name": "routeInstructions",

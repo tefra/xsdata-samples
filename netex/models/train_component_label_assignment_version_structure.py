@@ -17,7 +17,7 @@ class TrainComponentLabelAssignmentVersionStructure(
     class Meta:
         name = "TrainComponentLabelAssignment_VersionStructure"
 
-    label: Optional[MultilingualString] = field(
+    label: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Label",
@@ -25,7 +25,7 @@ class TrainComponentLabelAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_journey_ref: Optional[Union[DeadRunRef, VehicleJourneyRef]] = (
+    vehicle_journey_ref: DeadRunRef | VehicleJourneyRef | None = (
         field(
             default=None,
             metadata={
@@ -45,7 +45,7 @@ class TrainComponentLabelAssignmentVersionStructure(
             },
         )
     )
-    train_component_ref: Optional[TrainComponentRef] = field(
+    train_component_ref: TrainComponentRef | None = field(
         default=None,
         metadata={
             "name": "TrainComponentRef",

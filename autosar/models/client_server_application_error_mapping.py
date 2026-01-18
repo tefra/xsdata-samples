@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -34,9 +36,7 @@ class ClientServerApplicationErrorMapping:
     class Meta:
         name = "CLIENT-SERVER-APPLICATION-ERROR-MAPPING"
 
-    first_application_error_ref: Optional[
-        "ClientServerApplicationErrorMapping.FirstApplicationErrorRef"
-    ] = field(
+    first_application_error_ref: ClientServerApplicationErrorMapping.FirstApplicationErrorRef | None = field(
         default=None,
         metadata={
             "name": "FIRST-APPLICATION-ERROR-REF",
@@ -44,9 +44,7 @@ class ClientServerApplicationErrorMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_application_error_ref: Optional[
-        "ClientServerApplicationErrorMapping.SecondApplicationErrorRef"
-    ] = field(
+    second_application_error_ref: ClientServerApplicationErrorMapping.SecondApplicationErrorRef | None = field(
         default=None,
         metadata={
             "name": "SECOND-APPLICATION-ERROR-REF",
@@ -54,14 +52,14 @@ class ClientServerApplicationErrorMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -72,7 +70,7 @@ class ClientServerApplicationErrorMapping:
 
     @dataclass
     class FirstApplicationErrorRef(Ref):
-        dest: Optional[ApplicationErrorSubtypesEnum] = field(
+        dest: ApplicationErrorSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -83,7 +81,7 @@ class ClientServerApplicationErrorMapping:
 
     @dataclass
     class SecondApplicationErrorRef(Ref):
-        dest: Optional[ApplicationErrorSubtypesEnum] = field(
+        dest: ApplicationErrorSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

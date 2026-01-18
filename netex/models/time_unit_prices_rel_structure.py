@@ -20,7 +20,7 @@ class TimeUnitPricesRelStructure(StrictContainmentAggregationStructure):
         name = "timeUnitPrices_RelStructure"
 
     time_unit_price_ref_or_time_unit_price_or_cell_ref: Iterable[
-        Union[TimeUnitPriceRef, TimeUnitPriceVersionedChildStructure, CellRef]
+        TimeUnitPriceRef | TimeUnitPriceVersionedChildStructure | CellRef
     ] = field(
         default_factory=list,
         metadata={

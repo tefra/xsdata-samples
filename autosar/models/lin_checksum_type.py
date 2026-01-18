@@ -28,20 +28,20 @@ class LinChecksumType:
     class Meta:
         name = "LIN-CHECKSUM-TYPE"
 
-    value: Optional[LinChecksumTypeSimple] = field(
+    value: LinChecksumTypeSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

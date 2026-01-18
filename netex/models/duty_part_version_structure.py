@@ -15,7 +15,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
     class Meta:
         name = "DutyPart_VersionStructure"
 
-    driver_access_duration: Optional[XmlDuration] = field(
+    driver_access_duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "DriverAccessDuration",
@@ -23,7 +23,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    driver_return_duration: Optional[XmlDuration] = field(
+    driver_return_duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "DriverReturnDuration",
@@ -31,7 +31,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    duty_ref: Optional[DutyRef] = field(
+    duty_ref: DutyRef | None = field(
         default=None,
         metadata={
             "name": "DutyRef",
@@ -39,7 +39,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_time: Optional[XmlTime] = field(
+    start_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "StartTime",
@@ -47,7 +47,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_offset: Optional[int] = field(
+    day_offset: int | None = field(
         default=None,
         metadata={
             "name": "DayOffset",
@@ -55,7 +55,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_time: Optional[XmlTime] = field(
+    end_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "EndTime",
@@ -63,7 +63,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_day_offset: Optional[int] = field(
+    end_day_offset: int | None = field(
         default=None,
         metadata={
             "name": "EndDayOffset",
@@ -71,7 +71,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_point_ref: Optional[TimingPointRefStructure] = field(
+    start_point_ref: TimingPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "StartPointRef",
@@ -79,7 +79,7 @@ class DutyPartVersionStructure(AccountableElementStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_point_ref: Optional[TimingPointRefStructure] = field(
+    end_point_ref: TimingPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "EndPointRef",

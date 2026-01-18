@@ -6,7 +6,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class PaymentByMobileStructure:
-    phone_number_to_pay: Optional[str] = field(
+    phone_number_to_pay: str | None = field(
         default=None,
         metadata={
             "name": "PhoneNumberToPay",
@@ -14,7 +14,7 @@ class PaymentByMobileStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    support_phone_number: Optional[str] = field(
+    support_phone_number: str | None = field(
         default=None,
         metadata={
             "name": "SupportPhoneNumber",
@@ -22,7 +22,7 @@ class PaymentByMobileStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    payment_url: Optional[str] = field(
+    payment_url: str | None = field(
         default=None,
         metadata={
             "name": "PaymentUrl",
@@ -30,7 +30,7 @@ class PaymentByMobileStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    payment_app_download_url: Optional[str] = field(
+    payment_app_download_url: str | None = field(
         default=None,
         metadata={
             "name": "PaymentAppDownloadUrl",

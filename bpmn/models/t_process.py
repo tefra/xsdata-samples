@@ -60,14 +60,14 @@ class TProcess(TCallableElement):
     class Meta:
         name = "tProcess"
 
-    auditing: Optional[Auditing] = field(
+    auditing: Auditing | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    monitoring: Optional[Monitoring] = field(
+    monitoring: Monitoring | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -431,14 +431,14 @@ class TProcess(TCallableElement):
             "type": "Attribute",
         },
     )
-    is_executable: Optional[bool] = field(
+    is_executable: bool | None = field(
         default=None,
         metadata={
             "name": "isExecutable",
             "type": "Attribute",
         },
     )
-    definitional_collaboration_ref: Optional[QName] = field(
+    definitional_collaboration_ref: QName | None = field(
         default=None,
         metadata={
             "name": "definitionalCollaborationRef",

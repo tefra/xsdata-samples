@@ -15,7 +15,7 @@ class StopAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "StopAssignment_VersionStructure"
 
-    boarding_use: Optional[bool] = field(
+    boarding_use: bool | None = field(
         default=None,
         metadata={
             "name": "BoardingUse",
@@ -23,7 +23,7 @@ class StopAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alighting_use: Optional[bool] = field(
+    alighting_use: bool | None = field(
         default=None,
         metadata={
             "name": "AlightingUse",
@@ -31,7 +31,7 @@ class StopAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -39,13 +39,7 @@ class StopAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point: Optional[
-        Union[
-            FareScheduledStopPointRef,
-            ScheduledStopPointRef,
-            ScheduledStopPoint,
-        ]
-    ] = field(
+    fare_scheduled_stop_point_ref_or_scheduled_stop_point_ref_or_scheduled_stop_point: FareScheduledStopPointRef | ScheduledStopPointRef | ScheduledStopPoint | None = field(
         default=None,
         metadata={
             "type": "Elements",

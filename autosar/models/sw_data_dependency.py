@@ -40,7 +40,7 @@ class SwDataDependency:
     class Meta:
         name = "SW-DATA-DEPENDENCY"
 
-    sw_data_dependency_formula: Optional[CompuGenericMath] = field(
+    sw_data_dependency_formula: CompuGenericMath | None = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEPENDENCY-FORMULA",
@@ -48,7 +48,7 @@ class SwDataDependency:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_data_dependency_args: Optional[SwDataDependencyArgs] = field(
+    sw_data_dependency_args: SwDataDependencyArgs | None = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEPENDENCY-ARGS",
@@ -56,14 +56,14 @@ class SwDataDependency:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

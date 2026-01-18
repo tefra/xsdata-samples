@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -140,7 +142,7 @@ class ConsumedEventGroup:
     class Meta:
         name = "CONSUMED-EVENT-GROUP"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -149,7 +151,7 @@ class ConsumedEventGroup:
             "required": True,
         },
     )
-    short_name_fragments: Optional["ConsumedEventGroup.ShortNameFragments"] = (
+    short_name_fragments: ConsumedEventGroup.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -159,7 +161,7 @@ class ConsumedEventGroup:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -167,7 +169,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -175,7 +177,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -183,7 +185,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -191,7 +193,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -199,7 +201,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ConsumedEventGroup.Annotations"] = field(
+    annotations: ConsumedEventGroup.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -207,9 +209,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    application_endpoint_ref: Optional[
-        "ConsumedEventGroup.ApplicationEndpointRef"
-    ] = field(
+    application_endpoint_ref: ConsumedEventGroup.ApplicationEndpointRef | None = field(
         default=None,
         metadata={
             "name": "APPLICATION-ENDPOINT-REF",
@@ -217,7 +217,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    auto_require: Optional[Boolean] = field(
+    auto_require: Boolean | None = field(
         default=None,
         metadata={
             "name": "AUTO-REQUIRE",
@@ -225,7 +225,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_identifier: Optional[PositiveInteger] = field(
+    event_group_identifier: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "EVENT-GROUP-IDENTIFIER",
@@ -233,9 +233,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_multicast_addresss: Optional[
-        "ConsumedEventGroup.EventMulticastAddresss"
-    ] = field(
+    event_multicast_addresss: ConsumedEventGroup.EventMulticastAddresss | None = field(
         default=None,
         metadata={
             "name": "EVENT-MULTICAST-ADDRESSS",
@@ -243,7 +241,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    instance_identifier: Optional[PositiveInteger] = field(
+    instance_identifier: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "INSTANCE-IDENTIFIER",
@@ -251,9 +249,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_activation_routing_groups: Optional[
-        "ConsumedEventGroup.PduActivationRoutingGroups"
-    ] = field(
+    pdu_activation_routing_groups: ConsumedEventGroup.PduActivationRoutingGroups | None = field(
         default=None,
         metadata={
             "name": "PDU-ACTIVATION-ROUTING-GROUPS",
@@ -261,7 +257,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    priority: Optional[PositiveInteger] = field(
+    priority: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "PRIORITY",
@@ -269,7 +265,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    routing_group_refs: Optional["ConsumedEventGroup.RoutingGroupRefs"] = (
+    routing_group_refs: ConsumedEventGroup.RoutingGroupRefs | None = (
         field(
             default=None,
             metadata={
@@ -279,7 +275,7 @@ class ConsumedEventGroup:
             },
         )
     )
-    sd_client_config: Optional[SdClientConfig] = field(
+    sd_client_config: SdClientConfig | None = field(
         default=None,
         metadata={
             "name": "SD-CLIENT-CONFIG",
@@ -287,9 +283,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sd_client_timer_configs: Optional[
-        "ConsumedEventGroup.SdClientTimerConfigs"
-    ] = field(
+    sd_client_timer_configs: ConsumedEventGroup.SdClientTimerConfigs | None = field(
         default=None,
         metadata={
             "name": "SD-CLIENT-TIMER-CONFIGS",
@@ -297,7 +291,7 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -305,14 +299,14 @@ class ConsumedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -320,7 +314,7 @@ class ConsumedEventGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -352,7 +346,7 @@ class ConsumedEventGroup:
 
     @dataclass
     class ApplicationEndpointRef(Ref):
-        dest: Optional[ApplicationEndpointSubtypesEnum] = field(
+        dest: ApplicationEndpointSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -388,7 +382,7 @@ class ConsumedEventGroup:
     @dataclass
     class RoutingGroupRefs:
         routing_group_ref: list[
-            "ConsumedEventGroup.RoutingGroupRefs.RoutingGroupRef"
+            ConsumedEventGroup.RoutingGroupRefs.RoutingGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -400,7 +394,7 @@ class ConsumedEventGroup:
 
         @dataclass
         class RoutingGroupRef(Ref):
-            dest: Optional[SoAdRoutingGroupSubtypesEnum] = field(
+            dest: SoAdRoutingGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

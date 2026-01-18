@@ -11,7 +11,7 @@ class VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram:
     class Meta:
         name = "_VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram"
 
-    vms_pictogram: Optional[VmsPictogram] = field(
+    vms_pictogram: VmsPictogram | None = field(
         default=None,
         metadata={
             "name": "vmsPictogram",
@@ -20,7 +20,7 @@ class VmsPictogramDisplayAreaPictogramSequencingIndexVmsPictogram:
             "required": True,
         },
     )
-    pictogram_sequencing_index: Optional[int] = field(
+    pictogram_sequencing_index: int | None = field(
         default=None,
         metadata={
             "name": "pictogramSequencingIndex",

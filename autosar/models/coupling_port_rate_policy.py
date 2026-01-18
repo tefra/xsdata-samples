@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -46,7 +48,7 @@ class CouplingPortRatePolicy:
     class Meta:
         name = "COUPLING-PORT-RATE-POLICY"
 
-    data_length: Optional[PositiveInteger] = field(
+    data_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "DATA-LENGTH",
@@ -54,7 +56,7 @@ class CouplingPortRatePolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    policy_action: Optional[CouplingPortRatePolicyActionEnum] = field(
+    policy_action: CouplingPortRatePolicyActionEnum | None = field(
         default=None,
         metadata={
             "name": "POLICY-ACTION",
@@ -62,7 +64,7 @@ class CouplingPortRatePolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    priority: Optional[PositiveInteger] = field(
+    priority: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "PRIORITY",
@@ -70,7 +72,7 @@ class CouplingPortRatePolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_interval: Optional[TimeValue] = field(
+    time_interval: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIME-INTERVAL",
@@ -78,7 +80,7 @@ class CouplingPortRatePolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    v_lan_refs: Optional["CouplingPortRatePolicy.VLanRefs"] = field(
+    v_lan_refs: CouplingPortRatePolicy.VLanRefs | None = field(
         default=None,
         metadata={
             "name": "V-LAN-REFS",
@@ -86,14 +88,14 @@ class CouplingPortRatePolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -104,7 +106,7 @@ class CouplingPortRatePolicy:
 
     @dataclass
     class VLanRefs:
-        v_lan_ref: list["CouplingPortRatePolicy.VLanRefs.VLanRef"] = field(
+        v_lan_ref: list[CouplingPortRatePolicy.VLanRefs.VLanRef] = field(
             default_factory=list,
             metadata={
                 "name": "V-LAN-REF",
@@ -115,7 +117,7 @@ class CouplingPortRatePolicy:
 
         @dataclass
         class VLanRef(Ref):
-            dest: Optional[EthernetPhysicalChannelSubtypesEnum] = field(
+            dest: EthernetPhysicalChannelSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

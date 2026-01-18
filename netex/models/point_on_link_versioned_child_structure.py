@@ -47,7 +47,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "PointOnLink_VersionedChildStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -55,7 +55,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    link_ref: Optional[LinkRefStructure] = field(
+    link_ref: LinkRefStructure | None = field(
         default=None,
         metadata={
             "name": "LinkRef",
@@ -63,7 +63,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distance_from_start: Optional[Decimal] = field(
+    distance_from_start: Decimal | None = field(
         default=None,
         metadata={
             "name": "DistanceFromStart",
@@ -71,43 +71,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
-        Union[
-            VehicleMeetingPointRef,
-            WirePointRef,
-            RoadPointRef,
-            RailwayPointRef,
-            TrafficControlPointRef,
-            BeaconPointRef,
-            ActivationPointRef,
-            BorderPointRef,
-            FareScheduledStopPointRef,
-            ScheduledStopPointRef,
-            GaragePointRef,
-            ParkingPointRef,
-            ReliefPointRef,
-            TimingPointRef,
-            RoutePointRef,
-            PointRef,
-            VehicleMeetingPoint,
-            BorderPoint,
-            FareScheduledStopPoint,
-            ScheduledStopPoint,
-            PathJunction,
-            RoutePoint,
-            ParkingPoint,
-            GaragePoint,
-            ReliefPoint,
-            TimingPoint,
-            WireJunction,
-            RoadJunction,
-            RailwayJunction,
-            TrafficControlPoint,
-            BeaconPoint,
-            ActivationPoint,
-            Point2,
-        ]
-    ] = field(
+    choice: VehicleMeetingPointRef | WirePointRef | RoadPointRef | RailwayPointRef | TrafficControlPointRef | BeaconPointRef | ActivationPointRef | BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | RoutePointRef | PointRef | VehicleMeetingPoint | BorderPoint | FareScheduledStopPoint | ScheduledStopPoint | PathJunction | RoutePoint | ParkingPoint | GaragePoint | ReliefPoint | TimingPoint | WireJunction | RoadJunction | RailwayJunction | TrafficControlPoint | BeaconPoint | ActivationPoint | Point2 | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -280,7 +244,7 @@ class PointOnLinkVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

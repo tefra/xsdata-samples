@@ -50,14 +50,14 @@ class TextType:
             "required": True,
         },
     )
-    language_id: Optional[str] = field(
+    language_id: str | None = field(
         default=None,
         metadata={
             "name": "languageID",
             "type": "Attribute",
         },
     )
-    language_locale_id: Optional[str] = field(
+    language_locale_id: str | None = field(
         default=None,
         metadata={
             "name": "languageLocaleID",

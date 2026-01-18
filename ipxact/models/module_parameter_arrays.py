@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -16,7 +18,7 @@ class ModuleParameterArrays:
     class Meta:
         name = "moduleParameterArrays"
 
-    array: list["ModuleParameterArrays.Array"] = field(
+    array: list[ModuleParameterArrays.Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -27,7 +29,7 @@ class ModuleParameterArrays:
 
     @dataclass
     class Array:
-        left: Optional[Left] = field(
+        left: Left | None = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -35,7 +37,7 @@ class ModuleParameterArrays:
                 "required": True,
             },
         )
-        right: Optional[Right] = field(
+        right: Right | None = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -43,14 +45,14 @@ class ModuleParameterArrays:
                 "required": True,
             },
         )
-        array_id: Optional[str] = field(
+        array_id: str | None = field(
             default=None,
             metadata={
                 "name": "arrayId",
                 "type": "Attribute",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

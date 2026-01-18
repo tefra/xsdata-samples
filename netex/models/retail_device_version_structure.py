@@ -24,7 +24,7 @@ class RetailDeviceVersionStructure(InstalledEquipmentVersionStructure):
     class Meta:
         name = "RetailDevice_VersionStructure"
 
-    status: Optional[str] = field(
+    status: str | None = field(
         default=None,
         metadata={
             "name": "Status",
@@ -32,20 +32,7 @@ class RetailDeviceVersionStructure(InstalledEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: Optional[
-        Union[
-            RetailConsortiumRef,
-            OnlineServiceOperatorRef,
-            GeneralOrganisationRef,
-            ManagementAgentRef,
-            ServicedOrganisationRef,
-            TravelAgentRef,
-            OtherOrganisationRef,
-            AuthorityRef,
-            OperatorRef,
-            OrganisationRef,
-        ]
-    ] = field(
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -103,7 +90,7 @@ class RetailDeviceVersionStructure(InstalledEquipmentVersionStructure):
             ),
         },
     )
-    type_of_retail_device_ref: Optional[TypeOfRetailDeviceRef] = field(
+    type_of_retail_device_ref: TypeOfRetailDeviceRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfRetailDeviceRef",

@@ -95,14 +95,14 @@ class Map:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -110,98 +110,98 @@ class Map:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    class_value: Optional[str] = field(
+    class_value: str | None = field(
         default=None,
         metadata={
             "name": "CLASS",
             "type": "Attribute",
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "name": "NAME",
             "type": "Attribute",
         },
     )
-    onclick: Optional[str] = field(
+    onclick: str | None = field(
         default=None,
         metadata={
             "name": "ONCLICK",
             "type": "Attribute",
         },
     )
-    ondblclick: Optional[str] = field(
+    ondblclick: str | None = field(
         default=None,
         metadata={
             "name": "ONDBLCLICK",
             "type": "Attribute",
         },
     )
-    onkeydown: Optional[str] = field(
+    onkeydown: str | None = field(
         default=None,
         metadata={
             "name": "ONKEYDOWN",
             "type": "Attribute",
         },
     )
-    onkeypress: Optional[str] = field(
+    onkeypress: str | None = field(
         default=None,
         metadata={
             "name": "ONKEYPRESS",
             "type": "Attribute",
         },
     )
-    onkeyup: Optional[str] = field(
+    onkeyup: str | None = field(
         default=None,
         metadata={
             "name": "ONKEYUP",
             "type": "Attribute",
         },
     )
-    onmousedown: Optional[str] = field(
+    onmousedown: str | None = field(
         default=None,
         metadata={
             "name": "ONMOUSEDOWN",
             "type": "Attribute",
         },
     )
-    onmousemove: Optional[str] = field(
+    onmousemove: str | None = field(
         default=None,
         metadata={
             "name": "ONMOUSEMOVE",
             "type": "Attribute",
         },
     )
-    onmouseout: Optional[str] = field(
+    onmouseout: str | None = field(
         default=None,
         metadata={
             "name": "ONMOUSEOUT",
             "type": "Attribute",
         },
     )
-    onmouseover: Optional[str] = field(
+    onmouseover: str | None = field(
         default=None,
         metadata={
             "name": "ONMOUSEOVER",
             "type": "Attribute",
         },
     )
-    onmouseup: Optional[str] = field(
+    onmouseup: str | None = field(
         default=None,
         metadata={
             "name": "ONMOUSEUP",
             "type": "Attribute",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "name": "STYLE",
             "type": "Attribute",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "name": "TITLE",

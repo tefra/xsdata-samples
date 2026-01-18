@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -48,7 +50,7 @@ class SwRecordLayoutGroupContent:
         name = "SW-RECORD-LAYOUT-GROUP-CONTENT"
 
     sw_record_layout_ref: list[
-        "SwRecordLayoutGroupContent.SwRecordLayoutRef"
+        SwRecordLayoutGroupContent.SwRecordLayoutRef
     ] = field(
         default_factory=list,
         metadata={
@@ -73,14 +75,14 @@ class SwRecordLayoutGroupContent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -91,7 +93,7 @@ class SwRecordLayoutGroupContent:
 
     @dataclass
     class SwRecordLayoutRef(Ref):
-        dest: Optional[SwRecordLayoutSubtypesEnum] = field(
+        dest: SwRecordLayoutSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

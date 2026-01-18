@@ -24,73 +24,73 @@ class Response:
         name = "response"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    processing_meta: Optional[ProcessingMeta] = field(
+    processing_meta: ProcessingMeta | None = field(
         default=None,
         metadata={
             "name": "processing-meta",
             "type": "Element",
         },
     )
-    front: Optional[Front] = field(
+    front: Front | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    front_stub: Optional[FrontStub] = field(
+    front_stub: FrontStub | None = field(
         default=None,
         metadata={
             "name": "front-stub",
             "type": "Element",
         },
     )
-    body: Optional[Body] = field(
+    body: Body | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    back: Optional[Back] = field(
+    back: Back | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    floats_group: Optional[FloatsGroup] = field(
+    floats_group: FloatsGroup | None = field(
         default=None,
         metadata={
             "name": "floats-group",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    response_type: Optional[str] = field(
+    response_type: str | None = field(
         default=None,
         metadata={
             "name": "response-type",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",

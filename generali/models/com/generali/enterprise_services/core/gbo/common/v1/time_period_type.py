@@ -28,7 +28,7 @@ class TimePeriodType:
         date of the time period.</description>
     """
 
-    from_date_time: Optional[DateTimeType] = field(
+    from_date_time: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "FromDateTime",
@@ -36,7 +36,7 @@ class TimePeriodType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    to_date_time: Optional[DateTimeType] = field(
+    to_date_time: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "ToDateTime",
@@ -44,7 +44,7 @@ class TimePeriodType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    duration: Optional[DurationType] = field(
+    duration: DurationType | None = field(
         default=None,
         metadata={
             "name": "Duration",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -46,7 +48,7 @@ class IPduMapping:
     class Meta:
         name = "I-PDU-MAPPING"
 
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -54,7 +56,7 @@ class IPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_max_length: Optional[PositiveInteger] = field(
+    pdu_max_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "PDU-MAX-LENGTH",
@@ -62,7 +64,7 @@ class IPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdur_tp_chunk_size: Optional[PositiveInteger] = field(
+    pdur_tp_chunk_size: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "PDUR-TP-CHUNK-SIZE",
@@ -70,7 +72,7 @@ class IPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_i_pdu_ref: Optional["IPduMapping.SourceIPduRef"] = field(
+    source_i_pdu_ref: IPduMapping.SourceIPduRef | None = field(
         default=None,
         metadata={
             "name": "SOURCE-I-PDU-REF",
@@ -78,7 +80,7 @@ class IPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_i_pdu: Optional[TargetIPduRef] = field(
+    target_i_pdu: TargetIPduRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-I-PDU",
@@ -86,7 +88,7 @@ class IPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -94,14 +96,14 @@ class IPduMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -112,7 +114,7 @@ class IPduMapping:
 
     @dataclass
     class SourceIPduRef(Ref):
-        dest: Optional[PduTriggeringSubtypesEnum] = field(
+        dest: PduTriggeringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

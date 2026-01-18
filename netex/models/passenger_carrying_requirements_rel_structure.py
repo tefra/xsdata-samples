@@ -17,7 +17,7 @@ class PassengerCarryingRequirementsRelStructure(
         name = "passengerCarryingRequirements_RelStructure"
 
     passenger_carrying_requirement_ref_or_passenger_carrying_requirement: Iterable[
-        Union[PassengerCarryingRequirementRef, PassengerCarryingRequirement]
+        PassengerCarryingRequirementRef | PassengerCarryingRequirement
     ] = field(
         default_factory=list,
         metadata={

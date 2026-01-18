@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -34,7 +36,7 @@ class DataFormatTailoring:
     class Meta:
         name = "DATA-FORMAT-TAILORING"
 
-    class_tailorings: Optional["DataFormatTailoring.ClassTailorings"] = field(
+    class_tailorings: DataFormatTailoring.ClassTailorings | None = field(
         default=None,
         metadata={
             "name": "CLASS-TAILORINGS",
@@ -42,9 +44,7 @@ class DataFormatTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    constraint_tailorings: Optional[
-        "DataFormatTailoring.ConstraintTailorings"
-    ] = field(
+    constraint_tailorings: DataFormatTailoring.ConstraintTailorings | None = field(
         default=None,
         metadata={
             "name": "CONSTRAINT-TAILORINGS",
@@ -52,14 +52,14 @@ class DataFormatTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

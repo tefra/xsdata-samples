@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -102,7 +104,7 @@ class McFunction:
     class Meta:
         name = "MC-FUNCTION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -111,7 +113,7 @@ class McFunction:
             "required": True,
         },
     )
-    short_name_fragments: Optional["McFunction.ShortNameFragments"] = field(
+    short_name_fragments: McFunction.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -119,7 +121,7 @@ class McFunction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +129,7 @@ class McFunction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +137,7 @@ class McFunction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +145,7 @@ class McFunction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +153,7 @@ class McFunction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +161,7 @@ class McFunction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["McFunction.Annotations"] = field(
+    annotations: McFunction.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +169,7 @@ class McFunction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,7 +177,7 @@ class McFunction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    def_calprm_set: Optional[McFunctionDataRefSet] = field(
+    def_calprm_set: McFunctionDataRefSet | None = field(
         default=None,
         metadata={
             "name": "DEF-CALPRM-SET",
@@ -183,7 +185,7 @@ class McFunction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ref_calprm_set: Optional[McFunctionDataRefSet] = field(
+    ref_calprm_set: McFunctionDataRefSet | None = field(
         default=None,
         metadata={
             "name": "REF-CALPRM-SET",
@@ -191,7 +193,7 @@ class McFunction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    in_measurement_set: Optional[McFunctionDataRefSet] = field(
+    in_measurement_set: McFunctionDataRefSet | None = field(
         default=None,
         metadata={
             "name": "IN-MEASUREMENT-SET",
@@ -199,7 +201,7 @@ class McFunction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    out_measurment_set: Optional[McFunctionDataRefSet] = field(
+    out_measurment_set: McFunctionDataRefSet | None = field(
         default=None,
         metadata={
             "name": "OUT-MEASURMENT-SET",
@@ -207,7 +209,7 @@ class McFunction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    loc_measurement_set: Optional[McFunctionDataRefSet] = field(
+    loc_measurement_set: McFunctionDataRefSet | None = field(
         default=None,
         metadata={
             "name": "LOC-MEASUREMENT-SET",
@@ -215,7 +217,7 @@ class McFunction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    out_measurement_set: Optional[McFunctionDataRefSet] = field(
+    out_measurement_set: McFunctionDataRefSet | None = field(
         default=None,
         metadata={
             "name": "OUT-MEASUREMENT-SET",
@@ -223,7 +225,7 @@ class McFunction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_function_refs: Optional["McFunction.SubFunctionRefs"] = field(
+    sub_function_refs: McFunction.SubFunctionRefs | None = field(
         default=None,
         metadata={
             "name": "SUB-FUNCTION-REFS",
@@ -231,14 +233,14 @@ class McFunction:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -246,7 +248,7 @@ class McFunction:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -278,7 +280,7 @@ class McFunction:
 
     @dataclass
     class SubFunctionRefs:
-        sub_function_ref: list["McFunction.SubFunctionRefs.SubFunctionRef"] = (
+        sub_function_ref: list[McFunction.SubFunctionRefs.SubFunctionRef] = (
             field(
                 default_factory=list,
                 metadata={
@@ -291,7 +293,7 @@ class McFunction:
 
         @dataclass
         class SubFunctionRef(Ref):
-            dest: Optional[McFunctionSubtypesEnum] = field(
+            dest: McFunctionSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

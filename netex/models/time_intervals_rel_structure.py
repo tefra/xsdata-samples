@@ -15,7 +15,7 @@ class TimeIntervalsRelStructure(ContainmentAggregationStructure):
         name = "timeIntervals_RelStructure"
 
     time_interval_ref_or_time_interval: Iterable[
-        Union[TimeIntervalRef, TimeInterval]
+        TimeIntervalRef | TimeInterval
     ] = field(
         default_factory=list,
         metadata={

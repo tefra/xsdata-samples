@@ -7,7 +7,7 @@ class Percent:
     class Meta:
         name = "percent"
 
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "type",
@@ -15,7 +15,7 @@ class Percent:
             "required": True,
         },
     )
-    description: Optional[object] = field(
+    description: object | None = field(
         default=None,
         metadata={
             "type": "Element",

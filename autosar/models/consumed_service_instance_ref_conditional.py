@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class ConsumedServiceInstanceRefConditional:
     class Meta:
         name = "CONSUMED-SERVICE-INSTANCE-REF-CONDITIONAL"
 
-    consumed_service_instance_ref: Optional[
-        "ConsumedServiceInstanceRefConditional.ConsumedServiceInstanceRef"
-    ] = field(
+    consumed_service_instance_ref: ConsumedServiceInstanceRefConditional.ConsumedServiceInstanceRef | None = field(
         default=None,
         metadata={
             "name": "CONSUMED-SERVICE-INSTANCE-REF",
@@ -43,7 +43,7 @@ class ConsumedServiceInstanceRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class ConsumedServiceInstanceRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class ConsumedServiceInstanceRefConditional:
 
     @dataclass
     class ConsumedServiceInstanceRef(Ref):
-        dest: Optional[ConsumedServiceInstanceSubtypesEnum] = field(
+        dest: ConsumedServiceInstanceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

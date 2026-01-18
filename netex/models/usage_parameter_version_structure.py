@@ -15,7 +15,7 @@ class UsageParameterVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "UsageParameter_VersionStructure"
 
-    type_of_usage_parameter_ref: Optional[TypeOfUsageParameterRef] = field(
+    type_of_usage_parameter_ref: TypeOfUsageParameterRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfUsageParameterRef",
@@ -23,7 +23,7 @@ class UsageParameterVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: Optional[UsageParameterPricesRelStructure] = field(
+    prices: UsageParameterPricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

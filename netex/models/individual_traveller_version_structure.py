@@ -21,7 +21,7 @@ class IndividualTravellerVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "IndividualTraveller_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -29,7 +29,7 @@ class IndividualTravellerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_ref: Optional[CustomerRef] = field(
+    customer_ref: CustomerRef | None = field(
         default=None,
         metadata={
             "name": "CustomerRef",
@@ -37,7 +37,7 @@ class IndividualTravellerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    identity_verified: Optional[bool] = field(
+    identity_verified: bool | None = field(
         default=None,
         metadata={
             "name": "IdentityVerified",
@@ -45,7 +45,7 @@ class IndividualTravellerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ranking: Optional[int] = field(
+    ranking: int | None = field(
         default=None,
         metadata={
             "name": "Ranking",
@@ -53,7 +53,7 @@ class IndividualTravellerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gender: Optional[GenderEnumeration] = field(
+    gender: GenderEnumeration | None = field(
         default=None,
         metadata={
             "name": "Gender",
@@ -61,7 +61,7 @@ class IndividualTravellerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    talkative: Optional[bool] = field(
+    talkative: bool | None = field(
         default=None,
         metadata={
             "name": "Talkative",
@@ -69,7 +69,7 @@ class IndividualTravellerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    smoker: Optional[bool] = field(
+    smoker: bool | None = field(
         default=None,
         metadata={
             "name": "Smoker",
@@ -86,9 +86,7 @@ class IndividualTravellerVersionStructure(DataManagedObjectStructure):
             "tokens": True,
         },
     )
-    vehicle_pooling_driver_infos: Optional[
-        VehiclePoolingDriverInfosRelStructure
-    ] = field(
+    vehicle_pooling_driver_infos: VehiclePoolingDriverInfosRelStructure | None = field(
         default=None,
         metadata={
             "name": "vehiclePoolingDriverInfos",
@@ -96,9 +94,7 @@ class IndividualTravellerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    individual_passenger_infos: Optional[
-        IndividualPassengerInfosRelStructure
-    ] = field(
+    individual_passenger_infos: IndividualPassengerInfosRelStructure | None = field(
         default=None,
         metadata={
             "name": "individualPassengerInfos",

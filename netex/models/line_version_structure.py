@@ -46,7 +46,7 @@ class LineVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Line_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -55,7 +55,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "required": True,
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -63,7 +63,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -71,7 +71,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
+    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -79,7 +79,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_submode: Optional[TransportSubmode] = field(
+    transport_submode: TransportSubmode | None = field(
         default=None,
         metadata={
             "name": "TransportSubmode",
@@ -87,7 +87,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    url: Optional[str] = field(
+    url: str | None = field(
         default=None,
         metadata={
             "name": "Url",
@@ -95,7 +95,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_code: Optional[str] = field(
+    public_code: str | None = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -103,7 +103,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -111,7 +111,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    external_line_ref: Optional[ExternalObjectRefStructure] = field(
+    external_line_ref: ExternalObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "ExternalLineRef",
@@ -119,7 +119,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    authority_ref: Optional[AuthorityRef] = field(
+    authority_ref: AuthorityRef | None = field(
         default=None,
         metadata={
             "name": "AuthorityRef",
@@ -127,7 +127,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operator_ref: Optional[OperatorRef] = field(
+    operator_ref: OperatorRef | None = field(
         default=None,
         metadata={
             "name": "OperatorRef",
@@ -135,7 +135,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    additional_operators: Optional[TransportOrganisationRefsRelStructure] = (
+    additional_operators: TransportOrganisationRefsRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -145,7 +145,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    other_modes: Optional[ModeRefsRelStructure] = field(
+    other_modes: ModeRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "otherModes",
@@ -153,7 +153,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operational_context_ref: Optional[OperationalContextRef] = field(
+    operational_context_ref: OperationalContextRef | None = field(
         default=None,
         metadata={
             "name": "OperationalContextRef",
@@ -161,7 +161,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    line_type: Optional[LineTypeEnumeration] = field(
+    line_type: LineTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "LineType",
@@ -169,7 +169,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_line_ref: Optional[TypeOfLineRef] = field(
+    type_of_line_ref: TypeOfLineRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfLineRef",
@@ -177,7 +177,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    external_product_category_ref: Optional[ExternalObjectRefStructure] = (
+    external_product_category_ref: ExternalObjectRefStructure | None = (
         field(
             default=None,
             metadata={
@@ -187,7 +187,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    type_of_product_category_ref: Optional[TypeOfProductCategoryRef] = field(
+    type_of_product_category_ref: TypeOfProductCategoryRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfProductCategoryRef",
@@ -195,7 +195,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_service_ref: Optional[TypeOfServiceRef] = field(
+    type_of_service_ref: TypeOfServiceRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfServiceRef",
@@ -203,7 +203,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    monitored: Optional[bool] = field(
+    monitored: bool | None = field(
         default=None,
         metadata={
             "name": "Monitored",
@@ -211,14 +211,14 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    routes: Optional[RouteRefsRelStructure] = field(
+    routes: RouteRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    represented_by_group_ref: Optional[GroupOfLinesRefStructure] = field(
+    represented_by_group_ref: GroupOfLinesRefStructure | None = field(
         default=None,
         metadata={
             "name": "RepresentedByGroupRef",
@@ -226,7 +226,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    presentation: Optional[PresentationStructure] = field(
+    presentation: PresentationStructure | None = field(
         default=None,
         metadata={
             "name": "Presentation",
@@ -234,7 +234,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alternative_presentation: Optional[PresentationStructure] = field(
+    alternative_presentation: PresentationStructure | None = field(
         default=None,
         metadata={
             "name": "AlternativePresentation",
@@ -242,7 +242,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    printed_presentation: Optional[PrintPresentationStructure] = field(
+    printed_presentation: PrintPresentationStructure | None = field(
         default=None,
         metadata={
             "name": "PrintedPresentation",
@@ -259,7 +259,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "tokens": True,
         },
     )
-    types_of_payment_method: Optional[TypeOfPaymentMethodValueStructure] = (
+    types_of_payment_method: TypeOfPaymentMethodValueStructure | None = (
         field(
             default=None,
             metadata={
@@ -278,7 +278,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "tokens": True,
         },
     )
-    contact_details: Optional[ContactStructure] = field(
+    contact_details: ContactStructure | None = field(
         default=None,
         metadata={
             "name": "ContactDetails",
@@ -286,7 +286,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accessibility_assessment: Optional[AccessibilityAssessment] = field(
+    accessibility_assessment: AccessibilityAssessment | None = field(
         default=None,
         metadata={
             "name": "AccessibilityAssessment",
@@ -294,7 +294,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    allowed_directions: Optional[AllowedLineDirectionsRelStructure] = field(
+    allowed_directions: AllowedLineDirectionsRelStructure | None = field(
         default=None,
         metadata={
             "name": "allowedDirections",
@@ -302,7 +302,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -310,7 +310,7 @@ class LineVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    document_links: Optional[InfoLinksRelStructure] = field(
+    document_links: InfoLinksRelStructure | None = field(
         default=None,
         metadata={
             "name": "documentLinks",

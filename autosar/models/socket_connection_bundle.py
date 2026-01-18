@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -67,7 +69,7 @@ class SocketConnectionBundle:
     class Meta:
         name = "SOCKET-CONNECTION-BUNDLE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -76,9 +78,7 @@ class SocketConnectionBundle:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SocketConnectionBundle.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SocketConnectionBundle.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -86,9 +86,7 @@ class SocketConnectionBundle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bundled_connections: Optional[
-        "SocketConnectionBundle.BundledConnections"
-    ] = field(
+    bundled_connections: SocketConnectionBundle.BundledConnections | None = field(
         default=None,
         metadata={
             "name": "BUNDLED-CONNECTIONS",
@@ -96,7 +94,7 @@ class SocketConnectionBundle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    differentiated_service_field: Optional[PositiveInteger] = field(
+    differentiated_service_field: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "DIFFERENTIATED-SERVICE-FIELD",
@@ -104,7 +102,7 @@ class SocketConnectionBundle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flow_label: Optional[PositiveInteger] = field(
+    flow_label: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "FLOW-LABEL",
@@ -112,7 +110,7 @@ class SocketConnectionBundle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    path_mtu_discovery_enabled: Optional[Boolean] = field(
+    path_mtu_discovery_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "PATH-MTU-DISCOVERY-ENABLED",
@@ -120,7 +118,7 @@ class SocketConnectionBundle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdus: Optional["SocketConnectionBundle.Pdus"] = field(
+    pdus: SocketConnectionBundle.Pdus | None = field(
         default=None,
         metadata={
             "name": "PDUS",
@@ -128,7 +126,7 @@ class SocketConnectionBundle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    server_port_ref: Optional["SocketConnectionBundle.ServerPortRef"] = field(
+    server_port_ref: SocketConnectionBundle.ServerPortRef | None = field(
         default=None,
         metadata={
             "name": "SERVER-PORT-REF",
@@ -136,7 +134,7 @@ class SocketConnectionBundle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    udp_checksum_handling: Optional[UdpChecksumCalculationEnum] = field(
+    udp_checksum_handling: UdpChecksumCalculationEnum | None = field(
         default=None,
         metadata={
             "name": "UDP-CHECKSUM-HANDLING",
@@ -144,7 +142,7 @@ class SocketConnectionBundle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -152,14 +150,14 @@ class SocketConnectionBundle:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -205,7 +203,7 @@ class SocketConnectionBundle:
 
     @dataclass
     class ServerPortRef(Ref):
-        dest: Optional[SocketAddressSubtypesEnum] = field(
+        dest: SocketAddressSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

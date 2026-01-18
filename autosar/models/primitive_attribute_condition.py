@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -54,7 +56,7 @@ class PrimitiveAttributeCondition:
     class Meta:
         name = "PRIMITIVE-ATTRIBUTE-CONDITION"
 
-    lower_multiplicity: Optional[PositiveInteger] = field(
+    lower_multiplicity: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "LOWER-MULTIPLICITY",
@@ -62,7 +64,7 @@ class PrimitiveAttributeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity: Optional[PositiveInteger] = field(
+    upper_multiplicity: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY",
@@ -70,7 +72,7 @@ class PrimitiveAttributeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity_infinite: Optional[Boolean] = field(
+    upper_multiplicity_infinite: Boolean | None = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY-INFINITE",
@@ -78,7 +80,7 @@ class PrimitiveAttributeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max: Optional[LimitValue] = field(
+    max: LimitValue | None = field(
         default=None,
         metadata={
             "name": "MAX",
@@ -86,7 +88,7 @@ class PrimitiveAttributeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_length: Optional[PositiveInteger] = field(
+    max_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-LENGTH",
@@ -94,7 +96,7 @@ class PrimitiveAttributeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min: Optional[LimitValue] = field(
+    min: LimitValue | None = field(
         default=None,
         metadata={
             "name": "MIN",
@@ -102,7 +104,7 @@ class PrimitiveAttributeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_length: Optional[PositiveInteger] = field(
+    min_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MIN-LENGTH",
@@ -110,7 +112,7 @@ class PrimitiveAttributeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pattern: Optional[RegularExpression] = field(
+    pattern: RegularExpression | None = field(
         default=None,
         metadata={
             "name": "PATTERN",
@@ -118,7 +120,7 @@ class PrimitiveAttributeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    attribute_ref: Optional["PrimitiveAttributeCondition.AttributeRef"] = (
+    attribute_ref: PrimitiveAttributeCondition.AttributeRef | None = (
         field(
             default=None,
             metadata={
@@ -128,14 +130,14 @@ class PrimitiveAttributeCondition:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -146,7 +148,7 @@ class PrimitiveAttributeCondition:
 
     @dataclass
     class AttributeRef(Ref):
-        dest: Optional[PrimitiveAttributeTailoringSubtypesEnum] = field(
+        dest: PrimitiveAttributeTailoringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

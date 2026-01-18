@@ -17,7 +17,7 @@ class FareDemandFactorsRelStructure(StrictContainmentAggregationStructure):
         name = "fareDemandFactors_RelStructure"
 
     fare_demand_factor_ref_or_fare_demand_factor: Iterable[
-        Union[FareDemandFactorRef, FareDemandFactor]
+        FareDemandFactorRef | FareDemandFactor
     ] = field(
         default_factory=list,
         metadata={

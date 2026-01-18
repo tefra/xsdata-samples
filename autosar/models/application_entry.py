@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -38,7 +40,7 @@ class ApplicationEntry:
     class Meta:
         name = "APPLICATION-ENTRY"
 
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -46,7 +48,7 @@ class ApplicationEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delay: Optional[TimeValue] = field(
+    delay: TimeValue | None = field(
         default=None,
         metadata={
             "name": "DELAY",
@@ -54,7 +56,7 @@ class ApplicationEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    position_in_table: Optional[Integer] = field(
+    position_in_table: Integer | None = field(
         default=None,
         metadata={
             "name": "POSITION-IN-TABLE",
@@ -62,7 +64,7 @@ class ApplicationEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_triggering_ref: Optional["ApplicationEntry.FrameTriggeringRef"] = (
+    frame_triggering_ref: ApplicationEntry.FrameTriggeringRef | None = (
         field(
             default=None,
             metadata={
@@ -72,14 +74,14 @@ class ApplicationEntry:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -90,7 +92,7 @@ class ApplicationEntry:
 
     @dataclass
     class FrameTriggeringRef(Ref):
-        dest: Optional[LinFrameTriggeringSubtypesEnum] = field(
+        dest: LinFrameTriggeringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

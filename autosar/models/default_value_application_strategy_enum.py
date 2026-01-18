@@ -34,20 +34,20 @@ class DefaultValueApplicationStrategyEnum:
     class Meta:
         name = "DEFAULT-VALUE-APPLICATION-STRATEGY-ENUM"
 
-    value: Optional[DefaultValueApplicationStrategyEnumSimple] = field(
+    value: DefaultValueApplicationStrategyEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -17,7 +17,7 @@ class ParkingAreaVersionStructure(ParkingComponentVersionStructure):
     class Meta:
         name = "ParkingArea_VersionStructure"
 
-    total_capacity: Optional[int] = field(
+    total_capacity: int | None = field(
         default=None,
         metadata={
             "name": "TotalCapacity",
@@ -25,7 +25,7 @@ class ParkingAreaVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    number_of_bays_with_recharging: Optional[int] = field(
+    number_of_bays_with_recharging: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfBaysWithRecharging",
@@ -33,9 +33,7 @@ class ParkingAreaVersionStructure(ParkingComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_properties_or_parking_properties: Optional[
-        Union[ParkingProperties, ParkingPropertiesRelStructure]
-    ] = field(
+    parking_properties_or_parking_properties: ParkingProperties | ParkingPropertiesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -53,14 +51,14 @@ class ParkingAreaVersionStructure(ParkingComponentVersionStructure):
             ),
         },
     )
-    bays: Optional[ParkingBaysRelStructure] = field(
+    bays: ParkingBaysRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entrances: Optional[EntranceRefsRelStructure] = field(
+    entrances: EntranceRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

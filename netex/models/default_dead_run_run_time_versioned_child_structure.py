@@ -18,7 +18,7 @@ class DefaultDeadRunRunTimeVersionedChildStructure(
     class Meta:
         name = "DefaultDeadRunRunTime_VersionedChildStructure"
 
-    run_time: Optional[XmlDuration] = field(
+    run_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "RunTime",
@@ -27,7 +27,7 @@ class DefaultDeadRunRunTimeVersionedChildStructure(
             "required": True,
         },
     )
-    dead_run_ref: Optional[DeadRunRef] = field(
+    dead_run_ref: DeadRunRef | None = field(
         default=None,
         metadata={
             "name": "DeadRunRef",

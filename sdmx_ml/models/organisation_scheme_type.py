@@ -23,13 +23,7 @@ class OrganisationSchemeType(OrganisationSchemeBaseType):
     """
 
     choice_1: tuple[
-        Union[
-            OrganisationUnit,
-            MetadataProvider,
-            DataProvider,
-            DataConsumer,
-            Agency,
-        ],
+        OrganisationUnit | MetadataProvider | DataProvider | DataConsumer | Agency,
         ...,
     ] = field(
         default_factory=tuple,

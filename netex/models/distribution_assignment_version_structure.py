@@ -56,20 +56,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
     class Meta:
         name = "DistributionAssignment_VersionStructure"
 
-    choice: Optional[
-        Union[
-            EntitlementProductRef,
-            SupplementProductRef,
-            PreassignedFareProductRef,
-            AmountOfPriceUnitProductRef,
-            UsageDiscountRightRef,
-            ThirdPartyProductRef,
-            CappedDiscountRightRef,
-            SaleDiscountRightRef,
-            FareProductRef,
-            ServiceAccessRightRef,
-        ]
-    ] = field(
+    choice: EntitlementProductRef | SupplementProductRef | PreassignedFareProductRef | AmountOfPriceUnitProductRef | UsageDiscountRightRef | ThirdPartyProductRef | CappedDiscountRightRef | SaleDiscountRightRef | FareProductRef | ServiceAccessRightRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -127,7 +114,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             ),
         },
     )
-    sales_offer_package_ref: Optional[SalesOfferPackageRef] = field(
+    sales_offer_package_ref: SalesOfferPackageRef | None = field(
         default=None,
         metadata={
             "name": "SalesOfferPackageRef",
@@ -135,9 +122,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    group_of_sales_offer_packages_ref: Optional[
-        GroupOfSalesOfferPackagesRef
-    ] = field(
+    group_of_sales_offer_packages_ref: GroupOfSalesOfferPackagesRef | None = field(
         default=None,
         metadata={
             "name": "GroupOfSalesOfferPackagesRef",
@@ -154,9 +139,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "tokens": True,
         },
     )
-    all_countries_ref_or_country_ref: Optional[
-        Union[AllCountriesRef, CountryRef]
-    ] = field(
+    all_countries_ref_or_country_ref: AllCountriesRef | CountryRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -174,7 +157,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             ),
         },
     )
-    allowed_in_country: Optional[bool] = field(
+    allowed_in_country: bool | None = field(
         default=None,
         metadata={
             "name": "AllowedInCountry",
@@ -182,7 +165,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    topographic_place_ref: Optional[TopographicPlaceRef] = field(
+    topographic_place_ref: TopographicPlaceRef | None = field(
         default=None,
         metadata={
             "name": "TopographicPlaceRef",
@@ -190,13 +173,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref: Optional[
-        Union[
-            AllDistributionChannelsRef,
-            GroupOfDistributionChannelsRef,
-            DistributionChannelRef,
-        ]
-    ] = field(
+    all_distribution_channels_ref_or_group_of_distribution_channels_ref_or_distribution_channel_ref: AllDistributionChannelsRef | GroupOfDistributionChannelsRef | DistributionChannelRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -219,7 +196,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             ),
         },
     )
-    distribution_channel_type: Optional[DistributionChannelTypeEnumeration] = (
+    distribution_channel_type: DistributionChannelTypeEnumeration | None = (
         field(
             default=None,
             metadata={
@@ -229,7 +206,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             },
         )
     )
-    allowed_in_channel: Optional[bool] = field(
+    allowed_in_channel: bool | None = field(
         default=None,
         metadata={
             "name": "AllowedInChannel",
@@ -237,7 +214,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    restricted_to_channel: Optional[bool] = field(
+    restricted_to_channel: bool | None = field(
         default=None,
         metadata={
             "name": "RestrictedToChannel",
@@ -245,7 +222,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mandatory_product: Optional[bool] = field(
+    mandatory_product: bool | None = field(
         default=None,
         metadata={
             "name": "MandatoryProduct",
@@ -253,7 +230,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    initial_carrier: Optional[bool] = field(
+    initial_carrier: bool | None = field(
         default=None,
         metadata={
             "name": "InitialCarrier",
@@ -261,7 +238,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transit_carrier: Optional[bool] = field(
+    transit_carrier: bool | None = field(
         default=None,
         metadata={
             "name": "TransitCarrier",
@@ -269,7 +246,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    final_carrier: Optional[bool] = field(
+    final_carrier: bool | None = field(
         default=None,
         metadata={
             "name": "FinalCarrier",
@@ -277,25 +254,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice_1: Optional[
-        Union[
-            AllAuthoritiesRef,
-            AllOperatorsRef,
-            AllPublicTransportOrganisationsRef,
-            AllTransportOrganisationsRef,
-            AllOrganisationsRef,
-            RetailConsortiumRef,
-            OnlineServiceOperatorRef,
-            GeneralOrganisationRef,
-            ManagementAgentRef,
-            ServicedOrganisationRef,
-            TravelAgentRef,
-            OtherOrganisationRef,
-            AuthorityRef,
-            OperatorRef,
-            OrganisationRef,
-        ]
-    ] = field(
+    choice_1: AllAuthoritiesRef | AllOperatorsRef | AllPublicTransportOrganisationsRef | AllTransportOrganisationsRef | AllOrganisationsRef | RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -378,7 +337,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             ),
         },
     )
-    responsibility_set_ref: Optional[ResponsibilitySetRef] = field(
+    responsibility_set_ref: ResponsibilitySetRef | None = field(
         default=None,
         metadata={
             "name": "ResponsibilitySetRef",
@@ -386,7 +345,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    ticketing_service_facility_list: Optional[TicketingServiceFacilityList] = (
+    ticketing_service_facility_list: TicketingServiceFacilityList | None = (
         field(
             default=None,
             metadata={
@@ -405,7 +364,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "tokens": True,
         },
     )
-    requires_registration: Optional[bool] = field(
+    requires_registration: bool | None = field(
         default=None,
         metadata={
             "name": "RequiresRegistration",
@@ -413,7 +372,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fulfilment_method_ref: Optional[FulfilmentMethodRef] = field(
+    fulfilment_method_ref: FulfilmentMethodRef | None = field(
         default=None,
         metadata={
             "name": "FulfilmentMethodRef",
@@ -421,7 +380,7 @@ class DistributionAssignmentVersionStructure(AssignmentVersionStructure2):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",

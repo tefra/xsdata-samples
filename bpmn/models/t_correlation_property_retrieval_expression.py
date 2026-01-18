@@ -13,7 +13,7 @@ class TCorrelationPropertyRetrievalExpression(TBaseElement):
     class Meta:
         name = "tCorrelationPropertyRetrievalExpression"
 
-    message_path: Optional[TFormalExpression] = field(
+    message_path: TFormalExpression | None = field(
         default=None,
         metadata={
             "name": "messagePath",
@@ -22,7 +22,7 @@ class TCorrelationPropertyRetrievalExpression(TBaseElement):
             "required": True,
         },
     )
-    message_ref: Optional[QName] = field(
+    message_ref: QName | None = field(
         default=None,
         metadata={
             "name": "messageRef",

@@ -35,7 +35,7 @@ __NAMESPACE__ = "urn:oasis:names:specification:ubl:schema:xsd:TransportationStat
 
 @dataclass(frozen=True)
 class TransportationStatusRequestType:
-    ublextensions: Optional[Ublextensions] = field(
+    ublextensions: Ublextensions | None = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -43,7 +43,7 @@ class TransportationStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: Optional[UblversionId] = field(
+    ublversion_id: UblversionId | None = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -51,7 +51,7 @@ class TransportationStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: Optional[CustomizationId] = field(
+    customization_id: CustomizationId | None = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -59,7 +59,7 @@ class TransportationStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: Optional[ProfileId] = field(
+    profile_id: ProfileId | None = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -67,7 +67,7 @@ class TransportationStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: Optional[ProfileExecutionId] = field(
+    profile_execution_id: ProfileExecutionId | None = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -75,7 +75,7 @@ class TransportationStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -84,7 +84,7 @@ class TransportationStatusRequestType:
             "required": True,
         },
     )
-    carrier_assigned_id: Optional[CarrierAssignedId] = field(
+    carrier_assigned_id: CarrierAssignedId | None = field(
         default=None,
         metadata={
             "name": "CarrierAssignedID",
@@ -92,7 +92,7 @@ class TransportationStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -100,7 +100,7 @@ class TransportationStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -108,7 +108,7 @@ class TransportationStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -116,7 +116,7 @@ class TransportationStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -140,7 +140,7 @@ class TransportationStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    shipping_order_id: Optional[ShippingOrderId] = field(
+    shipping_order_id: ShippingOrderId | None = field(
         default=None,
         metadata={
             "name": "ShippingOrderID",
@@ -148,7 +148,7 @@ class TransportationStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    other_instruction: Optional[OtherInstruction] = field(
+    other_instruction: OtherInstruction | None = field(
         default=None,
         metadata={
             "name": "OtherInstruction",
@@ -156,7 +156,7 @@ class TransportationStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    transportation_status_type_code: Optional[TransportationStatusTypeCode] = (
+    transportation_status_type_code: TransportationStatusTypeCode | None = (
         field(
             default=None,
             metadata={
@@ -166,7 +166,7 @@ class TransportationStatusRequestType:
             },
         )
     )
-    sender_party: Optional[SenderParty] = field(
+    sender_party: SenderParty | None = field(
         default=None,
         metadata={
             "name": "SenderParty",
@@ -174,7 +174,7 @@ class TransportationStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    receiver_party: Optional[ReceiverParty] = field(
+    receiver_party: ReceiverParty | None = field(
         default=None,
         metadata={
             "name": "ReceiverParty",
@@ -182,9 +182,7 @@ class TransportationStatusRequestType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_execution_plan_document_reference: Optional[
-        TransportExecutionPlanDocumentReference
-    ] = field(
+    transport_execution_plan_document_reference: TransportExecutionPlanDocumentReference | None = field(
         default=None,
         metadata={
             "name": "TransportExecutionPlanDocumentReference",

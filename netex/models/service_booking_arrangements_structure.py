@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ServiceBookingArrangementsStructure(BookingArrangementsStructure):
-    minimum_booking_duration: Optional[XmlDuration] = field(
+    minimum_booking_duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MinimumBookingDuration",
@@ -19,7 +19,7 @@ class ServiceBookingArrangementsStructure(BookingArrangementsStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_booking_duration: Optional[XmlDuration] = field(
+    maximum_booking_duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MaximumBookingDuration",
@@ -27,7 +27,7 @@ class ServiceBookingArrangementsStructure(BookingArrangementsStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    deposit_required: Optional[bool] = field(
+    deposit_required: bool | None = field(
         default=None,
         metadata={
             "name": "DepositRequired",
@@ -35,7 +35,7 @@ class ServiceBookingArrangementsStructure(BookingArrangementsStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_charge_type: Optional[BookingChargeTypeEnumeration] = field(
+    booking_charge_type: BookingChargeTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "BookingChargeType",

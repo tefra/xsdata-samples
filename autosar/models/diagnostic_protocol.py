@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -109,7 +111,7 @@ class DiagnosticProtocol:
     class Meta:
         name = "DIAGNOSTIC-PROTOCOL"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -118,7 +120,7 @@ class DiagnosticProtocol:
             "required": True,
         },
     )
-    short_name_fragments: Optional["DiagnosticProtocol.ShortNameFragments"] = (
+    short_name_fragments: DiagnosticProtocol.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -128,7 +130,7 @@ class DiagnosticProtocol:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -136,7 +138,7 @@ class DiagnosticProtocol:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -144,7 +146,7 @@ class DiagnosticProtocol:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -152,7 +154,7 @@ class DiagnosticProtocol:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -160,7 +162,7 @@ class DiagnosticProtocol:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -168,7 +170,7 @@ class DiagnosticProtocol:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticProtocol.Annotations"] = field(
+    annotations: DiagnosticProtocol.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -176,7 +178,7 @@ class DiagnosticProtocol:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -184,9 +186,7 @@ class DiagnosticProtocol:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_connections: Optional[
-        "DiagnosticProtocol.DiagnosticConnections"
-    ] = field(
+    diagnostic_connections: DiagnosticProtocol.DiagnosticConnections | None = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-CONNECTIONS",
@@ -194,7 +194,7 @@ class DiagnosticProtocol:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    priority: Optional[PositiveIntegerValueVariationPoint] = field(
+    priority: PositiveIntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "PRIORITY",
@@ -202,7 +202,7 @@ class DiagnosticProtocol:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    protocol_kind: Optional[NmtokenString] = field(
+    protocol_kind: NmtokenString | None = field(
         default=None,
         metadata={
             "name": "PROTOCOL-KIND",
@@ -210,7 +210,7 @@ class DiagnosticProtocol:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    send_resp_pend_on_trans_to_boot: Optional[BooleanValueVariationPoint] = (
+    send_resp_pend_on_trans_to_boot: BooleanValueVariationPoint | None = (
         field(
             default=None,
             metadata={
@@ -220,7 +220,7 @@ class DiagnosticProtocol:
             },
         )
     )
-    service_tables: Optional["DiagnosticProtocol.ServiceTables"] = field(
+    service_tables: DiagnosticProtocol.ServiceTables | None = field(
         default=None,
         metadata={
             "name": "SERVICE-TABLES",
@@ -228,14 +228,14 @@ class DiagnosticProtocol:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -243,7 +243,7 @@ class DiagnosticProtocol:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

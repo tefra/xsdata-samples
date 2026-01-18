@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -57,7 +59,7 @@ class SenderAnnotation:
     class Meta:
         name = "SENDER-ANNOTATION"
 
-    label: Optional[MultilanguageLongName] = field(
+    label: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -65,7 +67,7 @@ class SenderAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_origin: Optional[String] = field(
+    annotation_origin: String | None = field(
         default=None,
         metadata={
             "name": "ANNOTATION-ORIGIN",
@@ -73,7 +75,7 @@ class SenderAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotation_text: Optional[DocumentationBlock] = field(
+    annotation_text: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "ANNOTATION-TEXT",
@@ -81,7 +83,7 @@ class SenderAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    computed: Optional[Boolean] = field(
+    computed: Boolean | None = field(
         default=None,
         metadata={
             "name": "COMPUTED",
@@ -89,7 +91,7 @@ class SenderAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: Optional["SenderAnnotation.DataElementRef"] = field(
+    data_element_ref: SenderAnnotation.DataElementRef | None = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENT-REF",
@@ -97,7 +99,7 @@ class SenderAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    limit_kind: Optional[DataLimitKindEnum] = field(
+    limit_kind: DataLimitKindEnum | None = field(
         default=None,
         metadata={
             "name": "LIMIT-KIND",
@@ -105,7 +107,7 @@ class SenderAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    processing_kind: Optional[ProcessingKindEnum] = field(
+    processing_kind: ProcessingKindEnum | None = field(
         default=None,
         metadata={
             "name": "PROCESSING-KIND",
@@ -113,14 +115,14 @@ class SenderAnnotation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -131,7 +133,7 @@ class SenderAnnotation:
 
     @dataclass
     class DataElementRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

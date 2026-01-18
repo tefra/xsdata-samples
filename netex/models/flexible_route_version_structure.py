@@ -12,7 +12,7 @@ class FlexibleRouteVersionStructure(RouteVersionStructure):
     class Meta:
         name = "FlexibleRoute_VersionStructure"
 
-    flexible_route_type: Optional[FlexibleRouteTypeEnumeration] = field(
+    flexible_route_type: FlexibleRouteTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "FlexibleRouteType",

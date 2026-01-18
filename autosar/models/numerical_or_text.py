@@ -41,7 +41,7 @@ class NumericalOrText:
     class Meta:
         name = "NUMERICAL-OR-TEXT"
 
-    vf: Optional[NumericalValueVariationPoint] = field(
+    vf: NumericalValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "VF",
@@ -49,7 +49,7 @@ class NumericalOrText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vt: Optional[String] = field(
+    vt: String | None = field(
         default=None,
         metadata={
             "name": "VT",
@@ -57,7 +57,7 @@ class NumericalOrText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -65,14 +65,14 @@ class NumericalOrText:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

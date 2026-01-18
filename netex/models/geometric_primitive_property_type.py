@@ -11,9 +11,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class GeometricPrimitivePropertyType:
-    abstract_surface_or_abstract_curve_or_abstract_geometric_primitive: Optional[
-        Union[Polygon, LineString, Point1]
-    ] = field(
+    abstract_surface_or_abstract_curve_or_abstract_geometric_primitive: Polygon | LineString | Point1 | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -42,7 +40,7 @@ class GeometricPrimitivePropertyType:
             "type": "Attribute",
         },
     )
-    nil_reason: Optional[Union[str, NilReasonEnumerationValue]] = field(
+    nil_reason: str | NilReasonEnumerationValue | None = field(
         default=None,
         metadata={
             "name": "nilReason",

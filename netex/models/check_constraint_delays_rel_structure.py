@@ -17,7 +17,7 @@ class CheckConstraintDelaysRelStructure(StrictContainmentAggregationStructure):
         name = "checkConstraintDelays_RelStructure"
 
     check_constraint_delay_ref_or_check_constraint_delay: Iterable[
-        Union[CheckConstraintDelayRef, CheckConstraintDelay]
+        CheckConstraintDelayRef | CheckConstraintDelay
     ] = field(
         default_factory=list,
         metadata={

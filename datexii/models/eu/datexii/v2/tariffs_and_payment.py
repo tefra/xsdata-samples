@@ -52,7 +52,7 @@ class TariffsAndPayment:
     :ivar tariffs_and_payment_extension:
     """
 
-    last_updated: Optional[XmlDateTime] = field(
+    last_updated: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "lastUpdated",
@@ -76,7 +76,7 @@ class TariffsAndPayment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    payment_additional_description: Optional[MultilingualString] = field(
+    payment_additional_description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "paymentAdditionalDescription",
@@ -84,7 +84,7 @@ class TariffsAndPayment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    free_of_charge: Optional[bool] = field(
+    free_of_charge: bool | None = field(
         default=None,
         metadata={
             "name": "freeOfCharge",
@@ -92,7 +92,7 @@ class TariffsAndPayment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    reservation_fee: Optional[Decimal] = field(
+    reservation_fee: Decimal | None = field(
         default=None,
         metadata={
             "name": "reservationFee",
@@ -102,7 +102,7 @@ class TariffsAndPayment:
             "fraction_digits": 2,
         },
     )
-    url_link_address: Optional[str] = field(
+    url_link_address: str | None = field(
         default=None,
         metadata={
             "name": "urlLinkAddress",
@@ -126,7 +126,7 @@ class TariffsAndPayment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    accepted_payment_cards: Optional[AcceptedPaymentCards] = field(
+    accepted_payment_cards: AcceptedPaymentCards | None = field(
         default=None,
         metadata={
             "name": "acceptedPaymentCards",
@@ -134,7 +134,7 @@ class TariffsAndPayment:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    tariffs_and_payment_extension: Optional[ExtensionType] = field(
+    tariffs_and_payment_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "tariffsAndPaymentExtension",

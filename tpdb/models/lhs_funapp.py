@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -11,14 +13,14 @@ class LhsFunapp:
     class Meta:
         global_type = False
 
-    name: Optional[Name] = field(
+    name: Name | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    arg: list["LhsFunappArg"] = field(
+    arg: list[LhsFunappArg] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -48,7 +50,7 @@ class LhsLambda:
             "max_occurs": 2,
         },
     )
-    type_value: Optional[Type] = field(
+    type_value: Type | None = field(
         default=None,
         metadata={
             "name": "type",
@@ -56,20 +58,20 @@ class LhsLambda:
             "required": True,
         },
     )
-    funapp: Optional[LhsFunapp] = field(
+    funapp: LhsFunapp | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: Optional["LhsLambda"] = field(
+    lambda_value: LhsLambda | None = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    application: Optional["LhsApplication"] = field(
+    application: LhsApplication | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -118,7 +120,7 @@ class LhsApplication:
             "sequence": 1,
         },
     )
-    application: list["LhsApplication"] = field(
+    application: list[LhsApplication] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -142,26 +144,26 @@ class LhsFunappArg:
     class Meta:
         global_type = False
 
-    funapp: Optional[LhsFunapp] = field(
+    funapp: LhsFunapp | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    var: Optional[Var] = field(
+    var: Var | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: Optional[LhsLambda] = field(
+    lambda_value: LhsLambda | None = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    application: Optional[LhsApplication] = field(
+    application: LhsApplication | None = field(
         default=None,
         metadata={
             "type": "Element",

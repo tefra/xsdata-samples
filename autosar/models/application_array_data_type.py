@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -105,7 +107,7 @@ class ApplicationArrayDataType:
     class Meta:
         name = "APPLICATION-ARRAY-DATA-TYPE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -114,9 +116,7 @@ class ApplicationArrayDataType:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ApplicationArrayDataType.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ApplicationArrayDataType.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -124,7 +124,7 @@ class ApplicationArrayDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -132,7 +132,7 @@ class ApplicationArrayDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -140,7 +140,7 @@ class ApplicationArrayDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -148,7 +148,7 @@ class ApplicationArrayDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -156,7 +156,7 @@ class ApplicationArrayDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -164,7 +164,7 @@ class ApplicationArrayDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ApplicationArrayDataType.Annotations"] = field(
+    annotations: ApplicationArrayDataType.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -172,9 +172,7 @@ class ApplicationArrayDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional[
-        "ApplicationArrayDataType.BlueprintPolicys"
-    ] = field(
+    blueprint_policys: ApplicationArrayDataType.BlueprintPolicys | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -182,7 +180,7 @@ class ApplicationArrayDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: Optional[String] = field(
+    short_name_pattern: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -190,7 +188,7 @@ class ApplicationArrayDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -198,7 +196,7 @@ class ApplicationArrayDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_data_def_props: Optional[SwDataDefProps] = field(
+    sw_data_def_props: SwDataDefProps | None = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEF-PROPS",
@@ -206,7 +204,7 @@ class ApplicationArrayDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dynamic_array_size_profile: Optional[String] = field(
+    dynamic_array_size_profile: String | None = field(
         default=None,
         metadata={
             "name": "DYNAMIC-ARRAY-SIZE-PROFILE",
@@ -214,7 +212,7 @@ class ApplicationArrayDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    element: Optional[ApplicationArrayElement] = field(
+    element: ApplicationArrayElement | None = field(
         default=None,
         metadata={
             "name": "ELEMENT",
@@ -222,14 +220,14 @@ class ApplicationArrayDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -237,7 +235,7 @@ class ApplicationArrayDataType:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

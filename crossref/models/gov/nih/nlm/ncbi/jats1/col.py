@@ -13,32 +13,32 @@ class Col:
         name = "col"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    align: Optional[ColAlign] = field(
+    align: ColAlign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: Optional[str] = field(
+    char: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: Optional[str] = field(
+    charoff: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -50,25 +50,25 @@ class Col:
             "type": "Attribute",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: Optional[ColValign] = field(
+    valign: ColValign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    width: Optional[str] = field(
+    width: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

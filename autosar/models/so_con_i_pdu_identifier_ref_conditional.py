@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class SoConIPduIdentifierRefConditional:
     class Meta:
         name = "SO-CON-I-PDU-IDENTIFIER-REF-CONDITIONAL"
 
-    so_con_i_pdu_identifier_ref: Optional[
-        "SoConIPduIdentifierRefConditional.SoConIPduIdentifierRef"
-    ] = field(
+    so_con_i_pdu_identifier_ref: SoConIPduIdentifierRefConditional.SoConIPduIdentifierRef | None = field(
         default=None,
         metadata={
             "name": "SO-CON-I-PDU-IDENTIFIER-REF",
@@ -43,7 +43,7 @@ class SoConIPduIdentifierRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class SoConIPduIdentifierRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class SoConIPduIdentifierRefConditional:
 
     @dataclass
     class SoConIPduIdentifierRef(Ref):
-        dest: Optional[SoConIPduIdentifierSubtypesEnum] = field(
+        dest: SoConIPduIdentifierSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

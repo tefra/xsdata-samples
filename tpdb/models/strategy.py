@@ -9,4 +9,4 @@ class Strategy:
     class Meta:
         name = "strategy"
 
-    value: Optional[StrategyValue] = field(default=None)
+    value: StrategyValue | None = field(default=None)

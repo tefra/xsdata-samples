@@ -16,7 +16,7 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "TravelDocument_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -24,7 +24,7 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -32,7 +32,7 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -40,7 +40,7 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_travel_document_ref: Optional[TypeOfTravelDocumentRef] = field(
+    type_of_travel_document_ref: TypeOfTravelDocumentRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfTravelDocumentRef",
@@ -48,7 +48,7 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_purchase_package_ref: Optional[CustomerPurchasePackageRef] = (
+    customer_purchase_package_ref: CustomerPurchasePackageRef | None = (
         field(
             default=None,
             metadata={
@@ -58,7 +58,7 @@ class TravelDocumentVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    marked_as: Optional[MarkedAsEnumeration] = field(
+    marked_as: MarkedAsEnumeration | None = field(
         default=None,
         metadata={
             "name": "MarkedAs",

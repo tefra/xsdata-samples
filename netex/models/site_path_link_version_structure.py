@@ -19,7 +19,7 @@ class SitePathLinkVersionStructure(PathLinkVersionStructure):
     class Meta:
         name = "SitePathLink_VersionStructure"
 
-    site_ref: Optional[SiteRefStructure] = field(
+    site_ref: SiteRefStructure | None = field(
         default=None,
         metadata={
             "name": "SiteRef",
@@ -27,7 +27,7 @@ class SitePathLinkVersionStructure(PathLinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    level_ref: Optional[LevelRef] = field(
+    level_ref: LevelRef | None = field(
         default=None,
         metadata={
             "name": "LevelRef",
@@ -35,7 +35,7 @@ class SitePathLinkVersionStructure(PathLinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    class_of_use_ref: Optional[ClassOfUseRef] = field(
+    class_of_use_ref: ClassOfUseRef | None = field(
         default=None,
         metadata={
             "name": "ClassOfUseRef",
@@ -43,7 +43,7 @@ class SitePathLinkVersionStructure(PathLinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    check_constraints: Optional[CheckConstraintsRelStructure] = field(
+    check_constraints: CheckConstraintsRelStructure | None = field(
         default=None,
         metadata={
             "name": "checkConstraints",
@@ -51,7 +51,7 @@ class SitePathLinkVersionStructure(PathLinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    equipment_places: Optional[EquipmentPlacesRelStructure] = field(
+    equipment_places: EquipmentPlacesRelStructure | None = field(
         default=None,
         metadata={
             "name": "equipmentPlaces",
@@ -59,7 +59,7 @@ class SitePathLinkVersionStructure(PathLinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    place_equipments: Optional[PlaceEquipmentsRelStructure] = field(
+    place_equipments: PlaceEquipmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "placeEquipments",
@@ -67,7 +67,7 @@ class SitePathLinkVersionStructure(PathLinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    local_services: Optional[LocalServicesRelStructure] = field(
+    local_services: LocalServicesRelStructure | None = field(
         default=None,
         metadata={
             "name": "localServices",
@@ -75,7 +75,7 @@ class SitePathLinkVersionStructure(PathLinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    label: Optional[MultilingualString] = field(
+    label: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Label",

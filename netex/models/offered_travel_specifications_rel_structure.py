@@ -15,7 +15,7 @@ class OfferedTravelSpecificationsRelStructure(ContainmentAggregationStructure):
         name = "offeredTravelSpecifications_RelStructure"
 
     offered_travel_specification_ref_or_offered_travel_specification: Iterable[
-        Union[OfferedTravelSpecificationRef, OfferedTravelSpecification]
+        OfferedTravelSpecificationRef | OfferedTravelSpecification
     ] = field(
         default_factory=list,
         metadata={

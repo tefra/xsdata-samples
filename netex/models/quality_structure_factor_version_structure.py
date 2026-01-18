@@ -18,7 +18,7 @@ class QualityStructureFactorVersionStructure(
     class Meta:
         name = "QualityStructureFactor_VersionStructure"
 
-    value: Optional[object] = field(
+    value: object | None = field(
         default=None,
         metadata={
             "name": "Value",
@@ -26,7 +26,7 @@ class QualityStructureFactorVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: Optional[QualityStructureFactorPricesRelStructure] = field(
+    prices: QualityStructureFactorPricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

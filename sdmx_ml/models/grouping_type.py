@@ -20,13 +20,7 @@ class GroupingType:
     """
 
     choice: tuple[
-        Union[
-            MetadataAttributeList,
-            MeasureList,
-            Group,
-            DimensionList,
-            AttributeList,
-        ],
+        MetadataAttributeList | MeasureList | Group | DimensionList | AttributeList,
         ...,
     ] = field(
         default_factory=tuple,

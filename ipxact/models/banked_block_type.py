@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -60,7 +62,7 @@ class BankedBlockType:
     class Meta:
         name = "bankedBlockType"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -68,7 +70,7 @@ class BankedBlockType:
             "required": True,
         },
     )
-    display_name: Optional[DisplayName] = field(
+    display_name: DisplayName | None = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -76,7 +78,7 @@ class BankedBlockType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -84,14 +86,14 @@ class BankedBlockType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_handles: Optional["BankedBlockType.AccessHandles"] = field(
+    access_handles: BankedBlockType.AccessHandles | None = field(
         default=None,
         metadata={
             "name": "accessHandles",
@@ -99,7 +101,7 @@ class BankedBlockType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    range: Optional[UnsignedPositiveLongintExpression] = field(
+    range: UnsignedPositiveLongintExpression | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -107,7 +109,7 @@ class BankedBlockType:
             "required": True,
         },
     )
-    width: Optional[UnsignedPositiveIntExpression] = field(
+    width: UnsignedPositiveIntExpression | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -115,21 +117,21 @@ class BankedBlockType:
             "required": True,
         },
     )
-    usage: Optional[UsageType] = field(
+    usage: UsageType | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    volatile: Optional[Volatile] = field(
+    volatile: Volatile | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_policies: Optional[AccessPolicies] = field(
+    access_policies: AccessPolicies | None = field(
         default=None,
         metadata={
             "name": "accessPolicies",
@@ -137,14 +139,14 @@ class BankedBlockType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    parameters: Optional[Parameters] = field(
+    parameters: Parameters | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    register: list["BankedBlockType.Register"] = field(
+    register: list[BankedBlockType.Register] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -159,7 +161,7 @@ class BankedBlockType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -167,7 +169,7 @@ class BankedBlockType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -215,7 +217,7 @@ class BankedBlockType:
         :ivar id:
         """
 
-        name: Optional[str] = field(
+        name: str | None = field(
             default=None,
             metadata={
                 "type": "Element",
@@ -223,7 +225,7 @@ class BankedBlockType:
                 "required": True,
             },
         )
-        display_name: Optional[DisplayName] = field(
+        display_name: DisplayName | None = field(
             default=None,
             metadata={
                 "name": "displayName",
@@ -231,7 +233,7 @@ class BankedBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        short_description: Optional[ShortDescription] = field(
+        short_description: ShortDescription | None = field(
             default=None,
             metadata={
                 "name": "shortDescription",
@@ -239,14 +241,14 @@ class BankedBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        description: Optional[Description] = field(
+        description: Description | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        access_handles: Optional["BankedBlockType.Register.AccessHandles"] = (
+        access_handles: BankedBlockType.Register.AccessHandles | None = (
             field(
                 default=None,
                 metadata={
@@ -256,14 +258,14 @@ class BankedBlockType:
                 },
             )
         )
-        array: Optional[Array] = field(
+        array: Array | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        address_offset: Optional[UnsignedLongintExpression] = field(
+        address_offset: UnsignedLongintExpression | None = field(
             default=None,
             metadata={
                 "name": "addressOffset",
@@ -272,9 +274,7 @@ class BankedBlockType:
                 "required": True,
             },
         )
-        register_definition_ref: Optional[
-            "BankedBlockType.Register.RegisterDefinitionRef"
-        ] = field(
+        register_definition_ref: BankedBlockType.Register.RegisterDefinitionRef | None = field(
             default=None,
             metadata={
                 "name": "registerDefinitionRef",
@@ -282,7 +282,7 @@ class BankedBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        type_identifier: Optional[str] = field(
+        type_identifier: str | None = field(
             default=None,
             metadata={
                 "name": "typeIdentifier",
@@ -290,21 +290,21 @@ class BankedBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        size: Optional[UnsignedPositiveIntExpression] = field(
+        size: UnsignedPositiveIntExpression | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        volatile: Optional[Volatile] = field(
+        volatile: Volatile | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        access_policies: Optional[AccessPolicies] = field(
+        access_policies: AccessPolicies | None = field(
             default=None,
             metadata={
                 "name": "accessPolicies",
@@ -320,7 +320,7 @@ class BankedBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        alternate_registers: Optional[AlternateRegisters] = field(
+        alternate_registers: AlternateRegisters | None = field(
             default=None,
             metadata={
                 "name": "alternateRegisters",
@@ -328,14 +328,14 @@ class BankedBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        parameters: Optional[Parameters] = field(
+        parameters: Parameters | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        vendor_extensions: Optional[VendorExtensions] = field(
+        vendor_extensions: VendorExtensions | None = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
@@ -343,7 +343,7 @@ class BankedBlockType:
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -371,7 +371,7 @@ class BankedBlockType:
                     "required": True,
                 },
             )
-            type_definitions: Optional[str] = field(
+            type_definitions: str | None = field(
                 default=None,
                 metadata={
                     "name": "typeDefinitions",

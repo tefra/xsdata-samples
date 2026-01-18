@@ -23,7 +23,7 @@ class VehicleJourneyStopAssignmentVersionStructure(
     class Meta:
         name = "VehicleJourneyStopAssignment_VersionStructure"
 
-    vehicle_journey_ref: Iterable[Union[DeadRunRef, VehicleJourneyRef]] = (
+    vehicle_journey_ref: Iterable[DeadRunRef | VehicleJourneyRef] = (
         field(
             default_factory=list,
             metadata={
@@ -43,13 +43,7 @@ class VehicleJourneyStopAssignmentVersionStructure(
             },
         )
     )
-    passenger_stop_assignment_ref: Optional[
-        Union[
-            VehicleJourneyStopAssignmentRef,
-            DynamicStopAssignmentRef,
-            PassengerStopAssignmentRef,
-        ]
-    ] = field(
+    passenger_stop_assignment_ref: VehicleJourneyStopAssignmentRef | DynamicStopAssignmentRef | PassengerStopAssignmentRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -19,7 +21,7 @@ class Choices:
         name = "choices"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    choice: list["Choices.Choice"] = field(
+    choice: list[Choices.Choice] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -36,21 +38,21 @@ class Choices:
         :ivar id:
         """
 
-        name: Optional[str] = field(
+        name: str | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        enumeration: list["Choices.Choice.Enumeration"] = field(
+        enumeration: list[Choices.Choice.Enumeration] = field(
             default_factory=list,
             metadata={
                 "type": "Element",
                 "min_occurs": 1,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -68,19 +70,19 @@ class Choices:
             :ivar id:
             """
 
-            text: Optional[str] = field(
+            text: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
                 },
             )
-            help: Optional[str] = field(
+            help: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
                 },
             )
-            id: Optional[str] = field(
+            id: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

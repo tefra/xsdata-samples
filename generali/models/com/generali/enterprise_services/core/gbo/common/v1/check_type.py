@@ -29,7 +29,7 @@ class CheckType(BaseIdentifiedComponentType):
         against the business object.
     """
 
-    made_against: Optional[ChecksMadeAgainstType] = field(
+    made_against: ChecksMadeAgainstType | None = field(
         default=None,
         metadata={
             "name": "MadeAgainst",
@@ -37,7 +37,7 @@ class CheckType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    made_by: Optional[ChecksMadeByType] = field(
+    made_by: ChecksMadeByType | None = field(
         default=None,
         metadata={
             "name": "MadeBy",

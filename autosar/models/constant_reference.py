@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -37,7 +39,7 @@ class ConstantReference:
     class Meta:
         name = "CONSTANT-REFERENCE"
 
-    short_label: Optional[Identifier] = field(
+    short_label: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -45,7 +47,7 @@ class ConstantReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -53,7 +55,7 @@ class ConstantReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    constant_ref: Optional["ConstantReference.ConstantRef"] = field(
+    constant_ref: ConstantReference.ConstantRef | None = field(
         default=None,
         metadata={
             "name": "CONSTANT-REF",
@@ -61,14 +63,14 @@ class ConstantReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -79,7 +81,7 @@ class ConstantReference:
 
     @dataclass
     class ConstantRef(Ref):
-        dest: Optional[ConstantSpecificationSubtypesEnum] = field(
+        dest: ConstantSpecificationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

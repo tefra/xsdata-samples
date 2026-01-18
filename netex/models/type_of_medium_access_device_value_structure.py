@@ -12,7 +12,7 @@ class TypeOfMediumAccessDeviceValueStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "TypeOfMediumAccessDevice_ValueStructure"
 
-    type_of_machine_readability_ref: Optional[TypeOfMachineReadabilityRef] = (
+    type_of_machine_readability_ref: TypeOfMachineReadabilityRef | None = (
         field(
             default=None,
             metadata={

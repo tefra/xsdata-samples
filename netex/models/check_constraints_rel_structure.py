@@ -15,7 +15,7 @@ class CheckConstraintsRelStructure(ContainmentAggregationStructure):
         name = "checkConstraints_RelStructure"
 
     check_constraint_ref_or_check_constraint: Iterable[
-        Union[CheckConstraintRef, CheckConstraint]
+        CheckConstraintRef | CheckConstraint
     ] = field(
         default_factory=list,
         metadata={

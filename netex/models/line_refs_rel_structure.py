@@ -14,7 +14,7 @@ class LineRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "lineRefs_RelStructure"
 
-    line_ref: Iterable[Union[FlexibleLineRef, LineRef]] = field(
+    line_ref: Iterable[FlexibleLineRef | LineRef] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

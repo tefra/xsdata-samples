@@ -204,848 +204,848 @@ class LambdaType:
             "type": "Element",
         },
     )
-    apply: Optional[Apply] = field(
+    apply: Apply | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    bind: Optional[Bind] = field(
+    bind: Bind | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ci: Optional[Ci] = field(
+    ci: Ci | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cn: Optional[Cn] = field(
+    cn: Cn | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csymbol: Optional[Csymbol] = field(
+    csymbol: Csymbol | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cbytes: Optional[Cbytes] = field(
+    cbytes: Cbytes | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cerror: Optional[Cerror] = field(
+    cerror: Cerror | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cs: Optional[Cs] = field(
+    cs: Cs | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    share: Optional[Share] = field(
+    share: Share | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    piecewise: Optional[Piecewise] = field(
+    piecewise: Piecewise | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    declare: Optional[Declare] = field(
+    declare: Declare | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    fn: Optional[Fn] = field(
+    fn: Fn | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reln: Optional[Reln] = field(
+    reln: Reln | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    interval: Optional[Interval] = field(
+    interval: Interval | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    moment: Optional[Moment] = field(
+    moment: Moment | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    log: Optional[Log] = field(
+    log: Log | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ln: Optional[Ln] = field(
+    ln: Ln | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    image: Optional[Image] = field(
+    image: Image | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    codomain: Optional[Codomain] = field(
+    codomain: Codomain | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    domain: Optional[Domain] = field(
+    domain: Domain | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ident: Optional[Ident] = field(
+    ident: Ident | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    inverse: Optional[Inverse] = field(
+    inverse: Inverse | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lambda_value: Optional[Lambda] = field(
+    lambda_value: Lambda | None = field(
         default=None,
         metadata={
             "name": "lambda",
             "type": "Element",
         },
     )
-    compose: Optional[Compose] = field(
+    compose: Compose | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    quotient: Optional[Quotient] = field(
+    quotient: Quotient | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divide: Optional[Divide] = field(
+    divide: Divide | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    minus: Optional[Minus] = field(
+    minus: Minus | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    power: Optional[Power] = field(
+    power: Power | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rem: Optional[Rem] = field(
+    rem: Rem | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    root: Optional[Root] = field(
+    root: Root | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorial: Optional[Factorial] = field(
+    factorial: Factorial | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    abs: Optional[Abs] = field(
+    abs: Abs | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    conjugate: Optional[Conjugate] = field(
+    conjugate: Conjugate | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arg: Optional[Arg] = field(
+    arg: Arg | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    real: Optional[Real] = field(
+    real: Real | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginary: Optional[Imaginary] = field(
+    imaginary: Imaginary | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    floor: Optional[Floor] = field(
+    floor: Floor | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    ceiling: Optional[Ceiling] = field(
+    ceiling: Ceiling | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exp: Optional[Exp] = field(
+    exp: Exp | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    min: Optional[Min] = field(
+    min: Min | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    max: Optional[Max] = field(
+    max: Max | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lcm: Optional[Lcm] = field(
+    lcm: Lcm | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gcd: Optional[Gcd] = field(
+    gcd: Gcd | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    times: Optional[Times] = field(
+    times: Times | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    plus: Optional[Plus] = field(
+    plus: Plus | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    xor: Optional[Xor] = field(
+    xor: Xor | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    or_value: Optional[Or] = field(
+    or_value: Or | None = field(
         default=None,
         metadata={
             "name": "or",
             "type": "Element",
         },
     )
-    and_value: Optional[And] = field(
+    and_value: And | None = field(
         default=None,
         metadata={
             "name": "and",
             "type": "Element",
         },
     )
-    not_value: Optional[Not] = field(
+    not_value: Not | None = field(
         default=None,
         metadata={
             "name": "not",
             "type": "Element",
         },
     )
-    equivalent: Optional[Equivalent] = field(
+    equivalent: Equivalent | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    implies: Optional[Implies] = field(
+    implies: Implies | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exists: Optional[Exists] = field(
+    exists: Exists | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    forall: Optional[Forall] = field(
+    forall: Forall | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    leq: Optional[Leq] = field(
+    leq: Leq | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    geq: Optional[Geq] = field(
+    geq: Geq | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lt: Optional[Lt] = field(
+    lt: Lt | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    gt: Optional[Gt] = field(
+    gt: Gt | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eq: Optional[Eq] = field(
+    eq: Eq | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tendsto: Optional[Tendsto] = field(
+    tendsto: Tendsto | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    factorof: Optional[Factorof] = field(
+    factorof: Factorof | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    approx: Optional[Approx] = field(
+    approx: Approx | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    neq: Optional[Neq] = field(
+    neq: Neq | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    int_value: Optional[Int] = field(
+    int_value: Int | None = field(
         default=None,
         metadata={
             "name": "int",
             "type": "Element",
         },
     )
-    diff: Optional[Diff] = field(
+    diff: Diff | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    partialdiff: Optional[Partialdiff] = field(
+    partialdiff: Partialdiff | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    laplacian: Optional[Laplacian] = field(
+    laplacian: Laplacian | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    curl: Optional[Curl] = field(
+    curl: Curl | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    grad: Optional[Grad] = field(
+    grad: Grad | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    divergence: Optional[Divergence] = field(
+    divergence: Divergence | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    list_value: Optional[List] = field(
+    list_value: List | None = field(
         default=None,
         metadata={
             "name": "list",
             "type": "Element",
         },
     )
-    set: Optional[Set] = field(
+    set: Set | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cartesianproduct: Optional[Cartesianproduct] = field(
+    cartesianproduct: Cartesianproduct | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    intersect: Optional[Intersect] = field(
+    intersect: Intersect | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    union: Optional[UnionType] = field(
+    union: UnionType | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    setdiff: Optional[Setdiff] = field(
+    setdiff: Setdiff | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notprsubset: Optional[Notprsubset] = field(
+    notprsubset: Notprsubset | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notsubset: Optional[Notsubset] = field(
+    notsubset: Notsubset | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notin: Optional[Notin] = field(
+    notin: Notin | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    in_value: Optional[In] = field(
+    in_value: In | None = field(
         default=None,
         metadata={
             "name": "in",
             "type": "Element",
         },
     )
-    prsubset: Optional[Prsubset] = field(
+    prsubset: Prsubset | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subset: Optional[Subset] = field(
+    subset: Subset | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    card: Optional[Card] = field(
+    card: Card | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sum: Optional[Sum] = field(
+    sum: Sum | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    product: Optional[Product] = field(
+    product: Product | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    limit: Optional[Limit] = field(
+    limit: Limit | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctanh: Optional[Arctanh] = field(
+    arctanh: Arctanh | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsinh: Optional[Arcsinh] = field(
+    arcsinh: Arcsinh | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsech: Optional[Arcsech] = field(
+    arcsech: Arcsech | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsec: Optional[Arcsec] = field(
+    arcsec: Arcsec | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsch: Optional[Arccsch] = field(
+    arccsch: Arccsch | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccsc: Optional[Arccsc] = field(
+    arccsc: Arccsc | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccoth: Optional[Arccoth] = field(
+    arccoth: Arccoth | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccot: Optional[Arccot] = field(
+    arccot: Arccot | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccosh: Optional[Arccosh] = field(
+    arccosh: Arccosh | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arctan: Optional[Arctan] = field(
+    arctan: Arctan | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arccos: Optional[Arccos] = field(
+    arccos: Arccos | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arcsin: Optional[Arcsin] = field(
+    arcsin: Arcsin | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    coth: Optional[Coth] = field(
+    coth: Coth | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csch: Optional[Csch] = field(
+    csch: Csch | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sech: Optional[Sech] = field(
+    sech: Sech | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tanh: Optional[Tanh] = field(
+    tanh: Tanh | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cosh: Optional[Cosh] = field(
+    cosh: Cosh | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sinh: Optional[Sinh] = field(
+    sinh: Sinh | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cot: Optional[Cot] = field(
+    cot: Cot | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    csc: Optional[Csc] = field(
+    csc: Csc | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sec: Optional[Sec] = field(
+    sec: Sec | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tan: Optional[Tan] = field(
+    tan: Tan | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    cos: Optional[Cos] = field(
+    cos: Cos | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sin: Optional[Sin] = field(
+    sin: Sin | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mode: Optional[Mode] = field(
+    mode: Mode | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    median: Optional[Median] = field(
+    median: Median | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    variance: Optional[Variance] = field(
+    variance: Variance | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sdev: Optional[Sdev] = field(
+    sdev: Sdev | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    mean: Optional[Mean] = field(
+    mean: Mean | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrixrow: Optional[Matrixrow] = field(
+    matrixrow: Matrixrow | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    matrix: Optional[Matrix] = field(
+    matrix: Matrix | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vector: Optional[Vector] = field(
+    vector: Vector | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    transpose: Optional[Transpose] = field(
+    transpose: Transpose | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    determinant: Optional[Determinant] = field(
+    determinant: Determinant | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    selector: Optional[Selector] = field(
+    selector: Selector | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    outerproduct: Optional[Outerproduct] = field(
+    outerproduct: Outerproduct | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    scalarproduct: Optional[Scalarproduct] = field(
+    scalarproduct: Scalarproduct | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vectorproduct: Optional[Vectorproduct] = field(
+    vectorproduct: Vectorproduct | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    emptyset: Optional[Emptyset] = field(
+    emptyset: Emptyset | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    primes: Optional[Primes] = field(
+    primes: Primes | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    complexes: Optional[Complexes] = field(
+    complexes: Complexes | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    naturalnumbers: Optional[Naturalnumbers] = field(
+    naturalnumbers: Naturalnumbers | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    rationals: Optional[Rationals] = field(
+    rationals: Rationals | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    reals: Optional[Reals] = field(
+    reals: Reals | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    integers: Optional[Integers] = field(
+    integers: Integers | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    infinity: Optional[Infinity] = field(
+    infinity: Infinity | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    eulergamma: Optional[Eulergamma] = field(
+    eulergamma: Eulergamma | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    pi: Optional[Pi] = field(
+    pi: Pi | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    false: Optional[FalseType] = field(
+    false: FalseType | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    true: Optional[TrueType] = field(
+    true: TrueType | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    notanumber: Optional[Notanumber] = field(
+    notanumber: Notanumber | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    imaginaryi: Optional[Imaginaryi] = field(
+    imaginaryi: Imaginaryi | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    exponentiale: Optional[Exponentiale] = field(
+    exponentiale: Exponentiale | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: Optional[object] = field(
+    xref: object | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1059,19 +1059,19 @@ class LambdaType:
             "tokens": True,
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: Optional[object] = field(
+    other: object | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1084,13 +1084,13 @@ class LambdaType:
             "namespace": "##other",
         },
     )
-    encoding: Optional[str] = field(
+    encoding: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    definition_url: Optional[str] = field(
+    definition_url: str | None = field(
         default=None,
         metadata={
             "name": "definitionURL",

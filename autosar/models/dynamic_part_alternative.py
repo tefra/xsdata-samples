@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -43,7 +45,7 @@ class DynamicPartAlternative:
     class Meta:
         name = "DYNAMIC-PART-ALTERNATIVE"
 
-    i_pdu_ref: Optional["DynamicPartAlternative.IPduRef"] = field(
+    i_pdu_ref: DynamicPartAlternative.IPduRef | None = field(
         default=None,
         metadata={
             "name": "I-PDU-REF",
@@ -51,7 +53,7 @@ class DynamicPartAlternative:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_dynamic_part: Optional[Boolean] = field(
+    initial_dynamic_part: Boolean | None = field(
         default=None,
         metadata={
             "name": "INITIAL-DYNAMIC-PART",
@@ -59,7 +61,7 @@ class DynamicPartAlternative:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    selector_field_code: Optional[Integer] = field(
+    selector_field_code: Integer | None = field(
         default=None,
         metadata={
             "name": "SELECTOR-FIELD-CODE",
@@ -67,14 +69,14 @@ class DynamicPartAlternative:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -85,7 +87,7 @@ class DynamicPartAlternative:
 
     @dataclass
     class IPduRef(Ref):
-        dest: Optional[ISignalIPduSubtypesEnum] = field(
+        dest: ISignalIPduSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

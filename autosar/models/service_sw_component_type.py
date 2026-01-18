@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -137,7 +139,7 @@ class ServiceSwComponentType:
     class Meta:
         name = "SERVICE-SW-COMPONENT-TYPE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -146,9 +148,7 @@ class ServiceSwComponentType:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ServiceSwComponentType.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ServiceSwComponentType.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -156,7 +156,7 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -164,7 +164,7 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -172,7 +172,7 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -180,7 +180,7 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -188,7 +188,7 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -196,7 +196,7 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ServiceSwComponentType.Annotations"] = field(
+    annotations: ServiceSwComponentType.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -204,7 +204,7 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -212,7 +212,7 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional["ServiceSwComponentType.BlueprintPolicys"] = (
+    blueprint_policys: ServiceSwComponentType.BlueprintPolicys | None = (
         field(
             default=None,
             metadata={
@@ -222,7 +222,7 @@ class ServiceSwComponentType:
             },
         )
     )
-    short_name_pattern: Optional[String] = field(
+    short_name_pattern: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -230,9 +230,7 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_documentations: Optional[
-        "ServiceSwComponentType.SwComponentDocumentations"
-    ] = field(
+    sw_component_documentations: ServiceSwComponentType.SwComponentDocumentations | None = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-DOCUMENTATIONS",
@@ -240,9 +238,7 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consistency_needss: Optional[
-        "ServiceSwComponentType.ConsistencyNeedss"
-    ] = field(
+    consistency_needss: ServiceSwComponentType.ConsistencyNeedss | None = field(
         default=None,
         metadata={
             "name": "CONSISTENCY-NEEDSS",
@@ -250,7 +246,7 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ports: Optional["ServiceSwComponentType.Ports"] = field(
+    ports: ServiceSwComponentType.Ports | None = field(
         default=None,
         metadata={
             "name": "PORTS",
@@ -258,7 +254,7 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_groups: Optional["ServiceSwComponentType.PortGroups"] = field(
+    port_groups: ServiceSwComponentType.PortGroups | None = field(
         default=None,
         metadata={
             "name": "PORT-GROUPS",
@@ -266,7 +262,7 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_group_refs: Optional["ServiceSwComponentType.UnitGroupRefs"] = field(
+    unit_group_refs: ServiceSwComponentType.UnitGroupRefs | None = field(
         default=None,
         metadata={
             "name": "UNIT-GROUP-REFS",
@@ -274,9 +270,7 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    internal_behaviors: Optional[
-        "ServiceSwComponentType.InternalBehaviors"
-    ] = field(
+    internal_behaviors: ServiceSwComponentType.InternalBehaviors | None = field(
         default=None,
         metadata={
             "name": "INTERNAL-BEHAVIORS",
@@ -284,7 +278,7 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbol_props: Optional[SymbolProps] = field(
+    symbol_props: SymbolProps | None = field(
         default=None,
         metadata={
             "name": "SYMBOL-PROPS",
@@ -292,14 +286,14 @@ class ServiceSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -307,7 +301,7 @@ class ServiceSwComponentType:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -429,7 +423,7 @@ class ServiceSwComponentType:
     @dataclass
     class UnitGroupRefs:
         unit_group_ref: list[
-            "ServiceSwComponentType.UnitGroupRefs.UnitGroupRef"
+            ServiceSwComponentType.UnitGroupRefs.UnitGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -441,7 +435,7 @@ class ServiceSwComponentType:
 
         @dataclass
         class UnitGroupRef(Ref):
-            dest: Optional[UnitGroupSubtypesEnum] = field(
+            dest: UnitGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

@@ -26,7 +26,7 @@ class TpegLinearLocation:
     :ivar tpeg_linear_location_extension:
     """
 
-    tpeg_direction: Optional[DirectionEnum] = field(
+    tpeg_direction: DirectionEnum | None = field(
         default=None,
         metadata={
             "name": "tpegDirection",
@@ -35,7 +35,7 @@ class TpegLinearLocation:
             "required": True,
         },
     )
-    tpeg_linear_location_type: Optional[TpegLoc01LinearLocationSubtypeEnum] = (
+    tpeg_linear_location_type: TpegLoc01LinearLocationSubtypeEnum | None = (
         field(
             default=None,
             metadata={
@@ -46,7 +46,7 @@ class TpegLinearLocation:
             },
         )
     )
-    to: Optional[TpegPoint] = field(
+    to: TpegPoint | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -54,7 +54,7 @@ class TpegLinearLocation:
             "required": True,
         },
     )
-    from_value: Optional[TpegPoint] = field(
+    from_value: TpegPoint | None = field(
         default=None,
         metadata={
             "name": "from",
@@ -63,7 +63,7 @@ class TpegLinearLocation:
             "required": True,
         },
     )
-    tpeg_linear_location_extension: Optional[ExtensionType] = field(
+    tpeg_linear_location_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "tpegLinearLocationExtension",

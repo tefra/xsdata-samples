@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -53,7 +55,7 @@ class VlanMembership:
     class Meta:
         name = "VLAN-MEMBERSHIP"
 
-    default_priority: Optional[PositiveInteger] = field(
+    default_priority: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "DEFAULT-PRIORITY",
@@ -61,7 +63,7 @@ class VlanMembership:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dhcp_address_assignment: Optional[DhcpServerConfiguration] = field(
+    dhcp_address_assignment: DhcpServerConfiguration | None = field(
         default=None,
         metadata={
             "name": "DHCP-ADDRESS-ASSIGNMENT",
@@ -69,7 +71,7 @@ class VlanMembership:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    send_activity: Optional[EthernetSwitchVlanEgressTaggingEnum] = field(
+    send_activity: EthernetSwitchVlanEgressTaggingEnum | None = field(
         default=None,
         metadata={
             "name": "SEND-ACTIVITY",
@@ -77,7 +79,7 @@ class VlanMembership:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vlan_ref: Optional["VlanMembership.VlanRef"] = field(
+    vlan_ref: VlanMembership.VlanRef | None = field(
         default=None,
         metadata={
             "name": "VLAN-REF",
@@ -85,14 +87,14 @@ class VlanMembership:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -103,7 +105,7 @@ class VlanMembership:
 
     @dataclass
     class VlanRef(Ref):
-        dest: Optional[EthernetPhysicalChannelSubtypesEnum] = field(
+        dest: EthernetPhysicalChannelSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

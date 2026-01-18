@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -94,7 +96,7 @@ class TdEventBswModule:
     class Meta:
         name = "TD-EVENT-BSW-MODULE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -103,7 +105,7 @@ class TdEventBswModule:
             "required": True,
         },
     )
-    short_name_fragments: Optional["TdEventBswModule.ShortNameFragments"] = (
+    short_name_fragments: TdEventBswModule.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -113,7 +115,7 @@ class TdEventBswModule:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +123,7 @@ class TdEventBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +131,7 @@ class TdEventBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +139,7 @@ class TdEventBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +147,7 @@ class TdEventBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +155,7 @@ class TdEventBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["TdEventBswModule.Annotations"] = field(
+    annotations: TdEventBswModule.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,7 +163,7 @@ class TdEventBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -169,7 +171,7 @@ class TdEventBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    occurrence_expression: Optional[TdEventOccurrenceExpression] = field(
+    occurrence_expression: TdEventOccurrenceExpression | None = field(
         default=None,
         metadata={
             "name": "OCCURRENCE-EXPRESSION",
@@ -177,9 +179,7 @@ class TdEventBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_module_description_ref: Optional[
-        "TdEventBswModule.BswModuleDescriptionRef"
-    ] = field(
+    bsw_module_description_ref: TdEventBswModule.BswModuleDescriptionRef | None = field(
         default=None,
         metadata={
             "name": "BSW-MODULE-DESCRIPTION-REF",
@@ -187,7 +187,7 @@ class TdEventBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_module_entry_ref: Optional["TdEventBswModule.BswModuleEntryRef"] = (
+    bsw_module_entry_ref: TdEventBswModule.BswModuleEntryRef | None = (
         field(
             default=None,
             metadata={
@@ -197,7 +197,7 @@ class TdEventBswModule:
             },
         )
     )
-    td_event_bsw_module_type: Optional[TdEventBswModuleTypeEnum] = field(
+    td_event_bsw_module_type: TdEventBswModuleTypeEnum | None = field(
         default=None,
         metadata={
             "name": "TD-EVENT-BSW-MODULE-TYPE",
@@ -205,14 +205,14 @@ class TdEventBswModule:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -220,7 +220,7 @@ class TdEventBswModule:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -252,7 +252,7 @@ class TdEventBswModule:
 
     @dataclass
     class BswModuleDescriptionRef(Ref):
-        dest: Optional[BswModuleDescriptionSubtypesEnum] = field(
+        dest: BswModuleDescriptionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -263,7 +263,7 @@ class TdEventBswModule:
 
     @dataclass
     class BswModuleEntryRef(Ref):
-        dest: Optional[BswModuleEntrySubtypesEnum] = field(
+        dest: BswModuleEntrySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

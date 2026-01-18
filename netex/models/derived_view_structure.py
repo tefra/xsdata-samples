@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class DerivedViewStructure:
-    branding_ref: Optional[BrandingRef] = field(
+    branding_ref: BrandingRef | None = field(
         default=None,
         metadata={
             "name": "BrandingRef",
@@ -16,7 +16,7 @@ class DerivedViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -7,7 +7,7 @@ class Entry:
     class Meta:
         name = "entry"
 
-    value: Optional[int] = field(
+    value: int | None = field(
         default=None,
         metadata={
             "required": True,

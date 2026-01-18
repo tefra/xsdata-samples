@@ -12,13 +12,13 @@ class TFormalExpression(TExpression):
     class Meta:
         name = "tFormalExpression"
 
-    language: Optional[str] = field(
+    language: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    evaluates_to_type_ref: Optional[QName] = field(
+    evaluates_to_type_ref: QName | None = field(
         default=None,
         metadata={
             "name": "evaluatesToTypeRef",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -23,7 +25,7 @@ class Channels:
         name = "channels"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    channel: list["Channels.Channel"] = field(
+    channel: list[Channels.Channel] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -45,34 +47,34 @@ class Channels:
         :ivar id:
         """
 
-        name: Optional[str] = field(
+        name: str | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        display_name: Optional[DisplayName] = field(
+        display_name: DisplayName | None = field(
             default=None,
             metadata={
                 "name": "displayName",
                 "type": "Element",
             },
         )
-        short_description: Optional[ShortDescription] = field(
+        short_description: ShortDescription | None = field(
             default=None,
             metadata={
                 "name": "shortDescription",
                 "type": "Element",
             },
         )
-        description: Optional[Description] = field(
+        description: Description | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        bus_interface_ref: list["Channels.Channel.BusInterfaceRef"] = field(
+        bus_interface_ref: list[Channels.Channel.BusInterfaceRef] = field(
             default_factory=list,
             metadata={
                 "name": "busInterfaceRef",
@@ -80,14 +82,14 @@ class Channels:
                 "min_occurs": 2,
             },
         )
-        vendor_extensions: Optional[VendorExtensions] = field(
+        vendor_extensions: VendorExtensions | None = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -97,7 +99,7 @@ class Channels:
 
         @dataclass
         class BusInterfaceRef:
-            local_name: Optional[str] = field(
+            local_name: str | None = field(
                 default=None,
                 metadata={
                     "name": "localName",
@@ -105,14 +107,14 @@ class Channels:
                     "required": True,
                 },
             )
-            vendor_extensions: Optional[VendorExtensions] = field(
+            vendor_extensions: VendorExtensions | None = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
                     "type": "Element",
                 },
             )
-            id: Optional[str] = field(
+            id: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

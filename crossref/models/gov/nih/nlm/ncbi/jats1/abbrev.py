@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -219,7 +221,7 @@ class CompoundKwd:
         name = "compound-kwd"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    compound_kwd_part: list["CompoundKwdPart"] = field(
+    compound_kwd_part: list[CompoundKwdPart] = field(
         default_factory=list,
         metadata={
             "name": "compound-kwd-part",
@@ -227,54 +229,54 @@ class CompoundKwd:
             "min_occurs": 1,
         },
     )
-    assigning_authority: Optional[str] = field(
+    assigning_authority: str | None = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab: Optional[str] = field(
+    vocab: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: Optional[str] = field(
+    vocab_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: Optional[str] = field(
+    vocab_term: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: Optional[str] = field(
+    vocab_term_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -293,7 +295,7 @@ class CompoundSubject:
         name = "compound-subject"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    compound_subject_part: list["CompoundSubjectPart"] = field(
+    compound_subject_part: list[CompoundSubjectPart] = field(
         default_factory=list,
         metadata={
             "name": "compound-subject-part",
@@ -301,54 +303,54 @@ class CompoundSubject:
             "min_occurs": 1,
         },
     )
-    assigning_authority: Optional[str] = field(
+    assigning_authority: str | None = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab: Optional[str] = field(
+    vocab: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: Optional[str] = field(
+    vocab_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: Optional[str] = field(
+    vocab_term: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: Optional[str] = field(
+    vocab_term_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -367,53 +369,53 @@ class Abbrev:
         name = "abbrev"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    alt: Optional[str] = field(
+    alt: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -421,14 +423,14 @@ class Abbrev:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -444,14 +446,14 @@ class Abbrev:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -491,58 +493,58 @@ class Abstract:
             "type": "Element",
         },
     )
-    label: Optional["Label"] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional["Title"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    p: list["P"] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    sec: list["Sec"] = field(
+    sec: list[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    abstract_type: Optional[str] = field(
+    abstract_type: str | None = field(
         default=None,
         metadata={
             "name": "abstract-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -568,26 +570,26 @@ class Alternatives:
             "type": "Element",
         },
     )
-    array: list["Array"] = field(
+    array: list[Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    chem_struct: list["ChemStruct"] = field(
+    chem_struct: list[ChemStruct] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct",
             "type": "Element",
         },
     )
-    code: list["Code"] = field(
+    code: list[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    graphic: list["Graphic"] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -600,27 +602,27 @@ class Alternatives:
             "type": "Element",
         },
     )
-    inline_media: list["InlineMedia"] = field(
+    inline_media: list[InlineMedia] = field(
         default_factory=list,
         metadata={
             "name": "inline-media",
             "type": "Element",
         },
     )
-    inline_supplementary_material: list["InlineSupplementaryMaterial"] = field(
+    inline_supplementary_material: list[InlineSupplementaryMaterial] = field(
         default_factory=list,
         metadata={
             "name": "inline-supplementary-material",
             "type": "Element",
         },
     )
-    media: list["Media"] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: list["Preformat"] = field(
+    preformat: list[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -633,20 +635,20 @@ class Alternatives:
             "type": "Element",
         },
     )
-    supplementary_material: list["SupplementaryMaterial"] = field(
+    supplementary_material: list[SupplementaryMaterial] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table: list["Table"] = field(
+    table: list[Table] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    textual_form: list["TextualForm"] = field(
+    textual_form: list[TextualForm] = field(
         default_factory=list,
         metadata={
             "name": "textual-form",
@@ -667,13 +669,13 @@ class Alternatives:
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -692,41 +694,41 @@ class Annotation:
         name = "annotation"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    p: list["P"] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "min_occurs": 1,
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -745,47 +747,47 @@ class AuthorComment:
         name = "author-comment"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    title: Optional["Title"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    p: list["P"] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "min_occurs": 1,
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -811,47 +813,47 @@ class BlockAlternatives:
             "type": "Element",
         },
     )
-    boxed_text: list["BoxedText"] = field(
+    boxed_text: list[BoxedText] = field(
         default_factory=list,
         metadata={
             "name": "boxed-text",
             "type": "Element",
         },
     )
-    fig: list["Fig"] = field(
+    fig: list[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: list["FigGroup"] = field(
+    fig_group: list[FigGroup] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    table_wrap: list["TableWrap"] = field(
+    table_wrap: list[TableWrap] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: list["TableWrapGroup"] = field(
+    table_wrap_group: list[TableWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -870,52 +872,52 @@ class Caption:
         name = "caption"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    title: Optional["Title"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    p: list["P"] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -941,34 +943,34 @@ class CitationAlternatives:
             "type": "Element",
         },
     )
-    element_citation: list["ElementCitation"] = field(
+    element_citation: list[ElementCitation] = field(
         default_factory=list,
         metadata={
             "name": "element-citation",
             "type": "Element",
         },
     )
-    mixed_citation: list["MixedCitation"] = field(
+    mixed_citation: list[MixedCitation] = field(
         default_factory=list,
         metadata={
             "name": "mixed-citation",
             "type": "Element",
         },
     )
-    nlm_citation: list["NlmCitation"] = field(
+    nlm_citation: list[NlmCitation] = field(
         default_factory=list,
         metadata={
             "name": "nlm-citation",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -987,34 +989,34 @@ class ConfSponsor:
         name = "conf-sponsor"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1051,34 +1053,34 @@ class CopyrightHolder:
         name = "copyright-holder"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1123,14 +1125,14 @@ class Def:
         name = "def"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    p: list["P"] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "min_occurs": 1,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1143,21 +1145,21 @@ class Def:
             "tokens": True,
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1176,40 +1178,40 @@ class Edition:
         name = "edition"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    designator: Optional[str] = field(
+    designator: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1246,60 +1248,60 @@ class Fn:
         name = "fn"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Optional["Label"] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    p: list["P"] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "min_occurs": 1,
         },
     )
-    custom_type: Optional[str] = field(
+    custom_type: str | None = field(
         default=None,
         metadata={
             "name": "custom-type",
             "type": "Attribute",
         },
     )
-    fn_type: Optional[FnFnType] = field(
+    fn_type: FnFnType | None = field(
         default=None,
         metadata={
             "name": "fn-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    symbol: Optional[str] = field(
+    symbol: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1318,41 +1320,41 @@ class IndexTerm:
         name = "index-term"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    term: Optional["Term"] = field(
+    term: Term | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    index_term: Optional["IndexTerm"] = field(
+    index_term: IndexTerm | None = field(
         default=None,
         metadata={
             "name": "index-term",
             "type": "Element",
         },
     )
-    see: list["See"] = field(
+    see: list[See] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    see_also: list["SeeAlso"] = field(
+    see_also: list[SeeAlso] = field(
         default_factory=list,
         metadata={
             "name": "see-also",
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1366,48 +1368,48 @@ class IndexTerm:
             "tokens": True,
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    vocab: Optional[str] = field(
+    vocab: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: Optional[str] = field(
+    vocab_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: Optional[str] = field(
+    vocab_term: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: Optional[str] = field(
+    vocab_term_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1426,47 +1428,47 @@ class Institution:
         name = "institution"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1474,14 +1476,14 @@ class Institution:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1497,14 +1499,14 @@ class Institution:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1548,54 +1550,54 @@ class License:
             "namespace": "http://www.niso.org/schemas/ali/1.0/",
         },
     )
-    license_p: list["LicenseP"] = field(
+    license_p: list[LicenseP] = field(
         default_factory=list,
         metadata={
             "name": "license-p",
             "type": "Element",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    license_type: Optional[str] = field(
+    license_type: str | None = field(
         default=None,
         metadata={
             "name": "license-type",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1603,14 +1605,14 @@ class License:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1626,14 +1628,14 @@ class License:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1652,34 +1654,34 @@ class OpenAccess:
         name = "open-access"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    p: list["P"] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "min_occurs": 1,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1698,34 +1700,34 @@ class AddrLine:
         name = "addr-line"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1890,34 +1892,34 @@ class AltTitle:
         name = "alt-title"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    alt_title_type: Optional[str] = field(
+    alt_title_type: str | None = field(
         default=None,
         metadata={
             "name": "alt-title-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2119,7 +2121,7 @@ class Array:
             "type": "Element",
         },
     )
-    ext_link: list["ExtLink"] = field(
+    ext_link: list[ExtLink] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
@@ -2138,44 +2140,44 @@ class Array:
             "type": "Element",
         },
     )
-    graphic: list["Graphic"] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: list["Media"] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    tbody: Optional["Tbody"] = field(
+    tbody: Tbody | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    attrib: list["Attrib"] = field(
+    attrib: list[Attrib] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    permissions: list["Permissions"] = field(
+    permissions: list[Permissions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2187,21 +2189,21 @@ class Array:
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2220,20 +2222,20 @@ class ArticleTitle:
         name = "article-title"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2415,27 +2417,27 @@ class Attrib:
         name = "attrib"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2613,34 +2615,34 @@ class AwardId:
         name = "award-id"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    assigning_authority: Optional[str] = field(
+    assigning_authority: str | None = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    award_id_type: Optional[str] = field(
+    award_id_type: str | None = field(
         default=None,
         metadata={
             "name": "award-id-type",
             "type": "Attribute",
         },
     )
-    award_type: Optional[str] = field(
+    award_type: str | None = field(
         default=None,
         metadata={
             "name": "award-type",
             "type": "Attribute",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2653,28 +2655,28 @@ class AwardId:
             "tokens": True,
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2682,14 +2684,14 @@ class AwardId:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2705,14 +2707,14 @@ class AwardId:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -2845,26 +2847,26 @@ class Bold:
         name = "bold"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    toggle: Optional[BoldToggle] = field(
+    toggle: BoldToggle | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3042,7 +3044,7 @@ class DefItem:
         name = "def-item"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    term: Optional["Term"] = field(
+    term: Term | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3056,27 +3058,27 @@ class DefItem:
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3095,13 +3097,13 @@ class FnGroup:
         name = "fn-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Optional["Label"] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional["Title"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -3114,34 +3116,34 @@ class FnGroup:
             "min_occurs": 1,
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3173,13 +3175,13 @@ class InstitutionWrap:
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3198,34 +3200,34 @@ class Speaker:
         name = "speaker"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3311,13 +3313,13 @@ class Address:
             "type": "Element",
         },
     )
-    institution: list["Institution"] = field(
+    institution: list[Institution] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    institution_wrap: list["InstitutionWrap"] = field(
+    institution_wrap: list[InstitutionWrap] = field(
         default_factory=list,
         metadata={
             "name": "institution-wrap",
@@ -3349,7 +3351,7 @@ class Address:
             "type": "Element",
         },
     )
-    ext_link: list["ExtLink"] = field(
+    ext_link: list[ExtLink] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
@@ -3362,34 +3364,34 @@ class Address:
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3408,14 +3410,14 @@ class Aff:
         name = "aff"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3428,21 +3430,21 @@ class Aff:
             "tokens": True,
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3603,27 +3605,27 @@ class ChapterTitle:
         name = "chapter-title"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3773,47 +3775,47 @@ class ChemStruct:
         name = "chem-struct"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3821,14 +3823,14 @@ class ChemStruct:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -3844,14 +3846,14 @@ class ChemStruct:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4021,39 +4023,39 @@ class Code:
         name = "code"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    code_type: Optional[str] = field(
+    code_type: str | None = field(
         default=None,
         metadata={
             "name": "code-type",
             "type": "Attribute",
         },
     )
-    code_version: Optional[str] = field(
+    code_version: str | None = field(
         default=None,
         metadata={
             "name": "code-version",
             "type": "Attribute",
         },
     )
-    executable: Optional[CodeExecutable] = field(
+    executable: CodeExecutable | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    language: Optional[str] = field(
+    language: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    language_version: Optional[str] = field(
+    language_version: str | None = field(
         default=None,
         metadata={
             "name": "language-version",
@@ -4066,7 +4068,7 @@ class Code:
             "type": "Attribute",
         },
     )
-    platforms: Optional[str] = field(
+    platforms: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4078,21 +4080,21 @@ class Code:
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4245,34 +4247,34 @@ class ConfLoc:
         name = "conf-loc"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4337,34 +4339,34 @@ class CopyrightStatement:
         name = "copyright-statement"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4465,34 +4467,34 @@ class DataTitle:
         name = "data-title"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4605,54 +4607,54 @@ class ExtLink:
         name = "ext-link"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    assigning_authority: Optional[str] = field(
+    assigning_authority: str | None = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    ext_link_type: Optional[str] = field(
+    ext_link_type: str | None = field(
         default=None,
         metadata={
             "name": "ext-link-type",
             "type": "Attribute",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4660,14 +4662,14 @@ class ExtLink:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4683,14 +4685,14 @@ class ExtLink:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4779,27 +4781,27 @@ class PublisherName:
         name = "publisher-name"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4843,13 +4845,13 @@ class AffAlternatives:
             "min_occurs": 1,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -4875,19 +4877,19 @@ class Answer:
             "type": "Element",
         },
     )
-    label: Optional["Label"] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional["Title"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subtitle: list["Subtitle"] = field(
+    subtitle: list[Subtitle] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4900,7 +4902,7 @@ class Answer:
             "type": "Element",
         },
     )
-    sec: list["Sec"] = field(
+    sec: list[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -4918,146 +4920,146 @@ class Answer:
             "type": "Element",
         },
     )
-    answer: list["Answer"] = field(
+    answer: list[Answer] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    answer_set: list["AnswerSet"] = field(
+    answer_set: list[AnswerSet] = field(
         default_factory=list,
         metadata={
             "name": "answer-set",
             "type": "Element",
         },
     )
-    array: list["Array"] = field(
+    array: list[Array] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    block_alternatives: list["BlockAlternatives"] = field(
+    block_alternatives: list[BlockAlternatives] = field(
         default_factory=list,
         metadata={
             "name": "block-alternatives",
             "type": "Element",
         },
     )
-    boxed_text: list["BoxedText"] = field(
+    boxed_text: list[BoxedText] = field(
         default_factory=list,
         metadata={
             "name": "boxed-text",
             "type": "Element",
         },
     )
-    chem_struct_wrap: list["ChemStructWrap"] = field(
+    chem_struct_wrap: list[ChemStructWrap] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
         },
     )
-    code: list["Code"] = field(
+    code: list[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig: list["Fig"] = field(
+    fig: list[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: list["FigGroup"] = field(
+    fig_group: list[FigGroup] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    graphic: list["Graphic"] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: list["Media"] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: list["Preformat"] = field(
+    preformat: list[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question: list["Question"] = field(
+    question: list[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: list["QuestionWrap"] = field(
+    question_wrap: list[QuestionWrap] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: list["QuestionWrapGroup"] = field(
+    question_wrap_group: list[QuestionWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: list["SupplementaryMaterial"] = field(
+    supplementary_material: list[SupplementaryMaterial] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: list["TableWrap"] = field(
+    table_wrap: list[TableWrap] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: list["TableWrapGroup"] = field(
+    table_wrap_group: list[TableWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
         },
     )
-    disp_formula: list["DispFormula"] = field(
+    disp_formula: list[DispFormula] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula",
             "type": "Element",
         },
     )
-    disp_formula_group: list["DispFormulaGroup"] = field(
+    disp_formula_group: list[DispFormulaGroup] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
         },
     )
-    def_list: list["DefList"] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    list_value: list["List"] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "list",
@@ -5078,86 +5080,86 @@ class Answer:
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    p: list["P"] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    related_article: list["RelatedArticle"] = field(
+    related_article: list[RelatedArticle] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: list["RelatedObject"] = field(
+    related_object: list[RelatedObject] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
             "type": "Element",
         },
     )
-    disp_quote: list["DispQuote"] = field(
+    disp_quote: list[DispQuote] = field(
         default_factory=list,
         metadata={
             "name": "disp-quote",
             "type": "Element",
         },
     )
-    speech: list["Speech"] = field(
+    speech: list[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: list["Statement"] = field(
+    statement: list[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: list["VerseGroup"] = field(
+    verse_group: list[VerseGroup] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    fn_group: list["FnGroup"] = field(
+    fn_group: list[FnGroup] = field(
         default_factory=list,
         metadata={
             "name": "fn-group",
             "type": "Element",
         },
     )
-    glossary: list["Glossary"] = field(
+    glossary: list[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ref_list: list["RefList"] = field(
+    ref_list: list[RefList] = field(
         default_factory=list,
         metadata={
             "name": "ref-list",
             "type": "Element",
         },
     )
-    explanation: list["Explanation"] = field(
+    explanation: list[Explanation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5171,21 +5173,21 @@ class Answer:
             "tokens": True,
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5211,13 +5213,13 @@ class ChemStructWrap:
             "type": "Element",
         },
     )
-    label: Optional["Label"] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    caption: Optional[Caption] = field(
+    caption: Caption | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -5229,14 +5231,14 @@ class ChemStructWrap:
             "type": "Element",
         },
     )
-    kwd_group: list["KwdGroup"] = field(
+    kwd_group: list[KwdGroup] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    subj_group: list["SubjGroup"] = field(
+    subj_group: list[SubjGroup] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
@@ -5263,7 +5265,7 @@ class ChemStructWrap:
             "type": "Element",
         },
     )
-    ext_link: list["ExtLink"] = field(
+    ext_link: list[ExtLink] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
@@ -5289,31 +5291,31 @@ class ChemStructWrap:
             "type": "Element",
         },
     )
-    code: list["Code"] = field(
+    code: list[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    graphic: list["Graphic"] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: list["Media"] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: list["Preformat"] = field(
+    preformat: list[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    textual_form: list["TextualForm"] = field(
+    textual_form: list[TextualForm] = field(
         default_factory=list,
         metadata={
             "name": "textual-form",
@@ -5326,20 +5328,20 @@ class ChemStructWrap:
             "type": "Element",
         },
     )
-    permissions: list["Permissions"] = field(
+    permissions: list[Permissions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5357,21 +5359,21 @@ class ChemStructWrap:
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5390,34 +5392,34 @@ class Comment:
         name = "comment"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5595,13 +5597,13 @@ class DefHead:
         name = "def-head"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5779,34 +5781,34 @@ class DispFormula:
         name = "disp-formula"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -5996,27 +5998,27 @@ class FixedCase:
         name = "fixed-case"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6245,7 +6247,7 @@ class Graphic:
             "type": "Element",
         },
     )
-    permissions: list["Permissions"] = field(
+    permissions: list[Permissions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6258,59 +6260,59 @@ class Graphic:
             "type": "Element",
         },
     )
-    label: list["Label"] = field(
+    label: list[Label] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    kwd_group: list["KwdGroup"] = field(
+    kwd_group: list[KwdGroup] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    subj_group: list["SubjGroup"] = field(
+    subj_group: list[SubjGroup] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
             "type": "Element",
         },
     )
-    xref: list["Xref"] = field(
+    xref: list[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    mime_subtype: Optional[str] = field(
+    mime_subtype: str | None = field(
         default=None,
         metadata={
             "name": "mime-subtype",
             "type": "Attribute",
         },
     )
-    mimetype: Optional[str] = field(
+    mimetype: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6328,21 +6330,21 @@ class Graphic:
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6350,7 +6352,7 @@ class Graphic:
             "required": True,
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6358,14 +6360,14 @@ class Graphic:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6381,14 +6383,14 @@ class Graphic:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6441,13 +6443,13 @@ class Permissions:
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6466,27 +6468,27 @@ class PublisherLoc:
         name = "publisher-loc"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6570,19 +6572,19 @@ class AnswerSet:
             "type": "Element",
         },
     )
-    label: Optional["Label"] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional["Title"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subtitle: list["Subtitle"] = field(
+    subtitle: list[Subtitle] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -6601,46 +6603,46 @@ class AnswerSet:
             "type": "Element",
         },
     )
-    p: list["P"] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    explanation: list["Explanation"] = field(
+    explanation: list[Explanation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6659,26 +6661,26 @@ class DefList:
         name = "def-list"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Optional["Label"] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional["Title"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    term_head: Optional["TermHead"] = field(
+    term_head: TermHead | None = field(
         default=None,
         metadata={
             "name": "term-head",
             "type": "Element",
         },
     )
-    def_head: Optional[DefHead] = field(
+    def_head: DefHead | None = field(
         default=None,
         metadata={
             "name": "def-head",
@@ -6692,62 +6694,62 @@ class DefList:
             "type": "Element",
         },
     )
-    def_list: list["DefList"] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    continued_from: Optional[str] = field(
+    continued_from: str | None = field(
         default=None,
         metadata={
             "name": "continued-from",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    list_content: Optional[str] = field(
+    list_content: str | None = field(
         default=None,
         metadata={
             "name": "list-content",
             "type": "Attribute",
         },
     )
-    list_type: Optional[str] = field(
+    list_type: str | None = field(
         default=None,
         metadata={
             "name": "list-type",
             "type": "Attribute",
         },
     )
-    prefix_word: Optional[str] = field(
+    prefix_word: str | None = field(
         default=None,
         metadata={
             "name": "prefix-word",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6773,13 +6775,13 @@ class DispFormulaGroup:
             "type": "Element",
         },
     )
-    label: Optional["Label"] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    caption: Optional[Caption] = field(
+    caption: Caption | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -6791,14 +6793,14 @@ class DispFormulaGroup:
             "type": "Element",
         },
     )
-    kwd_group: list["KwdGroup"] = field(
+    kwd_group: list[KwdGroup] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    subj_group: list["SubjGroup"] = field(
+    subj_group: list[SubjGroup] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
@@ -6825,7 +6827,7 @@ class DispFormulaGroup:
             "type": "Element",
         },
     )
-    ext_link: list["ExtLink"] = field(
+    ext_link: list[ExtLink] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
@@ -6845,41 +6847,41 @@ class DispFormulaGroup:
             "type": "Element",
         },
     )
-    disp_formula_group: list["DispFormulaGroup"] = field(
+    disp_formula_group: list[DispFormulaGroup] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6898,19 +6900,19 @@ class FundingSource:
         name = "funding-source"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    country: Optional[str] = field(
+    country: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6923,35 +6925,35 @@ class FundingSource:
             "tokens": True,
         },
     )
-    source_type: Optional[str] = field(
+    source_type: str | None = field(
         default=None,
         metadata={
             "name": "source-type",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6959,14 +6961,14 @@ class FundingSource:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -6982,14 +6984,14 @@ class FundingSource:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7130,34 +7132,34 @@ class Gov:
         name = "gov"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7246,34 +7248,34 @@ class InlineFormula:
         name = "inline-formula"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7403,80 +7405,80 @@ class InlineMedia:
         name = "inline-media"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    mime_subtype: Optional[str] = field(
+    mime_subtype: str | None = field(
         default=None,
         metadata={
             "name": "mime-subtype",
             "type": "Attribute",
         },
     )
-    mimetype: Optional[str] = field(
+    mimetype: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    vocab: Optional[str] = field(
+    vocab: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: Optional[str] = field(
+    vocab_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: Optional[str] = field(
+    vocab_term: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: Optional[str] = field(
+    vocab_term_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7484,7 +7486,7 @@ class InlineMedia:
             "required": True,
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7492,14 +7494,14 @@ class InlineMedia:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7515,14 +7517,14 @@ class InlineMedia:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7631,60 +7633,60 @@ class InlineSupplementaryMaterial:
         name = "inline-supplementary-material"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    mime_subtype: Optional[str] = field(
+    mime_subtype: str | None = field(
         default=None,
         metadata={
             "name": "mime-subtype",
             "type": "Attribute",
         },
     )
-    mimetype: Optional[str] = field(
+    mimetype: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7692,14 +7694,14 @@ class InlineSupplementaryMaterial:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7715,14 +7717,14 @@ class InlineSupplementaryMaterial:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -7831,401 +7833,20 @@ class Bio:
         name = "bio"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    sec_meta: Optional["SecMeta"] = field(
+    sec_meta: SecMeta | None = field(
         default=None,
         metadata={
             "name": "sec-meta",
             "type": "Element",
         },
     )
-    label: Optional["Label"] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional["Title"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        },
-    )
-    address: list[Address] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        },
-    )
-    alternatives: list[Alternatives] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        },
-    )
-    answer: list[Answer] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        },
-    )
-    answer_set: list[AnswerSet] = field(
-        default_factory=list,
-        metadata={
-            "name": "answer-set",
-            "type": "Element",
-        },
-    )
-    array: list[Array] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        },
-    )
-    block_alternatives: list["BlockAlternatives"] = field(
-        default_factory=list,
-        metadata={
-            "name": "block-alternatives",
-            "type": "Element",
-        },
-    )
-    boxed_text: list["BoxedText"] = field(
-        default_factory=list,
-        metadata={
-            "name": "boxed-text",
-            "type": "Element",
-        },
-    )
-    chem_struct_wrap: list["ChemStructWrap"] = field(
-        default_factory=list,
-        metadata={
-            "name": "chem-struct-wrap",
-            "type": "Element",
-        },
-    )
-    code: list["Code"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        },
-    )
-    explanation: list["Explanation"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        },
-    )
-    fig: list["Fig"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        },
-    )
-    fig_group: list["FigGroup"] = field(
-        default_factory=list,
-        metadata={
-            "name": "fig-group",
-            "type": "Element",
-        },
-    )
-    graphic: list["Graphic"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        },
-    )
-    media: list["Media"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        },
-    )
-    preformat: list["Preformat"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        },
-    )
-    question: list["Question"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        },
-    )
-    question_wrap: list["QuestionWrap"] = field(
-        default_factory=list,
-        metadata={
-            "name": "question-wrap",
-            "type": "Element",
-        },
-    )
-    question_wrap_group: list["QuestionWrapGroup"] = field(
-        default_factory=list,
-        metadata={
-            "name": "question-wrap-group",
-            "type": "Element",
-        },
-    )
-    supplementary_material: list["SupplementaryMaterial"] = field(
-        default_factory=list,
-        metadata={
-            "name": "supplementary-material",
-            "type": "Element",
-        },
-    )
-    table_wrap: list["TableWrap"] = field(
-        default_factory=list,
-        metadata={
-            "name": "table-wrap",
-            "type": "Element",
-        },
-    )
-    table_wrap_group: list["TableWrapGroup"] = field(
-        default_factory=list,
-        metadata={
-            "name": "table-wrap-group",
-            "type": "Element",
-        },
-    )
-    disp_formula: list["DispFormula"] = field(
-        default_factory=list,
-        metadata={
-            "name": "disp-formula",
-            "type": "Element",
-        },
-    )
-    disp_formula_group: list["DispFormulaGroup"] = field(
-        default_factory=list,
-        metadata={
-            "name": "disp-formula-group",
-            "type": "Element",
-        },
-    )
-    def_list: list["DefList"] = field(
-        default_factory=list,
-        metadata={
-            "name": "def-list",
-            "type": "Element",
-        },
-    )
-    list_value: list["List"] = field(
-        default_factory=list,
-        metadata={
-            "name": "list",
-            "type": "Element",
-        },
-    )
-    tex_math: list[TexMath] = field(
-        default_factory=list,
-        metadata={
-            "name": "tex-math",
-            "type": "Element",
-        },
-    )
-    math: list[Math] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-            "namespace": "http://www.w3.org/1998/Math/MathML",
-        },
-    )
-    p: list["P"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        },
-    )
-    related_article: list["RelatedArticle"] = field(
-        default_factory=list,
-        metadata={
-            "name": "related-article",
-            "type": "Element",
-        },
-    )
-    related_object: list["RelatedObject"] = field(
-        default_factory=list,
-        metadata={
-            "name": "related-object",
-            "type": "Element",
-        },
-    )
-    disp_quote: list["DispQuote"] = field(
-        default_factory=list,
-        metadata={
-            "name": "disp-quote",
-            "type": "Element",
-        },
-    )
-    speech: list["Speech"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        },
-    )
-    statement: list["Statement"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        },
-    )
-    verse_group: list["VerseGroup"] = field(
-        default_factory=list,
-        metadata={
-            "name": "verse-group",
-            "type": "Element",
-        },
-    )
-    sec: list["Sec"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        },
-    )
-    fn_group: list["FnGroup"] = field(
-        default_factory=list,
-        metadata={
-            "name": "fn-group",
-            "type": "Element",
-        },
-    )
-    glossary: list["Glossary"] = field(
-        default_factory=list,
-        metadata={
-            "type": "Element",
-        },
-    )
-    ref_list: list["RefList"] = field(
-        default_factory=list,
-        metadata={
-            "name": "ref-list",
-            "type": "Element",
-        },
-    )
-    content_type: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "content-type",
-            "type": "Attribute",
-        },
-    )
-    hreflang: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    id: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-        },
-    )
-    rid: list[str] = field(
-        default_factory=list,
-        metadata={
-            "type": "Attribute",
-            "tokens": True,
-        },
-    )
-    specific_use: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "specific-use",
-            "type": "Attribute",
-        },
-    )
-    actuate: Optional[ActuateType] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/1999/xlink",
-        },
-    )
-    href: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/1999/xlink",
-        },
-    )
-    role: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/1999/xlink",
-            "min_length": 1,
-        },
-    )
-    show: Optional[ShowType] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/1999/xlink",
-        },
-    )
-    title_attribute: Optional[str] = field(
-        default=None,
-        metadata={
-            "name": "title",
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/1999/xlink",
-        },
-    )
-    type_value: TypeType = field(
-        init=False,
-        default=TypeType.SIMPLE,
-        metadata={
-            "name": "type",
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/1999/xlink",
-        },
-    )
-    base: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        },
-    )
-    lang: Optional[Union[str, LangValue]] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/XML/1998/namespace",
-        },
-    )
-
-
-@dataclass
-class BoxedText:
-    """
-    <div> <h3>Boxed Text</h3> </div>.
-    """
-
-    class Meta:
-        name = "boxed-text"
-        namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
-
-    object_id: list[ObjectId] = field(
-        default_factory=list,
-        metadata={
-            "name": "object-id",
-            "type": "Element",
-        },
-    )
-    sec_meta: Optional["SecMeta"] = field(
-        default=None,
-        metadata={
-            "name": "sec-meta",
-            "type": "Element",
-        },
-    )
-    label: Optional["Label"] = field(
-        default=None,
-        metadata={
-            "type": "Element",
-        },
-    )
-    caption: Optional["Caption"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -8269,126 +7890,126 @@ class BoxedText:
             "type": "Element",
         },
     )
-    boxed_text: list["BoxedText"] = field(
+    boxed_text: list[BoxedText] = field(
         default_factory=list,
         metadata={
             "name": "boxed-text",
             "type": "Element",
         },
     )
-    chem_struct_wrap: list["ChemStructWrap"] = field(
+    chem_struct_wrap: list[ChemStructWrap] = field(
         default_factory=list,
         metadata={
             "name": "chem-struct-wrap",
             "type": "Element",
         },
     )
-    code: list["Code"] = field(
+    code: list[Code] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    explanation: list["Explanation"] = field(
+    explanation: list[Explanation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig: list["Fig"] = field(
+    fig: list[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: list["FigGroup"] = field(
+    fig_group: list[FigGroup] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    graphic: list["Graphic"] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: list["Media"] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: list["Preformat"] = field(
+    preformat: list[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question: list["Question"] = field(
+    question: list[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: list["QuestionWrap"] = field(
+    question_wrap: list[QuestionWrap] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: list["QuestionWrapGroup"] = field(
+    question_wrap_group: list[QuestionWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: list["SupplementaryMaterial"] = field(
+    supplementary_material: list[SupplementaryMaterial] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: list["TableWrap"] = field(
+    table_wrap: list[TableWrap] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: list["TableWrapGroup"] = field(
+    table_wrap_group: list[TableWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
             "type": "Element",
         },
     )
-    disp_formula: list["DispFormula"] = field(
+    disp_formula: list[DispFormula] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula",
             "type": "Element",
         },
     )
-    disp_formula_group: list["DispFormulaGroup"] = field(
+    disp_formula_group: list[DispFormulaGroup] = field(
         default_factory=list,
         metadata={
             "name": "disp-formula-group",
             "type": "Element",
         },
     )
-    def_list: list["DefList"] = field(
+    def_list: list[DefList] = field(
         default_factory=list,
         metadata={
             "name": "def-list",
             "type": "Element",
         },
     )
-    list_value: list["List"] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "list",
@@ -8409,72 +8030,453 @@ class BoxedText:
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    p: list["P"] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    related_article: list["RelatedArticle"] = field(
+    related_article: list[RelatedArticle] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: list["RelatedObject"] = field(
+    related_object: list[RelatedObject] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
             "type": "Element",
         },
     )
-    disp_quote: list["DispQuote"] = field(
+    disp_quote: list[DispQuote] = field(
         default_factory=list,
         metadata={
             "name": "disp-quote",
             "type": "Element",
         },
     )
-    speech: list["Speech"] = field(
+    speech: list[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: list["Statement"] = field(
+    statement: list[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: list["VerseGroup"] = field(
+    verse_group: list[VerseGroup] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    sec: list["Sec"] = field(
+    sec: list[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fn_group: list["FnGroup"] = field(
+    fn_group: list[FnGroup] = field(
         default_factory=list,
         metadata={
             "name": "fn-group",
             "type": "Element",
         },
     )
-    glossary: list["Glossary"] = field(
+    glossary: list[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ref_list: list["RefList"] = field(
+    ref_list: list[RefList] = field(
+        default_factory=list,
+        metadata={
+            "name": "ref-list",
+            "type": "Element",
+        },
+    )
+    content_type: str | None = field(
+        default=None,
+        metadata={
+            "name": "content-type",
+            "type": "Attribute",
+        },
+    )
+    hreflang: str | None = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    id: str | None = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+        },
+    )
+    rid: list[str] = field(
+        default_factory=list,
+        metadata={
+            "type": "Attribute",
+            "tokens": True,
+        },
+    )
+    specific_use: str | None = field(
+        default=None,
+        metadata={
+            "name": "specific-use",
+            "type": "Attribute",
+        },
+    )
+    actuate: ActuateType | None = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/1999/xlink",
+        },
+    )
+    href: str | None = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/1999/xlink",
+        },
+    )
+    role: str | None = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/1999/xlink",
+            "min_length": 1,
+        },
+    )
+    show: ShowType | None = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/1999/xlink",
+        },
+    )
+    title_attribute: str | None = field(
+        default=None,
+        metadata={
+            "name": "title",
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/1999/xlink",
+        },
+    )
+    type_value: TypeType = field(
+        init=False,
+        default=TypeType.SIMPLE,
+        metadata={
+            "name": "type",
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/1999/xlink",
+        },
+    )
+    base: str | None = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        },
+    )
+    lang: str | LangValue | None = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/XML/1998/namespace",
+        },
+    )
+
+
+@dataclass
+class BoxedText:
+    """
+    <div> <h3>Boxed Text</h3> </div>.
+    """
+
+    class Meta:
+        name = "boxed-text"
+        namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
+
+    object_id: list[ObjectId] = field(
+        default_factory=list,
+        metadata={
+            "name": "object-id",
+            "type": "Element",
+        },
+    )
+    sec_meta: SecMeta | None = field(
+        default=None,
+        metadata={
+            "name": "sec-meta",
+            "type": "Element",
+        },
+    )
+    label: Label | None = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        },
+    )
+    caption: Caption | None = field(
+        default=None,
+        metadata={
+            "type": "Element",
+        },
+    )
+    address: list[Address] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        },
+    )
+    alternatives: list[Alternatives] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        },
+    )
+    answer: list[Answer] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        },
+    )
+    answer_set: list[AnswerSet] = field(
+        default_factory=list,
+        metadata={
+            "name": "answer-set",
+            "type": "Element",
+        },
+    )
+    array: list[Array] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        },
+    )
+    block_alternatives: list[BlockAlternatives] = field(
+        default_factory=list,
+        metadata={
+            "name": "block-alternatives",
+            "type": "Element",
+        },
+    )
+    boxed_text: list[BoxedText] = field(
+        default_factory=list,
+        metadata={
+            "name": "boxed-text",
+            "type": "Element",
+        },
+    )
+    chem_struct_wrap: list[ChemStructWrap] = field(
+        default_factory=list,
+        metadata={
+            "name": "chem-struct-wrap",
+            "type": "Element",
+        },
+    )
+    code: list[Code] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        },
+    )
+    explanation: list[Explanation] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        },
+    )
+    fig: list[Fig] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        },
+    )
+    fig_group: list[FigGroup] = field(
+        default_factory=list,
+        metadata={
+            "name": "fig-group",
+            "type": "Element",
+        },
+    )
+    graphic: list[Graphic] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        },
+    )
+    media: list[Media] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        },
+    )
+    preformat: list[Preformat] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        },
+    )
+    question: list[Question] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        },
+    )
+    question_wrap: list[QuestionWrap] = field(
+        default_factory=list,
+        metadata={
+            "name": "question-wrap",
+            "type": "Element",
+        },
+    )
+    question_wrap_group: list[QuestionWrapGroup] = field(
+        default_factory=list,
+        metadata={
+            "name": "question-wrap-group",
+            "type": "Element",
+        },
+    )
+    supplementary_material: list[SupplementaryMaterial] = field(
+        default_factory=list,
+        metadata={
+            "name": "supplementary-material",
+            "type": "Element",
+        },
+    )
+    table_wrap: list[TableWrap] = field(
+        default_factory=list,
+        metadata={
+            "name": "table-wrap",
+            "type": "Element",
+        },
+    )
+    table_wrap_group: list[TableWrapGroup] = field(
+        default_factory=list,
+        metadata={
+            "name": "table-wrap-group",
+            "type": "Element",
+        },
+    )
+    disp_formula: list[DispFormula] = field(
+        default_factory=list,
+        metadata={
+            "name": "disp-formula",
+            "type": "Element",
+        },
+    )
+    disp_formula_group: list[DispFormulaGroup] = field(
+        default_factory=list,
+        metadata={
+            "name": "disp-formula-group",
+            "type": "Element",
+        },
+    )
+    def_list: list[DefList] = field(
+        default_factory=list,
+        metadata={
+            "name": "def-list",
+            "type": "Element",
+        },
+    )
+    list_value: list[List] = field(
+        default_factory=list,
+        metadata={
+            "name": "list",
+            "type": "Element",
+        },
+    )
+    tex_math: list[TexMath] = field(
+        default_factory=list,
+        metadata={
+            "name": "tex-math",
+            "type": "Element",
+        },
+    )
+    math: list[Math] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+            "namespace": "http://www.w3.org/1998/Math/MathML",
+        },
+    )
+    p: list[P] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        },
+    )
+    related_article: list[RelatedArticle] = field(
+        default_factory=list,
+        metadata={
+            "name": "related-article",
+            "type": "Element",
+        },
+    )
+    related_object: list[RelatedObject] = field(
+        default_factory=list,
+        metadata={
+            "name": "related-object",
+            "type": "Element",
+        },
+    )
+    disp_quote: list[DispQuote] = field(
+        default_factory=list,
+        metadata={
+            "name": "disp-quote",
+            "type": "Element",
+        },
+    )
+    speech: list[Speech] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        },
+    )
+    statement: list[Statement] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        },
+    )
+    verse_group: list[VerseGroup] = field(
+        default_factory=list,
+        metadata={
+            "name": "verse-group",
+            "type": "Element",
+        },
+    )
+    sec: list[Sec] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        },
+    )
+    fn_group: list[FnGroup] = field(
+        default_factory=list,
+        metadata={
+            "name": "fn-group",
+            "type": "Element",
+        },
+    )
+    glossary: list[Glossary] = field(
+        default_factory=list,
+        metadata={
+            "type": "Element",
+        },
+    )
+    ref_list: list[RefList] = field(
         default_factory=list,
         metadata={
             "name": "ref-list",
@@ -8487,20 +8489,20 @@ class BoxedText:
             "type": "Element",
         },
     )
-    permissions: list["Permissions"] = field(
+    permissions: list[Permissions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8518,21 +8520,21 @@ class BoxedText:
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8551,13 +8553,13 @@ class Italic:
         name = "italic"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
@@ -8570,7 +8572,7 @@ class Italic:
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8748,53 +8750,53 @@ class Collab:
         name = "collab"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    collab_type: Optional[str] = field(
+    collab_type: str | None = field(
         default=None,
         metadata={
             "name": "collab-type",
             "type": "Attribute",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    symbol: Optional[str] = field(
+    symbol: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/1999/xlink",
-        },
-    )
-    href: Optional[str] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: Optional[str] = field(
+    href: str | None = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/1999/xlink",
+        },
+    )
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8802,14 +8804,14 @@ class Collab:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -8825,14 +8827,14 @@ class Collab:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -9053,13 +9055,13 @@ class DispQuote:
         name = "disp-quote"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Optional["Label"] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional["Title"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -9123,78 +9125,78 @@ class DispQuote:
             "type": "Element",
         },
     )
-    explanation: list["Explanation"] = field(
+    explanation: list[Explanation] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig: list["Fig"] = field(
+    fig: list[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: list["FigGroup"] = field(
+    fig_group: list[FigGroup] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    graphic: list["Graphic"] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: list["Media"] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: list["Preformat"] = field(
+    preformat: list[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question: list["Question"] = field(
+    question: list[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: list["QuestionWrap"] = field(
+    question_wrap: list[QuestionWrap] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: list["QuestionWrapGroup"] = field(
+    question_wrap_group: list[QuestionWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: list["SupplementaryMaterial"] = field(
+    supplementary_material: list[SupplementaryMaterial] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: list["TableWrap"] = field(
+    table_wrap: list[TableWrap] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: list["TableWrapGroup"] = field(
+    table_wrap_group: list[TableWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
@@ -9222,7 +9224,7 @@ class DispQuote:
             "type": "Element",
         },
     )
-    list_value: list["List"] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "list",
@@ -9243,46 +9245,46 @@ class DispQuote:
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    p: list["P"] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    related_article: list["RelatedArticle"] = field(
+    related_article: list[RelatedArticle] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: list["RelatedObject"] = field(
+    related_object: list[RelatedObject] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
             "type": "Element",
         },
     )
-    disp_quote: list["DispQuote"] = field(
+    disp_quote: list[DispQuote] = field(
         default_factory=list,
         metadata={
             "name": "disp-quote",
             "type": "Element",
         },
     )
-    speech: list["Speech"] = field(
+    speech: list[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: list["Statement"] = field(
+    statement: list[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: list["VerseGroup"] = field(
+    verse_group: list[VerseGroup] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
@@ -9295,40 +9297,40 @@ class DispQuote:
             "type": "Element",
         },
     )
-    permissions: list["Permissions"] = field(
+    permissions: list[Permissions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -9347,54 +9349,54 @@ class Kwd:
         name = "kwd"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    assigning_authority: Optional[str] = field(
+    assigning_authority: str | None = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab: Optional[str] = field(
+    vocab: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: Optional[str] = field(
+    vocab_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: Optional[str] = field(
+    vocab_term: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: Optional[str] = field(
+    vocab_term_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -9483,26 +9485,26 @@ class Label:
         name = "label"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    alt: Optional[str] = field(
+    alt: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -9607,26 +9609,26 @@ class Monospace:
         name = "monospace"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    toggle: Optional[MonospaceToggle] = field(
+    toggle: MonospaceToggle | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -9811,13 +9813,13 @@ class CollabAlternatives:
             "min_occurs": 1,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -9843,19 +9845,19 @@ class Explanation:
             "type": "Element",
         },
     )
-    label: Optional["Label"] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional["Title"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subtitle: list["Subtitle"] = field(
+    subtitle: list[Subtitle] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -9868,7 +9870,7 @@ class Explanation:
             "type": "Element",
         },
     )
-    sec: list["Sec"] = field(
+    sec: list[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -9932,72 +9934,72 @@ class Explanation:
             "type": "Element",
         },
     )
-    fig: list["Fig"] = field(
+    fig: list[Fig] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_group: list["FigGroup"] = field(
+    fig_group: list[FigGroup] = field(
         default_factory=list,
         metadata={
             "name": "fig-group",
             "type": "Element",
         },
     )
-    graphic: list["Graphic"] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: list["Media"] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: list["Preformat"] = field(
+    preformat: list[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question: list["Question"] = field(
+    question: list[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: list["QuestionWrap"] = field(
+    question_wrap: list[QuestionWrap] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: list["QuestionWrapGroup"] = field(
+    question_wrap_group: list[QuestionWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: list["SupplementaryMaterial"] = field(
+    supplementary_material: list[SupplementaryMaterial] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: list["TableWrap"] = field(
+    table_wrap: list[TableWrap] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: list["TableWrapGroup"] = field(
+    table_wrap_group: list[TableWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
@@ -10025,7 +10027,7 @@ class Explanation:
             "type": "Element",
         },
     )
-    list_value: list["List"] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "list",
@@ -10046,20 +10048,20 @@ class Explanation:
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    p: list["P"] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    related_article: list["RelatedArticle"] = field(
+    related_article: list[RelatedArticle] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: list["RelatedObject"] = field(
+    related_object: list[RelatedObject] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
@@ -10073,53 +10075,53 @@ class Explanation:
             "type": "Element",
         },
     )
-    speech: list["Speech"] = field(
+    speech: list[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: list["Statement"] = field(
+    statement: list[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: list["VerseGroup"] = field(
+    verse_group: list[VerseGroup] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    fn_group: list["FnGroup"] = field(
+    fn_group: list[FnGroup] = field(
         default_factory=list,
         metadata={
             "name": "fn-group",
             "type": "Element",
         },
     )
-    glossary: list["Glossary"] = field(
+    glossary: list[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ref_list: list["RefList"] = field(
+    ref_list: list[RefList] = field(
         default_factory=list,
         metadata={
             "name": "ref-list",
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10133,21 +10135,21 @@ class Explanation:
             "tokens": True,
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10173,7 +10175,7 @@ class Fig:
             "type": "Element",
         },
     )
-    label: list["Label"] = field(
+    label: list[Label] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -10191,14 +10193,14 @@ class Fig:
             "type": "Element",
         },
     )
-    kwd_group: list["KwdGroup"] = field(
+    kwd_group: list[KwdGroup] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    subj_group: list["SubjGroup"] = field(
+    subj_group: list[SubjGroup] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
@@ -10266,33 +10268,33 @@ class Fig:
             "type": "Element",
         },
     )
-    speech: list["Speech"] = field(
+    speech: list[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: list["Statement"] = field(
+    statement: list[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: list["VerseGroup"] = field(
+    verse_group: list[VerseGroup] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    table_wrap: list["TableWrap"] = field(
+    table_wrap: list[TableWrap] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    p: list["P"] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -10305,7 +10307,7 @@ class Fig:
             "type": "Element",
         },
     )
-    list_value: list["List"] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "list",
@@ -10330,25 +10332,25 @@ class Fig:
             "type": "Element",
         },
     )
-    graphic: list["Graphic"] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: list["Media"] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: list["Preformat"] = field(
+    preformat: list[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    xref: list["Xref"] = field(
+    xref: list[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -10360,20 +10362,20 @@ class Fig:
             "type": "Element",
         },
     )
-    permissions: list["Permissions"] = field(
+    permissions: list[Permissions] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    fig_type: Optional[str] = field(
+    fig_type: str | None = field(
         default=None,
         metadata={
             "name": "fig-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10391,21 +10393,21 @@ class Fig:
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10431,19 +10433,19 @@ class List:
             "type": "Element",
         },
     )
-    label: Optional[Label] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional["Title"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    list_item: list["ListItem"] = field(
+    list_item: list[ListItem] = field(
         default_factory=list,
         metadata={
             "name": "list-item",
@@ -10451,55 +10453,55 @@ class List:
             "min_occurs": 1,
         },
     )
-    continued_from: Optional[str] = field(
+    continued_from: str | None = field(
         default=None,
         metadata={
             "name": "continued-from",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    list_content: Optional[str] = field(
+    list_content: str | None = field(
         default=None,
         metadata={
             "name": "list-content",
             "type": "Attribute",
         },
     )
-    list_type: Optional[str] = field(
+    list_type: str | None = field(
         default=None,
         metadata={
             "name": "list-type",
             "type": "Attribute",
         },
     )
-    prefix_word: Optional[str] = field(
+    prefix_word: str | None = field(
         default=None,
         metadata={
             "name": "prefix-word",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10531,61 +10533,61 @@ class NestedKwd:
             "type": "Element",
         },
     )
-    nested_kwd: list["NestedKwd"] = field(
+    nested_kwd: list[NestedKwd] = field(
         default_factory=list,
         metadata={
             "name": "nested-kwd",
             "type": "Element",
         },
     )
-    assigning_authority: Optional[str] = field(
+    assigning_authority: str | None = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab: Optional[str] = field(
+    vocab: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: Optional[str] = field(
+    vocab_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: Optional[str] = field(
+    vocab_term: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: Optional[str] = field(
+    vocab_term_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10604,7 +10606,7 @@ class NlmCitation:
         name = "nlm-citation"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    person_group: list["PersonGroup"] = field(
+    person_group: list[PersonGroup] = field(
         default_factory=list,
         metadata={
             "name": "person-group",
@@ -10624,97 +10626,97 @@ class NlmCitation:
             "type": "Element",
         },
     )
-    trans_title: list["TransTitle"] = field(
+    trans_title: list[TransTitle] = field(
         default_factory=list,
         metadata={
             "name": "trans-title",
             "type": "Element",
         },
     )
-    source: Optional["Source"] = field(
+    source: Source | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    patent: Optional[Patent] = field(
+    patent: Patent | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    trans_source: Optional["TransSource"] = field(
+    trans_source: TransSource | None = field(
         default=None,
         metadata={
             "name": "trans-source",
             "type": "Element",
         },
     )
-    year: Optional[Year] = field(
+    year: Year | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    month: Optional[Month] = field(
+    month: Month | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    day: Optional[Day] = field(
+    day: Day | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    time_stamp: Optional[TimeStamp] = field(
+    time_stamp: TimeStamp | None = field(
         default=None,
         metadata={
             "name": "time-stamp",
             "type": "Element",
         },
     )
-    season: Optional[Season] = field(
+    season: Season | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    access_date: Optional[AccessDate] = field(
+    access_date: AccessDate | None = field(
         default=None,
         metadata={
             "name": "access-date",
             "type": "Element",
         },
     )
-    volume: Optional[Volume] = field(
+    volume: Volume | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    edition: Optional[Edition] = field(
+    edition: Edition | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    conf_name: Optional[ConfName] = field(
+    conf_name: ConfName | None = field(
         default=None,
         metadata={
             "name": "conf-name",
             "type": "Element",
         },
     )
-    conf_date: Optional[ConfDate] = field(
+    conf_date: ConfDate | None = field(
         default=None,
         metadata={
             "name": "conf-date",
             "type": "Element",
         },
     )
-    conf_loc: Optional[ConfLoc] = field(
+    conf_loc: ConfLoc | None = field(
         default=None,
         metadata={
             "name": "conf-loc",
@@ -10727,20 +10729,20 @@ class NlmCitation:
             "type": "Element",
         },
     )
-    supplement: list["Supplement"] = field(
+    supplement: list[Supplement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    publisher_loc: Optional[PublisherLoc] = field(
+    publisher_loc: PublisherLoc | None = field(
         default=None,
         metadata={
             "name": "publisher-loc",
             "type": "Element",
         },
     )
-    publisher_name: Optional[PublisherName] = field(
+    publisher_name: PublisherName | None = field(
         default=None,
         metadata={
             "name": "publisher-name",
@@ -10759,14 +10761,14 @@ class NlmCitation:
             "type": "Element",
         },
     )
-    page_count: Optional[PageCount] = field(
+    page_count: PageCount | None = field(
         default=None,
         metadata={
             "name": "page-count",
             "type": "Element",
         },
     )
-    series: Optional["Series"] = field(
+    series: Series | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -10785,67 +10787,67 @@ class NlmCitation:
             "type": "Element",
         },
     )
-    annotation: Optional[Annotation] = field(
+    annotation: Annotation | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    publication_format: Optional[str] = field(
+    publication_format: str | None = field(
         default=None,
         metadata={
             "name": "publication-format",
             "type": "Attribute",
         },
     )
-    publication_type: Optional[str] = field(
+    publication_type: str | None = field(
         default=None,
         metadata={
             "name": "publication-type",
             "type": "Attribute",
         },
     )
-    publisher_type: Optional[str] = field(
+    publisher_type: str | None = field(
         default=None,
         metadata={
             "name": "publisher-type",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10853,14 +10855,14 @@ class NlmCitation:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10876,14 +10878,14 @@ class NlmCitation:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -10902,52 +10904,52 @@ class Note:
         name = "note"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Optional[Label] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    p: list["P"] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    product: list["Product"] = field(
+    product: list[Product] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -11056,21 +11058,21 @@ class Contrib:
             "type": "Element",
         },
     )
-    ext_link: list["ExtLink"] = field(
+    ext_link: list[ExtLink] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
             "type": "Element",
         },
     )
-    on_behalf_of: list["OnBehalfOf"] = field(
+    on_behalf_of: list[OnBehalfOf] = field(
         default_factory=list,
         metadata={
             "name": "on-behalf-of",
             "type": "Element",
         },
     )
-    role: list["Role"] = field(
+    role: list[Role] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -11082,45 +11084,45 @@ class Contrib:
             "type": "Element",
         },
     )
-    xref: list["Xref"] = field(
+    xref: list[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    contrib_type: Optional[str] = field(
+    contrib_type: str | None = field(
         default=None,
         metadata={
             "name": "contrib-type",
             "type": "Attribute",
         },
     )
-    corresp: Optional[ContribCorresp] = field(
+    corresp: ContribCorresp | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    deceased: Optional[ContribDeceased] = field(
+    deceased: ContribDeceased | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    equal_contrib: Optional[ContribEqualContrib] = field(
+    equal_contrib: ContribEqualContrib | None = field(
         default=None,
         metadata={
             "name": "equal-contrib",
             "type": "Attribute",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -11133,28 +11135,28 @@ class Contrib:
             "tokens": True,
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role_attribute: Optional[str] = field(
+    role_attribute: str | None = field(
         default=None,
         metadata={
             "name": "role",
@@ -11163,14 +11165,14 @@ class Contrib:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -11186,7 +11188,7 @@ class Contrib:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -11211,63 +11213,63 @@ class ElementCitation:
             "type": "Element",
         },
     )
-    fixed_case: list["FixedCase"] = field(
+    fixed_case: list[FixedCase] = field(
         default_factory=list,
         metadata={
             "name": "fixed-case",
             "type": "Element",
         },
     )
-    italic: list["Italic"] = field(
+    italic: list[Italic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    monospace: list["Monospace"] = field(
+    monospace: list[Monospace] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    overline: list["Overline"] = field(
+    overline: list[Overline] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    roman: list["Roman"] = field(
+    roman: list[Roman] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    sans_serif: list["SansSerif"] = field(
+    sans_serif: list[SansSerif] = field(
         default_factory=list,
         metadata={
             "name": "sans-serif",
             "type": "Element",
         },
     )
-    sc: list["Sc"] = field(
+    sc: list[Sc] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    strike: list["Strike"] = field(
+    strike: list[Strike] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    underline: list["Underline"] = field(
+    underline: list[Underline] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    ruby: list["Ruby"] = field(
+    ruby: list[Ruby] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -11286,7 +11288,7 @@ class ElementCitation:
             "type": "Element",
         },
     )
-    inline_media: list["InlineMedia"] = field(
+    inline_media: list[InlineMedia] = field(
         default_factory=list,
         metadata={
             "name": "inline-media",
@@ -11307,14 +11309,14 @@ class ElementCitation:
             "type": "Element",
         },
     )
-    inline_formula: list["InlineFormula"] = field(
+    inline_formula: list[InlineFormula] = field(
         default_factory=list,
         metadata={
             "name": "inline-formula",
             "type": "Element",
         },
     )
-    label: list["Label"] = field(
+    label: list[Label] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -11326,7 +11328,7 @@ class ElementCitation:
             "type": "Element",
         },
     )
-    index_term: list["IndexTerm"] = field(
+    index_term: list[IndexTerm] = field(
         default_factory=list,
         metadata={
             "name": "index-term",
@@ -11354,14 +11356,14 @@ class ElementCitation:
             "type": "Element",
         },
     )
-    named_content: list["NamedContent"] = field(
+    named_content: list[NamedContent] = field(
         default_factory=list,
         metadata={
             "name": "named-content",
             "type": "Element",
         },
     )
-    styled_content: list["StyledContent"] = field(
+    styled_content: list[StyledContent] = field(
         default_factory=list,
         metadata={
             "name": "styled-content",
@@ -11493,7 +11495,7 @@ class ElementCitation:
             "type": "Element",
         },
     )
-    ext_link: list["ExtLink"] = field(
+    ext_link: list[ExtLink] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
@@ -11506,19 +11508,19 @@ class ElementCitation:
             "type": "Element",
         },
     )
-    gov: list["Gov"] = field(
+    gov: list[Gov] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    institution: list["Institution"] = field(
+    institution: list[Institution] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    institution_wrap: list["InstitutionWrap"] = field(
+    institution_wrap: list[InstitutionWrap] = field(
         default_factory=list,
         metadata={
             "name": "institution-wrap",
@@ -11610,7 +11612,7 @@ class ElementCitation:
             "type": "Element",
         },
     )
-    part_title: list["PartTitle"] = field(
+    part_title: list[PartTitle] = field(
         default_factory=list,
         metadata={
             "name": "part-title",
@@ -11623,7 +11625,7 @@ class ElementCitation:
             "type": "Element",
         },
     )
-    person_group: list["PersonGroup"] = field(
+    person_group: list[PersonGroup] = field(
         default_factory=list,
         metadata={
             "name": "person-group",
@@ -11637,21 +11639,21 @@ class ElementCitation:
             "type": "Element",
         },
     )
-    publisher_loc: list["PublisherLoc"] = field(
+    publisher_loc: list[PublisherLoc] = field(
         default_factory=list,
         metadata={
             "name": "publisher-loc",
             "type": "Element",
         },
     )
-    publisher_name: list["PublisherName"] = field(
+    publisher_name: list[PublisherName] = field(
         default_factory=list,
         metadata={
             "name": "publisher-name",
             "type": "Element",
         },
     )
-    role: list["Role"] = field(
+    role: list[Role] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -11663,7 +11665,7 @@ class ElementCitation:
             "type": "Element",
         },
     )
-    series: list["Series"] = field(
+    series: list[Series] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -11675,13 +11677,13 @@ class ElementCitation:
             "type": "Element",
         },
     )
-    source: list["Source"] = field(
+    source: list[Source] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    std: list["Std"] = field(
+    std: list[Std] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -11701,20 +11703,20 @@ class ElementCitation:
             "type": "Element",
         },
     )
-    supplement: list["Supplement"] = field(
+    supplement: list[Supplement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    trans_source: list["TransSource"] = field(
+    trans_source: list[TransSource] = field(
         default_factory=list,
         metadata={
             "name": "trans-source",
             "type": "Element",
         },
     )
-    trans_title: list["TransTitle"] = field(
+    trans_title: list[TransTitle] = field(
         default_factory=list,
         metadata={
             "name": "trans-title",
@@ -11727,7 +11729,7 @@ class ElementCitation:
             "type": "Element",
         },
     )
-    version: list["Version"] = field(
+    version: list[Version] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -11759,80 +11761,80 @@ class ElementCitation:
             "type": "Element",
         },
     )
-    sub: list["Sub"] = field(
+    sub: list[Sub] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    sup: list["Sup"] = field(
+    sup: list[Sup] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    publication_format: Optional[str] = field(
+    publication_format: str | None = field(
         default=None,
         metadata={
             "name": "publication-format",
             "type": "Attribute",
         },
     )
-    publication_type: Optional[str] = field(
+    publication_type: str | None = field(
         default=None,
         metadata={
             "name": "publication-type",
             "type": "Attribute",
         },
     )
-    publisher_type: Optional[str] = field(
+    publisher_type: str | None = field(
         default=None,
         metadata={
             "name": "publisher-type",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    use_type: Optional[str] = field(
+    use_type: str | None = field(
         default=None,
         metadata={
             "name": "use-type",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role_attribute: Optional[str] = field(
+    role_attribute: str | None = field(
         default=None,
         metadata={
             "name": "role",
@@ -11841,14 +11843,14 @@ class ElementCitation:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -11864,14 +11866,14 @@ class ElementCitation:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -11897,7 +11899,7 @@ class FigGroup:
             "type": "Element",
         },
     )
-    label: list["Label"] = field(
+    label: list[Label] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -11915,14 +11917,14 @@ class FigGroup:
             "type": "Element",
         },
     )
-    kwd_group: list["KwdGroup"] = field(
+    kwd_group: list[KwdGroup] = field(
         default_factory=list,
         metadata={
             "name": "kwd-group",
             "type": "Element",
         },
     )
-    subj_group: list["SubjGroup"] = field(
+    subj_group: list[SubjGroup] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
@@ -11975,7 +11977,7 @@ class FigGroup:
             "type": "Element",
         },
     )
-    xref: list["Xref"] = field(
+    xref: list[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -11987,26 +11989,26 @@ class FigGroup:
             "type": "Element",
         },
     )
-    graphic: list["Graphic"] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: list["Media"] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12024,21 +12026,21 @@ class FigGroup:
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12057,13 +12059,13 @@ class KwdGroup:
         name = "kwd-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Optional["Label"] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional["Title"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -12089,54 +12091,54 @@ class KwdGroup:
             "type": "Element",
         },
     )
-    assigning_authority: Optional[str] = field(
+    assigning_authority: str | None = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    kwd_group_type: Optional[str] = field(
+    kwd_group_type: str | None = field(
         default=None,
         metadata={
             "name": "kwd-group-type",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    vocab: Optional[str] = field(
+    vocab: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: Optional[str] = field(
+    vocab_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12155,68 +12157,68 @@ class MixedCitation:
         name = "mixed-citation"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    publication_format: Optional[str] = field(
+    publication_format: str | None = field(
         default=None,
         metadata={
             "name": "publication-format",
             "type": "Attribute",
         },
     )
-    publication_type: Optional[str] = field(
+    publication_type: str | None = field(
         default=None,
         metadata={
             "name": "publication-type",
             "type": "Attribute",
         },
     )
-    publisher_type: Optional[str] = field(
+    publisher_type: str | None = field(
         default=None,
         metadata={
             "name": "publisher-type",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    use_type: Optional[str] = field(
+    use_type: str | None = field(
         default=None,
         metadata={
             "name": "use-type",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12224,14 +12226,14 @@ class MixedCitation:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12247,14 +12249,14 @@ class MixedCitation:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12631,41 +12633,41 @@ class PersonGroup:
         name = "person-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    custom_type: Optional[str] = field(
+    custom_type: str | None = field(
         default=None,
         metadata={
             "name": "custom-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    person_group_type: Optional[PersonGroupPersonGroupType] = field(
+    person_group_type: PersonGroupPersonGroupType | None = field(
         default=None,
         metadata={
             "name": "person-group-type",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12779,21 +12781,21 @@ class ContribGroup:
             "type": "Element",
         },
     )
-    ext_link: list["ExtLink"] = field(
+    ext_link: list[ExtLink] = field(
         default_factory=list,
         metadata={
             "name": "ext-link",
             "type": "Element",
         },
     )
-    on_behalf_of: list["OnBehalfOf"] = field(
+    on_behalf_of: list[OnBehalfOf] = field(
         default_factory=list,
         metadata={
             "name": "on-behalf-of",
             "type": "Element",
         },
     )
-    role: list["Role"] = field(
+    role: list[Role] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -12805,33 +12807,33 @@ class ContribGroup:
             "type": "Element",
         },
     )
-    xref: list["Xref"] = field(
+    xref: list[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -12857,13 +12859,13 @@ class Glossary:
             "type": "Element",
         },
     )
-    label: Optional["Label"] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional["Title"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -12946,59 +12948,59 @@ class Glossary:
             "type": "Element",
         },
     )
-    graphic: list["Graphic"] = field(
+    graphic: list[Graphic] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    media: list["Media"] = field(
+    media: list[Media] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    preformat: list["Preformat"] = field(
+    preformat: list[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question: list["Question"] = field(
+    question: list[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: list["QuestionWrap"] = field(
+    question_wrap: list[QuestionWrap] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: list["QuestionWrapGroup"] = field(
+    question_wrap_group: list[QuestionWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: list["SupplementaryMaterial"] = field(
+    supplementary_material: list[SupplementaryMaterial] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: list["TableWrap"] = field(
+    table_wrap: list[TableWrap] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: list["TableWrapGroup"] = field(
+    table_wrap_group: list[TableWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
@@ -13026,7 +13028,7 @@ class Glossary:
             "type": "Element",
         },
     )
-    list_value: list["List"] = field(
+    list_value: list[List] = field(
         default_factory=list,
         metadata={
             "name": "list",
@@ -13047,20 +13049,20 @@ class Glossary:
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    p: list["P"] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    related_article: list["RelatedArticle"] = field(
+    related_article: list[RelatedArticle] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: list["RelatedObject"] = field(
+    related_object: list[RelatedObject] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
@@ -13074,59 +13076,59 @@ class Glossary:
             "type": "Element",
         },
     )
-    speech: list["Speech"] = field(
+    speech: list[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: list["Statement"] = field(
+    statement: list[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: list["VerseGroup"] = field(
+    verse_group: list[VerseGroup] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    glossary: list["Glossary"] = field(
+    glossary: list[Glossary] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13222,46 +13224,46 @@ class Media:
             "type": "Element",
         },
     )
-    subj_group: list["SubjGroup"] = field(
+    subj_group: list[SubjGroup] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
             "type": "Element",
         },
     )
-    xref: list["Xref"] = field(
+    xref: list[Xref] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    mime_subtype: Optional[str] = field(
+    mime_subtype: str | None = field(
         default=None,
         metadata={
             "name": "mime-subtype",
             "type": "Attribute",
         },
     )
-    mimetype: Optional[str] = field(
+    mimetype: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13279,21 +13281,21 @@ class Media:
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13301,7 +13303,7 @@ class Media:
             "required": True,
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13309,14 +13311,14 @@ class Media:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13332,14 +13334,14 @@ class Media:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13358,7 +13360,7 @@ class Ref:
         name = "ref"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Optional[Label] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -13398,34 +13400,34 @@ class Ref:
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13444,13 +13446,13 @@ class NamedContent:
         name = "named-content"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    alt: Optional[str] = field(
+    alt: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
@@ -13458,13 +13460,13 @@ class NamedContent:
             "required": True,
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13477,55 +13479,55 @@ class NamedContent:
             "tokens": True,
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    vocab: Optional[str] = field(
+    vocab: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: Optional[str] = field(
+    vocab_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: Optional[str] = field(
+    vocab_term: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: Optional[str] = field(
+    vocab_term_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13533,14 +13535,14 @@ class NamedContent:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13556,14 +13558,14 @@ class NamedContent:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -13860,19 +13862,19 @@ class Option:
             "type": "Element",
         },
     )
-    label: Optional[Label] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional["Title"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subtitle: list["Subtitle"] = field(
+    subtitle: list[Subtitle] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -13885,7 +13887,7 @@ class Option:
             "type": "Element",
         },
     )
-    sec: list["Sec"] = field(
+    sec: list[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -13974,47 +13976,47 @@ class Option:
             "type": "Element",
         },
     )
-    preformat: list["Preformat"] = field(
+    preformat: list[Preformat] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question: list["Question"] = field(
+    question: list[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: list["QuestionWrap"] = field(
+    question_wrap: list[QuestionWrap] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: list["QuestionWrapGroup"] = field(
+    question_wrap_group: list[QuestionWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: list["SupplementaryMaterial"] = field(
+    supplementary_material: list[SupplementaryMaterial] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: list["TableWrap"] = field(
+    table_wrap: list[TableWrap] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: list["TableWrapGroup"] = field(
+    table_wrap_group: list[TableWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
@@ -14063,20 +14065,20 @@ class Option:
             "namespace": "http://www.w3.org/1998/Math/MathML",
         },
     )
-    p: list["P"] = field(
+    p: list[P] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    related_article: list["RelatedArticle"] = field(
+    related_article: list[RelatedArticle] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: list["RelatedObject"] = field(
+    related_object: list[RelatedObject] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
@@ -14090,19 +14092,19 @@ class Option:
             "type": "Element",
         },
     )
-    speech: list["Speech"] = field(
+    speech: list[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: list["Statement"] = field(
+    statement: list[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: list["VerseGroup"] = field(
+    verse_group: list[VerseGroup] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
@@ -14122,7 +14124,7 @@ class Option:
             "type": "Element",
         },
     )
-    ref_list: list["RefList"] = field(
+    ref_list: list[RefList] = field(
         default_factory=list,
         metadata={
             "name": "ref-list",
@@ -14135,40 +14137,40 @@ class Option:
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    correct: Optional[OptionCorrect] = field(
+    correct: OptionCorrect | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -14187,26 +14189,26 @@ class Overline:
         name = "overline"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    toggle: Optional[OverlineToggle] = field(
+    toggle: OverlineToggle | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -14384,34 +14386,34 @@ class P:
         name = "p"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -14729,27 +14731,27 @@ class PartTitle:
         name = "part-title"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -14899,7 +14901,7 @@ class Preformat:
         name = "preformat"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -14917,28 +14919,28 @@ class Preformat:
             "type": "Attribute",
         },
     )
-    preformat_type: Optional[str] = field(
+    preformat_type: str | None = field(
         default=None,
         metadata={
             "name": "preformat-type",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15083,34 +15085,34 @@ class Rb:
         name = "rb"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15186,26 +15188,26 @@ class Question:
             "type": "Element",
         },
     )
-    sec_meta: Optional["SecMeta"] = field(
+    sec_meta: SecMeta | None = field(
         default=None,
         metadata={
             "name": "sec-meta",
             "type": "Element",
         },
     )
-    label: Optional[Label] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional["Title"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subtitle: list["Subtitle"] = field(
+    subtitle: list[Subtitle] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -15218,7 +15220,7 @@ class Question:
             "type": "Element",
         },
     )
-    sec: list["Sec"] = field(
+    sec: list[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -15319,41 +15321,41 @@ class Question:
             "type": "Element",
         },
     )
-    question: list["Question"] = field(
+    question: list[Question] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    question_wrap: list["QuestionWrap"] = field(
+    question_wrap: list[QuestionWrap] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap",
             "type": "Element",
         },
     )
-    question_wrap_group: list["QuestionWrapGroup"] = field(
+    question_wrap_group: list[QuestionWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: list["SupplementaryMaterial"] = field(
+    supplementary_material: list[SupplementaryMaterial] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: list["TableWrap"] = field(
+    table_wrap: list[TableWrap] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: list["TableWrapGroup"] = field(
+    table_wrap_group: list[TableWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
@@ -15408,14 +15410,14 @@ class Question:
             "type": "Element",
         },
     )
-    related_article: list["RelatedArticle"] = field(
+    related_article: list[RelatedArticle] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: list["RelatedObject"] = field(
+    related_object: list[RelatedObject] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
@@ -15429,19 +15431,19 @@ class Question:
             "type": "Element",
         },
     )
-    speech: list["Speech"] = field(
+    speech: list[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: list["Statement"] = field(
+    statement: list[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: list["VerseGroup"] = field(
+    verse_group: list[VerseGroup] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
@@ -15467,48 +15469,48 @@ class Question:
             "type": "Element",
         },
     )
-    ref_list: list["RefList"] = field(
+    ref_list: list[RefList] = field(
         default_factory=list,
         metadata={
             "name": "ref-list",
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    question_response_type: Optional[QuestionQuestionResponseType] = field(
+    question_response_type: QuestionQuestionResponseType | None = field(
         default=None,
         metadata={
             "name": "question-response-type",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15527,41 +15529,41 @@ class Ruby:
         name = "ruby"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    rb: Optional[Rb] = field(
+    rb: Rb | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    rt: Optional[Rt] = field(
+    rt: Rt | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15587,7 +15589,7 @@ class Speech:
             "type": "Element",
         },
     )
-    speaker: Optional[Speaker] = field(
+    speaker: Speaker | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -15601,34 +15603,34 @@ class Speech:
             "min_occurs": 1,
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15647,13 +15649,13 @@ class Statement:
         name = "statement"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Optional[Label] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional["Title"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -15672,7 +15674,7 @@ class Statement:
             "type": "Element",
         },
     )
-    subj_group: list["SubjGroup"] = field(
+    subj_group: list[SubjGroup] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
@@ -15685,7 +15687,7 @@ class Statement:
             "type": "Element",
         },
     )
-    statement: list["Statement"] = field(
+    statement: list[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -15703,34 +15705,34 @@ class Statement:
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15756,20 +15758,20 @@ class QuestionWrap:
             "type": "Element",
         },
     )
-    question: Optional[Question] = field(
+    question: Question | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    answer: Optional[Answer] = field(
+    answer: Answer | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    answer_set: Optional[AnswerSet] = field(
+    answer_set: AnswerSet | None = field(
         default=None,
         metadata={
             "name": "answer-set",
@@ -15782,40 +15784,40 @@ class QuestionWrap:
             "type": "Element",
         },
     )
-    audience: Optional[str] = field(
+    audience: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15834,59 +15836,59 @@ class RelatedArticle:
         name = "related-article"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    elocation_id: Optional[str] = field(
+    elocation_id: str | None = field(
         default=None,
         metadata={
             "name": "elocation-id",
             "type": "Attribute",
         },
     )
-    ext_link_type: Optional[str] = field(
+    ext_link_type: str | None = field(
         default=None,
         metadata={
             "name": "ext-link-type",
             "type": "Attribute",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    issue: Optional[str] = field(
+    issue: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    journal_id: Optional[str] = field(
+    journal_id: str | None = field(
         default=None,
         metadata={
             "name": "journal-id",
             "type": "Attribute",
         },
     )
-    journal_id_type: Optional[str] = field(
+    journal_id_type: str | None = field(
         default=None,
         metadata={
             "name": "journal-id-type",
             "type": "Attribute",
         },
     )
-    page: Optional[str] = field(
+    page: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    related_article_type: Optional[str] = field(
+    related_article_type: str | None = field(
         default=None,
         metadata={
             "name": "related-article-type",
@@ -15894,34 +15896,34 @@ class RelatedArticle:
             "required": True,
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    vol: Optional[str] = field(
+    vol: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "namespace": "http://www.w3.org/1999/xlink",
-        },
-    )
-    href: Optional[str] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: Optional[str] = field(
+    href: str | None = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "namespace": "http://www.w3.org/1999/xlink",
+        },
+    )
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15929,14 +15931,14 @@ class RelatedArticle:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -15952,14 +15954,14 @@ class RelatedArticle:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -16292,124 +16294,124 @@ class RelatedObject:
         name = "related-object"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    document_id: Optional[str] = field(
+    document_id: str | None = field(
         default=None,
         metadata={
             "name": "document-id",
             "type": "Attribute",
         },
     )
-    document_id_type: Optional[str] = field(
+    document_id_type: str | None = field(
         default=None,
         metadata={
             "name": "document-id-type",
             "type": "Attribute",
         },
     )
-    document_type: Optional[str] = field(
+    document_type: str | None = field(
         default=None,
         metadata={
             "name": "document-type",
             "type": "Attribute",
         },
     )
-    ext_link_type: Optional[str] = field(
+    ext_link_type: str | None = field(
         default=None,
         metadata={
             "name": "ext-link-type",
             "type": "Attribute",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    link_type: Optional[str] = field(
+    link_type: str | None = field(
         default=None,
         metadata={
             "name": "link-type",
             "type": "Attribute",
         },
     )
-    object_id: Optional[str] = field(
+    object_id: str | None = field(
         default=None,
         metadata={
             "name": "object-id",
             "type": "Attribute",
         },
     )
-    object_id_type: Optional[str] = field(
+    object_id_type: str | None = field(
         default=None,
         metadata={
             "name": "object-id-type",
             "type": "Attribute",
         },
     )
-    object_type: Optional[str] = field(
+    object_type: str | None = field(
         default=None,
         metadata={
             "name": "object-type",
             "type": "Attribute",
         },
     )
-    source_id: Optional[str] = field(
+    source_id: str | None = field(
         default=None,
         metadata={
             "name": "source-id",
             "type": "Attribute",
         },
     )
-    source_id_type: Optional[str] = field(
+    source_id_type: str | None = field(
         default=None,
         metadata={
             "name": "source-id-type",
             "type": "Attribute",
         },
     )
-    source_type: Optional[str] = field(
+    source_type: str | None = field(
         default=None,
         metadata={
             "name": "source-type",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -16417,14 +16419,14 @@ class RelatedObject:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -16440,14 +16442,14 @@ class RelatedObject:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -16783,19 +16785,19 @@ class QuestionPreamble:
             "type": "Element",
         },
     )
-    label: Optional[Label] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional["Title"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subtitle: list["Subtitle"] = field(
+    subtitle: list[Subtitle] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -16916,28 +16918,28 @@ class QuestionPreamble:
             "type": "Element",
         },
     )
-    question_wrap_group: list["QuestionWrapGroup"] = field(
+    question_wrap_group: list[QuestionWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "question-wrap-group",
             "type": "Element",
         },
     )
-    supplementary_material: list["SupplementaryMaterial"] = field(
+    supplementary_material: list[SupplementaryMaterial] = field(
         default_factory=list,
         metadata={
             "name": "supplementary-material",
             "type": "Element",
         },
     )
-    table_wrap: list["TableWrap"] = field(
+    table_wrap: list[TableWrap] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap",
             "type": "Element",
         },
     )
-    table_wrap_group: list["TableWrapGroup"] = field(
+    table_wrap_group: list[TableWrapGroup] = field(
         default_factory=list,
         metadata={
             "name": "table-wrap-group",
@@ -16992,14 +16994,14 @@ class QuestionPreamble:
             "type": "Element",
         },
     )
-    related_article: list["RelatedArticle"] = field(
+    related_article: list[RelatedArticle] = field(
         default_factory=list,
         metadata={
             "name": "related-article",
             "type": "Element",
         },
     )
-    related_object: list["RelatedObject"] = field(
+    related_object: list[RelatedObject] = field(
         default_factory=list,
         metadata={
             "name": "related-object",
@@ -17013,59 +17015,59 @@ class QuestionPreamble:
             "type": "Element",
         },
     )
-    speech: list["Speech"] = field(
+    speech: list[Speech] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    statement: list["Statement"] = field(
+    statement: list[Statement] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    verse_group: list["VerseGroup"] = field(
+    verse_group: list[VerseGroup] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
             "type": "Element",
         },
     )
-    sec: list["Sec"] = field(
+    sec: list[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -17084,13 +17086,13 @@ class Roman:
         name = "roman"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
@@ -17103,7 +17105,7 @@ class Roman:
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -17288,19 +17290,19 @@ class QuestionWrapGroup:
             "type": "Element",
         },
     )
-    label: Optional[Label] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional["Title"] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subtitle: list["Subtitle"] = field(
+    subtitle: list[Subtitle] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -17313,7 +17315,7 @@ class QuestionWrapGroup:
             "type": "Element",
         },
     )
-    question_preamble: Optional[QuestionPreamble] = field(
+    question_preamble: QuestionPreamble | None = field(
         default=None,
         metadata={
             "name": "question-preamble",
@@ -17328,40 +17330,40 @@ class QuestionWrapGroup:
             "min_occurs": 1,
         },
     )
-    audience: Optional[str] = field(
+    audience: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -17380,26 +17382,26 @@ class SansSerif:
         name = "sans-serif"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    toggle: Optional[SansSerifToggle] = field(
+    toggle: SansSerifToggle | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -17577,26 +17579,26 @@ class Sc:
         name = "sc"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    toggle: Optional[ScToggle] = field(
+    toggle: ScToggle | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -17774,26 +17776,26 @@ class Strike:
         name = "strike"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    toggle: Optional[StrikeToggle] = field(
+    toggle: StrikeToggle | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -17971,59 +17973,59 @@ class StyledContent:
         name = "styled-content"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    alt: Optional[str] = field(
+    alt: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style_detail: Optional[str] = field(
+    style_detail: str | None = field(
         default=None,
         metadata={
             "name": "style-detail",
             "type": "Attribute",
         },
     )
-    style_type: Optional[str] = field(
+    style_type: str | None = field(
         default=None,
         metadata={
             "name": "style-type",
             "type": "Attribute",
         },
     )
-    toggle: Optional[StyledContentToggle] = field(
+    toggle: StyledContentToggle | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18313,26 +18315,26 @@ class Sub:
         name = "sub"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    arrange: Optional[SubArrange] = field(
+    arrange: SubArrange | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18510,26 +18512,26 @@ class Sup:
         name = "sup"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    arrange: Optional[SupArrange] = field(
+    arrange: SupArrange | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18707,34 +18709,34 @@ class StdOrganization:
         name = "std-organization"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18779,35 +18781,35 @@ class Target:
         name = "target"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    target_type: Optional[str] = field(
+    target_type: str | None = field(
         default=None,
         metadata={
             "name": "target-type",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18896,40 +18898,40 @@ class Version:
         name = "version"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    designator: Optional[str] = field(
+    designator: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -18966,33 +18968,33 @@ class Underline:
         name = "underline"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    toggle: Optional[UnderlineToggle] = field(
+    toggle: UnderlineToggle | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    underline_style: Optional[str] = field(
+    underline_style: str | None = field(
         default=None,
         metadata={
             "name": "underline-style",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -19170,20 +19172,20 @@ class CompoundSubjectPart:
         name = "compound-subject-part"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -19296,40 +19298,40 @@ class Price:
         name = "price"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    currency: Optional[str] = field(
+    currency: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -19402,75 +19404,75 @@ class Role:
         name = "role"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    assigning_authority: Optional[str] = field(
+    assigning_authority: str | None = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    degree_contribution: Optional[str] = field(
+    degree_contribution: str | None = field(
         default=None,
         metadata={
             "name": "degree-contribution",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    vocab: Optional[str] = field(
+    vocab: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: Optional[str] = field(
+    vocab_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: Optional[str] = field(
+    vocab_term: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: Optional[str] = field(
+    vocab_term_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -19559,34 +19561,34 @@ class Series:
         name = "series"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -19675,54 +19677,54 @@ class Subject:
         name = "subject"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    assigning_authority: Optional[str] = field(
+    assigning_authority: str | None = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab: Optional[str] = field(
+    vocab: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: Optional[str] = field(
+    vocab_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: Optional[str] = field(
+    vocab_term: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: Optional[str] = field(
+    vocab_term_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -19835,27 +19837,27 @@ class TextualForm:
         name = "textual-form"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -19965,26 +19967,26 @@ class Xref:
         name = "xref"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    alt: Optional[str] = field(
+    alt: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    custom_type: Optional[str] = field(
+    custom_type: str | None = field(
         default=None,
         metadata={
             "name": "custom-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    ref_type: Optional[XrefRefType] = field(
+    ref_type: XrefRefType | None = field(
         default=None,
         metadata={
             "name": "ref-type",
@@ -19998,21 +20000,21 @@ class Xref:
             "tokens": True,
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20101,20 +20103,20 @@ class CompoundKwdPart:
         name = "compound-kwd-part"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20239,27 +20241,27 @@ class OnBehalfOf:
         name = "on-behalf-of"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20368,14 +20370,14 @@ class See:
         name = "see"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20388,21 +20390,21 @@ class See:
             "tokens": True,
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20608,14 +20610,14 @@ class SeeAlso:
         name = "see-also"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20628,48 +20630,48 @@ class SeeAlso:
             "tokens": True,
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    vocab: Optional[str] = field(
+    vocab: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: Optional[str] = field(
+    vocab_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: Optional[str] = field(
+    vocab_term: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: Optional[str] = field(
+    vocab_term_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -20875,34 +20877,34 @@ class Source:
         name = "source"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -21061,61 +21063,61 @@ class SubjGroup:
             "type": "Element",
         },
     )
-    subj_group: list["SubjGroup"] = field(
+    subj_group: list[SubjGroup] = field(
         default_factory=list,
         metadata={
             "name": "subj-group",
             "type": "Element",
         },
     )
-    assigning_authority: Optional[str] = field(
+    assigning_authority: str | None = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    subj_group_type: Optional[str] = field(
+    subj_group_type: str | None = field(
         default=None,
         metadata={
             "name": "subj-group-type",
             "type": "Attribute",
         },
     )
-    vocab: Optional[str] = field(
+    vocab: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: Optional[str] = field(
+    vocab_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -21134,34 +21136,34 @@ class Subtitle:
         name = "subtitle"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -21343,7 +21345,7 @@ class Term:
         name = "term"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -21356,62 +21358,62 @@ class Term:
             "tokens": True,
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    term_status: Optional[str] = field(
+    term_status: str | None = field(
         default=None,
         metadata={
             "name": "term-status",
             "type": "Attribute",
         },
     )
-    term_type: Optional[str] = field(
+    term_type: str | None = field(
         default=None,
         metadata={
             "name": "term-type",
             "type": "Attribute",
         },
     )
-    vocab: Optional[str] = field(
+    vocab: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    vocab_identifier: Optional[str] = field(
+    vocab_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-identifier",
             "type": "Attribute",
         },
     )
-    vocab_term: Optional[str] = field(
+    vocab_term: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term",
             "type": "Attribute",
         },
     )
-    vocab_term_identifier: Optional[str] = field(
+    vocab_term_identifier: str | None = field(
         default=None,
         metadata={
             "name": "vocab-term-identifier",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -21617,13 +21619,13 @@ class TermHead:
         name = "term-head"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -21801,27 +21803,27 @@ class Title:
         name = "title"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -22019,34 +22021,34 @@ class TransSource:
         name = "trans-source"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -22196,34 +22198,34 @@ class TransTitle:
         name = "trans-title"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -22405,61 +22407,61 @@ class VerseLine:
         name = "verse-line"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    indent_level: Optional[str] = field(
+    indent_level: str | None = field(
         default=None,
         metadata={
             "name": "indent-level",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style_detail: Optional[str] = field(
+    style_detail: str | None = field(
         default=None,
         metadata={
             "name": "style-detail",
             "type": "Attribute",
         },
     )
-    style_type: Optional[str] = field(
+    style_type: str | None = field(
         default=None,
         metadata={
             "name": "style-type",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -22604,13 +22606,13 @@ class ListItem:
         name = "list-item"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Optional[Label] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional[Title] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -22636,27 +22638,27 @@ class ListItem:
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -22709,19 +22711,19 @@ class SecMeta:
             "type": "Element",
         },
     )
-    permissions: Optional[Permissions] = field(
+    permissions: Permissions | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -22740,34 +22742,34 @@ class Std:
         name = "std"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -22892,34 +22894,34 @@ class Supplement:
         name = "supplement"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    supplement_type: Optional[str] = field(
+    supplement_type: str | None = field(
         default=None,
         metadata={
             "name": "supplement-type",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -23060,7 +23062,7 @@ class TableWrapFoot:
         name = "table-wrap-foot"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    title: Optional[Title] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -23097,13 +23099,13 @@ class TableWrapFoot:
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -23122,19 +23124,19 @@ class VerseGroup:
         name = "verse-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Optional[Label] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional[Title] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    subtitle: Optional[Subtitle] = field(
+    subtitle: Subtitle | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -23147,7 +23149,7 @@ class VerseGroup:
             "type": "Element",
         },
     )
-    verse_group: list["VerseGroup"] = field(
+    verse_group: list[VerseGroup] = field(
         default_factory=list,
         metadata={
             "name": "verse-group",
@@ -23166,54 +23168,54 @@ class VerseGroup:
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style_detail: Optional[str] = field(
+    style_detail: str | None = field(
         default=None,
         metadata={
             "name": "style-detail",
             "type": "Attribute",
         },
     )
-    style_type: Optional[str] = field(
+    style_type: str | None = field(
         default=None,
         metadata={
             "name": "style-type",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -23232,47 +23234,47 @@ class Product:
         name = "product"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    product_type: Optional[str] = field(
+    product_type: str | None = field(
         default=None,
         metadata={
             "name": "product-type",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -23280,14 +23282,14 @@ class Product:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -23303,14 +23305,14 @@ class Product:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -23711,31 +23713,31 @@ class Td:
         name = "td"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    abbr: Optional[str] = field(
+    abbr: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: Optional[TdAlign] = field(
+    align: TdAlign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    axis: Optional[str] = field(
+    axis: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: Optional[str] = field(
+    char: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: Optional[str] = field(
+    charoff: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -23747,7 +23749,7 @@ class Td:
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
@@ -23761,7 +23763,7 @@ class Td:
             "tokens": True,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -23773,25 +23775,25 @@ class Td:
             "type": "Attribute",
         },
     )
-    scope: Optional[TdScope] = field(
+    scope: TdScope | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: Optional[TdValign] = field(
+    valign: TdValign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -24069,31 +24071,31 @@ class Th:
         name = "th"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    abbr: Optional[str] = field(
+    abbr: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    align: Optional[ThAlign] = field(
+    align: ThAlign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    axis: Optional[str] = field(
+    axis: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: Optional[str] = field(
+    char: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: Optional[str] = field(
+    charoff: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -24105,7 +24107,7 @@ class Th:
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
@@ -24119,7 +24121,7 @@ class Th:
             "tokens": True,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -24131,25 +24133,25 @@ class Th:
             "type": "Attribute",
         },
     )
-    scope: Optional[ThScope] = field(
+    scope: ThScope | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: Optional[ThValign] = field(
+    valign: ThValign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -24439,50 +24441,50 @@ class Tr:
             "type": "Element",
         },
     )
-    align: Optional[TrAlign] = field(
+    align: TrAlign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: Optional[str] = field(
+    char: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: Optional[str] = field(
+    charoff: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: Optional[TrValign] = field(
+    valign: TrValign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -24504,50 +24506,50 @@ class Tbody:
             "min_occurs": 1,
         },
     )
-    align: Optional[TbodyAlign] = field(
+    align: TbodyAlign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: Optional[str] = field(
+    char: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: Optional[str] = field(
+    charoff: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: Optional[TbodyValign] = field(
+    valign: TbodyValign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -24569,50 +24571,50 @@ class Tfoot:
             "min_occurs": 1,
         },
     )
-    align: Optional[TfootAlign] = field(
+    align: TfootAlign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: Optional[str] = field(
+    char: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: Optional[str] = field(
+    charoff: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: Optional[TfootValign] = field(
+    valign: TfootValign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -24634,50 +24636,50 @@ class Thead:
             "min_occurs": 1,
         },
     )
-    align: Optional[TheadAlign] = field(
+    align: TheadAlign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    char: Optional[str] = field(
+    char: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    charoff: Optional[str] = field(
+    charoff: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    valign: Optional[TheadValign] = field(
+    valign: TheadValign | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -24709,13 +24711,13 @@ class Table:
             "type": "Element",
         },
     )
-    thead: Optional[Thead] = field(
+    thead: Thead | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tfoot: Optional[Tfoot] = field(
+    tfoot: Tfoot | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -24733,75 +24735,75 @@ class Table:
             "type": "Element",
         },
     )
-    border: Optional[str] = field(
+    border: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    cellpadding: Optional[str] = field(
+    cellpadding: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    cellspacing: Optional[str] = field(
+    cellspacing: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    frame: Optional[TableFrame] = field(
+    frame: TableFrame | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    rules: Optional[TableRules] = field(
+    rules: TableRules | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    summary: Optional[str] = field(
+    summary: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    width: Optional[str] = field(
+    width: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25007,14 +25009,14 @@ class TableWrap:
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25032,21 +25034,21 @@ class TableWrap:
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25265,33 +25267,33 @@ class SupplementaryMaterial:
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    mime_subtype: Optional[str] = field(
+    mime_subtype: str | None = field(
         default=None,
         metadata={
             "name": "mime-subtype",
             "type": "Attribute",
         },
     )
-    mimetype: Optional[str] = field(
+    mimetype: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25309,28 +25311,28 @@ class SupplementaryMaterial:
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25338,14 +25340,14 @@ class SupplementaryMaterial:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25361,14 +25363,14 @@ class SupplementaryMaterial:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25472,14 +25474,14 @@ class TableWrapGroup:
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25497,21 +25499,21 @@ class TableWrapGroup:
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25530,27 +25532,27 @@ class LicenseP:
         name = "license-p"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -25879,13 +25881,13 @@ class RefList:
             "type": "Element",
         },
     )
-    label: Optional[Label] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional[Title] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -26121,41 +26123,41 @@ class RefList:
             "type": "Element",
         },
     )
-    ref_list: list["RefList"] = field(
+    ref_list: list[RefList] = field(
         default_factory=list,
         metadata={
             "name": "ref-list",
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -26174,14 +26176,14 @@ class Sec:
         name = "sec"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    sec_meta: Optional[SecMeta] = field(
+    sec_meta: SecMeta | None = field(
         default=None,
         metadata={
             "name": "sec-meta",
             "type": "Element",
         },
     )
-    label: Optional[Label] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -26421,7 +26423,7 @@ class Sec:
             "type": "Element",
         },
     )
-    sec: list["Sec"] = field(
+    sec: list[Sec] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -26447,34 +26449,34 @@ class Sec:
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    sec_type: Optional[str] = field(
+    sec_type: str | None = field(
         default=None,
         metadata={
             "name": "sec-type",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",

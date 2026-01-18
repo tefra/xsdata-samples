@@ -400,7 +400,7 @@ class Pobox:
     class Meta:
         name = "POBox"
 
-    pobox_postal_code: Optional[str] = field(
+    pobox_postal_code: str | None = field(
         default=None,
         metadata={
             "name": "POBoxPostalCode",
@@ -616,7 +616,7 @@ class UserId:
     class Meta:
         name = "UserID"
 
-    user_short_id: Optional[str] = field(
+    user_short_id: str | None = field(
         default=None,
         metadata={
             "name": "UserShortID",
@@ -733,7 +733,7 @@ class AcademicTitle:
             "required": True,
         }
     )
-    academic_title_coded_other: Optional[AcademicTitleCodedOther] = field(
+    academic_title_coded_other: AcademicTitleCodedOther | None = field(
         default=None,
         metadata={
             "name": "AcademicTitleCodedOther",
@@ -751,30 +751,28 @@ class Agency:
             "required": True,
         }
     )
-    agency_coded_other: Optional[AgencyCodedOther] = field(
+    agency_coded_other: AgencyCodedOther | None = field(
         default=None,
         metadata={
             "name": "AgencyCodedOther",
             "type": "Element",
         },
     )
-    agency_description: Optional[AgencyDescription] = field(
+    agency_description: AgencyDescription | None = field(
         default=None,
         metadata={
             "name": "AgencyDescription",
             "type": "Element",
         },
     )
-    code_list_identifier_coded: Optional[CodeListIdentifierCoded] = field(
+    code_list_identifier_coded: CodeListIdentifierCoded | None = field(
         default=None,
         metadata={
             "name": "CodeListIdentifierCoded",
             "type": "Element",
         },
     )
-    code_list_identifier_coded_other: Optional[
-        CodeListIdentifierCodedOther
-    ] = field(
+    code_list_identifier_coded_other: CodeListIdentifierCodedOther | None = field(
         default=None,
         metadata={
             "name": "CodeListIdentifierCodedOther",
@@ -792,7 +790,7 @@ class CertificatePurpose:
             "required": True,
         }
     )
-    certificate_purpose_coded_other: Optional[CertificatePurposeCodedOther] = (
+    certificate_purpose_coded_other: CertificatePurposeCodedOther | None = (
         field(
             default=None,
             metadata={
@@ -812,9 +810,7 @@ class ContactRelationType:
             "required": True,
         }
     )
-    contact_relation_type_coded_other: Optional[
-        ContactRelationTypeCodedOther
-    ] = field(
+    contact_relation_type_coded_other: ContactRelationTypeCodedOther | None = field(
         default=None,
         metadata={
             "name": "ContactRelationTypeCodedOther",
@@ -832,7 +828,7 @@ class Country:
             "required": True,
         }
     )
-    country_coded_other: Optional[CountryCodedOther] = field(
+    country_coded_other: CountryCodedOther | None = field(
         default=None,
         metadata={
             "name": "CountryCodedOther",
@@ -850,7 +846,7 @@ class DateFormat:
             "required": True,
         }
     )
-    date_format_coded_other: Optional[DateFormatCodedOther] = field(
+    date_format_coded_other: DateFormatCodedOther | None = field(
         default=None,
         metadata={
             "name": "DateFormatCodedOther",
@@ -861,7 +857,7 @@ class DateFormat:
 
 @dataclass(kw_only=True)
 class Language:
-    language_dependent: Optional[str] = field(
+    language_dependent: str | None = field(
         default=None,
         metadata={
             "name": "LanguageDependent",
@@ -875,21 +871,21 @@ class Language:
             "required": True,
         }
     )
-    language_coded_other: Optional[LanguageCodedOther] = field(
+    language_coded_other: LanguageCodedOther | None = field(
         default=None,
         metadata={
             "name": "LanguageCodedOther",
             "type": "Element",
         },
     )
-    locale_coded: Optional[LocaleCoded] = field(
+    locale_coded: LocaleCoded | None = field(
         default=None,
         metadata={
             "name": "LocaleCoded",
             "type": "Element",
         },
     )
-    locale_coded_other: Optional[LocaleCodedOther] = field(
+    locale_coded_other: LocaleCodedOther | None = field(
         default=None,
         metadata={
             "name": "LocaleCodedOther",
@@ -925,7 +921,7 @@ class Region:
             "required": True,
         }
     )
-    region_coded_other: Optional[RegionCodedOther] = field(
+    region_coded_other: RegionCodedOther | None = field(
         default=None,
         metadata={
             "name": "RegionCodedOther",
@@ -943,7 +939,7 @@ class Timezone:
             "required": True,
         }
     )
-    timezone_coded_other: Optional[TimezoneCodedOther] = field(
+    timezone_coded_other: TimezoneCodedOther | None = field(
         default=None,
         metadata={
             "name": "TimezoneCodedOther",
@@ -961,7 +957,7 @@ class Title:
             "required": True,
         }
     )
-    title_coded_other: Optional[TitleCodedOther] = field(
+    title_coded_other: TitleCodedOther | None = field(
         default=None,
         metadata={
             "name": "TitleCodedOther",
@@ -979,9 +975,7 @@ class TradingPartnerUserPurpose:
             "required": True,
         }
     )
-    trading_partner_user_purpose_coded_other: Optional[
-        TradingPartnerUserPurposeCodedOther
-    ] = field(
+    trading_partner_user_purpose_coded_other: TradingPartnerUserPurposeCodedOther | None = field(
         default=None,
         metadata={
             "name": "TradingPartnerUserPurposeCodedOther",
@@ -992,7 +986,7 @@ class TradingPartnerUserPurpose:
 
 @dataclass(kw_only=True)
 class UserRole:
-    user_role_authority: Optional[UserRoleAuthority] = field(
+    user_role_authority: UserRoleAuthority | None = field(
         default=None,
         metadata={
             "name": "UserRoleAuthority",
@@ -1006,7 +1000,7 @@ class UserRole:
             "required": True,
         }
     )
-    user_role_id: Optional[UserRoleId] = field(
+    user_role_id: UserRoleId | None = field(
         default=None,
         metadata={
             "name": "UserRoleID",
@@ -1024,7 +1018,7 @@ class UserStatus:
             "required": True,
         }
     )
-    user_status_coded_other: Optional[UserStatusCodedOther] = field(
+    user_status_coded_other: UserStatusCodedOther | None = field(
         default=None,
         metadata={
             "name": "UserStatusCodedOther",
@@ -1078,9 +1072,7 @@ class X509CertificateInfo:
 
 @dataclass(kw_only=True)
 class CommunicationDetail:
-    communication_detail_description: Optional[
-        CommunicationDetailDescription
-    ] = field(
+    communication_detail_description: CommunicationDetailDescription | None = field(
         default=None,
         metadata={
             "name": "CommunicationDetailDescription",
@@ -1101,7 +1093,7 @@ class CommunicationDetail:
             "required": True,
         }
     )
-    default_communication: Optional[DefaultCommunication] = field(
+    default_communication: DefaultCommunication | None = field(
         default=None,
         metadata={
             "name": "DefaultCommunication",
@@ -1203,14 +1195,14 @@ class PrimaryId:
             "required": True,
         }
     )
-    short_id: Optional[ShortId] = field(
+    short_id: ShortId | None = field(
         default=None,
         metadata={
             "name": "ShortID",
             "type": "Element",
         },
     )
-    primary_idurn: Optional[PrimaryIdurn] = field(
+    primary_idurn: PrimaryIdurn | None = field(
         default=None,
         metadata={
             "name": "PrimaryIDURN",
@@ -1221,14 +1213,14 @@ class PrimaryId:
 
 @dataclass(kw_only=True)
 class UserAdministration:
-    validity_dates: Optional[ValidityDates] = field(
+    validity_dates: ValidityDates | None = field(
         default=None,
         metadata={
             "name": "ValidityDates",
             "type": "Element",
         },
     )
-    user_status: Optional[UserStatus] = field(
+    user_status: UserStatus | None = field(
         default=None,
         metadata={
             "name": "UserStatus",
@@ -1272,14 +1264,14 @@ class X509Certificate:
             "type": "Element",
         },
     )
-    x509_cert: Optional[X509Cert] = field(
+    x509_cert: X509Cert | None = field(
         default=None,
         metadata={
             "name": "X509Cert",
             "type": "Element",
         },
     )
-    x509_certificate_info: Optional[X509CertificateInfo] = field(
+    x509_certificate_info: X509CertificateInfo | None = field(
         default=None,
         metadata={
             "name": "X509CertificateInfo",
@@ -1316,119 +1308,119 @@ class ListOfX509Certificate:
 
 @dataclass(kw_only=True)
 class PersonAddress:
-    organization_address_id: Optional[OrganizationAddressId] = field(
+    organization_address_id: OrganizationAddressId | None = field(
         default=None,
         metadata={
             "name": "OrganizationAddressID",
             "type": "Element",
         },
     )
-    pobox: Optional[Pobox] = field(
+    pobox: Pobox | None = field(
         default=None,
         metadata={
             "name": "POBox",
             "type": "Element",
         },
     )
-    street: Optional[Street] = field(
+    street: Street | None = field(
         default=None,
         metadata={
             "name": "Street",
             "type": "Element",
         },
     )
-    house_number: Optional[HouseNumber] = field(
+    house_number: HouseNumber | None = field(
         default=None,
         metadata={
             "name": "HouseNumber",
             "type": "Element",
         },
     )
-    street_supplement1: Optional[StreetSupplement1] = field(
+    street_supplement1: StreetSupplement1 | None = field(
         default=None,
         metadata={
             "name": "StreetSupplement1",
             "type": "Element",
         },
     )
-    street_supplement2: Optional[StreetSupplement2] = field(
+    street_supplement2: StreetSupplement2 | None = field(
         default=None,
         metadata={
             "name": "StreetSupplement2",
             "type": "Element",
         },
     )
-    postal_code: Optional[PostalCode] = field(
+    postal_code: PostalCode | None = field(
         default=None,
         metadata={
             "name": "PostalCode",
             "type": "Element",
         },
     )
-    city: Optional[City] = field(
+    city: City | None = field(
         default=None,
         metadata={
             "name": "City",
             "type": "Element",
         },
     )
-    county: Optional[County] = field(
+    county: County | None = field(
         default=None,
         metadata={
             "name": "County",
             "type": "Element",
         },
     )
-    region: Optional[Region] = field(
+    region: Region | None = field(
         default=None,
         metadata={
             "name": "Region",
             "type": "Element",
         },
     )
-    district: Optional[District] = field(
+    district: District | None = field(
         default=None,
         metadata={
             "name": "District",
             "type": "Element",
         },
     )
-    country: Optional[Country] = field(
+    country: Country | None = field(
         default=None,
         metadata={
             "name": "Country",
             "type": "Element",
         },
     )
-    building: Optional[Building] = field(
+    building: Building | None = field(
         default=None,
         metadata={
             "name": "Building",
             "type": "Element",
         },
     )
-    floor: Optional[Floor] = field(
+    floor: Floor | None = field(
         default=None,
         metadata={
             "name": "Floor",
             "type": "Element",
         },
     )
-    room_number: Optional[RoomNumber] = field(
+    room_number: RoomNumber | None = field(
         default=None,
         metadata={
             "name": "RoomNumber",
             "type": "Element",
         },
     )
-    inhouse_mail: Optional[InhouseMail] = field(
+    inhouse_mail: InhouseMail | None = field(
         default=None,
         metadata={
             "name": "InhouseMail",
             "type": "Element",
         },
     )
-    department: Optional[Department] = field(
+    department: Department | None = field(
         default=None,
         metadata={
             "name": "Department",
@@ -1446,14 +1438,14 @@ class PersonAddress:
 
 @dataclass(kw_only=True)
 class Identifications:
-    primary_id: Optional[PrimaryId] = field(
+    primary_id: PrimaryId | None = field(
         default=None,
         metadata={
             "name": "PrimaryID",
             "type": "Element",
         },
     )
-    list_of_trading_partner_id: Optional[ListOfTradingPartnerId] = field(
+    list_of_trading_partner_id: ListOfTradingPartnerId | None = field(
         default=None,
         metadata={
             "name": "ListOfTradingPartnerID",
@@ -1464,14 +1456,14 @@ class Identifications:
 
 @dataclass(kw_only=True)
 class PersonProfile:
-    title: Optional[Title] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "name": "Title",
             "type": "Element",
         },
     )
-    academic_title: Optional[AcademicTitle] = field(
+    academic_title: AcademicTitle | None = field(
         default=None,
         metadata={
             "name": "AcademicTitle",
@@ -1485,63 +1477,63 @@ class PersonProfile:
             "required": True,
         }
     )
-    first_name: Optional[FirstName] = field(
+    first_name: FirstName | None = field(
         default=None,
         metadata={
             "name": "FirstName",
             "type": "Element",
         },
     )
-    middle_name: Optional[MiddleName] = field(
+    middle_name: MiddleName | None = field(
         default=None,
         metadata={
             "name": "MiddleName",
             "type": "Element",
         },
     )
-    full_name: Optional[FullName] = field(
+    full_name: FullName | None = field(
         default=None,
         metadata={
             "name": "FullName",
             "type": "Element",
         },
     )
-    correspondence_language: Optional[CorrespondenceLanguage] = field(
+    correspondence_language: CorrespondenceLanguage | None = field(
         default=None,
         metadata={
             "name": "CorrespondenceLanguage",
             "type": "Element",
         },
     )
-    number_format: Optional[NumberFormat] = field(
+    number_format: NumberFormat | None = field(
         default=None,
         metadata={
             "name": "NumberFormat",
             "type": "Element",
         },
     )
-    date_format: Optional[DateFormat] = field(
+    date_format: DateFormat | None = field(
         default=None,
         metadata={
             "name": "DateFormat",
             "type": "Element",
         },
     )
-    time_format: Optional[TimeFormat] = field(
+    time_format: TimeFormat | None = field(
         default=None,
         metadata={
             "name": "TimeFormat",
             "type": "Element",
         },
     )
-    person_timezone: Optional[PersonTimezone] = field(
+    person_timezone: PersonTimezone | None = field(
         default=None,
         metadata={
             "name": "PersonTimezone",
             "type": "Element",
         },
     )
-    list_of_x509_certificate: Optional[ListOfX509Certificate] = field(
+    list_of_x509_certificate: ListOfX509Certificate | None = field(
         default=None,
         metadata={
             "name": "ListOfX509Certificate",
@@ -1555,7 +1547,7 @@ class PersonProfile:
             "required": True,
         }
     )
-    general_notes: Optional[GeneralNotes] = field(
+    general_notes: GeneralNotes | None = field(
         default=None,
         metadata={
             "name": "GeneralNotes",
@@ -1598,21 +1590,21 @@ class TradingPartnerUser:
             "required": True,
         }
     )
-    list_of_user_role: Optional[ListOfUserRole] = field(
+    list_of_user_role: ListOfUserRole | None = field(
         default=None,
         metadata={
             "name": "ListOfUserRole",
             "type": "Element",
         },
     )
-    user_administration: Optional[UserAdministration] = field(
+    user_administration: UserAdministration | None = field(
         default=None,
         metadata={
             "name": "UserAdministration",
             "type": "Element",
         },
     )
-    list_of_contact_relation_type: Optional[ListOfContactRelationType] = field(
+    list_of_contact_relation_type: ListOfContactRelationType | None = field(
         default=None,
         metadata={
             "name": "ListOfContactRelationType",

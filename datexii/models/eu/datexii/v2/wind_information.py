@@ -14,7 +14,7 @@ class WindInformation(WeatherData):
     Measurements of wind conditions.
     """
 
-    wind: Optional[Wind] = field(
+    wind: Wind | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -22,7 +22,7 @@ class WindInformation(WeatherData):
             "required": True,
         },
     )
-    wind_information_extension: Optional[ExtensionType] = field(
+    wind_information_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "windInformationExtension",

@@ -9,7 +9,7 @@ class TDocumentation:
     class Meta:
         name = "tDocumentation"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

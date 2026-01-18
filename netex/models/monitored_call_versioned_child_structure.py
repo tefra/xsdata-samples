@@ -16,7 +16,7 @@ class MonitoredCallVersionedChildStructure(CallVersionedChildStructure):
     class Meta:
         name = "MonitoredCall_VersionedChildStructure"
 
-    target_passing_time_view: Optional[TargetPassingTimeView] = field(
+    target_passing_time_view: TargetPassingTimeView | None = field(
         default=None,
         metadata={
             "name": "TargetPassingTimeView",
@@ -24,7 +24,7 @@ class MonitoredCallVersionedChildStructure(CallVersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    estimated_passing_time_view: Optional[EstimatedPassingTimeView] = field(
+    estimated_passing_time_view: EstimatedPassingTimeView | None = field(
         default=None,
         metadata={
             "name": "EstimatedPassingTimeView",
@@ -32,7 +32,7 @@ class MonitoredCallVersionedChildStructure(CallVersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    observed_passing_time_view: Optional[ObservedPassingTimeView] = field(
+    observed_passing_time_view: ObservedPassingTimeView | None = field(
         default=None,
         metadata={
             "name": "ObservedPassingTimeView",
@@ -40,7 +40,7 @@ class MonitoredCallVersionedChildStructure(CallVersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    previous_calls: Optional[PreviousCallsRelStructure] = field(
+    previous_calls: PreviousCallsRelStructure | None = field(
         default=None,
         metadata={
             "name": "previousCalls",
@@ -48,7 +48,7 @@ class MonitoredCallVersionedChildStructure(CallVersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    onward_calls: Optional[OnwardCallsRelStructure] = field(
+    onward_calls: OnwardCallsRelStructure | None = field(
         default=None,
         metadata={
             "name": "onwardCalls",

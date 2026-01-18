@@ -32,27 +32,7 @@ class PassengerEquipmentsRelStructure(ContainmentAggregationStructure):
         name = "passengerEquipments_RelStructure"
 
     passenger_equipment_ref_or_vehicle_equipment_ref_or_passenger_equipment: Iterable[
-        Union[
-            RubbishDisposalEquipmentRef,
-            PassengerBeaconEquipmentRef,
-            HelpPointEquipmentRef,
-            PassengerSafetyEquipmentRef,
-            SanitaryEquipmentRef,
-            WheelchairVehicleRef,
-            AccessVehicleEquipmentRef,
-            VehicleEquipmentRef,
-            PassengerEquipmentRef,
-            PassengerInformationEquipment,
-            RubbishDisposalEquipment,
-            PassengerBeaconEquipment,
-            HelpPointEquipment,
-            PassengerSafetyEquipment,
-            SanitaryEquipment,
-            TicketValidatorEquipment,
-            TicketingEquipment,
-            WheelchairVehicleEquipment,
-            AccessVehicleEquipment,
-        ]
+        RubbishDisposalEquipmentRef | PassengerBeaconEquipmentRef | HelpPointEquipmentRef | PassengerSafetyEquipmentRef | SanitaryEquipmentRef | WheelchairVehicleRef | AccessVehicleEquipmentRef | VehicleEquipmentRef | PassengerEquipmentRef | PassengerInformationEquipment | RubbishDisposalEquipment | PassengerBeaconEquipment | HelpPointEquipment | PassengerSafetyEquipment | SanitaryEquipment | TicketValidatorEquipment | TicketingEquipment | WheelchairVehicleEquipment | AccessVehicleEquipment
     ] = field(
         default_factory=list,
         metadata={

@@ -12,20 +12,20 @@ class TEscalation(TRootElement):
     class Meta:
         name = "tEscalation"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    escalation_code: Optional[str] = field(
+    escalation_code: str | None = field(
         default=None,
         metadata={
             "name": "escalationCode",
             "type": "Attribute",
         },
     )
-    structure_ref: Optional[QName] = field(
+    structure_ref: QName | None = field(
         default=None,
         metadata={
             "name": "structureRef",

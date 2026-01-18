@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class InnerDataPrototypeGroupInCompositionInstanceRef:
         name = "INNER-DATA-PROTOTYPE-GROUP-IN-COMPOSITION-INSTANCE-REF"
 
     context_sw_component_prototype_ref: list[
-        "InnerDataPrototypeGroupInCompositionInstanceRef.ContextSwComponentPrototypeRef"
+        InnerDataPrototypeGroupInCompositionInstanceRef.ContextSwComponentPrototypeRef
     ] = field(
         default_factory=list,
         metadata={
@@ -48,9 +50,7 @@ class InnerDataPrototypeGroupInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_data_prototype_group_ref: Optional[
-        "InnerDataPrototypeGroupInCompositionInstanceRef.TargetDataPrototypeGroupRef"
-    ] = field(
+    target_data_prototype_group_ref: InnerDataPrototypeGroupInCompositionInstanceRef.TargetDataPrototypeGroupRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-GROUP-REF",
@@ -58,7 +58,7 @@ class InnerDataPrototypeGroupInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -66,14 +66,14 @@ class InnerDataPrototypeGroupInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -84,7 +84,7 @@ class InnerDataPrototypeGroupInCompositionInstanceRef:
 
     @dataclass
     class ContextSwComponentPrototypeRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -95,7 +95,7 @@ class InnerDataPrototypeGroupInCompositionInstanceRef:
 
     @dataclass
     class TargetDataPrototypeGroupRef(Ref):
-        dest: Optional[DataPrototypeGroupSubtypesEnum] = field(
+        dest: DataPrototypeGroupSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

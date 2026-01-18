@@ -12,7 +12,7 @@ class ClassOfUseValueStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "ClassOfUse_ValueStructure"
 
-    fare_class: Optional[FareClassEnumeration] = field(
+    fare_class: FareClassEnumeration | None = field(
         default=None,
         metadata={
             "name": "FareClass",

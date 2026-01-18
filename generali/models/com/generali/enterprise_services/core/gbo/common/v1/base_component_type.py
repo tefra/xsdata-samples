@@ -15,7 +15,7 @@ class BaseComponentType:
         (add, update, delete) intended on a component.</description>
     """
 
-    action_code: Optional[str] = field(
+    action_code: str | None = field(
         default=None,
         metadata={
             "name": "actionCode",

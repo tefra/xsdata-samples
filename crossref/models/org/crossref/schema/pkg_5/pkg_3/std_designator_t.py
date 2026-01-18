@@ -19,7 +19,7 @@ class StdDesignatorT:
     class Meta:
         name = "std_designator_t"
 
-    std_designator: Optional[StdDesignator] = field(
+    std_designator: StdDesignator | None = field(
         default=None,
         metadata={
             "type": "Element",

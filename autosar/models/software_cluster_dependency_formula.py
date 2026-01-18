@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class SoftwareClusterDependencyFormula:
     class Meta:
         name = "SOFTWARE-CLUSTER-DEPENDENCY-FORMULA"
 
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -47,7 +49,7 @@ class SoftwareClusterDependencyFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operator: Optional[SoftwareClusterDependencyLogicalOperatorEnum] = field(
+    operator: SoftwareClusterDependencyLogicalOperatorEnum | None = field(
         default=None,
         metadata={
             "name": "OPERATOR",
@@ -55,7 +57,7 @@ class SoftwareClusterDependencyFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parts: Optional["SoftwareClusterDependencyFormula.Parts"] = field(
+    parts: SoftwareClusterDependencyFormula.Parts | None = field(
         default=None,
         metadata={
             "name": "PARTS",
@@ -63,14 +65,14 @@ class SoftwareClusterDependencyFormula:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -92,7 +94,7 @@ class SoftwareClusterDependencyFormula:
             },
         )
         software_cluster_dependency_formula: list[
-            "SoftwareClusterDependencyFormula"
+            SoftwareClusterDependencyFormula
         ] = field(
             default_factory=list,
             metadata={

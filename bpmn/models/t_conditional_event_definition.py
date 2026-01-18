@@ -12,7 +12,7 @@ class TConditionalEventDefinition(TEventDefinition):
     class Meta:
         name = "tConditionalEventDefinition"
 
-    condition: Optional[TExpression] = field(
+    condition: TExpression | None = field(
         default=None,
         metadata={
             "type": "Element",

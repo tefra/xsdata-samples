@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -42,7 +44,7 @@ class SwValueCont:
     class Meta:
         name = "SW-VALUE-CONT"
 
-    unit_ref: Optional["SwValueCont.UnitRef"] = field(
+    unit_ref: SwValueCont.UnitRef | None = field(
         default=None,
         metadata={
             "name": "UNIT-REF",
@@ -50,7 +52,7 @@ class SwValueCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_display_name: Optional[SingleLanguageUnitNames] = field(
+    unit_display_name: SingleLanguageUnitNames | None = field(
         default=None,
         metadata={
             "name": "UNIT-DISPLAY-NAME",
@@ -58,7 +60,7 @@ class SwValueCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_arraysize: Optional[ValueList] = field(
+    sw_arraysize: ValueList | None = field(
         default=None,
         metadata={
             "name": "SW-ARRAYSIZE",
@@ -66,7 +68,7 @@ class SwValueCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_values_phys: Optional[SwValues] = field(
+    sw_values_phys: SwValues | None = field(
         default=None,
         metadata={
             "name": "SW-VALUES-PHYS",
@@ -74,14 +76,14 @@ class SwValueCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -92,7 +94,7 @@ class SwValueCont:
 
     @dataclass
     class UnitRef(Ref):
-        dest: Optional[UnitSubtypesEnum] = field(
+        dest: UnitSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

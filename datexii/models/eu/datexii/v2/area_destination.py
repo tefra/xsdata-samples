@@ -15,7 +15,7 @@ class AreaDestination(Destination):
     which is an area.
     """
 
-    area: Optional[Area] = field(
+    area: Area | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -23,7 +23,7 @@ class AreaDestination(Destination):
             "required": True,
         },
     )
-    area_destination_extension: Optional[ExtensionType] = field(
+    area_destination_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "areaDestinationExtension",

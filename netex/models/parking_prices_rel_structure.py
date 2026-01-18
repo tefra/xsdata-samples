@@ -20,7 +20,7 @@ class ParkingPricesRelStructure(StrictContainmentAggregationStructure):
         name = "parkingPrices_RelStructure"
 
     parking_price_ref_or_cell_ref_or_parking_price: Iterable[
-        Union[ParkingPriceRef, CellRef, ParkingPriceVersionedChildStructure]
+        ParkingPriceRef | CellRef | ParkingPriceVersionedChildStructure
     ] = field(
         default_factory=list,
         metadata={

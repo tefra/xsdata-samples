@@ -19,7 +19,7 @@ class JourneyPatternWaitTimesRelStructure(
         name = "journeyPatternWaitTimes_RelStructure"
 
     journey_pattern_wait_time_ref_or_journey_pattern_wait_time: Iterable[
-        Union[JourneyPatternWaitTimeRef, JourneyPatternWaitTime]
+        JourneyPatternWaitTimeRef | JourneyPatternWaitTime
     ] = field(
         default_factory=list,
         metadata={

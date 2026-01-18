@@ -12,14 +12,14 @@ from xcbl.models.order_response import (
 
 @dataclass(kw_only=True)
 class ChangeOrderSummary:
-    original_order_summary: Optional[OriginalOrderSummary] = field(
+    original_order_summary: OriginalOrderSummary | None = field(
         default=None,
         metadata={
             "name": "OriginalOrderSummary",
             "type": "Element",
         },
     )
-    revised_order_summary: Optional[RevisedOrderSummary] = field(
+    revised_order_summary: RevisedOrderSummary | None = field(
         default=None,
         metadata={
             "name": "RevisedOrderSummary",
@@ -54,7 +54,7 @@ class ListOfChangeOrderPackageDetail:
 
 @dataclass(kw_only=True)
 class ChangeOrderDetail:
-    list_of_change_order_item_detail: Optional[ListOfChangeOrderItemDetail] = (
+    list_of_change_order_item_detail: ListOfChangeOrderItemDetail | None = (
         field(
             default=None,
             metadata={
@@ -63,9 +63,7 @@ class ChangeOrderDetail:
             },
         )
     )
-    list_of_change_order_package_detail: Optional[
-        ListOfChangeOrderPackageDetail
-    ] = field(
+    list_of_change_order_package_detail: ListOfChangeOrderPackageDetail | None = field(
         default=None,
         metadata={
             "name": "ListOfChangeOrderPackageDetail",
@@ -83,14 +81,14 @@ class ChangeOrder:
             "required": True,
         }
     )
-    change_order_detail: Optional[ChangeOrderDetail] = field(
+    change_order_detail: ChangeOrderDetail | None = field(
         default=None,
         metadata={
             "name": "ChangeOrderDetail",
             "type": "Element",
         },
     )
-    change_order_summary: Optional[ChangeOrderSummary] = field(
+    change_order_summary: ChangeOrderSummary | None = field(
         default=None,
         metadata={
             "name": "ChangeOrderSummary",

@@ -11,7 +11,7 @@ class TInclusiveGateway(TGateway):
     class Meta:
         name = "tInclusiveGateway"
 
-    default: Optional[str] = field(
+    default: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

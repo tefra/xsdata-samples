@@ -69,7 +69,7 @@ class IPduTiming:
     class Meta:
         name = "I-PDU-TIMING"
 
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -77,7 +77,7 @@ class IPduTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -85,7 +85,7 @@ class IPduTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -93,7 +93,7 @@ class IPduTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -101,7 +101,7 @@ class IPduTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_delay: Optional[TimeValue] = field(
+    minimum_delay: TimeValue | None = field(
         default=None,
         metadata={
             "name": "MINIMUM-DELAY",
@@ -109,7 +109,7 @@ class IPduTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_mode_declaration: Optional[TransmissionModeDeclaration] = (
+    transmission_mode_declaration: TransmissionModeDeclaration | None = (
         field(
             default=None,
             metadata={
@@ -119,7 +119,7 @@ class IPduTiming:
             },
         )
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -127,14 +127,14 @@ class IPduTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

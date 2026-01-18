@@ -27,7 +27,7 @@ class TpegNamedOnlyArea(TpegAreaLocation):
             "min_occurs": 1,
         },
     )
-    tpeg_named_only_area_extension: Optional[ExtensionType] = field(
+    tpeg_named_only_area_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "tpegNamedOnlyAreaExtension",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -16,12 +18,7 @@ class MetadataConstraintAttachmentType:
     """
 
     choice: tuple[
-        Union[
-            "MetadataConstraintAttachmentType.MetadataProvider",
-            "MetadataConstraintAttachmentType.MetadataSet",
-            "MetadataConstraintAttachmentType.SimpleDataSource",
-            "MetadataConstraintAttachmentType.MetadataStructure",
-        ],
+        MetadataConstraintAttachmentType.MetadataProvider | MetadataConstraintAttachmentType.MetadataSet | MetadataConstraintAttachmentType.SimpleDataSource | MetadataConstraintAttachmentType.MetadataStructure,
         ...,
     ] = field(
         default_factory=tuple,
@@ -60,11 +57,7 @@ class MetadataConstraintAttachmentType:
         },
     )
     queryable_data_source_or_metadataflow_or_metadata_provision_agreement: tuple[
-        Union[
-            QueryableDataSourceType1,
-            "MetadataConstraintAttachmentType.Metadataflow",
-            "MetadataConstraintAttachmentType.MetadataProvisionAgreement",
-        ],
+        QueryableDataSourceType1 | MetadataConstraintAttachmentType.Metadataflow | MetadataConstraintAttachmentType.MetadataProvisionAgreement,
         ...,
     ] = field(
         default_factory=tuple,
@@ -96,7 +89,7 @@ class MetadataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class MetadataProvider:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -106,7 +99,7 @@ class MetadataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class MetadataSet:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -116,7 +109,7 @@ class MetadataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class SimpleDataSource:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -125,7 +118,7 @@ class MetadataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class MetadataStructure:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -135,7 +128,7 @@ class MetadataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class Metadataflow:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -145,7 +138,7 @@ class MetadataConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class MetadataProvisionAgreement:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,

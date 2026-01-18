@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -101,7 +103,7 @@ class AgeConstraint:
     class Meta:
         name = "AGE-CONSTRAINT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -110,7 +112,7 @@ class AgeConstraint:
             "required": True,
         },
     )
-    short_name_fragments: Optional["AgeConstraint.ShortNameFragments"] = field(
+    short_name_fragments: AgeConstraint.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -118,7 +120,7 @@ class AgeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -126,7 +128,7 @@ class AgeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -134,7 +136,7 @@ class AgeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -142,7 +144,7 @@ class AgeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -150,7 +152,7 @@ class AgeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -158,7 +160,7 @@ class AgeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["AgeConstraint.Annotations"] = field(
+    annotations: AgeConstraint.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -166,7 +168,7 @@ class AgeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace_refs: Optional["AgeConstraint.TraceRefs"] = field(
+    trace_refs: AgeConstraint.TraceRefs | None = field(
         default=None,
         metadata={
             "name": "TRACE-REFS",
@@ -174,7 +176,7 @@ class AgeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_condition_ref: Optional["AgeConstraint.TimingConditionRef"] = field(
+    timing_condition_ref: AgeConstraint.TimingConditionRef | None = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
@@ -182,7 +184,7 @@ class AgeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -190,7 +192,7 @@ class AgeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum: Optional[MultidimensionalTime] = field(
+    maximum: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "MAXIMUM",
@@ -198,7 +200,7 @@ class AgeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum: Optional[MultidimensionalTime] = field(
+    minimum: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "MINIMUM",
@@ -206,7 +208,7 @@ class AgeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    scope_ref: Optional["AgeConstraint.ScopeRef"] = field(
+    scope_ref: AgeConstraint.ScopeRef | None = field(
         default=None,
         metadata={
             "name": "SCOPE-REF",
@@ -214,14 +216,14 @@ class AgeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -229,7 +231,7 @@ class AgeConstraint:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -261,7 +263,7 @@ class AgeConstraint:
 
     @dataclass
     class TraceRefs:
-        trace_ref: list["AgeConstraint.TraceRefs.TraceRef"] = field(
+        trace_ref: list[AgeConstraint.TraceRefs.TraceRef] = field(
             default_factory=list,
             metadata={
                 "name": "TRACE-REF",
@@ -272,7 +274,7 @@ class AgeConstraint:
 
         @dataclass
         class TraceRef(Ref):
-            dest: Optional[TraceableSubtypesEnum] = field(
+            dest: TraceableSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -283,7 +285,7 @@ class AgeConstraint:
 
     @dataclass
     class TimingConditionRef(Ref):
-        dest: Optional[TimingConditionSubtypesEnum] = field(
+        dest: TimingConditionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -294,7 +296,7 @@ class AgeConstraint:
 
     @dataclass
     class ScopeRef(Ref):
-        dest: Optional[TimingDescriptionEventSubtypesEnum] = field(
+        dest: TimingDescriptionEventSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

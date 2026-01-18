@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class SupervisedEntityCheckpointNeedsRefConditional:
     class Meta:
         name = "SUPERVISED-ENTITY-CHECKPOINT-NEEDS-REF-CONDITIONAL"
 
-    supervised_entity_checkpoint_needs_ref: Optional[
-        "SupervisedEntityCheckpointNeedsRefConditional.SupervisedEntityCheckpointNeedsRef"
-    ] = field(
+    supervised_entity_checkpoint_needs_ref: SupervisedEntityCheckpointNeedsRefConditional.SupervisedEntityCheckpointNeedsRef | None = field(
         default=None,
         metadata={
             "name": "SUPERVISED-ENTITY-CHECKPOINT-NEEDS-REF",
@@ -43,7 +43,7 @@ class SupervisedEntityCheckpointNeedsRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class SupervisedEntityCheckpointNeedsRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class SupervisedEntityCheckpointNeedsRefConditional:
 
     @dataclass
     class SupervisedEntityCheckpointNeedsRef(Ref):
-        dest: Optional[SupervisedEntityCheckpointNeedsSubtypesEnum] = field(
+        dest: SupervisedEntityCheckpointNeedsSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

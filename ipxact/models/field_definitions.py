@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -42,7 +44,7 @@ class FieldDefinitions:
         name = "fieldDefinitions"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    field_definition: list["FieldDefinitions.FieldDefinition"] = field(
+    field_definition: list[FieldDefinitions.FieldDefinition] = field(
         default_factory=list,
         metadata={
             "name": "fieldDefinition",
@@ -71,41 +73,41 @@ class FieldDefinitions:
         :ivar id:
         """
 
-        name: Optional[str] = field(
+        name: str | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        display_name: Optional[DisplayName] = field(
+        display_name: DisplayName | None = field(
             default=None,
             metadata={
                 "name": "displayName",
                 "type": "Element",
             },
         )
-        short_description: Optional[ShortDescription] = field(
+        short_description: ShortDescription | None = field(
             default=None,
             metadata={
                 "name": "shortDescription",
                 "type": "Element",
             },
         )
-        description: Optional[Description] = field(
+        description: Description | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        type_identifier: Optional[str] = field(
+        type_identifier: str | None = field(
             default=None,
             metadata={
                 "name": "typeIdentifier",
                 "type": "Element",
             },
         )
-        bit_width: Optional[UnsignedPositiveIntExpression] = field(
+        bit_width: UnsignedPositiveIntExpression | None = field(
             default=None,
             metadata={
                 "name": "bitWidth",
@@ -113,42 +115,40 @@ class FieldDefinitions:
                 "required": True,
             },
         )
-        volatile: Optional[bool] = field(
+        volatile: bool | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        resets: Optional["FieldDefinitions.FieldDefinition.Resets"] = field(
+        resets: FieldDefinitions.FieldDefinition.Resets | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        field_access_policies: Optional[
-            "FieldDefinitions.FieldDefinition.FieldAccessPolicies"
-        ] = field(
+        field_access_policies: FieldDefinitions.FieldDefinition.FieldAccessPolicies | None = field(
             default=None,
             metadata={
                 "name": "fieldAccessPolicies",
                 "type": "Element",
             },
         )
-        enumerated_values: Optional[EnumeratedValues] = field(
+        enumerated_values: EnumeratedValues | None = field(
             default=None,
             metadata={
                 "name": "enumeratedValues",
                 "type": "Element",
             },
         )
-        vendor_extensions: Optional[VendorExtensions] = field(
+        vendor_extensions: VendorExtensions | None = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -173,7 +173,7 @@ class FieldDefinitions:
         @dataclass
         class FieldAccessPolicies(FieldAccessPropertiesType):
             field_access_policy: list[
-                "FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy"
+                FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy
             ] = field(
                 default_factory=list,
                 metadata={
@@ -212,86 +212,80 @@ class FieldDefinitions:
                         "type": "Element",
                     },
                 )
-                field_access_policy_definition_ref: Optional[
-                    FieldAccessPolicyDefinitionRef
-                ] = field(
+                field_access_policy_definition_ref: FieldAccessPolicyDefinitionRef | None = field(
                     default=None,
                     metadata={
                         "name": "fieldAccessPolicyDefinitionRef",
                         "type": "Element",
                     },
                 )
-                access: Optional[Access] = field(
+                access: Access | None = field(
                     default=None,
                     metadata={
                         "type": "Element",
                     },
                 )
-                modified_write_value: Optional[ModifiedWriteValue] = field(
+                modified_write_value: ModifiedWriteValue | None = field(
                     default=None,
                     metadata={
                         "name": "modifiedWriteValue",
                         "type": "Element",
                     },
                 )
-                write_value_constraint: Optional[WriteValueConstraint] = field(
+                write_value_constraint: WriteValueConstraint | None = field(
                     default=None,
                     metadata={
                         "name": "writeValueConstraint",
                         "type": "Element",
                     },
                 )
-                read_action: Optional[ReadAction] = field(
+                read_action: ReadAction | None = field(
                     default=None,
                     metadata={
                         "name": "readAction",
                         "type": "Element",
                     },
                 )
-                read_response: Optional[ReadResponse] = field(
+                read_response: ReadResponse | None = field(
                     default=None,
                     metadata={
                         "name": "readResponse",
                         "type": "Element",
                     },
                 )
-                broadcasts: Optional[
-                    "FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Broadcasts"
-                ] = field(
+                broadcasts: FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Broadcasts | None = field(
                     default=None,
                     metadata={
                         "type": "Element",
                     },
                 )
-                access_restrictions: Optional[AccessRestrictions] = field(
+                access_restrictions: AccessRestrictions | None = field(
                     default=None,
                     metadata={
                         "name": "accessRestrictions",
                         "type": "Element",
                     },
                 )
-                testable: Optional[
-                    "FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Testable"
-                ] = field(
+                testable: FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Testable | None = field(
                     default=None,
                     metadata={
                         "type": "Element",
                     },
                 )
-                reserved: Optional[UnsignedBitExpression] = field(
+                reserved: UnsignedBitExpression | None = field(
                     default=None,
                     metadata={
                         "type": "Element",
                     },
                 )
-                vendor_extensions: Optional[VendorExtensions] = field(
+                vendor_extensions: VendorExtensions | None = field(
                     default=None,
                     metadata={
                         "name": "vendorExtensions",
                         "type": "Element",
                     },
                 )
-                id: Optional[str] = field(
+                id: str | None = field(
                     default=None,
                     metadata={
                         "type": "Attribute",
@@ -302,7 +296,7 @@ class FieldDefinitions:
                 @dataclass
                 class Broadcasts:
                     broadcast_to: list[
-                        "FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo"
+                        FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo
                     ] = field(
                         default_factory=list,
                         metadata={
@@ -314,25 +308,21 @@ class FieldDefinitions:
 
                     @dataclass
                     class BroadcastTo:
-                        address_space_ref: Optional[
-                            "FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo.AddressSpaceRef"
-                        ] = field(
+                        address_space_ref: FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo.AddressSpaceRef | None = field(
                             default=None,
                             metadata={
                                 "name": "addressSpaceRef",
                                 "type": "Element",
                             },
                         )
-                        memory_map_ref: Optional[
-                            "FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo.MemoryMapRef"
-                        ] = field(
+                        memory_map_ref: FieldDefinitions.FieldDefinition.FieldAccessPolicies.FieldAccessPolicy.Broadcasts.BroadcastTo.MemoryMapRef | None = field(
                             default=None,
                             metadata={
                                 "name": "memoryMapRef",
                                 "type": "Element",
                             },
                         )
-                        memory_remap_ref: Optional[MemoryRemapRef] = field(
+                        memory_remap_ref: MemoryRemapRef | None = field(
                             default=None,
                             metadata={
                                 "name": "memoryRemapRef",
@@ -346,7 +336,7 @@ class FieldDefinitions:
                                 "type": "Element",
                             },
                         )
-                        address_block_ref: Optional[AddressBlockRef] = field(
+                        address_block_ref: AddressBlockRef | None = field(
                             default=None,
                             metadata={
                                 "name": "addressBlockRef",
@@ -360,23 +350,21 @@ class FieldDefinitions:
                                 "type": "Element",
                             },
                         )
-                        register_ref: Optional[RegisterRef] = field(
+                        register_ref: RegisterRef | None = field(
                             default=None,
                             metadata={
                                 "name": "registerRef",
                                 "type": "Element",
                             },
                         )
-                        alternate_register_ref: Optional[
-                            AlternateRegisterRef
-                        ] = field(
+                        alternate_register_ref: AlternateRegisterRef | None = field(
                             default=None,
                             metadata={
                                 "name": "alternateRegisterRef",
                                 "type": "Element",
                             },
                         )
-                        field_ref: Optional[FieldRef] = field(
+                        field_ref: FieldRef | None = field(
                             default=None,
                             metadata={
                                 "name": "fieldRef",
@@ -384,7 +372,7 @@ class FieldDefinitions:
                                 "required": True,
                             },
                         )
-                        id: Optional[str] = field(
+                        id: str | None = field(
                             default=None,
                             metadata={
                                 "type": "Attribute",
@@ -394,7 +382,7 @@ class FieldDefinitions:
 
                         @dataclass
                         class AddressSpaceRef:
-                            address_space_ref: Optional[str] = field(
+                            address_space_ref: str | None = field(
                                 default=None,
                                 metadata={
                                     "name": "addressSpaceRef",
@@ -405,7 +393,7 @@ class FieldDefinitions:
 
                         @dataclass
                         class MemoryMapRef:
-                            memory_map_ref: Optional[str] = field(
+                            memory_map_ref: str | None = field(
                                 default=None,
                                 metadata={
                                     "name": "memoryMapRef",
@@ -431,7 +419,7 @@ class FieldDefinitions:
                         from the field.
                     """
 
-                    value: Optional[bool] = field(
+                    value: bool | None = field(
                         default=None,
                         metadata={
                             "required": True,

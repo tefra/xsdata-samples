@@ -15,7 +15,7 @@ class FlexibleStopPlacesRelStructure(ContainmentAggregationStructure):
         name = "flexibleStopPlaces_RelStructure"
 
     flexible_stop_place_ref_or_flexible_stop_place: Iterable[
-        Union[FlexibleStopPlaceRef, FlexibleStopPlace]
+        FlexibleStopPlaceRef | FlexibleStopPlace
     ] = field(
         default_factory=list,
         metadata={

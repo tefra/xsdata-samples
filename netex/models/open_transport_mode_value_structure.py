@@ -25,7 +25,7 @@ class OpenTransportModeValueStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "OpenTransportMode_ValueStructure"
 
-    transport_mode: Optional[AllModesEnumeration] = field(
+    transport_mode: AllModesEnumeration | None = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -34,22 +34,7 @@ class OpenTransportModeValueStructure(TypeOfValueVersionStructure):
             "required": True,
         },
     )
-    choice: Optional[
-        Union[
-            AirSubmode,
-            BusSubmode,
-            CoachSubmode,
-            FunicularSubmode,
-            MetroSubmode,
-            TramSubmode,
-            TelecabinSubmode,
-            RailSubmode,
-            WaterSubmode,
-            SnowAndIceSubmode,
-            TaxiSubmode,
-            SelfDriveSubmode,
-        ]
-    ] = field(
+    choice: AirSubmode | BusSubmode | CoachSubmode | FunicularSubmode | MetroSubmode | TramSubmode | TelecabinSubmode | RailSubmode | WaterSubmode | SnowAndIceSubmode | TaxiSubmode | SelfDriveSubmode | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -117,7 +102,7 @@ class OpenTransportModeValueStructure(TypeOfValueVersionStructure):
             ),
         },
     )
-    submode_ref: Optional[SubmodeRef] = field(
+    submode_ref: SubmodeRef | None = field(
         default=None,
         metadata={
             "name": "SubmodeRef",

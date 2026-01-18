@@ -25,7 +25,7 @@ class PrpaMt201307Uv02DataSource:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -49,7 +49,7 @@ class PrpaMt201307Uv02DataSource:
             "min_occurs": 1,
         },
     )
-    semantics_text: Optional[St] = field(
+    semantics_text: St | None = field(
         default=None,
         metadata={
             "name": "semanticsText",
@@ -58,7 +58,7 @@ class PrpaMt201307Uv02DataSource:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -80,7 +80,7 @@ class PrpaMt201307Uv02PatientIdentifier:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -104,7 +104,7 @@ class PrpaMt201307Uv02PatientIdentifier:
             "min_occurs": 1,
         },
     )
-    semantics_text: Optional[St] = field(
+    semantics_text: St | None = field(
         default=None,
         metadata={
             "name": "semanticsText",
@@ -113,7 +113,7 @@ class PrpaMt201307Uv02PatientIdentifier:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -135,7 +135,7 @@ class PrpaMt201307Uv02ParameterList:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -151,7 +151,7 @@ class PrpaMt201307Uv02ParameterList:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: Optional[Ii] = field(
+    id: Ii | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -176,7 +176,7 @@ class PrpaMt201307Uv02ParameterList:
             "min_occurs": 1,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -198,7 +198,7 @@ class PrpaMt201307Uv02QueryByParameter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -214,7 +214,7 @@ class PrpaMt201307Uv02QueryByParameter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    query_id: Optional[Ii] = field(
+    query_id: Ii | None = field(
         default=None,
         metadata={
             "name": "queryId",
@@ -223,7 +223,7 @@ class PrpaMt201307Uv02QueryByParameter:
             "required": True,
         },
     )
-    status_code: Optional[Cs] = field(
+    status_code: Cs | None = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -232,7 +232,7 @@ class PrpaMt201307Uv02QueryByParameter:
             "required": True,
         },
     )
-    modify_code: Optional[Cs] = field(
+    modify_code: Cs | None = field(
         default=None,
         metadata={
             "name": "modifyCode",
@@ -248,7 +248,7 @@ class PrpaMt201307Uv02QueryByParameter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    response_priority_code: Optional[Cs] = field(
+    response_priority_code: Cs | None = field(
         default=None,
         metadata={
             "name": "responsePriorityCode",
@@ -256,7 +256,7 @@ class PrpaMt201307Uv02QueryByParameter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    execution_and_delivery_time: Optional[TsExplicit] = field(
+    execution_and_delivery_time: TsExplicit | None = field(
         default=None,
         metadata={
             "name": "executionAndDeliveryTime",
@@ -264,7 +264,7 @@ class PrpaMt201307Uv02QueryByParameter:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    parameter_list: Optional[PrpaMt201307Uv02ParameterList] = field(
+    parameter_list: PrpaMt201307Uv02ParameterList | None = field(
         default=None,
         metadata={
             "name": "parameterList",
@@ -273,7 +273,7 @@ class PrpaMt201307Uv02QueryByParameter:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",

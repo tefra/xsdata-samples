@@ -19,7 +19,7 @@ class TBaseElement:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    extension_elements: Optional[ExtensionElements] = field(
+    extension_elements: ExtensionElements | None = field(
         default=None,
         metadata={
             "name": "extensionElements",
@@ -27,7 +27,7 @@ class TBaseElement:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

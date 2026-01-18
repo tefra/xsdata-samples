@@ -32,7 +32,7 @@ class GroupOfParkingSites(ParkingRecord):
     :ivar group_of_parking_sites_extension:
     """
 
-    group_of_parking_sites_type: Optional[GroupOfParkingSitesTypeEnum] = field(
+    group_of_parking_sites_type: GroupOfParkingSitesTypeEnum | None = field(
         default=None,
         metadata={
             "name": "groupOfParkingSitesType",
@@ -56,7 +56,7 @@ class GroupOfParkingSites(ParkingRecord):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    group_of_parking_sites_extension: Optional[ExtensionType] = field(
+    group_of_parking_sites_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "groupOfParkingSitesExtension",

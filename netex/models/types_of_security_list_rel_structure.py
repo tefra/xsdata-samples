@@ -15,7 +15,7 @@ class TypesOfSecurityListRelStructure(ContainmentAggregationStructure):
         name = "typesOfSecurityList_RelStructure"
 
     type_of_security_list_ref_or_type_of_security_list: Iterable[
-        Union[TypeOfSecurityListRef, TypeOfSecurityList]
+        TypeOfSecurityListRef | TypeOfSecurityList
     ] = field(
         default_factory=list,
         metadata={

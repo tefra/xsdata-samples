@@ -31,14 +31,14 @@ class ReportPaper:
         name = "report-paper"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    report_paper_metadata: Optional[ReportPaperMetadata] = field(
+    report_paper_metadata: ReportPaperMetadata | None = field(
         default=None,
         metadata={
             "name": "report-paper_metadata",
             "type": "Element",
         },
     )
-    report_paper_series_metadata: Optional[ReportPaperSeriesMetadata] = field(
+    report_paper_series_metadata: ReportPaperSeriesMetadata | None = field(
         default=None,
         metadata={
             "name": "report-paper_series_metadata",
@@ -51,7 +51,7 @@ class ReportPaper:
             "type": "Element",
         },
     )
-    component_list: Optional[ComponentList] = field(
+    component_list: ComponentList | None = field(
         default=None,
         metadata={
             "type": "Element",

@@ -15,7 +15,7 @@ class SiteFacilitySetsRelStructure(ContainmentAggregationStructure):
         name = "siteFacilitySets_RelStructure"
 
     site_facility_set_ref_or_site_facility_set: Iterable[
-        Union[SiteFacilitySetRef, SiteFacilitySet]
+        SiteFacilitySetRef | SiteFacilitySet
     ] = field(
         default_factory=list,
         metadata={

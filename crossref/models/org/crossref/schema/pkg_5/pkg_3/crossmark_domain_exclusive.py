@@ -10,7 +10,7 @@ class CrossmarkDomainExclusive:
         name = "crossmark_domain_exclusive"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    value: Optional[bool] = field(
+    value: bool | None = field(
         default=None,
         metadata={
             "required": True,

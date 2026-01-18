@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class PercValueType:
-    amount: Optional[AmountType] = field(
+    amount: AmountType | None = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -21,7 +21,7 @@ class PercValueType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    percentage: Optional[PercentType] = field(
+    percentage: PercentType | None = field(
         default=None,
         metadata={
             "name": "Percentage",

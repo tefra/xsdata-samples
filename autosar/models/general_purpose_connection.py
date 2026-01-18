@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -86,7 +88,7 @@ class GeneralPurposeConnection:
     class Meta:
         name = "GENERAL-PURPOSE-CONNECTION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -95,9 +97,7 @@ class GeneralPurposeConnection:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "GeneralPurposeConnection.ShortNameFragments"
-    ] = field(
+    short_name_fragments: GeneralPurposeConnection.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -105,7 +105,7 @@ class GeneralPurposeConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -113,7 +113,7 @@ class GeneralPurposeConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -121,7 +121,7 @@ class GeneralPurposeConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -129,7 +129,7 @@ class GeneralPurposeConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -137,7 +137,7 @@ class GeneralPurposeConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -145,7 +145,7 @@ class GeneralPurposeConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["GeneralPurposeConnection.Annotations"] = field(
+    annotations: GeneralPurposeConnection.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -153,7 +153,7 @@ class GeneralPurposeConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -161,9 +161,7 @@ class GeneralPurposeConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggering_refs: Optional[
-        "GeneralPurposeConnection.PduTriggeringRefs"
-    ] = field(
+    pdu_triggering_refs: GeneralPurposeConnection.PduTriggeringRefs | None = field(
         default=None,
         metadata={
             "name": "PDU-TRIGGERING-REFS",
@@ -171,14 +169,14 @@ class GeneralPurposeConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -186,7 +184,7 @@ class GeneralPurposeConnection:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -219,7 +217,7 @@ class GeneralPurposeConnection:
     @dataclass
     class PduTriggeringRefs:
         pdu_triggering_ref: list[
-            "GeneralPurposeConnection.PduTriggeringRefs.PduTriggeringRef"
+            GeneralPurposeConnection.PduTriggeringRefs.PduTriggeringRef
         ] = field(
             default_factory=list,
             metadata={
@@ -231,7 +229,7 @@ class GeneralPurposeConnection:
 
         @dataclass
         class PduTriggeringRef(Ref):
-            dest: Optional[PduTriggeringSubtypesEnum] = field(
+            dest: PduTriggeringSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

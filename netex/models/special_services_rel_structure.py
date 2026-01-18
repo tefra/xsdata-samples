@@ -16,7 +16,7 @@ class SpecialServicesRelStructure(ContainmentAggregationStructure):
         name = "specialServices_RelStructure"
 
     dated_special_service_ref_or_special_service_ref_or_special_service: Iterable[
-        Union[DatedSpecialServiceRef, SpecialServiceRef, SpecialService]
+        DatedSpecialServiceRef | SpecialServiceRef | SpecialService
     ] = field(
         default_factory=list,
         metadata={

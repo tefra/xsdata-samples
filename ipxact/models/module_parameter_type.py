@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -99,7 +101,7 @@ class ModuleParameterType:
     class Meta:
         name = "moduleParameterType"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -107,7 +109,7 @@ class ModuleParameterType:
             "required": True,
         },
     )
-    display_name: Optional[DisplayName] = field(
+    display_name: DisplayName | None = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -115,7 +117,7 @@ class ModuleParameterType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -123,28 +125,28 @@ class ModuleParameterType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    vectors: Optional["ModuleParameterType.Vectors"] = field(
+    vectors: ModuleParameterType.Vectors | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    arrays: Optional[ModuleParameterArrays] = field(
+    arrays: ModuleParameterArrays | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    value: Optional[Value] = field(
+    value: Value | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -152,7 +154,7 @@ class ModuleParameterType:
             "required": True,
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -160,34 +162,34 @@ class ModuleParameterType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    parameter_id: Optional[str] = field(
+    parameter_id: str | None = field(
         default=None,
         metadata={
             "name": "parameterId",
             "type": "Attribute",
         },
     )
-    prompt: Optional[str] = field(
+    prompt: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    choice_ref: Optional[str] = field(
+    choice_ref: str | None = field(
         default=None,
         metadata={
             "name": "choiceRef",
             "type": "Attribute",
         },
     )
-    order: Optional[float] = field(
+    order: float | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -201,13 +203,13 @@ class ModuleParameterType:
             "tokens": True,
         },
     )
-    minimum: Optional[str] = field(
+    minimum: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    maximum: Optional[str] = field(
+    maximum: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -220,19 +222,19 @@ class ModuleParameterType:
             "type": "Attribute",
         },
     )
-    sign: Optional[SignType] = field(
+    sign: SignType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    prefix: Optional[ModuleParameterTypePrefix] = field(
+    prefix: ModuleParameterTypePrefix | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    unit: Optional[ModuleParameterTypeUnit] = field(
+    unit: ModuleParameterTypeUnit | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -251,7 +253,7 @@ class ModuleParameterType:
             "namespace": "##other",
         },
     )
-    data_type: Optional[str] = field(
+    data_type: str | None = field(
         default=None,
         metadata={
             "name": "dataType",
@@ -265,7 +267,7 @@ class ModuleParameterType:
             "type": "Attribute",
         },
     )
-    data_type_definition: Optional[str] = field(
+    data_type_definition: str | None = field(
         default=None,
         metadata={
             "name": "dataTypeDefinition",
@@ -286,7 +288,7 @@ class ModuleParameterType:
         :ivar vector: Left and right ranges of the vector.
         """
 
-        vector: list["ModuleParameterType.Vectors.Vector"] = field(
+        vector: list[ModuleParameterType.Vectors.Vector] = field(
             default_factory=list,
             metadata={
                 "type": "Element",
@@ -297,7 +299,7 @@ class ModuleParameterType:
 
         @dataclass
         class Vector:
-            left: Optional[Left] = field(
+            left: Left | None = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -305,7 +307,7 @@ class ModuleParameterType:
                     "required": True,
                 },
             )
-            right: Optional[Right] = field(
+            right: Right | None = field(
                 default=None,
                 metadata={
                     "type": "Element",
@@ -313,14 +315,14 @@ class ModuleParameterType:
                     "required": True,
                 },
             )
-            vector_id: Optional[str] = field(
+            vector_id: str | None = field(
                 default=None,
                 metadata={
                     "name": "vectorId",
                     "type": "Attribute",
                 },
             )
-            id: Optional[str] = field(
+            id: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

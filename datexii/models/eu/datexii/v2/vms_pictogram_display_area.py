@@ -24,7 +24,7 @@ class VmsPictogramDisplayArea:
     :ivar vms_pictogram_display_area_extension:
     """
 
-    synchronized_sequencing_with_text_pages: Optional[bool] = field(
+    synchronized_sequencing_with_text_pages: bool | None = field(
         default=None,
         metadata={
             "name": "synchronizedSequencingWithTextPages",
@@ -42,7 +42,7 @@ class VmsPictogramDisplayArea:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_pictogram_display_area_extension: Optional[ExtensionType] = field(
+    vms_pictogram_display_area_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "vmsPictogramDisplayAreaExtension",

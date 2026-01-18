@@ -24,7 +24,7 @@ class TActivity(TFlowNode):
     class Meta:
         name = "tActivity"
 
-    io_specification: Optional[IoSpecification] = field(
+    io_specification: IoSpecification | None = field(
         default=None,
         metadata={
             "name": "ioSpecification",
@@ -86,7 +86,7 @@ class TActivity(TFlowNode):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    standard_loop_characteristics: Optional[StandardLoopCharacteristics] = (
+    standard_loop_characteristics: StandardLoopCharacteristics | None = (
         field(
             default=None,
             metadata={
@@ -96,9 +96,7 @@ class TActivity(TFlowNode):
             },
         )
     )
-    multi_instance_loop_characteristics: Optional[
-        MultiInstanceLoopCharacteristics
-    ] = field(
+    multi_instance_loop_characteristics: MultiInstanceLoopCharacteristics | None = field(
         default=None,
         metadata={
             "name": "multiInstanceLoopCharacteristics",
@@ -106,7 +104,7 @@ class TActivity(TFlowNode):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    loop_characteristics: Optional[LoopCharacteristics] = field(
+    loop_characteristics: LoopCharacteristics | None = field(
         default=None,
         metadata={
             "name": "loopCharacteristics",
@@ -135,7 +133,7 @@ class TActivity(TFlowNode):
             "type": "Attribute",
         },
     )
-    default: Optional[str] = field(
+    default: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

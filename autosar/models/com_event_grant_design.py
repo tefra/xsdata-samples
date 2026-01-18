@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -94,7 +96,7 @@ class ComEventGrantDesign:
     class Meta:
         name = "COM-EVENT-GRANT-DESIGN"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -103,9 +105,7 @@ class ComEventGrantDesign:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ComEventGrantDesign.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ComEventGrantDesign.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -113,7 +113,7 @@ class ComEventGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class ComEventGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class ComEventGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class ComEventGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class ComEventGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +153,7 @@ class ComEventGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ComEventGrantDesign.Annotations"] = field(
+    annotations: ComEventGrantDesign.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,7 +161,7 @@ class ComEventGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -169,7 +169,7 @@ class ComEventGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    process_design_ref: Optional["ComEventGrantDesign.ProcessDesignRef"] = (
+    process_design_ref: ComEventGrantDesign.ProcessDesignRef | None = (
         field(
             default=None,
             metadata={
@@ -179,7 +179,7 @@ class ComEventGrantDesign:
             },
         )
     )
-    remote_subject_ref: Optional["ComEventGrantDesign.RemoteSubjectRef"] = (
+    remote_subject_ref: ComEventGrantDesign.RemoteSubjectRef | None = (
         field(
             default=None,
             metadata={
@@ -189,7 +189,7 @@ class ComEventGrantDesign:
             },
         )
     )
-    event_iref: Optional[EventInExecutableInstanceRef] = field(
+    event_iref: EventInExecutableInstanceRef | None = field(
         default=None,
         metadata={
             "name": "EVENT-IREF",
@@ -197,14 +197,14 @@ class ComEventGrantDesign:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -212,7 +212,7 @@ class ComEventGrantDesign:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -244,7 +244,7 @@ class ComEventGrantDesign:
 
     @dataclass
     class ProcessDesignRef(Ref):
-        dest: Optional[ProcessDesignSubtypesEnum] = field(
+        dest: ProcessDesignSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -255,7 +255,7 @@ class ComEventGrantDesign:
 
     @dataclass
     class RemoteSubjectRef(Ref):
-        dest: Optional[AbstractIamRemoteSubjectSubtypesEnum] = field(
+        dest: AbstractIamRemoteSubjectSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

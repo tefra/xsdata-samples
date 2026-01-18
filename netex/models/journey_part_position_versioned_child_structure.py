@@ -15,7 +15,7 @@ class JourneyPartPositionVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "JourneyPartPosition_VersionedChildStructure"
 
-    parent_journey_part_ref: Optional[JourneyPartRefStructure] = field(
+    parent_journey_part_ref: JourneyPartRefStructure | None = field(
         default=None,
         metadata={
             "name": "ParentJourneyPartRef",
@@ -24,7 +24,7 @@ class JourneyPartPositionVersionedChildStructure(VersionedChildStructure):
         },
     )
     scheduled_stop_point_ref: Iterable[
-        Union[FareScheduledStopPointRef, ScheduledStopPointRef]
+        FareScheduledStopPointRef | ScheduledStopPointRef
     ] = field(
         default_factory=list,
         metadata={
@@ -43,7 +43,7 @@ class JourneyPartPositionVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    position_in_train: Optional[int] = field(
+    position_in_train: int | None = field(
         default=None,
         metadata={
             "name": "PositionInTrain",
@@ -52,7 +52,7 @@ class JourneyPartPositionVersionedChildStructure(VersionedChildStructure):
             "required": True,
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

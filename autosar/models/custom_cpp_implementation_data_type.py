@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -131,7 +133,7 @@ class CustomCppImplementationDataType:
     class Meta:
         name = "CUSTOM-CPP-IMPLEMENTATION-DATA-TYPE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -140,9 +142,7 @@ class CustomCppImplementationDataType:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "CustomCppImplementationDataType.ShortNameFragments"
-    ] = field(
+    short_name_fragments: CustomCppImplementationDataType.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -150,7 +150,7 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -158,7 +158,7 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -166,7 +166,7 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -174,7 +174,7 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -182,7 +182,7 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -190,7 +190,7 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["CustomCppImplementationDataType.Annotations"] = (
+    annotations: CustomCppImplementationDataType.Annotations | None = (
         field(
             default=None,
             metadata={
@@ -200,9 +200,7 @@ class CustomCppImplementationDataType:
             },
         )
     )
-    blueprint_policys: Optional[
-        "CustomCppImplementationDataType.BlueprintPolicys"
-    ] = field(
+    blueprint_policys: CustomCppImplementationDataType.BlueprintPolicys | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -210,7 +208,7 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: Optional[String] = field(
+    short_name_pattern: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -218,7 +216,7 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -226,7 +224,7 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_data_def_props: Optional[SwDataDefProps] = field(
+    sw_data_def_props: SwDataDefProps | None = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEF-PROPS",
@@ -234,7 +232,7 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    array_size: Optional[PositiveIntegerValueVariationPoint] = field(
+    array_size: PositiveIntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "ARRAY-SIZE",
@@ -242,7 +240,7 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    header_file: Optional[String] = field(
+    header_file: String | None = field(
         default=None,
         metadata={
             "name": "HEADER-FILE",
@@ -250,7 +248,7 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    namespaces: Optional["CustomCppImplementationDataType.Namespaces"] = field(
+    namespaces: CustomCppImplementationDataType.Namespaces | None = field(
         default=None,
         metadata={
             "name": "NAMESPACES",
@@ -258,7 +256,7 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_elements: Optional["CustomCppImplementationDataType.SubElements"] = (
+    sub_elements: CustomCppImplementationDataType.SubElements | None = (
         field(
             default=None,
             metadata={
@@ -268,9 +266,7 @@ class CustomCppImplementationDataType:
             },
         )
     )
-    template_arguments: Optional[
-        "CustomCppImplementationDataType.TemplateArguments"
-    ] = field(
+    template_arguments: CustomCppImplementationDataType.TemplateArguments | None = field(
         default=None,
         metadata={
             "name": "TEMPLATE-ARGUMENTS",
@@ -278,7 +274,7 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_emitter: Optional[NmtokenString] = field(
+    type_emitter: NmtokenString | None = field(
         default=None,
         metadata={
             "name": "TYPE-EMITTER",
@@ -286,9 +282,7 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_reference_ref: Optional[
-        "CustomCppImplementationDataType.TypeReferenceRef"
-    ] = field(
+    type_reference_ref: CustomCppImplementationDataType.TypeReferenceRef | None = field(
         default=None,
         metadata={
             "name": "TYPE-REFERENCE-REF",
@@ -296,14 +290,14 @@ class CustomCppImplementationDataType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -311,7 +305,7 @@ class CustomCppImplementationDataType:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -407,7 +401,7 @@ class CustomCppImplementationDataType:
 
     @dataclass
     class TypeReferenceRef(Ref):
-        dest: Optional[CppImplementationDataTypeSubtypesEnum] = field(
+        dest: CppImplementationDataTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

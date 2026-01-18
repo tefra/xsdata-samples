@@ -17,7 +17,7 @@ class FarePointInPatternVersionedChildStructure(
     class Meta:
         name = "FarePointInPattern_VersionedChildStructure"
 
-    scheduled_stop_point_view: Optional[ScheduledStopPointView] = field(
+    scheduled_stop_point_view: ScheduledStopPointView | None = field(
         default=None,
         metadata={
             "name": "ScheduledStopPointView",
@@ -25,7 +25,7 @@ class FarePointInPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    abridgement_ranking: Optional[int] = field(
+    abridgement_ranking: int | None = field(
         default=None,
         metadata={
             "name": "AbridgementRanking",
@@ -33,7 +33,7 @@ class FarePointInPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    presentation_position: Optional[SeriesPresentationEnumeration] = field(
+    presentation_position: SeriesPresentationEnumeration | None = field(
         default=None,
         metadata={
             "name": "PresentationPosition",
@@ -41,7 +41,7 @@ class FarePointInPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_forbidden: Optional[bool] = field(
+    is_forbidden: bool | None = field(
         default=None,
         metadata={
             "name": "IsForbidden",
@@ -49,7 +49,7 @@ class FarePointInPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    interchange_allowed: Optional[bool] = field(
+    interchange_allowed: bool | None = field(
         default=None,
         metadata={
             "name": "InterchangeAllowed",
@@ -57,7 +57,7 @@ class FarePointInPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_fare_stage: Optional[bool] = field(
+    is_fare_stage: bool | None = field(
         default=None,
         metadata={
             "name": "IsFareStage",

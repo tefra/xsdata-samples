@@ -41,7 +41,7 @@ class VehicleCharacteristicsExtended:
             "max_length": 1024,
         },
     )
-    operation_free_of_emission: Optional[bool] = field(
+    operation_free_of_emission: bool | None = field(
         default=None,
         metadata={
             "name": "operationFreeOfEmission",
@@ -49,7 +49,7 @@ class VehicleCharacteristicsExtended:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    load_type2: Optional[LoadType2Enum] = field(
+    load_type2: LoadType2Enum | None = field(
         default=None,
         metadata={
             "name": "loadType2",
@@ -57,7 +57,7 @@ class VehicleCharacteristicsExtended:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_type2: Optional[VehicleType2Enum] = field(
+    vehicle_type2: VehicleType2Enum | None = field(
         default=None,
         metadata={
             "name": "vehicleType2",
@@ -65,7 +65,7 @@ class VehicleCharacteristicsExtended:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    fuel_type2: Optional[FuelType2Enum] = field(
+    fuel_type2: FuelType2Enum | None = field(
         default=None,
         metadata={
             "name": "fuelType2",
@@ -73,7 +73,7 @@ class VehicleCharacteristicsExtended:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_usage2: Optional[VehicleUsage2Enum] = field(
+    vehicle_usage2: VehicleUsage2Enum | None = field(
         default=None,
         metadata={
             "name": "vehicleUsage2",

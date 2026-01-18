@@ -15,7 +15,7 @@ class ModeRestrictionAssessmentsRelStructure(ContainmentAggregationStructure):
         name = "modeRestrictionAssessments_RelStructure"
 
     mode_restriction_assessment_ref_or_mode_restriction_assessment: Iterable[
-        Union[ModeRestrictionAssessmentRef, ModeRestrictionAssessment]
+        ModeRestrictionAssessmentRef | ModeRestrictionAssessment
     ] = field(
         default_factory=list,
         metadata={

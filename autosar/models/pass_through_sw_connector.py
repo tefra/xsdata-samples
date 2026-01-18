@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -99,7 +101,7 @@ class PassThroughSwConnector:
     class Meta:
         name = "PASS-THROUGH-SW-CONNECTOR"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -108,9 +110,7 @@ class PassThroughSwConnector:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "PassThroughSwConnector.ShortNameFragments"
-    ] = field(
+    short_name_fragments: PassThroughSwConnector.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -118,7 +118,7 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -126,7 +126,7 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -134,7 +134,7 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -142,7 +142,7 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -150,7 +150,7 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -158,7 +158,7 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["PassThroughSwConnector.Annotations"] = field(
+    annotations: PassThroughSwConnector.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -166,7 +166,7 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapping_ref: Optional["PassThroughSwConnector.MappingRef"] = field(
+    mapping_ref: PassThroughSwConnector.MappingRef | None = field(
         default=None,
         metadata={
             "name": "MAPPING-REF",
@@ -174,7 +174,7 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -182,9 +182,7 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provided_outer_port_ref: Optional[
-        "PassThroughSwConnector.ProvidedOuterPortRef"
-    ] = field(
+    provided_outer_port_ref: PassThroughSwConnector.ProvidedOuterPortRef | None = field(
         default=None,
         metadata={
             "name": "PROVIDED-OUTER-PORT-REF",
@@ -192,9 +190,7 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_outer_port_ref: Optional[
-        "PassThroughSwConnector.RequiredOuterPortRef"
-    ] = field(
+    required_outer_port_ref: PassThroughSwConnector.RequiredOuterPortRef | None = field(
         default=None,
         metadata={
             "name": "REQUIRED-OUTER-PORT-REF",
@@ -202,14 +198,14 @@ class PassThroughSwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -217,7 +213,7 @@ class PassThroughSwConnector:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -249,7 +245,7 @@ class PassThroughSwConnector:
 
     @dataclass
     class MappingRef(Ref):
-        dest: Optional[PortInterfaceMappingSubtypesEnum] = field(
+        dest: PortInterfaceMappingSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -260,7 +256,7 @@ class PassThroughSwConnector:
 
     @dataclass
     class ProvidedOuterPortRef(Ref):
-        dest: Optional[AbstractProvidedPortPrototypeSubtypesEnum] = field(
+        dest: AbstractProvidedPortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -271,7 +267,7 @@ class PassThroughSwConnector:
 
     @dataclass
     class RequiredOuterPortRef(Ref):
-        dest: Optional[AbstractRequiredPortPrototypeSubtypesEnum] = field(
+        dest: AbstractRequiredPortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

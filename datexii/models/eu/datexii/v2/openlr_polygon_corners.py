@@ -25,7 +25,7 @@ class OpenlrPolygonCorners:
             "min_occurs": 3,
         },
     )
-    openlr_polygon_corners_extension: Optional[ExtensionType] = field(
+    openlr_polygon_corners_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "openlrPolygonCornersExtension",

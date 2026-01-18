@@ -7,7 +7,7 @@ class DescText:
     class Meta:
         name = "desc-text"
 
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "type",
@@ -15,7 +15,7 @@ class DescText:
             "required": True,
         },
     )
-    description: Optional[str] = field(
+    description: str | None = field(
         default=None,
         metadata={
             "type": "Element",

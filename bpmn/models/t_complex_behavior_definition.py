@@ -13,7 +13,7 @@ class TComplexBehaviorDefinition(TBaseElement):
     class Meta:
         name = "tComplexBehaviorDefinition"
 
-    condition: Optional[TFormalExpression] = field(
+    condition: TFormalExpression | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -21,7 +21,7 @@ class TComplexBehaviorDefinition(TBaseElement):
             "required": True,
         },
     )
-    event: Optional[TImplicitThrowEvent] = field(
+    event: TImplicitThrowEvent | None = field(
         default=None,
         metadata={
             "type": "Element",

@@ -15,7 +15,7 @@ class JourneyPartsRelStructure(ContainmentAggregationStructure):
         name = "journeyParts_RelStructure"
 
     journey_part_ref_or_journey_part: Iterable[
-        Union[JourneyPartRef, JourneyPart]
+        JourneyPartRef | JourneyPart
     ] = field(
         default_factory=list,
         metadata={

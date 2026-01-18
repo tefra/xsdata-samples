@@ -29,7 +29,7 @@ class GarageVersionStructure(AddressablePlaceVersionStructure):
     class Meta:
         name = "Garage_VersionStructure"
 
-    contact_details: Optional[ContactStructure] = field(
+    contact_details: ContactStructure | None = field(
         default=None,
         metadata={
             "name": "ContactDetails",
@@ -37,20 +37,7 @@ class GarageVersionStructure(AddressablePlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: Optional[
-        Union[
-            RetailConsortiumRef,
-            OnlineServiceOperatorRef,
-            GeneralOrganisationRef,
-            ManagementAgentRef,
-            ServicedOrganisationRef,
-            TravelAgentRef,
-            OtherOrganisationRef,
-            AuthorityRef,
-            OperatorRef,
-            OrganisationRef,
-        ]
-    ] = field(
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -108,14 +95,14 @@ class GarageVersionStructure(AddressablePlaceVersionStructure):
             ),
         },
     )
-    operators: Optional[TransportOrganisationRefsRelStructure] = field(
+    operators: TransportOrganisationRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    garage_points: Optional[GaragePointsRelStructure] = field(
+    garage_points: GaragePointsRelStructure | None = field(
         default=None,
         metadata={
             "name": "garagePoints",
@@ -123,7 +110,7 @@ class GarageVersionStructure(AddressablePlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    crew_bases: Optional[CrewBaseRefsRelStructure] = field(
+    crew_bases: CrewBaseRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "crewBases",

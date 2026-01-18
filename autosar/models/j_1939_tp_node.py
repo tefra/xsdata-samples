@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -94,7 +96,7 @@ class J1939TpNode:
     class Meta:
         name = "J-1939-TP-NODE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -103,7 +105,7 @@ class J1939TpNode:
             "required": True,
         },
     )
-    short_name_fragments: Optional["J1939TpNode.ShortNameFragments"] = field(
+    short_name_fragments: J1939TpNode.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -111,7 +113,7 @@ class J1939TpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -119,7 +121,7 @@ class J1939TpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -127,7 +129,7 @@ class J1939TpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -135,7 +137,7 @@ class J1939TpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -143,7 +145,7 @@ class J1939TpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -151,7 +153,7 @@ class J1939TpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["J1939TpNode.Annotations"] = field(
+    annotations: J1939TpNode.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -159,7 +161,7 @@ class J1939TpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    connector_ref: Optional["J1939TpNode.ConnectorRef"] = field(
+    connector_ref: J1939TpNode.ConnectorRef | None = field(
         default=None,
         metadata={
             "name": "CONNECTOR-REF",
@@ -167,7 +169,7 @@ class J1939TpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_address_ref: Optional["J1939TpNode.TpAddressRef"] = field(
+    tp_address_ref: J1939TpNode.TpAddressRef | None = field(
         default=None,
         metadata={
             "name": "TP-ADDRESS-REF",
@@ -175,7 +177,7 @@ class J1939TpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -183,14 +185,14 @@ class J1939TpNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -198,7 +200,7 @@ class J1939TpNode:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -230,7 +232,7 @@ class J1939TpNode:
 
     @dataclass
     class ConnectorRef(Ref):
-        dest: Optional[CommunicationConnectorSubtypesEnum] = field(
+        dest: CommunicationConnectorSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -241,7 +243,7 @@ class J1939TpNode:
 
     @dataclass
     class TpAddressRef(Ref):
-        dest: Optional[TpAddressSubtypesEnum] = field(
+        dest: TpAddressSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

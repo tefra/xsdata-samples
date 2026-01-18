@@ -102,41 +102,41 @@ class TextFormatType:
             "type": "Attribute",
         },
     )
-    is_sequence: Optional[bool] = field(
+    is_sequence: bool | None = field(
         default=None,
         metadata={
             "name": "isSequence",
             "type": "Attribute",
         },
     )
-    interval: Optional[Decimal] = field(
+    interval: Decimal | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    start_value: Optional[Decimal] = field(
+    start_value: Decimal | None = field(
         default=None,
         metadata={
             "name": "startValue",
             "type": "Attribute",
         },
     )
-    end_value: Optional[Decimal] = field(
+    end_value: Decimal | None = field(
         default=None,
         metadata={
             "name": "endValue",
             "type": "Attribute",
         },
     )
-    time_interval: Optional[XmlDuration] = field(
+    time_interval: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "timeInterval",
             "type": "Attribute",
         },
     )
-    start_time: Optional[Union[XmlPeriod, XmlDate, XmlDateTime, str]] = field(
+    start_time: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
         default=None,
         metadata={
             "name": "startTime",
@@ -144,7 +144,7 @@ class TextFormatType:
             "pattern": r".{5}A1.*",
         },
     )
-    end_time: Optional[Union[XmlPeriod, XmlDate, XmlDateTime, str]] = field(
+    end_time: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
         default=None,
         metadata={
             "name": "endTime",
@@ -152,41 +152,41 @@ class TextFormatType:
             "pattern": r".{5}A1.*",
         },
     )
-    min_length: Optional[int] = field(
+    min_length: int | None = field(
         default=None,
         metadata={
             "name": "minLength",
             "type": "Attribute",
         },
     )
-    max_length: Optional[int] = field(
+    max_length: int | None = field(
         default=None,
         metadata={
             "name": "maxLength",
             "type": "Attribute",
         },
     )
-    min_value: Optional[Decimal] = field(
+    min_value: Decimal | None = field(
         default=None,
         metadata={
             "name": "minValue",
             "type": "Attribute",
         },
     )
-    max_value: Optional[Decimal] = field(
+    max_value: Decimal | None = field(
         default=None,
         metadata={
             "name": "maxValue",
             "type": "Attribute",
         },
     )
-    decimals: Optional[int] = field(
+    decimals: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    pattern: Optional[str] = field(
+    pattern: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

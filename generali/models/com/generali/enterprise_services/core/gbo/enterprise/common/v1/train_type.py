@@ -21,7 +21,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class TrainType(VehicleType):
-    number_of_carriages: Optional[NumberType] = field(
+    number_of_carriages: NumberType | None = field(
         default=None,
         metadata={
             "name": "NumberOfCarriages",
@@ -29,7 +29,7 @@ class TrainType(VehicleType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    primary_depot: Optional[TextType] = field(
+    primary_depot: TextType | None = field(
         default=None,
         metadata={
             "name": "PrimaryDepot",
@@ -37,7 +37,7 @@ class TrainType(VehicleType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    seated_capacity: Optional[NumericType] = field(
+    seated_capacity: NumericType | None = field(
         default=None,
         metadata={
             "name": "SeatedCapacity",
@@ -45,7 +45,7 @@ class TrainType(VehicleType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    standing_capacity: Optional[NumberType] = field(
+    standing_capacity: NumberType | None = field(
         default=None,
         metadata={
             "name": "StandingCapacity",
@@ -53,7 +53,7 @@ class TrainType(VehicleType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    total_capacity: Optional[NumberType] = field(
+    total_capacity: NumberType | None = field(
         default=None,
         metadata={
             "name": "TotalCapacity",

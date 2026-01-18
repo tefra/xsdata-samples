@@ -18,13 +18,7 @@ class CommonVehicleServiceRefsRelStructure(OneToManyRelationshipStructure):
         name = "commonVehicleServiceRefs_RelStructure"
 
     common_vehicle_service_ref_or_vehicle_pooling_service_ref: Iterable[
-        Union[
-            VehicleRentalServiceRef,
-            VehicleSharingServiceRef,
-            ChauffeuredVehicleServiceRef,
-            TaxiServiceRef,
-            CarPoolingServiceRef,
-        ]
+        VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef
     ] = field(
         default_factory=list,
         metadata={

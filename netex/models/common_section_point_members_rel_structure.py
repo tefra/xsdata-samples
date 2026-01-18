@@ -19,7 +19,7 @@ class CommonSectionPointMembersRelStructure(
         name = "commonSectionPointMembers_RelStructure"
 
     common_section_point_member: Iterable[
-        Union[LineSectionPointMember, CommonSectionPointMember]
+        LineSectionPointMember | CommonSectionPointMember
     ] = field(
         default_factory=list,
         metadata={

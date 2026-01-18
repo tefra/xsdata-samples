@@ -12,13 +12,13 @@ class FreeToRead:
         name = "free_to_read"
         namespace = "http://www.crossref.org/AccessIndicators.xsd"
 
-    end_date: Optional[XmlDate] = field(
+    end_date: XmlDate | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    start_date: Optional[XmlDate] = field(
+    start_date: XmlDate | None = field(
         default=None,
         metadata={
             "type": "Attribute",

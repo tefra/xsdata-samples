@@ -18,13 +18,7 @@ class TransportTypeRefsRelStructure(OneToManyRelationshipStructure):
         name = "transportTypeRefs_RelStructure"
 
     transport_type_ref_or_vehicle_type_ref: Iterable[
-        Union[
-            SimpleVehicleTypeRef,
-            CompoundTrainRef,
-            TrainRef,
-            VehicleTypeRef,
-            TransportTypeRef,
-        ]
+        SimpleVehicleTypeRef | CompoundTrainRef | TrainRef | VehicleTypeRef | TransportTypeRef
     ] = field(
         default_factory=list,
         metadata={

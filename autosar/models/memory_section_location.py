@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class MemorySectionLocation:
     class Meta:
         name = "MEMORY-SECTION-LOCATION"
 
-    provided_memory_ref: Optional[
-        "MemorySectionLocation.ProvidedMemoryRef"
-    ] = field(
+    provided_memory_ref: MemorySectionLocation.ProvidedMemoryRef | None = field(
         default=None,
         metadata={
             "name": "PROVIDED-MEMORY-REF",
@@ -43,9 +43,7 @@ class MemorySectionLocation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_memory_section_ref: Optional[
-        "MemorySectionLocation.SoftwareMemorySectionRef"
-    ] = field(
+    software_memory_section_ref: MemorySectionLocation.SoftwareMemorySectionRef | None = field(
         default=None,
         metadata={
             "name": "SOFTWARE-MEMORY-SECTION-REF",
@@ -53,14 +51,14 @@ class MemorySectionLocation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +69,7 @@ class MemorySectionLocation:
 
     @dataclass
     class ProvidedMemoryRef(Ref):
-        dest: Optional[HwElementSubtypesEnum] = field(
+        dest: HwElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -82,7 +80,7 @@ class MemorySectionLocation:
 
     @dataclass
     class SoftwareMemorySectionRef(Ref):
-        dest: Optional[MemorySectionSubtypesEnum] = field(
+        dest: MemorySectionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

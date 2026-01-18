@@ -36,7 +36,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class SiteConnectionEndStructure:
-    transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
+    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -44,7 +44,7 @@ class SiteConnectionEndStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_area_ref: Optional[StopAreaRefStructure] = field(
+    stop_area_ref: StopAreaRefStructure | None = field(
         default=None,
         metadata={
             "name": "StopAreaRef",
@@ -52,9 +52,7 @@ class SiteConnectionEndStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    scheduled_stop_point_ref_or_vehicle_meeting_point_ref: Optional[
-        Union[ScheduledStopPointRefStructure, PointRefStructure]
-    ] = field(
+    scheduled_stop_point_ref_or_vehicle_meeting_point_ref: ScheduledStopPointRefStructure | PointRefStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -73,26 +71,7 @@ class SiteConnectionEndStructure:
         },
     )
     choice: Iterable[
-        Union[
-            TaxiRankRef,
-            StopPlaceRef,
-            AccessSpaceRef,
-            BoardingPositionRef,
-            TaxiStandRef,
-            QuayRef,
-            StopPlaceEntranceRef,
-            PointOfInterestRef,
-            PointOfInterestSpaceRef,
-            PointOfInterestEntranceRef,
-            ParkingRef,
-            VehiclePoolingParkingAreaRef,
-            VehicleSharingParkingAreaRef,
-            TaxiParkingAreaRef,
-            ParkingAreaRef,
-            ParkingEntranceForVehiclesRef,
-            ParkingPassengerEntranceRef,
-            ParkingEntranceRef,
-        ]
+        TaxiRankRef | StopPlaceRef | AccessSpaceRef | BoardingPositionRef | TaxiStandRef | QuayRef | StopPlaceEntranceRef | PointOfInterestRef | PointOfInterestSpaceRef | PointOfInterestEntranceRef | ParkingRef | VehiclePoolingParkingAreaRef | VehicleSharingParkingAreaRef | TaxiParkingAreaRef | ParkingAreaRef | ParkingEntranceForVehiclesRef | ParkingPassengerEntranceRef | ParkingEntranceRef
     ] = field(
         default_factory=list,
         metadata={
@@ -192,9 +171,7 @@ class SiteConnectionEndStructure:
             "max_occurs": 8,
         },
     )
-    authority_ref_or_operator_ref_or_operator_view: Optional[
-        Union[AuthorityRef, OperatorRef, OperatorView]
-    ] = field(
+    authority_ref_or_operator_ref_or_operator_view: AuthorityRef | OperatorRef | OperatorView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -217,7 +194,7 @@ class SiteConnectionEndStructure:
             ),
         },
     )
-    label: Optional[MultilingualString] = field(
+    label: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Label",

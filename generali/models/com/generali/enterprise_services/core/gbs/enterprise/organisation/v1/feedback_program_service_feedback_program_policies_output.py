@@ -14,7 +14,7 @@ class FeedbackProgramServiceFeedbackProgramPoliciesOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional[FeedbackProgramServiceFeedbackProgramPoliciesOutputBody] = (
+    body: FeedbackProgramServiceFeedbackProgramPoliciesOutputBody | None = (
         field(
             default=None,
             metadata={

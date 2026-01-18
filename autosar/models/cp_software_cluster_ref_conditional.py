@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,9 +33,7 @@ class CpSoftwareClusterRefConditional:
     class Meta:
         name = "CP-SOFTWARE-CLUSTER-REF-CONDITIONAL"
 
-    cp_software_cluster_ref: Optional[
-        "CpSoftwareClusterRefConditional.CpSoftwareClusterRef"
-    ] = field(
+    cp_software_cluster_ref: CpSoftwareClusterRefConditional.CpSoftwareClusterRef | None = field(
         default=None,
         metadata={
             "name": "CP-SOFTWARE-CLUSTER-REF",
@@ -41,7 +41,7 @@ class CpSoftwareClusterRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -49,14 +49,14 @@ class CpSoftwareClusterRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +67,7 @@ class CpSoftwareClusterRefConditional:
 
     @dataclass
     class CpSoftwareClusterRef(Ref):
-        dest: Optional[CpSoftwareClusterSubtypesEnum] = field(
+        dest: CpSoftwareClusterSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

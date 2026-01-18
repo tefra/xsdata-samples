@@ -30,13 +30,13 @@ class Resource:
             "pattern": r"([hH][tT][tT][pP]|[hH][tT][tT][pP][sS]|[fF][tT][pP])://.*",
         },
     )
-    mime_type: Optional[ResourceMimeType] = field(
+    mime_type: ResourceMimeType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    content_version: Optional[ResourceContentVersion] = field(
+    content_version: ResourceContentVersion | None = field(
         default=None,
         metadata={
             "type": "Attribute",

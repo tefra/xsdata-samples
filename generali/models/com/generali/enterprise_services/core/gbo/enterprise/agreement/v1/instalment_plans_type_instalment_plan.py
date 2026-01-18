@@ -24,7 +24,7 @@ class InstalmentPlansTypeInstalmentPlan:
     class Meta:
         global_type = False
 
-    start_date: Optional[DateTimeType] = field(
+    start_date: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -32,7 +32,7 @@ class InstalmentPlansTypeInstalmentPlan:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    end_date: Optional[DateTimeType] = field(
+    end_date: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -40,7 +40,7 @@ class InstalmentPlansTypeInstalmentPlan:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    number_of_instalment: Optional[NumericType] = field(
+    number_of_instalment: NumericType | None = field(
         default=None,
         metadata={
             "name": "NumberOfInstalment",
@@ -49,7 +49,7 @@ class InstalmentPlansTypeInstalmentPlan:
             "required": True,
         },
     )
-    instalment_basis: Optional[InstalmentBasisEnum] = field(
+    instalment_basis: InstalmentBasisEnum | None = field(
         default=None,
         metadata={
             "name": "InstalmentBasis",
@@ -58,7 +58,7 @@ class InstalmentPlansTypeInstalmentPlan:
             "required": True,
         },
     )
-    instalment_date: Optional[InstalmentDateEnum] = field(
+    instalment_date: InstalmentDateEnum | None = field(
         default=None,
         metadata={
             "name": "InstalmentDate",

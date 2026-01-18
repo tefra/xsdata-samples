@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
@@ -11,7 +13,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 @dataclass
 class EnvelopeType:
     lower_corner_or_upper_corner_or_pos: Iterable[
-        Union["EnvelopeType.LowerCorner", "EnvelopeType.UpperCorner", Pos]
+        EnvelopeType.LowerCorner | EnvelopeType.UpperCorner | Pos
     ] = field(
         default_factory=list,
         metadata={
@@ -37,14 +39,14 @@ class EnvelopeType:
             "max_occurs": 2,
         },
     )
-    srs_name: Optional[str] = field(
+    srs_name: str | None = field(
         default=None,
         metadata={
             "name": "srsName",
             "type": "Attribute",
         },
     )
-    srs_dimension: Optional[int] = field(
+    srs_dimension: int | None = field(
         default=None,
         metadata={
             "name": "srsDimension",

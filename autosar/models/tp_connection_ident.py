@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,7 +35,7 @@ class TpConnectionIdent:
     class Meta:
         name = "TP-CONNECTION-IDENT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -42,7 +44,7 @@ class TpConnectionIdent:
             "required": True,
         },
     )
-    short_name_fragments: Optional["TpConnectionIdent.ShortNameFragments"] = (
+    short_name_fragments: TpConnectionIdent.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -52,14 +54,14 @@ class TpConnectionIdent:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

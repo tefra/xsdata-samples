@@ -33,7 +33,7 @@ class Location(GroupOfLocations):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    location_for_display: Optional[PointCoordinates] = field(
+    location_for_display: PointCoordinates | None = field(
         default=None,
         metadata={
             "name": "locationForDisplay",
@@ -41,7 +41,7 @@ class Location(GroupOfLocations):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    location_extension: Optional[ExtensionType] = field(
+    location_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "locationExtension",

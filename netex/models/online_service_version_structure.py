@@ -14,7 +14,7 @@ class OnlineServiceVersionStructure(MobilityServiceVersionStructure):
     class Meta:
         name = "OnlineService_VersionStructure"
 
-    log_in_required: Optional[bool] = field(
+    log_in_required: bool | None = field(
         default=None,
         metadata={
             "name": "LogInRequired",
@@ -22,7 +22,7 @@ class OnlineServiceVersionStructure(MobilityServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    proposing_services: Optional[MobilityServiceRefsRelStructure] = field(
+    proposing_services: MobilityServiceRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "proposingServices",

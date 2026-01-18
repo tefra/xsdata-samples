@@ -14,14 +14,14 @@ class TFlowElement(TBaseElement):
     class Meta:
         name = "tFlowElement"
 
-    auditing: Optional[Auditing] = field(
+    auditing: Auditing | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    monitoring: Optional[Monitoring] = field(
+    monitoring: Monitoring | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -36,7 +36,7 @@ class TFlowElement(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

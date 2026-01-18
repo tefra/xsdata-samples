@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,7 +33,7 @@ class TargetIPduRef:
     class Meta:
         name = "TARGET-I-PDU-REF"
 
-    default_value: Optional[PduMappingDefaultValue] = field(
+    default_value: PduMappingDefaultValue | None = field(
         default=None,
         metadata={
             "name": "DEFAULT-VALUE",
@@ -39,7 +41,7 @@ class TargetIPduRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_i_pdu_ref: Optional["TargetIPduRef.TargetIPduRefInner"] = field(
+    target_i_pdu_ref: TargetIPduRef.TargetIPduRefInner | None = field(
         default=None,
         metadata={
             "name": "TARGET-I-PDU-REF",
@@ -47,14 +49,14 @@ class TargetIPduRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -65,7 +67,7 @@ class TargetIPduRef:
 
     @dataclass
     class TargetIPduRefInner(Ref):
-        dest: Optional[PduTriggeringSubtypesEnum] = field(
+        dest: PduTriggeringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

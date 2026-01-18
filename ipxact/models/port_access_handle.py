@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -27,7 +29,7 @@ class PortAccessHandle:
     class Meta:
         name = "portAccessHandle"
 
-    view_ref: list["PortAccessHandle.ViewRef"] = field(
+    view_ref: list[PortAccessHandle.ViewRef] = field(
         default_factory=list,
         metadata={
             "name": "viewRef",
@@ -35,14 +37,14 @@ class PortAccessHandle:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    indices: Optional["PortAccessHandle.Indices"] = field(
+    indices: PortAccessHandle.Indices | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    slices: Optional[PortSlicesType] = field(
+    slices: PortSlicesType | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -50,7 +52,7 @@ class PortAccessHandle:
             "required": True,
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -64,7 +66,7 @@ class PortAccessHandle:
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -80,7 +82,7 @@ class PortAccessHandle:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -94,7 +96,7 @@ class PortAccessHandle:
         :ivar index: An index into the IP-XACT object.
         """
 
-        index: list["PortAccessHandle.Indices.Index"] = field(
+        index: list[PortAccessHandle.Indices.Index] = field(
             default_factory=list,
             metadata={
                 "type": "Element",
@@ -105,7 +107,7 @@ class PortAccessHandle:
 
         @dataclass
         class Index(UnsignedIntExpression):
-            id: Optional[str] = field(
+            id: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

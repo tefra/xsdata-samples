@@ -37,7 +37,7 @@ class EcucStringParamDefConditional:
     class Meta:
         name = "ECUC-STRING-PARAM-DEF-CONDITIONAL"
 
-    default_value: Optional[VerbatimString] = field(
+    default_value: VerbatimString | None = field(
         default=None,
         metadata={
             "name": "DEFAULT-VALUE",
@@ -45,7 +45,7 @@ class EcucStringParamDefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_length: Optional[PositiveInteger] = field(
+    max_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-LENGTH",
@@ -53,7 +53,7 @@ class EcucStringParamDefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_length: Optional[PositiveInteger] = field(
+    min_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MIN-LENGTH",
@@ -61,7 +61,7 @@ class EcucStringParamDefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    regular_expression: Optional[RegularExpression] = field(
+    regular_expression: RegularExpression | None = field(
         default=None,
         metadata={
             "name": "REGULAR-EXPRESSION",
@@ -69,7 +69,7 @@ class EcucStringParamDefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -77,14 +77,14 @@ class EcucStringParamDefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

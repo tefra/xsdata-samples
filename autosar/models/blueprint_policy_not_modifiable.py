@@ -30,7 +30,7 @@ class BlueprintPolicyNotModifiable:
     class Meta:
         name = "BLUEPRINT-POLICY-NOT-MODIFIABLE"
 
-    attribute_name: Optional[String] = field(
+    attribute_name: String | None = field(
         default=None,
         metadata={
             "name": "ATTRIBUTE-NAME",
@@ -38,14 +38,14 @@ class BlueprintPolicyNotModifiable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

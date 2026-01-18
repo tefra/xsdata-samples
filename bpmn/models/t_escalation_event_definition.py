@@ -12,7 +12,7 @@ class TEscalationEventDefinition(TEventDefinition):
     class Meta:
         name = "tEscalationEventDefinition"
 
-    escalation_ref: Optional[QName] = field(
+    escalation_ref: QName | None = field(
         default=None,
         metadata={
             "name": "escalationRef",

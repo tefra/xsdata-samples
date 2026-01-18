@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,9 +33,7 @@ class IdsmRateLimitationRefConditional:
     class Meta:
         name = "IDSM-RATE-LIMITATION-REF-CONDITIONAL"
 
-    idsm_rate_limitation_ref: Optional[
-        "IdsmRateLimitationRefConditional.IdsmRateLimitationRef"
-    ] = field(
+    idsm_rate_limitation_ref: IdsmRateLimitationRefConditional.IdsmRateLimitationRef | None = field(
         default=None,
         metadata={
             "name": "IDSM-RATE-LIMITATION-REF",
@@ -41,7 +41,7 @@ class IdsmRateLimitationRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -49,14 +49,14 @@ class IdsmRateLimitationRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +67,7 @@ class IdsmRateLimitationRefConditional:
 
     @dataclass
     class IdsmRateLimitationRef(Ref):
-        dest: Optional[IdsmRateLimitationSubtypesEnum] = field(
+        dest: IdsmRateLimitationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

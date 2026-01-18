@@ -18,7 +18,7 @@ class DirectionBearingValue(DataValue):
     :ivar direction_bearing_value_extension:
     """
 
-    direction_bearing: Optional[int] = field(
+    direction_bearing: int | None = field(
         default=None,
         metadata={
             "name": "directionBearing",
@@ -27,7 +27,7 @@ class DirectionBearingValue(DataValue):
             "required": True,
         },
     )
-    direction_bearing_value_extension: Optional[ExtensionType] = field(
+    direction_bearing_value_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "directionBearingValueExtension",

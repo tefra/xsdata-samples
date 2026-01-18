@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -96,7 +98,7 @@ class PerInstanceMemory:
     class Meta:
         name = "PER-INSTANCE-MEMORY"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,7 +107,7 @@ class PerInstanceMemory:
             "required": True,
         },
     )
-    short_name_fragments: Optional["PerInstanceMemory.ShortNameFragments"] = (
+    short_name_fragments: PerInstanceMemory.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -115,7 +117,7 @@ class PerInstanceMemory:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -123,7 +125,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -131,7 +133,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -139,7 +141,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -147,7 +149,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -155,7 +157,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["PerInstanceMemory.Annotations"] = field(
+    annotations: PerInstanceMemory.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -163,7 +165,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    init_value: Optional[String] = field(
+    init_value: String | None = field(
         default=None,
         metadata={
             "name": "INIT-VALUE",
@@ -171,7 +173,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_data_def_props: Optional[SwDataDefProps] = field(
+    sw_data_def_props: SwDataDefProps | None = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEF-PROPS",
@@ -179,7 +181,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_value: Optional[CIdentifier] = field(
+    type_value: CIdentifier | None = field(
         default=None,
         metadata={
             "name": "TYPE",
@@ -187,7 +189,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_definition: Optional[String] = field(
+    type_definition: String | None = field(
         default=None,
         metadata={
             "name": "TYPE-DEFINITION",
@@ -195,7 +197,7 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -203,14 +205,14 @@ class PerInstanceMemory:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -218,7 +220,7 @@ class PerInstanceMemory:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

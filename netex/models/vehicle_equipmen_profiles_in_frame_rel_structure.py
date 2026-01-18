@@ -17,7 +17,7 @@ class VehicleEquipmenProfilesInFrameRelStructure(
         name = "vehicleEquipmenProfilesInFrame_RelStructure"
 
     vehicle_equipment_profile_or_charging_equipment_profile: Iterable[
-        Union[VehicleEquipmentProfile, ChargingEquipmentProfile]
+        VehicleEquipmentProfile | ChargingEquipmentProfile
     ] = field(
         default_factory=list,
         metadata={

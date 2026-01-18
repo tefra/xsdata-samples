@@ -14,7 +14,7 @@ class TimingLinkVersionStructure(LinkVersionStructure):
     class Meta:
         name = "TimingLink_VersionStructure"
 
-    from_point_ref: Optional[TimingPointRefStructure] = field(
+    from_point_ref: TimingPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "FromPointRef",
@@ -23,7 +23,7 @@ class TimingLinkVersionStructure(LinkVersionStructure):
             "required": True,
         },
     )
-    to_point_ref: Optional[TimingPointRefStructure] = field(
+    to_point_ref: TimingPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "ToPointRef",
@@ -32,7 +32,7 @@ class TimingLinkVersionStructure(LinkVersionStructure):
             "required": True,
         },
     )
-    vehicle_mode: Optional[VehicleMode] = field(
+    vehicle_mode: VehicleMode | None = field(
         default=None,
         metadata={
             "name": "VehicleMode",
@@ -40,7 +40,7 @@ class TimingLinkVersionStructure(LinkVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operational_context_ref: Optional[OperationalContextRef] = field(
+    operational_context_ref: OperationalContextRef | None = field(
         default=None,
         metadata={
             "name": "OperationalContextRef",

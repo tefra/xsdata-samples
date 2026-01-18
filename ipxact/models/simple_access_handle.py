@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -23,7 +25,7 @@ class SimpleAccessHandle:
     class Meta:
         name = "simpleAccessHandle"
 
-    view_ref: list["SimpleAccessHandle.ViewRef"] = field(
+    view_ref: list[SimpleAccessHandle.ViewRef] = field(
         default_factory=list,
         metadata={
             "name": "viewRef",
@@ -31,7 +33,7 @@ class SimpleAccessHandle:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    path_segments: Optional["SimpleAccessHandle.PathSegments"] = field(
+    path_segments: SimpleAccessHandle.PathSegments | None = field(
         default=None,
         metadata={
             "name": "pathSegments",
@@ -40,7 +42,7 @@ class SimpleAccessHandle:
             "required": True,
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
@@ -48,7 +50,7 @@ class SimpleAccessHandle:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -64,7 +66,7 @@ class SimpleAccessHandle:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -94,7 +96,7 @@ class SecOcCryptoServiceMapping:
     class Meta:
         name = "SEC-OC-CRYPTO-SERVICE-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -103,9 +105,7 @@ class SecOcCryptoServiceMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SecOcCryptoServiceMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SecOcCryptoServiceMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -113,7 +113,7 @@ class SecOcCryptoServiceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class SecOcCryptoServiceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class SecOcCryptoServiceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class SecOcCryptoServiceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class SecOcCryptoServiceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +153,7 @@ class SecOcCryptoServiceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SecOcCryptoServiceMapping.Annotations"] = field(
+    annotations: SecOcCryptoServiceMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,7 +161,7 @@ class SecOcCryptoServiceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -169,9 +169,7 @@ class SecOcCryptoServiceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    authentication_ref: Optional[
-        "SecOcCryptoServiceMapping.AuthenticationRef"
-    ] = field(
+    authentication_ref: SecOcCryptoServiceMapping.AuthenticationRef | None = field(
         default=None,
         metadata={
             "name": "AUTHENTICATION-REF",
@@ -179,9 +177,7 @@ class SecOcCryptoServiceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_service_key_ref: Optional[
-        "SecOcCryptoServiceMapping.CryptoServiceKeyRef"
-    ] = field(
+    crypto_service_key_ref: SecOcCryptoServiceMapping.CryptoServiceKeyRef | None = field(
         default=None,
         metadata={
             "name": "CRYPTO-SERVICE-KEY-REF",
@@ -189,9 +185,7 @@ class SecOcCryptoServiceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_service_queue_ref: Optional[
-        "SecOcCryptoServiceMapping.CryptoServiceQueueRef"
-    ] = field(
+    crypto_service_queue_ref: SecOcCryptoServiceMapping.CryptoServiceQueueRef | None = field(
         default=None,
         metadata={
             "name": "CRYPTO-SERVICE-QUEUE-REF",
@@ -199,14 +193,14 @@ class SecOcCryptoServiceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -214,7 +208,7 @@ class SecOcCryptoServiceMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -246,7 +240,7 @@ class SecOcCryptoServiceMapping:
 
     @dataclass
     class AuthenticationRef(Ref):
-        dest: Optional[CryptoServicePrimitiveSubtypesEnum] = field(
+        dest: CryptoServicePrimitiveSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -257,7 +251,7 @@ class SecOcCryptoServiceMapping:
 
     @dataclass
     class CryptoServiceKeyRef(Ref):
-        dest: Optional[CryptoServiceKeySubtypesEnum] = field(
+        dest: CryptoServiceKeySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -268,7 +262,7 @@ class SecOcCryptoServiceMapping:
 
     @dataclass
     class CryptoServiceQueueRef(Ref):
-        dest: Optional[CryptoServiceQueueSubtypesEnum] = field(
+        dest: CryptoServiceQueueSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

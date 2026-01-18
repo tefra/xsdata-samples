@@ -18,7 +18,7 @@ class Management:
     Information relating to the management of the situation record.
     """
 
-    life_cycle_management: Optional[LifeCycleManagement] = field(
+    life_cycle_management: LifeCycleManagement | None = field(
         default=None,
         metadata={
             "name": "lifeCycleManagement",
@@ -26,7 +26,7 @@ class Management:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    filter_exit_management: Optional[FilterExitManagement] = field(
+    filter_exit_management: FilterExitManagement | None = field(
         default=None,
         metadata={
             "name": "filterExitManagement",
@@ -34,7 +34,7 @@ class Management:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    management_extension: Optional[ExtensionType] = field(
+    management_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "managementExtension",

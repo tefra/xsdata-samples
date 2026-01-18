@@ -15,7 +15,7 @@ class CheckConstraintDelayVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "CheckConstraintDelay_VersionStructure"
 
-    check_constraint_ref: Optional[CheckConstraintRef] = field(
+    check_constraint_ref: CheckConstraintRef | None = field(
         default=None,
         metadata={
             "name": "CheckConstraintRef",
@@ -23,7 +23,7 @@ class CheckConstraintDelayVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    class_of_use_ref: Optional[ClassOfUseRef] = field(
+    class_of_use_ref: ClassOfUseRef | None = field(
         default=None,
         metadata={
             "name": "ClassOfUseRef",
@@ -31,7 +31,7 @@ class CheckConstraintDelayVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_likely_delay: Optional[XmlDuration] = field(
+    minimum_likely_delay: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MinimumLikelyDelay",
@@ -39,7 +39,7 @@ class CheckConstraintDelayVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    average_delay: Optional[XmlDuration] = field(
+    average_delay: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "AverageDelay",
@@ -47,7 +47,7 @@ class CheckConstraintDelayVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_likely_delay: Optional[XmlDuration] = field(
+    maximum_likely_delay: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MaximumLikelyDelay",

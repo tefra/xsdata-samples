@@ -72,7 +72,7 @@ class GroupTypeAbstract(AnnotableType):
             "namespace": "",
         },
     )
-    metadata: Optional[MetadataSetType] = field(
+    metadata: MetadataSetType | None = field(
         default=None,
         metadata={
             "name": "Metadata",
@@ -80,7 +80,7 @@ class GroupTypeAbstract(AnnotableType):
             "namespace": "",
         },
     )
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "type",

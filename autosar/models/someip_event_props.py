@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -35,7 +37,7 @@ class SomeipEventProps:
     class Meta:
         name = "SOMEIP-EVENT-PROPS"
 
-    collection_props: Optional[SomeipCollectionProps] = field(
+    collection_props: SomeipCollectionProps | None = field(
         default=None,
         metadata={
             "name": "COLLECTION-PROPS",
@@ -43,7 +45,7 @@ class SomeipEventProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_ref: Optional["SomeipEventProps.EventRef"] = field(
+    event_ref: SomeipEventProps.EventRef | None = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
@@ -51,14 +53,14 @@ class SomeipEventProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +71,7 @@ class SomeipEventProps:
 
     @dataclass
     class EventRef(Ref):
-        dest: Optional[SomeipEventDeploymentSubtypesEnum] = field(
+        dest: SomeipEventDeploymentSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

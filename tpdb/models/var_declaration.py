@@ -10,14 +10,14 @@ class VarDeclaration:
     class Meta:
         name = "varDeclaration"
 
-    var: Optional[Var] = field(
+    var: Var | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    type_value: Optional[Type] = field(
+    type_value: Type | None = field(
         default=None,
         metadata={
             "name": "type",

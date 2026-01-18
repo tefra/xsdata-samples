@@ -25,16 +25,7 @@ class ParkingBaysRelStructure(ContainmentAggregationStructure):
         name = "parkingBays_RelStructure"
 
     parking_bay_ref_or_vehicle_sharing_parking_bay_ref_or_parking_bay: Iterable[
-        Union[
-            VehiclePoolingParkingBayRef,
-            MonitoredVehicleSharingParkingBayRef,
-            VehicleSharingParkingBayRef,
-            ParkingBayRef,
-            MonitoredVehicleSharingParkingBay,
-            VehiclePoolingParkingBay,
-            VehicleSharingParkingBay,
-            ParkingBay,
-        ]
+        VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef | MonitoredVehicleSharingParkingBay | VehiclePoolingParkingBay | VehicleSharingParkingBay | ParkingBay
     ] = field(
         default_factory=list,
         metadata={

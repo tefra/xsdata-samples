@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -35,7 +37,7 @@ class DdsEventQosProps:
     class Meta:
         name = "DDS-EVENT-QOS-PROPS"
 
-    qos_profile: Optional[String] = field(
+    qos_profile: String | None = field(
         default=None,
         metadata={
             "name": "QOS-PROFILE",
@@ -43,7 +45,7 @@ class DdsEventQosProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_ref: Optional["DdsEventQosProps.EventRef"] = field(
+    event_ref: DdsEventQosProps.EventRef | None = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
@@ -51,14 +53,14 @@ class DdsEventQosProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +71,7 @@ class DdsEventQosProps:
 
     @dataclass
     class EventRef(Ref):
-        dest: Optional[ServiceEventDeploymentSubtypesEnum] = field(
+        dest: ServiceEventDeploymentSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

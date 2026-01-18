@@ -34,23 +34,21 @@ class AcknowledgementReferenceNumber:
 
 @dataclass(kw_only=True)
 class MessageAcknowledgement:
-    acknowledgement_location: Optional[AcknowledgementLocation] = field(
+    acknowledgement_location: AcknowledgementLocation | None = field(
         default=None,
         metadata={
             "name": "AcknowledgementLocation",
             "type": "Element",
         },
     )
-    acknowledgement_reference_number: Optional[
-        AcknowledgementReferenceNumber
-    ] = field(
+    acknowledgement_reference_number: AcknowledgementReferenceNumber | None = field(
         default=None,
         metadata={
             "name": "AcknowledgementReferenceNumber",
             "type": "Element",
         },
     )
-    acknowledgement_note: Optional[AcknowledgementNote] = field(
+    acknowledgement_note: AcknowledgementNote | None = field(
         default=None,
         metadata={
             "name": "AcknowledgementNote",

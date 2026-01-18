@@ -19,7 +19,7 @@ class Mobility:
     :ivar mobility_extension:
     """
 
-    mobility_type: Optional[MobilityEnum] = field(
+    mobility_type: MobilityEnum | None = field(
         default=None,
         metadata={
             "name": "mobilityType",
@@ -28,7 +28,7 @@ class Mobility:
             "required": True,
         },
     )
-    mobility_extension: Optional[ExtensionType] = field(
+    mobility_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "mobilityExtension",

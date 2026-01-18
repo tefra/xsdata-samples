@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -97,7 +99,7 @@ class SignalBasedEventElementToISignalTriggeringMapping:
     class Meta:
         name = "SIGNAL-BASED-EVENT-ELEMENT-TO-I-SIGNAL-TRIGGERING-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -106,9 +108,7 @@ class SignalBasedEventElementToISignalTriggeringMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SignalBasedEventElementToISignalTriggeringMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SignalBasedEventElementToISignalTriggeringMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -116,7 +116,7 @@ class SignalBasedEventElementToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -124,7 +124,7 @@ class SignalBasedEventElementToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -132,7 +132,7 @@ class SignalBasedEventElementToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -140,7 +140,7 @@ class SignalBasedEventElementToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -148,7 +148,7 @@ class SignalBasedEventElementToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -156,9 +156,7 @@ class SignalBasedEventElementToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "SignalBasedEventElementToISignalTriggeringMapping.Annotations"
-    ] = field(
+    annotations: SignalBasedEventElementToISignalTriggeringMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -166,9 +164,7 @@ class SignalBasedEventElementToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_prototype_in_service_interface_ref: Optional[
-        DataPrototypeInServiceInterfaceRef
-    ] = field(
+    data_prototype_in_service_interface_ref: DataPrototypeInServiceInterfaceRef | None = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPE-IN-SERVICE-INTERFACE-REF",
@@ -176,7 +172,7 @@ class SignalBasedEventElementToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    filter: Optional[DataFilter] = field(
+    filter: DataFilter | None = field(
         default=None,
         metadata={
             "name": "FILTER",
@@ -184,9 +180,7 @@ class SignalBasedEventElementToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_triggering_ref: Optional[
-        "SignalBasedEventElementToISignalTriggeringMapping.ISignalTriggeringRef"
-    ] = field(
+    i_signal_triggering_ref: SignalBasedEventElementToISignalTriggeringMapping.ISignalTriggeringRef | None = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-TRIGGERING-REF",
@@ -194,7 +188,7 @@ class SignalBasedEventElementToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_trigger: Optional[Boolean] = field(
+    transmission_trigger: Boolean | None = field(
         default=None,
         metadata={
             "name": "TRANSMISSION-TRIGGER",
@@ -202,14 +196,14 @@ class SignalBasedEventElementToISignalTriggeringMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -217,7 +211,7 @@ class SignalBasedEventElementToISignalTriggeringMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -249,7 +243,7 @@ class SignalBasedEventElementToISignalTriggeringMapping:
 
     @dataclass
     class ISignalTriggeringRef(Ref):
-        dest: Optional[ISignalTriggeringSubtypesEnum] = field(
+        dest: ISignalTriggeringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

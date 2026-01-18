@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -92,7 +94,7 @@ class TdEventBswInternalBehavior:
     class Meta:
         name = "TD-EVENT-BSW-INTERNAL-BEHAVIOR"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -101,9 +103,7 @@ class TdEventBswInternalBehavior:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "TdEventBswInternalBehavior.ShortNameFragments"
-    ] = field(
+    short_name_fragments: TdEventBswInternalBehavior.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -111,7 +111,7 @@ class TdEventBswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -119,7 +119,7 @@ class TdEventBswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -127,7 +127,7 @@ class TdEventBswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -135,7 +135,7 @@ class TdEventBswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -143,7 +143,7 @@ class TdEventBswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -151,7 +151,7 @@ class TdEventBswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["TdEventBswInternalBehavior.Annotations"] = field(
+    annotations: TdEventBswInternalBehavior.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -159,7 +159,7 @@ class TdEventBswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -167,7 +167,7 @@ class TdEventBswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    occurrence_expression: Optional[TdEventOccurrenceExpression] = field(
+    occurrence_expression: TdEventOccurrenceExpression | None = field(
         default=None,
         metadata={
             "name": "OCCURRENCE-EXPRESSION",
@@ -175,9 +175,7 @@ class TdEventBswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bsw_module_entity_ref: Optional[
-        "TdEventBswInternalBehavior.BswModuleEntityRef"
-    ] = field(
+    bsw_module_entity_ref: TdEventBswInternalBehavior.BswModuleEntityRef | None = field(
         default=None,
         metadata={
             "name": "BSW-MODULE-ENTITY-REF",
@@ -185,9 +183,7 @@ class TdEventBswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_event_bsw_internal_behavior_type: Optional[
-        TdEventBswInternalBehaviorTypeEnum
-    ] = field(
+    td_event_bsw_internal_behavior_type: TdEventBswInternalBehaviorTypeEnum | None = field(
         default=None,
         metadata={
             "name": "TD-EVENT-BSW-INTERNAL-BEHAVIOR-TYPE",
@@ -195,14 +191,14 @@ class TdEventBswInternalBehavior:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -210,7 +206,7 @@ class TdEventBswInternalBehavior:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -242,7 +238,7 @@ class TdEventBswInternalBehavior:
 
     @dataclass
     class BswModuleEntityRef(Ref):
-        dest: Optional[BswModuleEntitySubtypesEnum] = field(
+        dest: BswModuleEntitySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

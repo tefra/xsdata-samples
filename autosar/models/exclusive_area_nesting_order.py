@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -43,7 +45,7 @@ class ExclusiveAreaNestingOrder:
     class Meta:
         name = "EXCLUSIVE-AREA-NESTING-ORDER"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -52,9 +54,7 @@ class ExclusiveAreaNestingOrder:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ExclusiveAreaNestingOrder.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ExclusiveAreaNestingOrder.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -62,9 +62,7 @@ class ExclusiveAreaNestingOrder:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_refs: Optional[
-        "ExclusiveAreaNestingOrder.ExclusiveAreaRefs"
-    ] = field(
+    exclusive_area_refs: ExclusiveAreaNestingOrder.ExclusiveAreaRefs | None = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-REFS",
@@ -72,7 +70,7 @@ class ExclusiveAreaNestingOrder:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -80,14 +78,14 @@ class ExclusiveAreaNestingOrder:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -110,7 +108,7 @@ class ExclusiveAreaNestingOrder:
     @dataclass
     class ExclusiveAreaRefs:
         exclusive_area_ref: list[
-            "ExclusiveAreaNestingOrder.ExclusiveAreaRefs.ExclusiveAreaRef"
+            ExclusiveAreaNestingOrder.ExclusiveAreaRefs.ExclusiveAreaRef
         ] = field(
             default_factory=list,
             metadata={
@@ -122,7 +120,7 @@ class ExclusiveAreaNestingOrder:
 
         @dataclass
         class ExclusiveAreaRef(Ref):
-            dest: Optional[ExclusiveAreaSubtypesEnum] = field(
+            dest: ExclusiveAreaSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

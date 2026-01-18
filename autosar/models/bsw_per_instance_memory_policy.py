@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -37,7 +39,7 @@ class BswPerInstanceMemoryPolicy:
     class Meta:
         name = "BSW-PER-INSTANCE-MEMORY-POLICY"
 
-    enable_take_address: Optional[Boolean] = field(
+    enable_take_address: Boolean | None = field(
         default=None,
         metadata={
             "name": "ENABLE-TAKE-ADDRESS",
@@ -45,9 +47,7 @@ class BswPerInstanceMemoryPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ar_typed_per_instance_memory_ref: Optional[
-        "BswPerInstanceMemoryPolicy.ArTypedPerInstanceMemoryRef"
-    ] = field(
+    ar_typed_per_instance_memory_ref: BswPerInstanceMemoryPolicy.ArTypedPerInstanceMemoryRef | None = field(
         default=None,
         metadata={
             "name": "AR-TYPED-PER-INSTANCE-MEMORY-REF",
@@ -55,7 +55,7 @@ class BswPerInstanceMemoryPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -63,14 +63,14 @@ class BswPerInstanceMemoryPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -81,7 +81,7 @@ class BswPerInstanceMemoryPolicy:
 
     @dataclass
     class ArTypedPerInstanceMemoryRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

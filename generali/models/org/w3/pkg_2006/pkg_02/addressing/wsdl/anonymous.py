@@ -13,7 +13,7 @@ class Anonymous:
     class Meta:
         namespace = "http://www.w3.org/2006/02/addressing/wsdl"
 
-    value: Optional[AnonymousType] = field(
+    value: AnonymousType | None = field(
         default=None,
         metadata={
             "required": True,

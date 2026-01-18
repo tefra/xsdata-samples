@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -103,7 +105,7 @@ class PhysicalDimension:
     class Meta:
         name = "PHYSICAL-DIMENSION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -112,7 +114,7 @@ class PhysicalDimension:
             "required": True,
         },
     )
-    short_name_fragments: Optional["PhysicalDimension.ShortNameFragments"] = (
+    short_name_fragments: PhysicalDimension.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -122,7 +124,7 @@ class PhysicalDimension:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -130,7 +132,7 @@ class PhysicalDimension:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -138,7 +140,7 @@ class PhysicalDimension:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -146,7 +148,7 @@ class PhysicalDimension:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -154,7 +156,7 @@ class PhysicalDimension:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -162,7 +164,7 @@ class PhysicalDimension:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["PhysicalDimension.Annotations"] = field(
+    annotations: PhysicalDimension.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -170,7 +172,7 @@ class PhysicalDimension:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -178,7 +180,7 @@ class PhysicalDimension:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    length_exp: Optional[NumericalValue] = field(
+    length_exp: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "LENGTH-EXP",
@@ -186,7 +188,7 @@ class PhysicalDimension:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mass_exp: Optional[NumericalValue] = field(
+    mass_exp: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "MASS-EXP",
@@ -194,7 +196,7 @@ class PhysicalDimension:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_exp: Optional[NumericalValue] = field(
+    time_exp: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "TIME-EXP",
@@ -202,7 +204,7 @@ class PhysicalDimension:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    current_exp: Optional[NumericalValue] = field(
+    current_exp: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "CURRENT-EXP",
@@ -210,7 +212,7 @@ class PhysicalDimension:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    temperature_exp: Optional[NumericalValue] = field(
+    temperature_exp: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "TEMPERATURE-EXP",
@@ -218,7 +220,7 @@ class PhysicalDimension:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    molar_amount_exp: Optional[NumericalValue] = field(
+    molar_amount_exp: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "MOLAR-AMOUNT-EXP",
@@ -226,7 +228,7 @@ class PhysicalDimension:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    luminous_intensity_exp: Optional[NumericalValue] = field(
+    luminous_intensity_exp: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "LUMINOUS-INTENSITY-EXP",
@@ -234,14 +236,14 @@ class PhysicalDimension:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -249,7 +251,7 @@ class PhysicalDimension:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

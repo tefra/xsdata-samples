@@ -19,7 +19,7 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "CompanionProfile_VersionStructure"
 
-    parent_ref: Optional[UsageParameterRefStructure] = field(
+    parent_ref: UsageParameterRefStructure | None = field(
         default=None,
         metadata={
             "name": "ParentRef",
@@ -27,9 +27,7 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    user_profile_ref: Optional[
-        Union[VehiclePoolerProfileRef, CompanionProfileRef, UserProfileRef]
-    ] = field(
+    user_profile_ref: VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -52,7 +50,7 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
             ),
         },
     )
-    companion_relationship_type: Optional[CompanionRelationshipEnumeration] = (
+    companion_relationship_type: CompanionRelationshipEnumeration | None = (
         field(
             default=None,
             metadata={
@@ -62,7 +60,7 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
             },
         )
     )
-    minimum_number_of_persons: Optional[int] = field(
+    minimum_number_of_persons: int | None = field(
         default=None,
         metadata={
             "name": "MinimumNumberOfPersons",
@@ -70,7 +68,7 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_number_of_persons: Optional[int] = field(
+    maximum_number_of_persons: int | None = field(
         default=None,
         metadata={
             "name": "MaximumNumberOfPersons",
@@ -78,7 +76,7 @@ class CompanionProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    discount_basis: Optional[DiscountBasisEnumeration] = field(
+    discount_basis: DiscountBasisEnumeration | None = field(
         default=None,
         metadata={
             "name": "DiscountBasis",

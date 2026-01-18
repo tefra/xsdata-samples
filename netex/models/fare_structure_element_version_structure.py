@@ -50,7 +50,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "FareStructureElement_VersionStructure"
 
-    tariff_basis: Optional[TariffBasisEnumeration] = field(
+    tariff_basis: TariffBasisEnumeration | None = field(
         default=None,
         metadata={
             "name": "TariffBasis",
@@ -58,9 +58,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_fare_structure_element_ref: Optional[
-        TypeOfFareStructureElementRef
-    ] = field(
+    type_of_fare_structure_element_ref: TypeOfFareStructureElementRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfFareStructureElementRef",
@@ -68,13 +66,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    geographical_interval_ref_or_geographical_intervals_or_geographical_structure_factors: Optional[
-        Union[
-            GeographicalIntervalRef,
-            GeographicalIntervalsRelStructure,
-            GeographicalStructureFactorsRelStructure,
-        ]
-    ] = field(
+    geographical_interval_ref_or_geographical_intervals_or_geographical_structure_factors: GeographicalIntervalRef | GeographicalIntervalsRelStructure | GeographicalStructureFactorsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -97,13 +89,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    time_interval_ref_or_time_intervals_or_time_structure_factors: Optional[
-        Union[
-            TimeIntervalRef,
-            TimeIntervalsRelStructure,
-            TimeStructureFactorsRelStructure,
-        ]
-    ] = field(
+    time_interval_ref_or_time_intervals_or_time_structure_factors: TimeIntervalRef | TimeIntervalsRelStructure | TimeStructureFactorsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -126,14 +112,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    choice: Optional[
-        Union[
-            FareQuotaFactorRef,
-            FareDemandFactorRef,
-            QualityStructureFactorRef,
-            QualityStructureFactorsRelStructure,
-        ]
-    ] = field(
+    choice: FareQuotaFactorRef | FareDemandFactorRef | QualityStructureFactorRef | QualityStructureFactorsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -161,14 +140,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    choice_1: Optional[
-        Union[
-            DistanceMatrixElementRef,
-            DistanceMatrixElementsRelStructure,
-            GroupOfDistanceMatrixElementsRef,
-            GroupOfDistanceMatrixElements,
-        ]
-    ] = field(
+    choice_1: DistanceMatrixElementRef | DistanceMatrixElementsRelStructure | GroupOfDistanceMatrixElementsRef | GroupOfDistanceMatrixElements | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -196,9 +168,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    fare_structure_elements_in_sequence: Optional[
-        FareStructureElementsInSequenceRelStructure
-    ] = field(
+    fare_structure_elements_in_sequence: FareStructureElementsInSequenceRelStructure | None = field(
         default=None,
         metadata={
             "name": "fareStructureElementsInSequence",
@@ -206,13 +176,7 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[
-        Union[
-            GenericParameterAssignmentsRelStructure,
-            GenericParameterAssignment,
-            GenericParameterAssignmentInContext,
-        ]
-    ] = field(
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: GenericParameterAssignmentsRelStructure | GenericParameterAssignment | GenericParameterAssignmentInContext | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -235,14 +199,14 @@ class FareStructureElementVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    prices: Optional[FareStructureElementPricesRelStructure] = field(
+    prices: FareStructureElementPricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name_of_class_of_unit: Optional[str] = field(
+    name_of_class_of_unit: str | None = field(
         default=None,
         metadata={
             "name": "nameOfClassOfUnit",

@@ -16,7 +16,7 @@ class VehiclePoolingServiceVersionStructure(
     class Meta:
         name = "VehiclePoolingService_VersionStructure"
 
-    vehicle_pooling_ref: Optional[VehiclePoolingRef] = field(
+    vehicle_pooling_ref: VehiclePoolingRef | None = field(
         default=None,
         metadata={
             "name": "VehiclePoolingRef",
@@ -25,7 +25,7 @@ class VehiclePoolingServiceVersionStructure(
             "required": True,
         },
     )
-    pooling_policy_url: Optional[str] = field(
+    pooling_policy_url: str | None = field(
         default=None,
         metadata={
             "name": "PoolingPolicyUrl",

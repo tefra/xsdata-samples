@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -41,7 +43,7 @@ class SoAdConfig:
     class Meta:
         name = "SO-AD-CONFIG"
 
-    connections: Optional["SoAdConfig.Connections"] = field(
+    connections: SoAdConfig.Connections | None = field(
         default=None,
         metadata={
             "name": "CONNECTIONS",
@@ -49,7 +51,7 @@ class SoAdConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    connection_bundles: Optional["SoAdConfig.ConnectionBundles"] = field(
+    connection_bundles: SoAdConfig.ConnectionBundles | None = field(
         default=None,
         metadata={
             "name": "CONNECTION-BUNDLES",
@@ -57,7 +59,7 @@ class SoAdConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    logic_addresss: Optional["SoAdConfig.LogicAddresss"] = field(
+    logic_addresss: SoAdConfig.LogicAddresss | None = field(
         default=None,
         metadata={
             "name": "LOGIC-ADDRESSS",
@@ -65,7 +67,7 @@ class SoAdConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    socket_addresss: Optional["SoAdConfig.SocketAddresss"] = field(
+    socket_addresss: SoAdConfig.SocketAddresss | None = field(
         default=None,
         metadata={
             "name": "SOCKET-ADDRESSS",
@@ -73,14 +75,14 @@ class SoAdConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

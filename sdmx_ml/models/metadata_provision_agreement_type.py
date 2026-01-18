@@ -31,7 +31,7 @@ class MetadataProvisionAgreementType(MetadataProvisionAgreementBaseType):
         include wildcards for parts of the reference.
     """
 
-    metadataflow: Optional[str] = field(
+    metadataflow: str | None = field(
         default=None,
         metadata={
             "name": "Metadataflow",
@@ -41,7 +41,7 @@ class MetadataProvisionAgreementType(MetadataProvisionAgreementBaseType):
             "pattern": r".+\.metadatastructure\.Metadataflow=.+",
         },
     )
-    metadata_provider: Optional[str] = field(
+    metadata_provider: str | None = field(
         default=None,
         metadata={
             "name": "MetadataProvider",

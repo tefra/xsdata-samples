@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class DiagnosticStorageConditionRefConditional:
     class Meta:
         name = "DIAGNOSTIC-STORAGE-CONDITION-REF-CONDITIONAL"
 
-    diagnostic_storage_condition_ref: Optional[
-        "DiagnosticStorageConditionRefConditional.DiagnosticStorageConditionRef"
-    ] = field(
+    diagnostic_storage_condition_ref: DiagnosticStorageConditionRefConditional.DiagnosticStorageConditionRef | None = field(
         default=None,
         metadata={
             "name": "DIAGNOSTIC-STORAGE-CONDITION-REF",
@@ -43,7 +43,7 @@ class DiagnosticStorageConditionRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class DiagnosticStorageConditionRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class DiagnosticStorageConditionRefConditional:
 
     @dataclass
     class DiagnosticStorageConditionRef(Ref):
-        dest: Optional[DiagnosticStorageConditionSubtypesEnum] = field(
+        dest: DiagnosticStorageConditionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

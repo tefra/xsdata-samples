@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -47,7 +49,7 @@ class CppTemplateArgument:
     class Meta:
         name = "CPP-TEMPLATE-ARGUMENT"
 
-    allocator_ref: Optional["CppTemplateArgument.AllocatorRef"] = field(
+    allocator_ref: CppTemplateArgument.AllocatorRef | None = field(
         default=None,
         metadata={
             "name": "ALLOCATOR-REF",
@@ -55,7 +57,7 @@ class CppTemplateArgument:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -63,7 +65,7 @@ class CppTemplateArgument:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    inplace: Optional[Boolean] = field(
+    inplace: Boolean | None = field(
         default=None,
         metadata={
             "name": "INPLACE",
@@ -71,7 +73,7 @@ class CppTemplateArgument:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    template_type_ref: Optional["CppTemplateArgument.TemplateTypeRef"] = field(
+    template_type_ref: CppTemplateArgument.TemplateTypeRef | None = field(
         default=None,
         metadata={
             "name": "TEMPLATE-TYPE-REF",
@@ -79,14 +81,14 @@ class CppTemplateArgument:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -97,7 +99,7 @@ class CppTemplateArgument:
 
     @dataclass
     class AllocatorRef(Ref):
-        dest: Optional[AllocatorSubtypesEnum] = field(
+        dest: AllocatorSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -108,7 +110,7 @@ class CppTemplateArgument:
 
     @dataclass
     class TemplateTypeRef(Ref):
-        dest: Optional[CppImplementationDataTypeSubtypesEnum] = field(
+        dest: CppImplementationDataTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

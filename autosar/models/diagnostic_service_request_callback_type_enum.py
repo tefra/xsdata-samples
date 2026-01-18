@@ -30,20 +30,20 @@ class DiagnosticServiceRequestCallbackTypeEnum:
     class Meta:
         name = "DIAGNOSTIC-SERVICE-REQUEST-CALLBACK-TYPE-ENUM"
 
-    value: Optional[DiagnosticServiceRequestCallbackTypeEnumSimple] = field(
+    value: DiagnosticServiceRequestCallbackTypeEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

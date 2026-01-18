@@ -65,7 +65,7 @@ class BaseHeaderType:
         source of the data.
     """
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -84,7 +84,7 @@ class BaseHeaderType:
             "required": True,
         },
     )
-    prepared: Optional[Union[XmlDateTime, XmlDate]] = field(
+    prepared: XmlDateTime | XmlDate | None = field(
         default=None,
         metadata={
             "name": "Prepared",
@@ -93,7 +93,7 @@ class BaseHeaderType:
             "required": True,
         },
     )
-    sender: Optional[SenderType] = field(
+    sender: SenderType | None = field(
         default=None,
         metadata={
             "name": "Sender",
@@ -126,7 +126,7 @@ class BaseHeaderType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
         },
     )
-    data_provider: Optional[str] = field(
+    data_provider: str | None = field(
         default=None,
         metadata={
             "name": "DataProvider",
@@ -135,7 +135,7 @@ class BaseHeaderType:
             "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
         },
     )
-    metadata_provider: Optional[str] = field(
+    metadata_provider: str | None = field(
         default=None,
         metadata={
             "name": "MetadataProvider",
@@ -144,7 +144,7 @@ class BaseHeaderType:
             "pattern": r".+\.base\.MetadataProvider=.+:METADATA_PROVIDERS\(.+\).+",
         },
     )
-    data_set_action: Optional[ActionType] = field(
+    data_set_action: ActionType | None = field(
         default=None,
         metadata={
             "name": "DataSetAction",
@@ -161,7 +161,7 @@ class BaseHeaderType:
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    extracted: Optional[XmlDateTime] = field(
+    extracted: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "Extracted",
@@ -169,7 +169,7 @@ class BaseHeaderType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
         },
     )
-    reporting_begin: Optional[Union[XmlPeriod, XmlDate, XmlDateTime, str]] = (
+    reporting_begin: XmlPeriod | XmlDate | XmlDateTime | str | None = (
         field(
             default=None,
             metadata={
@@ -180,7 +180,7 @@ class BaseHeaderType:
             },
         )
     )
-    reporting_end: Optional[Union[XmlPeriod, XmlDate, XmlDateTime, str]] = (
+    reporting_end: XmlPeriod | XmlDate | XmlDateTime | str | None = (
         field(
             default=None,
             metadata={
@@ -191,7 +191,7 @@ class BaseHeaderType:
             },
         )
     )
-    embargo_date: Optional[XmlDateTime] = field(
+    embargo_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "EmbargoDate",

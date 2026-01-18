@@ -15,7 +15,7 @@ class CoursesOfJourneysRelStructure(ContainmentAggregationStructure):
         name = "coursesOfJourneys_RelStructure"
 
     course_of_journeys_ref_or_course_of_journeys: Iterable[
-        Union[CourseOfJourneysRef, CourseOfJourneys]
+        CourseOfJourneysRef | CourseOfJourneys
     ] = field(
         default_factory=list,
         metadata={

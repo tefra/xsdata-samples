@@ -14,7 +14,7 @@ class MediumApplicationInstanceRefsRelStructure(
     class Meta:
         name = "mediumApplicationInstanceRefs_RelStructure"
 
-    medium_application_instance_ref: Optional[MediumApplicationInstanceRef] = (
+    medium_application_instance_ref: MediumApplicationInstanceRef | None = (
         field(
             default=None,
             metadata={

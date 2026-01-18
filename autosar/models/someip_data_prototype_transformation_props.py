@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -105,7 +107,7 @@ class SomeipDataPrototypeTransformationProps:
     class Meta:
         name = "SOMEIP-DATA-PROTOTYPE-TRANSFORMATION-PROPS"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -114,9 +116,7 @@ class SomeipDataPrototypeTransformationProps:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SomeipDataPrototypeTransformationProps.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SomeipDataPrototypeTransformationProps.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -124,7 +124,7 @@ class SomeipDataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -132,7 +132,7 @@ class SomeipDataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -140,7 +140,7 @@ class SomeipDataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -148,7 +148,7 @@ class SomeipDataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -156,7 +156,7 @@ class SomeipDataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -164,9 +164,7 @@ class SomeipDataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "SomeipDataPrototypeTransformationProps.Annotations"
-    ] = field(
+    annotations: SomeipDataPrototypeTransformationProps.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -174,7 +172,7 @@ class SomeipDataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -182,9 +180,7 @@ class SomeipDataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_prototypes: Optional[
-        "SomeipDataPrototypeTransformationProps.DataPrototypes"
-    ] = field(
+    data_prototypes: SomeipDataPrototypeTransformationProps.DataPrototypes | None = field(
         default=None,
         metadata={
             "name": "DATA-PROTOTYPES",
@@ -192,7 +188,7 @@ class SomeipDataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_representation: Optional[SwDataDefProps] = field(
+    network_representation: SwDataDefProps | None = field(
         default=None,
         metadata={
             "name": "NETWORK-REPRESENTATION",
@@ -200,9 +196,7 @@ class SomeipDataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    someip_transformation_props_ref: Optional[
-        "SomeipDataPrototypeTransformationProps.SomeipTransformationPropsRef"
-    ] = field(
+    someip_transformation_props_ref: SomeipDataPrototypeTransformationProps.SomeipTransformationPropsRef | None = field(
         default=None,
         metadata={
             "name": "SOMEIP-TRANSFORMATION-PROPS-REF",
@@ -210,14 +204,14 @@ class SomeipDataPrototypeTransformationProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -225,7 +219,7 @@ class SomeipDataPrototypeTransformationProps:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -270,7 +264,7 @@ class SomeipDataPrototypeTransformationProps:
 
     @dataclass
     class SomeipTransformationPropsRef(Ref):
-        dest: Optional[ApSomeipTransformationPropsSubtypesEnum] = field(
+        dest: ApSomeipTransformationPropsSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

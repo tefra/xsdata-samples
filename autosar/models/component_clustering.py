@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -45,7 +47,7 @@ class ComponentClustering:
     class Meta:
         name = "COMPONENT-CLUSTERING"
 
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -53,7 +55,7 @@ class ComponentClustering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -61,9 +63,7 @@ class ComponentClustering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    clustered_component_irefs: Optional[
-        "ComponentClustering.ClusteredComponentIrefs"
-    ] = field(
+    clustered_component_irefs: ComponentClustering.ClusteredComponentIrefs | None = field(
         default=None,
         metadata={
             "name": "CLUSTERED-COMPONENT-IREFS",
@@ -71,7 +71,7 @@ class ComponentClustering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapping_scope: Optional[MappingScopeEnum] = field(
+    mapping_scope: MappingScopeEnum | None = field(
         default=None,
         metadata={
             "name": "MAPPING-SCOPE",
@@ -79,14 +79,14 @@ class ComponentClustering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

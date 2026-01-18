@@ -23,7 +23,7 @@ class Name:
         name = "name"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    surname: Optional[Surname] = field(
+    surname: Surname | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -39,19 +39,19 @@ class Name:
             "sequence": 1,
         },
     )
-    prefix: Optional[Prefix] = field(
+    prefix: Prefix | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    suffix: Optional[Suffix] = field(
+    suffix: Suffix | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    content_type: Optional[object] = field(
+    content_type: object | None = field(
         default=None,
         metadata={
             "name": "content-type",
@@ -65,14 +65,14 @@ class Name:
             "type": "Attribute",
         },
     )
-    specific_use: Optional[object] = field(
+    specific_use: object | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    language: Optional[NameLanguage] = field(
+    language: NameLanguage | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -19,7 +19,7 @@ class TBoundaryEvent(TCatchEvent):
             "type": "Attribute",
         },
     )
-    attached_to_ref: Optional[QName] = field(
+    attached_to_ref: QName | None = field(
         default=None,
         metadata={
             "name": "attachedToRef",

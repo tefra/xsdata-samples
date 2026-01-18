@@ -33,13 +33,13 @@ class JournalIssue:
         name = "journal_issue"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    contributors: Optional[Contributors] = field(
+    contributors: Contributors | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    titles: Optional[Titles] = field(
+    titles: Titles | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -53,31 +53,31 @@ class JournalIssue:
             "max_occurs": 10,
         },
     )
-    journal_volume: Optional[JournalVolume] = field(
+    journal_volume: JournalVolume | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    issue: Optional[Issue] = field(
+    issue: Issue | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    special_numbering: Optional[SpecialNumbering] = field(
+    special_numbering: SpecialNumbering | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    archive_locations: Optional[ArchiveLocations] = field(
+    archive_locations: ArchiveLocations | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    doi_data: Optional[DoiData] = field(
+    doi_data: DoiData | None = field(
         default=None,
         metadata={
             "type": "Element",

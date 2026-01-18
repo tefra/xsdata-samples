@@ -9,7 +9,7 @@ class ExtensionsStructure1:
     class Meta:
         name = "ExtensionsStructure"
 
-    any_element: Optional[object] = field(
+    any_element: object | None = field(
         default=None,
         metadata={
             "type": "Wildcard",

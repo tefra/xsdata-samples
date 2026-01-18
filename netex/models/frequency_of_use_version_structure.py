@@ -16,7 +16,7 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "FrequencyOfUse_VersionStructure"
 
-    frequency_of_use_type: Optional[FrequencyOfUseTypeEnumeration] = field(
+    frequency_of_use_type: FrequencyOfUseTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "FrequencyOfUseType",
@@ -24,7 +24,7 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimal_frequency: Optional[int] = field(
+    minimal_frequency: int | None = field(
         default=None,
         metadata={
             "name": "MinimalFrequency",
@@ -32,7 +32,7 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximal_frequency: Optional[int] = field(
+    maximal_frequency: int | None = field(
         default=None,
         metadata={
             "name": "MaximalFrequency",
@@ -40,7 +40,7 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    frequency_interval: Optional[XmlDuration] = field(
+    frequency_interval: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "FrequencyInterval",
@@ -48,7 +48,7 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_interval_ref: Optional[TimeIntervalRef] = field(
+    time_interval_ref: TimeIntervalRef | None = field(
         default=None,
         metadata={
             "name": "TimeIntervalRef",
@@ -56,7 +56,7 @@ class FrequencyOfUseVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    discount_basis: Optional[DiscountBasisEnumeration] = field(
+    discount_basis: DiscountBasisEnumeration | None = field(
         default=None,
         metadata={
             "name": "DiscountBasis",

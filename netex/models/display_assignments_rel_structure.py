@@ -15,7 +15,7 @@ class DisplayAssignmentsRelStructure(ContainmentAggregationStructure):
         name = "displayAssignments_RelStructure"
 
     display_assignment_ref_or_display_assignment: Iterable[
-        Union[DisplayAssignmentRef, DisplayAssignment]
+        DisplayAssignmentRef | DisplayAssignment
     ] = field(
         default_factory=list,
         metadata={

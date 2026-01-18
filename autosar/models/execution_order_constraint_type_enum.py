@@ -30,20 +30,20 @@ class ExecutionOrderConstraintTypeEnum:
     class Meta:
         name = "EXECUTION-ORDER-CONSTRAINT-TYPE-ENUM"
 
-    value: Optional[ExecutionOrderConstraintTypeEnumSimple] = field(
+    value: ExecutionOrderConstraintTypeEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

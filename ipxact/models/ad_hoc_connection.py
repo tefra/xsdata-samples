@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -37,7 +39,7 @@ class AdHocConnection:
         name = "adHocConnection"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -46,34 +48,34 @@ class AdHocConnection:
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
         },
     )
-    display_name: Optional[DisplayName] = field(
+    display_name: DisplayName | None = field(
         default=None,
         metadata={
             "name": "displayName",
             "type": "Element",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
             "type": "Element",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    tied_value: Optional[ComplexTiedValueExpression] = field(
+    tied_value: ComplexTiedValueExpression | None = field(
         default=None,
         metadata={
             "name": "tiedValue",
             "type": "Element",
         },
     )
-    port_references: Optional["AdHocConnection.PortReferences"] = field(
+    port_references: AdHocConnection.PortReferences | None = field(
         default=None,
         metadata={
             "name": "portReferences",
@@ -81,14 +83,14 @@ class AdHocConnection:
             "required": True,
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -105,7 +107,7 @@ class AdHocConnection:
         """
 
         internal_port_reference: list[
-            "AdHocConnection.PortReferences.InternalPortReference"
+            AdHocConnection.PortReferences.InternalPortReference
         ] = field(
             default_factory=list,
             metadata={
@@ -144,21 +146,21 @@ class AdHocConnection:
                     "type": "Element",
                 },
             )
-            part_select: Optional[PartSelect] = field(
+            part_select: PartSelect | None = field(
                 default=None,
                 metadata={
                     "name": "partSelect",
                     "type": "Element",
                 },
             )
-            vendor_extensions: Optional[VendorExtensions] = field(
+            vendor_extensions: VendorExtensions | None = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
                     "type": "Element",
                 },
             )
-            port_ref: Optional[str] = field(
+            port_ref: str | None = field(
                 default=None,
                 metadata={
                     "name": "portRef",
@@ -168,7 +170,7 @@ class AdHocConnection:
                     "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
                 },
             )
-            component_instance_ref: Optional[str] = field(
+            component_instance_ref: str | None = field(
                 default=None,
                 metadata={
                     "name": "componentInstanceRef",
@@ -176,7 +178,7 @@ class AdHocConnection:
                     "required": True,
                 },
             )
-            id: Optional[str] = field(
+            id: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

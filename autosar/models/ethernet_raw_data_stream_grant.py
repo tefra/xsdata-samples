@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -94,7 +96,7 @@ class EthernetRawDataStreamGrant:
     class Meta:
         name = "ETHERNET-RAW-DATA-STREAM-GRANT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -103,9 +105,7 @@ class EthernetRawDataStreamGrant:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "EthernetRawDataStreamGrant.ShortNameFragments"
-    ] = field(
+    short_name_fragments: EthernetRawDataStreamGrant.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -113,7 +113,7 @@ class EthernetRawDataStreamGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -121,7 +121,7 @@ class EthernetRawDataStreamGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -129,7 +129,7 @@ class EthernetRawDataStreamGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -137,7 +137,7 @@ class EthernetRawDataStreamGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -145,7 +145,7 @@ class EthernetRawDataStreamGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -153,7 +153,7 @@ class EthernetRawDataStreamGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["EthernetRawDataStreamGrant.Annotations"] = field(
+    annotations: EthernetRawDataStreamGrant.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,7 +161,7 @@ class EthernetRawDataStreamGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -169,7 +169,7 @@ class EthernetRawDataStreamGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    design_ref: Optional["EthernetRawDataStreamGrant.DesignRef"] = field(
+    design_ref: EthernetRawDataStreamGrant.DesignRef | None = field(
         default=None,
         metadata={
             "name": "DESIGN-REF",
@@ -177,9 +177,7 @@ class EthernetRawDataStreamGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ethernet_raw_data_stream_mapping_ref: Optional[
-        "EthernetRawDataStreamGrant.EthernetRawDataStreamMappingRef"
-    ] = field(
+    ethernet_raw_data_stream_mapping_ref: EthernetRawDataStreamGrant.EthernetRawDataStreamMappingRef | None = field(
         default=None,
         metadata={
             "name": "ETHERNET-RAW-DATA-STREAM-MAPPING-REF",
@@ -187,14 +185,14 @@ class EthernetRawDataStreamGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -202,7 +200,7 @@ class EthernetRawDataStreamGrant:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -234,7 +232,7 @@ class EthernetRawDataStreamGrant:
 
     @dataclass
     class DesignRef(Ref):
-        dest: Optional[RawDataStreamGrantDesignSubtypesEnum] = field(
+        dest: RawDataStreamGrantDesignSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -245,7 +243,7 @@ class EthernetRawDataStreamGrant:
 
     @dataclass
     class EthernetRawDataStreamMappingRef(Ref):
-        dest: Optional[EthernetRawDataStreamMappingSubtypesEnum] = field(
+        dest: EthernetRawDataStreamMappingSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

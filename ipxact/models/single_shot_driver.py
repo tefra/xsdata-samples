@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -26,7 +28,7 @@ class SingleShotDriver:
         name = "singleShotDriver"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    single_shot_offset: Optional["SingleShotDriver.SingleShotOffset"] = field(
+    single_shot_offset: SingleShotDriver.SingleShotOffset | None = field(
         default=None,
         metadata={
             "name": "singleShotOffset",
@@ -34,7 +36,7 @@ class SingleShotDriver:
             "required": True,
         },
     )
-    single_shot_value: Optional[UnsignedBitVectorExpression] = field(
+    single_shot_value: UnsignedBitVectorExpression | None = field(
         default=None,
         metadata={
             "name": "singleShotValue",
@@ -42,7 +44,7 @@ class SingleShotDriver:
             "required": True,
         },
     )
-    single_shot_duration: Optional["SingleShotDriver.SingleShotDuration"] = (
+    single_shot_duration: SingleShotDriver.SingleShotDuration | None = (
         field(
             default=None,
             metadata={

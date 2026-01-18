@@ -13,7 +13,7 @@ class LuggageServiceFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: Optional[LuggageServiceFacilityEnumeration] = field(
+    value: LuggageServiceFacilityEnumeration | None = field(
         default=None,
         metadata={
             "required": True,

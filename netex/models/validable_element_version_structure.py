@@ -30,7 +30,7 @@ class ValidableElementVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "ValidableElement_VersionStructure"
 
-    fare_structure_elements: Optional[FareStructureElementRefsRelStructure] = (
+    fare_structure_elements: FareStructureElementRefsRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -40,9 +40,7 @@ class ValidableElementVersionStructure(PriceableObjectVersionStructure):
             },
         )
     )
-    fare_elements_in_sequence: Optional[
-        FareElementInSequenceRefsRelStructure
-    ] = field(
+    fare_elements_in_sequence: FareElementInSequenceRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "fareElementsInSequence",
@@ -50,7 +48,7 @@ class ValidableElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    discount_rights: Optional[DiscountRightRefsRelStructure] = field(
+    discount_rights: DiscountRightRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "discountRights",
@@ -58,7 +56,7 @@ class ValidableElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    amount_of_price_units: Optional[AmountOfPriceUnitRefsRelStructure] = field(
+    amount_of_price_units: AmountOfPriceUnitRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "amountOfPriceUnits",
@@ -66,7 +64,7 @@ class ValidableElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    third_party_products: Optional[ThirdPartyProductRefsRelStructure] = field(
+    third_party_products: ThirdPartyProductRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "thirdPartyProducts",
@@ -74,9 +72,7 @@ class ValidableElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_parameter_assignments: Optional[
-        ValidityParameterAssignmentsRelStructure
-    ] = field(
+    validity_parameter_assignments: ValidityParameterAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "validityParameterAssignments",
@@ -84,7 +80,7 @@ class ValidableElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: Optional[ValidableElementPricesRelStructure] = field(
+    prices: ValidableElementPricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

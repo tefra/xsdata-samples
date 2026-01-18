@@ -27,7 +27,7 @@ class Delays:
     :ivar delays_extension:
     """
 
-    delay_band: Optional[DelayBandEnum] = field(
+    delay_band: DelayBandEnum | None = field(
         default=None,
         metadata={
             "name": "delayBand",
@@ -35,7 +35,7 @@ class Delays:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    delays_type: Optional[DelaysTypeEnum] = field(
+    delays_type: DelaysTypeEnum | None = field(
         default=None,
         metadata={
             "name": "delaysType",
@@ -43,7 +43,7 @@ class Delays:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    delay_time_value: Optional[float] = field(
+    delay_time_value: float | None = field(
         default=None,
         metadata={
             "name": "delayTimeValue",
@@ -51,7 +51,7 @@ class Delays:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    delays_extension: Optional[ExtensionType] = field(
+    delays_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "delaysExtension",

@@ -30,7 +30,7 @@ class CompuRationalCoeffs:
     class Meta:
         name = "COMPU-RATIONAL-COEFFS"
 
-    compu_numerator: Optional[CompuNominatorDenominator] = field(
+    compu_numerator: CompuNominatorDenominator | None = field(
         default=None,
         metadata={
             "name": "COMPU-NUMERATOR",
@@ -38,7 +38,7 @@ class CompuRationalCoeffs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    compu_denominator: Optional[CompuNominatorDenominator] = field(
+    compu_denominator: CompuNominatorDenominator | None = field(
         default=None,
         metadata={
             "name": "COMPU-DENOMINATOR",
@@ -46,14 +46,14 @@ class CompuRationalCoeffs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

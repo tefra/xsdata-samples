@@ -25,18 +25,7 @@ class DatedSpecialServiceVersionStructure(SpecialServiceVersionStructure):
     class Meta:
         name = "DatedSpecialService_VersionStructure"
 
-    choice: Optional[
-        Union[
-            SingleJourneyRef,
-            DatedVehicleJourneyRef,
-            DatedSpecialServiceRef,
-            SpecialServiceRef,
-            TemplateServiceJourneyRef,
-            ServiceJourneyRef,
-            DeadRunRef,
-            VehicleJourneyRef,
-        ]
-    ] = field(
+    choice: SingleJourneyRef | DatedVehicleJourneyRef | DatedSpecialServiceRef | SpecialServiceRef | TemplateServiceJourneyRef | ServiceJourneyRef | DeadRunRef | VehicleJourneyRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -84,7 +73,7 @@ class DatedSpecialServiceVersionStructure(SpecialServiceVersionStructure):
             ),
         },
     )
-    operating_day_ref: Optional[OperatingDayRef] = field(
+    operating_day_ref: OperatingDayRef | None = field(
         default=None,
         metadata={
             "name": "OperatingDayRef",
@@ -93,9 +82,7 @@ class DatedSpecialServiceVersionStructure(SpecialServiceVersionStructure):
             "required": True,
         },
     )
-    external_dated_vehicle_journey_ref: Optional[
-        ExternalObjectRefStructure
-    ] = field(
+    external_dated_vehicle_journey_ref: ExternalObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "ExternalDatedVehicleJourneyRef",
@@ -103,7 +90,7 @@ class DatedSpecialServiceVersionStructure(SpecialServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    dated_journey_pattern_ref: Optional[JourneyPatternRefStructure] = field(
+    dated_journey_pattern_ref: JourneyPatternRefStructure | None = field(
         default=None,
         metadata={
             "name": "DatedJourneyPatternRef",
@@ -111,7 +98,7 @@ class DatedSpecialServiceVersionStructure(SpecialServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    driver_ref: Optional[DriverRef] = field(
+    driver_ref: DriverRef | None = field(
         default=None,
         metadata={
             "name": "DriverRef",
@@ -119,7 +106,7 @@ class DatedSpecialServiceVersionStructure(SpecialServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    dated_passing_times: Optional[TargetPassingTimesRelStructure] = field(
+    dated_passing_times: TargetPassingTimesRelStructure | None = field(
         default=None,
         metadata={
             "name": "datedPassingTimes",
@@ -127,7 +114,7 @@ class DatedSpecialServiceVersionStructure(SpecialServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    dated_calls: Optional[DatedCallsRelStructure] = field(
+    dated_calls: DatedCallsRelStructure | None = field(
         default=None,
         metadata={
             "name": "datedCalls",

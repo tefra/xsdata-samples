@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -37,7 +39,7 @@ class LinOrderedConfigurableFrame:
     class Meta:
         name = "LIN-ORDERED-CONFIGURABLE-FRAME"
 
-    frame_ref: Optional["LinOrderedConfigurableFrame.FrameRef"] = field(
+    frame_ref: LinOrderedConfigurableFrame.FrameRef | None = field(
         default=None,
         metadata={
             "name": "FRAME-REF",
@@ -45,7 +47,7 @@ class LinOrderedConfigurableFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    index: Optional[Integer] = field(
+    index: Integer | None = field(
         default=None,
         metadata={
             "name": "INDEX",
@@ -53,14 +55,14 @@ class LinOrderedConfigurableFrame:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +73,7 @@ class LinOrderedConfigurableFrame:
 
     @dataclass
     class FrameRef(Ref):
-        dest: Optional[LinFrameSubtypesEnum] = field(
+        dest: LinFrameSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

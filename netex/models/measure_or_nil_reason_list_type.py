@@ -9,14 +9,14 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass
 class MeasureOrNilReasonListType:
-    value: Iterable[Union[str, NilReasonEnumerationValue]] = field(
+    value: Iterable[str | NilReasonEnumerationValue] = field(
         default_factory=list,
         metadata={
             "pattern": r"other:\w{2,}",
             "tokens": True,
         },
     )
-    uom: Optional[str] = field(
+    uom: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

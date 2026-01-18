@@ -29,7 +29,7 @@ class SomeipServiceVersion:
     class Meta:
         name = "SOMEIP-SERVICE-VERSION"
 
-    major_version: Optional[PositiveInteger] = field(
+    major_version: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAJOR-VERSION",
@@ -37,7 +37,7 @@ class SomeipServiceVersion:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minor_version: Optional[PositiveInteger] = field(
+    minor_version: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MINOR-VERSION",
@@ -45,14 +45,14 @@ class SomeipServiceVersion:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

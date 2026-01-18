@@ -19,7 +19,7 @@ __NAMESPACE__ = "http://generali.com/enterprise-services/core/gbo/common/v1"
 
 @dataclass
 class GeographyType:
-    description: Optional[TextType] = field(
+    description: TextType | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -27,7 +27,7 @@ class GeographyType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    name: Optional[CodeType] = field(
+    name: CodeType | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -36,7 +36,7 @@ class GeographyType:
             "required": True,
         },
     )
-    country: Optional[CountryGbotype] = field(
+    country: CountryGbotype | None = field(
         default=None,
         metadata={
             "name": "Country",
@@ -44,7 +44,7 @@ class GeographyType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    address: Optional[GeographyTypeAddress] = field(
+    address: GeographyTypeAddress | None = field(
         default=None,
         metadata={
             "name": "Address",

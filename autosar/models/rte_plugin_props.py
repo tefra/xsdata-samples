@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -36,9 +38,7 @@ class RtePluginProps:
     class Meta:
         name = "RTE-PLUGIN-PROPS"
 
-    associated_cross_sw_cluster_com_rte_plugin_ref: Optional[
-        "RtePluginProps.AssociatedCrossSwClusterComRtePluginRef"
-    ] = field(
+    associated_cross_sw_cluster_com_rte_plugin_ref: RtePluginProps.AssociatedCrossSwClusterComRtePluginRef | None = field(
         default=None,
         metadata={
             "name": "ASSOCIATED-CROSS-SW-CLUSTER-COM-RTE-PLUGIN-REF",
@@ -46,9 +46,7 @@ class RtePluginProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    associated_rte_plugin_ref: Optional[
-        "RtePluginProps.AssociatedRtePluginRef"
-    ] = field(
+    associated_rte_plugin_ref: RtePluginProps.AssociatedRtePluginRef | None = field(
         default=None,
         metadata={
             "name": "ASSOCIATED-RTE-PLUGIN-REF",
@@ -56,14 +54,14 @@ class RtePluginProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -74,7 +72,7 @@ class RtePluginProps:
 
     @dataclass
     class AssociatedCrossSwClusterComRtePluginRef(Ref):
-        dest: Optional[EcucContainerValueSubtypesEnum] = field(
+        dest: EcucContainerValueSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -85,7 +83,7 @@ class RtePluginProps:
 
     @dataclass
     class AssociatedRtePluginRef(Ref):
-        dest: Optional[EcucContainerValueSubtypesEnum] = field(
+        dest: EcucContainerValueSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -21,9 +21,7 @@ class WinterDrivingManagement(NetworkManagement):
     :ivar winter_driving_management_extension:
     """
 
-    winter_equipment_management_type: Optional[
-        WinterEquipmentManagementTypeEnum
-    ] = field(
+    winter_equipment_management_type: WinterEquipmentManagementTypeEnum | None = field(
         default=None,
         metadata={
             "name": "winterEquipmentManagementType",
@@ -32,7 +30,7 @@ class WinterDrivingManagement(NetworkManagement):
             "required": True,
         },
     )
-    winter_driving_management_extension: Optional[ExtensionType] = field(
+    winter_driving_management_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "winterDrivingManagementExtension",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -104,7 +106,7 @@ class ISignalIPduGroup:
     class Meta:
         name = "I-SIGNAL-I-PDU-GROUP"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -113,7 +115,7 @@ class ISignalIPduGroup:
             "required": True,
         },
     )
-    short_name_fragments: Optional["ISignalIPduGroup.ShortNameFragments"] = (
+    short_name_fragments: ISignalIPduGroup.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -123,7 +125,7 @@ class ISignalIPduGroup:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -131,7 +133,7 @@ class ISignalIPduGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -139,7 +141,7 @@ class ISignalIPduGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -147,7 +149,7 @@ class ISignalIPduGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -155,7 +157,7 @@ class ISignalIPduGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -163,7 +165,7 @@ class ISignalIPduGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ISignalIPduGroup.Annotations"] = field(
+    annotations: ISignalIPduGroup.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -171,7 +173,7 @@ class ISignalIPduGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -179,7 +181,7 @@ class ISignalIPduGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_direction: Optional[CommunicationDirectionType] = field(
+    communication_direction: CommunicationDirectionType | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-DIRECTION",
@@ -187,7 +189,7 @@ class ISignalIPduGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_mode: Optional[String] = field(
+    communication_mode: String | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-MODE",
@@ -195,9 +197,7 @@ class ISignalIPduGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_i_signal_i_pdu_group_refs: Optional[
-        "ISignalIPduGroup.ContainedISignalIPduGroupRefs"
-    ] = field(
+    contained_i_signal_i_pdu_group_refs: ISignalIPduGroup.ContainedISignalIPduGroupRefs | None = field(
         default=None,
         metadata={
             "name": "CONTAINED-I-SIGNAL-I-PDU-GROUP-REFS",
@@ -205,7 +205,7 @@ class ISignalIPduGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_i_pdus: Optional["ISignalIPduGroup.ISignalIPdus"] = field(
+    i_signal_i_pdus: ISignalIPduGroup.ISignalIPdus | None = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-I-PDUS",
@@ -213,7 +213,7 @@ class ISignalIPduGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_pdus: Optional["ISignalIPduGroup.NmPdus"] = field(
+    nm_pdus: ISignalIPduGroup.NmPdus | None = field(
         default=None,
         metadata={
             "name": "NM-PDUS",
@@ -221,14 +221,14 @@ class ISignalIPduGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -236,7 +236,7 @@ class ISignalIPduGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -269,7 +269,7 @@ class ISignalIPduGroup:
     @dataclass
     class ContainedISignalIPduGroupRefs:
         contained_i_signal_i_pdu_group_ref: list[
-            "ISignalIPduGroup.ContainedISignalIPduGroupRefs.ContainedISignalIPduGroupRef"
+            ISignalIPduGroup.ContainedISignalIPduGroupRefs.ContainedISignalIPduGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -281,7 +281,7 @@ class ISignalIPduGroup:
 
         @dataclass
         class ContainedISignalIPduGroupRef(Ref):
-            dest: Optional[ISignalIPduGroupSubtypesEnum] = field(
+            dest: ISignalIPduGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

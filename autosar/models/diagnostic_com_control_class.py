@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -117,7 +119,7 @@ class DiagnosticComControlClass:
     class Meta:
         name = "DIAGNOSTIC-COM-CONTROL-CLASS"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -126,9 +128,7 @@ class DiagnosticComControlClass:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticComControlClass.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticComControlClass.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -136,7 +136,7 @@ class DiagnosticComControlClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -144,7 +144,7 @@ class DiagnosticComControlClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -152,7 +152,7 @@ class DiagnosticComControlClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -160,7 +160,7 @@ class DiagnosticComControlClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -168,7 +168,7 @@ class DiagnosticComControlClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -176,7 +176,7 @@ class DiagnosticComControlClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticComControlClass.Annotations"] = field(
+    annotations: DiagnosticComControlClass.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -184,7 +184,7 @@ class DiagnosticComControlClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -192,9 +192,7 @@ class DiagnosticComControlClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: Optional[
-        "DiagnosticComControlClass.AccessPermissionRef"
-    ] = field(
+    access_permission_ref: DiagnosticComControlClass.AccessPermissionRef | None = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -202,9 +200,7 @@ class DiagnosticComControlClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_validity: Optional[
-        DiagnosticAccessPermissionValidityEnum
-    ] = field(
+    access_permission_validity: DiagnosticAccessPermissionValidityEnum | None = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-VALIDITY",
@@ -212,9 +208,7 @@ class DiagnosticComControlClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    all_channels_refs: Optional[
-        "DiagnosticComControlClass.AllChannelsRefs"
-    ] = field(
+    all_channels_refs: DiagnosticComControlClass.AllChannelsRefs | None = field(
         default=None,
         metadata={
             "name": "ALL-CHANNELS-REFS",
@@ -222,9 +216,7 @@ class DiagnosticComControlClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    specific_channels: Optional[
-        "DiagnosticComControlClass.SpecificChannels"
-    ] = field(
+    specific_channels: DiagnosticComControlClass.SpecificChannels | None = field(
         default=None,
         metadata={
             "name": "SPECIFIC-CHANNELS",
@@ -232,9 +224,7 @@ class DiagnosticComControlClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_node_channels: Optional[
-        "DiagnosticComControlClass.SubNodeChannels"
-    ] = field(
+    sub_node_channels: DiagnosticComControlClass.SubNodeChannels | None = field(
         default=None,
         metadata={
             "name": "SUB-NODE-CHANNELS",
@@ -242,14 +232,14 @@ class DiagnosticComControlClass:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -257,7 +247,7 @@ class DiagnosticComControlClass:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -289,7 +279,7 @@ class DiagnosticComControlClass:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: Optional[DiagnosticAccessPermissionSubtypesEnum] = field(
+        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -301,7 +291,7 @@ class DiagnosticComControlClass:
     @dataclass
     class AllChannelsRefs:
         all_channels_ref: list[
-            "DiagnosticComControlClass.AllChannelsRefs.AllChannelsRef"
+            DiagnosticComControlClass.AllChannelsRefs.AllChannelsRef
         ] = field(
             default_factory=list,
             metadata={
@@ -313,7 +303,7 @@ class DiagnosticComControlClass:
 
         @dataclass
         class AllChannelsRef(Ref):
-            dest: Optional[CommunicationClusterSubtypesEnum] = field(
+            dest: CommunicationClusterSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

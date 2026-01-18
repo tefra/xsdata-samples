@@ -51,7 +51,7 @@ class CyclicTiming:
     class Meta:
         name = "CYCLIC-TIMING"
 
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -59,7 +59,7 @@ class CyclicTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -67,7 +67,7 @@ class CyclicTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -75,7 +75,7 @@ class CyclicTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -83,7 +83,7 @@ class CyclicTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_offset: Optional[TimeRangeType] = field(
+    time_offset: TimeRangeType | None = field(
         default=None,
         metadata={
             "name": "TIME-OFFSET",
@@ -91,7 +91,7 @@ class CyclicTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_period: Optional[TimeRangeType] = field(
+    time_period: TimeRangeType | None = field(
         default=None,
         metadata={
             "name": "TIME-PERIOD",
@@ -99,14 +99,14 @@ class CyclicTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

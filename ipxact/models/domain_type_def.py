@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -22,28 +24,28 @@ class DomainTypeDef:
         name = "domainTypeDef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    type_name: Optional["DomainTypeDef.TypeName"] = field(
+    type_name: DomainTypeDef.TypeName | None = field(
         default=None,
         metadata={
             "name": "typeName",
             "type": "Element",
         },
     )
-    type_definition: list["DomainTypeDef.TypeDefinition"] = field(
+    type_definition: list[DomainTypeDef.TypeDefinition] = field(
         default_factory=list,
         metadata={
             "name": "typeDefinition",
             "type": "Element",
         },
     )
-    view_ref: list["DomainTypeDef.ViewRef"] = field(
+    view_ref: list[DomainTypeDef.ViewRef] = field(
         default_factory=list,
         metadata={
             "name": "viewRef",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -59,7 +61,7 @@ class DomainTypeDef:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -75,7 +77,7 @@ class DomainTypeDef:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -91,7 +93,7 @@ class DomainTypeDef:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

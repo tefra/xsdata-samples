@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -36,7 +38,7 @@ class SomeipMethodProps:
     class Meta:
         name = "SOMEIP-METHOD-PROPS"
 
-    collection_props: Optional[SomeipCollectionProps] = field(
+    collection_props: SomeipCollectionProps | None = field(
         default=None,
         metadata={
             "name": "COLLECTION-PROPS",
@@ -44,7 +46,7 @@ class SomeipMethodProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_ref: Optional["SomeipMethodProps.MethodRef"] = field(
+    method_ref: SomeipMethodProps.MethodRef | None = field(
         default=None,
         metadata={
             "name": "METHOD-REF",
@@ -52,14 +54,14 @@ class SomeipMethodProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +72,7 @@ class SomeipMethodProps:
 
     @dataclass
     class MethodRef(Ref):
-        dest: Optional[SomeipMethodDeploymentSubtypesEnum] = field(
+        dest: SomeipMethodDeploymentSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

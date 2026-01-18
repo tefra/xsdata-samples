@@ -30,20 +30,20 @@ class HandleTerminationAndRestartEnum:
     class Meta:
         name = "HANDLE-TERMINATION-AND-RESTART-ENUM"
 
-    value: Optional[HandleTerminationAndRestartEnumSimple] = field(
+    value: HandleTerminationAndRestartEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

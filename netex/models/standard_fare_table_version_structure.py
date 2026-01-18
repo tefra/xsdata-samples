@@ -32,7 +32,7 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "StandardFareTable_VersionStructure"
 
-    start_date: Optional[XmlDate] = field(
+    start_date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -40,7 +40,7 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_date: Optional[XmlDate] = field(
+    end_date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -48,7 +48,7 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rounding_ref: Optional[RoundingRef] = field(
+    rounding_ref: RoundingRef | None = field(
         default=None,
         metadata={
             "name": "RoundingRef",
@@ -56,7 +56,7 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_fare_table_ref: Optional[TypeOfFareTableRef] = field(
+    type_of_fare_table_ref: TypeOfFareTableRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfFareTableRef",
@@ -64,7 +64,7 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices_for: Optional[PriceableObjectRefsRelStructure] = field(
+    prices_for: PriceableObjectRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "pricesFor",
@@ -72,7 +72,7 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    used_in: Optional[UsedInRefsRelStructure] = field(
+    used_in: UsedInRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "usedIn",
@@ -80,20 +80,7 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: Optional[
-        Union[
-            RetailConsortiumRef,
-            OnlineServiceOperatorRef,
-            GeneralOrganisationRef,
-            ManagementAgentRef,
-            ServicedOrganisationRef,
-            TravelAgentRef,
-            OtherOrganisationRef,
-            AuthorityRef,
-            OperatorRef,
-            OrganisationRef,
-        ]
-    ] = field(
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -151,7 +138,7 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
             ),
         },
     )
-    first_class_single: Optional[Decimal] = field(
+    first_class_single: Decimal | None = field(
         default=None,
         metadata={
             "name": "FirstClassSingle",
@@ -159,7 +146,7 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    second_class_single: Optional[Decimal] = field(
+    second_class_single: Decimal | None = field(
         default=None,
         metadata={
             "name": "SecondClassSingle",
@@ -168,7 +155,7 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "required": True,
         },
     )
-    first_class_return: Optional[Decimal] = field(
+    first_class_return: Decimal | None = field(
         default=None,
         metadata={
             "name": "FirstClassReturn",
@@ -176,7 +163,7 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    second_class_return: Optional[Decimal] = field(
+    second_class_return: Decimal | None = field(
         default=None,
         metadata={
             "name": "SecondClassReturn",

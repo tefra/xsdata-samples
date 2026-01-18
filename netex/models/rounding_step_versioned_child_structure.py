@@ -13,7 +13,7 @@ class RoundingStepVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "RoundingStep_VersionedChildStructure"
 
-    rounding_step_ref: Optional[RoundingStepRef] = field(
+    rounding_step_ref: RoundingStepRef | None = field(
         default=None,
         metadata={
             "name": "RoundingStepRef",
@@ -21,7 +21,7 @@ class RoundingStepVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    round_if_greater_than: Optional[Decimal] = field(
+    round_if_greater_than: Decimal | None = field(
         default=None,
         metadata={
             "name": "RoundIfGreaterThan",
@@ -30,7 +30,7 @@ class RoundingStepVersionedChildStructure(VersionedChildStructure):
             "required": True,
         },
     )
-    round_to: Optional[Decimal] = field(
+    round_to: Decimal | None = field(
         default=None,
         metadata={
             "name": "RoundTo",

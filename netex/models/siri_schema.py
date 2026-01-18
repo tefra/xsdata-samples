@@ -23,26 +23,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class SiriSchema:
-    choice: Optional[
-        Union[
-            ServiceRequest,
-            SubscriptionRequest,
-            TerminateSubscriptionRequest,
-            DataReadyNotification,
-            DataSupplyRequest,
-            CheckStatusRequest,
-            HeartbeatNotification,
-            CapabilitiesRequest,
-            SubscriptionResponse,
-            TerminateSubscriptionResponse,
-            DataReadyAcknowledgement,
-            ServiceDelivery,
-            DataReceivedAcknowledgement,
-            CheckStatusResponse,
-            CapabilitiesResponse,
-            Extensions1,
-        ]
-    ] = field(
+    choice: ServiceRequest | SubscriptionRequest | TerminateSubscriptionRequest | DataReadyNotification | DataSupplyRequest | CheckStatusRequest | HeartbeatNotification | CapabilitiesRequest | SubscriptionResponse | TerminateSubscriptionResponse | DataReadyAcknowledgement | ServiceDelivery | DataReceivedAcknowledgement | CheckStatusResponse | CapabilitiesResponse | Extensions1 | None = field(
         default=None,
         metadata={
             "type": "Elements",

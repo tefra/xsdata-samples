@@ -115,7 +115,7 @@ class AuctionResultResponseHeader:
             "required": True,
         }
     )
-    auction_result_reference: Optional[AuctionResultReference] = field(
+    auction_result_reference: AuctionResultReference | None = field(
         default=None,
         metadata={
             "name": "AuctionResultReference",
@@ -129,9 +129,7 @@ class AuctionResultResponseHeader:
             "required": True,
         }
     )
-    auction_result_response_coded_other: Optional[
-        AuctionResultResponseCodedOther
-    ] = field(
+    auction_result_response_coded_other: AuctionResultResponseCodedOther | None = field(
         default=None,
         metadata={
             "name": "AuctionResultResponseCodedOther",
@@ -145,7 +143,7 @@ class AuctionResultResponseHeader:
             "required": True,
         }
     )
-    general_note: Optional[GeneralNote] = field(
+    general_note: GeneralNote | None = field(
         default=None,
         metadata={
             "name": "GeneralNote",

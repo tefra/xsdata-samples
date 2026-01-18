@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -188,7 +190,7 @@ class ISignal:
     class Meta:
         name = "I-SIGNAL"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -197,7 +199,7 @@ class ISignal:
             "required": True,
         },
     )
-    short_name_fragments: Optional["ISignal.ShortNameFragments"] = field(
+    short_name_fragments: ISignal.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -205,7 +207,7 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -213,7 +215,7 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -221,7 +223,7 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -229,7 +231,7 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -237,7 +239,7 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -245,7 +247,7 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ISignal.Annotations"] = field(
+    annotations: ISignal.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -253,7 +255,7 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -261,7 +263,7 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_transformations: Optional["ISignal.DataTransformations"] = field(
+    data_transformations: ISignal.DataTransformations | None = field(
         default=None,
         metadata={
             "name": "DATA-TRANSFORMATIONS",
@@ -269,7 +271,7 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_type_policy: Optional[DataTypePolicyEnum] = field(
+    data_type_policy: DataTypePolicyEnum | None = field(
         default=None,
         metadata={
             "name": "DATA-TYPE-POLICY",
@@ -277,7 +279,7 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_props: Optional[ISignalProps] = field(
+    i_signal_props: ISignalProps | None = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-PROPS",
@@ -285,7 +287,7 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_type: Optional[ISignalTypeEnum] = field(
+    i_signal_type: ISignalTypeEnum | None = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-TYPE",
@@ -293,7 +295,7 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    init_value: Optional["ISignal.InitValue"] = field(
+    init_value: ISignal.InitValue | None = field(
         default=None,
         metadata={
             "name": "INIT-VALUE",
@@ -301,7 +303,7 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    length: Optional[Integer] = field(
+    length: Integer | None = field(
         default=None,
         metadata={
             "name": "LENGTH",
@@ -309,7 +311,7 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_representation_props: Optional[SwDataDefProps] = field(
+    network_representation_props: SwDataDefProps | None = field(
         default=None,
         metadata={
             "name": "NETWORK-REPRESENTATION-PROPS",
@@ -317,7 +319,7 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_signal_ref: Optional["ISignal.SystemSignalRef"] = field(
+    system_signal_ref: ISignal.SystemSignalRef | None = field(
         default=None,
         metadata={
             "name": "SYSTEM-SIGNAL-REF",
@@ -325,9 +327,7 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timeout_substitution_value: Optional[
-        "ISignal.TimeoutSubstitutionValue"
-    ] = field(
+    timeout_substitution_value: ISignal.TimeoutSubstitutionValue | None = field(
         default=None,
         metadata={
             "name": "TIMEOUT-SUBSTITUTION-VALUE",
@@ -335,9 +335,7 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformation_i_signal_propss: Optional[
-        "ISignal.TransformationISignalPropss"
-    ] = field(
+    transformation_i_signal_propss: ISignal.TransformationISignalPropss | None = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-I-SIGNAL-PROPSS",
@@ -345,14 +343,14 @@ class ISignal:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -360,7 +358,7 @@ class ISignal:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -405,9 +403,7 @@ class ISignal:
 
     @dataclass
     class InitValue:
-        application_assoc_map_value_specification: Optional[
-            ApplicationAssocMapValueSpecification
-        ] = field(
+        application_assoc_map_value_specification: ApplicationAssocMapValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-ASSOC-MAP-VALUE-SPECIFICATION",
@@ -415,9 +411,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_rule_based_value_specification: Optional[
-            ApplicationRuleBasedValueSpecification
-        ] = field(
+        application_rule_based_value_specification: ApplicationRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-RULE-BASED-VALUE-SPECIFICATION",
@@ -425,9 +419,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_value_specification: Optional[
-            ApplicationValueSpecification
-        ] = field(
+        application_value_specification: ApplicationValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-VALUE-SPECIFICATION",
@@ -435,7 +427,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        array_value_specification: Optional[ArrayValueSpecification] = field(
+        array_value_specification: ArrayValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "ARRAY-VALUE-SPECIFICATION",
@@ -443,9 +435,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        composite_rule_based_value_specification: Optional[
-            CompositeRuleBasedValueSpecification
-        ] = field(
+        composite_rule_based_value_specification: CompositeRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "COMPOSITE-RULE-BASED-VALUE-SPECIFICATION",
@@ -453,7 +443,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        constant_reference: Optional[ConstantReference] = field(
+        constant_reference: ConstantReference | None = field(
             default=None,
             metadata={
                 "name": "CONSTANT-REFERENCE",
@@ -461,9 +451,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        not_available_value_specification: Optional[
-            NotAvailableValueSpecification
-        ] = field(
+        not_available_value_specification: NotAvailableValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NOT-AVAILABLE-VALUE-SPECIFICATION",
@@ -471,9 +459,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_rule_based_value_specification: Optional[
-            NumericalRuleBasedValueSpecification
-        ] = field(
+        numerical_rule_based_value_specification: NumericalRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-RULE-BASED-VALUE-SPECIFICATION",
@@ -481,9 +467,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: Optional[
-            NumericalValueSpecification
-        ] = field(
+        numerical_value_specification: NumericalValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-VALUE-SPECIFICATION",
@@ -491,7 +475,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        record_value_specification: Optional[RecordValueSpecification] = field(
+        record_value_specification: RecordValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "RECORD-VALUE-SPECIFICATION",
@@ -499,9 +483,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: Optional[
-            ReferenceValueSpecification
-        ] = field(
+        reference_value_specification: ReferenceValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "REFERENCE-VALUE-SPECIFICATION",
@@ -509,7 +491,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        text_value_specification: Optional[TextValueSpecification] = field(
+        text_value_specification: TextValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "TEXT-VALUE-SPECIFICATION",
@@ -520,7 +502,7 @@ class ISignal:
 
     @dataclass
     class SystemSignalRef(Ref):
-        dest: Optional[SystemSignalSubtypesEnum] = field(
+        dest: SystemSignalSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -531,9 +513,7 @@ class ISignal:
 
     @dataclass
     class TimeoutSubstitutionValue:
-        application_assoc_map_value_specification: Optional[
-            ApplicationAssocMapValueSpecification
-        ] = field(
+        application_assoc_map_value_specification: ApplicationAssocMapValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-ASSOC-MAP-VALUE-SPECIFICATION",
@@ -541,9 +521,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_rule_based_value_specification: Optional[
-            ApplicationRuleBasedValueSpecification
-        ] = field(
+        application_rule_based_value_specification: ApplicationRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-RULE-BASED-VALUE-SPECIFICATION",
@@ -551,9 +529,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        application_value_specification: Optional[
-            ApplicationValueSpecification
-        ] = field(
+        application_value_specification: ApplicationValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "APPLICATION-VALUE-SPECIFICATION",
@@ -561,7 +537,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        array_value_specification: Optional[ArrayValueSpecification] = field(
+        array_value_specification: ArrayValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "ARRAY-VALUE-SPECIFICATION",
@@ -569,9 +545,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        composite_rule_based_value_specification: Optional[
-            CompositeRuleBasedValueSpecification
-        ] = field(
+        composite_rule_based_value_specification: CompositeRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "COMPOSITE-RULE-BASED-VALUE-SPECIFICATION",
@@ -579,7 +553,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        constant_reference: Optional[ConstantReference] = field(
+        constant_reference: ConstantReference | None = field(
             default=None,
             metadata={
                 "name": "CONSTANT-REFERENCE",
@@ -587,9 +561,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        not_available_value_specification: Optional[
-            NotAvailableValueSpecification
-        ] = field(
+        not_available_value_specification: NotAvailableValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NOT-AVAILABLE-VALUE-SPECIFICATION",
@@ -597,9 +569,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_rule_based_value_specification: Optional[
-            NumericalRuleBasedValueSpecification
-        ] = field(
+        numerical_rule_based_value_specification: NumericalRuleBasedValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-RULE-BASED-VALUE-SPECIFICATION",
@@ -607,9 +577,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_specification: Optional[
-            NumericalValueSpecification
-        ] = field(
+        numerical_value_specification: NumericalValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-VALUE-SPECIFICATION",
@@ -617,7 +585,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        record_value_specification: Optional[RecordValueSpecification] = field(
+        record_value_specification: RecordValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "RECORD-VALUE-SPECIFICATION",
@@ -625,9 +593,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        reference_value_specification: Optional[
-            ReferenceValueSpecification
-        ] = field(
+        reference_value_specification: ReferenceValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "REFERENCE-VALUE-SPECIFICATION",
@@ -635,7 +601,7 @@ class ISignal:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        text_value_specification: Optional[TextValueSpecification] = field(
+        text_value_specification: TextValueSpecification | None = field(
             default=None,
             metadata={
                 "name": "TEXT-VALUE-SPECIFICATION",

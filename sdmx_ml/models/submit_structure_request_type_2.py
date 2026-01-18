@@ -33,7 +33,7 @@ class SubmitStructureRequestType2(RegistryInterfaceType):
             "type": "Ignore",
         },
     )
-    submit_structure_request: Optional[SubmitStructureRequestType1] = field(
+    submit_structure_request: SubmitStructureRequestType1 | None = field(
         default=None,
         metadata={
             "name": "SubmitStructureRequest",

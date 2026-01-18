@@ -89,42 +89,42 @@ class InvoiceResponseDetail:
             "required": True,
         }
     )
-    invoice_response_coded: Optional[InvoiceResponseCoded] = field(
+    invoice_response_coded: InvoiceResponseCoded | None = field(
         default=None,
         metadata={
             "name": "InvoiceResponseCoded",
             "type": "Element",
         },
     )
-    invoice_response_coded_other: Optional[InvoiceResponseCodedOther] = field(
+    invoice_response_coded_other: InvoiceResponseCodedOther | None = field(
         default=None,
         metadata={
             "name": "InvoiceResponseCodedOther",
             "type": "Element",
         },
     )
-    list_of_structured_note: Optional[ListOfStructuredNote] = field(
+    list_of_structured_note: ListOfStructuredNote | None = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    error_info: Optional[ErrorInfo] = field(
+    error_info: ErrorInfo | None = field(
         default=None,
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
         },
     )
-    list_of_name_value_set: Optional[ListOfNameValueSet] = field(
+    list_of_name_value_set: ListOfNameValueSet | None = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
         },
     )
-    list_of_attachment: Optional[ListOfAttachment] = field(
+    list_of_attachment: ListOfAttachment | None = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
@@ -160,14 +160,14 @@ class InvoiceResponseParty:
             "required": True,
         }
     )
-    remit_to_party: Optional[RemitToParty] = field(
+    remit_to_party: RemitToParty | None = field(
         default=None,
         metadata={
             "name": "RemitToParty",
             "type": "Element",
         },
     )
-    list_of_party_coded: Optional[ListOfPartyCoded] = field(
+    list_of_party_coded: ListOfPartyCoded | None = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
@@ -204,7 +204,7 @@ class InvoiceResponseHeader:
             "required": True,
         }
     )
-    invoice_response_issue_date: Optional[InvoiceResponseIssueDate] = field(
+    invoice_response_issue_date: InvoiceResponseIssueDate | None = field(
         default=None,
         metadata={
             "name": "InvoiceResponseIssueDate",
@@ -232,7 +232,7 @@ class InvoiceResponseHeader:
             "required": True,
         }
     )
-    invoice_response_coded_other: Optional[InvoiceResponseCodedOther] = field(
+    invoice_response_coded_other: InvoiceResponseCodedOther | None = field(
         default=None,
         metadata={
             "name": "InvoiceResponseCodedOther",
@@ -246,35 +246,35 @@ class InvoiceResponseHeader:
             "required": True,
         }
     )
-    invoice_response_header_note: Optional[InvoiceResponseHeaderNote] = field(
+    invoice_response_header_note: InvoiceResponseHeaderNote | None = field(
         default=None,
         metadata={
             "name": "InvoiceResponseHeaderNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: Optional[ListOfStructuredNote] = field(
+    list_of_structured_note: ListOfStructuredNote | None = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    error_info: Optional[ErrorInfo] = field(
+    error_info: ErrorInfo | None = field(
         default=None,
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
         },
     )
-    list_of_name_value_set: Optional[ListOfNameValueSet] = field(
+    list_of_name_value_set: ListOfNameValueSet | None = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
         },
     )
-    list_of_attachment: Optional[ListOfAttachment] = field(
+    list_of_attachment: ListOfAttachment | None = field(
         default=None,
         metadata={
             "name": "ListOfAttachment",
@@ -292,7 +292,7 @@ class InvoiceResponse:
             "required": True,
         }
     )
-    list_of_invoice_response_detail: Optional[ListOfInvoiceResponseDetail] = (
+    list_of_invoice_response_detail: ListOfInvoiceResponseDetail | None = (
         field(
             default=None,
             metadata={

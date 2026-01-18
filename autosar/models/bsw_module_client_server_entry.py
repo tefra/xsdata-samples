@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -55,7 +57,7 @@ class BswModuleClientServerEntry:
     class Meta:
         name = "BSW-MODULE-CLIENT-SERVER-ENTRY"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -64,9 +66,7 @@ class BswModuleClientServerEntry:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "BswModuleClientServerEntry.ShortNameFragments"
-    ] = field(
+    short_name_fragments: BswModuleClientServerEntry.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -74,9 +74,7 @@ class BswModuleClientServerEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    encapsulated_entry_ref: Optional[
-        "BswModuleClientServerEntry.EncapsulatedEntryRef"
-    ] = field(
+    encapsulated_entry_ref: BswModuleClientServerEntry.EncapsulatedEntryRef | None = field(
         default=None,
         metadata={
             "name": "ENCAPSULATED-ENTRY-REF",
@@ -84,7 +82,7 @@ class BswModuleClientServerEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_reentrant: Optional[Boolean] = field(
+    is_reentrant: Boolean | None = field(
         default=None,
         metadata={
             "name": "IS-REENTRANT",
@@ -92,7 +90,7 @@ class BswModuleClientServerEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_synchronous: Optional[Boolean] = field(
+    is_synchronous: Boolean | None = field(
         default=None,
         metadata={
             "name": "IS-SYNCHRONOUS",
@@ -100,7 +98,7 @@ class BswModuleClientServerEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -108,14 +106,14 @@ class BswModuleClientServerEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -137,7 +135,7 @@ class BswModuleClientServerEntry:
 
     @dataclass
     class EncapsulatedEntryRef(Ref):
-        dest: Optional[BswModuleEntrySubtypesEnum] = field(
+        dest: BswModuleEntrySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

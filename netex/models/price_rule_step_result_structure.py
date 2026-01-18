@@ -35,28 +35,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class PriceRuleStepResultStructure:
-    fare_price_ref: Optional[
-        Union[
-            CustomerPurchasePackagePriceRef,
-            ParkingPriceRef,
-            TimeIntervalPriceRef,
-            TimeUnitPriceRef,
-            QualityStructureFactorPriceRef,
-            ControllableElementPriceRef,
-            ValidableElementPriceRef,
-            GeographicalIntervalPriceRef,
-            GeographicalUnitPriceRef,
-            UsageParameterPriceRef,
-            SeriesConstraintPriceRef,
-            SalesOfferPackagePriceRef,
-            DistanceMatrixElementPriceRef,
-            FareStructureElementPriceRef,
-            FulfilmentMethodPriceRef,
-            CappingRulePriceRef,
-            FareProductPriceRef,
-            FarePriceRef,
-        ]
-    ] = field(
+    fare_price_ref: CustomerPurchasePackagePriceRef | ParkingPriceRef | TimeIntervalPriceRef | TimeUnitPriceRef | QualityStructureFactorPriceRef | ControllableElementPriceRef | ValidableElementPriceRef | GeographicalIntervalPriceRef | GeographicalUnitPriceRef | UsageParameterPriceRef | SeriesConstraintPriceRef | SalesOfferPackagePriceRef | DistanceMatrixElementPriceRef | FareStructureElementPriceRef | FulfilmentMethodPriceRef | CappingRulePriceRef | FareProductPriceRef | FarePriceRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -154,7 +133,7 @@ class PriceRuleStepResultStructure:
             ),
         },
     )
-    amount: Optional[Decimal] = field(
+    amount: Decimal | None = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -162,7 +141,7 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    currency: Optional[str] = field(
+    currency: str | None = field(
         default=None,
         metadata={
             "name": "Currency",
@@ -173,7 +152,7 @@ class PriceRuleStepResultStructure:
             "pattern": r"[A-Z][A-Z][A-Z]",
         },
     )
-    price_unit_ref: Optional[PriceUnitRef] = field(
+    price_unit_ref: PriceUnitRef | None = field(
         default=None,
         metadata={
             "name": "PriceUnitRef",
@@ -181,7 +160,7 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    units: Optional[Decimal] = field(
+    units: Decimal | None = field(
         default=None,
         metadata={
             "name": "Units",
@@ -189,7 +168,7 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rate_used: Optional[Decimal] = field(
+    rate_used: Decimal | None = field(
         default=None,
         metadata={
             "name": "RateUsed",
@@ -197,7 +176,7 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    adjustment_amount: Optional[Decimal] = field(
+    adjustment_amount: Decimal | None = field(
         default=None,
         metadata={
             "name": "AdjustmentAmount",
@@ -205,7 +184,7 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    adjustment_units: Optional[Decimal] = field(
+    adjustment_units: Decimal | None = field(
         default=None,
         metadata={
             "name": "AdjustmentUnits",
@@ -213,9 +192,7 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    discounting_rule_ref_or_pricing_rule_ref: Optional[
-        Union[LimitingRuleRef, DiscountingRuleRef, PricingRuleRef]
-    ] = field(
+    discounting_rule_ref_or_pricing_rule_ref: LimitingRuleRef | DiscountingRuleRef | PricingRuleRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -238,7 +215,7 @@ class PriceRuleStepResultStructure:
             ),
         },
     )
-    rounding_ref: Optional[RoundingRef] = field(
+    rounding_ref: RoundingRef | None = field(
         default=None,
         metadata={
             "name": "RoundingRef",
@@ -246,7 +223,7 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rounding_step_ref: Optional[RoundingStepRef] = field(
+    rounding_step_ref: RoundingStepRef | None = field(
         default=None,
         metadata={
             "name": "RoundingStepRef",
@@ -254,7 +231,7 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    narrative: Optional[MultilingualString] = field(
+    narrative: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Narrative",
@@ -262,13 +239,13 @@ class PriceRuleStepResultStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

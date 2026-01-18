@@ -21,7 +21,7 @@ class SituationPublication(PayloadPublication):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    situation_publication_extension: Optional[ExtensionType] = field(
+    situation_publication_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "situationPublicationExtension",

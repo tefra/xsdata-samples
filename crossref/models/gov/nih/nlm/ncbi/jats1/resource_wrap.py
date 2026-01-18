@@ -17,7 +17,7 @@ class ResourceWrap:
         name = "resource-wrap"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    resource_name: Optional[ResourceName] = field(
+    resource_name: ResourceName | None = field(
         default=None,
         metadata={
             "name": "resource-name",
@@ -32,13 +32,13 @@ class ResourceWrap:
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

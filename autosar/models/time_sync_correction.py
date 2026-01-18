@@ -47,7 +47,7 @@ class TimeSyncCorrection:
     class Meta:
         name = "TIME-SYNC-CORRECTION"
 
-    allow_provider_rate_correction: Optional[Boolean] = field(
+    allow_provider_rate_correction: Boolean | None = field(
         default=None,
         metadata={
             "name": "ALLOW-PROVIDER-RATE-CORRECTION",
@@ -55,7 +55,7 @@ class TimeSyncCorrection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    offset_correction_adaption_interval: Optional[TimeValue] = field(
+    offset_correction_adaption_interval: TimeValue | None = field(
         default=None,
         metadata={
             "name": "OFFSET-CORRECTION-ADAPTION-INTERVAL",
@@ -63,7 +63,7 @@ class TimeSyncCorrection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    offset_correction_jump_threshold: Optional[TimeValue] = field(
+    offset_correction_jump_threshold: TimeValue | None = field(
         default=None,
         metadata={
             "name": "OFFSET-CORRECTION-JUMP-THRESHOLD",
@@ -71,7 +71,7 @@ class TimeSyncCorrection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rate_corrections_per_measurement_duration: Optional[PositiveInteger] = (
+    rate_corrections_per_measurement_duration: PositiveInteger | None = (
         field(
             default=None,
             metadata={
@@ -81,7 +81,7 @@ class TimeSyncCorrection:
             },
         )
     )
-    rate_deviation_measurement_duration: Optional[TimeValue] = field(
+    rate_deviation_measurement_duration: TimeValue | None = field(
         default=None,
         metadata={
             "name": "RATE-DEVIATION-MEASUREMENT-DURATION",
@@ -89,14 +89,14 @@ class TimeSyncCorrection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

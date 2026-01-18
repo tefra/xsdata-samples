@@ -15,7 +15,7 @@ class FlexibleStopAssignmentVersionStructure(StopAssignmentVersionStructure):
     class Meta:
         name = "FlexibleStopAssignment_VersionStructure"
 
-    flexible_stop_place_ref: Optional[FlexibleStopPlaceRef] = field(
+    flexible_stop_place_ref: FlexibleStopPlaceRef | None = field(
         default=None,
         metadata={
             "name": "FlexibleStopPlaceRef",
@@ -24,9 +24,7 @@ class FlexibleStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             "required": True,
         },
     )
-    flexible_quay_ref: Optional[
-        Union[HailAndRideAreaRef, FlexibleAreaRef, FlexibleQuayRef]
-    ] = field(
+    flexible_quay_ref: HailAndRideAreaRef | FlexibleAreaRef | FlexibleQuayRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

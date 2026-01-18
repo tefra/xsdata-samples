@@ -18,9 +18,7 @@ class PointOfInterestClassificationHierarchyVersionStructure(
     class Meta:
         name = "PointOfInterestClassificationHierarchy_VersionStructure"
 
-    members: Optional[
-        PointOfInterestClassificationHierarchyMembersRelStructure
-    ] = field(
+    members: PointOfInterestClassificationHierarchyMembersRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

@@ -16,9 +16,7 @@ class VehicleSharingPlaceAssignmentRefsRelStructure(
     class Meta:
         name = "VehicleSharingPlaceAssignmentRefs_RelStructure"
 
-    vehicle_sharing_place_assignment_ref: Optional[
-        VehicleSharingPlaceAssignmentRef
-    ] = field(
+    vehicle_sharing_place_assignment_ref: VehicleSharingPlaceAssignmentRef | None = field(
         default=None,
         metadata={
             "name": "VehicleSharingPlaceAssignmentRef",

@@ -12,20 +12,20 @@ class TError(TRootElement):
     class Meta:
         name = "tError"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    error_code: Optional[str] = field(
+    error_code: str | None = field(
         default=None,
         metadata={
             "name": "errorCode",
             "type": "Attribute",
         },
     )
-    structure_ref: Optional[QName] = field(
+    structure_ref: QName | None = field(
         default=None,
         metadata={
             "name": "structureRef",

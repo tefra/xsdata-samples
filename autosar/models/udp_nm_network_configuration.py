@@ -35,7 +35,7 @@ class UdpNmNetworkConfiguration:
     class Meta:
         name = "UDP-NM-NETWORK-CONFIGURATION"
 
-    ipv_4_multicast_ip_address: Optional[Ip4AddressString] = field(
+    ipv_4_multicast_ip_address: Ip4AddressString | None = field(
         default=None,
         metadata={
             "name": "IPV-4-MULTICAST-IP-ADDRESS",
@@ -43,7 +43,7 @@ class UdpNmNetworkConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ipv_6_multicast_ip_address: Optional[Ip6AddressString] = field(
+    ipv_6_multicast_ip_address: Ip6AddressString | None = field(
         default=None,
         metadata={
             "name": "IPV-6-MULTICAST-IP-ADDRESS",
@@ -51,7 +51,7 @@ class UdpNmNetworkConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    udp_port: Optional[PositiveInteger] = field(
+    udp_port: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "UDP-PORT",
@@ -59,14 +59,14 @@ class UdpNmNetworkConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

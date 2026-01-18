@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class UnknownSubscriberErrorStructure(ErrorCodeStructure):
-    subscriber_ref: Optional[ParticipantRefStructure] = field(
+    subscriber_ref: ParticipantRefStructure | None = field(
         default=None,
         metadata={
             "name": "SubscriberRef",

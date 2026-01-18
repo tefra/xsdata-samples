@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -42,7 +44,7 @@ class BswDistinguishedPartition:
     class Meta:
         name = "BSW-DISTINGUISHED-PARTITION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -51,9 +53,7 @@ class BswDistinguishedPartition:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "BswDistinguishedPartition.ShortNameFragments"
-    ] = field(
+    short_name_fragments: BswDistinguishedPartition.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -61,7 +61,7 @@ class BswDistinguishedPartition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -69,14 +69,14 @@ class BswDistinguishedPartition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

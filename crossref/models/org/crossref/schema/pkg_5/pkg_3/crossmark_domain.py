@@ -26,14 +26,14 @@ class CrossmarkDomain:
         name = "crossmark_domain"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    domain: Optional[Domain] = field(
+    domain: Domain | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    filter: Optional[Filter] = field(
+    filter: Filter | None = field(
         default=None,
         metadata={
             "type": "Element",

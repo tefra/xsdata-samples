@@ -26,34 +26,34 @@ class Anonymous:
         name = "anonymous"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    affiliations: Optional[Affiliations] = field(
+    affiliations: Affiliations | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    sequence: Optional[AnonymousSequence] = field(
+    sequence: AnonymousSequence | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    contributor_role: Optional[AnonymousContributorRole] = field(
+    contributor_role: AnonymousContributorRole | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    name_style: Optional[AnonymousNameStyle] = field(
+    name_style: AnonymousNameStyle | None = field(
         default=None,
         metadata={
             "name": "name-style",
             "type": "Attribute",
         },
     )
-    language: Optional[AnonymousLanguage] = field(
+    language: AnonymousLanguage | None = field(
         default=None,
         metadata={
             "type": "Attribute",

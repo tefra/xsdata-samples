@@ -16,7 +16,7 @@ class VehicleRentalModeOfOperationValueStructure(
     class Meta:
         name = "VehicleRentalModeOfOperation_ValueStructure"
 
-    vehicle_rental_type: Optional[VehicleRentalTypeEnumeration] = field(
+    vehicle_rental_type: VehicleRentalTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "VehicleRentalType",

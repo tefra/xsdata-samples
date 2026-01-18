@@ -58,7 +58,7 @@ class Exchange:
     :ivar exchange_extension:
     """
 
-    changed_flag: Optional[ChangedFlagEnum] = field(
+    changed_flag: ChangedFlagEnum | None = field(
         default=None,
         metadata={
             "name": "changedFlag",
@@ -66,7 +66,7 @@ class Exchange:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    client_identification: Optional[str] = field(
+    client_identification: str | None = field(
         default=None,
         metadata={
             "name": "clientIdentification",
@@ -75,7 +75,7 @@ class Exchange:
             "max_length": 1024,
         },
     )
-    delivery_break: Optional[bool] = field(
+    delivery_break: bool | None = field(
         default=None,
         metadata={
             "name": "deliveryBreak",
@@ -83,7 +83,7 @@ class Exchange:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    deny_reason: Optional[DenyReasonEnum] = field(
+    deny_reason: DenyReasonEnum | None = field(
         default=None,
         metadata={
             "name": "denyReason",
@@ -91,7 +91,7 @@ class Exchange:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    historical_start_date: Optional[XmlDateTime] = field(
+    historical_start_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "historicalStartDate",
@@ -99,7 +99,7 @@ class Exchange:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    historical_stop_date: Optional[XmlDateTime] = field(
+    historical_stop_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "historicalStopDate",
@@ -107,7 +107,7 @@ class Exchange:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    keep_alive: Optional[bool] = field(
+    keep_alive: bool | None = field(
         default=None,
         metadata={
             "name": "keepAlive",
@@ -115,7 +115,7 @@ class Exchange:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    request_type: Optional[RequestTypeEnum] = field(
+    request_type: RequestTypeEnum | None = field(
         default=None,
         metadata={
             "name": "requestType",
@@ -123,14 +123,14 @@ class Exchange:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    response: Optional[ResponseEnum] = field(
+    response: ResponseEnum | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    subscription_reference: Optional[str] = field(
+    subscription_reference: str | None = field(
         default=None,
         metadata={
             "name": "subscriptionReference",
@@ -139,7 +139,7 @@ class Exchange:
             "max_length": 1024,
         },
     )
-    supplier_identification: Optional[InternationalIdentifier] = field(
+    supplier_identification: InternationalIdentifier | None = field(
         default=None,
         metadata={
             "name": "supplierIdentification",
@@ -148,14 +148,14 @@ class Exchange:
             "required": True,
         },
     )
-    target: Optional[Target] = field(
+    target: Target | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    subscription: Optional[Subscription] = field(
+    subscription: Subscription | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -178,7 +178,7 @@ class Exchange:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    exchange_extension: Optional[ExtensionType] = field(
+    exchange_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "exchangeExtension",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -56,7 +58,7 @@ class ImplementationDataTypeElementInPortInterfaceRef:
     class Meta:
         name = "IMPLEMENTATION-DATA-TYPE-ELEMENT-IN-PORT-INTERFACE-REF"
 
-    tag_id: Optional[PositiveInteger] = field(
+    tag_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TAG-ID",
@@ -64,9 +66,7 @@ class ImplementationDataTypeElementInPortInterfaceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_data_prototype_ref: Optional[
-        "ImplementationDataTypeElementInPortInterfaceRef.RootDataPrototypeRef"
-    ] = field(
+    root_data_prototype_ref: ImplementationDataTypeElementInPortInterfaceRef.RootDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "ROOT-DATA-PROTOTYPE-REF",
@@ -74,9 +74,7 @@ class ImplementationDataTypeElementInPortInterfaceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_implementation_data_element_refs: Optional[
-        "ImplementationDataTypeElementInPortInterfaceRef.ContextImplementationDataElementRefs"
-    ] = field(
+    context_implementation_data_element_refs: ImplementationDataTypeElementInPortInterfaceRef.ContextImplementationDataElementRefs | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-IMPLEMENTATION-DATA-ELEMENT-REFS",
@@ -84,9 +82,7 @@ class ImplementationDataTypeElementInPortInterfaceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_implementation_data_type_element_ref: Optional[
-        "ImplementationDataTypeElementInPortInterfaceRef.TargetImplementationDataTypeElementRef"
-    ] = field(
+    target_implementation_data_type_element_ref: ImplementationDataTypeElementInPortInterfaceRef.TargetImplementationDataTypeElementRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-IMPLEMENTATION-DATA-TYPE-ELEMENT-REF",
@@ -94,14 +90,14 @@ class ImplementationDataTypeElementInPortInterfaceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -112,7 +108,7 @@ class ImplementationDataTypeElementInPortInterfaceRef:
 
     @dataclass
     class RootDataPrototypeRef(Ref):
-        dest: Optional[AutosarDataPrototypeSubtypesEnum] = field(
+        dest: AutosarDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -124,7 +120,7 @@ class ImplementationDataTypeElementInPortInterfaceRef:
     @dataclass
     class ContextImplementationDataElementRefs:
         context_implementation_data_element_ref: list[
-            "ImplementationDataTypeElementInPortInterfaceRef.ContextImplementationDataElementRefs.ContextImplementationDataElementRef"
+            ImplementationDataTypeElementInPortInterfaceRef.ContextImplementationDataElementRefs.ContextImplementationDataElementRef
         ] = field(
             default_factory=list,
             metadata={
@@ -136,7 +132,7 @@ class ImplementationDataTypeElementInPortInterfaceRef:
 
         @dataclass
         class ContextImplementationDataElementRef(Ref):
-            dest: Optional[ImplementationDataTypeElementSubtypesEnum] = field(
+            dest: ImplementationDataTypeElementSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -147,7 +143,7 @@ class ImplementationDataTypeElementInPortInterfaceRef:
 
     @dataclass
     class TargetImplementationDataTypeElementRef(Ref):
-        dest: Optional[ImplementationDataTypeElementSubtypesEnum] = field(
+        dest: ImplementationDataTypeElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

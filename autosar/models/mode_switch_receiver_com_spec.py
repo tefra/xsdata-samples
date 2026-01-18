@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -43,7 +45,7 @@ class ModeSwitchReceiverComSpec:
     class Meta:
         name = "MODE-SWITCH-RECEIVER-COM-SPEC"
 
-    enhanced_mode_api: Optional[Boolean] = field(
+    enhanced_mode_api: Boolean | None = field(
         default=None,
         metadata={
             "name": "ENHANCED-MODE-API",
@@ -51,7 +53,7 @@ class ModeSwitchReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_group_ref: Optional["ModeSwitchReceiverComSpec.ModeGroupRef"] = field(
+    mode_group_ref: ModeSwitchReceiverComSpec.ModeGroupRef | None = field(
         default=None,
         metadata={
             "name": "MODE-GROUP-REF",
@@ -59,7 +61,7 @@ class ModeSwitchReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    supports_asynchronous_mode_switch: Optional[Boolean] = field(
+    supports_asynchronous_mode_switch: Boolean | None = field(
         default=None,
         metadata={
             "name": "SUPPORTS-ASYNCHRONOUS-MODE-SWITCH",
@@ -67,14 +69,14 @@ class ModeSwitchReceiverComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -85,7 +87,7 @@ class ModeSwitchReceiverComSpec:
 
     @dataclass
     class ModeGroupRef(Ref):
-        dest: Optional[ModeDeclarationGroupPrototypeSubtypesEnum] = field(
+        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

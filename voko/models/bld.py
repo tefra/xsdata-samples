@@ -23,19 +23,19 @@ class Bld:
             "required": True,
         }
     )
-    prm: Optional[str] = field(
+    prm: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    lrg: Optional[str] = field(
+    lrg: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    alt: Optional[str] = field(
+    alt: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -48,7 +48,7 @@ class Bld:
             "required": True,
         },
     )
-    mrk: Optional[str] = field(
+    mrk: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -26,7 +26,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Vehicle_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -34,7 +34,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -42,7 +42,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -50,7 +50,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    registration_number: Optional[str] = field(
+    registration_number: str | None = field(
         default=None,
         metadata={
             "name": "RegistrationNumber",
@@ -58,7 +58,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    registration_date: Optional[XmlDate] = field(
+    registration_date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "RegistrationDate",
@@ -66,7 +66,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operational_number: Optional[str] = field(
+    operational_number: str | None = field(
         default=None,
         metadata={
             "name": "OperationalNumber",
@@ -74,7 +74,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -82,7 +82,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_organisation_ref: Optional[Union[AuthorityRef, OperatorRef]] = (
+    transport_organisation_ref: AuthorityRef | OperatorRef | None = (
         field(
             default=None,
             metadata={
@@ -102,15 +102,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    transport_type_ref_or_vehicle_type_ref: Optional[
-        Union[
-            SimpleVehicleTypeRef,
-            CompoundTrainRef,
-            TrainRef,
-            VehicleTypeRef,
-            TransportTypeRef,
-        ]
-    ] = field(
+    transport_type_ref_or_vehicle_type_ref: SimpleVehicleTypeRef | CompoundTrainRef | TrainRef | VehicleTypeRef | TransportTypeRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -143,7 +135,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    vehicle_model_ref: Optional[VehicleModelRef] = field(
+    vehicle_model_ref: VehicleModelRef | None = field(
         default=None,
         metadata={
             "name": "VehicleModelRef",
@@ -151,9 +143,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_model_profile_ref: Optional[
-        Union[CycleModelProfileRef, CarModelProfileRef]
-    ] = field(
+    vehicle_model_profile_ref: CycleModelProfileRef | CarModelProfileRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -171,7 +161,7 @@ class VehicleVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    actual_vehicle_equipments: Optional[EquipmentsRelStructure] = field(
+    actual_vehicle_equipments: EquipmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "actualVehicleEquipments",

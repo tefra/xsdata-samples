@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -126,7 +128,7 @@ class SoftwarePackage:
     class Meta:
         name = "SOFTWARE-PACKAGE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -135,7 +137,7 @@ class SoftwarePackage:
             "required": True,
         },
     )
-    short_name_fragments: Optional["SoftwarePackage.ShortNameFragments"] = (
+    short_name_fragments: SoftwarePackage.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -145,7 +147,7 @@ class SoftwarePackage:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -153,7 +155,7 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -161,7 +163,7 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -169,7 +171,7 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -177,7 +179,7 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -185,7 +187,7 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SoftwarePackage.Annotations"] = field(
+    annotations: SoftwarePackage.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -193,7 +195,7 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -201,7 +203,7 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    action_type: Optional[SoftwarePackageActionTypeEnum] = field(
+    action_type: SoftwarePackageActionTypeEnum | None = field(
         default=None,
         metadata={
             "name": "ACTION-TYPE",
@@ -209,7 +211,7 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    compressed_software_package_size: Optional[PositiveInteger] = field(
+    compressed_software_package_size: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "COMPRESSED-SOFTWARE-PACKAGE-SIZE",
@@ -217,7 +219,7 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delta_package_applicable_version: Optional[StrongRevisionLabelString] = (
+    delta_package_applicable_version: StrongRevisionLabelString | None = (
         field(
             default=None,
             metadata={
@@ -227,7 +229,7 @@ class SoftwarePackage:
             },
         )
     )
-    maximum_supported_ucm_version: Optional[RevisionLabelString] = field(
+    maximum_supported_ucm_version: RevisionLabelString | None = field(
         default=None,
         metadata={
             "name": "MAXIMUM-SUPPORTED-UCM-VERSION",
@@ -235,7 +237,7 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_supported_ucm_version: Optional[RevisionLabelString] = field(
+    minimum_supported_ucm_version: RevisionLabelString | None = field(
         default=None,
         metadata={
             "name": "MINIMUM-SUPPORTED-UCM-VERSION",
@@ -243,7 +245,7 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    packager_id: Optional[PositiveInteger] = field(
+    packager_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "PACKAGER-ID",
@@ -251,9 +253,7 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    packager_signature_ref: Optional[
-        "SoftwarePackage.PackagerSignatureRef"
-    ] = field(
+    packager_signature_ref: SoftwarePackage.PackagerSignatureRef | None = field(
         default=None,
         metadata={
             "name": "PACKAGER-SIGNATURE-REF",
@@ -261,7 +261,7 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    post_verification_reboot: Optional[Boolean] = field(
+    post_verification_reboot: Boolean | None = field(
         default=None,
         metadata={
             "name": "POST-VERIFICATION-REBOOT",
@@ -269,7 +269,7 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pre_activate_irefs: Optional["SoftwarePackage.PreActivateIrefs"] = field(
+    pre_activate_irefs: SoftwarePackage.PreActivateIrefs | None = field(
         default=None,
         metadata={
             "name": "PRE-ACTIVATE-IREFS",
@@ -277,7 +277,7 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pre_activation_reboot: Optional[Boolean] = field(
+    pre_activation_reboot: Boolean | None = field(
         default=None,
         metadata={
             "name": "PRE-ACTIVATION-REBOOT",
@@ -285,7 +285,7 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_cluster_ref: Optional["SoftwarePackage.SoftwareClusterRef"] = (
+    software_cluster_ref: SoftwarePackage.SoftwareClusterRef | None = (
         field(
             default=None,
             metadata={
@@ -295,7 +295,7 @@ class SoftwarePackage:
             },
         )
     )
-    uncompressed_software_cluster_size: Optional[PositiveInteger] = field(
+    uncompressed_software_cluster_size: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "UNCOMPRESSED-SOFTWARE-CLUSTER-SIZE",
@@ -303,7 +303,7 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    verify_irefs: Optional["SoftwarePackage.VerifyIrefs"] = field(
+    verify_irefs: SoftwarePackage.VerifyIrefs | None = field(
         default=None,
         metadata={
             "name": "VERIFY-IREFS",
@@ -311,14 +311,14 @@ class SoftwarePackage:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -326,7 +326,7 @@ class SoftwarePackage:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -358,7 +358,7 @@ class SoftwarePackage:
 
     @dataclass
     class PackagerSignatureRef(Ref):
-        dest: Optional[CryptoServiceCertificateSubtypesEnum] = field(
+        dest: CryptoServiceCertificateSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -382,7 +382,7 @@ class SoftwarePackage:
 
     @dataclass
     class SoftwareClusterRef(Ref):
-        dest: Optional[SoftwareClusterSubtypesEnum] = field(
+        dest: SoftwareClusterSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

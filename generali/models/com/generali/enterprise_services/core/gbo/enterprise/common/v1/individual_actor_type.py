@@ -52,7 +52,7 @@ class IndividualActorType(BaseComponentType):
     :ivar employee_code:
     """
 
-    name: Optional[IndividualActorNameType] = field(
+    name: IndividualActorNameType | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -60,7 +60,7 @@ class IndividualActorType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    birth_date: Optional[DateType] = field(
+    birth_date: DateType | None = field(
         default=None,
         metadata={
             "name": "BirthDate",
@@ -68,7 +68,7 @@ class IndividualActorType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    death_date: Optional[DateType] = field(
+    death_date: DateType | None = field(
         default=None,
         metadata={
             "name": "DeathDate",
@@ -76,7 +76,7 @@ class IndividualActorType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    death_indicator: Optional[IndicatorType] = field(
+    death_indicator: IndicatorType | None = field(
         default=None,
         metadata={
             "name": "DeathIndicator",
@@ -84,7 +84,7 @@ class IndividualActorType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    nationality_code: Optional[CodeType] = field(
+    nationality_code: CodeType | None = field(
         default=None,
         metadata={
             "name": "NationalityCode",
@@ -92,7 +92,7 @@ class IndividualActorType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    language_code: Optional[str] = field(
+    language_code: str | None = field(
         default=None,
         metadata={
             "name": "LanguageCode",
@@ -100,7 +100,7 @@ class IndividualActorType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    gender_code: Optional[GenderCodeType] = field(
+    gender_code: GenderCodeType | None = field(
         default=None,
         metadata={
             "name": "GenderCode",
@@ -108,7 +108,7 @@ class IndividualActorType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    marital_status_code: Optional[MaritalStatusCodeType] = field(
+    marital_status_code: MaritalStatusCodeType | None = field(
         default=None,
         metadata={
             "name": "MaritalStatusCode",
@@ -116,7 +116,7 @@ class IndividualActorType(BaseComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    employee_code: Optional[CodeType] = field(
+    employee_code: CodeType | None = field(
         default=None,
         metadata={
             "name": "EmployeeCode",

@@ -18,7 +18,7 @@ class UsageParameterPricesRelStructure(StrictContainmentAggregationStructure):
         name = "usageParameterPrices_RelStructure"
 
     usage_parameter_price_ref_or_usage_parameter_price_or_cell_ref: Iterable[
-        Union[UsageParameterPriceRef, UsageParameterPrice, CellRef]
+        UsageParameterPriceRef | UsageParameterPrice | CellRef
     ] = field(
         default_factory=list,
         metadata={

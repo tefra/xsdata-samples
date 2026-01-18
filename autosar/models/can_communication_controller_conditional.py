@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class CanCommunicationControllerConditional:
     class Meta:
         name = "CAN-COMMUNICATION-CONTROLLER-CONDITIONAL"
 
-    wake_up_by_controller_supported: Optional[Boolean] = field(
+    wake_up_by_controller_supported: Boolean | None = field(
         default=None,
         metadata={
             "name": "WAKE-UP-BY-CONTROLLER-SUPPORTED",
@@ -47,9 +49,7 @@ class CanCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    can_controller_attributes: Optional[
-        "CanCommunicationControllerConditional.CanControllerAttributes"
-    ] = field(
+    can_controller_attributes: CanCommunicationControllerConditional.CanControllerAttributes | None = field(
         default=None,
         metadata={
             "name": "CAN-CONTROLLER-ATTRIBUTES",
@@ -57,7 +57,7 @@ class CanCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -65,14 +65,14 @@ class CanCommunicationControllerConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -83,7 +83,7 @@ class CanCommunicationControllerConditional:
 
     @dataclass
     class CanControllerAttributes:
-        can_controller_configuration: Optional[CanControllerConfiguration] = (
+        can_controller_configuration: CanControllerConfiguration | None = (
             field(
                 default=None,
                 metadata={
@@ -93,9 +93,7 @@ class CanCommunicationControllerConditional:
                 },
             )
         )
-        can_controller_configuration_requirements: Optional[
-            CanControllerConfigurationRequirements
-        ] = field(
+        can_controller_configuration_requirements: CanControllerConfigurationRequirements | None = field(
             default=None,
             metadata={
                 "name": "CAN-CONTROLLER-CONFIGURATION-REQUIREMENTS",

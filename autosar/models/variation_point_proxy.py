@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -131,7 +133,7 @@ class VariationPointProxy:
     class Meta:
         name = "VARIATION-POINT-PROXY"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -140,9 +142,7 @@ class VariationPointProxy:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "VariationPointProxy.ShortNameFragments"
-    ] = field(
+    short_name_fragments: VariationPointProxy.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -150,7 +150,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -158,7 +158,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -166,7 +166,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -174,7 +174,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -182,7 +182,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -190,7 +190,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["VariationPointProxy.Annotations"] = field(
+    annotations: VariationPointProxy.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -198,7 +198,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    condition_access: Optional[ConditionByFormula] = field(
+    condition_access: ConditionByFormula | None = field(
         default=None,
         metadata={
             "name": "CONDITION-ACCESS",
@@ -206,9 +206,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implementation_data_type_ref: Optional[
-        "VariationPointProxy.ImplementationDataTypeRef"
-    ] = field(
+    implementation_data_type_ref: VariationPointProxy.ImplementationDataTypeRef | None = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-DATA-TYPE-REF",
@@ -216,9 +214,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    post_build_value_access_ref: Optional[
-        "VariationPointProxy.PostBuildValueAccessRef"
-    ] = field(
+    post_build_value_access_ref: VariationPointProxy.PostBuildValueAccessRef | None = field(
         default=None,
         metadata={
             "name": "POST-BUILD-VALUE-ACCESS-REF",
@@ -226,9 +222,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    post_build_variant_conditions: Optional[
-        "VariationPointProxy.PostBuildVariantConditions"
-    ] = field(
+    post_build_variant_conditions: VariationPointProxy.PostBuildVariantConditions | None = field(
         default=None,
         metadata={
             "name": "POST-BUILD-VARIANT-CONDITIONS",
@@ -236,7 +230,7 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_access: Optional["VariationPointProxy.ValueAccess"] = field(
+    value_access: VariationPointProxy.ValueAccess | None = field(
         default=None,
         metadata={
             "name": "VALUE-ACCESS",
@@ -244,14 +238,14 @@ class VariationPointProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -259,7 +253,7 @@ class VariationPointProxy:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -291,7 +285,7 @@ class VariationPointProxy:
 
     @dataclass
     class ImplementationDataTypeRef(Ref):
-        dest: Optional[ImplementationDataTypeSubtypesEnum] = field(
+        dest: ImplementationDataTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -302,7 +296,7 @@ class VariationPointProxy:
 
     @dataclass
     class PostBuildValueAccessRef(Ref):
-        dest: Optional[PostBuildVariantCriterionSubtypesEnum] = field(
+        dest: PostBuildVariantCriterionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -324,7 +318,7 @@ class VariationPointProxy:
 
     @dataclass
     class ValueAccess:
-        boolean_value_variation_point: Optional[BooleanValueVariationPoint] = (
+        boolean_value_variation_point: BooleanValueVariationPoint | None = (
             field(
                 default=None,
                 metadata={
@@ -334,9 +328,7 @@ class VariationPointProxy:
                 },
             )
         )
-        diagnostic_debounce_behavior_enum_value_variation_point: Optional[
-            DiagnosticDebounceBehaviorEnumValueVariationPoint
-        ] = field(
+        diagnostic_debounce_behavior_enum_value_variation_point: DiagnosticDebounceBehaviorEnumValueVariationPoint | None = field(
             default=None,
             metadata={
                 "name": "DIAGNOSTIC-DEBOUNCE-BEHAVIOR-ENUM-VALUE-VARIATION-POINT",
@@ -344,9 +336,7 @@ class VariationPointProxy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_indicator_type_enum_value_variation_point: Optional[
-            DiagnosticIndicatorTypeEnumValueVariationPoint
-        ] = field(
+        diagnostic_indicator_type_enum_value_variation_point: DiagnosticIndicatorTypeEnumValueVariationPoint | None = field(
             default=None,
             metadata={
                 "name": "DIAGNOSTIC-INDICATOR-TYPE-ENUM-VALUE-VARIATION-POINT",
@@ -354,9 +344,7 @@ class VariationPointProxy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_test_result_update_enum_value_variation_point: Optional[
-            DiagnosticTestResultUpdateEnumValueVariationPoint
-        ] = field(
+        diagnostic_test_result_update_enum_value_variation_point: DiagnosticTestResultUpdateEnumValueVariationPoint | None = field(
             default=None,
             metadata={
                 "name": "DIAGNOSTIC-TEST-RESULT-UPDATE-ENUM-VALUE-VARIATION-POINT",
@@ -364,9 +352,7 @@ class VariationPointProxy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        diagnostic_wwh_obd_dtc_class_enum_value_variation_point: Optional[
-            DiagnosticWwhObdDtcClassEnumValueVariationPoint
-        ] = field(
+        diagnostic_wwh_obd_dtc_class_enum_value_variation_point: DiagnosticWwhObdDtcClassEnumValueVariationPoint | None = field(
             default=None,
             metadata={
                 "name": "DIAGNOSTIC-WWH-OBD-DTC-CLASS-ENUM-VALUE-VARIATION-POINT",
@@ -374,7 +360,7 @@ class VariationPointProxy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        float_value_variation_point: Optional[FloatValueVariationPoint] = (
+        float_value_variation_point: FloatValueVariationPoint | None = (
             field(
                 default=None,
                 metadata={
@@ -384,7 +370,7 @@ class VariationPointProxy:
                 },
             )
         )
-        integer_value_variation_point: Optional[IntegerValueVariationPoint] = (
+        integer_value_variation_point: IntegerValueVariationPoint | None = (
             field(
                 default=None,
                 metadata={
@@ -394,7 +380,7 @@ class VariationPointProxy:
                 },
             )
         )
-        limit: Optional[Limit] = field(
+        limit: Limit | None = field(
             default=None,
             metadata={
                 "name": "LIMIT",
@@ -402,9 +388,7 @@ class VariationPointProxy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        name_token_value_variation_point: Optional[
-            NameTokenValueVariationPoint
-        ] = field(
+        name_token_value_variation_point: NameTokenValueVariationPoint | None = field(
             default=None,
             metadata={
                 "name": "NAME-TOKEN-VALUE-VARIATION-POINT",
@@ -412,9 +396,7 @@ class VariationPointProxy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        numerical_value_variation_point: Optional[
-            NumericalValueVariationPoint
-        ] = field(
+        numerical_value_variation_point: NumericalValueVariationPoint | None = field(
             default=None,
             metadata={
                 "name": "NUMERICAL-VALUE-VARIATION-POINT",
@@ -422,9 +404,7 @@ class VariationPointProxy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        positive_integer_value_variation_point: Optional[
-            PositiveIntegerValueVariationPoint
-        ] = field(
+        positive_integer_value_variation_point: PositiveIntegerValueVariationPoint | None = field(
             default=None,
             metadata={
                 "name": "POSITIVE-INTEGER-VALUE-VARIATION-POINT",
@@ -432,9 +412,7 @@ class VariationPointProxy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        time_value_value_variation_point: Optional[
-            TimeValueValueVariationPoint
-        ] = field(
+        time_value_value_variation_point: TimeValueValueVariationPoint | None = field(
             default=None,
             metadata={
                 "name": "TIME-VALUE-VALUE-VARIATION-POINT",
@@ -442,9 +420,7 @@ class VariationPointProxy:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        unlimited_integer_value_variation_point: Optional[
-            UnlimitedIntegerValueVariationPoint
-        ] = field(
+        unlimited_integer_value_variation_point: UnlimitedIntegerValueVariationPoint | None = field(
             default=None,
             metadata={
                 "name": "UNLIMITED-INTEGER-VALUE-VARIATION-POINT",

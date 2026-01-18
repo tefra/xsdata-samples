@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -35,9 +37,7 @@ class PortPrototypeBlueprintMapping:
     class Meta:
         name = "PORT-PROTOTYPE-BLUEPRINT-MAPPING"
 
-    port_prototype_blueprint_ref: Optional[
-        "PortPrototypeBlueprintMapping.PortPrototypeBlueprintRef"
-    ] = field(
+    port_prototype_blueprint_ref: PortPrototypeBlueprintMapping.PortPrototypeBlueprintRef | None = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-BLUEPRINT-REF",
@@ -45,9 +45,7 @@ class PortPrototypeBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    derived_port_prototype_ref: Optional[
-        "PortPrototypeBlueprintMapping.DerivedPortPrototypeRef"
-    ] = field(
+    derived_port_prototype_ref: PortPrototypeBlueprintMapping.DerivedPortPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "DERIVED-PORT-PROTOTYPE-REF",
@@ -55,14 +53,14 @@ class PortPrototypeBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -73,7 +71,7 @@ class PortPrototypeBlueprintMapping:
 
     @dataclass
     class PortPrototypeBlueprintRef(Ref):
-        dest: Optional[PortPrototypeBlueprintSubtypesEnum] = field(
+        dest: PortPrototypeBlueprintSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -84,7 +82,7 @@ class PortPrototypeBlueprintMapping:
 
     @dataclass
     class DerivedPortPrototypeRef(Ref):
-        dest: Optional[PortPrototypeSubtypesEnum] = field(
+        dest: PortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

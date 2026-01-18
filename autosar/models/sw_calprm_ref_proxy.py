@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -37,7 +39,7 @@ class SwCalprmRefProxy:
     class Meta:
         name = "SW-CALPRM-REF-PROXY"
 
-    ar_parameter: Optional[AutosarParameterRef] = field(
+    ar_parameter: AutosarParameterRef | None = field(
         default=None,
         metadata={
             "name": "AR-PARAMETER",
@@ -45,7 +47,7 @@ class SwCalprmRefProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_data_instance_ref: Optional["SwCalprmRefProxy.McDataInstanceRef"] = (
+    mc_data_instance_ref: SwCalprmRefProxy.McDataInstanceRef | None = (
         field(
             default=None,
             metadata={
@@ -55,14 +57,14 @@ class SwCalprmRefProxy:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -73,7 +75,7 @@ class SwCalprmRefProxy:
 
     @dataclass
     class McDataInstanceRef(Ref):
-        dest: Optional[McDataInstanceSubtypesEnum] = field(
+        dest: McDataInstanceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

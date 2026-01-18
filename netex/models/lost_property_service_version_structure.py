@@ -13,7 +13,7 @@ class LostPropertyServiceVersionStructure(CustomerServiceVersionStructure):
     class Meta:
         name = "LostPropertyService_VersionStructure"
 
-    property_kept_for_duration: Optional[XmlDuration] = field(
+    property_kept_for_duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "PropertyKeptForDuration",

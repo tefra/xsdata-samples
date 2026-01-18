@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -47,7 +49,7 @@ class FlexrayFifoConfiguration:
     class Meta:
         name = "FLEXRAY-FIFO-CONFIGURATION"
 
-    admit_without_message_id: Optional[Boolean] = field(
+    admit_without_message_id: Boolean | None = field(
         default=None,
         metadata={
             "name": "ADMIT-WITHOUT-MESSAGE-ID",
@@ -55,7 +57,7 @@ class FlexrayFifoConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_cycle: Optional[Integer] = field(
+    base_cycle: Integer | None = field(
         default=None,
         metadata={
             "name": "BASE-CYCLE",
@@ -63,7 +65,7 @@ class FlexrayFifoConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    channel_ref: Optional["FlexrayFifoConfiguration.ChannelRef"] = field(
+    channel_ref: FlexrayFifoConfiguration.ChannelRef | None = field(
         default=None,
         metadata={
             "name": "CHANNEL-REF",
@@ -71,7 +73,7 @@ class FlexrayFifoConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cycle_repetition: Optional[Integer] = field(
+    cycle_repetition: Integer | None = field(
         default=None,
         metadata={
             "name": "CYCLE-REPETITION",
@@ -79,7 +81,7 @@ class FlexrayFifoConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fifo_depth: Optional[Integer] = field(
+    fifo_depth: Integer | None = field(
         default=None,
         metadata={
             "name": "FIFO-DEPTH",
@@ -87,7 +89,7 @@ class FlexrayFifoConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fifo_ranges: Optional["FlexrayFifoConfiguration.FifoRanges"] = field(
+    fifo_ranges: FlexrayFifoConfiguration.FifoRanges | None = field(
         default=None,
         metadata={
             "name": "FIFO-RANGES",
@@ -95,7 +97,7 @@ class FlexrayFifoConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    msg_id_mask: Optional[Integer] = field(
+    msg_id_mask: Integer | None = field(
         default=None,
         metadata={
             "name": "MSG-ID-MASK",
@@ -103,7 +105,7 @@ class FlexrayFifoConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    msg_id_match: Optional[Integer] = field(
+    msg_id_match: Integer | None = field(
         default=None,
         metadata={
             "name": "MSG-ID-MATCH",
@@ -111,14 +113,14 @@ class FlexrayFifoConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -129,7 +131,7 @@ class FlexrayFifoConfiguration:
 
     @dataclass
     class ChannelRef(Ref):
-        dest: Optional[FlexrayPhysicalChannelSubtypesEnum] = field(
+        dest: FlexrayPhysicalChannelSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

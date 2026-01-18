@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -40,9 +42,7 @@ class InterpolationRoutineMapping:
     class Meta:
         name = "INTERPOLATION-ROUTINE-MAPPING"
 
-    interpolation_routines: Optional[
-        "InterpolationRoutineMapping.InterpolationRoutines"
-    ] = field(
+    interpolation_routines: InterpolationRoutineMapping.InterpolationRoutines | None = field(
         default=None,
         metadata={
             "name": "INTERPOLATION-ROUTINES",
@@ -50,9 +50,7 @@ class InterpolationRoutineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_record_layout_ref: Optional[
-        "InterpolationRoutineMapping.SwRecordLayoutRef"
-    ] = field(
+    sw_record_layout_ref: InterpolationRoutineMapping.SwRecordLayoutRef | None = field(
         default=None,
         metadata={
             "name": "SW-RECORD-LAYOUT-REF",
@@ -60,14 +58,14 @@ class InterpolationRoutineMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -89,7 +87,7 @@ class InterpolationRoutineMapping:
 
     @dataclass
     class SwRecordLayoutRef(Ref):
-        dest: Optional[SwRecordLayoutSubtypesEnum] = field(
+        dest: SwRecordLayoutSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

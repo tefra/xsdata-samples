@@ -29,20 +29,20 @@ class DiagnosticDataCaptureEnum:
     class Meta:
         name = "DIAGNOSTIC-DATA-CAPTURE-ENUM"
 
-    value: Optional[DiagnosticDataCaptureEnumSimple] = field(
+    value: DiagnosticDataCaptureEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

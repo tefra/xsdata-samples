@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -29,9 +31,7 @@ class SpecificationScope:
     class Meta:
         name = "SPECIFICATION-SCOPE"
 
-    specification_document_scopes: Optional[
-        "SpecificationScope.SpecificationDocumentScopes"
-    ] = field(
+    specification_document_scopes: SpecificationScope.SpecificationDocumentScopes | None = field(
         default=None,
         metadata={
             "name": "SPECIFICATION-DOCUMENT-SCOPES",
@@ -39,14 +39,14 @@ class SpecificationScope:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

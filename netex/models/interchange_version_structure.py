@@ -21,7 +21,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Interchange_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -29,7 +29,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -37,7 +37,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -45,7 +45,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    external_interchange_ref: Optional[ExternalObjectRefStructure] = field(
+    external_interchange_ref: ExternalObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "ExternalInterchangeRef",
@@ -53,7 +53,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    connection_ref: Optional[ConnectionRefStructure] = field(
+    connection_ref: ConnectionRefStructure | None = field(
         default=None,
         metadata={
             "name": "ConnectionRef",
@@ -61,7 +61,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    priority: Optional[int] = field(
+    priority: int | None = field(
         default=None,
         metadata={
             "name": "Priority",
@@ -69,7 +69,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stay_seated: Optional[bool] = field(
+    stay_seated: bool | None = field(
         default=None,
         metadata={
             "name": "StaySeated",
@@ -77,7 +77,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    cross_border: Optional[bool] = field(
+    cross_border: bool | None = field(
         default=None,
         metadata={
             "name": "CrossBorder",
@@ -85,7 +85,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    planned: Optional[bool] = field(
+    planned: bool | None = field(
         default=None,
         metadata={
             "name": "Planned",
@@ -93,7 +93,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    guaranteed: Optional[bool] = field(
+    guaranteed: bool | None = field(
         default=None,
         metadata={
             "name": "Guaranteed",
@@ -101,7 +101,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    advertised: Optional[bool] = field(
+    advertised: bool | None = field(
         default=None,
         metadata={
             "name": "Advertised",
@@ -109,7 +109,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    controlled: Optional[bool] = field(
+    controlled: bool | None = field(
         default=None,
         metadata={
             "name": "Controlled",
@@ -117,7 +117,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    connection_certainty: Optional[ConnectionCertaintyEnumeration] = field(
+    connection_certainty: ConnectionCertaintyEnumeration | None = field(
         default=None,
         metadata={
             "name": "ConnectionCertainty",
@@ -125,7 +125,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    standard_wait_time: Optional[XmlDuration] = field(
+    standard_wait_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "StandardWaitTime",
@@ -133,7 +133,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_wait_time: Optional[XmlDuration] = field(
+    maximum_wait_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MaximumWaitTime",
@@ -141,7 +141,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_automatic_wait_time: Optional[XmlDuration] = field(
+    maximum_automatic_wait_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MaximumAutomaticWaitTime",
@@ -149,7 +149,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    standard_transfer_time: Optional[XmlDuration] = field(
+    standard_transfer_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "StandardTransferTime",
@@ -157,7 +157,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_transfer_time: Optional[XmlDuration] = field(
+    minimum_transfer_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MinimumTransferTime",
@@ -165,7 +165,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_transfer_time: Optional[XmlDuration] = field(
+    maximum_transfer_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MaximumTransferTime",
@@ -173,7 +173,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    control_centre_notify_threshold: Optional[XmlDuration] = field(
+    control_centre_notify_threshold: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "ControlCentreNotifyThreshold",
@@ -190,7 +190,7 @@ class InterchangeVersionStructure(DataManagedObjectStructure):
             "tokens": True,
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",

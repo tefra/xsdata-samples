@@ -54,7 +54,7 @@ class CoctMt110000Uv04AccountHolderLanguage:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -70,7 +70,7 @@ class CoctMt110000Uv04AccountHolderLanguage:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: Optional[Cs] = field(
+    language_code: Cs | None = field(
         default=None,
         metadata={
             "name": "languageCode",
@@ -79,7 +79,7 @@ class CoctMt110000Uv04AccountHolderLanguage:
             "required": True,
         },
     )
-    mode_code: Optional[Cs] = field(
+    mode_code: Cs | None = field(
         default=None,
         metadata={
             "name": "modeCode",
@@ -88,7 +88,7 @@ class CoctMt110000Uv04AccountHolderLanguage:
             "required": True,
         },
     )
-    preference_ind: Optional[Bl] = field(
+    preference_ind: Bl | None = field(
         default=None,
         metadata={
             "name": "preferenceInd",
@@ -97,7 +97,7 @@ class CoctMt110000Uv04AccountHolderLanguage:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -119,7 +119,7 @@ class CoctMt110000Uv04AccountHolderOrganization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -142,28 +142,28 @@ class CoctMt110000Uv04AccountHolderOrganization:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: Optional[OnExplicit] = field(
+    name: OnExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[EntityClassOrganization] = field(
+    class_code: EntityClassOrganization | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -195,7 +195,7 @@ class CoctMt110000Uv04RelationshipRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -211,30 +211,21 @@ class CoctMt110000Uv04RelationshipRole:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cs] = field(
+    code: Cs | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[
-        Union[
-            RoleClassMutualRelationship,
-            RoleClassPassive,
-            str,
-            RoleClassOntological,
-            RoleClassPartitive,
-            RoleClassRootValue,
-        ]
-    ] = field(
+    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -258,7 +249,7 @@ class CoctMt110000Uv04AccountHolderPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -281,21 +272,21 @@ class CoctMt110000Uv04AccountHolderPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    name: Optional[PnExplicit] = field(
+    name: PnExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: Optional[AdExplicit] = field(
+    addr: AdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    as_relationship_role: Optional[CoctMt110000Uv04RelationshipRole] = field(
+    as_relationship_role: CoctMt110000Uv04RelationshipRole | None = field(
         default=None,
         metadata={
             "name": "asRelationshipRole",
@@ -315,7 +306,7 @@ class CoctMt110000Uv04AccountHolderPerson:
             },
         )
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -355,7 +346,7 @@ class CoctMt110000Uv04AccountHolder:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -378,23 +369,21 @@ class CoctMt110000Uv04AccountHolder:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    addr: Optional[AdExplicit] = field(
+    addr: AdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    telecom: Optional[TelExplicit] = field(
+    telecom: TelExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    held_account_holder_person: Optional[
-        CoctMt110000Uv04AccountHolderPerson
-    ] = field(
+    held_account_holder_person: CoctMt110000Uv04AccountHolderPerson | None = field(
         default=None,
         metadata={
             "name": "heldAccountHolderPerson",
@@ -403,9 +392,7 @@ class CoctMt110000Uv04AccountHolder:
             "nillable": True,
         },
     )
-    held_account_holder_organization: Optional[
-        CoctMt110000Uv04AccountHolderOrganization
-    ] = field(
+    held_account_holder_organization: CoctMt110000Uv04AccountHolderOrganization | None = field(
         default=None,
         metadata={
             "name": "heldAccountHolderOrganization",
@@ -414,30 +401,14 @@ class CoctMt110000Uv04AccountHolder:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Union[
-        RoleClassMutualRelationship,
-        RoleClassPassive,
-        str,
-        RoleClassOntological,
-        RoleClassPartitive,
-        RoleClassRootValue,
-        XAccommodationRequestorRole,
-        XDocumentEntrySubject,
-        XDocumentSubject,
-        XInformationRecipientRole,
-        XRoleClassAccommodationRequestor,
-        XRoleClassCoverage,
-        XRoleClassCoverageInvoice,
-        XRoleClassCredentialedEntity,
-        XRoleClassPayeePolicyRelationship,
-    ] = field(
+    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
         init=False,
         default=RoleClassPassive.HLD,
         metadata={
@@ -462,7 +433,7 @@ class CoctMt110000Uv04Holder:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -478,14 +449,14 @@ class CoctMt110000Uv04Holder:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: Optional[IvlTsExplicit] = field(
+    time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    account_holder: Optional[CoctMt110000Uv04AccountHolder] = field(
+    account_holder: CoctMt110000Uv04AccountHolder | None = field(
         default=None,
         metadata={
             "name": "accountHolder",
@@ -494,7 +465,7 @@ class CoctMt110000Uv04Holder:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -525,7 +496,7 @@ class CoctMt110000Uv04Account:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -541,7 +512,7 @@ class CoctMt110000Uv04Account:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: Optional[Ii] = field(
+    id: Ii | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -549,21 +520,21 @@ class CoctMt110000Uv04Account:
             "required": True,
         },
     )
-    code: Optional[Cs] = field(
+    code: Cs | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    title: Optional[St] = field(
+    title: St | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -571,7 +542,7 @@ class CoctMt110000Uv04Account:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    balance_amt: Optional[Mo] = field(
+    balance_amt: Mo | None = field(
         default=None,
         metadata={
             "name": "balanceAmt",
@@ -579,7 +550,7 @@ class CoctMt110000Uv04Account:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    holder: Optional[CoctMt110000Uv04Holder] = field(
+    holder: CoctMt110000Uv04Holder | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -587,7 +558,7 @@ class CoctMt110000Uv04Account:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",

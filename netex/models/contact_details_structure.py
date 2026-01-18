@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ContactDetailsStructure:
-    contact_person: Optional[MultilingualString] = field(
+    contact_person: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ContactPerson",
@@ -16,7 +16,7 @@ class ContactDetailsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    email: Optional[str] = field(
+    email: str | None = field(
         default=None,
         metadata={
             "name": "Email",
@@ -24,7 +24,7 @@ class ContactDetailsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    phone: Optional[str] = field(
+    phone: str | None = field(
         default=None,
         metadata={
             "name": "Phone",
@@ -32,7 +32,7 @@ class ContactDetailsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fax: Optional[str] = field(
+    fax: str | None = field(
         default=None,
         metadata={
             "name": "Fax",
@@ -40,7 +40,7 @@ class ContactDetailsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    url: Optional[str] = field(
+    url: str | None = field(
         default=None,
         metadata={
             "name": "Url",
@@ -48,7 +48,7 @@ class ContactDetailsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    further_details: Optional[MultilingualString] = field(
+    further_details: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "FurtherDetails",

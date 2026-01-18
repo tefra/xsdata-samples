@@ -31,7 +31,7 @@ class CoctMt240003Uv02ServiceDeliveryLocation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -55,7 +55,7 @@ class CoctMt240003Uv02ServiceDeliveryLocation:
             "min_occurs": 1,
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -76,7 +76,7 @@ class CoctMt240003Uv02ServiceDeliveryLocation:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    location: Optional[CoctMt710000Uv01Place] = field(
+    location: CoctMt710000Uv01Place | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -84,7 +84,7 @@ class CoctMt240003Uv02ServiceDeliveryLocation:
             "nillable": True,
         },
     )
-    service_provider_organization: Optional[CoctMt150003Uv03Organization] = (
+    service_provider_organization: CoctMt150003Uv03Organization | None = (
         field(
             default=None,
             metadata={
@@ -95,14 +95,14 @@ class CoctMt240003Uv02ServiceDeliveryLocation:
             },
         )
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[RoleClassServiceDeliveryLocation] = field(
+    class_code: RoleClassServiceDeliveryLocation | None = field(
         default=None,
         metadata={
             "name": "classCode",

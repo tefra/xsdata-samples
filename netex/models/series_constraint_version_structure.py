@@ -29,7 +29,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "SeriesConstraint_VersionStructure"
 
-    private_code: Optional[PrivateCode] = field(
+    private_code: PrivateCode | None = field(
         default=None,
         metadata={
             "name": "PrivateCode",
@@ -37,7 +37,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    itinerary: Optional[MultilingualString] = field(
+    itinerary: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Itinerary",
@@ -45,7 +45,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    symbol_marking_usual_route: Optional[str] = field(
+    symbol_marking_usual_route: str | None = field(
         default=None,
         metadata={
             "name": "SymbolMarkingUsualRoute",
@@ -53,7 +53,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    series_type: Optional[SeriesTypeEnumeration] = field(
+    series_type: SeriesTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "SeriesType",
@@ -61,7 +61,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    routing_type: Optional[RoutingTypeEnumeration] = field(
+    routing_type: RoutingTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "RoutingType",
@@ -69,7 +69,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_basis: Optional[FareBasisEnumeration] = field(
+    fare_basis: FareBasisEnumeration | None = field(
         default=None,
         metadata={
             "name": "FareBasis",
@@ -77,7 +77,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    first_class_distance: Optional[Decimal] = field(
+    first_class_distance: Decimal | None = field(
         default=None,
         metadata={
             "name": "FirstClassDistance",
@@ -85,7 +85,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    second_class_distance: Optional[Decimal] = field(
+    second_class_distance: Decimal | None = field(
         default=None,
         metadata={
             "name": "SecondClassDistance",
@@ -93,7 +93,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    discrete: Optional[bool] = field(
+    discrete: bool | None = field(
         default=None,
         metadata={
             "name": "Discrete",
@@ -101,7 +101,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_connection_ref: Optional[ConnectionRefStructure] = field(
+    from_connection_ref: ConnectionRefStructure | None = field(
         default=None,
         metadata={
             "name": "FromConnectionRef",
@@ -109,7 +109,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_connection_ref: Optional[ConnectionRefStructure] = field(
+    to_connection_ref: ConnectionRefStructure | None = field(
         default=None,
         metadata={
             "name": "ToConnectionRef",
@@ -147,7 +147,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

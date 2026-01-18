@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -27,35 +29,35 @@ class TransTypeDef:
         name = "transTypeDef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    type_name: Optional["TransTypeDef.TypeName"] = field(
+    type_name: TransTypeDef.TypeName | None = field(
         default=None,
         metadata={
             "name": "typeName",
             "type": "Element",
         },
     )
-    type_definition: list["TransTypeDef.TypeDefinition"] = field(
+    type_definition: list[TransTypeDef.TypeDefinition] = field(
         default_factory=list,
         metadata={
             "name": "typeDefinition",
             "type": "Element",
         },
     )
-    type_parameters: Optional[TypeParameters] = field(
+    type_parameters: TypeParameters | None = field(
         default=None,
         metadata={
             "name": "typeParameters",
             "type": "Element",
         },
     )
-    view_ref: list["TransTypeDef.ViewRef"] = field(
+    view_ref: list[TransTypeDef.ViewRef] = field(
         default_factory=list,
         metadata={
             "name": "viewRef",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -93,7 +95,7 @@ class TransTypeDef:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -109,7 +111,7 @@ class TransTypeDef:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

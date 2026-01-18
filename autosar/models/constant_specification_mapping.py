@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -41,9 +43,7 @@ class ConstantSpecificationMapping:
     class Meta:
         name = "CONSTANT-SPECIFICATION-MAPPING"
 
-    appl_constant_ref: Optional[
-        "ConstantSpecificationMapping.ApplConstantRef"
-    ] = field(
+    appl_constant_ref: ConstantSpecificationMapping.ApplConstantRef | None = field(
         default=None,
         metadata={
             "name": "APPL-CONSTANT-REF",
@@ -51,9 +51,7 @@ class ConstantSpecificationMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    impl_constant_ref: Optional[
-        "ConstantSpecificationMapping.ImplConstantRef"
-    ] = field(
+    impl_constant_ref: ConstantSpecificationMapping.ImplConstantRef | None = field(
         default=None,
         metadata={
             "name": "IMPL-CONSTANT-REF",
@@ -61,14 +59,14 @@ class ConstantSpecificationMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -79,7 +77,7 @@ class ConstantSpecificationMapping:
 
     @dataclass
     class ApplConstantRef(Ref):
-        dest: Optional[ConstantSpecificationSubtypesEnum] = field(
+        dest: ConstantSpecificationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -90,7 +88,7 @@ class ConstantSpecificationMapping:
 
     @dataclass
     class ImplConstantRef(Ref):
-        dest: Optional[ConstantSpecificationSubtypesEnum] = field(
+        dest: ConstantSpecificationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

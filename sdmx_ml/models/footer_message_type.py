@@ -19,7 +19,7 @@ class FooterMessageType(CodedStatusMessageType):
     or Warning added to it.
     """
 
-    severity: Optional[SeverityCodeType] = field(
+    severity: SeverityCodeType | None = field(
         default=None,
         metadata={
             "type": "Attribute",

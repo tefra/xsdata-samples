@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -93,7 +95,7 @@ class AssemblySwConnector:
     class Meta:
         name = "ASSEMBLY-SW-CONNECTOR"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -102,9 +104,7 @@ class AssemblySwConnector:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "AssemblySwConnector.ShortNameFragments"
-    ] = field(
+    short_name_fragments: AssemblySwConnector.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -112,7 +112,7 @@ class AssemblySwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -120,7 +120,7 @@ class AssemblySwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -128,7 +128,7 @@ class AssemblySwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -136,7 +136,7 @@ class AssemblySwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -144,7 +144,7 @@ class AssemblySwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -152,7 +152,7 @@ class AssemblySwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["AssemblySwConnector.Annotations"] = field(
+    annotations: AssemblySwConnector.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -160,7 +160,7 @@ class AssemblySwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapping_ref: Optional["AssemblySwConnector.MappingRef"] = field(
+    mapping_ref: AssemblySwConnector.MappingRef | None = field(
         default=None,
         metadata={
             "name": "MAPPING-REF",
@@ -168,7 +168,7 @@ class AssemblySwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -176,7 +176,7 @@ class AssemblySwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provider_iref: Optional[PPortInCompositionInstanceRef] = field(
+    provider_iref: PPortInCompositionInstanceRef | None = field(
         default=None,
         metadata={
             "name": "PROVIDER-IREF",
@@ -184,7 +184,7 @@ class AssemblySwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    requester_iref: Optional[RPortInCompositionInstanceRef] = field(
+    requester_iref: RPortInCompositionInstanceRef | None = field(
         default=None,
         metadata={
             "name": "REQUESTER-IREF",
@@ -192,14 +192,14 @@ class AssemblySwConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -207,7 +207,7 @@ class AssemblySwConnector:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -239,7 +239,7 @@ class AssemblySwConnector:
 
     @dataclass
     class MappingRef(Ref):
-        dest: Optional[PortInterfaceMappingSubtypesEnum] = field(
+        dest: PortInterfaceMappingSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

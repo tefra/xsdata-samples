@@ -14,9 +14,7 @@ class ServiceJourneyPatternVersionStructure(JourneyPatternVersionStructure):
     class Meta:
         name = "ServiceJourneyPattern_VersionStructure"
 
-    service_journey_pattern_type: Optional[
-        ServiceJourneyPatternTypeEnumeration
-    ] = field(
+    service_journey_pattern_type: ServiceJourneyPatternTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "ServiceJourneyPatternType",

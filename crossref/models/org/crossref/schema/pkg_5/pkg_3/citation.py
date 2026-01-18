@@ -22,7 +22,7 @@ class Citation(CitationT):
         name = "citation"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    key: Optional[str] = field(
+    key: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -13,7 +13,7 @@ class VehicleJourneyLayoverVersionedChildStructure(JourneyLayoverStructure):
     class Meta:
         name = "VehicleJourneyLayover_VersionedChildStructure"
 
-    vehicle_journey_ref: Optional[Union[DeadRunRef, VehicleJourneyRef]] = (
+    vehicle_journey_ref: DeadRunRef | VehicleJourneyRef | None = (
         field(
             default=None,
             metadata={

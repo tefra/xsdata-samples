@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -20,12 +22,7 @@ class TimeRangeValueType:
     """
 
     choice: tuple[
-        Union[
-            "TimeRangeValueType.BeforePeriod",
-            "TimeRangeValueType.AfterPeriod",
-            "TimeRangeValueType.StartPeriod",
-            "TimeRangeValueType.EndPeriod",
-        ],
+        TimeRangeValueType.BeforePeriod | TimeRangeValueType.AfterPeriod | TimeRangeValueType.StartPeriod | TimeRangeValueType.EndPeriod,
         ...,
     ] = field(
         default_factory=tuple,
@@ -56,7 +53,7 @@ class TimeRangeValueType:
             "max_occurs": 2,
         },
     )
-    valid_from: Optional[Union[XmlPeriod, XmlDate, XmlDateTime, str]] = field(
+    valid_from: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
         default=None,
         metadata={
             "name": "validFrom",
@@ -64,7 +61,7 @@ class TimeRangeValueType:
             "pattern": r".{5}A1.*",
         },
     )
-    valid_to: Optional[Union[XmlPeriod, XmlDate, XmlDateTime, str]] = field(
+    valid_to: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
         default=None,
         metadata={
             "name": "validTo",

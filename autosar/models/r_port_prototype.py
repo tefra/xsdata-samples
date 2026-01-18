@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -121,7 +123,7 @@ class RPortPrototype:
     class Meta:
         name = "R-PORT-PROTOTYPE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -130,7 +132,7 @@ class RPortPrototype:
             "required": True,
         },
     )
-    short_name_fragments: Optional["RPortPrototype.ShortNameFragments"] = (
+    short_name_fragments: RPortPrototype.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -140,7 +142,7 @@ class RPortPrototype:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -148,7 +150,7 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -156,7 +158,7 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -164,7 +166,7 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -172,7 +174,7 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -180,7 +182,7 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["RPortPrototype.Annotations"] = field(
+    annotations: RPortPrototype.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -188,9 +190,7 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_server_annotations: Optional[
-        "RPortPrototype.ClientServerAnnotations"
-    ] = field(
+    client_server_annotations: RPortPrototype.ClientServerAnnotations | None = field(
         default=None,
         metadata={
             "name": "CLIENT-SERVER-ANNOTATIONS",
@@ -198,7 +198,7 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delegated_port_annotation: Optional[DelegatedPortAnnotation] = field(
+    delegated_port_annotation: DelegatedPortAnnotation | None = field(
         default=None,
         metadata={
             "name": "DELEGATED-PORT-ANNOTATION",
@@ -206,9 +206,7 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    io_hw_abstraction_server_annotations: Optional[
-        "RPortPrototype.IoHwAbstractionServerAnnotations"
-    ] = field(
+    io_hw_abstraction_server_annotations: RPortPrototype.IoHwAbstractionServerAnnotations | None = field(
         default=None,
         metadata={
             "name": "IO-HW-ABSTRACTION-SERVER-ANNOTATIONS",
@@ -216,7 +214,7 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_port_annotations: Optional["RPortPrototype.ModePortAnnotations"] = (
+    mode_port_annotations: RPortPrototype.ModePortAnnotations | None = (
         field(
             default=None,
             metadata={
@@ -226,9 +224,7 @@ class RPortPrototype:
             },
         )
     )
-    nv_data_port_annotations: Optional[
-        "RPortPrototype.NvDataPortAnnotations"
-    ] = field(
+    nv_data_port_annotations: RPortPrototype.NvDataPortAnnotations | None = field(
         default=None,
         metadata={
             "name": "NV-DATA-PORT-ANNOTATIONS",
@@ -236,9 +232,7 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter_port_annotations: Optional[
-        "RPortPrototype.ParameterPortAnnotations"
-    ] = field(
+    parameter_port_annotations: RPortPrototype.ParameterPortAnnotations | None = field(
         default=None,
         metadata={
             "name": "PARAMETER-PORT-ANNOTATIONS",
@@ -246,7 +240,7 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_props: Optional[RPortPrototypeProps] = field(
+    port_prototype_props: RPortPrototypeProps | None = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-PROPS",
@@ -254,9 +248,7 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sender_receiver_annotations: Optional[
-        "RPortPrototype.SenderReceiverAnnotations"
-    ] = field(
+    sender_receiver_annotations: RPortPrototype.SenderReceiverAnnotations | None = field(
         default=None,
         metadata={
             "name": "SENDER-RECEIVER-ANNOTATIONS",
@@ -264,9 +256,7 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_port_annotations: Optional[
-        "RPortPrototype.TriggerPortAnnotations"
-    ] = field(
+    trigger_port_annotations: RPortPrototype.TriggerPortAnnotations | None = field(
         default=None,
         metadata={
             "name": "TRIGGER-PORT-ANNOTATIONS",
@@ -274,7 +264,7 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -282,7 +272,7 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_com_specs: Optional["RPortPrototype.RequiredComSpecs"] = field(
+    required_com_specs: RPortPrototype.RequiredComSpecs | None = field(
         default=None,
         metadata={
             "name": "REQUIRED-COM-SPECS",
@@ -290,9 +280,7 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_interface_tref: Optional[
-        "RPortPrototype.RequiredInterfaceTref"
-    ] = field(
+    required_interface_tref: RPortPrototype.RequiredInterfaceTref | None = field(
         default=None,
         metadata={
             "name": "REQUIRED-INTERFACE-TREF",
@@ -300,14 +288,14 @@ class RPortPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -315,7 +303,7 @@ class RPortPrototype:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -503,7 +491,7 @@ class RPortPrototype:
 
     @dataclass
     class RequiredInterfaceTref(Ref):
-        dest: Optional[PortInterfaceSubtypesEnum] = field(
+        dest: PortInterfaceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

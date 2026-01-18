@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -59,7 +61,7 @@ class McSwEmulationMethodSupport:
     class Meta:
         name = "MC-SW-EMULATION-METHOD-SUPPORT"
 
-    short_label: Optional[Identifier] = field(
+    short_label: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -67,7 +69,7 @@ class McSwEmulationMethodSupport:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[Identifier] = field(
+    category: Identifier | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -75,9 +77,7 @@ class McSwEmulationMethodSupport:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    base_reference_ref: Optional[
-        "McSwEmulationMethodSupport.BaseReferenceRef"
-    ] = field(
+    base_reference_ref: McSwEmulationMethodSupport.BaseReferenceRef | None = field(
         default=None,
         metadata={
             "name": "BASE-REFERENCE-REF",
@@ -85,7 +85,7 @@ class McSwEmulationMethodSupport:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    element_groups: Optional["McSwEmulationMethodSupport.ElementGroups"] = (
+    element_groups: McSwEmulationMethodSupport.ElementGroups | None = (
         field(
             default=None,
             metadata={
@@ -95,9 +95,7 @@ class McSwEmulationMethodSupport:
             },
         )
     )
-    reference_table_ref: Optional[
-        "McSwEmulationMethodSupport.ReferenceTableRef"
-    ] = field(
+    reference_table_ref: McSwEmulationMethodSupport.ReferenceTableRef | None = field(
         default=None,
         metadata={
             "name": "REFERENCE-TABLE-REF",
@@ -105,7 +103,7 @@ class McSwEmulationMethodSupport:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -113,14 +111,14 @@ class McSwEmulationMethodSupport:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -131,7 +129,7 @@ class McSwEmulationMethodSupport:
 
     @dataclass
     class BaseReferenceRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -153,7 +151,7 @@ class McSwEmulationMethodSupport:
 
     @dataclass
     class ReferenceTableRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

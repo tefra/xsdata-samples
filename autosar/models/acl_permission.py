@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -111,7 +113,7 @@ class AclPermission:
     class Meta:
         name = "ACL-PERMISSION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -120,7 +122,7 @@ class AclPermission:
             "required": True,
         },
     )
-    short_name_fragments: Optional["AclPermission.ShortNameFragments"] = field(
+    short_name_fragments: AclPermission.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -128,7 +130,7 @@ class AclPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -136,7 +138,7 @@ class AclPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -144,7 +146,7 @@ class AclPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -152,7 +154,7 @@ class AclPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -160,7 +162,7 @@ class AclPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -168,7 +170,7 @@ class AclPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["AclPermission.Annotations"] = field(
+    annotations: AclPermission.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -176,7 +178,7 @@ class AclPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -184,7 +186,7 @@ class AclPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional["AclPermission.BlueprintPolicys"] = field(
+    blueprint_policys: AclPermission.BlueprintPolicys | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -192,7 +194,7 @@ class AclPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: Optional[String] = field(
+    short_name_pattern: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -200,7 +202,7 @@ class AclPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    acl_contexts: Optional["AclPermission.AclContexts"] = field(
+    acl_contexts: AclPermission.AclContexts | None = field(
         default=None,
         metadata={
             "name": "ACL-CONTEXTS",
@@ -208,7 +210,7 @@ class AclPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    acl_object_refs: Optional["AclPermission.AclObjectRefs"] = field(
+    acl_object_refs: AclPermission.AclObjectRefs | None = field(
         default=None,
         metadata={
             "name": "ACL-OBJECT-REFS",
@@ -216,7 +218,7 @@ class AclPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    acl_operation_refs: Optional["AclPermission.AclOperationRefs"] = field(
+    acl_operation_refs: AclPermission.AclOperationRefs | None = field(
         default=None,
         metadata={
             "name": "ACL-OPERATION-REFS",
@@ -224,7 +226,7 @@ class AclPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    acl_role_refs: Optional["AclPermission.AclRoleRefs"] = field(
+    acl_role_refs: AclPermission.AclRoleRefs | None = field(
         default=None,
         metadata={
             "name": "ACL-ROLE-REFS",
@@ -232,7 +234,7 @@ class AclPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    acl_scope: Optional[AclScopeEnum] = field(
+    acl_scope: AclScopeEnum | None = field(
         default=None,
         metadata={
             "name": "ACL-SCOPE",
@@ -240,14 +242,14 @@ class AclPermission:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -255,7 +257,7 @@ class AclPermission:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -335,7 +337,7 @@ class AclPermission:
 
     @dataclass
     class AclObjectRefs:
-        acl_object_ref: list["AclPermission.AclObjectRefs.AclObjectRef"] = (
+        acl_object_ref: list[AclPermission.AclObjectRefs.AclObjectRef] = (
             field(
                 default_factory=list,
                 metadata={
@@ -348,7 +350,7 @@ class AclPermission:
 
         @dataclass
         class AclObjectRef(Ref):
-            dest: Optional[AclObjectSetSubtypesEnum] = field(
+            dest: AclObjectSetSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -360,7 +362,7 @@ class AclPermission:
     @dataclass
     class AclOperationRefs:
         acl_operation_ref: list[
-            "AclPermission.AclOperationRefs.AclOperationRef"
+            AclPermission.AclOperationRefs.AclOperationRef
         ] = field(
             default_factory=list,
             metadata={
@@ -372,7 +374,7 @@ class AclPermission:
 
         @dataclass
         class AclOperationRef(Ref):
-            dest: Optional[AclOperationSubtypesEnum] = field(
+            dest: AclOperationSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -383,7 +385,7 @@ class AclPermission:
 
     @dataclass
     class AclRoleRefs:
-        acl_role_ref: list["AclPermission.AclRoleRefs.AclRoleRef"] = field(
+        acl_role_ref: list[AclPermission.AclRoleRefs.AclRoleRef] = field(
             default_factory=list,
             metadata={
                 "name": "ACL-ROLE-REF",
@@ -394,7 +396,7 @@ class AclPermission:
 
         @dataclass
         class AclRoleRef(Ref):
-            dest: Optional[AclRoleSubtypesEnum] = field(
+            dest: AclRoleSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

@@ -18,9 +18,7 @@ class TimeStructureFactorsRelStructure(StrictContainmentAggregationStructure):
         name = "timeStructureFactors_RelStructure"
 
     parking_charge_band_ref_or_time_structure_factor_ref_or_time_structure_factor: Iterable[
-        Union[
-            ParkingChargeBandRef, TimeStructureFactorRef, TimeStructureFactor
-        ]
+        ParkingChargeBandRef | TimeStructureFactorRef | TimeStructureFactor
     ] = field(
         default_factory=list,
         metadata={

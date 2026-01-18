@@ -15,7 +15,7 @@ class PathLinkRefsRelStructure(OneToManyRelationshipStructure):
         name = "pathLinkRefs_RelStructure"
 
     path_link_ref_or_path_link_ref_by_value: Iterable[
-        Union[PathLinkRef, PathLinkRefByValue]
+        PathLinkRef | PathLinkRefByValue
     ] = field(
         default_factory=list,
         metadata={

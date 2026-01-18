@@ -11,7 +11,7 @@ class EscalatorEquipmentVersionStructure(StairEquipmentVersionStructure):
     class Meta:
         name = "EscalatorEquipment_VersionStructure"
 
-    tactile_actuators: Optional[bool] = field(
+    tactile_actuators: bool | None = field(
         default=None,
         metadata={
             "name": "TactileActuators",
@@ -19,7 +19,7 @@ class EscalatorEquipmentVersionStructure(StairEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    energy_saving: Optional[bool] = field(
+    energy_saving: bool | None = field(
         default=None,
         metadata={
             "name": "EnergySaving",
@@ -27,7 +27,7 @@ class EscalatorEquipmentVersionStructure(StairEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    dogs_must_be_carried: Optional[bool] = field(
+    dogs_must_be_carried: bool | None = field(
         default=None,
         metadata={
             "name": "DogsMustBeCarried",
@@ -35,7 +35,7 @@ class EscalatorEquipmentVersionStructure(StairEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    escalator_with_landing: Optional[bool] = field(
+    escalator_with_landing: bool | None = field(
         default=None,
         metadata={
             "name": "EscalatorWithLanding",
@@ -43,7 +43,7 @@ class EscalatorEquipmentVersionStructure(StairEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    monitoring_remote_control: Optional[bool] = field(
+    monitoring_remote_control: bool | None = field(
         default=None,
         metadata={
             "name": "MonitoringRemoteControl",

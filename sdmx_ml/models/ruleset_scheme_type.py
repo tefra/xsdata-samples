@@ -23,7 +23,7 @@ class RulesetSchemeType(RulesetSchemeBaseType):
         Schemes, and Concepts.
     """
 
-    vtl_mapping_scheme: Optional[str] = field(
+    vtl_mapping_scheme: str | None = field(
         default=None,
         metadata={
             "name": "VtlMappingScheme",

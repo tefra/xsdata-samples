@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Any, ForwardRef, Optional, Union
 
@@ -16,7 +18,7 @@ class OnlineServiceOperatorVersionStructure(OrganisationVersionStructure):
     class Meta:
         name = "OnlineServiceOperator_VersionStructure"
 
-    country_ref: Optional[CountryRef] = field(
+    country_ref: CountryRef | None = field(
         default=None,
         metadata={
             "name": "CountryRef",
@@ -24,13 +26,7 @@ class OnlineServiceOperatorVersionStructure(OrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    address: Optional[
-        Union[
-            PostalAddress,
-            RoadAddress,
-            "OnlineServiceOperatorVersionStructure.Address",
-        ]
-    ] = field(
+    address: PostalAddress | RoadAddress | OnlineServiceOperatorVersionStructure.Address | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -55,7 +51,7 @@ class OnlineServiceOperatorVersionStructure(OrganisationVersionStructure):
             ),
         },
     )
-    services: Optional[OnlineServiceRefsRelStructure] = field(
+    services: OnlineServiceRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

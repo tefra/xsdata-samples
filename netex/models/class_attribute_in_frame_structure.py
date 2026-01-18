@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ClassAttributeInFrameStructure:
-    type_value: Optional[QName] = field(
+    type_value: QName | None = field(
         default=None,
         metadata={
             "name": "Type",
@@ -17,7 +17,7 @@ class ClassAttributeInFrameStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mandatory: Optional[MandatoryEnumeration] = field(
+    mandatory: MandatoryEnumeration | None = field(
         default=None,
         metadata={
             "name": "Mandatory",
@@ -25,7 +25,7 @@ class ClassAttributeInFrameStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: Optional[QName] = field(
+    name: QName | None = field(
         default=None,
         metadata={
             "type": "Attribute",

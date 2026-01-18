@@ -6,7 +6,7 @@ from xsdata.models.datatype import XmlDateTime
 
 @dataclass
 class Error:
-    timestamp: Optional[XmlDateTime] = field(
+    timestamp: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "Timestamp",
@@ -15,7 +15,7 @@ class Error:
             "required": True,
         },
     )
-    code: Optional[str] = field(
+    code: str | None = field(
         default=None,
         metadata={
             "name": "Code",
@@ -24,7 +24,7 @@ class Error:
             "required": True,
         },
     )
-    message: Optional[str] = field(
+    message: str | None = field(
         default=None,
         metadata={
             "name": "Message",
@@ -33,7 +33,7 @@ class Error:
             "nillable": True,
         },
     )
-    payload: Optional[str] = field(
+    payload: str | None = field(
         default=None,
         metadata={
             "name": "Payload",

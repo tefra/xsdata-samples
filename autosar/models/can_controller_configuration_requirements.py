@@ -63,7 +63,7 @@ class CanControllerConfigurationRequirements:
     class Meta:
         name = "CAN-CONTROLLER-CONFIGURATION-REQUIREMENTS"
 
-    can_controller_fd_attributes: Optional[CanControllerFdConfiguration] = (
+    can_controller_fd_attributes: CanControllerFdConfiguration | None = (
         field(
             default=None,
             metadata={
@@ -73,9 +73,7 @@ class CanControllerConfigurationRequirements:
             },
         )
     )
-    can_controller_fd_requirements: Optional[
-        CanControllerFdConfigurationRequirements
-    ] = field(
+    can_controller_fd_requirements: CanControllerFdConfigurationRequirements | None = field(
         default=None,
         metadata={
             "name": "CAN-CONTROLLER-FD-REQUIREMENTS",
@@ -83,7 +81,7 @@ class CanControllerConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_number_of_time_quanta_per_bit: Optional[Integer] = field(
+    max_number_of_time_quanta_per_bit: Integer | None = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-OF-TIME-QUANTA-PER-BIT",
@@ -91,7 +89,7 @@ class CanControllerConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_sample_point: Optional[Float] = field(
+    max_sample_point: Float | None = field(
         default=None,
         metadata={
             "name": "MAX-SAMPLE-POINT",
@@ -99,7 +97,7 @@ class CanControllerConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_sync_jump_width: Optional[Float] = field(
+    max_sync_jump_width: Float | None = field(
         default=None,
         metadata={
             "name": "MAX-SYNC-JUMP-WIDTH",
@@ -107,7 +105,7 @@ class CanControllerConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_number_of_time_quanta_per_bit: Optional[Integer] = field(
+    min_number_of_time_quanta_per_bit: Integer | None = field(
         default=None,
         metadata={
             "name": "MIN-NUMBER-OF-TIME-QUANTA-PER-BIT",
@@ -115,7 +113,7 @@ class CanControllerConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_sample_point: Optional[Float] = field(
+    min_sample_point: Float | None = field(
         default=None,
         metadata={
             "name": "MIN-SAMPLE-POINT",
@@ -123,7 +121,7 @@ class CanControllerConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    min_sync_jump_width: Optional[Float] = field(
+    min_sync_jump_width: Float | None = field(
         default=None,
         metadata={
             "name": "MIN-SYNC-JUMP-WIDTH",
@@ -131,14 +129,14 @@ class CanControllerConfigurationRequirements:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -30,7 +30,7 @@ class GroupOfDistanceMatrixElementsVersionStructure(
     class Meta:
         name = "GroupOfDistanceMatrixElements_VersionStructure"
 
-    use_to_exclude: Optional[bool] = field(
+    use_to_exclude: bool | None = field(
         default=None,
         metadata={
             "name": "UseToExclude",
@@ -38,7 +38,7 @@ class GroupOfDistanceMatrixElementsVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    price_groups: Optional[PriceGroupsRelStructure] = field(
+    price_groups: PriceGroupsRelStructure | None = field(
         default=None,
         metadata={
             "name": "priceGroups",
@@ -46,7 +46,7 @@ class GroupOfDistanceMatrixElementsVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_tables: Optional[FareTablesRelStructure] = field(
+    fare_tables: FareTablesRelStructure | None = field(
         default=None,
         metadata={
             "name": "fareTables",
@@ -54,7 +54,7 @@ class GroupOfDistanceMatrixElementsVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distance: Optional[Decimal] = field(
+    distance: Decimal | None = field(
         default=None,
         metadata={
             "name": "Distance",
@@ -62,7 +62,7 @@ class GroupOfDistanceMatrixElementsVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    structure_factors: Optional[GeographicalStructureFactorsRelStructure] = (
+    structure_factors: GeographicalStructureFactorsRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -72,7 +72,7 @@ class GroupOfDistanceMatrixElementsVersionStructure(
             },
         )
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -80,14 +80,14 @@ class GroupOfDistanceMatrixElementsVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    members: Optional[DistanceMatrixElementsRelStructure] = field(
+    members: DistanceMatrixElementsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: Optional[DistanceMatrixElementPricesRelStructure] = field(
+    prices: DistanceMatrixElementPricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

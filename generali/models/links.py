@@ -10,7 +10,7 @@ class Links:
     class Meta:
         name = "_links"
 
-    self_value: Optional[Self] = field(
+    self_value: Self | None = field(
         default=None,
         metadata={
             "name": "self",
@@ -18,7 +18,7 @@ class Links:
             "required": True,
         },
     )
-    find: Optional[Find] = field(
+    find: Find | None = field(
         default=None,
         metadata={
             "type": "Element",

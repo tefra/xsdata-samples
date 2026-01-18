@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -35,7 +37,7 @@ class BswReleasedTriggerPolicy:
     class Meta:
         name = "BSW-RELEASED-TRIGGER-POLICY"
 
-    enable_take_address: Optional[Boolean] = field(
+    enable_take_address: Boolean | None = field(
         default=None,
         metadata={
             "name": "ENABLE-TAKE-ADDRESS",
@@ -43,9 +45,7 @@ class BswReleasedTriggerPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    released_trigger_ref: Optional[
-        "BswReleasedTriggerPolicy.ReleasedTriggerRef"
-    ] = field(
+    released_trigger_ref: BswReleasedTriggerPolicy.ReleasedTriggerRef | None = field(
         default=None,
         metadata={
             "name": "RELEASED-TRIGGER-REF",
@@ -53,7 +53,7 @@ class BswReleasedTriggerPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -61,14 +61,14 @@ class BswReleasedTriggerPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -79,7 +79,7 @@ class BswReleasedTriggerPolicy:
 
     @dataclass
     class ReleasedTriggerRef(Ref):
-        dest: Optional[TriggerSubtypesEnum] = field(
+        dest: TriggerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

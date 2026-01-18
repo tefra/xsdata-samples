@@ -18,7 +18,7 @@ class ScheduledModeOfOperationValueStructure(
     class Meta:
         name = "ScheduledModeOfOperation_ValueStructure"
 
-    scheduled_operation_type: Optional[ScheduledOperationTypeEnumeration] = (
+    scheduled_operation_type: ScheduledOperationTypeEnumeration | None = (
         field(
             default=None,
             metadata={

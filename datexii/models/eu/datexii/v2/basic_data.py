@@ -32,7 +32,7 @@ class BasicData:
         which the time of measurement or calculation is given.
     """
 
-    measurement_or_calculation_period: Optional[float] = field(
+    measurement_or_calculation_period: float | None = field(
         default=None,
         metadata={
             "name": "measurementOrCalculationPeriod",
@@ -40,7 +40,7 @@ class BasicData:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_or_calculation_time: Optional[XmlDateTime] = field(
+    measurement_or_calculation_time: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "measurementOrCalculationTime",
@@ -48,7 +48,7 @@ class BasicData:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    pertinent_location: Optional[GroupOfLocations] = field(
+    pertinent_location: GroupOfLocations | None = field(
         default=None,
         metadata={
             "name": "pertinentLocation",
@@ -56,7 +56,7 @@ class BasicData:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    basic_data_extension: Optional[ExtensionType] = field(
+    basic_data_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "basicDataExtension",
@@ -64,7 +64,7 @@ class BasicData:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_or_calculated_time_precision: Optional[TimePrecisionEnum] = (
+    measurement_or_calculated_time_precision: TimePrecisionEnum | None = (
         field(
             default=None,
             metadata={

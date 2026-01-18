@@ -22,4 +22,4 @@ class BooleanValueType(ValueType):
             "type": "Ignore",
         },
     )
-    value: Optional[bool] = field(default=None)
+    value: bool | None = field(default=None)

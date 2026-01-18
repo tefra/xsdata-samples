@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -118,7 +120,7 @@ class HwElement:
     class Meta:
         name = "HW-ELEMENT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -127,7 +129,7 @@ class HwElement:
             "required": True,
         },
     )
-    short_name_fragments: Optional["HwElement.ShortNameFragments"] = field(
+    short_name_fragments: HwElement.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -135,7 +137,7 @@ class HwElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -143,7 +145,7 @@ class HwElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -151,7 +153,7 @@ class HwElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -159,7 +161,7 @@ class HwElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -167,7 +169,7 @@ class HwElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -175,7 +177,7 @@ class HwElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["HwElement.Annotations"] = field(
+    annotations: HwElement.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -183,7 +185,7 @@ class HwElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -191,7 +193,7 @@ class HwElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_type_ref: Optional["HwElement.HwTypeRef"] = field(
+    hw_type_ref: HwElement.HwTypeRef | None = field(
         default=None,
         metadata={
             "name": "HW-TYPE-REF",
@@ -199,7 +201,7 @@ class HwElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_category_refs: Optional["HwElement.HwCategoryRefs"] = field(
+    hw_category_refs: HwElement.HwCategoryRefs | None = field(
         default=None,
         metadata={
             "name": "HW-CATEGORY-REFS",
@@ -207,7 +209,7 @@ class HwElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_attribute_values: Optional["HwElement.HwAttributeValues"] = field(
+    hw_attribute_values: HwElement.HwAttributeValues | None = field(
         default=None,
         metadata={
             "name": "HW-ATTRIBUTE-VALUES",
@@ -215,7 +217,7 @@ class HwElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nested_elements: Optional["HwElement.NestedElements"] = field(
+    nested_elements: HwElement.NestedElements | None = field(
         default=None,
         metadata={
             "name": "NESTED-ELEMENTS",
@@ -223,7 +225,7 @@ class HwElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_pin_groups: Optional["HwElement.HwPinGroups"] = field(
+    hw_pin_groups: HwElement.HwPinGroups | None = field(
         default=None,
         metadata={
             "name": "HW-PIN-GROUPS",
@@ -231,7 +233,7 @@ class HwElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_element_connections: Optional["HwElement.HwElementConnections"] = field(
+    hw_element_connections: HwElement.HwElementConnections | None = field(
         default=None,
         metadata={
             "name": "HW-ELEMENT-CONNECTIONS",
@@ -239,14 +241,14 @@ class HwElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -254,7 +256,7 @@ class HwElement:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -286,7 +288,7 @@ class HwElement:
 
     @dataclass
     class HwTypeRef(Ref):
-        dest: Optional[HwTypeSubtypesEnum] = field(
+        dest: HwTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -297,7 +299,7 @@ class HwElement:
 
     @dataclass
     class HwCategoryRefs:
-        hw_category_ref: list["HwElement.HwCategoryRefs.HwCategoryRef"] = (
+        hw_category_ref: list[HwElement.HwCategoryRefs.HwCategoryRef] = (
             field(
                 default_factory=list,
                 metadata={
@@ -310,7 +312,7 @@ class HwElement:
 
         @dataclass
         class HwCategoryRef(Ref):
-            dest: Optional[HwCategorySubtypesEnum] = field(
+            dest: HwCategorySubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

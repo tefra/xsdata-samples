@@ -13,7 +13,7 @@ class TResourceAssignmentExpression(TBaseElement):
     class Meta:
         name = "tResourceAssignmentExpression"
 
-    formal_expression: Optional[FormalExpression] = field(
+    formal_expression: FormalExpression | None = field(
         default=None,
         metadata={
             "name": "formalExpression",
@@ -21,7 +21,7 @@ class TResourceAssignmentExpression(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    expression: Optional[Expression] = field(
+    expression: Expression | None = field(
         default=None,
         metadata={
             "type": "Element",

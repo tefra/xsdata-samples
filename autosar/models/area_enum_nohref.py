@@ -27,20 +27,20 @@ class AreaEnumNohref:
     class Meta:
         name = "AREA-ENUM-NOHREF"
 
-    value: Optional[AreaEnumNohrefSimple] = field(
+    value: AreaEnumNohrefSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

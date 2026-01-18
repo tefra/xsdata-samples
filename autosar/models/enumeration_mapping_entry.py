@@ -38,7 +38,7 @@ class EnumerationMappingEntry:
     class Meta:
         name = "ENUMERATION-MAPPING-ENTRY"
 
-    numerical_value: Optional[PositiveInteger] = field(
+    numerical_value: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "NUMERICAL-VALUE",
@@ -46,7 +46,7 @@ class EnumerationMappingEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    enumerator_value: Optional[NmtokenString] = field(
+    enumerator_value: NmtokenString | None = field(
         default=None,
         metadata={
             "name": "ENUMERATOR-VALUE",
@@ -54,14 +54,14 @@ class EnumerationMappingEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

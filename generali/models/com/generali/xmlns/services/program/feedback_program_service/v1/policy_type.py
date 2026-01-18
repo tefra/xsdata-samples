@@ -18,7 +18,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PolicyType:
-    policy_id: Optional[str] = field(
+    policy_id: str | None = field(
         default=None,
         metadata={
             "name": "PolicyID",
@@ -27,7 +27,7 @@ class PolicyType:
             "required": True,
         },
     )
-    status: Optional[Status] = field(
+    status: Status | None = field(
         default=None,
         metadata={
             "name": "Status",
@@ -35,7 +35,7 @@ class PolicyType:
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
         },
     )
-    local_policies: Optional[LocalPolicies] = field(
+    local_policies: LocalPolicies | None = field(
         default=None,
         metadata={
             "name": "LocalPolicies",
@@ -44,7 +44,7 @@ class PolicyType:
             "required": True,
         },
     )
-    errors: Optional[ErrorsType] = field(
+    errors: ErrorsType | None = field(
         default=None,
         metadata={
             "name": "Errors",

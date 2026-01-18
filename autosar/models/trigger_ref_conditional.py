@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,7 +33,7 @@ class TriggerRefConditional:
     class Meta:
         name = "TRIGGER-REF-CONDITIONAL"
 
-    trigger_ref: Optional["TriggerRefConditional.TriggerRef"] = field(
+    trigger_ref: TriggerRefConditional.TriggerRef | None = field(
         default=None,
         metadata={
             "name": "TRIGGER-REF",
@@ -39,7 +41,7 @@ class TriggerRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -47,14 +49,14 @@ class TriggerRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -65,7 +67,7 @@ class TriggerRefConditional:
 
     @dataclass
     class TriggerRef(Ref):
-        dest: Optional[TriggerSubtypesEnum] = field(
+        dest: TriggerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

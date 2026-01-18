@@ -22,20 +22,20 @@ class Pages:
         name = "pages"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    first_page: Optional[FirstPage] = field(
+    first_page: FirstPage | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    last_page: Optional[LastPage] = field(
+    last_page: LastPage | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    other_pages: Optional[OtherPages] = field(
+    other_pages: OtherPages | None = field(
         default=None,
         metadata={
             "type": "Element",

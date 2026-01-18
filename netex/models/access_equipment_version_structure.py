@@ -13,7 +13,7 @@ class AccessEquipmentVersionStructure(PlaceEquipmentVersionStructure):
     class Meta:
         name = "AccessEquipment_VersionStructure"
 
-    width: Optional[Decimal] = field(
+    width: Decimal | None = field(
         default=None,
         metadata={
             "name": "Width",
@@ -21,7 +21,7 @@ class AccessEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    height: Optional[Decimal] = field(
+    height: Decimal | None = field(
         default=None,
         metadata={
             "name": "Height",
@@ -29,7 +29,7 @@ class AccessEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_of_use: Optional[DirectionOfUseEnumeration] = field(
+    direction_of_use: DirectionOfUseEnumeration | None = field(
         default=None,
         metadata={
             "name": "DirectionOfUse",
@@ -37,7 +37,7 @@ class AccessEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passengers_per_minute: Optional[int] = field(
+    passengers_per_minute: int | None = field(
         default=None,
         metadata={
             "name": "PassengersPerMinute",
@@ -45,7 +45,7 @@ class AccessEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    relative_weighting: Optional[int] = field(
+    relative_weighting: int | None = field(
         default=None,
         metadata={
             "name": "RelativeWeighting",
@@ -53,7 +53,7 @@ class AccessEquipmentVersionStructure(PlaceEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    safe_for_guide_dog: Optional[bool] = field(
+    safe_for_guide_dog: bool | None = field(
         default=None,
         metadata={
             "name": "SafeForGuideDog",

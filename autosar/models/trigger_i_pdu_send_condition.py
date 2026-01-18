@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class TriggerIPduSendCondition:
     class Meta:
         name = "TRIGGER-I-PDU-SEND-CONDITION"
 
-    mode_declaration_refs: Optional[
-        "TriggerIPduSendCondition.ModeDeclarationRefs"
-    ] = field(
+    mode_declaration_refs: TriggerIPduSendCondition.ModeDeclarationRefs | None = field(
         default=None,
         metadata={
             "name": "MODE-DECLARATION-REFS",
@@ -43,14 +43,14 @@ class TriggerIPduSendCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -62,7 +62,7 @@ class TriggerIPduSendCondition:
     @dataclass
     class ModeDeclarationRefs:
         mode_declaration_ref: list[
-            "TriggerIPduSendCondition.ModeDeclarationRefs.ModeDeclarationRef"
+            TriggerIPduSendCondition.ModeDeclarationRefs.ModeDeclarationRef
         ] = field(
             default_factory=list,
             metadata={
@@ -74,7 +74,7 @@ class TriggerIPduSendCondition:
 
         @dataclass
         class ModeDeclarationRef(Ref):
-            dest: Optional[ModeDeclarationSubtypesEnum] = field(
+            dest: ModeDeclarationSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

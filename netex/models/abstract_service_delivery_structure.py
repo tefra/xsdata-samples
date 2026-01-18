@@ -20,12 +20,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 @dataclass
 class AbstractServiceDeliveryStructure(ResponseStructure):
     choice: Iterable[
-        Union[
-            MessageQualifierStructure,
-            ParticipantRefStructure,
-            SubscriptionFilterRefStructure,
-            SubscriptionQualifierStructure,
-        ]
+        MessageQualifierStructure | ParticipantRefStructure | SubscriptionFilterRefStructure | SubscriptionQualifierStructure
     ] = field(
         default_factory=list,
         metadata={
@@ -55,7 +50,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "max_occurs": 3,
         },
     )
-    delegator_address: Optional[str] = field(
+    delegator_address: str | None = field(
         default=None,
         metadata={
             "name": "DelegatorAddress",
@@ -63,7 +58,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: Optional[ParticipantRefStructure] = field(
+    delegator_ref: ParticipantRefStructure | None = field(
         default=None,
         metadata={
             "name": "DelegatorRef",
@@ -71,7 +66,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    status: Optional[Status] = field(
+    status: Status | None = field(
         default=None,
         metadata={
             "name": "Status",
@@ -79,7 +74,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: Optional[ServiceDeliveryErrorConditionStructure] = field(
+    error_condition: ServiceDeliveryErrorConditionStructure | None = field(
         default=None,
         metadata={
             "name": "ErrorCondition",
@@ -87,7 +82,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    valid_until: Optional[XmlDateTime] = field(
+    valid_until: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "ValidUntil",
@@ -95,7 +90,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    shortest_possible_cycle: Optional[XmlDuration] = field(
+    shortest_possible_cycle: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "ShortestPossibleCycle",
@@ -103,7 +98,7 @@ class AbstractServiceDeliveryStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    default_language: Optional[str] = field(
+    default_language: str | None = field(
         default=None,
         metadata={
             "name": "DefaultLanguage",

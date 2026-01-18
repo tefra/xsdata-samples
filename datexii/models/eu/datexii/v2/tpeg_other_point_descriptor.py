@@ -23,9 +23,7 @@ class TpegOtherPointDescriptor(TpegPointDescriptor):
     :ivar tpeg_other_point_descriptor_extension:
     """
 
-    tpeg_other_point_descriptor_type: Optional[
-        TpegLoc03OtherPointDescriptorSubtypeEnum
-    ] = field(
+    tpeg_other_point_descriptor_type: TpegLoc03OtherPointDescriptorSubtypeEnum | None = field(
         default=None,
         metadata={
             "name": "tpegOtherPointDescriptorType",
@@ -34,7 +32,7 @@ class TpegOtherPointDescriptor(TpegPointDescriptor):
             "required": True,
         },
     )
-    tpeg_other_point_descriptor_extension: Optional[ExtensionType] = field(
+    tpeg_other_point_descriptor_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "tpegOtherPointDescriptorExtension",

@@ -29,7 +29,7 @@ class PrmCharAbsTol:
     class Meta:
         name = "PRM-CHAR-ABS-TOL"
 
-    abs: Optional[NumericalValue] = field(
+    abs: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "ABS",
@@ -37,7 +37,7 @@ class PrmCharAbsTol:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tol: Optional[NumericalValue] = field(
+    tol: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "TOL",
@@ -45,14 +45,14 @@ class PrmCharAbsTol:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

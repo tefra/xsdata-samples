@@ -44,7 +44,7 @@ class SalesTransactionFrameVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "SalesTransactionFrame_VersionFrameStructure"
 
-    retail_consortiums: Optional[RetailConsortiumsInFrameRelStructure] = field(
+    retail_consortiums: RetailConsortiumsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "retailConsortiums",
@@ -52,7 +52,7 @@ class SalesTransactionFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    retail_devices: Optional[RetailDevicesInFrameRelStructure] = field(
+    retail_devices: RetailDevicesInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "retailDevices",
@@ -60,14 +60,14 @@ class SalesTransactionFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customers: Optional[CustomersInFrameRelStructure] = field(
+    customers: CustomersInFrameRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_accounts: Optional[CustomerAccountsInFrameRelStructure] = field(
+    customer_accounts: CustomerAccountsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "customerAccounts",
@@ -75,7 +75,7 @@ class SalesTransactionFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_contracts: Optional[FareContractsInFrameRelStructure] = field(
+    fare_contracts: FareContractsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "fareContracts",
@@ -83,7 +83,7 @@ class SalesTransactionFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    medium_access_devices: Optional[MediumAccessDevicesInFrameRelStructure] = (
+    medium_access_devices: MediumAccessDevicesInFrameRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -93,23 +93,21 @@ class SalesTransactionFrameVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    blacklists: Optional[BlacklistsInFrameRelStructure] = field(
+    blacklists: BlacklistsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    whitelists: Optional[WhitelistsInFrameRelStructure] = field(
+    whitelists: WhitelistsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    travel_specifications: Optional[
-        TravelSpecificationsInFrameRelStructure
-    ] = field(
+    travel_specifications: TravelSpecificationsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "travelSpecifications",
@@ -117,7 +115,7 @@ class SalesTransactionFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sales_transactions: Optional[SalesTransactionsInFrameRelStructure] = field(
+    sales_transactions: SalesTransactionsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "salesTransactions",
@@ -125,9 +123,7 @@ class SalesTransactionFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    types_of_travel_documents: Optional[
-        TypesOfTravelDocumentInFrameRelStructure
-    ] = field(
+    types_of_travel_documents: TypesOfTravelDocumentInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "typesOfTravelDocuments",
@@ -135,7 +131,7 @@ class SalesTransactionFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    travel_documents: Optional[TravelDocumentsInFrameRelStructure] = field(
+    travel_documents: TravelDocumentsInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "travelDocuments",
@@ -143,9 +139,7 @@ class SalesTransactionFrameVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_purchase_packages: Optional[
-        CustomerPurchasePackagesInFrameRelStructure
-    ] = field(
+    customer_purchase_packages: CustomerPurchasePackagesInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "customerPurchasePackages",

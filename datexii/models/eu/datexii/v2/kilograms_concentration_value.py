@@ -19,7 +19,7 @@ class KilogramsConcentrationValue(DataValue):
     :ivar kilograms_concentration_value_extension:
     """
 
-    kilograms_concentration: Optional[float] = field(
+    kilograms_concentration: float | None = field(
         default=None,
         metadata={
             "name": "kilogramsConcentration",
@@ -28,7 +28,7 @@ class KilogramsConcentrationValue(DataValue):
             "required": True,
         },
     )
-    kilograms_concentration_value_extension: Optional[ExtensionType] = field(
+    kilograms_concentration_value_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "kilogramsConcentrationValueExtension",

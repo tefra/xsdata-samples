@@ -15,7 +15,7 @@ class ItemBaseType(NameableType):
     It requires that at least an id be supplied for an item.
     """
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

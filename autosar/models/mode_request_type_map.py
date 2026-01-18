@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -41,9 +43,7 @@ class ModeRequestTypeMap:
     class Meta:
         name = "MODE-REQUEST-TYPE-MAP"
 
-    implementation_data_type_ref: Optional[
-        "ModeRequestTypeMap.ImplementationDataTypeRef"
-    ] = field(
+    implementation_data_type_ref: ModeRequestTypeMap.ImplementationDataTypeRef | None = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-DATA-TYPE-REF",
@@ -51,7 +51,7 @@ class ModeRequestTypeMap:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_group_ref: Optional["ModeRequestTypeMap.ModeGroupRef"] = field(
+    mode_group_ref: ModeRequestTypeMap.ModeGroupRef | None = field(
         default=None,
         metadata={
             "name": "MODE-GROUP-REF",
@@ -59,14 +59,14 @@ class ModeRequestTypeMap:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -77,7 +77,7 @@ class ModeRequestTypeMap:
 
     @dataclass
     class ImplementationDataTypeRef(Ref):
-        dest: Optional[AbstractImplementationDataTypeSubtypesEnum] = field(
+        dest: AbstractImplementationDataTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -88,7 +88,7 @@ class ModeRequestTypeMap:
 
     @dataclass
     class ModeGroupRef(Ref):
-        dest: Optional[ModeDeclarationGroupSubtypesEnum] = field(
+        dest: ModeDeclarationGroupSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

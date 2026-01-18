@@ -18,7 +18,7 @@ class FloatingPointMetreDistanceValue(DataValue):
     :ivar floating_point_metre_distance_value_extension:
     """
 
-    floating_point_metre_distance: Optional[float] = field(
+    floating_point_metre_distance: float | None = field(
         default=None,
         metadata={
             "name": "floatingPointMetreDistance",
@@ -27,7 +27,7 @@ class FloatingPointMetreDistanceValue(DataValue):
             "required": True,
         },
     )
-    floating_point_metre_distance_value_extension: Optional[ExtensionType] = (
+    floating_point_metre_distance_value_extension: ExtensionType | None = (
         field(
             default=None,
             metadata={

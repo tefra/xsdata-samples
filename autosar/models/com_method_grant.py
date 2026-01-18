@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -104,7 +106,7 @@ class ComMethodGrant:
     class Meta:
         name = "COM-METHOD-GRANT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -113,7 +115,7 @@ class ComMethodGrant:
             "required": True,
         },
     )
-    short_name_fragments: Optional["ComMethodGrant.ShortNameFragments"] = (
+    short_name_fragments: ComMethodGrant.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -123,7 +125,7 @@ class ComMethodGrant:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -131,7 +133,7 @@ class ComMethodGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -139,7 +141,7 @@ class ComMethodGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -147,7 +149,7 @@ class ComMethodGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -155,7 +157,7 @@ class ComMethodGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -163,7 +165,7 @@ class ComMethodGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ComMethodGrant.Annotations"] = field(
+    annotations: ComMethodGrant.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -171,7 +173,7 @@ class ComMethodGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -179,7 +181,7 @@ class ComMethodGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_subject_refs: Optional["ComMethodGrant.RemoteSubjectRefs"] = field(
+    remote_subject_refs: ComMethodGrant.RemoteSubjectRefs | None = field(
         default=None,
         metadata={
             "name": "REMOTE-SUBJECT-REFS",
@@ -187,7 +189,7 @@ class ComMethodGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_ref: Optional["ComMethodGrant.ServiceInstanceRef"] = (
+    service_instance_ref: ComMethodGrant.ServiceInstanceRef | None = (
         field(
             default=None,
             metadata={
@@ -197,7 +199,7 @@ class ComMethodGrant:
             },
         )
     )
-    design_ref: Optional["ComMethodGrant.DesignRef"] = field(
+    design_ref: ComMethodGrant.DesignRef | None = field(
         default=None,
         metadata={
             "name": "DESIGN-REF",
@@ -205,7 +207,7 @@ class ComMethodGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_deployment_ref: Optional["ComMethodGrant.ServiceDeploymentRef"] = (
+    service_deployment_ref: ComMethodGrant.ServiceDeploymentRef | None = (
         field(
             default=None,
             metadata={
@@ -215,14 +217,14 @@ class ComMethodGrant:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -230,7 +232,7 @@ class ComMethodGrant:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -263,7 +265,7 @@ class ComMethodGrant:
     @dataclass
     class RemoteSubjectRefs:
         remote_subject_ref: list[
-            "ComMethodGrant.RemoteSubjectRefs.RemoteSubjectRef"
+            ComMethodGrant.RemoteSubjectRefs.RemoteSubjectRef
         ] = field(
             default_factory=list,
             metadata={
@@ -275,7 +277,7 @@ class ComMethodGrant:
 
         @dataclass
         class RemoteSubjectRef(Ref):
-            dest: Optional[AbstractIamRemoteSubjectSubtypesEnum] = field(
+            dest: AbstractIamRemoteSubjectSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -286,7 +288,7 @@ class ComMethodGrant:
 
     @dataclass
     class ServiceInstanceRef(Ref):
-        dest: Optional[AdaptivePlatformServiceInstanceSubtypesEnum] = field(
+        dest: AdaptivePlatformServiceInstanceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -297,7 +299,7 @@ class ComMethodGrant:
 
     @dataclass
     class DesignRef(Ref):
-        dest: Optional[ComMethodGrantDesignSubtypesEnum] = field(
+        dest: ComMethodGrantDesignSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -308,7 +310,7 @@ class ComMethodGrant:
 
     @dataclass
     class ServiceDeploymentRef(Ref):
-        dest: Optional[ServiceMethodDeploymentSubtypesEnum] = field(
+        dest: ServiceMethodDeploymentSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

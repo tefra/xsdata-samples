@@ -30,20 +30,20 @@ class RxAcceptContainedIPduEnum:
     class Meta:
         name = "RX-ACCEPT-CONTAINED-I-PDU-ENUM"
 
-    value: Optional[RxAcceptContainedIPduEnumSimple] = field(
+    value: RxAcceptContainedIPduEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

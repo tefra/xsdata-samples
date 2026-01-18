@@ -15,7 +15,7 @@ class FrequencyGroupsInFrameRelStructure(ContainmentAggregationStructure):
         name = "frequencyGroupsInFrame_RelStructure"
 
     headway_journey_group_or_rhythmical_journey_group: Iterable[
-        Union[HeadwayJourneyGroup, RhythmicalJourneyGroup]
+        HeadwayJourneyGroup | RhythmicalJourneyGroup
     ] = field(
         default_factory=list,
         metadata={

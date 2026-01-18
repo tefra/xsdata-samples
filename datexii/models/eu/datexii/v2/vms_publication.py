@@ -17,7 +17,7 @@ class VmsPublication(PayloadPublication):
     message signs.
     """
 
-    header_information: Optional[HeaderInformation] = field(
+    header_information: HeaderInformation | None = field(
         default=None,
         metadata={
             "name": "headerInformation",
@@ -35,7 +35,7 @@ class VmsPublication(PayloadPublication):
             "min_occurs": 1,
         },
     )
-    vms_publication_extension: Optional[ExtensionType] = field(
+    vms_publication_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "vmsPublicationExtension",

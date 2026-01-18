@@ -12,7 +12,7 @@ class BrandingVersionStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "Branding_VersionStructure"
 
-    presentation: Optional[PresentationStructure] = field(
+    presentation: PresentationStructure | None = field(
         default=None,
         metadata={
             "name": "Presentation",

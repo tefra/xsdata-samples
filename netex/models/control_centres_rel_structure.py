@@ -15,7 +15,7 @@ class ControlCentresRelStructure(ContainmentAggregationStructure):
         name = "ControlCentres_RelStructure"
 
     control_centre_ref_or_control_centre: Iterable[
-        Union[ControlCentreRef, ControlCentre]
+        ControlCentreRef | ControlCentre
     ] = field(
         default_factory=list,
         metadata={

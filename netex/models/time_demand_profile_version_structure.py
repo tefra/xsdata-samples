@@ -23,7 +23,7 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "TimeDemandProfile_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -31,9 +31,7 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_type_ref_or_timeband_ref: Optional[
-        Union[TimeDemandTypeRef, TimebandRef]
-    ] = field(
+    time_demand_type_ref_or_timeband_ref: TimeDemandTypeRef | TimebandRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -51,14 +49,7 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    journey_pattern_ref: Optional[
-        Union[
-            ServiceJourneyPatternRef,
-            ServicePatternRef,
-            DeadRunJourneyPatternRef,
-            JourneyPatternRef,
-        ]
-    ] = field(
+    journey_pattern_ref: ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -86,7 +77,7 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    vehicle_journey_ref: Optional[Union[DeadRunRef, VehicleJourneyRef]] = (
+    vehicle_journey_ref: DeadRunRef | VehicleJourneyRef | None = (
         field(
             default=None,
             metadata={
@@ -106,7 +97,7 @@ class TimeDemandProfileVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    members: Optional[TimeDemandProfileMembersRelStructure] = field(
+    members: TimeDemandProfileMembersRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

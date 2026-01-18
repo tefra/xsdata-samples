@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -97,7 +99,7 @@ class TdEventIPdu:
     class Meta:
         name = "TD-EVENT-I-PDU"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -106,7 +108,7 @@ class TdEventIPdu:
             "required": True,
         },
     )
-    short_name_fragments: Optional["TdEventIPdu.ShortNameFragments"] = field(
+    short_name_fragments: TdEventIPdu.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -114,7 +116,7 @@ class TdEventIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +124,7 @@ class TdEventIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +132,7 @@ class TdEventIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +140,7 @@ class TdEventIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +148,7 @@ class TdEventIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +156,7 @@ class TdEventIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["TdEventIPdu.Annotations"] = field(
+    annotations: TdEventIPdu.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -162,7 +164,7 @@ class TdEventIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -170,7 +172,7 @@ class TdEventIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    occurrence_expression: Optional[TdEventOccurrenceExpression] = field(
+    occurrence_expression: TdEventOccurrenceExpression | None = field(
         default=None,
         metadata={
             "name": "OCCURRENCE-EXPRESSION",
@@ -178,7 +180,7 @@ class TdEventIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: Optional["TdEventIPdu.EcuInstanceRef"] = field(
+    ecu_instance_ref: TdEventIPdu.EcuInstanceRef | None = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
@@ -186,7 +188,7 @@ class TdEventIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_pdu_ref: Optional["TdEventIPdu.IPduRef"] = field(
+    i_pdu_ref: TdEventIPdu.IPduRef | None = field(
         default=None,
         metadata={
             "name": "I-PDU-REF",
@@ -194,7 +196,7 @@ class TdEventIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channel_ref: Optional["TdEventIPdu.PhysicalChannelRef"] = field(
+    physical_channel_ref: TdEventIPdu.PhysicalChannelRef | None = field(
         default=None,
         metadata={
             "name": "PHYSICAL-CHANNEL-REF",
@@ -202,7 +204,7 @@ class TdEventIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_event_type: Optional[TdEventIPduTypeEnum] = field(
+    td_event_type: TdEventIPduTypeEnum | None = field(
         default=None,
         metadata={
             "name": "TD-EVENT-TYPE",
@@ -210,14 +212,14 @@ class TdEventIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -225,7 +227,7 @@ class TdEventIPdu:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -257,7 +259,7 @@ class TdEventIPdu:
 
     @dataclass
     class EcuInstanceRef(Ref):
-        dest: Optional[EcuInstanceSubtypesEnum] = field(
+        dest: EcuInstanceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -268,7 +270,7 @@ class TdEventIPdu:
 
     @dataclass
     class IPduRef(Ref):
-        dest: Optional[IPduSubtypesEnum] = field(
+        dest: IPduSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -279,7 +281,7 @@ class TdEventIPdu:
 
     @dataclass
     class PhysicalChannelRef(Ref):
-        dest: Optional[PhysicalChannelSubtypesEnum] = field(
+        dest: PhysicalChannelSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

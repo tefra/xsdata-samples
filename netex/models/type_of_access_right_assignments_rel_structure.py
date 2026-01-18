@@ -17,7 +17,7 @@ class TypeOfAccessRightAssignmentsRelStructure(
         name = "TypeOfAccessRightAssignments_RelStructure"
 
     type_of_access_right_assignment_ref_or_type_of_access_right_assignment: Iterable[
-        Union[TypeOfAccessRightAssignmentRef, TypeOfAccessRightAssignment]
+        TypeOfAccessRightAssignmentRef | TypeOfAccessRightAssignment
     ] = field(
         default_factory=list,
         metadata={

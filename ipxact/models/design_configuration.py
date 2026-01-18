@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -55,55 +57,55 @@ class DesignConfiguration:
         name = "designConfiguration"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    vendor: Optional[str] = field(
+    vendor: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    library: Optional[str] = field(
+    library: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    display_name: Optional[str] = field(
+    display_name: str | None = field(
         default=None,
         metadata={
             "name": "displayName",
             "type": "Element",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
             "type": "Element",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    design_ref: Optional[LibraryRefType] = field(
+    design_ref: LibraryRefType | None = field(
         default=None,
         metadata={
             "name": "designRef",
@@ -118,7 +120,7 @@ class DesignConfiguration:
         },
     )
     interconnection_configuration: list[
-        "DesignConfiguration.InterconnectionConfiguration"
+        DesignConfiguration.InterconnectionConfiguration
     ] = field(
         default_factory=list,
         metadata={
@@ -126,39 +128,39 @@ class DesignConfiguration:
             "type": "Element",
         },
     )
-    view_configuration: list["DesignConfiguration.ViewConfiguration"] = field(
+    view_configuration: list[DesignConfiguration.ViewConfiguration] = field(
         default_factory=list,
         metadata={
             "name": "viewConfiguration",
             "type": "Element",
         },
     )
-    choices: Optional[Choices] = field(
+    choices: Choices | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    parameters: Optional[Parameters] = field(
+    parameters: Parameters | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    assertions: Optional[Assertions] = field(
+    assertions: Assertions | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -182,7 +184,7 @@ class DesignConfiguration:
         :ivar id:
         """
 
-        interconnection_ref: Optional[str] = field(
+        interconnection_ref: str | None = field(
             default=None,
             metadata={
                 "name": "interconnectionRef",
@@ -191,7 +193,7 @@ class DesignConfiguration:
             },
         )
         abstractor_instances: list[
-            "DesignConfiguration.InterconnectionConfiguration.AbstractorInstances"
+            DesignConfiguration.InterconnectionConfiguration.AbstractorInstances
         ] = field(
             default_factory=list,
             metadata={
@@ -200,14 +202,14 @@ class DesignConfiguration:
                 "min_occurs": 1,
             },
         )
-        vendor_extensions: Optional[VendorExtensions] = field(
+        vendor_extensions: VendorExtensions | None = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -229,7 +231,7 @@ class DesignConfiguration:
             """
 
             interface_ref: list[
-                "DesignConfiguration.InterconnectionConfiguration.AbstractorInstances.InterfaceRef"
+                DesignConfiguration.InterconnectionConfiguration.AbstractorInstances.InterfaceRef
             ] = field(
                 default_factory=list,
                 metadata={
@@ -238,7 +240,7 @@ class DesignConfiguration:
                 },
             )
             abstractor_instance: list[
-                "DesignConfiguration.InterconnectionConfiguration.AbstractorInstances.AbstractorInstance"
+                DesignConfiguration.InterconnectionConfiguration.AbstractorInstances.AbstractorInstance
             ] = field(
                 default_factory=list,
                 metadata={
@@ -247,14 +249,14 @@ class DesignConfiguration:
                     "min_occurs": 1,
                 },
             )
-            vendor_extensions: Optional[VendorExtensions] = field(
+            vendor_extensions: VendorExtensions | None = field(
                 default=None,
                 metadata={
                     "name": "vendorExtensions",
                     "type": "Element",
                 },
             )
-            id: Optional[str] = field(
+            id: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
@@ -273,14 +275,14 @@ class DesignConfiguration:
                 :ivar id:
                 """
 
-                vendor_extensions: Optional[VendorExtensions] = field(
+                vendor_extensions: VendorExtensions | None = field(
                     default=None,
                     metadata={
                         "name": "vendorExtensions",
                         "type": "Element",
                     },
                 )
-                component_ref: Optional[str] = field(
+                component_ref: str | None = field(
                     default=None,
                     metadata={
                         "name": "componentRef",
@@ -288,7 +290,7 @@ class DesignConfiguration:
                         "required": True,
                     },
                 )
-                bus_ref: Optional[str] = field(
+                bus_ref: str | None = field(
                     default=None,
                     metadata={
                         "name": "busRef",
@@ -296,7 +298,7 @@ class DesignConfiguration:
                         "required": True,
                     },
                 )
-                id: Optional[str] = field(
+                id: str | None = field(
                     default=None,
                     metadata={
                         "type": "Attribute",
@@ -317,7 +319,7 @@ class DesignConfiguration:
                 :ivar id:
                 """
 
-                instance_name: Optional[str] = field(
+                instance_name: str | None = field(
                     default=None,
                     metadata={
                         "name": "instanceName",
@@ -325,27 +327,27 @@ class DesignConfiguration:
                         "required": True,
                     },
                 )
-                display_name: Optional[DisplayName] = field(
+                display_name: DisplayName | None = field(
                     default=None,
                     metadata={
                         "name": "displayName",
                         "type": "Element",
                     },
                 )
-                short_description: Optional[ShortDescription] = field(
+                short_description: ShortDescription | None = field(
                     default=None,
                     metadata={
                         "name": "shortDescription",
                         "type": "Element",
                     },
                 )
-                description: Optional[Description] = field(
+                description: Description | None = field(
                     default=None,
                     metadata={
                         "type": "Element",
                     },
                 )
-                abstractor_ref: Optional[ConfigurableLibraryRefType] = field(
+                abstractor_ref: ConfigurableLibraryRefType | None = field(
                     default=None,
                     metadata={
                         "name": "abstractorRef",
@@ -353,7 +355,7 @@ class DesignConfiguration:
                         "required": True,
                     },
                 )
-                view_name: Optional[str] = field(
+                view_name: str | None = field(
                     default=None,
                     metadata={
                         "name": "viewName",
@@ -361,7 +363,7 @@ class DesignConfiguration:
                         "required": True,
                     },
                 )
-                id: Optional[str] = field(
+                id: str | None = field(
                     default=None,
                     metadata={
                         "type": "Attribute",
@@ -378,7 +380,7 @@ class DesignConfiguration:
         :ivar id:
         """
 
-        instance_name: Optional[InstanceName] = field(
+        instance_name: InstanceName | None = field(
             default=None,
             metadata={
                 "name": "instanceName",
@@ -386,21 +388,21 @@ class DesignConfiguration:
                 "required": True,
             },
         )
-        view: Optional["DesignConfiguration.ViewConfiguration.View"] = field(
+        view: DesignConfiguration.ViewConfiguration.View | None = field(
             default=None,
             metadata={
                 "type": "Element",
                 "required": True,
             },
         )
-        vendor_extensions: Optional[VendorExtensions] = field(
+        vendor_extensions: VendorExtensions | None = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -416,16 +418,14 @@ class DesignConfiguration:
             :ivar view_ref:
             """
 
-            configurable_element_values: Optional[
-                ConfigurableElementValues
-            ] = field(
+            configurable_element_values: ConfigurableElementValues | None = field(
                 default=None,
                 metadata={
                     "name": "configurableElementValues",
                     "type": "Element",
                 },
             )
-            view_ref: Optional[str] = field(
+            view_ref: str | None = field(
                 default=None,
                 metadata={
                     "name": "viewRef",

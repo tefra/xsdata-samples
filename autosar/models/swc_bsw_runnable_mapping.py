@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class SwcBswRunnableMapping:
     class Meta:
         name = "SWC-BSW-RUNNABLE-MAPPING"
 
-    bsw_entity_ref: Optional["SwcBswRunnableMapping.BswEntityRef"] = field(
+    bsw_entity_ref: SwcBswRunnableMapping.BswEntityRef | None = field(
         default=None,
         metadata={
             "name": "BSW-ENTITY-REF",
@@ -47,7 +49,7 @@ class SwcBswRunnableMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_runnable_ref: Optional["SwcBswRunnableMapping.SwcRunnableRef"] = field(
+    swc_runnable_ref: SwcBswRunnableMapping.SwcRunnableRef | None = field(
         default=None,
         metadata={
             "name": "SWC-RUNNABLE-REF",
@@ -55,7 +57,7 @@ class SwcBswRunnableMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -63,14 +65,14 @@ class SwcBswRunnableMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -81,7 +83,7 @@ class SwcBswRunnableMapping:
 
     @dataclass
     class BswEntityRef(Ref):
-        dest: Optional[BswModuleEntitySubtypesEnum] = field(
+        dest: BswModuleEntitySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -92,7 +94,7 @@ class SwcBswRunnableMapping:
 
     @dataclass
     class SwcRunnableRef(Ref):
-        dest: Optional[RunnableEntitySubtypesEnum] = field(
+        dest: RunnableEntitySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

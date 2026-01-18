@@ -13,7 +13,7 @@ class PassengerEquipmentVersionStructure(InstalledEquipmentVersionStructure):
     class Meta:
         name = "PassengerEquipment_VersionStructure"
 
-    fixed: Optional[bool] = field(
+    fixed: bool | None = field(
         default=None,
         metadata={
             "name": "Fixed",

@@ -30,7 +30,7 @@ class NonOrderedLocationGroupByList(NonOrderedLocations):
             "min_occurs": 2,
         },
     )
-    non_ordered_location_group_by_list_extension: Optional[ExtensionType] = (
+    non_ordered_location_group_by_list_extension: ExtensionType | None = (
         field(
             default=None,
             metadata={

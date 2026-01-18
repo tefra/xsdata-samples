@@ -19,14 +19,14 @@ class TLinkEventDefinition(TEventDefinition):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    target: Optional[QName] = field(
+    target: QName | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -12,7 +12,7 @@ class CodeType:
             "required": True,
         },
     )
-    code_space: Optional[str] = field(
+    code_space: str | None = field(
         default=None,
         metadata={
             "name": "codeSpace",

@@ -52,7 +52,7 @@ class DayWeekMonth:
             "max_occurs": 12,
         },
     )
-    day_week_month_extension: Optional[ExtensionType] = field(
+    day_week_month_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "dayWeekMonthExtension",

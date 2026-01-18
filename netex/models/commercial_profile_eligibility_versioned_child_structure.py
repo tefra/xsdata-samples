@@ -16,7 +16,7 @@ class CommercialProfileEligibilityVersionedChildStructure(
     class Meta:
         name = "CommercialProfileEligibility_VersionedChildStructure"
 
-    commercial_profile_ref: Optional[CommercialProfileRef] = field(
+    commercial_profile_ref: CommercialProfileRef | None = field(
         default=None,
         metadata={
             "name": "CommercialProfileRef",

@@ -24,7 +24,7 @@ class TitleGroup:
         name = "title-group"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    article_title: Optional[ArticleTitle] = field(
+    article_title: ArticleTitle | None = field(
         default=None,
         metadata={
             "name": "article-title",
@@ -52,20 +52,20 @@ class TitleGroup:
             "type": "Element",
         },
     )
-    fn_group: Optional[FnGroup] = field(
+    fn_group: FnGroup | None = field(
         default=None,
         metadata={
             "name": "fn-group",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

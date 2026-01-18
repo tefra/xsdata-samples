@@ -18,9 +18,7 @@ class MediumAccessDeviceSecurityListingVersionedChildStructure(
     class Meta:
         name = "MediumAccessDeviceSecurityListing_VersionedChildStructure"
 
-    medium_access_device_ref: Optional[
-        Union[MobileDeviceRef, EmvCardRef, SmartcardRef]
-    ] = field(
+    medium_access_device_ref: MobileDeviceRef | EmvCardRef | SmartcardRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -127,7 +129,7 @@ class CanCommunicationConnector:
     class Meta:
         name = "CAN-COMMUNICATION-CONNECTOR"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -136,9 +138,7 @@ class CanCommunicationConnector:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "CanCommunicationConnector.ShortNameFragments"
-    ] = field(
+    short_name_fragments: CanCommunicationConnector.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -146,7 +146,7 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -154,7 +154,7 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -162,7 +162,7 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -170,7 +170,7 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -178,7 +178,7 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -186,7 +186,7 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["CanCommunicationConnector.Annotations"] = field(
+    annotations: CanCommunicationConnector.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -194,9 +194,7 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_controller_ref: Optional[
-        "CanCommunicationConnector.CommControllerRef"
-    ] = field(
+    comm_controller_ref: CanCommunicationConnector.CommControllerRef | None = field(
         default=None,
         metadata={
             "name": "COMM-CONTROLLER-REF",
@@ -204,7 +202,7 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    create_ecu_wakeup_source: Optional[Boolean] = field(
+    create_ecu_wakeup_source: Boolean | None = field(
         default=None,
         metadata={
             "name": "CREATE-ECU-WAKEUP-SOURCE",
@@ -212,7 +210,7 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dynamic_pnc_to_channel_mapping_enabled: Optional[Boolean] = field(
+    dynamic_pnc_to_channel_mapping_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "DYNAMIC-PNC-TO-CHANNEL-MAPPING-ENABLED",
@@ -220,9 +218,7 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_comm_port_instances: Optional[
-        "CanCommunicationConnector.EcuCommPortInstances"
-    ] = field(
+    ecu_comm_port_instances: CanCommunicationConnector.EcuCommPortInstances | None = field(
         default=None,
         metadata={
             "name": "ECU-COMM-PORT-INSTANCES",
@@ -230,7 +226,7 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_gateway_type: Optional[PncGatewayTypeEnum] = field(
+    pnc_gateway_type: PncGatewayTypeEnum | None = field(
         default=None,
         metadata={
             "name": "PNC-GATEWAY-TYPE",
@@ -238,7 +234,7 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -246,7 +242,7 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_wakeup_can_id: Optional[PositiveInteger] = field(
+    pnc_wakeup_can_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "PNC-WAKEUP-CAN-ID",
@@ -254,7 +250,7 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_wakeup_can_id_extended: Optional[Boolean] = field(
+    pnc_wakeup_can_id_extended: Boolean | None = field(
         default=None,
         metadata={
             "name": "PNC-WAKEUP-CAN-ID-EXTENDED",
@@ -262,7 +258,7 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_wakeup_can_id_mask: Optional[PositiveInteger] = field(
+    pnc_wakeup_can_id_mask: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "PNC-WAKEUP-CAN-ID-MASK",
@@ -270,7 +266,7 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_wakeup_data_mask: Optional[PositiveUnlimitedInteger] = field(
+    pnc_wakeup_data_mask: PositiveUnlimitedInteger | None = field(
         default=None,
         metadata={
             "name": "PNC-WAKEUP-DATA-MASK",
@@ -278,7 +274,7 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_wakeup_dlc: Optional[PositiveInteger] = field(
+    pnc_wakeup_dlc: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "PNC-WAKEUP-DLC",
@@ -286,14 +282,14 @@ class CanCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -301,7 +297,7 @@ class CanCommunicationConnector:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -333,7 +329,7 @@ class CanCommunicationConnector:
 
     @dataclass
     class CommControllerRef(Ref):
-        dest: Optional[CommunicationControllerSubtypesEnum] = field(
+        dest: CommunicationControllerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

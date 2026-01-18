@@ -12,7 +12,7 @@ class VehiclePoolerProfileVersionStructure(UserProfileVersionStructure):
     class Meta:
         name = "VehiclePoolerProfile_VersionStructure"
 
-    host_user_profile_ref: Optional[UserProfileRefStructure] = field(
+    host_user_profile_ref: UserProfileRefStructure | None = field(
         default=None,
         metadata={
             "name": "HostUserProfileRef",
@@ -20,7 +20,7 @@ class VehiclePoolerProfileVersionStructure(UserProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    smoking_allowed: Optional[bool] = field(
+    smoking_allowed: bool | None = field(
         default=None,
         metadata={
             "name": "SmokingAllowed",
@@ -28,7 +28,7 @@ class VehiclePoolerProfileVersionStructure(UserProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    pets_allowed: Optional[bool] = field(
+    pets_allowed: bool | None = field(
         default=None,
         metadata={
             "name": "PetsAllowed",
@@ -36,7 +36,7 @@ class VehiclePoolerProfileVersionStructure(UserProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    luggage_allowed: Optional[bool] = field(
+    luggage_allowed: bool | None = field(
         default=None,
         metadata={
             "name": "LuggageAllowed",
@@ -44,7 +44,7 @@ class VehiclePoolerProfileVersionStructure(UserProfileVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    detour_accepted: Optional[bool] = field(
+    detour_accepted: bool | None = field(
         default=None,
         metadata={
             "name": "DetourAccepted",

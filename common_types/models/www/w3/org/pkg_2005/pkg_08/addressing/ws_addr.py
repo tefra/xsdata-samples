@@ -11,7 +11,7 @@ class AttributedQnameType:
     class Meta:
         name = "AttributedQNameType"
 
-    value: Optional[QName] = field(
+    value: QName | None = field(
         default=None,
         metadata={
             "required": True,
@@ -48,7 +48,7 @@ class AttributedUritype:
 
 @dataclass
 class AttributedUnsignedLongType:
-    value: Optional[int] = field(
+    value: int | None = field(
         default=None,
         metadata={
             "required": True,
@@ -152,7 +152,7 @@ class RelatesToType:
             "required": True,
         },
     )
-    relationship_type: Union[RelationshipType, str] = field(
+    relationship_type: RelationshipType | str = field(
         default=RelationshipType.HTTP_WWW_W3_ORG_2005_08_ADDRESSING_REPLY,
         metadata={
             "name": "RelationshipType",
@@ -182,7 +182,7 @@ class To(AttributedUritype):
 
 @dataclass
 class EndpointReferenceType:
-    address: Optional[AttributedUritype] = field(
+    address: AttributedUritype | None = field(
         default=None,
         metadata={
             "name": "Address",
@@ -191,7 +191,7 @@ class EndpointReferenceType:
             "required": True,
         },
     )
-    reference_parameters: Optional[ReferenceParameters] = field(
+    reference_parameters: ReferenceParameters | None = field(
         default=None,
         metadata={
             "name": "ReferenceParameters",
@@ -199,7 +199,7 @@ class EndpointReferenceType:
             "namespace": "http://www.w3.org/2005/08/addressing",
         },
     )
-    metadata: Optional[Metadata] = field(
+    metadata: Metadata | None = field(
         default=None,
         metadata={
             "name": "Metadata",
@@ -225,7 +225,7 @@ class EndpointReferenceType:
 
 @dataclass
 class ProblemActionType:
-    action: Optional[Action] = field(
+    action: Action | None = field(
         default=None,
         metadata={
             "name": "Action",
@@ -233,7 +233,7 @@ class ProblemActionType:
             "namespace": "http://www.w3.org/2005/08/addressing",
         },
     )
-    soap_action: Optional[str] = field(
+    soap_action: str | None = field(
         default=None,
         metadata={
             "name": "SoapAction",

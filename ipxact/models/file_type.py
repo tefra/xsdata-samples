@@ -16,25 +16,25 @@ class FileType:
         name = "fileType"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: Optional[SimpleFileType] = field(
+    value: SimpleFileType | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    user: Optional[str] = field(
+    user: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    libext: Optional[str] = field(
+    libext: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

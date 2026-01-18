@@ -11,7 +11,7 @@ class PredefinedItineraryIndexPredefinedLocation:
     class Meta:
         name = "_PredefinedItineraryIndexPredefinedLocation"
 
-    predefined_location: Optional[PredefinedLocation] = field(
+    predefined_location: PredefinedLocation | None = field(
         default=None,
         metadata={
             "name": "predefinedLocation",
@@ -20,7 +20,7 @@ class PredefinedItineraryIndexPredefinedLocation:
             "required": True,
         },
     )
-    index: Optional[int] = field(
+    index: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

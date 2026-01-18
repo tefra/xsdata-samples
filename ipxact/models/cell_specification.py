@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -27,21 +29,21 @@ class CellSpecification:
         name = "cellSpecification"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    cell_function: Optional["CellSpecification.CellFunction"] = field(
+    cell_function: CellSpecification.CellFunction | None = field(
         default=None,
         metadata={
             "name": "cellFunction",
             "type": "Element",
         },
     )
-    cell_class: Optional[CellClassValueType] = field(
+    cell_class: CellClassValueType | None = field(
         default=None,
         metadata={
             "name": "cellClass",
             "type": "Element",
         },
     )
-    cell_strength: Optional[CellStrengthValueType] = field(
+    cell_strength: CellStrengthValueType | None = field(
         default=None,
         metadata={
             "name": "cellStrength",
@@ -51,13 +53,13 @@ class CellSpecification:
 
     @dataclass
     class CellFunction:
-        value: Optional[CellFunctionValueType] = field(
+        value: CellFunctionValueType | None = field(
             default=None,
             metadata={
                 "required": True,
             },
         )
-        other: Optional[str] = field(
+        other: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

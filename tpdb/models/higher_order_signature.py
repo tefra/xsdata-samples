@@ -20,16 +20,14 @@ class HigherOrderSignature:
     class Meta:
         name = "higherOrderSignature"
 
-    variable_type_info: Optional[HigherOrderSignatureVariableTypeInfo] = field(
+    variable_type_info: HigherOrderSignatureVariableTypeInfo | None = field(
         default=None,
         metadata={
             "name": "variableTypeInfo",
             "type": "Element",
         },
     )
-    function_symbol_type_info: Optional[
-        HigherOrderSignatureFunctionSymbolTypeInfo
-    ] = field(
+    function_symbol_type_info: HigherOrderSignatureFunctionSymbolTypeInfo | None = field(
         default=None,
         metadata={
             "name": "functionSymbolTypeInfo",

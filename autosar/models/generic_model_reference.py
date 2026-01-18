@@ -36,7 +36,7 @@ class GenericModelReference:
     class Meta:
         name = "GENERIC-MODEL-REFERENCE"
 
-    ref: Optional[Ref] = field(
+    ref: Ref | None = field(
         default=None,
         metadata={
             "name": "REF",
@@ -44,14 +44,14 @@ class GenericModelReference:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -59,14 +59,14 @@ class GenericModelReference:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "name": "BASE",
             "type": "Attribute",
         },
     )
-    dest: Optional[str] = field(
+    dest: str | None = field(
         default=None,
         metadata={
             "name": "DEST",

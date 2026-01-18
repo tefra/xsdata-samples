@@ -17,7 +17,7 @@ class ControllableElementsRelStructure(StrictContainmentAggregationStructure):
         name = "controllableElements_RelStructure"
 
     controllable_element_ref_or_controllable_element: Iterable[
-        Union[ControllableElementRef, ControllableElement]
+        ControllableElementRef | ControllableElement
     ] = field(
         default_factory=list,
         metadata={

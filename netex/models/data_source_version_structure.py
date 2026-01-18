@@ -12,7 +12,7 @@ class DataSourceVersionStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "DataSource_VersionStructure"
 
-    email: Optional[str] = field(
+    email: str | None = field(
         default=None,
         metadata={
             "name": "Email",
@@ -20,7 +20,7 @@ class DataSourceVersionStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    data_licence_code: Optional[ExternalObjectRefStructure] = field(
+    data_licence_code: ExternalObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "DataLicenceCode",
@@ -28,7 +28,7 @@ class DataSourceVersionStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    data_licence_url: Optional[str] = field(
+    data_licence_url: str | None = field(
         default=None,
         metadata={
             "name": "DataLicenceUrl",

@@ -16,7 +16,7 @@ class DriverTripTimeVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "DriverTripTime_VersionStructure"
 
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -24,7 +24,7 @@ class DriverTripTimeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    driver_trip_ref: Optional[DriverTripRef] = field(
+    driver_trip_ref: DriverTripRef | None = field(
         default=None,
         metadata={
             "name": "DriverTripRef",
@@ -32,7 +32,7 @@ class DriverTripTimeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    duration: Optional[XmlDuration] = field(
+    duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "Duration",
@@ -40,7 +40,7 @@ class DriverTripTimeVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_mode: Optional[AllModesEnumeration] = field(
+    transport_mode: AllModesEnumeration | None = field(
         default=None,
         metadata={
             "name": "TransportMode",

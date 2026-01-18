@@ -23,15 +23,7 @@ class VehicleAccessCredentialsAssignmentVersionStructure(
     class Meta:
         name = "VehicleAccessCredentialsAssignment_VersionStructure"
 
-    common_vehicle_service_ref_or_vehicle_pooling_service_ref: Optional[
-        Union[
-            VehicleRentalServiceRef,
-            VehicleSharingServiceRef,
-            ChauffeuredVehicleServiceRef,
-            TaxiServiceRef,
-            CarPoolingServiceRef,
-        ]
-    ] = field(
+    common_vehicle_service_ref_or_vehicle_pooling_service_ref: VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -64,7 +56,7 @@ class VehicleAccessCredentialsAssignmentVersionStructure(
             ),
         },
     )
-    vehicle_ref: Optional[VehicleRef] = field(
+    vehicle_ref: VehicleRef | None = field(
         default=None,
         metadata={
             "name": "VehicleRef",
@@ -72,9 +64,7 @@ class VehicleAccessCredentialsAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    medium_access_device_ref: Optional[
-        Union[MobileDeviceRef, EmvCardRef, SmartcardRef]
-    ] = field(
+    medium_access_device_ref: MobileDeviceRef | EmvCardRef | SmartcardRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -97,7 +87,7 @@ class VehicleAccessCredentialsAssignmentVersionStructure(
             ),
         },
     )
-    service_access_code_ref: Optional[ServiceAccessCodeRef] = field(
+    service_access_code_ref: ServiceAccessCodeRef | None = field(
         default=None,
         metadata={
             "name": "ServiceAccessCodeRef",

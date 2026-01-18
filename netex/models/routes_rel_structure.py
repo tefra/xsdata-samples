@@ -14,7 +14,7 @@ class RoutesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "routes_RelStructure"
 
-    route_ref_or_route: Iterable[Union[RouteRef, Route]] = field(
+    route_ref_or_route: Iterable[RouteRef | Route] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -16,7 +16,7 @@ class AccessibilityLimitationsRelStructure(
     class Meta:
         name = "accessibilityLimitations_RelStructure"
 
-    accessibility_limitation: Optional[AccessibilityLimitation] = field(
+    accessibility_limitation: AccessibilityLimitation | None = field(
         default=None,
         metadata={
             "name": "AccessibilityLimitation",

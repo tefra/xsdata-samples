@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import Optional
@@ -21,7 +23,7 @@ class SpecificParameterAssignmentsRelStructure(
     class Meta:
         name = "specificParameterAssignments_RelStructure"
 
-    specific_parameter_assignment: Iterable["SpecificParameterAssignment"] = (
+    specific_parameter_assignment: Iterable[SpecificParameterAssignment] = (
         field(
             default_factory=list,
             metadata={
@@ -41,7 +43,7 @@ class SpecificParameterAssignmentVersionStructure(
     class Meta:
         name = "SpecificParameterAssignment_VersionStructure"
 
-    access_number: Optional[int] = field(
+    access_number: int | None = field(
         default=None,
         metadata={
             "name": "AccessNumber",
@@ -49,7 +51,7 @@ class SpecificParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    includes_grouping_type: Optional[LogicalOperationEnumeration] = field(
+    includes_grouping_type: LogicalOperationEnumeration | None = field(
         default=None,
         metadata={
             "name": "IncludesGroupingType",
@@ -57,14 +59,14 @@ class SpecificParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    includes: Optional[SpecificParameterAssignmentsRelStructure] = field(
+    includes: SpecificParameterAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distribution_assignment_ref: Optional[DistributionAssignmentRef] = field(
+    distribution_assignment_ref: DistributionAssignmentRef | None = field(
         default=None,
         metadata={
             "name": "DistributionAssignmentRef",
@@ -72,7 +74,7 @@ class SpecificParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    retailing_organization_ref: Optional[OrganisationRefStructure] = field(
+    retailing_organization_ref: OrganisationRefStructure | None = field(
         default=None,
         metadata={
             "name": "RetailingOrganizationRef",
@@ -80,7 +82,7 @@ class SpecificParameterAssignmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    collection_point_ref: Optional[PointRefStructure] = field(
+    collection_point_ref: PointRefStructure | None = field(
         default=None,
         metadata={
             "name": "CollectionPointRef",

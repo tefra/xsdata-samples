@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -104,7 +106,7 @@ class ComEventGrant:
     class Meta:
         name = "COM-EVENT-GRANT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -113,7 +115,7 @@ class ComEventGrant:
             "required": True,
         },
     )
-    short_name_fragments: Optional["ComEventGrant.ShortNameFragments"] = field(
+    short_name_fragments: ComEventGrant.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -121,7 +123,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -129,7 +131,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -137,7 +139,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -145,7 +147,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -153,7 +155,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -161,7 +163,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ComEventGrant.Annotations"] = field(
+    annotations: ComEventGrant.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -169,7 +171,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -177,7 +179,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_subject_refs: Optional["ComEventGrant.RemoteSubjectRefs"] = field(
+    remote_subject_refs: ComEventGrant.RemoteSubjectRefs | None = field(
         default=None,
         metadata={
             "name": "REMOTE-SUBJECT-REFS",
@@ -185,7 +187,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_ref: Optional["ComEventGrant.ServiceInstanceRef"] = field(
+    service_instance_ref: ComEventGrant.ServiceInstanceRef | None = field(
         default=None,
         metadata={
             "name": "SERVICE-INSTANCE-REF",
@@ -193,7 +195,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    design_ref: Optional["ComEventGrant.DesignRef"] = field(
+    design_ref: ComEventGrant.DesignRef | None = field(
         default=None,
         metadata={
             "name": "DESIGN-REF",
@@ -201,7 +203,7 @@ class ComEventGrant:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_deployment_ref: Optional["ComEventGrant.ServiceDeploymentRef"] = (
+    service_deployment_ref: ComEventGrant.ServiceDeploymentRef | None = (
         field(
             default=None,
             metadata={
@@ -211,14 +213,14 @@ class ComEventGrant:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -226,7 +228,7 @@ class ComEventGrant:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -259,7 +261,7 @@ class ComEventGrant:
     @dataclass
     class RemoteSubjectRefs:
         remote_subject_ref: list[
-            "ComEventGrant.RemoteSubjectRefs.RemoteSubjectRef"
+            ComEventGrant.RemoteSubjectRefs.RemoteSubjectRef
         ] = field(
             default_factory=list,
             metadata={
@@ -271,7 +273,7 @@ class ComEventGrant:
 
         @dataclass
         class RemoteSubjectRef(Ref):
-            dest: Optional[AbstractIamRemoteSubjectSubtypesEnum] = field(
+            dest: AbstractIamRemoteSubjectSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -282,7 +284,7 @@ class ComEventGrant:
 
     @dataclass
     class ServiceInstanceRef(Ref):
-        dest: Optional[AdaptivePlatformServiceInstanceSubtypesEnum] = field(
+        dest: AdaptivePlatformServiceInstanceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -293,7 +295,7 @@ class ComEventGrant:
 
     @dataclass
     class DesignRef(Ref):
-        dest: Optional[ComEventGrantDesignSubtypesEnum] = field(
+        dest: ComEventGrantDesignSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -304,7 +306,7 @@ class ComEventGrant:
 
     @dataclass
     class ServiceDeploymentRef(Ref):
-        dest: Optional[ServiceEventDeploymentSubtypesEnum] = field(
+        dest: ServiceEventDeploymentSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

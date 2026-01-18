@@ -25,9 +25,7 @@ class ParkingVMS:
     :ivar parking_vmsextension:
     """
 
-    vms_unit_used_to_manage_parking: Optional[
-        VmsUnitRecordVersionedReference
-    ] = field(
+    vms_unit_used_to_manage_parking: VmsUnitRecordVersionedReference | None = field(
         default=None,
         metadata={
             "name": "vmsUnitUsedToManageParking",
@@ -44,7 +42,7 @@ class ParkingVMS:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_vmsextension: Optional[ExtensionType] = field(
+    parking_vmsextension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "parkingVMSExtension",

@@ -17,7 +17,7 @@ class InterchangeRuleTimingVersionStructure(
     class Meta:
         name = "InterchangeRuleTiming_VersionStructure"
 
-    standard_wait_time: Optional[XmlDuration] = field(
+    standard_wait_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "StandardWaitTime",
@@ -25,7 +25,7 @@ class InterchangeRuleTimingVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_wait_time: Optional[XmlDuration] = field(
+    maximum_wait_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MaximumWaitTime",
@@ -33,7 +33,7 @@ class InterchangeRuleTimingVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_automatic_wait_time: Optional[XmlDuration] = field(
+    maximum_automatic_wait_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MaximumAutomaticWaitTime",
@@ -41,7 +41,7 @@ class InterchangeRuleTimingVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    standard_transfer_time: Optional[XmlDuration] = field(
+    standard_transfer_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "StandardTransferTime",
@@ -49,7 +49,7 @@ class InterchangeRuleTimingVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_transfer_time: Optional[XmlDuration] = field(
+    minimum_transfer_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MinimumTransferTime",
@@ -57,7 +57,7 @@ class InterchangeRuleTimingVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_transfer_time: Optional[XmlDuration] = field(
+    maximum_transfer_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MaximumTransferTime",
@@ -65,7 +65,7 @@ class InterchangeRuleTimingVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    control_centre_notify_threshold: Optional[XmlDuration] = field(
+    control_centre_notify_threshold: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "ControlCentreNotifyThreshold",

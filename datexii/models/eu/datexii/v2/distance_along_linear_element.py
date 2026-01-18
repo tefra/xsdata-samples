@@ -15,7 +15,7 @@ class DistanceAlongLinearElement:
     direction of traffic flow.
     """
 
-    distance_along_linear_element_extension: Optional[ExtensionType] = field(
+    distance_along_linear_element_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "distanceAlongLinearElementExtension",

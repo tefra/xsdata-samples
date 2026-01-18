@@ -9,14 +9,14 @@ class Comment:
     class Meta:
         name = "comment"
 
-    author: Optional[str] = field(
+    author: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    date: Optional[XmlDate] = field(
+    date: XmlDate | None = field(
         default=None,
         metadata={
             "type": "Attribute",

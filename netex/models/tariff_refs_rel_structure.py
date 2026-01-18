@@ -14,7 +14,7 @@ class TariffRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "tariffRefs_RelStructure"
 
-    tariff_ref: Iterable[Union[ParkingTariffRef, TariffRef]] = field(
+    tariff_ref: Iterable[ParkingTariffRef | TariffRef] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

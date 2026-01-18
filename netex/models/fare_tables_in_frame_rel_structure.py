@@ -18,7 +18,7 @@ class FareTablesInFrameRelStructure(FrameContainmentStructure):
         name = "fareTablesInFrame_RelStructure"
 
     fare_table: Iterable[
-        Union[StandardFareTable, FareTableInContext, FareTable]
+        StandardFareTable | FareTableInContext | FareTable
     ] = field(
         default_factory=list,
         metadata={

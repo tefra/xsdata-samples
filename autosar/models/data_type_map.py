@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -37,9 +39,7 @@ class DataTypeMap:
     class Meta:
         name = "DATA-TYPE-MAP"
 
-    application_data_type_ref: Optional[
-        "DataTypeMap.ApplicationDataTypeRef"
-    ] = field(
+    application_data_type_ref: DataTypeMap.ApplicationDataTypeRef | None = field(
         default=None,
         metadata={
             "name": "APPLICATION-DATA-TYPE-REF",
@@ -47,9 +47,7 @@ class DataTypeMap:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implementation_data_type_ref: Optional[
-        "DataTypeMap.ImplementationDataTypeRef"
-    ] = field(
+    implementation_data_type_ref: DataTypeMap.ImplementationDataTypeRef | None = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-DATA-TYPE-REF",
@@ -57,14 +55,14 @@ class DataTypeMap:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -75,7 +73,7 @@ class DataTypeMap:
 
     @dataclass
     class ApplicationDataTypeRef(Ref):
-        dest: Optional[ApplicationDataTypeSubtypesEnum] = field(
+        dest: ApplicationDataTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -86,7 +84,7 @@ class DataTypeMap:
 
     @dataclass
     class ImplementationDataTypeRef(Ref):
-        dest: Optional[AbstractImplementationDataTypeSubtypesEnum] = field(
+        dest: AbstractImplementationDataTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

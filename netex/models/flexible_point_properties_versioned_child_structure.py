@@ -28,27 +28,7 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "FlexiblePointProperties_VersionedChildStructure"
 
-    choice: Optional[
-        Union[
-            PointOnRouteRef,
-            VehicleMeetingPointRef,
-            WirePointRef,
-            RoadPointRef,
-            RailwayPointRef,
-            TrafficControlPointRef,
-            BeaconPointRef,
-            ActivationPointRef,
-            BorderPointRef,
-            FareScheduledStopPointRef,
-            ScheduledStopPointRef,
-            GaragePointRef,
-            ParkingPointRef,
-            ReliefPointRef,
-            TimingPointRef,
-            RoutePointRef,
-            PointRef,
-        ]
-    ] = field(
+    choice: PointOnRouteRef | VehicleMeetingPointRef | WirePointRef | RoadPointRef | RailwayPointRef | TrafficControlPointRef | BeaconPointRef | ActivationPointRef | BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | RoutePointRef | PointRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -141,7 +121,7 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    may_be_skipped: Optional[bool] = field(
+    may_be_skipped: bool | None = field(
         default=None,
         metadata={
             "name": "MayBeSkipped",
@@ -149,7 +129,7 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    on_main_route: Optional[bool] = field(
+    on_main_route: bool | None = field(
         default=None,
         metadata={
             "name": "OnMainRoute",
@@ -157,7 +137,7 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    point_standing_for_azone: Optional[bool] = field(
+    point_standing_for_azone: bool | None = field(
         default=None,
         metadata={
             "name": "PointStandingForAZone",
@@ -165,7 +145,7 @@ class FlexiblePointPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    zone_containing_stops: Optional[bool] = field(
+    zone_containing_stops: bool | None = field(
         default=None,
         metadata={
             "name": "ZoneContainingStops",

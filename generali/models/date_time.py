@@ -7,7 +7,7 @@ class DateTime:
     class Meta:
         name = "date-time"
 
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "type",
@@ -15,7 +15,7 @@ class DateTime:
             "required": True,
         },
     )
-    format: Optional[str] = field(
+    format: str | None = field(
         default=None,
         metadata={
             "type": "Element",

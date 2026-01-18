@@ -17,7 +17,7 @@ class TimeIntervalVersionStructure(FareIntervalVersionStructure):
     class Meta:
         name = "TimeInterval_VersionStructure"
 
-    start_time: Optional[XmlTime] = field(
+    start_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "StartTime",
@@ -25,7 +25,7 @@ class TimeIntervalVersionStructure(FareIntervalVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_time: Optional[XmlTime] = field(
+    end_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "EndTime",
@@ -33,7 +33,7 @@ class TimeIntervalVersionStructure(FareIntervalVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_offset: Optional[int] = field(
+    day_offset: int | None = field(
         default=None,
         metadata={
             "name": "DayOffset",
@@ -41,7 +41,7 @@ class TimeIntervalVersionStructure(FareIntervalVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    duration: Optional[XmlDuration] = field(
+    duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "Duration",
@@ -49,7 +49,7 @@ class TimeIntervalVersionStructure(FareIntervalVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_duration: Optional[XmlDuration] = field(
+    minimum_duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MinimumDuration",
@@ -57,14 +57,14 @@ class TimeIntervalVersionStructure(FareIntervalVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: Optional[TimeIntervalPricesRelStructure] = field(
+    prices: TimeIntervalPricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_structure_factors: Optional[TimeStructureFactorsRelStructure] = field(
+    time_structure_factors: TimeStructureFactorsRelStructure | None = field(
         default=None,
         metadata={
             "name": "timeStructureFactors",

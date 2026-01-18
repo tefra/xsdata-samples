@@ -60,7 +60,7 @@ class PassengerInformationEquipmentVersionStructure(
     class Meta:
         name = "PassengerInformationEquipment_VersionStructure"
 
-    logical_display_ref: Optional[LogicalDisplayRef] = field(
+    logical_display_ref: LogicalDisplayRef | None = field(
         default=None,
         metadata={
             "name": "LogicalDisplayRef",
@@ -68,7 +68,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_place_ref: Optional[Union[TaxiRankRef, StopPlaceRef]] = field(
+    stop_place_ref: TaxiRankRef | StopPlaceRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -86,36 +86,7 @@ class PassengerInformationEquipmentVersionStructure(
             ),
         },
     )
-    choice: Optional[
-        Union[
-            VehicleStoppingPositionRef,
-            VehicleStoppingPlaceRef,
-            BoardingPositionRef,
-            AccessSpaceRef,
-            TaxiStandRef,
-            QuayRef,
-            StopPlaceSpaceRef,
-            VehiclePoolingParkingBayRef,
-            MonitoredVehicleSharingParkingBayRef,
-            VehicleSharingParkingBayRef,
-            ParkingBayRef,
-            VehiclePoolingParkingAreaRef,
-            VehicleSharingParkingAreaRef,
-            TaxiParkingAreaRef,
-            ParkingAreaRef,
-            PointOfInterestSpaceRef,
-            StopPlaceVehicleEntranceRef,
-            StopPlaceEntranceRef,
-            ParkingEntranceForVehiclesRef,
-            ParkingPassengerEntranceRef,
-            ParkingEntranceRef,
-            PointOfInterestVehicleEntranceRef,
-            PointOfInterestEntranceRef,
-            VehicleEntranceRef,
-            EntranceRef,
-            SiteComponentRef,
-        ]
-    ] = field(
+    choice: VehicleStoppingPositionRef | VehicleStoppingPlaceRef | BoardingPositionRef | AccessSpaceRef | TaxiStandRef | QuayRef | StopPlaceSpaceRef | VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef | VehiclePoolingParkingAreaRef | VehicleSharingParkingAreaRef | TaxiParkingAreaRef | ParkingAreaRef | PointOfInterestSpaceRef | StopPlaceVehicleEntranceRef | StopPlaceEntranceRef | ParkingEntranceForVehiclesRef | ParkingPassengerEntranceRef | ParkingEntranceRef | PointOfInterestVehicleEntranceRef | PointOfInterestEntranceRef | VehicleEntranceRef | EntranceRef | SiteComponentRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -264,9 +235,7 @@ class PassengerInformationEquipmentVersionStructure(
             "tokens": True,
         },
     )
-    type_of_passenger_information_equipment_ref: Optional[
-        TypeOfPassengerInformationEquipmentRef
-    ] = field(
+    type_of_passenger_information_equipment_ref: TypeOfPassengerInformationEquipmentRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfPassengerInformationEquipmentRef",
@@ -274,7 +243,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    low_counter_access: Optional[bool] = field(
+    low_counter_access: bool | None = field(
         default=None,
         metadata={
             "name": "LowCounterAccess",
@@ -282,7 +251,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    height_of_low_counter: Optional[Decimal] = field(
+    height_of_low_counter: Decimal | None = field(
         default=None,
         metadata={
             "name": "HeightOfLowCounter",
@@ -290,7 +259,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    induction_loops: Optional[bool] = field(
+    induction_loops: bool | None = field(
         default=None,
         metadata={
             "name": "InductionLoops",
@@ -298,7 +267,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tactile_interface_available: Optional[bool] = field(
+    tactile_interface_available: bool | None = field(
         default=None,
         metadata={
             "name": "TactileInterfaceAvailable",
@@ -306,7 +275,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    audio_interface_available: Optional[bool] = field(
+    audio_interface_available: bool | None = field(
         default=None,
         metadata={
             "name": "AudioInterfaceAvailable",
@@ -314,7 +283,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    disabled_priority: Optional[bool] = field(
+    disabled_priority: bool | None = field(
         default=None,
         metadata={
             "name": "DisabledPriority",
@@ -322,7 +291,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheelchair_suitable: Optional[bool] = field(
+    wheelchair_suitable: bool | None = field(
         default=None,
         metadata={
             "name": "WheelchairSuitable",
@@ -330,9 +299,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_information_facility_list: Optional[
-        PassengerInformationFacilityList
-    ] = field(
+    passenger_information_facility_list: PassengerInformationFacilityList | None = field(
         default=None,
         metadata={
             "name": "PassengerInformationFacilityList",
@@ -340,9 +307,7 @@ class PassengerInformationEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accessibility_info_facility_list: Optional[
-        AccessibilityInfoFacilityList
-    ] = field(
+    accessibility_info_facility_list: AccessibilityInfoFacilityList | None = field(
         default=None,
         metadata={
             "name": "AccessibilityInfoFacilityList",

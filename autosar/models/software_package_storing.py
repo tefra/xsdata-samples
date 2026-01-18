@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -34,7 +36,7 @@ class SoftwarePackageStoring:
     class Meta:
         name = "SOFTWARE-PACKAGE-STORING"
 
-    storing: Optional[SoftwarePackageStoringEnum] = field(
+    storing: SoftwarePackageStoringEnum | None = field(
         default=None,
         metadata={
             "name": "STORING",
@@ -42,7 +44,7 @@ class SoftwarePackageStoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transfer_refs: Optional["SoftwarePackageStoring.TransferRefs"] = field(
+    transfer_refs: SoftwarePackageStoring.TransferRefs | None = field(
         default=None,
         metadata={
             "name": "TRANSFER-REFS",
@@ -50,14 +52,14 @@ class SoftwarePackageStoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +71,7 @@ class SoftwarePackageStoring:
     @dataclass
     class TransferRefs:
         transfer_ref: list[
-            "SoftwarePackageStoring.TransferRefs.TransferRef"
+            SoftwarePackageStoring.TransferRefs.TransferRef
         ] = field(
             default_factory=list,
             metadata={
@@ -81,7 +83,7 @@ class SoftwarePackageStoring:
 
         @dataclass
         class TransferRef(Ref):
-            dest: Optional[SoftwarePackageSubtypesEnum] = field(
+            dest: SoftwarePackageSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

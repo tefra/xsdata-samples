@@ -34,26 +34,26 @@ class Conference:
         name = "conference"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    contributors: Optional[Contributors] = field(
+    contributors: Contributors | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    event_metadata: Optional[EventMetadata] = field(
+    event_metadata: EventMetadata | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    proceedings_series_metadata: Optional[ProceedingsSeriesMetadata] = field(
+    proceedings_series_metadata: ProceedingsSeriesMetadata | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    proceedings_metadata: Optional[ProceedingsMetadata] = field(
+    proceedings_metadata: ProceedingsMetadata | None = field(
         default=None,
         metadata={
             "type": "Element",

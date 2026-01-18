@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -96,7 +98,7 @@ class FireAndForgetMapping:
     class Meta:
         name = "FIRE-AND-FORGET-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,9 +107,7 @@ class FireAndForgetMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "FireAndForgetMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: FireAndForgetMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -115,7 +115,7 @@ class FireAndForgetMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -123,7 +123,7 @@ class FireAndForgetMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -131,7 +131,7 @@ class FireAndForgetMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -139,7 +139,7 @@ class FireAndForgetMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -147,7 +147,7 @@ class FireAndForgetMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -155,7 +155,7 @@ class FireAndForgetMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["FireAndForgetMapping.Annotations"] = field(
+    annotations: FireAndForgetMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -163,7 +163,7 @@ class FireAndForgetMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_element_ref: Optional["FireAndForgetMapping.DataElementRef"] = field(
+    data_element_ref: FireAndForgetMapping.DataElementRef | None = field(
         default=None,
         metadata={
             "name": "DATA-ELEMENT-REF",
@@ -171,7 +171,7 @@ class FireAndForgetMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    method_ref: Optional["FireAndForgetMapping.MethodRef"] = field(
+    method_ref: FireAndForgetMapping.MethodRef | None = field(
         default=None,
         metadata={
             "name": "METHOD-REF",
@@ -179,7 +179,7 @@ class FireAndForgetMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_ref: Optional["FireAndForgetMapping.TriggerRef"] = field(
+    trigger_ref: FireAndForgetMapping.TriggerRef | None = field(
         default=None,
         metadata={
             "name": "TRIGGER-REF",
@@ -187,14 +187,14 @@ class FireAndForgetMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -202,7 +202,7 @@ class FireAndForgetMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -234,7 +234,7 @@ class FireAndForgetMapping:
 
     @dataclass
     class DataElementRef(Ref):
-        dest: Optional[VariableDataPrototypeSubtypesEnum] = field(
+        dest: VariableDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -245,7 +245,7 @@ class FireAndForgetMapping:
 
     @dataclass
     class MethodRef(Ref):
-        dest: Optional[ClientServerOperationSubtypesEnum] = field(
+        dest: ClientServerOperationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -256,7 +256,7 @@ class FireAndForgetMapping:
 
     @dataclass
     class TriggerRef(Ref):
-        dest: Optional[TriggerSubtypesEnum] = field(
+        dest: TriggerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

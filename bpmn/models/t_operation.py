@@ -12,7 +12,7 @@ class TOperation(TBaseElement):
     class Meta:
         name = "tOperation"
 
-    in_message_ref: Optional[QName] = field(
+    in_message_ref: QName | None = field(
         default=None,
         metadata={
             "name": "inMessageRef",
@@ -21,7 +21,7 @@ class TOperation(TBaseElement):
             "required": True,
         },
     )
-    out_message_ref: Optional[QName] = field(
+    out_message_ref: QName | None = field(
         default=None,
         metadata={
             "name": "outMessageRef",
@@ -37,14 +37,14 @@ class TOperation(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    implementation_ref: Optional[QName] = field(
+    implementation_ref: QName | None = field(
         default=None,
         metadata={
             "name": "implementationRef",

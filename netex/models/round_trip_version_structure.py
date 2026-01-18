@@ -12,7 +12,7 @@ class RoundTripVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "RoundTrip_VersionStructure"
 
-    trip_type: Optional[RoundTripTypeEnumeration] = field(
+    trip_type: RoundTripTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "TripType",
@@ -20,7 +20,7 @@ class RoundTripVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    double_single_fare: Optional[bool] = field(
+    double_single_fare: bool | None = field(
         default=None,
         metadata={
             "name": "DoubleSingleFare",
@@ -28,7 +28,7 @@ class RoundTripVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_trip: Optional[bool] = field(
+    short_trip: bool | None = field(
         default=None,
         metadata={
             "name": "ShortTrip",
@@ -36,7 +36,7 @@ class RoundTripVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_required: Optional[bool] = field(
+    is_required: bool | None = field(
         default=None,
         metadata={
             "name": "IsRequired",

@@ -15,7 +15,7 @@ class HailAndRideAreasRelStructure(ContainmentAggregationStructure):
         name = "hailAndRideAreas_RelStructure"
 
     hail_and_ride_area_ref_or_hail_and_ride_area: Iterable[
-        Union[HailAndRideAreaRef, HailAndRideArea]
+        HailAndRideAreaRef | HailAndRideArea
     ] = field(
         default_factory=list,
         metadata={

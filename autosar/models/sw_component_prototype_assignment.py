@@ -34,7 +34,7 @@ class SwComponentPrototypeAssignment:
     class Meta:
         name = "SW-COMPONENT-PROTOTYPE-ASSIGNMENT"
 
-    sw_component_iref: Optional[ComponentInSystemInstanceRef] = field(
+    sw_component_iref: ComponentInSystemInstanceRef | None = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-IREF",
@@ -42,7 +42,7 @@ class SwComponentPrototypeAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -50,14 +50,14 @@ class SwComponentPrototypeAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

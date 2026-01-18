@@ -16,7 +16,7 @@ class MeasureRepresentationType(RepresentationType):
     simple value, or an enumerated value.
     """
 
-    max_occurs: Union[int, UnboundedCodeType] = field(
+    max_occurs: int | UnboundedCodeType = field(
         default=1,
         metadata={
             "name": "maxOccurs",

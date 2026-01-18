@@ -15,7 +15,7 @@ class SpatialFeaturesInFrameRelStructure(ContainmentAggregationStructure):
         name = "spatialFeaturesInFrame_RelStructure"
 
     simple_feature_or_complex_feature: Iterable[
-        Union[SimpleFeature, ComplexFeature]
+        SimpleFeature | ComplexFeature
     ] = field(
         default_factory=list,
         metadata={

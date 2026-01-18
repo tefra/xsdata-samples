@@ -54,7 +54,7 @@ class MeasurementSiteRecord:
     :ivar version:
     """
 
-    measurement_site_record_version_time: Optional[XmlDateTime] = field(
+    measurement_site_record_version_time: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "measurementSiteRecordVersionTime",
@@ -62,7 +62,7 @@ class MeasurementSiteRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    computation_method: Optional[ComputationMethodEnum] = field(
+    computation_method: ComputationMethodEnum | None = field(
         default=None,
         metadata={
             "name": "computationMethod",
@@ -70,7 +70,7 @@ class MeasurementSiteRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_equipment_reference: Optional[str] = field(
+    measurement_equipment_reference: str | None = field(
         default=None,
         metadata={
             "name": "measurementEquipmentReference",
@@ -79,7 +79,7 @@ class MeasurementSiteRecord:
             "max_length": 1024,
         },
     )
-    measurement_equipment_type_used: Optional[MultilingualString] = field(
+    measurement_equipment_type_used: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "measurementEquipmentTypeUsed",
@@ -87,7 +87,7 @@ class MeasurementSiteRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_site_name: Optional[MultilingualString] = field(
+    measurement_site_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "measurementSiteName",
@@ -95,7 +95,7 @@ class MeasurementSiteRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_site_number_of_lanes: Optional[int] = field(
+    measurement_site_number_of_lanes: int | None = field(
         default=None,
         metadata={
             "name": "measurementSiteNumberOfLanes",
@@ -103,7 +103,7 @@ class MeasurementSiteRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_site_identification: Optional[str] = field(
+    measurement_site_identification: str | None = field(
         default=None,
         metadata={
             "name": "measurementSiteIdentification",
@@ -112,7 +112,7 @@ class MeasurementSiteRecord:
             "max_length": 1024,
         },
     )
-    measurement_side: Optional[DirectionEnum] = field(
+    measurement_side: DirectionEnum | None = field(
         default=None,
         metadata={
             "name": "measurementSide",
@@ -130,7 +130,7 @@ class MeasurementSiteRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_site_location: Optional[GroupOfLocations] = field(
+    measurement_site_location: GroupOfLocations | None = field(
         default=None,
         metadata={
             "name": "measurementSiteLocation",
@@ -139,7 +139,7 @@ class MeasurementSiteRecord:
             "required": True,
         },
     )
-    measurement_site_record_extension: Optional[ExtensionType] = field(
+    measurement_site_record_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "measurementSiteRecordExtension",
@@ -147,14 +147,14 @@ class MeasurementSiteRecord:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

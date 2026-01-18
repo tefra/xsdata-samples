@@ -12,7 +12,7 @@ class VehicleRequirementVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "VehicleRequirement_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",

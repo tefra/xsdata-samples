@@ -100,7 +100,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class TravelSpecificationSummaryViewStructure:
-    origin: Optional[TravelSpecificationSummaryEndpointStructure] = field(
+    origin: TravelSpecificationSummaryEndpointStructure | None = field(
         default=None,
         metadata={
             "name": "Origin",
@@ -108,7 +108,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination: Optional[TravelSpecificationSummaryEndpointStructure] = field(
+    destination: TravelSpecificationSummaryEndpointStructure | None = field(
         default=None,
         metadata={
             "name": "Destination",
@@ -116,7 +116,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start: Optional[XmlDateTime] = field(
+    start: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "Start",
@@ -124,7 +124,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end: Optional[XmlDateTime] = field(
+    end: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "End",
@@ -132,7 +132,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    duration: Optional[XmlDuration] = field(
+    duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "Duration",
@@ -140,14 +140,14 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journeys: Optional[TravelSpecificationJourneyRefsRelStructure] = field(
+    journeys: TravelSpecificationJourneyRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    series_constraints: Optional[SeriesConstraintRefsRelStructure] = field(
+    series_constraints: SeriesConstraintRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "seriesConstraints",
@@ -155,9 +155,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    authority_ref_or_operator_ref_or_group_of_operators_ref: Optional[
-        Union[AuthorityRef, OperatorRef, GroupOfOperatorsRef]
-    ] = field(
+    authority_ref_or_operator_ref_or_group_of_operators_ref: AuthorityRef | OperatorRef | GroupOfOperatorsRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -180,7 +178,7 @@ class TravelSpecificationSummaryViewStructure:
             ),
         },
     )
-    type_of_product_category_ref: Optional[TypeOfProductCategoryRef] = field(
+    type_of_product_category_ref: TypeOfProductCategoryRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfProductCategoryRef",
@@ -188,7 +186,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_fare_product_ref: Optional[TypeOfFareProductRef] = field(
+    type_of_fare_product_ref: TypeOfFareProductRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfFareProductRef",
@@ -196,7 +194,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_class: Optional[FareClass] = field(
+    fare_class: FareClass | None = field(
         default=None,
         metadata={
             "name": "FareClass",
@@ -204,7 +202,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    class_of_use_ref: Optional[ClassOfUseRef] = field(
+    class_of_use_ref: ClassOfUseRef | None = field(
         default=None,
         metadata={
             "name": "ClassOfUseRef",
@@ -212,9 +210,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    user_profile_ref: Optional[
-        Union[VehiclePoolerProfileRef, CompanionProfileRef, UserProfileRef]
-    ] = field(
+    user_profile_ref: VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -237,7 +233,7 @@ class TravelSpecificationSummaryViewStructure:
             ),
         },
     )
-    group_ticket_ref: Optional[GroupTicketRef] = field(
+    group_ticket_ref: GroupTicketRef | None = field(
         default=None,
         metadata={
             "name": "GroupTicketRef",
@@ -245,7 +241,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_number_of_users: Optional[int] = field(
+    maximum_number_of_users: int | None = field(
         default=None,
         metadata={
             "name": "MaximumNumberOfUsers",
@@ -253,7 +249,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_element_ref: Optional[TrainElementRef] = field(
+    train_element_ref: TrainElementRef | None = field(
         default=None,
         metadata={
             "name": "TrainElementRef",
@@ -261,9 +257,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_component_label_assignment_ref: Optional[
-        TrainComponentLabelAssignmentRef
-    ] = field(
+    train_component_label_assignment_ref: TrainComponentLabelAssignmentRef | None = field(
         default=None,
         metadata={
             "name": "TrainComponentLabelAssignmentRef",
@@ -271,7 +265,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_seat_ref: Optional[PassengerSeatRef] = field(
+    passenger_seat_ref: PassengerSeatRef | None = field(
         default=None,
         metadata={
             "name": "PassengerSeatRef",
@@ -279,7 +273,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    service_facility_set: Optional[ServiceFacilitySet] = field(
+    service_facility_set: ServiceFacilitySet | None = field(
         default=None,
         metadata={
             "name": "ServiceFacilitySet",
@@ -287,73 +281,7 @@ class TravelSpecificationSummaryViewStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
-        Union[
-            RetailDeviceRef,
-            OnlineServiceRef,
-            VehicleRentalServiceRef,
-            VehicleSharingServiceRef,
-            ChauffeuredVehicleServiceRef,
-            TaxiServiceRef,
-            CarPoolingServiceRef,
-            ActivatedEquipmentRef,
-            BatteryEquipmentRef,
-            RefuellingEquipmentRef,
-            VehicleChargingEquipmentRef,
-            AssistanceBookingServiceRef,
-            CateringServiceRef,
-            RetailServiceRef,
-            MoneyServiceRef,
-            HireServiceRef,
-            CommunicationServiceRef,
-            MeetingPointServiceRef,
-            LeftLuggageServiceRef,
-            LuggageServiceRef,
-            LostPropertyServiceRef,
-            ComplaintsServiceRef,
-            CustomerServiceRef,
-            AssistanceServiceRef,
-            TicketingServiceRef,
-            LocalServiceRef,
-            VehicleReleaseEquipmentRef,
-            TicketValidatorEquipmentRef,
-            TicketingEquipmentRef,
-            PassengerInformationEquipmentRef,
-            CycleStorageEquipmentRef,
-            TrolleyStandEquipmentRef,
-            SeatingEquipmentRef,
-            ShelterEquipmentRef,
-            LuggageLockerEquipmentRef,
-            WaitingRoomEquipmentRef,
-            WaitingEquipmentRef,
-            SiteEquipmentRef,
-            PlaceLightingEquipmentRef,
-            RoughSurfaceRef,
-            StaircaseEquipmentRef,
-            QueueingEquipmentRef,
-            TravelatorEquipmentRef,
-            EscalatorEquipmentRef,
-            LiftCallEquipmentRef,
-            LiftEquipmentRef,
-            CrossingEquipmentRef,
-            RampEquipmentRef,
-            EntranceEquipmentRef,
-            HeadingSignRef,
-            GeneralSignRef,
-            PlaceSignRef,
-            SignEquipmentRef,
-            RubbishDisposalEquipmentRef,
-            PassengerBeaconEquipmentRef,
-            HelpPointEquipmentRef,
-            PassengerSafetyEquipmentRef,
-            SanitaryEquipmentRef,
-            WheelchairVehicleRef,
-            AccessVehicleEquipmentRef,
-            VehicleEquipmentRef,
-            PassengerEquipmentRef,
-            EquipmentRef,
-        ]
-    ] = field(
+    choice: RetailDeviceRef | OnlineServiceRef | VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | ActivatedEquipmentRef | BatteryEquipmentRef | RefuellingEquipmentRef | VehicleChargingEquipmentRef | AssistanceBookingServiceRef | CateringServiceRef | RetailServiceRef | MoneyServiceRef | HireServiceRef | CommunicationServiceRef | MeetingPointServiceRef | LeftLuggageServiceRef | LuggageServiceRef | LostPropertyServiceRef | ComplaintsServiceRef | CustomerServiceRef | AssistanceServiceRef | TicketingServiceRef | LocalServiceRef | VehicleReleaseEquipmentRef | TicketValidatorEquipmentRef | TicketingEquipmentRef | PassengerInformationEquipmentRef | CycleStorageEquipmentRef | TrolleyStandEquipmentRef | SeatingEquipmentRef | ShelterEquipmentRef | LuggageLockerEquipmentRef | WaitingRoomEquipmentRef | WaitingEquipmentRef | SiteEquipmentRef | PlaceLightingEquipmentRef | RoughSurfaceRef | StaircaseEquipmentRef | QueueingEquipmentRef | TravelatorEquipmentRef | EscalatorEquipmentRef | LiftCallEquipmentRef | LiftEquipmentRef | CrossingEquipmentRef | RampEquipmentRef | EntranceEquipmentRef | HeadingSignRef | GeneralSignRef | PlaceSignRef | SignEquipmentRef | RubbishDisposalEquipmentRef | PassengerBeaconEquipmentRef | HelpPointEquipmentRef | PassengerSafetyEquipmentRef | SanitaryEquipmentRef | WheelchairVehicleRef | AccessVehicleEquipmentRef | VehicleEquipmentRef | PassengerEquipmentRef | EquipmentRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

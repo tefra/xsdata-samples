@@ -16,7 +16,7 @@ class PartyIds:
         name = "PartyIDs"
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    party_id: Optional[PartyId] = field(
+    party_id: PartyId | None = field(
         default=None,
         metadata={
             "name": "PartyID",

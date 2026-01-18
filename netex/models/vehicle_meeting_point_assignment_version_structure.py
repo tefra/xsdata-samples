@@ -56,7 +56,7 @@ class VehicleMeetingPointAssignmentVersionStructure(
     class Meta:
         name = "VehicleMeetingPointAssignment_VersionStructure"
 
-    vehicle_meeting_point_ref: Optional[VehicleMeetingPointRef] = field(
+    vehicle_meeting_point_ref: VehicleMeetingPointRef | None = field(
         default=None,
         metadata={
             "name": "VehicleMeetingPointRef",
@@ -65,47 +65,7 @@ class VehicleMeetingPointAssignmentVersionStructure(
             "required": True,
         },
     )
-    choice: Optional[
-        Union[
-            VehiclePoolingMeetingPlaceRef,
-            VehicleMeetingPlaceRef,
-            GarageRef,
-            VehicleStoppingPositionRef,
-            VehicleStoppingPlaceRef,
-            BoardingPositionRef,
-            AccessSpaceRef,
-            TaxiStandRef,
-            QuayRef,
-            StopPlaceSpaceRef,
-            VehiclePoolingParkingBayRef,
-            MonitoredVehicleSharingParkingBayRef,
-            VehicleSharingParkingBayRef,
-            ParkingBayRef,
-            VehiclePoolingParkingAreaRef,
-            VehicleSharingParkingAreaRef,
-            TaxiParkingAreaRef,
-            ParkingAreaRef,
-            PointOfInterestSpaceRef,
-            StopPlaceVehicleEntranceRef,
-            StopPlaceEntranceRef,
-            ParkingEntranceForVehiclesRef,
-            ParkingPassengerEntranceRef,
-            ParkingEntranceRef,
-            PointOfInterestVehicleEntranceRef,
-            PointOfInterestEntranceRef,
-            VehicleEntranceRef,
-            EntranceRef,
-            SiteComponentRef,
-            TaxiRankRef,
-            StopPlaceRef,
-            ParkingRef,
-            PointOfInterestRef,
-            ServiceSiteRef,
-            SiteRef,
-            SiteElementRef,
-            AddressablePlaceRef,
-        ]
-    ] = field(
+    choice: VehiclePoolingMeetingPlaceRef | VehicleMeetingPlaceRef | GarageRef | VehicleStoppingPositionRef | VehicleStoppingPlaceRef | BoardingPositionRef | AccessSpaceRef | TaxiStandRef | QuayRef | StopPlaceSpaceRef | VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef | VehiclePoolingParkingAreaRef | VehicleSharingParkingAreaRef | TaxiParkingAreaRef | ParkingAreaRef | PointOfInterestSpaceRef | StopPlaceVehicleEntranceRef | StopPlaceEntranceRef | ParkingEntranceForVehiclesRef | ParkingPassengerEntranceRef | ParkingEntranceRef | PointOfInterestVehicleEntranceRef | PointOfInterestEntranceRef | VehicleEntranceRef | EntranceRef | SiteComponentRef | TaxiRankRef | StopPlaceRef | ParkingRef | PointOfInterestRef | ServiceSiteRef | SiteRef | SiteElementRef | AddressablePlaceRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -298,7 +258,7 @@ class VehicleMeetingPointAssignmentVersionStructure(
             ),
         },
     )
-    usage: Optional[MeetingUsageEnumeration] = field(
+    usage: MeetingUsageEnumeration | None = field(
         default=None,
         metadata={
             "name": "Usage",

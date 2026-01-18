@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -38,7 +40,7 @@ class QueryRegistrationRequestType:
         metadata sets returned should also be sent the results.
     """
 
-    query_type: Optional[QueryTypeType] = field(
+    query_type: QueryTypeType | None = field(
         default=None,
         metadata={
             "name": "QueryType",
@@ -47,15 +49,7 @@ class QueryRegistrationRequestType:
             "required": True,
         },
     )
-    choice: Optional[
-        Union[
-            EmptyType,
-            "QueryRegistrationRequestType.ProvisionAgreement",
-            "QueryRegistrationRequestType.DataProvider",
-            "QueryRegistrationRequestType.Dataflow",
-            "QueryRegistrationRequestType.Metadataflow",
-        ]
-    ] = field(
+    choice: EmptyType | QueryRegistrationRequestType.ProvisionAgreement | QueryRegistrationRequestType.DataProvider | QueryRegistrationRequestType.Dataflow | QueryRegistrationRequestType.Metadataflow | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -96,7 +90,7 @@ class QueryRegistrationRequestType:
             ),
         },
     )
-    reference_period: Optional[ReferencePeriodType] = field(
+    reference_period: ReferencePeriodType | None = field(
         default=None,
         metadata={
             "name": "ReferencePeriod",
@@ -105,7 +99,7 @@ class QueryRegistrationRequestType:
         },
     )
     data_key_set_or_cube_region_or_metadata_target_region: tuple[
-        Union[DataKeySetType, CubeRegionType, MetadataTargetRegionType], ...
+        DataKeySetType | CubeRegionType | MetadataTargetRegionType, ...
     ] = field(
         default_factory=tuple,
         metadata={
@@ -139,7 +133,7 @@ class QueryRegistrationRequestType:
 
     @dataclass(frozen=True)
     class ProvisionAgreement:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -149,7 +143,7 @@ class QueryRegistrationRequestType:
 
     @dataclass(frozen=True)
     class DataProvider:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -159,7 +153,7 @@ class QueryRegistrationRequestType:
 
     @dataclass(frozen=True)
     class Dataflow:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -169,7 +163,7 @@ class QueryRegistrationRequestType:
 
     @dataclass(frozen=True)
     class Metadataflow:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,

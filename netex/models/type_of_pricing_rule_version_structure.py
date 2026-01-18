@@ -12,7 +12,7 @@ class TypeOfPricingRuleVersionStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "TypeOfPricingRule_VersionStructure"
 
-    tax_category: Optional[TaxCategoryEnumeration] = field(
+    tax_category: TaxCategoryEnumeration | None = field(
         default=None,
         metadata={
             "name": "TaxCategory",

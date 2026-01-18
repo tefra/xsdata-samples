@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -34,7 +36,7 @@ class ComponentInCompositionInstanceRef:
         name = "COMPONENT-IN-COMPOSITION-INSTANCE-REF"
 
     context_component_ref: list[
-        "ComponentInCompositionInstanceRef.ContextComponentRef"
+        ComponentInCompositionInstanceRef.ContextComponentRef
     ] = field(
         default_factory=list,
         metadata={
@@ -43,9 +45,7 @@ class ComponentInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_component_ref: Optional[
-        "ComponentInCompositionInstanceRef.TargetComponentRef"
-    ] = field(
+    target_component_ref: ComponentInCompositionInstanceRef.TargetComponentRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-COMPONENT-REF",
@@ -53,14 +53,14 @@ class ComponentInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +71,7 @@ class ComponentInCompositionInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -82,7 +82,7 @@ class ComponentInCompositionInstanceRef:
 
     @dataclass
     class TargetComponentRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

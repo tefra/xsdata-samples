@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class RepresentationMapType(RepresentationMapBaseType):
-    source_codelist_or_source_data_type: tuple[Union[str, DataType], ...] = (
+    source_codelist_or_source_data_type: tuple[str | DataType, ...] = (
         field(
             default_factory=tuple,
             metadata={
@@ -33,7 +33,7 @@ class RepresentationMapType(RepresentationMapBaseType):
             },
         )
     )
-    target_codelist_or_target_data_type: tuple[Union[str, DataType], ...] = (
+    target_codelist_or_target_data_type: tuple[str | DataType, ...] = (
         field(
             default_factory=tuple,
             metadata={

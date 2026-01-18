@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -47,9 +49,7 @@ class ImplementationElementInParameterInstanceRef:
     class Meta:
         name = "IMPLEMENTATION-ELEMENT-IN-PARAMETER-INSTANCE-REF"
 
-    context_ref: Optional[
-        "ImplementationElementInParameterInstanceRef.ContextRef"
-    ] = field(
+    context_ref: ImplementationElementInParameterInstanceRef.ContextRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-REF",
@@ -57,9 +57,7 @@ class ImplementationElementInParameterInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_ref: Optional[
-        "ImplementationElementInParameterInstanceRef.TargetRef"
-    ] = field(
+    target_ref: ImplementationElementInParameterInstanceRef.TargetRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-REF",
@@ -67,14 +65,14 @@ class ImplementationElementInParameterInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -85,7 +83,7 @@ class ImplementationElementInParameterInstanceRef:
 
     @dataclass
     class ContextRef(Ref):
-        dest: Optional[ParameterDataPrototypeSubtypesEnum] = field(
+        dest: ParameterDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -96,7 +94,7 @@ class ImplementationElementInParameterInstanceRef:
 
     @dataclass
     class TargetRef(Ref):
-        dest: Optional[ImplementationDataTypeElementSubtypesEnum] = field(
+        dest: ImplementationDataTypeElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

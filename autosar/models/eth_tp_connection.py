@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,7 +35,7 @@ class EthTpConnection:
     class Meta:
         name = "ETH-TP-CONNECTION"
 
-    ident: Optional[TpConnectionIdent] = field(
+    ident: TpConnectionIdent | None = field(
         default=None,
         metadata={
             "name": "IDENT",
@@ -41,7 +43,7 @@ class EthTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tp_sdu_refs: Optional["EthTpConnection.TpSduRefs"] = field(
+    tp_sdu_refs: EthTpConnection.TpSduRefs | None = field(
         default=None,
         metadata={
             "name": "TP-SDU-REFS",
@@ -49,14 +51,14 @@ class EthTpConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +69,7 @@ class EthTpConnection:
 
     @dataclass
     class TpSduRefs:
-        tp_sdu_ref: list["EthTpConnection.TpSduRefs.TpSduRef"] = field(
+        tp_sdu_ref: list[EthTpConnection.TpSduRefs.TpSduRef] = field(
             default_factory=list,
             metadata={
                 "name": "TP-SDU-REF",
@@ -78,7 +80,7 @@ class EthTpConnection:
 
         @dataclass
         class TpSduRef(Ref):
-            dest: Optional[PduTriggeringSubtypesEnum] = field(
+            dest: PduTriggeringSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

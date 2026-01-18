@@ -12,13 +12,13 @@ class TSignal(TRootElement):
     class Meta:
         name = "tSignal"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    structure_ref: Optional[QName] = field(
+    structure_ref: QName | None = field(
         default=None,
         metadata={
             "name": "structureRef",

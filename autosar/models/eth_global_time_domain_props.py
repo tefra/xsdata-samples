@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -47,7 +49,7 @@ class EthGlobalTimeDomainProps:
     class Meta:
         name = "ETH-GLOBAL-TIME-DOMAIN-PROPS"
 
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -55,7 +57,7 @@ class EthGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crc_flags: Optional[EthTSynCrcFlags] = field(
+    crc_flags: EthTSynCrcFlags | None = field(
         default=None,
         metadata={
             "name": "CRC-FLAGS",
@@ -63,7 +65,7 @@ class EthGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    destination_physical_address: Optional[MacAddressString] = field(
+    destination_physical_address: MacAddressString | None = field(
         default=None,
         metadata={
             "name": "DESTINATION-PHYSICAL-ADDRESS",
@@ -71,7 +73,7 @@ class EthGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fup_data_id_lists: Optional["EthGlobalTimeDomainProps.FupDataIdLists"] = (
+    fup_data_id_lists: EthGlobalTimeDomainProps.FupDataIdLists | None = (
         field(
             default=None,
             metadata={
@@ -81,9 +83,7 @@ class EthGlobalTimeDomainProps:
             },
         )
     )
-    managed_coupling_ports: Optional[
-        "EthGlobalTimeDomainProps.ManagedCouplingPorts"
-    ] = field(
+    managed_coupling_ports: EthGlobalTimeDomainProps.ManagedCouplingPorts | None = field(
         default=None,
         metadata={
             "name": "MANAGED-COUPLING-PORTS",
@@ -91,7 +91,7 @@ class EthGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    message_compliance: Optional[EthGlobalTimeMessageFormatEnum] = field(
+    message_compliance: EthGlobalTimeMessageFormatEnum | None = field(
         default=None,
         metadata={
             "name": "MESSAGE-COMPLIANCE",
@@ -99,7 +99,7 @@ class EthGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vlan_priority: Optional[PositiveInteger] = field(
+    vlan_priority: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "VLAN-PRIORITY",
@@ -107,14 +107,14 @@ class EthGlobalTimeDomainProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

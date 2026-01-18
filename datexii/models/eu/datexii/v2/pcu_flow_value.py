@@ -17,7 +17,7 @@ class PcuFlowValue(DataValue):
     :ivar pcu_flow_value_extension:
     """
 
-    pcu_flow_rate: Optional[int] = field(
+    pcu_flow_rate: int | None = field(
         default=None,
         metadata={
             "name": "pcuFlowRate",
@@ -26,7 +26,7 @@ class PcuFlowValue(DataValue):
             "required": True,
         },
     )
-    pcu_flow_value_extension: Optional[ExtensionType] = field(
+    pcu_flow_value_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "pcuFlowValueExtension",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -41,9 +43,7 @@ class SwGenericAxisParam:
     class Meta:
         name = "SW-GENERIC-AXIS-PARAM"
 
-    sw_generic_axis_param_type_ref: Optional[
-        "SwGenericAxisParam.SwGenericAxisParamTypeRef"
-    ] = field(
+    sw_generic_axis_param_type_ref: SwGenericAxisParam.SwGenericAxisParamTypeRef | None = field(
         default=None,
         metadata={
             "name": "SW-GENERIC-AXIS-PARAM-TYPE-REF",
@@ -59,14 +59,14 @@ class SwGenericAxisParam:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -77,7 +77,7 @@ class SwGenericAxisParam:
 
     @dataclass
     class SwGenericAxisParamTypeRef(Ref):
-        dest: Optional[SwGenericAxisParamTypeSubtypesEnum] = field(
+        dest: SwGenericAxisParamTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -14,7 +14,7 @@ class AlternativeNameVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "AlternativeName_VersionedChildStructure"
 
-    named_object_ref: Optional[VersionOfObjectRefStructure] = field(
+    named_object_ref: VersionOfObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "NamedObjectRef",
@@ -22,7 +22,7 @@ class AlternativeNameVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    lang: Optional[str] = field(
+    lang: str | None = field(
         default=None,
         metadata={
             "name": "Lang",
@@ -30,7 +30,7 @@ class AlternativeNameVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name_type: Optional[NameTypeEnumeration] = field(
+    name_type: NameTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "NameType",
@@ -38,7 +38,7 @@ class AlternativeNameVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_name: Optional[str] = field(
+    type_of_name: str | None = field(
         default=None,
         metadata={
             "name": "TypeOfName",
@@ -46,7 +46,7 @@ class AlternativeNameVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -55,7 +55,7 @@ class AlternativeNameVersionedChildStructure(VersionedChildStructure):
             "required": True,
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -63,7 +63,7 @@ class AlternativeNameVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    abbreviation: Optional[MultilingualString] = field(
+    abbreviation: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Abbreviation",
@@ -71,7 +71,7 @@ class AlternativeNameVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    qualifier_name: Optional[MultilingualString] = field(
+    qualifier_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "QualifierName",
@@ -79,7 +79,7 @@ class AlternativeNameVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

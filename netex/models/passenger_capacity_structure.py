@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class PassengerCapacityStructure(DataManagedObjectStructure):
-    fare_class: Optional[FareClassEnumeration] = field(
+    fare_class: FareClassEnumeration | None = field(
         default=None,
         metadata={
             "name": "FareClass",
@@ -17,7 +17,7 @@ class PassengerCapacityStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    total_capacity: Optional[int] = field(
+    total_capacity: int | None = field(
         default=None,
         metadata={
             "name": "TotalCapacity",
@@ -25,7 +25,7 @@ class PassengerCapacityStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    seating_capacity: Optional[int] = field(
+    seating_capacity: int | None = field(
         default=None,
         metadata={
             "name": "SeatingCapacity",
@@ -33,7 +33,7 @@ class PassengerCapacityStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    standing_capacity: Optional[int] = field(
+    standing_capacity: int | None = field(
         default=None,
         metadata={
             "name": "StandingCapacity",
@@ -41,7 +41,7 @@ class PassengerCapacityStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    special_place_capacity: Optional[int] = field(
+    special_place_capacity: int | None = field(
         default=None,
         metadata={
             "name": "SpecialPlaceCapacity",
@@ -49,7 +49,7 @@ class PassengerCapacityStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    pushchair_capacity: Optional[int] = field(
+    pushchair_capacity: int | None = field(
         default=None,
         metadata={
             "name": "PushchairCapacity",
@@ -57,7 +57,7 @@ class PassengerCapacityStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wheelchair_place_capacity: Optional[int] = field(
+    wheelchair_place_capacity: int | None = field(
         default=None,
         metadata={
             "name": "WheelchairPlaceCapacity",

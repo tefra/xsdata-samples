@@ -17,7 +17,7 @@ class OpenlrRectangle:
     :ivar openlr_rectangle_extension:
     """
 
-    openlr_lower_left: Optional[PointCoordinates] = field(
+    openlr_lower_left: PointCoordinates | None = field(
         default=None,
         metadata={
             "name": "openlrLowerLeft",
@@ -26,7 +26,7 @@ class OpenlrRectangle:
             "required": True,
         },
     )
-    openlr_upper_right: Optional[PointCoordinates] = field(
+    openlr_upper_right: PointCoordinates | None = field(
         default=None,
         metadata={
             "name": "openlrUpperRight",
@@ -35,7 +35,7 @@ class OpenlrRectangle:
             "required": True,
         },
     )
-    openlr_rectangle_extension: Optional[ExtensionType] = field(
+    openlr_rectangle_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "openlrRectangleExtension",

@@ -15,35 +15,35 @@ class Bpmnedge(LabeledEdge):
         name = "BPMNEdge"
         namespace = "http://www.omg.org/spec/BPMN/20100524/DI"
 
-    bpmnlabel: Optional[Bpmnlabel] = field(
+    bpmnlabel: Bpmnlabel | None = field(
         default=None,
         metadata={
             "name": "BPMNLabel",
             "type": "Element",
         },
     )
-    bpmn_element: Optional[QName] = field(
+    bpmn_element: QName | None = field(
         default=None,
         metadata={
             "name": "bpmnElement",
             "type": "Attribute",
         },
     )
-    source_element: Optional[QName] = field(
+    source_element: QName | None = field(
         default=None,
         metadata={
             "name": "sourceElement",
             "type": "Attribute",
         },
     )
-    target_element: Optional[QName] = field(
+    target_element: QName | None = field(
         default=None,
         metadata={
             "name": "targetElement",
             "type": "Attribute",
         },
     )
-    message_visible_kind: Optional[MessageVisibleKind] = field(
+    message_visible_kind: MessageVisibleKind | None = field(
         default=None,
         metadata={
             "name": "messageVisibleKind",

@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class CodespaceStructure(EntityStructure):
-    xmlns: Optional[str] = field(
+    xmlns: str | None = field(
         default=None,
         metadata={
             "name": "Xmlns",
@@ -17,7 +17,7 @@ class CodespaceStructure(EntityStructure):
             "required": True,
         },
     )
-    xmlns_url: Optional[str] = field(
+    xmlns_url: str | None = field(
         default=None,
         metadata={
             "name": "XmlnsUrl",
@@ -25,7 +25,7 @@ class CodespaceStructure(EntityStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[str] = field(
+    description: str | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -33,7 +33,7 @@ class CodespaceStructure(EntityStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    data_source_ref: Optional[str] = field(
+    data_source_ref: str | None = field(
         default=None,
         metadata={
             "name": "dataSourceRef",

@@ -51,7 +51,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class RiskElementRoleType(BaseReferenceComponentOptionalType):
-    building: Optional[BuildingType] = field(
+    building: BuildingType | None = field(
         default=None,
         metadata={
             "name": "Building",
@@ -59,7 +59,7 @@ class RiskElementRoleType(BaseReferenceComponentOptionalType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    pipe_line: Optional[PipeLineType] = field(
+    pipe_line: PipeLineType | None = field(
         default=None,
         metadata={
             "name": "PipeLine",
@@ -67,7 +67,7 @@ class RiskElementRoleType(BaseReferenceComponentOptionalType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    land: Optional[LandType] = field(
+    land: LandType | None = field(
         default=None,
         metadata={
             "name": "Land",
@@ -75,7 +75,7 @@ class RiskElementRoleType(BaseReferenceComponentOptionalType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    railway_track: Optional[RailwayTrackType] = field(
+    railway_track: RailwayTrackType | None = field(
         default=None,
         metadata={
             "name": "RailwayTrack",
@@ -83,7 +83,7 @@ class RiskElementRoleType(BaseReferenceComponentOptionalType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    liability: Optional[LiabilityType] = field(
+    liability: LiabilityType | None = field(
         default=None,
         metadata={
             "name": "Liability",
@@ -91,7 +91,7 @@ class RiskElementRoleType(BaseReferenceComponentOptionalType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    train: Optional[TrainType] = field(
+    train: TrainType | None = field(
         default=None,
         metadata={
             "name": "Train",
@@ -99,7 +99,7 @@ class RiskElementRoleType(BaseReferenceComponentOptionalType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    aircraft: Optional[AircraftType] = field(
+    aircraft: AircraftType | None = field(
         default=None,
         metadata={
             "name": "Aircraft",
@@ -107,7 +107,7 @@ class RiskElementRoleType(BaseReferenceComponentOptionalType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    helicopter: Optional[HelicopterType] = field(
+    helicopter: HelicopterType | None = field(
         default=None,
         metadata={
             "name": "Helicopter",
@@ -115,7 +115,7 @@ class RiskElementRoleType(BaseReferenceComponentOptionalType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    ship: Optional[ShipType] = field(
+    ship: ShipType | None = field(
         default=None,
         metadata={
             "name": "Ship",
@@ -123,7 +123,7 @@ class RiskElementRoleType(BaseReferenceComponentOptionalType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    hovercraft: Optional[HovercraftType] = field(
+    hovercraft: HovercraftType | None = field(
         default=None,
         metadata={
             "name": "Hovercraft",
@@ -131,7 +131,7 @@ class RiskElementRoleType(BaseReferenceComponentOptionalType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    vessel: Optional[VesselType] = field(
+    vessel: VesselType | None = field(
         default=None,
         metadata={
             "name": "Vessel",
@@ -139,7 +139,7 @@ class RiskElementRoleType(BaseReferenceComponentOptionalType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    single_point: Optional[SinglePointStructureType] = field(
+    single_point: SinglePointStructureType | None = field(
         default=None,
         metadata={
             "name": "SinglePoint",
@@ -147,7 +147,7 @@ class RiskElementRoleType(BaseReferenceComponentOptionalType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    expansive_structure: Optional[ExpansiveStructureType] = field(
+    expansive_structure: ExpansiveStructureType | None = field(
         default=None,
         metadata={
             "name": "ExpansiveStructure",
@@ -155,7 +155,7 @@ class RiskElementRoleType(BaseReferenceComponentOptionalType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    owner: Optional[str] = field(
+    owner: str | None = field(
         default=None,
         metadata={
             "name": "Owner",
@@ -165,7 +165,7 @@ class RiskElementRoleType(BaseReferenceComponentOptionalType):
             "pattern": r"G([0-9]{9})",
         },
     )
-    floater: Optional[bool] = field(
+    floater: bool | None = field(
         default=None,
         metadata={
             "name": "Floater",

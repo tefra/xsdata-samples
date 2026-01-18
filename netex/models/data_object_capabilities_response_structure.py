@@ -15,9 +15,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 class DataObjectCapabilitiesResponseStructure(
     AbstractServiceCapabilitiesResponseStructure
 ):
-    data_object_service_capabilities: Optional[
-        DataObjectServiceCapabilities
-    ] = field(
+    data_object_service_capabilities: DataObjectServiceCapabilities | None = field(
         default=None,
         metadata={
             "name": "DataObjectServiceCapabilities",
@@ -25,7 +23,7 @@ class DataObjectCapabilitiesResponseStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    data_object_permissions: Optional[DataObjectPermissions] = field(
+    data_object_permissions: DataObjectPermissions | None = field(
         default=None,
         metadata={
             "name": "DataObjectPermissions",
@@ -33,7 +31,7 @@ class DataObjectCapabilitiesResponseStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    extensions: Optional[Extensions2] = field(
+    extensions: Extensions2 | None = field(
         default=None,
         metadata={
             "name": "Extensions",

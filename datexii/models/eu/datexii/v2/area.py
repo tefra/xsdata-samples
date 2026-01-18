@@ -17,7 +17,7 @@ class Area(Location):
     snow in an area but only above a certain altitude).
     """
 
-    alert_carea: Optional[AlertCArea] = field(
+    alert_carea: AlertCArea | None = field(
         default=None,
         metadata={
             "name": "alertCArea",
@@ -25,7 +25,7 @@ class Area(Location):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    tpeg_area_location: Optional[TpegAreaLocation] = field(
+    tpeg_area_location: TpegAreaLocation | None = field(
         default=None,
         metadata={
             "name": "tpegAreaLocation",
@@ -33,7 +33,7 @@ class Area(Location):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    area_extension: Optional[AreaExtensionType] = field(
+    area_extension: AreaExtensionType | None = field(
         default=None,
         metadata={
             "name": "areaExtension",

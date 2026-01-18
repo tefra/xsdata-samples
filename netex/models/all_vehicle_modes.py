@@ -13,7 +13,7 @@ class AllVehicleModes:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: Optional[AllVehicleModesOfTransportEnumeration] = field(
+    value: AllVehicleModesOfTransportEnumeration | None = field(
         default=None,
         metadata={
             "required": True,

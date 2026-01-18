@@ -15,7 +15,7 @@ class SalesTransactionsRelStructure(ContainmentAggregationStructure):
         name = "salesTransactions_RelStructure"
 
     sales_transaction_ref_or_sales_transaction: Iterable[
-        Union[SalesTransactionRef, SalesTransaction]
+        SalesTransactionRef | SalesTransaction
     ] = field(
         default_factory=list,
         metadata={

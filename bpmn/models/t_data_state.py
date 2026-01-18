@@ -11,7 +11,7 @@ class TDataState(TBaseElement):
     class Meta:
         name = "tDataState"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

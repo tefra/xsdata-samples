@@ -49,7 +49,7 @@ class GeographicLocationType(BaseSimpleComponentType):
         Global Positioning System</description>
     """
 
-    altitude_measure: Optional[MeasureType] = field(
+    altitude_measure: MeasureType | None = field(
         default=None,
         metadata={
             "name": "AltitudeMeasure",
@@ -57,7 +57,7 @@ class GeographicLocationType(BaseSimpleComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    latitude_measure: Optional[MeasureType] = field(
+    latitude_measure: MeasureType | None = field(
         default=None,
         metadata={
             "name": "LatitudeMeasure",
@@ -65,7 +65,7 @@ class GeographicLocationType(BaseSimpleComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    longitude_measure: Optional[MeasureType] = field(
+    longitude_measure: MeasureType | None = field(
         default=None,
         metadata={
             "name": "LongitudeMeasure",
@@ -73,7 +73,7 @@ class GeographicLocationType(BaseSimpleComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    latitude_direction_code: Optional[CodeType] = field(
+    latitude_direction_code: CodeType | None = field(
         default=None,
         metadata={
             "name": "LatitudeDirectionCode",
@@ -81,7 +81,7 @@ class GeographicLocationType(BaseSimpleComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    longitude_direction_code: Optional[CodeType] = field(
+    longitude_direction_code: CodeType | None = field(
         default=None,
         metadata={
             "name": "LongitudeDirectionCode",
@@ -89,7 +89,7 @@ class GeographicLocationType(BaseSimpleComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    system_id: Optional[Idtype] = field(
+    system_id: Idtype | None = field(
         default=None,
         metadata={
             "name": "SystemID",

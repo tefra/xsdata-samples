@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -100,7 +102,7 @@ class TraceableTable:
     class Meta:
         name = "TRACEABLE-TABLE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,7 +111,7 @@ class TraceableTable:
             "required": True,
         },
     )
-    short_name_fragments: Optional["TraceableTable.ShortNameFragments"] = (
+    short_name_fragments: TraceableTable.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -119,7 +121,7 @@ class TraceableTable:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +129,7 @@ class TraceableTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +137,7 @@ class TraceableTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +145,7 @@ class TraceableTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +153,7 @@ class TraceableTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +161,7 @@ class TraceableTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["TraceableTable.Annotations"] = field(
+    annotations: TraceableTable.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +169,7 @@ class TraceableTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace_refs: Optional["TraceableTable.TraceRefs"] = field(
+    trace_refs: TraceableTable.TraceRefs | None = field(
         default=None,
         metadata={
             "name": "TRACE-REFS",
@@ -175,7 +177,7 @@ class TraceableTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    table: Optional[Table] = field(
+    table: Table | None = field(
         default=None,
         metadata={
             "name": "TABLE",
@@ -183,14 +185,14 @@ class TraceableTable:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -198,7 +200,7 @@ class TraceableTable:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -213,7 +215,7 @@ class TraceableTable:
             "tokens": True,
         },
     )
-    view: Optional[str] = field(
+    view: str | None = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -221,14 +223,14 @@ class TraceableTable:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: Optional[ChapterEnumBreakSimple] = field(
+    break_value: ChapterEnumBreakSimple | None = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
+    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",
@@ -260,7 +262,7 @@ class TraceableTable:
 
     @dataclass
     class TraceRefs:
-        trace_ref: list["TraceableTable.TraceRefs.TraceRef"] = field(
+        trace_ref: list[TraceableTable.TraceRefs.TraceRef] = field(
             default_factory=list,
             metadata={
                 "name": "TRACE-REF",
@@ -271,7 +273,7 @@ class TraceableTable:
 
         @dataclass
         class TraceRef(Ref):
-            dest: Optional[TraceableSubtypesEnum] = field(
+            dest: TraceableSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

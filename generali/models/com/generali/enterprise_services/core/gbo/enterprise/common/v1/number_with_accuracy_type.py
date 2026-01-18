@@ -15,7 +15,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class NumberWithAccuracyType(NumericType):
-    accuracy: Optional[AccuracyCodeList] = field(
+    accuracy: AccuracyCodeList | None = field(
         default=None,
         metadata={
             "name": "Accuracy",

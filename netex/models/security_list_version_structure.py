@@ -24,7 +24,7 @@ class SecurityListVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "SecurityList_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -32,7 +32,7 @@ class SecurityListVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -40,7 +40,7 @@ class SecurityListVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_security_list_ref: Optional[TypeOfSecurityListRef] = field(
+    type_of_security_list_ref: TypeOfSecurityListRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfSecurityListRef",
@@ -48,20 +48,7 @@ class SecurityListVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: Optional[
-        Union[
-            RetailConsortiumRef,
-            OnlineServiceOperatorRef,
-            GeneralOrganisationRef,
-            ManagementAgentRef,
-            ServicedOrganisationRef,
-            TravelAgentRef,
-            OtherOrganisationRef,
-            AuthorityRef,
-            OperatorRef,
-            OrganisationRef,
-        ]
-    ] = field(
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -119,7 +106,7 @@ class SecurityListVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    security_listings: Optional[SecurityListingsRelStructure] = field(
+    security_listings: SecurityListingsRelStructure | None = field(
         default=None,
         metadata={
             "name": "securityListings",

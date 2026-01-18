@@ -41,25 +41,7 @@ class ItemSchemeType(MaintainableType):
     """
 
     choice: tuple[
-        Union[
-            CustomType,
-            UserDefinedOperator,
-            Ruleset,
-            NamePersonalisation,
-            VtlMapping,
-            Transformation,
-            ReportingCategory,
-            OrganisationUnit,
-            MetadataProvider,
-            DataProvider,
-            DataConsumer,
-            Agency,
-            Concept,
-            GeoGridCode,
-            GeoFeatureSetCode,
-            Code,
-            Category,
-        ],
+        CustomType | UserDefinedOperator | Ruleset | NamePersonalisation | VtlMapping | Transformation | ReportingCategory | OrganisationUnit | MetadataProvider | DataProvider | DataConsumer | Agency | Concept | GeoGridCode | GeoFeatureSetCode | Code | Category,
         ...,
     ] = field(
         default_factory=tuple,

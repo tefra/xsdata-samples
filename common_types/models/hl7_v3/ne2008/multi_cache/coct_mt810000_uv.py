@@ -38,7 +38,7 @@ class CoctMt810000UvPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -54,7 +54,7 @@ class CoctMt810000UvPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    responsible: Optional[CoctMt040008UvResponsible] = field(
+    responsible: CoctMt040008UvResponsible | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -62,14 +62,14 @@ class CoctMt810000UvPerformer:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[ParticipationPhysicalPerformer] = field(
+    type_code: ParticipationPhysicalPerformer | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -92,7 +92,7 @@ class CoctMt810000UvPrimaryPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -108,7 +108,7 @@ class CoctMt810000UvPrimaryPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    signature_code: Optional[Ce] = field(
+    signature_code: Ce | None = field(
         default=None,
         metadata={
             "name": "signatureCode",
@@ -116,7 +116,7 @@ class CoctMt810000UvPrimaryPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    signature_text: Optional[EdExplicit] = field(
+    signature_text: EdExplicit | None = field(
         default=None,
         metadata={
             "name": "signatureText",
@@ -124,7 +124,7 @@ class CoctMt810000UvPrimaryPerformer:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_entity: Optional[CoctMt090002Uv01AssignedEntity] = field(
+    assigned_entity: CoctMt090002Uv01AssignedEntity | None = field(
         default=None,
         metadata={
             "name": "assignedEntity",
@@ -133,7 +133,7 @@ class CoctMt810000UvPrimaryPerformer:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -164,7 +164,7 @@ class CoctMt810000UvVerificationRequest:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -188,14 +188,14 @@ class CoctMt810000UvVerificationRequest:
             "min_occurs": 1,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[ActClassObservation] = field(
+    class_code: ActClassObservation | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -227,7 +227,7 @@ class CoctMt810000UvInFulfillmentOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -243,7 +243,7 @@ class CoctMt810000UvInFulfillmentOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    verification_request: Optional[CoctMt810000UvVerificationRequest] = field(
+    verification_request: CoctMt810000UvVerificationRequest | None = field(
         default=None,
         metadata={
             "name": "verificationRequest",
@@ -252,14 +252,14 @@ class CoctMt810000UvInFulfillmentOf:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[ActRelationshipFulfills] = field(
+    type_code: ActRelationshipFulfills | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -282,7 +282,7 @@ class CoctMt810000UvInformationProvision:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -298,7 +298,7 @@ class CoctMt810000UvInformationProvision:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    performer: Optional[CoctMt810000UvPerformer] = field(
+    performer: CoctMt810000UvPerformer | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -306,7 +306,7 @@ class CoctMt810000UvInformationProvision:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -346,7 +346,7 @@ class CoctMt810000UvSupport:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -362,7 +362,7 @@ class CoctMt810000UvSupport:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    information_provision: Optional[CoctMt810000UvInformationProvision] = (
+    information_provision: CoctMt810000UvInformationProvision | None = (
         field(
             default=None,
             metadata={
@@ -373,14 +373,14 @@ class CoctMt810000UvSupport:
             },
         )
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[ActRelationshipHasSupport] = field(
+    type_code: ActRelationshipHasSupport | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -403,7 +403,7 @@ class CoctMt810000UvVerification:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -426,14 +426,14 @@ class CoctMt810000UvVerification:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Optional[Cs] = field(
+    status_code: Cs | None = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -441,7 +441,7 @@ class CoctMt810000UvVerification:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[TsExplicit] = field(
+    effective_time: TsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -449,7 +449,7 @@ class CoctMt810000UvVerification:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    reason_code: Optional[Ce] = field(
+    reason_code: Ce | None = field(
         default=None,
         metadata={
             "name": "reasonCode",
@@ -457,7 +457,7 @@ class CoctMt810000UvVerification:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    value: Optional[Ce] = field(
+    value: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -498,14 +498,14 @@ class CoctMt810000UvVerification:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[ActClassObservation] = field(
+    class_code: ActClassObservation | None = field(
         default=None,
         metadata={
             "name": "classCode",

@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ContextualisedRequestStructure:
-    service_request_context: Optional[ServiceRequestContextStructure] = field(
+    service_request_context: ServiceRequestContextStructure | None = field(
         default=None,
         metadata={
             "name": "ServiceRequestContext",
@@ -20,7 +20,7 @@ class ContextualisedRequestStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    request_timestamp: Optional[RequestTimestamp] = field(
+    request_timestamp: RequestTimestamp | None = field(
         default=None,
         metadata={
             "name": "RequestTimestamp",
@@ -29,7 +29,7 @@ class ContextualisedRequestStructure:
             "required": True,
         },
     )
-    account_id: Optional[str] = field(
+    account_id: str | None = field(
         default=None,
         metadata={
             "name": "AccountId",
@@ -37,7 +37,7 @@ class ContextualisedRequestStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    account_key: Optional[str] = field(
+    account_key: str | None = field(
         default=None,
         metadata={
             "name": "AccountKey",
@@ -45,7 +45,7 @@ class ContextualisedRequestStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    address: Optional[str] = field(
+    address: str | None = field(
         default=None,
         metadata={
             "name": "Address",
@@ -53,7 +53,7 @@ class ContextualisedRequestStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    requestor_ref: Optional[RequestorRef] = field(
+    requestor_ref: RequestorRef | None = field(
         default=None,
         metadata={
             "name": "RequestorRef",
@@ -62,7 +62,7 @@ class ContextualisedRequestStructure:
             "required": True,
         },
     )
-    message_identifier: Optional[MessageQualifierStructure] = field(
+    message_identifier: MessageQualifierStructure | None = field(
         default=None,
         metadata={
             "name": "MessageIdentifier",
@@ -70,7 +70,7 @@ class ContextualisedRequestStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_address: Optional[str] = field(
+    delegator_address: str | None = field(
         default=None,
         metadata={
             "name": "DelegatorAddress",
@@ -78,7 +78,7 @@ class ContextualisedRequestStructure:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: Optional[ParticipantRefStructure] = field(
+    delegator_ref: ParticipantRefStructure | None = field(
         default=None,
         metadata={
             "name": "DelegatorRef",

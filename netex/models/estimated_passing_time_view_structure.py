@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
@@ -16,15 +18,7 @@ class EstimatedPassingTimeViewStructure(PassingTimeViewStructure):
         name = "EstimatedPassingTime_ViewStructure"
 
     choice: Iterable[
-        Union[
-            "EstimatedPassingTimeViewStructure.ExpectedArrivalTime",
-            "EstimatedPassingTimeViewStructure.ArrivalDayOffset",
-            "EstimatedPassingTimeViewStructure.ExpectedDepartureTime",
-            "EstimatedPassingTimeViewStructure.DepartureDayOffset",
-            XmlDuration,
-            "EstimatedPassingTimeViewStructure.ExpectedNonstopPassingTime",
-            "EstimatedPassingTimeViewStructure.PassingTimeDayOffset",
-        ]
+        EstimatedPassingTimeViewStructure.ExpectedArrivalTime | EstimatedPassingTimeViewStructure.ArrivalDayOffset | EstimatedPassingTimeViewStructure.ExpectedDepartureTime | EstimatedPassingTimeViewStructure.DepartureDayOffset | XmlDuration | EstimatedPassingTimeViewStructure.ExpectedNonstopPassingTime | EstimatedPassingTimeViewStructure.PassingTimeDayOffset
     ] = field(
         default_factory=list,
         metadata={
@@ -81,7 +75,7 @@ class EstimatedPassingTimeViewStructure(PassingTimeViewStructure):
             "max_occurs": 5,
         },
     )
-    expected_headway: Optional[HeadwayIntervalStructure] = field(
+    expected_headway: HeadwayIntervalStructure | None = field(
         default=None,
         metadata={
             "name": "ExpectedHeadway",
@@ -92,7 +86,7 @@ class EstimatedPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class ExpectedArrivalTime:
-        value: Optional[XmlTime] = field(
+        value: XmlTime | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -101,7 +95,7 @@ class EstimatedPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class ArrivalDayOffset:
-        value: Optional[int] = field(
+        value: int | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -110,7 +104,7 @@ class EstimatedPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class ExpectedDepartureTime:
-        value: Optional[XmlTime] = field(
+        value: XmlTime | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -119,7 +113,7 @@ class EstimatedPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class DepartureDayOffset:
-        value: Optional[int] = field(
+        value: int | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -128,7 +122,7 @@ class EstimatedPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class ExpectedNonstopPassingTime:
-        value: Optional[XmlTime] = field(
+        value: XmlTime | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -137,7 +131,7 @@ class EstimatedPassingTimeViewStructure(PassingTimeViewStructure):
 
     @dataclass
     class PassingTimeDayOffset:
-        value: Optional[int] = field(
+        value: int | None = field(
             default=None,
             metadata={
                 "required": True,

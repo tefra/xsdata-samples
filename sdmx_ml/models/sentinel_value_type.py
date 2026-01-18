@@ -38,7 +38,7 @@ class SentinelValueType:
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
         },
     )
-    value: Optional[object] = field(
+    value: object | None = field(
         default=None,
         metadata={
             "type": "Attribute",

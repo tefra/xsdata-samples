@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -103,7 +105,7 @@ class DoIpRoutingActivationConfirmationNeeds:
     class Meta:
         name = "DO-IP-ROUTING-ACTIVATION-CONFIRMATION-NEEDS"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -112,9 +114,7 @@ class DoIpRoutingActivationConfirmationNeeds:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DoIpRoutingActivationConfirmationNeeds.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DoIpRoutingActivationConfirmationNeeds.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -122,7 +122,7 @@ class DoIpRoutingActivationConfirmationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -130,7 +130,7 @@ class DoIpRoutingActivationConfirmationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -138,7 +138,7 @@ class DoIpRoutingActivationConfirmationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -146,7 +146,7 @@ class DoIpRoutingActivationConfirmationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -154,7 +154,7 @@ class DoIpRoutingActivationConfirmationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -162,9 +162,7 @@ class DoIpRoutingActivationConfirmationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "DoIpRoutingActivationConfirmationNeeds.Annotations"
-    ] = field(
+    annotations: DoIpRoutingActivationConfirmationNeeds.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -172,7 +170,7 @@ class DoIpRoutingActivationConfirmationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_length_request: Optional[PositiveInteger] = field(
+    data_length_request: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "DATA-LENGTH-REQUEST",
@@ -180,7 +178,7 @@ class DoIpRoutingActivationConfirmationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_length_response: Optional[PositiveInteger] = field(
+    data_length_response: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "DATA-LENGTH-RESPONSE",
@@ -188,7 +186,7 @@ class DoIpRoutingActivationConfirmationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    routing_activation_type: Optional[NmtokenString] = field(
+    routing_activation_type: NmtokenString | None = field(
         default=None,
         metadata={
             "name": "ROUTING-ACTIVATION-TYPE",
@@ -196,14 +194,14 @@ class DoIpRoutingActivationConfirmationNeeds:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -211,7 +209,7 @@ class DoIpRoutingActivationConfirmationNeeds:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

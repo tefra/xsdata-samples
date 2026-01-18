@@ -22,11 +22,7 @@ class FareStructureElementPricesRelStructure(
         name = "fareStructureElementPrices_RelStructure"
 
     fare_structure_element_price_ref_or_fare_structure_element_price_or_cell_ref: Iterable[
-        Union[
-            FareStructureElementPriceRef,
-            FareStructureElementPriceVersionedChildStructure,
-            CellRef,
-        ]
+        FareStructureElementPriceRef | FareStructureElementPriceVersionedChildStructure | CellRef
     ] = field(
         default_factory=list,
         metadata={

@@ -28,7 +28,7 @@ class MeasurementSiteTable:
     :ivar version:
     """
 
-    measurement_site_table_identification: Optional[str] = field(
+    measurement_site_table_identification: str | None = field(
         default=None,
         metadata={
             "name": "measurementSiteTableIdentification",
@@ -46,7 +46,7 @@ class MeasurementSiteTable:
             "min_occurs": 1,
         },
     )
-    measurement_site_table_extension: Optional[ExtensionType] = field(
+    measurement_site_table_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "measurementSiteTableExtension",
@@ -54,14 +54,14 @@ class MeasurementSiteTable:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

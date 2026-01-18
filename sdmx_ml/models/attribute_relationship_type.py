@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Union
 
@@ -18,12 +20,7 @@ class AttributeRelationshipType:
     """
 
     choice: tuple[
-        Union[
-            "AttributeRelationshipType.Dataflow",
-            OptionalLocalDimensionReferenceType,
-            str,
-            "AttributeRelationshipType.Observation",
-        ],
+        AttributeRelationshipType.Dataflow | OptionalLocalDimensionReferenceType | str | AttributeRelationshipType.Observation,
         ...,
     ] = field(
         default_factory=tuple,

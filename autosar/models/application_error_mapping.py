@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -32,7 +34,7 @@ class ApplicationErrorMapping:
     class Meta:
         name = "APPLICATION-ERROR-MAPPING"
 
-    system_signal_ref: Optional["ApplicationErrorMapping.SystemSignalRef"] = (
+    system_signal_ref: ApplicationErrorMapping.SystemSignalRef | None = (
         field(
             default=None,
             metadata={
@@ -42,14 +44,14 @@ class ApplicationErrorMapping:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -60,7 +62,7 @@ class ApplicationErrorMapping:
 
     @dataclass
     class SystemSignalRef(Ref):
-        dest: Optional[SystemSignalSubtypesEnum] = field(
+        dest: SystemSignalSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

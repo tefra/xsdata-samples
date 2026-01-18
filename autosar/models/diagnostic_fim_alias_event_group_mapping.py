@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -95,7 +97,7 @@ class DiagnosticFimAliasEventGroupMapping:
     class Meta:
         name = "DIAGNOSTIC-FIM-ALIAS-EVENT-GROUP-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -104,9 +106,7 @@ class DiagnosticFimAliasEventGroupMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticFimAliasEventGroupMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticFimAliasEventGroupMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -114,7 +114,7 @@ class DiagnosticFimAliasEventGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +122,7 @@ class DiagnosticFimAliasEventGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +130,7 @@ class DiagnosticFimAliasEventGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +138,7 @@ class DiagnosticFimAliasEventGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +146,7 @@ class DiagnosticFimAliasEventGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,9 +154,7 @@ class DiagnosticFimAliasEventGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "DiagnosticFimAliasEventGroupMapping.Annotations"
-    ] = field(
+    annotations: DiagnosticFimAliasEventGroupMapping.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -164,7 +162,7 @@ class DiagnosticFimAliasEventGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -172,9 +170,7 @@ class DiagnosticFimAliasEventGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    actual_event_ref: Optional[
-        "DiagnosticFimAliasEventGroupMapping.ActualEventRef"
-    ] = field(
+    actual_event_ref: DiagnosticFimAliasEventGroupMapping.ActualEventRef | None = field(
         default=None,
         metadata={
             "name": "ACTUAL-EVENT-REF",
@@ -182,9 +178,7 @@ class DiagnosticFimAliasEventGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    alias_event_ref: Optional[
-        "DiagnosticFimAliasEventGroupMapping.AliasEventRef"
-    ] = field(
+    alias_event_ref: DiagnosticFimAliasEventGroupMapping.AliasEventRef | None = field(
         default=None,
         metadata={
             "name": "ALIAS-EVENT-REF",
@@ -192,14 +186,14 @@ class DiagnosticFimAliasEventGroupMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -207,7 +201,7 @@ class DiagnosticFimAliasEventGroupMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -239,7 +233,7 @@ class DiagnosticFimAliasEventGroupMapping:
 
     @dataclass
     class ActualEventRef(Ref):
-        dest: Optional[DiagnosticFimEventGroupSubtypesEnum] = field(
+        dest: DiagnosticFimEventGroupSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -250,7 +244,7 @@ class DiagnosticFimAliasEventGroupMapping:
 
     @dataclass
     class AliasEventRef(Ref):
-        dest: Optional[DiagnosticFimAliasEventGroupSubtypesEnum] = field(
+        dest: DiagnosticFimAliasEventGroupSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

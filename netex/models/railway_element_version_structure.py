@@ -14,7 +14,7 @@ class RailwayElementVersionStructure(InfrastructureLinkVersionStructure):
     class Meta:
         name = "RailwayElement_VersionStructure"
 
-    from_point_ref: Optional[RailwayPointRefStructure] = field(
+    from_point_ref: RailwayPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "FromPointRef",
@@ -23,7 +23,7 @@ class RailwayElementVersionStructure(InfrastructureLinkVersionStructure):
             "required": True,
         },
     )
-    to_point_ref: Optional[RailwayPointRefStructure] = field(
+    to_point_ref: RailwayPointRefStructure | None = field(
         default=None,
         metadata={
             "name": "ToPointRef",

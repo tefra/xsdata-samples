@@ -8,7 +8,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class AbstractIdentifiedItemStructure(AbstractItemStructure):
-    item_identifier: Optional[str] = field(
+    item_identifier: str | None = field(
         default=None,
         metadata={
             "name": "ItemIdentifier",

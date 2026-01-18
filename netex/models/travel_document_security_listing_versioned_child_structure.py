@@ -17,9 +17,7 @@ class TravelDocumentSecurityListingVersionedChildStructure(
     class Meta:
         name = "TravelDocumentSecurityListing_VersionedChildStructure"
 
-    travel_document_ref: Optional[
-        Union[ServiceAccessCodeRef, TravelDocumentRef]
-    ] = field(
+    travel_document_ref: ServiceAccessCodeRef | TravelDocumentRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -18,14 +18,14 @@ class PrivateChar:
         name = "private-char"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    glyph_data: Optional[GlyphData] = field(
+    glyph_data: GlyphData | None = field(
         default=None,
         metadata={
             "name": "glyph-data",
             "type": "Element",
         },
     )
-    glyph_ref: Optional[GlyphRef] = field(
+    glyph_ref: GlyphRef | None = field(
         default=None,
         metadata={
             "name": "glyph-ref",
@@ -39,32 +39,32 @@ class PrivateChar:
             "type": "Element",
         },
     )
-    description: Optional[str] = field(
+    description: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

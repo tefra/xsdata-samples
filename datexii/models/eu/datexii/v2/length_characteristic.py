@@ -22,7 +22,7 @@ class LengthCharacteristic:
     :ivar length_characteristic_extension:
     """
 
-    comparison_operator: Optional[ComparisonOperatorEnum] = field(
+    comparison_operator: ComparisonOperatorEnum | None = field(
         default=None,
         metadata={
             "name": "comparisonOperator",
@@ -31,7 +31,7 @@ class LengthCharacteristic:
             "required": True,
         },
     )
-    vehicle_length: Optional[float] = field(
+    vehicle_length: float | None = field(
         default=None,
         metadata={
             "name": "vehicleLength",
@@ -40,7 +40,7 @@ class LengthCharacteristic:
             "required": True,
         },
     )
-    length_characteristic_extension: Optional[ExtensionType] = field(
+    length_characteristic_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "lengthCharacteristicExtension",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -96,7 +98,7 @@ class DiagnosticDataElement:
     class Meta:
         name = "DIAGNOSTIC-DATA-ELEMENT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -105,9 +107,7 @@ class DiagnosticDataElement:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticDataElement.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticDataElement.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -115,7 +115,7 @@ class DiagnosticDataElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -123,7 +123,7 @@ class DiagnosticDataElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -131,7 +131,7 @@ class DiagnosticDataElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -139,7 +139,7 @@ class DiagnosticDataElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -147,7 +147,7 @@ class DiagnosticDataElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -155,7 +155,7 @@ class DiagnosticDataElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticDataElement.Annotations"] = field(
+    annotations: DiagnosticDataElement.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -163,7 +163,7 @@ class DiagnosticDataElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    array_size_semantics: Optional[ArraySizeSemanticsEnum] = field(
+    array_size_semantics: ArraySizeSemanticsEnum | None = field(
         default=None,
         metadata={
             "name": "ARRAY-SIZE-SEMANTICS",
@@ -171,7 +171,7 @@ class DiagnosticDataElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_number_of_elements: Optional[PositiveInteger] = field(
+    max_number_of_elements: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-OF-ELEMENTS",
@@ -179,7 +179,7 @@ class DiagnosticDataElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    scaling_info_size: Optional[PositiveInteger] = field(
+    scaling_info_size: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SCALING-INFO-SIZE",
@@ -187,7 +187,7 @@ class DiagnosticDataElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_data_def_props: Optional[SwDataDefProps] = field(
+    sw_data_def_props: SwDataDefProps | None = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEF-PROPS",
@@ -195,7 +195,7 @@ class DiagnosticDataElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -203,14 +203,14 @@ class DiagnosticDataElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -218,7 +218,7 @@ class DiagnosticDataElement:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

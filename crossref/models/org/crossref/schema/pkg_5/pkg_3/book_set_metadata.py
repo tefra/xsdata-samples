@@ -60,20 +60,20 @@ class BookSetMetadata:
         name = "book_set_metadata"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    set_metadata: Optional[SetMetadata] = field(
+    set_metadata: SetMetadata | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    contributors: Optional[Contributors] = field(
+    contributors: Contributors | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    titles: Optional[Titles] = field(
+    titles: Titles | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -95,7 +95,7 @@ class BookSetMetadata:
             "sequence": 1,
         },
     )
-    edition_number: Optional[EditionNumber] = field(
+    edition_number: EditionNumber | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -116,39 +116,39 @@ class BookSetMetadata:
             "max_occurs": 6,
         },
     )
-    noisbn: Optional[Noisbn] = field(
+    noisbn: Noisbn | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    publisher: Optional[Publisher] = field(
+    publisher: Publisher | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    publisher_item: Optional[PublisherItem] = field(
+    publisher_item: PublisherItem | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    crossmark: Optional[Crossmark] = field(
+    crossmark: Crossmark | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    program: Optional[FundrefProgram] = field(
+    program: FundrefProgram | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/fundref.xsd",
         },
     )
-    program_1: Optional[AccessIndicatorsProgram] = field(
+    program_1: AccessIndicatorsProgram | None = field(
         default=None,
         metadata={
             "name": "program",
@@ -156,7 +156,7 @@ class BookSetMetadata:
             "namespace": "http://www.crossref.org/AccessIndicators.xsd",
         },
     )
-    program_2: Optional[RelationsProgram] = field(
+    program_2: RelationsProgram | None = field(
         default=None,
         metadata={
             "name": "program",
@@ -164,25 +164,25 @@ class BookSetMetadata:
             "namespace": "http://www.crossref.org/relations.xsd",
         },
     )
-    archive_locations: Optional[ArchiveLocations] = field(
+    archive_locations: ArchiveLocations | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    doi_data: Optional[DoiData] = field(
+    doi_data: DoiData | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    citation_list: Optional[CitationList] = field(
+    citation_list: CitationList | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    language: Optional[BookSetMetadataLanguage] = field(
+    language: BookSetMetadataLanguage | None = field(
         default=None,
         metadata={
             "type": "Attribute",

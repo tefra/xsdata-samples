@@ -20,15 +20,7 @@ class FareStructureFactorsRelStructure(ContainmentAggregationStructure):
         name = "fareStructureFactors_RelStructure"
 
     choice: Iterable[
-        Union[
-            ParkingChargeBandRef,
-            TimeStructureFactorRef,
-            FareQuotaFactorRef,
-            FareDemandFactorRef,
-            QualityStructureFactorRef,
-            GeographicalStructureFactorRef,
-            FareStructureFactor,
-        ]
+        ParkingChargeBandRef | TimeStructureFactorRef | FareQuotaFactorRef | FareDemandFactorRef | QualityStructureFactorRef | GeographicalStructureFactorRef | FareStructureFactor
     ] = field(
         default_factory=list,
         metadata={

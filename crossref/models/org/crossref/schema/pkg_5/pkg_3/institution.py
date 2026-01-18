@@ -31,7 +31,7 @@ class Institution:
         name = "institution"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    institution_name: Optional[InstitutionName] = field(
+    institution_name: InstitutionName | None = field(
         default=None,
         metadata={
             "type": "Element",

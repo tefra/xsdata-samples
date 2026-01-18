@@ -41,7 +41,7 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
     class Meta:
         name = "ServicePattern_VersionStructure"
 
-    route_ref_or_route_view: Optional[Union[RouteRef, RouteView]] = field(
+    route_ref_or_route_view: RouteRef | RouteView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -59,7 +59,7 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             ),
         },
     )
-    direction_type: Optional[DirectionTypeEnumeration] = field(
+    direction_type: DirectionTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "DirectionType",
@@ -67,9 +67,7 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_ref_or_direction_view: Optional[
-        Union[DirectionRef, DirectionView]
-    ] = field(
+    direction_ref_or_direction_view: DirectionRef | DirectionView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -87,9 +85,7 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             ),
         },
     )
-    destination_display_ref_or_destination_display_view: Optional[
-        Union[DestinationDisplayRef, DestinationDisplayView]
-    ] = field(
+    destination_display_ref_or_destination_display_view: DestinationDisplayRef | DestinationDisplayView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -107,7 +103,7 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             ),
         },
     )
-    type_of_journey_pattern_ref: Optional[TypeOfJourneyPatternRef] = field(
+    type_of_journey_pattern_ref: TypeOfJourneyPatternRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfJourneyPatternRef",
@@ -115,7 +111,7 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operational_context_ref: Optional[OperationalContextRef] = field(
+    operational_context_ref: OperationalContextRef | None = field(
         default=None,
         metadata={
             "name": "OperationalContextRef",
@@ -123,7 +119,7 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timing_pattern_ref: Optional[TimingPatternRef] = field(
+    timing_pattern_ref: TimingPatternRef | None = field(
         default=None,
         metadata={
             "name": "TimingPatternRef",
@@ -131,7 +127,7 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -139,7 +135,7 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    run_times: Optional[JourneyPatternRunTimesRelStructure] = field(
+    run_times: JourneyPatternRunTimesRelStructure | None = field(
         default=None,
         metadata={
             "name": "runTimes",
@@ -147,7 +143,7 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    wait_times: Optional[JourneyPatternWaitTimesRelStructure] = field(
+    wait_times: JourneyPatternWaitTimesRelStructure | None = field(
         default=None,
         metadata={
             "name": "waitTimes",
@@ -155,21 +151,21 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    headways: Optional[JourneyPatternHeadwaysRelStructure] = field(
+    headways: JourneyPatternHeadwaysRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    layovers: Optional[JourneyPatternLayoversRelStructure] = field(
+    layovers: JourneyPatternLayoversRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_patterns: Optional[JourneyPatternRefsRelStructure] = field(
+    journey_patterns: JourneyPatternRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "journeyPatterns",
@@ -177,7 +173,7 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    points_in_sequence: Optional[StopPointsInJourneyPatternRelStructure] = (
+    points_in_sequence: StopPointsInJourneyPatternRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -187,7 +183,7 @@ class ServicePatternVersionStructure(LinkSequenceVersionStructure):
             },
         )
     )
-    links_in_sequence: Optional[ServiceLinksInJourneyPatternRelStructure] = (
+    links_in_sequence: ServiceLinksInJourneyPatternRelStructure | None = (
         field(
             default=None,
             metadata={

@@ -35,7 +35,7 @@ class TcpIpIcmpv4Props:
     class Meta:
         name = "TCP-IP-ICMPV-4-PROPS"
 
-    tcp_ip_icmp_v_4_echo_reply_enabled: Optional[Boolean] = field(
+    tcp_ip_icmp_v_4_echo_reply_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-ICMP-V-4-ECHO-REPLY-ENABLED",
@@ -43,7 +43,7 @@ class TcpIpIcmpv4Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_icmp_v_4_ttl: Optional[PositiveInteger] = field(
+    tcp_ip_icmp_v_4_ttl: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-ICMP-V-4-TTL",
@@ -51,14 +51,14 @@ class TcpIpIcmpv4Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

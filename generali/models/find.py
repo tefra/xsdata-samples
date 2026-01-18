@@ -7,7 +7,7 @@ class Find:
     class Meta:
         name = "find"
 
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Element",

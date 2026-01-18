@@ -14,7 +14,7 @@ class FareTableRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "fareTableRefs_RelStructure"
 
-    fare_table_ref: Iterable[Union[StandardFareTableRef, FareTableRef]] = (
+    fare_table_ref: Iterable[StandardFareTableRef | FareTableRef] = (
         field(
             default_factory=list,
             metadata={

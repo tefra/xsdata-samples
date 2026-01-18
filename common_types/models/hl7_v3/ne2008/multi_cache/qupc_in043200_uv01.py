@@ -75,7 +75,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject5:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -91,7 +91,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject5:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    care_provision_event: Optional[RepcMt004000Uv01CareProvisionEvent] = field(
+    care_provision_event: RepcMt004000Uv01CareProvisionEvent | None = field(
         default=None,
         metadata={
             "name": "careProvisionEvent",
@@ -100,34 +100,14 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject5:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Union[
-        ActRelationshipConditional,
-        ActRelationshipHasComponent,
-        ActRelationshipOutcome,
-        ActRelationshipCostTracking,
-        ActRelationshipPosting,
-        str,
-        ActRelationshipHasSupport,
-        ActRelationshipTemporallyPertains,
-        ActRelationshipPertainsValue,
-        ActRelationshipSequel,
-        XActRelationshipDocument,
-        XActRelationshipEntry,
-        XActRelationshipEntryRelationship,
-        XActRelationshipExternalReference,
-        XActRelationshipPatientTransport,
-        XActRelationshipPertinentInfo,
-        XActRelationshipRelatedAuthorizations,
-        XActReplaceOrRevise,
-        XSuccReplPrev,
-    ] = field(
+    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
         init=False,
         default=ActRelationshipPertainsValue.SUBJ,
         metadata={
@@ -160,7 +140,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -183,7 +163,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    status_code: Optional[Cs] = field(
+    status_code: Cs | None = field(
         default=None,
         metadata={
             "name": "statusCode",
@@ -192,7 +172,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "required": True,
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -200,7 +180,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    author: Optional[MfmiMt700712Uv01Author2] = field(
+    author: MfmiMt700712Uv01Author2 | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -208,7 +188,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "nillable": True,
         },
     )
-    custodian: Optional[MfmiMt700712Uv01Custodian] = field(
+    custodian: MfmiMt700712Uv01Custodian | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -242,7 +222,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "nillable": True,
         },
     )
-    subject2: Optional[QupcIn043200Uv01MfmiMt700712Uv01Subject5] = field(
+    subject2: QupcIn043200Uv01MfmiMt700712Uv01Subject5 | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -250,7 +230,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -290,7 +270,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -306,9 +286,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject1:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    registration_event: Optional[
-        QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent
-    ] = field(
+    registration_event: QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent | None = field(
         default=None,
         metadata={
             "name": "registrationEvent",
@@ -317,34 +295,14 @@ class QupcIn043200Uv01MfmiMt700712Uv01Subject1:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Union[
-        ActRelationshipConditional,
-        ActRelationshipHasComponent,
-        ActRelationshipOutcome,
-        ActRelationshipCostTracking,
-        ActRelationshipPosting,
-        str,
-        ActRelationshipHasSupport,
-        ActRelationshipTemporallyPertains,
-        ActRelationshipPertainsValue,
-        ActRelationshipSequel,
-        XActRelationshipDocument,
-        XActRelationshipEntry,
-        XActRelationshipEntryRelationship,
-        XActRelationshipExternalReference,
-        XActRelationshipPatientTransport,
-        XActRelationshipPertinentInfo,
-        XActRelationshipRelatedAuthorizations,
-        XActReplaceOrRevise,
-        XSuccReplPrev,
-    ] = field(
+    type_code: ActRelationshipConditional | ActRelationshipHasComponent | ActRelationshipOutcome | ActRelationshipCostTracking | ActRelationshipPosting | str | ActRelationshipHasSupport | ActRelationshipTemporallyPertains | ActRelationshipPertainsValue | ActRelationshipSequel | XActRelationshipDocument | XActRelationshipEntry | XActRelationshipEntryRelationship | XActRelationshipExternalReference | XActRelationshipPatientTransport | XActRelationshipPertinentInfo | XActRelationshipRelatedAuthorizations | XActReplaceOrRevise | XSuccReplPrev = field(
         init=False,
         default=ActRelationshipPertainsValue.SUBJ,
         metadata={
@@ -377,7 +335,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -400,21 +358,21 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    text: Optional[EdExplicit] = field(
+    text: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -438,7 +396,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    language_code: Optional[Ce] = field(
+    language_code: Ce | None = field(
         default=None,
         metadata={
             "name": "languageCode",
@@ -498,7 +456,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    query_ack: Optional[MfmiMt700712Uv01QueryAck] = field(
+    query_ack: MfmiMt700712Uv01QueryAck | None = field(
         default=None,
         metadata={
             "name": "queryAck",
@@ -507,7 +465,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "required": True,
         },
     )
-    parameter_list: Optional[QupcMt040300Uv01ParameterList] = field(
+    parameter_list: QupcMt040300Uv01ParameterList | None = field(
         default=None,
         metadata={
             "name": "parameterList",
@@ -516,14 +474,14 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[ActClassControlAct] = field(
+    class_code: ActClassControlAct | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -531,7 +489,7 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "required": True,
         },
     )
-    mood_code: Optional[XActMoodIntentEvent] = field(
+    mood_code: XActMoodIntentEvent | None = field(
         default=None,
         metadata={
             "name": "moodCode",
@@ -554,7 +512,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -570,7 +528,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    id: Optional[Ii] = field(
+    id: Ii | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -578,7 +536,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "required": True,
         },
     )
-    creation_time: Optional[TsExplicit] = field(
+    creation_time: TsExplicit | None = field(
         default=None,
         metadata={
             "name": "creationTime",
@@ -587,7 +545,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "required": True,
         },
     )
-    security_text: Optional[St] = field(
+    security_text: St | None = field(
         default=None,
         metadata={
             "name": "securityText",
@@ -595,7 +553,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    version_code: Optional[Cs] = field(
+    version_code: Cs | None = field(
         default=None,
         metadata={
             "name": "versionCode",
@@ -603,7 +561,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    interaction_id: Optional[Ii] = field(
+    interaction_id: Ii | None = field(
         default=None,
         metadata={
             "name": "interactionId",
@@ -620,7 +578,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    processing_code: Optional[Cs] = field(
+    processing_code: Cs | None = field(
         default=None,
         metadata={
             "name": "processingCode",
@@ -629,7 +587,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "required": True,
         },
     )
-    processing_mode_code: Optional[Cs] = field(
+    processing_mode_code: Cs | None = field(
         default=None,
         metadata={
             "name": "processingModeCode",
@@ -638,7 +596,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "required": True,
         },
     )
-    accept_ack_code: Optional[Cs] = field(
+    accept_ack_code: Cs | None = field(
         default=None,
         metadata={
             "name": "acceptAckCode",
@@ -672,7 +630,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "nillable": True,
         },
     )
-    sender: Optional[McciMt000300Uv01Sender] = field(
+    sender: McciMt000300Uv01Sender | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -697,9 +655,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "nillable": True,
         },
     )
-    control_act_process: Optional[
-        QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess
-    ] = field(
+    control_act_process: QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess | None = field(
         default=None,
         metadata={
             "name": "controlActProcess",
@@ -708,7 +664,7 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "required": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",

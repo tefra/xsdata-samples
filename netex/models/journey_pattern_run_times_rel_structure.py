@@ -19,7 +19,7 @@ class JourneyPatternRunTimesRelStructure(
         name = "journeyPatternRunTimes_RelStructure"
 
     journey_pattern_run_time_ref_or_journey_pattern_run_time: Iterable[
-        Union[JourneyPatternRunTimeRef, JourneyPatternRunTime]
+        JourneyPatternRunTimeRef | JourneyPatternRunTime
     ] = field(
         default_factory=list,
         metadata={

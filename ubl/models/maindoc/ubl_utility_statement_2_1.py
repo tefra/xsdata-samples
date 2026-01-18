@@ -37,7 +37,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class UtilityStatementType:
-    ublextensions: Optional[Ublextensions] = field(
+    ublextensions: Ublextensions | None = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -45,7 +45,7 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: Optional[UblversionId] = field(
+    ublversion_id: UblversionId | None = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -53,7 +53,7 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: Optional[CustomizationId] = field(
+    customization_id: CustomizationId | None = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -61,7 +61,7 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: Optional[ProfileId] = field(
+    profile_id: ProfileId | None = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -69,7 +69,7 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: Optional[ProfileExecutionId] = field(
+    profile_execution_id: ProfileExecutionId | None = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -77,7 +77,7 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -86,7 +86,7 @@ class UtilityStatementType:
             "required": True,
         },
     )
-    copy_indicator: Optional[CopyIndicator] = field(
+    copy_indicator: CopyIndicator | None = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -94,7 +94,7 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -102,7 +102,7 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -111,7 +111,7 @@ class UtilityStatementType:
             "required": True,
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -119,7 +119,7 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    utility_statement_type_code: Optional[UtilityStatementTypeCode] = field(
+    utility_statement_type_code: UtilityStatementTypeCode | None = field(
         default=None,
         metadata={
             "name": "UtilityStatementTypeCode",
@@ -136,7 +136,7 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_currency_code: Optional[DocumentCurrencyCode] = field(
+    document_currency_code: DocumentCurrencyCode | None = field(
         default=None,
         metadata={
             "name": "DocumentCurrencyCode",
@@ -145,7 +145,7 @@ class UtilityStatementType:
             "required": True,
         },
     )
-    accounting_cost_code: Optional[AccountingCostCode] = field(
+    accounting_cost_code: AccountingCostCode | None = field(
         default=None,
         metadata={
             "name": "AccountingCostCode",
@@ -153,7 +153,7 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    accounting_cost: Optional[AccountingCost] = field(
+    accounting_cost: AccountingCost | None = field(
         default=None,
         metadata={
             "name": "AccountingCost",
@@ -161,7 +161,7 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    parent_document_reference: Optional[ParentDocumentReference] = field(
+    parent_document_reference: ParentDocumentReference | None = field(
         default=None,
         metadata={
             "name": "ParentDocumentReference",
@@ -188,7 +188,7 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sender_party: Optional[SenderParty] = field(
+    sender_party: SenderParty | None = field(
         default=None,
         metadata={
             "name": "SenderParty",
@@ -197,7 +197,7 @@ class UtilityStatementType:
             "required": True,
         },
     )
-    receiver_party: Optional[ReceiverParty] = field(
+    receiver_party: ReceiverParty | None = field(
         default=None,
         metadata={
             "name": "ReceiverParty",
@@ -206,7 +206,7 @@ class UtilityStatementType:
             "required": True,
         },
     )
-    customer_party: Optional[CustomerParty] = field(
+    customer_party: CustomerParty | None = field(
         default=None,
         metadata={
             "name": "CustomerParty",
@@ -214,7 +214,7 @@ class UtilityStatementType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    subscriber_party: Optional[SubscriberParty] = field(
+    subscriber_party: SubscriberParty | None = field(
         default=None,
         metadata={
             "name": "SubscriberParty",

@@ -12,7 +12,7 @@ class TBaseElementWithMixedContent:
     class Meta:
         name = "tBaseElementWithMixedContent"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

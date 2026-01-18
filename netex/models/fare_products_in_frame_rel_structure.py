@@ -20,15 +20,7 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
         name = "fareProductsInFrame_RelStructure"
 
     fare_product: Iterable[
-        Union[
-            SupplementProduct,
-            PreassignedFareProduct,
-            AmountOfPriceUnitProduct,
-            CappedDiscountRight,
-            UsageDiscountRight,
-            ThirdPartyProduct,
-            SaleDiscountRight,
-        ]
+        SupplementProduct | PreassignedFareProduct | AmountOfPriceUnitProduct | CappedDiscountRight | UsageDiscountRight | ThirdPartyProduct | SaleDiscountRight
     ] = field(
         default_factory=list,
         metadata={

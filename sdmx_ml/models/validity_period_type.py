@@ -18,7 +18,7 @@ class ValidityPeriodType:
         subscription.
     """
 
-    start_date: Optional[XmlDate] = field(
+    start_date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -27,7 +27,7 @@ class ValidityPeriodType:
             "required": True,
         },
     )
-    end_date: Optional[XmlDate] = field(
+    end_date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "EndDate",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -83,7 +85,7 @@ class DoIpLogicAddress:
     class Meta:
         name = "DO-IP-LOGIC-ADDRESS"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -92,7 +94,7 @@ class DoIpLogicAddress:
             "required": True,
         },
     )
-    short_name_fragments: Optional["DoIpLogicAddress.ShortNameFragments"] = (
+    short_name_fragments: DoIpLogicAddress.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -102,7 +104,7 @@ class DoIpLogicAddress:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -110,7 +112,7 @@ class DoIpLogicAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -118,7 +120,7 @@ class DoIpLogicAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -126,7 +128,7 @@ class DoIpLogicAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -134,7 +136,7 @@ class DoIpLogicAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -142,7 +144,7 @@ class DoIpLogicAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DoIpLogicAddress.Annotations"] = field(
+    annotations: DoIpLogicAddress.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -150,7 +152,7 @@ class DoIpLogicAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    address: Optional[Integer] = field(
+    address: Integer | None = field(
         default=None,
         metadata={
             "name": "ADDRESS",
@@ -158,9 +160,7 @@ class DoIpLogicAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    do_ip_logic_address_props: Optional[
-        "DoIpLogicAddress.DoIpLogicAddressProps"
-    ] = field(
+    do_ip_logic_address_props: DoIpLogicAddress.DoIpLogicAddressProps | None = field(
         default=None,
         metadata={
             "name": "DO-IP-LOGIC-ADDRESS-PROPS",
@@ -168,14 +168,14 @@ class DoIpLogicAddress:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -183,7 +183,7 @@ class DoIpLogicAddress:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -215,9 +215,7 @@ class DoIpLogicAddress:
 
     @dataclass
     class DoIpLogicAddressProps:
-        do_ip_logic_target_address_props: Optional[
-            DoIpLogicTargetAddressProps
-        ] = field(
+        do_ip_logic_target_address_props: DoIpLogicTargetAddressProps | None = field(
             default=None,
             metadata={
                 "name": "DO-IP-LOGIC-TARGET-ADDRESS-PROPS",
@@ -225,9 +223,7 @@ class DoIpLogicAddress:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        do_ip_logic_tester_address_props: Optional[
-            DoIpLogicTesterAddressProps
-        ] = field(
+        do_ip_logic_tester_address_props: DoIpLogicTesterAddressProps | None = field(
             default=None,
             metadata={
                 "name": "DO-IP-LOGIC-TESTER-ADDRESS-PROPS",

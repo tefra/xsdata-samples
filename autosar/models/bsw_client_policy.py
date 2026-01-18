@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class BswClientPolicy:
     class Meta:
         name = "BSW-CLIENT-POLICY"
 
-    enable_take_address: Optional[Boolean] = field(
+    enable_take_address: Boolean | None = field(
         default=None,
         metadata={
             "name": "ENABLE-TAKE-ADDRESS",
@@ -47,9 +49,7 @@ class BswClientPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_client_server_entry_ref: Optional[
-        "BswClientPolicy.RequiredClientServerEntryRef"
-    ] = field(
+    required_client_server_entry_ref: BswClientPolicy.RequiredClientServerEntryRef | None = field(
         default=None,
         metadata={
             "name": "REQUIRED-CLIENT-SERVER-ENTRY-REF",
@@ -57,7 +57,7 @@ class BswClientPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -65,14 +65,14 @@ class BswClientPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -83,7 +83,7 @@ class BswClientPolicy:
 
     @dataclass
     class RequiredClientServerEntryRef(Ref):
-        dest: Optional[BswModuleClientServerEntrySubtypesEnum] = field(
+        dest: BswModuleClientServerEntrySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

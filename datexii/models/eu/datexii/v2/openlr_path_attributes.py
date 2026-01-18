@@ -25,9 +25,7 @@ class OpenlrPathAttributes:
     :ivar openlr_path_attributes_extension:
     """
 
-    openlr_lowest_frcto_next_lrpoint: Optional[
-        OpenlrFunctionalRoadClassEnum
-    ] = field(
+    openlr_lowest_frcto_next_lrpoint: OpenlrFunctionalRoadClassEnum | None = field(
         default=None,
         metadata={
             "name": "openlrLowestFRCToNextLRPoint",
@@ -36,7 +34,7 @@ class OpenlrPathAttributes:
             "required": True,
         },
     )
-    openlr_distance_to_next_lrpoint: Optional[int] = field(
+    openlr_distance_to_next_lrpoint: int | None = field(
         default=None,
         metadata={
             "name": "openlrDistanceToNextLRPoint",
@@ -45,7 +43,7 @@ class OpenlrPathAttributes:
             "required": True,
         },
     )
-    openlr_path_attributes_extension: Optional[ExtensionType] = field(
+    openlr_path_attributes_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "openlrPathAttributesExtension",

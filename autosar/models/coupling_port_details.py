@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -53,9 +55,7 @@ class CouplingPortDetails:
     class Meta:
         name = "COUPLING-PORT-DETAILS"
 
-    coupling_port_structural_elements: Optional[
-        "CouplingPortDetails.CouplingPortStructuralElements"
-    ] = field(
+    coupling_port_structural_elements: CouplingPortDetails.CouplingPortStructuralElements | None = field(
         default=None,
         metadata={
             "name": "COUPLING-PORT-STRUCTURAL-ELEMENTS",
@@ -63,9 +63,7 @@ class CouplingPortDetails:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ethernet_priority_regenerations: Optional[
-        "CouplingPortDetails.EthernetPriorityRegenerations"
-    ] = field(
+    ethernet_priority_regenerations: CouplingPortDetails.EthernetPriorityRegenerations | None = field(
         default=None,
         metadata={
             "name": "ETHERNET-PRIORITY-REGENERATIONS",
@@ -73,9 +71,7 @@ class CouplingPortDetails:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ethernet_traffic_class_assignments: Optional[
-        "CouplingPortDetails.EthernetTrafficClassAssignments"
-    ] = field(
+    ethernet_traffic_class_assignments: CouplingPortDetails.EthernetTrafficClassAssignments | None = field(
         default=None,
         metadata={
             "name": "ETHERNET-TRAFFIC-CLASS-ASSIGNMENTS",
@@ -83,7 +79,7 @@ class CouplingPortDetails:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    global_time_props: Optional[GlobalTimeCouplingPortProps] = field(
+    global_time_props: GlobalTimeCouplingPortProps | None = field(
         default=None,
         metadata={
             "name": "GLOBAL-TIME-PROPS",
@@ -91,9 +87,7 @@ class CouplingPortDetails:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    last_egress_scheduler_ref: Optional[
-        "CouplingPortDetails.LastEgressSchedulerRef"
-    ] = field(
+    last_egress_scheduler_ref: CouplingPortDetails.LastEgressSchedulerRef | None = field(
         default=None,
         metadata={
             "name": "LAST-EGRESS-SCHEDULER-REF",
@@ -101,7 +95,7 @@ class CouplingPortDetails:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rate_policys: Optional["CouplingPortDetails.RatePolicys"] = field(
+    rate_policys: CouplingPortDetails.RatePolicys | None = field(
         default=None,
         metadata={
             "name": "RATE-POLICYS",
@@ -109,14 +103,14 @@ class CouplingPortDetails:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -182,7 +176,7 @@ class CouplingPortDetails:
 
     @dataclass
     class LastEgressSchedulerRef(Ref):
-        dest: Optional[CouplingPortSchedulerSubtypesEnum] = field(
+        dest: CouplingPortSchedulerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

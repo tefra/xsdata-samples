@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -138,7 +140,7 @@ class EthernetCommunicationConnector:
     class Meta:
         name = "ETHERNET-COMMUNICATION-CONNECTOR"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -147,9 +149,7 @@ class EthernetCommunicationConnector:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "EthernetCommunicationConnector.ShortNameFragments"
-    ] = field(
+    short_name_fragments: EthernetCommunicationConnector.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -157,7 +157,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -165,7 +165,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -173,7 +173,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -181,7 +181,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -189,7 +189,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -197,7 +197,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["EthernetCommunicationConnector.Annotations"] = (
+    annotations: EthernetCommunicationConnector.Annotations | None = (
         field(
             default=None,
             metadata={
@@ -207,9 +207,7 @@ class EthernetCommunicationConnector:
             },
         )
     )
-    comm_controller_ref: Optional[
-        "EthernetCommunicationConnector.CommControllerRef"
-    ] = field(
+    comm_controller_ref: EthernetCommunicationConnector.CommControllerRef | None = field(
         default=None,
         metadata={
             "name": "COMM-CONTROLLER-REF",
@@ -217,7 +215,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    create_ecu_wakeup_source: Optional[Boolean] = field(
+    create_ecu_wakeup_source: Boolean | None = field(
         default=None,
         metadata={
             "name": "CREATE-ECU-WAKEUP-SOURCE",
@@ -225,7 +223,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dynamic_pnc_to_channel_mapping_enabled: Optional[Boolean] = field(
+    dynamic_pnc_to_channel_mapping_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "DYNAMIC-PNC-TO-CHANNEL-MAPPING-ENABLED",
@@ -233,9 +231,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_comm_port_instances: Optional[
-        "EthernetCommunicationConnector.EcuCommPortInstances"
-    ] = field(
+    ecu_comm_port_instances: EthernetCommunicationConnector.EcuCommPortInstances | None = field(
         default=None,
         metadata={
             "name": "ECU-COMM-PORT-INSTANCES",
@@ -243,7 +239,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_gateway_type: Optional[PncGatewayTypeEnum] = field(
+    pnc_gateway_type: PncGatewayTypeEnum | None = field(
         default=None,
         metadata={
             "name": "PNC-GATEWAY-TYPE",
@@ -251,7 +247,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -259,9 +255,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    eth_ip_props_ref: Optional[
-        "EthernetCommunicationConnector.EthIpPropsRef"
-    ] = field(
+    eth_ip_props_ref: EthernetCommunicationConnector.EthIpPropsRef | None = field(
         default=None,
         metadata={
             "name": "ETH-IP-PROPS-REF",
@@ -269,7 +263,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ip_v_6_path_mtu_enabled: Optional[Boolean] = field(
+    ip_v_6_path_mtu_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "IP-V-6-PATH-MTU-ENABLED",
@@ -277,7 +271,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ip_v_6_path_mtu_timeout: Optional[TimeValue] = field(
+    ip_v_6_path_mtu_timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "IP-V-6-PATH-MTU-TIMEOUT",
@@ -285,7 +279,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum_transmission_unit: Optional[PositiveInteger] = field(
+    maximum_transmission_unit: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAXIMUM-TRANSMISSION-UNIT",
@@ -293,7 +287,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    neighbor_cache_size: Optional[PositiveInteger] = field(
+    neighbor_cache_size: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "NEIGHBOR-CACHE-SIZE",
@@ -301,9 +295,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_endpoint_refs: Optional[
-        "EthernetCommunicationConnector.NetworkEndpointRefs"
-    ] = field(
+    network_endpoint_refs: EthernetCommunicationConnector.NetworkEndpointRefs | None = field(
         default=None,
         metadata={
             "name": "NETWORK-ENDPOINT-REFS",
@@ -311,7 +303,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    path_mtu_enabled: Optional[Boolean] = field(
+    path_mtu_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "PATH-MTU-ENABLED",
@@ -319,7 +311,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    path_mtu_timeout: Optional[TimeValue] = field(
+    path_mtu_timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "PATH-MTU-TIMEOUT",
@@ -327,7 +319,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pnc_filter_data_mask: Optional[PositiveUnlimitedInteger] = field(
+    pnc_filter_data_mask: PositiveUnlimitedInteger | None = field(
         default=None,
         metadata={
             "name": "PNC-FILTER-DATA-MASK",
@@ -335,9 +327,7 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unicast_network_endpoint_ref: Optional[
-        "EthernetCommunicationConnector.UnicastNetworkEndpointRef"
-    ] = field(
+    unicast_network_endpoint_ref: EthernetCommunicationConnector.UnicastNetworkEndpointRef | None = field(
         default=None,
         metadata={
             "name": "UNICAST-NETWORK-ENDPOINT-REF",
@@ -345,14 +335,14 @@ class EthernetCommunicationConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -360,7 +350,7 @@ class EthernetCommunicationConnector:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -392,7 +382,7 @@ class EthernetCommunicationConnector:
 
     @dataclass
     class CommControllerRef(Ref):
-        dest: Optional[CommunicationControllerSubtypesEnum] = field(
+        dest: CommunicationControllerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -430,7 +420,7 @@ class EthernetCommunicationConnector:
 
     @dataclass
     class EthIpPropsRef(Ref):
-        dest: Optional[EthIpPropsSubtypesEnum] = field(
+        dest: EthIpPropsSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -442,7 +432,7 @@ class EthernetCommunicationConnector:
     @dataclass
     class NetworkEndpointRefs:
         network_endpoint_ref: list[
-            "EthernetCommunicationConnector.NetworkEndpointRefs.NetworkEndpointRef"
+            EthernetCommunicationConnector.NetworkEndpointRefs.NetworkEndpointRef
         ] = field(
             default_factory=list,
             metadata={
@@ -454,7 +444,7 @@ class EthernetCommunicationConnector:
 
         @dataclass
         class NetworkEndpointRef(Ref):
-            dest: Optional[NetworkEndpointSubtypesEnum] = field(
+            dest: NetworkEndpointSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -465,7 +455,7 @@ class EthernetCommunicationConnector:
 
     @dataclass
     class UnicastNetworkEndpointRef(Ref):
-        dest: Optional[NetworkEndpointSubtypesEnum] = field(
+        dest: NetworkEndpointSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

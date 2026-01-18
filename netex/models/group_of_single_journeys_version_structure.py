@@ -15,14 +15,14 @@ class GroupOfSingleJourneysVersionStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "GroupOfSingleJourneys_VersionStructure"
 
-    members: Optional[SingleJourneyRefsRelStructure] = field(
+    members: SingleJourneyRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",

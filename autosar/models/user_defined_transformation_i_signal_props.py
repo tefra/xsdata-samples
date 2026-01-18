@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -52,7 +54,7 @@ class UserDefinedTransformationISignalProps:
     class Meta:
         name = "USER-DEFINED-TRANSFORMATION-I-SIGNAL-PROPS"
 
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -60,7 +62,7 @@ class UserDefinedTransformationISignalProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -68,7 +70,7 @@ class UserDefinedTransformationISignalProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -76,7 +78,7 @@ class UserDefinedTransformationISignalProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -84,9 +86,7 @@ class UserDefinedTransformationISignalProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    user_defined_transformation_i_signal_props_variants: Optional[
-        "UserDefinedTransformationISignalProps.UserDefinedTransformationISignalPropsVariants"
-    ] = field(
+    user_defined_transformation_i_signal_props_variants: UserDefinedTransformationISignalProps.UserDefinedTransformationISignalPropsVariants | None = field(
         default=None,
         metadata={
             "name": "USER-DEFINED-TRANSFORMATION-I-SIGNAL-PROPS-VARIANTS",
@@ -94,14 +94,14 @@ class UserDefinedTransformationISignalProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

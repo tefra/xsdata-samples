@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -32,9 +34,7 @@ class RPortInCompositionInstanceRef:
     class Meta:
         name = "R-PORT-IN-COMPOSITION-INSTANCE-REF"
 
-    context_component_ref: Optional[
-        "RPortInCompositionInstanceRef.ContextComponentRef"
-    ] = field(
+    context_component_ref: RPortInCompositionInstanceRef.ContextComponentRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-COMPONENT-REF",
@@ -42,9 +42,7 @@ class RPortInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_r_port_ref: Optional[
-        "RPortInCompositionInstanceRef.TargetRPortRef"
-    ] = field(
+    target_r_port_ref: RPortInCompositionInstanceRef.TargetRPortRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-R-PORT-REF",
@@ -52,14 +50,14 @@ class RPortInCompositionInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +68,7 @@ class RPortInCompositionInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -81,7 +79,7 @@ class RPortInCompositionInstanceRef:
 
     @dataclass
     class TargetRPortRef(Ref):
-        dest: Optional[AbstractRequiredPortPrototypeSubtypesEnum] = field(
+        dest: AbstractRequiredPortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

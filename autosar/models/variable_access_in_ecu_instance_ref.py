@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -34,9 +36,7 @@ class VariableAccessInEcuInstanceRef:
     class Meta:
         name = "VARIABLE-ACCESS-IN-ECU-INSTANCE-REF"
 
-    context_root_composition_ref: Optional[
-        "VariableAccessInEcuInstanceRef.ContextRootCompositionRef"
-    ] = field(
+    context_root_composition_ref: VariableAccessInEcuInstanceRef.ContextRootCompositionRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-COMPOSITION-REF",
@@ -44,9 +44,7 @@ class VariableAccessInEcuInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_atomic_component_ref: Optional[
-        "VariableAccessInEcuInstanceRef.ContextAtomicComponentRef"
-    ] = field(
+    context_atomic_component_ref: VariableAccessInEcuInstanceRef.ContextAtomicComponentRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-ATOMIC-COMPONENT-REF",
@@ -54,9 +52,7 @@ class VariableAccessInEcuInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_variable_access_ref: Optional[
-        "VariableAccessInEcuInstanceRef.TargetVariableAccessRef"
-    ] = field(
+    target_variable_access_ref: VariableAccessInEcuInstanceRef.TargetVariableAccessRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-VARIABLE-ACCESS-REF",
@@ -64,14 +60,14 @@ class VariableAccessInEcuInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +78,7 @@ class VariableAccessInEcuInstanceRef:
 
     @dataclass
     class ContextRootCompositionRef(Ref):
-        dest: Optional[RootSwCompositionPrototypeSubtypesEnum] = field(
+        dest: RootSwCompositionPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -93,7 +89,7 @@ class VariableAccessInEcuInstanceRef:
 
     @dataclass
     class ContextAtomicComponentRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -104,7 +100,7 @@ class VariableAccessInEcuInstanceRef:
 
     @dataclass
     class TargetVariableAccessRef(Ref):
-        dest: Optional[VariableAccessSubtypesEnum] = field(
+        dest: VariableAccessSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

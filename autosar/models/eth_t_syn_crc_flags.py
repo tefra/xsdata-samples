@@ -39,7 +39,7 @@ class EthTSynCrcFlags:
     class Meta:
         name = "ETH-T-SYN-CRC-FLAGS"
 
-    crc_correction_field: Optional[Boolean] = field(
+    crc_correction_field: Boolean | None = field(
         default=None,
         metadata={
             "name": "CRC-CORRECTION-FIELD",
@@ -47,7 +47,7 @@ class EthTSynCrcFlags:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crc_domain_number: Optional[Boolean] = field(
+    crc_domain_number: Boolean | None = field(
         default=None,
         metadata={
             "name": "CRC-DOMAIN-NUMBER",
@@ -55,7 +55,7 @@ class EthTSynCrcFlags:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crc_message_length: Optional[Boolean] = field(
+    crc_message_length: Boolean | None = field(
         default=None,
         metadata={
             "name": "CRC-MESSAGE-LENGTH",
@@ -63,7 +63,7 @@ class EthTSynCrcFlags:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crc_precise_origin_timestamp: Optional[Boolean] = field(
+    crc_precise_origin_timestamp: Boolean | None = field(
         default=None,
         metadata={
             "name": "CRC-PRECISE-ORIGIN-TIMESTAMP",
@@ -71,7 +71,7 @@ class EthTSynCrcFlags:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crc_sequence_id: Optional[Boolean] = field(
+    crc_sequence_id: Boolean | None = field(
         default=None,
         metadata={
             "name": "CRC-SEQUENCE-ID",
@@ -79,7 +79,7 @@ class EthTSynCrcFlags:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crc_source_port_identity: Optional[Boolean] = field(
+    crc_source_port_identity: Boolean | None = field(
         default=None,
         metadata={
             "name": "CRC-SOURCE-PORT-IDENTITY",
@@ -87,14 +87,14 @@ class EthTSynCrcFlags:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

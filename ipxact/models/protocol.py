@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -19,7 +21,7 @@ class Protocol:
         name = "protocol"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    protocol_type: Optional["Protocol.ProtocolType"] = field(
+    protocol_type: Protocol.ProtocolType | None = field(
         default=None,
         metadata={
             "name": "protocolType",
@@ -27,7 +29,7 @@ class Protocol:
             "required": True,
         },
     )
-    payload: Optional[Payload] = field(
+    payload: Payload | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -36,13 +38,13 @@ class Protocol:
 
     @dataclass
     class ProtocolType:
-        value: Optional[ProtocolTypeType] = field(
+        value: ProtocolTypeType | None = field(
             default=None,
             metadata={
                 "required": True,
             },
         )
-        custom: Optional[str] = field(
+        custom: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

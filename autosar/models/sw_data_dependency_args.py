@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -55,7 +57,7 @@ class SwDataDependencyArgs:
             "sequence": 1,
         },
     )
-    mc_data_instance_ref: list["SwDataDependencyArgs.McDataInstanceRef"] = (
+    mc_data_instance_ref: list[SwDataDependencyArgs.McDataInstanceRef] = (
         field(
             default_factory=list,
             metadata={
@@ -76,7 +78,7 @@ class SwDataDependencyArgs:
         },
     )
     mc_data_instance_var_ref: list[
-        "SwDataDependencyArgs.McDataInstanceVarRef"
+        SwDataDependencyArgs.McDataInstanceVarRef
     ] = field(
         default_factory=list,
         metadata={
@@ -86,14 +88,14 @@ class SwDataDependencyArgs:
             "sequence": 2,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -104,7 +106,7 @@ class SwDataDependencyArgs:
 
     @dataclass
     class McDataInstanceRef(Ref):
-        dest: Optional[McDataInstanceSubtypesEnum] = field(
+        dest: McDataInstanceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -115,7 +117,7 @@ class SwDataDependencyArgs:
 
     @dataclass
     class McDataInstanceVarRef(Ref):
-        dest: Optional[McDataInstanceSubtypesEnum] = field(
+        dest: McDataInstanceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

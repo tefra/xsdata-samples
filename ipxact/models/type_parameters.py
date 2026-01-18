@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -24,7 +26,7 @@ class TypeParameters:
             "type": "Element",
         },
     )
-    service_type_def: list["ServiceTypeDef"] = field(
+    service_type_def: list[ServiceTypeDef] = field(
         default_factory=list,
         metadata={
             "name": "serviceTypeDef",
@@ -53,7 +55,7 @@ class ServiceTypeDef:
         name = "serviceTypeDef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    type_name: Optional["ServiceTypeDef.TypeName"] = field(
+    type_name: ServiceTypeDef.TypeName | None = field(
         default=None,
         metadata={
             "name": "typeName",
@@ -61,21 +63,21 @@ class ServiceTypeDef:
             "required": True,
         },
     )
-    type_definition: list["ServiceTypeDef.TypeDefinition"] = field(
+    type_definition: list[ServiceTypeDef.TypeDefinition] = field(
         default_factory=list,
         metadata={
             "name": "typeDefinition",
             "type": "Element",
         },
     )
-    type_parameters: Optional[TypeParameters] = field(
+    type_parameters: TypeParameters | None = field(
         default=None,
         metadata={
             "name": "typeParameters",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -113,7 +115,7 @@ class ServiceTypeDef:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

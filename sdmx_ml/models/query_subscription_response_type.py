@@ -26,7 +26,7 @@ class QuerySubscriptionResponseType:
         for each subscription.
     """
 
-    status_message: Optional[StatusMessageType2] = field(
+    status_message: StatusMessageType2 | None = field(
         default=None,
         metadata={
             "name": "StatusMessage",

@@ -36,7 +36,7 @@ class AttachmentType(BaseIdentifiedComponentType):
         external document.</description>
     """
 
-    size_measure: Optional[AttachmentTypeSizeMeasure] = field(
+    size_measure: AttachmentTypeSizeMeasure | None = field(
         default=None,
         metadata={
             "name": "SizeMeasure",
@@ -44,7 +44,7 @@ class AttachmentType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    binary_object: Optional[BinaryObjectType] = field(
+    binary_object: BinaryObjectType | None = field(
         default=None,
         metadata={
             "name": "BinaryObject",
@@ -52,7 +52,7 @@ class AttachmentType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    reference_uri: Optional[Uritype] = field(
+    reference_uri: Uritype | None = field(
         default=None,
         metadata={
             "name": "ReferenceURI",

@@ -45,7 +45,7 @@ class VehicleCountWithinInterval:
     :ivar vehicle_count_within_interval_extension:
     """
 
-    measurement_or_calcualtion_time: Optional[XmlDateTime] = field(
+    measurement_or_calcualtion_time: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "measurementOrCalcualtionTime",
@@ -53,7 +53,7 @@ class VehicleCountWithinInterval:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    measurement_interval: Optional[float] = field(
+    measurement_interval: float | None = field(
         default=None,
         metadata={
             "name": "measurementInterval",
@@ -62,7 +62,7 @@ class VehicleCountWithinInterval:
             "required": True,
         },
     )
-    number_of_incoming_vehicles: Optional[VehicleCountValue] = field(
+    number_of_incoming_vehicles: VehicleCountValue | None = field(
         default=None,
         metadata={
             "name": "numberOfIncomingVehicles",
@@ -70,7 +70,7 @@ class VehicleCountWithinInterval:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    number_of_outgoing_vehicles: Optional[VehicleCountValue] = field(
+    number_of_outgoing_vehicles: VehicleCountValue | None = field(
         default=None,
         metadata={
             "name": "numberOfOutgoingVehicles",
@@ -78,7 +78,7 @@ class VehicleCountWithinInterval:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    change_of_occupied_spaces: Optional[OccupancyChangeValue] = field(
+    change_of_occupied_spaces: OccupancyChangeValue | None = field(
         default=None,
         metadata={
             "name": "changeOfOccupiedSpaces",
@@ -86,7 +86,7 @@ class VehicleCountWithinInterval:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    counted_vehicles: Optional[VehicleCharacteristics] = field(
+    counted_vehicles: VehicleCharacteristics | None = field(
         default=None,
         metadata={
             "name": "countedVehicles",
@@ -94,7 +94,7 @@ class VehicleCountWithinInterval:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vehicle_count_within_interval_extension: Optional[ExtensionType] = field(
+    vehicle_count_within_interval_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "vehicleCountWithinIntervalExtension",

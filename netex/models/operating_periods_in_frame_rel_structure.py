@@ -15,7 +15,7 @@ class OperatingPeriodsInFrameRelStructure(ContainmentAggregationStructure):
         name = "operatingPeriodsInFrame_RelStructure"
 
     operating_period_or_uic_operating_period: Iterable[
-        Union[OperatingPeriod, UicOperatingPeriod]
+        OperatingPeriod | UicOperatingPeriod
     ] = field(
         default_factory=list,
         metadata={

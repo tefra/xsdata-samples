@@ -20,7 +20,7 @@ class FilterReference:
     :ivar filter_reference_extension:
     """
 
-    delete_filter: Optional[bool] = field(
+    delete_filter: bool | None = field(
         default=None,
         metadata={
             "name": "deleteFilter",
@@ -28,7 +28,7 @@ class FilterReference:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    filter_operation_approved: Optional[bool] = field(
+    filter_operation_approved: bool | None = field(
         default=None,
         metadata={
             "name": "filterOperationApproved",
@@ -36,7 +36,7 @@ class FilterReference:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    key_filter_reference: Optional[str] = field(
+    key_filter_reference: str | None = field(
         default=None,
         metadata={
             "name": "keyFilterReference",
@@ -46,7 +46,7 @@ class FilterReference:
             "max_length": 1024,
         },
     )
-    filter_reference_extension: Optional[ExtensionType] = field(
+    filter_reference_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "filterReferenceExtension",

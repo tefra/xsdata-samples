@@ -30,7 +30,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class StructureType(RiskElementType):
-    additional_information: Optional[TextType] = field(
+    additional_information: TextType | None = field(
         default=None,
         metadata={
             "name": "AdditionalInformation",
@@ -38,7 +38,7 @@ class StructureType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    automatic_fire_detection_coverage_percentage: Optional[PercentType] = (
+    automatic_fire_detection_coverage_percentage: PercentType | None = (
         field(
             default=None,
             metadata={
@@ -48,7 +48,7 @@ class StructureType(RiskElementType):
             },
         )
     )
-    automatic_sprinkler_coverage_percentage: Optional[PercentType] = field(
+    automatic_sprinkler_coverage_percentage: PercentType | None = field(
         default=None,
         metadata={
             "name": "AutomaticSprinklerCoveragePercentage",
@@ -56,7 +56,7 @@ class StructureType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    combustible_percentage: Optional[PercentType] = field(
+    combustible_percentage: PercentType | None = field(
         default=None,
         metadata={
             "name": "CombustiblePercentage",
@@ -64,7 +64,7 @@ class StructureType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    construction_year: Optional[NumberType] = field(
+    construction_year: NumberType | None = field(
         default=None,
         metadata={
             "name": "ConstructionYear",
@@ -72,7 +72,7 @@ class StructureType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    highly_protected_risk_percentage: Optional[PercentType] = field(
+    highly_protected_risk_percentage: PercentType | None = field(
         default=None,
         metadata={
             "name": "HighlyProtectedRiskPercentage",
@@ -80,7 +80,7 @@ class StructureType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    survey_report_available: Optional[bool] = field(
+    survey_report_available: bool | None = field(
         default=None,
         metadata={
             "name": "SurveyReportAvailable",
@@ -88,7 +88,7 @@ class StructureType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    non_combustible_percentage: Optional[PercentType] = field(
+    non_combustible_percentage: PercentType | None = field(
         default=None,
         metadata={
             "name": "NonCombustiblePercentage",
@@ -96,7 +96,7 @@ class StructureType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    part_combustible_percentage: Optional[PercentType] = field(
+    part_combustible_percentage: PercentType | None = field(
         default=None,
         metadata={
             "name": "PartCombustiblePercentage",
@@ -104,7 +104,7 @@ class StructureType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    quality_rating: Optional[CodeType] = field(
+    quality_rating: CodeType | None = field(
         default=None,
         metadata={
             "name": "QualityRating",
@@ -112,7 +112,7 @@ class StructureType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    structure_area_m2: Optional[NumericType] = field(
+    structure_area_m2: NumericType | None = field(
         default=None,
         metadata={
             "name": "StructureAreaM2",
@@ -120,7 +120,7 @@ class StructureType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    survey_report_date: Optional[DateTimeType] = field(
+    survey_report_date: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "SurveyReportDate",
@@ -128,7 +128,7 @@ class StructureType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    top_location: Optional[bool] = field(
+    top_location: bool | None = field(
         default=None,
         metadata={
             "name": "TopLocation",
@@ -136,7 +136,7 @@ class StructureType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    construction_type: Optional[CodeType] = field(
+    construction_type: CodeType | None = field(
         default=None,
         metadata={
             "name": "ConstructionType",

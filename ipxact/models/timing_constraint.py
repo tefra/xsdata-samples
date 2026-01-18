@@ -31,7 +31,7 @@ class TimingConstraint:
         name = "timingConstraint"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: Optional[float] = field(
+    value: float | None = field(
         default=None,
         metadata={
             "required": True,
@@ -39,21 +39,21 @@ class TimingConstraint:
             "max_inclusive": 100.0,
         },
     )
-    clock_edge: Optional[EdgeValueType] = field(
+    clock_edge: EdgeValueType | None = field(
         default=None,
         metadata={
             "name": "clockEdge",
             "type": "Attribute",
         },
     )
-    delay_type: Optional[DelayValueType] = field(
+    delay_type: DelayValueType | None = field(
         default=None,
         metadata={
             "name": "delayType",
             "type": "Attribute",
         },
     )
-    clock_name: Optional[str] = field(
+    clock_name: str | None = field(
         default=None,
         metadata={
             "name": "clockName",
@@ -63,7 +63,7 @@ class TimingConstraint:
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

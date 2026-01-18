@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -19,7 +21,7 @@ class PortAccessType1:
     class Meta:
         name = "portAccessType"
 
-    port_access_type: Optional[PortAccessType] = field(
+    port_access_type: PortAccessType | None = field(
         default=None,
         metadata={
             "name": "portAccessType",
@@ -27,7 +29,7 @@ class PortAccessType1:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_handles: Optional["PortAccessType1.AccessHandles"] = field(
+    access_handles: PortAccessType1.AccessHandles | None = field(
         default=None,
         metadata={
             "name": "accessHandles",

@@ -19,7 +19,7 @@ class ParkingUsageScenarioStatus:
     :ivar parking_usage_scenario_status_extension:
     """
 
-    usage_scenario_operation_status: Optional[OperationStatusEnum] = field(
+    usage_scenario_operation_status: OperationStatusEnum | None = field(
         default=None,
         metadata={
             "name": "usageScenarioOperationStatus",
@@ -28,7 +28,7 @@ class ParkingUsageScenarioStatus:
             "required": True,
         },
     )
-    parking_usage_scenario_status_extension: Optional[ExtensionType] = field(
+    parking_usage_scenario_status_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "parkingUsageScenarioStatusExtension",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -36,9 +38,7 @@ class PhmCheckpointInExecutableInstanceRef:
     class Meta:
         name = "PHM-CHECKPOINT-IN-EXECUTABLE-INSTANCE-REF"
 
-    context_root_sw_component_prototype_ref: Optional[
-        "PhmCheckpointInExecutableInstanceRef.ContextRootSwComponentPrototypeRef"
-    ] = field(
+    context_root_sw_component_prototype_ref: PhmCheckpointInExecutableInstanceRef.ContextRootSwComponentPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-SW-COMPONENT-PROTOTYPE-REF",
@@ -47,7 +47,7 @@ class PhmCheckpointInExecutableInstanceRef:
         },
     )
     context_component_prototype_ref: list[
-        "PhmCheckpointInExecutableInstanceRef.ContextComponentPrototypeRef"
+        PhmCheckpointInExecutableInstanceRef.ContextComponentPrototypeRef
     ] = field(
         default_factory=list,
         metadata={
@@ -56,9 +56,7 @@ class PhmCheckpointInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_r_port_prototype_ref: Optional[
-        "PhmCheckpointInExecutableInstanceRef.ContextRPortPrototypeRef"
-    ] = field(
+    context_r_port_prototype_ref: PhmCheckpointInExecutableInstanceRef.ContextRPortPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-R-PORT-PROTOTYPE-REF",
@@ -66,9 +64,7 @@ class PhmCheckpointInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_phm_checkpoint_ref: Optional[
-        "PhmCheckpointInExecutableInstanceRef.TargetPhmCheckpointRef"
-    ] = field(
+    target_phm_checkpoint_ref: PhmCheckpointInExecutableInstanceRef.TargetPhmCheckpointRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-PHM-CHECKPOINT-REF",
@@ -76,14 +72,14 @@ class PhmCheckpointInExecutableInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -94,7 +90,7 @@ class PhmCheckpointInExecutableInstanceRef:
 
     @dataclass
     class ContextRootSwComponentPrototypeRef(Ref):
-        dest: Optional[RootSwComponentPrototypeSubtypesEnum] = field(
+        dest: RootSwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -105,7 +101,7 @@ class PhmCheckpointInExecutableInstanceRef:
 
     @dataclass
     class ContextComponentPrototypeRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -116,7 +112,7 @@ class PhmCheckpointInExecutableInstanceRef:
 
     @dataclass
     class ContextRPortPrototypeRef(Ref):
-        dest: Optional[RPortPrototypeSubtypesEnum] = field(
+        dest: RPortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -127,7 +123,7 @@ class PhmCheckpointInExecutableInstanceRef:
 
     @dataclass
     class TargetPhmCheckpointRef(Ref):
-        dest: Optional[PhmCheckpointSubtypesEnum] = field(
+        dest: PhmCheckpointSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

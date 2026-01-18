@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -59,7 +61,7 @@ class McSupportData:
     class Meta:
         name = "MC-SUPPORT-DATA"
 
-    emulation_supports: Optional["McSupportData.EmulationSupports"] = field(
+    emulation_supports: McSupportData.EmulationSupports | None = field(
         default=None,
         metadata={
             "name": "EMULATION-SUPPORTS",
@@ -67,7 +69,7 @@ class McSupportData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_parameter_instances: Optional["McSupportData.McParameterInstances"] = (
+    mc_parameter_instances: McSupportData.McParameterInstances | None = (
         field(
             default=None,
             metadata={
@@ -77,7 +79,7 @@ class McSupportData:
             },
         )
     )
-    mc_variable_instances: Optional["McSupportData.McVariableInstances"] = (
+    mc_variable_instances: McSupportData.McVariableInstances | None = (
         field(
             default=None,
             metadata={
@@ -87,9 +89,7 @@ class McSupportData:
             },
         )
     )
-    measurable_system_constant_values_refs: Optional[
-        "McSupportData.MeasurableSystemConstantValuesRefs"
-    ] = field(
+    measurable_system_constant_values_refs: McSupportData.MeasurableSystemConstantValuesRefs | None = field(
         default=None,
         metadata={
             "name": "MEASURABLE-SYSTEM-CONSTANT-VALUES-REFS",
@@ -97,7 +97,7 @@ class McSupportData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_support_data: Optional[RptSupportData] = field(
+    rpt_support_data: RptSupportData | None = field(
         default=None,
         metadata={
             "name": "RPT-SUPPORT-DATA",
@@ -105,14 +105,14 @@ class McSupportData:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -159,7 +159,7 @@ class McSupportData:
     @dataclass
     class MeasurableSystemConstantValuesRefs:
         measurable_system_constant_values_ref: list[
-            "McSupportData.MeasurableSystemConstantValuesRefs.MeasurableSystemConstantValuesRef"
+            McSupportData.MeasurableSystemConstantValuesRefs.MeasurableSystemConstantValuesRef
         ] = field(
             default_factory=list,
             metadata={
@@ -171,7 +171,7 @@ class McSupportData:
 
         @dataclass
         class MeasurableSystemConstantValuesRef(Ref):
-            dest: Optional[SwSystemconstantValueSetSubtypesEnum] = field(
+            dest: SwSystemconstantValueSetSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

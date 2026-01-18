@@ -33,7 +33,7 @@ class CompetingInterestStatement:
         name = "competing_interest_statement"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    language: Optional[CompetingInterestStatementLanguage] = field(
+    language: CompetingInterestStatementLanguage | None = field(
         default=None,
         metadata={
             "type": "Attribute",

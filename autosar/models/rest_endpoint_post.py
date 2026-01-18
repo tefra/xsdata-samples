@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -95,7 +97,7 @@ class RestEndpointPost:
     class Meta:
         name = "REST-ENDPOINT-POST"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -104,7 +106,7 @@ class RestEndpointPost:
             "required": True,
         },
     )
-    short_name_fragments: Optional["RestEndpointPost.ShortNameFragments"] = (
+    short_name_fragments: RestEndpointPost.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -114,7 +116,7 @@ class RestEndpointPost:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +124,7 @@ class RestEndpointPost:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +132,7 @@ class RestEndpointPost:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +140,7 @@ class RestEndpointPost:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +148,7 @@ class RestEndpointPost:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +156,7 @@ class RestEndpointPost:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["RestEndpointPost.Annotations"] = field(
+    annotations: RestEndpointPost.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -162,7 +164,7 @@ class RestEndpointPost:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional["RestEndpointPost.BlueprintPolicys"] = field(
+    blueprint_policys: RestEndpointPost.BlueprintPolicys | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -170,7 +172,7 @@ class RestEndpointPost:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: Optional[String] = field(
+    short_name_pattern: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -178,7 +180,7 @@ class RestEndpointPost:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    arguments: Optional["RestEndpointPost.Arguments"] = field(
+    arguments: RestEndpointPost.Arguments | None = field(
         default=None,
         metadata={
             "name": "ARGUMENTS",
@@ -186,14 +188,14 @@ class RestEndpointPost:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -201,7 +203,7 @@ class RestEndpointPost:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

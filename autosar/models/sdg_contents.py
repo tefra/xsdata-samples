@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -48,7 +50,7 @@ class SdgContents:
     class Meta:
         name = "SDG-CONTENTS"
 
-    sdx_ref: list["SdgContents.SdxRef"] = field(
+    sdx_ref: list[SdgContents.SdxRef] = field(
         default_factory=list,
         metadata={
             "name": "SDX-REF",
@@ -88,14 +90,14 @@ class SdgContents:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -106,7 +108,7 @@ class SdgContents:
 
     @dataclass
     class SdxRef(Ref):
-        dest: Optional[ReferrableSubtypesEnum] = field(
+        dest: ReferrableSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

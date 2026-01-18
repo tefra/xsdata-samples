@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -39,7 +41,7 @@ class AccessCount:
     class Meta:
         name = "ACCESS-COUNT"
 
-    access_point_ref: Optional["AccessCount.AccessPointRef"] = field(
+    access_point_ref: AccessCount.AccessPointRef | None = field(
         default=None,
         metadata={
             "name": "ACCESS-POINT-REF",
@@ -47,7 +49,7 @@ class AccessCount:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: Optional[PositiveIntegerValueVariationPoint] = field(
+    value: PositiveIntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -55,7 +57,7 @@ class AccessCount:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -63,14 +65,14 @@ class AccessCount:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -81,7 +83,7 @@ class AccessCount:
 
     @dataclass
     class AccessPointRef(Ref):
-        dest: Optional[AbstractAccessPointSubtypesEnum] = field(
+        dest: AbstractAccessPointSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

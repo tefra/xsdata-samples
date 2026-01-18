@@ -51,7 +51,7 @@ class CanControllerConfiguration:
     class Meta:
         name = "CAN-CONTROLLER-CONFIGURATION"
 
-    can_controller_fd_attributes: Optional[CanControllerFdConfiguration] = (
+    can_controller_fd_attributes: CanControllerFdConfiguration | None = (
         field(
             default=None,
             metadata={
@@ -61,9 +61,7 @@ class CanControllerConfiguration:
             },
         )
     )
-    can_controller_fd_requirements: Optional[
-        CanControllerFdConfigurationRequirements
-    ] = field(
+    can_controller_fd_requirements: CanControllerFdConfigurationRequirements | None = field(
         default=None,
         metadata={
             "name": "CAN-CONTROLLER-FD-REQUIREMENTS",
@@ -71,7 +69,7 @@ class CanControllerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    prop_seg: Optional[Integer] = field(
+    prop_seg: Integer | None = field(
         default=None,
         metadata={
             "name": "PROP-SEG",
@@ -79,7 +77,7 @@ class CanControllerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sync_jump_width: Optional[Integer] = field(
+    sync_jump_width: Integer | None = field(
         default=None,
         metadata={
             "name": "SYNC-JUMP-WIDTH",
@@ -87,7 +85,7 @@ class CanControllerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_seg_1: Optional[Integer] = field(
+    time_seg_1: Integer | None = field(
         default=None,
         metadata={
             "name": "TIME-SEG-1",
@@ -95,7 +93,7 @@ class CanControllerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_seg_2: Optional[Integer] = field(
+    time_seg_2: Integer | None = field(
         default=None,
         metadata={
             "name": "TIME-SEG-2",
@@ -103,14 +101,14 @@ class CanControllerConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

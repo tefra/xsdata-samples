@@ -7,7 +7,7 @@ class Duration:
     class Meta:
         name = "duration"
 
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "type",
@@ -15,7 +15,7 @@ class Duration:
             "required": True,
         },
     )
-    description: Optional[str] = field(
+    description: str | None = field(
         default=None,
         metadata={
             "type": "Element",

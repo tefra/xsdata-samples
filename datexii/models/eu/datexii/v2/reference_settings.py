@@ -28,9 +28,7 @@ class ReferenceSettings:
     :ivar reference_settings_extension:
     """
 
-    predefined_non_ordered_location_group_reference: Optional[
-        PredefinedNonOrderedLocationGroupVersionedReference
-    ] = field(
+    predefined_non_ordered_location_group_reference: PredefinedNonOrderedLocationGroupVersionedReference | None = field(
         default=None,
         metadata={
             "name": "predefinedNonOrderedLocationGroupReference",
@@ -38,7 +36,7 @@ class ReferenceSettings:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    traffic_status_default: Optional[TrafficStatusEnum] = field(
+    traffic_status_default: TrafficStatusEnum | None = field(
         default=None,
         metadata={
             "name": "trafficStatusDefault",
@@ -46,7 +44,7 @@ class ReferenceSettings:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    reference_settings_extension: Optional[ExtensionType] = field(
+    reference_settings_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "referenceSettingsExtension",

@@ -17,7 +17,7 @@ class GaragePointsRelStructure(StrictContainmentAggregationStructure):
         name = "garagePoints_RelStructure"
 
     garage_point_ref_or_garage_point: Iterable[
-        Union[GaragePointRef, GaragePoint]
+        GaragePointRef | GaragePoint
     ] = field(
         default_factory=list,
         metadata={

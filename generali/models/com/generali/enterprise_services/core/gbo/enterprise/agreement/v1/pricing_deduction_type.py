@@ -18,7 +18,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PricingDeductionType(BaseIdentifiedComponentType):
-    deduction_type: Optional[CodeDescriptionType] = field(
+    deduction_type: CodeDescriptionType | None = field(
         default=None,
         metadata={
             "name": "DeductionType",
@@ -26,7 +26,7 @@ class PricingDeductionType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    value: Optional[ValueType] = field(
+    value: ValueType | None = field(
         default=None,
         metadata={
             "name": "Value",

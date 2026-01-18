@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -270,7 +272,7 @@ class RunnableEntity:
     class Meta:
         name = "RUNNABLE-ENTITY"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -279,7 +281,7 @@ class RunnableEntity:
             "required": True,
         },
     )
-    short_name_fragments: Optional["RunnableEntity.ShortNameFragments"] = (
+    short_name_fragments: RunnableEntity.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -289,7 +291,7 @@ class RunnableEntity:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -297,7 +299,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -305,7 +307,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -313,7 +315,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -321,7 +323,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -329,7 +331,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["RunnableEntity.Annotations"] = field(
+    annotations: RunnableEntity.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -337,7 +339,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reasons: Optional["RunnableEntity.ActivationReasons"] = field(
+    activation_reasons: RunnableEntity.ActivationReasons | None = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASONS",
@@ -345,9 +347,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    can_enter_exclusive_area_refs: Optional[
-        "RunnableEntity.CanEnterExclusiveAreaRefs"
-    ] = field(
+    can_enter_exclusive_area_refs: RunnableEntity.CanEnterExclusiveAreaRefs | None = field(
         default=None,
         metadata={
             "name": "CAN-ENTER-EXCLUSIVE-AREA-REFS",
@@ -355,9 +355,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_nesting_order_refs: Optional[
-        "RunnableEntity.ExclusiveAreaNestingOrderRefs"
-    ] = field(
+    exclusive_area_nesting_order_refs: RunnableEntity.ExclusiveAreaNestingOrderRefs | None = field(
         default=None,
         metadata={
             "name": "EXCLUSIVE-AREA-NESTING-ORDER-REFS",
@@ -365,7 +363,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_start_interval: Optional[TimeValue] = field(
+    minimum_start_interval: TimeValue | None = field(
         default=None,
         metadata={
             "name": "MINIMUM-START-INTERVAL",
@@ -373,7 +371,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reentrancy_level: Optional[ReentrancyLevelEnum] = field(
+    reentrancy_level: ReentrancyLevelEnum | None = field(
         default=None,
         metadata={
             "name": "REENTRANCY-LEVEL",
@@ -381,9 +379,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    runs_inside_exclusive_area_refs: Optional[
-        "RunnableEntity.RunsInsideExclusiveAreaRefs"
-    ] = field(
+    runs_inside_exclusive_area_refs: RunnableEntity.RunsInsideExclusiveAreaRefs | None = field(
         default=None,
         metadata={
             "name": "RUNS-INSIDE-EXCLUSIVE-AREA-REFS",
@@ -391,7 +387,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_addr_method_ref: Optional["RunnableEntity.SwAddrMethodRef"] = field(
+    sw_addr_method_ref: RunnableEntity.SwAddrMethodRef | None = field(
         default=None,
         metadata={
             "name": "SW-ADDR-METHOD-REF",
@@ -399,7 +395,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    arguments: Optional["RunnableEntity.Arguments"] = field(
+    arguments: RunnableEntity.Arguments | None = field(
         default=None,
         metadata={
             "name": "ARGUMENTS",
@@ -407,9 +403,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    asynchronous_server_call_result_points: Optional[
-        "RunnableEntity.AsynchronousServerCallResultPoints"
-    ] = field(
+    asynchronous_server_call_result_points: RunnableEntity.AsynchronousServerCallResultPoints | None = field(
         default=None,
         metadata={
             "name": "ASYNCHRONOUS-SERVER-CALL-RESULT-POINTS",
@@ -417,7 +411,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    can_be_invoked_concurrently: Optional[Boolean] = field(
+    can_be_invoked_concurrently: Boolean | None = field(
         default=None,
         metadata={
             "name": "CAN-BE-INVOKED-CONCURRENTLY",
@@ -425,7 +419,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_read_accesss: Optional["RunnableEntity.DataReadAccesss"] = field(
+    data_read_accesss: RunnableEntity.DataReadAccesss | None = field(
         default=None,
         metadata={
             "name": "DATA-READ-ACCESSS",
@@ -433,9 +427,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_receive_point_by_arguments: Optional[
-        "RunnableEntity.DataReceivePointByArguments"
-    ] = field(
+    data_receive_point_by_arguments: RunnableEntity.DataReceivePointByArguments | None = field(
         default=None,
         metadata={
             "name": "DATA-RECEIVE-POINT-BY-ARGUMENTS",
@@ -443,9 +435,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_receive_point_by_values: Optional[
-        "RunnableEntity.DataReceivePointByValues"
-    ] = field(
+    data_receive_point_by_values: RunnableEntity.DataReceivePointByValues | None = field(
         default=None,
         metadata={
             "name": "DATA-RECEIVE-POINT-BY-VALUES",
@@ -453,7 +443,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_send_points: Optional["RunnableEntity.DataSendPoints"] = field(
+    data_send_points: RunnableEntity.DataSendPoints | None = field(
         default=None,
         metadata={
             "name": "DATA-SEND-POINTS",
@@ -461,7 +451,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_write_accesss: Optional["RunnableEntity.DataWriteAccesss"] = field(
+    data_write_accesss: RunnableEntity.DataWriteAccesss | None = field(
         default=None,
         metadata={
             "name": "DATA-WRITE-ACCESSS",
@@ -469,9 +459,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    external_triggering_points: Optional[
-        "RunnableEntity.ExternalTriggeringPoints"
-    ] = field(
+    external_triggering_points: RunnableEntity.ExternalTriggeringPoints | None = field(
         default=None,
         metadata={
             "name": "EXTERNAL-TRIGGERING-POINTS",
@@ -479,9 +467,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    internal_triggering_points: Optional[
-        "RunnableEntity.InternalTriggeringPoints"
-    ] = field(
+    internal_triggering_points: RunnableEntity.InternalTriggeringPoints | None = field(
         default=None,
         metadata={
             "name": "INTERNAL-TRIGGERING-POINTS",
@@ -489,7 +475,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_access_points: Optional["RunnableEntity.ModeAccessPoints"] = field(
+    mode_access_points: RunnableEntity.ModeAccessPoints | None = field(
         default=None,
         metadata={
             "name": "MODE-ACCESS-POINTS",
@@ -497,7 +483,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_switch_points: Optional["RunnableEntity.ModeSwitchPoints"] = field(
+    mode_switch_points: RunnableEntity.ModeSwitchPoints | None = field(
         default=None,
         metadata={
             "name": "MODE-SWITCH-POINTS",
@@ -505,7 +491,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter_accesss: Optional["RunnableEntity.ParameterAccesss"] = field(
+    parameter_accesss: RunnableEntity.ParameterAccesss | None = field(
         default=None,
         metadata={
             "name": "PARAMETER-ACCESSS",
@@ -513,7 +499,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    read_local_variables: Optional["RunnableEntity.ReadLocalVariables"] = (
+    read_local_variables: RunnableEntity.ReadLocalVariables | None = (
         field(
             default=None,
             metadata={
@@ -523,7 +509,7 @@ class RunnableEntity:
             },
         )
     )
-    server_call_points: Optional["RunnableEntity.ServerCallPoints"] = field(
+    server_call_points: RunnableEntity.ServerCallPoints | None = field(
         default=None,
         metadata={
             "name": "SERVER-CALL-POINTS",
@@ -531,7 +517,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbol: Optional[CIdentifier] = field(
+    symbol: CIdentifier | None = field(
         default=None,
         metadata={
             "name": "SYMBOL",
@@ -539,7 +525,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    wait_points: Optional["RunnableEntity.WaitPoints"] = field(
+    wait_points: RunnableEntity.WaitPoints | None = field(
         default=None,
         metadata={
             "name": "WAIT-POINTS",
@@ -547,9 +533,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    written_local_variables: Optional[
-        "RunnableEntity.WrittenLocalVariables"
-    ] = field(
+    written_local_variables: RunnableEntity.WrittenLocalVariables | None = field(
         default=None,
         metadata={
             "name": "WRITTEN-LOCAL-VARIABLES",
@@ -557,7 +541,7 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -565,14 +549,14 @@ class RunnableEntity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -580,7 +564,7 @@ class RunnableEntity:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -626,7 +610,7 @@ class RunnableEntity:
     @dataclass
     class CanEnterExclusiveAreaRefs:
         can_enter_exclusive_area_ref: list[
-            "RunnableEntity.CanEnterExclusiveAreaRefs.CanEnterExclusiveAreaRef"
+            RunnableEntity.CanEnterExclusiveAreaRefs.CanEnterExclusiveAreaRef
         ] = field(
             default_factory=list,
             metadata={
@@ -638,7 +622,7 @@ class RunnableEntity:
 
         @dataclass
         class CanEnterExclusiveAreaRef(Ref):
-            dest: Optional[ExclusiveAreaSubtypesEnum] = field(
+            dest: ExclusiveAreaSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -650,7 +634,7 @@ class RunnableEntity:
     @dataclass
     class ExclusiveAreaNestingOrderRefs:
         exclusive_area_nesting_order_ref: list[
-            "RunnableEntity.ExclusiveAreaNestingOrderRefs.ExclusiveAreaNestingOrderRef"
+            RunnableEntity.ExclusiveAreaNestingOrderRefs.ExclusiveAreaNestingOrderRef
         ] = field(
             default_factory=list,
             metadata={
@@ -662,7 +646,7 @@ class RunnableEntity:
 
         @dataclass
         class ExclusiveAreaNestingOrderRef(Ref):
-            dest: Optional[ExclusiveAreaNestingOrderSubtypesEnum] = field(
+            dest: ExclusiveAreaNestingOrderSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -674,7 +658,7 @@ class RunnableEntity:
     @dataclass
     class RunsInsideExclusiveAreaRefs:
         runs_inside_exclusive_area_ref: list[
-            "RunnableEntity.RunsInsideExclusiveAreaRefs.RunsInsideExclusiveAreaRef"
+            RunnableEntity.RunsInsideExclusiveAreaRefs.RunsInsideExclusiveAreaRef
         ] = field(
             default_factory=list,
             metadata={
@@ -686,7 +670,7 @@ class RunnableEntity:
 
         @dataclass
         class RunsInsideExclusiveAreaRef(Ref):
-            dest: Optional[ExclusiveAreaSubtypesEnum] = field(
+            dest: ExclusiveAreaSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -697,7 +681,7 @@ class RunnableEntity:
 
     @dataclass
     class SwAddrMethodRef(Ref):
-        dest: Optional[SwAddrMethodSubtypesEnum] = field(
+        dest: SwAddrMethodSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

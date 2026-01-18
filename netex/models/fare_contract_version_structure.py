@@ -20,7 +20,7 @@ class FareContractVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "FareContract_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -28,7 +28,7 @@ class FareContractVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -36,7 +36,7 @@ class FareContractVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_date: Optional[XmlDateTime] = field(
+    start_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -44,7 +44,7 @@ class FareContractVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_date: Optional[XmlDateTime] = field(
+    end_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -52,7 +52,7 @@ class FareContractVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    status: Optional[str] = field(
+    status: str | None = field(
         default=None,
         metadata={
             "name": "Status",
@@ -60,7 +60,7 @@ class FareContractVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_ref: Optional[CustomerRef] = field(
+    customer_ref: CustomerRef | None = field(
         default=None,
         metadata={
             "name": "CustomerRef",
@@ -68,7 +68,7 @@ class FareContractVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_account_ref: Optional[CustomerAccountRef] = field(
+    customer_account_ref: CustomerAccountRef | None = field(
         default=None,
         metadata={
             "name": "CustomerAccountRef",
@@ -76,7 +76,7 @@ class FareContractVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_fare_contract_ref: Optional[TypeOfFareContractRef] = field(
+    type_of_fare_contract_ref: TypeOfFareContractRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfFareContractRef",
@@ -84,7 +84,7 @@ class FareContractVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_contract_entries: Optional[FareContractEntriesRelStructure] = field(
+    fare_contract_entries: FareContractEntriesRelStructure | None = field(
         default=None,
         metadata={
             "name": "fareContractEntries",

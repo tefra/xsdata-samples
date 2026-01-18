@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -34,9 +36,7 @@ class DataPrototypeInSenderReceiverInterfaceInstanceRef:
     class Meta:
         name = "DATA-PROTOTYPE-IN-SENDER-RECEIVER-INTERFACE-INSTANCE-REF"
 
-    root_data_prototype_in_sr_ref: Optional[
-        "DataPrototypeInSenderReceiverInterfaceInstanceRef.RootDataPrototypeInSrRef"
-    ] = field(
+    root_data_prototype_in_sr_ref: DataPrototypeInSenderReceiverInterfaceInstanceRef.RootDataPrototypeInSrRef | None = field(
         default=None,
         metadata={
             "name": "ROOT-DATA-PROTOTYPE-IN-SR-REF",
@@ -45,7 +45,7 @@ class DataPrototypeInSenderReceiverInterfaceInstanceRef:
         },
     )
     context_data_prototype_in_sr_ref: list[
-        "DataPrototypeInSenderReceiverInterfaceInstanceRef.ContextDataPrototypeInSrRef"
+        DataPrototypeInSenderReceiverInterfaceInstanceRef.ContextDataPrototypeInSrRef
     ] = field(
         default_factory=list,
         metadata={
@@ -54,9 +54,7 @@ class DataPrototypeInSenderReceiverInterfaceInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_data_prototype_in_sr_ref: Optional[
-        "DataPrototypeInSenderReceiverInterfaceInstanceRef.TargetDataPrototypeInSrRef"
-    ] = field(
+    target_data_prototype_in_sr_ref: DataPrototypeInSenderReceiverInterfaceInstanceRef.TargetDataPrototypeInSrRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-IN-SR-REF",
@@ -64,14 +62,14 @@ class DataPrototypeInSenderReceiverInterfaceInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +80,7 @@ class DataPrototypeInSenderReceiverInterfaceInstanceRef:
 
     @dataclass
     class RootDataPrototypeInSrRef(Ref):
-        dest: Optional[AutosarDataPrototypeSubtypesEnum] = field(
+        dest: AutosarDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -93,9 +91,7 @@ class DataPrototypeInSenderReceiverInterfaceInstanceRef:
 
     @dataclass
     class ContextDataPrototypeInSrRef(Ref):
-        dest: Optional[
-            ApplicationCompositeElementDataPrototypeSubtypesEnum
-        ] = field(
+        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -106,7 +102,7 @@ class DataPrototypeInSenderReceiverInterfaceInstanceRef:
 
     @dataclass
     class TargetDataPrototypeInSrRef(Ref):
-        dest: Optional[DataPrototypeSubtypesEnum] = field(
+        dest: DataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

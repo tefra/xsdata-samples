@@ -11,7 +11,7 @@ class PeriodExtensionType:
     class Meta:
         name = "_PeriodExtensionType"
 
-    period_extended: Optional[PeriodExtended] = field(
+    period_extended: PeriodExtended | None = field(
         default=None,
         metadata={
             "name": "periodExtended",

@@ -12,7 +12,7 @@ class TravelatorEquipmentVersionStructure(AccessEquipmentVersionStructure):
     class Meta:
         name = "TravelatorEquipment_VersionStructure"
 
-    tactile_actuators: Optional[bool] = field(
+    tactile_actuators: bool | None = field(
         default=None,
         metadata={
             "name": "TactileActuators",
@@ -20,7 +20,7 @@ class TravelatorEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    energy_saving: Optional[bool] = field(
+    energy_saving: bool | None = field(
         default=None,
         metadata={
             "name": "EnergySaving",
@@ -28,7 +28,7 @@ class TravelatorEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    speed: Optional[Decimal] = field(
+    speed: Decimal | None = field(
         default=None,
         metadata={
             "name": "Speed",
@@ -36,7 +36,7 @@ class TravelatorEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    length: Optional[Decimal] = field(
+    length: Decimal | None = field(
         default=None,
         metadata={
             "name": "Length",
@@ -44,7 +44,7 @@ class TravelatorEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gradient: Optional[Decimal] = field(
+    gradient: Decimal | None = field(
         default=None,
         metadata={
             "name": "Gradient",
@@ -52,7 +52,7 @@ class TravelatorEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    integrates_an_escalator_part: Optional[bool] = field(
+    integrates_an_escalator_part: bool | None = field(
         default=None,
         metadata={
             "name": "IntegratesAnEscalatorPart",

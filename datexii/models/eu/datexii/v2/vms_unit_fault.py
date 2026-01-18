@@ -19,7 +19,7 @@ class VmsUnitFault(Fault):
     :ivar vms_unit_fault_extension:
     """
 
-    vms_unit_fault: Optional[VmsFaultEnum] = field(
+    vms_unit_fault: VmsFaultEnum | None = field(
         default=None,
         metadata={
             "name": "vmsUnitFault",
@@ -28,7 +28,7 @@ class VmsUnitFault(Fault):
             "required": True,
         },
     )
-    vms_unit_fault_extension: Optional[ExtensionType] = field(
+    vms_unit_fault_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "vmsUnitFaultExtension",

@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class AccountableElementStructure(DataManagedObjectStructure):
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -19,7 +19,7 @@ class AccountableElementStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accounting_time: Optional[XmlDuration] = field(
+    accounting_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "AccountingTime",
@@ -27,7 +27,7 @@ class AccountableElementStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accounting_factor: Optional[XmlDuration] = field(
+    accounting_factor: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "AccountingFactor",
@@ -35,7 +35,7 @@ class AccountableElementStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    preparation_duration: Optional[XmlDuration] = field(
+    preparation_duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "PreparationDuration",
@@ -43,7 +43,7 @@ class AccountableElementStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    finishing_duration: Optional[XmlDuration] = field(
+    finishing_duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "FinishingDuration",

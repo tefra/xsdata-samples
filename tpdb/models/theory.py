@@ -9,4 +9,4 @@ class Theory:
     class Meta:
         name = "theory"
 
-    value: Optional[TheoryValue] = field(default=None)
+    value: TheoryValue | None = field(default=None)

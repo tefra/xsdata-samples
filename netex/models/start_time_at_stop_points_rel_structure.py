@@ -17,7 +17,7 @@ class StartTimeAtStopPointsRelStructure(StrictContainmentAggregationStructure):
         name = "startTimeAtStopPoints_RelStructure"
 
     start_time_at_stop_point_ref_or_start_time_at_stop_point: Iterable[
-        Union[StartTimeAtStopPointRef, StartTimeAtStopPoint]
+        StartTimeAtStopPointRef | StartTimeAtStopPoint
     ] = field(
         default_factory=list,
         metadata={

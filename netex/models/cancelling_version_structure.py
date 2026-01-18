@@ -12,7 +12,7 @@ class CancellingVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "Cancelling_VersionStructure"
 
-    booking_arrangements: Optional[BookingArrangementsStructure] = field(
+    booking_arrangements: BookingArrangementsStructure | None = field(
         default=None,
         metadata={
             "name": "BookingArrangements",
@@ -20,7 +20,7 @@ class CancellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    cancellation_allowed: Optional[bool] = field(
+    cancellation_allowed: bool | None = field(
         default=None,
         metadata={
             "name": "CancellationAllowed",
@@ -28,7 +28,7 @@ class CancellingVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_deposit_refundable: Optional[bool] = field(
+    booking_deposit_refundable: bool | None = field(
         default=None,
         metadata={
             "name": "BookingDepositRefundable",

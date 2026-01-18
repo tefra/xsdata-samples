@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -41,7 +43,7 @@ class Baseline:
     class Meta:
         name = "BASELINE"
 
-    standard_revisions: Optional["Baseline.StandardRevisions"] = field(
+    standard_revisions: Baseline.StandardRevisions | None = field(
         default=None,
         metadata={
             "name": "STANDARD-REVISIONS",
@@ -49,7 +51,7 @@ class Baseline:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    custom_specification_refs: Optional["Baseline.CustomSpecificationRefs"] = (
+    custom_specification_refs: Baseline.CustomSpecificationRefs | None = (
         field(
             default=None,
             metadata={
@@ -59,7 +61,7 @@ class Baseline:
             },
         )
     )
-    custom_sdg_def_refs: Optional["Baseline.CustomSdgDefRefs"] = field(
+    custom_sdg_def_refs: Baseline.CustomSdgDefRefs | None = field(
         default=None,
         metadata={
             "name": "CUSTOM-SDG-DEF-REFS",
@@ -67,14 +69,14 @@ class Baseline:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -106,7 +108,7 @@ class Baseline:
     @dataclass
     class CustomSpecificationRefs:
         custom_specification_ref: list[
-            "Baseline.CustomSpecificationRefs.CustomSpecificationRef"
+            Baseline.CustomSpecificationRefs.CustomSpecificationRef
         ] = field(
             default_factory=list,
             metadata={
@@ -118,7 +120,7 @@ class Baseline:
 
         @dataclass
         class CustomSpecificationRef(Ref):
-            dest: Optional[DocumentationSubtypesEnum] = field(
+            dest: DocumentationSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -130,7 +132,7 @@ class Baseline:
     @dataclass
     class CustomSdgDefRefs:
         custom_sdg_def_ref: list[
-            "Baseline.CustomSdgDefRefs.CustomSdgDefRef"
+            Baseline.CustomSdgDefRefs.CustomSdgDefRef
         ] = field(
             default_factory=list,
             metadata={
@@ -142,7 +144,7 @@ class Baseline:
 
         @dataclass
         class CustomSdgDefRef(Ref):
-            dest: Optional[SdgDefSubtypesEnum] = field(
+            dest: SdgDefSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

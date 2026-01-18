@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,7 +35,7 @@ class PncMappingIdent:
     class Meta:
         name = "PNC-MAPPING-IDENT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -42,7 +44,7 @@ class PncMappingIdent:
             "required": True,
         },
     )
-    short_name_fragments: Optional["PncMappingIdent.ShortNameFragments"] = (
+    short_name_fragments: PncMappingIdent.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -52,14 +54,14 @@ class PncMappingIdent:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

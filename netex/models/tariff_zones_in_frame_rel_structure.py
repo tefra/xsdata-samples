@@ -14,7 +14,7 @@ class TariffZonesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "tariffZonesInFrame_RelStructure"
 
-    tariff_zone: Iterable[Union[FareZone, TariffZone]] = field(
+    tariff_zone: Iterable[FareZone | TariffZone] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

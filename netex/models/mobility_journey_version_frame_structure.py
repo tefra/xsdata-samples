@@ -25,7 +25,7 @@ class MobilityJourneyVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "MobilityJourney_VersionFrameStructure"
 
-    single_journey_paths: Optional[SingleJourneyPathsRelStructure] = field(
+    single_journey_paths: SingleJourneyPathsRelStructure | None = field(
         default=None,
         metadata={
             "name": "singleJourneyPaths",
@@ -33,7 +33,7 @@ class MobilityJourneyVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    groups_of_single_journeys: Optional[GroupsOfSingleJourneysRelStructure] = (
+    groups_of_single_journeys: GroupsOfSingleJourneysRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -43,7 +43,7 @@ class MobilityJourneyVersionFrameStructure(CommonVersionFrameStructure):
             },
         )
     )
-    single_journeys: Optional[SingleJourneysRelStructure] = field(
+    single_journeys: SingleJourneysRelStructure | None = field(
         default=None,
         metadata={
             "name": "singleJourneys",
@@ -51,9 +51,7 @@ class MobilityJourneyVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    individual_travellers: Optional[
-        IndividualTravellersInFrameRelStructure
-    ] = field(
+    individual_travellers: IndividualTravellersInFrameRelStructure | None = field(
         default=None,
         metadata={
             "name": "individualTravellers",
@@ -61,9 +59,7 @@ class MobilityJourneyVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_access_credentials: Optional[
-        VehicleAccessCredentialAssignmentsRelStructure
-    ] = field(
+    vehicle_access_credentials: VehicleAccessCredentialAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "vehicleAccessCredentials",
@@ -71,7 +67,7 @@ class MobilityJourneyVersionFrameStructure(CommonVersionFrameStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_log_entries: Optional[ParkingLogEntriesInFrameRelStructure] = (
+    parking_log_entries: ParkingLogEntriesInFrameRelStructure | None = (
         field(
             default=None,
             metadata={

@@ -36,7 +36,7 @@ class HeaderInformation:
     :ivar header_information_extension:
     """
 
-    area_of_interest: Optional[AreaOfInterestEnum] = field(
+    area_of_interest: AreaOfInterestEnum | None = field(
         default=None,
         metadata={
             "name": "areaOfInterest",
@@ -44,7 +44,7 @@ class HeaderInformation:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    confidentiality: Optional[ConfidentialityValueEnum] = field(
+    confidentiality: ConfidentialityValueEnum | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -52,7 +52,7 @@ class HeaderInformation:
             "required": True,
         },
     )
-    information_status: Optional[InformationStatusEnum] = field(
+    information_status: InformationStatusEnum | None = field(
         default=None,
         metadata={
             "name": "informationStatus",
@@ -61,14 +61,14 @@ class HeaderInformation:
             "required": True,
         },
     )
-    urgency: Optional[UrgencyEnum] = field(
+    urgency: UrgencyEnum | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    header_information_extension: Optional[ExtensionType] = field(
+    header_information_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "headerInformationExtension",

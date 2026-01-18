@@ -23,7 +23,7 @@ class AxleWeight:
     :ivar axle_weight_extension:
     """
 
-    axle_position_identifier: Optional[int] = field(
+    axle_position_identifier: int | None = field(
         default=None,
         metadata={
             "name": "axlePositionIdentifier",
@@ -32,7 +32,7 @@ class AxleWeight:
             "required": True,
         },
     )
-    axle_weight: Optional[float] = field(
+    axle_weight: float | None = field(
         default=None,
         metadata={
             "name": "axleWeight",
@@ -40,7 +40,7 @@ class AxleWeight:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    maximum_permitted_axle_weight: Optional[float] = field(
+    maximum_permitted_axle_weight: float | None = field(
         default=None,
         metadata={
             "name": "maximumPermittedAxleWeight",
@@ -48,7 +48,7 @@ class AxleWeight:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    axle_weight_extension: Optional[ExtensionType] = field(
+    axle_weight_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "axleWeightExtension",

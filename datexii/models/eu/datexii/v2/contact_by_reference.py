@@ -20,7 +20,7 @@ class ContactByReference(Contact):
     :ivar contact_by_reference_extension:
     """
 
-    contact_reference: Optional[ContactDetailsVersionedReference] = field(
+    contact_reference: ContactDetailsVersionedReference | None = field(
         default=None,
         metadata={
             "name": "contactReference",
@@ -29,7 +29,7 @@ class ContactByReference(Contact):
             "required": True,
         },
     )
-    contact_by_reference_extension: Optional[ExtensionType] = field(
+    contact_by_reference_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "contactByReferenceExtension",

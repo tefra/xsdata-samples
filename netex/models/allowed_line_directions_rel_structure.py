@@ -15,7 +15,7 @@ class AllowedLineDirectionsRelStructure(ContainmentAggregationStructure):
         name = "allowedLineDirections_RelStructure"
 
     allowed_line_direction_ref_or_allowed_line_direction: Iterable[
-        Union[AllowedLineDirectionRef, AllowedLineDirection]
+        AllowedLineDirectionRef | AllowedLineDirection
     ] = field(
         default_factory=list,
         metadata={

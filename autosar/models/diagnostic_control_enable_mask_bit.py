@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -38,7 +40,7 @@ class DiagnosticControlEnableMaskBit:
     class Meta:
         name = "DIAGNOSTIC-CONTROL-ENABLE-MASK-BIT"
 
-    bit_number: Optional[PositiveInteger] = field(
+    bit_number: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "BIT-NUMBER",
@@ -46,9 +48,7 @@ class DiagnosticControlEnableMaskBit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    controlled_data_element_refs: Optional[
-        "DiagnosticControlEnableMaskBit.ControlledDataElementRefs"
-    ] = field(
+    controlled_data_element_refs: DiagnosticControlEnableMaskBit.ControlledDataElementRefs | None = field(
         default=None,
         metadata={
             "name": "CONTROLLED-DATA-ELEMENT-REFS",
@@ -56,14 +56,14 @@ class DiagnosticControlEnableMaskBit:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -75,7 +75,7 @@ class DiagnosticControlEnableMaskBit:
     @dataclass
     class ControlledDataElementRefs:
         controlled_data_element_ref: list[
-            "DiagnosticControlEnableMaskBit.ControlledDataElementRefs.ControlledDataElementRef"
+            DiagnosticControlEnableMaskBit.ControlledDataElementRefs.ControlledDataElementRef
         ] = field(
             default_factory=list,
             metadata={
@@ -87,7 +87,7 @@ class DiagnosticControlEnableMaskBit:
 
         @dataclass
         class ControlledDataElementRef(Ref):
-            dest: Optional[DiagnosticDataElementSubtypesEnum] = field(
+            dest: DiagnosticDataElementSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

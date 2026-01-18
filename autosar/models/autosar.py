@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -44,42 +46,42 @@ class Autosar:
         name = "AUTOSAR"
         namespace = "http://autosar.org/schema/r4.0"
 
-    file_info_comment: Optional[FileInfoComment] = field(
+    file_info_comment: FileInfoComment | None = field(
         default=None,
         metadata={
             "name": "FILE-INFO-COMMENT",
             "type": "Element",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
             "type": "Element",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
             "type": "Element",
         },
     )
-    ar_packages: Optional["Autosar.ArPackages"] = field(
+    ar_packages: Autosar.ArPackages | None = field(
         default=None,
         metadata={
             "name": "AR-PACKAGES",
             "type": "Element",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

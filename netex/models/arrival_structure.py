@@ -30,7 +30,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class ArrivalStructure:
-    time: Optional[XmlTime] = field(
+    time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "Time",
@@ -38,7 +38,7 @@ class ArrivalStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_offset: Optional[int] = field(
+    day_offset: int | None = field(
         default=None,
         metadata={
             "name": "DayOffset",
@@ -46,7 +46,7 @@ class ArrivalStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    for_alighting: Optional[bool] = field(
+    for_alighting: bool | None = field(
         default=None,
         metadata={
             "name": "ForAlighting",
@@ -54,7 +54,7 @@ class ArrivalStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_flexible: Optional[bool] = field(
+    is_flexible: bool | None = field(
         default=None,
         metadata={
             "name": "IsFlexible",
@@ -62,7 +62,7 @@ class ArrivalStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_part_ref: Optional[JourneyPartRef] = field(
+    journey_part_ref: JourneyPartRef | None = field(
         default=None,
         metadata={
             "name": "JourneyPartRef",
@@ -70,7 +70,7 @@ class ArrivalStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_meetings: Optional[JourneyMeetingViewsRelStructure] = field(
+    journey_meetings: JourneyMeetingViewsRelStructure | None = field(
         default=None,
         metadata={
             "name": "journeyMeetings",
@@ -78,14 +78,14 @@ class ArrivalStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    interchanges: Optional[ServiceJourneyInterchangesRelStructure] = field(
+    interchanges: ServiceJourneyInterchangesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    interchange_rules: Optional[InterchangeRulesRelStructure] = field(
+    interchange_rules: InterchangeRulesRelStructure | None = field(
         default=None,
         metadata={
             "name": "interchangeRules",
@@ -93,9 +93,7 @@ class ArrivalStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_demand_type_ref_or_timeband_ref: Optional[
-        Union[TimeDemandTypeRef, TimebandRef]
-    ] = field(
+    time_demand_type_ref_or_timeband_ref: TimeDemandTypeRef | TimebandRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -113,7 +111,7 @@ class ArrivalStructure:
             ),
         },
     )
-    duty_part_ref: Optional[DutyPartRef] = field(
+    duty_part_ref: DutyPartRef | None = field(
         default=None,
         metadata={
             "name": "DutyPartRef",
@@ -121,14 +119,7 @@ class ArrivalStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
-        Union[
-            VehicleJourneyStopAssignmentRef,
-            DynamicStopAssignmentRef,
-            PassengerStopAssignmentRef,
-            QuayAssignmentView,
-        ]
-    ] = field(
+    choice: VehicleJourneyStopAssignmentRef | DynamicStopAssignmentRef | PassengerStopAssignmentRef | QuayAssignmentView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -156,7 +147,7 @@ class ArrivalStructure:
             ),
         },
     )
-    dynamic_stop_assignment: Optional[DynamicStopAssignment] = field(
+    dynamic_stop_assignment: DynamicStopAssignment | None = field(
         default=None,
         metadata={
             "name": "DynamicStopAssignment",
@@ -164,7 +155,7 @@ class ArrivalStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accessibility_assessment: Optional[AccessibilityAssessment] = field(
+    accessibility_assessment: AccessibilityAssessment | None = field(
         default=None,
         metadata={
             "name": "AccessibilityAssessment",
@@ -172,7 +163,7 @@ class ArrivalStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    check_constraint: Optional[CheckConstraint] = field(
+    check_constraint: CheckConstraint | None = field(
         default=None,
         metadata={
             "name": "CheckConstraint",
@@ -180,7 +171,7 @@ class ArrivalStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",

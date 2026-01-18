@@ -17,7 +17,7 @@ class DepartmentVersionStructure(OrganisationPartVersionStructure):
     class Meta:
         name = "Department_VersionStructure"
 
-    type_of_operation_ref: Optional[TypeOfOperationRef] = field(
+    type_of_operation_ref: TypeOfOperationRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfOperationRef",
@@ -25,7 +25,7 @@ class DepartmentVersionStructure(OrganisationPartVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    units: Optional[OrganisationalUnitRefsRelStructure] = field(
+    units: OrganisationalUnitRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

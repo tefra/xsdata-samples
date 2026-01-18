@@ -22,7 +22,7 @@ class PollutionInformation(WeatherData):
             "min_occurs": 1,
         },
     )
-    pollution_information_extension: Optional[ExtensionType] = field(
+    pollution_information_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "pollutionInformationExtension",

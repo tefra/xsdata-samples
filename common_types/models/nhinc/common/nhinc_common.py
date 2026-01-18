@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -10,7 +12,7 @@ __NAMESPACE__ = "urn:gov:hhs:fha:nhinc:common:nhinccommon"
 
 @dataclass
 class AcknowledgementType:
-    message: Optional[str] = field(
+    message: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -21,7 +23,7 @@ class AcknowledgementType:
 
 @dataclass
 class AssigningAuthorityType:
-    assigning_authority_id: Optional[str] = field(
+    assigning_authority_id: str | None = field(
         default=None,
         metadata={
             "name": "assigningAuthorityId",
@@ -37,7 +39,7 @@ class ConnectcustomHttpHeadersType:
     class Meta:
         name = "CONNECTCustomHttpHeadersType"
 
-    header_name: Optional[str] = field(
+    header_name: str | None = field(
         default=None,
         metadata={
             "name": "headerName",
@@ -46,7 +48,7 @@ class ConnectcustomHttpHeadersType:
             "required": True,
         },
     )
-    header_value: Optional[str] = field(
+    header_value: str | None = field(
         default=None,
         metadata={
             "name": "headerValue",
@@ -59,7 +61,7 @@ class ConnectcustomHttpHeadersType:
 
 @dataclass
 class CeType:
-    code: Optional[str] = field(
+    code: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -67,7 +69,7 @@ class CeType:
             "required": True,
         },
     )
-    code_system: Optional[str] = field(
+    code_system: str | None = field(
         default=None,
         metadata={
             "name": "codeSystem",
@@ -75,7 +77,7 @@ class CeType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    code_system_name: Optional[str] = field(
+    code_system_name: str | None = field(
         default=None,
         metadata={
             "name": "codeSystemName",
@@ -83,7 +85,7 @@ class CeType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    code_system_version: Optional[str] = field(
+    code_system_version: str | None = field(
         default=None,
         metadata={
             "name": "codeSystemVersion",
@@ -92,7 +94,7 @@ class CeType:
             "required": True,
         },
     )
-    display_name: Optional[str] = field(
+    display_name: str | None = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -101,7 +103,7 @@ class CeType:
             "required": True,
         },
     )
-    original_text: Optional[str] = field(
+    original_text: str | None = field(
         default=None,
         metadata={
             "name": "originalText",
@@ -110,7 +112,7 @@ class CeType:
             "required": True,
         },
     )
-    translation: list["CeType"] = field(
+    translation: list[CeType] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -124,7 +126,7 @@ class CreateEprrequestType:
     class Meta:
         name = "CreateEPRRequestType"
 
-    endpoint_url: Optional[str] = field(
+    endpoint_url: str | None = field(
         default=None,
         metadata={
             "name": "endpointURL",
@@ -133,7 +135,7 @@ class CreateEprrequestType:
             "required": True,
         },
     )
-    namespace_uri: Optional[str] = field(
+    namespace_uri: str | None = field(
         default=None,
         metadata={
             "name": "namespaceURI",
@@ -142,7 +144,7 @@ class CreateEprrequestType:
             "required": True,
         },
     )
-    namespace_prefix: Optional[str] = field(
+    namespace_prefix: str | None = field(
         default=None,
         metadata={
             "name": "namespacePrefix",
@@ -151,7 +153,7 @@ class CreateEprrequestType:
             "required": True,
         },
     )
-    service_name: Optional[str] = field(
+    service_name: str | None = field(
         default=None,
         metadata={
             "name": "serviceName",
@@ -160,7 +162,7 @@ class CreateEprrequestType:
             "required": True,
         },
     )
-    port_name: Optional[str] = field(
+    port_name: str | None = field(
         default=None,
         metadata={
             "name": "portName",
@@ -173,14 +175,14 @@ class CreateEprrequestType:
 
 @dataclass
 class HomeCommunityType:
-    description: Optional[str] = field(
+    description: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    home_community_id: Optional[str] = field(
+    home_community_id: str | None = field(
         default=None,
         metadata={
             "name": "homeCommunityId",
@@ -189,7 +191,7 @@ class HomeCommunityType:
             "required": True,
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -200,7 +202,7 @@ class HomeCommunityType:
 
 @dataclass
 class QualifiedSubjectIdentifierType:
-    subject_identifier: Optional[str] = field(
+    subject_identifier: str | None = field(
         default=None,
         metadata={
             "name": "SubjectIdentifier",
@@ -209,7 +211,7 @@ class QualifiedSubjectIdentifierType:
             "required": True,
         },
     )
-    assigning_authority_identifier: Optional[str] = field(
+    assigning_authority_identifier: str | None = field(
         default=None,
         metadata={
             "name": "AssigningAuthorityIdentifier",
@@ -222,7 +224,7 @@ class QualifiedSubjectIdentifierType:
 
 @dataclass
 class ResponseType:
-    status: Optional[bool] = field(
+    status: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -230,7 +232,7 @@ class ResponseType:
             "required": True,
         },
     )
-    message: Optional[str] = field(
+    message: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -242,7 +244,7 @@ class ResponseType:
 
 @dataclass
 class SamlAuthnStatementType:
-    auth_instant: Optional[str] = field(
+    auth_instant: str | None = field(
         default=None,
         metadata={
             "name": "authInstant",
@@ -251,7 +253,7 @@ class SamlAuthnStatementType:
             "required": True,
         },
     )
-    session_index: Optional[str] = field(
+    session_index: str | None = field(
         default=None,
         metadata={
             "name": "sessionIndex",
@@ -259,7 +261,7 @@ class SamlAuthnStatementType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    auth_context_class_ref: Optional[str] = field(
+    auth_context_class_ref: str | None = field(
         default=None,
         metadata={
             "name": "authContextClassRef",
@@ -268,7 +270,7 @@ class SamlAuthnStatementType:
             "required": True,
         },
     )
-    subject_locality_address: Optional[str] = field(
+    subject_locality_address: str | None = field(
         default=None,
         metadata={
             "name": "subjectLocalityAddress",
@@ -276,7 +278,7 @@ class SamlAuthnStatementType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    subject_locality_dnsname: Optional[str] = field(
+    subject_locality_dnsname: str | None = field(
         default=None,
         metadata={
             "name": "subjectLocalityDNSName",
@@ -288,7 +290,7 @@ class SamlAuthnStatementType:
 
 @dataclass
 class SamlAuthzDecisionStatementEvidenceConditionsType:
-    not_before: Optional[str] = field(
+    not_before: str | None = field(
         default=None,
         metadata={
             "name": "notBefore",
@@ -296,7 +298,7 @@ class SamlAuthzDecisionStatementEvidenceConditionsType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    not_on_or_after: Optional[str] = field(
+    not_on_or_after: str | None = field(
         default=None,
         metadata={
             "name": "notOnOrAfter",
@@ -308,7 +310,7 @@ class SamlAuthzDecisionStatementEvidenceConditionsType:
 
 @dataclass
 class SamlConditionsType:
-    not_before: Optional[str] = field(
+    not_before: str | None = field(
         default=None,
         metadata={
             "name": "notBefore",
@@ -317,7 +319,7 @@ class SamlConditionsType:
             "required": True,
         },
     )
-    not_on_or_after: Optional[str] = field(
+    not_on_or_after: str | None = field(
         default=None,
         metadata={
             "name": "notOnOrAfter",
@@ -330,14 +332,14 @@ class SamlConditionsType:
 
 @dataclass
 class SamlIssuerType:
-    issuer: Optional[str] = field(
+    issuer: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    issuer_format: Optional[str] = field(
+    issuer_format: str | None = field(
         default=None,
         metadata={
             "name": "issuerFormat",
@@ -349,7 +351,7 @@ class SamlIssuerType:
 
 @dataclass
 class SamlSignatureKeyInfoType:
-    rsa_key_value_modulus: Optional[bytes] = field(
+    rsa_key_value_modulus: bytes | None = field(
         default=None,
         metadata={
             "name": "rsaKeyValueModulus",
@@ -358,7 +360,7 @@ class SamlSignatureKeyInfoType:
             "format": "base64",
         },
     )
-    rsa_key_value_exponent: Optional[bytes] = field(
+    rsa_key_value_exponent: bytes | None = field(
         default=None,
         metadata={
             "name": "rsaKeyValueExponent",
@@ -371,7 +373,7 @@ class SamlSignatureKeyInfoType:
 
 @dataclass
 class TokenRetrieveInfoType:
-    request: Optional[str] = field(
+    request: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -383,7 +385,7 @@ class TokenRetrieveInfoType:
 
 @dataclass
 class UrlInfoType:
-    url: Optional[str] = field(
+    url: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -391,7 +393,7 @@ class UrlInfoType:
             "required": True,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -420,7 +422,7 @@ class Acknowledgement(AcknowledgementType):
 
 @dataclass
 class AddressType:
-    address_type: Optional[CeType] = field(
+    address_type: CeType | None = field(
         default=None,
         metadata={
             "name": "addressType",
@@ -429,7 +431,7 @@ class AddressType:
             "required": True,
         },
     )
-    city: Optional[str] = field(
+    city: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -437,7 +439,7 @@ class AddressType:
             "required": True,
         },
     )
-    country: Optional[str] = field(
+    country: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -445,7 +447,7 @@ class AddressType:
             "required": True,
         },
     )
-    state: Optional[str] = field(
+    state: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -453,7 +455,7 @@ class AddressType:
             "required": True,
         },
     )
-    street_address: Optional[str] = field(
+    street_address: str | None = field(
         default=None,
         metadata={
             "name": "streetAddress",
@@ -462,7 +464,7 @@ class AddressType:
             "required": True,
         },
     )
-    zip_code: Optional[str] = field(
+    zip_code: str | None = field(
         default=None,
         metadata={
             "name": "zipCode",
@@ -538,7 +540,7 @@ class HomeCommunity(HomeCommunityType):
 
 @dataclass
 class NhinTargetCommunityType:
-    home_community: Optional[HomeCommunityType] = field(
+    home_community: HomeCommunityType | None = field(
         default=None,
         metadata={
             "name": "homeCommunity",
@@ -547,7 +549,7 @@ class NhinTargetCommunityType:
             "required": True,
         },
     )
-    list_value: Optional[str] = field(
+    list_value: str | None = field(
         default=None,
         metadata={
             "name": "list",
@@ -555,7 +557,7 @@ class NhinTargetCommunityType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    region: Optional[str] = field(
+    region: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -566,14 +568,14 @@ class NhinTargetCommunityType:
 
 @dataclass
 class NhinTargetSystemType:
-    epr: Optional[EndpointReferenceType] = field(
+    epr: EndpointReferenceType | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    home_community: Optional[HomeCommunityType] = field(
+    home_community: HomeCommunityType | None = field(
         default=None,
         metadata={
             "name": "homeCommunity",
@@ -581,14 +583,14 @@ class NhinTargetSystemType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    url: Optional[str] = field(
+    url: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    exchange_name: Optional[str] = field(
+    exchange_name: str | None = field(
         default=None,
         metadata={
             "name": "exchangeName",
@@ -596,7 +598,7 @@ class NhinTargetSystemType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    use_spec_version: Optional[str] = field(
+    use_spec_version: str | None = field(
         default=None,
         metadata={
             "name": "useSpecVersion",
@@ -608,7 +610,7 @@ class NhinTargetSystemType:
 
 @dataclass
 class PersonNameType:
-    family_name: Optional[str] = field(
+    family_name: str | None = field(
         default=None,
         metadata={
             "name": "familyName",
@@ -617,7 +619,7 @@ class PersonNameType:
             "required": True,
         },
     )
-    given_name: Optional[str] = field(
+    given_name: str | None = field(
         default=None,
         metadata={
             "name": "givenName",
@@ -626,7 +628,7 @@ class PersonNameType:
             "required": True,
         },
     )
-    name_type: Optional[CeType] = field(
+    name_type: CeType | None = field(
         default=None,
         metadata={
             "name": "nameType",
@@ -635,7 +637,7 @@ class PersonNameType:
             "required": True,
         },
     )
-    second_name_or_initials: Optional[str] = field(
+    second_name_or_initials: str | None = field(
         default=None,
         metadata={
             "name": "secondNameOrInitials",
@@ -644,7 +646,7 @@ class PersonNameType:
             "required": True,
         },
     )
-    full_name: Optional[str] = field(
+    full_name: str | None = field(
         default=None,
         metadata={
             "name": "fullName",
@@ -653,7 +655,7 @@ class PersonNameType:
             "required": True,
         },
     )
-    prefix: Optional[str] = field(
+    prefix: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -661,7 +663,7 @@ class PersonNameType:
             "required": True,
         },
     )
-    suffix: Optional[str] = field(
+    suffix: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -673,7 +675,7 @@ class PersonNameType:
 
 @dataclass
 class PhoneType:
-    area_code: Optional[str] = field(
+    area_code: str | None = field(
         default=None,
         metadata={
             "name": "areaCode",
@@ -682,7 +684,7 @@ class PhoneType:
             "required": True,
         },
     )
-    country_code: Optional[str] = field(
+    country_code: str | None = field(
         default=None,
         metadata={
             "name": "countryCode",
@@ -691,7 +693,7 @@ class PhoneType:
             "required": True,
         },
     )
-    extension: Optional[str] = field(
+    extension: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -699,7 +701,7 @@ class PhoneType:
             "required": True,
         },
     )
-    local_number: Optional[str] = field(
+    local_number: str | None = field(
         default=None,
         metadata={
             "name": "localNumber",
@@ -708,7 +710,7 @@ class PhoneType:
             "required": True,
         },
     )
-    phone_number_type: Optional[CeType] = field(
+    phone_number_type: CeType | None = field(
         default=None,
         metadata={
             "name": "phoneNumberType",
@@ -751,14 +753,14 @@ class SamlAuthnStatement(SamlAuthnStatementType):
 
 @dataclass
 class SamlAuthzDecisionStatementEvidenceAssertionType:
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    issue_instant: Optional[str] = field(
+    issue_instant: str | None = field(
         default=None,
         metadata={
             "name": "issueInstant",
@@ -766,21 +768,21 @@ class SamlAuthzDecisionStatementEvidenceAssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    issuer: Optional[str] = field(
+    issuer: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    issuer_format: Optional[str] = field(
+    issuer_format: str | None = field(
         default=None,
         metadata={
             "name": "issuerFormat",
@@ -788,14 +790,14 @@ class SamlAuthzDecisionStatementEvidenceAssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    subject: Optional[str] = field(
+    subject: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    conditions: Optional[SamlAuthzDecisionStatementEvidenceConditionsType] = (
+    conditions: SamlAuthzDecisionStatementEvidenceConditionsType | None = (
         field(
             default=None,
             metadata={
@@ -850,7 +852,7 @@ class SamlSignatureKeyInfo(SamlSignatureKeyInfoType):
 
 @dataclass
 class SamlSignatureType:
-    key_info: Optional[SamlSignatureKeyInfoType] = field(
+    key_info: SamlSignatureKeyInfoType | None = field(
         default=None,
         metadata={
             "name": "keyInfo",
@@ -858,7 +860,7 @@ class SamlSignatureType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    signature_value: Optional[bytes] = field(
+    signature_value: bytes | None = field(
         default=None,
         metadata={
             "name": "signatureValue",
@@ -871,7 +873,7 @@ class SamlSignatureType:
 
 @dataclass
 class SamlSubjectConfirmationType:
-    method: Optional[str] = field(
+    method: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -879,7 +881,7 @@ class SamlSubjectConfirmationType:
             "required": True,
         },
     )
-    subject_condition: Optional[SamlConditionsType] = field(
+    subject_condition: SamlConditionsType | None = field(
         default=None,
         metadata={
             "name": "subjectCondition",
@@ -887,14 +889,14 @@ class SamlSubjectConfirmationType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    recipient: Optional[str] = field(
+    recipient: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    in_response_to: Optional[str] = field(
+    in_response_to: str | None = field(
         default=None,
         metadata={
             "name": "inResponseTo",
@@ -902,7 +904,7 @@ class SamlSubjectConfirmationType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    address: Optional[str] = field(
+    address: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -964,7 +966,7 @@ class NhinTargetCommunitiesType:
             "min_occurs": 1,
         },
     )
-    use_spec_version: Optional[str] = field(
+    use_spec_version: str | None = field(
         default=None,
         metadata={
             "name": "useSpecVersion",
@@ -972,7 +974,7 @@ class NhinTargetCommunitiesType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    exchange_name: Optional[str] = field(
+    exchange_name: str | None = field(
         default=None,
         metadata={
             "name": "exchangeName",
@@ -1022,7 +1024,7 @@ class SamlAuthzDecisionStatementEvidenceAssertion(
 
 @dataclass
 class SamlAuthzDecisionStatementEvidenceType:
-    assertion: Optional[SamlAuthzDecisionStatementEvidenceAssertionType] = (
+    assertion: SamlAuthzDecisionStatementEvidenceAssertionType | None = (
         field(
             default=None,
             metadata={
@@ -1041,7 +1043,7 @@ class SamlSignature(SamlSignatureType):
 
 @dataclass
 class UserType:
-    person_name: Optional[PersonNameType] = field(
+    person_name: PersonNameType | None = field(
         default=None,
         metadata={
             "name": "personName",
@@ -1050,7 +1052,7 @@ class UserType:
             "required": True,
         },
     )
-    user_name: Optional[str] = field(
+    user_name: str | None = field(
         default=None,
         metadata={
             "name": "userName",
@@ -1059,7 +1061,7 @@ class UserType:
             "required": True,
         },
     )
-    org: Optional[HomeCommunityType] = field(
+    org: HomeCommunityType | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1067,7 +1069,7 @@ class UserType:
             "required": True,
         },
     )
-    role_coded: Optional[CeType] = field(
+    role_coded: CeType | None = field(
         default=None,
         metadata={
             "name": "roleCoded",
@@ -1093,7 +1095,7 @@ class Addresses(AddressesType):
 
 @dataclass
 class ConfigAssertionType:
-    user_info: Optional[UserType] = field(
+    user_info: UserType | None = field(
         default=None,
         metadata={
             "name": "userInfo",
@@ -1102,7 +1104,7 @@ class ConfigAssertionType:
             "required": True,
         },
     )
-    config_instance: Optional[str] = field(
+    config_instance: str | None = field(
         default=None,
         metadata={
             "name": "configInstance",
@@ -1111,7 +1113,7 @@ class ConfigAssertionType:
             "required": True,
         },
     )
-    auth_method: Optional[str] = field(
+    auth_method: str | None = field(
         default=None,
         metadata={
             "name": "authMethod",
@@ -1138,28 +1140,28 @@ class SamlAuthzDecisionStatementEvidence(
 
 @dataclass
 class SamlAuthzDecisionStatementType:
-    decision: Optional[str] = field(
+    decision: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    resource: Optional[str] = field(
+    resource: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    action: Optional[str] = field(
+    action: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    evidence: Optional[SamlAuthzDecisionStatementEvidenceType] = field(
+    evidence: SamlAuthzDecisionStatementEvidenceType | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1176,14 +1178,14 @@ class User(UserType):
 
 @dataclass
 class AssertionType:
-    address: Optional[AddressType] = field(
+    address: AddressType | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    date_of_birth: Optional[str] = field(
+    date_of_birth: str | None = field(
         default=None,
         metadata={
             "name": "dateOfBirth",
@@ -1191,7 +1193,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    explanation_non_claimant_signature: Optional[str] = field(
+    explanation_non_claimant_signature: str | None = field(
         default=None,
         metadata={
             "name": "explanationNonClaimantSignature",
@@ -1199,7 +1201,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    have_second_witness_signature: Optional[bool] = field(
+    have_second_witness_signature: bool | None = field(
         default=None,
         metadata={
             "name": "haveSecondWitnessSignature",
@@ -1207,7 +1209,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    have_signature: Optional[bool] = field(
+    have_signature: bool | None = field(
         default=None,
         metadata={
             "name": "haveSignature",
@@ -1215,7 +1217,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    have_witness_signature: Optional[bool] = field(
+    have_witness_signature: bool | None = field(
         default=None,
         metadata={
             "name": "haveWitnessSignature",
@@ -1223,7 +1225,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    home_community: Optional[HomeCommunityType] = field(
+    home_community: HomeCommunityType | None = field(
         default=None,
         metadata={
             "name": "homeCommunity",
@@ -1232,7 +1234,7 @@ class AssertionType:
             "required": True,
         },
     )
-    national_provider_id: Optional[str] = field(
+    national_provider_id: str | None = field(
         default=None,
         metadata={
             "name": "nationalProviderId",
@@ -1240,7 +1242,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    person_name: Optional[PersonNameType] = field(
+    person_name: PersonNameType | None = field(
         default=None,
         metadata={
             "name": "personName",
@@ -1248,7 +1250,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    phone_number: Optional[PhoneType] = field(
+    phone_number: PhoneType | None = field(
         default=None,
         metadata={
             "name": "phoneNumber",
@@ -1256,7 +1258,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    second_witness_address: Optional[AddressType] = field(
+    second_witness_address: AddressType | None = field(
         default=None,
         metadata={
             "name": "secondWitnessAddress",
@@ -1264,7 +1266,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    second_witness_name: Optional[PersonNameType] = field(
+    second_witness_name: PersonNameType | None = field(
         default=None,
         metadata={
             "name": "secondWitnessName",
@@ -1272,7 +1274,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    second_witness_phone: Optional[PhoneType] = field(
+    second_witness_phone: PhoneType | None = field(
         default=None,
         metadata={
             "name": "secondWitnessPhone",
@@ -1280,7 +1282,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    ssn: Optional[str] = field(
+    ssn: str | None = field(
         default=None,
         metadata={
             "name": "SSN",
@@ -1296,7 +1298,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    witness_address: Optional[AddressType] = field(
+    witness_address: AddressType | None = field(
         default=None,
         metadata={
             "name": "witnessAddress",
@@ -1304,7 +1306,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    witness_name: Optional[PersonNameType] = field(
+    witness_name: PersonNameType | None = field(
         default=None,
         metadata={
             "name": "witnessName",
@@ -1312,7 +1314,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    witness_phone: Optional[PhoneType] = field(
+    witness_phone: PhoneType | None = field(
         default=None,
         metadata={
             "name": "witnessPhone",
@@ -1320,7 +1322,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    user_info: Optional[UserType] = field(
+    user_info: UserType | None = field(
         default=None,
         metadata={
             "name": "userInfo",
@@ -1329,7 +1331,7 @@ class AssertionType:
             "required": True,
         },
     )
-    authorized: Optional[bool] = field(
+    authorized: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1337,7 +1339,7 @@ class AssertionType:
             "required": True,
         },
     )
-    purpose_of_disclosure_coded: Optional[CeType] = field(
+    purpose_of_disclosure_coded: CeType | None = field(
         default=None,
         metadata={
             "name": "purposeOfDisclosureCoded",
@@ -1346,7 +1348,7 @@ class AssertionType:
             "required": True,
         },
     )
-    acp_attribute: Optional[str] = field(
+    acp_attribute: str | None = field(
         default=None,
         metadata={
             "name": "acpAttribute",
@@ -1354,7 +1356,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    instance_acp_attribute: Optional[str] = field(
+    instance_acp_attribute: str | None = field(
         default=None,
         metadata={
             "name": "instanceAcpAttribute",
@@ -1362,7 +1364,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    saml_conditions: Optional[SamlConditionsType] = field(
+    saml_conditions: SamlConditionsType | None = field(
         default=None,
         metadata={
             "name": "samlConditions",
@@ -1370,7 +1372,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    saml_authn_statement: Optional[SamlAuthnStatementType] = field(
+    saml_authn_statement: SamlAuthnStatementType | None = field(
         default=None,
         metadata={
             "name": "samlAuthnStatement",
@@ -1378,7 +1380,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    saml_authz_decision_statement: Optional[SamlAuthzDecisionStatementType] = (
+    saml_authz_decision_statement: SamlAuthzDecisionStatementType | None = (
         field(
             default=None,
             metadata={
@@ -1388,7 +1390,7 @@ class AssertionType:
             },
         )
     )
-    saml_signature: Optional[SamlSignatureType] = field(
+    saml_signature: SamlSignatureType | None = field(
         default=None,
         metadata={
             "name": "samlSignature",
@@ -1396,7 +1398,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    saml_issuer: Optional[SamlIssuerType] = field(
+    saml_issuer: SamlIssuerType | None = field(
         default=None,
         metadata={
             "name": "samlIssuer",
@@ -1412,7 +1414,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    message_id: Optional[str] = field(
+    message_id: str | None = field(
         default=None,
         metadata={
             "name": "messageId",
@@ -1428,7 +1430,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    implements_spec_version: Optional[str] = field(
+    implements_spec_version: str | None = field(
         default=None,
         metadata={
             "name": "implementsSpecVersion",
@@ -1436,7 +1438,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    transaction_timeout: Optional[int] = field(
+    transaction_timeout: int | None = field(
         default=None,
         metadata={
             "name": "transactionTimeout",
@@ -1444,7 +1446,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    keep_alive: Optional[str] = field(
+    keep_alive: str | None = field(
         default=None,
         metadata={
             "name": "keepAlive",
@@ -1460,7 +1462,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    signature_algorithm: Optional[str] = field(
+    signature_algorithm: str | None = field(
         default=None,
         metadata={
             "name": "signatureAlgorithm",
@@ -1468,7 +1470,7 @@ class AssertionType:
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
         },
     )
-    digest_algorithm: Optional[str] = field(
+    digest_algorithm: str | None = field(
         default=None,
         metadata={
             "name": "digestAlgorithm",
@@ -1498,7 +1500,7 @@ class Assertion(AssertionType):
 
 @dataclass
 class TokenCreationInfoType:
-    assertion: Optional[AssertionType] = field(
+    assertion: AssertionType | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -1506,7 +1508,7 @@ class TokenCreationInfoType:
             "required": True,
         },
     )
-    action_name: Optional[str] = field(
+    action_name: str | None = field(
         default=None,
         metadata={
             "name": "actionName",
@@ -1515,7 +1517,7 @@ class TokenCreationInfoType:
             "required": True,
         },
     )
-    resource_name: Optional[str] = field(
+    resource_name: str | None = field(
         default=None,
         metadata={
             "name": "resourceName",

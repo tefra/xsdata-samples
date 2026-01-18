@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -89,7 +91,7 @@ class IdsmProperties:
     class Meta:
         name = "IDSM-PROPERTIES"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -98,7 +100,7 @@ class IdsmProperties:
             "required": True,
         },
     )
-    short_name_fragments: Optional["IdsmProperties.ShortNameFragments"] = (
+    short_name_fragments: IdsmProperties.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -108,7 +110,7 @@ class IdsmProperties:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -116,7 +118,7 @@ class IdsmProperties:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -124,7 +126,7 @@ class IdsmProperties:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -132,7 +134,7 @@ class IdsmProperties:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -140,7 +142,7 @@ class IdsmProperties:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -148,7 +150,7 @@ class IdsmProperties:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["IdsmProperties.Annotations"] = field(
+    annotations: IdsmProperties.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -156,7 +158,7 @@ class IdsmProperties:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -164,9 +166,7 @@ class IdsmProperties:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rate_limitation_filters: Optional[
-        "IdsmProperties.RateLimitationFilters"
-    ] = field(
+    rate_limitation_filters: IdsmProperties.RateLimitationFilters | None = field(
         default=None,
         metadata={
             "name": "RATE-LIMITATION-FILTERS",
@@ -174,9 +174,7 @@ class IdsmProperties:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    traffic_limitation_filters: Optional[
-        "IdsmProperties.TrafficLimitationFilters"
-    ] = field(
+    traffic_limitation_filters: IdsmProperties.TrafficLimitationFilters | None = field(
         default=None,
         metadata={
             "name": "TRAFFIC-LIMITATION-FILTERS",
@@ -184,14 +182,14 @@ class IdsmProperties:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -199,7 +197,7 @@ class IdsmProperties:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

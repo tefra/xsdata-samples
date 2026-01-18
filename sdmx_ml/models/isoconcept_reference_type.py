@@ -13,7 +13,7 @@ class IsoconceptReferenceType:
     class Meta:
         name = "ISOConceptReferenceType"
 
-    concept_agency: Optional[str] = field(
+    concept_agency: str | None = field(
         default=None,
         metadata={
             "name": "ConceptAgency",
@@ -22,7 +22,7 @@ class IsoconceptReferenceType:
             "required": True,
         },
     )
-    concept_scheme_id: Optional[str] = field(
+    concept_scheme_id: str | None = field(
         default=None,
         metadata={
             "name": "ConceptSchemeID",
@@ -31,7 +31,7 @@ class IsoconceptReferenceType:
             "required": True,
         },
     )
-    concept_id: Optional[str] = field(
+    concept_id: str | None = field(
         default=None,
         metadata={
             "name": "ConceptID",

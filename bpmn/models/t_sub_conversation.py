@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 
 from .call_conversation import CallConversation
@@ -13,7 +15,7 @@ class TSubConversation(TConversationNode):
     class Meta:
         name = "tSubConversation"
 
-    sub_conversation: list["SubConversation"] = field(
+    sub_conversation: list[SubConversation] = field(
         default_factory=list,
         metadata={
             "name": "subConversation",

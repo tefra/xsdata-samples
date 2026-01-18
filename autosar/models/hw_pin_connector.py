@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -51,7 +53,7 @@ class HwPinConnector:
     class Meta:
         name = "HW-PIN-CONNECTOR"
 
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -59,7 +61,7 @@ class HwPinConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -67,7 +69,7 @@ class HwPinConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -75,7 +77,7 @@ class HwPinConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -83,7 +85,7 @@ class HwPinConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_pin_refs: Optional["HwPinConnector.HwPinRefs"] = field(
+    hw_pin_refs: HwPinConnector.HwPinRefs | None = field(
         default=None,
         metadata={
             "name": "HW-PIN-REFS",
@@ -91,7 +93,7 @@ class HwPinConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -99,14 +101,14 @@ class HwPinConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -117,7 +119,7 @@ class HwPinConnector:
 
     @dataclass
     class HwPinRefs:
-        hw_pin_ref: list["HwPinConnector.HwPinRefs.HwPinRef"] = field(
+        hw_pin_ref: list[HwPinConnector.HwPinRefs.HwPinRef] = field(
             default_factory=list,
             metadata={
                 "name": "HW-PIN-REF",
@@ -129,7 +131,7 @@ class HwPinConnector:
 
         @dataclass
         class HwPinRef(Ref):
-            dest: Optional[HwPinSubtypesEnum] = field(
+            dest: HwPinSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
@@ -10,7 +12,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class LocaleStructure:
-    time_zone_offset: Optional[Decimal] = field(
+    time_zone_offset: Decimal | None = field(
         default=None,
         metadata={
             "name": "TimeZoneOffset",
@@ -18,7 +20,7 @@ class LocaleStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    time_zone: Optional[str] = field(
+    time_zone: str | None = field(
         default=None,
         metadata={
             "name": "TimeZone",
@@ -26,7 +28,7 @@ class LocaleStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    summer_time_zone_offset: Optional[Decimal] = field(
+    summer_time_zone_offset: Decimal | None = field(
         default=None,
         metadata={
             "name": "SummerTimeZoneOffset",
@@ -34,7 +36,7 @@ class LocaleStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    summer_time_zone: Optional[str] = field(
+    summer_time_zone: str | None = field(
         default=None,
         metadata={
             "name": "SummerTimeZone",
@@ -42,7 +44,7 @@ class LocaleStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    default_language: Optional[str] = field(
+    default_language: str | None = field(
         default=None,
         metadata={
             "name": "DefaultLanguage",
@@ -50,7 +52,7 @@ class LocaleStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    languages: Optional["LocaleStructure.Languages"] = field(
+    languages: LocaleStructure.Languages | None = field(
         default=None,
         metadata={
             "type": "Element",

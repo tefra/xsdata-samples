@@ -13,7 +13,7 @@ class TItemDefinition(TRootElement):
     class Meta:
         name = "tItemDefinition"
 
-    structure_ref: Optional[QName] = field(
+    structure_ref: QName | None = field(
         default=None,
         metadata={
             "name": "structureRef",

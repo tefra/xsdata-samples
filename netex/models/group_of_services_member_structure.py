@@ -27,7 +27,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 class GroupOfServicesMemberStructure(
     AbstractGroupMemberVersionedChildStructure
 ):
-    group_of_services_ref: Optional[GroupOfServicesRefStructure] = field(
+    group_of_services_ref: GroupOfServicesRefStructure | None = field(
         default=None,
         metadata={
             "name": "GroupOfServicesRef",
@@ -35,21 +35,7 @@ class GroupOfServicesMemberStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
-        Union[
-            SingleJourneyRef,
-            DatedVehicleJourneyRef,
-            DatedSpecialServiceRef,
-            SpecialServiceRef,
-            TemplateServiceJourneyRef,
-            ServiceJourneyRef,
-            DeadRunRef,
-            VehicleJourneyRef,
-            TrainNumberRef,
-            JourneyDesignator,
-            ServiceDesignator,
-        ]
-    ] = field(
+    choice: SingleJourneyRef | DatedVehicleJourneyRef | DatedSpecialServiceRef | SpecialServiceRef | TemplateServiceJourneyRef | ServiceJourneyRef | DeadRunRef | VehicleJourneyRef | TrainNumberRef | JourneyDesignator | ServiceDesignator | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -112,7 +98,7 @@ class GroupOfServicesMemberStructure(
             ),
         },
     )
-    notice_assignments: Optional[NoticeAssignmentViewsRelStructure] = field(
+    notice_assignments: NoticeAssignmentViewsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",

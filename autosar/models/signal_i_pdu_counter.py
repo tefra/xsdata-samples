@@ -40,7 +40,7 @@ class SignalIPduCounter:
     class Meta:
         name = "SIGNAL-I-PDU-COUNTER"
 
-    pdu_counter_size: Optional[Integer] = field(
+    pdu_counter_size: Integer | None = field(
         default=None,
         metadata={
             "name": "PDU-COUNTER-SIZE",
@@ -48,7 +48,7 @@ class SignalIPduCounter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_counter_start_position: Optional[Integer] = field(
+    pdu_counter_start_position: Integer | None = field(
         default=None,
         metadata={
             "name": "PDU-COUNTER-START-POSITION",
@@ -56,7 +56,7 @@ class SignalIPduCounter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_counter_threshold: Optional[Integer] = field(
+    pdu_counter_threshold: Integer | None = field(
         default=None,
         metadata={
             "name": "PDU-COUNTER-THRESHOLD",
@@ -64,7 +64,7 @@ class SignalIPduCounter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -72,14 +72,14 @@ class SignalIPduCounter:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

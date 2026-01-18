@@ -16,9 +16,7 @@ class VehicleAccessCredentialsAssignmentRefsRelStructure(
     class Meta:
         name = "vehicleAccessCredentialsAssignmentRefs_RelStructure"
 
-    vehicle_access_credentials_assignment_ref: Optional[
-        VehicleAccessCredentialsAssignmentRef
-    ] = field(
+    vehicle_access_credentials_assignment_ref: VehicleAccessCredentialsAssignmentRef | None = field(
         default=None,
         metadata={
             "name": "VehicleAccessCredentialsAssignmentRef",

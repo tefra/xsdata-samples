@@ -18,9 +18,7 @@ class UserProfileEligibilityVersionedChildStructure(
     class Meta:
         name = "UserProfileEligibility_VersionedChildStructure"
 
-    user_profile_ref: Optional[
-        Union[VehiclePoolerProfileRef, CompanionProfileRef, UserProfileRef]
-    ] = field(
+    user_profile_ref: VehiclePoolerProfileRef | CompanionProfileRef | UserProfileRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

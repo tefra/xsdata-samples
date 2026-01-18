@@ -14,7 +14,7 @@ class CustomersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "customers_RelStructure"
 
-    customer_ref_or_customer: Iterable[Union[CustomerRef, Customer]] = field(
+    customer_ref_or_customer: Iterable[CustomerRef | Customer] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

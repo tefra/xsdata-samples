@@ -33,20 +33,20 @@ class ByteOrderEnum:
     class Meta:
         name = "BYTE-ORDER-ENUM"
 
-    value: Optional[ByteOrderEnumSimple] = field(
+    value: ByteOrderEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

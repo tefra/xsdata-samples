@@ -24,11 +24,7 @@ class CustomerPurchasePackagePricesRelStructure(
         name = "customerPurchasePackagePrices_RelStructure"
 
     customer_purchase_package_price_ref_or_customer_purchase_package_price_or_cell_ref: Iterable[
-        Union[
-            CustomerPurchasePackagePriceRef,
-            CustomerPurchasePackagePriceVersionedChildStructure,
-            CellRef,
-        ]
+        CustomerPurchasePackagePriceRef | CustomerPurchasePackagePriceVersionedChildStructure | CellRef
     ] = field(
         default_factory=list,
         metadata={

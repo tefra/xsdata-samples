@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -95,7 +97,7 @@ class NetworkEndpoint:
     class Meta:
         name = "NETWORK-ENDPOINT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -104,7 +106,7 @@ class NetworkEndpoint:
             "required": True,
         },
     )
-    short_name_fragments: Optional["NetworkEndpoint.ShortNameFragments"] = (
+    short_name_fragments: NetworkEndpoint.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -114,7 +116,7 @@ class NetworkEndpoint:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +124,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +132,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +140,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +148,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +156,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["NetworkEndpoint.Annotations"] = field(
+    annotations: NetworkEndpoint.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -162,7 +164,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fully_qualified_domain_name: Optional[String] = field(
+    fully_qualified_domain_name: String | None = field(
         default=None,
         metadata={
             "name": "FULLY-QUALIFIED-DOMAIN-NAME",
@@ -170,7 +172,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    infrastructure_services: Optional[InfrastructureServices] = field(
+    infrastructure_services: InfrastructureServices | None = field(
         default=None,
         metadata={
             "name": "INFRASTRUCTURE-SERVICES",
@@ -178,7 +180,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ip_sec_config: Optional[IpSecConfig] = field(
+    ip_sec_config: IpSecConfig | None = field(
         default=None,
         metadata={
             "name": "IP-SEC-CONFIG",
@@ -186,9 +188,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_endpoint_addresses: Optional[
-        "NetworkEndpoint.NetworkEndpointAddresses"
-    ] = field(
+    network_endpoint_addresses: NetworkEndpoint.NetworkEndpointAddresses | None = field(
         default=None,
         metadata={
             "name": "NETWORK-ENDPOINT-ADDRESSES",
@@ -196,7 +196,7 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    priority: Optional[PositiveInteger] = field(
+    priority: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "PRIORITY",
@@ -204,14 +204,14 @@ class NetworkEndpoint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -219,7 +219,7 @@ class NetworkEndpoint:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -18,7 +18,7 @@ class FeedbackProgramPoliciesResponse:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    response_code: Optional[str] = field(
+    response_code: str | None = field(
         default=None,
         metadata={
             "name": "ResponseCode",
@@ -26,14 +26,14 @@ class FeedbackProgramPoliciesResponse:
             "required": True,
         },
     )
-    response_text: Optional[str] = field(
+    response_text: str | None = field(
         default=None,
         metadata={
             "name": "ResponseText",
             "type": "Element",
         },
     )
-    request_id: Optional[str] = field(
+    request_id: str | None = field(
         default=None,
         metadata={
             "name": "RequestID",

@@ -15,7 +15,7 @@ class ResidentialQualificationsRelStructure(OneToManyRelationshipStructure):
         name = "residentialQualifications_RelStructure"
 
     residential_qualification_ref_or_residential_qualification: Iterable[
-        Union[ResidentialQualificationRef, ResidentialQualification]
+        ResidentialQualificationRef | ResidentialQualification
     ] = field(
         default_factory=list,
         metadata={

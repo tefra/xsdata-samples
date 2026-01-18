@@ -30,7 +30,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class DeductionType(BaseIdentifiedComponentType):
-    calculated: Optional[bool] = field(
+    calculated: bool | None = field(
         default=None,
         metadata={
             "name": "Calculated",
@@ -39,7 +39,7 @@ class DeductionType(BaseIdentifiedComponentType):
             "required": True,
         },
     )
-    value: Optional[ValueTypeDeduction] = field(
+    value: ValueTypeDeduction | None = field(
         default=None,
         metadata={
             "name": "Value",
@@ -48,7 +48,7 @@ class DeductionType(BaseIdentifiedComponentType):
             "required": True,
         },
     )
-    applies_to_premium_type: Optional[DeductionApplyToEnum] = field(
+    applies_to_premium_type: DeductionApplyToEnum | None = field(
         default=None,
         metadata={
             "name": "AppliesToPremiumType",
@@ -57,7 +57,7 @@ class DeductionType(BaseIdentifiedComponentType):
             "required": True,
         },
     )
-    value_type: Optional[PremiumValueEnum] = field(
+    value_type: PremiumValueEnum | None = field(
         default=None,
         metadata={
             "name": "ValueType",
@@ -65,7 +65,7 @@ class DeductionType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    deduction_type: Optional[CodeDescriptionType] = field(
+    deduction_type: CodeDescriptionType | None = field(
         default=None,
         metadata={
             "name": "DeductionType",
@@ -74,7 +74,7 @@ class DeductionType(BaseIdentifiedComponentType):
             "required": True,
         },
     )
-    time_applied: Optional[TimeAppliedEnum] = field(
+    time_applied: TimeAppliedEnum | None = field(
         default=None,
         metadata={
             "name": "TimeApplied",
@@ -82,7 +82,7 @@ class DeductionType(BaseIdentifiedComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    applied_deductions: Optional[AppliedDeductionsType] = field(
+    applied_deductions: AppliedDeductionsType | None = field(
         default=None,
         metadata={
             "name": "AppliedDeductions",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import Any, Optional, Union
@@ -20,7 +22,7 @@ class FareTableRowsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "fareTableRows_RelStructure"
 
-    fare_table_row: Iterable["FareTableRow"] = field(
+    fare_table_row: Iterable[FareTableRow] = field(
         default_factory=list,
         metadata={
             "name": "FareTableRow",
@@ -36,7 +38,7 @@ class FareTableRowVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "FareTableRow_VersionedChildStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -44,7 +46,7 @@ class FareTableRowVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    label: Optional[MultilingualString] = field(
+    label: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Label",
@@ -52,7 +54,7 @@ class FareTableRowVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_table_ref: Optional[Union[StandardFareTableRef, FareTableRef]] = (
+    fare_table_ref: StandardFareTableRef | FareTableRef | None = (
         field(
             default=None,
             metadata={
@@ -72,7 +74,7 @@ class FareTableRowVersionedChildStructure(VersionedChildStructure):
             },
         )
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",
@@ -80,21 +82,21 @@ class FareTableRowVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    representing: Optional[ObjectRefsRelStructure] = field(
+    representing: ObjectRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rows: Optional[FareTableRowsRelStructure] = field(
+    rows: FareTableRowsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

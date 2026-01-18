@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -114,7 +116,7 @@ class AnalyzedExecutionTime:
     class Meta:
         name = "ANALYZED-EXECUTION-TIME"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -123,9 +125,7 @@ class AnalyzedExecutionTime:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "AnalyzedExecutionTime.ShortNameFragments"
-    ] = field(
+    short_name_fragments: AnalyzedExecutionTime.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -133,7 +133,7 @@ class AnalyzedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -141,7 +141,7 @@ class AnalyzedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -149,7 +149,7 @@ class AnalyzedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -157,7 +157,7 @@ class AnalyzedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -165,7 +165,7 @@ class AnalyzedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -173,7 +173,7 @@ class AnalyzedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["AnalyzedExecutionTime.Annotations"] = field(
+    annotations: AnalyzedExecutionTime.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -181,7 +181,7 @@ class AnalyzedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_ref: Optional["AnalyzedExecutionTime.ExclusiveAreaRef"] = (
+    exclusive_area_ref: AnalyzedExecutionTime.ExclusiveAreaRef | None = (
         field(
             default=None,
             metadata={
@@ -191,9 +191,7 @@ class AnalyzedExecutionTime:
             },
         )
     )
-    executable_entity_ref: Optional[
-        "AnalyzedExecutionTime.ExecutableEntityRef"
-    ] = field(
+    executable_entity_ref: AnalyzedExecutionTime.ExecutableEntityRef | None = field(
         default=None,
         metadata={
             "name": "EXECUTABLE-ENTITY-REF",
@@ -201,7 +199,7 @@ class AnalyzedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hardware_configuration: Optional[HardwareConfiguration] = field(
+    hardware_configuration: HardwareConfiguration | None = field(
         default=None,
         metadata={
             "name": "HARDWARE-CONFIGURATION",
@@ -209,7 +207,7 @@ class AnalyzedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_element_ref: Optional["AnalyzedExecutionTime.HwElementRef"] = field(
+    hw_element_ref: AnalyzedExecutionTime.HwElementRef | None = field(
         default=None,
         metadata={
             "name": "HW-ELEMENT-REF",
@@ -217,9 +215,7 @@ class AnalyzedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    included_library_refs: Optional[
-        "AnalyzedExecutionTime.IncludedLibraryRefs"
-    ] = field(
+    included_library_refs: AnalyzedExecutionTime.IncludedLibraryRefs | None = field(
         default=None,
         metadata={
             "name": "INCLUDED-LIBRARY-REFS",
@@ -227,9 +223,7 @@ class AnalyzedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_section_locations: Optional[
-        "AnalyzedExecutionTime.MemorySectionLocations"
-    ] = field(
+    memory_section_locations: AnalyzedExecutionTime.MemorySectionLocations | None = field(
         default=None,
         metadata={
             "name": "MEMORY-SECTION-LOCATIONS",
@@ -237,7 +231,7 @@ class AnalyzedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_context: Optional[SoftwareContext] = field(
+    software_context: SoftwareContext | None = field(
         default=None,
         metadata={
             "name": "SOFTWARE-CONTEXT",
@@ -245,7 +239,7 @@ class AnalyzedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -253,7 +247,7 @@ class AnalyzedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    best_case_execution_time: Optional[MultidimensionalTime] = field(
+    best_case_execution_time: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "BEST-CASE-EXECUTION-TIME",
@@ -261,7 +255,7 @@ class AnalyzedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    worst_case_execution_time: Optional[MultidimensionalTime] = field(
+    worst_case_execution_time: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "WORST-CASE-EXECUTION-TIME",
@@ -269,14 +263,14 @@ class AnalyzedExecutionTime:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -284,7 +278,7 @@ class AnalyzedExecutionTime:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -316,7 +310,7 @@ class AnalyzedExecutionTime:
 
     @dataclass
     class ExclusiveAreaRef(Ref):
-        dest: Optional[ExclusiveAreaSubtypesEnum] = field(
+        dest: ExclusiveAreaSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -327,7 +321,7 @@ class AnalyzedExecutionTime:
 
     @dataclass
     class ExecutableEntityRef(Ref):
-        dest: Optional[ExecutableEntitySubtypesEnum] = field(
+        dest: ExecutableEntitySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -338,7 +332,7 @@ class AnalyzedExecutionTime:
 
     @dataclass
     class HwElementRef(Ref):
-        dest: Optional[HwElementSubtypesEnum] = field(
+        dest: HwElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -350,7 +344,7 @@ class AnalyzedExecutionTime:
     @dataclass
     class IncludedLibraryRefs:
         included_library_ref: list[
-            "AnalyzedExecutionTime.IncludedLibraryRefs.IncludedLibraryRef"
+            AnalyzedExecutionTime.IncludedLibraryRefs.IncludedLibraryRef
         ] = field(
             default_factory=list,
             metadata={
@@ -362,7 +356,7 @@ class AnalyzedExecutionTime:
 
         @dataclass
         class IncludedLibraryRef(Ref):
-            dest: Optional[DependencyOnArtifactSubtypesEnum] = field(
+            dest: DependencyOnArtifactSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

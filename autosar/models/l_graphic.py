@@ -37,7 +37,7 @@ class LGraphic:
     class Meta:
         name = "L-GRAPHIC"
 
-    graphic: Optional[Graphic] = field(
+    graphic: Graphic | None = field(
         default=None,
         metadata={
             "name": "GRAPHIC",
@@ -45,7 +45,7 @@ class LGraphic:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    map: Optional[Map] = field(
+    map: Map | None = field(
         default=None,
         metadata={
             "name": "MAP",
@@ -53,14 +53,14 @@ class LGraphic:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -68,7 +68,7 @@ class LGraphic:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    l: Optional[LEnumSimple] = field(
+    l: LEnumSimple | None = field(
         default=None,
         metadata={
             "name": "L",

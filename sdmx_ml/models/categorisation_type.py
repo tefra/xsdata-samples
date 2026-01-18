@@ -19,7 +19,7 @@ class CategorisationType(CategorisationBaseType):
         referenced object is to be mapped to.
     """
 
-    source: Optional[str] = field(
+    source: str | None = field(
         default=None,
         metadata={
             "name": "Source",
@@ -28,7 +28,7 @@ class CategorisationType(CategorisationBaseType):
             "pattern": r".+\)(\.[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*)?",
         },
     )
-    target: Optional[str] = field(
+    target: str | None = field(
         default=None,
         metadata={
             "name": "Target",

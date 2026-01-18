@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -105,7 +107,7 @@ class TransformationTechnology:
     class Meta:
         name = "TRANSFORMATION-TECHNOLOGY"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -114,9 +116,7 @@ class TransformationTechnology:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "TransformationTechnology.ShortNameFragments"
-    ] = field(
+    short_name_fragments: TransformationTechnology.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -124,7 +124,7 @@ class TransformationTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -132,7 +132,7 @@ class TransformationTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -140,7 +140,7 @@ class TransformationTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -148,7 +148,7 @@ class TransformationTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -156,7 +156,7 @@ class TransformationTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -164,7 +164,7 @@ class TransformationTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["TransformationTechnology.Annotations"] = field(
+    annotations: TransformationTechnology.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -172,7 +172,7 @@ class TransformationTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    buffer_properties: Optional[BufferProperties] = field(
+    buffer_properties: BufferProperties | None = field(
         default=None,
         metadata={
             "name": "BUFFER-PROPERTIES",
@@ -180,7 +180,7 @@ class TransformationTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    has_internal_state: Optional[Boolean] = field(
+    has_internal_state: Boolean | None = field(
         default=None,
         metadata={
             "name": "HAS-INTERNAL-STATE",
@@ -188,7 +188,7 @@ class TransformationTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    needs_original_data: Optional[Boolean] = field(
+    needs_original_data: Boolean | None = field(
         default=None,
         metadata={
             "name": "NEEDS-ORIGINAL-DATA",
@@ -196,7 +196,7 @@ class TransformationTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    protocol: Optional[String] = field(
+    protocol: String | None = field(
         default=None,
         metadata={
             "name": "PROTOCOL",
@@ -204,9 +204,7 @@ class TransformationTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformation_descriptions: Optional[
-        "TransformationTechnology.TransformationDescriptions"
-    ] = field(
+    transformation_descriptions: TransformationTechnology.TransformationDescriptions | None = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-DESCRIPTIONS",
@@ -214,7 +212,7 @@ class TransformationTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformer_class: Optional[TransformerClassEnum] = field(
+    transformer_class: TransformerClassEnum | None = field(
         default=None,
         metadata={
             "name": "TRANSFORMER-CLASS",
@@ -222,7 +220,7 @@ class TransformationTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    version: Optional[String] = field(
+    version: String | None = field(
         default=None,
         metadata={
             "name": "VERSION",
@@ -230,7 +228,7 @@ class TransformationTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -238,14 +236,14 @@ class TransformationTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -253,7 +251,7 @@ class TransformationTechnology:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

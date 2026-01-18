@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -38,7 +40,7 @@ class Compu:
     class Meta:
         name = "COMPU"
 
-    compu_scales: Optional["Compu.CompuScales"] = field(
+    compu_scales: Compu.CompuScales | None = field(
         default=None,
         metadata={
             "name": "COMPU-SCALES",
@@ -46,7 +48,7 @@ class Compu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    compu_default_value: Optional[CompuConst] = field(
+    compu_default_value: CompuConst | None = field(
         default=None,
         metadata={
             "name": "COMPU-DEFAULT-VALUE",
@@ -54,14 +56,14 @@ class Compu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

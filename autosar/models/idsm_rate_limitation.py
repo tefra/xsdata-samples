@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -92,7 +94,7 @@ class IdsmRateLimitation:
     class Meta:
         name = "IDSM-RATE-LIMITATION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -101,7 +103,7 @@ class IdsmRateLimitation:
             "required": True,
         },
     )
-    short_name_fragments: Optional["IdsmRateLimitation.ShortNameFragments"] = (
+    short_name_fragments: IdsmRateLimitation.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -111,7 +113,7 @@ class IdsmRateLimitation:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -119,7 +121,7 @@ class IdsmRateLimitation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -127,7 +129,7 @@ class IdsmRateLimitation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -135,7 +137,7 @@ class IdsmRateLimitation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -143,7 +145,7 @@ class IdsmRateLimitation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -151,7 +153,7 @@ class IdsmRateLimitation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["IdsmRateLimitation.Annotations"] = field(
+    annotations: IdsmRateLimitation.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -159,7 +161,7 @@ class IdsmRateLimitation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_events_in_interval: Optional[PositiveInteger] = field(
+    max_events_in_interval: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-EVENTS-IN-INTERVAL",
@@ -167,7 +169,7 @@ class IdsmRateLimitation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_interval: Optional[Float] = field(
+    time_interval: Float | None = field(
         default=None,
         metadata={
             "name": "TIME-INTERVAL",
@@ -175,14 +177,14 @@ class IdsmRateLimitation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -190,7 +192,7 @@ class IdsmRateLimitation:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

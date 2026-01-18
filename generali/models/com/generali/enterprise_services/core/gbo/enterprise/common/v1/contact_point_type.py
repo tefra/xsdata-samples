@@ -37,7 +37,7 @@ class ContactPointType(BaseSimpleComponentType):
     :ivar fax: <description xmlns="">SMS as contact point</description>
     """
 
-    email: Optional[EmailAddressFullType] = field(
+    email: EmailAddressFullType | None = field(
         default=None,
         metadata={
             "name": "Email",
@@ -45,7 +45,7 @@ class ContactPointType(BaseSimpleComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    telephone: Optional[TelephoneNumberType] = field(
+    telephone: TelephoneNumberType | None = field(
         default=None,
         metadata={
             "name": "Telephone",
@@ -53,7 +53,7 @@ class ContactPointType(BaseSimpleComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    postal: Optional[GeographyType] = field(
+    postal: GeographyType | None = field(
         default=None,
         metadata={
             "name": "Postal",
@@ -61,7 +61,7 @@ class ContactPointType(BaseSimpleComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    sms: Optional[TelephoneNumberType] = field(
+    sms: TelephoneNumberType | None = field(
         default=None,
         metadata={
             "name": "SMS",
@@ -69,7 +69,7 @@ class ContactPointType(BaseSimpleComponentType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    fax: Optional[TelephoneNumberType] = field(
+    fax: TelephoneNumberType | None = field(
         default=None,
         metadata={
             "name": "Fax",

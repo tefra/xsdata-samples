@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -16,9 +18,7 @@ class FixedValueMapType(AnnotableType):
     :ivar value: The fixed value for the component.
     """
 
-    source_or_target: Optional[
-        Union["FixedValueMapType.Source", "FixedValueMapType.Target"]
-    ] = field(
+    source_or_target: FixedValueMapType.Source | FixedValueMapType.Target | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -47,7 +47,7 @@ class FixedValueMapType(AnnotableType):
 
     @dataclass(frozen=True)
     class Source:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -57,7 +57,7 @@ class FixedValueMapType(AnnotableType):
 
     @dataclass(frozen=True)
     class Target:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,

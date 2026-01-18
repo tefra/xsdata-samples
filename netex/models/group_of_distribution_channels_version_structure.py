@@ -18,7 +18,7 @@ class GroupOfDistributionChannelsVersionStructure(
     class Meta:
         name = "GroupOfDistributionChannels_VersionStructure"
 
-    members: Optional[DistributionChannelRefsRelStructure] = field(
+    members: DistributionChannelRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

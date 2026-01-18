@@ -84,28 +84,28 @@ class FrontStub:
             "type": "Element",
         },
     )
-    article_version: Optional[ArticleVersion] = field(
+    article_version: ArticleVersion | None = field(
         default=None,
         metadata={
             "name": "article-version",
             "type": "Element",
         },
     )
-    article_version_alternatives: Optional[ArticleVersionAlternatives] = field(
+    article_version_alternatives: ArticleVersionAlternatives | None = field(
         default=None,
         metadata={
             "name": "article-version-alternatives",
             "type": "Element",
         },
     )
-    article_categories: Optional[ArticleCategories] = field(
+    article_categories: ArticleCategories | None = field(
         default=None,
         metadata={
             "name": "article-categories",
             "type": "Element",
         },
     )
-    title_group: Optional[TitleGroup] = field(
+    title_group: TitleGroup | None = field(
         default=None,
         metadata={
             "name": "title-group",
@@ -132,7 +132,7 @@ class FrontStub:
             "type": "Element",
         },
     )
-    author_notes: Optional[AuthorNotes] = field(
+    author_notes: AuthorNotes | None = field(
         default=None,
         metadata={
             "name": "author-notes",
@@ -146,7 +146,7 @@ class FrontStub:
             "type": "Element",
         },
     )
-    pub_date_not_available: Optional[PubDateNotAvailable] = field(
+    pub_date_not_available: PubDateNotAvailable | None = field(
         default=None,
         metadata={
             "name": "pub-date-not-available",
@@ -166,7 +166,7 @@ class FrontStub:
             "type": "Element",
         },
     )
-    volume_series: Optional[VolumeSeries] = field(
+    volume_series: VolumeSeries | None = field(
         default=None,
         metadata={
             "name": "volume-series",
@@ -207,7 +207,7 @@ class FrontStub:
             "type": "Element",
         },
     )
-    issue_part: Optional[IssuePart] = field(
+    issue_part: IssuePart | None = field(
         default=None,
         metadata={
             "name": "issue-part",
@@ -227,32 +227,32 @@ class FrontStub:
             "type": "Element",
         },
     )
-    supplement: Optional[Supplement] = field(
+    supplement: Supplement | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    fpage: Optional[Fpage] = field(
+    fpage: Fpage | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    lpage: Optional[Lpage] = field(
+    lpage: Lpage | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    page_range: Optional[PageRange] = field(
+    page_range: PageRange | None = field(
         default=None,
         metadata={
             "name": "page-range",
             "type": "Element",
         },
     )
-    elocation_id: Optional[ElocationId] = field(
+    elocation_id: ElocationId | None = field(
         default=None,
         metadata={
             "name": "elocation-id",
@@ -291,20 +291,20 @@ class FrontStub:
             "type": "Element",
         },
     )
-    history: Optional[History] = field(
+    history: History | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    pub_history: Optional[PubHistory] = field(
+    pub_history: PubHistory | None = field(
         default=None,
         metadata={
             "name": "pub-history",
             "type": "Element",
         },
     )
-    permissions: Optional[Permissions] = field(
+    permissions: Permissions | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -371,26 +371,26 @@ class FrontStub:
             "type": "Element",
         },
     )
-    counts: Optional[Counts] = field(
+    counts: Counts | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    custom_meta_group: Optional[CustomMetaGroup] = field(
+    custom_meta_group: CustomMetaGroup | None = field(
         default=None,
         metadata={
             "name": "custom-meta-group",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

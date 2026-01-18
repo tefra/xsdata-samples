@@ -15,7 +15,7 @@ class AccessSpacesRelStructure(ContainmentAggregationStructure):
         name = "accessSpaces_RelStructure"
 
     access_space_ref_or_access_space: Iterable[
-        Union[AccessSpaceRef, AccessSpace]
+        AccessSpaceRef | AccessSpace
     ] = field(
         default_factory=list,
         metadata={

@@ -20,9 +20,7 @@ class DistanceMatrixElementPricesRelStructure(
         name = "distanceMatrixElementPrices_RelStructure"
 
     distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref: Iterable[
-        Union[
-            DistanceMatrixElementPriceRef, DistanceMatrixElementPrice, CellRef
-        ]
+        DistanceMatrixElementPriceRef | DistanceMatrixElementPrice | CellRef
     ] = field(
         default_factory=list,
         metadata={

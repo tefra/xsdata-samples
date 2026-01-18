@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -40,7 +42,7 @@ class ExecutableEntityActivationReason:
     class Meta:
         name = "EXECUTABLE-ENTITY-ACTIVATION-REASON"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -49,9 +51,7 @@ class ExecutableEntityActivationReason:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ExecutableEntityActivationReason.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ExecutableEntityActivationReason.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -59,7 +59,7 @@ class ExecutableEntityActivationReason:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbol: Optional[CIdentifier] = field(
+    symbol: CIdentifier | None = field(
         default=None,
         metadata={
             "name": "SYMBOL",
@@ -67,7 +67,7 @@ class ExecutableEntityActivationReason:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bit_position: Optional[PositiveInteger] = field(
+    bit_position: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "BIT-POSITION",
@@ -75,14 +75,14 @@ class ExecutableEntityActivationReason:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

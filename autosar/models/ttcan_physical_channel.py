@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -105,7 +107,7 @@ class TtcanPhysicalChannel:
     class Meta:
         name = "TTCAN-PHYSICAL-CHANNEL"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -114,9 +116,7 @@ class TtcanPhysicalChannel:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "TtcanPhysicalChannel.ShortNameFragments"
-    ] = field(
+    short_name_fragments: TtcanPhysicalChannel.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -124,7 +124,7 @@ class TtcanPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -132,7 +132,7 @@ class TtcanPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -140,7 +140,7 @@ class TtcanPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -148,7 +148,7 @@ class TtcanPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -156,7 +156,7 @@ class TtcanPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -164,7 +164,7 @@ class TtcanPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["TtcanPhysicalChannel.Annotations"] = field(
+    annotations: TtcanPhysicalChannel.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -172,7 +172,7 @@ class TtcanPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    comm_connectors: Optional["TtcanPhysicalChannel.CommConnectors"] = field(
+    comm_connectors: TtcanPhysicalChannel.CommConnectors | None = field(
         default=None,
         metadata={
             "name": "COMM-CONNECTORS",
@@ -180,7 +180,7 @@ class TtcanPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    frame_triggerings: Optional["TtcanPhysicalChannel.FrameTriggerings"] = (
+    frame_triggerings: TtcanPhysicalChannel.FrameTriggerings | None = (
         field(
             default=None,
             metadata={
@@ -190,9 +190,7 @@ class TtcanPhysicalChannel:
             },
         )
     )
-    i_signal_triggerings: Optional[
-        "TtcanPhysicalChannel.ISignalTriggerings"
-    ] = field(
+    i_signal_triggerings: TtcanPhysicalChannel.ISignalTriggerings | None = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-TRIGGERINGS",
@@ -200,9 +198,7 @@ class TtcanPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    managed_physical_channel_refs: Optional[
-        "TtcanPhysicalChannel.ManagedPhysicalChannelRefs"
-    ] = field(
+    managed_physical_channel_refs: TtcanPhysicalChannel.ManagedPhysicalChannelRefs | None = field(
         default=None,
         metadata={
             "name": "MANAGED-PHYSICAL-CHANNEL-REFS",
@@ -210,7 +206,7 @@ class TtcanPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_triggerings: Optional["TtcanPhysicalChannel.PduTriggerings"] = field(
+    pdu_triggerings: TtcanPhysicalChannel.PduTriggerings | None = field(
         default=None,
         metadata={
             "name": "PDU-TRIGGERINGS",
@@ -218,7 +214,7 @@ class TtcanPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -226,14 +222,14 @@ class TtcanPhysicalChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -241,7 +237,7 @@ class TtcanPhysicalChannel:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -333,7 +329,7 @@ class TtcanPhysicalChannel:
     @dataclass
     class ManagedPhysicalChannelRefs:
         managed_physical_channel_ref: list[
-            "TtcanPhysicalChannel.ManagedPhysicalChannelRefs.ManagedPhysicalChannelRef"
+            TtcanPhysicalChannel.ManagedPhysicalChannelRefs.ManagedPhysicalChannelRef
         ] = field(
             default_factory=list,
             metadata={
@@ -345,7 +341,7 @@ class TtcanPhysicalChannel:
 
         @dataclass
         class ManagedPhysicalChannelRef(Ref):
-            dest: Optional[PhysicalChannelSubtypesEnum] = field(
+            dest: PhysicalChannelSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

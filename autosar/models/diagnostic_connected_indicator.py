@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -99,7 +101,7 @@ class DiagnosticConnectedIndicator:
     class Meta:
         name = "DIAGNOSTIC-CONNECTED-INDICATOR"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -108,9 +110,7 @@ class DiagnosticConnectedIndicator:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticConnectedIndicator.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticConnectedIndicator.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -118,7 +118,7 @@ class DiagnosticConnectedIndicator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -126,7 +126,7 @@ class DiagnosticConnectedIndicator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -134,7 +134,7 @@ class DiagnosticConnectedIndicator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -142,7 +142,7 @@ class DiagnosticConnectedIndicator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -150,7 +150,7 @@ class DiagnosticConnectedIndicator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -158,7 +158,7 @@ class DiagnosticConnectedIndicator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticConnectedIndicator.Annotations"] = field(
+    annotations: DiagnosticConnectedIndicator.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -166,7 +166,7 @@ class DiagnosticConnectedIndicator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    behavior: Optional[DiagnosticConnectedIndicatorBehaviorEnum] = field(
+    behavior: DiagnosticConnectedIndicatorBehaviorEnum | None = field(
         default=None,
         metadata={
             "name": "BEHAVIOR",
@@ -174,9 +174,7 @@ class DiagnosticConnectedIndicator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    healing_cycle_counter_threshold: Optional[
-        PositiveIntegerValueVariationPoint
-    ] = field(
+    healing_cycle_counter_threshold: PositiveIntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "HEALING-CYCLE-COUNTER-THRESHOLD",
@@ -184,9 +182,7 @@ class DiagnosticConnectedIndicator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    healing_cycle_ref: Optional[
-        "DiagnosticConnectedIndicator.HealingCycleRef"
-    ] = field(
+    healing_cycle_ref: DiagnosticConnectedIndicator.HealingCycleRef | None = field(
         default=None,
         metadata={
             "name": "HEALING-CYCLE-REF",
@@ -194,7 +190,7 @@ class DiagnosticConnectedIndicator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    indicator_ref: Optional["DiagnosticConnectedIndicator.IndicatorRef"] = (
+    indicator_ref: DiagnosticConnectedIndicator.IndicatorRef | None = (
         field(
             default=None,
             metadata={
@@ -204,7 +200,7 @@ class DiagnosticConnectedIndicator:
             },
         )
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -212,14 +208,14 @@ class DiagnosticConnectedIndicator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -227,7 +223,7 @@ class DiagnosticConnectedIndicator:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -259,7 +255,7 @@ class DiagnosticConnectedIndicator:
 
     @dataclass
     class HealingCycleRef(Ref):
-        dest: Optional[DiagnosticOperationCycleSubtypesEnum] = field(
+        dest: DiagnosticOperationCycleSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -270,7 +266,7 @@ class DiagnosticConnectedIndicator:
 
     @dataclass
     class IndicatorRef(Ref):
-        dest: Optional[DiagnosticIndicatorSubtypesEnum] = field(
+        dest: DiagnosticIndicatorSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

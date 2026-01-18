@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -120,7 +122,7 @@ class ExecutionTimeConstraint:
     class Meta:
         name = "EXECUTION-TIME-CONSTRAINT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -129,9 +131,7 @@ class ExecutionTimeConstraint:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ExecutionTimeConstraint.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ExecutionTimeConstraint.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -139,7 +139,7 @@ class ExecutionTimeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -147,7 +147,7 @@ class ExecutionTimeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -155,7 +155,7 @@ class ExecutionTimeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -163,7 +163,7 @@ class ExecutionTimeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -171,7 +171,7 @@ class ExecutionTimeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -179,7 +179,7 @@ class ExecutionTimeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ExecutionTimeConstraint.Annotations"] = field(
+    annotations: ExecutionTimeConstraint.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -187,7 +187,7 @@ class ExecutionTimeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace_refs: Optional["ExecutionTimeConstraint.TraceRefs"] = field(
+    trace_refs: ExecutionTimeConstraint.TraceRefs | None = field(
         default=None,
         metadata={
             "name": "TRACE-REFS",
@@ -195,9 +195,7 @@ class ExecutionTimeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_condition_ref: Optional[
-        "ExecutionTimeConstraint.TimingConditionRef"
-    ] = field(
+    timing_condition_ref: ExecutionTimeConstraint.TimingConditionRef | None = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
@@ -205,7 +203,7 @@ class ExecutionTimeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -213,7 +211,7 @@ class ExecutionTimeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    component_iref: Optional[ComponentInCompositionInstanceRef] = field(
+    component_iref: ComponentInCompositionInstanceRef | None = field(
         default=None,
         metadata={
             "name": "COMPONENT-IREF",
@@ -221,7 +219,7 @@ class ExecutionTimeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    executable_ref: Optional["ExecutionTimeConstraint.ExecutableRef"] = field(
+    executable_ref: ExecutionTimeConstraint.ExecutableRef | None = field(
         default=None,
         metadata={
             "name": "EXECUTABLE-REF",
@@ -229,7 +227,7 @@ class ExecutionTimeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    execution_time_type: Optional[ExecutionTimeTypeEnum] = field(
+    execution_time_type: ExecutionTimeTypeEnum | None = field(
         default=None,
         metadata={
             "name": "EXECUTION-TIME-TYPE",
@@ -237,7 +235,7 @@ class ExecutionTimeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum: Optional[MultidimensionalTime] = field(
+    maximum: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "MAXIMUM",
@@ -245,7 +243,7 @@ class ExecutionTimeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum: Optional[MultidimensionalTime] = field(
+    minimum: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "MINIMUM",
@@ -253,14 +251,14 @@ class ExecutionTimeConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -268,7 +266,7 @@ class ExecutionTimeConstraint:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -300,7 +298,7 @@ class ExecutionTimeConstraint:
 
     @dataclass
     class TraceRefs:
-        trace_ref: list["ExecutionTimeConstraint.TraceRefs.TraceRef"] = field(
+        trace_ref: list[ExecutionTimeConstraint.TraceRefs.TraceRef] = field(
             default_factory=list,
             metadata={
                 "name": "TRACE-REF",
@@ -311,7 +309,7 @@ class ExecutionTimeConstraint:
 
         @dataclass
         class TraceRef(Ref):
-            dest: Optional[TraceableSubtypesEnum] = field(
+            dest: TraceableSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -322,7 +320,7 @@ class ExecutionTimeConstraint:
 
     @dataclass
     class TimingConditionRef(Ref):
-        dest: Optional[TimingConditionSubtypesEnum] = field(
+        dest: TimingConditionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -333,7 +331,7 @@ class ExecutionTimeConstraint:
 
     @dataclass
     class ExecutableRef(Ref):
-        dest: Optional[ExecutableEntitySubtypesEnum] = field(
+        dest: ExecutableEntitySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

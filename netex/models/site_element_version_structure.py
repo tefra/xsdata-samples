@@ -24,7 +24,7 @@ class SiteElementVersionStructure(AddressablePlaceVersionStructure):
     class Meta:
         name = "SiteElement_VersionStructure"
 
-    accessibility_assessment: Optional[AccessibilityAssessment] = field(
+    accessibility_assessment: AccessibilityAssessment | None = field(
         default=None,
         metadata={
             "name": "AccessibilityAssessment",
@@ -41,7 +41,7 @@ class SiteElementVersionStructure(AddressablePlaceVersionStructure):
             "tokens": True,
         },
     )
-    name_suffix: Optional[MultilingualString] = field(
+    name_suffix: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "NameSuffix",
@@ -49,7 +49,7 @@ class SiteElementVersionStructure(AddressablePlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alternative_names: Optional[AlternativeNamesRelStructure] = field(
+    alternative_names: AlternativeNamesRelStructure | None = field(
         default=None,
         metadata={
             "name": "alternativeNames",
@@ -57,7 +57,7 @@ class SiteElementVersionStructure(AddressablePlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    cross_road: Optional[MultilingualString] = field(
+    cross_road: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "CrossRoad",
@@ -65,7 +65,7 @@ class SiteElementVersionStructure(AddressablePlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    landmark: Optional[MultilingualString] = field(
+    landmark: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Landmark",
@@ -73,7 +73,7 @@ class SiteElementVersionStructure(AddressablePlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_use: Optional[PublicUseEnumeration] = field(
+    public_use: PublicUseEnumeration | None = field(
         default=None,
         metadata={
             "name": "PublicUse",
@@ -81,7 +81,7 @@ class SiteElementVersionStructure(AddressablePlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    covered: Optional[CoveredEnumeration] = field(
+    covered: CoveredEnumeration | None = field(
         default=None,
         metadata={
             "name": "Covered",
@@ -89,7 +89,7 @@ class SiteElementVersionStructure(AddressablePlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gated: Optional[GatedEnumeration] = field(
+    gated: GatedEnumeration | None = field(
         default=None,
         metadata={
             "name": "Gated",
@@ -97,7 +97,7 @@ class SiteElementVersionStructure(AddressablePlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    lighting: Optional[LightingEnumeration] = field(
+    lighting: LightingEnumeration | None = field(
         default=None,
         metadata={
             "name": "Lighting",
@@ -105,7 +105,7 @@ class SiteElementVersionStructure(AddressablePlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    all_areas_wheelchair_accessible: Optional[bool] = field(
+    all_areas_wheelchair_accessible: bool | None = field(
         default=None,
         metadata={
             "name": "AllAreasWheelchairAccessible",
@@ -113,7 +113,7 @@ class SiteElementVersionStructure(AddressablePlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    person_capacity: Optional[int] = field(
+    person_capacity: int | None = field(
         default=None,
         metadata={
             "name": "PersonCapacity",
@@ -121,7 +121,7 @@ class SiteElementVersionStructure(AddressablePlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    presentation: Optional[PresentationStructure] = field(
+    presentation: PresentationStructure | None = field(
         default=None,
         metadata={
             "name": "Presentation",
@@ -129,7 +129,7 @@ class SiteElementVersionStructure(AddressablePlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    facilities: Optional[SiteFacilitySetsRelStructure] = field(
+    facilities: SiteFacilitySetsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -84,7 +86,7 @@ class SynchronizedTimeBaseProvider:
     class Meta:
         name = "SYNCHRONIZED-TIME-BASE-PROVIDER"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -93,9 +95,7 @@ class SynchronizedTimeBaseProvider:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SynchronizedTimeBaseProvider.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SynchronizedTimeBaseProvider.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -103,7 +103,7 @@ class SynchronizedTimeBaseProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -111,7 +111,7 @@ class SynchronizedTimeBaseProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -119,7 +119,7 @@ class SynchronizedTimeBaseProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -127,7 +127,7 @@ class SynchronizedTimeBaseProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -135,7 +135,7 @@ class SynchronizedTimeBaseProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -143,7 +143,7 @@ class SynchronizedTimeBaseProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SynchronizedTimeBaseProvider.Annotations"] = field(
+    annotations: SynchronizedTimeBaseProvider.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -151,9 +151,7 @@ class SynchronizedTimeBaseProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_time_provider_ref: Optional[
-        "SynchronizedTimeBaseProvider.NetworkTimeProviderRef"
-    ] = field(
+    network_time_provider_ref: SynchronizedTimeBaseProvider.NetworkTimeProviderRef | None = field(
         default=None,
         metadata={
             "name": "NETWORK-TIME-PROVIDER-REF",
@@ -161,7 +159,7 @@ class SynchronizedTimeBaseProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_sync_correction: Optional[TimeSyncCorrection] = field(
+    time_sync_correction: TimeSyncCorrection | None = field(
         default=None,
         metadata={
             "name": "TIME-SYNC-CORRECTION",
@@ -169,14 +167,14 @@ class SynchronizedTimeBaseProvider:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -184,7 +182,7 @@ class SynchronizedTimeBaseProvider:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -216,7 +214,7 @@ class SynchronizedTimeBaseProvider:
 
     @dataclass
     class NetworkTimeProviderRef(Ref):
-        dest: Optional[GlobalTimeMasterSubtypesEnum] = field(
+        dest: GlobalTimeMasterSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

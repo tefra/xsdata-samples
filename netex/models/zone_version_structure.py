@@ -17,14 +17,14 @@ class ZoneVersionStructure(GroupOfPointsVersionStructure):
     class Meta:
         name = "Zone_VersionStructure"
 
-    types: Optional[TypeOfZoneRefsRelStructure] = field(
+    types: TypeOfZoneRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    centroid: Optional[SimplePointVersionStructure] = field(
+    centroid: SimplePointVersionStructure | None = field(
         default=None,
         metadata={
             "name": "Centroid",
@@ -32,7 +32,7 @@ class ZoneVersionStructure(GroupOfPointsVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    polygon_or_multi_surface: Optional[Union[Polygon, MultiSurface]] = field(
+    polygon_or_multi_surface: Polygon | MultiSurface | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -50,14 +50,14 @@ class ZoneVersionStructure(GroupOfPointsVersionStructure):
             ),
         },
     )
-    projections: Optional[ProjectionsRelStructure] = field(
+    projections: ProjectionsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parent_zone_ref: Optional[ZoneRefStructure] = field(
+    parent_zone_ref: ZoneRefStructure | None = field(
         default=None,
         metadata={
             "name": "ParentZoneRef",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -49,7 +51,7 @@ class DocRevision:
     class Meta:
         name = "DOC-REVISION"
 
-    revision_label: Optional[RevisionLabelString] = field(
+    revision_label: RevisionLabelString | None = field(
         default=None,
         metadata={
             "name": "REVISION-LABEL",
@@ -57,7 +59,7 @@ class DocRevision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    revision_label_p_1: Optional[RevisionLabelString] = field(
+    revision_label_p_1: RevisionLabelString | None = field(
         default=None,
         metadata={
             "name": "REVISION-LABEL-P-1",
@@ -65,7 +67,7 @@ class DocRevision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    revision_label_p_2: Optional[RevisionLabelString] = field(
+    revision_label_p_2: RevisionLabelString | None = field(
         default=None,
         metadata={
             "name": "REVISION-LABEL-P-2",
@@ -73,7 +75,7 @@ class DocRevision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    state: Optional[NmtokenString] = field(
+    state: NmtokenString | None = field(
         default=None,
         metadata={
             "name": "STATE",
@@ -81,7 +83,7 @@ class DocRevision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    issued_by: Optional[String] = field(
+    issued_by: String | None = field(
         default=None,
         metadata={
             "name": "ISSUED-BY",
@@ -89,7 +91,7 @@ class DocRevision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    date: Optional[Date] = field(
+    date: Date | None = field(
         default=None,
         metadata={
             "name": "DATE",
@@ -97,7 +99,7 @@ class DocRevision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    modifications: Optional["DocRevision.Modifications"] = field(
+    modifications: DocRevision.Modifications | None = field(
         default=None,
         metadata={
             "name": "MODIFICATIONS",
@@ -105,14 +107,14 @@ class DocRevision:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

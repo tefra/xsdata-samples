@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -98,7 +100,7 @@ class ConsumedProvidedServiceInstanceGroup:
     class Meta:
         name = "CONSUMED-PROVIDED-SERVICE-INSTANCE-GROUP"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -107,9 +109,7 @@ class ConsumedProvidedServiceInstanceGroup:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ConsumedProvidedServiceInstanceGroup.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ConsumedProvidedServiceInstanceGroup.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -117,7 +117,7 @@ class ConsumedProvidedServiceInstanceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -125,7 +125,7 @@ class ConsumedProvidedServiceInstanceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -133,7 +133,7 @@ class ConsumedProvidedServiceInstanceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -141,7 +141,7 @@ class ConsumedProvidedServiceInstanceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -149,7 +149,7 @@ class ConsumedProvidedServiceInstanceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -157,9 +157,7 @@ class ConsumedProvidedServiceInstanceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "ConsumedProvidedServiceInstanceGroup.Annotations"
-    ] = field(
+    annotations: ConsumedProvidedServiceInstanceGroup.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +165,7 @@ class ConsumedProvidedServiceInstanceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,9 +173,7 @@ class ConsumedProvidedServiceInstanceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consumed_service_instances: Optional[
-        "ConsumedProvidedServiceInstanceGroup.ConsumedServiceInstances"
-    ] = field(
+    consumed_service_instances: ConsumedProvidedServiceInstanceGroup.ConsumedServiceInstances | None = field(
         default=None,
         metadata={
             "name": "CONSUMED-SERVICE-INSTANCES",
@@ -185,9 +181,7 @@ class ConsumedProvidedServiceInstanceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    provided_service_instances: Optional[
-        "ConsumedProvidedServiceInstanceGroup.ProvidedServiceInstances"
-    ] = field(
+    provided_service_instances: ConsumedProvidedServiceInstanceGroup.ProvidedServiceInstances | None = field(
         default=None,
         metadata={
             "name": "PROVIDED-SERVICE-INSTANCES",
@@ -195,14 +189,14 @@ class ConsumedProvidedServiceInstanceGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -210,7 +204,7 @@ class ConsumedProvidedServiceInstanceGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -45,7 +45,7 @@ class ReroutingManagement(NetworkManagement):
             "min_occurs": 1,
         },
     )
-    rerouting_itinerary_description: Optional[MultilingualString] = field(
+    rerouting_itinerary_description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "reroutingItineraryDescription",
@@ -53,7 +53,7 @@ class ReroutingManagement(NetworkManagement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    signed_rerouting: Optional[bool] = field(
+    signed_rerouting: bool | None = field(
         default=None,
         metadata={
             "name": "signedRerouting",
@@ -61,7 +61,7 @@ class ReroutingManagement(NetworkManagement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    entry: Optional[str] = field(
+    entry: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -69,7 +69,7 @@ class ReroutingManagement(NetworkManagement):
             "max_length": 1024,
         },
     )
-    exit: Optional[str] = field(
+    exit: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -77,7 +77,7 @@ class ReroutingManagement(NetworkManagement):
             "max_length": 1024,
         },
     )
-    road_or_junction_number: Optional[str] = field(
+    road_or_junction_number: str | None = field(
         default=None,
         metadata={
             "name": "roadOrJunctionNumber",
@@ -94,7 +94,7 @@ class ReroutingManagement(NetworkManagement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    rerouting_management_extension: Optional[ExtensionType] = field(
+    rerouting_management_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "reroutingManagementExtension",

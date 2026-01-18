@@ -19,7 +19,7 @@ class VehicleSharingServiceVersionStructure(
     class Meta:
         name = "VehicleSharingService_VersionStructure"
 
-    vehicle_sharing_ref: Optional[VehicleSharingRef] = field(
+    vehicle_sharing_ref: VehicleSharingRef | None = field(
         default=None,
         metadata={
             "name": "VehicleSharingRef",
@@ -28,7 +28,7 @@ class VehicleSharingServiceVersionStructure(
             "required": True,
         },
     )
-    sharing_policy_url: Optional[str] = field(
+    sharing_policy_url: str | None = field(
         default=None,
         metadata={
             "name": "SharingPolicyUrl",
@@ -36,7 +36,7 @@ class VehicleSharingServiceVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_sharing_period: Optional[XmlDuration] = field(
+    minimum_sharing_period: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MinimumSharingPeriod",
@@ -44,7 +44,7 @@ class VehicleSharingServiceVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_sharing_period: Optional[XmlDuration] = field(
+    maximum_sharing_period: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MaximumSharingPeriod",
@@ -52,7 +52,7 @@ class VehicleSharingServiceVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    floating_vehicles: Optional[bool] = field(
+    floating_vehicles: bool | None = field(
         default=None,
         metadata={
             "name": "FloatingVehicles",
@@ -60,7 +60,7 @@ class VehicleSharingServiceVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fleets: Optional[FleetRefsRelStructure] = field(
+    fleets: FleetRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

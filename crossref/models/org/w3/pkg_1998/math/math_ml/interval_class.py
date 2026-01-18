@@ -1305,13 +1305,13 @@ class IntervalType:
             "sequence": 1,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: Optional[object] = field(
+    xref: object | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1325,19 +1325,19 @@ class IntervalType:
             "tokens": True,
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: Optional[object] = field(
+    other: object | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -1350,20 +1350,20 @@ class IntervalType:
             "namespace": "##other",
         },
     )
-    encoding: Optional[str] = field(
+    encoding: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    definition_url: Optional[str] = field(
+    definition_url: str | None = field(
         default=None,
         metadata={
             "name": "definitionURL",
             "type": "Attribute",
         },
     )
-    closure: Optional[object] = field(
+    closure: object | None = field(
         default=None,
         metadata={
             "type": "Attribute",

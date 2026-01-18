@@ -60,14 +60,14 @@ class App:
         name = "app"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    sec_meta: Optional[SecMeta] = field(
+    sec_meta: SecMeta | None = field(
         default=None,
         metadata={
             "name": "sec-meta",
             "type": "Element",
         },
     )
-    label: Optional[Label] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -333,40 +333,40 @@ class App:
             "type": "Element",
         },
     )
-    permissions: Optional[Permissions] = field(
+    permissions: Permissions | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",

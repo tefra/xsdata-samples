@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -83,7 +85,7 @@ class EventHandler:
     class Meta:
         name = "EVENT-HANDLER"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -92,7 +94,7 @@ class EventHandler:
             "required": True,
         },
     )
-    short_name_fragments: Optional["EventHandler.ShortNameFragments"] = field(
+    short_name_fragments: EventHandler.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -100,9 +102,7 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    application_endpoint_ref: Optional[
-        "EventHandler.ApplicationEndpointRef"
-    ] = field(
+    application_endpoint_ref: EventHandler.ApplicationEndpointRef | None = field(
         default=None,
         metadata={
             "name": "APPLICATION-ENDPOINT-REF",
@@ -110,9 +110,7 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consumed_event_group_refs: Optional[
-        "EventHandler.ConsumedEventGroupRefs"
-    ] = field(
+    consumed_event_group_refs: EventHandler.ConsumedEventGroupRefs | None = field(
         default=None,
         metadata={
             "name": "CONSUMED-EVENT-GROUP-REFS",
@@ -120,7 +118,7 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_identifier: Optional[PositiveInteger] = field(
+    event_group_identifier: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "EVENT-GROUP-IDENTIFIER",
@@ -128,9 +126,7 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_multicast_addresss: Optional[
-        "EventHandler.EventMulticastAddresss"
-    ] = field(
+    event_multicast_addresss: EventHandler.EventMulticastAddresss | None = field(
         default=None,
         metadata={
             "name": "EVENT-MULTICAST-ADDRESSS",
@@ -138,7 +134,7 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multicast_threshold: Optional[PositiveInteger] = field(
+    multicast_threshold: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MULTICAST-THRESHOLD",
@@ -146,9 +142,7 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_activation_routing_groups: Optional[
-        "EventHandler.PduActivationRoutingGroups"
-    ] = field(
+    pdu_activation_routing_groups: EventHandler.PduActivationRoutingGroups | None = field(
         default=None,
         metadata={
             "name": "PDU-ACTIVATION-ROUTING-GROUPS",
@@ -156,7 +150,7 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    routing_group_refs: Optional["EventHandler.RoutingGroupRefs"] = field(
+    routing_group_refs: EventHandler.RoutingGroupRefs | None = field(
         default=None,
         metadata={
             "name": "ROUTING-GROUP-REFS",
@@ -164,7 +158,7 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sd_server_config: Optional[SdServerConfig] = field(
+    sd_server_config: SdServerConfig | None = field(
         default=None,
         metadata={
             "name": "SD-SERVER-CONFIG",
@@ -172,9 +166,7 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sd_server_eg_timing_configs: Optional[
-        "EventHandler.SdServerEgTimingConfigs"
-    ] = field(
+    sd_server_eg_timing_configs: EventHandler.SdServerEgTimingConfigs | None = field(
         default=None,
         metadata={
             "name": "SD-SERVER-EG-TIMING-CONFIGS",
@@ -182,7 +174,7 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -190,14 +182,14 @@ class EventHandler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -219,7 +211,7 @@ class EventHandler:
 
     @dataclass
     class ApplicationEndpointRef(Ref):
-        dest: Optional[ApplicationEndpointSubtypesEnum] = field(
+        dest: ApplicationEndpointSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -231,7 +223,7 @@ class EventHandler:
     @dataclass
     class ConsumedEventGroupRefs:
         consumed_event_group_ref: list[
-            "EventHandler.ConsumedEventGroupRefs.ConsumedEventGroupRef"
+            EventHandler.ConsumedEventGroupRefs.ConsumedEventGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -243,7 +235,7 @@ class EventHandler:
 
         @dataclass
         class ConsumedEventGroupRef(Ref):
-            dest: Optional[ConsumedEventGroupSubtypesEnum] = field(
+            dest: ConsumedEventGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -279,7 +271,7 @@ class EventHandler:
     @dataclass
     class RoutingGroupRefs:
         routing_group_ref: list[
-            "EventHandler.RoutingGroupRefs.RoutingGroupRef"
+            EventHandler.RoutingGroupRefs.RoutingGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -291,7 +283,7 @@ class EventHandler:
 
         @dataclass
         class RoutingGroupRef(Ref):
-            dest: Optional[SoAdRoutingGroupSubtypesEnum] = field(
+            dest: SoAdRoutingGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

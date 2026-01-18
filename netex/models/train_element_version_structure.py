@@ -22,7 +22,7 @@ class TrainElementVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "TrainElement_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -30,7 +30,7 @@ class TrainElementVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -38,7 +38,7 @@ class TrainElementVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_element_type: Optional[TrainElementTypeEnumeration] = field(
+    train_element_type: TrainElementTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "TrainElementType",
@@ -46,7 +46,7 @@ class TrainElementVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_classes: Optional[FareClasses] = field(
+    fare_classes: FareClasses | None = field(
         default=None,
         metadata={
             "name": "FareClasses",
@@ -54,7 +54,7 @@ class TrainElementVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_capacity: Optional[PassengerCapacityStructure] = field(
+    passenger_capacity: PassengerCapacityStructure | None = field(
         default=None,
         metadata={
             "name": "PassengerCapacity",
@@ -62,14 +62,14 @@ class TrainElementVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    capacities: Optional[PassengerCapacitiesRelStructure] = field(
+    capacities: PassengerCapacitiesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    length: Optional[Decimal] = field(
+    length: Decimal | None = field(
         default=None,
         metadata={
             "name": "Length",
@@ -77,7 +77,7 @@ class TrainElementVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    width: Optional[Decimal] = field(
+    width: Decimal | None = field(
         default=None,
         metadata={
             "name": "Width",
@@ -85,7 +85,7 @@ class TrainElementVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    train_size: Optional[TrainSize] = field(
+    train_size: TrainSize | None = field(
         default=None,
         metadata={
             "name": "TrainSize",
@@ -93,14 +93,14 @@ class TrainElementVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    facilities: Optional[ServiceFacilitySetsRelStructure] = field(
+    facilities: ServiceFacilitySetsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    equipments: Optional[EquipmentsRelStructure] = field(
+    equipments: EquipmentsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

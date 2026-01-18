@@ -72,47 +72,47 @@ class BinaryObjectType:
         xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">string</ns1:PrimitiveType>
     """
 
-    value: Optional[bytes] = field(
+    value: bytes | None = field(
         default=None,
         metadata={
             "required": True,
             "format": "base64",
         },
     )
-    format: Optional[str] = field(
+    format: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    mime_code: Optional[str] = field(
+    mime_code: str | None = field(
         default=None,
         metadata={
             "name": "mimeCode",
             "type": "Attribute",
         },
     )
-    encoding_code: Optional[str] = field(
+    encoding_code: str | None = field(
         default=None,
         metadata={
             "name": "encodingCode",
             "type": "Attribute",
         },
     )
-    character_set_code: Optional[str] = field(
+    character_set_code: str | None = field(
         default=None,
         metadata={
             "name": "characterSetCode",
             "type": "Attribute",
         },
     )
-    uri: Optional[str] = field(
+    uri: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    file_name: Optional[str] = field(
+    file_name: str | None = field(
         default=None,
         metadata={
             "name": "fileName",

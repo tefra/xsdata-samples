@@ -31,9 +31,7 @@ class SiteMeasurements:
     :ivar site_measurements_extension:
     """
 
-    measurement_site_reference: Optional[
-        MeasurementSiteRecordVersionedReference
-    ] = field(
+    measurement_site_reference: MeasurementSiteRecordVersionedReference | None = field(
         default=None,
         metadata={
             "name": "measurementSiteReference",
@@ -42,7 +40,7 @@ class SiteMeasurements:
             "required": True,
         },
     )
-    measurement_time_default: Optional[XmlDateTime] = field(
+    measurement_time_default: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "measurementTimeDefault",
@@ -59,7 +57,7 @@ class SiteMeasurements:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    site_measurements_extension: Optional[ExtensionType] = field(
+    site_measurements_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "siteMeasurementsExtension",

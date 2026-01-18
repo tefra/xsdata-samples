@@ -12,7 +12,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class RiskType:
-    risk_element: Optional[RiskElementInvolvementType] = field(
+    risk_element: RiskElementInvolvementType | None = field(
         default=None,
         metadata={
             "name": "RiskElement",

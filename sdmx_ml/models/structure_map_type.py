@@ -50,7 +50,7 @@ class StructureMapType(StructureMapBaseType):
         source or target component in the mapping.
     """
 
-    source: Optional[str] = field(
+    source: str | None = field(
         default=None,
         metadata={
             "name": "Source",
@@ -60,7 +60,7 @@ class StructureMapType(StructureMapBaseType):
             "pattern": r".+\.datastructure\.DataStructure=.+|.+\.datastructure\.Dataflow=.+|.+\.metadatastructure\.MetadataStructure=.+|.+\.metadatastructure\.Metadataflow=.+",
         },
     )
-    target: Optional[str] = field(
+    target: str | None = field(
         default=None,
         metadata={
             "name": "Target",

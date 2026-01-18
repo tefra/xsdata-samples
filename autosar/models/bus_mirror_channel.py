@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -32,7 +34,7 @@ class BusMirrorChannel:
     class Meta:
         name = "BUS-MIRROR-CHANNEL"
 
-    bus_mirror_network_id: Optional[PositiveInteger] = field(
+    bus_mirror_network_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "BUS-MIRROR-NETWORK-ID",
@@ -40,7 +42,7 @@ class BusMirrorChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    channels: Optional["BusMirrorChannel.Channels"] = field(
+    channels: BusMirrorChannel.Channels | None = field(
         default=None,
         metadata={
             "name": "CHANNELS",
@@ -48,14 +50,14 @@ class BusMirrorChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

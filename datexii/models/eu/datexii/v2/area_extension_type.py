@@ -14,7 +14,7 @@ class AreaExtensionType:
     class Meta:
         name = "_AreaExtensionType"
 
-    openlr_extended_area: Optional[OpenlrExtendedArea] = field(
+    openlr_extended_area: OpenlrExtendedArea | None = field(
         default=None,
         metadata={
             "name": "openlrExtendedArea",
@@ -22,7 +22,7 @@ class AreaExtensionType:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    area_extended: Optional[AreaExtended] = field(
+    area_extended: AreaExtended | None = field(
         default=None,
         metadata={
             "name": "areaExtended",

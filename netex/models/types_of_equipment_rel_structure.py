@@ -15,7 +15,7 @@ class TypesOfEquipmentRelStructure(OneToManyRelationshipStructure):
         name = "typesOfEquipment_RelStructure"
 
     type_of_equipment_ref_or_type_of_equipment: Iterable[
-        Union[TypeOfEquipmentRef, TypeOfEquipment]
+        TypeOfEquipmentRef | TypeOfEquipment
     ] = field(
         default_factory=list,
         metadata={

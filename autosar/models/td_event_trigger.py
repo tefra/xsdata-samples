@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -106,7 +108,7 @@ class TdEventTrigger:
     class Meta:
         name = "TD-EVENT-TRIGGER"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -115,7 +117,7 @@ class TdEventTrigger:
             "required": True,
         },
     )
-    short_name_fragments: Optional["TdEventTrigger.ShortNameFragments"] = (
+    short_name_fragments: TdEventTrigger.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -125,7 +127,7 @@ class TdEventTrigger:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -133,7 +135,7 @@ class TdEventTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -141,7 +143,7 @@ class TdEventTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -149,7 +151,7 @@ class TdEventTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -157,7 +159,7 @@ class TdEventTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -165,7 +167,7 @@ class TdEventTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["TdEventTrigger.Annotations"] = field(
+    annotations: TdEventTrigger.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -173,7 +175,7 @@ class TdEventTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -181,7 +183,7 @@ class TdEventTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    occurrence_expression: Optional[TdEventOccurrenceExpression] = field(
+    occurrence_expression: TdEventOccurrenceExpression | None = field(
         default=None,
         metadata={
             "name": "OCCURRENCE-EXPRESSION",
@@ -189,7 +191,7 @@ class TdEventTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    component_iref: Optional[ComponentInCompositionInstanceRef] = field(
+    component_iref: ComponentInCompositionInstanceRef | None = field(
         default=None,
         metadata={
             "name": "COMPONENT-IREF",
@@ -197,7 +199,7 @@ class TdEventTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_external: Optional[Boolean] = field(
+    is_external: Boolean | None = field(
         default=None,
         metadata={
             "name": "IS-EXTERNAL",
@@ -205,9 +207,7 @@ class TdEventTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_blueprint_ref: Optional[
-        "TdEventTrigger.PortPrototypeBlueprintRef"
-    ] = field(
+    port_prototype_blueprint_ref: TdEventTrigger.PortPrototypeBlueprintRef | None = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-BLUEPRINT-REF",
@@ -215,7 +215,7 @@ class TdEventTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_ref: Optional["TdEventTrigger.PortRef"] = field(
+    port_ref: TdEventTrigger.PortRef | None = field(
         default=None,
         metadata={
             "name": "PORT-REF",
@@ -223,7 +223,7 @@ class TdEventTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_event_trigger_type: Optional[TdEventTriggerTypeEnum] = field(
+    td_event_trigger_type: TdEventTriggerTypeEnum | None = field(
         default=None,
         metadata={
             "name": "TD-EVENT-TRIGGER-TYPE",
@@ -231,7 +231,7 @@ class TdEventTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_ref: Optional["TdEventTrigger.TriggerRef"] = field(
+    trigger_ref: TdEventTrigger.TriggerRef | None = field(
         default=None,
         metadata={
             "name": "TRIGGER-REF",
@@ -239,14 +239,14 @@ class TdEventTrigger:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -254,7 +254,7 @@ class TdEventTrigger:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -286,7 +286,7 @@ class TdEventTrigger:
 
     @dataclass
     class PortPrototypeBlueprintRef(Ref):
-        dest: Optional[PortPrototypeBlueprintSubtypesEnum] = field(
+        dest: PortPrototypeBlueprintSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -297,7 +297,7 @@ class TdEventTrigger:
 
     @dataclass
     class PortRef(Ref):
-        dest: Optional[PortPrototypeSubtypesEnum] = field(
+        dest: PortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -308,7 +308,7 @@ class TdEventTrigger:
 
     @dataclass
     class TriggerRef(Ref):
-        dest: Optional[TriggerSubtypesEnum] = field(
+        dest: TriggerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

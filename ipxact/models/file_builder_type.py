@@ -28,7 +28,7 @@ class FileBuilderType:
     class Meta:
         name = "fileBuilderType"
 
-    file_type: Optional[FileType] = field(
+    file_type: FileType | None = field(
         default=None,
         metadata={
             "name": "fileType",
@@ -37,21 +37,21 @@ class FileBuilderType:
             "required": True,
         },
     )
-    command: Optional[StringExpression] = field(
+    command: StringExpression | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    flags: Optional[StringExpression] = field(
+    flags: StringExpression | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    replace_default_flags: Optional[UnsignedBitExpression] = field(
+    replace_default_flags: UnsignedBitExpression | None = field(
         default=None,
         metadata={
             "name": "replaceDefaultFlags",
@@ -59,7 +59,7 @@ class FileBuilderType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

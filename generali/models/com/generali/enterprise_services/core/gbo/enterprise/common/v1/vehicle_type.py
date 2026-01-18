@@ -21,7 +21,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class VehicleType(RiskElementType):
-    manufactured_date: Optional[DateType] = field(
+    manufactured_date: DateType | None = field(
         default=None,
         metadata={
             "name": "ManufacturedDate",
@@ -29,7 +29,7 @@ class VehicleType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    manufacturer: Optional[TextType] = field(
+    manufacturer: TextType | None = field(
         default=None,
         metadata={
             "name": "Manufacturer",
@@ -37,7 +37,7 @@ class VehicleType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    model: Optional[TextType] = field(
+    model: TextType | None = field(
         default=None,
         metadata={
             "name": "Model",
@@ -45,7 +45,7 @@ class VehicleType(RiskElementType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
         },
     )
-    vehicle_identifier: Optional[CodeType] = field(
+    vehicle_identifier: CodeType | None = field(
         default=None,
         metadata={
             "name": "VehicleIdentifier",

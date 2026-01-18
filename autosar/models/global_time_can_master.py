@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -102,7 +104,7 @@ class GlobalTimeCanMaster:
     class Meta:
         name = "GLOBAL-TIME-CAN-MASTER"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -111,9 +113,7 @@ class GlobalTimeCanMaster:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "GlobalTimeCanMaster.ShortNameFragments"
-    ] = field(
+    short_name_fragments: GlobalTimeCanMaster.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -121,7 +121,7 @@ class GlobalTimeCanMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -129,7 +129,7 @@ class GlobalTimeCanMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -137,7 +137,7 @@ class GlobalTimeCanMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -145,7 +145,7 @@ class GlobalTimeCanMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -153,7 +153,7 @@ class GlobalTimeCanMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -161,7 +161,7 @@ class GlobalTimeCanMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["GlobalTimeCanMaster.Annotations"] = field(
+    annotations: GlobalTimeCanMaster.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -169,9 +169,7 @@ class GlobalTimeCanMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    communication_connector_ref: Optional[
-        "GlobalTimeCanMaster.CommunicationConnectorRef"
-    ] = field(
+    communication_connector_ref: GlobalTimeCanMaster.CommunicationConnectorRef | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CONNECTOR-REF",
@@ -179,7 +177,7 @@ class GlobalTimeCanMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    immediate_resume_time: Optional[TimeValue] = field(
+    immediate_resume_time: TimeValue | None = field(
         default=None,
         metadata={
             "name": "IMMEDIATE-RESUME-TIME",
@@ -187,7 +185,7 @@ class GlobalTimeCanMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_system_wide_global_time_master: Optional[Boolean] = field(
+    is_system_wide_global_time_master: Boolean | None = field(
         default=None,
         metadata={
             "name": "IS-SYSTEM-WIDE-GLOBAL-TIME-MASTER",
@@ -195,7 +193,7 @@ class GlobalTimeCanMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sync_period: Optional[TimeValue] = field(
+    sync_period: TimeValue | None = field(
         default=None,
         metadata={
             "name": "SYNC-PERIOD",
@@ -203,7 +201,7 @@ class GlobalTimeCanMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -211,7 +209,7 @@ class GlobalTimeCanMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crc_secured: Optional[GlobalTimeCrcSupportEnum] = field(
+    crc_secured: GlobalTimeCrcSupportEnum | None = field(
         default=None,
         metadata={
             "name": "CRC-SECURED",
@@ -219,7 +217,7 @@ class GlobalTimeCanMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    follow_up_offset: Optional[TimeValue] = field(
+    follow_up_offset: TimeValue | None = field(
         default=None,
         metadata={
             "name": "FOLLOW-UP-OFFSET",
@@ -227,7 +225,7 @@ class GlobalTimeCanMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sync_confirmation_timeout: Optional[TimeValue] = field(
+    sync_confirmation_timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "SYNC-CONFIRMATION-TIMEOUT",
@@ -235,14 +233,14 @@ class GlobalTimeCanMaster:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -250,7 +248,7 @@ class GlobalTimeCanMaster:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -282,7 +280,7 @@ class GlobalTimeCanMaster:
 
     @dataclass
     class CommunicationConnectorRef(Ref):
-        dest: Optional[CommunicationConnectorSubtypesEnum] = field(
+        dest: CommunicationConnectorSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

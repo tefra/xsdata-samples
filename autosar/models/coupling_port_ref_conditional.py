@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,9 +33,7 @@ class CouplingPortRefConditional:
     class Meta:
         name = "COUPLING-PORT-REF-CONDITIONAL"
 
-    coupling_port_ref: Optional[
-        "CouplingPortRefConditional.CouplingPortRef"
-    ] = field(
+    coupling_port_ref: CouplingPortRefConditional.CouplingPortRef | None = field(
         default=None,
         metadata={
             "name": "COUPLING-PORT-REF",
@@ -41,7 +41,7 @@ class CouplingPortRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -49,14 +49,14 @@ class CouplingPortRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +67,7 @@ class CouplingPortRefConditional:
 
     @dataclass
     class CouplingPortRef(Ref):
-        dest: Optional[CouplingPortSubtypesEnum] = field(
+        dest: CouplingPortSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

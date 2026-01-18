@@ -14,7 +14,7 @@ class TimingPointVersionStructure(PointVersionStructure):
     class Meta:
         name = "TimingPoint_VersionStructure"
 
-    timing_point_status: Optional[TimingPointStatusEnumeration] = field(
+    timing_point_status: TimingPointStatusEnumeration | None = field(
         default=None,
         metadata={
             "name": "TimingPointStatus",
@@ -22,7 +22,7 @@ class TimingPointVersionStructure(PointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    allowed_for_wait_time: Optional[XmlDuration] = field(
+    allowed_for_wait_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "AllowedForWaitTime",

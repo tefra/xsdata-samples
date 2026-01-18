@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import Any, ForwardRef, Optional, Union
@@ -39,7 +41,7 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
     class Meta:
         name = "TransportOrganisation_VersionStructure"
 
-    country_ref: Optional[CountryRef] = field(
+    country_ref: CountryRef | None = field(
         default=None,
         metadata={
             "name": "CountryRef",
@@ -47,13 +49,7 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    address: Optional[
-        Union[
-            PostalAddress,
-            RoadAddress,
-            "TransportOrganisationVersionStructure.Address",
-        ]
-    ] = field(
+    address: PostalAddress | RoadAddress | TransportOrganisationVersionStructure.Address | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -78,7 +74,7 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
             ),
         },
     )
-    primary_mode: Optional[AllModesEnumeration] = field(
+    primary_mode: AllModesEnumeration | None = field(
         default=None,
         metadata={
             "name": "PrimaryMode",
@@ -86,22 +82,7 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
-        Union[
-            AirSubmode,
-            BusSubmode,
-            CoachSubmode,
-            FunicularSubmode,
-            MetroSubmode,
-            TramSubmode,
-            TelecabinSubmode,
-            RailSubmode,
-            WaterSubmode,
-            SnowAndIceSubmode,
-            TaxiSubmode,
-            SelfDriveSubmode,
-        ]
-    ] = field(
+    choice: AirSubmode | BusSubmode | CoachSubmode | FunicularSubmode | MetroSubmode | TramSubmode | TelecabinSubmode | RailSubmode | WaterSubmode | SnowAndIceSubmode | TaxiSubmode | SelfDriveSubmode | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -169,16 +150,7 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
             ),
         },
     )
-    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: Optional[
-        Union[
-            PersonalModeOfOperationRef,
-            VehiclePoolingRef,
-            VehicleSharingRef,
-            VehicleRentalRef,
-            FlexibleModeOfOperationRef,
-            ScheduledModeOfOperationRef,
-        ]
-    ] = field(
+    mode_of_operation_ref_or_alternative_mode_of_operation_ref_or_conventional_mode_of_operation_ref: PersonalModeOfOperationRef | VehiclePoolingRef | VehicleSharingRef | VehicleRentalRef | FlexibleModeOfOperationRef | ScheduledModeOfOperationRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -225,7 +197,7 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
             "tokens": True,
         },
     )
-    customer_service_contact_details: Optional[ContactStructure] = field(
+    customer_service_contact_details: ContactStructure | None = field(
         default=None,
         metadata={
             "name": "CustomerServiceContactDetails",
@@ -233,14 +205,14 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    departments: Optional[DepartmentsRelStructure] = field(
+    departments: DepartmentsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    other_modes: Optional[ModeRefsRelStructure] = field(
+    other_modes: ModeRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "otherModes",

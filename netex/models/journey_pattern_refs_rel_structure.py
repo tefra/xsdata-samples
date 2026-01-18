@@ -17,12 +17,7 @@ class JourneyPatternRefsRelStructure(OneToManyRelationshipStructure):
         name = "journeyPatternRefs_RelStructure"
 
     journey_pattern_ref: Iterable[
-        Union[
-            ServiceJourneyPatternRef,
-            ServicePatternRef,
-            DeadRunJourneyPatternRef,
-            JourneyPatternRef,
-        ]
+        ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef
     ] = field(
         default_factory=list,
         metadata={

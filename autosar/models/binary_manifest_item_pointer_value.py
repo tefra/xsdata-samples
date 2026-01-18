@@ -32,7 +32,7 @@ class BinaryManifestItemPointerValue:
     class Meta:
         name = "BINARY-MANIFEST-ITEM-POINTER-VALUE"
 
-    address: Optional[Address] = field(
+    address: Address | None = field(
         default=None,
         metadata={
             "name": "ADDRESS",
@@ -40,7 +40,7 @@ class BinaryManifestItemPointerValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbol: Optional[SymbolString] = field(
+    symbol: SymbolString | None = field(
         default=None,
         metadata={
             "name": "SYMBOL",
@@ -48,14 +48,14 @@ class BinaryManifestItemPointerValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

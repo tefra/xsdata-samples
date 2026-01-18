@@ -19,7 +19,7 @@ class PointCoordinates:
     :ivar point_coordinates_extension:
     """
 
-    latitude: Optional[float] = field(
+    latitude: float | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -27,7 +27,7 @@ class PointCoordinates:
             "required": True,
         },
     )
-    longitude: Optional[float] = field(
+    longitude: float | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -35,7 +35,7 @@ class PointCoordinates:
             "required": True,
         },
     )
-    point_coordinates_extension: Optional[ExtensionType] = field(
+    point_coordinates_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "pointCoordinatesExtension",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -35,9 +37,7 @@ class ModeDrivenTransmissionModeCondition:
     class Meta:
         name = "MODE-DRIVEN-TRANSMISSION-MODE-CONDITION"
 
-    mode_declaration_refs: Optional[
-        "ModeDrivenTransmissionModeCondition.ModeDeclarationRefs"
-    ] = field(
+    mode_declaration_refs: ModeDrivenTransmissionModeCondition.ModeDeclarationRefs | None = field(
         default=None,
         metadata={
             "name": "MODE-DECLARATION-REFS",
@@ -45,14 +45,14 @@ class ModeDrivenTransmissionModeCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -64,7 +64,7 @@ class ModeDrivenTransmissionModeCondition:
     @dataclass
     class ModeDeclarationRefs:
         mode_declaration_ref: list[
-            "ModeDrivenTransmissionModeCondition.ModeDeclarationRefs.ModeDeclarationRef"
+            ModeDrivenTransmissionModeCondition.ModeDeclarationRefs.ModeDeclarationRef
         ] = field(
             default_factory=list,
             metadata={
@@ -76,7 +76,7 @@ class ModeDrivenTransmissionModeCondition:
 
         @dataclass
         class ModeDeclarationRef(Ref):
-            dest: Optional[ModeDeclarationSubtypesEnum] = field(
+            dest: ModeDeclarationSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

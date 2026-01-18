@@ -46,7 +46,7 @@ class IndividualVehicleDataValues(TrafficData):
     :ivar individual_vehicle_data_values_extension:
     """
 
-    individual_vehicle_speed: Optional[SpeedValue] = field(
+    individual_vehicle_speed: SpeedValue | None = field(
         default=None,
         metadata={
             "name": "individualVehicleSpeed",
@@ -54,7 +54,7 @@ class IndividualVehicleDataValues(TrafficData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    arrival_time: Optional[DateTimeValue] = field(
+    arrival_time: DateTimeValue | None = field(
         default=None,
         metadata={
             "name": "arrivalTime",
@@ -62,7 +62,7 @@ class IndividualVehicleDataValues(TrafficData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    exit_time: Optional[DateTimeValue] = field(
+    exit_time: DateTimeValue | None = field(
         default=None,
         metadata={
             "name": "exitTime",
@@ -70,7 +70,7 @@ class IndividualVehicleDataValues(TrafficData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    passage_duration_time: Optional[DurationValue] = field(
+    passage_duration_time: DurationValue | None = field(
         default=None,
         metadata={
             "name": "passageDurationTime",
@@ -78,7 +78,7 @@ class IndividualVehicleDataValues(TrafficData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    presence_duration_time: Optional[DurationValue] = field(
+    presence_duration_time: DurationValue | None = field(
         default=None,
         metadata={
             "name": "presenceDurationTime",
@@ -86,7 +86,7 @@ class IndividualVehicleDataValues(TrafficData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    time_gap: Optional[DurationValue] = field(
+    time_gap: DurationValue | None = field(
         default=None,
         metadata={
             "name": "timeGap",
@@ -94,7 +94,7 @@ class IndividualVehicleDataValues(TrafficData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    time_headway: Optional[DurationValue] = field(
+    time_headway: DurationValue | None = field(
         default=None,
         metadata={
             "name": "timeHeadway",
@@ -102,7 +102,7 @@ class IndividualVehicleDataValues(TrafficData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    distance_gap: Optional[FloatingPointMetreDistanceValue] = field(
+    distance_gap: FloatingPointMetreDistanceValue | None = field(
         default=None,
         metadata={
             "name": "distanceGap",
@@ -110,7 +110,7 @@ class IndividualVehicleDataValues(TrafficData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    distance_headway: Optional[FloatingPointMetreDistanceValue] = field(
+    distance_headway: FloatingPointMetreDistanceValue | None = field(
         default=None,
         metadata={
             "name": "distanceHeadway",
@@ -118,7 +118,7 @@ class IndividualVehicleDataValues(TrafficData):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    individual_vehicle_data_values_extension: Optional[ExtensionType] = field(
+    individual_vehicle_data_values_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "individualVehicleDataValuesExtension",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -27,7 +29,7 @@ class GroupSelector:
         name = "groupSelector"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    name: list["GroupSelector.Name"] = field(
+    name: list[GroupSelector.Name] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -41,7 +43,7 @@ class GroupSelector:
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -57,7 +59,7 @@ class GroupSelector:
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

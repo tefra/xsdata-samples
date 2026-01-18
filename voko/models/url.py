@@ -7,7 +7,7 @@ class Url:
     class Meta:
         name = "url"
 
-    ref: Optional[str] = field(
+    ref: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -31,7 +31,7 @@ class RemotingTechnology:
     class Meta:
         name = "REMOTING-TECHNOLOGY"
 
-    name: Optional[RemotingTechnologyEnum] = field(
+    name: RemotingTechnologyEnum | None = field(
         default=None,
         metadata={
             "name": "NAME",
@@ -39,7 +39,7 @@ class RemotingTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    version: Optional[String] = field(
+    version: String | None = field(
         default=None,
         metadata={
             "name": "VERSION",
@@ -47,14 +47,14 @@ class RemotingTechnology:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

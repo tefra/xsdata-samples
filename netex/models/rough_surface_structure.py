@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class RoughSurfaceStructure(AccessEquipmentVersionStructure):
-    surface_type: Optional[SurfaceTypeEnumeration] = field(
+    surface_type: SurfaceTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "SurfaceType",
@@ -18,7 +18,7 @@ class RoughSurfaceStructure(AccessEquipmentVersionStructure):
             "required": True,
         },
     )
-    visual_contrast: Optional[bool] = field(
+    visual_contrast: bool | None = field(
         default=None,
         metadata={
             "name": "VisualContrast",
@@ -26,7 +26,7 @@ class RoughSurfaceStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    suitable_for_cycles: Optional[bool] = field(
+    suitable_for_cycles: bool | None = field(
         default=None,
         metadata={
             "name": "SuitableForCycles",

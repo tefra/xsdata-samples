@@ -22,7 +22,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class EntitlementConstraintStructure:
-    period_constraint: Optional[SamePeriodEnumeration] = field(
+    period_constraint: SamePeriodEnumeration | None = field(
         default=None,
         metadata={
             "name": "PeriodConstraint",
@@ -30,7 +30,7 @@ class EntitlementConstraintStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    origin_constraint: Optional[SameStopEnumeration] = field(
+    origin_constraint: SameStopEnumeration | None = field(
         default=None,
         metadata={
             "name": "OriginConstraint",
@@ -38,7 +38,7 @@ class EntitlementConstraintStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination_constraint: Optional[SameStopEnumeration] = field(
+    destination_constraint: SameStopEnumeration | None = field(
         default=None,
         metadata={
             "name": "DestinationConstraint",
@@ -46,7 +46,7 @@ class EntitlementConstraintStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariff_zone_constraint: Optional[SameZoneEnumeration] = field(
+    tariff_zone_constraint: SameZoneEnumeration | None = field(
         default=None,
         metadata={
             "name": "TariffZoneConstraint",
@@ -54,7 +54,7 @@ class EntitlementConstraintStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    route_constraint: Optional[SameRouteEnumeration] = field(
+    route_constraint: SameRouteEnumeration | None = field(
         default=None,
         metadata={
             "name": "RouteConstraint",
@@ -62,7 +62,7 @@ class EntitlementConstraintStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_constraint: Optional[SameRouteEnumeration] = field(
+    direction_constraint: SameRouteEnumeration | None = field(
         default=None,
         metadata={
             "name": "DirectionConstraint",
@@ -70,7 +70,7 @@ class EntitlementConstraintStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operator_constraint: Optional[SameOperatorEnumeration] = field(
+    operator_constraint: SameOperatorEnumeration | None = field(
         default=None,
         metadata={
             "name": "OperatorConstraint",
@@ -78,9 +78,7 @@ class EntitlementConstraintStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_product_category_constraint: Optional[
-        SameTypeOfProductCategoryEnumeration
-    ] = field(
+    type_of_product_category_constraint: SameTypeOfProductCategoryEnumeration | None = field(
         default=None,
         metadata={
             "name": "TypeOfProductCategoryConstraint",
@@ -88,7 +86,7 @@ class EntitlementConstraintStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    class_of_use_constraint: Optional[SameClassOfUseEnumeration] = field(
+    class_of_use_constraint: SameClassOfUseEnumeration | None = field(
         default=None,
         metadata={
             "name": "ClassOfUseConstraint",
@@ -96,9 +94,7 @@ class EntitlementConstraintStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_travel_document_constraint: Optional[
-        SameTypeOfTravelDocumentEnumeration
-    ] = field(
+    type_of_travel_document_constraint: SameTypeOfTravelDocumentEnumeration | None = field(
         default=None,
         metadata={
             "name": "TypeOfTravelDocumentConstraint",
@@ -106,7 +102,7 @@ class EntitlementConstraintStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_constraint: Optional[SameJourneyEnumeration] = field(
+    journey_constraint: SameJourneyEnumeration | None = field(
         default=None,
         metadata={
             "name": "JourneyConstraint",
@@ -114,7 +110,7 @@ class EntitlementConstraintStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    user_constraint: Optional[SameUserEnumeration] = field(
+    user_constraint: SameUserEnumeration | None = field(
         default=None,
         metadata={
             "name": "UserConstraint",
@@ -122,7 +118,7 @@ class EntitlementConstraintStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    specific_to_profiles: Optional[UserProfileRefsRelStructure] = field(
+    specific_to_profiles: UserProfileRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "specificToProfiles",

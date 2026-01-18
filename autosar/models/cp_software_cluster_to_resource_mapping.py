@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -92,7 +94,7 @@ class CpSoftwareClusterToResourceMapping:
     class Meta:
         name = "CP-SOFTWARE-CLUSTER-TO-RESOURCE-MAPPING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -101,9 +103,7 @@ class CpSoftwareClusterToResourceMapping:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "CpSoftwareClusterToResourceMapping.ShortNameFragments"
-    ] = field(
+    short_name_fragments: CpSoftwareClusterToResourceMapping.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -111,7 +111,7 @@ class CpSoftwareClusterToResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -119,7 +119,7 @@ class CpSoftwareClusterToResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -127,7 +127,7 @@ class CpSoftwareClusterToResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -135,7 +135,7 @@ class CpSoftwareClusterToResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -143,7 +143,7 @@ class CpSoftwareClusterToResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -151,7 +151,7 @@ class CpSoftwareClusterToResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["CpSoftwareClusterToResourceMapping.Annotations"] = (
+    annotations: CpSoftwareClusterToResourceMapping.Annotations | None = (
         field(
             default=None,
             metadata={
@@ -161,9 +161,7 @@ class CpSoftwareClusterToResourceMapping:
             },
         )
     )
-    provider_ref: Optional[
-        "CpSoftwareClusterToResourceMapping.ProviderRef"
-    ] = field(
+    provider_ref: CpSoftwareClusterToResourceMapping.ProviderRef | None = field(
         default=None,
         metadata={
             "name": "PROVIDER-REF",
@@ -171,9 +169,7 @@ class CpSoftwareClusterToResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    requester_refs: Optional[
-        "CpSoftwareClusterToResourceMapping.RequesterRefs"
-    ] = field(
+    requester_refs: CpSoftwareClusterToResourceMapping.RequesterRefs | None = field(
         default=None,
         metadata={
             "name": "REQUESTER-REFS",
@@ -181,9 +177,7 @@ class CpSoftwareClusterToResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_resource_ref: Optional[
-        "CpSoftwareClusterToResourceMapping.ServiceResourceRef"
-    ] = field(
+    service_resource_ref: CpSoftwareClusterToResourceMapping.ServiceResourceRef | None = field(
         default=None,
         metadata={
             "name": "SERVICE-RESOURCE-REF",
@@ -191,7 +185,7 @@ class CpSoftwareClusterToResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -199,14 +193,14 @@ class CpSoftwareClusterToResourceMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -214,7 +208,7 @@ class CpSoftwareClusterToResourceMapping:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -246,7 +240,7 @@ class CpSoftwareClusterToResourceMapping:
 
     @dataclass
     class ProviderRef(Ref):
-        dest: Optional[CpSoftwareClusterSubtypesEnum] = field(
+        dest: CpSoftwareClusterSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -258,7 +252,7 @@ class CpSoftwareClusterToResourceMapping:
     @dataclass
     class RequesterRefs:
         requester_ref: list[
-            "CpSoftwareClusterToResourceMapping.RequesterRefs.RequesterRef"
+            CpSoftwareClusterToResourceMapping.RequesterRefs.RequesterRef
         ] = field(
             default_factory=list,
             metadata={
@@ -270,7 +264,7 @@ class CpSoftwareClusterToResourceMapping:
 
         @dataclass
         class RequesterRef(Ref):
-            dest: Optional[CpSoftwareClusterSubtypesEnum] = field(
+            dest: CpSoftwareClusterSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -281,7 +275,7 @@ class CpSoftwareClusterToResourceMapping:
 
     @dataclass
     class ServiceResourceRef(Ref):
-        dest: Optional[CpSoftwareClusterServiceResourceSubtypesEnum] = field(
+        dest: CpSoftwareClusterServiceResourceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -21,7 +21,7 @@ class PassengerSafetyEquipmentVersionStructure(
     class Meta:
         name = "PassengerSafetyEquipment_VersionStructure"
 
-    cctv: Optional[bool] = field(
+    cctv: bool | None = field(
         default=None,
         metadata={
             "name": "Cctv",
@@ -29,7 +29,7 @@ class PassengerSafetyEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    mobile_phone_coverage: Optional[bool] = field(
+    mobile_phone_coverage: bool | None = field(
         default=None,
         metadata={
             "name": "MobilePhoneCoverage",
@@ -37,7 +37,7 @@ class PassengerSafetyEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    panic_button: Optional[bool] = field(
+    panic_button: bool | None = field(
         default=None,
         metadata={
             "name": "PanicButton",
@@ -45,7 +45,7 @@ class PassengerSafetyEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sos_panel: Optional[bool] = field(
+    sos_panel: bool | None = field(
         default=None,
         metadata={
             "name": "SosPanel",
@@ -53,7 +53,7 @@ class PassengerSafetyEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    height_of_sos_panel: Optional[Decimal] = field(
+    height_of_sos_panel: Decimal | None = field(
         default=None,
         metadata={
             "name": "HeightOfSosPanel",
@@ -61,7 +61,7 @@ class PassengerSafetyEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    lighting: Optional[LightingEnumeration] = field(
+    lighting: LightingEnumeration | None = field(
         default=None,
         metadata={
             "name": "Lighting",
@@ -69,7 +69,7 @@ class PassengerSafetyEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    audio_announcements: Optional[bool] = field(
+    audio_announcements: bool | None = field(
         default=None,
         metadata={
             "name": "AudioAnnouncements",
@@ -77,7 +77,7 @@ class PassengerSafetyEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    acoustic_announcements: Optional[bool] = field(
+    acoustic_announcements: bool | None = field(
         default=None,
         metadata={
             "name": "AcousticAnnouncements",
@@ -85,7 +85,7 @@ class PassengerSafetyEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    audio_announcement_type: Optional[AudioAnnouncementTypeEnumeration] = (
+    audio_announcement_type: AudioAnnouncementTypeEnumeration | None = (
         field(
             default=None,
             metadata={
@@ -95,7 +95,7 @@ class PassengerSafetyEquipmentVersionStructure(
             },
         )
     )
-    audio_announcements_trigger: Optional[AudioTriggerMethodEnumeration] = (
+    audio_announcements_trigger: AudioTriggerMethodEnumeration | None = (
         field(
             default=None,
             metadata={

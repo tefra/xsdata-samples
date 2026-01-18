@@ -54,7 +54,7 @@ class InstantiationDataDefProps:
     class Meta:
         name = "INSTANTIATION-DATA-DEF-PROPS"
 
-    parameter_instance: Optional[AutosarParameterRef] = field(
+    parameter_instance: AutosarParameterRef | None = field(
         default=None,
         metadata={
             "name": "PARAMETER-INSTANCE",
@@ -62,7 +62,7 @@ class InstantiationDataDefProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_data_def_props: Optional[SwDataDefProps] = field(
+    sw_data_def_props: SwDataDefProps | None = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEF-PROPS",
@@ -70,7 +70,7 @@ class InstantiationDataDefProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variable_instance: Optional[AutosarVariableRef] = field(
+    variable_instance: AutosarVariableRef | None = field(
         default=None,
         metadata={
             "name": "VARIABLE-INSTANCE",
@@ -78,7 +78,7 @@ class InstantiationDataDefProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -86,14 +86,14 @@ class InstantiationDataDefProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -12,7 +12,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class RailwayTrackType(ExpansiveStructureType):
-    electrified: Optional[bool] = field(
+    electrified: bool | None = field(
         default=None,
         metadata={
             "name": "Electrified",

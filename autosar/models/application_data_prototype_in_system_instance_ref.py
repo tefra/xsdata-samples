@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -44,9 +46,7 @@ class ApplicationDataPrototypeInSystemInstanceRef:
     class Meta:
         name = "APPLICATION-DATA-PROTOTYPE-IN-SYSTEM-INSTANCE-REF"
 
-    context_composition_ref: Optional[
-        "ApplicationDataPrototypeInSystemInstanceRef.ContextCompositionRef"
-    ] = field(
+    context_composition_ref: ApplicationDataPrototypeInSystemInstanceRef.ContextCompositionRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-COMPOSITION-REF",
@@ -55,7 +55,7 @@ class ApplicationDataPrototypeInSystemInstanceRef:
         },
     )
     context_component_ref: list[
-        "ApplicationDataPrototypeInSystemInstanceRef.ContextComponentRef"
+        ApplicationDataPrototypeInSystemInstanceRef.ContextComponentRef
     ] = field(
         default_factory=list,
         metadata={
@@ -64,9 +64,7 @@ class ApplicationDataPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_port_ref: Optional[
-        "ApplicationDataPrototypeInSystemInstanceRef.ContextPortRef"
-    ] = field(
+    context_port_ref: ApplicationDataPrototypeInSystemInstanceRef.ContextPortRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-PORT-REF",
@@ -74,9 +72,7 @@ class ApplicationDataPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    root_data_prototype_ref: Optional[
-        "ApplicationDataPrototypeInSystemInstanceRef.RootDataPrototypeRef"
-    ] = field(
+    root_data_prototype_ref: ApplicationDataPrototypeInSystemInstanceRef.RootDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "ROOT-DATA-PROTOTYPE-REF",
@@ -85,7 +81,7 @@ class ApplicationDataPrototypeInSystemInstanceRef:
         },
     )
     context_data_prototype_ref: list[
-        "ApplicationDataPrototypeInSystemInstanceRef.ContextDataPrototypeRef"
+        ApplicationDataPrototypeInSystemInstanceRef.ContextDataPrototypeRef
     ] = field(
         default_factory=list,
         metadata={
@@ -94,9 +90,7 @@ class ApplicationDataPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_data_prototype_ref: Optional[
-        "ApplicationDataPrototypeInSystemInstanceRef.TargetDataPrototypeRef"
-    ] = field(
+    target_data_prototype_ref: ApplicationDataPrototypeInSystemInstanceRef.TargetDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-DATA-PROTOTYPE-REF",
@@ -104,14 +98,14 @@ class ApplicationDataPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -122,7 +116,7 @@ class ApplicationDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextCompositionRef(Ref):
-        dest: Optional[RootSwCompositionPrototypeSubtypesEnum] = field(
+        dest: RootSwCompositionPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -133,7 +127,7 @@ class ApplicationDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -144,7 +138,7 @@ class ApplicationDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextPortRef(Ref):
-        dest: Optional[PortPrototypeSubtypesEnum] = field(
+        dest: PortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -155,7 +149,7 @@ class ApplicationDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class RootDataPrototypeRef(Ref):
-        dest: Optional[AutosarDataPrototypeSubtypesEnum] = field(
+        dest: AutosarDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -166,9 +160,7 @@ class ApplicationDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextDataPrototypeRef(Ref):
-        dest: Optional[
-            ApplicationCompositeElementDataPrototypeSubtypesEnum
-        ] = field(
+        dest: ApplicationCompositeElementDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -179,7 +171,7 @@ class ApplicationDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class TargetDataPrototypeRef(Ref):
-        dest: Optional[DataPrototypeSubtypesEnum] = field(
+        dest: DataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

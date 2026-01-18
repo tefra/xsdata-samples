@@ -31,20 +31,20 @@ class EEnum:
     class Meta:
         name = "E-ENUM"
 
-    value: Optional[EEnumSimple] = field(
+    value: EEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

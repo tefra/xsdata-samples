@@ -41,7 +41,7 @@ class Impact:
     :ivar impact_extension:
     """
 
-    capacity_remaining: Optional[float] = field(
+    capacity_remaining: float | None = field(
         default=None,
         metadata={
             "name": "capacityRemaining",
@@ -49,7 +49,7 @@ class Impact:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    number_of_lanes_restricted: Optional[int] = field(
+    number_of_lanes_restricted: int | None = field(
         default=None,
         metadata={
             "name": "numberOfLanesRestricted",
@@ -57,7 +57,7 @@ class Impact:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    number_of_operational_lanes: Optional[int] = field(
+    number_of_operational_lanes: int | None = field(
         default=None,
         metadata={
             "name": "numberOfOperationalLanes",
@@ -65,7 +65,7 @@ class Impact:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    original_number_of_lanes: Optional[int] = field(
+    original_number_of_lanes: int | None = field(
         default=None,
         metadata={
             "name": "originalNumberOfLanes",
@@ -73,7 +73,7 @@ class Impact:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    residual_road_width: Optional[float] = field(
+    residual_road_width: float | None = field(
         default=None,
         metadata={
             "name": "residualRoadWidth",
@@ -81,7 +81,7 @@ class Impact:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    traffic_constriction_type: Optional[TrafficConstrictionTypeEnum] = field(
+    traffic_constriction_type: TrafficConstrictionTypeEnum | None = field(
         default=None,
         metadata={
             "name": "trafficConstrictionType",
@@ -89,14 +89,14 @@ class Impact:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    delays: Optional[Delays] = field(
+    delays: Delays | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    impact_extension: Optional[ExtensionType] = field(
+    impact_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "impactExtension",

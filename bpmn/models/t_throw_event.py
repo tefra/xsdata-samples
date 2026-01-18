@@ -42,7 +42,7 @@ class TThrowEvent(TEvent):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    input_set: Optional[InputSet] = field(
+    input_set: InputSet | None = field(
         default=None,
         metadata={
             "name": "inputSet",

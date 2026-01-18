@@ -24,7 +24,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "CappingRule_VersionedChildStructure"
 
-    maximum_distance: Optional[Decimal] = field(
+    maximum_distance: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumDistance",
@@ -32,7 +32,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    capping_period: Optional[CappingPeriodEnumeration] = field(
+    capping_period: CappingPeriodEnumeration | None = field(
         default=None,
         metadata={
             "name": "CappingPeriod",
@@ -49,7 +49,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
         },
     )
     preassigned_fare_product_ref: Iterable[
-        Union[SupplementProductRef, PreassignedFareProductRef]
+        SupplementProductRef | PreassignedFareProductRef
     ] = field(
         default_factory=list,
         metadata={
@@ -68,7 +68,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    validable_element_ref: Optional[ValidableElementRef] = field(
+    validable_element_ref: ValidableElementRef | None = field(
         default=None,
         metadata={
             "name": "ValidableElementRef",
@@ -76,13 +76,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[
-        Union[
-            GenericParameterAssignmentsRelStructure,
-            GenericParameterAssignment,
-            GenericParameterAssignmentInContext,
-        ]
-    ] = field(
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: GenericParameterAssignmentsRelStructure | GenericParameterAssignment | GenericParameterAssignmentInContext | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -105,7 +99,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    prices: Optional[CappingRulePricesRelStructure] = field(
+    prices: CappingRulePricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

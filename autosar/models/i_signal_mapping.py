@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -44,7 +46,7 @@ class ISignalMapping:
     class Meta:
         name = "I-SIGNAL-MAPPING"
 
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -52,7 +54,7 @@ class ISignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_signal_ref: Optional["ISignalMapping.SourceSignalRef"] = field(
+    source_signal_ref: ISignalMapping.SourceSignalRef | None = field(
         default=None,
         metadata={
             "name": "SOURCE-SIGNAL-REF",
@@ -60,7 +62,7 @@ class ISignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_signal_ref: Optional["ISignalMapping.TargetSignalRef"] = field(
+    target_signal_ref: ISignalMapping.TargetSignalRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-SIGNAL-REF",
@@ -68,7 +70,7 @@ class ISignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -76,14 +78,14 @@ class ISignalMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -94,7 +96,7 @@ class ISignalMapping:
 
     @dataclass
     class SourceSignalRef(Ref):
-        dest: Optional[ISignalTriggeringSubtypesEnum] = field(
+        dest: ISignalTriggeringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -105,7 +107,7 @@ class ISignalMapping:
 
     @dataclass
     class TargetSignalRef(Ref):
-        dest: Optional[ISignalTriggeringSubtypesEnum] = field(
+        dest: ISignalTriggeringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

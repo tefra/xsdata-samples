@@ -15,14 +15,7 @@ class UserNeedVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "UserNeed_VersionedChildStructure"
 
-    choice: Optional[
-        Union[
-            MobilityEnumeration,
-            PsychosensoryNeedEnumeration,
-            MedicalNeedEnumeration,
-            EncumbranceEnumeration,
-        ]
-    ] = field(
+    choice: MobilityEnumeration | PsychosensoryNeedEnumeration | MedicalNeedEnumeration | EncumbranceEnumeration | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -50,7 +43,7 @@ class UserNeedVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    excluded: Optional[bool] = field(
+    excluded: bool | None = field(
         default=None,
         metadata={
             "name": "Excluded",
@@ -58,7 +51,7 @@ class UserNeedVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    need_ranking: Optional[int] = field(
+    need_ranking: int | None = field(
         default=None,
         metadata={
             "name": "NeedRanking",

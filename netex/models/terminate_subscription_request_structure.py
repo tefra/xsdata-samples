@@ -15,7 +15,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
-    address: Optional[str] = field(
+    address: str | None = field(
         default=None,
         metadata={
             "name": "Address",
@@ -23,7 +23,7 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    requestor_ref: Optional[RequestorRef] = field(
+    requestor_ref: RequestorRef | None = field(
         default=None,
         metadata={
             "name": "RequestorRef",
@@ -32,7 +32,7 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
             "required": True,
         },
     )
-    message_identifier: Optional[MessageQualifierStructure] = field(
+    message_identifier: MessageQualifierStructure | None = field(
         default=None,
         metadata={
             "name": "MessageIdentifier",
@@ -40,7 +40,7 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_address: Optional[str] = field(
+    delegator_address: str | None = field(
         default=None,
         metadata={
             "name": "DelegatorAddress",
@@ -48,7 +48,7 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: Optional[ParticipantRefStructure] = field(
+    delegator_ref: ParticipantRefStructure | None = field(
         default=None,
         metadata={
             "name": "DelegatorRef",
@@ -56,7 +56,7 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscriber_ref: Optional[ParticipantRefStructure] = field(
+    subscriber_ref: ParticipantRefStructure | None = field(
         default=None,
         metadata={
             "name": "SubscriberRef",
@@ -65,7 +65,7 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
         },
     )
     all_or_subscription_ref: Iterable[
-        Union[EmptyType1, SubscriptionQualifierStructure]
+        EmptyType1 | SubscriptionQualifierStructure
     ] = field(
         default_factory=list,
         metadata={
@@ -84,7 +84,7 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
             ),
         },
     )
-    extensions: Optional[Extensions1] = field(
+    extensions: Extensions1 | None = field(
         default=None,
         metadata={
             "name": "Extensions",

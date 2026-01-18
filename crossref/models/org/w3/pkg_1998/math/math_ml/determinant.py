@@ -10,7 +10,7 @@ class Determinant:
         name = "determinant"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    any_element: Optional[object] = field(
+    any_element: object | None = field(
         default=None,
         metadata={
             "type": "Wildcard",

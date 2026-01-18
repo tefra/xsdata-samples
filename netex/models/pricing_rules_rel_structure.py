@@ -17,9 +17,7 @@ class PricingRulesRelStructure(FrameContainmentStructure):
         name = "pricingRules_RelStructure"
 
     pricing_rule: Iterable[
-        Union[
-            LimitingRuleInContext, LimitingRule, DiscountingRule, PricingRule
-        ]
+        LimitingRuleInContext | LimitingRule | DiscountingRule | PricingRule
     ] = field(
         default_factory=list,
         metadata={

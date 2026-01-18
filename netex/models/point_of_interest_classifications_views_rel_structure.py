@@ -21,9 +21,7 @@ class PointOfInterestClassificationsViewsRelStructure(
         name = "pointOfInterestClassificationsViews_RelStructure"
 
     point_of_interest_classification_ref_or_point_of_interest_classification_view: Iterable[
-        Union[
-            PointOfInterestClassificationRef, PointOfInterestClassificationView
-        ]
+        PointOfInterestClassificationRef | PointOfInterestClassificationView
     ] = field(
         default_factory=list,
         metadata={

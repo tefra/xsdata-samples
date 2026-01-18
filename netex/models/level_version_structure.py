@@ -21,7 +21,7 @@ class LevelVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Level_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -29,7 +29,7 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -37,7 +37,7 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -45,7 +45,7 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_code: Optional[str] = field(
+    public_code: str | None = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -53,7 +53,7 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_use: Optional[bool] = field(
+    public_use: bool | None = field(
         default=None,
         metadata={
             "name": "PublicUse",
@@ -61,7 +61,7 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    relative_level_order: Optional[int] = field(
+    relative_level_order: int | None = field(
         default=None,
         metadata={
             "name": "RelativeLevelOrder",
@@ -69,9 +69,7 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accessibility_assessment: Optional[
-        AccessibilityAssessmentVersionedChildStructure
-    ] = field(
+    accessibility_assessment: AccessibilityAssessmentVersionedChildStructure | None = field(
         default=None,
         metadata={
             "name": "AccessibilityAssessment",
@@ -79,7 +77,7 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    all_areas_wheelchair_accessible: Optional[bool] = field(
+    all_areas_wheelchair_accessible: bool | None = field(
         default=None,
         metadata={
             "name": "AllAreasWheelchairAccessible",
@@ -87,16 +85,7 @@ class LevelVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_place_ref_or_site_ref: Optional[
-        Union[
-            TaxiRankRef,
-            StopPlaceRef,
-            ParkingRef,
-            PointOfInterestRef,
-            ServiceSiteRef,
-            SiteRef,
-        ]
-    ] = field(
+    stop_place_ref_or_site_ref: TaxiRankRef | StopPlaceRef | ParkingRef | PointOfInterestRef | ServiceSiteRef | SiteRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

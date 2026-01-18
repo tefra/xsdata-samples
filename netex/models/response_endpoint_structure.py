@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ResponseEndpointStructure(ResponseStructure):
-    address: Optional[str] = field(
+    address: str | None = field(
         default=None,
         metadata={
             "name": "Address",
@@ -18,7 +18,7 @@ class ResponseEndpointStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    responder_ref: Optional[ParticipantRefStructure] = field(
+    responder_ref: ParticipantRefStructure | None = field(
         default=None,
         metadata={
             "name": "ResponderRef",
@@ -26,7 +26,7 @@ class ResponseEndpointStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    request_message_ref: Optional[MessageQualifierStructure] = field(
+    request_message_ref: MessageQualifierStructure | None = field(
         default=None,
         metadata={
             "name": "RequestMessageRef",
@@ -34,7 +34,7 @@ class ResponseEndpointStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_address: Optional[str] = field(
+    delegator_address: str | None = field(
         default=None,
         metadata={
             "name": "DelegatorAddress",
@@ -42,7 +42,7 @@ class ResponseEndpointStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: Optional[ParticipantRefStructure] = field(
+    delegator_ref: ParticipantRefStructure | None = field(
         default=None,
         metadata={
             "name": "DelegatorRef",

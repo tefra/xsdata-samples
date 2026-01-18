@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -46,7 +48,7 @@ class Std:
     class Meta:
         name = "STD"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -55,7 +57,7 @@ class Std:
             "required": True,
         },
     )
-    short_name_fragments: Optional["Std.ShortNameFragments"] = field(
+    short_name_fragments: Std.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -63,7 +65,7 @@ class Std:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name_1: Optional[SingleLanguageLongName] = field(
+    long_name_1: SingleLanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME-1",
@@ -71,7 +73,7 @@ class Std:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    subtitle: Optional[String] = field(
+    subtitle: String | None = field(
         default=None,
         metadata={
             "name": "SUBTITLE",
@@ -79,7 +81,7 @@ class Std:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    state: Optional[String] = field(
+    state: String | None = field(
         default=None,
         metadata={
             "name": "STATE",
@@ -87,7 +89,7 @@ class Std:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    date: Optional[Date] = field(
+    date: Date | None = field(
         default=None,
         metadata={
             "name": "DATE",
@@ -95,7 +97,7 @@ class Std:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    url: Optional[Url] = field(
+    url: Url | None = field(
         default=None,
         metadata={
             "name": "URL",
@@ -103,7 +105,7 @@ class Std:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    position: Optional[String] = field(
+    position: String | None = field(
         default=None,
         metadata={
             "name": "POSITION",
@@ -111,14 +113,14 @@ class Std:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

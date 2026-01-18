@@ -14,7 +14,7 @@ class AddressesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "addressesInFrame_RelStructure"
 
-    address: Iterable[Union[PostalAddress, RoadAddress]] = field(
+    address: Iterable[PostalAddress | RoadAddress] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

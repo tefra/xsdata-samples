@@ -53,14 +53,14 @@ class AwardGroup:
             "type": "Element",
         },
     )
-    award_name: Optional[AwardName] = field(
+    award_name: AwardName | None = field(
         default=None,
         metadata={
             "name": "award-name",
             "type": "Element",
         },
     )
-    award_desc: Optional[AwardDesc] = field(
+    award_desc: AwardDesc | None = field(
         default=None,
         metadata={
             "name": "award-desc",
@@ -81,20 +81,20 @@ class AwardGroup:
             "type": "Element",
         },
     )
-    award_type: Optional[str] = field(
+    award_type: str | None = field(
         default=None,
         metadata={
             "name": "award-type",
             "type": "Attribute",
         },
     )
-    hreflang: Optional[str] = field(
+    hreflang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -107,28 +107,28 @@ class AwardGroup:
             "tokens": True,
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    actuate: Optional[ActuateType] = field(
+    actuate: ActuateType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    role: Optional[str] = field(
+    role: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -136,14 +136,14 @@ class AwardGroup:
             "min_length": 1,
         },
     )
-    show: Optional[ShowType] = field(
+    show: ShowType | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    title: Optional[str] = field(
+    title: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -159,14 +159,14 @@ class AwardGroup:
             "namespace": "http://www.w3.org/1999/xlink",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    lang: Optional[Union[str, LangValue]] = field(
+    lang: str | LangValue | None = field(
         default=None,
         metadata={
             "type": "Attribute",

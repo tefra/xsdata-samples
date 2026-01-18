@@ -27,20 +27,20 @@ class ChapterEnumBreak:
     class Meta:
         name = "CHAPTER-ENUM-BREAK"
 
-    value: Optional[ChapterEnumBreakSimple] = field(
+    value: ChapterEnumBreakSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

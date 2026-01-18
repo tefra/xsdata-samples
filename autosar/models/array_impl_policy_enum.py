@@ -28,20 +28,20 @@ class ArrayImplPolicyEnum:
     class Meta:
         name = "ARRAY-IMPL-POLICY-ENUM"
 
-    value: Optional[ArrayImplPolicyEnumSimple] = field(
+    value: ArrayImplPolicyEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

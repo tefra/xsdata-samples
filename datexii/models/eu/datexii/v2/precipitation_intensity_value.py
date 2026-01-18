@@ -18,7 +18,7 @@ class PrecipitationIntensityValue(DataValue):
     :ivar precipitation_intensity_value_extension:
     """
 
-    millimetres_per_hour_intensity: Optional[float] = field(
+    millimetres_per_hour_intensity: float | None = field(
         default=None,
         metadata={
             "name": "millimetresPerHourIntensity",
@@ -27,7 +27,7 @@ class PrecipitationIntensityValue(DataValue):
             "required": True,
         },
     )
-    precipitation_intensity_value_extension: Optional[ExtensionType] = field(
+    precipitation_intensity_value_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "precipitationIntensityValueExtension",

@@ -30,7 +30,7 @@ class HttpAcceptEncoding:
     class Meta:
         name = "HTTP-ACCEPT-ENCODING"
 
-    accept_encoding: Optional[HttpAcceptEncodingEnum] = field(
+    accept_encoding: HttpAcceptEncodingEnum | None = field(
         default=None,
         metadata={
             "name": "ACCEPT-ENCODING",
@@ -38,14 +38,14 @@ class HttpAcceptEncoding:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

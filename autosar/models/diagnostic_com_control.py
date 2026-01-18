@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -100,7 +102,7 @@ class DiagnosticComControl:
     class Meta:
         name = "DIAGNOSTIC-COM-CONTROL"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,9 +111,7 @@ class DiagnosticComControl:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticComControl.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticComControl.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -119,7 +119,7 @@ class DiagnosticComControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +127,7 @@ class DiagnosticComControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +135,7 @@ class DiagnosticComControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +143,7 @@ class DiagnosticComControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +151,7 @@ class DiagnosticComControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +159,7 @@ class DiagnosticComControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticComControl.Annotations"] = field(
+    annotations: DiagnosticComControl.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +167,7 @@ class DiagnosticComControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -175,9 +175,7 @@ class DiagnosticComControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    access_permission_ref: Optional[
-        "DiagnosticComControl.AccessPermissionRef"
-    ] = field(
+    access_permission_ref: DiagnosticComControl.AccessPermissionRef | None = field(
         default=None,
         metadata={
             "name": "ACCESS-PERMISSION-REF",
@@ -185,9 +183,7 @@ class DiagnosticComControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    com_control_class_ref: Optional[
-        "DiagnosticComControl.ComControlClassRef"
-    ] = field(
+    com_control_class_ref: DiagnosticComControl.ComControlClassRef | None = field(
         default=None,
         metadata={
             "name": "COM-CONTROL-CLASS-REF",
@@ -195,7 +191,7 @@ class DiagnosticComControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    custom_sub_function_number: Optional[PositiveInteger] = field(
+    custom_sub_function_number: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "CUSTOM-SUB-FUNCTION-NUMBER",
@@ -203,14 +199,14 @@ class DiagnosticComControl:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -218,7 +214,7 @@ class DiagnosticComControl:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -250,7 +246,7 @@ class DiagnosticComControl:
 
     @dataclass
     class AccessPermissionRef(Ref):
-        dest: Optional[DiagnosticAccessPermissionSubtypesEnum] = field(
+        dest: DiagnosticAccessPermissionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -261,7 +257,7 @@ class DiagnosticComControl:
 
     @dataclass
     class ComControlClassRef(Ref):
-        dest: Optional[DiagnosticComControlClassSubtypesEnum] = field(
+        dest: DiagnosticComControlClassSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

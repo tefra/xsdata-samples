@@ -25,20 +25,7 @@ class EntitlementGivenVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "EntitlementGiven_VersionStructure"
 
-    choice: Optional[
-        Union[
-            EntitlementProductRef,
-            SupplementProductRef,
-            PreassignedFareProductRef,
-            AmountOfPriceUnitProductRef,
-            UsageDiscountRightRef,
-            ThirdPartyProductRef,
-            CappedDiscountRightRef,
-            SaleDiscountRightRef,
-            FareProductRef,
-            ServiceAccessRightRef,
-        ]
-    ] = field(
+    choice: EntitlementProductRef | SupplementProductRef | PreassignedFareProductRef | AmountOfPriceUnitProductRef | UsageDiscountRightRef | ThirdPartyProductRef | CappedDiscountRightRef | SaleDiscountRightRef | FareProductRef | ServiceAccessRightRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -96,7 +83,7 @@ class EntitlementGivenVersionStructure(UsageParameterVersionStructure):
             ),
         },
     )
-    minimum_qualification_period: Optional[XmlDuration] = field(
+    minimum_qualification_period: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "MinimumQualificationPeriod",
@@ -104,7 +91,7 @@ class EntitlementGivenVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entitlement_constraint: Optional[EntitlementConstraintStructure] = field(
+    entitlement_constraint: EntitlementConstraintStructure | None = field(
         default=None,
         metadata={
             "name": "EntitlementConstraint",
@@ -112,7 +99,7 @@ class EntitlementGivenVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entitlement_type: Optional[EntitlementTypeEnumeration] = field(
+    entitlement_type: EntitlementTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "EntitlementType",

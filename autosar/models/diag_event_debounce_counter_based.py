@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -105,7 +107,7 @@ class DiagEventDebounceCounterBased:
     class Meta:
         name = "DIAG-EVENT-DEBOUNCE-COUNTER-BASED"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -114,9 +116,7 @@ class DiagEventDebounceCounterBased:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagEventDebounceCounterBased.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagEventDebounceCounterBased.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -124,7 +124,7 @@ class DiagEventDebounceCounterBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -132,7 +132,7 @@ class DiagEventDebounceCounterBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -140,7 +140,7 @@ class DiagEventDebounceCounterBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -148,7 +148,7 @@ class DiagEventDebounceCounterBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -156,7 +156,7 @@ class DiagEventDebounceCounterBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -164,7 +164,7 @@ class DiagEventDebounceCounterBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagEventDebounceCounterBased.Annotations"] = field(
+    annotations: DiagEventDebounceCounterBased.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -172,7 +172,7 @@ class DiagEventDebounceCounterBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    counter_based_fdc_threshold_storage_value: Optional[Integer] = field(
+    counter_based_fdc_threshold_storage_value: Integer | None = field(
         default=None,
         metadata={
             "name": "COUNTER-BASED-FDC-THRESHOLD-STORAGE-VALUE",
@@ -180,7 +180,7 @@ class DiagEventDebounceCounterBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    counter_decrement_step_size: Optional[IntegerValueVariationPoint] = field(
+    counter_decrement_step_size: IntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "COUNTER-DECREMENT-STEP-SIZE",
@@ -188,7 +188,7 @@ class DiagEventDebounceCounterBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    counter_failed_threshold: Optional[IntegerValueVariationPoint] = field(
+    counter_failed_threshold: IntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "COUNTER-FAILED-THRESHOLD",
@@ -196,7 +196,7 @@ class DiagEventDebounceCounterBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    counter_increment_step_size: Optional[IntegerValueVariationPoint] = field(
+    counter_increment_step_size: IntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "COUNTER-INCREMENT-STEP-SIZE",
@@ -204,7 +204,7 @@ class DiagEventDebounceCounterBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    counter_jump_down: Optional[BooleanValueVariationPoint] = field(
+    counter_jump_down: BooleanValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "COUNTER-JUMP-DOWN",
@@ -212,7 +212,7 @@ class DiagEventDebounceCounterBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    counter_jump_down_value: Optional[IntegerValueVariationPoint] = field(
+    counter_jump_down_value: IntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "COUNTER-JUMP-DOWN-VALUE",
@@ -220,7 +220,7 @@ class DiagEventDebounceCounterBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    counter_jump_up: Optional[BooleanValueVariationPoint] = field(
+    counter_jump_up: BooleanValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "COUNTER-JUMP-UP",
@@ -228,7 +228,7 @@ class DiagEventDebounceCounterBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    counter_jump_up_value: Optional[IntegerValueVariationPoint] = field(
+    counter_jump_up_value: IntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "COUNTER-JUMP-UP-VALUE",
@@ -236,7 +236,7 @@ class DiagEventDebounceCounterBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    counter_passed_threshold: Optional[IntegerValueVariationPoint] = field(
+    counter_passed_threshold: IntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "COUNTER-PASSED-THRESHOLD",
@@ -244,14 +244,14 @@ class DiagEventDebounceCounterBased:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -259,7 +259,7 @@ class DiagEventDebounceCounterBased:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -192,7 +194,7 @@ class CompositionSwComponentType:
     class Meta:
         name = "COMPOSITION-SW-COMPONENT-TYPE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -201,9 +203,7 @@ class CompositionSwComponentType:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "CompositionSwComponentType.ShortNameFragments"
-    ] = field(
+    short_name_fragments: CompositionSwComponentType.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -211,7 +211,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -219,7 +219,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -227,7 +227,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -235,7 +235,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -243,7 +243,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -251,7 +251,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["CompositionSwComponentType.Annotations"] = field(
+    annotations: CompositionSwComponentType.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -259,7 +259,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -267,9 +267,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional[
-        "CompositionSwComponentType.BlueprintPolicys"
-    ] = field(
+    blueprint_policys: CompositionSwComponentType.BlueprintPolicys | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -277,7 +275,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: Optional[String] = field(
+    short_name_pattern: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -285,9 +283,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_documentations: Optional[
-        "CompositionSwComponentType.SwComponentDocumentations"
-    ] = field(
+    sw_component_documentations: CompositionSwComponentType.SwComponentDocumentations | None = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-DOCUMENTATIONS",
@@ -295,9 +291,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consistency_needss: Optional[
-        "CompositionSwComponentType.ConsistencyNeedss"
-    ] = field(
+    consistency_needss: CompositionSwComponentType.ConsistencyNeedss | None = field(
         default=None,
         metadata={
             "name": "CONSISTENCY-NEEDSS",
@@ -305,7 +299,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ports: Optional["CompositionSwComponentType.Ports"] = field(
+    ports: CompositionSwComponentType.Ports | None = field(
         default=None,
         metadata={
             "name": "PORTS",
@@ -313,7 +307,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_groups: Optional["CompositionSwComponentType.PortGroups"] = field(
+    port_groups: CompositionSwComponentType.PortGroups | None = field(
         default=None,
         metadata={
             "name": "PORT-GROUPS",
@@ -321,7 +315,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_group_refs: Optional["CompositionSwComponentType.UnitGroupRefs"] = (
+    unit_group_refs: CompositionSwComponentType.UnitGroupRefs | None = (
         field(
             default=None,
             metadata={
@@ -331,7 +325,7 @@ class CompositionSwComponentType:
             },
         )
     )
-    components: Optional["CompositionSwComponentType.Components"] = field(
+    components: CompositionSwComponentType.Components | None = field(
         default=None,
         metadata={
             "name": "COMPONENTS",
@@ -339,7 +333,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    connectors: Optional["CompositionSwComponentType.Connectors"] = field(
+    connectors: CompositionSwComponentType.Connectors | None = field(
         default=None,
         metadata={
             "name": "CONNECTORS",
@@ -347,9 +341,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    constant_value_mapping_refs: Optional[
-        "CompositionSwComponentType.ConstantValueMappingRefs"
-    ] = field(
+    constant_value_mapping_refs: CompositionSwComponentType.ConstantValueMappingRefs | None = field(
         default=None,
         metadata={
             "name": "CONSTANT-VALUE-MAPPING-REFS",
@@ -357,9 +349,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    data_type_mapping_refs: Optional[
-        "CompositionSwComponentType.DataTypeMappingRefs"
-    ] = field(
+    data_type_mapping_refs: CompositionSwComponentType.DataTypeMappingRefs | None = field(
         default=None,
         metadata={
             "name": "DATA-TYPE-MAPPING-REFS",
@@ -367,9 +357,7 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    instantiation_rte_event_propss: Optional[
-        "CompositionSwComponentType.InstantiationRteEventPropss"
-    ] = field(
+    instantiation_rte_event_propss: CompositionSwComponentType.InstantiationRteEventPropss | None = field(
         default=None,
         metadata={
             "name": "INSTANTIATION-RTE-EVENT-PROPSS",
@@ -377,14 +365,14 @@ class CompositionSwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -392,7 +380,7 @@ class CompositionSwComponentType:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -514,7 +502,7 @@ class CompositionSwComponentType:
     @dataclass
     class UnitGroupRefs:
         unit_group_ref: list[
-            "CompositionSwComponentType.UnitGroupRefs.UnitGroupRef"
+            CompositionSwComponentType.UnitGroupRefs.UnitGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -526,7 +514,7 @@ class CompositionSwComponentType:
 
         @dataclass
         class UnitGroupRef(Ref):
-            dest: Optional[UnitGroupSubtypesEnum] = field(
+            dest: UnitGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -576,7 +564,7 @@ class CompositionSwComponentType:
     @dataclass
     class ConstantValueMappingRefs:
         constant_value_mapping_ref: list[
-            "CompositionSwComponentType.ConstantValueMappingRefs.ConstantValueMappingRef"
+            CompositionSwComponentType.ConstantValueMappingRefs.ConstantValueMappingRef
         ] = field(
             default_factory=list,
             metadata={
@@ -588,7 +576,7 @@ class CompositionSwComponentType:
 
         @dataclass
         class ConstantValueMappingRef(Ref):
-            dest: Optional[ConstantSpecificationMappingSetSubtypesEnum] = (
+            dest: ConstantSpecificationMappingSetSubtypesEnum | None = (
                 field(
                     default=None,
                     metadata={
@@ -602,7 +590,7 @@ class CompositionSwComponentType:
     @dataclass
     class DataTypeMappingRefs:
         data_type_mapping_ref: list[
-            "CompositionSwComponentType.DataTypeMappingRefs.DataTypeMappingRef"
+            CompositionSwComponentType.DataTypeMappingRefs.DataTypeMappingRef
         ] = field(
             default_factory=list,
             metadata={
@@ -614,7 +602,7 @@ class CompositionSwComponentType:
 
         @dataclass
         class DataTypeMappingRef(Ref):
-            dest: Optional[DataTypeMappingSetSubtypesEnum] = field(
+            dest: DataTypeMappingSetSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

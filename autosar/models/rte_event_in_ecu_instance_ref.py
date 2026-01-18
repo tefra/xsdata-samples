@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -34,9 +36,7 @@ class RteEventInEcuInstanceRef:
     class Meta:
         name = "RTE-EVENT-IN-ECU-INSTANCE-REF"
 
-    context_root_composition_ref: Optional[
-        "RteEventInEcuInstanceRef.ContextRootCompositionRef"
-    ] = field(
+    context_root_composition_ref: RteEventInEcuInstanceRef.ContextRootCompositionRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-ROOT-COMPOSITION-REF",
@@ -44,9 +44,7 @@ class RteEventInEcuInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_atomic_component_ref: Optional[
-        "RteEventInEcuInstanceRef.ContextAtomicComponentRef"
-    ] = field(
+    context_atomic_component_ref: RteEventInEcuInstanceRef.ContextAtomicComponentRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-ATOMIC-COMPONENT-REF",
@@ -54,9 +52,7 @@ class RteEventInEcuInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_rte_event_ref: Optional[
-        "RteEventInEcuInstanceRef.TargetRteEventRef"
-    ] = field(
+    target_rte_event_ref: RteEventInEcuInstanceRef.TargetRteEventRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-RTE-EVENT-REF",
@@ -64,14 +60,14 @@ class RteEventInEcuInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +78,7 @@ class RteEventInEcuInstanceRef:
 
     @dataclass
     class ContextRootCompositionRef(Ref):
-        dest: Optional[RootSwCompositionPrototypeSubtypesEnum] = field(
+        dest: RootSwCompositionPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -93,7 +89,7 @@ class RteEventInEcuInstanceRef:
 
     @dataclass
     class ContextAtomicComponentRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -104,7 +100,7 @@ class RteEventInEcuInstanceRef:
 
     @dataclass
     class TargetRteEventRef(Ref):
-        dest: Optional[RteEventSubtypesEnum] = field(
+        dest: RteEventSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

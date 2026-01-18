@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -50,7 +52,7 @@ class ProcessStepType(ProcessStepBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    computation: Optional[ComputationType] = field(
+    computation: ComputationType | None = field(
         default=None,
         metadata={
             "name": "Computation",
@@ -66,7 +68,7 @@ class ProcessStepType(ProcessStepBaseType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
         },
     )
-    process_step: tuple["ProcessStepType", ...] = field(
+    process_step: tuple[ProcessStepType, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "ProcessStep",

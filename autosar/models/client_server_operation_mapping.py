@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -42,9 +44,7 @@ class ClientServerOperationMapping:
     class Meta:
         name = "CLIENT-SERVER-OPERATION-MAPPING"
 
-    argument_mappings: Optional[
-        "ClientServerOperationMapping.ArgumentMappings"
-    ] = field(
+    argument_mappings: ClientServerOperationMapping.ArgumentMappings | None = field(
         default=None,
         metadata={
             "name": "ARGUMENT-MAPPINGS",
@@ -52,9 +52,7 @@ class ClientServerOperationMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    first_operation_ref: Optional[
-        "ClientServerOperationMapping.FirstOperationRef"
-    ] = field(
+    first_operation_ref: ClientServerOperationMapping.FirstOperationRef | None = field(
         default=None,
         metadata={
             "name": "FIRST-OPERATION-REF",
@@ -62,9 +60,7 @@ class ClientServerOperationMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    first_to_second_data_transformation_ref: Optional[
-        "ClientServerOperationMapping.FirstToSecondDataTransformationRef"
-    ] = field(
+    first_to_second_data_transformation_ref: ClientServerOperationMapping.FirstToSecondDataTransformationRef | None = field(
         default=None,
         metadata={
             "name": "FIRST-TO-SECOND-DATA-TRANSFORMATION-REF",
@@ -72,9 +68,7 @@ class ClientServerOperationMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_operation_ref: Optional[
-        "ClientServerOperationMapping.SecondOperationRef"
-    ] = field(
+    second_operation_ref: ClientServerOperationMapping.SecondOperationRef | None = field(
         default=None,
         metadata={
             "name": "SECOND-OPERATION-REF",
@@ -82,14 +76,14 @@ class ClientServerOperationMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -111,7 +105,7 @@ class ClientServerOperationMapping:
 
     @dataclass
     class FirstOperationRef(Ref):
-        dest: Optional[ClientServerOperationSubtypesEnum] = field(
+        dest: ClientServerOperationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -122,7 +116,7 @@ class ClientServerOperationMapping:
 
     @dataclass
     class FirstToSecondDataTransformationRef(Ref):
-        dest: Optional[DataTransformationSubtypesEnum] = field(
+        dest: DataTransformationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -133,7 +127,7 @@ class ClientServerOperationMapping:
 
     @dataclass
     class SecondOperationRef(Ref):
-        dest: Optional[ClientServerOperationSubtypesEnum] = field(
+        dest: ClientServerOperationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

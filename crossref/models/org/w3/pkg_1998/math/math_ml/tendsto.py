@@ -10,13 +10,13 @@ class Tendsto:
         name = "tendsto"
         namespace = "http://www.w3.org/1998/Math/MathML"
 
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    xref: Optional[object] = field(
+    xref: object | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -30,19 +30,19 @@ class Tendsto:
             "tokens": True,
         },
     )
-    style: Optional[str] = field(
+    style: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    other: Optional[object] = field(
+    other: object | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -55,20 +55,20 @@ class Tendsto:
             "namespace": "##other",
         },
     )
-    encoding: Optional[str] = field(
+    encoding: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    definition_url: Optional[str] = field(
+    definition_url: str | None = field(
         default=None,
         metadata={
             "name": "definitionURL",
             "type": "Attribute",
         },
     )
-    type_value: Optional[object] = field(
+    type_value: object | None = field(
         default=None,
         metadata={
             "name": "type",

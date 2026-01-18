@@ -22,11 +22,7 @@ class QualityStructureFactorPricesRelStructure(
         name = "qualityStructureFactorPrices_RelStructure"
 
     quality_structure_factor_price_ref_or_quality_structure_factor_price_or_cell_ref: Iterable[
-        Union[
-            QualityStructureFactorPriceRef,
-            QualityStructureFactorPriceVersionedChildStructure,
-            CellRef,
-        ]
+        QualityStructureFactorPriceRef | QualityStructureFactorPriceVersionedChildStructure | CellRef
     ] = field(
         default_factory=list,
         metadata={

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -46,7 +48,7 @@ class DocumentationContext:
     class Meta:
         name = "DOCUMENTATION-CONTEXT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -55,9 +57,7 @@ class DocumentationContext:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DocumentationContext.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DocumentationContext.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -65,7 +65,7 @@ class DocumentationContext:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -73,7 +73,7 @@ class DocumentationContext:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    feature_iref: Optional[AnyInstanceRef] = field(
+    feature_iref: AnyInstanceRef | None = field(
         default=None,
         metadata={
             "name": "FEATURE-IREF",
@@ -81,7 +81,7 @@ class DocumentationContext:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    identifiable_ref: Optional["DocumentationContext.IdentifiableRef"] = field(
+    identifiable_ref: DocumentationContext.IdentifiableRef | None = field(
         default=None,
         metadata={
             "name": "IDENTIFIABLE-REF",
@@ -89,14 +89,14 @@ class DocumentationContext:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -118,7 +118,7 @@ class DocumentationContext:
 
     @dataclass
     class IdentifiableRef(Ref):
-        dest: Optional[IdentifiableSubtypesEnum] = field(
+        dest: IdentifiableSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

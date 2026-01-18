@@ -20,7 +20,7 @@ class CharacteristicType(BaseSimpleComponentType):
     GBytes".</description>.
     """
 
-    values: Optional[CharacteristicTypeValues] = field(
+    values: CharacteristicTypeValues | None = field(
         default=None,
         metadata={
             "name": "Values",

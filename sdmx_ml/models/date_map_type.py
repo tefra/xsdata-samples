@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -39,11 +41,7 @@ class DateMapType(IdentifiableType):
         },
     )
     frequency_dimension_or_mapped_frequencies_or_target_frequency_id: tuple[
-        Union[
-            "DateMapType.FrequencyDimension",
-            "DateMapType.MappedFrequencies",
-            "DateMapType.TargetFrequencyId",
-        ],
+        DateMapType.FrequencyDimension | DateMapType.MappedFrequencies | DateMapType.TargetFrequencyId,
         ...,
     ] = field(
         default_factory=tuple,
@@ -68,7 +66,7 @@ class DateMapType(IdentifiableType):
             ),
         },
     )
-    resolve_period: Optional[ResolvePeriodType] = field(
+    resolve_period: ResolvePeriodType | None = field(
         default=None,
         metadata={
             "name": "resolvePeriod",
@@ -78,7 +76,7 @@ class DateMapType(IdentifiableType):
 
     @dataclass(frozen=True)
     class FrequencyDimension:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -88,7 +86,7 @@ class DateMapType(IdentifiableType):
 
     @dataclass(frozen=True)
     class MappedFrequencies:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -98,7 +96,7 @@ class DateMapType(IdentifiableType):
 
     @dataclass(frozen=True)
     class TargetFrequencyId:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,

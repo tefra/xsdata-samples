@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -61,7 +63,7 @@ class BuildActionIoElement:
     class Meta:
         name = "BUILD-ACTION-IO-ELEMENT"
 
-    category: Optional[NmtokenString] = field(
+    category: NmtokenString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -69,7 +71,7 @@ class BuildActionIoElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdgs: Optional["BuildActionIoElement.Sdgs"] = field(
+    sdgs: BuildActionIoElement.Sdgs | None = field(
         default=None,
         metadata={
             "name": "SDGS",
@@ -77,7 +79,7 @@ class BuildActionIoElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecuc_definition_ref: Optional["BuildActionIoElement.EcucDefinitionRef"] = (
+    ecuc_definition_ref: BuildActionIoElement.EcucDefinitionRef | None = (
         field(
             default=None,
             metadata={
@@ -87,7 +89,7 @@ class BuildActionIoElement:
             },
         )
     )
-    engineering_object: Optional[BuildEngineeringObject] = field(
+    engineering_object: BuildEngineeringObject | None = field(
         default=None,
         metadata={
             "name": "ENGINEERING-OBJECT",
@@ -95,7 +97,7 @@ class BuildActionIoElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    foreign_model_reference: Optional[ForeignModelReference] = field(
+    foreign_model_reference: ForeignModelReference | None = field(
         default=None,
         metadata={
             "name": "FOREIGN-MODEL-REFERENCE",
@@ -103,7 +105,7 @@ class BuildActionIoElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    model_object_reference: Optional[GenericModelReference] = field(
+    model_object_reference: GenericModelReference | None = field(
         default=None,
         metadata={
             "name": "MODEL-OBJECT-REFERENCE",
@@ -111,7 +113,7 @@ class BuildActionIoElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    role: Optional[Identifier] = field(
+    role: Identifier | None = field(
         default=None,
         metadata={
             "name": "ROLE",
@@ -119,14 +121,14 @@ class BuildActionIoElement:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -148,7 +150,7 @@ class BuildActionIoElement:
 
     @dataclass
     class EcucDefinitionRef(Ref):
-        dest: Optional[EcucDefinitionElementSubtypesEnum] = field(
+        dest: EcucDefinitionElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

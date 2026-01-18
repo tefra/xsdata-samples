@@ -15,7 +15,7 @@ class RetailConsortiumsRelStructure(ContainmentAggregationStructure):
         name = "retailConsortiums_RelStructure"
 
     retail_consortium_ref_or_retail_consortium: Iterable[
-        Union[RetailConsortiumRef, RetailConsortium]
+        RetailConsortiumRef | RetailConsortium
     ] = field(
         default_factory=list,
         metadata={

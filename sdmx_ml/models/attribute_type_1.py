@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional, Union
 
@@ -32,7 +34,7 @@ class AttributeType1(AnnotableType):
         name = "AttributeType"
 
     value_or_text_or_structured_text: tuple[
-        Union[object, Text, StructuredText], ...
+        object | Text | StructuredText, ...
     ] = field(
         default_factory=tuple,
         metadata={
@@ -56,7 +58,7 @@ class AttributeType1(AnnotableType):
             ),
         },
     )
-    attribute: tuple["Attribute1", ...] = field(
+    attribute: tuple[Attribute1, ...] = field(
         default_factory=tuple,
         metadata={
             "name": "Attribute",
@@ -64,7 +66,7 @@ class AttributeType1(AnnotableType):
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/metadata/generic",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

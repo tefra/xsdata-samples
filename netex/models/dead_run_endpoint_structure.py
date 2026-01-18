@@ -24,26 +24,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class DeadRunEndpointStructure:
-    choice: Optional[
-        Union[
-            VehicleMeetingPointRef,
-            WirePointRef,
-            RoadPointRef,
-            RailwayPointRef,
-            TrafficControlPointRef,
-            BeaconPointRef,
-            ActivationPointRef,
-            BorderPointRef,
-            FareScheduledStopPointRef,
-            ScheduledStopPointRef,
-            GaragePointRef,
-            ParkingPointRef,
-            ReliefPointRef,
-            TimingPointRef,
-            RoutePointRef,
-            PointRef,
-        ]
-    ] = field(
+    choice: VehicleMeetingPointRef | WirePointRef | RoadPointRef | RailwayPointRef | TrafficControlPointRef | BeaconPointRef | ActivationPointRef | BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | RoutePointRef | PointRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -131,7 +112,7 @@ class DeadRunEndpointStructure:
             ),
         },
     )
-    type_of_point_ref: Optional[TypeOfPointRef] = field(
+    type_of_point_ref: TypeOfPointRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfPointRef",

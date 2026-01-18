@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -47,7 +49,7 @@ class BankedBankType:
     class Meta:
         name = "bankedBankType"
 
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -55,7 +57,7 @@ class BankedBankType:
             "required": True,
         },
     )
-    display_name: Optional[DisplayName] = field(
+    display_name: DisplayName | None = field(
         default=None,
         metadata={
             "name": "displayName",
@@ -63,7 +65,7 @@ class BankedBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
@@ -71,14 +73,14 @@ class BankedBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_handles: Optional["BankedBankType.AccessHandles"] = field(
+    access_handles: BankedBankType.AccessHandles | None = field(
         default=None,
         metadata={
             "name": "accessHandles",
@@ -86,7 +88,7 @@ class BankedBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bank_definition_ref: Optional["BankedBankType.BankDefinitionRef"] = field(
+    bank_definition_ref: BankedBankType.BankDefinitionRef | None = field(
         default=None,
         metadata={
             "name": "bankDefinitionRef",
@@ -102,7 +104,7 @@ class BankedBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bank: list["BankedBankType.Bank"] = field(
+    bank: list[BankedBankType.Bank] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -117,21 +119,21 @@ class BankedBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    usage: Optional[UsageType] = field(
+    usage: UsageType | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    volatile: Optional[Volatile] = field(
+    volatile: Volatile | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    access_policies: Optional[AccessPolicies] = field(
+    access_policies: AccessPolicies | None = field(
         default=None,
         metadata={
             "name": "accessPolicies",
@@ -139,14 +141,14 @@ class BankedBankType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    parameters: Optional[Parameters] = field(
+    parameters: Parameters | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    bank_alignment: Optional[BankAlignmentType] = field(
+    bank_alignment: BankAlignmentType | None = field(
         default=None,
         metadata={
             "name": "bankAlignment",
@@ -154,7 +156,7 @@ class BankedBankType:
             "required": True,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -182,7 +184,7 @@ class BankedBankType:
                 "required": True,
             },
         )
-        type_definitions: Optional[str] = field(
+        type_definitions: str | None = field(
             default=None,
             metadata={
                 "name": "typeDefinitions",
@@ -193,7 +195,7 @@ class BankedBankType:
 
     @dataclass
     class Bank:
-        vendor_extensions: Optional[VendorExtensions] = field(
+        vendor_extensions: VendorExtensions | None = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",

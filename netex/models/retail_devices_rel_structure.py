@@ -15,7 +15,7 @@ class RetailDevicesRelStructure(ContainmentAggregationStructure):
         name = "RetailDevices_RelStructure"
 
     retail_device_ref_or_retail_device: Iterable[
-        Union[RetailDeviceRef, RetailDevice]
+        RetailDeviceRef | RetailDevice
     ] = field(
         default_factory=list,
         metadata={

@@ -56,59 +56,14 @@ class PurposeOfGroupingValueStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "PurposeOfGrouping_ValueStructure"
 
-    classes: Optional[ClassRefsRelStructure] = field(
+    classes: ClassRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_entity: Optional[
-        Union[
-            TypeOfMobilityService,
-            TypeOfRetailDevice,
-            CustomerAccountStatus,
-            TypeOfCustomerAccount,
-            TypeOfFareContractEntry,
-            TypeOfFareContract,
-            TypeOfTravelDocument,
-            TypeOfSalesOfferPackage,
-            TypeOfFareProduct,
-            TypeOfFareStructureElement,
-            TypeOfTariff,
-            TypeOfAccessRightAssignment,
-            TypeOfFareStructureFactor,
-            TypeOfFlexibleService,
-            TypeOfTimeDemandType,
-            TypeOfPassengerInformationEquipment,
-            TypeOfJourneyPattern,
-            TypeOfActivation,
-            TypeOfModeOfOperation,
-            TypeOfPlug,
-            TypeOfBatteryChemistry,
-            TypeOfLine,
-            TypeOfDeliveryVariant,
-            TypeOfNotice,
-            TypeOfCongestion,
-            TypeOfFacility,
-            TypeOfService,
-            TypeOfEquipment,
-            TypeOfFeature,
-            TypeOfLinkSequence,
-            TypeOfPlace,
-            TypeOfTransfer,
-            TypeOfOperation,
-            TypeOfOrganisationPart,
-            TypeOfOrganisation,
-            TypeOfZone,
-            TypeOfLink,
-            TypeOfPoint,
-            TypeOfProjection,
-            TypeOfFrame,
-            TypeOfResponsibilityRole,
-            TypeOfEntity,
-        ]
-    ] = field(
+    type_of_entity: TypeOfMobilityService | TypeOfRetailDevice | CustomerAccountStatus | TypeOfCustomerAccount | TypeOfFareContractEntry | TypeOfFareContract | TypeOfTravelDocument | TypeOfSalesOfferPackage | TypeOfFareProduct | TypeOfFareStructureElement | TypeOfTariff | TypeOfAccessRightAssignment | TypeOfFareStructureFactor | TypeOfFlexibleService | TypeOfTimeDemandType | TypeOfPassengerInformationEquipment | TypeOfJourneyPattern | TypeOfActivation | TypeOfModeOfOperation | TypeOfPlug | TypeOfBatteryChemistry | TypeOfLine | TypeOfDeliveryVariant | TypeOfNotice | TypeOfCongestion | TypeOfFacility | TypeOfService | TypeOfEquipment | TypeOfFeature | TypeOfLinkSequence | TypeOfPlace | TypeOfTransfer | TypeOfOperation | TypeOfOrganisationPart | TypeOfOrganisation | TypeOfZone | TypeOfLink | TypeOfPoint | TypeOfProjection | TypeOfFrame | TypeOfResponsibilityRole | TypeOfEntity | None = field(
         default=None,
         metadata={
             "type": "Elements",

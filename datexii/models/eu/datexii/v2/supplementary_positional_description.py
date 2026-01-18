@@ -38,7 +38,7 @@ class SupplementaryPositionalDescription:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    sequential_ramp_number: Optional[int] = field(
+    sequential_ramp_number: int | None = field(
         default=None,
         metadata={
             "name": "sequentialRampNumber",
@@ -54,7 +54,7 @@ class SupplementaryPositionalDescription:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    supplementary_positional_description_extension: Optional[ExtensionType] = (
+    supplementary_positional_description_extension: ExtensionType | None = (
         field(
             default=None,
             metadata={
@@ -64,7 +64,7 @@ class SupplementaryPositionalDescription:
             },
         )
     )
-    location_precision: Optional[int] = field(
+    location_precision: int | None = field(
         default=None,
         metadata={
             "name": "locationPrecision",

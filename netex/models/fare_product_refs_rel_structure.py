@@ -21,16 +21,7 @@ class FareProductRefsRelStructure(OneToManyRelationshipStructure):
         name = "fareProductRefs_RelStructure"
 
     preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: Iterable[
-        Union[
-            SupplementProductRef,
-            PreassignedFareProductRef,
-            AmountOfPriceUnitProductRef,
-            UsageDiscountRightRef,
-            ThirdPartyProductRef,
-            CappedDiscountRightRef,
-            SaleDiscountRightRef,
-            FareProductRef,
-        ]
+        SupplementProductRef | PreassignedFareProductRef | AmountOfPriceUnitProductRef | UsageDiscountRightRef | ThirdPartyProductRef | CappedDiscountRightRef | SaleDiscountRightRef | FareProductRef
     ] = field(
         default_factory=list,
         metadata={

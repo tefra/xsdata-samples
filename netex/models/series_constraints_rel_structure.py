@@ -15,7 +15,7 @@ class SeriesConstraintsRelStructure(ContainmentAggregationStructure):
         name = "SeriesConstraints_RelStructure"
 
     series_constraint_ref_or_series_constraint: Iterable[
-        Union[SeriesConstraintRef, SeriesConstraint]
+        SeriesConstraintRef | SeriesConstraint
     ] = field(
         default_factory=list,
         metadata={

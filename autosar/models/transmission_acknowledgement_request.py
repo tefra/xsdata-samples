@@ -31,7 +31,7 @@ class TransmissionAcknowledgementRequest:
     class Meta:
         name = "TRANSMISSION-ACKNOWLEDGEMENT-REQUEST"
 
-    timeout: Optional[TimeValue] = field(
+    timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TIMEOUT",
@@ -39,14 +39,14 @@ class TransmissionAcknowledgementRequest:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

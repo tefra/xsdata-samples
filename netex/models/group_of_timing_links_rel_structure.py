@@ -14,7 +14,7 @@ class GroupOfTimingLinksRelStructure(GroupOfEntitiesVersionStructure):
     class Meta:
         name = "GroupOfTimingLinks_RelStructure"
 
-    members: Optional[TimingLinkRefsRelStructure] = field(
+    members: TimingLinkRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

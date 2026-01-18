@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -100,7 +102,7 @@ class BusMirrorChannelMappingFlexray:
     class Meta:
         name = "BUS-MIRROR-CHANNEL-MAPPING-FLEXRAY"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,9 +111,7 @@ class BusMirrorChannelMappingFlexray:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "BusMirrorChannelMappingFlexray.ShortNameFragments"
-    ] = field(
+    short_name_fragments: BusMirrorChannelMappingFlexray.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -119,7 +119,7 @@ class BusMirrorChannelMappingFlexray:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +127,7 @@ class BusMirrorChannelMappingFlexray:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +135,7 @@ class BusMirrorChannelMappingFlexray:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +143,7 @@ class BusMirrorChannelMappingFlexray:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +151,7 @@ class BusMirrorChannelMappingFlexray:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +159,7 @@ class BusMirrorChannelMappingFlexray:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["BusMirrorChannelMappingFlexray.Annotations"] = (
+    annotations: BusMirrorChannelMappingFlexray.Annotations | None = (
         field(
             default=None,
             metadata={
@@ -169,7 +169,7 @@ class BusMirrorChannelMappingFlexray:
             },
         )
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -177,7 +177,7 @@ class BusMirrorChannelMappingFlexray:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_channel: Optional[BusMirrorChannel] = field(
+    source_channel: BusMirrorChannel | None = field(
         default=None,
         metadata={
             "name": "SOURCE-CHANNEL",
@@ -185,7 +185,7 @@ class BusMirrorChannelMappingFlexray:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_channel: Optional[BusMirrorChannel] = field(
+    target_channel: BusMirrorChannel | None = field(
         default=None,
         metadata={
             "name": "TARGET-CHANNEL",
@@ -193,9 +193,7 @@ class BusMirrorChannelMappingFlexray:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_pdu_triggerings: Optional[
-        "BusMirrorChannelMappingFlexray.TargetPduTriggerings"
-    ] = field(
+    target_pdu_triggerings: BusMirrorChannelMappingFlexray.TargetPduTriggerings | None = field(
         default=None,
         metadata={
             "name": "TARGET-PDU-TRIGGERINGS",
@@ -203,7 +201,7 @@ class BusMirrorChannelMappingFlexray:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_deadline: Optional[TimeValue] = field(
+    transmission_deadline: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TRANSMISSION-DEADLINE",
@@ -211,14 +209,14 @@ class BusMirrorChannelMappingFlexray:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -226,7 +224,7 @@ class BusMirrorChannelMappingFlexray:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

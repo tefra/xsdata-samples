@@ -16,7 +16,7 @@ class IndividualRoleType:
     :ivar individual: A contact person for the organisation.
     """
 
-    individual: Optional[ContactPersonType] = field(
+    individual: ContactPersonType | None = field(
         default=None,
         metadata={
             "name": "Individual",

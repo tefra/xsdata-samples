@@ -15,7 +15,7 @@ class PointOfInterestEntrancesRelStructure(ContainmentAggregationStructure):
         name = "pointOfInterestEntrances_RelStructure"
 
     point_of_interest_entrance_ref_or_point_of_interest_entrance: Iterable[
-        Union[SiteComponentRefStructure, PointOfInterestEntrance]
+        SiteComponentRefStructure | PointOfInterestEntrance
     ] = field(
         default_factory=list,
         metadata={

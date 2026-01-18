@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -46,7 +48,7 @@ class FlexrayTpEcu:
     class Meta:
         name = "FLEXRAY-TP-ECU"
 
-    cancellation: Optional[Boolean] = field(
+    cancellation: Boolean | None = field(
         default=None,
         metadata={
             "name": "CANCELLATION",
@@ -54,7 +56,7 @@ class FlexrayTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    cycle_time_main_function: Optional[TimeValue] = field(
+    cycle_time_main_function: TimeValue | None = field(
         default=None,
         metadata={
             "name": "CYCLE-TIME-MAIN-FUNCTION",
@@ -62,7 +64,7 @@ class FlexrayTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_ref: Optional["FlexrayTpEcu.EcuInstanceRef"] = field(
+    ecu_instance_ref: FlexrayTpEcu.EcuInstanceRef | None = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REF",
@@ -70,7 +72,7 @@ class FlexrayTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    full_duplex_enabled: Optional[Boolean] = field(
+    full_duplex_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "FULL-DUPLEX-ENABLED",
@@ -78,7 +80,7 @@ class FlexrayTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmit_cancellation: Optional[Boolean] = field(
+    transmit_cancellation: Boolean | None = field(
         default=None,
         metadata={
             "name": "TRANSMIT-CANCELLATION",
@@ -86,7 +88,7 @@ class FlexrayTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -94,14 +96,14 @@ class FlexrayTpEcu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -112,7 +114,7 @@ class FlexrayTpEcu:
 
     @dataclass
     class EcuInstanceRef(Ref):
-        dest: Optional[EcuInstanceSubtypesEnum] = field(
+        dest: EcuInstanceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

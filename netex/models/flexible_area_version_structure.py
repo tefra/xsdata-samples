@@ -14,7 +14,7 @@ class FlexibleAreaVersionStructure(FlexibleQuayVersionStructure):
     class Meta:
         name = "FlexibleArea_VersionStructure"
 
-    destinations: Optional[DestinationDisplayViewsRelStructure] = field(
+    destinations: DestinationDisplayViewsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

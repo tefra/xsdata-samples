@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -32,7 +34,7 @@ class FmAttributeValue:
     class Meta:
         name = "FM-ATTRIBUTE-VALUE"
 
-    definition_ref: Optional["FmAttributeValue.DefinitionRef"] = field(
+    definition_ref: FmAttributeValue.DefinitionRef | None = field(
         default=None,
         metadata={
             "name": "DEFINITION-REF",
@@ -40,7 +42,7 @@ class FmAttributeValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value: Optional[NumericalValue] = field(
+    value: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "VALUE",
@@ -48,14 +50,14 @@ class FmAttributeValue:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -66,7 +68,7 @@ class FmAttributeValue:
 
     @dataclass
     class DefinitionRef(Ref):
-        dest: Optional[FmAttributeDefSubtypesEnum] = field(
+        dest: FmAttributeDefSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

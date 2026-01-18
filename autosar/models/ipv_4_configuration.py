@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -46,7 +48,7 @@ class Ipv4Configuration:
     class Meta:
         name = "IPV-4-CONFIGURATION"
 
-    assignment_priority: Optional[PositiveInteger] = field(
+    assignment_priority: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "ASSIGNMENT-PRIORITY",
@@ -54,7 +56,7 @@ class Ipv4Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_gateway: Optional[Ip4AddressString] = field(
+    default_gateway: Ip4AddressString | None = field(
         default=None,
         metadata={
             "name": "DEFAULT-GATEWAY",
@@ -62,7 +64,7 @@ class Ipv4Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dns_server_addresses: Optional["Ipv4Configuration.DnsServerAddresses"] = (
+    dns_server_addresses: Ipv4Configuration.DnsServerAddresses | None = (
         field(
             default=None,
             metadata={
@@ -72,7 +74,7 @@ class Ipv4Configuration:
             },
         )
     )
-    ip_address_keep_behavior: Optional[IpAddressKeepEnum] = field(
+    ip_address_keep_behavior: IpAddressKeepEnum | None = field(
         default=None,
         metadata={
             "name": "IP-ADDRESS-KEEP-BEHAVIOR",
@@ -80,7 +82,7 @@ class Ipv4Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ipv_4_address: Optional[Ip4AddressString] = field(
+    ipv_4_address: Ip4AddressString | None = field(
         default=None,
         metadata={
             "name": "IPV-4-ADDRESS",
@@ -88,7 +90,7 @@ class Ipv4Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ipv_4_address_source: Optional[Ipv4AddressSourceEnum] = field(
+    ipv_4_address_source: Ipv4AddressSourceEnum | None = field(
         default=None,
         metadata={
             "name": "IPV-4-ADDRESS-SOURCE",
@@ -96,7 +98,7 @@ class Ipv4Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    network_mask: Optional[Ip4AddressString] = field(
+    network_mask: Ip4AddressString | None = field(
         default=None,
         metadata={
             "name": "NETWORK-MASK",
@@ -104,7 +106,7 @@ class Ipv4Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ttl: Optional[PositiveInteger] = field(
+    ttl: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "TTL",
@@ -112,14 +114,14 @@ class Ipv4Configuration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

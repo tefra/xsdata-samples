@@ -16,7 +16,7 @@ class NetworkDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "Network_DerivedViewStructure"
 
-    network_ref: Optional[NetworkRef] = field(
+    network_ref: NetworkRef | None = field(
         default=None,
         metadata={
             "name": "NetworkRef",
@@ -24,7 +24,7 @@ class NetworkDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -32,7 +32,7 @@ class NetworkDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
+    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
         default=None,
         metadata={
             "name": "TransportMode",

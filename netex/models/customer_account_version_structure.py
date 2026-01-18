@@ -29,7 +29,7 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "CustomerAccount_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -37,7 +37,7 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -45,7 +45,7 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_date: Optional[XmlDateTime] = field(
+    start_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -53,7 +53,7 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_date: Optional[XmlDateTime] = field(
+    end_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -61,7 +61,7 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_ref: Optional[CustomerRef] = field(
+    customer_ref: CustomerRef | None = field(
         default=None,
         metadata={
             "name": "CustomerRef",
@@ -69,7 +69,7 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_customer_account_ref: Optional[TypeOfCustomerAccountRef] = field(
+    type_of_customer_account_ref: TypeOfCustomerAccountRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfCustomerAccountRef",
@@ -77,7 +77,7 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_account_status_ref: Optional[CustomerAccountStatusRef] = field(
+    customer_account_status_ref: CustomerAccountStatusRef | None = field(
         default=None,
         metadata={
             "name": "CustomerAccountStatusRef",
@@ -85,7 +85,7 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_account_status_type: Optional[AccountStatusTypeEnumeration] = (
+    customer_account_status_type: AccountStatusTypeEnumeration | None = (
         field(
             default=None,
             metadata={
@@ -95,7 +95,7 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    fare_contracts: Optional[FareContractsRelStructure] = field(
+    fare_contracts: FareContractsRelStructure | None = field(
         default=None,
         metadata={
             "name": "fareContracts",
@@ -103,9 +103,7 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_purchase_packages: Optional[
-        CustomerPurchasePackageRefsRelStructure
-    ] = field(
+    customer_purchase_packages: CustomerPurchasePackageRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "customerPurchasePackages",
@@ -113,7 +111,7 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_payment_means_ref: Optional[CustomerPaymentMeansRef] = field(
+    customer_payment_means_ref: CustomerPaymentMeansRef | None = field(
         default=None,
         metadata={
             "name": "CustomerPaymentMeansRef",
@@ -121,7 +119,7 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    payment_means: Optional[CustomerPaymentMeansRelStructure] = field(
+    payment_means: CustomerPaymentMeansRelStructure | None = field(
         default=None,
         metadata={
             "name": "paymentMeans",
@@ -129,7 +127,7 @@ class CustomerAccountVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    medium_access_devices: Optional[MediumAccessDeviceRefsRelStructure] = (
+    medium_access_devices: MediumAccessDeviceRefsRelStructure | None = (
         field(
             default=None,
             metadata={

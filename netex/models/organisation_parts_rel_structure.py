@@ -22,17 +22,7 @@ class OrganisationPartsRelStructure(ContainmentAggregationStructure):
         name = "organisationParts_RelStructure"
 
     organisation_part_ref_or_organisation_part: Iterable[
-        Union[
-            ControlCentreRef,
-            OrganisationalUnitRef,
-            DepartmentRef,
-            OrganisationPartRef,
-            ControlCentre,
-            OperatingDepartment,
-            OrganisationalUnit,
-            Department,
-            OrganisationPart,
-        ]
+        ControlCentreRef | OrganisationalUnitRef | DepartmentRef | OrganisationPartRef | ControlCentre | OperatingDepartment | OrganisationalUnit | Department | OrganisationPart
     ] = field(
         default_factory=list,
         metadata={

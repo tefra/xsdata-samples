@@ -19,7 +19,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "OperatingPeriod_VersionStructure"
 
-    service_calendar_ref: Optional[ServiceCalendarRef] = field(
+    service_calendar_ref: ServiceCalendarRef | None = field(
         default=None,
         metadata={
             "name": "ServiceCalendarRef",
@@ -27,7 +27,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -35,7 +35,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -43,9 +43,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_operating_day_ref_or_from_date: Optional[
-        Union[OperatingDayRefStructure, XmlDateTime]
-    ] = field(
+    from_operating_day_ref_or_from_date: OperatingDayRefStructure | XmlDateTime | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -63,9 +61,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    to_operating_day_ref_or_to_date: Optional[
-        Union[OperatingDayRefStructure, XmlDateTime]
-    ] = field(
+    to_operating_day_ref_or_to_date: OperatingDayRefStructure | XmlDateTime | None = field(
         default=None,
         metadata={
             "type": "Elements",

@@ -21,7 +21,7 @@ class QueryResultType(BaseHeaderType):
         response message.</description>
     """
 
-    total_count: Optional[int] = field(
+    total_count: int | None = field(
         default=None,
         metadata={
             "name": "TotalCount",

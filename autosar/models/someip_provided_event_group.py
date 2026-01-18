@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -111,7 +113,7 @@ class SomeipProvidedEventGroup:
     class Meta:
         name = "SOMEIP-PROVIDED-EVENT-GROUP"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -120,9 +122,7 @@ class SomeipProvidedEventGroup:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SomeipProvidedEventGroup.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SomeipProvidedEventGroup.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -130,7 +130,7 @@ class SomeipProvidedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -138,7 +138,7 @@ class SomeipProvidedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -146,7 +146,7 @@ class SomeipProvidedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -154,7 +154,7 @@ class SomeipProvidedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -162,7 +162,7 @@ class SomeipProvidedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -170,7 +170,7 @@ class SomeipProvidedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SomeipProvidedEventGroup.Annotations"] = field(
+    annotations: SomeipProvidedEventGroup.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -178,7 +178,7 @@ class SomeipProvidedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_group_ref: Optional["SomeipProvidedEventGroup.EventGroupRef"] = (
+    event_group_ref: SomeipProvidedEventGroup.EventGroupRef | None = (
         field(
             default=None,
             metadata={
@@ -188,7 +188,7 @@ class SomeipProvidedEventGroup:
             },
         )
     )
-    event_multicast_udp_port: Optional[PositiveInteger] = field(
+    event_multicast_udp_port: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "EVENT-MULTICAST-UDP-PORT",
@@ -196,7 +196,7 @@ class SomeipProvidedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ipv_4_multicast_ip_address: Optional[Ip4AddressString] = field(
+    ipv_4_multicast_ip_address: Ip4AddressString | None = field(
         default=None,
         metadata={
             "name": "IPV-4-MULTICAST-IP-ADDRESS",
@@ -204,7 +204,7 @@ class SomeipProvidedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ipv_6_multicast_ip_address: Optional[Ip6AddressString] = field(
+    ipv_6_multicast_ip_address: Ip6AddressString | None = field(
         default=None,
         metadata={
             "name": "IPV-6-MULTICAST-IP-ADDRESS",
@@ -212,7 +212,7 @@ class SomeipProvidedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multicast_threshold: Optional[PositiveInteger] = field(
+    multicast_threshold: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MULTICAST-THRESHOLD",
@@ -220,9 +220,7 @@ class SomeipProvidedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sd_server_event_group_timing_config_ref: Optional[
-        "SomeipProvidedEventGroup.SdServerEventGroupTimingConfigRef"
-    ] = field(
+    sd_server_event_group_timing_config_ref: SomeipProvidedEventGroup.SdServerEventGroupTimingConfigRef | None = field(
         default=None,
         metadata={
             "name": "SD-SERVER-EVENT-GROUP-TIMING-CONFIG-REF",
@@ -230,14 +228,14 @@ class SomeipProvidedEventGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -245,7 +243,7 @@ class SomeipProvidedEventGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -277,7 +275,7 @@ class SomeipProvidedEventGroup:
 
     @dataclass
     class EventGroupRef(Ref):
-        dest: Optional[SomeipEventGroupSubtypesEnum] = field(
+        dest: SomeipEventGroupSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -288,7 +286,7 @@ class SomeipProvidedEventGroup:
 
     @dataclass
     class SdServerEventGroupTimingConfigRef(Ref):
-        dest: Optional[SomeipSdServerEventGroupTimingConfigSubtypesEnum] = (
+        dest: SomeipSdServerEventGroupTimingConfigSubtypesEnum | None = (
             field(
                 default=None,
                 metadata={

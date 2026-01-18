@@ -33,7 +33,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class ExtensionType:
-    effective_date: Optional[DateTimeType] = field(
+    effective_date: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "EffectiveDate",
@@ -41,7 +41,7 @@ class ExtensionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    end_date: Optional[DateTimeType] = field(
+    end_date: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -49,7 +49,7 @@ class ExtensionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    retroactive_date: Optional[DateTimeType] = field(
+    retroactive_date: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "RetroactiveDate",
@@ -57,7 +57,7 @@ class ExtensionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    term_date: Optional[DateTimeType] = field(
+    term_date: DateTimeType | None = field(
         default=None,
         metadata={
             "name": "TermDate",
@@ -65,7 +65,7 @@ class ExtensionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    premium: Optional[PremiumType] = field(
+    premium: PremiumType | None = field(
         default=None,
         metadata={
             "name": "Premium",
@@ -73,7 +73,7 @@ class ExtensionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    exposures: Optional[ExposuresType] = field(
+    exposures: ExposuresType | None = field(
         default=None,
         metadata={
             "name": "Exposures",
@@ -81,7 +81,7 @@ class ExtensionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    deductibles: Optional[DeductiblesType] = field(
+    deductibles: DeductiblesType | None = field(
         default=None,
         metadata={
             "name": "Deductibles",
@@ -89,7 +89,7 @@ class ExtensionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    clauses: Optional[ClausesType] = field(
+    clauses: ClausesType | None = field(
         default=None,
         metadata={
             "name": "Clauses",
@@ -97,7 +97,7 @@ class ExtensionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    limits: Optional[LimitsType] = field(
+    limits: LimitsType | None = field(
         default=None,
         metadata={
             "name": "Limits",
@@ -105,7 +105,7 @@ class ExtensionType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    extension_code: Optional[CodeDescriptionType] = field(
+    extension_code: CodeDescriptionType | None = field(
         default=None,
         metadata={
             "name": "ExtensionCode",
@@ -114,7 +114,7 @@ class ExtensionType:
             "required": True,
         },
     )
-    geographical_scope: Optional[GeographicalScope] = field(
+    geographical_scope: GeographicalScope | None = field(
         default=None,
         metadata={
             "name": "GeographicalScope",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -133,7 +135,7 @@ class CanNmNode:
     class Meta:
         name = "CAN-NM-NODE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -142,7 +144,7 @@ class CanNmNode:
             "required": True,
         },
     )
-    short_name_fragments: Optional["CanNmNode.ShortNameFragments"] = field(
+    short_name_fragments: CanNmNode.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -150,7 +152,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -158,7 +160,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -166,7 +168,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -174,7 +176,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -182,7 +184,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -190,7 +192,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["CanNmNode.Annotations"] = field(
+    annotations: CanNmNode.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -198,7 +200,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    controller_ref: Optional["CanNmNode.ControllerRef"] = field(
+    controller_ref: CanNmNode.ControllerRef | None = field(
         default=None,
         metadata={
             "name": "CONTROLLER-REF",
@@ -206,7 +208,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    machine_ref: Optional["CanNmNode.MachineRef"] = field(
+    machine_ref: CanNmNode.MachineRef | None = field(
         default=None,
         metadata={
             "name": "MACHINE-REF",
@@ -214,7 +216,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_coord_cluster: Optional[PositiveInteger] = field(
+    nm_coord_cluster: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "NM-COORD-CLUSTER",
@@ -222,7 +224,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_coordinator_role: Optional[NmCoordinatorRoleEnum] = field(
+    nm_coordinator_role: NmCoordinatorRoleEnum | None = field(
         default=None,
         metadata={
             "name": "NM-COORDINATOR-ROLE",
@@ -230,7 +232,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_if_ecu_ref: Optional["CanNmNode.NmIfEcuRef"] = field(
+    nm_if_ecu_ref: CanNmNode.NmIfEcuRef | None = field(
         default=None,
         metadata={
             "name": "NM-IF-ECU-REF",
@@ -238,7 +240,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_node_id: Optional[Integer] = field(
+    nm_node_id: Integer | None = field(
         default=None,
         metadata={
             "name": "NM-NODE-ID",
@@ -246,7 +248,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_passive_mode_enabled: Optional[Boolean] = field(
+    nm_passive_mode_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-PASSIVE-MODE-ENABLED",
@@ -254,7 +256,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rx_nm_pdu_refs: Optional["CanNmNode.RxNmPduRefs"] = field(
+    rx_nm_pdu_refs: CanNmNode.RxNmPduRefs | None = field(
         default=None,
         metadata={
             "name": "RX-NM-PDU-REFS",
@@ -262,7 +264,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tx_nm_pdu_refs: Optional["CanNmNode.TxNmPduRefs"] = field(
+    tx_nm_pdu_refs: CanNmNode.TxNmPduRefs | None = field(
         default=None,
         metadata={
             "name": "TX-NM-PDU-REFS",
@@ -270,7 +272,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -278,7 +280,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    all_nm_messages_keep_awake: Optional[Boolean] = field(
+    all_nm_messages_keep_awake: Boolean | None = field(
         default=None,
         metadata={
             "name": "ALL-NM-MESSAGES-KEEP-AWAKE",
@@ -286,7 +288,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_car_wake_up_filter_enabled: Optional[Boolean] = field(
+    nm_car_wake_up_filter_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-CAR-WAKE-UP-FILTER-ENABLED",
@@ -294,7 +296,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_car_wake_up_rx_enabled: Optional[Boolean] = field(
+    nm_car_wake_up_rx_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-CAR-WAKE-UP-RX-ENABLED",
@@ -302,7 +304,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_msg_cycle_offset: Optional[TimeValue] = field(
+    nm_msg_cycle_offset: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NM-MSG-CYCLE-OFFSET",
@@ -310,7 +312,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_msg_reduced_time: Optional[TimeValue] = field(
+    nm_msg_reduced_time: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NM-MSG-REDUCED-TIME",
@@ -318,7 +320,7 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_range_config: Optional[CanNmRangeConfig] = field(
+    nm_range_config: CanNmRangeConfig | None = field(
         default=None,
         metadata={
             "name": "NM-RANGE-CONFIG",
@@ -326,14 +328,14 @@ class CanNmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -341,7 +343,7 @@ class CanNmNode:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -373,7 +375,7 @@ class CanNmNode:
 
     @dataclass
     class ControllerRef(Ref):
-        dest: Optional[CommunicationControllerSubtypesEnum] = field(
+        dest: CommunicationControllerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -384,7 +386,7 @@ class CanNmNode:
 
     @dataclass
     class MachineRef(Ref):
-        dest: Optional[MachineDesignSubtypesEnum] = field(
+        dest: MachineDesignSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -395,7 +397,7 @@ class CanNmNode:
 
     @dataclass
     class NmIfEcuRef(Ref):
-        dest: Optional[NmEcuSubtypesEnum] = field(
+        dest: NmEcuSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -406,7 +408,7 @@ class CanNmNode:
 
     @dataclass
     class RxNmPduRefs:
-        rx_nm_pdu_ref: list["CanNmNode.RxNmPduRefs.RxNmPduRef"] = field(
+        rx_nm_pdu_ref: list[CanNmNode.RxNmPduRefs.RxNmPduRef] = field(
             default_factory=list,
             metadata={
                 "name": "RX-NM-PDU-REF",
@@ -417,7 +419,7 @@ class CanNmNode:
 
         @dataclass
         class RxNmPduRef(Ref):
-            dest: Optional[NmPduSubtypesEnum] = field(
+            dest: NmPduSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -428,7 +430,7 @@ class CanNmNode:
 
     @dataclass
     class TxNmPduRefs:
-        tx_nm_pdu_ref: list["CanNmNode.TxNmPduRefs.TxNmPduRef"] = field(
+        tx_nm_pdu_ref: list[CanNmNode.TxNmPduRefs.TxNmPduRef] = field(
             default_factory=list,
             metadata={
                 "name": "TX-NM-PDU-REF",
@@ -439,7 +441,7 @@ class CanNmNode:
 
         @dataclass
         class TxNmPduRef(Ref):
-            dest: Optional[NmPduSubtypesEnum] = field(
+            dest: NmPduSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

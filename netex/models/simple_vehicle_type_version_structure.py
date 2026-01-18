@@ -19,7 +19,7 @@ class SimpleVehicleTypeVersionStructure(TransportTypeVersionStructure):
     class Meta:
         name = "SimpleVehicleType_VersionStructure"
 
-    length: Optional[Decimal] = field(
+    length: Decimal | None = field(
         default=None,
         metadata={
             "name": "Length",
@@ -27,7 +27,7 @@ class SimpleVehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    width: Optional[Decimal] = field(
+    width: Decimal | None = field(
         default=None,
         metadata={
             "name": "Width",
@@ -35,7 +35,7 @@ class SimpleVehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    height: Optional[Decimal] = field(
+    height: Decimal | None = field(
         default=None,
         metadata={
             "name": "Height",
@@ -43,7 +43,7 @@ class SimpleVehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    weight: Optional[Decimal] = field(
+    weight: Decimal | None = field(
         default=None,
         metadata={
             "name": "Weight",
@@ -51,7 +51,7 @@ class SimpleVehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    first_axle_height: Optional[Decimal] = field(
+    first_axle_height: Decimal | None = field(
         default=None,
         metadata={
             "name": "FirstAxleHeight",
@@ -59,7 +59,7 @@ class SimpleVehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    licence_requirements: Optional[LicenceRequirementsEnumeration] = field(
+    licence_requirements: LicenceRequirementsEnumeration | None = field(
         default=None,
         metadata={
             "name": "LicenceRequirements",
@@ -67,7 +67,7 @@ class SimpleVehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_category: Optional[SimpleVehicleCategoryEnumeration] = field(
+    vehicle_category: SimpleVehicleCategoryEnumeration | None = field(
         default=None,
         metadata={
             "name": "VehicleCategory",
@@ -75,7 +75,7 @@ class SimpleVehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_age: Optional[int] = field(
+    minimum_age: int | None = field(
         default=None,
         metadata={
             "name": "MinimumAge",
@@ -83,7 +83,7 @@ class SimpleVehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    portable: Optional[bool] = field(
+    portable: bool | None = field(
         default=None,
         metadata={
             "name": "Portable",
@@ -91,7 +91,7 @@ class SimpleVehicleTypeVersionStructure(TransportTypeVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accepted_driver_permits: Optional[AcceptedDriverPermitsRelStructure] = (
+    accepted_driver_permits: AcceptedDriverPermitsRelStructure | None = (
         field(
             default=None,
             metadata={

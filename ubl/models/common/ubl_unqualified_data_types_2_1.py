@@ -35,7 +35,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class DateTimeType:
-    value: Optional[XmlDateTime] = field(
+    value: XmlDateTime | None = field(
         default=None,
         metadata={
             "required": True,
@@ -45,7 +45,7 @@ class DateTimeType:
 
 @dataclass(frozen=True)
 class DateType:
-    value: Optional[XmlDate] = field(
+    value: XmlDate | None = field(
         default=None,
         metadata={
             "required": True,
@@ -55,7 +55,7 @@ class DateType:
 
 @dataclass(frozen=True)
 class IndicatorType:
-    value: Optional[bool] = field(
+    value: bool | None = field(
         default=None,
         metadata={
             "required": True,
@@ -65,7 +65,7 @@ class IndicatorType:
 
 @dataclass(frozen=True)
 class TimeType:
-    value: Optional[XmlTime] = field(
+    value: XmlTime | None = field(
         default=None,
         metadata={
             "required": True,
@@ -75,7 +75,7 @@ class TimeType:
 
 @dataclass(frozen=True)
 class AmountType(CctsCctSchemaModule21AmountType):
-    currency_id: Optional[str] = field(
+    currency_id: str | None = field(
         default=None,
         metadata={
             "name": "currencyID",
@@ -87,7 +87,7 @@ class AmountType(CctsCctSchemaModule21AmountType):
 
 @dataclass(frozen=True)
 class BinaryObjectType(CctsCctSchemaModule21BinaryObjectType):
-    mime_code: Optional[str] = field(
+    mime_code: str | None = field(
         default=None,
         metadata={
             "name": "mimeCode",
@@ -104,7 +104,7 @@ class CodeType(CctsCctSchemaModule21CodeType):
 
 @dataclass(frozen=True)
 class GraphicType(CctsCctSchemaModule21BinaryObjectType):
-    mime_code: Optional[str] = field(
+    mime_code: str | None = field(
         default=None,
         metadata={
             "name": "mimeCode",
@@ -121,7 +121,7 @@ class IdentifierType(CctsCctSchemaModule21IdentifierType):
 
 @dataclass(frozen=True)
 class MeasureType(CctsCctSchemaModule21MeasureType):
-    unit_code: Optional[str] = field(
+    unit_code: str | None = field(
         default=None,
         metadata={
             "name": "unitCode",
@@ -148,7 +148,7 @@ class PercentType(CctsCctSchemaModule21NumericType):
 
 @dataclass(frozen=True)
 class PictureType(CctsCctSchemaModule21BinaryObjectType):
-    mime_code: Optional[str] = field(
+    mime_code: str | None = field(
         default=None,
         metadata={
             "name": "mimeCode",
@@ -170,7 +170,7 @@ class RateType(CctsCctSchemaModule21NumericType):
 
 @dataclass(frozen=True)
 class SoundType(CctsCctSchemaModule21BinaryObjectType):
-    mime_code: Optional[str] = field(
+    mime_code: str | None = field(
         default=None,
         metadata={
             "name": "mimeCode",
@@ -192,7 +192,7 @@ class ValueType(CctsCctSchemaModule21NumericType):
 
 @dataclass(frozen=True)
 class VideoType(CctsCctSchemaModule21BinaryObjectType):
-    mime_code: Optional[str] = field(
+    mime_code: str | None = field(
         default=None,
         metadata={
             "name": "mimeCode",

@@ -15,7 +15,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class UnderwriterInvolvement(ContactInvolvement):
-    underwriter_role: Optional[UnderwriterRoleType] = field(
+    underwriter_role: UnderwriterRoleType | None = field(
         default=None,
         metadata={
             "name": "UnderwriterRole",

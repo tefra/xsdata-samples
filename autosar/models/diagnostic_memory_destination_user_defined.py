@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -104,7 +106,7 @@ class DiagnosticMemoryDestinationUserDefined:
     class Meta:
         name = "DIAGNOSTIC-MEMORY-DESTINATION-USER-DEFINED"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -113,9 +115,7 @@ class DiagnosticMemoryDestinationUserDefined:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticMemoryDestinationUserDefined.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticMemoryDestinationUserDefined.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -123,7 +123,7 @@ class DiagnosticMemoryDestinationUserDefined:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -131,7 +131,7 @@ class DiagnosticMemoryDestinationUserDefined:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -139,7 +139,7 @@ class DiagnosticMemoryDestinationUserDefined:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -147,7 +147,7 @@ class DiagnosticMemoryDestinationUserDefined:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -155,7 +155,7 @@ class DiagnosticMemoryDestinationUserDefined:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -163,9 +163,7 @@ class DiagnosticMemoryDestinationUserDefined:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "DiagnosticMemoryDestinationUserDefined.Annotations"
-    ] = field(
+    annotations: DiagnosticMemoryDestinationUserDefined.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -173,7 +171,7 @@ class DiagnosticMemoryDestinationUserDefined:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -181,7 +179,7 @@ class DiagnosticMemoryDestinationUserDefined:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dtc_status_availability_mask: Optional[PositiveInteger] = field(
+    dtc_status_availability_mask: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "DTC-STATUS-AVAILABILITY-MASK",
@@ -189,9 +187,7 @@ class DiagnosticMemoryDestinationUserDefined:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_displacement_strategy: Optional[
-        DiagnosticEventDisplacementStrategyEnum
-    ] = field(
+    event_displacement_strategy: DiagnosticEventDisplacementStrategyEnum | None = field(
         default=None,
         metadata={
             "name": "EVENT-DISPLACEMENT-STRATEGY",
@@ -199,7 +195,7 @@ class DiagnosticMemoryDestinationUserDefined:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_number_of_event_entries: Optional[PositiveInteger] = field(
+    max_number_of_event_entries: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MAX-NUMBER-OF-EVENT-ENTRIES",
@@ -207,9 +203,7 @@ class DiagnosticMemoryDestinationUserDefined:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_entry_storage_trigger: Optional[
-        DiagnosticMemoryEntryStorageTriggerEnum
-    ] = field(
+    memory_entry_storage_trigger: DiagnosticMemoryEntryStorageTriggerEnum | None = field(
         default=None,
         metadata={
             "name": "MEMORY-ENTRY-STORAGE-TRIGGER",
@@ -217,9 +211,7 @@ class DiagnosticMemoryDestinationUserDefined:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_of_freeze_frame_record_numeration: Optional[
-        DiagnosticTypeOfFreezeFrameRecordNumerationEnum
-    ] = field(
+    type_of_freeze_frame_record_numeration: DiagnosticTypeOfFreezeFrameRecordNumerationEnum | None = field(
         default=None,
         metadata={
             "name": "TYPE-OF-FREEZE-FRAME-RECORD-NUMERATION",
@@ -227,7 +219,7 @@ class DiagnosticMemoryDestinationUserDefined:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    memory_id: Optional[PositiveInteger] = field(
+    memory_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "MEMORY-ID",
@@ -235,14 +227,14 @@ class DiagnosticMemoryDestinationUserDefined:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -250,7 +242,7 @@ class DiagnosticMemoryDestinationUserDefined:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

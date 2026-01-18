@@ -32,7 +32,7 @@ class ElaboratedDataPublication(PayloadPublication):
     :ivar elaborated_data_publication_extension:
     """
 
-    forecast_default: Optional[bool] = field(
+    forecast_default: bool | None = field(
         default=None,
         metadata={
             "name": "forecastDefault",
@@ -40,7 +40,7 @@ class ElaboratedDataPublication(PayloadPublication):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    period_default: Optional[float] = field(
+    period_default: float | None = field(
         default=None,
         metadata={
             "name": "periodDefault",
@@ -48,7 +48,7 @@ class ElaboratedDataPublication(PayloadPublication):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    time_default: Optional[XmlDateTime] = field(
+    time_default: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "timeDefault",
@@ -56,7 +56,7 @@ class ElaboratedDataPublication(PayloadPublication):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    header_information: Optional[HeaderInformation] = field(
+    header_information: HeaderInformation | None = field(
         default=None,
         metadata={
             "name": "headerInformation",
@@ -65,7 +65,7 @@ class ElaboratedDataPublication(PayloadPublication):
             "required": True,
         },
     )
-    reference_settings: Optional[ReferenceSettings] = field(
+    reference_settings: ReferenceSettings | None = field(
         default=None,
         metadata={
             "name": "referenceSettings",
@@ -82,7 +82,7 @@ class ElaboratedDataPublication(PayloadPublication):
             "min_occurs": 1,
         },
     )
-    elaborated_data_publication_extension: Optional[ExtensionType] = field(
+    elaborated_data_publication_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "elaboratedDataPublicationExtension",

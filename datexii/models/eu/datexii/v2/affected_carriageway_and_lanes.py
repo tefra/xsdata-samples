@@ -29,7 +29,7 @@ class AffectedCarriagewayAndLanes:
     :ivar affected_carriageway_and_lanes_extension:
     """
 
-    carriageway: Optional[CarriagewayEnum] = field(
+    carriageway: CarriagewayEnum | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -44,14 +44,14 @@ class AffectedCarriagewayAndLanes:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    footpath: Optional[bool] = field(
+    footpath: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    length_affected: Optional[float] = field(
+    length_affected: float | None = field(
         default=None,
         metadata={
             "name": "lengthAffected",
@@ -59,7 +59,7 @@ class AffectedCarriagewayAndLanes:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    affected_carriageway_and_lanes_extension: Optional[ExtensionType] = field(
+    affected_carriageway_and_lanes_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "affectedCarriagewayAndLanesExtension",

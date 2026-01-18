@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -36,9 +38,7 @@ class DiagnosticComControlSpecificChannel:
     class Meta:
         name = "DIAGNOSTIC-COM-CONTROL-SPECIFIC-CHANNEL"
 
-    specific_channel_ref: Optional[
-        "DiagnosticComControlSpecificChannel.SpecificChannelRef"
-    ] = field(
+    specific_channel_ref: DiagnosticComControlSpecificChannel.SpecificChannelRef | None = field(
         default=None,
         metadata={
             "name": "SPECIFIC-CHANNEL-REF",
@@ -46,7 +46,7 @@ class DiagnosticComControlSpecificChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    subnet_number: Optional[PositiveInteger] = field(
+    subnet_number: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "SUBNET-NUMBER",
@@ -54,14 +54,14 @@ class DiagnosticComControlSpecificChannel:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -72,7 +72,7 @@ class DiagnosticComControlSpecificChannel:
 
     @dataclass
     class SpecificChannelRef(Ref):
-        dest: Optional[CommunicationClusterSubtypesEnum] = field(
+        dest: CommunicationClusterSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

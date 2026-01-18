@@ -30,21 +30,21 @@ class ElaboratedData:
     :ivar elaborated_data_extension:
     """
 
-    forecast: Optional[bool] = field(
+    forecast: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    source: Optional[Source] = field(
+    source: Source | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    validity: Optional[Validity] = field(
+    validity: Validity | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -59,7 +59,7 @@ class ElaboratedData:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    basic_data: Optional[BasicData] = field(
+    basic_data: BasicData | None = field(
         default=None,
         metadata={
             "name": "basicData",
@@ -67,7 +67,7 @@ class ElaboratedData:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    elaborated_data_extension: Optional[ExtensionType] = field(
+    elaborated_data_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "elaboratedDataExtension",

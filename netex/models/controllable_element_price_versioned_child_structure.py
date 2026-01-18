@@ -16,7 +16,7 @@ class ControllableElementPriceVersionedChildStructure(
     class Meta:
         name = "ControllableElementPrice_VersionedChildStructure"
 
-    controllable_element_ref: Optional[ControllableElementRef] = field(
+    controllable_element_ref: ControllableElementRef | None = field(
         default=None,
         metadata={
             "name": "ControllableElementRef",

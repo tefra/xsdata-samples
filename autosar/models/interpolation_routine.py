@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -41,7 +43,7 @@ class InterpolationRoutine:
     class Meta:
         name = "INTERPOLATION-ROUTINE"
 
-    short_label: Optional[Identifier] = field(
+    short_label: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -49,7 +51,7 @@ class InterpolationRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_default: Optional[Boolean] = field(
+    is_default: Boolean | None = field(
         default=None,
         metadata={
             "name": "IS-DEFAULT",
@@ -57,9 +59,7 @@ class InterpolationRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    interpolation_routine_ref: Optional[
-        "InterpolationRoutine.InterpolationRoutineRef"
-    ] = field(
+    interpolation_routine_ref: InterpolationRoutine.InterpolationRoutineRef | None = field(
         default=None,
         metadata={
             "name": "INTERPOLATION-ROUTINE-REF",
@@ -67,14 +67,14 @@ class InterpolationRoutine:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -85,7 +85,7 @@ class InterpolationRoutine:
 
     @dataclass
     class InterpolationRoutineRef(Ref):
-        dest: Optional[BswModuleEntrySubtypesEnum] = field(
+        dest: BswModuleEntrySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
@@ -23,7 +25,7 @@ class TypesOfFrameRelStructure(OneToManyRelationshipStructure):
         name = "typesOfFrame_RelStructure"
 
     type_of_frame_ref_or_type_of_frame: Iterable[
-        Union[TypeOfFrameRef, "TypeOfFrame"]
+        TypeOfFrameRef | TypeOfFrame
     ] = field(
         default_factory=list,
         metadata={
@@ -49,7 +51,7 @@ class TypeOfFrameValueStructure(TypeOfEntityVersionStructure):
     class Meta:
         name = "TypeOfFrame_ValueStructure"
 
-    type_of_validity_ref: Optional[TypeOfValidityRef] = field(
+    type_of_validity_ref: TypeOfValidityRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfValidityRef",
@@ -57,7 +59,7 @@ class TypeOfFrameValueStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    frame_class_ref: Optional[ClassRefStructure] = field(
+    frame_class_ref: ClassRefStructure | None = field(
         default=None,
         metadata={
             "name": "FrameClassRef",
@@ -65,14 +67,14 @@ class TypeOfFrameValueStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    classes: Optional[ClassesInRepositoryRelStructure] = field(
+    classes: ClassesInRepositoryRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    types_of_entity: Optional[TypeOfEntityRefsRelStructure] = field(
+    types_of_entity: TypeOfEntityRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "typesOfEntity",
@@ -80,14 +82,14 @@ class TypeOfFrameValueStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    includes: Optional[TypesOfFrameRelStructure] = field(
+    includes: TypesOfFrameRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    locating_system_ref: Optional[str] = field(
+    locating_system_ref: str | None = field(
         default=None,
         metadata={
             "name": "LocatingSystemRef",
@@ -95,7 +97,7 @@ class TypeOfFrameValueStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    modification_set: Optional[ModificationSetEnumeration] = field(
+    modification_set: ModificationSetEnumeration | None = field(
         default=None,
         metadata={
             "name": "ModificationSet",
@@ -103,7 +105,7 @@ class TypeOfFrameValueStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    layer_ref: Optional[LayerRef] = field(
+    layer_ref: LayerRef | None = field(
         default=None,
         metadata={
             "name": "LayerRef",

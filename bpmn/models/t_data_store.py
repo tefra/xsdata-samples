@@ -13,7 +13,7 @@ class TDataStore(TRootElement):
     class Meta:
         name = "tDataStore"
 
-    data_state: Optional[DataState] = field(
+    data_state: DataState | None = field(
         default=None,
         metadata={
             "name": "dataState",
@@ -21,13 +21,13 @@ class TDataStore(TRootElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    capacity: Optional[int] = field(
+    capacity: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -40,7 +40,7 @@ class TDataStore(TRootElement):
             "type": "Attribute",
         },
     )
-    item_subject_ref: Optional[QName] = field(
+    item_subject_ref: QName | None = field(
         default=None,
         metadata={
             "name": "itemSubjectRef",

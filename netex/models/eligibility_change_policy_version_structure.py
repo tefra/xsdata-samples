@@ -13,7 +13,7 @@ class EligibilityChangePolicyVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "EligibilityChangePolicy_VersionStructure"
 
-    on_becoming_eligible_policy: Optional[OnBecomingEnumeration] = field(
+    on_becoming_eligible_policy: OnBecomingEnumeration | None = field(
         default=None,
         metadata={
             "name": "OnBecomingEligiblePolicy",
@@ -21,7 +21,7 @@ class EligibilityChangePolicyVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    on_ceasing_to_be_eligible_policy: Optional[OnCeasingEnumeration] = field(
+    on_ceasing_to_be_eligible_policy: OnCeasingEnumeration | None = field(
         default=None,
         metadata={
             "name": "OnCeasingToBeEligiblePolicy",

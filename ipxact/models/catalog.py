@@ -38,121 +38,121 @@ class Catalog:
         name = "catalog"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    vendor: Optional[str] = field(
+    vendor: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    library: Optional[str] = field(
+    library: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    display_name: Optional[str] = field(
+    display_name: str | None = field(
         default=None,
         metadata={
             "name": "displayName",
             "type": "Element",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
             "type": "Element",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    catalogs: Optional[IpxactFilesType] = field(
+    catalogs: IpxactFilesType | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    bus_definitions: Optional[IpxactFilesType] = field(
+    bus_definitions: IpxactFilesType | None = field(
         default=None,
         metadata={
             "name": "busDefinitions",
             "type": "Element",
         },
     )
-    abstraction_definitions: Optional[IpxactFilesType] = field(
+    abstraction_definitions: IpxactFilesType | None = field(
         default=None,
         metadata={
             "name": "abstractionDefinitions",
             "type": "Element",
         },
     )
-    components: Optional[IpxactFilesType] = field(
+    components: IpxactFilesType | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    abstractors: Optional[IpxactFilesType] = field(
+    abstractors: IpxactFilesType | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    designs: Optional[IpxactFilesType] = field(
+    designs: IpxactFilesType | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    design_configurations: Optional[IpxactFilesType] = field(
+    design_configurations: IpxactFilesType | None = field(
         default=None,
         metadata={
             "name": "designConfigurations",
             "type": "Element",
         },
     )
-    generator_chains: Optional[IpxactFilesType] = field(
+    generator_chains: IpxactFilesType | None = field(
         default=None,
         metadata={
             "name": "generatorChains",
             "type": "Element",
         },
     )
-    type_definitions: Optional[IpxactFilesType] = field(
+    type_definitions: IpxactFilesType | None = field(
         default=None,
         metadata={
             "name": "typeDefinitions",
             "type": "Element",
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

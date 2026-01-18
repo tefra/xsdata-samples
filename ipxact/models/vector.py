@@ -17,21 +17,21 @@ class Vector:
         name = "vector"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    left: Optional[Left] = field(
+    left: Left | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    right: Optional[Right] = field(
+    right: Right | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

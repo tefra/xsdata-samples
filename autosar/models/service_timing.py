@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -144,7 +146,7 @@ class ServiceTiming:
     class Meta:
         name = "SERVICE-TIMING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -153,7 +155,7 @@ class ServiceTiming:
             "required": True,
         },
     )
-    short_name_fragments: Optional["ServiceTiming.ShortNameFragments"] = field(
+    short_name_fragments: ServiceTiming.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -161,7 +163,7 @@ class ServiceTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -169,7 +171,7 @@ class ServiceTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -177,7 +179,7 @@ class ServiceTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -185,7 +187,7 @@ class ServiceTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -193,7 +195,7 @@ class ServiceTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -201,7 +203,7 @@ class ServiceTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ServiceTiming.Annotations"] = field(
+    annotations: ServiceTiming.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -209,7 +211,7 @@ class ServiceTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -217,7 +219,7 @@ class ServiceTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_conditions: Optional["ServiceTiming.TimingConditions"] = field(
+    timing_conditions: ServiceTiming.TimingConditions | None = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITIONS",
@@ -225,7 +227,7 @@ class ServiceTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_descriptions: Optional["ServiceTiming.TimingDescriptions"] = field(
+    timing_descriptions: ServiceTiming.TimingDescriptions | None = field(
         default=None,
         metadata={
             "name": "TIMING-DESCRIPTIONS",
@@ -233,7 +235,7 @@ class ServiceTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_guarantees: Optional["ServiceTiming.TimingGuarantees"] = field(
+    timing_guarantees: ServiceTiming.TimingGuarantees | None = field(
         default=None,
         metadata={
             "name": "TIMING-GUARANTEES",
@@ -241,7 +243,7 @@ class ServiceTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_requirements: Optional["ServiceTiming.TimingRequirements"] = field(
+    timing_requirements: ServiceTiming.TimingRequirements | None = field(
         default=None,
         metadata={
             "name": "TIMING-REQUIREMENTS",
@@ -249,7 +251,7 @@ class ServiceTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_resource: Optional[TimingExtensionResource] = field(
+    timing_resource: TimingExtensionResource | None = field(
         default=None,
         metadata={
             "name": "TIMING-RESOURCE",
@@ -257,7 +259,7 @@ class ServiceTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    service_instance_refs: Optional["ServiceTiming.ServiceInstanceRefs"] = (
+    service_instance_refs: ServiceTiming.ServiceInstanceRefs | None = (
         field(
             default=None,
             metadata={
@@ -267,14 +269,14 @@ class ServiceTiming:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -282,7 +284,7 @@ class ServiceTiming:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -739,7 +741,7 @@ class ServiceTiming:
     @dataclass
     class ServiceInstanceRefs:
         service_instance_ref: list[
-            "ServiceTiming.ServiceInstanceRefs.ServiceInstanceRef"
+            ServiceTiming.ServiceInstanceRefs.ServiceInstanceRef
         ] = field(
             default_factory=list,
             metadata={
@@ -751,7 +753,7 @@ class ServiceTiming:
 
         @dataclass
         class ServiceInstanceRef(Ref):
-            dest: Optional[AdaptivePlatformServiceInstanceSubtypesEnum] = (
+            dest: AdaptivePlatformServiceInstanceSubtypesEnum | None = (
                 field(
                     default=None,
                     metadata={

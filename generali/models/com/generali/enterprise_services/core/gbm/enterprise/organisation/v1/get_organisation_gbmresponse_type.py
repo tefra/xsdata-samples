@@ -24,7 +24,7 @@ class GetOrganisationGbmresponseType(BaseGbmheaderType):
     class Meta:
         name = "GetOrganisationGBMResponseType"
 
-    organisation_gbo: Optional[OrganisationGbotype] = field(
+    organisation_gbo: OrganisationGbotype | None = field(
         default=None,
         metadata={
             "name": "OrganisationGBO",

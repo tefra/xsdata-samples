@@ -6,7 +6,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class StairEndStructure:
-    continuing_handrail: Optional[bool] = field(
+    continuing_handrail: bool | None = field(
         default=None,
         metadata={
             "name": "ContinuingHandrail",
@@ -14,7 +14,7 @@ class StairEndStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    textured_surface: Optional[bool] = field(
+    textured_surface: bool | None = field(
         default=None,
         metadata={
             "name": "TexturedSurface",
@@ -22,7 +22,7 @@ class StairEndStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    visual_contrast: Optional[bool] = field(
+    visual_contrast: bool | None = field(
         default=None,
         metadata={
             "name": "VisualContrast",

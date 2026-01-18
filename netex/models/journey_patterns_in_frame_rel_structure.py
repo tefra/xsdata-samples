@@ -16,7 +16,7 @@ class JourneyPatternsInFrameRelStructure(ContainmentAggregationStructure):
         name = "journeyPatternsInFrame_RelStructure"
 
     journey_pattern: Iterable[
-        Union[ServiceJourneyPattern, DeadRunJourneyPattern, JourneyPattern]
+        ServiceJourneyPattern | DeadRunJourneyPattern | JourneyPattern
     ] = field(
         default_factory=list,
         metadata={

@@ -15,7 +15,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class MaintenanceType:
-    year: Optional[NumberType] = field(
+    year: NumberType | None = field(
         default=None,
         metadata={
             "name": "Year",
@@ -24,7 +24,7 @@ class MaintenanceType:
             "required": True,
         },
     )
-    type_value: Optional[MaintenanceTypeEnum] = field(
+    type_value: MaintenanceTypeEnum | None = field(
         default=None,
         metadata={
             "name": "Type",

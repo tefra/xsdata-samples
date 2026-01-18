@@ -16,7 +16,7 @@ class GroupOfLocations:
     using different Location objects for different referencing systems.
     """
 
-    group_of_locations_extension: Optional[ExtensionType] = field(
+    group_of_locations_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "groupOfLocationsExtension",

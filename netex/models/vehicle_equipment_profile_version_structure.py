@@ -82,7 +82,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "VehicleEquipmentProfile_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -90,7 +90,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -98,73 +98,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
-        Union[
-            RetailDeviceRef,
-            OnlineServiceRef,
-            VehicleRentalServiceRef,
-            VehicleSharingServiceRef,
-            ChauffeuredVehicleServiceRef,
-            TaxiServiceRef,
-            CarPoolingServiceRef,
-            ActivatedEquipmentRef,
-            BatteryEquipmentRef,
-            RefuellingEquipmentRef,
-            VehicleChargingEquipmentRef,
-            AssistanceBookingServiceRef,
-            CateringServiceRef,
-            RetailServiceRef,
-            MoneyServiceRef,
-            HireServiceRef,
-            CommunicationServiceRef,
-            MeetingPointServiceRef,
-            LeftLuggageServiceRef,
-            LuggageServiceRef,
-            LostPropertyServiceRef,
-            ComplaintsServiceRef,
-            CustomerServiceRef,
-            AssistanceServiceRef,
-            TicketingServiceRef,
-            LocalServiceRef,
-            VehicleReleaseEquipmentRef,
-            TicketValidatorEquipmentRef,
-            TicketingEquipmentRef,
-            PassengerInformationEquipmentRef,
-            CycleStorageEquipmentRef,
-            TrolleyStandEquipmentRef,
-            SeatingEquipmentRef,
-            ShelterEquipmentRef,
-            LuggageLockerEquipmentRef,
-            WaitingRoomEquipmentRef,
-            WaitingEquipmentRef,
-            SiteEquipmentRef,
-            PlaceLightingEquipmentRef,
-            RoughSurfaceRef,
-            StaircaseEquipmentRef,
-            QueueingEquipmentRef,
-            TravelatorEquipmentRef,
-            EscalatorEquipmentRef,
-            LiftCallEquipmentRef,
-            LiftEquipmentRef,
-            CrossingEquipmentRef,
-            RampEquipmentRef,
-            EntranceEquipmentRef,
-            HeadingSignRef,
-            GeneralSignRef,
-            PlaceSignRef,
-            SignEquipmentRef,
-            RubbishDisposalEquipmentRef,
-            PassengerBeaconEquipmentRef,
-            HelpPointEquipmentRef,
-            PassengerSafetyEquipmentRef,
-            SanitaryEquipmentRef,
-            WheelchairVehicleRef,
-            AccessVehicleEquipmentRef,
-            VehicleEquipmentRef,
-            PassengerEquipmentRef,
-            EquipmentRef,
-        ]
-    ] = field(
+    choice: RetailDeviceRef | OnlineServiceRef | VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | ActivatedEquipmentRef | BatteryEquipmentRef | RefuellingEquipmentRef | VehicleChargingEquipmentRef | AssistanceBookingServiceRef | CateringServiceRef | RetailServiceRef | MoneyServiceRef | HireServiceRef | CommunicationServiceRef | MeetingPointServiceRef | LeftLuggageServiceRef | LuggageServiceRef | LostPropertyServiceRef | ComplaintsServiceRef | CustomerServiceRef | AssistanceServiceRef | TicketingServiceRef | LocalServiceRef | VehicleReleaseEquipmentRef | TicketValidatorEquipmentRef | TicketingEquipmentRef | PassengerInformationEquipmentRef | CycleStorageEquipmentRef | TrolleyStandEquipmentRef | SeatingEquipmentRef | ShelterEquipmentRef | LuggageLockerEquipmentRef | WaitingRoomEquipmentRef | WaitingEquipmentRef | SiteEquipmentRef | PlaceLightingEquipmentRef | RoughSurfaceRef | StaircaseEquipmentRef | QueueingEquipmentRef | TravelatorEquipmentRef | EscalatorEquipmentRef | LiftCallEquipmentRef | LiftEquipmentRef | CrossingEquipmentRef | RampEquipmentRef | EntranceEquipmentRef | HeadingSignRef | GeneralSignRef | PlaceSignRef | SignEquipmentRef | RubbishDisposalEquipmentRef | PassengerBeaconEquipmentRef | HelpPointEquipmentRef | PassengerSafetyEquipmentRef | SanitaryEquipmentRef | WheelchairVehicleRef | AccessVehicleEquipmentRef | VehicleEquipmentRef | PassengerEquipmentRef | EquipmentRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -487,7 +421,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    units: Optional[int] = field(
+    units: int | None = field(
         default=None,
         metadata={
             "name": "Units",
@@ -495,7 +429,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    manufacturer: Optional[MultilingualString] = field(
+    manufacturer: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Manufacturer",
@@ -503,7 +437,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_equipment_ref: Optional[TypeOfEquipmentRef] = field(
+    type_of_equipment_ref: TypeOfEquipmentRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfEquipmentRef",
@@ -511,9 +445,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    purpose_of_equipment_profile_ref: Optional[
-        PurposeOfEquipmentProfileRef
-    ] = field(
+    purpose_of_equipment_profile_ref: PurposeOfEquipmentProfileRef | None = field(
         default=None,
         metadata={
             "name": "PurposeOfEquipmentProfileRef",
@@ -521,9 +453,7 @@ class VehicleEquipmentProfileVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    vehicle_equipment_profile_members: Optional[
-        VehicleEquipmentProfileMembersRelStructure
-    ] = field(
+    vehicle_equipment_profile_members: VehicleEquipmentProfileMembersRelStructure | None = field(
         default=None,
         metadata={
             "name": "vehicleEquipmentProfileMembers",

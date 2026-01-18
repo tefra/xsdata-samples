@@ -15,7 +15,7 @@ class TypesOfFacilityRelStructure(ContainmentAggregationStructure):
         name = "typesOfFacility_RelStructure"
 
     type_of_facility_ref_or_type_of_facility: Iterable[
-        Union[TypeOfFacilityRef, TypeOfFacility]
+        TypeOfFacilityRef | TypeOfFacility
     ] = field(
         default_factory=list,
         metadata={

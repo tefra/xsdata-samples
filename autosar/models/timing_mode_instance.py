@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -89,7 +91,7 @@ class TimingModeInstance:
     class Meta:
         name = "TIMING-MODE-INSTANCE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -98,7 +100,7 @@ class TimingModeInstance:
             "required": True,
         },
     )
-    short_name_fragments: Optional["TimingModeInstance.ShortNameFragments"] = (
+    short_name_fragments: TimingModeInstance.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -108,7 +110,7 @@ class TimingModeInstance:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -116,7 +118,7 @@ class TimingModeInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -124,7 +126,7 @@ class TimingModeInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -132,7 +134,7 @@ class TimingModeInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -140,7 +142,7 @@ class TimingModeInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -148,7 +150,7 @@ class TimingModeInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["TimingModeInstance.Annotations"] = field(
+    annotations: TimingModeInstance.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -156,7 +158,7 @@ class TimingModeInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_instance: Optional["TimingModeInstance.ModeInstance"] = field(
+    mode_instance: TimingModeInstance.ModeInstance | None = field(
         default=None,
         metadata={
             "name": "MODE-INSTANCE",
@@ -164,7 +166,7 @@ class TimingModeInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -172,14 +174,14 @@ class TimingModeInstance:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -187,7 +189,7 @@ class TimingModeInstance:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -219,7 +221,7 @@ class TimingModeInstance:
 
     @dataclass
     class ModeInstance:
-        mode_in_bsw_instance_ref: Optional[ModeInBswInstanceRef] = field(
+        mode_in_bsw_instance_ref: ModeInBswInstanceRef | None = field(
             default=None,
             metadata={
                 "name": "MODE-IN-BSW-INSTANCE-REF",
@@ -227,7 +229,7 @@ class TimingModeInstance:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        mode_in_swc_instance_ref: Optional[ModeInSwcInstanceRef] = field(
+        mode_in_swc_instance_ref: ModeInSwcInstanceRef | None = field(
             default=None,
             metadata={
                 "name": "MODE-IN-SWC-INSTANCE-REF",

@@ -14,48 +14,48 @@ class Issn:
         name = "issn"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    assigning_authority: Optional[str] = field(
+    assigning_authority: str | None = field(
         default=None,
         metadata={
             "name": "assigning-authority",
             "type": "Attribute",
         },
     )
-    content_type: Optional[str] = field(
+    content_type: str | None = field(
         default=None,
         metadata={
             "name": "content-type",
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    pub_type: Optional[str] = field(
+    pub_type: str | None = field(
         default=None,
         metadata={
             "name": "pub-type",
             "type": "Attribute",
         },
     )
-    publication_format: Optional[str] = field(
+    publication_format: str | None = field(
         default=None,
         metadata={
             "name": "publication-format",
             "type": "Attribute",
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

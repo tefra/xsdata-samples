@@ -24,17 +24,7 @@ class EntranceRefsRelStructure(OneToManyRelationshipStructure):
         name = "entranceRefs_RelStructure"
 
     entrance_ref_or_parking_entrance_ref: Iterable[
-        Union[
-            StopPlaceVehicleEntranceRef,
-            StopPlaceEntranceRef,
-            ParkingEntranceForVehiclesRef,
-            ParkingPassengerEntranceRef,
-            ParkingEntranceRef,
-            PointOfInterestVehicleEntranceRef,
-            PointOfInterestEntranceRef,
-            VehicleEntranceRef,
-            EntranceRef,
-        ]
+        StopPlaceVehicleEntranceRef | StopPlaceEntranceRef | ParkingEntranceForVehiclesRef | ParkingPassengerEntranceRef | ParkingEntranceRef | PointOfInterestVehicleEntranceRef | PointOfInterestEntranceRef | VehicleEntranceRef | EntranceRef
     ] = field(
         default_factory=list,
         metadata={

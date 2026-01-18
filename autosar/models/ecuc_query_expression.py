@@ -34,14 +34,14 @@ class EcucQueryExpression:
     class Meta:
         name = "ECUC-QUERY-EXPRESSION"
 
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -76,7 +76,7 @@ class EcucQueryExpression:
 
     @dataclass
     class ConfigElementDefGlobalRef(Ref):
-        dest: Optional[EcucDefinitionElementSubtypesEnum] = field(
+        dest: EcucDefinitionElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -87,7 +87,7 @@ class EcucQueryExpression:
 
     @dataclass
     class ConfigElementDefLocalRef(Ref):
-        dest: Optional[EcucDefinitionElementSubtypesEnum] = field(
+        dest: EcucDefinitionElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

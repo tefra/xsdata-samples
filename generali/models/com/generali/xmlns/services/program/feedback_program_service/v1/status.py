@@ -15,4 +15,4 @@ class Status:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    value: Optional[StatusValue] = field(default=None)
+    value: StatusValue | None = field(default=None)

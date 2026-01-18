@@ -22,13 +22,13 @@ class AuthorNotes:
         name = "author-notes"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    label: Optional[Label] = field(
+    label: Label | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    title: Optional[Title] = field(
+    title: Title | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -52,7 +52,7 @@ class AuthorNotes:
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -65,14 +65,14 @@ class AuthorNotes:
             "tokens": True,
         },
     )
-    specific_use: Optional[str] = field(
+    specific_use: str | None = field(
         default=None,
         metadata={
             "name": "specific-use",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

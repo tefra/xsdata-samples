@@ -18,7 +18,7 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
     class Meta:
         name = "RampEquipment_VersionStructure"
 
-    length: Optional[Decimal] = field(
+    length: Decimal | None = field(
         default=None,
         metadata={
             "name": "Length",
@@ -26,7 +26,7 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_load: Optional[Decimal] = field(
+    maximum_load: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumLoad",
@@ -34,7 +34,7 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gradient: Optional[int] = field(
+    gradient: int | None = field(
         default=None,
         metadata={
             "name": "Gradient",
@@ -42,7 +42,7 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gradient_type: Optional[GradientEnumeration] = field(
+    gradient_type: GradientEnumeration | None = field(
         default=None,
         metadata={
             "name": "GradientType",
@@ -50,7 +50,7 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    pedestal: Optional[bool] = field(
+    pedestal: bool | None = field(
         default=None,
         metadata={
             "name": "Pedestal",
@@ -58,7 +58,7 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    handrail_type: Optional[HandrailEnumeration] = field(
+    handrail_type: HandrailEnumeration | None = field(
         default=None,
         metadata={
             "name": "HandrailType",
@@ -66,7 +66,7 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    handrail_height: Optional[Decimal] = field(
+    handrail_height: Decimal | None = field(
         default=None,
         metadata={
             "name": "HandrailHeight",
@@ -74,7 +74,7 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    lower_handrail_height: Optional[Decimal] = field(
+    lower_handrail_height: Decimal | None = field(
         default=None,
         metadata={
             "name": "LowerHandrailHeight",
@@ -82,7 +82,7 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tactile_writing: Optional[bool] = field(
+    tactile_writing: bool | None = field(
         default=None,
         metadata={
             "name": "TactileWriting",
@@ -90,7 +90,7 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tactile_guidance_strips: Optional[bool] = field(
+    tactile_guidance_strips: bool | None = field(
         default=None,
         metadata={
             "name": "TactileGuidanceStrips",
@@ -98,7 +98,7 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    visual_guidance_bands: Optional[bool] = field(
+    visual_guidance_bands: bool | None = field(
         default=None,
         metadata={
             "name": "VisualGuidanceBands",
@@ -106,7 +106,7 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    temporary: Optional[bool] = field(
+    temporary: bool | None = field(
         default=None,
         metadata={
             "name": "Temporary",
@@ -114,7 +114,7 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    suitable_for_cycles: Optional[bool] = field(
+    suitable_for_cycles: bool | None = field(
         default=None,
         metadata={
             "name": "SuitableForCycles",
@@ -122,7 +122,7 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    rest_stop_distance: Optional[Decimal] = field(
+    rest_stop_distance: Decimal | None = field(
         default=None,
         metadata={
             "name": "RestStopDistance",
@@ -130,7 +130,7 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    safety_edge: Optional[SafetyEdgeEnumeration] = field(
+    safety_edge: SafetyEdgeEnumeration | None = field(
         default=None,
         metadata={
             "name": "SafetyEdge",
@@ -138,7 +138,7 @@ class RampEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    turning_space: Optional[RampTurningSpacePositionEnumeration] = field(
+    turning_space: RampTurningSpacePositionEnumeration | None = field(
         default=None,
         metadata={
             "name": "TurningSpace",

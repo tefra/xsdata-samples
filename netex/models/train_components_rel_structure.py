@@ -15,7 +15,7 @@ class TrainComponentsRelStructure(ContainmentAggregationStructure):
         name = "trainComponents_RelStructure"
 
     train_component_ref_or_train_component: Iterable[
-        Union[TrainComponentRef, TrainComponent]
+        TrainComponentRef | TrainComponent
     ] = field(
         default_factory=list,
         metadata={

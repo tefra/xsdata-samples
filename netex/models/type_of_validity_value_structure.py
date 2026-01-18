@@ -15,7 +15,7 @@ class TypeOfValidityValueStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "TypeOfValidity_ValueStructure"
 
-    periodicity: Optional[XmlDuration] = field(
+    periodicity: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "Periodicity",
@@ -23,7 +23,7 @@ class TypeOfValidityValueStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    nature: Optional[FrameNatureEnumeration] = field(
+    nature: FrameNatureEnumeration | None = field(
         default=None,
         metadata={
             "name": "Nature",
@@ -31,7 +31,7 @@ class TypeOfValidityValueStructure(TypeOfValueVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    classes: Optional[ClassRefsRelStructure] = field(
+    classes: ClassRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

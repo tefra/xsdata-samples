@@ -28,7 +28,7 @@ class DistanceFromLinearElementReferent(DistanceAlongLinearElement):
     :ivar distance_from_linear_element_referent_extension:
     """
 
-    distance_along: Optional[float] = field(
+    distance_along: float | None = field(
         default=None,
         metadata={
             "name": "distanceAlong",
@@ -37,7 +37,7 @@ class DistanceFromLinearElementReferent(DistanceAlongLinearElement):
             "required": True,
         },
     )
-    from_referent: Optional[Referent] = field(
+    from_referent: Referent | None = field(
         default=None,
         metadata={
             "name": "fromReferent",
@@ -46,7 +46,7 @@ class DistanceFromLinearElementReferent(DistanceAlongLinearElement):
             "required": True,
         },
     )
-    towards_referent: Optional[Referent] = field(
+    towards_referent: Referent | None = field(
         default=None,
         metadata={
             "name": "towardsReferent",
@@ -54,9 +54,7 @@ class DistanceFromLinearElementReferent(DistanceAlongLinearElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    distance_from_linear_element_referent_extension: Optional[
-        ExtensionType
-    ] = field(
+    distance_from_linear_element_referent_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "distanceFromLinearElementReferentExtension",

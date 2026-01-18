@@ -19,7 +19,7 @@ class OpenlrOffsets:
     :ivar openlr_offsets_extension:
     """
 
-    openlr_positive_offset: Optional[int] = field(
+    openlr_positive_offset: int | None = field(
         default=None,
         metadata={
             "name": "openlrPositiveOffset",
@@ -27,7 +27,7 @@ class OpenlrOffsets:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    openlr_negative_offset: Optional[int] = field(
+    openlr_negative_offset: int | None = field(
         default=None,
         metadata={
             "name": "openlrNegativeOffset",
@@ -35,7 +35,7 @@ class OpenlrOffsets:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    openlr_offsets_extension: Optional[ExtensionType] = field(
+    openlr_offsets_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "openlrOffsetsExtension",

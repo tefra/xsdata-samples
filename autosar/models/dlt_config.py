@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -36,7 +38,7 @@ class DltConfig:
     class Meta:
         name = "DLT-CONFIG"
 
-    dlt_ecu_id: Optional[String] = field(
+    dlt_ecu_id: String | None = field(
         default=None,
         metadata={
             "name": "DLT-ECU-ID",
@@ -44,7 +46,7 @@ class DltConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    dlt_log_channels: Optional["DltConfig.DltLogChannels"] = field(
+    dlt_log_channels: DltConfig.DltLogChannels | None = field(
         default=None,
         metadata={
             "name": "DLT-LOG-CHANNELS",
@@ -52,7 +54,7 @@ class DltConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    session_id_support: Optional[Boolean] = field(
+    session_id_support: Boolean | None = field(
         default=None,
         metadata={
             "name": "SESSION-ID-SUPPORT",
@@ -60,7 +62,7 @@ class DltConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timestamp_support: Optional[Boolean] = field(
+    timestamp_support: Boolean | None = field(
         default=None,
         metadata={
             "name": "TIMESTAMP-SUPPORT",
@@ -68,14 +70,14 @@ class DltConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -18,7 +18,7 @@ class CappingRulePricesRelStructure(StrictContainmentAggregationStructure):
         name = "cappingRulePrices_RelStructure"
 
     capping_rule_price_ref_or_cell_ref_or_capping_rule_price: Iterable[
-        Union[CappingRulePriceRef, CellRef, CappingRulePrice]
+        CappingRulePriceRef | CellRef | CappingRulePrice
     ] = field(
         default_factory=list,
         metadata={

@@ -24,19 +24,19 @@ class DatabaseDate:
         name = "database_date"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    creation_date: Optional[CreationDate] = field(
+    creation_date: CreationDate | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    publication_date: Optional[PublicationDate] = field(
+    publication_date: PublicationDate | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    update_date: Optional[UpdateDate] = field(
+    update_date: UpdateDate | None = field(
         default=None,
         metadata={
             "type": "Element",

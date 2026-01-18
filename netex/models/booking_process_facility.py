@@ -11,7 +11,7 @@ class BookingProcessFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: Optional[BookingProcessEnumeration] = field(
+    value: BookingProcessEnumeration | None = field(
         default=None,
         metadata={
             "required": True,

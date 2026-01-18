@@ -15,7 +15,7 @@ class TypeOfUsageParametersRelStructure(ContainmentAggregationStructure):
         name = "typeOfUsageParameters_RelStructure"
 
     type_of_usage_parameter_ref_or_type_of_usage_parameter: Iterable[
-        Union[TypeOfUsageParameterRef, TypeOfUsageParameter]
+        TypeOfUsageParameterRef | TypeOfUsageParameter
     ] = field(
         default_factory=list,
         metadata={

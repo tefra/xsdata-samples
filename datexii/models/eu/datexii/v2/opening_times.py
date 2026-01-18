@@ -32,7 +32,7 @@ class OpeningTimes:
     :ivar opening_times_extension:
     """
 
-    last_updated: Optional[XmlDateTime] = field(
+    last_updated: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "lastUpdated",
@@ -40,7 +40,7 @@ class OpeningTimes:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    open_all_year: Optional[bool] = field(
+    open_all_year: bool | None = field(
         default=None,
         metadata={
             "name": "openAllYear",
@@ -48,14 +48,14 @@ class OpeningTimes:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    available24hours: Optional[bool] = field(
+    available24hours: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    url_link_address: Optional[str] = field(
+    url_link_address: str | None = field(
         default=None,
         metadata={
             "name": "urlLinkAddress",
@@ -63,7 +63,7 @@ class OpeningTimes:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    opening_times_unknown: Optional[bool] = field(
+    opening_times_unknown: bool | None = field(
         default=None,
         metadata={
             "name": "openingTimesUnknown",
@@ -71,7 +71,7 @@ class OpeningTimes:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    opening_times_not_specified: Optional[bool] = field(
+    opening_times_not_specified: bool | None = field(
         default=None,
         metadata={
             "name": "openingTimesNotSpecified",
@@ -79,14 +79,14 @@ class OpeningTimes:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    validity: Optional[Validity] = field(
+    validity: Validity | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    opening_times_extension: Optional[ExtensionType] = field(
+    opening_times_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "openingTimesExtension",

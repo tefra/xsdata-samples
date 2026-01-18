@@ -20,7 +20,7 @@ class ItemSchemeMapType(ItemSchemeMapBaseType):
     :ivar item_map:
     """
 
-    source: Optional[str] = field(
+    source: str | None = field(
         default=None,
         metadata={
             "name": "Source",
@@ -30,7 +30,7 @@ class ItemSchemeMapType(ItemSchemeMapBaseType):
             "pattern": r".+\)",
         },
     )
-    target: Optional[str] = field(
+    target: str | None = field(
         default=None,
         metadata={
             "name": "Target",

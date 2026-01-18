@@ -17,7 +17,7 @@ class PassengerCarryingRequirementVersionStructure(
     class Meta:
         name = "PassengerCarryingRequirement_VersionStructure"
 
-    passenger_capacity: Optional[PassengerCapacity] = field(
+    passenger_capacity: PassengerCapacity | None = field(
         default=None,
         metadata={
             "name": "PassengerCapacity",
@@ -25,7 +25,7 @@ class PassengerCarryingRequirementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    low_floor: Optional[bool] = field(
+    low_floor: bool | None = field(
         default=None,
         metadata={
             "name": "LowFloor",
@@ -33,7 +33,7 @@ class PassengerCarryingRequirementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_lift_or_ramp: Optional[bool] = field(
+    has_lift_or_ramp: bool | None = field(
         default=None,
         metadata={
             "name": "HasLiftOrRamp",
@@ -41,7 +41,7 @@ class PassengerCarryingRequirementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    has_hoist: Optional[bool] = field(
+    has_hoist: bool | None = field(
         default=None,
         metadata={
             "name": "HasHoist",
@@ -49,7 +49,7 @@ class PassengerCarryingRequirementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    boarding_height: Optional[Decimal] = field(
+    boarding_height: Decimal | None = field(
         default=None,
         metadata={
             "name": "BoardingHeight",
@@ -57,7 +57,7 @@ class PassengerCarryingRequirementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    gap_to_platform: Optional[Decimal] = field(
+    gap_to_platform: Decimal | None = field(
         default=None,
         metadata={
             "name": "GapToPlatform",

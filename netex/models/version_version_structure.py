@@ -18,7 +18,7 @@ class VersionVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "Version_VersionStructure"
 
-    start_date: Optional[XmlDateTime] = field(
+    start_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "StartDate",
@@ -26,7 +26,7 @@ class VersionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    end_date: Optional[XmlDateTime] = field(
+    end_date: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "EndDate",
@@ -34,7 +34,7 @@ class VersionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    status: Optional[VersionStatusEnumeration] = field(
+    status: VersionStatusEnumeration | None = field(
         default=None,
         metadata={
             "name": "Status",
@@ -42,7 +42,7 @@ class VersionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -50,7 +50,7 @@ class VersionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    version_type: Optional[VersionTypeEnumeration] = field(
+    version_type: VersionTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "VersionType",
@@ -58,7 +58,7 @@ class VersionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_version_ref: Optional[TypeOfVersionRef] = field(
+    type_of_version_ref: TypeOfVersionRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfVersionRef",
@@ -66,7 +66,7 @@ class VersionVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    derived_from_version_ref: Optional[VersionRefStructure] = field(
+    derived_from_version_ref: VersionRefStructure | None = field(
         default=None,
         metadata={
             "name": "DerivedFromVersionRef",

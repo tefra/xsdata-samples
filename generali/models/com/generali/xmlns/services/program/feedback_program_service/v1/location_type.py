@@ -8,7 +8,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class LocationType:
-    global_location_id: Optional[str] = field(
+    global_location_id: str | None = field(
         default=None,
         metadata={
             "name": "GlobalLocationID",
@@ -17,7 +17,7 @@ class LocationType:
             "required": True,
         },
     )
-    local_location_id: Optional[str] = field(
+    local_location_id: str | None = field(
         default=None,
         metadata={
             "name": "LocalLocationID",

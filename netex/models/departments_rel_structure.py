@@ -15,7 +15,7 @@ class DepartmentsRelStructure(ContainmentAggregationStructure):
         name = "departments_RelStructure"
 
     department_ref_or_department: Iterable[
-        Union[DepartmentRef, Department]
+        DepartmentRef | Department
     ] = field(
         default_factory=list,
         metadata={

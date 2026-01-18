@@ -38,7 +38,7 @@ class NetworkManagement(OperatorAction):
     :ivar network_management_extension:
     """
 
-    compliance_option: Optional[ComplianceOptionEnum] = field(
+    compliance_option: ComplianceOptionEnum | None = field(
         default=None,
         metadata={
             "name": "complianceOption",
@@ -71,7 +71,7 @@ class NetworkManagement(OperatorAction):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    automatically_initiated: Optional[bool] = field(
+    automatically_initiated: bool | None = field(
         default=None,
         metadata={
             "name": "automaticallyInitiated",
@@ -87,7 +87,7 @@ class NetworkManagement(OperatorAction):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    network_management_extension: Optional[ExtensionType] = field(
+    network_management_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "networkManagementExtension",

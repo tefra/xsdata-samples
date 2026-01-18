@@ -17,7 +17,7 @@ class FareQuotaFactorsRelStructure(StrictContainmentAggregationStructure):
         name = "fareQuotaFactors_RelStructure"
 
     fare_quota_factor_ref_or_fare_quota_factor: Iterable[
-        Union[FareQuotaFactorRef, FareQuotaFactor]
+        FareQuotaFactorRef | FareQuotaFactor
     ] = field(
         default_factory=list,
         metadata={

@@ -25,7 +25,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "DisplayAssignment_VersionStructure"
 
-    logical_display_ref: Optional[LogicalDisplayRef] = field(
+    logical_display_ref: LogicalDisplayRef | None = field(
         default=None,
         metadata={
             "name": "LogicalDisplayRef",
@@ -33,9 +33,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    scheduled_stop_point_ref: Optional[
-        Union[FareScheduledStopPointRef, ScheduledStopPointRef]
-    ] = field(
+    scheduled_stop_point_ref: FareScheduledStopPointRef | ScheduledStopPointRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -53,7 +51,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    vehicle_mode: Optional[VehicleMode] = field(
+    vehicle_mode: VehicleMode | None = field(
         default=None,
         metadata={
             "name": "VehicleMode",
@@ -61,7 +59,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
+    line_ref: FlexibleLineRef | LineRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -79,7 +77,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    direction_ref: Optional[DirectionRef] = field(
+    direction_ref: DirectionRef | None = field(
         default=None,
         metadata={
             "name": "DirectionRef",
@@ -87,14 +85,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_pattern_ref: Optional[
-        Union[
-            ServiceJourneyPatternRef,
-            ServicePatternRef,
-            DeadRunJourneyPatternRef,
-            JourneyPatternRef,
-        ]
-    ] = field(
+    journey_pattern_ref: ServiceJourneyPatternRef | ServicePatternRef | DeadRunJourneyPatternRef | JourneyPatternRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -122,7 +113,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    display_assignment_type: Optional[DisplayAssignmentTypeEnumeration] = (
+    display_assignment_type: DisplayAssignmentTypeEnumeration | None = (
         field(
             default=None,
             metadata={
@@ -132,7 +123,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             },
         )
     )
-    number_of_journeys_to_show: Optional[int] = field(
+    number_of_journeys_to_show: int | None = field(
         default=None,
         metadata={
             "name": "NumberOfJourneysToShow",
@@ -140,7 +131,7 @@ class DisplayAssignmentVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    display_priority: Optional[int] = field(
+    display_priority: int | None = field(
         default=None,
         metadata={
             "name": "DisplayPriority",

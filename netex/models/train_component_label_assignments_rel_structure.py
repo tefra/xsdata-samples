@@ -19,7 +19,7 @@ class TrainComponentLabelAssignmentsRelStructure(
         name = "trainComponentLabelAssignments_RelStructure"
 
     train_component_label_assignment_ref_or_train_component_label_assignment: Iterable[
-        Union[TrainComponentLabelAssignmentRef, TrainComponentLabelAssignment]
+        TrainComponentLabelAssignmentRef | TrainComponentLabelAssignment
     ] = field(
         default_factory=list,
         metadata={

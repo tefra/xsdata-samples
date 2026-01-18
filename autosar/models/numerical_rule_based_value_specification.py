@@ -37,7 +37,7 @@ class NumericalRuleBasedValueSpecification:
     class Meta:
         name = "NUMERICAL-RULE-BASED-VALUE-SPECIFICATION"
 
-    short_label: Optional[Identifier] = field(
+    short_label: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -45,7 +45,7 @@ class NumericalRuleBasedValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -53,7 +53,7 @@ class NumericalRuleBasedValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rule_based_values: Optional[RuleBasedValueSpecification] = field(
+    rule_based_values: RuleBasedValueSpecification | None = field(
         default=None,
         metadata={
             "name": "RULE-BASED-VALUES",
@@ -61,14 +61,14 @@ class NumericalRuleBasedValueSpecification:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

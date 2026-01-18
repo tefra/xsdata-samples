@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class PortInterfaceBlueprintMapping:
     class Meta:
         name = "PORT-INTERFACE-BLUEPRINT-MAPPING"
 
-    port_interface_blueprint_ref: Optional[
-        "PortInterfaceBlueprintMapping.PortInterfaceBlueprintRef"
-    ] = field(
+    port_interface_blueprint_ref: PortInterfaceBlueprintMapping.PortInterfaceBlueprintRef | None = field(
         default=None,
         metadata={
             "name": "PORT-INTERFACE-BLUEPRINT-REF",
@@ -43,9 +43,7 @@ class PortInterfaceBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    derived_port_interface_ref: Optional[
-        "PortInterfaceBlueprintMapping.DerivedPortInterfaceRef"
-    ] = field(
+    derived_port_interface_ref: PortInterfaceBlueprintMapping.DerivedPortInterfaceRef | None = field(
         default=None,
         metadata={
             "name": "DERIVED-PORT-INTERFACE-REF",
@@ -53,14 +51,14 @@ class PortInterfaceBlueprintMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +69,7 @@ class PortInterfaceBlueprintMapping:
 
     @dataclass
     class PortInterfaceBlueprintRef(Ref):
-        dest: Optional[PortInterfaceSubtypesEnum] = field(
+        dest: PortInterfaceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -82,7 +80,7 @@ class PortInterfaceBlueprintMapping:
 
     @dataclass
     class DerivedPortInterfaceRef(Ref):
-        dest: Optional[PortInterfaceSubtypesEnum] = field(
+        dest: PortInterfaceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

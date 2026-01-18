@@ -25,7 +25,7 @@ class CustomerPurchasePackageElementVersionStructure(
     class Meta:
         name = "CustomerPurchasePackageElement_VersionStructure"
 
-    customer_purchase_package_ref: Optional[CustomerPurchasePackageRef] = (
+    customer_purchase_package_ref: CustomerPurchasePackageRef | None = (
         field(
             default=None,
             metadata={
@@ -35,7 +35,7 @@ class CustomerPurchasePackageElementVersionStructure(
             },
         )
     )
-    sales_offer_package_element_ref: Optional[SalesOfferPackageElementRef] = (
+    sales_offer_package_element_ref: SalesOfferPackageElementRef | None = (
         field(
             default=None,
             metadata={
@@ -45,7 +45,7 @@ class CustomerPurchasePackageElementVersionStructure(
             },
         )
     )
-    marked_as: Optional[MarkedAsEnumeration] = field(
+    marked_as: MarkedAsEnumeration | None = field(
         default=None,
         metadata={
             "name": "MarkedAs",
@@ -53,7 +53,7 @@ class CustomerPurchasePackageElementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    blocked: Optional[bool] = field(
+    blocked: bool | None = field(
         default=None,
         metadata={
             "name": "Blocked",
@@ -61,9 +61,7 @@ class CustomerPurchasePackageElementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    element_accesses: Optional[
-        CustomerPurchasePackageElementAccessesRelStructure
-    ] = field(
+    element_accesses: CustomerPurchasePackageElementAccessesRelStructure | None = field(
         default=None,
         metadata={
             "name": "elementAccesses",
@@ -71,9 +69,7 @@ class CustomerPurchasePackageElementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    validity_parameter_assignments: Optional[
-        CustomerPurchaseParameterAssignmentsRelStructure
-    ] = field(
+    validity_parameter_assignments: CustomerPurchaseParameterAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "validityParameterAssignments",
@@ -81,14 +77,14 @@ class CustomerPurchasePackageElementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: Optional[CustomerPurchasePackagePricesRelStructure] = field(
+    prices: CustomerPurchasePackagePricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -14,7 +14,7 @@ class WhitelistsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "whitelists_RelStructure"
 
-    whitelist_ref_or_whitelist: Iterable[Union[WhitelistRef, Whitelist]] = (
+    whitelist_ref_or_whitelist: Iterable[WhitelistRef | Whitelist] = (
         field(
             default_factory=list,
             metadata={

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -48,9 +50,7 @@ class TextTableMapping:
     class Meta:
         name = "TEXT-TABLE-MAPPING"
 
-    bitfield_text_table_mask_first: Optional[
-        PositiveIntegerValueVariationPoint
-    ] = field(
+    bitfield_text_table_mask_first: PositiveIntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "BITFIELD-TEXT-TABLE-MASK-FIRST",
@@ -58,9 +58,7 @@ class TextTableMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bitfield_text_table_mask_second: Optional[
-        PositiveIntegerValueVariationPoint
-    ] = field(
+    bitfield_text_table_mask_second: PositiveIntegerValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "BITFIELD-TEXT-TABLE-MASK-SECOND",
@@ -68,7 +66,7 @@ class TextTableMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    identical_mapping: Optional[Boolean] = field(
+    identical_mapping: Boolean | None = field(
         default=None,
         metadata={
             "name": "IDENTICAL-MAPPING",
@@ -76,7 +74,7 @@ class TextTableMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mapping_direction: Optional[MappingDirectionEnum] = field(
+    mapping_direction: MappingDirectionEnum | None = field(
         default=None,
         metadata={
             "name": "MAPPING-DIRECTION",
@@ -84,7 +82,7 @@ class TextTableMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_pairs: Optional["TextTableMapping.ValuePairs"] = field(
+    value_pairs: TextTableMapping.ValuePairs | None = field(
         default=None,
         metadata={
             "name": "VALUE-PAIRS",
@@ -92,14 +90,14 @@ class TextTableMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

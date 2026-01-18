@@ -62,21 +62,13 @@ class Assertion:
         name = "assertion"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    explanation: Optional[str] = field(
+    explanation: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    group_label: Optional[str] = field(
-        default=None,
-        metadata={
-            "type": "Attribute",
-            "min_length": 2,
-            "max_length": 150,
-        },
-    )
-    group_name: Optional[str] = field(
+    group_label: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -84,7 +76,7 @@ class Assertion:
             "max_length": 150,
         },
     )
-    label: Optional[str] = field(
+    group_name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -92,7 +84,15 @@ class Assertion:
             "max_length": 150,
         },
     )
-    name: Optional[str] = field(
+    label: str | None = field(
+        default=None,
+        metadata={
+            "type": "Attribute",
+            "min_length": 2,
+            "max_length": 150,
+        },
+    )
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -101,13 +101,13 @@ class Assertion:
             "max_length": 150,
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    href: Optional[str] = field(
+    href: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

@@ -14,7 +14,7 @@ class SecuritylistRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "securitylistRefs_RelStructure"
 
-    security_list_ref: Iterable[Union[WhitelistRef, BlacklistRef]] = field(
+    security_list_ref: Iterable[WhitelistRef | BlacklistRef] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

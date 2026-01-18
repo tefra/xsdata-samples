@@ -27,20 +27,20 @@ class FlexrayChannelName:
     class Meta:
         name = "FLEXRAY-CHANNEL-NAME"
 
-    value: Optional[FlexrayChannelNameSimple] = field(
+    value: FlexrayChannelNameSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -41,7 +43,7 @@ class SwcExclusiveAreaPolicy:
     class Meta:
         name = "SWC-EXCLUSIVE-AREA-POLICY"
 
-    api_principle: Optional[ApiPrincipleEnum] = field(
+    api_principle: ApiPrincipleEnum | None = field(
         default=None,
         metadata={
             "name": "API-PRINCIPLE",
@@ -49,7 +51,7 @@ class SwcExclusiveAreaPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_ref: Optional["SwcExclusiveAreaPolicy.ExclusiveAreaRef"] = (
+    exclusive_area_ref: SwcExclusiveAreaPolicy.ExclusiveAreaRef | None = (
         field(
             default=None,
             metadata={
@@ -59,7 +61,7 @@ class SwcExclusiveAreaPolicy:
             },
         )
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -67,14 +69,14 @@ class SwcExclusiveAreaPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -85,7 +87,7 @@ class SwcExclusiveAreaPolicy:
 
     @dataclass
     class ExclusiveAreaRef(Ref):
-        dest: Optional[ExclusiveAreaSubtypesEnum] = field(
+        dest: ExclusiveAreaSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

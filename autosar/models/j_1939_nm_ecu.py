@@ -24,14 +24,14 @@ class J1939NmEcu:
     class Meta:
         name = "J-1939-NM-ECU"
 
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

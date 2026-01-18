@@ -37,7 +37,7 @@ class SwBitRepresentation:
     class Meta:
         name = "SW-BIT-REPRESENTATION"
 
-    bit_position: Optional[Integer] = field(
+    bit_position: Integer | None = field(
         default=None,
         metadata={
             "name": "BIT-POSITION",
@@ -45,7 +45,7 @@ class SwBitRepresentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    number_of_bits: Optional[Integer] = field(
+    number_of_bits: Integer | None = field(
         default=None,
         metadata={
             "name": "NUMBER-OF-BITS",
@@ -53,14 +53,14 @@ class SwBitRepresentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

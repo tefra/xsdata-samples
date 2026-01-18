@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -42,7 +44,7 @@ class ReferenceCondition:
     class Meta:
         name = "REFERENCE-CONDITION"
 
-    lower_multiplicity: Optional[PositiveInteger] = field(
+    lower_multiplicity: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "LOWER-MULTIPLICITY",
@@ -50,7 +52,7 @@ class ReferenceCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity: Optional[PositiveInteger] = field(
+    upper_multiplicity: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY",
@@ -58,7 +60,7 @@ class ReferenceCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_multiplicity_infinite: Optional[Boolean] = field(
+    upper_multiplicity_infinite: Boolean | None = field(
         default=None,
         metadata={
             "name": "UPPER-MULTIPLICITY-INFINITE",
@@ -66,7 +68,7 @@ class ReferenceCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    reference_ref: Optional["ReferenceCondition.ReferenceRef"] = field(
+    reference_ref: ReferenceCondition.ReferenceRef | None = field(
         default=None,
         metadata={
             "name": "REFERENCE-REF",
@@ -74,14 +76,14 @@ class ReferenceCondition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -92,7 +94,7 @@ class ReferenceCondition:
 
     @dataclass
     class ReferenceRef(Ref):
-        dest: Optional[ReferenceTailoringSubtypesEnum] = field(
+        dest: ReferenceTailoringSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

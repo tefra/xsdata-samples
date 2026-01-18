@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -12,7 +14,7 @@ class StructPortTypeDefs:
         name = "structPortTypeDefs"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    struct_port_type_def: list["StructPortTypeDefs.StructPortTypeDef"] = field(
+    struct_port_type_def: list[StructPortTypeDefs.StructPortTypeDef] = field(
         default_factory=list,
         metadata={
             "name": "structPortTypeDef",
@@ -39,9 +41,7 @@ class StructPortTypeDefs:
         :ivar id:
         """
 
-        type_name: Optional[
-            "StructPortTypeDefs.StructPortTypeDef.TypeName"
-        ] = field(
+        type_name: StructPortTypeDefs.StructPortTypeDef.TypeName | None = field(
             default=None,
             metadata={
                 "name": "typeName",
@@ -50,7 +50,7 @@ class StructPortTypeDefs:
             },
         )
         type_definition: list[
-            "StructPortTypeDefs.StructPortTypeDef.TypeDefinition"
+            StructPortTypeDefs.StructPortTypeDef.TypeDefinition
         ] = field(
             default_factory=list,
             metadata={
@@ -58,29 +58,27 @@ class StructPortTypeDefs:
                 "type": "Element",
             },
         )
-        type_parameters: Optional[
-            "StructPortTypeDefs.StructPortTypeDef.TypeParameters"
-        ] = field(
+        type_parameters: StructPortTypeDefs.StructPortTypeDef.TypeParameters | None = field(
             default=None,
             metadata={
                 "name": "typeParameters",
                 "type": "Element",
             },
         )
-        role: Optional[str] = field(
+        role: str | None = field(
             default=None,
             metadata={
                 "type": "Element",
             },
         )
-        view_ref: list["StructPortTypeDefs.StructPortTypeDef.ViewRef"] = field(
+        view_ref: list[StructPortTypeDefs.StructPortTypeDef.ViewRef] = field(
             default_factory=list,
             metadata={
                 "name": "viewRef",
                 "type": "Element",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -118,7 +116,7 @@ class StructPortTypeDefs:
                     "required": True,
                 },
             )
-            id: Optional[str] = field(
+            id: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",
@@ -145,7 +143,7 @@ class StructPortTypeDefs:
                     "required": True,
                 },
             )
-            id: Optional[str] = field(
+            id: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

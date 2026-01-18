@@ -81,7 +81,7 @@ class ObsType(AnnotableType):
             "namespace": "",
         },
     )
-    metadata: Optional[MetadataSetType] = field(
+    metadata: MetadataSetType | None = field(
         default=None,
         metadata={
             "name": "Metadata",
@@ -89,7 +89,7 @@ class ObsType(AnnotableType):
             "namespace": "",
         },
     )
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "type",
@@ -97,7 +97,7 @@ class ObsType(AnnotableType):
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    time_period: Optional[Union[XmlPeriod, XmlDate, XmlDateTime, str]] = field(
+    time_period: XmlPeriod | XmlDate | XmlDateTime | str | None = field(
         default=None,
         metadata={
             "name": "TIME_PERIOD",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -34,7 +36,7 @@ class VariationRestrictionWithSeverity:
     class Meta:
         name = "VARIATION-RESTRICTION-WITH-SEVERITY"
 
-    severity: Optional[SeverityEnum] = field(
+    severity: SeverityEnum | None = field(
         default=None,
         metadata={
             "name": "SEVERITY",
@@ -42,7 +44,7 @@ class VariationRestrictionWithSeverity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation: Optional[Boolean] = field(
+    variation: Boolean | None = field(
         default=None,
         metadata={
             "name": "VARIATION",
@@ -50,9 +52,7 @@ class VariationRestrictionWithSeverity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    valid_binding_times: Optional[
-        "VariationRestrictionWithSeverity.ValidBindingTimes"
-    ] = field(
+    valid_binding_times: VariationRestrictionWithSeverity.ValidBindingTimes | None = field(
         default=None,
         metadata={
             "name": "VALID-BINDING-TIMES",
@@ -60,14 +60,14 @@ class VariationRestrictionWithSeverity:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

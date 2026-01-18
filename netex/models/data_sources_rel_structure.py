@@ -15,7 +15,7 @@ class DataSourcesRelStructure(ContainmentAggregationStructure):
         name = "dataSources_RelStructure"
 
     data_source_ref_or_data_source: Iterable[
-        Union[DataSourceRef, DataSource]
+        DataSourceRef | DataSource
     ] = field(
         default_factory=list,
         metadata={

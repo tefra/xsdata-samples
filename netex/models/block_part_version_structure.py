@@ -20,7 +20,7 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "BlockPart_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -28,7 +28,7 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -36,7 +36,7 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    block_ref: Optional[Union[TrainBlockRef, BlockRef]] = field(
+    block_ref: TrainBlockRef | BlockRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -54,9 +54,7 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    vehicle_type_ref: Optional[
-        Union[CompoundTrainRef, TrainRef, VehicleTypeRef]
-    ] = field(
+    vehicle_type_ref: CompoundTrainRef | TrainRef | VehicleTypeRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -79,7 +77,7 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    compound_block_ref: Optional[CompoundBlockRef] = field(
+    compound_block_ref: CompoundBlockRef | None = field(
         default=None,
         metadata={
             "name": "CompoundBlockRef",
@@ -87,9 +85,7 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_part_couple_ref_or_journey_parts: Optional[
-        Union[JourneyPartCoupleRef, JourneyPartRefsRelStructure]
-    ] = field(
+    journey_part_couple_ref_or_journey_parts: JourneyPartCoupleRef | JourneyPartRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -107,7 +103,7 @@ class BlockPartVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

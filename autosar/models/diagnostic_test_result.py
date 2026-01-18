@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -103,7 +105,7 @@ class DiagnosticTestResult:
     class Meta:
         name = "DIAGNOSTIC-TEST-RESULT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -112,9 +114,7 @@ class DiagnosticTestResult:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticTestResult.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticTestResult.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -122,7 +122,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -130,7 +130,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -138,7 +138,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -146,7 +146,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -154,7 +154,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -162,7 +162,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticTestResult.Annotations"] = field(
+    annotations: DiagnosticTestResult.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -170,7 +170,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -178,7 +178,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    diagnostic_events: Optional["DiagnosticTestResult.DiagnosticEvents"] = (
+    diagnostic_events: DiagnosticTestResult.DiagnosticEvents | None = (
         field(
             default=None,
             metadata={
@@ -188,7 +188,7 @@ class DiagnosticTestResult:
             },
         )
     )
-    event_ref: Optional["DiagnosticTestResult.EventRef"] = field(
+    event_ref: DiagnosticTestResult.EventRef | None = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
@@ -196,9 +196,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    monitored_identifier_ref: Optional[
-        "DiagnosticTestResult.MonitoredIdentifierRef"
-    ] = field(
+    monitored_identifier_ref: DiagnosticTestResult.MonitoredIdentifierRef | None = field(
         default=None,
         metadata={
             "name": "MONITORED-IDENTIFIER-REF",
@@ -206,7 +204,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    test_identifier: Optional[DiagnosticTestIdentifier] = field(
+    test_identifier: DiagnosticTestIdentifier | None = field(
         default=None,
         metadata={
             "name": "TEST-IDENTIFIER",
@@ -214,9 +212,7 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    update_kind: Optional[
-        DiagnosticTestResultUpdateEnumValueVariationPoint
-    ] = field(
+    update_kind: DiagnosticTestResultUpdateEnumValueVariationPoint | None = field(
         default=None,
         metadata={
             "name": "UPDATE-KIND",
@@ -224,14 +220,14 @@ class DiagnosticTestResult:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -239,7 +235,7 @@ class DiagnosticTestResult:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -284,7 +280,7 @@ class DiagnosticTestResult:
 
     @dataclass
     class EventRef(Ref):
-        dest: Optional[DiagnosticEventSubtypesEnum] = field(
+        dest: DiagnosticEventSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -295,7 +291,7 @@ class DiagnosticTestResult:
 
     @dataclass
     class MonitoredIdentifierRef(Ref):
-        dest: Optional[DiagnosticMeasurementIdentifierSubtypesEnum] = field(
+        dest: DiagnosticMeasurementIdentifierSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

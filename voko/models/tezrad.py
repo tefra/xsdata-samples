@@ -7,7 +7,7 @@ class Tezrad:
     class Meta:
         name = "tezrad"
 
-    fak: Optional[str] = field(
+    fak: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

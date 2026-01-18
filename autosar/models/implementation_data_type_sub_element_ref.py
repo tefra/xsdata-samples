@@ -39,7 +39,7 @@ class ImplementationDataTypeSubElementRef:
     class Meta:
         name = "IMPLEMENTATION-DATA-TYPE-SUB-ELEMENT-REF"
 
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -47,9 +47,7 @@ class ImplementationDataTypeSubElementRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implementation_data_type_element: Optional[
-        ArVariableInImplementationDataInstanceRef
-    ] = field(
+    implementation_data_type_element: ArVariableInImplementationDataInstanceRef | None = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-DATA-TYPE-ELEMENT",
@@ -57,9 +55,7 @@ class ImplementationDataTypeSubElementRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    parameter_implementation_data_type_element: Optional[
-        ArParameterInImplementationDataInstanceRef
-    ] = field(
+    parameter_implementation_data_type_element: ArParameterInImplementationDataInstanceRef | None = field(
         default=None,
         metadata={
             "name": "PARAMETER-IMPLEMENTATION-DATA-TYPE-ELEMENT",
@@ -67,14 +63,14 @@ class ImplementationDataTypeSubElementRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

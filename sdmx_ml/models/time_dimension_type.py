@@ -50,7 +50,7 @@ class TimeDimensionType(BaseDimensionType):
             "type": "Ignore",
         },
     )
-    local_representation: Optional[TimeDimensionRepresentationType] = field(
+    local_representation: TimeDimensionRepresentationType | None = field(
         default=None,
         metadata={
             "name": "LocalRepresentation",

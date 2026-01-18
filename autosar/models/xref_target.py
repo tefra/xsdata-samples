@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -36,7 +38,7 @@ class XrefTarget:
     class Meta:
         name = "XREF-TARGET"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -45,7 +47,7 @@ class XrefTarget:
             "required": True,
         },
     )
-    short_name_fragments: Optional["XrefTarget.ShortNameFragments"] = field(
+    short_name_fragments: XrefTarget.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -53,7 +55,7 @@ class XrefTarget:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name_1: Optional[SingleLanguageLongName] = field(
+    long_name_1: SingleLanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME-1",
@@ -61,14 +63,14 @@ class XrefTarget:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

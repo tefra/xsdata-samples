@@ -7,7 +7,7 @@ class LastModifiedDateTime:
     class Meta:
         name = "last-modified-date-time"
 
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "type",
@@ -15,7 +15,7 @@ class LastModifiedDateTime:
             "required": True,
         },
     )
-    format: Optional[str] = field(
+    format: str | None = field(
         default=None,
         metadata={
             "type": "Element",

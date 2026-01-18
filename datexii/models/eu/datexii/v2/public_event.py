@@ -20,7 +20,7 @@ class PublicEvent(Activity):
     :ivar public_event_extension:
     """
 
-    public_event_type: Optional[PublicEventTypeEnum] = field(
+    public_event_type: PublicEventTypeEnum | None = field(
         default=None,
         metadata={
             "name": "publicEventType",
@@ -29,7 +29,7 @@ class PublicEvent(Activity):
             "required": True,
         },
     )
-    public_event_extension: Optional[ExtensionType] = field(
+    public_event_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "publicEventExtension",

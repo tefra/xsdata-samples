@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -100,7 +102,7 @@ class ExternalTriggerOccurredEvent:
     class Meta:
         name = "EXTERNAL-TRIGGER-OCCURRED-EVENT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -109,9 +111,7 @@ class ExternalTriggerOccurredEvent:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ExternalTriggerOccurredEvent.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ExternalTriggerOccurredEvent.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -119,7 +119,7 @@ class ExternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +127,7 @@ class ExternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +135,7 @@ class ExternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +143,7 @@ class ExternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +151,7 @@ class ExternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +159,7 @@ class ExternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ExternalTriggerOccurredEvent.Annotations"] = field(
+    annotations: ExternalTriggerOccurredEvent.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,9 +167,7 @@ class ExternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reason_representation_ref: Optional[
-        "ExternalTriggerOccurredEvent.ActivationReasonRepresentationRef"
-    ] = field(
+    activation_reason_representation_ref: ExternalTriggerOccurredEvent.ActivationReasonRepresentationRef | None = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
@@ -177,9 +175,7 @@ class ExternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_mode_irefs: Optional[
-        "ExternalTriggerOccurredEvent.DisabledModeIrefs"
-    ] = field(
+    disabled_mode_irefs: ExternalTriggerOccurredEvent.DisabledModeIrefs | None = field(
         default=None,
         metadata={
             "name": "DISABLED-MODE-IREFS",
@@ -187,9 +183,7 @@ class ExternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    start_on_event_ref: Optional[
-        "ExternalTriggerOccurredEvent.StartOnEventRef"
-    ] = field(
+    start_on_event_ref: ExternalTriggerOccurredEvent.StartOnEventRef | None = field(
         default=None,
         metadata={
             "name": "START-ON-EVENT-REF",
@@ -197,7 +191,7 @@ class ExternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -205,7 +199,7 @@ class ExternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_iref: Optional[RTriggerInAtomicSwcInstanceRef] = field(
+    trigger_iref: RTriggerInAtomicSwcInstanceRef | None = field(
         default=None,
         metadata={
             "name": "TRIGGER-IREF",
@@ -213,14 +207,14 @@ class ExternalTriggerOccurredEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -228,7 +222,7 @@ class ExternalTriggerOccurredEvent:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -260,7 +254,7 @@ class ExternalTriggerOccurredEvent:
 
     @dataclass
     class ActivationReasonRepresentationRef(Ref):
-        dest: Optional[ExecutableEntityActivationReasonSubtypesEnum] = field(
+        dest: ExecutableEntityActivationReasonSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -282,7 +276,7 @@ class ExternalTriggerOccurredEvent:
 
     @dataclass
     class StartOnEventRef(Ref):
-        dest: Optional[RunnableEntitySubtypesEnum] = field(
+        dest: RunnableEntitySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

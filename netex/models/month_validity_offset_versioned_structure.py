@@ -14,7 +14,7 @@ class MonthValidityOffsetVersionedStructure(DataManagedObjectStructure):
     class Meta:
         name = "MonthValidityOffset_VersionedStructure"
 
-    month: Optional[XmlPeriod] = field(
+    month: XmlPeriod | None = field(
         default=None,
         metadata={
             "name": "Month",
@@ -23,7 +23,7 @@ class MonthValidityOffsetVersionedStructure(DataManagedObjectStructure):
             "required": True,
         },
     )
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -31,7 +31,7 @@ class MonthValidityOffsetVersionedStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_offset: Optional[int] = field(
+    day_offset: int | None = field(
         default=None,
         metadata={
             "name": "DayOffset",

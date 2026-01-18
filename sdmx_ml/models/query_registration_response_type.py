@@ -24,7 +24,7 @@ class QueryRegistrationResponseType:
         registration the meets the conditions specified in the query.
     """
 
-    status_message: Optional[StatusMessageType2] = field(
+    status_message: StatusMessageType2 | None = field(
         default=None,
         metadata={
             "name": "StatusMessage",

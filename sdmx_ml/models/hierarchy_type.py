@@ -33,7 +33,7 @@ class HierarchyType(HierarchyBaseType):
         formal level structure.
     """
 
-    level: Optional[LevelType] = field(
+    level: LevelType | None = field(
         default=None,
         metadata={
             "name": "Level",
@@ -50,7 +50,7 @@ class HierarchyType(HierarchyBaseType):
             "min_occurs": 1,
         },
     )
-    has_formal_levels: Optional[bool] = field(
+    has_formal_levels: bool | None = field(
         default=None,
         metadata={
             "name": "hasFormalLevels",

@@ -33,7 +33,7 @@ class HardwareConfiguration:
     class Meta:
         name = "HARDWARE-CONFIGURATION"
 
-    additional_information: Optional[String] = field(
+    additional_information: String | None = field(
         default=None,
         metadata={
             "name": "ADDITIONAL-INFORMATION",
@@ -41,7 +41,7 @@ class HardwareConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    processor_mode: Optional[String] = field(
+    processor_mode: String | None = field(
         default=None,
         metadata={
             "name": "PROCESSOR-MODE",
@@ -49,7 +49,7 @@ class HardwareConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    processor_speed: Optional[String] = field(
+    processor_speed: String | None = field(
         default=None,
         metadata={
             "name": "PROCESSOR-SPEED",
@@ -57,14 +57,14 @@ class HardwareConfiguration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

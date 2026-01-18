@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -30,7 +32,7 @@ class TriggerMapping:
     class Meta:
         name = "TRIGGER-MAPPING"
 
-    first_trigger_ref: Optional["TriggerMapping.FirstTriggerRef"] = field(
+    first_trigger_ref: TriggerMapping.FirstTriggerRef | None = field(
         default=None,
         metadata={
             "name": "FIRST-TRIGGER-REF",
@@ -38,7 +40,7 @@ class TriggerMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_trigger_ref: Optional["TriggerMapping.SecondTriggerRef"] = field(
+    second_trigger_ref: TriggerMapping.SecondTriggerRef | None = field(
         default=None,
         metadata={
             "name": "SECOND-TRIGGER-REF",
@@ -46,14 +48,14 @@ class TriggerMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -64,7 +66,7 @@ class TriggerMapping:
 
     @dataclass
     class FirstTriggerRef(Ref):
-        dest: Optional[TriggerSubtypesEnum] = field(
+        dest: TriggerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -75,7 +77,7 @@ class TriggerMapping:
 
     @dataclass
     class SecondTriggerRef(Ref):
-        dest: Optional[TriggerSubtypesEnum] = field(
+        dest: TriggerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

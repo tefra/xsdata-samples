@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -97,7 +99,7 @@ class FieldType:
     class Meta:
         name = "FIELD"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -106,7 +108,7 @@ class FieldType:
             "required": True,
         },
     )
-    short_name_fragments: Optional["FieldType.ShortNameFragments"] = field(
+    short_name_fragments: FieldType.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -114,7 +116,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -122,7 +124,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -130,7 +132,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -138,7 +140,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -146,7 +148,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -154,7 +156,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["FieldType.Annotations"] = field(
+    annotations: FieldType.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -162,7 +164,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_data_def_props: Optional[SwDataDefProps] = field(
+    sw_data_def_props: SwDataDefProps | None = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEF-PROPS",
@@ -170,7 +172,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_tref: Optional["FieldType.TypeTref"] = field(
+    type_tref: FieldType.TypeTref | None = field(
         default=None,
         metadata={
             "name": "TYPE-TREF",
@@ -178,7 +180,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    has_getter: Optional[Boolean] = field(
+    has_getter: Boolean | None = field(
         default=None,
         metadata={
             "name": "HAS-GETTER",
@@ -186,7 +188,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    has_notifier: Optional[Boolean] = field(
+    has_notifier: Boolean | None = field(
         default=None,
         metadata={
             "name": "HAS-NOTIFIER",
@@ -194,7 +196,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    has_setter: Optional[Boolean] = field(
+    has_setter: Boolean | None = field(
         default=None,
         metadata={
             "name": "HAS-SETTER",
@@ -202,7 +204,7 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -210,14 +212,14 @@ class FieldType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -225,7 +227,7 @@ class FieldType:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -257,7 +259,7 @@ class FieldType:
 
     @dataclass
     class TypeTref(Ref):
-        dest: Optional[AutosarDataTypeSubtypesEnum] = field(
+        dest: AutosarDataTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

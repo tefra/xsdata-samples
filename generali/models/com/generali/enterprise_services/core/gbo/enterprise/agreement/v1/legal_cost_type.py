@@ -15,7 +15,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class LegalCostType:
-    amount: Optional[AmountType] = field(
+    amount: AmountType | None = field(
         default=None,
         metadata={
             "name": "Amount",
@@ -24,7 +24,7 @@ class LegalCostType:
             "required": True,
         },
     )
-    cost_type: Optional[LegalCostTypeCostType] = field(
+    cost_type: LegalCostTypeCostType | None = field(
         default=None,
         metadata={
             "name": "CostType",

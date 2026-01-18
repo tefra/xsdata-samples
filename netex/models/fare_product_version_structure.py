@@ -49,7 +49,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
     class Meta:
         name = "FareProduct_VersionStructure"
 
-    charging_moment_ref: Optional[ChargingMomentRef] = field(
+    charging_moment_ref: ChargingMomentRef | None = field(
         default=None,
         metadata={
             "name": "ChargingMomentRef",
@@ -57,7 +57,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    charging_moment_type: Optional[ChargingMomentEnumeration] = field(
+    charging_moment_type: ChargingMomentEnumeration | None = field(
         default=None,
         metadata={
             "name": "ChargingMomentType",
@@ -65,9 +65,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_fare_product_ref_or_types_of_fare_product: Optional[
-        Union[TypeOfFareProductRef, TypeOfFareProductRefsRelStructure]
-    ] = field(
+    type_of_fare_product_ref_or_types_of_fare_product: TypeOfFareProductRef | TypeOfFareProductRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -85,20 +83,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             ),
         },
     )
-    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: Optional[
-        Union[
-            RetailConsortiumRef,
-            OnlineServiceOperatorRef,
-            GeneralOrganisationRef,
-            ManagementAgentRef,
-            ServicedOrganisationRef,
-            TravelAgentRef,
-            OtherOrganisationRef,
-            AuthorityRef,
-            OperatorRef,
-            OrganisationRef,
-        ]
-    ] = field(
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -156,7 +141,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             ),
         },
     )
-    condition_summary: Optional[ConditionSummary] = field(
+    condition_summary: ConditionSummary | None = field(
         default=None,
         metadata={
             "name": "ConditionSummary",
@@ -164,18 +149,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: Optional[
-        Union[
-            SupplementProductRef,
-            PreassignedFareProductRef,
-            AmountOfPriceUnitProductRef,
-            UsageDiscountRightRef,
-            ThirdPartyProductRef,
-            CappedDiscountRightRef,
-            SaleDiscountRightRef,
-            FareProductRef,
-        ]
-    ] = field(
+    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: SupplementProductRef | PreassignedFareProductRef | AmountOfPriceUnitProductRef | UsageDiscountRightRef | ThirdPartyProductRef | CappedDiscountRightRef | SaleDiscountRightRef | FareProductRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -223,13 +197,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             ),
         },
     )
-    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: Optional[
-        Union[
-            GenericParameterAssignmentsRelStructure,
-            GenericParameterAssignment,
-            GenericParameterAssignmentInContext,
-        ]
-    ] = field(
+    validity_parameter_assignments_or_generic_parameter_assignment_or_generic_parameter_assignment_in_context: GenericParameterAssignmentsRelStructure | GenericParameterAssignment | GenericParameterAssignmentInContext | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -252,7 +220,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             ),
         },
     )
-    validable_elements: Optional[ValidableElementsRelStructure] = field(
+    validable_elements: ValidableElementsRelStructure | None = field(
         default=None,
         metadata={
             "name": "validableElements",
@@ -260,7 +228,7 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    access_rights_in_product: Optional[AccessRightsInProductRelStructure] = (
+    access_rights_in_product: AccessRightsInProductRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -270,14 +238,14 @@ class FareProductVersionStructure(ServiceAccessRightVersionStructure):
             },
         )
     )
-    tariffs: Optional[TariffRefsRelStructure] = field(
+    tariffs: TariffRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: Optional[FareProductPricesRelStructure] = field(
+    prices: FareProductPricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

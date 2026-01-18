@@ -46,7 +46,7 @@ class Publication:
             "max_occurs": 2,
         },
     )
-    doi: Optional[Doi] = field(
+    doi: Doi | None = field(
         default=None,
         metadata={
             "type": "Element",

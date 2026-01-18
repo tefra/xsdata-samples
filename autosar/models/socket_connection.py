@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -141,7 +143,7 @@ class SocketConnection:
     class Meta:
         name = "SOCKET-CONNECTION"
 
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -149,7 +151,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -157,7 +159,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -165,7 +167,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -173,9 +175,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    allowed_i_pv_6_ext_headers_ref: Optional[
-        "SocketConnection.AllowedIPv6ExtHeadersRef"
-    ] = field(
+    allowed_i_pv_6_ext_headers_ref: SocketConnection.AllowedIPv6ExtHeadersRef | None = field(
         default=None,
         metadata={
             "name": "ALLOWED-I-PV-6-EXT-HEADERS-REF",
@@ -183,9 +183,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    allowed_tcp_options_ref: Optional[
-        "SocketConnection.AllowedTcpOptionsRef"
-    ] = field(
+    allowed_tcp_options_ref: SocketConnection.AllowedTcpOptionsRef | None = field(
         default=None,
         metadata={
             "name": "ALLOWED-TCP-OPTIONS-REF",
@@ -193,7 +191,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    autosar_connector: Optional[SoAdConnectorType] = field(
+    autosar_connector: SoAdConnectorType | None = field(
         default=None,
         metadata={
             "name": "AUTOSAR-CONNECTOR",
@@ -201,7 +199,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_ip_addr_from_connection_request: Optional[Boolean] = field(
+    client_ip_addr_from_connection_request: Boolean | None = field(
         default=None,
         metadata={
             "name": "CLIENT-IP-ADDR-FROM-CONNECTION-REQUEST",
@@ -209,7 +207,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_port_from_connection_request: Optional[Boolean] = field(
+    client_port_from_connection_request: Boolean | None = field(
         default=None,
         metadata={
             "name": "CLIENT-PORT-FROM-CONNECTION-REQUEST",
@@ -217,7 +215,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    client_port_ref: Optional["SocketConnection.ClientPortRef"] = field(
+    client_port_ref: SocketConnection.ClientPortRef | None = field(
         default=None,
         metadata={
             "name": "CLIENT-PORT-REF",
@@ -225,9 +223,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    do_ip_source_address_ref: Optional[
-        "SocketConnection.DoIpSourceAddressRef"
-    ] = field(
+    do_ip_source_address_ref: SocketConnection.DoIpSourceAddressRef | None = field(
         default=None,
         metadata={
             "name": "DO-IP-SOURCE-ADDRESS-REF",
@@ -235,9 +231,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    do_ip_target_address_ref: Optional[
-        "SocketConnection.DoIpTargetAddressRef"
-    ] = field(
+    do_ip_target_address_ref: SocketConnection.DoIpTargetAddressRef | None = field(
         default=None,
         metadata={
             "name": "DO-IP-TARGET-ADDRESS-REF",
@@ -245,7 +239,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ident: Optional[TpConnectionIdent] = field(
+    ident: TpConnectionIdent | None = field(
         default=None,
         metadata={
             "name": "IDENT",
@@ -253,7 +247,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    local_port_ref: Optional["SocketConnection.LocalPortRef"] = field(
+    local_port_ref: SocketConnection.LocalPortRef | None = field(
         default=None,
         metadata={
             "name": "LOCAL-PORT-REF",
@@ -261,7 +255,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    n_pdu_ref: Optional["SocketConnection.NPduRef"] = field(
+    n_pdu_ref: SocketConnection.NPduRef | None = field(
         default=None,
         metadata={
             "name": "N-PDU-REF",
@@ -269,7 +263,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdus: Optional["SocketConnection.Pdus"] = field(
+    pdus: SocketConnection.Pdus | None = field(
         default=None,
         metadata={
             "name": "PDUS",
@@ -277,7 +271,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_collection_max_buffer_size: Optional[PositiveInteger] = field(
+    pdu_collection_max_buffer_size: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "PDU-COLLECTION-MAX-BUFFER-SIZE",
@@ -285,7 +279,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_collection_timeout: Optional[TimeValue] = field(
+    pdu_collection_timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "PDU-COLLECTION-TIMEOUT",
@@ -293,7 +287,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    remote_port_ref: Optional["SocketConnection.RemotePortRef"] = field(
+    remote_port_ref: SocketConnection.RemotePortRef | None = field(
         default=None,
         metadata={
             "name": "REMOTE-PORT-REF",
@@ -301,9 +295,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    runtime_ip_address_configuration: Optional[
-        RuntimeAddressConfigurationEnum
-    ] = field(
+    runtime_ip_address_configuration: RuntimeAddressConfigurationEnum | None = field(
         default=None,
         metadata={
             "name": "RUNTIME-IP-ADDRESS-CONFIGURATION",
@@ -311,7 +303,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    runtime_port_configuration: Optional[RuntimeAddressConfigurationEnum] = (
+    runtime_port_configuration: RuntimeAddressConfigurationEnum | None = (
         field(
             default=None,
             metadata={
@@ -321,7 +313,7 @@ class SocketConnection:
             },
         )
     )
-    short_label: Optional[Identifier] = field(
+    short_label: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -329,7 +321,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    socket_protocol: Optional[SoAdProtocolType] = field(
+    socket_protocol: SoAdProtocolType | None = field(
         default=None,
         metadata={
             "name": "SOCKET-PROTOCOL",
@@ -337,7 +329,7 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -345,14 +337,14 @@ class SocketConnection:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -363,7 +355,7 @@ class SocketConnection:
 
     @dataclass
     class AllowedIPv6ExtHeadersRef(Ref):
-        dest: Optional[IPv6ExtHeaderFilterListSubtypesEnum] = field(
+        dest: IPv6ExtHeaderFilterListSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -374,7 +366,7 @@ class SocketConnection:
 
     @dataclass
     class AllowedTcpOptionsRef(Ref):
-        dest: Optional[TcpOptionFilterListSubtypesEnum] = field(
+        dest: TcpOptionFilterListSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -385,7 +377,7 @@ class SocketConnection:
 
     @dataclass
     class ClientPortRef(Ref):
-        dest: Optional[SocketAddressSubtypesEnum] = field(
+        dest: SocketAddressSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -396,7 +388,7 @@ class SocketConnection:
 
     @dataclass
     class DoIpSourceAddressRef(Ref):
-        dest: Optional[LogicAddressSubtypesEnum] = field(
+        dest: LogicAddressSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -407,7 +399,7 @@ class SocketConnection:
 
     @dataclass
     class DoIpTargetAddressRef(Ref):
-        dest: Optional[LogicAddressSubtypesEnum] = field(
+        dest: LogicAddressSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -418,7 +410,7 @@ class SocketConnection:
 
     @dataclass
     class LocalPortRef(Ref):
-        dest: Optional[SocketAddressSubtypesEnum] = field(
+        dest: SocketAddressSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -429,7 +421,7 @@ class SocketConnection:
 
     @dataclass
     class NPduRef(Ref):
-        dest: Optional[NPduSubtypesEnum] = field(
+        dest: NPduSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -453,7 +445,7 @@ class SocketConnection:
 
     @dataclass
     class RemotePortRef(Ref):
-        dest: Optional[SocketAddressSubtypesEnum] = field(
+        dest: SocketAddressSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

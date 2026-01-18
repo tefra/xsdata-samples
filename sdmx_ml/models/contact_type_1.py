@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -51,13 +53,7 @@ class ContactType1:
         },
     )
     choice: tuple[
-        Union[
-            "ContactType1.Telephone",
-            "ContactType1.Fax",
-            "ContactType1.X400",
-            "ContactType1.Uri",
-            "ContactType1.Email",
-        ],
+        ContactType1.Telephone | ContactType1.Fax | ContactType1.X400 | ContactType1.Uri | ContactType1.Email,
         ...,
     ] = field(
         default_factory=tuple,
@@ -92,7 +88,7 @@ class ContactType1:
             ),
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -102,7 +98,7 @@ class ContactType1:
 
     @dataclass(frozen=True)
     class Telephone:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -111,7 +107,7 @@ class ContactType1:
 
     @dataclass(frozen=True)
     class Fax:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -120,7 +116,7 @@ class ContactType1:
 
     @dataclass(frozen=True)
     class X400:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -129,7 +125,7 @@ class ContactType1:
 
     @dataclass(frozen=True)
     class Uri:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -138,7 +134,7 @@ class ContactType1:
 
     @dataclass(frozen=True)
     class Email:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,

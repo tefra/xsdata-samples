@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -61,7 +63,7 @@ class TtcanClusterConditional:
     class Meta:
         name = "TTCAN-CLUSTER-CONDITIONAL"
 
-    baudrate: Optional[PositiveUnlimitedInteger] = field(
+    baudrate: PositiveUnlimitedInteger | None = field(
         default=None,
         metadata={
             "name": "BAUDRATE",
@@ -69,7 +71,7 @@ class TtcanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    physical_channels: Optional["TtcanClusterConditional.PhysicalChannels"] = (
+    physical_channels: TtcanClusterConditional.PhysicalChannels | None = (
         field(
             default=None,
             metadata={
@@ -79,7 +81,7 @@ class TtcanClusterConditional:
             },
         )
     )
-    protocol_name: Optional[String] = field(
+    protocol_name: String | None = field(
         default=None,
         metadata={
             "name": "PROTOCOL-NAME",
@@ -87,7 +89,7 @@ class TtcanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    protocol_version: Optional[String] = field(
+    protocol_version: String | None = field(
         default=None,
         metadata={
             "name": "PROTOCOL-VERSION",
@@ -95,7 +97,7 @@ class TtcanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    speed: Optional[Integer] = field(
+    speed: Integer | None = field(
         default=None,
         metadata={
             "name": "SPEED",
@@ -103,7 +105,7 @@ class TtcanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    bus_off_recovery: Optional[CanClusterBusOffRecovery] = field(
+    bus_off_recovery: CanClusterBusOffRecovery | None = field(
         default=None,
         metadata={
             "name": "BUS-OFF-RECOVERY",
@@ -111,7 +113,7 @@ class TtcanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    can_fd_baudrate: Optional[PositiveUnlimitedInteger] = field(
+    can_fd_baudrate: PositiveUnlimitedInteger | None = field(
         default=None,
         metadata={
             "name": "CAN-FD-BAUDRATE",
@@ -119,7 +121,7 @@ class TtcanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    basic_cycle_length: Optional[Integer] = field(
+    basic_cycle_length: Integer | None = field(
         default=None,
         metadata={
             "name": "BASIC-CYCLE-LENGTH",
@@ -127,7 +129,7 @@ class TtcanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ntu: Optional[TimeValue] = field(
+    ntu: TimeValue | None = field(
         default=None,
         metadata={
             "name": "NTU",
@@ -135,7 +137,7 @@ class TtcanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_mode: Optional[Boolean] = field(
+    operation_mode: Boolean | None = field(
         default=None,
         metadata={
             "name": "OPERATION-MODE",
@@ -143,7 +145,7 @@ class TtcanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -151,14 +153,14 @@ class TtcanClusterConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

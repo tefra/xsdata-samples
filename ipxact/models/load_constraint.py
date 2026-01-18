@@ -23,7 +23,7 @@ class LoadConstraint:
         name = "loadConstraint"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    cell_specification: Optional[CellSpecification] = field(
+    cell_specification: CellSpecification | None = field(
         default=None,
         metadata={
             "name": "cellSpecification",
@@ -31,7 +31,7 @@ class LoadConstraint:
             "required": True,
         },
     )
-    count: Optional[UnsignedPositiveIntExpression] = field(
+    count: UnsignedPositiveIntExpression | None = field(
         default=None,
         metadata={
             "type": "Element",

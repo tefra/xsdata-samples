@@ -31,7 +31,7 @@ class MetaDataItem:
     class Meta:
         name = "META-DATA-ITEM"
 
-    length: Optional[PositiveInteger] = field(
+    length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "LENGTH",
@@ -39,7 +39,7 @@ class MetaDataItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    meta_data_item_type: Optional[TextValueSpecification] = field(
+    meta_data_item_type: TextValueSpecification | None = field(
         default=None,
         metadata={
             "name": "META-DATA-ITEM-TYPE",
@@ -47,14 +47,14 @@ class MetaDataItem:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

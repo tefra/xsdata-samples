@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -41,9 +43,7 @@ class TtcanAbsolutelyScheduledTiming:
     class Meta:
         name = "TTCAN-ABSOLUTELY-SCHEDULED-TIMING"
 
-    communication_cycle: Optional[
-        "TtcanAbsolutelyScheduledTiming.CommunicationCycle"
-    ] = field(
+    communication_cycle: TtcanAbsolutelyScheduledTiming.CommunicationCycle | None = field(
         default=None,
         metadata={
             "name": "COMMUNICATION-CYCLE",
@@ -51,7 +51,7 @@ class TtcanAbsolutelyScheduledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    time_mark: Optional[Integer] = field(
+    time_mark: Integer | None = field(
         default=None,
         metadata={
             "name": "TIME-MARK",
@@ -59,7 +59,7 @@ class TtcanAbsolutelyScheduledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger: Optional[TtcanTriggerType] = field(
+    trigger: TtcanTriggerType | None = field(
         default=None,
         metadata={
             "name": "TRIGGER",
@@ -67,14 +67,14 @@ class TtcanAbsolutelyScheduledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -85,7 +85,7 @@ class TtcanAbsolutelyScheduledTiming:
 
     @dataclass
     class CommunicationCycle:
-        cycle_counter: Optional[CycleCounter] = field(
+        cycle_counter: CycleCounter | None = field(
             default=None,
             metadata={
                 "name": "CYCLE-COUNTER",
@@ -93,7 +93,7 @@ class TtcanAbsolutelyScheduledTiming:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        cycle_repetition: Optional[CycleRepetition] = field(
+        cycle_repetition: CycleRepetition | None = field(
             default=None,
             metadata={
                 "name": "CYCLE-REPETITION",

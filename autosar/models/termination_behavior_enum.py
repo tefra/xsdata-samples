@@ -28,20 +28,20 @@ class TerminationBehaviorEnum:
     class Meta:
         name = "TERMINATION-BEHAVIOR-ENUM"
 
-    value: Optional[TerminationBehaviorEnumSimple] = field(
+    value: TerminationBehaviorEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

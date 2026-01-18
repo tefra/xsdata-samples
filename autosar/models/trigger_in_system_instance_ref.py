@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -40,9 +42,7 @@ class TriggerInSystemInstanceRef:
     class Meta:
         name = "TRIGGER-IN-SYSTEM-INSTANCE-REF"
 
-    context_composition_ref: Optional[
-        "TriggerInSystemInstanceRef.ContextCompositionRef"
-    ] = field(
+    context_composition_ref: TriggerInSystemInstanceRef.ContextCompositionRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-COMPOSITION-REF",
@@ -51,7 +51,7 @@ class TriggerInSystemInstanceRef:
         },
     )
     context_component_ref: list[
-        "TriggerInSystemInstanceRef.ContextComponentRef"
+        TriggerInSystemInstanceRef.ContextComponentRef
     ] = field(
         default_factory=list,
         metadata={
@@ -60,7 +60,7 @@ class TriggerInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_port_ref: Optional["TriggerInSystemInstanceRef.ContextPortRef"] = (
+    context_port_ref: TriggerInSystemInstanceRef.ContextPortRef | None = (
         field(
             default=None,
             metadata={
@@ -70,9 +70,7 @@ class TriggerInSystemInstanceRef:
             },
         )
     )
-    target_trigger_ref: Optional[
-        "TriggerInSystemInstanceRef.TargetTriggerRef"
-    ] = field(
+    target_trigger_ref: TriggerInSystemInstanceRef.TargetTriggerRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-TRIGGER-REF",
@@ -80,14 +78,14 @@ class TriggerInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -98,7 +96,7 @@ class TriggerInSystemInstanceRef:
 
     @dataclass
     class ContextCompositionRef(Ref):
-        dest: Optional[RootSwCompositionPrototypeSubtypesEnum] = field(
+        dest: RootSwCompositionPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -109,7 +107,7 @@ class TriggerInSystemInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -120,7 +118,7 @@ class TriggerInSystemInstanceRef:
 
     @dataclass
     class ContextPortRef(Ref):
-        dest: Optional[PortPrototypeSubtypesEnum] = field(
+        dest: PortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -131,7 +129,7 @@ class TriggerInSystemInstanceRef:
 
     @dataclass
     class TargetTriggerRef(Ref):
-        dest: Optional[TriggerSubtypesEnum] = field(
+        dest: TriggerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

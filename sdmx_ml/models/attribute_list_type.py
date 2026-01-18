@@ -16,7 +16,7 @@ class AttributeListType(AttributeListBaseType):
     """
 
     attribute_or_metadata_attribute_usage: tuple[
-        Union[Attribute2, MetadataAttributeUsage], ...
+        Attribute2 | MetadataAttributeUsage, ...
     ] = field(
         default_factory=tuple,
         metadata={

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -55,9 +57,7 @@ class SenderRecArrayElementMapping:
     class Meta:
         name = "SENDER-REC-ARRAY-ELEMENT-MAPPING"
 
-    complex_type_mapping: Optional[
-        "SenderRecArrayElementMapping.ComplexTypeMapping"
-    ] = field(
+    complex_type_mapping: SenderRecArrayElementMapping.ComplexTypeMapping | None = field(
         default=None,
         metadata={
             "name": "COMPLEX-TYPE-MAPPING",
@@ -65,7 +65,7 @@ class SenderRecArrayElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    indexed_array_element: Optional[IndexedArrayElement] = field(
+    indexed_array_element: IndexedArrayElement | None = field(
         default=None,
         metadata={
             "name": "INDEXED-ARRAY-ELEMENT",
@@ -73,9 +73,7 @@ class SenderRecArrayElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_signal_ref: Optional[
-        "SenderRecArrayElementMapping.SystemSignalRef"
-    ] = field(
+    system_signal_ref: SenderRecArrayElementMapping.SystemSignalRef | None = field(
         default=None,
         metadata={
             "name": "SYSTEM-SIGNAL-REF",
@@ -83,14 +81,14 @@ class SenderRecArrayElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -101,9 +99,7 @@ class SenderRecArrayElementMapping:
 
     @dataclass
     class ComplexTypeMapping:
-        sender_rec_array_type_mapping: Optional[
-            "SenderRecArrayTypeMapping"
-        ] = field(
+        sender_rec_array_type_mapping: SenderRecArrayTypeMapping | None = field(
             default=None,
             metadata={
                 "name": "SENDER-REC-ARRAY-TYPE-MAPPING",
@@ -111,9 +107,7 @@ class SenderRecArrayElementMapping:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        sender_rec_record_type_mapping: Optional[
-            "SenderRecRecordTypeMapping"
-        ] = field(
+        sender_rec_record_type_mapping: SenderRecRecordTypeMapping | None = field(
             default=None,
             metadata={
                 "name": "SENDER-REC-RECORD-TYPE-MAPPING",
@@ -124,7 +118,7 @@ class SenderRecArrayElementMapping:
 
     @dataclass
     class SystemSignalRef(Ref):
-        dest: Optional[SystemSignalSubtypesEnum] = field(
+        dest: SystemSignalSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -165,9 +159,7 @@ class SenderRecArrayTypeMapping:
     class Meta:
         name = "SENDER-REC-ARRAY-TYPE-MAPPING"
 
-    array_element_mappings: Optional[
-        "SenderRecArrayTypeMapping.ArrayElementMappings"
-    ] = field(
+    array_element_mappings: SenderRecArrayTypeMapping.ArrayElementMappings | None = field(
         default=None,
         metadata={
             "name": "ARRAY-ELEMENT-MAPPINGS",
@@ -175,7 +167,7 @@ class SenderRecArrayTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sender_to_signal_text_table_mapping: Optional[TextTableMapping] = field(
+    sender_to_signal_text_table_mapping: TextTableMapping | None = field(
         default=None,
         metadata={
             "name": "SENDER-TO-SIGNAL-TEXT-TABLE-MAPPING",
@@ -183,7 +175,7 @@ class SenderRecArrayTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    signal_to_receiver_text_table_mapping: Optional[TextTableMapping] = field(
+    signal_to_receiver_text_table_mapping: TextTableMapping | None = field(
         default=None,
         metadata={
             "name": "SIGNAL-TO-RECEIVER-TEXT-TABLE-MAPPING",
@@ -191,14 +183,14 @@ class SenderRecArrayTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -270,9 +262,7 @@ class SenderRecRecordElementMapping:
     class Meta:
         name = "SENDER-REC-RECORD-ELEMENT-MAPPING"
 
-    application_record_element_ref: Optional[
-        "SenderRecRecordElementMapping.ApplicationRecordElementRef"
-    ] = field(
+    application_record_element_ref: SenderRecRecordElementMapping.ApplicationRecordElementRef | None = field(
         default=None,
         metadata={
             "name": "APPLICATION-RECORD-ELEMENT-REF",
@@ -280,9 +270,7 @@ class SenderRecRecordElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    complex_type_mapping: Optional[
-        "SenderRecRecordElementMapping.ComplexTypeMapping"
-    ] = field(
+    complex_type_mapping: SenderRecRecordElementMapping.ComplexTypeMapping | None = field(
         default=None,
         metadata={
             "name": "COMPLEX-TYPE-MAPPING",
@@ -290,9 +278,7 @@ class SenderRecRecordElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    implementation_record_element_ref: Optional[
-        "SenderRecRecordElementMapping.ImplementationRecordElementRef"
-    ] = field(
+    implementation_record_element_ref: SenderRecRecordElementMapping.ImplementationRecordElementRef | None = field(
         default=None,
         metadata={
             "name": "IMPLEMENTATION-RECORD-ELEMENT-REF",
@@ -300,7 +286,7 @@ class SenderRecRecordElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sender_to_signal_text_table_mapping: Optional[TextTableMapping] = field(
+    sender_to_signal_text_table_mapping: TextTableMapping | None = field(
         default=None,
         metadata={
             "name": "SENDER-TO-SIGNAL-TEXT-TABLE-MAPPING",
@@ -308,7 +294,7 @@ class SenderRecRecordElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    signal_to_receiver_text_table_mapping: Optional[TextTableMapping] = field(
+    signal_to_receiver_text_table_mapping: TextTableMapping | None = field(
         default=None,
         metadata={
             "name": "SIGNAL-TO-RECEIVER-TEXT-TABLE-MAPPING",
@@ -316,9 +302,7 @@ class SenderRecRecordElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_signal_ref: Optional[
-        "SenderRecRecordElementMapping.SystemSignalRef"
-    ] = field(
+    system_signal_ref: SenderRecRecordElementMapping.SystemSignalRef | None = field(
         default=None,
         metadata={
             "name": "SYSTEM-SIGNAL-REF",
@@ -326,14 +310,14 @@ class SenderRecRecordElementMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -344,7 +328,7 @@ class SenderRecRecordElementMapping:
 
     @dataclass
     class ApplicationRecordElementRef(Ref):
-        dest: Optional[ApplicationRecordElementSubtypesEnum] = field(
+        dest: ApplicationRecordElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -355,7 +339,7 @@ class SenderRecRecordElementMapping:
 
     @dataclass
     class ComplexTypeMapping:
-        sender_rec_array_type_mapping: Optional[SenderRecArrayTypeMapping] = (
+        sender_rec_array_type_mapping: SenderRecArrayTypeMapping | None = (
             field(
                 default=None,
                 metadata={
@@ -365,9 +349,7 @@ class SenderRecRecordElementMapping:
                 },
             )
         )
-        sender_rec_record_type_mapping: Optional[
-            "SenderRecRecordTypeMapping"
-        ] = field(
+        sender_rec_record_type_mapping: SenderRecRecordTypeMapping | None = field(
             default=None,
             metadata={
                 "name": "SENDER-REC-RECORD-TYPE-MAPPING",
@@ -378,7 +360,7 @@ class SenderRecRecordElementMapping:
 
     @dataclass
     class ImplementationRecordElementRef(Ref):
-        dest: Optional[ImplementationDataTypeElementSubtypesEnum] = field(
+        dest: ImplementationDataTypeElementSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -389,7 +371,7 @@ class SenderRecRecordElementMapping:
 
     @dataclass
     class SystemSignalRef(Ref):
-        dest: Optional[SystemSignalSubtypesEnum] = field(
+        dest: SystemSignalSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -422,9 +404,7 @@ class SenderRecRecordTypeMapping:
     class Meta:
         name = "SENDER-REC-RECORD-TYPE-MAPPING"
 
-    record_element_mappings: Optional[
-        "SenderRecRecordTypeMapping.RecordElementMappings"
-    ] = field(
+    record_element_mappings: SenderRecRecordTypeMapping.RecordElementMappings | None = field(
         default=None,
         metadata={
             "name": "RECORD-ELEMENT-MAPPINGS",
@@ -432,14 +412,14 @@ class SenderRecRecordTypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

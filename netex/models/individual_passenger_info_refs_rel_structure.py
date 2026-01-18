@@ -12,7 +12,7 @@ class IndividualPassengerInfoRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "IndividualPassengerInfoRefs_RelStructure"
 
-    individual_passenger_info_ref: Optional[IndividualPassengerInfoRef] = (
+    individual_passenger_info_ref: IndividualPassengerInfoRef | None = (
         field(
             default=None,
             metadata={

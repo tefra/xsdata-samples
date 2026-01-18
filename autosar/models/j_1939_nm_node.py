@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -110,7 +112,7 @@ class J1939NmNode:
     class Meta:
         name = "J-1939-NM-NODE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -119,7 +121,7 @@ class J1939NmNode:
             "required": True,
         },
     )
-    short_name_fragments: Optional["J1939NmNode.ShortNameFragments"] = field(
+    short_name_fragments: J1939NmNode.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -127,7 +129,7 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -135,7 +137,7 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -143,7 +145,7 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -151,7 +153,7 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -159,7 +161,7 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -167,7 +169,7 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["J1939NmNode.Annotations"] = field(
+    annotations: J1939NmNode.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -175,7 +177,7 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    controller_ref: Optional["J1939NmNode.ControllerRef"] = field(
+    controller_ref: J1939NmNode.ControllerRef | None = field(
         default=None,
         metadata={
             "name": "CONTROLLER-REF",
@@ -183,7 +185,7 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    machine_ref: Optional["J1939NmNode.MachineRef"] = field(
+    machine_ref: J1939NmNode.MachineRef | None = field(
         default=None,
         metadata={
             "name": "MACHINE-REF",
@@ -191,7 +193,7 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_coord_cluster: Optional[PositiveInteger] = field(
+    nm_coord_cluster: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "NM-COORD-CLUSTER",
@@ -199,7 +201,7 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_coordinator_role: Optional[NmCoordinatorRoleEnum] = field(
+    nm_coordinator_role: NmCoordinatorRoleEnum | None = field(
         default=None,
         metadata={
             "name": "NM-COORDINATOR-ROLE",
@@ -207,7 +209,7 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_if_ecu_ref: Optional["J1939NmNode.NmIfEcuRef"] = field(
+    nm_if_ecu_ref: J1939NmNode.NmIfEcuRef | None = field(
         default=None,
         metadata={
             "name": "NM-IF-ECU-REF",
@@ -215,7 +217,7 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_node_id: Optional[Integer] = field(
+    nm_node_id: Integer | None = field(
         default=None,
         metadata={
             "name": "NM-NODE-ID",
@@ -223,7 +225,7 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nm_passive_mode_enabled: Optional[Boolean] = field(
+    nm_passive_mode_enabled: Boolean | None = field(
         default=None,
         metadata={
             "name": "NM-PASSIVE-MODE-ENABLED",
@@ -231,7 +233,7 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rx_nm_pdu_refs: Optional["J1939NmNode.RxNmPduRefs"] = field(
+    rx_nm_pdu_refs: J1939NmNode.RxNmPduRefs | None = field(
         default=None,
         metadata={
             "name": "RX-NM-PDU-REFS",
@@ -239,7 +241,7 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tx_nm_pdu_refs: Optional["J1939NmNode.TxNmPduRefs"] = field(
+    tx_nm_pdu_refs: J1939NmNode.TxNmPduRefs | None = field(
         default=None,
         metadata={
             "name": "TX-NM-PDU-REFS",
@@ -247,7 +249,7 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -255,7 +257,7 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    node_name: Optional[J1939NodeName] = field(
+    node_name: J1939NodeName | None = field(
         default=None,
         metadata={
             "name": "NODE-NAME",
@@ -263,14 +265,14 @@ class J1939NmNode:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -278,7 +280,7 @@ class J1939NmNode:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -310,7 +312,7 @@ class J1939NmNode:
 
     @dataclass
     class ControllerRef(Ref):
-        dest: Optional[CommunicationControllerSubtypesEnum] = field(
+        dest: CommunicationControllerSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -321,7 +323,7 @@ class J1939NmNode:
 
     @dataclass
     class MachineRef(Ref):
-        dest: Optional[MachineDesignSubtypesEnum] = field(
+        dest: MachineDesignSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -332,7 +334,7 @@ class J1939NmNode:
 
     @dataclass
     class NmIfEcuRef(Ref):
-        dest: Optional[NmEcuSubtypesEnum] = field(
+        dest: NmEcuSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -343,7 +345,7 @@ class J1939NmNode:
 
     @dataclass
     class RxNmPduRefs:
-        rx_nm_pdu_ref: list["J1939NmNode.RxNmPduRefs.RxNmPduRef"] = field(
+        rx_nm_pdu_ref: list[J1939NmNode.RxNmPduRefs.RxNmPduRef] = field(
             default_factory=list,
             metadata={
                 "name": "RX-NM-PDU-REF",
@@ -354,7 +356,7 @@ class J1939NmNode:
 
         @dataclass
         class RxNmPduRef(Ref):
-            dest: Optional[NmPduSubtypesEnum] = field(
+            dest: NmPduSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -365,7 +367,7 @@ class J1939NmNode:
 
     @dataclass
     class TxNmPduRefs:
-        tx_nm_pdu_ref: list["J1939NmNode.TxNmPduRefs.TxNmPduRef"] = field(
+        tx_nm_pdu_ref: list[J1939NmNode.TxNmPduRefs.TxNmPduRef] = field(
             default_factory=list,
             metadata={
                 "name": "TX-NM-PDU-REF",
@@ -376,7 +378,7 @@ class J1939NmNode:
 
         @dataclass
         class TxNmPduRef(Ref):
-            dest: Optional[NmPduSubtypesEnum] = field(
+            dest: NmPduSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

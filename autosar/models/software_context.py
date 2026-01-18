@@ -30,7 +30,7 @@ class SoftwareContext:
     class Meta:
         name = "SOFTWARE-CONTEXT"
 
-    input: Optional[String] = field(
+    input: String | None = field(
         default=None,
         metadata={
             "name": "INPUT",
@@ -38,7 +38,7 @@ class SoftwareContext:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    state: Optional[String] = field(
+    state: String | None = field(
         default=None,
         metadata={
             "name": "STATE",
@@ -46,14 +46,14 @@ class SoftwareContext:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

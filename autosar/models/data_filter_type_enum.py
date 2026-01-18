@@ -27,20 +27,20 @@ class DataFilterTypeEnum:
     class Meta:
         name = "DATA-FILTER-TYPE-ENUM"
 
-    value: Optional[DataFilterTypeEnumSimple] = field(
+    value: DataFilterTypeEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

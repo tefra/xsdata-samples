@@ -12,7 +12,7 @@ class PartyId:
         name = "PartyID"
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    party_guns: Optional[str] = field(
+    party_guns: str | None = field(
         default=None,
         metadata={
             "name": "PartyGUNS",
@@ -20,7 +20,7 @@ class PartyId:
             "required": True,
         },
     )
-    party_type: Optional[str] = field(
+    party_type: str | None = field(
         default=None,
         metadata={
             "name": "PartyType",

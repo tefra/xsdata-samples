@@ -15,7 +15,7 @@ class RespondingGatewayPrpaIn201305Uv02RequestType:
     class Meta:
         name = "RespondingGateway_PRPA_IN201305UV02RequestType"
 
-    prpa_in201305_uv02: Optional[PrpaIn201305Uv02] = field(
+    prpa_in201305_uv02: PrpaIn201305Uv02 | None = field(
         default=None,
         metadata={
             "name": "PRPA_IN201305UV02",
@@ -24,7 +24,7 @@ class RespondingGatewayPrpaIn201305Uv02RequestType:
             "required": True,
         },
     )
-    assertion: Optional[AssertionType] = field(
+    assertion: AssertionType | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -32,7 +32,7 @@ class RespondingGatewayPrpaIn201305Uv02RequestType:
             "required": True,
         },
     )
-    nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
+    nhin_target_communities: NhinTargetCommunitiesType | None = field(
         default=None,
         metadata={
             "name": "NhinTargetCommunities",
@@ -47,7 +47,7 @@ class RespondingGatewayPrpaIn201305Uv02SecuredRequestType:
     class Meta:
         name = "RespondingGateway_PRPA_IN201305UV02SecuredRequestType"
 
-    prpa_in201305_uv02: Optional[PrpaIn201305Uv02] = field(
+    prpa_in201305_uv02: PrpaIn201305Uv02 | None = field(
         default=None,
         metadata={
             "name": "PRPA_IN201305UV02",
@@ -56,7 +56,7 @@ class RespondingGatewayPrpaIn201305Uv02SecuredRequestType:
             "required": True,
         },
     )
-    nhin_target_communities: Optional[NhinTargetCommunitiesType] = field(
+    nhin_target_communities: NhinTargetCommunitiesType | None = field(
         default=None,
         metadata={
             "name": "NhinTargetCommunities",

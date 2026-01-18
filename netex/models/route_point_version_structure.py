@@ -11,7 +11,7 @@ class RoutePointVersionStructure(PointVersionStructure):
     class Meta:
         name = "RoutePoint_VersionStructure"
 
-    via_flag: Optional[bool] = field(
+    via_flag: bool | None = field(
         default=None,
         metadata={
             "name": "ViaFlag",
@@ -19,7 +19,7 @@ class RoutePointVersionStructure(PointVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    border_crossing: Optional[bool] = field(
+    border_crossing: bool | None = field(
         default=None,
         metadata={
             "name": "BorderCrossing",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -36,7 +38,7 @@ class AccessCountSet:
     class Meta:
         name = "ACCESS-COUNT-SET"
 
-    access_counts: Optional["AccessCountSet.AccessCounts"] = field(
+    access_counts: AccessCountSet.AccessCounts | None = field(
         default=None,
         metadata={
             "name": "ACCESS-COUNTS",
@@ -44,7 +46,7 @@ class AccessCountSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    count_profile: Optional[NmtokenString] = field(
+    count_profile: NmtokenString | None = field(
         default=None,
         metadata={
             "name": "COUNT-PROFILE",
@@ -52,7 +54,7 @@ class AccessCountSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -60,14 +62,14 @@ class AccessCountSet:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

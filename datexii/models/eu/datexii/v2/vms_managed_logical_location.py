@@ -26,7 +26,7 @@ class VmsManagedLogicalLocation:
     :ivar vms_managed_logical_location_extension:
     """
 
-    managed_logical_location: Optional[MultilingualString] = field(
+    managed_logical_location: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "managedLogicalLocation",
@@ -34,7 +34,7 @@ class VmsManagedLogicalLocation:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    distance_from_logical_location: Optional[int] = field(
+    distance_from_logical_location: int | None = field(
         default=None,
         metadata={
             "name": "distanceFromLogicalLocation",
@@ -42,7 +42,7 @@ class VmsManagedLogicalLocation:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    managed_location: Optional[Location] = field(
+    managed_location: Location | None = field(
         default=None,
         metadata={
             "name": "managedLocation",
@@ -50,7 +50,7 @@ class VmsManagedLogicalLocation:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_managed_logical_location_extension: Optional[ExtensionType] = field(
+    vms_managed_logical_location_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "vmsManagedLogicalLocationExtension",

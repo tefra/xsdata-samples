@@ -11,7 +11,7 @@ class VmsUnitVmsIndexVms:
     class Meta:
         name = "_VmsUnitVmsIndexVms"
 
-    vms: Optional[Vms] = field(
+    vms: Vms | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -19,7 +19,7 @@ class VmsUnitVmsIndexVms:
             "required": True,
         },
     )
-    vms_index: Optional[int] = field(
+    vms_index: int | None = field(
         default=None,
         metadata={
             "name": "vmsIndex",

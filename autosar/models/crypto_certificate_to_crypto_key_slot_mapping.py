@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class CryptoCertificateToCryptoKeySlotMapping:
     class Meta:
         name = "CRYPTO-CERTIFICATE-TO-CRYPTO-KEY-SLOT-MAPPING"
 
-    crypto_certificate_ref: Optional[
-        "CryptoCertificateToCryptoKeySlotMapping.CryptoCertificateRef"
-    ] = field(
+    crypto_certificate_ref: CryptoCertificateToCryptoKeySlotMapping.CryptoCertificateRef | None = field(
         default=None,
         metadata={
             "name": "CRYPTO-CERTIFICATE-REF",
@@ -43,9 +43,7 @@ class CryptoCertificateToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    crypto_key_slot_refs: Optional[
-        "CryptoCertificateToCryptoKeySlotMapping.CryptoKeySlotRefs"
-    ] = field(
+    crypto_key_slot_refs: CryptoCertificateToCryptoKeySlotMapping.CryptoKeySlotRefs | None = field(
         default=None,
         metadata={
             "name": "CRYPTO-KEY-SLOT-REFS",
@@ -53,14 +51,14 @@ class CryptoCertificateToCryptoKeySlotMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -71,7 +69,7 @@ class CryptoCertificateToCryptoKeySlotMapping:
 
     @dataclass
     class CryptoCertificateRef(Ref):
-        dest: Optional[CryptoCertificateSubtypesEnum] = field(
+        dest: CryptoCertificateSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -83,7 +81,7 @@ class CryptoCertificateToCryptoKeySlotMapping:
     @dataclass
     class CryptoKeySlotRefs:
         crypto_key_slot_ref: list[
-            "CryptoCertificateToCryptoKeySlotMapping.CryptoKeySlotRefs.CryptoKeySlotRef"
+            CryptoCertificateToCryptoKeySlotMapping.CryptoKeySlotRefs.CryptoKeySlotRef
         ] = field(
             default_factory=list,
             metadata={
@@ -96,7 +94,7 @@ class CryptoCertificateToCryptoKeySlotMapping:
 
         @dataclass
         class CryptoKeySlotRef(Ref):
-            dest: Optional[CryptoKeySlotSubtypesEnum] = field(
+            dest: CryptoKeySlotSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -17,13 +19,7 @@ class IdentifiableObjectEventType:
     specific instance, or specific instances of the object may be selected.
     """
 
-    all_or_urn_or_id: Optional[
-        Union[
-            EmptyType,
-            "IdentifiableObjectEventType.Urn",
-            "IdentifiableObjectEventType.Id",
-        ]
-    ] = field(
+    all_or_urn_or_id: EmptyType | IdentifiableObjectEventType.Urn | IdentifiableObjectEventType.Id | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -49,7 +45,7 @@ class IdentifiableObjectEventType:
 
     @dataclass(frozen=True)
     class Urn:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -58,7 +54,7 @@ class IdentifiableObjectEventType:
 
     @dataclass(frozen=True)
     class Id:
-        value: Optional[Union[str, WildCardValueType]] = field(
+        value: str | WildCardValueType | None = field(
             default=None,
             metadata={
                 "required": True,

@@ -21,7 +21,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "ServiceCalendar_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -29,7 +29,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -37,7 +37,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    from_date: Optional[XmlDate] = field(
+    from_date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "FromDate",
@@ -45,7 +45,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    to_date: Optional[XmlDate] = field(
+    to_date: XmlDate | None = field(
         default=None,
         metadata={
             "name": "ToDate",
@@ -53,7 +53,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    earliest_time: Optional[XmlTime] = field(
+    earliest_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "EarliestTime",
@@ -61,7 +61,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_length: Optional[XmlDuration] = field(
+    day_length: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "DayLength",
@@ -69,7 +69,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_types: Optional[DayTypesRelStructure] = field(
+    day_types: DayTypesRelStructure | None = field(
         default=None,
         metadata={
             "name": "dayTypes",
@@ -77,14 +77,14 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    timebands: Optional[TimebandsRelStructure] = field(
+    timebands: TimebandsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operating_days: Optional[OperatingDaysRelStructure] = field(
+    operating_days: OperatingDaysRelStructure | None = field(
         default=None,
         metadata={
             "name": "operatingDays",
@@ -92,7 +92,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    operating_periods: Optional[OperatingPeriodsRelStructure] = field(
+    operating_periods: OperatingPeriodsRelStructure | None = field(
         default=None,
         metadata={
             "name": "operatingPeriods",
@@ -100,7 +100,7 @@ class ServiceCalendarVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    day_type_assignments: Optional[DayTypeAssignmentsRelStructure] = field(
+    day_type_assignments: DayTypeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "dayTypeAssignments",

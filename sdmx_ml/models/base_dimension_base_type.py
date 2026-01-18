@@ -16,7 +16,7 @@ class BaseDimensionBaseType(ComponentType):
     components (that does not allow for XHTML representation).
     """
 
-    concept_identity: Optional[str] = field(
+    concept_identity: str | None = field(
         default=None,
         metadata={
             "name": "ConceptIdentity",

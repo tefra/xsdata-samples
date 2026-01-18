@@ -26,7 +26,7 @@ class VmsText:
     :ivar vms_text_extension:
     """
 
-    vms_legend_code: Optional[str] = field(
+    vms_legend_code: str | None = field(
         default=None,
         metadata={
             "name": "vmsLegendCode",
@@ -35,7 +35,7 @@ class VmsText:
             "max_length": 1024,
         },
     )
-    vms_text_image_url: Optional[str] = field(
+    vms_text_image_url: str | None = field(
         default=None,
         metadata={
             "name": "vmsTextImageUrl",
@@ -51,7 +51,7 @@ class VmsText:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    vms_text_extension: Optional[ExtensionType] = field(
+    vms_text_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "vmsTextExtension",

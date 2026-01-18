@@ -19,7 +19,7 @@ class StdSetDesignator(StdDesignatorT):
         name = "std_set_designator"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    family: Optional[str] = field(
+    family: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

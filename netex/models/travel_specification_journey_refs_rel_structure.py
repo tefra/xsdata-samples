@@ -19,12 +19,7 @@ class TravelSpecificationJourneyRefsRelStructure(
         name = "travelSpecificationJourneyRefs_RelStructure"
 
     choice: Iterable[
-        Union[
-            TemplateServiceJourneyRef,
-            ServiceJourneyRef,
-            SingleJourneyRef,
-            TrainNumberRef,
-        ]
+        TemplateServiceJourneyRef | ServiceJourneyRef | SingleJourneyRef | TrainNumberRef
     ] = field(
         default_factory=list,
         metadata={

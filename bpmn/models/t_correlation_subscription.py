@@ -21,7 +21,7 @@ class TCorrelationSubscription(TBaseElement):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    correlation_key_ref: Optional[QName] = field(
+    correlation_key_ref: QName | None = field(
         default=None,
         metadata={
             "name": "correlationKeyRef",

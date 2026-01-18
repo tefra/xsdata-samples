@@ -16,11 +16,7 @@ class TravelSpecificationRefsRelStructure(OneToManyRelationshipStructure):
         name = "travelSpecificationRefs_RelStructure"
 
     travel_specification_ref: Iterable[
-        Union[
-            OfferedTravelSpecificationRef,
-            RequestedTravelSpecificationRef,
-            TravelSpecificationRef,
-        ]
+        OfferedTravelSpecificationRef | RequestedTravelSpecificationRef | TravelSpecificationRef
     ] = field(
         default_factory=list,
         metadata={

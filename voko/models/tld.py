@@ -7,13 +7,13 @@ class Tld:
     class Meta:
         name = "tld"
 
-    lit: Optional[str] = field(
+    lit: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    var: Optional[str] = field(
+    var: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

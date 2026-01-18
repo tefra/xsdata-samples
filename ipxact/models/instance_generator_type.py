@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -23,7 +25,7 @@ class InstanceGeneratorType(GeneratorType):
     class Meta:
         name = "instanceGeneratorType"
 
-    group: list["InstanceGeneratorType.Group"] = field(
+    group: list[InstanceGeneratorType.Group] = field(
         default_factory=list,
         metadata={
             "type": "Element",
@@ -45,7 +47,7 @@ class InstanceGeneratorType(GeneratorType):
                 "required": True,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

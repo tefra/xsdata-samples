@@ -18,7 +18,7 @@ class VehicleTypeZoneRestrictionVersionStructure(VersionedChildStructure):
     class Meta:
         name = "VehicleTypeZoneRestriction_VersionStructure"
 
-    zone_use: Optional[TransportZoneUseEnumeration] = field(
+    zone_use: TransportZoneUseEnumeration | None = field(
         default=None,
         metadata={
             "name": "ZoneUse",
@@ -26,7 +26,7 @@ class VehicleTypeZoneRestrictionVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    maximum_speed: Optional[Decimal] = field(
+    maximum_speed: Decimal | None = field(
         default=None,
         metadata={
             "name": "MaximumSpeed",
@@ -34,15 +34,7 @@ class VehicleTypeZoneRestrictionVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_type_ref_or_vehicle_type_ref: Optional[
-        Union[
-            SimpleVehicleTypeRef,
-            CompoundTrainRef,
-            TrainRef,
-            VehicleTypeRef,
-            TransportTypeRef,
-        ]
-    ] = field(
+    transport_type_ref_or_vehicle_type_ref: SimpleVehicleTypeRef | CompoundTrainRef | TrainRef | VehicleTypeRef | TransportTypeRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

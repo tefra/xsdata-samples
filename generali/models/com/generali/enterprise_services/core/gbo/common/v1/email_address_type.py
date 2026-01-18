@@ -28,7 +28,7 @@ class EmailAddressType:
         peter.jackson</description>
     """
 
-    full_address_text: Optional[EmailAddressFullType] = field(
+    full_address_text: EmailAddressFullType | None = field(
         default=None,
         metadata={
             "name": "FullAddressText",
@@ -37,7 +37,7 @@ class EmailAddressType:
             "required": True,
         },
     )
-    domain_part_text: Optional[EmailAddressDomainPartType] = field(
+    domain_part_text: EmailAddressDomainPartType | None = field(
         default=None,
         metadata={
             "name": "DomainPartText",
@@ -45,7 +45,7 @@ class EmailAddressType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
         },
     )
-    local_part_text: Optional[EmailAddressLocalPartType] = field(
+    local_part_text: EmailAddressLocalPartType | None = field(
         default=None,
         metadata={
             "name": "LocalPartText",

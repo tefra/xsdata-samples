@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -120,7 +122,7 @@ class TdEventModeDeclaration:
     class Meta:
         name = "TD-EVENT-MODE-DECLARATION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -129,9 +131,7 @@ class TdEventModeDeclaration:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "TdEventModeDeclaration.ShortNameFragments"
-    ] = field(
+    short_name_fragments: TdEventModeDeclaration.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -139,7 +139,7 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -147,7 +147,7 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -155,7 +155,7 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -163,7 +163,7 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -171,7 +171,7 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -179,7 +179,7 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["TdEventModeDeclaration.Annotations"] = field(
+    annotations: TdEventModeDeclaration.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -187,7 +187,7 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -195,7 +195,7 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    occurrence_expression: Optional[TdEventOccurrenceExpression] = field(
+    occurrence_expression: TdEventOccurrenceExpression | None = field(
         default=None,
         metadata={
             "name": "OCCURRENCE-EXPRESSION",
@@ -203,7 +203,7 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    component_iref: Optional[ComponentInCompositionInstanceRef] = field(
+    component_iref: ComponentInCompositionInstanceRef | None = field(
         default=None,
         metadata={
             "name": "COMPONENT-IREF",
@@ -211,7 +211,7 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    is_external: Optional[Boolean] = field(
+    is_external: Boolean | None = field(
         default=None,
         metadata={
             "name": "IS-EXTERNAL",
@@ -219,9 +219,7 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_prototype_blueprint_ref: Optional[
-        "TdEventModeDeclaration.PortPrototypeBlueprintRef"
-    ] = field(
+    port_prototype_blueprint_ref: TdEventModeDeclaration.PortPrototypeBlueprintRef | None = field(
         default=None,
         metadata={
             "name": "PORT-PROTOTYPE-BLUEPRINT-REF",
@@ -229,7 +227,7 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_ref: Optional["TdEventModeDeclaration.PortRef"] = field(
+    port_ref: TdEventModeDeclaration.PortRef | None = field(
         default=None,
         metadata={
             "name": "PORT-REF",
@@ -237,9 +235,7 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    entry_mode_declaration_ref: Optional[
-        "TdEventModeDeclaration.EntryModeDeclarationRef"
-    ] = field(
+    entry_mode_declaration_ref: TdEventModeDeclaration.EntryModeDeclarationRef | None = field(
         default=None,
         metadata={
             "name": "ENTRY-MODE-DECLARATION-REF",
@@ -247,9 +243,7 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exit_mode_declaration_ref: Optional[
-        "TdEventModeDeclaration.ExitModeDeclarationRef"
-    ] = field(
+    exit_mode_declaration_ref: TdEventModeDeclaration.ExitModeDeclarationRef | None = field(
         default=None,
         metadata={
             "name": "EXIT-MODE-DECLARATION-REF",
@@ -257,9 +251,7 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mode_declaration_ref: Optional[
-        "TdEventModeDeclaration.ModeDeclarationRef"
-    ] = field(
+    mode_declaration_ref: TdEventModeDeclaration.ModeDeclarationRef | None = field(
         default=None,
         metadata={
             "name": "MODE-DECLARATION-REF",
@@ -267,9 +259,7 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    td_event_mode_declaration_type: Optional[
-        TdEventModeDeclarationTypeEnum
-    ] = field(
+    td_event_mode_declaration_type: TdEventModeDeclarationTypeEnum | None = field(
         default=None,
         metadata={
             "name": "TD-EVENT-MODE-DECLARATION-TYPE",
@@ -277,14 +267,14 @@ class TdEventModeDeclaration:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -292,7 +282,7 @@ class TdEventModeDeclaration:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -324,7 +314,7 @@ class TdEventModeDeclaration:
 
     @dataclass
     class PortPrototypeBlueprintRef(Ref):
-        dest: Optional[PortPrototypeBlueprintSubtypesEnum] = field(
+        dest: PortPrototypeBlueprintSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -335,7 +325,7 @@ class TdEventModeDeclaration:
 
     @dataclass
     class PortRef(Ref):
-        dest: Optional[PortPrototypeSubtypesEnum] = field(
+        dest: PortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -346,7 +336,7 @@ class TdEventModeDeclaration:
 
     @dataclass
     class EntryModeDeclarationRef(Ref):
-        dest: Optional[ModeDeclarationSubtypesEnum] = field(
+        dest: ModeDeclarationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -357,7 +347,7 @@ class TdEventModeDeclaration:
 
     @dataclass
     class ExitModeDeclarationRef(Ref):
-        dest: Optional[ModeDeclarationSubtypesEnum] = field(
+        dest: ModeDeclarationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -368,7 +358,7 @@ class TdEventModeDeclaration:
 
     @dataclass
     class ModeDeclarationRef(Ref):
-        dest: Optional[ModeDeclarationGroupPrototypeSubtypesEnum] = field(
+        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -50,56 +50,56 @@ class CitationT:
     class Meta:
         name = "citation_t"
 
-    issn: Optional[Issn] = field(
+    issn: Issn | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    journal_title: Optional[JournalTitle] = field(
+    journal_title: JournalTitle | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    author: Optional[Author] = field(
+    author: Author | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    volume: Optional[Volume] = field(
+    volume: Volume | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    issue: Optional[Issue] = field(
+    issue: Issue | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    first_page: Optional[FirstPage] = field(
+    first_page: FirstPage | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    elocation_id: Optional[ElocationId] = field(
+    elocation_id: ElocationId | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    c_year: Optional[CYear] = field(
+    c_year: CYear | None = field(
         default=None,
         metadata={
             "name": "cYear",
@@ -107,70 +107,70 @@ class CitationT:
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    doi: Optional[Doi] = field(
+    doi: Doi | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    isbn: Optional[Isbn] = field(
+    isbn: Isbn | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    series_title: Optional[SeriesTitle] = field(
+    series_title: SeriesTitle | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    volume_title: Optional[VolumeTitle] = field(
+    volume_title: VolumeTitle | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    edition_number: Optional[EditionNumber] = field(
+    edition_number: EditionNumber | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    component_number: Optional[ComponentNumber] = field(
+    component_number: ComponentNumber | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    article_title: Optional[ArticleTitle] = field(
+    article_title: ArticleTitle | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    std_designator: Optional[StdDesignator] = field(
+    std_designator: StdDesignator | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    standards_body: Optional[StandardsBody] = field(
+    standards_body: StandardsBody | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
         },
     )
-    unstructured_citation: Optional[UnstructuredCitation] = field(
+    unstructured_citation: UnstructuredCitation | None = field(
         default=None,
         metadata={
             "type": "Element",

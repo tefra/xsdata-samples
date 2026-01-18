@@ -15,7 +15,7 @@ class SalesOfferPackageElementsRelStructure(ContainmentAggregationStructure):
         name = "salesOfferPackageElements_RelStructure"
 
     sales_offer_package_element_ref_or_sales_offer_package_element: Iterable[
-        Union[SalesOfferPackageElementRef, SalesOfferPackageElement]
+        SalesOfferPackageElementRef | SalesOfferPackageElement
     ] = field(
         default_factory=list,
         metadata={

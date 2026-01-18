@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -55,7 +57,7 @@ class TdEventOccurrenceExpression:
     class Meta:
         name = "TD-EVENT-OCCURRENCE-EXPRESSION"
 
-    arguments: Optional["TdEventOccurrenceExpression.Arguments"] = field(
+    arguments: TdEventOccurrenceExpression.Arguments | None = field(
         default=None,
         metadata={
             "name": "ARGUMENTS",
@@ -63,7 +65,7 @@ class TdEventOccurrenceExpression:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    formula: Optional[TdEventOccurrenceExpressionFormula] = field(
+    formula: TdEventOccurrenceExpressionFormula | None = field(
         default=None,
         metadata={
             "name": "FORMULA",
@@ -71,7 +73,7 @@ class TdEventOccurrenceExpression:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    modes: Optional["TdEventOccurrenceExpression.Modes"] = field(
+    modes: TdEventOccurrenceExpression.Modes | None = field(
         default=None,
         metadata={
             "name": "MODES",
@@ -79,7 +81,7 @@ class TdEventOccurrenceExpression:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variables: Optional["TdEventOccurrenceExpression.Variables"] = field(
+    variables: TdEventOccurrenceExpression.Variables | None = field(
         default=None,
         metadata={
             "name": "VARIABLES",
@@ -87,14 +89,14 @@ class TdEventOccurrenceExpression:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

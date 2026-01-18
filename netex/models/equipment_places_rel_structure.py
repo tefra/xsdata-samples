@@ -15,7 +15,7 @@ class EquipmentPlacesRelStructure(ContainmentAggregationStructure):
         name = "equipmentPlaces_RelStructure"
 
     equipment_place_ref_or_equipment_place: Iterable[
-        Union[EquipmentPlaceRef, EquipmentPlace]
+        EquipmentPlaceRef | EquipmentPlace
     ] = field(
         default_factory=list,
         metadata={

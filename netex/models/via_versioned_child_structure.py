@@ -23,11 +23,7 @@ class ViaVersionedChildStructure(VersionedChildStructure):
     class Meta:
         name = "Via_VersionedChildStructure"
 
-    destination_display_ref_or_destination_display_view_or_name: Optional[
-        Union[
-            DestinationDisplayRef, DestinationDisplayView, MultilingualString
-        ]
-    ] = field(
+    destination_display_ref_or_destination_display_view_or_name: DestinationDisplayRef | DestinationDisplayView | MultilingualString | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -50,18 +46,7 @@ class ViaVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    choice: Optional[
-        Union[
-            BorderPointRef,
-            FareScheduledStopPointRef,
-            ScheduledStopPointRef,
-            GaragePointRef,
-            ParkingPointRef,
-            ReliefPointRef,
-            TimingPointRef,
-            RoutePointRef,
-        ]
-    ] = field(
+    choice: BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | RoutePointRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -109,7 +94,7 @@ class ViaVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    via_type: Optional[ViaTypeEnumeration] = field(
+    via_type: ViaTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "ViaType",

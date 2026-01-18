@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -58,7 +60,7 @@ class HwPinGroupConnector:
     class Meta:
         name = "HW-PIN-GROUP-CONNECTOR"
 
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -66,7 +68,7 @@ class HwPinGroupConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -74,7 +76,7 @@ class HwPinGroupConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -82,7 +84,7 @@ class HwPinGroupConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -90,7 +92,7 @@ class HwPinGroupConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_pin_connections: Optional["HwPinGroupConnector.HwPinConnections"] = (
+    hw_pin_connections: HwPinGroupConnector.HwPinConnections | None = (
         field(
             default=None,
             metadata={
@@ -100,7 +102,7 @@ class HwPinGroupConnector:
             },
         )
     )
-    hw_pin_group_refs: Optional["HwPinGroupConnector.HwPinGroupRefs"] = field(
+    hw_pin_group_refs: HwPinGroupConnector.HwPinGroupRefs | None = field(
         default=None,
         metadata={
             "name": "HW-PIN-GROUP-REFS",
@@ -108,7 +110,7 @@ class HwPinGroupConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -116,14 +118,14 @@ class HwPinGroupConnector:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -146,7 +148,7 @@ class HwPinGroupConnector:
     @dataclass
     class HwPinGroupRefs:
         hw_pin_group_ref: list[
-            "HwPinGroupConnector.HwPinGroupRefs.HwPinGroupRef"
+            HwPinGroupConnector.HwPinGroupRefs.HwPinGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -159,7 +161,7 @@ class HwPinGroupConnector:
 
         @dataclass
         class HwPinGroupRef(Ref):
-            dest: Optional[HwPinGroupSubtypesEnum] = field(
+            dest: HwPinGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

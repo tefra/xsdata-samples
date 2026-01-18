@@ -12,7 +12,7 @@ class DiscountingRuleVersionedStructure(PricingRuleVersionedStructure):
     class Meta:
         name = "DiscountingRule_VersionedStructure"
 
-    discount_as_percentage: Optional[Decimal] = field(
+    discount_as_percentage: Decimal | None = field(
         default=None,
         metadata={
             "name": "DiscountAsPercentage",
@@ -20,7 +20,7 @@ class DiscountingRuleVersionedStructure(PricingRuleVersionedStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    discount_as_value: Optional[Decimal] = field(
+    discount_as_value: Decimal | None = field(
         default=None,
         metadata={
             "name": "DiscountAsValue",
@@ -28,7 +28,7 @@ class DiscountingRuleVersionedStructure(PricingRuleVersionedStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    can_be_cumulative: Optional[bool] = field(
+    can_be_cumulative: bool | None = field(
         default=None,
         metadata={
             "name": "CanBeCumulative",

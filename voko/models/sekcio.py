@@ -9,7 +9,7 @@ class Sekcio:
     class Meta:
         name = "sekcio"
 
-    lit: Optional[str] = field(
+    lit: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

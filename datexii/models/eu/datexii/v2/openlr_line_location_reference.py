@@ -31,9 +31,7 @@ class OpenlrLineLocationReference:
             },
         )
     )
-    openlr_last_location_reference_point: Optional[
-        OpenlrLastLocationReferencePoint
-    ] = field(
+    openlr_last_location_reference_point: OpenlrLastLocationReferencePoint | None = field(
         default=None,
         metadata={
             "name": "openlrLastLocationReferencePoint",
@@ -42,7 +40,7 @@ class OpenlrLineLocationReference:
             "required": True,
         },
     )
-    openlr_offsets: Optional[OpenlrOffsets] = field(
+    openlr_offsets: OpenlrOffsets | None = field(
         default=None,
         metadata={
             "name": "openlrOffsets",
@@ -50,7 +48,7 @@ class OpenlrLineLocationReference:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    openlr_line_location_reference_extension: Optional[ExtensionType] = field(
+    openlr_line_location_reference_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "openlrLineLocationReferenceExtension",

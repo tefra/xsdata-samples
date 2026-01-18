@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -10,7 +12,7 @@ __NAMESPACE__ = "http://datex2.eu/schema/2/2_0"
 
 @dataclass
 class MultilingualString:
-    values: Optional["MultilingualString.Values"] = field(
+    values: MultilingualString.Values | None = field(
         default=None,
         metadata={
             "type": "Element",

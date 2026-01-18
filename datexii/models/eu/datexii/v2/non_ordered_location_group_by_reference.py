@@ -25,9 +25,7 @@ class NonOrderedLocationGroupByReference(NonOrderedLocations):
     :ivar non_ordered_location_group_by_reference_extension:
     """
 
-    predefined_non_ordered_location_group_reference: Optional[
-        PredefinedNonOrderedLocationGroupVersionedReference
-    ] = field(
+    predefined_non_ordered_location_group_reference: PredefinedNonOrderedLocationGroupVersionedReference | None = field(
         default=None,
         metadata={
             "name": "predefinedNonOrderedLocationGroupReference",
@@ -36,9 +34,7 @@ class NonOrderedLocationGroupByReference(NonOrderedLocations):
             "required": True,
         },
     )
-    non_ordered_location_group_by_reference_extension: Optional[
-        ExtensionType
-    ] = field(
+    non_ordered_location_group_by_reference_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "nonOrderedLocationGroupByReferenceExtension",

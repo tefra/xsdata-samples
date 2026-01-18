@@ -19,7 +19,7 @@ class TExtension:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    definition: Optional[QName] = field(
+    definition: QName | None = field(
         default=None,
         metadata={
             "type": "Attribute",

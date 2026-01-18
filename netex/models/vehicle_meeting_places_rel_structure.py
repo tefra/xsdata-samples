@@ -15,7 +15,7 @@ class VehicleMeetingPlacesRelStructure(ContainmentAggregationStructure):
         name = "vehicleMeetingPlaces_RelStructure"
 
     vehicle_meeting_place: Iterable[
-        Union[VehiclePoolingMeetingPlace, VehicleMeetingPlace2]
+        VehiclePoolingMeetingPlace | VehicleMeetingPlace2
     ] = field(
         default_factory=list,
         metadata={

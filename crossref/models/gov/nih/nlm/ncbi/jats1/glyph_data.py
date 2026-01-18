@@ -16,44 +16,44 @@ class GlyphData:
         name = "glyph-data"
         namespace = "http://www.ncbi.nlm.nih.gov/JATS1"
 
-    fontchar: Optional[str] = field(
+    fontchar: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    fontname: Optional[str] = field(
+    fontname: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    format: Optional[str] = field(
+    format: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    resolution: Optional[str] = field(
+    resolution: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    x_size: Optional[str] = field(
+    x_size: str | None = field(
         default=None,
         metadata={
             "name": "x-size",
             "type": "Attribute",
         },
     )
-    base: Optional[str] = field(
+    base: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -68,7 +68,7 @@ class GlyphData:
             "namespace": "http://www.w3.org/XML/1998/namespace",
         },
     )
-    y_size: Optional[str] = field(
+    y_size: str | None = field(
         default=None,
         metadata={
             "name": "y-size",

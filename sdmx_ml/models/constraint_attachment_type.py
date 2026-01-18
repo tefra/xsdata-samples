@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
 
@@ -16,13 +18,7 @@ class ConstraintAttachmentType:
     """
 
     choice: tuple[
-        Union[
-            "ConstraintAttachmentType.DataProvider",
-            "ConstraintAttachmentType.MetadataProvider",
-            "ConstraintAttachmentType.MetadataSet",
-            "ConstraintAttachmentType.SimpleDataSource",
-            "ConstraintAttachmentType.DataStructure",
-        ],
+        ConstraintAttachmentType.DataProvider | ConstraintAttachmentType.MetadataProvider | ConstraintAttachmentType.MetadataSet | ConstraintAttachmentType.SimpleDataSource | ConstraintAttachmentType.DataStructure,
         ...,
     ] = field(
         default_factory=tuple,
@@ -66,14 +62,7 @@ class ConstraintAttachmentType:
         },
     )
     choice_1: tuple[
-        Union[
-            QueryableDataSourceType1,
-            "ConstraintAttachmentType.MetadataStructure",
-            "ConstraintAttachmentType.Dataflow",
-            "ConstraintAttachmentType.Metadataflow",
-            "ConstraintAttachmentType.ProvisionAgreement",
-            "ConstraintAttachmentType.MetadataProvisionAgreement",
-        ],
+        QueryableDataSourceType1 | ConstraintAttachmentType.MetadataStructure | ConstraintAttachmentType.Dataflow | ConstraintAttachmentType.Metadataflow | ConstraintAttachmentType.ProvisionAgreement | ConstraintAttachmentType.MetadataProvisionAgreement,
         ...,
     ] = field(
         default_factory=tuple,
@@ -124,7 +113,7 @@ class ConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class DataProvider:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -134,7 +123,7 @@ class ConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class MetadataProvider:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -144,7 +133,7 @@ class ConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class MetadataSet:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -154,7 +143,7 @@ class ConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class SimpleDataSource:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -163,7 +152,7 @@ class ConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class DataStructure:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -173,7 +162,7 @@ class ConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class MetadataStructure:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -183,7 +172,7 @@ class ConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class Dataflow:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -193,7 +182,7 @@ class ConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class Metadataflow:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -203,7 +192,7 @@ class ConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class ProvisionAgreement:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -213,7 +202,7 @@ class ConstraintAttachmentType:
 
     @dataclass(frozen=True)
     class MetadataProvisionAgreement:
-        value: Optional[str] = field(
+        value: str | None = field(
             default=None,
             metadata={
                 "required": True,

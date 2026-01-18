@@ -11,7 +11,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ProducerResponseEndpointStructure(ResponseStructure):
-    producer_ref: Optional[ParticipantRefStructure] = field(
+    producer_ref: ParticipantRefStructure | None = field(
         default=None,
         metadata={
             "name": "ProducerRef",
@@ -19,7 +19,7 @@ class ProducerResponseEndpointStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    address: Optional[str] = field(
+    address: str | None = field(
         default=None,
         metadata={
             "name": "Address",
@@ -27,7 +27,7 @@ class ProducerResponseEndpointStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    response_message_identifier: Optional[MessageQualifierStructure] = field(
+    response_message_identifier: MessageQualifierStructure | None = field(
         default=None,
         metadata={
             "name": "ResponseMessageIdentifier",
@@ -35,7 +35,7 @@ class ProducerResponseEndpointStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    request_message_ref: Optional[MessageRefStructure] = field(
+    request_message_ref: MessageRefStructure | None = field(
         default=None,
         metadata={
             "name": "RequestMessageRef",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -46,7 +48,7 @@ class QualifierType:
     class Meta:
         name = "qualifierType"
 
-    is_address: Optional[bool] = field(
+    is_address: bool | None = field(
         default=None,
         metadata={
             "name": "isAddress",
@@ -54,7 +56,7 @@ class QualifierType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    is_data: Optional[bool] = field(
+    is_data: bool | None = field(
         default=None,
         metadata={
             "name": "isData",
@@ -62,7 +64,7 @@ class QualifierType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    is_clock: Optional[bool] = field(
+    is_clock: bool | None = field(
         default=None,
         metadata={
             "name": "isClock",
@@ -70,7 +72,7 @@ class QualifierType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    is_reset: Optional["QualifierType.IsReset"] = field(
+    is_reset: QualifierType.IsReset | None = field(
         default=None,
         metadata={
             "name": "isReset",
@@ -78,7 +80,7 @@ class QualifierType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    is_valid: Optional[bool] = field(
+    is_valid: bool | None = field(
         default=None,
         metadata={
             "name": "isValid",
@@ -86,7 +88,7 @@ class QualifierType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    is_interrupt: Optional[bool] = field(
+    is_interrupt: bool | None = field(
         default=None,
         metadata={
             "name": "isInterrupt",
@@ -94,7 +96,7 @@ class QualifierType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    is_clock_en: Optional["QualifierType.IsClockEn"] = field(
+    is_clock_en: QualifierType.IsClockEn | None = field(
         default=None,
         metadata={
             "name": "isClockEn",
@@ -102,7 +104,7 @@ class QualifierType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    is_power_en: Optional["QualifierType.IsPowerEn"] = field(
+    is_power_en: QualifierType.IsPowerEn | None = field(
         default=None,
         metadata={
             "name": "isPowerEn",
@@ -110,7 +112,7 @@ class QualifierType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    is_opcode: Optional[bool] = field(
+    is_opcode: bool | None = field(
         default=None,
         metadata={
             "name": "isOpcode",
@@ -118,7 +120,7 @@ class QualifierType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    is_protection: Optional[bool] = field(
+    is_protection: bool | None = field(
         default=None,
         metadata={
             "name": "isProtection",
@@ -126,7 +128,7 @@ class QualifierType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    is_flow_control: Optional["QualifierType.IsFlowControl"] = field(
+    is_flow_control: QualifierType.IsFlowControl | None = field(
         default=None,
         metadata={
             "name": "isFlowControl",
@@ -134,7 +136,7 @@ class QualifierType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    is_user: Optional["QualifierType.IsUser"] = field(
+    is_user: QualifierType.IsUser | None = field(
         default=None,
         metadata={
             "name": "isUser",
@@ -142,7 +144,7 @@ class QualifierType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    is_request: Optional[bool] = field(
+    is_request: bool | None = field(
         default=None,
         metadata={
             "name": "isRequest",
@@ -150,7 +152,7 @@ class QualifierType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    is_response: Optional[bool] = field(
+    is_response: bool | None = field(
         default=None,
         metadata={
             "name": "isResponse",
@@ -158,7 +160,7 @@ class QualifierType:
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -173,13 +175,13 @@ class QualifierType:
         :ivar level: Assertion level
         """
 
-        value: Optional[bool] = field(
+        value: bool | None = field(
             default=None,
             metadata={
                 "required": True,
             },
         )
-        level: Optional[IsResetLevel] = field(
+        level: IsResetLevel | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -193,13 +195,13 @@ class QualifierType:
         :ivar level: Assertion level
         """
 
-        value: Optional[bool] = field(
+        value: bool | None = field(
             default=None,
             metadata={
                 "required": True,
             },
         )
-        level: Optional[IsClockEnLevel] = field(
+        level: IsClockEnLevel | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -214,19 +216,19 @@ class QualifierType:
         :ivar power_domain_ref: PowerDomain references
         """
 
-        value: Optional[bool] = field(
+        value: bool | None = field(
             default=None,
             metadata={
                 "required": True,
             },
         )
-        level: Optional[IsPowerEnLevel] = field(
+        level: IsPowerEnLevel | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
             },
         )
-        power_domain_ref: Optional[str] = field(
+        power_domain_ref: str | None = field(
             default=None,
             metadata={
                 "name": "powerDomainRef",
@@ -242,20 +244,20 @@ class QualifierType:
         :ivar user: User flow type information
         """
 
-        value: Optional[bool] = field(
+        value: bool | None = field(
             default=None,
             metadata={
                 "required": True,
             },
         )
-        flow_type: Optional[IsFlowControlFlowType] = field(
+        flow_type: IsFlowControlFlowType | None = field(
             default=None,
             metadata={
                 "name": "flowType",
                 "type": "Attribute",
             },
         )
-        user: Optional[str] = field(
+        user: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -269,13 +271,13 @@ class QualifierType:
         :ivar user: User behaviour
         """
 
-        value: Optional[bool] = field(
+        value: bool | None = field(
             default=None,
             metadata={
                 "required": True,
             },
         )
-        user: Optional[str] = field(
+        user: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",

@@ -21,9 +21,7 @@ class ParkingRouteStatus:
     :ivar parking_route_status_extension:
     """
 
-    parking_route_reference: Optional[
-        ParkingRouteDetailsVersionedReference
-    ] = field(
+    parking_route_reference: ParkingRouteDetailsVersionedReference | None = field(
         default=None,
         metadata={
             "name": "parkingRouteReference",
@@ -32,7 +30,7 @@ class ParkingRouteStatus:
             "required": True,
         },
     )
-    parking_route_active: Optional[bool] = field(
+    parking_route_active: bool | None = field(
         default=None,
         metadata={
             "name": "parkingRouteActive",
@@ -41,7 +39,7 @@ class ParkingRouteStatus:
             "required": True,
         },
     )
-    parking_route_status_extension: Optional[ExtensionType] = field(
+    parking_route_status_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "parkingRouteStatusExtension",

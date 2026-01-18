@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -123,7 +125,7 @@ class ISignalIPdu:
     class Meta:
         name = "I-SIGNAL-I-PDU"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -132,7 +134,7 @@ class ISignalIPdu:
             "required": True,
         },
     )
-    short_name_fragments: Optional["ISignalIPdu.ShortNameFragments"] = field(
+    short_name_fragments: ISignalIPdu.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -140,7 +142,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -148,7 +150,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -156,7 +158,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -164,7 +166,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -172,7 +174,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -180,7 +182,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ISignalIPdu.Annotations"] = field(
+    annotations: ISignalIPdu.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -188,7 +190,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -196,7 +198,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    has_dynamic_length: Optional[Boolean] = field(
+    has_dynamic_length: Boolean | None = field(
         default=None,
         metadata={
             "name": "HAS-DYNAMIC-LENGTH",
@@ -204,7 +206,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    length: Optional[Integer] = field(
+    length: Integer | None = field(
         default=None,
         metadata={
             "name": "LENGTH",
@@ -212,7 +214,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    meta_data_length: Optional[PositiveInteger] = field(
+    meta_data_length: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "META-DATA-LENGTH",
@@ -220,7 +222,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    contained_i_pdu_props: Optional[ContainedIPduProps] = field(
+    contained_i_pdu_props: ContainedIPduProps | None = field(
         default=None,
         metadata={
             "name": "CONTAINED-I-PDU-PROPS",
@@ -228,9 +230,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_pdu_timing_specifications: Optional[
-        "ISignalIPdu.IPduTimingSpecifications"
-    ] = field(
+    i_pdu_timing_specifications: ISignalIPdu.IPduTimingSpecifications | None = field(
         default=None,
         metadata={
             "name": "I-PDU-TIMING-SPECIFICATIONS",
@@ -238,7 +238,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    i_signal_to_pdu_mappings: Optional["ISignalIPdu.ISignalToPduMappings"] = (
+    i_signal_to_pdu_mappings: ISignalIPdu.ISignalToPduMappings | None = (
         field(
             default=None,
             metadata={
@@ -248,7 +248,7 @@ class ISignalIPdu:
             },
         )
     )
-    pdu_counters: Optional["ISignalIPdu.PduCounters"] = field(
+    pdu_counters: ISignalIPdu.PduCounters | None = field(
         default=None,
         metadata={
             "name": "PDU-COUNTERS",
@@ -256,7 +256,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    pdu_replications: Optional["ISignalIPdu.PduReplications"] = field(
+    pdu_replications: ISignalIPdu.PduReplications | None = field(
         default=None,
         metadata={
             "name": "PDU-REPLICATIONS",
@@ -264,7 +264,7 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unused_bit_pattern: Optional[Integer] = field(
+    unused_bit_pattern: Integer | None = field(
         default=None,
         metadata={
             "name": "UNUSED-BIT-PATTERN",
@@ -272,14 +272,14 @@ class ISignalIPdu:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -287,7 +287,7 @@ class ISignalIPdu:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",

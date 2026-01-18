@@ -63,7 +63,7 @@ class RegistrationType:
         the provision agreement references a metadata flow.
     """
 
-    provision_agreement: Optional[str] = field(
+    provision_agreement: str | None = field(
         default=None,
         metadata={
             "name": "ProvisionAgreement",
@@ -73,7 +73,7 @@ class RegistrationType:
             "pattern": r".+\.registry\.ProvisionAgreement=.+",
         },
     )
-    datasource: Optional[DataSourceType] = field(
+    datasource: DataSourceType | None = field(
         default=None,
         metadata={
             "name": "Datasource",
@@ -82,28 +82,28 @@ class RegistrationType:
             "required": True,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
-    valid_from: Optional[XmlDateTime] = field(
+    valid_from: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "validFrom",
             "type": "Attribute",
         },
     )
-    valid_to: Optional[XmlDateTime] = field(
+    valid_to: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "validTo",
             "type": "Attribute",
         },
     )
-    last_updated: Optional[XmlDateTime] = field(
+    last_updated: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "lastUpdated",

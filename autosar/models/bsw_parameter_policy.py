@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -37,7 +39,7 @@ class BswParameterPolicy:
     class Meta:
         name = "BSW-PARAMETER-POLICY"
 
-    enable_take_address: Optional[Boolean] = field(
+    enable_take_address: Boolean | None = field(
         default=None,
         metadata={
             "name": "ENABLE-TAKE-ADDRESS",
@@ -45,9 +47,7 @@ class BswParameterPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    per_instance_parameter_ref: Optional[
-        "BswParameterPolicy.PerInstanceParameterRef"
-    ] = field(
+    per_instance_parameter_ref: BswParameterPolicy.PerInstanceParameterRef | None = field(
         default=None,
         metadata={
             "name": "PER-INSTANCE-PARAMETER-REF",
@@ -55,7 +55,7 @@ class BswParameterPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -63,14 +63,14 @@ class BswParameterPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -81,7 +81,7 @@ class BswParameterPolicy:
 
     @dataclass
     class PerInstanceParameterRef(Ref):
-        dest: Optional[ParameterDataPrototypeSubtypesEnum] = field(
+        dest: ParameterDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

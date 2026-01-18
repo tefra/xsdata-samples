@@ -9,7 +9,7 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
 
 @dataclass(frozen=True)
 class EpochMapType(EpochMapBaseType):
-    base_period: Optional[str] = field(
+    base_period: str | None = field(
         default=None,
         metadata={
             "name": "basePeriod",
@@ -17,7 +17,7 @@ class EpochMapType(EpochMapBaseType):
             "required": True,
         },
     )
-    epoch_period: Optional[EpochPeriodType] = field(
+    epoch_period: EpochPeriodType | None = field(
         default=None,
         metadata={
             "name": "epochPeriod",

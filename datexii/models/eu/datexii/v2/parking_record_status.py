@@ -85,7 +85,7 @@ class ParkingRecordStatus:
     :ivar parking_record_status_extension:
     """
 
-    parking_record_reference: Optional[ParkingRecordVersionedReference] = (
+    parking_record_reference: ParkingRecordVersionedReference | None = (
         field(
             default=None,
             metadata={
@@ -96,7 +96,7 @@ class ParkingRecordStatus:
             },
         )
     )
-    parking_status_origin_time: Optional[XmlDateTime] = field(
+    parking_status_origin_time: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "parkingStatusOriginTime",
@@ -105,7 +105,7 @@ class ParkingRecordStatus:
             "required": True,
         },
     )
-    parking_status_description: Optional[MultilingualString] = field(
+    parking_status_description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "parkingStatusDescription",
@@ -113,7 +113,7 @@ class ParkingRecordStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_queueing_time: Optional[float] = field(
+    parking_queueing_time: float | None = field(
         default=None,
         metadata={
             "name": "parkingQueueingTime",
@@ -121,7 +121,7 @@ class ParkingRecordStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_conditions: Optional[ParkingConditionsEnum] = field(
+    parking_conditions: ParkingConditionsEnum | None = field(
         default=None,
         metadata={
             "name": "parkingConditions",
@@ -165,7 +165,7 @@ class ParkingRecordStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_occupancy: Optional[ParkingOccupancy] = field(
+    parking_occupancy: ParkingOccupancy | None = field(
         default=None,
         metadata={
             "name": "parkingOccupancy",
@@ -184,7 +184,7 @@ class ParkingRecordStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_status_validity: Optional[ParkingStatusValidity] = field(
+    parking_status_validity: ParkingStatusValidity | None = field(
         default=None,
         metadata={
             "name": "parkingStatusValidity",
@@ -192,7 +192,7 @@ class ParkingRecordStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    override_parking_thresholds: Optional[ParkingThresholds] = field(
+    override_parking_thresholds: ParkingThresholds | None = field(
         default=None,
         metadata={
             "name": "overrideParkingThresholds",
@@ -236,7 +236,7 @@ class ParkingRecordStatus:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    parking_record_status_extension: Optional[ExtensionType] = field(
+    parking_record_status_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "parkingRecordStatusExtension",

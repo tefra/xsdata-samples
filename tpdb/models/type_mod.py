@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -7,13 +9,13 @@ class Type:
     class Meta:
         name = "type"
 
-    basic: Optional[str] = field(
+    basic: str | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    arrow: Optional["TypeArrow"] = field(
+    arrow: TypeArrow | None = field(
         default=None,
         metadata={
             "type": "Element",

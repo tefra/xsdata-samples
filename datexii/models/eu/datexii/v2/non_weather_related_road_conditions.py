@@ -32,7 +32,7 @@ class NonWeatherRelatedRoadConditions(RoadConditions):
             "min_occurs": 1,
         },
     )
-    non_weather_related_road_conditions_extension: Optional[ExtensionType] = (
+    non_weather_related_road_conditions_extension: ExtensionType | None = (
         field(
             default=None,
             metadata={

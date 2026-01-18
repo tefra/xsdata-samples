@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -65,7 +67,7 @@ class PortApiOption:
     class Meta:
         name = "PORT-API-OPTION"
 
-    enable_take_address: Optional[Boolean] = field(
+    enable_take_address: Boolean | None = field(
         default=None,
         metadata={
             "name": "ENABLE-TAKE-ADDRESS",
@@ -73,7 +75,7 @@ class PortApiOption:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    error_handling: Optional[DataTransformationErrorHandlingEnum] = field(
+    error_handling: DataTransformationErrorHandlingEnum | None = field(
         default=None,
         metadata={
             "name": "ERROR-HANDLING",
@@ -81,7 +83,7 @@ class PortApiOption:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    indirect_api: Optional[Boolean] = field(
+    indirect_api: Boolean | None = field(
         default=None,
         metadata={
             "name": "INDIRECT-API",
@@ -89,7 +91,7 @@ class PortApiOption:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_arg_values: Optional["PortApiOption.PortArgValues"] = field(
+    port_arg_values: PortApiOption.PortArgValues | None = field(
         default=None,
         metadata={
             "name": "PORT-ARG-VALUES",
@@ -97,7 +99,7 @@ class PortApiOption:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_ref: Optional["PortApiOption.PortRef"] = field(
+    port_ref: PortApiOption.PortRef | None = field(
         default=None,
         metadata={
             "name": "PORT-REF",
@@ -105,7 +107,7 @@ class PortApiOption:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    supported_features: Optional["PortApiOption.SupportedFeatures"] = field(
+    supported_features: PortApiOption.SupportedFeatures | None = field(
         default=None,
         metadata={
             "name": "SUPPORTED-FEATURES",
@@ -113,9 +115,7 @@ class PortApiOption:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformer_status_forwarding: Optional[
-        DataTransformationStatusForwardingEnum
-    ] = field(
+    transformer_status_forwarding: DataTransformationStatusForwardingEnum | None = field(
         default=None,
         metadata={
             "name": "TRANSFORMER-STATUS-FORWARDING",
@@ -123,7 +123,7 @@ class PortApiOption:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -131,14 +131,14 @@ class PortApiOption:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -160,7 +160,7 @@ class PortApiOption:
 
     @dataclass
     class PortRef(Ref):
-        dest: Optional[PortPrototypeSubtypesEnum] = field(
+        dest: PortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

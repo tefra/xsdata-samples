@@ -14,7 +14,7 @@ class TopographicProjectionVersionStructure(ProjectionVersionStructure):
     class Meta:
         name = "TopographicProjection_VersionStructure"
 
-    projected_object_ref: Optional[VersionOfObjectRefStructure] = field(
+    projected_object_ref: VersionOfObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "ProjectedObjectRef",
@@ -22,9 +22,7 @@ class TopographicProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    country_ref_or_topographic_place_ref: Optional[
-        Union[CountryRef, TopographicPlaceRef]
-    ] = field(
+    country_ref_or_topographic_place_ref: CountryRef | TopographicPlaceRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

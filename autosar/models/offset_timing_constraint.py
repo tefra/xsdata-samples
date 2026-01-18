@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -111,7 +113,7 @@ class OffsetTimingConstraint:
     class Meta:
         name = "OFFSET-TIMING-CONSTRAINT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -120,9 +122,7 @@ class OffsetTimingConstraint:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "OffsetTimingConstraint.ShortNameFragments"
-    ] = field(
+    short_name_fragments: OffsetTimingConstraint.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -130,7 +130,7 @@ class OffsetTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -138,7 +138,7 @@ class OffsetTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -146,7 +146,7 @@ class OffsetTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -154,7 +154,7 @@ class OffsetTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -162,7 +162,7 @@ class OffsetTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -170,7 +170,7 @@ class OffsetTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["OffsetTimingConstraint.Annotations"] = field(
+    annotations: OffsetTimingConstraint.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -178,7 +178,7 @@ class OffsetTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace_refs: Optional["OffsetTimingConstraint.TraceRefs"] = field(
+    trace_refs: OffsetTimingConstraint.TraceRefs | None = field(
         default=None,
         metadata={
             "name": "TRACE-REFS",
@@ -186,9 +186,7 @@ class OffsetTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_condition_ref: Optional[
-        "OffsetTimingConstraint.TimingConditionRef"
-    ] = field(
+    timing_condition_ref: OffsetTimingConstraint.TimingConditionRef | None = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
@@ -196,7 +194,7 @@ class OffsetTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -204,7 +202,7 @@ class OffsetTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    source_ref: Optional["OffsetTimingConstraint.SourceRef"] = field(
+    source_ref: OffsetTimingConstraint.SourceRef | None = field(
         default=None,
         metadata={
             "name": "SOURCE-REF",
@@ -212,7 +210,7 @@ class OffsetTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_ref: Optional["OffsetTimingConstraint.TargetRef"] = field(
+    target_ref: OffsetTimingConstraint.TargetRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-REF",
@@ -220,7 +218,7 @@ class OffsetTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum: Optional[MultidimensionalTime] = field(
+    minimum: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "MINIMUM",
@@ -228,7 +226,7 @@ class OffsetTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum: Optional[MultidimensionalTime] = field(
+    maximum: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "MAXIMUM",
@@ -236,14 +234,14 @@ class OffsetTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -251,7 +249,7 @@ class OffsetTimingConstraint:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -283,7 +281,7 @@ class OffsetTimingConstraint:
 
     @dataclass
     class TraceRefs:
-        trace_ref: list["OffsetTimingConstraint.TraceRefs.TraceRef"] = field(
+        trace_ref: list[OffsetTimingConstraint.TraceRefs.TraceRef] = field(
             default_factory=list,
             metadata={
                 "name": "TRACE-REF",
@@ -294,7 +292,7 @@ class OffsetTimingConstraint:
 
         @dataclass
         class TraceRef(Ref):
-            dest: Optional[TraceableSubtypesEnum] = field(
+            dest: TraceableSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -305,7 +303,7 @@ class OffsetTimingConstraint:
 
     @dataclass
     class TimingConditionRef(Ref):
-        dest: Optional[TimingConditionSubtypesEnum] = field(
+        dest: TimingConditionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -316,7 +314,7 @@ class OffsetTimingConstraint:
 
     @dataclass
     class SourceRef(Ref):
-        dest: Optional[TimingDescriptionEventSubtypesEnum] = field(
+        dest: TimingDescriptionEventSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -327,7 +325,7 @@ class OffsetTimingConstraint:
 
     @dataclass
     class TargetRef(Ref):
-        dest: Optional[TimingDescriptionEventSubtypesEnum] = field(
+        dest: TimingDescriptionEventSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

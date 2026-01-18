@@ -25,7 +25,7 @@ class IndicatorType:
     xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">boolean</ns1:PrimitiveType>.
     """
 
-    value: Optional[bool] = field(
+    value: bool | None = field(
         default=None,
         metadata={
             "required": True,

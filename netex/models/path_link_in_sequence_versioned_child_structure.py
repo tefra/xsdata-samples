@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -20,7 +22,7 @@ class PathLinkInSequenceVersionedChildStructure(
     class Meta:
         name = "PathLinkInSequence_VersionedChildStructure"
 
-    path_link_ref: Optional[PathLinkRef] = field(
+    path_link_ref: PathLinkRef | None = field(
         default=None,
         metadata={
             "name": "PathLinkRef",
@@ -29,7 +31,7 @@ class PathLinkInSequenceVersionedChildStructure(
             "required": True,
         },
     )
-    reverse: Optional[bool] = field(
+    reverse: bool | None = field(
         default=None,
         metadata={
             "name": "Reverse",
@@ -37,7 +39,7 @@ class PathLinkInSequenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    heading: Optional[PathHeadingEnumeration] = field(
+    heading: PathHeadingEnumeration | None = field(
         default=None,
         metadata={
             "name": "Heading",
@@ -45,7 +47,7 @@ class PathLinkInSequenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transition: Optional[TransitionEnumeration] = field(
+    transition: TransitionEnumeration | None = field(
         default=None,
         metadata={
             "name": "Transition",
@@ -53,7 +55,7 @@ class PathLinkInSequenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    instruction: Optional[MultilingualString] = field(
+    instruction: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Instruction",
@@ -61,7 +63,7 @@ class PathLinkInSequenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    label: Optional[MultilingualString] = field(
+    label: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Label",
@@ -69,7 +71,7 @@ class PathLinkInSequenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    views: Optional["PathLinkInSequenceVersionedChildStructure.Views"] = field(
+    views: PathLinkInSequenceVersionedChildStructure.Views | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -79,7 +81,7 @@ class PathLinkInSequenceVersionedChildStructure(
 
     @dataclass
     class Views:
-        path_link_view: Optional[PathLinkView] = field(
+        path_link_view: PathLinkView | None = field(
             default=None,
             metadata={
                 "name": "PathLinkView",

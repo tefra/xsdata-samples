@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -20,7 +22,7 @@ class ViewLinks:
         name = "viewLinks"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    view_link: list["ViewLinks.ViewLink"] = field(
+    view_link: list[ViewLinks.ViewLink] = field(
         default_factory=list,
         metadata={
             "name": "viewLink",
@@ -39,9 +41,7 @@ class ViewLinks:
         :ivar id:
         """
 
-        external_view_reference: Optional[
-            "ViewLinks.ViewLink.ExternalViewReference"
-        ] = field(
+        external_view_reference: ViewLinks.ViewLink.ExternalViewReference | None = field(
             default=None,
             metadata={
                 "name": "externalViewReference",
@@ -49,7 +49,7 @@ class ViewLinks:
                 "required": True,
             },
         )
-        view_reference: Optional["ViewLinks.ViewLink.ViewReference"] = field(
+        view_reference: ViewLinks.ViewLink.ViewReference | None = field(
             default=None,
             metadata={
                 "name": "viewReference",
@@ -57,14 +57,14 @@ class ViewLinks:
                 "required": True,
             },
         )
-        vendor_extensions: Optional[VendorExtensions] = field(
+        vendor_extensions: VendorExtensions | None = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -78,7 +78,7 @@ class ViewLinks:
             :ivar view_ref: Reference to a specific view.
             """
 
-            view_ref: Optional[str] = field(
+            view_ref: str | None = field(
                 default=None,
                 metadata={
                     "name": "viewRef",
@@ -93,7 +93,7 @@ class ViewLinks:
             :ivar view_ref: Reference to a specific view.
             """
 
-            view_ref: Optional[str] = field(
+            view_ref: str | None = field(
                 default=None,
                 metadata={
                     "name": "viewRef",

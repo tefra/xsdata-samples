@@ -21,7 +21,7 @@ class HeaviestAxleWeightCharacteristic:
     :ivar heaviest_axle_weight_characteristic_extension:
     """
 
-    comparison_operator: Optional[ComparisonOperatorEnum] = field(
+    comparison_operator: ComparisonOperatorEnum | None = field(
         default=None,
         metadata={
             "name": "comparisonOperator",
@@ -30,7 +30,7 @@ class HeaviestAxleWeightCharacteristic:
             "required": True,
         },
     )
-    heaviest_axle_weight: Optional[float] = field(
+    heaviest_axle_weight: float | None = field(
         default=None,
         metadata={
             "name": "heaviestAxleWeight",
@@ -39,7 +39,7 @@ class HeaviestAxleWeightCharacteristic:
             "required": True,
         },
     )
-    heaviest_axle_weight_characteristic_extension: Optional[ExtensionType] = (
+    heaviest_axle_weight_characteristic_extension: ExtensionType | None = (
         field(
             default=None,
             metadata={

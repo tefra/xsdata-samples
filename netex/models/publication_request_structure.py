@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import Optional
@@ -19,7 +21,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class PublicationRequestStructure:
-    request_timestamp: Optional[XmlDateTime] = field(
+    request_timestamp: XmlDateTime | None = field(
         default=None,
         metadata={
             "name": "RequestTimestamp",
@@ -28,7 +30,7 @@ class PublicationRequestStructure:
             "required": True,
         },
     )
-    participant_ref: Optional[ParticipantRef] = field(
+    participant_ref: ParticipantRef | None = field(
         default=None,
         metadata={
             "name": "ParticipantRef",
@@ -36,7 +38,7 @@ class PublicationRequestStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -44,14 +46,14 @@ class PublicationRequestStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    topics: Optional["PublicationRequestStructure.Topics"] = field(
+    topics: PublicationRequestStructure.Topics | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    request_policy: Optional[NetworkFrameRequestPolicyStructure] = field(
+    request_policy: NetworkFrameRequestPolicyStructure | None = field(
         default=None,
         metadata={
             "name": "RequestPolicy",
@@ -59,7 +61,7 @@ class PublicationRequestStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    subscription_policy: Optional[NetworkFrameSubscriptionPolicyStructure] = (
+    subscription_policy: NetworkFrameSubscriptionPolicyStructure | None = (
         field(
             default=None,
             metadata={

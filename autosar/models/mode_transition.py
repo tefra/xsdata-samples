@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -84,7 +86,7 @@ class ModeTransition:
     class Meta:
         name = "MODE-TRANSITION"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -93,7 +95,7 @@ class ModeTransition:
             "required": True,
         },
     )
-    short_name_fragments: Optional["ModeTransition.ShortNameFragments"] = (
+    short_name_fragments: ModeTransition.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -103,7 +105,7 @@ class ModeTransition:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -111,7 +113,7 @@ class ModeTransition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -119,7 +121,7 @@ class ModeTransition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -127,7 +129,7 @@ class ModeTransition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -135,7 +137,7 @@ class ModeTransition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -143,7 +145,7 @@ class ModeTransition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ModeTransition.Annotations"] = field(
+    annotations: ModeTransition.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -151,7 +153,7 @@ class ModeTransition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    entered_mode_ref: Optional["ModeTransition.EnteredModeRef"] = field(
+    entered_mode_ref: ModeTransition.EnteredModeRef | None = field(
         default=None,
         metadata={
             "name": "ENTERED-MODE-REF",
@@ -159,7 +161,7 @@ class ModeTransition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exited_mode_ref: Optional["ModeTransition.ExitedModeRef"] = field(
+    exited_mode_ref: ModeTransition.ExitedModeRef | None = field(
         default=None,
         metadata={
             "name": "EXITED-MODE-REF",
@@ -167,14 +169,14 @@ class ModeTransition:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -182,7 +184,7 @@ class ModeTransition:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -214,7 +216,7 @@ class ModeTransition:
 
     @dataclass
     class EnteredModeRef(Ref):
-        dest: Optional[ModeDeclarationSubtypesEnum] = field(
+        dest: ModeDeclarationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -225,7 +227,7 @@ class ModeTransition:
 
     @dataclass
     class ExitedModeRef(Ref):
-        dest: Optional[ModeDeclarationSubtypesEnum] = field(
+        dest: ModeDeclarationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -31,7 +31,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
     class Meta:
         name = "DistanceMatrixElement_VersionStructure"
 
-    distance: Optional[Decimal] = field(
+    distance: Decimal | None = field(
         default=None,
         metadata={
             "name": "Distance",
@@ -39,7 +39,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    relative_ranking: Optional[int] = field(
+    relative_ranking: int | None = field(
         default=None,
         metadata={
             "name": "RelativeRanking",
@@ -47,7 +47,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    is_direct: Optional[bool] = field(
+    is_direct: bool | None = field(
         default=None,
         metadata={
             "name": "IsDirect",
@@ -55,7 +55,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    inverse_allowed: Optional[bool] = field(
+    inverse_allowed: bool | None = field(
         default=None,
         metadata={
             "name": "InverseAllowed",
@@ -63,17 +63,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
-        Union[
-            ScheduledStopPointRefStructure,
-            ScheduledStopPointDerivedViewStructure,
-            TariffZoneRefStructure,
-            ZoneDerivedViewStructure,
-            PointRefStructure,
-            FareSectionRefStructure,
-            FarePointInPatternRefStructure,
-        ]
-    ] = field(
+    choice: ScheduledStopPointRefStructure | ScheduledStopPointDerivedViewStructure | TariffZoneRefStructure | ZoneDerivedViewStructure | PointRefStructure | FareSectionRefStructure | FarePointInPatternRefStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -116,17 +106,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    choice_1: Optional[
-        Union[
-            ScheduledStopPointRefStructure,
-            ScheduledStopPointDerivedViewStructure,
-            TariffZoneRefStructure,
-            ZoneDerivedViewStructure,
-            PointRefStructure,
-            FareSectionRefStructure,
-            FarePointInPatternRefStructure,
-        ]
-    ] = field(
+    choice_1: ScheduledStopPointRefStructure | ScheduledStopPointDerivedViewStructure | TariffZoneRefStructure | ZoneDerivedViewStructure | PointRefStructure | FareSectionRefStructure | FarePointInPatternRefStructure | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -169,7 +149,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             ),
         },
     )
-    series_constraints: Optional[SeriesConstraintsRelStructure] = field(
+    series_constraints: SeriesConstraintsRelStructure | None = field(
         default=None,
         metadata={
             "name": "seriesConstraints",
@@ -177,7 +157,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    structure_factors: Optional[GeographicalStructureFactorsRelStructure] = (
+    structure_factors: GeographicalStructureFactorsRelStructure | None = (
         field(
             default=None,
             metadata={
@@ -187,14 +167,14 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             },
         )
     )
-    tariffs: Optional[TariffRefsRelStructure] = field(
+    tariffs: TariffRefsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_table_ref: Optional[Union[StandardFareTableRef, FareTableRef]] = (
+    fare_table_ref: StandardFareTableRef | FareTableRef | None = (
         field(
             default=None,
             metadata={
@@ -214,7 +194,7 @@ class DistanceMatrixElementVersionStructure(PriceableObjectVersionStructure):
             },
         )
     )
-    prices: Optional[DistanceMatrixElementPricesRelStructure] = field(
+    prices: DistanceMatrixElementPricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

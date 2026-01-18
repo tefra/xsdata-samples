@@ -14,7 +14,7 @@ class AgreementInterfaceNotifyAgreementOutput:
         name = "Envelope"
         namespace = "http://schemas.xmlsoap.org/soap/envelope/"
 
-    body: Optional[AgreementInterfaceNotifyAgreementOutputBody] = field(
+    body: AgreementInterfaceNotifyAgreementOutputBody | None = field(
         default=None,
         metadata={
             "name": "Body",

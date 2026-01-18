@@ -42,7 +42,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class RemittanceAdviceType:
-    ublextensions: Optional[Ublextensions] = field(
+    ublextensions: Ublextensions | None = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -50,7 +50,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: Optional[UblversionId] = field(
+    ublversion_id: UblversionId | None = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -58,7 +58,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: Optional[CustomizationId] = field(
+    customization_id: CustomizationId | None = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -66,7 +66,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: Optional[ProfileId] = field(
+    profile_id: ProfileId | None = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -74,7 +74,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: Optional[ProfileExecutionId] = field(
+    profile_execution_id: ProfileExecutionId | None = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -82,7 +82,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -91,7 +91,7 @@ class RemittanceAdviceType:
             "required": True,
         },
     )
-    copy_indicator: Optional[CopyIndicator] = field(
+    copy_indicator: CopyIndicator | None = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -99,7 +99,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -107,7 +107,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -116,7 +116,7 @@ class RemittanceAdviceType:
             "required": True,
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -132,7 +132,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    document_currency_code: Optional[DocumentCurrencyCode] = field(
+    document_currency_code: DocumentCurrencyCode | None = field(
         default=None,
         metadata={
             "name": "DocumentCurrencyCode",
@@ -140,7 +140,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_debit_amount: Optional[TotalDebitAmount] = field(
+    total_debit_amount: TotalDebitAmount | None = field(
         default=None,
         metadata={
             "name": "TotalDebitAmount",
@@ -148,7 +148,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_credit_amount: Optional[TotalCreditAmount] = field(
+    total_credit_amount: TotalCreditAmount | None = field(
         default=None,
         metadata={
             "name": "TotalCreditAmount",
@@ -156,7 +156,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    total_payment_amount: Optional[TotalPaymentAmount] = field(
+    total_payment_amount: TotalPaymentAmount | None = field(
         default=None,
         metadata={
             "name": "TotalPaymentAmount",
@@ -164,7 +164,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payment_order_reference: Optional[PaymentOrderReference] = field(
+    payment_order_reference: PaymentOrderReference | None = field(
         default=None,
         metadata={
             "name": "PaymentOrderReference",
@@ -172,7 +172,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    payer_reference: Optional[PayerReference] = field(
+    payer_reference: PayerReference | None = field(
         default=None,
         metadata={
             "name": "PayerReference",
@@ -180,7 +180,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    invoicing_party_reference: Optional[InvoicingPartyReference] = field(
+    invoicing_party_reference: InvoicingPartyReference | None = field(
         default=None,
         metadata={
             "name": "InvoicingPartyReference",
@@ -188,7 +188,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    line_count_numeric: Optional[LineCountNumeric] = field(
+    line_count_numeric: LineCountNumeric | None = field(
         default=None,
         metadata={
             "name": "LineCountNumeric",
@@ -204,7 +204,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    billing_reference: Optional[BillingReference] = field(
+    billing_reference: BillingReference | None = field(
         default=None,
         metadata={
             "name": "BillingReference",
@@ -230,7 +230,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    accounting_customer_party: Optional[AccountingCustomerParty] = field(
+    accounting_customer_party: AccountingCustomerParty | None = field(
         default=None,
         metadata={
             "name": "AccountingCustomerParty",
@@ -239,7 +239,7 @@ class RemittanceAdviceType:
             "required": True,
         },
     )
-    accounting_supplier_party: Optional[AccountingSupplierParty] = field(
+    accounting_supplier_party: AccountingSupplierParty | None = field(
         default=None,
         metadata={
             "name": "AccountingSupplierParty",
@@ -248,7 +248,7 @@ class RemittanceAdviceType:
             "required": True,
         },
     )
-    payee_party: Optional[PayeeParty] = field(
+    payee_party: PayeeParty | None = field(
         default=None,
         metadata={
             "name": "PayeeParty",
@@ -256,7 +256,7 @@ class RemittanceAdviceType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    payment_means: Optional[PaymentMeans] = field(
+    payment_means: PaymentMeans | None = field(
         default=None,
         metadata={
             "name": "PaymentMeans",

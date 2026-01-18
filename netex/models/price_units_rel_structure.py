@@ -14,7 +14,7 @@ class PriceUnitsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "priceUnits_RelStructure"
 
-    price_unit_ref_or_price_unit: Iterable[Union[PriceUnitRef, PriceUnit]] = (
+    price_unit_ref_or_price_unit: Iterable[PriceUnitRef | PriceUnit] = (
         field(
             default_factory=list,
             metadata={

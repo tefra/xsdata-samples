@@ -33,7 +33,7 @@ class Ipv6Props:
     class Meta:
         name = "IPV-6-PROPS"
 
-    dhcp_props: Optional[Dhcpv6Props] = field(
+    dhcp_props: Dhcpv6Props | None = field(
         default=None,
         metadata={
             "name": "DHCP-PROPS",
@@ -41,7 +41,7 @@ class Ipv6Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    fragmentation_props: Optional[Ipv6FragmentationProps] = field(
+    fragmentation_props: Ipv6FragmentationProps | None = field(
         default=None,
         metadata={
             "name": "FRAGMENTATION-PROPS",
@@ -49,7 +49,7 @@ class Ipv6Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ndp_props: Optional[Ipv6NdpProps] = field(
+    ndp_props: Ipv6NdpProps | None = field(
         default=None,
         metadata={
             "name": "NDP-PROPS",
@@ -57,14 +57,14 @@ class Ipv6Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

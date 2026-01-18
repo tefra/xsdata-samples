@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import Optional
@@ -10,7 +12,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class PassengerAccessibilityNeedsStructure:
-    accompanied_by_carer: Optional[bool] = field(
+    accompanied_by_carer: bool | None = field(
         default=None,
         metadata={
             "name": "AccompaniedByCarer",
@@ -18,7 +20,7 @@ class PassengerAccessibilityNeedsStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    user_needs: Optional["PassengerAccessibilityNeedsStructure.UserNeeds"] = (
+    user_needs: PassengerAccessibilityNeedsStructure.UserNeeds | None = (
         field(
             default=None,
             metadata={
@@ -28,9 +30,7 @@ class PassengerAccessibilityNeedsStructure:
             },
         )
     )
-    suitabilities: Optional[
-        "PassengerAccessibilityNeedsStructure.Suitabilities"
-    ] = field(
+    suitabilities: PassengerAccessibilityNeedsStructure.Suitabilities | None = field(
         default=None,
         metadata={
             "type": "Element",

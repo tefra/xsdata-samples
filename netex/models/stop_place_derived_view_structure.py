@@ -19,7 +19,7 @@ class StopPlaceDerivedViewStructure(DerivedViewStructure):
     class Meta:
         name = "StopPlace_DerivedViewStructure"
 
-    stop_place_ref: Optional[Union[TaxiRankRef, StopPlaceRef]] = field(
+    stop_place_ref: TaxiRankRef | StopPlaceRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -37,7 +37,7 @@ class StopPlaceDerivedViewStructure(DerivedViewStructure):
             ),
         },
     )
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -45,7 +45,7 @@ class StopPlaceDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    place_types: Optional[TypeOfPlaceRefsRelStructure] = field(
+    place_types: TypeOfPlaceRefsRelStructure | None = field(
         default=None,
         metadata={
             "name": "placeTypes",
@@ -53,7 +53,7 @@ class StopPlaceDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    short_name: Optional[MultilingualString] = field(
+    short_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "ShortName",
@@ -61,7 +61,7 @@ class StopPlaceDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    public_code: Optional[str] = field(
+    public_code: str | None = field(
         default=None,
         metadata={
             "name": "PublicCode",
@@ -69,7 +69,7 @@ class StopPlaceDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    stop_place_type: Optional[StopTypeEnumeration] = field(
+    stop_place_type: StopTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "StopPlaceType",
@@ -77,7 +77,7 @@ class StopPlaceDerivedViewStructure(DerivedViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
+    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
         default=None,
         metadata={
             "name": "TransportMode",

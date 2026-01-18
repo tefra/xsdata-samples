@@ -15,7 +15,7 @@ class TrainStopAssignmentsRelStructure(ContainmentAggregationStructure):
         name = "trainStopAssignments_RelStructure"
 
     train_stop_assignment_ref_or_train_stop_assignment: Iterable[
-        Union[TrainStopAssignmentRef, TrainStopAssignment]
+        TrainStopAssignmentRef | TrainStopAssignment
     ] = field(
         default_factory=list,
         metadata={

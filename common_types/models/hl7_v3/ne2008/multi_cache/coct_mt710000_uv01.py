@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -32,7 +34,7 @@ class CoctMt710000Uv01LocatedEntityHasParts:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -56,7 +58,7 @@ class CoctMt710000Uv01LocatedEntityHasParts:
             "min_occurs": 1,
         },
     )
-    located_place: Optional["CoctMt710000Uv01Place"] = field(
+    located_place: CoctMt710000Uv01Place | None = field(
         default=None,
         metadata={
             "name": "locatedPlace",
@@ -65,14 +67,14 @@ class CoctMt710000Uv01LocatedEntityHasParts:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[RoleClassLocatedEntity] = field(
+    class_code: RoleClassLocatedEntity | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -95,7 +97,7 @@ class CoctMt710000Uv01LocatedEntityPartOf:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -119,7 +121,7 @@ class CoctMt710000Uv01LocatedEntityPartOf:
             "min_occurs": 1,
         },
     )
-    location: Optional["CoctMt710000Uv01Place"] = field(
+    location: CoctMt710000Uv01Place | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -127,14 +129,14 @@ class CoctMt710000Uv01LocatedEntityPartOf:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[RoleClassLocatedEntity] = field(
+    class_code: RoleClassLocatedEntity | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -157,7 +159,7 @@ class CoctMt710000Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -180,7 +182,7 @@ class CoctMt710000Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -194,14 +196,14 @@ class CoctMt710000Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    desc: Optional[EdExplicit] = field(
+    desc: EdExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    directions_text: Optional[EdExplicit] = field(
+    directions_text: EdExplicit | None = field(
         default=None,
         metadata={
             "name": "directionsText",
@@ -209,7 +211,7 @@ class CoctMt710000Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    position_text: Optional[EdExplicit] = field(
+    position_text: EdExplicit | None = field(
         default=None,
         metadata={
             "name": "positionText",
@@ -217,7 +219,7 @@ class CoctMt710000Uv01Place:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    gps_text: Optional[St] = field(
+    gps_text: St | None = field(
         default=None,
         metadata={
             "name": "gpsText",
@@ -247,14 +249,14 @@ class CoctMt710000Uv01Place:
             },
         )
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[EntityClassPlace] = field(
+    class_code: EntityClassPlace | None = field(
         default=None,
         metadata={
             "name": "classCode",

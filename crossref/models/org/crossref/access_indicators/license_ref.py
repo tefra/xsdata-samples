@@ -24,13 +24,13 @@ class LicenseRef:
             "pattern": r"([hH][tT][tT][pP]|[hH][tT][tT][pP][sS]|[fF][tT][pP])://.*",
         },
     )
-    start_date: Optional[XmlDate] = field(
+    start_date: XmlDate | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    applies_to: Optional[LicenseRefAppliesTo] = field(
+    applies_to: LicenseRefAppliesTo | None = field(
         default=None,
         metadata={
             "type": "Attribute",

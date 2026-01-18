@@ -16,7 +16,7 @@ class VehiclePoolingModeOfOperationValueStructure(
     class Meta:
         name = "VehiclePoolingModeOfOperation_ValueStructure"
 
-    vehicle_pooling_type: Optional[VehiclePoolingTypeEnumeration] = field(
+    vehicle_pooling_type: VehiclePoolingTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "VehiclePoolingType",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -68,7 +70,7 @@ class RoleBasedDataAssignment:
     class Meta:
         name = "ROLE-BASED-DATA-ASSIGNMENT"
 
-    role: Optional[Identifier] = field(
+    role: Identifier | None = field(
         default=None,
         metadata={
             "name": "ROLE",
@@ -76,7 +78,7 @@ class RoleBasedDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    used_data_element: Optional[AutosarVariableRef] = field(
+    used_data_element: AutosarVariableRef | None = field(
         default=None,
         metadata={
             "name": "USED-DATA-ELEMENT",
@@ -84,7 +86,7 @@ class RoleBasedDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    used_parameter_element: Optional[AutosarParameterRef] = field(
+    used_parameter_element: AutosarParameterRef | None = field(
         default=None,
         metadata={
             "name": "USED-PARAMETER-ELEMENT",
@@ -92,7 +94,7 @@ class RoleBasedDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    used_pim_ref: Optional["RoleBasedDataAssignment.UsedPimRef"] = field(
+    used_pim_ref: RoleBasedDataAssignment.UsedPimRef | None = field(
         default=None,
         metadata={
             "name": "USED-PIM-REF",
@@ -100,7 +102,7 @@ class RoleBasedDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -108,14 +110,14 @@ class RoleBasedDataAssignment:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -126,7 +128,7 @@ class RoleBasedDataAssignment:
 
     @dataclass
     class UsedPimRef(Ref):
-        dest: Optional[PerInstanceMemorySubtypesEnum] = field(
+        dest: PerInstanceMemorySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

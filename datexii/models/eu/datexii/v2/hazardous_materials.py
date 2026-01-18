@@ -41,7 +41,7 @@ class HazardousMaterials:
     :ivar hazardous_materials_extension:
     """
 
-    chemical_name: Optional[MultilingualString] = field(
+    chemical_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "chemicalName",
@@ -50,7 +50,7 @@ class HazardousMaterials:
             "required": True,
         },
     )
-    dangerous_goods_flash_point: Optional[float] = field(
+    dangerous_goods_flash_point: float | None = field(
         default=None,
         metadata={
             "name": "dangerousGoodsFlashPoint",
@@ -58,7 +58,7 @@ class HazardousMaterials:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    dangerous_goods_regulations: Optional[DangerousGoodsRegulationsEnum] = (
+    dangerous_goods_regulations: DangerousGoodsRegulationsEnum | None = (
         field(
             default=None,
             metadata={
@@ -68,7 +68,7 @@ class HazardousMaterials:
             },
         )
     )
-    hazard_code_identification: Optional[str] = field(
+    hazard_code_identification: str | None = field(
         default=None,
         metadata={
             "name": "hazardCodeIdentification",
@@ -77,7 +77,7 @@ class HazardousMaterials:
             "max_length": 1024,
         },
     )
-    hazard_code_version_number: Optional[int] = field(
+    hazard_code_version_number: int | None = field(
         default=None,
         metadata={
             "name": "hazardCodeVersionNumber",
@@ -85,7 +85,7 @@ class HazardousMaterials:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    hazard_substance_item_page_number: Optional[str] = field(
+    hazard_substance_item_page_number: str | None = field(
         default=None,
         metadata={
             "name": "hazardSubstanceItemPageNumber",
@@ -94,7 +94,7 @@ class HazardousMaterials:
             "max_length": 1024,
         },
     )
-    trem_card_number: Optional[str] = field(
+    trem_card_number: str | None = field(
         default=None,
         metadata={
             "name": "tremCardNumber",
@@ -103,7 +103,7 @@ class HazardousMaterials:
             "max_length": 1024,
         },
     )
-    undg_number: Optional[str] = field(
+    undg_number: str | None = field(
         default=None,
         metadata={
             "name": "undgNumber",
@@ -112,7 +112,7 @@ class HazardousMaterials:
             "max_length": 1024,
         },
     )
-    volume_of_dangerous_goods: Optional[float] = field(
+    volume_of_dangerous_goods: float | None = field(
         default=None,
         metadata={
             "name": "volumeOfDangerousGoods",
@@ -120,7 +120,7 @@ class HazardousMaterials:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    weight_of_dangerous_goods: Optional[float] = field(
+    weight_of_dangerous_goods: float | None = field(
         default=None,
         metadata={
             "name": "weightOfDangerousGoods",
@@ -128,7 +128,7 @@ class HazardousMaterials:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    hazardous_materials_extension: Optional[ExtensionType] = field(
+    hazardous_materials_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "hazardousMaterialsExtension",

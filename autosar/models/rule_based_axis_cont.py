@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -50,7 +52,7 @@ class RuleBasedAxisCont:
     class Meta:
         name = "RULE-BASED-AXIS-CONT"
 
-    category: Optional[CalprmAxisCategoryEnum] = field(
+    category: CalprmAxisCategoryEnum | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -58,7 +60,7 @@ class RuleBasedAxisCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_ref: Optional["RuleBasedAxisCont.UnitRef"] = field(
+    unit_ref: RuleBasedAxisCont.UnitRef | None = field(
         default=None,
         metadata={
             "name": "UNIT-REF",
@@ -66,7 +68,7 @@ class RuleBasedAxisCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_arraysize: Optional[ValueList] = field(
+    sw_arraysize: ValueList | None = field(
         default=None,
         metadata={
             "name": "SW-ARRAYSIZE",
@@ -74,7 +76,7 @@ class RuleBasedAxisCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_axis_index: Optional[AxisIndexType] = field(
+    sw_axis_index: AxisIndexType | None = field(
         default=None,
         metadata={
             "name": "SW-AXIS-INDEX",
@@ -82,7 +84,7 @@ class RuleBasedAxisCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rule_based_values: Optional[RuleBasedValueSpecification] = field(
+    rule_based_values: RuleBasedValueSpecification | None = field(
         default=None,
         metadata={
             "name": "RULE-BASED-VALUES",
@@ -90,14 +92,14 @@ class RuleBasedAxisCont:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -108,7 +110,7 @@ class RuleBasedAxisCont:
 
     @dataclass
     class UnitRef(Ref):
-        dest: Optional[UnitSubtypesEnum] = field(
+        dest: UnitSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

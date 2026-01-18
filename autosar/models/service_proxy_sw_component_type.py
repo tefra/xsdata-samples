@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -152,7 +154,7 @@ class ServiceProxySwComponentType:
     class Meta:
         name = "SERVICE-PROXY-SW-COMPONENT-TYPE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -161,9 +163,7 @@ class ServiceProxySwComponentType:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ServiceProxySwComponentType.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ServiceProxySwComponentType.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -171,7 +171,7 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -179,7 +179,7 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -187,7 +187,7 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -195,7 +195,7 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -203,7 +203,7 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -211,7 +211,7 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ServiceProxySwComponentType.Annotations"] = field(
+    annotations: ServiceProxySwComponentType.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -219,7 +219,7 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -227,9 +227,7 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    blueprint_policys: Optional[
-        "ServiceProxySwComponentType.BlueprintPolicys"
-    ] = field(
+    blueprint_policys: ServiceProxySwComponentType.BlueprintPolicys | None = field(
         default=None,
         metadata={
             "name": "BLUEPRINT-POLICYS",
@@ -237,7 +235,7 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    short_name_pattern: Optional[String] = field(
+    short_name_pattern: String | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-PATTERN",
@@ -245,9 +243,7 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_component_documentations: Optional[
-        "ServiceProxySwComponentType.SwComponentDocumentations"
-    ] = field(
+    sw_component_documentations: ServiceProxySwComponentType.SwComponentDocumentations | None = field(
         default=None,
         metadata={
             "name": "SW-COMPONENT-DOCUMENTATIONS",
@@ -255,9 +251,7 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    consistency_needss: Optional[
-        "ServiceProxySwComponentType.ConsistencyNeedss"
-    ] = field(
+    consistency_needss: ServiceProxySwComponentType.ConsistencyNeedss | None = field(
         default=None,
         metadata={
             "name": "CONSISTENCY-NEEDSS",
@@ -265,7 +259,7 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ports: Optional["ServiceProxySwComponentType.Ports"] = field(
+    ports: ServiceProxySwComponentType.Ports | None = field(
         default=None,
         metadata={
             "name": "PORTS",
@@ -273,7 +267,7 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_groups: Optional["ServiceProxySwComponentType.PortGroups"] = field(
+    port_groups: ServiceProxySwComponentType.PortGroups | None = field(
         default=None,
         metadata={
             "name": "PORT-GROUPS",
@@ -281,7 +275,7 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    unit_group_refs: Optional["ServiceProxySwComponentType.UnitGroupRefs"] = (
+    unit_group_refs: ServiceProxySwComponentType.UnitGroupRefs | None = (
         field(
             default=None,
             metadata={
@@ -291,9 +285,7 @@ class ServiceProxySwComponentType:
             },
         )
     )
-    internal_behaviors: Optional[
-        "ServiceProxySwComponentType.InternalBehaviors"
-    ] = field(
+    internal_behaviors: ServiceProxySwComponentType.InternalBehaviors | None = field(
         default=None,
         metadata={
             "name": "INTERNAL-BEHAVIORS",
@@ -301,7 +293,7 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    symbol_props: Optional[SymbolProps] = field(
+    symbol_props: SymbolProps | None = field(
         default=None,
         metadata={
             "name": "SYMBOL-PROPS",
@@ -309,14 +301,14 @@ class ServiceProxySwComponentType:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -324,7 +316,7 @@ class ServiceProxySwComponentType:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -446,7 +438,7 @@ class ServiceProxySwComponentType:
     @dataclass
     class UnitGroupRefs:
         unit_group_ref: list[
-            "ServiceProxySwComponentType.UnitGroupRefs.UnitGroupRef"
+            ServiceProxySwComponentType.UnitGroupRefs.UnitGroupRef
         ] = field(
             default_factory=list,
             metadata={
@@ -458,7 +450,7 @@ class ServiceProxySwComponentType:
 
         @dataclass
         class UnitGroupRef(Ref):
-            dest: Optional[UnitGroupSubtypesEnum] = field(
+            dest: UnitGroupSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

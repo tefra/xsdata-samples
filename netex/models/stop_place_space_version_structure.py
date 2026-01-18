@@ -16,7 +16,7 @@ class StopPlaceSpaceVersionStructure(StopPlaceComponentVersionStructure):
     class Meta:
         name = "StopPlaceSpace_VersionStructure"
 
-    boarding_use: Optional[bool] = field(
+    boarding_use: bool | None = field(
         default=None,
         metadata={
             "name": "BoardingUse",
@@ -24,7 +24,7 @@ class StopPlaceSpaceVersionStructure(StopPlaceComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    alighting_use: Optional[bool] = field(
+    alighting_use: bool | None = field(
         default=None,
         metadata={
             "name": "AlightingUse",
@@ -32,7 +32,7 @@ class StopPlaceSpaceVersionStructure(StopPlaceComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    label: Optional[MultilingualString] = field(
+    label: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Label",
@@ -40,14 +40,14 @@ class StopPlaceSpaceVersionStructure(StopPlaceComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    entrances: Optional[SiteEntrancesRelStructure] = field(
+    entrances: SiteEntrancesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    length: Optional[Decimal] = field(
+    length: Decimal | None = field(
         default=None,
         metadata={
             "name": "Length",
@@ -55,7 +55,7 @@ class StopPlaceSpaceVersionStructure(StopPlaceComponentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    width: Optional[Decimal] = field(
+    width: Decimal | None = field(
         default=None,
         metadata={
             "name": "Width",

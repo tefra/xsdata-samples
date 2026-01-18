@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -103,7 +105,7 @@ class ArgumentDataPrototype:
     class Meta:
         name = "ARGUMENT-DATA-PROTOTYPE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -112,9 +114,7 @@ class ArgumentDataPrototype:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "ArgumentDataPrototype.ShortNameFragments"
-    ] = field(
+    short_name_fragments: ArgumentDataPrototype.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -122,7 +122,7 @@ class ArgumentDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -130,7 +130,7 @@ class ArgumentDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -138,7 +138,7 @@ class ArgumentDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -146,7 +146,7 @@ class ArgumentDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -154,7 +154,7 @@ class ArgumentDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -162,7 +162,7 @@ class ArgumentDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ArgumentDataPrototype.Annotations"] = field(
+    annotations: ArgumentDataPrototype.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -170,7 +170,7 @@ class ArgumentDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_data_def_props: Optional[SwDataDefProps] = field(
+    sw_data_def_props: SwDataDefProps | None = field(
         default=None,
         metadata={
             "name": "SW-DATA-DEF-PROPS",
@@ -178,7 +178,7 @@ class ArgumentDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    type_tref: Optional["ArgumentDataPrototype.TypeTref"] = field(
+    type_tref: ArgumentDataPrototype.TypeTref | None = field(
         default=None,
         metadata={
             "name": "TYPE-TREF",
@@ -186,7 +186,7 @@ class ArgumentDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    direction: Optional[ArgumentDirectionEnum] = field(
+    direction: ArgumentDirectionEnum | None = field(
         default=None,
         metadata={
             "name": "DIRECTION",
@@ -194,7 +194,7 @@ class ArgumentDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    server_argument_impl_policy: Optional[ServerArgumentImplPolicyEnum] = (
+    server_argument_impl_policy: ServerArgumentImplPolicyEnum | None = (
         field(
             default=None,
             metadata={
@@ -204,7 +204,7 @@ class ArgumentDataPrototype:
             },
         )
     )
-    type_blueprints: Optional["ArgumentDataPrototype.TypeBlueprints"] = field(
+    type_blueprints: ArgumentDataPrototype.TypeBlueprints | None = field(
         default=None,
         metadata={
             "name": "TYPE-BLUEPRINTS",
@@ -212,7 +212,7 @@ class ArgumentDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -220,14 +220,14 @@ class ArgumentDataPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -235,7 +235,7 @@ class ArgumentDataPrototype:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -267,7 +267,7 @@ class ArgumentDataPrototype:
 
     @dataclass
     class TypeTref(Ref):
-        dest: Optional[AutosarDataTypeSubtypesEnum] = field(
+        dest: AutosarDataTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

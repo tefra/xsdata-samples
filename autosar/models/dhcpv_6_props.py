@@ -44,7 +44,7 @@ class Dhcpv6Props:
     class Meta:
         name = "DHCPV-6-PROPS"
 
-    tcp_ip_dhcp_v_6_cnf_delay_max: Optional[TimeValue] = field(
+    tcp_ip_dhcp_v_6_cnf_delay_max: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-DHCP-V-6-CNF-DELAY-MAX",
@@ -52,7 +52,7 @@ class Dhcpv6Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_dhcp_v_6_cnf_delay_min: Optional[TimeValue] = field(
+    tcp_ip_dhcp_v_6_cnf_delay_min: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-DHCP-V-6-CNF-DELAY-MIN",
@@ -60,7 +60,7 @@ class Dhcpv6Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_dhcp_v_6_inf_delay_max: Optional[TimeValue] = field(
+    tcp_ip_dhcp_v_6_inf_delay_max: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-DHCP-V-6-INF-DELAY-MAX",
@@ -68,7 +68,7 @@ class Dhcpv6Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_dhcp_v_6_inf_delay_min: Optional[TimeValue] = field(
+    tcp_ip_dhcp_v_6_inf_delay_min: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-DHCP-V-6-INF-DELAY-MIN",
@@ -76,7 +76,7 @@ class Dhcpv6Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_dhcp_v_6_sol_delay_max: Optional[TimeValue] = field(
+    tcp_ip_dhcp_v_6_sol_delay_max: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-DHCP-V-6-SOL-DELAY-MAX",
@@ -84,7 +84,7 @@ class Dhcpv6Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_ip_dhcp_v_6_sol_delay_min: Optional[TimeValue] = field(
+    tcp_ip_dhcp_v_6_sol_delay_min: TimeValue | None = field(
         default=None,
         metadata={
             "name": "TCP-IP-DHCP-V-6-SOL-DELAY-MIN",
@@ -92,14 +92,14 @@ class Dhcpv6Props:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -21,7 +21,7 @@ class MediumApplicationInstanceVersionedChildStructure(
     class Meta:
         name = "MediumApplicationInstance_VersionedChildStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -29,7 +29,7 @@ class MediumApplicationInstanceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    identity_token: Optional[str] = field(
+    identity_token: str | None = field(
         default=None,
         metadata={
             "name": "IdentityToken",
@@ -37,9 +37,7 @@ class MediumApplicationInstanceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    medium_access_device_ref: Optional[
-        Union[MobileDeviceRef, EmvCardRef, SmartcardRef]
-    ] = field(
+    medium_access_device_ref: MobileDeviceRef | EmvCardRef | SmartcardRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -62,7 +60,7 @@ class MediumApplicationInstanceVersionedChildStructure(
             ),
         },
     )
-    customer_account_ref: Optional[CustomerAccountRef] = field(
+    customer_account_ref: CustomerAccountRef | None = field(
         default=None,
         metadata={
             "name": "CustomerAccountRef",
@@ -70,7 +68,7 @@ class MediumApplicationInstanceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_travel_document_ref: Optional[TypeOfTravelDocumentRef] = field(
+    type_of_travel_document_ref: TypeOfTravelDocumentRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfTravelDocumentRef",
@@ -78,9 +76,7 @@ class MediumApplicationInstanceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    travel_document_ref: Optional[
-        Union[ServiceAccessCodeRef, TravelDocumentRef]
-    ] = field(
+    travel_document_ref: ServiceAccessCodeRef | TravelDocumentRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

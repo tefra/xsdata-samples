@@ -18,7 +18,7 @@ class DataSourceType:
     """
 
     simple_data_source_or_queryable_data_source: tuple[
-        Union[str, QueryableDataSourceType2], ...
+        str | QueryableDataSourceType2, ...
     ] = field(
         default_factory=tuple,
         metadata={

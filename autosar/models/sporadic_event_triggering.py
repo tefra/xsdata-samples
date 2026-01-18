@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -103,7 +105,7 @@ class SporadicEventTriggering:
     class Meta:
         name = "SPORADIC-EVENT-TRIGGERING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -112,9 +114,7 @@ class SporadicEventTriggering:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SporadicEventTriggering.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SporadicEventTriggering.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -122,7 +122,7 @@ class SporadicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -130,7 +130,7 @@ class SporadicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -138,7 +138,7 @@ class SporadicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -146,7 +146,7 @@ class SporadicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -154,7 +154,7 @@ class SporadicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -162,7 +162,7 @@ class SporadicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SporadicEventTriggering.Annotations"] = field(
+    annotations: SporadicEventTriggering.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -170,7 +170,7 @@ class SporadicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trace_refs: Optional["SporadicEventTriggering.TraceRefs"] = field(
+    trace_refs: SporadicEventTriggering.TraceRefs | None = field(
         default=None,
         metadata={
             "name": "TRACE-REFS",
@@ -178,9 +178,7 @@ class SporadicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_condition_ref: Optional[
-        "SporadicEventTriggering.TimingConditionRef"
-    ] = field(
+    timing_condition_ref: SporadicEventTriggering.TimingConditionRef | None = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
@@ -188,7 +186,7 @@ class SporadicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -196,7 +194,7 @@ class SporadicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_ref: Optional["SporadicEventTriggering.EventRef"] = field(
+    event_ref: SporadicEventTriggering.EventRef | None = field(
         default=None,
         metadata={
             "name": "EVENT-REF",
@@ -204,7 +202,7 @@ class SporadicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    minimum_inter_arrival_time: Optional[MultidimensionalTime] = field(
+    minimum_inter_arrival_time: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "MINIMUM-INTER-ARRIVAL-TIME",
@@ -212,7 +210,7 @@ class SporadicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    maximum_inter_arrival_time: Optional[MultidimensionalTime] = field(
+    maximum_inter_arrival_time: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "MAXIMUM-INTER-ARRIVAL-TIME",
@@ -220,7 +218,7 @@ class SporadicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    jitter: Optional[MultidimensionalTime] = field(
+    jitter: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "JITTER",
@@ -228,7 +226,7 @@ class SporadicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    period: Optional[MultidimensionalTime] = field(
+    period: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "PERIOD",
@@ -236,14 +234,14 @@ class SporadicEventTriggering:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -251,7 +249,7 @@ class SporadicEventTriggering:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -283,7 +281,7 @@ class SporadicEventTriggering:
 
     @dataclass
     class TraceRefs:
-        trace_ref: list["SporadicEventTriggering.TraceRefs.TraceRef"] = field(
+        trace_ref: list[SporadicEventTriggering.TraceRefs.TraceRef] = field(
             default_factory=list,
             metadata={
                 "name": "TRACE-REF",
@@ -294,7 +292,7 @@ class SporadicEventTriggering:
 
         @dataclass
         class TraceRef(Ref):
-            dest: Optional[TraceableSubtypesEnum] = field(
+            dest: TraceableSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -305,7 +303,7 @@ class SporadicEventTriggering:
 
     @dataclass
     class TimingConditionRef(Ref):
-        dest: Optional[TimingConditionSubtypesEnum] = field(
+        dest: TimingConditionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -316,7 +314,7 @@ class SporadicEventTriggering:
 
     @dataclass
     class EventRef(Ref):
-        dest: Optional[TimingDescriptionEventSubtypesEnum] = field(
+        dest: TimingDescriptionEventSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

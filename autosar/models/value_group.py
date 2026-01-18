@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -58,7 +60,7 @@ class ValueGroup:
     class Meta:
         name = "VALUE-GROUP"
 
-    label: Optional[MultilanguageLongName] = field(
+    label: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LABEL",
@@ -98,7 +100,7 @@ class ValueGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    vg: list["ValueGroup"] = field(
+    vg: list[ValueGroup] = field(
         default_factory=list,
         metadata={
             "name": "VG",
@@ -106,14 +108,14 @@ class ValueGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

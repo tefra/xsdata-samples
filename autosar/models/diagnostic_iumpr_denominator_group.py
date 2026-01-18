@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -85,7 +87,7 @@ class DiagnosticIumprDenominatorGroup:
     class Meta:
         name = "DIAGNOSTIC-IUMPR-DENOMINATOR-GROUP"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -94,9 +96,7 @@ class DiagnosticIumprDenominatorGroup:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "DiagnosticIumprDenominatorGroup.ShortNameFragments"
-    ] = field(
+    short_name_fragments: DiagnosticIumprDenominatorGroup.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -104,7 +104,7 @@ class DiagnosticIumprDenominatorGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -112,7 +112,7 @@ class DiagnosticIumprDenominatorGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -120,7 +120,7 @@ class DiagnosticIumprDenominatorGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -128,7 +128,7 @@ class DiagnosticIumprDenominatorGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -136,7 +136,7 @@ class DiagnosticIumprDenominatorGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -144,7 +144,7 @@ class DiagnosticIumprDenominatorGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["DiagnosticIumprDenominatorGroup.Annotations"] = (
+    annotations: DiagnosticIumprDenominatorGroup.Annotations | None = (
         field(
             default=None,
             metadata={
@@ -154,7 +154,7 @@ class DiagnosticIumprDenominatorGroup:
             },
         )
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -162,7 +162,7 @@ class DiagnosticIumprDenominatorGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    iumpr_refs: Optional["DiagnosticIumprDenominatorGroup.IumprRefs"] = field(
+    iumpr_refs: DiagnosticIumprDenominatorGroup.IumprRefs | None = field(
         default=None,
         metadata={
             "name": "IUMPR-REFS",
@@ -170,14 +170,14 @@ class DiagnosticIumprDenominatorGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -185,7 +185,7 @@ class DiagnosticIumprDenominatorGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -218,7 +218,7 @@ class DiagnosticIumprDenominatorGroup:
     @dataclass
     class IumprRefs:
         iumpr_ref: list[
-            "DiagnosticIumprDenominatorGroup.IumprRefs.IumprRef"
+            DiagnosticIumprDenominatorGroup.IumprRefs.IumprRef
         ] = field(
             default_factory=list,
             metadata={
@@ -230,7 +230,7 @@ class DiagnosticIumprDenominatorGroup:
 
         @dataclass
         class IumprRef(Ref):
-            dest: Optional[DiagnosticIumprSubtypesEnum] = field(
+            dest: DiagnosticIumprSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

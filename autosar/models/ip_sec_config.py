@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -34,7 +36,7 @@ class IpSecConfig:
     class Meta:
         name = "IP-SEC-CONFIG"
 
-    ip_sec_config_props_ref: Optional["IpSecConfig.IpSecConfigPropsRef"] = (
+    ip_sec_config_props_ref: IpSecConfig.IpSecConfigPropsRef | None = (
         field(
             default=None,
             metadata={
@@ -44,7 +46,7 @@ class IpSecConfig:
             },
         )
     )
-    ip_sec_rules: Optional["IpSecConfig.IpSecRules"] = field(
+    ip_sec_rules: IpSecConfig.IpSecRules | None = field(
         default=None,
         metadata={
             "name": "IP-SEC-RULES",
@@ -52,14 +54,14 @@ class IpSecConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -70,7 +72,7 @@ class IpSecConfig:
 
     @dataclass
     class IpSecConfigPropsRef(Ref):
-        dest: Optional[IpSecConfigPropsSubtypesEnum] = field(
+        dest: IpSecConfigPropsSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

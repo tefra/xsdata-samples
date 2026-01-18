@@ -17,12 +17,7 @@ class ParkingLogEntriesRelStructure(ContainmentAggregationStructure):
         name = "parkingLogEntries_RelStructure"
 
     choice: Iterable[
-        Union[
-            ParkingBayConditionRef,
-            RentalAvailabilityRef,
-            ParkingBayCondition,
-            RentalAvailability,
-        ]
+        ParkingBayConditionRef | RentalAvailabilityRef | ParkingBayCondition | RentalAvailability
     ] = field(
         default_factory=list,
         metadata={

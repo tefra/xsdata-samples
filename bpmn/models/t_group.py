@@ -12,7 +12,7 @@ class TGroup(TArtifact):
     class Meta:
         name = "tGroup"
 
-    category_value_ref: Optional[QName] = field(
+    category_value_ref: QName | None = field(
         default=None,
         metadata={
             "name": "categoryValueRef",

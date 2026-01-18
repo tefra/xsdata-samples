@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -113,7 +115,7 @@ class TransformerHardErrorEvent:
     class Meta:
         name = "TRANSFORMER-HARD-ERROR-EVENT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -122,9 +124,7 @@ class TransformerHardErrorEvent:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "TransformerHardErrorEvent.ShortNameFragments"
-    ] = field(
+    short_name_fragments: TransformerHardErrorEvent.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -132,7 +132,7 @@ class TransformerHardErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -140,7 +140,7 @@ class TransformerHardErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -148,7 +148,7 @@ class TransformerHardErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -156,7 +156,7 @@ class TransformerHardErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -164,7 +164,7 @@ class TransformerHardErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -172,7 +172,7 @@ class TransformerHardErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["TransformerHardErrorEvent.Annotations"] = field(
+    annotations: TransformerHardErrorEvent.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -180,9 +180,7 @@ class TransformerHardErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    activation_reason_representation_ref: Optional[
-        "TransformerHardErrorEvent.ActivationReasonRepresentationRef"
-    ] = field(
+    activation_reason_representation_ref: TransformerHardErrorEvent.ActivationReasonRepresentationRef | None = field(
         default=None,
         metadata={
             "name": "ACTIVATION-REASON-REPRESENTATION-REF",
@@ -190,9 +188,7 @@ class TransformerHardErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    disabled_mode_irefs: Optional[
-        "TransformerHardErrorEvent.DisabledModeIrefs"
-    ] = field(
+    disabled_mode_irefs: TransformerHardErrorEvent.DisabledModeIrefs | None = field(
         default=None,
         metadata={
             "name": "DISABLED-MODE-IREFS",
@@ -200,9 +196,7 @@ class TransformerHardErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    start_on_event_ref: Optional[
-        "TransformerHardErrorEvent.StartOnEventRef"
-    ] = field(
+    start_on_event_ref: TransformerHardErrorEvent.StartOnEventRef | None = field(
         default=None,
         metadata={
             "name": "START-ON-EVENT-REF",
@@ -210,7 +204,7 @@ class TransformerHardErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -218,7 +212,7 @@ class TransformerHardErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_iref: Optional[POperationInAtomicSwcInstanceRef] = field(
+    operation_iref: POperationInAtomicSwcInstanceRef | None = field(
         default=None,
         metadata={
             "name": "OPERATION-IREF",
@@ -226,7 +220,7 @@ class TransformerHardErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_trigger_iref: Optional[RTriggerInAtomicSwcInstanceRef] = field(
+    required_trigger_iref: RTriggerInAtomicSwcInstanceRef | None = field(
         default=None,
         metadata={
             "name": "REQUIRED-TRIGGER-IREF",
@@ -234,7 +228,7 @@ class TransformerHardErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    trigger_iref: Optional[PTriggerInAtomicSwcTypeInstanceRef] = field(
+    trigger_iref: PTriggerInAtomicSwcTypeInstanceRef | None = field(
         default=None,
         metadata={
             "name": "TRIGGER-IREF",
@@ -242,14 +236,14 @@ class TransformerHardErrorEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -257,7 +251,7 @@ class TransformerHardErrorEvent:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -289,7 +283,7 @@ class TransformerHardErrorEvent:
 
     @dataclass
     class ActivationReasonRepresentationRef(Ref):
-        dest: Optional[ExecutableEntityActivationReasonSubtypesEnum] = field(
+        dest: ExecutableEntityActivationReasonSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -311,7 +305,7 @@ class TransformerHardErrorEvent:
 
     @dataclass
     class StartOnEventRef(Ref):
-        dest: Optional[RunnableEntitySubtypesEnum] = field(
+        dest: RunnableEntitySubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

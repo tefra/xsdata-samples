@@ -18,11 +18,7 @@ class CustomerEligibilityRefsRelStructure(OneToManyRelationshipStructure):
         name = "customerEligibilityRefs_RelStructure"
 
     customer_eligibility_ref: Iterable[
-        Union[
-            ResidentialQualificationEligibilityRef,
-            CommercialProfileEligibilityRef,
-            UserProfileEligibilityRef,
-        ]
+        ResidentialQualificationEligibilityRef | CommercialProfileEligibilityRef | UserProfileEligibilityRef
     ] = field(
         default_factory=list,
         metadata={

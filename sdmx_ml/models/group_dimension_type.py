@@ -24,7 +24,7 @@ class GroupDimensionType(GroupDimensionBaseType):
         defined.
     """
 
-    dimension_reference: Optional[str] = field(
+    dimension_reference: str | None = field(
         default=None,
         metadata={
             "name": "DimensionReference",

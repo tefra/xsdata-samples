@@ -30,7 +30,7 @@ class SalesOfferPackageElementVersionStructure(
     class Meta:
         name = "SalesOfferPackageElement_VersionStructure"
 
-    requires_validation: Optional[bool] = field(
+    requires_validation: bool | None = field(
         default=None,
         metadata={
             "name": "RequiresValidation",
@@ -38,7 +38,7 @@ class SalesOfferPackageElementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    condition_summary: Optional[ConditionSummary] = field(
+    condition_summary: ConditionSummary | None = field(
         default=None,
         metadata={
             "name": "ConditionSummary",
@@ -46,7 +46,7 @@ class SalesOfferPackageElementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sales_offer_package_ref: Optional[SalesOfferPackageRef] = field(
+    sales_offer_package_ref: SalesOfferPackageRef | None = field(
         default=None,
         metadata={
             "name": "SalesOfferPackageRef",
@@ -54,7 +54,7 @@ class SalesOfferPackageElementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_travel_document_ref: Optional[TypeOfTravelDocumentRef] = field(
+    type_of_travel_document_ref: TypeOfTravelDocumentRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfTravelDocumentRef",
@@ -62,18 +62,7 @@ class SalesOfferPackageElementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: Optional[
-        Union[
-            SupplementProductRef,
-            PreassignedFareProductRef,
-            AmountOfPriceUnitProductRef,
-            UsageDiscountRightRef,
-            ThirdPartyProductRef,
-            CappedDiscountRightRef,
-            SaleDiscountRightRef,
-            FareProductRef,
-        ]
-    ] = field(
+    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: SupplementProductRef | PreassignedFareProductRef | AmountOfPriceUnitProductRef | UsageDiscountRightRef | ThirdPartyProductRef | CappedDiscountRightRef | SaleDiscountRightRef | FareProductRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -121,9 +110,7 @@ class SalesOfferPackageElementVersionStructure(
             ),
         },
     )
-    validity_parameter_assignments: Optional[
-        GenericParameterAssignmentsRelStructure
-    ] = field(
+    validity_parameter_assignments: GenericParameterAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "validityParameterAssignments",
@@ -131,14 +118,14 @@ class SalesOfferPackageElementVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: Optional[SalesOfferPackagePricesRelStructure] = field(
+    prices: SalesOfferPackagePricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

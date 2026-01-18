@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -34,9 +36,7 @@ class RModeInAtomicSwcInstanceRef:
     class Meta:
         name = "R-MODE-IN-ATOMIC-SWC-INSTANCE-REF"
 
-    context_port_ref: Optional[
-        "RModeInAtomicSwcInstanceRef.ContextPortRef"
-    ] = field(
+    context_port_ref: RModeInAtomicSwcInstanceRef.ContextPortRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-PORT-REF",
@@ -44,9 +44,7 @@ class RModeInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_mode_declaration_group_prototype_ref: Optional[
-        "RModeInAtomicSwcInstanceRef.ContextModeDeclarationGroupPrototypeRef"
-    ] = field(
+    context_mode_declaration_group_prototype_ref: RModeInAtomicSwcInstanceRef.ContextModeDeclarationGroupPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-MODE-DECLARATION-GROUP-PROTOTYPE-REF",
@@ -54,9 +52,7 @@ class RModeInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_mode_declaration_ref: Optional[
-        "RModeInAtomicSwcInstanceRef.TargetModeDeclarationRef"
-    ] = field(
+    target_mode_declaration_ref: RModeInAtomicSwcInstanceRef.TargetModeDeclarationRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-MODE-DECLARATION-REF",
@@ -64,14 +60,14 @@ class RModeInAtomicSwcInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -82,7 +78,7 @@ class RModeInAtomicSwcInstanceRef:
 
     @dataclass
     class ContextPortRef(Ref):
-        dest: Optional[AbstractRequiredPortPrototypeSubtypesEnum] = field(
+        dest: AbstractRequiredPortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -93,7 +89,7 @@ class RModeInAtomicSwcInstanceRef:
 
     @dataclass
     class ContextModeDeclarationGroupPrototypeRef(Ref):
-        dest: Optional[ModeDeclarationGroupPrototypeSubtypesEnum] = field(
+        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -104,7 +100,7 @@ class RModeInAtomicSwcInstanceRef:
 
     @dataclass
     class TargetModeDeclarationRef(Ref):
-        dest: Optional[ModeDeclarationSubtypesEnum] = field(
+        dest: ModeDeclarationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

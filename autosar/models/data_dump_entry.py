@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -51,7 +53,7 @@ class DataDumpEntry:
     class Meta:
         name = "DATA-DUMP-ENTRY"
 
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -59,7 +61,7 @@ class DataDumpEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    delay: Optional[TimeValue] = field(
+    delay: TimeValue | None = field(
         default=None,
         metadata={
             "name": "DELAY",
@@ -67,7 +69,7 @@ class DataDumpEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    position_in_table: Optional[Integer] = field(
+    position_in_table: Integer | None = field(
         default=None,
         metadata={
             "name": "POSITION-IN-TABLE",
@@ -75,9 +77,7 @@ class DataDumpEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_controller_ref: Optional[
-        "DataDumpEntry.AssignedControllerRef"
-    ] = field(
+    assigned_controller_ref: DataDumpEntry.AssignedControllerRef | None = field(
         default=None,
         metadata={
             "name": "ASSIGNED-CONTROLLER-REF",
@@ -85,9 +85,7 @@ class DataDumpEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    assigned_lin_slave_config_ref: Optional[
-        "DataDumpEntry.AssignedLinSlaveConfigRef"
-    ] = field(
+    assigned_lin_slave_config_ref: DataDumpEntry.AssignedLinSlaveConfigRef | None = field(
         default=None,
         metadata={
             "name": "ASSIGNED-LIN-SLAVE-CONFIG-REF",
@@ -95,7 +93,7 @@ class DataDumpEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    byte_values: Optional["DataDumpEntry.ByteValues"] = field(
+    byte_values: DataDumpEntry.ByteValues | None = field(
         default=None,
         metadata={
             "name": "BYTE-VALUES",
@@ -103,14 +101,14 @@ class DataDumpEntry:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -121,7 +119,7 @@ class DataDumpEntry:
 
     @dataclass
     class AssignedControllerRef(Ref):
-        dest: Optional[LinSlaveSubtypesEnum] = field(
+        dest: LinSlaveSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -132,7 +130,7 @@ class DataDumpEntry:
 
     @dataclass
     class AssignedLinSlaveConfigRef(Ref):
-        dest: Optional[LinSlaveConfigIdentSubtypesEnum] = field(
+        dest: LinSlaveConfigIdentSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

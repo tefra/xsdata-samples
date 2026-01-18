@@ -9,14 +9,14 @@ class Yes:
     class Meta:
         name = "yes"
 
-    lowerbound: Optional[Union[str, BoundValue]] = field(
+    lowerbound: str | BoundValue | None = field(
         default=None,
         metadata={
             "type": "Element",
             "pattern": r"O\(n\^[0-9]+\)",
         },
     )
-    upperbound: Optional[Union[str, BoundValue]] = field(
+    upperbound: str | BoundValue | None = field(
         default=None,
         metadata={
             "type": "Element",

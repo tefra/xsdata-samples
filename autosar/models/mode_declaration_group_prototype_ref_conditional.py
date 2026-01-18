@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,9 +35,7 @@ class ModeDeclarationGroupPrototypeRefConditional:
     class Meta:
         name = "MODE-DECLARATION-GROUP-PROTOTYPE-REF-CONDITIONAL"
 
-    mode_declaration_group_prototype_ref: Optional[
-        "ModeDeclarationGroupPrototypeRefConditional.ModeDeclarationGroupPrototypeRef"
-    ] = field(
+    mode_declaration_group_prototype_ref: ModeDeclarationGroupPrototypeRefConditional.ModeDeclarationGroupPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "MODE-DECLARATION-GROUP-PROTOTYPE-REF",
@@ -43,7 +43,7 @@ class ModeDeclarationGroupPrototypeRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -51,14 +51,14 @@ class ModeDeclarationGroupPrototypeRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -69,7 +69,7 @@ class ModeDeclarationGroupPrototypeRefConditional:
 
     @dataclass
     class ModeDeclarationGroupPrototypeRef(Ref):
-        dest: Optional[ModeDeclarationGroupPrototypeSubtypesEnum] = field(
+        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

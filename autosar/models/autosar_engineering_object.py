@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -44,7 +46,7 @@ class AutosarEngineeringObject:
     class Meta:
         name = "AUTOSAR-ENGINEERING-OBJECT"
 
-    short_label: Optional[NmtokenString] = field(
+    short_label: NmtokenString | None = field(
         default=None,
         metadata={
             "name": "SHORT-LABEL",
@@ -52,7 +54,7 @@ class AutosarEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[NmtokenString] = field(
+    category: NmtokenString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -60,7 +62,7 @@ class AutosarEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    revision_labels: Optional["AutosarEngineeringObject.RevisionLabels"] = (
+    revision_labels: AutosarEngineeringObject.RevisionLabels | None = (
         field(
             default=None,
             metadata={
@@ -70,7 +72,7 @@ class AutosarEngineeringObject:
             },
         )
     )
-    domain: Optional[NmtokenString] = field(
+    domain: NmtokenString | None = field(
         default=None,
         metadata={
             "name": "DOMAIN",
@@ -78,14 +80,14 @@ class AutosarEngineeringObject:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

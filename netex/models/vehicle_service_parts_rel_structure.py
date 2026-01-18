@@ -15,7 +15,7 @@ class VehicleServicePartsRelStructure(ContainmentAggregationStructure):
         name = "vehicleServiceParts_RelStructure"
 
     vehicle_service_part_ref_or_vehicle_service_part: Iterable[
-        Union[VehicleServicePartRef, VehicleServicePart]
+        VehicleServicePartRef | VehicleServicePart
     ] = field(
         default_factory=list,
         metadata={

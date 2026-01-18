@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from typing import ForwardRef, Optional, Union
@@ -23,11 +25,7 @@ class GeographicalUnitPricesRelStructure(
         name = "geographicalUnitPrices_RelStructure"
 
     geographical_unit_price_ref_or_geographical_unit_price_or_cell_ref: Iterable[
-        Union[
-            GeographicalUnitPriceRef,
-            "GeographicalUnitPriceVersionedChildStructure",
-            CellRef,
-        ]
+        GeographicalUnitPriceRef | GeographicalUnitPriceVersionedChildStructure | CellRef
     ] = field(
         default_factory=list,
         metadata={
@@ -62,7 +60,7 @@ class GeographicalUnitPriceVersionedChildStructure(
     class Meta:
         name = "GeographicalUnitPrice_VersionedChildStructure"
 
-    geographical_unit_ref: Optional[GeographicalUnitRef] = field(
+    geographical_unit_ref: GeographicalUnitRef | None = field(
         default=None,
         metadata={
             "name": "GeographicalUnitRef",
@@ -70,7 +68,7 @@ class GeographicalUnitPriceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: Optional[GeographicalUnitPricesRelStructure] = field(
+    prices: GeographicalUnitPricesRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

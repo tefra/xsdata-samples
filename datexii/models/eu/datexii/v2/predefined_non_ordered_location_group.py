@@ -25,9 +25,7 @@ class PredefinedNonOrderedLocationGroup(PredefinedLocationContainer):
     :ivar version:
     """
 
-    predefined_non_ordered_location_group_name: Optional[
-        MultilingualString
-    ] = field(
+    predefined_non_ordered_location_group_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "predefinedNonOrderedLocationGroupName",
@@ -44,9 +42,7 @@ class PredefinedNonOrderedLocationGroup(PredefinedLocationContainer):
             "min_occurs": 2,
         },
     )
-    predefined_non_ordered_location_group_extension: Optional[
-        ExtensionType
-    ] = field(
+    predefined_non_ordered_location_group_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "predefinedNonOrderedLocationGroupExtension",
@@ -54,14 +50,14 @@ class PredefinedNonOrderedLocationGroup(PredefinedLocationContainer):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

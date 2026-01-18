@@ -19,7 +19,7 @@ class GeoGridCodelistType(GeoGridCodelistBaseType):
         corresponding to the grid definition for the GeoGrid Codelist.
     """
 
-    grid_definition: Optional[str] = field(
+    grid_definition: str | None = field(
         default=None,
         metadata={
             "name": "GridDefinition",

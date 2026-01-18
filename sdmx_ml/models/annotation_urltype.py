@@ -27,7 +27,7 @@ class AnnotationUrltype:
             "required": True,
         },
     )
-    lang: Optional[str] = field(
+    lang: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

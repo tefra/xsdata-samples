@@ -11,7 +11,7 @@ class TypeOfEntityVersionStructure(TypeOfValueVersionStructure):
     class Meta:
         name = "TypeOfEntity_VersionStructure"
 
-    name_of_classified_entity_class: Optional[str] = field(
+    name_of_classified_entity_class: str | None = field(
         default=None,
         metadata={
             "name": "nameOfClassifiedEntityClass",

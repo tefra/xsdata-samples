@@ -58,7 +58,7 @@ class EventControlledTiming:
     class Meta:
         name = "EVENT-CONTROLLED-TIMING"
 
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -66,7 +66,7 @@ class EventControlledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -74,7 +74,7 @@ class EventControlledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -82,7 +82,7 @@ class EventControlledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -90,7 +90,7 @@ class EventControlledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    number_of_repetitions: Optional[Integer] = field(
+    number_of_repetitions: Integer | None = field(
         default=None,
         metadata={
             "name": "NUMBER-OF-REPETITIONS",
@@ -98,7 +98,7 @@ class EventControlledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    repetition_period: Optional[TimeRangeType] = field(
+    repetition_period: TimeRangeType | None = field(
         default=None,
         metadata={
             "name": "REPETITION-PERIOD",
@@ -106,14 +106,14 @@ class EventControlledTiming:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -13,7 +13,7 @@ class LogicalDisplayVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "LogicalDisplay_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -21,7 +21,7 @@ class LogicalDisplayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -29,7 +29,7 @@ class LogicalDisplayVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    display_assignments: Optional[DisplayAssignmentsRelStructure] = field(
+    display_assignments: DisplayAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "displayAssignments",

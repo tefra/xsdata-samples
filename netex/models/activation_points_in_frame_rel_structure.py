@@ -14,7 +14,7 @@ class ActivationPointsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "activationPointsInFrame_RelStructure"
 
-    activation_point: Iterable[Union[BeaconPoint, ActivationPoint]] = field(
+    activation_point: Iterable[BeaconPoint | ActivationPoint] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

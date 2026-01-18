@@ -349,19 +349,19 @@ class TDefinitions:
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    target_namespace: Optional[str] = field(
+    target_namespace: str | None = field(
         default=None,
         metadata={
             "name": "targetNamespace",
@@ -383,13 +383,13 @@ class TDefinitions:
             "type": "Attribute",
         },
     )
-    exporter: Optional[str] = field(
+    exporter: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    exporter_version: Optional[str] = field(
+    exporter_version: str | None = field(
         default=None,
         metadata={
             "name": "exporterVersion",

@@ -27,20 +27,20 @@ class SwServiceReentranceEnum:
     class Meta:
         name = "SW-SERVICE-REENTRANCE-ENUM"
 
-    value: Optional[SwServiceReentranceEnumSimple] = field(
+    value: SwServiceReentranceEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

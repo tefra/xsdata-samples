@@ -22,7 +22,7 @@ class AlertCPoint:
     :ivar alert_cpoint_extension:
     """
 
-    alert_clocation_country_code: Optional[str] = field(
+    alert_clocation_country_code: str | None = field(
         default=None,
         metadata={
             "name": "alertCLocationCountryCode",
@@ -32,7 +32,7 @@ class AlertCPoint:
             "max_length": 1024,
         },
     )
-    alert_clocation_table_number: Optional[str] = field(
+    alert_clocation_table_number: str | None = field(
         default=None,
         metadata={
             "name": "alertCLocationTableNumber",
@@ -42,7 +42,7 @@ class AlertCPoint:
             "max_length": 1024,
         },
     )
-    alert_clocation_table_version: Optional[str] = field(
+    alert_clocation_table_version: str | None = field(
         default=None,
         metadata={
             "name": "alertCLocationTableVersion",
@@ -52,7 +52,7 @@ class AlertCPoint:
             "max_length": 1024,
         },
     )
-    alert_cpoint_extension: Optional[ExtensionType] = field(
+    alert_cpoint_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "alertCPointExtension",

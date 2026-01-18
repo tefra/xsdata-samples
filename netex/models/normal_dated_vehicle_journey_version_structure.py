@@ -16,7 +16,7 @@ class NormalDatedVehicleJourneyVersionStructure(
     class Meta:
         name = "NormalDatedVehicleJourney_VersionStructure"
 
-    service_alteration_type: Optional[ServiceAlterationEnumeration] = field(
+    service_alteration_type: ServiceAlterationEnumeration | None = field(
         default=None,
         metadata={
             "name": "ServiceAlterationType",

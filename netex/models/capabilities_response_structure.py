@@ -9,9 +9,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class CapabilitiesResponseStructure(ProducerResponseStructure):
-    data_object_capabilities_response: Optional[
-        DataObjectCapabilitiesResponse
-    ] = field(
+    data_object_capabilities_response: DataObjectCapabilitiesResponse | None = field(
         default=None,
         metadata={
             "name": "DataObjectCapabilitiesResponse",

@@ -17,7 +17,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass
 class HeadingSignStructure(SignEquipmentVersionStructure):
-    place_name: Optional[MultilingualString] = field(
+    place_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "PlaceName",
@@ -26,7 +26,7 @@ class HeadingSignStructure(SignEquipmentVersionStructure):
             "required": True,
         },
     )
-    line_ref: Optional[Union[FlexibleLineRef, LineRef]] = field(
+    line_ref: FlexibleLineRef | LineRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -44,7 +44,7 @@ class HeadingSignStructure(SignEquipmentVersionStructure):
             ),
         },
     )
-    line_name: Optional[MultilingualString] = field(
+    line_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "LineName",
@@ -52,7 +52,7 @@ class HeadingSignStructure(SignEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_mode: Optional[AllVehicleModesOfTransportEnumeration] = field(
+    transport_mode: AllVehicleModesOfTransportEnumeration | None = field(
         default=None,
         metadata={
             "name": "TransportMode",
@@ -60,7 +60,7 @@ class HeadingSignStructure(SignEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    transport_submode: Optional[TransportSubmode] = field(
+    transport_submode: TransportSubmode | None = field(
         default=None,
         metadata={
             "name": "TransportSubmode",
@@ -68,7 +68,7 @@ class HeadingSignStructure(SignEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    line_map: Optional[str] = field(
+    line_map: str | None = field(
         default=None,
         metadata={
             "name": "LineMap",
@@ -76,7 +76,7 @@ class HeadingSignStructure(SignEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_ref: Optional[DirectionRef] = field(
+    direction_ref: DirectionRef | None = field(
         default=None,
         metadata={
             "name": "DirectionRef",
@@ -84,7 +84,7 @@ class HeadingSignStructure(SignEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    direction_name: Optional[MultilingualString] = field(
+    direction_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "DirectionName",
@@ -92,7 +92,7 @@ class HeadingSignStructure(SignEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    destination_display_ref: Optional[DestinationDisplayRef] = field(
+    destination_display_ref: DestinationDisplayRef | None = field(
         default=None,
         metadata={
             "name": "DestinationDisplayRef",
@@ -100,7 +100,7 @@ class HeadingSignStructure(SignEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    line_public_code: Optional[str] = field(
+    line_public_code: str | None = field(
         default=None,
         metadata={
             "name": "LinePublicCode",

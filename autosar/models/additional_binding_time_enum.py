@@ -30,20 +30,20 @@ class AdditionalBindingTimeEnum:
     class Meta:
         name = "ADDITIONAL-BINDING-TIME-ENUM"
 
-    value: Optional[AdditionalBindingTimeEnumSimple] = field(
+    value: AdditionalBindingTimeEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

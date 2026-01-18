@@ -28,7 +28,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "JourneyAccounting_VersionStructure"
 
-    accounted_object_ref: Optional[VersionOfObjectRefStructure] = field(
+    accounted_object_ref: VersionOfObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "AccountedObjectRef",
@@ -36,20 +36,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: Optional[
-        Union[
-            RetailConsortiumRef,
-            OnlineServiceOperatorRef,
-            GeneralOrganisationRef,
-            ManagementAgentRef,
-            ServicedOrganisationRef,
-            TravelAgentRef,
-            OtherOrganisationRef,
-            AuthorityRef,
-            OperatorRef,
-            OrganisationRef,
-        ]
-    ] = field(
+    organisation_ref_or_other_organisation_ref_or_transport_organisation_ref: RetailConsortiumRef | OnlineServiceOperatorRef | GeneralOrganisationRef | ManagementAgentRef | ServicedOrganisationRef | TravelAgentRef | OtherOrganisationRef | AuthorityRef | OperatorRef | OrganisationRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -107,7 +94,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    supply_contract_ref: Optional[SupplyContractRef] = field(
+    supply_contract_ref: SupplyContractRef | None = field(
         default=None,
         metadata={
             "name": "SupplyContractRef",
@@ -115,7 +102,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accounting_code: Optional[str] = field(
+    accounting_code: str | None = field(
         default=None,
         metadata={
             "name": "AccountingCode",
@@ -123,7 +110,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accounting_type: Optional[JourneyAccountingEnumeration] = field(
+    accounting_type: JourneyAccountingEnumeration | None = field(
         default=None,
         metadata={
             "name": "AccountingType",
@@ -139,7 +126,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distance: Optional[Decimal] = field(
+    distance: Decimal | None = field(
         default=None,
         metadata={
             "name": "Distance",
@@ -147,7 +134,7 @@ class JourneyAccountingVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    duration: Optional[XmlDuration] = field(
+    duration: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "Duration",

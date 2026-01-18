@@ -13,9 +13,7 @@ class SituationRecordExtensionType:
     class Meta:
         name = "_SituationRecordExtensionType"
 
-    situation_record_extended_approved: Optional[
-        SituationRecordExtendedApproved
-    ] = field(
+    situation_record_extended_approved: SituationRecordExtendedApproved | None = field(
         default=None,
         metadata={
             "name": "situationRecordExtendedApproved",

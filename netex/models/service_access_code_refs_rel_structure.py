@@ -12,7 +12,7 @@ class ServiceAccessCodeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "serviceAccessCodeRefs_RelStructure"
 
-    service_access_code_ref: Optional[ServiceAccessCodeRef] = field(
+    service_access_code_ref: ServiceAccessCodeRef | None = field(
         default=None,
         metadata={
             "name": "ServiceAccessCodeRef",

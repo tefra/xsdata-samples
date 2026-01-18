@@ -36,26 +36,7 @@ class PointInJourneyPatternVersionedChildStructure(
     class Meta:
         name = "PointInJourneyPattern_VersionedChildStructure"
 
-    choice_1: Optional[
-        Union[
-            VehicleMeetingPointRef,
-            WirePointRef,
-            RoadPointRef,
-            RailwayPointRef,
-            TrafficControlPointRef,
-            BeaconPointRef,
-            ActivationPointRef,
-            BorderPointRef,
-            FareScheduledStopPointRef,
-            ScheduledStopPointRef,
-            GaragePointRef,
-            ParkingPointRef,
-            ReliefPointRef,
-            TimingPointRef,
-            RoutePointRef,
-            PointRef,
-        ]
-    ] = field(
+    choice_1: VehicleMeetingPointRef | WirePointRef | RoadPointRef | RailwayPointRef | TrafficControlPointRef | BeaconPointRef | ActivationPointRef | BorderPointRef | FareScheduledStopPointRef | ScheduledStopPointRef | GaragePointRef | ParkingPointRef | ReliefPointRef | TimingPointRef | RoutePointRef | PointRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -143,9 +124,7 @@ class PointInJourneyPatternVersionedChildStructure(
             ),
         },
     )
-    destination_display_ref_or_destination_display_view: Optional[
-        Union[DestinationDisplayRef, DestinationDisplayView]
-    ] = field(
+    destination_display_ref_or_destination_display_view: DestinationDisplayRef | DestinationDisplayView | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -163,14 +142,14 @@ class PointInJourneyPatternVersionedChildStructure(
             ),
         },
     )
-    vias: Optional[ViasRelStructure] = field(
+    vias: ViasRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    flexible_point_properties: Optional[FlexiblePointProperties] = field(
+    flexible_point_properties: FlexiblePointProperties | None = field(
         default=None,
         metadata={
             "name": "FlexiblePointProperties",
@@ -178,7 +157,7 @@ class PointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    change_of_destination_display: Optional[bool] = field(
+    change_of_destination_display: bool | None = field(
         default=None,
         metadata={
             "name": "ChangeOfDestinationDisplay",
@@ -186,7 +165,7 @@ class PointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    change_of_service_requirements: Optional[bool] = field(
+    change_of_service_requirements: bool | None = field(
         default=None,
         metadata={
             "name": "ChangeOfServiceRequirements",
@@ -194,7 +173,7 @@ class PointInJourneyPatternVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    notice_assignments: Optional[NoticeAssignmentsRelStructure] = field(
+    notice_assignments: NoticeAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "noticeAssignments",

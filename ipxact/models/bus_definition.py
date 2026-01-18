@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -58,55 +60,55 @@ class BusDefinition:
         name = "busDefinition"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    vendor: Optional[str] = field(
+    vendor: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    library: Optional[str] = field(
+    library: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    name: Optional[str] = field(
+    name: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    version: Optional[str] = field(
+    version: str | None = field(
         default=None,
         metadata={
             "type": "Element",
             "required": True,
         },
     )
-    display_name: Optional[str] = field(
+    display_name: str | None = field(
         default=None,
         metadata={
             "name": "displayName",
             "type": "Element",
         },
     )
-    short_description: Optional[ShortDescription] = field(
+    short_description: ShortDescription | None = field(
         default=None,
         metadata={
             "name": "shortDescription",
             "type": "Element",
         },
     )
-    description: Optional[Description] = field(
+    description: Description | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    direct_connection: Optional[bool] = field(
+    direct_connection: bool | None = field(
         default=None,
         metadata={
             "name": "directConnection",
@@ -114,13 +116,13 @@ class BusDefinition:
             "required": True,
         },
     )
-    broadcast: Optional[bool] = field(
+    broadcast: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    is_addressable: Optional[bool] = field(
+    is_addressable: bool | None = field(
         default=None,
         metadata={
             "name": "isAddressable",
@@ -128,59 +130,59 @@ class BusDefinition:
             "required": True,
         },
     )
-    extends: Optional[LibraryRefType] = field(
+    extends: LibraryRefType | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    max_initiators: Optional[UnsignedIntExpression] = field(
+    max_initiators: UnsignedIntExpression | None = field(
         default=None,
         metadata={
             "name": "maxInitiators",
             "type": "Element",
         },
     )
-    max_targets: Optional[UnsignedIntExpression] = field(
+    max_targets: UnsignedIntExpression | None = field(
         default=None,
         metadata={
             "name": "maxTargets",
             "type": "Element",
         },
     )
-    system_group_names: Optional["BusDefinition.SystemGroupNames"] = field(
+    system_group_names: BusDefinition.SystemGroupNames | None = field(
         default=None,
         metadata={
             "name": "systemGroupNames",
             "type": "Element",
         },
     )
-    choices: Optional[Choices] = field(
+    choices: Choices | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    parameters: Optional[Parameters] = field(
+    parameters: Parameters | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    assertions: Optional[Assertions] = field(
+    assertions: Assertions | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    vendor_extensions: Optional[VendorExtensions] = field(
+    vendor_extensions: VendorExtensions | None = field(
         default=None,
         metadata={
             "name": "vendorExtensions",
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -196,7 +198,7 @@ class BusDefinition:
         """
 
         system_group_name: list[
-            "BusDefinition.SystemGroupNames.SystemGroupName"
+            BusDefinition.SystemGroupNames.SystemGroupName
         ] = field(
             default_factory=list,
             metadata={
@@ -214,7 +216,7 @@ class BusDefinition:
                     "required": True,
                 },
             )
-            id: Optional[str] = field(
+            id: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

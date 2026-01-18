@@ -32,7 +32,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True)
 class TransportProgressStatusType:
-    ublextensions: Optional[Ublextensions] = field(
+    ublextensions: Ublextensions | None = field(
         default=None,
         metadata={
             "name": "UBLExtensions",
@@ -40,7 +40,7 @@ class TransportProgressStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
         },
     )
-    ublversion_id: Optional[UblversionId] = field(
+    ublversion_id: UblversionId | None = field(
         default=None,
         metadata={
             "name": "UBLVersionID",
@@ -48,7 +48,7 @@ class TransportProgressStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    customization_id: Optional[CustomizationId] = field(
+    customization_id: CustomizationId | None = field(
         default=None,
         metadata={
             "name": "CustomizationID",
@@ -56,7 +56,7 @@ class TransportProgressStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_id: Optional[ProfileId] = field(
+    profile_id: ProfileId | None = field(
         default=None,
         metadata={
             "name": "ProfileID",
@@ -64,7 +64,7 @@ class TransportProgressStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    profile_execution_id: Optional[ProfileExecutionId] = field(
+    profile_execution_id: ProfileExecutionId | None = field(
         default=None,
         metadata={
             "name": "ProfileExecutionID",
@@ -72,7 +72,7 @@ class TransportProgressStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    id: Optional[Id] = field(
+    id: Id | None = field(
         default=None,
         metadata={
             "name": "ID",
@@ -81,7 +81,7 @@ class TransportProgressStatusType:
             "required": True,
         },
     )
-    copy_indicator: Optional[CopyIndicator] = field(
+    copy_indicator: CopyIndicator | None = field(
         default=None,
         metadata={
             "name": "CopyIndicator",
@@ -89,7 +89,7 @@ class TransportProgressStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    uuid: Optional[Uuid] = field(
+    uuid: Uuid | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -97,7 +97,7 @@ class TransportProgressStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    issue_date: Optional[IssueDate] = field(
+    issue_date: IssueDate | None = field(
         default=None,
         metadata={
             "name": "IssueDate",
@@ -106,7 +106,7 @@ class TransportProgressStatusType:
             "required": True,
         },
     )
-    issue_time: Optional[IssueTime] = field(
+    issue_time: IssueTime | None = field(
         default=None,
         metadata={
             "name": "IssueTime",
@@ -123,7 +123,7 @@ class TransportProgressStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
         },
     )
-    status_available_indicator: Optional[StatusAvailableIndicator] = field(
+    status_available_indicator: StatusAvailableIndicator | None = field(
         default=None,
         metadata={
             "name": "StatusAvailableIndicator",
@@ -139,7 +139,7 @@ class TransportProgressStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    sender_party: Optional[SenderParty] = field(
+    sender_party: SenderParty | None = field(
         default=None,
         metadata={
             "name": "SenderParty",
@@ -147,7 +147,7 @@ class TransportProgressStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    receiver_party: Optional[ReceiverParty] = field(
+    receiver_party: ReceiverParty | None = field(
         default=None,
         metadata={
             "name": "ReceiverParty",
@@ -155,7 +155,7 @@ class TransportProgressStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    source_issuer_party: Optional[SourceIssuerParty] = field(
+    source_issuer_party: SourceIssuerParty | None = field(
         default=None,
         metadata={
             "name": "SourceIssuerParty",
@@ -163,9 +163,7 @@ class TransportProgressStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_progress_status_request_document_reference: Optional[
-        TransportProgressStatusRequestDocumentReference
-    ] = field(
+    transport_progress_status_request_document_reference: TransportProgressStatusRequestDocumentReference | None = field(
         default=None,
         metadata={
             "name": "TransportProgressStatusRequestDocumentReference",
@@ -173,7 +171,7 @@ class TransportProgressStatusType:
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
         },
     )
-    transport_means: Optional[TransportMeans] = field(
+    transport_means: TransportMeans | None = field(
         default=None,
         metadata={
             "name": "TransportMeans",

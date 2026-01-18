@@ -18,11 +18,7 @@ class QualityStructureFactorPriceVersionedChildStructure(
     class Meta:
         name = "QualityStructureFactorPrice_VersionedChildStructure"
 
-    quality_structure_factor_ref: Optional[
-        Union[
-            FareQuotaFactorRef, FareDemandFactorRef, QualityStructureFactorRef
-        ]
-    ] = field(
+    quality_structure_factor_ref: FareQuotaFactorRef | FareDemandFactorRef | QualityStructureFactorRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

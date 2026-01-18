@@ -15,7 +15,7 @@ class DeliveryVariantVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "DeliveryVariant_VersionStructure"
 
-    parent_ref: Optional[VersionOfObjectRefStructure] = field(
+    parent_ref: VersionOfObjectRefStructure | None = field(
         default=None,
         metadata={
             "name": "ParentRef",
@@ -23,7 +23,7 @@ class DeliveryVariantVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    delivery_variant_media_type: Optional[DeliveryVariantTypeEnumeration] = (
+    delivery_variant_media_type: DeliveryVariantTypeEnumeration | None = (
         field(
             default=None,
             metadata={
@@ -33,7 +33,7 @@ class DeliveryVariantVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    type_of_delivery_variant_ref: Optional[TypeOfDeliveryVariantRef] = field(
+    type_of_delivery_variant_ref: TypeOfDeliveryVariantRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfDeliveryVariantRef",
@@ -41,7 +41,7 @@ class DeliveryVariantVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    variant_text: Optional[MultilingualString] = field(
+    variant_text: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "VariantText",
@@ -49,7 +49,7 @@ class DeliveryVariantVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    order: Optional[int] = field(
+    order: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

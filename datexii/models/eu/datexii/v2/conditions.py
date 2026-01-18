@@ -21,7 +21,7 @@ class Conditions(TrafficElement):
     :ivar conditions_extension:
     """
 
-    driving_condition_type: Optional[DrivingConditionTypeEnum] = field(
+    driving_condition_type: DrivingConditionTypeEnum | None = field(
         default=None,
         metadata={
             "name": "drivingConditionType",
@@ -29,7 +29,7 @@ class Conditions(TrafficElement):
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    conditions_extension: Optional[ExtensionType] = field(
+    conditions_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "conditionsExtension",

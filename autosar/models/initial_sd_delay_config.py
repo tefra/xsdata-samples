@@ -66,7 +66,7 @@ class InitialSdDelayConfig:
     class Meta:
         name = "INITIAL-SD-DELAY-CONFIG"
 
-    initial_delay_max_value: Optional[TimeValue] = field(
+    initial_delay_max_value: TimeValue | None = field(
         default=None,
         metadata={
             "name": "INITIAL-DELAY-MAX-VALUE",
@@ -74,7 +74,7 @@ class InitialSdDelayConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_delay_min_value: Optional[TimeValue] = field(
+    initial_delay_min_value: TimeValue | None = field(
         default=None,
         metadata={
             "name": "INITIAL-DELAY-MIN-VALUE",
@@ -82,7 +82,7 @@ class InitialSdDelayConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_repetitions_base_delay: Optional[TimeValue] = field(
+    initial_repetitions_base_delay: TimeValue | None = field(
         default=None,
         metadata={
             "name": "INITIAL-REPETITIONS-BASE-DELAY",
@@ -90,7 +90,7 @@ class InitialSdDelayConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    initial_repetitions_max: Optional[PositiveInteger] = field(
+    initial_repetitions_max: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "INITIAL-REPETITIONS-MAX",
@@ -98,14 +98,14 @@ class InitialSdDelayConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -33,7 +35,7 @@ class RoleBasedResourceDependency:
     class Meta:
         name = "ROLE-BASED-RESOURCE-DEPENDENCY"
 
-    resource_ref: Optional["RoleBasedResourceDependency.ResourceRef"] = field(
+    resource_ref: RoleBasedResourceDependency.ResourceRef | None = field(
         default=None,
         metadata={
             "name": "RESOURCE-REF",
@@ -41,7 +43,7 @@ class RoleBasedResourceDependency:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    role: Optional[Identifier] = field(
+    role: Identifier | None = field(
         default=None,
         metadata={
             "name": "ROLE",
@@ -49,14 +51,14 @@ class RoleBasedResourceDependency:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +69,7 @@ class RoleBasedResourceDependency:
 
     @dataclass
     class ResourceRef(Ref):
-        dest: Optional[CpSoftwareClusterResourceSubtypesEnum] = field(
+        dest: CpSoftwareClusterResourceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -14,7 +14,7 @@ class TimetabledPassingTimeViewStructure(PassingTimeViewStructure):
     class Meta:
         name = "TimetabledPassingTime_ViewStructure"
 
-    arrival_time: Optional[XmlTime] = field(
+    arrival_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "ArrivalTime",
@@ -22,7 +22,7 @@ class TimetabledPassingTimeViewStructure(PassingTimeViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    arrival_day_offset: Optional[int] = field(
+    arrival_day_offset: int | None = field(
         default=None,
         metadata={
             "name": "ArrivalDayOffset",
@@ -30,7 +30,7 @@ class TimetabledPassingTimeViewStructure(PassingTimeViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    departure_time: Optional[XmlTime] = field(
+    departure_time: XmlTime | None = field(
         default=None,
         metadata={
             "name": "DepartureTime",
@@ -38,7 +38,7 @@ class TimetabledPassingTimeViewStructure(PassingTimeViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    departure_day_offset: Optional[int] = field(
+    departure_day_offset: int | None = field(
         default=None,
         metadata={
             "name": "DepartureDayOffset",
@@ -46,7 +46,7 @@ class TimetabledPassingTimeViewStructure(PassingTimeViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    waiting_time: Optional[XmlDuration] = field(
+    waiting_time: XmlDuration | None = field(
         default=None,
         metadata={
             "name": "WaitingTime",
@@ -54,7 +54,7 @@ class TimetabledPassingTimeViewStructure(PassingTimeViewStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    headway: Optional[HeadwayIntervalStructure] = field(
+    headway: HeadwayIntervalStructure | None = field(
         default=None,
         metadata={
             "name": "Headway",

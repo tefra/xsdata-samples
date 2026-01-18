@@ -12,7 +12,7 @@ class ComplexFeatureRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "complexFeatureRefs_RelStructure"
 
-    complex_feature_ref: Optional[ComplexFeatureRef] = field(
+    complex_feature_ref: ComplexFeatureRef | None = field(
         default=None,
         metadata={
             "name": "ComplexFeatureRef",

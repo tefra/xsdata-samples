@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -109,7 +111,7 @@ class RptExecutableEntityEvent:
     class Meta:
         name = "RPT-EXECUTABLE-ENTITY-EVENT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -118,9 +120,7 @@ class RptExecutableEntityEvent:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "RptExecutableEntityEvent.ShortNameFragments"
-    ] = field(
+    short_name_fragments: RptExecutableEntityEvent.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -128,7 +128,7 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -136,7 +136,7 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -144,7 +144,7 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -152,7 +152,7 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -160,7 +160,7 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -168,7 +168,7 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["RptExecutableEntityEvent.Annotations"] = field(
+    annotations: RptExecutableEntityEvent.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -176,9 +176,7 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    execution_context_refs: Optional[
-        "RptExecutableEntityEvent.ExecutionContextRefs"
-    ] = field(
+    execution_context_refs: RptExecutableEntityEvent.ExecutionContextRefs | None = field(
         default=None,
         metadata={
             "name": "EXECUTION-CONTEXT-REFS",
@@ -186,9 +184,7 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_data_assignments: Optional[
-        "RptExecutableEntityEvent.McDataAssignments"
-    ] = field(
+    mc_data_assignments: RptExecutableEntityEvent.McDataAssignments | None = field(
         default=None,
         metadata={
             "name": "MC-DATA-ASSIGNMENTS",
@@ -196,7 +192,7 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_event_id: Optional[PositiveInteger] = field(
+    rpt_event_id: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "RPT-EVENT-ID",
@@ -204,9 +200,7 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_executable_entity_properties: Optional[
-        RptExecutableEntityProperties
-    ] = field(
+    rpt_executable_entity_properties: RptExecutableEntityProperties | None = field(
         default=None,
         metadata={
             "name": "RPT-EXECUTABLE-ENTITY-PROPERTIES",
@@ -214,7 +208,7 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_impl_policy: Optional[RptImplPolicy] = field(
+    rpt_impl_policy: RptImplPolicy | None = field(
         default=None,
         metadata={
             "name": "RPT-IMPL-POLICY",
@@ -222,9 +216,7 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_service_point_post_refs: Optional[
-        "RptExecutableEntityEvent.RptServicePointPostRefs"
-    ] = field(
+    rpt_service_point_post_refs: RptExecutableEntityEvent.RptServicePointPostRefs | None = field(
         default=None,
         metadata={
             "name": "RPT-SERVICE-POINT-POST-REFS",
@@ -232,9 +224,7 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    rpt_service_point_pre_refs: Optional[
-        "RptExecutableEntityEvent.RptServicePointPreRefs"
-    ] = field(
+    rpt_service_point_pre_refs: RptExecutableEntityEvent.RptServicePointPreRefs | None = field(
         default=None,
         metadata={
             "name": "RPT-SERVICE-POINT-PRE-REFS",
@@ -242,7 +232,7 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -250,14 +240,14 @@ class RptExecutableEntityEvent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -265,7 +255,7 @@ class RptExecutableEntityEvent:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -298,7 +288,7 @@ class RptExecutableEntityEvent:
     @dataclass
     class ExecutionContextRefs:
         execution_context_ref: list[
-            "RptExecutableEntityEvent.ExecutionContextRefs.ExecutionContextRef"
+            RptExecutableEntityEvent.ExecutionContextRefs.ExecutionContextRef
         ] = field(
             default_factory=list,
             metadata={
@@ -310,7 +300,7 @@ class RptExecutableEntityEvent:
 
         @dataclass
         class ExecutionContextRef(Ref):
-            dest: Optional[RptExecutionContextSubtypesEnum] = field(
+            dest: RptExecutionContextSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -333,7 +323,7 @@ class RptExecutableEntityEvent:
     @dataclass
     class RptServicePointPostRefs:
         rpt_service_point_post_ref: list[
-            "RptExecutableEntityEvent.RptServicePointPostRefs.RptServicePointPostRef"
+            RptExecutableEntityEvent.RptServicePointPostRefs.RptServicePointPostRef
         ] = field(
             default_factory=list,
             metadata={
@@ -345,7 +335,7 @@ class RptExecutableEntityEvent:
 
         @dataclass
         class RptServicePointPostRef(Ref):
-            dest: Optional[RptServicePointSubtypesEnum] = field(
+            dest: RptServicePointSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -357,7 +347,7 @@ class RptExecutableEntityEvent:
     @dataclass
     class RptServicePointPreRefs:
         rpt_service_point_pre_ref: list[
-            "RptExecutableEntityEvent.RptServicePointPreRefs.RptServicePointPreRef"
+            RptExecutableEntityEvent.RptServicePointPreRefs.RptServicePointPreRef
         ] = field(
             default_factory=list,
             metadata={
@@ -369,7 +359,7 @@ class RptExecutableEntityEvent:
 
         @dataclass
         class RptServicePointPreRef(Ref):
-            dest: Optional[RptServicePointSubtypesEnum] = field(
+            dest: RptServicePointSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

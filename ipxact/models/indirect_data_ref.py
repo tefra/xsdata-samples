@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -23,21 +25,21 @@ class IndirectDataRef:
         name = "indirectDataRef"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    address_space_ref: Optional["IndirectDataRef.AddressSpaceRef"] = field(
+    address_space_ref: IndirectDataRef.AddressSpaceRef | None = field(
         default=None,
         metadata={
             "name": "addressSpaceRef",
             "type": "Element",
         },
     )
-    memory_map_ref: Optional["IndirectDataRef.MemoryMapRef"] = field(
+    memory_map_ref: IndirectDataRef.MemoryMapRef | None = field(
         default=None,
         metadata={
             "name": "memoryMapRef",
             "type": "Element",
         },
     )
-    memory_remap_ref: Optional[MemoryRemapRef] = field(
+    memory_remap_ref: MemoryRemapRef | None = field(
         default=None,
         metadata={
             "name": "memoryRemapRef",
@@ -51,7 +53,7 @@ class IndirectDataRef:
             "type": "Element",
         },
     )
-    address_block_ref: Optional[AddressBlockRef] = field(
+    address_block_ref: AddressBlockRef | None = field(
         default=None,
         metadata={
             "name": "addressBlockRef",
@@ -65,21 +67,21 @@ class IndirectDataRef:
             "type": "Element",
         },
     )
-    register_ref: Optional[RegisterRef] = field(
+    register_ref: RegisterRef | None = field(
         default=None,
         metadata={
             "name": "registerRef",
             "type": "Element",
         },
     )
-    alternate_register_ref: Optional[AlternateRegisterRef] = field(
+    alternate_register_ref: AlternateRegisterRef | None = field(
         default=None,
         metadata={
             "name": "alternateRegisterRef",
             "type": "Element",
         },
     )
-    field_ref: Optional[FieldRef] = field(
+    field_ref: FieldRef | None = field(
         default=None,
         metadata={
             "name": "fieldRef",
@@ -90,7 +92,7 @@ class IndirectDataRef:
 
     @dataclass
     class AddressSpaceRef:
-        address_space_ref: Optional[str] = field(
+        address_space_ref: str | None = field(
             default=None,
             metadata={
                 "name": "addressSpaceRef",
@@ -101,7 +103,7 @@ class IndirectDataRef:
 
     @dataclass
     class MemoryMapRef:
-        memory_map_ref: Optional[str] = field(
+        memory_map_ref: str | None = field(
             default=None,
             metadata={
                 "name": "memoryMapRef",

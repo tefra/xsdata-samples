@@ -33,7 +33,7 @@ class CoctMt090108UvPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -57,7 +57,7 @@ class CoctMt090108UvPerson:
             "min_occurs": 1,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -97,7 +97,7 @@ class CoctMt090108UvAssignedPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -121,7 +121,7 @@ class CoctMt090108UvAssignedPerson:
             "min_occurs": 1,
         },
     )
-    code: Optional[Ce] = field(
+    code: Ce | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -142,7 +142,7 @@ class CoctMt090108UvAssignedPerson:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_person: Optional[CoctMt090108UvPerson] = field(
+    assigned_person: CoctMt090108UvPerson | None = field(
         default=None,
         metadata={
             "name": "assignedPerson",
@@ -151,7 +151,7 @@ class CoctMt090108UvAssignedPerson:
             "nillable": True,
         },
     )
-    represented_organization: Optional[CoctMt150007UvOrganization] = field(
+    represented_organization: CoctMt150007UvOrganization | None = field(
         default=None,
         metadata={
             "name": "representedOrganization",
@@ -160,7 +160,7 @@ class CoctMt090108UvAssignedPerson:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",

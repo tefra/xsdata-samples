@@ -27,25 +27,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class ServiceDeliveryErrorConditionStructure:
-    choice: Optional[
-        Union[
-            UnapprovedKeyAccessError,
-            UnknownParticipantError,
-            UnknownEndpointError,
-            EndpointDeniedAccessError,
-            EndpointNotAvailableAccessError,
-            ServiceNotAvailableError,
-            CapabilityNotSupportedError,
-            AccessNotAllowedError,
-            InvalidDataReferencesError,
-            BeyondDataHorizon,
-            NoInfoForTopicError,
-            ParametersIgnoredError,
-            UnknownExtensionsError,
-            AllowedResourceUsageExceededError,
-            OtherError,
-        ]
-    ] = field(
+    choice: UnapprovedKeyAccessError | UnknownParticipantError | UnknownEndpointError | EndpointDeniedAccessError | EndpointNotAvailableAccessError | ServiceNotAvailableError | CapabilityNotSupportedError | AccessNotAllowedError | InvalidDataReferencesError | BeyondDataHorizon | NoInfoForTopicError | ParametersIgnoredError | UnknownExtensionsError | AllowedResourceUsageExceededError | OtherError | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -128,7 +110,7 @@ class ServiceDeliveryErrorConditionStructure:
             ),
         },
     )
-    description: Optional[ErrorDescriptionStructure] = field(
+    description: ErrorDescriptionStructure | None = field(
         default=None,
         metadata={
             "name": "Description",

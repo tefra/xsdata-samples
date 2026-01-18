@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -86,7 +88,7 @@ class UcmStep:
     class Meta:
         name = "UCM-STEP"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -95,7 +97,7 @@ class UcmStep:
             "required": True,
         },
     )
-    short_name_fragments: Optional["UcmStep.ShortNameFragments"] = field(
+    short_name_fragments: UcmStep.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -103,7 +105,7 @@ class UcmStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -111,7 +113,7 @@ class UcmStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -119,7 +121,7 @@ class UcmStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -127,7 +129,7 @@ class UcmStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -135,7 +137,7 @@ class UcmStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -143,7 +145,7 @@ class UcmStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["UcmStep.Annotations"] = field(
+    annotations: UcmStep.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -151,7 +153,7 @@ class UcmStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_package_steps: Optional["UcmStep.SoftwarePackageSteps"] = field(
+    software_package_steps: UcmStep.SoftwarePackageSteps | None = field(
         default=None,
         metadata={
             "name": "SOFTWARE-PACKAGE-STEPS",
@@ -159,7 +161,7 @@ class UcmStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ucm_ref: Optional["UcmStep.UcmRef"] = field(
+    ucm_ref: UcmStep.UcmRef | None = field(
         default=None,
         metadata={
             "name": "UCM-REF",
@@ -167,14 +169,14 @@ class UcmStep:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -182,7 +184,7 @@ class UcmStep:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -225,7 +227,7 @@ class UcmStep:
 
     @dataclass
     class UcmRef(Ref):
-        dest: Optional[UcmDescriptionSubtypesEnum] = field(
+        dest: UcmDescriptionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

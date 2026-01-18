@@ -21,7 +21,7 @@ class VersionableQueryType(IdentifiableQueryType):
         will only match the latest version.
     """
 
-    version: Union[str, WildcardType, WildCardValueType] = field(
+    version: str | WildcardType | WildCardValueType = field(
         default=WildcardType.ASTERISK,
         metadata={
             "type": "Attribute",

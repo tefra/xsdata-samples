@@ -28,7 +28,7 @@ class Validity:
     :ivar validity_extension:
     """
 
-    validity_status: Optional[ValidityStatusEnum] = field(
+    validity_status: ValidityStatusEnum | None = field(
         default=None,
         metadata={
             "name": "validityStatus",
@@ -37,14 +37,14 @@ class Validity:
             "required": True,
         },
     )
-    overrunning: Optional[bool] = field(
+    overrunning: bool | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    validity_time_specification: Optional[OverallPeriod] = field(
+    validity_time_specification: OverallPeriod | None = field(
         default=None,
         metadata={
             "name": "validityTimeSpecification",
@@ -53,7 +53,7 @@ class Validity:
             "required": True,
         },
     )
-    validity_extension: Optional[ExtensionType] = field(
+    validity_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "validityExtension",

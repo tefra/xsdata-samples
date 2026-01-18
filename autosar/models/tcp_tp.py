@@ -41,7 +41,7 @@ class TcpTp:
     class Meta:
         name = "TCP-TP"
 
-    keep_alive_interval: Optional[TimeValue] = field(
+    keep_alive_interval: TimeValue | None = field(
         default=None,
         metadata={
             "name": "KEEP-ALIVE-INTERVAL",
@@ -49,7 +49,7 @@ class TcpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    keep_alive_probes_max: Optional[PositiveInteger] = field(
+    keep_alive_probes_max: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "KEEP-ALIVE-PROBES-MAX",
@@ -57,7 +57,7 @@ class TcpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    keep_alive_time: Optional[TimeValue] = field(
+    keep_alive_time: TimeValue | None = field(
         default=None,
         metadata={
             "name": "KEEP-ALIVE-TIME",
@@ -65,7 +65,7 @@ class TcpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    keep_alives: Optional[Boolean] = field(
+    keep_alives: Boolean | None = field(
         default=None,
         metadata={
             "name": "KEEP-ALIVES",
@@ -73,7 +73,7 @@ class TcpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    nagles_algorithm: Optional[Boolean] = field(
+    nagles_algorithm: Boolean | None = field(
         default=None,
         metadata={
             "name": "NAGLES-ALGORITHM",
@@ -81,7 +81,7 @@ class TcpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    receive_window_min: Optional[PositiveInteger] = field(
+    receive_window_min: PositiveInteger | None = field(
         default=None,
         metadata={
             "name": "RECEIVE-WINDOW-MIN",
@@ -89,7 +89,7 @@ class TcpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tcp_tp_port: Optional[TpPort] = field(
+    tcp_tp_port: TpPort | None = field(
         default=None,
         metadata={
             "name": "TCP-TP-PORT",
@@ -97,14 +97,14 @@ class TcpTp:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

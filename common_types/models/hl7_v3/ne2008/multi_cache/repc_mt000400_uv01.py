@@ -48,7 +48,7 @@ class RepcMt000400Uv01Author5:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -64,7 +64,7 @@ class RepcMt000400Uv01Author5:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    note_text: Optional[St] = field(
+    note_text: St | None = field(
         default=None,
         metadata={
             "name": "noteText",
@@ -72,7 +72,7 @@ class RepcMt000400Uv01Author5:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: Optional[TsExplicit] = field(
+    time: TsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -80,7 +80,7 @@ class RepcMt000400Uv01Author5:
             "required": True,
         },
     )
-    mode_code: Optional[Ce] = field(
+    mode_code: Ce | None = field(
         default=None,
         metadata={
             "name": "modeCode",
@@ -89,7 +89,7 @@ class RepcMt000400Uv01Author5:
             "required": True,
         },
     )
-    signature_code: Optional[Cs] = field(
+    signature_code: Cs | None = field(
         default=None,
         metadata={
             "name": "signatureCode",
@@ -98,7 +98,7 @@ class RepcMt000400Uv01Author5:
             "required": True,
         },
     )
-    signature_text: Optional[EdExplicit] = field(
+    signature_text: EdExplicit | None = field(
         default=None,
         metadata={
             "name": "signatureText",
@@ -106,7 +106,7 @@ class RepcMt000400Uv01Author5:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    assigned_person: Optional[CoctMt090100Uv01AssignedPerson] = field(
+    assigned_person: CoctMt090100Uv01AssignedPerson | None = field(
         default=None,
         metadata={
             "name": "assignedPerson",
@@ -115,7 +115,7 @@ class RepcMt000400Uv01Author5:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -154,7 +154,7 @@ class RepcMt000400Uv01Component4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -170,7 +170,7 @@ class RepcMt000400Uv01Component4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    sequence_number: Optional[Int] = field(
+    sequence_number: Int | None = field(
         default=None,
         metadata={
             "name": "sequenceNumber",
@@ -178,7 +178,7 @@ class RepcMt000400Uv01Component4:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    act_reference1: Optional[RepcMt000100Uv01ActReference] = field(
+    act_reference1: RepcMt000100Uv01ActReference | None = field(
         default=None,
         metadata={
             "name": "actReference1",
@@ -187,7 +187,7 @@ class RepcMt000400Uv01Component4:
             "nillable": True,
         },
     )
-    act: Optional[RepcMt000100Uv01Act] = field(
+    act: RepcMt000100Uv01Act | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -195,7 +195,7 @@ class RepcMt000400Uv01Component4:
             "nillable": True,
         },
     )
-    encounter: Optional[RepcMt000100Uv01Encounter] = field(
+    encounter: RepcMt000100Uv01Encounter | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -203,7 +203,7 @@ class RepcMt000400Uv01Component4:
             "nillable": True,
         },
     )
-    observation: Optional[RepcMt000100Uv01Observation] = field(
+    observation: RepcMt000100Uv01Observation | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -211,7 +211,7 @@ class RepcMt000400Uv01Component4:
             "nillable": True,
         },
     )
-    organizer: Optional[RepcMt000100Uv01Organizer] = field(
+    organizer: RepcMt000100Uv01Organizer | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -219,7 +219,7 @@ class RepcMt000400Uv01Component4:
             "nillable": True,
         },
     )
-    procedure: Optional[RepcMt000100Uv01Procedure] = field(
+    procedure: RepcMt000100Uv01Procedure | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -227,9 +227,7 @@ class RepcMt000400Uv01Component4:
             "nillable": True,
         },
     )
-    substance_administration: Optional[
-        RepcMt000100Uv01SubstanceAdministration
-    ] = field(
+    substance_administration: RepcMt000100Uv01SubstanceAdministration | None = field(
         default=None,
         metadata={
             "name": "substanceAdministration",
@@ -238,7 +236,7 @@ class RepcMt000400Uv01Component4:
             "nillable": True,
         },
     )
-    supply: Optional[RepcMt000100Uv01Supply] = field(
+    supply: RepcMt000100Uv01Supply | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -246,14 +244,14 @@ class RepcMt000400Uv01Component4:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    type_code: Optional[ActRelationshipHasComponent] = field(
+    type_code: ActRelationshipHasComponent | None = field(
         default=None,
         metadata={
             "name": "typeCode",
@@ -292,7 +290,7 @@ class RepcMt000400Uv01Custodian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -308,14 +306,14 @@ class RepcMt000400Uv01Custodian:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    time: Optional[IvlTsExplicit] = field(
+    time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
         },
     )
-    responsible_party: Optional[CoctMt040200Uv01ResponsibleParty] = field(
+    responsible_party: CoctMt040200Uv01ResponsibleParty | None = field(
         default=None,
         metadata={
             "name": "responsibleParty",
@@ -324,7 +322,7 @@ class RepcMt000400Uv01Custodian:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -355,7 +353,7 @@ class RepcMt000400Uv01ActCategory:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -371,7 +369,7 @@ class RepcMt000400Uv01ActCategory:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cs] = field(
+    code: Cs | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -395,7 +393,7 @@ class RepcMt000400Uv01ActCategory:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -435,7 +433,7 @@ class RepcMt000400Uv01ActList:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -451,7 +449,7 @@ class RepcMt000400Uv01ActList:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    code: Optional[Cd] = field(
+    code: Cd | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -459,7 +457,7 @@ class RepcMt000400Uv01ActList:
             "required": True,
         },
     )
-    effective_time: Optional[IvlTsExplicit] = field(
+    effective_time: IvlTsExplicit | None = field(
         default=None,
         metadata={
             "name": "effectiveTime",
@@ -491,7 +489,7 @@ class RepcMt000400Uv01ActList:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",

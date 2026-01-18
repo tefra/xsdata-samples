@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -17,7 +19,7 @@ class PowerDomainLinks:
         name = "powerDomainLinks"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    power_domain_link: list["PowerDomainLinks.PowerDomainLink"] = field(
+    power_domain_link: list[PowerDomainLinks.PowerDomainLink] = field(
         default_factory=list,
         metadata={
             "name": "powerDomainLink",
@@ -36,7 +38,7 @@ class PowerDomainLinks:
         :ivar id:
         """
 
-        external_power_domain_reference: Optional[StringExpression] = field(
+        external_power_domain_reference: StringExpression | None = field(
             default=None,
             metadata={
                 "name": "externalPowerDomainReference",
@@ -45,7 +47,7 @@ class PowerDomainLinks:
             },
         )
         internal_power_domain_reference: list[
-            "PowerDomainLinks.PowerDomainLink.InternalPowerDomainReference"
+            PowerDomainLinks.PowerDomainLink.InternalPowerDomainReference
         ] = field(
             default_factory=list,
             metadata={
@@ -54,7 +56,7 @@ class PowerDomainLinks:
                 "min_occurs": 1,
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -70,7 +72,7 @@ class PowerDomainLinks:
                     "required": True,
                 },
             )
-            id: Optional[str] = field(
+            id: str | None = field(
                 default=None,
                 metadata={
                     "type": "Attribute",

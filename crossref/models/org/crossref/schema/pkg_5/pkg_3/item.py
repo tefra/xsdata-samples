@@ -26,25 +26,25 @@ class Item:
         name = "item"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    doi: Optional[Doi] = field(
+    doi: Doi | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    resource: Optional[Resource] = field(
+    resource: Resource | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    crawler: Optional[ItemCrawler] = field(
+    crawler: ItemCrawler | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    label: Optional[str] = field(
+    label: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
@@ -52,13 +52,13 @@ class Item:
             "max_length": 128,
         },
     )
-    country: Optional[ItemCountry] = field(
+    country: ItemCountry | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    link_header_relationship: Optional[ItemLinkHeaderRelationship] = field(
+    link_header_relationship: ItemLinkHeaderRelationship | None = field(
         default=None,
         metadata={
             "type": "Attribute",

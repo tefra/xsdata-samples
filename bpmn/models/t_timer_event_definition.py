@@ -12,7 +12,7 @@ class TTimerEventDefinition(TEventDefinition):
     class Meta:
         name = "tTimerEventDefinition"
 
-    time_date: Optional[TExpression] = field(
+    time_date: TExpression | None = field(
         default=None,
         metadata={
             "name": "timeDate",
@@ -20,7 +20,7 @@ class TTimerEventDefinition(TEventDefinition):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    time_duration: Optional[TExpression] = field(
+    time_duration: TExpression | None = field(
         default=None,
         metadata={
             "name": "timeDuration",
@@ -28,7 +28,7 @@ class TTimerEventDefinition(TEventDefinition):
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
         },
     )
-    time_cycle: Optional[TExpression] = field(
+    time_cycle: TExpression | None = field(
         default=None,
         metadata={
             "name": "timeCycle",

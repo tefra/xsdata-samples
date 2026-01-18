@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -38,9 +40,7 @@ class ParameterDataPrototypeInSystemInstanceRef:
     class Meta:
         name = "PARAMETER-DATA-PROTOTYPE-IN-SYSTEM-INSTANCE-REF"
 
-    context_composition_ref: Optional[
-        "ParameterDataPrototypeInSystemInstanceRef.ContextCompositionRef"
-    ] = field(
+    context_composition_ref: ParameterDataPrototypeInSystemInstanceRef.ContextCompositionRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-COMPOSITION-REF",
@@ -49,7 +49,7 @@ class ParameterDataPrototypeInSystemInstanceRef:
         },
     )
     context_component_ref: list[
-        "ParameterDataPrototypeInSystemInstanceRef.ContextComponentRef"
+        ParameterDataPrototypeInSystemInstanceRef.ContextComponentRef
     ] = field(
         default_factory=list,
         metadata={
@@ -58,9 +58,7 @@ class ParameterDataPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    context_port_ref: Optional[
-        "ParameterDataPrototypeInSystemInstanceRef.ContextPortRef"
-    ] = field(
+    context_port_ref: ParameterDataPrototypeInSystemInstanceRef.ContextPortRef | None = field(
         default=None,
         metadata={
             "name": "CONTEXT-PORT-REF",
@@ -68,9 +66,7 @@ class ParameterDataPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    target_parameter_data_prototype_ref: Optional[
-        "ParameterDataPrototypeInSystemInstanceRef.TargetParameterDataPrototypeRef"
-    ] = field(
+    target_parameter_data_prototype_ref: ParameterDataPrototypeInSystemInstanceRef.TargetParameterDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "TARGET-PARAMETER-DATA-PROTOTYPE-REF",
@@ -78,14 +74,14 @@ class ParameterDataPrototypeInSystemInstanceRef:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -96,7 +92,7 @@ class ParameterDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextCompositionRef(Ref):
-        dest: Optional[RootSwCompositionPrototypeSubtypesEnum] = field(
+        dest: RootSwCompositionPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -107,7 +103,7 @@ class ParameterDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextComponentRef(Ref):
-        dest: Optional[SwComponentPrototypeSubtypesEnum] = field(
+        dest: SwComponentPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -118,7 +114,7 @@ class ParameterDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class ContextPortRef(Ref):
-        dest: Optional[PortPrototypeSubtypesEnum] = field(
+        dest: PortPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -129,7 +125,7 @@ class ParameterDataPrototypeInSystemInstanceRef:
 
     @dataclass
     class TargetParameterDataPrototypeRef(Ref):
-        dest: Optional[ParameterDataPrototypeSubtypesEnum] = field(
+        dest: ParameterDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

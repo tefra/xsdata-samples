@@ -20,7 +20,7 @@ class ControllableElementInSequenceVersionedChildStructure(
     class Meta:
         name = "ControllableElementInSequence_VersionedChildStructure"
 
-    controllable_element_ref: Optional[ControllableElementRef] = field(
+    controllable_element_ref: ControllableElementRef | None = field(
         default=None,
         metadata={
             "name": "ControllableElementRef",
@@ -28,7 +28,7 @@ class ControllableElementInSequenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_structure_element_ref: Optional[FareStructureElementRef] = field(
+    fare_structure_element_ref: FareStructureElementRef | None = field(
         default=None,
         metadata={
             "name": "FareStructureElementRef",
@@ -36,9 +36,7 @@ class ControllableElementInSequenceVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    access_right_parameter_assignments: Optional[
-        AccessRightParameterAssignmentsRelStructure
-    ] = field(
+    access_right_parameter_assignments: AccessRightParameterAssignmentsRelStructure | None = field(
         default=None,
         metadata={
             "name": "accessRightParameterAssignments",

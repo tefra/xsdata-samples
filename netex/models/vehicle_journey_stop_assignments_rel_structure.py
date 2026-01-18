@@ -19,7 +19,7 @@ class VehicleJourneyStopAssignmentsRelStructure(
         name = "vehicleJourneyStopAssignments_RelStructure"
 
     vehicle_journey_stop_assignment_ref_or_vehicle_journey_stop_assignment: Iterable[
-        Union[VehicleJourneyStopAssignmentRef, VehicleJourneyStopAssignment]
+        VehicleJourneyStopAssignmentRef | VehicleJourneyStopAssignment
     ] = field(
         default_factory=list,
         metadata={

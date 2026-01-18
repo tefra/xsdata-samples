@@ -34,7 +34,7 @@ class LifeCyclePeriod:
     class Meta:
         name = "LIFE-CYCLE-PERIOD"
 
-    date: Optional[Date] = field(
+    date: Date | None = field(
         default=None,
         metadata={
             "name": "DATE",
@@ -42,7 +42,7 @@ class LifeCyclePeriod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ar_release_version: Optional[RevisionLabelString] = field(
+    ar_release_version: RevisionLabelString | None = field(
         default=None,
         metadata={
             "name": "AR-RELEASE-VERSION",
@@ -50,7 +50,7 @@ class LifeCyclePeriod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    product_release: Optional[RevisionLabelString] = field(
+    product_release: RevisionLabelString | None = field(
         default=None,
         metadata={
             "name": "PRODUCT-RELEASE",
@@ -58,14 +58,14 @@ class LifeCyclePeriod:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

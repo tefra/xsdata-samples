@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -92,7 +94,7 @@ class SignalServiceTranslationElementProps:
     class Meta:
         name = "SIGNAL-SERVICE-TRANSLATION-ELEMENT-PROPS"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -101,9 +103,7 @@ class SignalServiceTranslationElementProps:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SignalServiceTranslationElementProps.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SignalServiceTranslationElementProps.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -111,7 +111,7 @@ class SignalServiceTranslationElementProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -119,7 +119,7 @@ class SignalServiceTranslationElementProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -127,7 +127,7 @@ class SignalServiceTranslationElementProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -135,7 +135,7 @@ class SignalServiceTranslationElementProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -143,7 +143,7 @@ class SignalServiceTranslationElementProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -151,9 +151,7 @@ class SignalServiceTranslationElementProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional[
-        "SignalServiceTranslationElementProps.Annotations"
-    ] = field(
+    annotations: SignalServiceTranslationElementProps.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -161,7 +159,7 @@ class SignalServiceTranslationElementProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    element: Optional["SignalServiceTranslationElementProps.Element"] = field(
+    element: SignalServiceTranslationElementProps.Element | None = field(
         default=None,
         metadata={
             "name": "ELEMENT",
@@ -169,7 +167,7 @@ class SignalServiceTranslationElementProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    filter: Optional[DataFilter] = field(
+    filter: DataFilter | None = field(
         default=None,
         metadata={
             "name": "FILTER",
@@ -177,7 +175,7 @@ class SignalServiceTranslationElementProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transmission_trigger: Optional[Boolean] = field(
+    transmission_trigger: Boolean | None = field(
         default=None,
         metadata={
             "name": "TRANSMISSION-TRIGGER",
@@ -185,14 +183,14 @@ class SignalServiceTranslationElementProps:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -200,7 +198,7 @@ class SignalServiceTranslationElementProps:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -232,9 +230,7 @@ class SignalServiceTranslationElementProps:
 
     @dataclass
     class Element:
-        data_prototype_in_port_interface_ref: Optional[
-            DataPrototypeInPortInterfaceRef
-        ] = field(
+        data_prototype_in_port_interface_ref: DataPrototypeInPortInterfaceRef | None = field(
             default=None,
             metadata={
                 "name": "DATA-PROTOTYPE-IN-PORT-INTERFACE-REF",
@@ -242,9 +238,7 @@ class SignalServiceTranslationElementProps:
                 "namespace": "http://autosar.org/schema/r4.0",
             },
         )
-        implementation_data_type_element_in_port_interface_ref: Optional[
-            ImplementationDataTypeElementInPortInterfaceRef
-        ] = field(
+        implementation_data_type_element_in_port_interface_ref: ImplementationDataTypeElementInPortInterfaceRef | None = field(
             default=None,
             metadata={
                 "name": "IMPLEMENTATION-DATA-TYPE-ELEMENT-IN-PORT-INTERFACE-REF",

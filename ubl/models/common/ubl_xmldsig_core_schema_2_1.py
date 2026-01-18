@@ -6,7 +6,7 @@ __NAMESPACE__ = "http://www.w3.org/2000/09/xmldsig#"
 
 @dataclass(frozen=True)
 class CanonicalizationMethodType:
-    algorithm: Optional[str] = field(
+    algorithm: str | None = field(
         default=None,
         metadata={
             "name": "Algorithm",
@@ -29,7 +29,7 @@ class DsakeyValueType:
     class Meta:
         name = "DSAKeyValueType"
 
-    p: Optional[bytes] = field(
+    p: bytes | None = field(
         default=None,
         metadata={
             "name": "P",
@@ -38,7 +38,7 @@ class DsakeyValueType:
             "format": "base64",
         },
     )
-    q: Optional[bytes] = field(
+    q: bytes | None = field(
         default=None,
         metadata={
             "name": "Q",
@@ -47,7 +47,7 @@ class DsakeyValueType:
             "format": "base64",
         },
     )
-    g: Optional[bytes] = field(
+    g: bytes | None = field(
         default=None,
         metadata={
             "name": "G",
@@ -56,7 +56,7 @@ class DsakeyValueType:
             "format": "base64",
         },
     )
-    y: Optional[bytes] = field(
+    y: bytes | None = field(
         default=None,
         metadata={
             "name": "Y",
@@ -66,7 +66,7 @@ class DsakeyValueType:
             "format": "base64",
         },
     )
-    j: Optional[bytes] = field(
+    j: bytes | None = field(
         default=None,
         metadata={
             "name": "J",
@@ -75,7 +75,7 @@ class DsakeyValueType:
             "format": "base64",
         },
     )
-    seed: Optional[bytes] = field(
+    seed: bytes | None = field(
         default=None,
         metadata={
             "name": "Seed",
@@ -84,7 +84,7 @@ class DsakeyValueType:
             "format": "base64",
         },
     )
-    pgen_counter: Optional[bytes] = field(
+    pgen_counter: bytes | None = field(
         default=None,
         metadata={
             "name": "PgenCounter",
@@ -97,7 +97,7 @@ class DsakeyValueType:
 
 @dataclass(frozen=True)
 class DigestMethodType:
-    algorithm: Optional[str] = field(
+    algorithm: str | None = field(
         default=None,
         metadata={
             "name": "Algorithm",
@@ -120,7 +120,7 @@ class DigestValue:
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
-    value: Optional[bytes] = field(
+    value: bytes | None = field(
         default=None,
         metadata={
             "required": True,
@@ -157,21 +157,21 @@ class MgmtData:
 
 @dataclass(frozen=True)
 class ObjectType:
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
         },
     )
-    mime_type: Optional[str] = field(
+    mime_type: str | None = field(
         default=None,
         metadata={
             "name": "MimeType",
             "type": "Attribute",
         },
     )
-    encoding: Optional[str] = field(
+    encoding: str | None = field(
         default=None,
         metadata={
             "name": "Encoding",
@@ -193,7 +193,7 @@ class PgpdataType:
     class Meta:
         name = "PGPDataType"
 
-    pgpkey_id: Optional[bytes] = field(
+    pgpkey_id: bytes | None = field(
         default=None,
         metadata={
             "name": "PGPKeyID",
@@ -227,7 +227,7 @@ class RsakeyValueType:
     class Meta:
         name = "RSAKeyValueType"
 
-    modulus: Optional[bytes] = field(
+    modulus: bytes | None = field(
         default=None,
         metadata={
             "name": "Modulus",
@@ -237,7 +237,7 @@ class RsakeyValueType:
             "format": "base64",
         },
     )
-    exponent: Optional[bytes] = field(
+    exponent: bytes | None = field(
         default=None,
         metadata={
             "name": "Exponent",
@@ -277,7 +277,7 @@ class SpkidataType:
 
 @dataclass(frozen=True)
 class SignatureMethodType:
-    algorithm: Optional[str] = field(
+    algorithm: str | None = field(
         default=None,
         metadata={
             "name": "Algorithm",
@@ -304,7 +304,7 @@ class SignatureMethodType:
 
 @dataclass(frozen=True)
 class SignaturePropertyType:
-    target: Optional[str] = field(
+    target: str | None = field(
         default=None,
         metadata={
             "name": "Target",
@@ -312,7 +312,7 @@ class SignaturePropertyType:
             "required": True,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "name": "Id",
@@ -331,14 +331,14 @@ class SignaturePropertyType:
 
 @dataclass(frozen=True)
 class SignatureValueType:
-    value: Optional[bytes] = field(
+    value: bytes | None = field(
         default=None,
         metadata={
             "required": True,
             "format": "base64",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "name": "Id",
@@ -349,7 +349,7 @@ class SignatureValueType:
 
 @dataclass(frozen=True)
 class TransformType:
-    algorithm: Optional[str] = field(
+    algorithm: str | None = field(
         default=None,
         metadata={
             "name": "Algorithm",
@@ -376,7 +376,7 @@ class TransformType:
 
 @dataclass(frozen=True)
 class X509IssuerSerialType:
-    x509_issuer_name: Optional[str] = field(
+    x509_issuer_name: str | None = field(
         default=None,
         metadata={
             "name": "X509IssuerName",
@@ -385,7 +385,7 @@ class X509IssuerSerialType:
             "required": True,
         },
     )
-    x509_serial_number: Optional[int] = field(
+    x509_serial_number: int | None = field(
         default=None,
         metadata={
             "name": "X509SerialNumber",
@@ -561,7 +561,7 @@ class SignaturePropertiesType:
             "min_occurs": 1,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "name": "Id",
@@ -609,7 +609,7 @@ class Transforms(TransformsType):
 
 @dataclass(frozen=True)
 class ReferenceType:
-    transforms: Optional[Transforms] = field(
+    transforms: Transforms | None = field(
         default=None,
         metadata={
             "name": "Transforms",
@@ -617,7 +617,7 @@ class ReferenceType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         },
     )
-    digest_method: Optional[DigestMethod] = field(
+    digest_method: DigestMethod | None = field(
         default=None,
         metadata={
             "name": "DigestMethod",
@@ -626,7 +626,7 @@ class ReferenceType:
             "required": True,
         },
     )
-    digest_value: Optional[DigestValue] = field(
+    digest_value: DigestValue | None = field(
         default=None,
         metadata={
             "name": "DigestValue",
@@ -635,21 +635,21 @@ class ReferenceType:
             "required": True,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "name": "Id",
             "type": "Attribute",
         },
     )
-    uri: Optional[str] = field(
+    uri: str | None = field(
         default=None,
         metadata={
             "name": "URI",
             "type": "Attribute",
         },
     )
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "Type",
@@ -660,7 +660,7 @@ class ReferenceType:
 
 @dataclass(frozen=True)
 class RetrievalMethodType:
-    transforms: Optional[Transforms] = field(
+    transforms: Transforms | None = field(
         default=None,
         metadata={
             "name": "Transforms",
@@ -668,14 +668,14 @@ class RetrievalMethodType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         },
     )
-    uri: Optional[str] = field(
+    uri: str | None = field(
         default=None,
         metadata={
             "name": "URI",
             "type": "Attribute",
         },
     )
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "Type",
@@ -698,7 +698,7 @@ class RetrievalMethod(RetrievalMethodType):
 
 @dataclass(frozen=True)
 class KeyInfoType:
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "name": "Id",
@@ -763,7 +763,7 @@ class ManifestType:
             "min_occurs": 1,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "name": "Id",
@@ -774,7 +774,7 @@ class ManifestType:
 
 @dataclass(frozen=True)
 class SignedInfoType:
-    canonicalization_method: Optional[CanonicalizationMethod] = field(
+    canonicalization_method: CanonicalizationMethod | None = field(
         default=None,
         metadata={
             "name": "CanonicalizationMethod",
@@ -783,7 +783,7 @@ class SignedInfoType:
             "required": True,
         },
     )
-    signature_method: Optional[SignatureMethod] = field(
+    signature_method: SignatureMethod | None = field(
         default=None,
         metadata={
             "name": "SignatureMethod",
@@ -801,7 +801,7 @@ class SignedInfoType:
             "min_occurs": 1,
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "name": "Id",
@@ -830,7 +830,7 @@ class SignedInfo(SignedInfoType):
 
 @dataclass(frozen=True)
 class SignatureType:
-    signed_info: Optional[SignedInfo] = field(
+    signed_info: SignedInfo | None = field(
         default=None,
         metadata={
             "name": "SignedInfo",
@@ -839,7 +839,7 @@ class SignatureType:
             "required": True,
         },
     )
-    signature_value: Optional[SignatureValue] = field(
+    signature_value: SignatureValue | None = field(
         default=None,
         metadata={
             "name": "SignatureValue",
@@ -848,7 +848,7 @@ class SignatureType:
             "required": True,
         },
     )
-    key_info: Optional[KeyInfo] = field(
+    key_info: KeyInfo | None = field(
         default=None,
         metadata={
             "name": "KeyInfo",
@@ -864,7 +864,7 @@ class SignatureType:
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "name": "Id",

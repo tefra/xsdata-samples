@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -31,9 +33,7 @@ class ISignalIPduRefConditional:
     class Meta:
         name = "I-SIGNAL-I-PDU-REF-CONDITIONAL"
 
-    i_signal_i_pdu_ref: Optional[
-        "ISignalIPduRefConditional.ISignalIPduRef"
-    ] = field(
+    i_signal_i_pdu_ref: ISignalIPduRefConditional.ISignalIPduRef | None = field(
         default=None,
         metadata={
             "name": "I-SIGNAL-I-PDU-REF",
@@ -41,7 +41,7 @@ class ISignalIPduRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -49,14 +49,14 @@ class ISignalIPduRefConditional:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -67,7 +67,7 @@ class ISignalIPduRefConditional:
 
     @dataclass
     class ISignalIPduRef(Ref):
-        dest: Optional[ISignalIPduSubtypesEnum] = field(
+        dest: ISignalIPduSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

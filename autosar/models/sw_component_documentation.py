@@ -55,7 +55,7 @@ class SwComponentDocumentation:
     class Meta:
         name = "SW-COMPONENT-DOCUMENTATION"
 
-    sw_feature_def: Optional[Chapter] = field(
+    sw_feature_def: Chapter | None = field(
         default=None,
         metadata={
             "name": "SW-FEATURE-DEF",
@@ -63,7 +63,7 @@ class SwComponentDocumentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_feature_desc: Optional[Chapter] = field(
+    sw_feature_desc: Chapter | None = field(
         default=None,
         metadata={
             "name": "SW-FEATURE-DESC",
@@ -71,7 +71,7 @@ class SwComponentDocumentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_test_desc: Optional[Chapter] = field(
+    sw_test_desc: Chapter | None = field(
         default=None,
         metadata={
             "name": "SW-TEST-DESC",
@@ -79,7 +79,7 @@ class SwComponentDocumentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_calibration_notes: Optional[Chapter] = field(
+    sw_calibration_notes: Chapter | None = field(
         default=None,
         metadata={
             "name": "SW-CALIBRATION-NOTES",
@@ -87,7 +87,7 @@ class SwComponentDocumentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_maintenance_notes: Optional[Chapter] = field(
+    sw_maintenance_notes: Chapter | None = field(
         default=None,
         metadata={
             "name": "SW-MAINTENANCE-NOTES",
@@ -95,7 +95,7 @@ class SwComponentDocumentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_diagnostics_notes: Optional[Chapter] = field(
+    sw_diagnostics_notes: Chapter | None = field(
         default=None,
         metadata={
             "name": "SW-DIAGNOSTICS-NOTES",
@@ -103,7 +103,7 @@ class SwComponentDocumentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sw_carb_doc: Optional[Chapter] = field(
+    sw_carb_doc: Chapter | None = field(
         default=None,
         metadata={
             "name": "SW-CARB-DOC",
@@ -119,7 +119,7 @@ class SwComponentDocumentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -127,14 +127,14 @@ class SwComponentDocumentation:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

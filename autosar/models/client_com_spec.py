@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -62,7 +64,7 @@ class ClientComSpec:
     class Meta:
         name = "CLIENT-COM-SPEC"
 
-    client_intent: Optional[ClientIntentEnum] = field(
+    client_intent: ClientIntentEnum | None = field(
         default=None,
         metadata={
             "name": "CLIENT-INTENT",
@@ -70,7 +72,7 @@ class ClientComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    end_to_end_call_response_timeout: Optional[TimeValue] = field(
+    end_to_end_call_response_timeout: TimeValue | None = field(
         default=None,
         metadata={
             "name": "END-TO-END-CALL-RESPONSE-TIMEOUT",
@@ -78,7 +80,7 @@ class ClientComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    getter_ref: Optional["ClientComSpec.GetterRef"] = field(
+    getter_ref: ClientComSpec.GetterRef | None = field(
         default=None,
         metadata={
             "name": "GETTER-REF",
@@ -86,7 +88,7 @@ class ClientComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    operation_ref: Optional["ClientComSpec.OperationRef"] = field(
+    operation_ref: ClientComSpec.OperationRef | None = field(
         default=None,
         metadata={
             "name": "OPERATION-REF",
@@ -94,7 +96,7 @@ class ClientComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    setter_ref: Optional["ClientComSpec.SetterRef"] = field(
+    setter_ref: ClientComSpec.SetterRef | None = field(
         default=None,
         metadata={
             "name": "SETTER-REF",
@@ -102,9 +104,7 @@ class ClientComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transformation_com_spec_propss: Optional[
-        "ClientComSpec.TransformationComSpecPropss"
-    ] = field(
+    transformation_com_spec_propss: ClientComSpec.TransformationComSpecPropss | None = field(
         default=None,
         metadata={
             "name": "TRANSFORMATION-COM-SPEC-PROPSS",
@@ -112,14 +112,14 @@ class ClientComSpec:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -130,7 +130,7 @@ class ClientComSpec:
 
     @dataclass
     class GetterRef(Ref):
-        dest: Optional[FieldSubtypesEnum] = field(
+        dest: FieldSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -141,7 +141,7 @@ class ClientComSpec:
 
     @dataclass
     class OperationRef(Ref):
-        dest: Optional[ClientServerOperationSubtypesEnum] = field(
+        dest: ClientServerOperationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -152,7 +152,7 @@ class ClientComSpec:
 
     @dataclass
     class SetterRef(Ref):
-        dest: Optional[FieldSubtypesEnum] = field(
+        dest: FieldSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

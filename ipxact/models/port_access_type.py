@@ -17,7 +17,7 @@ class PortAccessType:
         name = "portAccessType"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: Optional[SimplePortAccessType] = field(
+    value: SimplePortAccessType | None = field(
         default=None,
         metadata={
             "required": True,

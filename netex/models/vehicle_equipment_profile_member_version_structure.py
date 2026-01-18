@@ -13,7 +13,7 @@ class VehicleEquipmentProfileMemberVersionStructure(VersionedChildStructure):
     class Meta:
         name = "VehicleEquipmentProfileMember_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -21,7 +21,7 @@ class VehicleEquipmentProfileMemberVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Optional[MultilingualString] = field(
+    description: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Description",
@@ -29,7 +29,7 @@ class VehicleEquipmentProfileMemberVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    minimum_units: Optional[int] = field(
+    minimum_units: int | None = field(
         default=None,
         metadata={
             "name": "MinimumUnits",
@@ -37,7 +37,7 @@ class VehicleEquipmentProfileMemberVersionStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_equipment_ref: Optional[TypeOfEquipmentRef] = field(
+    type_of_equipment_ref: TypeOfEquipmentRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfEquipmentRef",

@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -131,7 +133,7 @@ class SynchronizationTimingConstraint:
     class Meta:
         name = "SYNCHRONIZATION-TIMING-CONSTRAINT"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -140,9 +142,7 @@ class SynchronizationTimingConstraint:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "SynchronizationTimingConstraint.ShortNameFragments"
-    ] = field(
+    short_name_fragments: SynchronizationTimingConstraint.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -150,7 +150,7 @@ class SynchronizationTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -158,7 +158,7 @@ class SynchronizationTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -166,7 +166,7 @@ class SynchronizationTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -174,7 +174,7 @@ class SynchronizationTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -182,7 +182,7 @@ class SynchronizationTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -190,7 +190,7 @@ class SynchronizationTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SynchronizationTimingConstraint.Annotations"] = (
+    annotations: SynchronizationTimingConstraint.Annotations | None = (
         field(
             default=None,
             metadata={
@@ -200,7 +200,7 @@ class SynchronizationTimingConstraint:
             },
         )
     )
-    trace_refs: Optional["SynchronizationTimingConstraint.TraceRefs"] = field(
+    trace_refs: SynchronizationTimingConstraint.TraceRefs | None = field(
         default=None,
         metadata={
             "name": "TRACE-REFS",
@@ -208,9 +208,7 @@ class SynchronizationTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    timing_condition_ref: Optional[
-        "SynchronizationTimingConstraint.TimingConditionRef"
-    ] = field(
+    timing_condition_ref: SynchronizationTimingConstraint.TimingConditionRef | None = field(
         default=None,
         metadata={
             "name": "TIMING-CONDITION-REF",
@@ -218,7 +216,7 @@ class SynchronizationTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -226,7 +224,7 @@ class SynchronizationTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    event_occurrence_kind: Optional[EventOccurrenceKindEnum] = field(
+    event_occurrence_kind: EventOccurrenceKindEnum | None = field(
         default=None,
         metadata={
             "name": "EVENT-OCCURRENCE-KIND",
@@ -234,9 +232,7 @@ class SynchronizationTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    scope_event_refs: Optional[
-        "SynchronizationTimingConstraint.ScopeEventRefs"
-    ] = field(
+    scope_event_refs: SynchronizationTimingConstraint.ScopeEventRefs | None = field(
         default=None,
         metadata={
             "name": "SCOPE-EVENT-REFS",
@@ -244,7 +240,7 @@ class SynchronizationTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    scope_refs: Optional["SynchronizationTimingConstraint.ScopeRefs"] = field(
+    scope_refs: SynchronizationTimingConstraint.ScopeRefs | None = field(
         default=None,
         metadata={
             "name": "SCOPE-REFS",
@@ -252,7 +248,7 @@ class SynchronizationTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    synchronization_constraint_type: Optional[SynchronizationTypeEnum] = field(
+    synchronization_constraint_type: SynchronizationTypeEnum | None = field(
         default=None,
         metadata={
             "name": "SYNCHRONIZATION-CONSTRAINT-TYPE",
@@ -260,7 +256,7 @@ class SynchronizationTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    tolerance: Optional[MultidimensionalTime] = field(
+    tolerance: MultidimensionalTime | None = field(
         default=None,
         metadata={
             "name": "TOLERANCE",
@@ -268,14 +264,14 @@ class SynchronizationTimingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -283,7 +279,7 @@ class SynchronizationTimingConstraint:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -316,7 +312,7 @@ class SynchronizationTimingConstraint:
     @dataclass
     class TraceRefs:
         trace_ref: list[
-            "SynchronizationTimingConstraint.TraceRefs.TraceRef"
+            SynchronizationTimingConstraint.TraceRefs.TraceRef
         ] = field(
             default_factory=list,
             metadata={
@@ -328,7 +324,7 @@ class SynchronizationTimingConstraint:
 
         @dataclass
         class TraceRef(Ref):
-            dest: Optional[TraceableSubtypesEnum] = field(
+            dest: TraceableSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -339,7 +335,7 @@ class SynchronizationTimingConstraint:
 
     @dataclass
     class TimingConditionRef(Ref):
-        dest: Optional[TimingConditionSubtypesEnum] = field(
+        dest: TimingConditionSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -351,7 +347,7 @@ class SynchronizationTimingConstraint:
     @dataclass
     class ScopeEventRefs:
         scope_event_ref: list[
-            "SynchronizationTimingConstraint.ScopeEventRefs.ScopeEventRef"
+            SynchronizationTimingConstraint.ScopeEventRefs.ScopeEventRef
         ] = field(
             default_factory=list,
             metadata={
@@ -363,7 +359,7 @@ class SynchronizationTimingConstraint:
 
         @dataclass
         class ScopeEventRef(Ref):
-            dest: Optional[TimingDescriptionEventSubtypesEnum] = field(
+            dest: TimingDescriptionEventSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -375,7 +371,7 @@ class SynchronizationTimingConstraint:
     @dataclass
     class ScopeRefs:
         scope_ref: list[
-            "SynchronizationTimingConstraint.ScopeRefs.ScopeRef"
+            SynchronizationTimingConstraint.ScopeRefs.ScopeRef
         ] = field(
             default_factory=list,
             metadata={
@@ -387,7 +383,7 @@ class SynchronizationTimingConstraint:
 
         @dataclass
         class ScopeRef(Ref):
-            dest: Optional[TimingDescriptionEventChainSubtypesEnum] = field(
+            dest: TimingDescriptionEventChainSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

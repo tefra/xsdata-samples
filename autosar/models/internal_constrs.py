@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -43,7 +45,7 @@ class InternalConstrs:
     class Meta:
         name = "INTERNAL-CONSTRS"
 
-    lower_limit: Optional[Limit] = field(
+    lower_limit: Limit | None = field(
         default=None,
         metadata={
             "name": "LOWER-LIMIT",
@@ -51,7 +53,7 @@ class InternalConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    upper_limit: Optional[Limit] = field(
+    upper_limit: Limit | None = field(
         default=None,
         metadata={
             "name": "UPPER-LIMIT",
@@ -59,7 +61,7 @@ class InternalConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    scale_constrs: Optional["InternalConstrs.ScaleConstrs"] = field(
+    scale_constrs: InternalConstrs.ScaleConstrs | None = field(
         default=None,
         metadata={
             "name": "SCALE-CONSTRS",
@@ -67,7 +69,7 @@ class InternalConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_gradient: Optional[NumericalValue] = field(
+    max_gradient: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "MAX-GRADIENT",
@@ -75,7 +77,7 @@ class InternalConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    max_diff: Optional[NumericalValue] = field(
+    max_diff: NumericalValue | None = field(
         default=None,
         metadata={
             "name": "MAX-DIFF",
@@ -83,7 +85,7 @@ class InternalConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    monotony: Optional[MonotonyEnum] = field(
+    monotony: MonotonyEnum | None = field(
         default=None,
         metadata={
             "name": "MONOTONY",
@@ -91,14 +93,14 @@ class InternalConstrs:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

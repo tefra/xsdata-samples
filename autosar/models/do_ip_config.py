@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -34,7 +36,7 @@ class DoIpConfig:
     class Meta:
         name = "DO-IP-CONFIG"
 
-    doip_interfaces: Optional["DoIpConfig.DoipInterfaces"] = field(
+    doip_interfaces: DoIpConfig.DoipInterfaces | None = field(
         default=None,
         metadata={
             "name": "DOIP-INTERFACES",
@@ -42,7 +44,7 @@ class DoIpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    logic_address: Optional[DoIpLogicAddress] = field(
+    logic_address: DoIpLogicAddress | None = field(
         default=None,
         metadata={
             "name": "LOGIC-ADDRESS",
@@ -50,14 +52,14 @@ class DoIpConfig:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

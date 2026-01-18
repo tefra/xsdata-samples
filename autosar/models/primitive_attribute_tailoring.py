@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -108,7 +110,7 @@ class PrimitiveAttributeTailoring:
     class Meta:
         name = "PRIMITIVE-ATTRIBUTE-TAILORING"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -117,9 +119,7 @@ class PrimitiveAttributeTailoring:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "PrimitiveAttributeTailoring.ShortNameFragments"
-    ] = field(
+    short_name_fragments: PrimitiveAttributeTailoring.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -127,7 +127,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -135,7 +135,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -143,7 +143,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -151,7 +151,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -159,7 +159,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -167,7 +167,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["PrimitiveAttributeTailoring.Annotations"] = field(
+    annotations: PrimitiveAttributeTailoring.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -175,7 +175,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    alternative_name: Optional[String] = field(
+    alternative_name: String | None = field(
         default=None,
         metadata={
             "name": "ALTERNATIVE-NAME",
@@ -183,7 +183,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    in_scope: Optional[Boolean] = field(
+    in_scope: Boolean | None = field(
         default=None,
         metadata={
             "name": "IN-SCOPE",
@@ -191,7 +191,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    multiplicity_restriction: Optional[MultiplicityRestrictionWithSeverity] = (
+    multiplicity_restriction: MultiplicityRestrictionWithSeverity | None = (
         field(
             default=None,
             metadata={
@@ -201,7 +201,7 @@ class PrimitiveAttributeTailoring:
             },
         )
     )
-    variation_restriction: Optional[VariationRestrictionWithSeverity] = field(
+    variation_restriction: VariationRestrictionWithSeverity | None = field(
         default=None,
         metadata={
             "name": "VARIATION-RESTRICTION",
@@ -209,7 +209,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    default_value_handling: Optional[DefaultValueApplicationStrategyEnum] = (
+    default_value_handling: DefaultValueApplicationStrategyEnum | None = (
         field(
             default=None,
             metadata={
@@ -219,9 +219,7 @@ class PrimitiveAttributeTailoring:
             },
         )
     )
-    sub_attribute_tailorings: Optional[
-        "PrimitiveAttributeTailoring.SubAttributeTailorings"
-    ] = field(
+    sub_attribute_tailorings: PrimitiveAttributeTailoring.SubAttributeTailorings | None = field(
         default=None,
         metadata={
             "name": "SUB-ATTRIBUTE-TAILORINGS",
@@ -229,7 +227,7 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    value_restriction: Optional[ValueRestrictionWithSeverity] = field(
+    value_restriction: ValueRestrictionWithSeverity | None = field(
         default=None,
         metadata={
             "name": "VALUE-RESTRICTION",
@@ -237,14 +235,14 @@ class PrimitiveAttributeTailoring:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -252,7 +250,7 @@ class PrimitiveAttributeTailoring:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -284,7 +282,7 @@ class PrimitiveAttributeTailoring:
 
     @dataclass
     class SubAttributeTailorings:
-        primitive_attribute_tailoring: list["PrimitiveAttributeTailoring"] = (
+        primitive_attribute_tailoring: list[PrimitiveAttributeTailoring] = (
             field(
                 default_factory=list,
                 metadata={

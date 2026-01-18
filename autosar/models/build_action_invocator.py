@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -37,7 +39,7 @@ class BuildActionInvocator:
     class Meta:
         name = "BUILD-ACTION-INVOCATOR"
 
-    command: Optional[VerbatimString] = field(
+    command: VerbatimString | None = field(
         default=None,
         metadata={
             "name": "COMMAND",
@@ -45,7 +47,7 @@ class BuildActionInvocator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sdgs: Optional["BuildActionInvocator.Sdgs"] = field(
+    sdgs: BuildActionInvocator.Sdgs | None = field(
         default=None,
         metadata={
             "name": "SDGS",
@@ -53,14 +55,14 @@ class BuildActionInvocator:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

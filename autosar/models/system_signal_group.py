@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -92,7 +94,7 @@ class SystemSignalGroup:
     class Meta:
         name = "SYSTEM-SIGNAL-GROUP"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -101,7 +103,7 @@ class SystemSignalGroup:
             "required": True,
         },
     )
-    short_name_fragments: Optional["SystemSignalGroup.ShortNameFragments"] = (
+    short_name_fragments: SystemSignalGroup.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -111,7 +113,7 @@ class SystemSignalGroup:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -119,7 +121,7 @@ class SystemSignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -127,7 +129,7 @@ class SystemSignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -135,7 +137,7 @@ class SystemSignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -143,7 +145,7 @@ class SystemSignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -151,7 +153,7 @@ class SystemSignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["SystemSignalGroup.Annotations"] = field(
+    annotations: SystemSignalGroup.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -159,7 +161,7 @@ class SystemSignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -167,7 +169,7 @@ class SystemSignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    system_signal_refs: Optional["SystemSignalGroup.SystemSignalRefs"] = field(
+    system_signal_refs: SystemSignalGroup.SystemSignalRefs | None = field(
         default=None,
         metadata={
             "name": "SYSTEM-SIGNAL-REFS",
@@ -175,9 +177,7 @@ class SystemSignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    transforming_system_signal_ref: Optional[
-        "SystemSignalGroup.TransformingSystemSignalRef"
-    ] = field(
+    transforming_system_signal_ref: SystemSignalGroup.TransformingSystemSignalRef | None = field(
         default=None,
         metadata={
             "name": "TRANSFORMING-SYSTEM-SIGNAL-REF",
@@ -185,14 +185,14 @@ class SystemSignalGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -200,7 +200,7 @@ class SystemSignalGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -233,7 +233,7 @@ class SystemSignalGroup:
     @dataclass
     class SystemSignalRefs:
         system_signal_ref: list[
-            "SystemSignalGroup.SystemSignalRefs.SystemSignalRef"
+            SystemSignalGroup.SystemSignalRefs.SystemSignalRef
         ] = field(
             default_factory=list,
             metadata={
@@ -245,7 +245,7 @@ class SystemSignalGroup:
 
         @dataclass
         class SystemSignalRef(Ref):
-            dest: Optional[SystemSignalSubtypesEnum] = field(
+            dest: SystemSignalSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -256,7 +256,7 @@ class SystemSignalGroup:
 
     @dataclass
     class TransformingSystemSignalRef(Ref):
-        dest: Optional[SystemSignalSubtypesEnum] = field(
+        dest: SystemSignalSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

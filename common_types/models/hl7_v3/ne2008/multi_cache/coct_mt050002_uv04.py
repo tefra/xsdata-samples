@@ -47,7 +47,7 @@ class CoctMt050002Uv04NonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -77,7 +77,7 @@ class CoctMt050002Uv04NonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    administrative_gender_code: Optional[Ce] = field(
+    administrative_gender_code: Ce | None = field(
         default=None,
         metadata={
             "name": "administrativeGenderCode",
@@ -85,7 +85,7 @@ class CoctMt050002Uv04NonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    birth_time: Optional[TsExplicit] = field(
+    birth_time: TsExplicit | None = field(
         default=None,
         metadata={
             "name": "birthTime",
@@ -93,14 +93,14 @@ class CoctMt050002Uv04NonPersonLivingSubject:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Optional[EntityClassNonPersonLivingSubject] = field(
+    class_code: EntityClassNonPersonLivingSubject | None = field(
         default=None,
         metadata={
             "name": "classCode",
@@ -132,7 +132,7 @@ class CoctMt050002Uv04Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -162,7 +162,7 @@ class CoctMt050002Uv04Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    administrative_gender_code: Optional[Ce] = field(
+    administrative_gender_code: Ce | None = field(
         default=None,
         metadata={
             "name": "administrativeGenderCode",
@@ -170,7 +170,7 @@ class CoctMt050002Uv04Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    birth_time: Optional[TsExplicit] = field(
+    birth_time: TsExplicit | None = field(
         default=None,
         metadata={
             "name": "birthTime",
@@ -178,7 +178,7 @@ class CoctMt050002Uv04Person:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
@@ -218,7 +218,7 @@ class CoctMt050002Uv04Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    type_id: Optional[Ii] = field(
+    type_id: Ii | None = field(
         default=None,
         metadata={
             "name": "typeId",
@@ -249,7 +249,7 @@ class CoctMt050002Uv04Patient:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    patient_person: Optional[CoctMt050002Uv04Person] = field(
+    patient_person: CoctMt050002Uv04Person | None = field(
         default=None,
         metadata={
             "name": "patientPerson",
@@ -258,9 +258,7 @@ class CoctMt050002Uv04Patient:
             "nillable": True,
         },
     )
-    patient_non_person_living_subject: Optional[
-        CoctMt050002Uv04NonPersonLivingSubject
-    ] = field(
+    patient_non_person_living_subject: CoctMt050002Uv04NonPersonLivingSubject | None = field(
         default=None,
         metadata={
             "name": "patientNonPersonLivingSubject",
@@ -269,7 +267,7 @@ class CoctMt050002Uv04Patient:
             "nillable": True,
         },
     )
-    provider_organization: Optional[CoctMt150003Uv03Organization] = field(
+    provider_organization: CoctMt150003Uv03Organization | None = field(
         default=None,
         metadata={
             "name": "providerOrganization",
@@ -278,30 +276,14 @@ class CoctMt050002Uv04Patient:
             "nillable": True,
         },
     )
-    null_flavor: Optional[NullFlavor] = field(
+    null_flavor: NullFlavor | None = field(
         default=None,
         metadata={
             "name": "nullFlavor",
             "type": "Attribute",
         },
     )
-    class_code: Union[
-        RoleClassMutualRelationship,
-        RoleClassPassive,
-        str,
-        RoleClassOntological,
-        RoleClassPartitive,
-        RoleClassRootValue,
-        XAccommodationRequestorRole,
-        XDocumentEntrySubject,
-        XDocumentSubject,
-        XInformationRecipientRole,
-        XRoleClassAccommodationRequestor,
-        XRoleClassCoverage,
-        XRoleClassCoverageInvoice,
-        XRoleClassCredentialedEntity,
-        XRoleClassPayeePolicyRelationship,
-    ] = field(
+    class_code: RoleClassMutualRelationship | RoleClassPassive | str | RoleClassOntological | RoleClassPartitive | RoleClassRootValue | XAccommodationRequestorRole | XDocumentEntrySubject | XDocumentSubject | XInformationRecipientRole | XRoleClassAccommodationRequestor | XRoleClassCoverage | XRoleClassCoverageInvoice | XRoleClassCredentialedEntity | XRoleClassPayeePolicyRelationship = field(
         init=False,
         default=RoleClassMutualRelationship.PAT,
         metadata={

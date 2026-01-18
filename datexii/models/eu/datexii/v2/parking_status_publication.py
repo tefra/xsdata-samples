@@ -33,7 +33,7 @@ class ParkingStatusPublication:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    header_information: Optional[HeaderInformation] = field(
+    header_information: HeaderInformation | None = field(
         default=None,
         metadata={
             "name": "headerInformation",

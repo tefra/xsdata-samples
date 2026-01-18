@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -37,7 +39,7 @@ class SwVariableRefProxy:
     class Meta:
         name = "SW-VARIABLE-REF-PROXY"
 
-    autosar_variable: Optional[AutosarVariableRef] = field(
+    autosar_variable: AutosarVariableRef | None = field(
         default=None,
         metadata={
             "name": "AUTOSAR-VARIABLE",
@@ -45,9 +47,7 @@ class SwVariableRefProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    mc_data_instance_var_ref: Optional[
-        "SwVariableRefProxy.McDataInstanceVarRef"
-    ] = field(
+    mc_data_instance_var_ref: SwVariableRefProxy.McDataInstanceVarRef | None = field(
         default=None,
         metadata={
             "name": "MC-DATA-INSTANCE-VAR-REF",
@@ -55,14 +55,14 @@ class SwVariableRefProxy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -73,7 +73,7 @@ class SwVariableRefProxy:
 
     @dataclass
     class McDataInstanceVarRef(Ref):
-        dest: Optional[McDataInstanceSubtypesEnum] = field(
+        dest: McDataInstanceSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

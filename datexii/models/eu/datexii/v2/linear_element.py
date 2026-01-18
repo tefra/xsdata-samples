@@ -30,7 +30,7 @@ class LinearElement:
     :ivar linear_element_extension:
     """
 
-    road_name: Optional[MultilingualString] = field(
+    road_name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "roadName",
@@ -38,7 +38,7 @@ class LinearElement:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    road_number: Optional[str] = field(
+    road_number: str | None = field(
         default=None,
         metadata={
             "name": "roadNumber",
@@ -47,7 +47,7 @@ class LinearElement:
             "max_length": 1024,
         },
     )
-    linear_element_reference_model: Optional[str] = field(
+    linear_element_reference_model: str | None = field(
         default=None,
         metadata={
             "name": "linearElementReferenceModel",
@@ -56,7 +56,7 @@ class LinearElement:
             "max_length": 1024,
         },
     )
-    linear_element_reference_model_version: Optional[str] = field(
+    linear_element_reference_model_version: str | None = field(
         default=None,
         metadata={
             "name": "linearElementReferenceModelVersion",
@@ -65,7 +65,7 @@ class LinearElement:
             "max_length": 1024,
         },
     )
-    linear_element_nature: Optional[LinearElementNatureEnum] = field(
+    linear_element_nature: LinearElementNatureEnum | None = field(
         default=None,
         metadata={
             "name": "linearElementNature",
@@ -73,7 +73,7 @@ class LinearElement:
             "namespace": "http://datex2.eu/schema/2/2_0",
         },
     )
-    linear_element_extension: Optional[ExtensionType] = field(
+    linear_element_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "linearElementExtension",

@@ -30,7 +30,7 @@ class BaseSystemTraceabilityType(BaseHeaderType):
         system.</description>
     """
 
-    country_code: Optional[str] = field(
+    country_code: str | None = field(
         default=None,
         metadata={
             "name": "CountryCode",
@@ -39,7 +39,7 @@ class BaseSystemTraceabilityType(BaseHeaderType):
             "pattern": r"[A-Z][A-Z]",
         },
     )
-    country_name: Optional[str] = field(
+    country_name: str | None = field(
         default=None,
         metadata={
             "name": "CountryName",
@@ -47,7 +47,7 @@ class BaseSystemTraceabilityType(BaseHeaderType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
         },
     )
-    language_code: Optional[str] = field(
+    language_code: str | None = field(
         default=None,
         metadata={
             "name": "LanguageCode",
@@ -55,7 +55,7 @@ class BaseSystemTraceabilityType(BaseHeaderType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
         },
     )
-    operator_name: Optional[str] = field(
+    operator_name: str | None = field(
         default=None,
         metadata={
             "name": "OperatorName",
@@ -63,7 +63,7 @@ class BaseSystemTraceabilityType(BaseHeaderType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
         },
     )
-    system_id: Optional[str] = field(
+    system_id: str | None = field(
         default=None,
         metadata={
             "name": "SystemID",
@@ -71,7 +71,7 @@ class BaseSystemTraceabilityType(BaseHeaderType):
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
         },
     )
-    system_name: Optional[str] = field(
+    system_name: str | None = field(
         default=None,
         metadata={
             "name": "SystemName",

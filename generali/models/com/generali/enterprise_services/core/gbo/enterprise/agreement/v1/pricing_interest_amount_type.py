@@ -12,7 +12,7 @@ __NAMESPACE__ = (
 
 @dataclass
 class PricingInterestAmountType:
-    value: Optional[ValueType] = field(
+    value: ValueType | None = field(
         default=None,
         metadata={
             "name": "Value",
@@ -20,7 +20,7 @@ class PricingInterestAmountType:
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
         },
     )
-    type_value: Optional[str] = field(
+    type_value: str | None = field(
         default=None,
         metadata={
             "name": "Type",

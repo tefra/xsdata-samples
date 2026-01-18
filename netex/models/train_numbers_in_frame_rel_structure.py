@@ -15,7 +15,7 @@ class TrainNumbersInFrameRelStructure(ContainmentAggregationStructure):
         name = "trainNumbersInFrame_RelStructure"
 
     train_number_or_train_number_ref: Iterable[
-        Union[TrainNumber, TrainNumberRef]
+        TrainNumber | TrainNumberRef
     ] = field(
         default_factory=list,
         metadata={

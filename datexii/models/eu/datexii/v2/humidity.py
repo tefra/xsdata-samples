@@ -20,7 +20,7 @@ class Humidity:
     :ivar humidity_extension:
     """
 
-    relative_humidity: Optional[PercentageValue] = field(
+    relative_humidity: PercentageValue | None = field(
         default=None,
         metadata={
             "name": "relativeHumidity",
@@ -29,7 +29,7 @@ class Humidity:
             "required": True,
         },
     )
-    humidity_extension: Optional[ExtensionType] = field(
+    humidity_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "humidityExtension",

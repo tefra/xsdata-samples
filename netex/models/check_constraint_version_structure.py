@@ -92,7 +92,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
     class Meta:
         name = "CheckConstraint_VersionStructure"
 
-    place_ref: Optional[PlaceRef] = field(
+    place_ref: PlaceRef | None = field(
         default=None,
         metadata={
             "name": "PlaceRef",
@@ -100,7 +100,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    check_direction: Optional[CheckDirectionEnumeration] = field(
+    check_direction: CheckDirectionEnumeration | None = field(
         default=None,
         metadata={
             "name": "CheckDirection",
@@ -108,7 +108,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    check_process: Optional[CheckProcessTypeEnumeration] = field(
+    check_process: CheckProcessTypeEnumeration | None = field(
         default=None,
         metadata={
             "name": "CheckProcess",
@@ -116,7 +116,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    check_service: Optional[CheckServiceEnumeration] = field(
+    check_service: CheckServiceEnumeration | None = field(
         default=None,
         metadata={
             "name": "CheckService",
@@ -124,7 +124,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    access_feature_type: Optional[AccessFeatureEnumeration] = field(
+    access_feature_type: AccessFeatureEnumeration | None = field(
         default=None,
         metadata={
             "name": "AccessFeatureType",
@@ -132,7 +132,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    congestion: Optional[CongestionEnumeration] = field(
+    congestion: CongestionEnumeration | None = field(
         default=None,
         metadata={
             "name": "Congestion",
@@ -140,7 +140,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_congestion_ref: Optional[TypeOfCongestionRef] = field(
+    type_of_congestion_ref: TypeOfCongestionRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfCongestionRef",
@@ -148,7 +148,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    class_of_use_ref: Optional[ClassOfUseRef] = field(
+    class_of_use_ref: ClassOfUseRef | None = field(
         default=None,
         metadata={
             "name": "ClassOfUseRef",
@@ -156,7 +156,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_equipment_ref: Optional[TypeOfEquipmentRef] = field(
+    type_of_equipment_ref: TypeOfEquipmentRef | None = field(
         default=None,
         metadata={
             "name": "TypeOfEquipmentRef",
@@ -164,7 +164,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    facility_ref: Optional[FacilityRef] = field(
+    facility_ref: FacilityRef | None = field(
         default=None,
         metadata={
             "name": "FacilityRef",
@@ -172,73 +172,7 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Optional[
-        Union[
-            RetailDeviceRef,
-            OnlineServiceRef,
-            VehicleRentalServiceRef,
-            VehicleSharingServiceRef,
-            ChauffeuredVehicleServiceRef,
-            TaxiServiceRef,
-            CarPoolingServiceRef,
-            ActivatedEquipmentRef,
-            BatteryEquipmentRef,
-            RefuellingEquipmentRef,
-            VehicleChargingEquipmentRef,
-            AssistanceBookingServiceRef,
-            CateringServiceRef,
-            RetailServiceRef,
-            MoneyServiceRef,
-            HireServiceRef,
-            CommunicationServiceRef,
-            MeetingPointServiceRef,
-            LeftLuggageServiceRef,
-            LuggageServiceRef,
-            LostPropertyServiceRef,
-            ComplaintsServiceRef,
-            CustomerServiceRef,
-            AssistanceServiceRef,
-            TicketingServiceRef,
-            LocalServiceRef,
-            VehicleReleaseEquipmentRef,
-            TicketValidatorEquipmentRef,
-            TicketingEquipmentRef,
-            PassengerInformationEquipmentRef,
-            CycleStorageEquipmentRef,
-            TrolleyStandEquipmentRef,
-            SeatingEquipmentRef,
-            ShelterEquipmentRef,
-            LuggageLockerEquipmentRef,
-            WaitingRoomEquipmentRef,
-            WaitingEquipmentRef,
-            SiteEquipmentRef,
-            PlaceLightingEquipmentRef,
-            RoughSurfaceRef,
-            StaircaseEquipmentRef,
-            QueueingEquipmentRef,
-            TravelatorEquipmentRef,
-            EscalatorEquipmentRef,
-            LiftCallEquipmentRef,
-            LiftEquipmentRef,
-            CrossingEquipmentRef,
-            RampEquipmentRef,
-            EntranceEquipmentRef,
-            HeadingSignRef,
-            GeneralSignRef,
-            PlaceSignRef,
-            SignEquipmentRef,
-            RubbishDisposalEquipmentRef,
-            PassengerBeaconEquipmentRef,
-            HelpPointEquipmentRef,
-            PassengerSafetyEquipmentRef,
-            SanitaryEquipmentRef,
-            WheelchairVehicleRef,
-            AccessVehicleEquipmentRef,
-            VehicleEquipmentRef,
-            PassengerEquipmentRef,
-            EquipmentRef,
-        ]
-    ] = field(
+    choice: RetailDeviceRef | OnlineServiceRef | VehicleRentalServiceRef | VehicleSharingServiceRef | ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | ActivatedEquipmentRef | BatteryEquipmentRef | RefuellingEquipmentRef | VehicleChargingEquipmentRef | AssistanceBookingServiceRef | CateringServiceRef | RetailServiceRef | MoneyServiceRef | HireServiceRef | CommunicationServiceRef | MeetingPointServiceRef | LeftLuggageServiceRef | LuggageServiceRef | LostPropertyServiceRef | ComplaintsServiceRef | CustomerServiceRef | AssistanceServiceRef | TicketingServiceRef | LocalServiceRef | VehicleReleaseEquipmentRef | TicketValidatorEquipmentRef | TicketingEquipmentRef | PassengerInformationEquipmentRef | CycleStorageEquipmentRef | TrolleyStandEquipmentRef | SeatingEquipmentRef | ShelterEquipmentRef | LuggageLockerEquipmentRef | WaitingRoomEquipmentRef | WaitingEquipmentRef | SiteEquipmentRef | PlaceLightingEquipmentRef | RoughSurfaceRef | StaircaseEquipmentRef | QueueingEquipmentRef | TravelatorEquipmentRef | EscalatorEquipmentRef | LiftCallEquipmentRef | LiftEquipmentRef | CrossingEquipmentRef | RampEquipmentRef | EntranceEquipmentRef | HeadingSignRef | GeneralSignRef | PlaceSignRef | SignEquipmentRef | RubbishDisposalEquipmentRef | PassengerBeaconEquipmentRef | HelpPointEquipmentRef | PassengerSafetyEquipmentRef | SanitaryEquipmentRef | WheelchairVehicleRef | AccessVehicleEquipmentRef | VehicleEquipmentRef | PassengerEquipmentRef | EquipmentRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -561,14 +495,14 @@ class CheckConstraintVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    delays: Optional[CheckConstraintDelaysRelStructure] = field(
+    delays: CheckConstraintDelaysRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    throughput: Optional[CheckConstraintThroughputsRelStructure] = field(
+    throughput: CheckConstraintThroughputsRelStructure | None = field(
         default=None,
         metadata={
             "type": "Element",

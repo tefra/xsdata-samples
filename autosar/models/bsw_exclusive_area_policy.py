@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -40,7 +42,7 @@ class BswExclusiveAreaPolicy:
     class Meta:
         name = "BSW-EXCLUSIVE-AREA-POLICY"
 
-    enable_take_address: Optional[Boolean] = field(
+    enable_take_address: Boolean | None = field(
         default=None,
         metadata={
             "name": "ENABLE-TAKE-ADDRESS",
@@ -48,7 +50,7 @@ class BswExclusiveAreaPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    api_principle: Optional[ApiPrincipleEnum] = field(
+    api_principle: ApiPrincipleEnum | None = field(
         default=None,
         metadata={
             "name": "API-PRINCIPLE",
@@ -56,7 +58,7 @@ class BswExclusiveAreaPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    exclusive_area_ref: Optional["BswExclusiveAreaPolicy.ExclusiveAreaRef"] = (
+    exclusive_area_ref: BswExclusiveAreaPolicy.ExclusiveAreaRef | None = (
         field(
             default=None,
             metadata={
@@ -66,7 +68,7 @@ class BswExclusiveAreaPolicy:
             },
         )
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -74,14 +76,14 @@ class BswExclusiveAreaPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -92,7 +94,7 @@ class BswExclusiveAreaPolicy:
 
     @dataclass
     class ExclusiveAreaRef(Ref):
-        dest: Optional[ExclusiveAreaSubtypesEnum] = field(
+        dest: ExclusiveAreaSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

@@ -24,13 +24,13 @@ class PartSelect:
             "max_occurs": 2,
         },
     )
-    indices: Optional[Indices] = field(
+    indices: Indices | None = field(
         default=None,
         metadata={
             "type": "Element",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",

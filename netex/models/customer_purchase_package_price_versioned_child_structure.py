@@ -19,9 +19,7 @@ class CustomerPurchasePackagePriceVersionedChildStructure(
     class Meta:
         name = "CustomerPurchasePackagePrice_VersionedChildStructure"
 
-    customer_purchase_package_ref_or_customer_purchase_package_element_ref: Optional[
-        Union[CustomerPurchasePackageRef, CustomerPurchasePackageElementRef]
-    ] = field(
+    customer_purchase_package_ref_or_customer_purchase_package_element_ref: CustomerPurchasePackageRef | CustomerPurchasePackageElementRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

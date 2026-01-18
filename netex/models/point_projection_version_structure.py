@@ -14,7 +14,7 @@ class PointProjectionVersionStructure(ProjectionVersionStructure):
     class Meta:
         name = "PointProjection_VersionStructure"
 
-    projected_point_ref: Optional[PointRefStructure] = field(
+    projected_point_ref: PointRefStructure | None = field(
         default=None,
         metadata={
             "name": "ProjectedPointRef",
@@ -22,7 +22,7 @@ class PointProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    project_to_point_ref: Optional[PointRefStructure] = field(
+    project_to_point_ref: PointRefStructure | None = field(
         default=None,
         metadata={
             "name": "ProjectToPointRef",
@@ -30,7 +30,7 @@ class PointProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    project_to_link_ref: Optional[LinkRefStructure] = field(
+    project_to_link_ref: LinkRefStructure | None = field(
         default=None,
         metadata={
             "name": "ProjectToLinkRef",
@@ -38,7 +38,7 @@ class PointProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    distance: Optional[Decimal] = field(
+    distance: Decimal | None = field(
         default=None,
         metadata={
             "name": "Distance",

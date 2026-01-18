@@ -17,7 +17,7 @@ class Target:
     :ivar target_extension:
     """
 
-    address: Optional[str] = field(
+    address: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -26,7 +26,7 @@ class Target:
             "max_length": 1024,
         },
     )
-    protocol: Optional[str] = field(
+    protocol: str | None = field(
         default=None,
         metadata={
             "type": "Element",
@@ -35,7 +35,7 @@ class Target:
             "max_length": 1024,
         },
     )
-    target_extension: Optional[ExtensionType] = field(
+    target_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "targetExtension",

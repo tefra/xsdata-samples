@@ -16,7 +16,7 @@ class ValidableElementPriceVersionedChildStructure(
     class Meta:
         name = "ValidableElementPrice_VersionedChildStructure"
 
-    validable_element_ref: Optional[ValidableElementRef] = field(
+    validable_element_ref: ValidableElementRef | None = field(
         default=None,
         metadata={
             "name": "ValidableElementRef",

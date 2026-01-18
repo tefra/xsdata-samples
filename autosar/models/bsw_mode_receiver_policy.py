@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -43,7 +45,7 @@ class BswModeReceiverPolicy:
     class Meta:
         name = "BSW-MODE-RECEIVER-POLICY"
 
-    enhanced_mode_api: Optional[Boolean] = field(
+    enhanced_mode_api: Boolean | None = field(
         default=None,
         metadata={
             "name": "ENHANCED-MODE-API",
@@ -51,9 +53,7 @@ class BswModeReceiverPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    required_mode_group_ref: Optional[
-        "BswModeReceiverPolicy.RequiredModeGroupRef"
-    ] = field(
+    required_mode_group_ref: BswModeReceiverPolicy.RequiredModeGroupRef | None = field(
         default=None,
         metadata={
             "name": "REQUIRED-MODE-GROUP-REF",
@@ -61,7 +61,7 @@ class BswModeReceiverPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    supports_asynchronous_mode_switch: Optional[Boolean] = field(
+    supports_asynchronous_mode_switch: Boolean | None = field(
         default=None,
         metadata={
             "name": "SUPPORTS-ASYNCHRONOUS-MODE-SWITCH",
@@ -69,7 +69,7 @@ class BswModeReceiverPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -77,14 +77,14 @@ class BswModeReceiverPolicy:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -95,7 +95,7 @@ class BswModeReceiverPolicy:
 
     @dataclass
     class RequiredModeGroupRef(Ref):
-        dest: Optional[ModeDeclarationGroupPrototypeSubtypesEnum] = field(
+        dest: ModeDeclarationGroupPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

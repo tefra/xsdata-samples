@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -91,7 +93,7 @@ class ApApplicationError:
     class Meta:
         name = "AP-APPLICATION-ERROR"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -100,7 +102,7 @@ class ApApplicationError:
             "required": True,
         },
     )
-    short_name_fragments: Optional["ApApplicationError.ShortNameFragments"] = (
+    short_name_fragments: ApApplicationError.ShortNameFragments | None = (
         field(
             default=None,
             metadata={
@@ -110,7 +112,7 @@ class ApApplicationError:
             },
         )
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -118,7 +120,7 @@ class ApApplicationError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -126,7 +128,7 @@ class ApApplicationError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -134,7 +136,7 @@ class ApApplicationError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -142,7 +144,7 @@ class ApApplicationError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -150,7 +152,7 @@ class ApApplicationError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["ApApplicationError.Annotations"] = field(
+    annotations: ApApplicationError.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -158,7 +160,7 @@ class ApApplicationError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -166,7 +168,7 @@ class ApApplicationError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    error_code: Optional[Integer] = field(
+    error_code: Integer | None = field(
         default=None,
         metadata={
             "name": "ERROR-CODE",
@@ -174,7 +176,7 @@ class ApApplicationError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    error_domain_ref: Optional["ApApplicationError.ErrorDomainRef"] = field(
+    error_domain_ref: ApApplicationError.ErrorDomainRef | None = field(
         default=None,
         metadata={
             "name": "ERROR-DOMAIN-REF",
@@ -182,14 +184,14 @@ class ApApplicationError:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -197,7 +199,7 @@ class ApApplicationError:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -229,7 +231,7 @@ class ApApplicationError:
 
     @dataclass
     class ErrorDomainRef(Ref):
-        dest: Optional[ApApplicationErrorDomainSubtypesEnum] = field(
+        dest: ApApplicationErrorDomainSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

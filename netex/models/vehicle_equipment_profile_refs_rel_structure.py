@@ -15,7 +15,7 @@ class VehicleEquipmentProfileRefsRelStructure(OneToManyRelationshipStructure):
         name = "vehicleEquipmentProfileRefs_RelStructure"
 
     vehicle_equipment_profile_ref: Iterable[
-        Union[ChargingEquipmentProfileRef, VehicleEquipmentProfileRef]
+        ChargingEquipmentProfileRef | VehicleEquipmentProfileRef
     ] = field(
         default_factory=list,
         metadata={

@@ -46,7 +46,7 @@ class MsrQueryTopic1:
     class Meta:
         name = "MSR-QUERY-TOPIC-1"
 
-    msr_query_props: Optional[MsrQueryProps] = field(
+    msr_query_props: MsrQueryProps | None = field(
         default=None,
         metadata={
             "name": "MSR-QUERY-PROPS",
@@ -54,7 +54,7 @@ class MsrQueryTopic1:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    msr_query_result_topic_1: Optional[MsrQueryResultTopic1] = field(
+    msr_query_result_topic_1: MsrQueryResultTopic1 | None = field(
         default=None,
         metadata={
             "name": "MSR-QUERY-RESULT-TOPIC-1",
@@ -62,14 +62,14 @@ class MsrQueryTopic1:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -85,7 +85,7 @@ class MsrQueryTopic1:
             "tokens": True,
         },
     )
-    view: Optional[str] = field(
+    view: str | None = field(
         default=None,
         metadata={
             "name": "VIEW",
@@ -93,14 +93,14 @@ class MsrQueryTopic1:
             "pattern": r"(-?[a-zA-Z_]+)(( )+-?[a-zA-Z_]+)*",
         },
     )
-    break_value: Optional[ChapterEnumBreakSimple] = field(
+    break_value: ChapterEnumBreakSimple | None = field(
         default=None,
         metadata={
             "name": "BREAK",
             "type": "Attribute",
         },
     )
-    keep_with_previous: Optional[KeepWithPreviousEnumSimple] = field(
+    keep_with_previous: KeepWithPreviousEnumSimple | None = field(
         default=None,
         metadata={
             "name": "KEEP-WITH-PREVIOUS",

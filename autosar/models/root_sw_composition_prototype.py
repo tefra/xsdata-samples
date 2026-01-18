@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -118,7 +120,7 @@ class RootSwCompositionPrototype:
     class Meta:
         name = "ROOT-SW-COMPOSITION-PROTOTYPE"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -127,9 +129,7 @@ class RootSwCompositionPrototype:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "RootSwCompositionPrototype.ShortNameFragments"
-    ] = field(
+    short_name_fragments: RootSwCompositionPrototype.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -137,7 +137,7 @@ class RootSwCompositionPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -145,7 +145,7 @@ class RootSwCompositionPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -153,7 +153,7 @@ class RootSwCompositionPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -161,7 +161,7 @@ class RootSwCompositionPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -169,7 +169,7 @@ class RootSwCompositionPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -177,7 +177,7 @@ class RootSwCompositionPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["RootSwCompositionPrototype.Annotations"] = field(
+    annotations: RootSwCompositionPrototype.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -185,9 +185,7 @@ class RootSwCompositionPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    calibration_parameter_value_set_refs: Optional[
-        "RootSwCompositionPrototype.CalibrationParameterValueSetRefs"
-    ] = field(
+    calibration_parameter_value_set_refs: RootSwCompositionPrototype.CalibrationParameterValueSetRefs | None = field(
         default=None,
         metadata={
             "name": "CALIBRATION-PARAMETER-VALUE-SET-REFS",
@@ -195,7 +193,7 @@ class RootSwCompositionPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    flat_map_ref: Optional["RootSwCompositionPrototype.FlatMapRef"] = field(
+    flat_map_ref: RootSwCompositionPrototype.FlatMapRef | None = field(
         default=None,
         metadata={
             "name": "FLAT-MAP-REF",
@@ -203,9 +201,7 @@ class RootSwCompositionPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    software_composition_tref: Optional[
-        "RootSwCompositionPrototype.SoftwareCompositionTref"
-    ] = field(
+    software_composition_tref: RootSwCompositionPrototype.SoftwareCompositionTref | None = field(
         default=None,
         metadata={
             "name": "SOFTWARE-COMPOSITION-TREF",
@@ -213,7 +209,7 @@ class RootSwCompositionPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -221,14 +217,14 @@ class RootSwCompositionPrototype:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -236,7 +232,7 @@ class RootSwCompositionPrototype:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -269,7 +265,7 @@ class RootSwCompositionPrototype:
     @dataclass
     class CalibrationParameterValueSetRefs:
         calibration_parameter_value_set_ref: list[
-            "RootSwCompositionPrototype.CalibrationParameterValueSetRefs.CalibrationParameterValueSetRef"
+            RootSwCompositionPrototype.CalibrationParameterValueSetRefs.CalibrationParameterValueSetRef
         ] = field(
             default_factory=list,
             metadata={
@@ -281,7 +277,7 @@ class RootSwCompositionPrototype:
 
         @dataclass
         class CalibrationParameterValueSetRef(Ref):
-            dest: Optional[CalibrationParameterValueSetSubtypesEnum] = field(
+            dest: CalibrationParameterValueSetSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -292,7 +288,7 @@ class RootSwCompositionPrototype:
 
     @dataclass
     class FlatMapRef(Ref):
-        dest: Optional[FlatMapSubtypesEnum] = field(
+        dest: FlatMapSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -303,7 +299,7 @@ class RootSwCompositionPrototype:
 
     @dataclass
     class SoftwareCompositionTref(Ref):
-        dest: Optional[CompositionSwComponentTypeSubtypesEnum] = field(
+        dest: CompositionSwComponentTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

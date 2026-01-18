@@ -22,13 +22,13 @@ class UnsignedLongintExpression(ComplexBaseExpression):
     class Meta:
         name = "unsignedLongintExpression"
 
-    minimum: Optional[int] = field(
+    minimum: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    maximum: Optional[int] = field(
+    maximum: int | None = field(
         default=None,
         metadata={
             "type": "Attribute",

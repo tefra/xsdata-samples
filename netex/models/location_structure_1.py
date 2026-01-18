@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from decimal import Decimal
@@ -14,11 +16,7 @@ class LocationStructure1:
         name = "LocationStructure"
 
     longitude_or_latitude_or_coordinates: Iterable[
-        Union[
-            "LocationStructure1.Longitude",
-            "LocationStructure1.Latitude",
-            CoordinatesStructure,
-        ]
+        LocationStructure1.Longitude | LocationStructure1.Latitude | CoordinatesStructure
     ] = field(
         default_factory=list,
         metadata={
@@ -43,7 +41,7 @@ class LocationStructure1:
             "max_occurs": 2,
         },
     )
-    precision: Optional[int] = field(
+    precision: int | None = field(
         default=None,
         metadata={
             "name": "Precision",
@@ -51,13 +49,13 @@ class LocationStructure1:
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    id: Optional[str] = field(
+    id: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
         },
     )
-    srs_name: Optional[str] = field(
+    srs_name: str | None = field(
         default=None,
         metadata={
             "name": "srsName",
@@ -67,7 +65,7 @@ class LocationStructure1:
 
     @dataclass
     class Longitude:
-        value: Optional[Decimal] = field(
+        value: Decimal | None = field(
             default=None,
             metadata={
                 "required": True,
@@ -78,7 +76,7 @@ class LocationStructure1:
 
     @dataclass
     class Latitude:
-        value: Optional[Decimal] = field(
+        value: Decimal | None = field(
             default=None,
             metadata={
                 "required": True,

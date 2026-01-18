@@ -14,7 +14,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass
 class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
-    request_message_ref: Optional[MessageQualifierStructure] = field(
+    request_message_ref: MessageQualifierStructure | None = field(
         default=None,
         metadata={
             "name": "RequestMessageRef",
@@ -22,7 +22,7 @@ class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_address: Optional[str] = field(
+    delegator_address: str | None = field(
         default=None,
         metadata={
             "name": "DelegatorAddress",
@@ -30,7 +30,7 @@ class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    delegator_ref: Optional[ParticipantRefStructure] = field(
+    delegator_ref: ParticipantRefStructure | None = field(
         default=None,
         metadata={
             "name": "DelegatorRef",
@@ -38,7 +38,7 @@ class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    status: Optional[Status] = field(
+    status: Status | None = field(
         default=None,
         metadata={
             "name": "Status",
@@ -46,7 +46,7 @@ class AbstractServiceCapabilitiesResponseStructure(ResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    error_condition: Optional[ServiceDeliveryErrorConditionStructure] = field(
+    error_condition: ServiceDeliveryErrorConditionStructure | None = field(
         default=None,
         metadata={
             "name": "ErrorCondition",

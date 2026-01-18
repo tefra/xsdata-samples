@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -51,7 +53,7 @@ class SwcToEcuMappingConstraint:
     class Meta:
         name = "SWC-TO-ECU-MAPPING-CONSTRAINT"
 
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -59,7 +61,7 @@ class SwcToEcuMappingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -67,7 +69,7 @@ class SwcToEcuMappingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    component_iref: Optional[ComponentInSystemInstanceRef] = field(
+    component_iref: ComponentInSystemInstanceRef | None = field(
         default=None,
         metadata={
             "name": "COMPONENT-IREF",
@@ -75,9 +77,7 @@ class SwcToEcuMappingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    ecu_instance_refs: Optional[
-        "SwcToEcuMappingConstraint.EcuInstanceRefs"
-    ] = field(
+    ecu_instance_refs: SwcToEcuMappingConstraint.EcuInstanceRefs | None = field(
         default=None,
         metadata={
             "name": "ECU-INSTANCE-REFS",
@@ -85,9 +85,7 @@ class SwcToEcuMappingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    swc_to_ecu_mapping_constraint_type: Optional[
-        SwcToEcuMappingConstraintType
-    ] = field(
+    swc_to_ecu_mapping_constraint_type: SwcToEcuMappingConstraintType | None = field(
         default=None,
         metadata={
             "name": "SWC-TO-ECU-MAPPING-CONSTRAINT-TYPE",
@@ -95,14 +93,14 @@ class SwcToEcuMappingConstraint:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -114,7 +112,7 @@ class SwcToEcuMappingConstraint:
     @dataclass
     class EcuInstanceRefs:
         ecu_instance_ref: list[
-            "SwcToEcuMappingConstraint.EcuInstanceRefs.EcuInstanceRef"
+            SwcToEcuMappingConstraint.EcuInstanceRefs.EcuInstanceRef
         ] = field(
             default_factory=list,
             metadata={
@@ -126,7 +124,7 @@ class SwcToEcuMappingConstraint:
 
         @dataclass
         class EcuInstanceRef(Ref):
-            dest: Optional[EcuInstanceSubtypesEnum] = field(
+            dest: EcuInstanceSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

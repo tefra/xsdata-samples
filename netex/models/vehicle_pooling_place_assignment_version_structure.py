@@ -26,11 +26,7 @@ class VehiclePoolingPlaceAssignmentVersionStructure(
     class Meta:
         name = "VehiclePoolingPlaceAssignment_VersionStructure"
 
-    vehicle_pooling_service_ref: Optional[
-        Union[
-            ChauffeuredVehicleServiceRef, TaxiServiceRef, CarPoolingServiceRef
-        ]
-    ] = field(
+    vehicle_pooling_service_ref: ChauffeuredVehicleServiceRef | TaxiServiceRef | CarPoolingServiceRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -53,9 +49,7 @@ class VehiclePoolingPlaceAssignmentVersionStructure(
             ),
         },
     )
-    vehicle_pooling_meeting_place_ref_or_vehicle_pooling_parking_area_ref: Optional[
-        Union[VehiclePoolingMeetingPlaceRef, VehiclePoolingParkingAreaRef]
-    ] = field(
+    vehicle_pooling_meeting_place_ref_or_vehicle_pooling_parking_area_ref: VehiclePoolingMeetingPlaceRef | VehiclePoolingParkingAreaRef | None = field(
         default=None,
         metadata={
             "type": "Elements",
@@ -73,14 +67,7 @@ class VehiclePoolingPlaceAssignmentVersionStructure(
             ),
         },
     )
-    parking_bay_ref_or_vehicle_sharing_parking_bay_ref: Optional[
-        Union[
-            VehiclePoolingParkingBayRef,
-            MonitoredVehicleSharingParkingBayRef,
-            VehicleSharingParkingBayRef,
-            ParkingBayRef,
-        ]
-    ] = field(
+    parking_bay_ref_or_vehicle_sharing_parking_bay_ref: VehiclePoolingParkingBayRef | MonitoredVehicleSharingParkingBayRef | VehicleSharingParkingBayRef | ParkingBayRef | None = field(
         default=None,
         metadata={
             "type": "Elements",

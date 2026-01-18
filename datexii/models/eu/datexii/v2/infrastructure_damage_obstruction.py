@@ -22,7 +22,7 @@ class InfrastructureDamageObstruction(Obstruction):
     :ivar infrastructure_damage_obstruction_extension:
     """
 
-    infrastructure_damage_type: Optional[InfrastructureDamageTypeEnum] = field(
+    infrastructure_damage_type: InfrastructureDamageTypeEnum | None = field(
         default=None,
         metadata={
             "name": "infrastructureDamageType",
@@ -31,7 +31,7 @@ class InfrastructureDamageObstruction(Obstruction):
             "required": True,
         },
     )
-    infrastructure_damage_obstruction_extension: Optional[ExtensionType] = (
+    infrastructure_damage_obstruction_extension: ExtensionType | None = (
         field(
             default=None,
             metadata={

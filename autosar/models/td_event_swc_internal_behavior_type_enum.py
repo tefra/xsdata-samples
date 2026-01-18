@@ -30,20 +30,20 @@ class TdEventSwcInternalBehaviorTypeEnum:
     class Meta:
         name = "TD-EVENT-SWC-INTERNAL-BEHAVIOR-TYPE-ENUM"
 
-    value: Optional[TdEventSwcInternalBehaviorTypeEnumSimple] = field(
+    value: TdEventSwcInternalBehaviorTypeEnumSimple | None = field(
         default=None,
         metadata={
             "required": True,
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

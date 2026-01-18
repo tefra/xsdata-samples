@@ -17,7 +17,7 @@ class MediumAccessDeviceVersionStructure(DataManagedObjectStructure):
     class Meta:
         name = "MediumAccessDevice_VersionStructure"
 
-    name: Optional[MultilingualString] = field(
+    name: MultilingualString | None = field(
         default=None,
         metadata={
             "name": "Name",
@@ -25,7 +25,7 @@ class MediumAccessDeviceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    customer_ref: Optional[CustomerRef] = field(
+    customer_ref: CustomerRef | None = field(
         default=None,
         metadata={
             "name": "CustomerRef",
@@ -33,7 +33,7 @@ class MediumAccessDeviceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    identity_token: Optional[str] = field(
+    identity_token: str | None = field(
         default=None,
         metadata={
             "name": "IdentityToken",
@@ -41,7 +41,7 @@ class MediumAccessDeviceVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    type_of_medium_access_device_ref: Optional[TypeOfMediumAccessDeviceRef] = (
+    type_of_medium_access_device_ref: TypeOfMediumAccessDeviceRef | None = (
         field(
             default=None,
             metadata={
@@ -51,7 +51,7 @@ class MediumAccessDeviceVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    application_instances: Optional[MediumApplicationInstanceRelStructure] = (
+    application_instances: MediumApplicationInstanceRelStructure | None = (
         field(
             default=None,
             metadata={

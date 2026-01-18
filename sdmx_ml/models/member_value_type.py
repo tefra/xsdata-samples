@@ -27,7 +27,7 @@ class MemberValueType:
             "pattern": r"[A-Za-z0-9_@$-%]+",
         },
     )
-    cascade_values: Optional[Union[bool, ExcludeRootType]] = field(
+    cascade_values: bool | ExcludeRootType | None = field(
         default=None,
         metadata={
             "name": "cascadeValues",

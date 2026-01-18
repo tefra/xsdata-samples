@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -102,7 +104,7 @@ class HwPinGroup:
     class Meta:
         name = "HW-PIN-GROUP"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -111,7 +113,7 @@ class HwPinGroup:
             "required": True,
         },
     )
-    short_name_fragments: Optional["HwPinGroup.ShortNameFragments"] = field(
+    short_name_fragments: HwPinGroup.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -119,7 +121,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -127,7 +129,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -135,7 +137,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -143,7 +145,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -151,7 +153,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -159,7 +161,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["HwPinGroup.Annotations"] = field(
+    annotations: HwPinGroup.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -167,7 +169,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_type_ref: Optional["HwPinGroup.HwTypeRef"] = field(
+    hw_type_ref: HwPinGroup.HwTypeRef | None = field(
         default=None,
         metadata={
             "name": "HW-TYPE-REF",
@@ -175,7 +177,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_category_refs: Optional["HwPinGroup.HwCategoryRefs"] = field(
+    hw_category_refs: HwPinGroup.HwCategoryRefs | None = field(
         default=None,
         metadata={
             "name": "HW-CATEGORY-REFS",
@@ -183,7 +185,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_attribute_values: Optional["HwPinGroup.HwAttributeValues"] = field(
+    hw_attribute_values: HwPinGroup.HwAttributeValues | None = field(
         default=None,
         metadata={
             "name": "HW-ATTRIBUTE-VALUES",
@@ -191,7 +193,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    hw_pin_group_content: Optional["HwPinGroupContent"] = field(
+    hw_pin_group_content: HwPinGroupContent | None = field(
         default=None,
         metadata={
             "name": "HW-PIN-GROUP-CONTENT",
@@ -199,7 +201,7 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    variation_point: Optional[VariationPoint] = field(
+    variation_point: VariationPoint | None = field(
         default=None,
         metadata={
             "name": "VARIATION-POINT",
@@ -207,14 +209,14 @@ class HwPinGroup:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -222,7 +224,7 @@ class HwPinGroup:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -254,7 +256,7 @@ class HwPinGroup:
 
     @dataclass
     class HwTypeRef(Ref):
-        dest: Optional[HwTypeSubtypesEnum] = field(
+        dest: HwTypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -265,7 +267,7 @@ class HwPinGroup:
 
     @dataclass
     class HwCategoryRefs:
-        hw_category_ref: list["HwPinGroup.HwCategoryRefs.HwCategoryRef"] = (
+        hw_category_ref: list[HwPinGroup.HwCategoryRefs.HwCategoryRef] = (
             field(
                 default_factory=list,
                 metadata={
@@ -278,7 +280,7 @@ class HwPinGroup:
 
         @dataclass
         class HwCategoryRef(Ref):
-            dest: Optional[HwCategorySubtypesEnum] = field(
+            dest: HwCategorySubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",
@@ -343,14 +345,14 @@ class HwPinGroupContent:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",

@@ -23,9 +23,7 @@ class ItineraryByReference(Itinerary):
     :ivar itinerary_by_reference_extension:
     """
 
-    predefined_itinerary_reference: Optional[
-        PredefinedItineraryVersionedReference
-    ] = field(
+    predefined_itinerary_reference: PredefinedItineraryVersionedReference | None = field(
         default=None,
         metadata={
             "name": "predefinedItineraryReference",
@@ -34,7 +32,7 @@ class ItineraryByReference(Itinerary):
             "required": True,
         },
     )
-    itinerary_by_reference_extension: Optional[ExtensionType] = field(
+    itinerary_by_reference_extension: ExtensionType | None = field(
         default=None,
         metadata={
             "name": "itineraryByReferenceExtension",

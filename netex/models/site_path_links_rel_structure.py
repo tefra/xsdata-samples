@@ -15,7 +15,7 @@ class SitePathLinksRelStructure(ContainmentAggregationStructure):
         name = "sitePathLinks_RelStructure"
 
     path_link_ref_or_site_path_link: Iterable[
-        Union[PathLinkRef, SitePathLink]
+        PathLinkRef | SitePathLink
     ] = field(
         default_factory=list,
         metadata={

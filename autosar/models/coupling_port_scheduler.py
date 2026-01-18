@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -88,7 +90,7 @@ class CouplingPortScheduler:
     class Meta:
         name = "COUPLING-PORT-SCHEDULER"
 
-    short_name: Optional[Identifier] = field(
+    short_name: Identifier | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME",
@@ -97,9 +99,7 @@ class CouplingPortScheduler:
             "required": True,
         },
     )
-    short_name_fragments: Optional[
-        "CouplingPortScheduler.ShortNameFragments"
-    ] = field(
+    short_name_fragments: CouplingPortScheduler.ShortNameFragments | None = field(
         default=None,
         metadata={
             "name": "SHORT-NAME-FRAGMENTS",
@@ -107,7 +107,7 @@ class CouplingPortScheduler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    long_name: Optional[MultilanguageLongName] = field(
+    long_name: MultilanguageLongName | None = field(
         default=None,
         metadata={
             "name": "LONG-NAME",
@@ -115,7 +115,7 @@ class CouplingPortScheduler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    desc: Optional[MultiLanguageOverviewParagraph] = field(
+    desc: MultiLanguageOverviewParagraph | None = field(
         default=None,
         metadata={
             "name": "DESC",
@@ -123,7 +123,7 @@ class CouplingPortScheduler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    category: Optional[CategoryString] = field(
+    category: CategoryString | None = field(
         default=None,
         metadata={
             "name": "CATEGORY",
@@ -131,7 +131,7 @@ class CouplingPortScheduler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    admin_data: Optional[AdminData] = field(
+    admin_data: AdminData | None = field(
         default=None,
         metadata={
             "name": "ADMIN-DATA",
@@ -139,7 +139,7 @@ class CouplingPortScheduler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    introduction: Optional[DocumentationBlock] = field(
+    introduction: DocumentationBlock | None = field(
         default=None,
         metadata={
             "name": "INTRODUCTION",
@@ -147,7 +147,7 @@ class CouplingPortScheduler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    annotations: Optional["CouplingPortScheduler.Annotations"] = field(
+    annotations: CouplingPortScheduler.Annotations | None = field(
         default=None,
         metadata={
             "name": "ANNOTATIONS",
@@ -155,7 +155,7 @@ class CouplingPortScheduler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    port_scheduler: Optional[EthernetCouplingPortSchedulerEnum] = field(
+    port_scheduler: EthernetCouplingPortSchedulerEnum | None = field(
         default=None,
         metadata={
             "name": "PORT-SCHEDULER",
@@ -163,7 +163,7 @@ class CouplingPortScheduler:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    predecessor_refs: Optional["CouplingPortScheduler.PredecessorRefs"] = (
+    predecessor_refs: CouplingPortScheduler.PredecessorRefs | None = (
         field(
             default=None,
             metadata={
@@ -173,14 +173,14 @@ class CouplingPortScheduler:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -188,7 +188,7 @@ class CouplingPortScheduler:
             "pattern": r"([0-9]{4}-[0-9]{2}-[0-9]{2})(T[0-9]{2}:[0-9]{2}:[0-9]{2}(Z|([+\-][0-9]{2}:[0-9]{2})))?",
         },
     )
-    uuid: Optional[str] = field(
+    uuid: str | None = field(
         default=None,
         metadata={
             "name": "UUID",
@@ -221,7 +221,7 @@ class CouplingPortScheduler:
     @dataclass
     class PredecessorRefs:
         predecessor_ref: list[
-            "CouplingPortScheduler.PredecessorRefs.PredecessorRef"
+            CouplingPortScheduler.PredecessorRefs.PredecessorRef
         ] = field(
             default_factory=list,
             metadata={
@@ -233,7 +233,7 @@ class CouplingPortScheduler:
 
         @dataclass
         class PredecessorRef(Ref):
-            dest: Optional[CouplingPortStructuralElementSubtypesEnum] = field(
+            dest: CouplingPortStructuralElementSubtypesEnum | None = field(
                 default=None,
                 metadata={
                     "name": "DEST",

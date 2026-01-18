@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -75,9 +77,7 @@ class DataPrototypeMapping:
     class Meta:
         name = "DATA-PROTOTYPE-MAPPING"
 
-    first_data_prototype_ref: Optional[
-        "DataPrototypeMapping.FirstDataPrototypeRef"
-    ] = field(
+    first_data_prototype_ref: DataPrototypeMapping.FirstDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "FIRST-DATA-PROTOTYPE-REF",
@@ -85,9 +85,7 @@ class DataPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    first_to_second_data_transformation_ref: Optional[
-        "DataPrototypeMapping.FirstToSecondDataTransformationRef"
-    ] = field(
+    first_to_second_data_transformation_ref: DataPrototypeMapping.FirstToSecondDataTransformationRef | None = field(
         default=None,
         metadata={
             "name": "FIRST-TO-SECOND-DATA-TRANSFORMATION-REF",
@@ -95,9 +93,7 @@ class DataPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_data_prototype_ref: Optional[
-        "DataPrototypeMapping.SecondDataPrototypeRef"
-    ] = field(
+    second_data_prototype_ref: DataPrototypeMapping.SecondDataPrototypeRef | None = field(
         default=None,
         metadata={
             "name": "SECOND-DATA-PROTOTYPE-REF",
@@ -105,9 +101,7 @@ class DataPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    second_to_first_data_transformation_ref: Optional[
-        "DataPrototypeMapping.SecondToFirstDataTransformationRef"
-    ] = field(
+    second_to_first_data_transformation_ref: DataPrototypeMapping.SecondToFirstDataTransformationRef | None = field(
         default=None,
         metadata={
             "name": "SECOND-TO-FIRST-DATA-TRANSFORMATION-REF",
@@ -115,9 +109,7 @@ class DataPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    sub_element_mappings: Optional[
-        "DataPrototypeMapping.SubElementMappings"
-    ] = field(
+    sub_element_mappings: DataPrototypeMapping.SubElementMappings | None = field(
         default=None,
         metadata={
             "name": "SUB-ELEMENT-MAPPINGS",
@@ -125,7 +117,7 @@ class DataPrototypeMapping:
             "namespace": "http://autosar.org/schema/r4.0",
         },
     )
-    text_table_mappings: Optional["DataPrototypeMapping.TextTableMappings"] = (
+    text_table_mappings: DataPrototypeMapping.TextTableMappings | None = (
         field(
             default=None,
             metadata={
@@ -135,14 +127,14 @@ class DataPrototypeMapping:
             },
         )
     )
-    s: Optional[str] = field(
+    s: str | None = field(
         default=None,
         metadata={
             "name": "S",
             "type": "Attribute",
         },
     )
-    t: Optional[str] = field(
+    t: str | None = field(
         default=None,
         metadata={
             "name": "T",
@@ -153,7 +145,7 @@ class DataPrototypeMapping:
 
     @dataclass
     class FirstDataPrototypeRef(Ref):
-        dest: Optional[AutosarDataPrototypeSubtypesEnum] = field(
+        dest: AutosarDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -164,7 +156,7 @@ class DataPrototypeMapping:
 
     @dataclass
     class FirstToSecondDataTransformationRef(Ref):
-        dest: Optional[DataTransformationSubtypesEnum] = field(
+        dest: DataTransformationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -175,7 +167,7 @@ class DataPrototypeMapping:
 
     @dataclass
     class SecondDataPrototypeRef(Ref):
-        dest: Optional[AutosarDataPrototypeSubtypesEnum] = field(
+        dest: AutosarDataPrototypeSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",
@@ -186,7 +178,7 @@ class DataPrototypeMapping:
 
     @dataclass
     class SecondToFirstDataTransformationRef(Ref):
-        dest: Optional[DataTransformationSubtypesEnum] = field(
+        dest: DataTransformationSubtypesEnum | None = field(
             default=None,
             metadata={
                 "name": "DEST",

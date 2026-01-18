@@ -18,14 +18,14 @@ class FeedbackProgramPolicies:
     class Meta:
         namespace = "http://xmlns.generali.com/services/program/FeedbackProgramService/v1"
 
-    action: Optional[str] = field(
+    action: str | None = field(
         default=None,
         metadata={
             "type": "Attribute",
             "required": True,
         },
     )
-    schema_location: Optional[str] = field(
+    schema_location: str | None = field(
         default=None,
         metadata={
             "name": "schemaLocation",
@@ -34,7 +34,7 @@ class FeedbackProgramPolicies:
             "required": True,
         },
     )
-    consumer_id: Optional[str] = field(
+    consumer_id: str | None = field(
         default=None,
         metadata={
             "name": "ConsumerID",
@@ -42,7 +42,7 @@ class FeedbackProgramPolicies:
             "required": True,
         },
     )
-    transmission_id: Optional[str] = field(
+    transmission_id: str | None = field(
         default=None,
         metadata={
             "name": "TransmissionID",
@@ -50,7 +50,7 @@ class FeedbackProgramPolicies:
             "required": True,
         },
     )
-    program_id: Optional[str] = field(
+    program_id: str | None = field(
         default=None,
         metadata={
             "name": "ProgramID",
@@ -58,7 +58,7 @@ class FeedbackProgramPolicies:
             "required": True,
         },
     )
-    local_program_id: Optional[str] = field(
+    local_program_id: str | None = field(
         default=None,
         metadata={
             "name": "LocalProgramID",
@@ -66,7 +66,7 @@ class FeedbackProgramPolicies:
             "required": True,
         },
     )
-    policies: Optional[Policies] = field(
+    policies: Policies | None = field(
         default=None,
         metadata={
             "name": "Policies",
@@ -74,7 +74,7 @@ class FeedbackProgramPolicies:
             "required": True,
         },
     )
-    status: Optional[str] = field(
+    status: str | None = field(
         default=None,
         metadata={
             "name": "Status",
@@ -82,7 +82,7 @@ class FeedbackProgramPolicies:
             "required": True,
         },
     )
-    errors: Optional[Errors] = field(
+    errors: Errors | None = field(
         default=None,
         metadata={
             "name": "Errors",

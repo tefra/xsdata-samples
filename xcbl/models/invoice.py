@@ -283,7 +283,7 @@ class TaxPointDate:
 
 @dataclass(kw_only=True)
 class AllowOrChargeTreatment:
-    allow_or_charge_treatment_coded: Optional[AllowOrChargeTreatmentCoded] = (
+    allow_or_charge_treatment_coded: AllowOrChargeTreatmentCoded | None = (
         field(
             default=None,
             metadata={
@@ -292,9 +292,7 @@ class AllowOrChargeTreatment:
             },
         )
     )
-    allow_or_charge_treatment_coded_other: Optional[
-        AllowOrChargeTreatmentCodedOther
-    ] = field(
+    allow_or_charge_treatment_coded_other: AllowOrChargeTreatmentCodedOther | None = field(
         default=None,
         metadata={
             "name": "AllowOrChargeTreatmentCodedOther",
@@ -418,14 +416,14 @@ class InvoiceLanguage:
 
 @dataclass(kw_only=True)
 class InvoiceMedium:
-    invoice_medium_coded: Optional[InvoiceMediumCoded] = field(
+    invoice_medium_coded: InvoiceMediumCoded | None = field(
         default=None,
         metadata={
             "name": "InvoiceMediumCoded",
             "type": "Element",
         },
     )
-    invoice_medium_coded_other: Optional[InvoiceMediumCodedOther] = field(
+    invoice_medium_coded_other: InvoiceMediumCodedOther | None = field(
         default=None,
         metadata={
             "name": "InvoiceMediumCodedOther",
@@ -447,16 +445,14 @@ class InvoicePaymentInstructions:
 
 @dataclass(kw_only=True)
 class InvoicePaymentStatus:
-    invoice_payment_status_coded: Optional[InvoicePaymentStatusCoded] = field(
+    invoice_payment_status_coded: InvoicePaymentStatusCoded | None = field(
         default=None,
         metadata={
             "name": "InvoicePaymentStatusCoded",
             "type": "Element",
         },
     )
-    invoice_payment_status_coded_other: Optional[
-        InvoicePaymentStatusCodedOther
-    ] = field(
+    invoice_payment_status_coded_other: InvoicePaymentStatusCodedOther | None = field(
         default=None,
         metadata={
             "name": "InvoicePaymentStatusCodedOther",
@@ -474,7 +470,7 @@ class InvoicePurpose:
             "required": True,
         }
     )
-    invoice_purpose_coded_other: Optional[InvoicePurposeCodedOther] = field(
+    invoice_purpose_coded_other: InvoicePurposeCodedOther | None = field(
         default=None,
         metadata={
             "name": "InvoicePurposeCodedOther",
@@ -548,7 +544,7 @@ class PaymentMean:
             "required": True,
         }
     )
-    payment_coded_mean_other: Optional[PaymentCodedMeanOther] = field(
+    payment_coded_mean_other: PaymentCodedMeanOther | None = field(
         default=None,
         metadata={
             "name": "PaymentCodedMeanOther",
@@ -708,7 +704,7 @@ class Fitransfer:
     class Meta:
         name = "FITransfer"
 
-    from_fitransfer: Optional[FromFitransfer] = field(
+    from_fitransfer: FromFitransfer | None = field(
         default=None,
         metadata={
             "name": "FromFITransfer",
@@ -722,7 +718,7 @@ class Fitransfer:
             "required": True,
         }
     )
-    payment_record_other: Optional[PaymentRecordOther] = field(
+    payment_record_other: PaymentRecordOther | None = field(
         default=None,
         metadata={
             "name": "PaymentRecordOther",
@@ -740,7 +736,7 @@ class InvoiceDetail:
             "required": True,
         }
     )
-    list_of_package_detail: Optional[ListOfPackageDetail] = field(
+    list_of_package_detail: ListOfPackageDetail | None = field(
         default=None,
         metadata={
             "name": "ListOfPackageDetail",
@@ -758,14 +754,14 @@ class InvoiceParty:
             "required": True,
         }
     )
-    buyer_tax_information: Optional[BuyerTaxInformation] = field(
+    buyer_tax_information: BuyerTaxInformation | None = field(
         default=None,
         metadata={
             "name": "BuyerTaxInformation",
             "type": "Element",
         },
     )
-    buyer_tax: Optional[BuyerTax] = field(
+    buyer_tax: BuyerTax | None = field(
         default=None,
         metadata={
             "name": "BuyerTax",
@@ -779,84 +775,84 @@ class InvoiceParty:
             "required": True,
         }
     )
-    seller_tax_information: Optional[SellerTaxInformation] = field(
+    seller_tax_information: SellerTaxInformation | None = field(
         default=None,
         metadata={
             "name": "SellerTaxInformation",
             "type": "Element",
         },
     )
-    ship_to_party: Optional[ShipToParty] = field(
+    ship_to_party: ShipToParty | None = field(
         default=None,
         metadata={
             "name": "ShipToParty",
             "type": "Element",
         },
     )
-    bill_to_party: Optional[BillToParty] = field(
+    bill_to_party: BillToParty | None = field(
         default=None,
         metadata={
             "name": "BillToParty",
             "type": "Element",
         },
     )
-    remit_to_party: Optional[RemitToParty] = field(
+    remit_to_party: RemitToParty | None = field(
         default=None,
         metadata={
             "name": "RemitToParty",
             "type": "Element",
         },
     )
-    remit_to_tax_information: Optional[RemitToTaxInformation] = field(
+    remit_to_tax_information: RemitToTaxInformation | None = field(
         default=None,
         metadata={
             "name": "RemitToTaxInformation",
             "type": "Element",
         },
     )
-    remit_to_tax: Optional[RemitToTax] = field(
+    remit_to_tax: RemitToTax | None = field(
         default=None,
         metadata={
             "name": "RemitToTax",
             "type": "Element",
         },
     )
-    ship_from_party: Optional[ShipFromParty] = field(
+    ship_from_party: ShipFromParty | None = field(
         default=None,
         metadata={
             "name": "ShipFromParty",
             "type": "Element",
         },
     )
-    warehouse_party: Optional[WarehouseParty] = field(
+    warehouse_party: WarehouseParty | None = field(
         default=None,
         metadata={
             "name": "WarehouseParty",
             "type": "Element",
         },
     )
-    sold_to_party: Optional[SoldToParty] = field(
+    sold_to_party: SoldToParty | None = field(
         default=None,
         metadata={
             "name": "SoldToParty",
             "type": "Element",
         },
     )
-    manufacturing_party: Optional[ManufacturingParty] = field(
+    manufacturing_party: ManufacturingParty | None = field(
         default=None,
         metadata={
             "name": "ManufacturingParty",
             "type": "Element",
         },
     )
-    material_issuer_party: Optional[MaterialIssuerParty] = field(
+    material_issuer_party: MaterialIssuerParty | None = field(
         default=None,
         metadata={
             "name": "MaterialIssuerParty",
             "type": "Element",
         },
     )
-    list_of_party_coded: Optional[ListOfPartyCoded] = field(
+    list_of_party_coded: ListOfPartyCoded | None = field(
         default=None,
         metadata={
             "name": "ListOfPartyCoded",
@@ -881,58 +877,56 @@ class InvoiceTotals:
             "required": True,
         }
     )
-    tax_value: Optional[TaxValue] = field(
+    tax_value: TaxValue | None = field(
         default=None,
         metadata={
             "name": "TaxValue",
             "type": "Element",
         },
     )
-    tax_value_in_tax_accounting_currency: Optional[
-        TaxValueInTaxAccountingCurrency
-    ] = field(
+    tax_value_in_tax_accounting_currency: TaxValueInTaxAccountingCurrency | None = field(
         default=None,
         metadata={
             "name": "TaxValueInTaxAccountingCurrency",
             "type": "Element",
         },
     )
-    charge_total: Optional[ChargeTotal] = field(
+    charge_total: ChargeTotal | None = field(
         default=None,
         metadata={
             "name": "ChargeTotal",
             "type": "Element",
         },
     )
-    total_amount_payable: Optional[TotalAmountPayable] = field(
+    total_amount_payable: TotalAmountPayable | None = field(
         default=None,
         metadata={
             "name": "TotalAmountPayable",
             "type": "Element",
         },
     )
-    prepaid_amount: Optional[PrepaidAmount] = field(
+    prepaid_amount: PrepaidAmount | None = field(
         default=None,
         metadata={
             "name": "PrepaidAmount",
             "type": "Element",
         },
     )
-    total_discount: Optional[TotalDiscount] = field(
+    total_discount: TotalDiscount | None = field(
         default=None,
         metadata={
             "name": "TotalDiscount",
             "type": "Element",
         },
     )
-    total_tax_amount: Optional[TotalTaxAmount] = field(
+    total_tax_amount: TotalTaxAmount | None = field(
         default=None,
         metadata={
             "name": "TotalTaxAmount",
             "type": "Element",
         },
     )
-    total_amount_minus_discount: Optional[TotalAmountMinusDiscount] = field(
+    total_amount_minus_discount: TotalAmountMinusDiscount | None = field(
         default=None,
         metadata={
             "name": "TotalAmountMinusDiscount",
@@ -980,21 +974,21 @@ class SpecificRequirement:
             "required": True,
         }
     )
-    requirement_type_coded_other: Optional[RequirementTypeCodedOther] = field(
+    requirement_type_coded_other: RequirementTypeCodedOther | None = field(
         default=None,
         metadata={
             "name": "RequirementTypeCodedOther",
             "type": "Element",
         },
     )
-    requirement_reference: Optional[RequirementReference] = field(
+    requirement_reference: RequirementReference | None = field(
         default=None,
         metadata={
             "name": "RequirementReference",
             "type": "Element",
         },
     )
-    requirement_details: Optional[RequirementDetails] = field(
+    requirement_details: RequirementDetails | None = field(
         default=None,
         metadata={
             "name": "RequirementDetails",
@@ -1012,9 +1006,7 @@ class TotalAllowOrCharge:
             "required": True,
         }
     )
-    allow_or_charge_indicator_coded_other: Optional[
-        AllowOrChargeIndicatorCodedOther
-    ] = field(
+    allow_or_charge_indicator_coded_other: AllowOrChargeIndicatorCodedOther | None = field(
         default=None,
         metadata={
             "name": "AllowOrChargeIndicatorCodedOther",
@@ -1063,21 +1055,21 @@ class ListOfSpecificRequirement:
 
 @dataclass(kw_only=True)
 class PaymentRecord:
-    payment_ref: Optional[PaymentRef] = field(
+    payment_ref: PaymentRef | None = field(
         default=None,
         metadata={
             "name": "PaymentRef",
             "type": "Element",
         },
     )
-    card_info: Optional[CardInfo] = field(
+    card_info: CardInfo | None = field(
         default=None,
         metadata={
             "name": "CardInfo",
             "type": "Element",
         },
     )
-    fitransfer: Optional[Fitransfer] = field(
+    fitransfer: Fitransfer | None = field(
         default=None,
         metadata={
             "name": "FITransfer",
@@ -1109,7 +1101,7 @@ class ActualPayment:
             "required": True,
         }
     )
-    payment_record: Optional[PaymentRecord] = field(
+    payment_record: PaymentRecord | None = field(
         default=None,
         metadata={
             "name": "PaymentRecord",
@@ -1169,49 +1161,49 @@ class ListOfCountryRequirement:
 
 @dataclass(kw_only=True)
 class InvoiceSummary:
-    number_of_lines: Optional[NumberOfLines] = field(
+    number_of_lines: NumberOfLines | None = field(
         default=None,
         metadata={
             "name": "NumberOfLines",
             "type": "Element",
         },
     )
-    invoice_totals: Optional[InvoiceTotals] = field(
+    invoice_totals: InvoiceTotals | None = field(
         default=None,
         metadata={
             "name": "InvoiceTotals",
             "type": "Element",
         },
     )
-    list_of_tax_summary: Optional[ListOfTaxSummary] = field(
+    list_of_tax_summary: ListOfTaxSummary | None = field(
         default=None,
         metadata={
             "name": "ListOfTaxSummary",
             "type": "Element",
         },
     )
-    allow_or_charge_summary: Optional[AllowOrChargeSummary] = field(
+    allow_or_charge_summary: AllowOrChargeSummary | None = field(
         default=None,
         metadata={
             "name": "AllowOrChargeSummary",
             "type": "Element",
         },
     )
-    invoice_payment_status: Optional[InvoicePaymentStatus] = field(
+    invoice_payment_status: InvoicePaymentStatus | None = field(
         default=None,
         metadata={
             "name": "InvoicePaymentStatus",
             "type": "Element",
         },
     )
-    list_of_actual_payment: Optional[ListOfActualPayment] = field(
+    list_of_actual_payment: ListOfActualPayment | None = field(
         default=None,
         metadata={
             "name": "ListOfActualPayment",
             "type": "Element",
         },
     )
-    summary_note: Optional[SummaryNote] = field(
+    summary_note: SummaryNote | None = field(
         default=None,
         metadata={
             "name": "SummaryNote",
@@ -1233,21 +1225,21 @@ class OtherCountryRequirments:
 
 @dataclass(kw_only=True)
 class CountrySpecificRequirements:
-    nota_fiscal_type: Optional[NotaFiscalType] = field(
+    nota_fiscal_type: NotaFiscalType | None = field(
         default=None,
         metadata={
             "name": "NotaFiscalType",
             "type": "Element",
         },
     )
-    payment_reference_number: Optional[PaymentReferenceNumber] = field(
+    payment_reference_number: PaymentReferenceNumber | None = field(
         default=None,
         metadata={
             "name": "PaymentReferenceNumber",
             "type": "Element",
         },
     )
-    other_country_requirments: Optional[OtherCountryRequirments] = field(
+    other_country_requirments: OtherCountryRequirments | None = field(
         default=None,
         metadata={
             "name": "OtherCountryRequirments",
@@ -1272,7 +1264,7 @@ class InvoiceHeader:
             "required": True,
         }
     )
-    tax_point_date: Optional[TaxPointDate] = field(
+    tax_point_date: TaxPointDate | None = field(
         default=None,
         metadata={
             "name": "TaxPointDate",
@@ -1300,21 +1292,21 @@ class InvoiceHeader:
             "required": True,
         }
     )
-    invoice_currency: Optional[InvoiceCurrency] = field(
+    invoice_currency: InvoiceCurrency | None = field(
         default=None,
         metadata={
             "name": "InvoiceCurrency",
             "type": "Element",
         },
     )
-    payment_currency: Optional[PaymentCurrency] = field(
+    payment_currency: PaymentCurrency | None = field(
         default=None,
         metadata={
             "name": "PaymentCurrency",
             "type": "Element",
         },
     )
-    list_of_rate_of_exchange_detail: Optional[ListOfRateOfExchangeDetail] = (
+    list_of_rate_of_exchange_detail: ListOfRateOfExchangeDetail | None = (
         field(
             default=None,
             metadata={
@@ -1323,7 +1315,7 @@ class InvoiceHeader:
             },
         )
     )
-    tax_accounting_currency: Optional[TaxAccountingCurrency] = field(
+    tax_accounting_currency: TaxAccountingCurrency | None = field(
         default=None,
         metadata={
             "name": "TaxAccountingCurrency",
@@ -1337,28 +1329,28 @@ class InvoiceHeader:
             "required": True,
         }
     )
-    invoice_tax_reference: Optional[InvoiceTaxReference] = field(
+    invoice_tax_reference: InvoiceTaxReference | None = field(
         default=None,
         metadata={
             "name": "InvoiceTaxReference",
             "type": "Element",
         },
     )
-    invoice_medium: Optional[InvoiceMedium] = field(
+    invoice_medium: InvoiceMedium | None = field(
         default=None,
         metadata={
             "name": "InvoiceMedium",
             "type": "Element",
         },
     )
-    allow_or_charge_treatment: Optional[AllowOrChargeTreatment] = field(
+    allow_or_charge_treatment: AllowOrChargeTreatment | None = field(
         default=None,
         metadata={
             "name": "AllowOrChargeTreatment",
             "type": "Element",
         },
     )
-    invoice_dates: Optional[InvoiceDates] = field(
+    invoice_dates: InvoiceDates | None = field(
         default=None,
         metadata={
             "name": "InvoiceDates",
@@ -1372,28 +1364,28 @@ class InvoiceHeader:
             "required": True,
         }
     )
-    list_of_transport_routing: Optional[ListOfTransportRouting] = field(
+    list_of_transport_routing: ListOfTransportRouting | None = field(
         default=None,
         metadata={
             "name": "ListOfTransportRouting",
             "type": "Element",
         },
     )
-    invoice_terms_of_delivery: Optional[InvoiceTermsOfDelivery] = field(
+    invoice_terms_of_delivery: InvoiceTermsOfDelivery | None = field(
         default=None,
         metadata={
             "name": "InvoiceTermsOfDelivery",
             "type": "Element",
         },
     )
-    invoice_payment_instructions: Optional[InvoicePaymentInstructions] = field(
+    invoice_payment_instructions: InvoicePaymentInstructions | None = field(
         default=None,
         metadata={
             "name": "InvoicePaymentInstructions",
             "type": "Element",
         },
     )
-    invoice_allowances_or_charges: Optional[InvoiceAllowancesOrCharges] = (
+    invoice_allowances_or_charges: InvoiceAllowancesOrCharges | None = (
         field(
             default=None,
             metadata={
@@ -1402,7 +1394,7 @@ class InvoiceHeader:
             },
         )
     )
-    country_specific_requirements: Optional[CountrySpecificRequirements] = (
+    country_specific_requirements: CountrySpecificRequirements | None = (
         field(
             default=None,
             metadata={
@@ -1411,28 +1403,28 @@ class InvoiceHeader:
             },
         )
     )
-    invoice_header_note: Optional[InvoiceHeaderNote] = field(
+    invoice_header_note: InvoiceHeaderNote | None = field(
         default=None,
         metadata={
             "name": "InvoiceHeaderNote",
             "type": "Element",
         },
     )
-    list_of_structured_note: Optional[ListOfStructuredNote] = field(
+    list_of_structured_note: ListOfStructuredNote | None = field(
         default=None,
         metadata={
             "name": "ListOfStructuredNote",
             "type": "Element",
         },
     )
-    list_of_name_value_set: Optional[ListOfNameValueSet] = field(
+    list_of_name_value_set: ListOfNameValueSet | None = field(
         default=None,
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
         },
     )
-    invoice_header_attachments: Optional[InvoiceHeaderAttachments] = field(
+    invoice_header_attachments: InvoiceHeaderAttachments | None = field(
         default=None,
         metadata={
             "name": "InvoiceHeaderAttachments",
@@ -1457,7 +1449,7 @@ class Invoice:
             "required": True,
         }
     )
-    invoice_summary: Optional[InvoiceSummary] = field(
+    invoice_summary: InvoiceSummary | None = field(
         default=None,
         metadata={
             "name": "InvoiceSummary",

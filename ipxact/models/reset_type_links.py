@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 from typing import Optional
 
@@ -20,7 +22,7 @@ class ResetTypeLinks:
         name = "resetTypeLinks"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    reset_type_link: list["ResetTypeLinks.ResetTypeLink"] = field(
+    reset_type_link: list[ResetTypeLinks.ResetTypeLink] = field(
         default_factory=list,
         metadata={
             "name": "resetTypeLink",
@@ -40,9 +42,7 @@ class ResetTypeLinks:
         :ivar id:
         """
 
-        external_reset_type_reference: Optional[
-            "ResetTypeLinks.ResetTypeLink.ExternalResetTypeReference"
-        ] = field(
+        external_reset_type_reference: ResetTypeLinks.ResetTypeLink.ExternalResetTypeReference | None = field(
             default=None,
             metadata={
                 "name": "externalResetTypeReference",
@@ -50,9 +50,7 @@ class ResetTypeLinks:
                 "required": True,
             },
         )
-        reset_type_reference: Optional[
-            "ResetTypeLinks.ResetTypeLink.ResetTypeReference"
-        ] = field(
+        reset_type_reference: ResetTypeLinks.ResetTypeLink.ResetTypeReference | None = field(
             default=None,
             metadata={
                 "name": "resetTypeReference",
@@ -60,14 +58,14 @@ class ResetTypeLinks:
                 "required": True,
             },
         )
-        vendor_extensions: Optional[VendorExtensions] = field(
+        vendor_extensions: VendorExtensions | None = field(
             default=None,
             metadata={
                 "name": "vendorExtensions",
                 "type": "Element",
             },
         )
-        id: Optional[str] = field(
+        id: str | None = field(
             default=None,
             metadata={
                 "type": "Attribute",
@@ -81,7 +79,7 @@ class ResetTypeLinks:
             :ivar reset_type_ref: Reference to a specific resetType.
             """
 
-            reset_type_ref: Optional[str] = field(
+            reset_type_ref: str | None = field(
                 default=None,
                 metadata={
                     "name": "resetTypeRef",
@@ -96,7 +94,7 @@ class ResetTypeLinks:
             :ivar reset_type_ref: Reference to a specific resetType
             """
 
-            reset_type_ref: Optional[str] = field(
+            reset_type_ref: str | None = field(
                 default=None,
                 metadata={
                     "name": "resetTypeRef",
