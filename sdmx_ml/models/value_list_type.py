@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.value_item_type import ValueItemType
 from sdmx_ml.models.value_list_base_type import ValueListBaseType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -23,6 +23,6 @@ class ValueListType(ValueListBaseType):
         metadata={
             "name": "ValueItem",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )

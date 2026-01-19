@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.measure_base_type import MeasureBaseType
 from sdmx_ml.models.usage_type import UsageType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -27,7 +27,7 @@ class MeasureType(MeasureBaseType):
         metadata={
             "name": "ConceptRole",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "pattern": r".+\.conceptscheme\.Concept=.+",
         },
     )

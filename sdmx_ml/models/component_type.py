@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.component_base_type import ComponentBaseType
 from sdmx_ml.models.representation_type import RepresentationType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -42,7 +42,7 @@ class ComponentType(ComponentBaseType):
         metadata={
             "name": "ConceptIdentity",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "pattern": r".+\.conceptscheme\.Concept=.+",
         },
     )
@@ -51,6 +51,6 @@ class ComponentType(ComponentBaseType):
         metadata={
             "name": "LocalRepresentation",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )

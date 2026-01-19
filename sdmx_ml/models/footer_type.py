@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.footer_message_type import FooterMessageType
 
 __NAMESPACE__ = (
-    "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message/footer"
+    "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message/footer"
 )
 
 
@@ -30,7 +30,7 @@ class FooterType:
         metadata={
             "name": "Message",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message/footer",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message/footer",
             "min_occurs": 1,
         },
     )

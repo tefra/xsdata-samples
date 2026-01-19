@@ -10,7 +10,7 @@ from sdmx_ml.models.dimension_list import DimensionList
 from sdmx_ml.models.group import Group
 from sdmx_ml.models.measure_list import MeasureList
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -27,7 +27,7 @@ class DataStructureComponentsType(DataStructureComponentsBaseType):
         metadata={
             "name": "DimensionList",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
         }
     )
@@ -36,7 +36,7 @@ class DataStructureComponentsType(DataStructureComponentsBaseType):
         metadata={
             "name": "Group",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     attribute_list: None | AttributeList = field(
@@ -44,7 +44,7 @@ class DataStructureComponentsType(DataStructureComponentsBaseType):
         metadata={
             "name": "AttributeList",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     measure_list: None | MeasureList = field(
@@ -52,6 +52,6 @@ class DataStructureComponentsType(DataStructureComponentsBaseType):
         metadata={
             "name": "MeasureList",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )

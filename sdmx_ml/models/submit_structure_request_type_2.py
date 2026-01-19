@@ -8,7 +8,7 @@ from sdmx_ml.models.submit_structure_request_type_1 import (
     SubmitStructureRequestType1,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -39,7 +39,7 @@ class SubmitStructureRequestType2(RegistryInterfaceType):
         metadata={
             "name": "SubmitStructureRequest",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "required": True,
         }
     )

@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 from sdmx_ml.models.annotable_type import AnnotableType
 from sdmx_ml.models.member_selection_type import MemberSelectionType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -22,9 +22,9 @@ class RegionType(AnnotableType):
     dimensions of a dataset). For each region, a collection of attribute
     values can be provided. Taken together, the key values and attributes
     serve to identify or describe a subset of a data or metadata set.
-    Finally, the region can flagged as being included or excluded, although
-    this flag only makes sense when the region is used in a particular
-    context.
+    Finally, the region can be flagged as being included or excluded,
+    although this flag only makes sense when the region is used in a
+    particular context.
 
     :ivar key_value: KeyValue contains a reference to a component which
         disambiguates the data (i.e. a dimension) and provides a
@@ -74,7 +74,7 @@ class RegionType(AnnotableType):
         metadata={
             "name": "KeyValue",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     component: tuple[MemberSelectionType, ...] = field(
@@ -82,7 +82,7 @@ class RegionType(AnnotableType):
         metadata={
             "name": "Component",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     include: bool = field(

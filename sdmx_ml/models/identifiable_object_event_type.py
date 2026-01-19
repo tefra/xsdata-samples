@@ -6,7 +6,7 @@ from typing import ForwardRef
 from sdmx_ml.models.empty_type import EmptyType
 from sdmx_ml.models.wild_card_value_type import WildCardValueType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -32,17 +32,17 @@ class IdentifiableObjectEventType:
                 {
                     "name": "All",
                     "type": EmptyType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
                 {
                     "name": "URN",
                     "type": ForwardRef("IdentifiableObjectEventType.Urn"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
                 {
                     "name": "ID",
                     "type": ForwardRef("IdentifiableObjectEventType.Id"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
             ),
         },
@@ -51,16 +51,18 @@ class IdentifiableObjectEventType:
     @dataclass(frozen=True, kw_only=True)
     class Urn:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Id:
         value: str | WildCardValueType = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            }
+            },
         )

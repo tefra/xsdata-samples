@@ -7,7 +7,7 @@ from sdmx_ml.models.metadata_attribute_base_type import (
 )
 from sdmx_ml.models.unbounded_code_type import UnboundedCodeType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -53,7 +53,7 @@ class MetadataAttributeType(MetadataAttributeBaseType):
         metadata={
             "name": "MetadataAttribute",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     min_occurs: int = field(
@@ -83,12 +83,12 @@ class MetadataAttributeType(MetadataAttributeBaseType):
 @dataclass(frozen=True, kw_only=True)
 class MetadataAttribute(MetadataAttributeType):
     """
-    MetadataAttribute defines the a metadata attribute, which is the value
-    of an attribute, such as the instance of a coded or uncoded attribute
-    in a metadata structure definition.
+    MetadataAttribute defines the metadata attribute, which is the value of
+    an attribute, such as the instance of a coded or uncoded attribute in a
+    metadata structure definition.
     """
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )

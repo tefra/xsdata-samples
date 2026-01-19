@@ -6,7 +6,7 @@ from xsdata.models.datatype import XmlDateTime
 
 from sdmx_ml.models.nameable_type import NameableType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
 @dataclass(frozen=True, kw_only=True)

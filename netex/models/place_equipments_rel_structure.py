@@ -25,6 +25,7 @@ from .lift_call_equipment import LiftCallEquipment
 from .lift_call_equipment_ref import LiftCallEquipmentRef
 from .lift_equipment import LiftEquipment
 from .lift_equipment_ref import LiftEquipmentRef
+from .luggage_locker_equipment import LuggageLockerEquipment
 from .luggage_locker_equipment_ref import LuggageLockerEquipmentRef
 from .passenger_beacon_equipment import PassengerBeaconEquipment
 from .passenger_beacon_equipment_ref import PassengerBeaconEquipmentRef
@@ -127,6 +128,7 @@ class PlaceEquipmentsRelStructure(ContainmentAggregationStructure):
         | ShelterEquipment
         | TrolleyStandEquipment
         | WaitingRoomEquipment
+        | LuggageLockerEquipment
         | CrossingEquipment
         | QueueingEquipment
         | EntranceEquipment
@@ -370,6 +372,11 @@ class PlaceEquipmentsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "WaitingRoomEquipment",
                     "type": WaitingRoomEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LuggageLockerEquipment",
+                    "type": LuggageLockerEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

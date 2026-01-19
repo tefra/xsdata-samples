@@ -2,13 +2,13 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
 @dataclass(frozen=True, kw_only=True)
 class QueryableDataSourceType1:
     """
-    QueryableDataSourceType describes a data source which is accepts an
+    QueryableDataSourceType describes a data source which is accepts a
     standard SDMX Query message and responds appropriately.
 
     :ivar data_url: DataURL contains the URL of the data source.
@@ -32,7 +32,7 @@ class QueryableDataSourceType1:
         metadata={
             "name": "DataURL",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
             "required": True,
         }
     )
@@ -41,7 +41,7 @@ class QueryableDataSourceType1:
         metadata={
             "name": "WSDLURL",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
         },
     )
     wadlurl: None | str = field(
@@ -49,7 +49,7 @@ class QueryableDataSourceType1:
         metadata={
             "name": "WADLURL",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
         },
     )
     is_restdatasource: bool = field(

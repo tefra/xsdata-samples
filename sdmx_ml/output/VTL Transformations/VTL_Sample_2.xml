@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ns0:Structure xmlns:ns0="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message">
+<ns0:Structure xmlns:ns0="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message">
   <ns0:Header>
     <ns0:ID>VTL_SAMPLE2</ns0:ID>
     <ns0:Test>false</ns0:Test>
@@ -8,112 +8,112 @@
     <ns0:Receiver id="SDMX"/>
   </ns0:Header>
   <ns0:Structures>
-    <ns1:Codelists xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+    <ns1:Codelists xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure">
       <ns1:Codelist id="CL_AREA" version="1.0" agencyID="SDMX" isPartial="true">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Area codelist</ns2:Name>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Area codelist</ns2:Name>
         <ns1:Code id="EU">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">European Union</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">European Union</ns2:Name>
         </ns1:Code>
         <ns1:Code id="BENELUX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">The Benelux Union</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">The Benelux Union</ns2:Name>
         </ns1:Code>
         <ns1:Code id="BE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Belgium</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Belgium</ns2:Name>
         </ns1:Code>
         <ns1:Code id="LU">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Luxembourg</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Luxembourg</ns2:Name>
         </ns1:Code>
         <ns1:Code id="NE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">The Netherlands</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">The Netherlands</ns2:Name>
         </ns1:Code>
         <ns1:Code id="AT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Austria</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Austria</ns2:Name>
         </ns1:Code>
         <ns1:Code id="BG">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Bulgaria</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Bulgaria</ns2:Name>
         </ns1:Code>
         <ns1:Code id="SE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Sweden</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Sweden</ns2:Name>
         </ns1:Code>
         <ns1:Code id="SI">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Slovenia</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Slovenia</ns2:Name>
         </ns1:Code>
         <ns1:Code id="SK">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Slovakia</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Slovakia</ns2:Name>
         </ns1:Code>
       </ns1:Codelist>
     </ns1:Codelists>
-    <ns1:ConceptSchemes xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+    <ns1:ConceptSchemes xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure">
       <ns1:ConceptScheme id="CS21" version="1.0" agencyID="SDMX">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Concepts for Measures #2.1</ns2:Name>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Concepts for Measures #2.1</ns2:Name>
         <ns1:Concept id="IMPORT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Import</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Import</ns2:Name>
           <ns1:CoreRepresentation>
             <ns1:TextFormat textType="Numeric"/>
           </ns1:CoreRepresentation>
         </ns1:Concept>
         <ns1:Concept id="EXPORT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Export</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Export</ns2:Name>
           <ns1:CoreRepresentation>
             <ns1:TextFormat textType="Numeric"/>
           </ns1:CoreRepresentation>
         </ns1:Concept>
       </ns1:ConceptScheme>
       <ns1:ConceptScheme id="CS2R1" version="1.0" agencyID="SDMX">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Concepts for Measures in Results #2.1</ns2:Name>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Concepts for Measures in Results #2.1</ns2:Name>
         <ns1:Concept id="PERC_EU_IMPORT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Import for EU in percentage</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Import for EU in percentage</ns2:Name>
           <ns1:CoreRepresentation>
             <ns1:TextFormat textType="Numeric" minValue="0" maxValue="100"/>
           </ns1:CoreRepresentation>
         </ns1:Concept>
         <ns1:Concept id="PERC_EU_EXPORT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Export for EU in percentage</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Export for EU in percentage</ns2:Name>
           <ns1:CoreRepresentation>
             <ns1:TextFormat textType="Numeric" minValue="0" maxValue="100"/>
           </ns1:CoreRepresentation>
         </ns1:Concept>
       </ns1:ConceptScheme>
       <ns1:ConceptScheme id="CONCEPTS2" version="1.0" agencyID="SDMX">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Concepts for DSDs #2.1</ns2:Name>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Concepts for DSDs #2.1</ns2:Name>
         <ns1:Concept id="GEO_AREA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Geographical Area</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Geographical Area</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TIME_PERIOD">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Time Period</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Time Period</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MEASURE_DIMENSION">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Measure Dimension</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Measure Dimension</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="OBS_VALUE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Observation Value</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Observation Value</ns2:Name>
         </ns1:Concept>
       </ns1:ConceptScheme>
     </ns1:ConceptSchemes>
-    <ns1:CustomTypeSchemes xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+    <ns1:CustomTypeSchemes xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure">
       <ns1:CustomTypeScheme id="CTS1" version="1.0" agencyID="SDMX" vtlVersion="2.0">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Custom Type Scheme #1</ns2:Name>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Custom Type Scheme #1</ns2:Name>
         <ns1:CustomType id="NUMERIC_WITH_ZEROS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Custom Type sample for numbers</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Custom Type sample for numbers</ns2:Name>
           <ns1:VtlScalarType>number</ns1:VtlScalarType>
           <ns1:DataType>NUMERIC</ns1:DataType>
           <ns1:NullValue>0</ns1:NullValue>
         </ns1:CustomType>
       </ns1:CustomTypeScheme>
     </ns1:CustomTypeSchemes>
-    <ns1:Dataflows xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+    <ns1:Dataflows xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure">
       <ns1:Dataflow id="DF21" version="1.0" agencyID="SDMX">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Dataflow #2.1</ns2:Name>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Dataflow #2.1</ns2:Name>
         <ns1:Structure>urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=SDMX:DS21(1.0)</ns1:Structure>
       </ns1:Dataflow>
       <ns1:Dataflow id="DF2R1" version="1.0" agencyID="SDMX">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Dataflow for Result #2.1</ns2:Name>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Dataflow for Result #2.1</ns2:Name>
         <ns1:Structure>urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=SDMX:DS21(1.0)</ns1:Structure>
       </ns1:Dataflow>
     </ns1:Dataflows>
-    <ns1:DataStructures xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+    <ns1:DataStructures xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure">
       <ns1:DataStructure id="DS21" version="1.0" agencyID="SDMX">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Data Structure #2.1</ns2:Name>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Data Structure #2.1</ns2:Name>
         <ns1:DataStructureComponents>
           <ns1:DimensionList>
             <ns1:Dimension id="GEO_AREA">
@@ -137,7 +137,7 @@
         </ns1:DataStructureComponents>
       </ns1:DataStructure>
       <ns1:DataStructure id="DS2R1" version="1.0" agencyID="SDMX">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Data Structure for Results #2.1</ns2:Name>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Data Structure for Results #2.1</ns2:Name>
         <ns1:DataStructureComponents>
           <ns1:DimensionList>
             <ns1:Dimension id="GEO_AREA">
@@ -167,11 +167,11 @@
         </ns1:DataStructureComponents>
       </ns1:DataStructure>
     </ns1:DataStructures>
-    <ns1:RulesetSchemes xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+    <ns1:RulesetSchemes xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure">
       <ns1:RulesetScheme id="RS1" version="1.0" agencyID="SDMX" vtlVersion="2.0">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Ruleset Scheme #1</ns2:Name>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Ruleset Scheme #1</ns2:Name>
         <ns1:Ruleset id="DPR1" rulesetType="datapoint" rulesetScope="valuedomain">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">DataPoint Ruleset #1</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">DataPoint Ruleset #1</ns2:Name>
           <ns1:RulesetDefinition>
             define datapoint ruleset DPR1 ( variable INDICATOR as A, VALUE as B ) is  
               rule1: when A = "CREDIT" or A = "DEBIT" then B &gt;= 0 errorcode "Negative value" errorlevel 10;
@@ -180,7 +180,7 @@
           </ns1:RulesetDefinition>
         </ns1:Ruleset>
         <ns1:Ruleset id="HR1" rulesetType="hierarchical" rulesetScope="valuedomain">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Hierarchical Ruleset #1</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Hierarchical Ruleset #1</ns2:Name>
           <ns1:RulesetDefinition>
             define hierarchical ruleset HR1 (variable condition TIME as T rule GEO )
               EU = AT [ T &gt;= 1995-01-01 ]
@@ -198,12 +198,12 @@
         <ns1:VtlMappingScheme>urn:sdmx:org.sdmx.infomodel.transformation.VtlMappingScheme=SDMX:VTLMS1(1.0)</ns1:VtlMappingScheme>
       </ns1:RulesetScheme>
     </ns1:RulesetSchemes>
-    <ns1:TransformationSchemes xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+    <ns1:TransformationSchemes xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure">
       <ns1:TransformationScheme id="TS2" version="1.0" agencyID="SDMX" vtlVersion="2.0">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Transformation Scheme #2 – SDMX/VTL release sample</ns2:Name>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Transformation Scheme #2 – SDMX/VTL release sample</ns2:Name>
         <ns1:Transformation id="TS_A" isPersistent="false">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Transformation A</ns2:Name>
-          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Aggregates the dataflow DF21 according to the hierarchical ruleset HR1.
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Transformation A</ns2:Name>
+          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Aggregates the dataflow DF21 according to the hierarchical ruleset HR1.
             DF21 is mapped from SDMX to VTL through the pivot mapping method, therefore the mapped VTL dataset has the components IMPORT and EXPORT instead of MEASURE_DIMENSION and OBS_VALUE. 
             Following the application of the hierarchy operator, the observation relevant to EU and BENELUX are produced.
             The resulting VTL dataset TEMP1 is not persistent and it is assumed that it does not need a mapping towards SDMX.
@@ -212,16 +212,16 @@
           <ns1:Result>TEMP1</ns1:Result>
         </ns1:Transformation>
         <ns1:Transformation id="TS_B" isPersistent="false">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Transformation B</ns2:Name>
-          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Extracts from TEMP1 the observations having GEO_AREA="EU" and drops the GEO_AREA identifier. 
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Transformation B</ns2:Name>
+          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Extracts from TEMP1 the observations having GEO_AREA="EU" and drops the GEO_AREA identifier. 
             The result TEMP2 is not persistent and it is assumed that it does not need a mapping towards SDMX.
           </ns2:Description>
           <ns1:Expression>TEMP1 [sub GEO_AREA = "EU"]</ns1:Expression>
           <ns1:Result>TEMP2</ns1:Result>
         </ns1:Transformation>
         <ns1:Transformation id="TS_C" isPersistent="true">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Transformation C</ns2:Name>
-          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Applies the "percentage" user defined operator to TEMP1 and TEMP2 to calculate the percentage of each EU country in respect to the EU and renames IMPORT to PERC_EU_IMPORT and EXPORT to PERC_EU_EXPORT. 
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Transformation C</ns2:Name>
+          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Applies the "percentage" user defined operator to TEMP1 and TEMP2 to calculate the percentage of each EU country in respect to the EU and renames IMPORT to PERC_EU_IMPORT and EXPORT to PERC_EU_EXPORT. 
             According to the VTL behaviour, the result has the same identifiers as TEMP1 (GEO_AREA and TIME_PERIOD). 
             The result DF2R1 is persistent and is mapped from VTL to SDMX through the unpivot method, therefore the SDMX structure has MEASURE_DIMENSION and OBS_VALUE in place of PERC_EU_IMPORT and PERC_EU_EXPORT, which become the possible values of the MEASURE DIMENSION (i.e., concepts of relevant concept scheme).
           </ns2:Description>
@@ -234,11 +234,11 @@
         <ns1:UserDefinedOperatorScheme>urn:sdmx:org.sdmx.infomodel.transformation.UserDefinedOperatorScheme=SDMX:UDOS1(1.0)</ns1:UserDefinedOperatorScheme>
       </ns1:TransformationScheme>
     </ns1:TransformationSchemes>
-    <ns1:UserDefinedOperatorSchemes xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+    <ns1:UserDefinedOperatorSchemes xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure">
       <ns1:UserDefinedOperatorScheme id="UDOS1" version="1.0" agencyID="SDMX" vtlVersion="2.0">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">User Defined Operators #1</ns2:Name>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">User Defined Operators #1</ns2:Name>
         <ns1:UserDefinedOperator id="percentage">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Percentage</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Percentage</ns2:Name>
           <ns1:OperatorDefinition>
             define operator percentage (  DS_A  dataset { measure&lt;number&gt; _+ } ,
               DS_B dataset { measure&lt;number&gt; _+ }  )
@@ -248,7 +248,7 @@
           </ns1:OperatorDefinition>
         </ns1:UserDefinedOperator>
         <ns1:UserDefinedOperator id="diffperc">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Difference Percentage</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Difference Percentage</ns2:Name>
           <ns1:OperatorDefinition>
             define operator diffperc ( DS_A dataset { measure&lt;number&gt; _+ } ,
               DS_B dataset { measure&lt;number&gt; _+ } )
@@ -259,45 +259,45 @@
         </ns1:UserDefinedOperator>
       </ns1:UserDefinedOperatorScheme>
     </ns1:UserDefinedOperatorSchemes>
-    <ns1:VtlMappingSchemes xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+    <ns1:VtlMappingSchemes xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure">
       <ns1:VtlMappingScheme id="VTLMS1" version="1.0" agencyID="SDMX">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">VTL Mapping Scheme #1</ns2:Name>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">VTL Mapping Scheme #1</ns2:Name>
         <ns1:VtlMapping id="VTLM1" alias="DF1R1">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">VTL Mapping #1</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">VTL Mapping #1</ns2:Name>
           <ns1:Dataflow>urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=SDMX:DF1R1(1.0)</ns1:Dataflow>
           <ns1:FromVtlMapping method="M2A"/>
         </ns1:VtlMapping>
         <ns1:VtlMapping id="VTLM2" alias="DF11">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">VTL Mapping #2</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">VTL Mapping #2</ns2:Name>
           <ns1:Dataflow>urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=SDMX:D11(1.0)</ns1:Dataflow>
           <ns1:ToVtlMapping method="Basic"/>
         </ns1:VtlMapping>
         <ns1:VtlMapping id="VTLM3" alias="INDICATOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Variable INDICATOR mapping</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Variable INDICATOR mapping</ns2:Name>
           <ns1:Concept>urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CONCEPTS(1.0).MEASURE_DIMENSION</ns1:Concept>
         </ns1:VtlMapping>
         <ns1:VtlMapping id="VTLM4" alias="VALUE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Variable VALUE mapping</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Variable VALUE mapping</ns2:Name>
           <ns1:Concept>urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CONCEPTS(1.0).OBS_VALUE</ns1:Concept>
         </ns1:VtlMapping>
         <ns1:VtlMapping id="VTLM5" alias="TIME">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Variable TIME mapping</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Variable TIME mapping</ns2:Name>
           <ns1:Concept>urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CONCEPTS(1.0).TIME_PERIOD</ns1:Concept>
         </ns1:VtlMapping>
         <ns1:VtlMapping id="VTLM6" alias="GEO">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Variable GEO mapping</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Variable GEO mapping</ns2:Name>
           <ns1:Concept>urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=SDMX:CONCEPTS(1.0).COUNTRY</ns1:Concept>
         </ns1:VtlMapping>
       </ns1:VtlMappingScheme>
       <ns1:VtlMappingScheme id="VTLMS2" version="1.0" agencyID="SDMX">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">VTL Mapping Scheme #2</ns2:Name>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">VTL Mapping Scheme #2</ns2:Name>
         <ns1:VtlMapping id="VTLM1" alias="DF21">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">VTL Mapping #1</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">VTL Mapping #1</ns2:Name>
           <ns1:Dataflow>urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=SDMX:D21(1.0)</ns1:Dataflow>
           <ns1:ToVtlMapping method="Pivot"/>
         </ns1:VtlMapping>
         <ns1:VtlMapping id="VTLM2" alias="DF2R1">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">VTL Mapping #2</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">VTL Mapping #2</ns2:Name>
           <ns1:Dataflow>urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=SDMX:D2R1(1.0)</ns1:Dataflow>
           <ns1:FromVtlMapping method="Unpivot"/>
         </ns1:VtlMapping>

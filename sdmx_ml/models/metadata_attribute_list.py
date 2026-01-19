@@ -6,7 +6,7 @@ from sdmx_ml.models.metadata_attribute_list_type import (
     MetadataAttributeListType,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -28,5 +28,5 @@ class MetadataAttributeList(MetadataAttributeListType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )

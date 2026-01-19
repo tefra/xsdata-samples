@@ -6,7 +6,7 @@ from sdmx_ml.models.metadata_attribute_usage_type import (
     MetadataAttributeUsageType,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -17,11 +17,11 @@ class MetadataAttributeUsage(MetadataAttributeUsageType):
 
     By default, metadata attributes can be expressed at any level of the
     data. This allows an attribute relationship to be defined in order
-    restrict the reporing of a metadata attribute to a specific part of the
-    data.
+    restrict the reporting of a metadata attribute to a specific part of
+    the data.
     """
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )

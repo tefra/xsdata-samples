@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 from sdmx_ml.models.structure_type import StructureType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -20,4 +20,4 @@ class Structure(StructureType):
     """
 
     class Meta:
-        namespace = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
+        namespace = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message"

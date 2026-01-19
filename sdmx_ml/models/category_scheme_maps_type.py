@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.category_scheme_map_type import CategorySchemeMapType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -18,7 +18,7 @@ class CategorySchemeMapsType:
     service.
 
     :ivar category_scheme_map: CategorySchemeMap provides the details of
-        a category scheme map, which descibes mappings between
+        a category scheme map, which describes mappings between
         categories in different schemes.
     """
 
@@ -27,7 +27,7 @@ class CategorySchemeMapsType:
         metadata={
             "name": "CategorySchemeMap",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "min_occurs": 1,
         },
     )

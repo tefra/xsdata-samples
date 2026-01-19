@@ -6,7 +6,7 @@ from sdmx_ml.models.queryable_data_source_type_1 import (
     QueryableDataSourceType1,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)

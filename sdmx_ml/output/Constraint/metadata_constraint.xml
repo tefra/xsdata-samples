@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns0:Structure xmlns:ns0="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message">
+  <ns0:Header>
+    <ns0:ID>IREF583870</ns0:ID>
+    <ns0:Test>false</ns0:Test>
+    <ns0:Prepared>2024-07-30T16:53:05Z</ns0:Prepared>
+    <ns0:Sender id="Unknown"/>
+    <ns0:Receiver id="not_supplied"/>
+  </ns0:Header>
+  <ns0:Structures>
+    <ns1:MetadataConstraints xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure">
+      <ns1:MetadataConstraint id="DEMO_CONSTRAINT" urn="urn:sdmx:org.sdmx.infomodel.registry.MetadataConstraint=DEMO:DEMO_CONSTRAINT(1.0)" version="1.0" agencyID="DEMO">
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Allowed data constraints for the EXR dataflow.</ns2:Name>
+        <ns1:ConstraintAttachment>
+          <ns1:Metadataflow>urn:sdmx:org.sdmx.infomodel.metadatastructure.Metadataflow=ECB:EXR(1.0)</ns1:Metadataflow>
+        </ns1:ConstraintAttachment>
+        <ns1:MetadataTargetRegion>
+          <ns1:Component id="METADATA_ATT1">
+            <ns1:Value>Allowed_Value_1</ns1:Value>
+            <ns1:Value>Allowed_Value_2</ns1:Value>
+            <ns1:Value>Allowed_Value_3</ns1:Value>
+          </ns1:Component>
+          <ns1:Component id="METADATA_ATT1.SUB_ATT1">
+            <ns1:Value>Allowed_SubValue_1</ns1:Value>
+          </ns1:Component>
+        </ns1:MetadataTargetRegion>
+      </ns1:MetadataConstraint>
+    </ns1:MetadataConstraints>
+  </ns0:Structures>
+</ns0:Structure>
+

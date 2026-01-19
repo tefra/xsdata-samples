@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.maintainable_base_type import MaintainableBaseType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -12,8 +12,13 @@ class MaintainableType(MaintainableBaseType):
     """
     MaintainableType is an abstract base type for all maintainable objects.
 
-    :ivar agency_id: The agencyID must be provided, and identifies the
+    :ivar agency_id: The agencyID must be provided and identifies the
         maintenance agency of the object.
+    :ivar is_partial_language: The isPartialLanguage attribute, if true,
+        indicates that the object doesn't contain the complete set of
+        all available languages, e.g., when obtained as a response to a
+        GET query that requested specific languages through the HTTP
+        header 'Accept-Language'.
     :ivar is_external_reference: The isExternalReference attribute, if
         true, indicates that the actual object is not defined the
         corresponding element, rather its full details are defined
@@ -46,6 +51,13 @@ class MaintainableType(MaintainableBaseType):
             "required": True,
             "pattern": r"[A-Za-z][A-Za-z0-9_\-]*(\.[A-Za-z][A-Za-z0-9_\-]*)*",
         }
+    )
+    is_partial_language: bool = field(
+        default=False,
+        metadata={
+            "name": "isPartialLanguage",
+            "type": "Attribute",
+        },
     )
     is_external_reference: bool = field(
         default=False,

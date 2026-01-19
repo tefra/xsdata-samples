@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.action_type import ActionType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -14,7 +14,7 @@ class SubmittedStructureType:
     object.
 
     When used in a submit structure request, its purpose is to override the
-    default action or external dependency resolution behavior. If neither
+    default action or external dependency resolution behaviour. If neither
     of these indicators are set, then it will be ignored. In a submit
     structure response, it is used to reference a submitted object for the
     purpose of providing a status for the submission. In this case, the
@@ -41,7 +41,7 @@ class SubmittedStructureType:
         metadata={
             "name": "MaintainableObject",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
             "required": True,
             "pattern": r".+\)",
         }

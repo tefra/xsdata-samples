@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
 from sdmx_ml.models.value_type import ValueType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
 @dataclass(frozen=True, kw_only=True)

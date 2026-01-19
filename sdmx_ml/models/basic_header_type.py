@@ -6,7 +6,7 @@ from typing import Any
 from sdmx_ml.models.base_header_type import BaseHeaderType
 from sdmx_ml.models.party_type import PartyType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -133,7 +133,7 @@ class BasicHeaderType(BaseHeaderType):
         metadata={
             "name": "Receiver",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "min_occurs": 1,
         },
     )

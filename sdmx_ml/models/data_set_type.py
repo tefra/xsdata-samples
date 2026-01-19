@@ -8,22 +8,20 @@ from sdmx_ml.models.action_type import ActionType
 from sdmx_ml.models.annotable_type import AnnotableType
 from sdmx_ml.models.atts_type import AttsType
 from sdmx_ml.models.group_type_abstract import GroupTypeAbstract
-from sdmx_ml.models.metadata_set_type import MetadataSetType
+from sdmx_ml.models.metadata_type import MetadataType
 from sdmx_ml.models.obs_type import ObsType
 from sdmx_ml.models.series_type import SeriesType
 
 __NAMESPACE__ = (
-    "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific"
+    "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/data/structurespecific"
 )
 
 
 @dataclass(frozen=True, kw_only=True)
 class DataSetType(AnnotableType):
     """
-    <ns1:p
-    xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific">DataSetType
-    is the abstract type which defines the base structure for any data
-    structure definition specific data set.
+    DataSetType is the abstract type which defines the base structure for
+    any data structure definition specific data set.
 
     A derived data set type will be created that is specific to a data
     structure definition and the details of the organisation of the data
@@ -44,18 +42,16 @@ class DataSetType(AnnotableType):
     series will have a unique key. If the series contains only data or only
     documentation, then it is possible that another series with the same
     key might exist, but with not with the same purpose (i.e. to provide
-    data or documentation) as the first series.</ns1:p> <ns1:p
-    xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific">This
-    base type is designed such that derived types can be processed in a
-    generic manner; it assures that data structure definition specific data
-    will have a consistent structure. The group, series, obs, and atts
-    elements are unqualified, meaning that they are not qualified with a
-    namespace in an instance. This means that in the derived data set
-    types, the elements will always be the same, regardless of the target
-    namespace of the schemas which defines these derived types. This allows
-    for consistent processing of the structure without regard to what the
-    namespace might be for the data structure definition specific
-    schema.</ns1:p>.
+    data or documentation) as the first series. This base type is designed
+    such that derived types can be processed in a generic manner; it
+    assures that data structure definition specific data will have a
+    consistent structure. The group, series, obs, and atts elements are
+    unqualified, meaning that they are not qualified with a namespace in an
+    instance. This means that in the derived data set types, the elements
+    will always be the same, regardless of the target namespace of the
+    schemas which defines these derived types. This allows for consistent
+    processing of the structure without regard to what the namespace might
+    be for the data structure definition specific schema.
 
     :ivar data_provider: DataProvider contains a reference to the
         provider for the data set.
@@ -134,7 +130,7 @@ class DataSetType(AnnotableType):
             },
         )
     )
-    metadata: None | MetadataSetType = field(
+    metadata: None | MetadataType = field(
         default=None,
         metadata={
             "name": "Metadata",
@@ -146,7 +142,7 @@ class DataSetType(AnnotableType):
         metadata={
             "name": "structureRef",
             "type": "Attribute",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/data/structurespecific",
             "required": True,
         }
     )
@@ -155,7 +151,7 @@ class DataSetType(AnnotableType):
         metadata={
             "name": "setID",
             "type": "Attribute",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/data/structurespecific",
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
@@ -163,7 +159,7 @@ class DataSetType(AnnotableType):
         default=None,
         metadata={
             "type": "Attribute",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/data/structurespecific",
         },
     )
     reporting_begin_date: None | XmlPeriod | XmlDate | XmlDateTime = field(
@@ -171,7 +167,7 @@ class DataSetType(AnnotableType):
         metadata={
             "name": "reportingBeginDate",
             "type": "Attribute",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/data/structurespecific",
         },
     )
     reporting_end_date: None | XmlPeriod | XmlDate | XmlDateTime = field(
@@ -179,7 +175,7 @@ class DataSetType(AnnotableType):
         metadata={
             "name": "reportingEndDate",
             "type": "Attribute",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/data/structurespecific",
         },
     )
     valid_from_date: None | XmlDateTime = field(
@@ -187,7 +183,7 @@ class DataSetType(AnnotableType):
         metadata={
             "name": "validFromDate",
             "type": "Attribute",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/data/structurespecific",
         },
     )
     valid_to_date: None | XmlDateTime = field(
@@ -195,7 +191,7 @@ class DataSetType(AnnotableType):
         metadata={
             "name": "validToDate",
             "type": "Attribute",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/data/structurespecific",
         },
     )
     publication_year: None | XmlPeriod = field(
@@ -203,7 +199,7 @@ class DataSetType(AnnotableType):
         metadata={
             "name": "publicationYear",
             "type": "Attribute",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/data/structurespecific",
         },
     )
     publication_period: None | XmlPeriod | XmlDate | XmlDateTime | str = field(
@@ -211,7 +207,7 @@ class DataSetType(AnnotableType):
         metadata={
             "name": "publicationPeriod",
             "type": "Attribute",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/data/structurespecific",
             "pattern": r".{5}A1.*",
         },
     )

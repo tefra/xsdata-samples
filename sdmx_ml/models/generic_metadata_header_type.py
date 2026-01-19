@@ -8,7 +8,7 @@ from sdmx_ml.models.generic_metadata_structure_type import (
     GenericMetadataStructureType,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -61,7 +61,7 @@ class GenericMetadataHeaderType(BaseHeaderType):
         metadata={
             "name": "Structure",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "min_occurs": 1,
         },
     )

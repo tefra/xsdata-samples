@@ -181,6 +181,24 @@ obj = StructureSpecificData(
                                 'OBS_VALUE': '1.485477254901961',
                             }
                         ),
+                        ObsType(
+                            comp=[
+                                CompType(
+                                    value=[
+                                        ValueType(
+                                            content=[
+                                                '#N/A',
+                                            ]
+                                        ),
+                                    ],
+                                    id='OBS_STATUS'
+                                ),
+                            ],
+                            time_period=XmlPeriod("2020"),
+                            local_attributes={
+                                'OBS_VALUE': '1.585477254901961',
+                            }
+                        ),
                     ],
                     local_attributes={
                         'FREQ': 'A',

@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.annotable_type import AnnotableType
 from sdmx_ml.models.description import Description
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -13,7 +13,7 @@ class ComputationType(AnnotableType):
     """
     ComputationType describes a computation in a process.
 
-    :ivar description: Description describe the computation in any form
+    :ivar description: Description describes the computation in any form
         desired by the user (these are informational rather than
         machine-actionable), and so may be supplied in multiple,
         parallel-language versions,
@@ -34,7 +34,7 @@ class ComputationType(AnnotableType):
         metadata={
             "name": "Description",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
             "min_occurs": 1,
         },
     )

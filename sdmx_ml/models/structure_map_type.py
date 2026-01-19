@@ -11,7 +11,7 @@ from sdmx_ml.models.frequency_format_mapping_type import (
 )
 from sdmx_ml.models.structure_map_base_type import StructureMapBaseType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -31,10 +31,11 @@ class StructureMapType(StructureMapBaseType):
 
     :ivar source: Source provides a reference to a structure (data or
         metadata) or a structure usage (dataflow or metadataflow) from
-        which components defined by the actual structure are to mapped.
+        which components defined by the actual structure are to be
+        mapped.
     :ivar target: Target provides a reference to a structure (data or
         metadata) or a structure usage (dataflow or metadataflow) to
-        which components from the source are to mapped.
+        which components from the source are to be mapped.
     :ivar epoch_map: Provides the ability to map source to target date
         formats. The source date is described as the number of epochs
         since a point in time, where the duration of each epoch is
@@ -55,7 +56,7 @@ class StructureMapType(StructureMapBaseType):
         metadata={
             "name": "Source",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
             "pattern": r".+\.datastructure\.DataStructure=.+|.+\.datastructure\.Dataflow=.+|.+\.metadatastructure\.MetadataStructure=.+|.+\.metadatastructure\.Metadataflow=.+",
         }
@@ -64,7 +65,7 @@ class StructureMapType(StructureMapBaseType):
         metadata={
             "name": "Target",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
             "pattern": r".+\.datastructure\.DataStructure=.+|.+\.datastructure\.Dataflow=.+|.+\.metadatastructure\.MetadataStructure=.+|.+\.metadatastructure\.Metadataflow=.+",
         }
@@ -74,7 +75,7 @@ class StructureMapType(StructureMapBaseType):
         metadata={
             "name": "EpochMap",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     date_pattern_map: tuple[DatePatternMapType, ...] = field(
@@ -82,7 +83,7 @@ class StructureMapType(StructureMapBaseType):
         metadata={
             "name": "DatePatternMap",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     frequency_format_mapping: tuple[FrequencyFormatMappingType, ...] = field(
@@ -90,7 +91,7 @@ class StructureMapType(StructureMapBaseType):
         metadata={
             "name": "FrequencyFormatMapping",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     component_map: tuple[ComponentMapType, ...] = field(
@@ -98,7 +99,7 @@ class StructureMapType(StructureMapBaseType):
         metadata={
             "name": "ComponentMap",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     fixed_value_map: tuple[FixedValueMapType, ...] = field(
@@ -106,6 +107,6 @@ class StructureMapType(StructureMapBaseType):
         metadata={
             "name": "FixedValueMap",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )

@@ -1,129 +1,24 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
-from typing import ForwardRef
+from typing import Any
 
-from sdmx_ml.models.queryable_data_source_type_1 import (
-    QueryableDataSourceType1,
-)
+from sdmx_ml.models.constraint_attachment_type import ConstraintAttachmentType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
-class DataConstraintAttachmentType:
+class DataConstraintAttachmentType(ConstraintAttachmentType):
     """
     DataConstraintAttachmentType restricts the base
     ConstraintAttachmentType to only allow artefacts related to data.
     """
 
-    data_provider_or_simple_data_source_or_data_structure: tuple[
-        DataConstraintAttachmentType.DataProvider
-        | DataConstraintAttachmentType.SimpleDataSource
-        | DataConstraintAttachmentType.DataStructure,
-        ...,
-    ] = field(
-        default_factory=tuple,
+    choice_1: Any = field(
+        init=False,
+        default=None,
         metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "DataProvider",
-                    "type": ForwardRef(
-                        "DataConstraintAttachmentType.DataProvider"
-                    ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
-                },
-                {
-                    "name": "SimpleDataSource",
-                    "type": ForwardRef(
-                        "DataConstraintAttachmentType.SimpleDataSource"
-                    ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
-                },
-                {
-                    "name": "DataStructure",
-                    "type": ForwardRef(
-                        "DataConstraintAttachmentType.DataStructure"
-                    ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
-                },
-            ),
+            "type": "Ignore",
         },
     )
-    queryable_data_source_or_dataflow_or_provision_agreement: tuple[
-        QueryableDataSourceType1
-        | DataConstraintAttachmentType.Dataflow
-        | DataConstraintAttachmentType.ProvisionAgreement,
-        ...,
-    ] = field(
-        default_factory=tuple,
-        metadata={
-            "type": "Elements",
-            "choices": (
-                {
-                    "name": "QueryableDataSource",
-                    "type": QueryableDataSourceType1,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
-                },
-                {
-                    "name": "Dataflow",
-                    "type": ForwardRef(
-                        "DataConstraintAttachmentType.Dataflow"
-                    ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
-                },
-                {
-                    "name": "ProvisionAgreement",
-                    "type": ForwardRef(
-                        "DataConstraintAttachmentType.ProvisionAgreement"
-                    ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
-                },
-            ),
-        },
-    )
-
-    @dataclass(frozen=True, kw_only=True)
-    class DataProvider:
-        value: str = field(
-            metadata={
-                "required": True,
-                "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
-            }
-        )
-
-    @dataclass(frozen=True, kw_only=True)
-    class SimpleDataSource:
-        value: str = field(
-            metadata={
-                "required": True,
-            }
-        )
-
-    @dataclass(frozen=True, kw_only=True)
-    class DataStructure:
-        value: str = field(
-            metadata={
-                "required": True,
-                "pattern": r".+\.datastructure\.DataStructure=.+",
-            }
-        )
-
-    @dataclass(frozen=True, kw_only=True)
-    class Dataflow:
-        value: str = field(
-            metadata={
-                "required": True,
-                "pattern": r".+\.datastructure\.Dataflow=.+",
-            }
-        )
-
-    @dataclass(frozen=True, kw_only=True)
-    class ProvisionAgreement:
-        value: str = field(
-            metadata={
-                "required": True,
-                "pattern": r".+\.registry\.ProvisionAgreement=.+",
-            }
-        )

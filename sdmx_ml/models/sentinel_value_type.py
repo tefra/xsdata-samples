@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.description import Description
 from sdmx_ml.models.name import Name
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -27,7 +27,7 @@ class SentinelValueType:
         metadata={
             "name": "Name",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
             "min_occurs": 1,
         },
     )
@@ -36,7 +36,7 @@ class SentinelValueType:
         metadata={
             "name": "Description",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
         },
     )
     value: object = field(

@@ -11,7 +11,7 @@ from sdmx_ml.models.payload_structure_type import PayloadStructureType
 from sdmx_ml.models.sender_type import SenderType
 from sdmx_ml.models.text_type import TextType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -70,7 +70,7 @@ class BaseHeaderType:
         metadata={
             "name": "ID",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "required": True,
             "pattern": r"[A-Za-z0-9_@$\-]+",
         }
@@ -80,7 +80,7 @@ class BaseHeaderType:
         metadata={
             "name": "Test",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "required": True,
         },
     )
@@ -88,7 +88,7 @@ class BaseHeaderType:
         metadata={
             "name": "Prepared",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "required": True,
         }
     )
@@ -96,7 +96,7 @@ class BaseHeaderType:
         metadata={
             "name": "Sender",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "required": True,
         }
     )
@@ -105,7 +105,7 @@ class BaseHeaderType:
         metadata={
             "name": "Receiver",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
         },
     )
     name: tuple[Name, ...] = field(
@@ -113,7 +113,7 @@ class BaseHeaderType:
         metadata={
             "name": "Name",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
         },
     )
     structure: tuple[PayloadStructureType, ...] = field(
@@ -121,7 +121,7 @@ class BaseHeaderType:
         metadata={
             "name": "Structure",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
         },
     )
     data_provider: None | str = field(
@@ -129,7 +129,7 @@ class BaseHeaderType:
         metadata={
             "name": "DataProvider",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
         },
     )
@@ -138,7 +138,7 @@ class BaseHeaderType:
         metadata={
             "name": "MetadataProvider",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "pattern": r".+\.base\.MetadataProvider=.+:METADATA_PROVIDERS\(.+\).+",
         },
     )
@@ -147,7 +147,7 @@ class BaseHeaderType:
         metadata={
             "name": "DataSetAction",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
         },
     )
     data_set_id: tuple[str, ...] = field(
@@ -155,7 +155,7 @@ class BaseHeaderType:
         metadata={
             "name": "DataSetID",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
@@ -164,7 +164,7 @@ class BaseHeaderType:
         metadata={
             "name": "Extracted",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
         },
     )
     reporting_begin: None | XmlPeriod | XmlDate | XmlDateTime | str = field(
@@ -172,7 +172,7 @@ class BaseHeaderType:
         metadata={
             "name": "ReportingBegin",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "pattern": r".{5}A1.*",
         },
     )
@@ -181,7 +181,7 @@ class BaseHeaderType:
         metadata={
             "name": "ReportingEnd",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "pattern": r".{5}A1.*",
         },
     )
@@ -190,7 +190,7 @@ class BaseHeaderType:
         metadata={
             "name": "EmbargoDate",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
         },
     )
     source: tuple[TextType, ...] = field(
@@ -198,6 +198,6 @@ class BaseHeaderType:
         metadata={
             "name": "Source",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
         },
     )

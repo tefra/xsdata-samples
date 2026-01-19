@@ -7,7 +7,7 @@ from sdmx_ml.models.input_output_type import InputOutputType
 from sdmx_ml.models.process_step_base_type import ProcessStepBaseType
 from sdmx_ml.models.transition_type import TransitionType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -40,7 +40,7 @@ class ProcessStepType(ProcessStepBaseType):
         metadata={
             "name": "Input",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     output: tuple[InputOutputType, ...] = field(
@@ -48,7 +48,7 @@ class ProcessStepType(ProcessStepBaseType):
         metadata={
             "name": "Output",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     computation: None | ComputationType = field(
@@ -56,7 +56,7 @@ class ProcessStepType(ProcessStepBaseType):
         metadata={
             "name": "Computation",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     transition: tuple[TransitionType, ...] = field(
@@ -64,7 +64,7 @@ class ProcessStepType(ProcessStepBaseType):
         metadata={
             "name": "Transition",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     process_step: tuple[ProcessStepType, ...] = field(
@@ -72,6 +72,6 @@ class ProcessStepType(ProcessStepBaseType):
         metadata={
             "name": "ProcessStep",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )

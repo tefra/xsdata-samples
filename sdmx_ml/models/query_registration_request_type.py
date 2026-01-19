@@ -10,7 +10,7 @@ from sdmx_ml.models.metadata_target_region_type import MetadataTargetRegionType
 from sdmx_ml.models.query_type_type import QueryTypeType
 from sdmx_ml.models.reference_period_type import ReferencePeriodType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -44,7 +44,7 @@ class QueryRegistrationRequestType:
         metadata={
             "name": "QueryType",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
             "required": True,
         }
     )
@@ -63,35 +63,35 @@ class QueryRegistrationRequestType:
                 {
                     "name": "All",
                     "type": EmptyType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
                 {
                     "name": "ProvisionAgreement",
                     "type": ForwardRef(
                         "QueryRegistrationRequestType.ProvisionAgreement"
                     ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
                 {
                     "name": "DataProvider",
                     "type": ForwardRef(
                         "QueryRegistrationRequestType.DataProvider"
                     ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
                 {
                     "name": "Dataflow",
                     "type": ForwardRef(
                         "QueryRegistrationRequestType.Dataflow"
                     ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
                 {
                     "name": "Metadataflow",
                     "type": ForwardRef(
                         "QueryRegistrationRequestType.Metadataflow"
                     ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
             ),
         },
@@ -101,7 +101,7 @@ class QueryRegistrationRequestType:
         metadata={
             "name": "ReferencePeriod",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
         },
     )
     data_key_set_or_cube_region_or_metadata_target_region: tuple[
@@ -114,17 +114,17 @@ class QueryRegistrationRequestType:
                 {
                     "name": "DataKeySet",
                     "type": DataKeySetType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
                 {
                     "name": "CubeRegion",
                     "type": CubeRegionType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
                 {
                     "name": "MetadataTargetRegion",
                     "type": MetadataTargetRegionType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
             ),
         },
@@ -140,35 +140,39 @@ class QueryRegistrationRequestType:
     @dataclass(frozen=True, kw_only=True)
     class ProvisionAgreement:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r".+\.registry\.ProvisionAgreement=.+",
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
     class DataProvider:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Dataflow:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r".+\.datastructure\.Dataflow=.+",
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Metadataflow:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r".+\.metadatastructure\.Metadataflow=.+",
-            }
+            },
         )

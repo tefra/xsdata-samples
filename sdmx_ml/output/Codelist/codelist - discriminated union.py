@@ -6,7 +6,6 @@ from sdmx_ml.models.codelists_type import CodelistsType
 from sdmx_ml.models.concept_scheme_type import ConceptSchemeType
 from sdmx_ml.models.concept_schemes_type import ConceptSchemesType
 from sdmx_ml.models.constraint_attachment_type import ConstraintAttachmentType
-from sdmx_ml.models.constraint_role_type import ConstraintRoleType
 from sdmx_ml.models.contact_type_1 import ContactType1
 from sdmx_ml.models.cube_region_type import CubeRegionType
 from sdmx_ml.models.data_constraint_type import DataConstraintType
@@ -224,13 +223,12 @@ obj = Structure(
                     version='1.0',
                     agency_id='EXAMPLE',
                     constraint_attachment=ConstraintAttachmentType(
-                        choice_1=[
+                        choice=[
                             ConstraintAttachmentType.Dataflow(
                                 value='urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=EXAMPLE:LABOUR_ISIC(1.0)'
                             ),
                         ]
                     ),
-                    role=ConstraintRoleType.ALLOWED,
                     cube_region=[
                         CubeRegionType(
                             key_value=[
@@ -262,13 +260,12 @@ obj = Structure(
                     version='1.0',
                     agency_id='EXAMPLE',
                     constraint_attachment=ConstraintAttachmentType(
-                        choice_1=[
+                        choice=[
                             ConstraintAttachmentType.Dataflow(
                                 value='urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=EXAMPLE:LABOUR_NACE(1.0)'
                             ),
                         ]
                     ),
-                    role=ConstraintRoleType.ALLOWED,
                     cube_region=[
                         CubeRegionType(
                             key_value=[

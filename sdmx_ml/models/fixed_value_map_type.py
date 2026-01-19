@@ -5,7 +5,7 @@ from typing import ForwardRef
 
 from sdmx_ml.models.annotable_type import AnnotableType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -28,12 +28,12 @@ class FixedValueMapType(AnnotableType):
                 {
                     "name": "Source",
                     "type": ForwardRef("FixedValueMapType.Source"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "Target",
                     "type": ForwardRef("FixedValueMapType.Target"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
             ),
         },
@@ -43,24 +43,26 @@ class FixedValueMapType(AnnotableType):
         metadata={
             "name": "Value",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
 
     @dataclass(frozen=True, kw_only=True)
     class Source:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Target:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            }
+            },
         )

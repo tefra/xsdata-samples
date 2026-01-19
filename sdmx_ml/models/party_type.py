@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.contact_type_2 import ContactType2
 from sdmx_ml.models.name import Name
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -25,7 +25,7 @@ class PartyType:
         metadata={
             "name": "Name",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
         },
     )
     contact: tuple[ContactType2, ...] = field(
@@ -33,7 +33,7 @@ class PartyType:
         metadata={
             "name": "Contact",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
         },
     )
     id: str = field(

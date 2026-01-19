@@ -8,7 +8,7 @@ from sdmx_ml.models.optional_local_dimension_reference_type import (
     OptionalLocalDimensionReferenceType,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -33,17 +33,17 @@ class AttributeRelationshipType:
                 {
                     "name": "Dataflow",
                     "type": ForwardRef("AttributeRelationshipType.Dataflow"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "Dimension",
                     "type": OptionalLocalDimensionReferenceType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "Group",
                     "type": str,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                     "pattern": r"[A-Za-z0-9_@$\-]+",
                 },
                 {
@@ -51,7 +51,7 @@ class AttributeRelationshipType:
                     "type": ForwardRef(
                         "AttributeRelationshipType.Observation"
                     ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
             ),
         },

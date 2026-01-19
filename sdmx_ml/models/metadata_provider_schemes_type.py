@@ -6,7 +6,7 @@ from sdmx_ml.models.metadata_provider_scheme_type import (
     MetadataProviderSchemeType,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -20,7 +20,7 @@ class MetadataProviderSchemesType:
     or registry service.
 
     :ivar metadata_provider_scheme: MetadataProviderScheme provides the
-        details of an metadata provider scheme, in which metadata
+        details of a metadata provider scheme, in which metadata
         providers are described.
     """
 
@@ -29,7 +29,7 @@ class MetadataProviderSchemesType:
         metadata={
             "name": "MetadataProviderScheme",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "min_occurs": 1,
         },
     )

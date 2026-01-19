@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from enum import Enum
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 class CodeDataType(Enum):
@@ -10,14 +10,14 @@ class CodeDataType(Enum):
     CodeDataType is a restriction of the basic data types that are
     applicable to codes.
 
-    Although some of the higher level time period formats are perimitted,
-    it should be noted that any value which contains time (which includes a
+    Although some of the higher level time period formats are permitted, it
+    should be noted that any value which contains time (which includes a
     time zone offset) is not allowable as a code identifier.
 
     :cvar STRING: A string datatype corresponding to W3C XML Schema's
         xs:string datatype.
     :cvar ALPHA: A string datatype which only allows for the simple
-        aplhabetic charcter set of A-Z, a-z.
+        alphabetic character set of A-Z, a-z.
     :cvar ALPHA_NUMERIC: A string datatype which only allows for the
         simple alphabetic character set of A-Z, a-z plus the simple
         numeric character set of 0-9.

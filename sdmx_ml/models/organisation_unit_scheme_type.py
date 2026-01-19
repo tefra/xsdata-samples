@@ -5,14 +5,14 @@ from typing import Any
 
 from sdmx_ml.models.organisation_scheme_type import OrganisationSchemeType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
 class OrganisationUnitSchemeType(OrganisationSchemeType):
     """
     OrganisationUnitSchemeType defines a type of organisation scheme which
-    simply defines organisations and there parent child relationships.
+    simply defines organisations and their parent child relationships.
 
     Organisations in this scheme are assigned no particular role, and may
     in fact exist within the other type of organisation schemes as well.

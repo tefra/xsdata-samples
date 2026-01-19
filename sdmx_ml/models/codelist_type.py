@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.codelist_base_type import CodelistBaseType
 from sdmx_ml.models.codelist_extension_type import CodelistExtensionType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -26,6 +26,6 @@ class CodelistType(CodelistBaseType):
         metadata={
             "name": "CodelistExtension",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )

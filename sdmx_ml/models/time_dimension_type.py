@@ -8,7 +8,7 @@ from sdmx_ml.models.time_dimension_representation_type import (
     TimeDimensionRepresentationType,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -56,7 +56,7 @@ class TimeDimensionType(BaseDimensionType):
         metadata={
             "name": "LocalRepresentation",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
         }
     )

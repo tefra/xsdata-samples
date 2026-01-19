@@ -4,20 +4,18 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.annotable_type import AnnotableType
 from sdmx_ml.models.comp_type import CompType
-from sdmx_ml.models.metadata_set_type import MetadataSetType
+from sdmx_ml.models.metadata_type import MetadataType
 
 __NAMESPACE__ = (
-    "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific"
+    "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/data/structurespecific"
 )
 
 
 @dataclass(frozen=True, kw_only=True)
 class GroupTypeAbstract(AnnotableType):
     """
-    <ns1:p
-    xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific">GroupType
-    is the abstract type which defines a structure which is used to
-    communicate attribute values for a group defined in a data structure
+    GroupType is the abstract type which defines a structure which is used
+    to communicate attribute values for a group defined in a data structure
     definition.
 
     The group can consist of either a subset of the dimensions defined by
@@ -27,11 +25,10 @@ class GroupTypeAbstract(AnnotableType):
     constraint, only the identification of group is provided. It is
     expected that a system which is processing this will relate that
     identifier to the key sets defined in the constraint and apply the
-    values provided for the attributes appropriately.</ns1:p> <ns1:p
-    xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific">Data
-    structure definition schemas will drive types based on this for each
-    group defined in the data structure definition. Both the dimension
-    values which make up the key (if applicable) and the attribute values
+    values provided for the attributes appropriately. Data structure
+    definition schemas will drive types based on this for each group
+    defined in the data structure definition. Both the dimension values
+    which make up the key (if applicable) and the attribute values
     associated with the group will be represented with XML attributes. This
     is specified in the content model with the declaration of anyAttributes
     in the "local" namespace. The derived group type will refine this
@@ -46,7 +43,7 @@ class GroupTypeAbstract(AnnotableType):
     If additional attributes are required, these should be qualified with a
     namespace so that a generic application can easily distinguish them as
     not being meant to represent a data structure definition dimension or
-    attribute.</ns1:p>.
+    attribute.
 
     :ivar comp: Comp contains the details of group level attributes that
         have complex representation and cannot be expressed as XML
@@ -73,7 +70,7 @@ class GroupTypeAbstract(AnnotableType):
             "namespace": "",
         },
     )
-    metadata: None | MetadataSetType = field(
+    metadata: None | MetadataType = field(
         default=None,
         metadata={
             "name": "Metadata",

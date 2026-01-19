@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.status_message_type_1 import StatusMessageType1
 from sdmx_ml.models.status_type import StatusType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -29,7 +29,7 @@ class StatusMessageType2:
         metadata={
             "name": "MessageText",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
         },
     )
     status: StatusType = field(

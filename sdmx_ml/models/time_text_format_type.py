@@ -8,7 +8,7 @@ from sdmx_ml.models.simple_component_text_format_type import (
 )
 from sdmx_ml.models.time_data_type import TimeDataType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)

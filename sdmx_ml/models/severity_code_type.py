@@ -3,13 +3,13 @@ from __future__ import annotations
 from enum import Enum
 
 __NAMESPACE__ = (
-    "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message/footer"
+    "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message/footer"
 )
 
 
 class SeverityCodeType(Enum):
     """
-    :cvar ERROR: Error indicates the status message coresponds to an
+    :cvar ERROR: Error indicates the status message corresponds to an
         error.
     :cvar WARNING: Warning indicates that the status message corresponds
         to a warning.

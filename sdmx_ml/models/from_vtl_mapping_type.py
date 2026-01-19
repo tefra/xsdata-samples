@@ -7,7 +7,7 @@ from sdmx_ml.models.standard_from_vtl_mapping_method_type import (
     StandardFromVtlMappingMethodType,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -16,7 +16,7 @@ class FromVtlMappingType:
     FromVtlMappingType defines the mapping method and filter used when
     mapping from VTL to SDMX.
 
-    :ivar from_vtl_super_space: Identfies a super space of the mapped
+    :ivar from_vtl_super_space: Identifies a super space of the mapped
         dataflow that the mapping applies to. This is a collection of
         references to the dimensions that make up the space.
     :ivar method: The mapping method used when mapping from VTL to SDMX.
@@ -31,7 +31,7 @@ class FromVtlMappingType:
         metadata={
             "name": "FromVtlSuperSpace",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     method: None | StandardFromVtlMappingMethodType | str = field(

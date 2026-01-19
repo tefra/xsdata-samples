@@ -12,13 +12,13 @@ from sdmx_ml.models.item_base_type import ItemBaseType
 from sdmx_ml.models.simple_data_type import SimpleDataType
 from sdmx_ml.models.to_vtl_mapping_type import ToVtlMappingType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
 class ItemType(ItemBaseType):
     """
-    ItemType is an abstract base type for all items with in an item scheme.
+    ItemType is an abstract base type for all items within an item scheme.
 
     Concrete instances of this type may or may not utilize the nested item,
     but if so should restrict the actual types of item allowed.
@@ -52,93 +52,93 @@ class ItemType(ItemBaseType):
                 {
                     "name": "Parent",
                     "type": str,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
-                    "pattern": r"[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
+                    "pattern": r"[A-Za-z0-9_@$\-]+",
                 },
                 {
                     "name": "CustomType",
                     "type": ForwardRef("CustomType"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "UserDefinedOperator",
                     "type": ForwardRef("UserDefinedOperator"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "Ruleset",
                     "type": ForwardRef("Ruleset"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "NamePersonalisation",
                     "type": ForwardRef("NamePersonalisation"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "VtlMapping",
                     "type": ForwardRef("VtlMapping"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "Transformation",
                     "type": ForwardRef("Transformation"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "ReportingCategory",
                     "type": ForwardRef("ReportingCategory"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "OrganisationUnit",
                     "type": ForwardRef("OrganisationUnit"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "MetadataProvider",
                     "type": ForwardRef("MetadataProvider"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "DataProvider",
                     "type": ForwardRef("DataProvider"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "DataConsumer",
                     "type": ForwardRef("DataConsumer"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "Agency",
                     "type": ForwardRef("Agency"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "Concept",
                     "type": ForwardRef("Concept"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "GeoGridCode",
                     "type": ForwardRef("GeoGridCode"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "GeoFeatureSetCode",
                     "type": ForwardRef("GeoFeatureSetCode"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "Code",
                     "type": ForwardRef("Code"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "Category",
                     "type": ForwardRef("Category"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
             ),
         },
@@ -236,7 +236,7 @@ class ReportingCategoryBaseType(ItemType):
 @dataclass(frozen=True, kw_only=True)
 class UnnestedItemType(ItemType):
     """
-    UnnestedItemType is an abstract base type for all items with in an item
+    UnnestedItemType is an abstract base type for all items within an item
     scheme that do not contain nested items.
     """
 
@@ -258,7 +258,7 @@ class Category(CategoryType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )
 
 
@@ -274,7 +274,7 @@ class Code(CodeType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )
 
 
@@ -299,7 +299,7 @@ class ConceptType(ConceptBaseType):
         metadata={
             "name": "CoreRepresentation",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     isoconcept_reference: None | IsoconceptReferenceType = field(
@@ -307,7 +307,7 @@ class ConceptType(ConceptBaseType):
         metadata={
             "name": "ISOConceptReference",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
 
@@ -317,7 +317,7 @@ class CustomTypeBaseType(UnnestedItemType):
     """
     CustomTypeBaseType defines the base refinement of the CustomTypeType.
 
-    Its purpose is to retrict the urn attribute.
+    Its purpose is to restrict the urn attribute.
     """
 
     choice: Any = field(
@@ -343,7 +343,7 @@ class NamePersonalisationBaseType(UnnestedItemType):
     NamePersonalisationBaseType defines the base refinement of the
     NamePersonalisationType.
 
-    Its purpose is to retrict the urn attribute.
+    Its purpose is to restrict the urn attribute.
     """
 
     choice: Any = field(
@@ -372,7 +372,7 @@ class OrganisationType(BaseOrganisationType):
         metadata={
             "name": "Contact",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
 
@@ -383,7 +383,7 @@ class ReportingCategoryType(ReportingCategoryBaseType):
     ReportingCategoryType describes the structure of a reporting category,
     which groups structure usages into useful sub-packages.
 
-    Sub ordinate reporting categories can be nested within the category
+    Subordinate reporting categories can be nested within the category
     definition.
     """
 
@@ -401,14 +401,14 @@ class ReportingCategoryType(ReportingCategoryBaseType):
                     "type": ForwardRef(
                         "ReportingCategoryType.StructuralMetadata"
                     ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "ProvisioningMetadata",
                     "type": ForwardRef(
                         "ReportingCategoryType.ProvisioningMetadata"
                     ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
             ),
         },
@@ -417,19 +417,21 @@ class ReportingCategoryType(ReportingCategoryBaseType):
     @dataclass(frozen=True, kw_only=True)
     class StructuralMetadata:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r".+\.datastructure\.DataStructure=.+|.+\.metadatastructure\.MetadataStructure=.+",
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
     class ProvisioningMetadata:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r".+\.datastructure\.Dataflow=.+|.+\.metadatastructure\.Metadataflow=.+",
-            }
+            },
         )
 
 
@@ -438,7 +440,7 @@ class RulesetBaseType(UnnestedItemType):
     """
     RulesetBaseType defines the base refinement of the RulesetType.
 
-    Its purpose is to retrict the urn attribute.
+    Its purpose is to restrict the urn attribute.
     """
 
     choice: Any = field(
@@ -456,7 +458,7 @@ class TransformationBaseType(UnnestedItemType):
     TransformationBaseType defines the base refinement of the
     TransformationType.
 
-    Its purpose is to retrict the urn attribute.
+    Its purpose is to restrict the urn attribute.
     """
 
     choice: Any = field(
@@ -474,7 +476,7 @@ class UserDefinedOperatorBaseType(UnnestedItemType):
     UserDefinedOperatorBaseType defines the base refinement of the
     UserDefinedOperatorType.
 
-    Its purpose is to retrict the urn attribute.
+    Its purpose is to restrict the urn attribute.
     """
 
     choice: Any = field(
@@ -491,7 +493,7 @@ class VtlMappingBaseType(UnnestedItemType):
     """
     VtlMappingBaseType defines the base refinement of the VtlMappingType.
 
-    Its purpose is to retrict the urn attribute.
+    Its purpose is to restrict the urn attribute.
     """
 
     choice: Any = field(
@@ -529,7 +531,7 @@ class Concept(ConceptType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )
 
 
@@ -563,7 +565,7 @@ class CustomTypeType(CustomTypeBaseType):
         metadata={
             "name": "VtlScalarType",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
         }
     )
@@ -571,7 +573,7 @@ class CustomTypeType(CustomTypeBaseType):
         metadata={
             "name": "DataType",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
         }
     )
@@ -580,7 +582,7 @@ class CustomTypeType(CustomTypeBaseType):
         metadata={
             "name": "VtlLiteralFormat",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     output_format: None | str = field(
@@ -588,7 +590,7 @@ class CustomTypeType(CustomTypeBaseType):
         metadata={
             "name": "OutputFormat",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     null_value: None | str = field(
@@ -596,7 +598,7 @@ class CustomTypeType(CustomTypeBaseType):
         metadata={
             "name": "NullValue",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
 
@@ -640,7 +642,7 @@ class DataProviderType(OrganisationType):
 @dataclass(frozen=True, kw_only=True)
 class GeoFeatureSetCodeType(GeoRefCodeType):
     """
-    GeoFeatureSetCodeType defines the structure of a geogrphic code.
+    GeoFeatureSetCodeType defines the structure of a geographic code.
 
     :ivar value: The geo feature set of the Code, which represents a set
         of points defining a feature in a format defined a predefined
@@ -668,7 +670,7 @@ class GeoGridCodeType(GeoRefCodeType):
         metadata={
             "name": "GeoCell",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
         }
     )
@@ -716,7 +718,7 @@ class NamePersonalisationType(NamePersonalisationBaseType):
         metadata={
             "name": "VtlDefaultName",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
         }
     )
@@ -724,7 +726,7 @@ class NamePersonalisationType(NamePersonalisationBaseType):
         metadata={
             "name": "PersonalisedName",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
         }
     )
@@ -766,7 +768,7 @@ class ReportingCategory(ReportingCategoryType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )
 
 
@@ -782,7 +784,7 @@ class RulesetType(RulesetBaseType):
         ruleset. This must conform to the syntax of the VTL definition
         language.
     :ivar ruleset_type: The VTL type of the ruleset. In VTL 2.0, this is
-        datapoint or hierarchical
+        datapoint or hierarchical.
     :ivar ruleset_scope: This model artefact on which the ruleset is
         defined. In VTL 2.0, this is value domain or variable.
     """
@@ -791,7 +793,7 @@ class RulesetType(RulesetBaseType):
         metadata={
             "name": "RulesetDefinition",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
         }
     )
@@ -820,7 +822,7 @@ class TransformationType(TransformationBaseType):
     result.
 
     :ivar expression: The right-hand side of the VTL statement. This is
-        expression that is executed for this transformation. It include
+        expression that is executed for this transformation. It includes
         references to operands and other artefacts. The expression may
         contain references to SDMX artefacts using the reduced URN
         format; see Section 6 SDMX Standards ("SDMX Technical Notes"),
@@ -830,8 +832,8 @@ class TransformationType(TransformationBaseType):
         transformations. If the result is an SDMX artefact, the is
         expressed using the alias; see Section 6 SDMX Standards ("SDMX
         Technical Notes"), 10.2.3 ("Abbreviation of the URN").
-    :ivar is_persistent: Indicates if the the result is permanently
-        stored. A persistent result (value of true) can be used by
+    :ivar is_persistent: Indicates if the result is permanently stored.
+        A persistent result (value of true) can be used by
         transformation defined in other transformation schemes, but a
         non-persistent result (value of false) can only be used by
         transformations within the same transformation scheme.
@@ -841,7 +843,7 @@ class TransformationType(TransformationBaseType):
         metadata={
             "name": "Expression",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
         }
     )
@@ -849,7 +851,7 @@ class TransformationType(TransformationBaseType):
         metadata={
             "name": "Result",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
         }
     )
@@ -882,7 +884,7 @@ class UserDefinedOperatorType(UserDefinedOperatorBaseType):
         metadata={
             "name": "OperatorDefinition",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
         }
     )
@@ -903,7 +905,7 @@ class VtlMappingType(VtlMappingBaseType):
     VtlConceptMapping) is being described. When this is used to assign an
     alias for a SDMX Dataflow, this can also be used to indicate the
     methods used to convert the data structure from SDMX to VTL and
-    vice-versa. Finally, this can be used to override the deault Basic
+    vice-versa. Finally, this can be used to override the default Basic
     mapping methods used for Dataflows by utilizing the GenericDataflow
     element in place of a reference to a specific Dataflow.
 
@@ -929,32 +931,32 @@ class VtlMappingType(VtlMappingBaseType):
                 {
                     "name": "Dataflow",
                     "type": ForwardRef("VtlMappingType.Dataflow"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "GenericDataflow",
                     "type": EmptyType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "ToVtlMapping",
                     "type": ToVtlMappingType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "FromVtlMapping",
                     "type": FromVtlMappingType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "Codelist",
                     "type": ForwardRef("VtlMappingType.Codelist"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "Concept",
                     "type": ForwardRef("VtlMappingType.Concept"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
             ),
             "max_occurs": 3,
@@ -970,28 +972,31 @@ class VtlMappingType(VtlMappingBaseType):
     @dataclass(frozen=True, kw_only=True)
     class Dataflow:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r".+\.datastructure\.Dataflow=.+",
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Codelist:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r".+\.codelist\.Codelist=.+",
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Concept:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r".+\.conceptscheme\.Concept=.+",
-            }
+            },
         )
 
 
@@ -1004,7 +1009,7 @@ class Agency(AgencyType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )
 
 
@@ -1016,7 +1021,7 @@ class CustomType(CustomTypeType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )
 
 
@@ -1029,7 +1034,7 @@ class DataConsumer(DataConsumerType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )
 
 
@@ -1041,7 +1046,7 @@ class DataProvider(DataProviderType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )
 
 
@@ -1056,7 +1061,7 @@ class GeoFeatureSetCode(GeoFeatureSetCodeType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )
 
 
@@ -1069,19 +1074,19 @@ class GeoGridCode(GeoGridCodeType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )
 
 
 @dataclass(frozen=True, kw_only=True)
 class MetadataProvider(MetadataProviderType):
     """
-    MetadataProvider describes an organisation that produces metadata .
+    MetadataProvider describes an organisation that produces metadata.
     """
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )
 
 
@@ -1094,7 +1099,7 @@ class NamePersonalisation(NamePersonalisationType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )
 
 
@@ -1107,7 +1112,7 @@ class OrganisationUnit(OrganisationUnitType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )
 
 
@@ -1119,7 +1124,7 @@ class Ruleset(RulesetType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )
 
 
@@ -1132,7 +1137,7 @@ class Transformation(TransformationType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )
 
 
@@ -1145,7 +1150,7 @@ class UserDefinedOperator(UserDefinedOperatorType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )
 
 
@@ -1157,5 +1162,5 @@ class VtlMapping(VtlMappingType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )

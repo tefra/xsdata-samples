@@ -6,7 +6,7 @@ from sdmx_ml.models.metadata_provision_agreement_type import (
     MetadataProvisionAgreementType,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -32,7 +32,7 @@ class MetadataProvisionAgreementsType:
         metadata={
             "name": "MetadataProvisionAgreement",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "min_occurs": 1,
         },
     )

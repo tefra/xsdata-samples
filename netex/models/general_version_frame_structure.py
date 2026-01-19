@@ -256,6 +256,7 @@ from .link_sequence_projection import LinkSequenceProjection
 from .logical_display import LogicalDisplay
 from .lost_property_service import LostPropertyService
 from .luggage_allowance import LuggageAllowance
+from .luggage_locker_equipment import LuggageLockerEquipment
 from .luggage_service import LuggageService
 from .management_agent import ManagementAgent
 from .medium_access_device import MediumAccessDevice
@@ -995,6 +996,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
         | ShelterEquipment
         | TrolleyStandEquipment
         | WaitingRoomEquipment
+        | LuggageLockerEquipment
         | CrossingEquipment
         | QueueingEquipment
         | EntranceEquipment
@@ -2858,6 +2860,11 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "WaitingRoomEquipment",
                     "type": WaitingRoomEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LuggageLockerEquipment",
+                    "type": LuggageLockerEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {
@@ -4768,6 +4775,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
         | ShelterEquipment
         | TrolleyStandEquipment
         | WaitingRoomEquipment
+        | LuggageLockerEquipment
         | CrossingEquipment
         | QueueingEquipment
         | EntranceEquipment
@@ -6172,6 +6180,11 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "WaitingRoomEquipment",
                     "type": WaitingRoomEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LuggageLockerEquipment",
+                    "type": LuggageLockerEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

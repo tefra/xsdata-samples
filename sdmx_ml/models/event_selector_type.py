@@ -12,7 +12,7 @@ from sdmx_ml.models.structural_repository_events_type import (
     StructuralRepositoryEventsType,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -38,19 +38,19 @@ class EventSelectorType:
                 {
                     "name": "StructuralRepositoryEvents",
                     "type": StructuralRepositoryEventsType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                     "max_occurs": 3,
                 },
                 {
                     "name": "DataRegistrationEvents",
                     "type": DataRegistrationEventsType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                     "max_occurs": 3,
                 },
                 {
                     "name": "MetadataRegistrationEvents",
                     "type": MetadataRegistrationEventsType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                     "max_occurs": 3,
                 },
             ),

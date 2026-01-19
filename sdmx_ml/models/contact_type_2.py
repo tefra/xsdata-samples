@@ -6,7 +6,7 @@ from typing import ForwardRef
 from sdmx_ml.models.name import Name
 from sdmx_ml.models.text_type import TextType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -31,7 +31,7 @@ class ContactType2:
         metadata={
             "name": "Name",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
         },
     )
     department: tuple[TextType, ...] = field(
@@ -39,7 +39,7 @@ class ContactType2:
         metadata={
             "name": "Department",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
         },
     )
     role: tuple[TextType, ...] = field(
@@ -47,7 +47,7 @@ class ContactType2:
         metadata={
             "name": "Role",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
         },
     )
     choice: tuple[
@@ -65,27 +65,27 @@ class ContactType2:
                 {
                     "name": "Telephone",
                     "type": ForwardRef("ContactType2.Telephone"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
                 },
                 {
                     "name": "Fax",
                     "type": ForwardRef("ContactType2.Fax"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
                 },
                 {
                     "name": "X400",
                     "type": ForwardRef("ContactType2.X400"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
                 },
                 {
                     "name": "URI",
                     "type": ForwardRef("ContactType2.Uri"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
                 },
                 {
                     "name": "Email",
                     "type": ForwardRef("ContactType2.Email"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
                 },
             ),
         },
@@ -94,39 +94,44 @@ class ContactType2:
     @dataclass(frozen=True, kw_only=True)
     class Telephone:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Fax:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
     class X400:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Uri:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Email:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
-            }
+            },
         )

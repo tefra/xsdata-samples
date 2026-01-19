@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ns0:Structure xmlns:ns0="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message">
+<ns0:Structure xmlns:ns0="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message">
   <ns0:Header>
     <ns0:ID>IREF772628</ns0:ID>
     <ns0:Test>false</ns0:Test>
@@ -8,33 +8,33 @@
     <ns0:Receiver id="not_supplied"/>
   </ns0:Header>
   <ns0:Structures>
-    <ns1:ValueLists xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+    <ns1:ValueLists xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure">
       <ns1:ValueList id="VL_CURRENCY_SYMBOL" urn="urn:sdmx:org.sdmx.infomodel.codelist.ValueList=SDMX:VL_CURRENCY_SYMBOL(1.0)" version="1.0" agencyID="EXAMPLE">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Currency Symbol</ns2:Name>
-        <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Enumerated list of currencies identified by symbol</ns2:Description>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Currency Symbol</ns2:Name>
+        <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Enumerated list of currencies identified by symbol</ns2:Description>
         <ns1:ValueItem id="$">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">USD</ns2:Name>
-          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">US Dollar</ns2:Description>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">USD</ns2:Name>
+          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">US Dollar</ns2:Description>
         </ns1:ValueItem>
         <ns1:ValueItem id="£">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">GBP</ns2:Name>
-          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">UK Pound</ns2:Description>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">GBP</ns2:Name>
+          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">UK Pound</ns2:Description>
         </ns1:ValueItem>
         <ns1:ValueItem id="€">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">EUR</ns2:Name>
-          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Euro</ns2:Description>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">EUR</ns2:Name>
+          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Euro</ns2:Description>
         </ns1:ValueItem>
         <ns1:ValueItem id="¥">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">CNY</ns2:Name>
-          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">China Yuan Renminbi</ns2:Description>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">CNY</ns2:Name>
+          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">China Yuan Renminbi</ns2:Description>
         </ns1:ValueItem>
         <ns1:ValueItem id="﷼">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">IRR</ns2:Name>
-          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Iran Rial</ns2:Description>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">IRR</ns2:Name>
+          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Iran Rial</ns2:Description>
         </ns1:ValueItem>
         <ns1:ValueItem id="¥">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">JPY</ns2:Name>
-          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Japan Yen</ns2:Description>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">JPY</ns2:Name>
+          <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Japan Yen</ns2:Description>
         </ns1:ValueItem>
       </ns1:ValueList>
     </ns1:ValueLists>

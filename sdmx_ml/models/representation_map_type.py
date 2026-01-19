@@ -8,7 +8,7 @@ from sdmx_ml.models.representation_map_base_type import (
 )
 from sdmx_ml.models.value_mapping_type import ValueMappingType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -21,13 +21,13 @@ class RepresentationMapType(RepresentationMapBaseType):
                 {
                     "name": "SourceCodelist",
                     "type": str,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                     "pattern": r".+\.codelist\.Codelist=.+|.+\.codelist\.ValueList=.+",
                 },
                 {
                     "name": "SourceDataType",
                     "type": DataType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
             ),
         },
@@ -40,13 +40,13 @@ class RepresentationMapType(RepresentationMapBaseType):
                 {
                     "name": "TargetCodelist",
                     "type": str,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                     "pattern": r".+\.codelist\.Codelist=.+|.+\.codelist\.ValueList=.+",
                 },
                 {
                     "name": "TargetDataType",
                     "type": DataType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
             ),
         },
@@ -56,6 +56,6 @@ class RepresentationMapType(RepresentationMapBaseType):
         metadata={
             "name": "RepresentationMapping",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )

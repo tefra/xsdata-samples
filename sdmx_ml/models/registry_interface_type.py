@@ -36,7 +36,7 @@ from sdmx_ml.models.submit_subscriptions_response_type import (
     SubmitSubscriptionsResponseType,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -50,7 +50,7 @@ class RegistryInterfaceType:
         metadata={
             "name": "Header",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "required": True,
         }
     )
@@ -75,57 +75,57 @@ class RegistryInterfaceType:
                 {
                     "name": "SubmitRegistrationsRequest",
                     "type": SubmitRegistrationsRequestType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
                 },
                 {
                     "name": "SubmitRegistrationsResponse",
                     "type": SubmitRegistrationsResponseType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
                 },
                 {
                     "name": "QueryRegistrationRequest",
                     "type": QueryRegistrationRequestType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
                 },
                 {
                     "name": "QueryRegistrationResponse",
                     "type": QueryRegistrationResponseType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
                 },
                 {
                     "name": "SubmitStructureRequest",
                     "type": SubmitStructureRequestType1,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
                 },
                 {
                     "name": "SubmitStructureResponse",
                     "type": SubmitStructureResponseType1,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
                 },
                 {
                     "name": "SubmitSubscriptionsRequest",
                     "type": SubmitSubscriptionsRequestType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
                 },
                 {
                     "name": "SubmitSubscriptionsResponse",
                     "type": SubmitSubscriptionsResponseType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
                 },
                 {
                     "name": "QuerySubscriptionRequest",
                     "type": QuerySubscriptionRequestType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
                 },
                 {
                     "name": "QuerySubscriptionResponse",
                     "type": QuerySubscriptionResponseType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
                 },
                 {
                     "name": "NotifyRegistryEvent",
                     "type": NotifyRegistryEventType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
                 },
             ),
         },
@@ -135,6 +135,6 @@ class RegistryInterfaceType:
         metadata={
             "name": "Footer",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message/footer",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message/footer",
         },
     )

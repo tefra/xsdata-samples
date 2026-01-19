@@ -6,7 +6,7 @@ from sdmx_ml.models.dimension import Dimension
 from sdmx_ml.models.dimension_list_base_type import DimensionListBaseType
 from sdmx_ml.models.time_dimension import TimeDimension
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -31,7 +31,7 @@ class DimensionListType(DimensionListBaseType):
         metadata={
             "name": "Dimension",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "min_occurs": 1,
         },
     )
@@ -40,6 +40,6 @@ class DimensionListType(DimensionListBaseType):
         metadata={
             "name": "TimeDimension",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )

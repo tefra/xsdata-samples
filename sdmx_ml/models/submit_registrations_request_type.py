@@ -4,14 +4,14 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.registration_request_type import RegistrationRequestType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)
 class SubmitRegistrationsRequestType:
     """
     SubmitRegistrationsRequestType defines the payload of a request message
-    used to submit addtions, updates, or deletions of data/metadata set
+    used to submit additions, updates, or deletions of data/metadata set
     registrations.
 
     :ivar registration_request: RegistrationRequest provides the details
@@ -27,7 +27,7 @@ class SubmitRegistrationsRequestType:
         metadata={
             "name": "RegistrationRequest",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
             "min_occurs": 1,
         },
     )

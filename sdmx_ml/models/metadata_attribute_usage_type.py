@@ -9,7 +9,7 @@ from sdmx_ml.models.metadata_attribute_usage_base_type import (
     MetadataAttributeUsageBaseType,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -35,7 +35,7 @@ class MetadataAttributeUsageType(MetadataAttributeUsageBaseType):
         metadata={
             "name": "MetadataAttributeReference",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
             "pattern": r"[A-Za-z][A-Za-z0-9_\-]*",
         }
@@ -44,7 +44,7 @@ class MetadataAttributeUsageType(MetadataAttributeUsageBaseType):
         metadata={
             "name": "AttributeRelationship",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
         }
     )

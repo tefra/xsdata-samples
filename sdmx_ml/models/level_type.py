@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.coding_text_format_type import CodingTextFormatType
 from sdmx_ml.models.level_base_type import LevelBaseType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -28,7 +28,7 @@ class LevelType(LevelBaseType):
         metadata={
             "name": "CodingFormat",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     level: None | LevelType = field(
@@ -36,6 +36,6 @@ class LevelType(LevelBaseType):
         metadata={
             "name": "Level",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )

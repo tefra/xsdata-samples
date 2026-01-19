@@ -8,7 +8,7 @@ from sdmx_ml.models.structure_specific_data_header_type import (
     StructureSpecificDataHeaderType,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -29,7 +29,7 @@ class StructureSpecificDataType:
         metadata={
             "name": "Header",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "required": True,
         }
     )
@@ -38,7 +38,7 @@ class StructureSpecificDataType:
         metadata={
             "name": "DataSet",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
         },
     )
     footer: None | Footer = field(
@@ -46,6 +46,6 @@ class StructureSpecificDataType:
         metadata={
             "name": "Footer",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message/footer",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message/footer",
         },
     )

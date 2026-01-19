@@ -6,7 +6,7 @@ from sdmx_ml.models.description import Description
 from sdmx_ml.models.identifiable_type import IdentifiableType
 from sdmx_ml.models.name import Name
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -27,7 +27,7 @@ class NameableType(IdentifiableType):
         metadata={
             "name": "Name",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
             "min_occurs": 1,
         },
     )
@@ -36,6 +36,6 @@ class NameableType(IdentifiableType):
         metadata={
             "name": "Description",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
         },
     )

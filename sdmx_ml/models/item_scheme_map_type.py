@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.item_scheme_map_base_type import ItemSchemeMapBaseType
 from sdmx_ml.models.single_value_mapping_type import SingleValueMappingType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -25,7 +25,7 @@ class ItemSchemeMapType(ItemSchemeMapBaseType):
         metadata={
             "name": "Source",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
             "pattern": r".+\)",
         }
@@ -34,7 +34,7 @@ class ItemSchemeMapType(ItemSchemeMapBaseType):
         metadata={
             "name": "Target",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
             "pattern": r".+\)",
         }
@@ -44,6 +44,6 @@ class ItemSchemeMapType(ItemSchemeMapBaseType):
         metadata={
             "name": "ItemMap",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )

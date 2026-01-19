@@ -6,7 +6,7 @@ from sdmx_ml.models.action_type import ActionType
 from sdmx_ml.models.structures import Structures
 from sdmx_ml.models.submitted_structure_type import SubmittedStructureType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -59,12 +59,12 @@ class SubmitStructureRequestType1:
                 {
                     "name": "StructureLocation",
                     "type": str,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
                 {
                     "name": "Structures",
                     "type": Structures,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
             ),
         },
@@ -74,7 +74,7 @@ class SubmitStructureRequestType1:
         metadata={
             "name": "SubmittedStructure",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
         },
     )
     action: ActionType = field(

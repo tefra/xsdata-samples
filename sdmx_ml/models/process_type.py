@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.process_base_type import ProcessBaseType
 from sdmx_ml.models.process_step_type import ProcessStepType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -29,6 +29,6 @@ class ProcessType(ProcessBaseType):
         metadata={
             "name": "ProcessStep",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
