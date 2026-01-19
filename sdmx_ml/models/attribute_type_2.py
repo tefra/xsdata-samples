@@ -9,7 +9,7 @@ from sdmx_ml.models.attribute_relationship_type import (
 from sdmx_ml.models.measure_relationship_type import MeasureRelationshipType
 from sdmx_ml.models.usage_type import UsageType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -53,7 +53,7 @@ class AttributeType2(AttributeBaseType):
         metadata={
             "name": "ConceptRole",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "pattern": r".+\.conceptscheme\.Concept=.+",
         },
     )
@@ -61,7 +61,7 @@ class AttributeType2(AttributeBaseType):
         metadata={
             "name": "AttributeRelationship",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
         }
     )
@@ -70,7 +70,7 @@ class AttributeType2(AttributeBaseType):
         metadata={
             "name": "MeasureRelationship",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     usage: UsageType = field(

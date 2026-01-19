@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.annotable_type import AnnotableType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -27,7 +27,7 @@ class InputOutputType(AnnotableType):
         metadata={
             "name": "ObjectReference",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
             "pattern": r".+\)(\.[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*)?",
         }

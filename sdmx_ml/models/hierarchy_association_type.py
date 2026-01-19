@@ -4,13 +4,13 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.maintainable_type import MaintainableType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
 class HierarchyAssociationType(MaintainableType):
     """
-    HierarchyAssociationType defines the structure of a hiearchy
+    HierarchyAssociationType defines the structure of a hierarchy
     association, which links a hierarchy with and identifiable object in
     the context of another object (e.g. a dimension within the context of a
     dataflow).
@@ -26,7 +26,7 @@ class HierarchyAssociationType(MaintainableType):
         metadata={
             "name": "LinkedHierarchy",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
             "pattern": r".+\.codelist\.Hierarchy=.+",
         }
@@ -35,7 +35,7 @@ class HierarchyAssociationType(MaintainableType):
         metadata={
             "name": "LinkedObject",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
             "pattern": r".+\)(\.[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*)?",
         }
@@ -45,7 +45,7 @@ class HierarchyAssociationType(MaintainableType):
         metadata={
             "name": "ContextObject",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "pattern": r".+\)(\.[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*)?",
         },
     )

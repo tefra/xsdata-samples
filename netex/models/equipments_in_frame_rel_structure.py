@@ -26,6 +26,7 @@ from .left_luggage_service import LeftLuggageService
 from .lift_call_equipment import LiftCallEquipment
 from .lift_equipment import LiftEquipment
 from .lost_property_service import LostPropertyService
+from .luggage_locker_equipment import LuggageLockerEquipment
 from .luggage_service import LuggageService
 from .meeting_point_service import MeetingPointService
 from .money_service import MoneyService
@@ -99,6 +100,7 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
         | ShelterEquipment
         | TrolleyStandEquipment
         | WaitingRoomEquipment
+        | LuggageLockerEquipment
         | CrossingEquipment
         | QueueingEquipment
         | EntranceEquipment
@@ -277,6 +279,11 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "WaitingRoomEquipment",
                     "type": WaitingRoomEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LuggageLockerEquipment",
+                    "type": LuggageLockerEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

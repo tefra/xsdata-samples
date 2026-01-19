@@ -6,7 +6,7 @@ from sdmx_ml.models.transformation_scheme_base_type import (
     TransformationSchemeBaseType,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -55,7 +55,7 @@ class TransformationSchemeType(TransformationSchemeBaseType):
         metadata={
             "name": "VtlMappingScheme",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "pattern": r".+\.transformation\.VtlMappingScheme=.+",
         },
     )
@@ -64,7 +64,7 @@ class TransformationSchemeType(TransformationSchemeBaseType):
         metadata={
             "name": "NamePersonalisationScheme",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "pattern": r".+\.transformation\.NamePersonalisationScheme=.+",
         },
     )
@@ -73,7 +73,7 @@ class TransformationSchemeType(TransformationSchemeBaseType):
         metadata={
             "name": "CustomTypeScheme",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "pattern": r".+\.transformation\.CustomTypeScheme=.+",
         },
     )
@@ -82,7 +82,7 @@ class TransformationSchemeType(TransformationSchemeBaseType):
         metadata={
             "name": "RulesetScheme",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "pattern": r".+\.transformation\.RulesetScheme=.+",
         },
     )
@@ -91,7 +91,7 @@ class TransformationSchemeType(TransformationSchemeBaseType):
         metadata={
             "name": "UserDefinedOperatorScheme",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "pattern": r".+\.transformation\.UserDefinedOperatorScheme=.+",
         },
     )

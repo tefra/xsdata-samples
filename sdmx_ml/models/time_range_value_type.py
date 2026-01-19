@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
 from sdmx_ml.models.time_period_range_type import TimePeriodRangeType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -35,22 +35,22 @@ class TimeRangeValueType:
                 {
                     "name": "BeforePeriod",
                     "type": ForwardRef("TimeRangeValueType.BeforePeriod"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "AfterPeriod",
                     "type": ForwardRef("TimeRangeValueType.AfterPeriod"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "StartPeriod",
                     "type": ForwardRef("TimeRangeValueType.StartPeriod"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "EndPeriod",
                     "type": ForwardRef("TimeRangeValueType.EndPeriod"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
             ),
             "max_occurs": 2,

@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.registration_status_type import RegistrationStatusType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -28,7 +28,7 @@ class SubmitRegistrationsResponseType:
         metadata={
             "name": "RegistrationStatus",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
             "min_occurs": 1,
         },
     )

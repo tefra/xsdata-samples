@@ -6,17 +6,18 @@ from typing import Any
 from sdmx_ml.models.text import Text
 from sdmx_ml.models.value_type import ValueType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
 @dataclass(frozen=True, kw_only=True)
 class TextValueType(ValueType):
     """
-    TextValueType is a restriction of ValueType that allows mutliple Text
-    elements to expressed a text value in multiple languages.
+    TextValueType is a restriction of ValueType that allows multiple Text
+    elements to express a text value in multiple languages.
 
     The content of this should be restricted in its use to only allow a
-    langue code (xml:lang) to be used once within an element of this type.
+    language code (xml:lang) to be used once within an element of this
+    type.
     """
 
     content: Any = field(
@@ -31,6 +32,6 @@ class TextValueType(ValueType):
         metadata={
             "name": "Text",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
         },
     )

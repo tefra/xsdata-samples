@@ -63,8 +63,7 @@ def build(
 def test(c: Context, suite: Optional[str] = None, output_format="dataclasses"):
     run = partial(c.run, pty=True, echo=True)
     for s in get_suite(c, suite):
-        if s not in ("reqif"):
-            run(f"pytest --output-format {output_format} {s}/")
+        run(f"pytest --output-format {output_format} {s}/")
 
 
 @task

@@ -6,7 +6,7 @@ from xsdata.models.datatype import XmlDateTime
 
 from sdmx_ml.models.data_source_type import DataSourceType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -68,7 +68,7 @@ class RegistrationType:
         metadata={
             "name": "ProvisionAgreement",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
             "required": True,
             "pattern": r".+\.registry\.ProvisionAgreement=.+",
         }
@@ -77,7 +77,7 @@ class RegistrationType:
         metadata={
             "name": "Datasource",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
             "required": True,
         }
     )

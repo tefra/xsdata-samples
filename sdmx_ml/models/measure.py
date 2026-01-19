@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 from sdmx_ml.models.measure_type import MeasureType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -16,5 +16,5 @@ class Measure(MeasureType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )

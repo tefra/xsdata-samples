@@ -6,7 +6,7 @@ from sdmx_ml.models.coded_status_message_type import CodedStatusMessageType
 from sdmx_ml.models.severity_code_type import SeverityCodeType
 
 __NAMESPACE__ = (
-    "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message/footer"
+    "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message/footer"
 )
 
 

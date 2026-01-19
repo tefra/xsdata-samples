@@ -23,6 +23,15 @@ from sdmx_ml.models.attribute_type_1 import (
 )
 from sdmx_ml.models.attribute_type_2 import AttributeType2
 from sdmx_ml.models.atts_type import AttsType
+from sdmx_ml.models.availability_constraint_attachment_type import (
+    AvailabilityConstraintAttachmentType,
+)
+from sdmx_ml.models.availability_constraint_type import (
+    AvailabilityConstraintType,
+)
+from sdmx_ml.models.availability_constraints_type import (
+    AvailabilityConstraintsType,
+)
 from sdmx_ml.models.base_dimension_base_type import BaseDimensionBaseType
 from sdmx_ml.models.base_dimension_type import BaseDimensionType
 from sdmx_ml.models.base_header_type import BaseHeaderType
@@ -64,7 +73,6 @@ from sdmx_ml.models.concept_scheme_type import ConceptSchemeType
 from sdmx_ml.models.concept_schemes_type import ConceptSchemesType
 from sdmx_ml.models.constraint_attachment_type import ConstraintAttachmentType
 from sdmx_ml.models.constraint_base_type import ConstraintBaseType
-from sdmx_ml.models.constraint_role_type import ConstraintRoleType
 from sdmx_ml.models.constraint_type import ConstraintType
 from sdmx_ml.models.contact_type_1 import ContactType1
 from sdmx_ml.models.contact_type_2 import ContactType2
@@ -112,6 +120,7 @@ from sdmx_ml.models.data_structure_type_abstract import (
 )
 from sdmx_ml.models.data_structures_type import DataStructuresType
 from sdmx_ml.models.data_type import DataType
+from sdmx_ml.models.dataflow_base_type import DataflowBaseType
 from sdmx_ml.models.dataflow_type import DataflowType
 from sdmx_ml.models.dataflows_type import DataflowsType
 from sdmx_ml.models.date_map_type import DateMapType
@@ -119,6 +128,7 @@ from sdmx_ml.models.date_pattern_map_base_type import DatePatternMapBaseType
 from sdmx_ml.models.date_pattern_map_type import DatePatternMapType
 from sdmx_ml.models.description import Description
 from sdmx_ml.models.dimension import Dimension
+from sdmx_ml.models.dimension_constraint_type import DimensionConstraintType
 from sdmx_ml.models.dimension_list import DimensionList
 from sdmx_ml.models.dimension_list_base_type import DimensionListBaseType
 from sdmx_ml.models.dimension_list_type import DimensionListType
@@ -331,6 +341,7 @@ from sdmx_ml.models.metadata_structure_type_abstract import (
 )
 from sdmx_ml.models.metadata_structures_type import MetadataStructuresType
 from sdmx_ml.models.metadata_target_region_type import MetadataTargetRegionType
+from sdmx_ml.models.metadata_type import MetadataType
 from sdmx_ml.models.metadataflow_base_type import MetadataflowBaseType
 from sdmx_ml.models.metadataflow_type import MetadataflowType
 from sdmx_ml.models.metadataflows_type import MetadataflowsType
@@ -412,7 +423,6 @@ from sdmx_ml.models.registration_status_type import RegistrationStatusType
 from sdmx_ml.models.registration_type import RegistrationType
 from sdmx_ml.models.registry_interface import RegistryInterface
 from sdmx_ml.models.registry_interface_type import RegistryInterfaceType
-from sdmx_ml.models.release_calendar_type import ReleaseCalendarType
 from sdmx_ml.models.reporting_taxonomies_type import ReportingTaxonomiesType
 from sdmx_ml.models.reporting_taxonomy_map_type import ReportingTaxonomyMapType
 from sdmx_ml.models.reporting_taxonomy_maps_type import (
@@ -587,6 +597,9 @@ __all__ = [
     "Attribute1",
     "AttributeType2",
     "AttsType",
+    "AvailabilityConstraintAttachmentType",
+    "AvailabilityConstraintType",
+    "AvailabilityConstraintsType",
     "BaseDimensionBaseType",
     "BaseDimensionType",
     "BaseHeaderType",
@@ -626,7 +639,6 @@ __all__ = [
     "ConceptSchemesType",
     "ConstraintAttachmentType",
     "ConstraintBaseType",
-    "ConstraintRoleType",
     "ConstraintType",
     "ContactType1",
     "ContactType2",
@@ -660,6 +672,7 @@ __all__ = [
     "DataStructureTypeAbstract",
     "DataStructuresType",
     "DataType",
+    "DataflowBaseType",
     "DataflowType",
     "DataflowsType",
     "DateMapType",
@@ -667,6 +680,7 @@ __all__ = [
     "DatePatternMapType",
     "Description",
     "Dimension",
+    "DimensionConstraintType",
     "DimensionList",
     "DimensionListBaseType",
     "DimensionListType",
@@ -823,6 +837,7 @@ __all__ = [
     "MetadataStructureTypeAbstract",
     "MetadataStructuresType",
     "MetadataTargetRegionType",
+    "MetadataType",
     "MetadataflowBaseType",
     "MetadataflowType",
     "MetadataflowsType",
@@ -870,7 +885,6 @@ __all__ = [
     "RegistrationType",
     "RegistryInterface",
     "RegistryInterfaceType",
-    "ReleaseCalendarType",
     "ReportingTaxonomiesType",
     "ReportingTaxonomyMapType",
     "ReportingTaxonomyMapsType",

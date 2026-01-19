@@ -3,6 +3,9 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 from sdmx_ml.models.agency_schemes_type import AgencySchemesType
+from sdmx_ml.models.availability_constraints_type import (
+    AvailabilityConstraintsType,
+)
 from sdmx_ml.models.categorisations_type import CategorisationsType
 from sdmx_ml.models.category_scheme_maps_type import CategorySchemeMapsType
 from sdmx_ml.models.category_schemes_type import CategorySchemesType
@@ -57,7 +60,7 @@ from sdmx_ml.models.user_defined_operator_schemes_type import (
 from sdmx_ml.models.value_lists_type import ValueListsType
 from sdmx_ml.models.vtl_mapping_schemes_type import VtlMappingSchemesType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -75,6 +78,10 @@ class StructuresType:
         scheme descriptions. The agency schemes may be detailed in full,
         or referenced from an external structure document or registry
         service.
+    :ivar availability_constraints: AvailabilityConstraints contains a
+        collection of availability constraints. The constraints may be
+        detailed in full, or referenced from an external structure
+        document or registry service.
     :ivar categorisations: Categorisations contains a collection of
         structural object categorisations. This container may contain
         categorisations for many types of objects. The categorisations
@@ -106,9 +113,9 @@ class StructuresType:
         referenced from an external structure document or registry
         service.
     :ivar data_constraints: DataConstraints contains a collection of
-        data constraint descriptions. The constraints may be detailed in
-        full, or referenced from an external structure document or
-        registry service.
+        data constraints. The constraints may be detailed in full, or
+        referenced from an external structure document or registry
+        service.
     :ivar data_consumer_schemes: DataConsumerSchemes contains a
         collection of data consumer scheme descriptions. The data
         consumer schemes may be detailed in full, or referenced from an
@@ -126,9 +133,9 @@ class StructuresType:
         detailed in full, or referenced from an external structure
         document or registry service.
     :ivar geographic_codelists: GeographicCodelists contains a
-        collection of geographi codelist descriptions. The codelists may
-        be detailed in full, or referenced from an external structure
-        document or registry service.
+        collection of geographic codelist descriptions. The codelists
+        may be detailed in full, or referenced from an external
+        structure document or registry service.
     :ivar geo_grid_codelists: GeoGridCodelists contains a collection of
         geographic grid codelist descriptions. The codelists may be
         detailed in full, or referenced from an external structure
@@ -225,7 +232,15 @@ class StructuresType:
         metadata={
             "name": "AgencySchemes",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
+        },
+    )
+    availability_constraints: None | AvailabilityConstraintsType = field(
+        default=None,
+        metadata={
+            "name": "AvailabilityConstraints",
+            "type": "Element",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     categorisations: None | CategorisationsType = field(
@@ -233,7 +248,7 @@ class StructuresType:
         metadata={
             "name": "Categorisations",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     category_scheme_maps: None | CategorySchemeMapsType = field(
@@ -241,7 +256,7 @@ class StructuresType:
         metadata={
             "name": "CategorySchemeMaps",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     category_schemes: None | CategorySchemesType = field(
@@ -249,7 +264,7 @@ class StructuresType:
         metadata={
             "name": "CategorySchemes",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     codelists: None | CodelistsType = field(
@@ -257,7 +272,7 @@ class StructuresType:
         metadata={
             "name": "Codelists",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     concept_scheme_maps: None | ConceptSchemeMapsType = field(
@@ -265,7 +280,7 @@ class StructuresType:
         metadata={
             "name": "ConceptSchemeMaps",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     concept_schemes: None | ConceptSchemesType = field(
@@ -273,7 +288,7 @@ class StructuresType:
         metadata={
             "name": "ConceptSchemes",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     custom_type_schemes: None | CustomTypeSchemesType = field(
@@ -281,7 +296,7 @@ class StructuresType:
         metadata={
             "name": "CustomTypeSchemes",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     data_constraints: None | DataConstraintsType = field(
@@ -289,7 +304,7 @@ class StructuresType:
         metadata={
             "name": "DataConstraints",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     data_consumer_schemes: None | DataConsumerSchemesType = field(
@@ -297,7 +312,7 @@ class StructuresType:
         metadata={
             "name": "DataConsumerSchemes",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     dataflows: None | DataflowsType = field(
@@ -305,7 +320,7 @@ class StructuresType:
         metadata={
             "name": "Dataflows",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     data_provider_schemes: None | DataProviderSchemesType = field(
@@ -313,7 +328,7 @@ class StructuresType:
         metadata={
             "name": "DataProviderSchemes",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     data_structures: None | DataStructuresType = field(
@@ -321,7 +336,7 @@ class StructuresType:
         metadata={
             "name": "DataStructures",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     geographic_codelists: None | GeographicCodelistsType = field(
@@ -329,7 +344,7 @@ class StructuresType:
         metadata={
             "name": "GeographicCodelists",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     geo_grid_codelists: None | GeoGridCodelistsType = field(
@@ -337,7 +352,7 @@ class StructuresType:
         metadata={
             "name": "GeoGridCodelists",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     hierarchies: None | HierarchiesType = field(
@@ -345,7 +360,7 @@ class StructuresType:
         metadata={
             "name": "Hierarchies",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     hierarchy_associations: None | HierarchyAssociationsType = field(
@@ -353,7 +368,7 @@ class StructuresType:
         metadata={
             "name": "HierarchyAssociations",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     metadata_constraints: None | MetadataConstraintsType = field(
@@ -361,7 +376,7 @@ class StructuresType:
         metadata={
             "name": "MetadataConstraints",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     metadataflows: None | MetadataflowsType = field(
@@ -369,7 +384,7 @@ class StructuresType:
         metadata={
             "name": "Metadataflows",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     metadata_provider_schemes: None | MetadataProviderSchemesType = field(
@@ -377,7 +392,7 @@ class StructuresType:
         metadata={
             "name": "MetadataProviderSchemes",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     metadata_provision_agreements: None | MetadataProvisionAgreementsType = (
@@ -386,7 +401,7 @@ class StructuresType:
             metadata={
                 "name": "MetadataProvisionAgreements",
                 "type": "Element",
-                "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             },
         )
     )
@@ -395,7 +410,7 @@ class StructuresType:
         metadata={
             "name": "MetadataStructures",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     name_personalisation_schemes: None | NamePersonalisationSchemesType = (
@@ -404,7 +419,7 @@ class StructuresType:
             metadata={
                 "name": "NamePersonalisationSchemes",
                 "type": "Element",
-                "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             },
         )
     )
@@ -413,7 +428,7 @@ class StructuresType:
         metadata={
             "name": "OrganisationSchemeMaps",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     organisation_unit_schemes: None | OrganisationUnitSchemesType = field(
@@ -421,7 +436,7 @@ class StructuresType:
         metadata={
             "name": "OrganisationUnitSchemes",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     processes: None | ProcessesType = field(
@@ -429,7 +444,7 @@ class StructuresType:
         metadata={
             "name": "Processes",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     provision_agreements: None | ProvisionAgreementsType = field(
@@ -437,7 +452,7 @@ class StructuresType:
         metadata={
             "name": "ProvisionAgreements",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     reporting_taxonomies: None | ReportingTaxonomiesType = field(
@@ -445,7 +460,7 @@ class StructuresType:
         metadata={
             "name": "ReportingTaxonomies",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     reporting_taxonomy_maps: None | ReportingTaxonomyMapsType = field(
@@ -453,7 +468,7 @@ class StructuresType:
         metadata={
             "name": "ReportingTaxonomyMaps",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     representation_maps: None | RepresentationMapsType = field(
@@ -461,7 +476,7 @@ class StructuresType:
         metadata={
             "name": "RepresentationMaps",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     ruleset_schemes: None | RulesetSchemesType = field(
@@ -469,7 +484,7 @@ class StructuresType:
         metadata={
             "name": "RulesetSchemes",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     structure_maps: None | StructureMapsType = field(
@@ -477,7 +492,7 @@ class StructuresType:
         metadata={
             "name": "StructureMaps",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     transformation_schemes: None | TransformationSchemesType = field(
@@ -485,7 +500,7 @@ class StructuresType:
         metadata={
             "name": "TransformationSchemes",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     user_defined_operator_schemes: None | UserDefinedOperatorSchemesType = (
@@ -494,7 +509,7 @@ class StructuresType:
             metadata={
                 "name": "UserDefinedOperatorSchemes",
                 "type": "Element",
-                "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             },
         )
     )
@@ -503,7 +518,7 @@ class StructuresType:
         metadata={
             "name": "ValueLists",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     vtl_mapping_schemes: None | VtlMappingSchemesType = field(
@@ -511,6 +526,6 @@ class StructuresType:
         metadata={
             "name": "VtlMappingSchemes",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )

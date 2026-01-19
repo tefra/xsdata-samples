@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.text_type import TextType
 from sdmx_ml.models.transition_base_type import TransitionBaseType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -30,7 +30,7 @@ class TransitionType(TransitionBaseType):
         metadata={
             "name": "TargetStep",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
             "pattern": r"[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*",
         }
@@ -40,7 +40,7 @@ class TransitionType(TransitionBaseType):
         metadata={
             "name": "Condition",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "min_occurs": 1,
         },
     )

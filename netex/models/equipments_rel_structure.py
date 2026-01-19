@@ -51,6 +51,7 @@ from .lift_equipment_ref import LiftEquipmentRef
 from .local_service_ref import LocalServiceRef
 from .lost_property_service import LostPropertyService
 from .lost_property_service_ref import LostPropertyServiceRef
+from .luggage_locker_equipment import LuggageLockerEquipment
 from .luggage_locker_equipment_ref import LuggageLockerEquipmentRef
 from .luggage_service import LuggageService
 from .luggage_service_ref import LuggageServiceRef
@@ -227,6 +228,7 @@ class EquipmentsRelStructure(ContainmentAggregationStructure):
         | ShelterEquipment
         | TrolleyStandEquipment
         | WaitingRoomEquipment
+        | LuggageLockerEquipment
         | CrossingEquipment
         | QueueingEquipment
         | EntranceEquipment
@@ -720,6 +722,11 @@ class EquipmentsRelStructure(ContainmentAggregationStructure):
                 {
                     "name": "WaitingRoomEquipment",
                     "type": WaitingRoomEquipment,
+                    "namespace": "http://www.netex.org.uk/netex",
+                },
+                {
+                    "name": "LuggageLockerEquipment",
+                    "type": LuggageLockerEquipment,
                     "namespace": "http://www.netex.org.uk/netex",
                 },
                 {

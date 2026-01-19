@@ -10,7 +10,7 @@ from sdmx_ml.models.attribute_type_1 import Attribute1
 from sdmx_ml.models.metadata_set_base_type import MetadataSetBaseType
 
 __NAMESPACE__ = (
-    "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/metadata/generic"
+    "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/metadata/generic"
 )
 
 
@@ -21,7 +21,7 @@ class MetadataSetType(MetadataSetBaseType):
     contains a collection of reported metadata against a set of targets.
 
     The targets should conform to the restrictions described by the
-    metadata provision or the metadataflow. Note that this is maintainble,
+    metadata provision or the metadataflow. Note that this is maintainable,
     and as such must specify in agency. In this case, the agency is the
     metadata provider. If a metadata provision agreement is referenced, it
     is assumed that the metadata provider described in the provision will
@@ -34,7 +34,7 @@ class MetadataSetType(MetadataSetBaseType):
         the metadataflow.
     :ivar attribute: Att elements hold the reported metadata attribute
         values being reported in the metadata set. These conform to the
-        metadata structure defintion
+        metadata structure definition.
     :ivar action: The action attribute indicates whether the file is
         appending, replacing, or deleting.
     :ivar reporting_begin_date: The reportingBeginDate indicates the
@@ -66,12 +66,12 @@ class MetadataSetType(MetadataSetBaseType):
                     "type": ForwardRef(
                         "MetadataSetType.MetadataProvisionAgreement"
                     ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/metadata/generic",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/metadata/generic",
                 },
                 {
                     "name": "Metadataflow",
                     "type": ForwardRef("MetadataSetType.Metadataflow"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/metadata/generic",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/metadata/generic",
                 },
             ),
         },
@@ -81,7 +81,7 @@ class MetadataSetType(MetadataSetBaseType):
         metadata={
             "name": "Target",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/metadata/generic",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/metadata/generic",
             "pattern": r".+\)(\.[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*)?|.+\)(\.\*(\.\*)*)?",
         },
     )
@@ -90,7 +90,7 @@ class MetadataSetType(MetadataSetBaseType):
         metadata={
             "name": "Attribute",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/metadata/generic",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/metadata/generic",
         },
     )
     action: None | ActionType = field(
@@ -132,17 +132,19 @@ class MetadataSetType(MetadataSetBaseType):
     @dataclass(frozen=True, kw_only=True)
     class MetadataProvisionAgreement:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r".+\.registry\.MetadataProvisionAgreement=.+",
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Metadataflow:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r".+\.metadatastructure\.Metadataflow=.+",
-            }
+            },
         )

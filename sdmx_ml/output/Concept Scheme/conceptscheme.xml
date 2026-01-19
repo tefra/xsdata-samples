@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ns0:Structure xmlns:ns0="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message">
+<ns0:Structure xmlns:ns0="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message">
   <ns0:Header>
     <ns0:ID>IREF407410</ns0:ID>
     <ns0:Test>false</ns0:Test>
@@ -8,1034 +8,1034 @@
     <ns0:Receiver id="not_supplied"/>
   </ns0:Header>
   <ns0:Structures>
-    <ns1:ConceptSchemes xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+    <ns1:ConceptSchemes xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure">
       <ns1:ConceptScheme id="ECB_CONCEPTS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.ConceptScheme=ECB:ECB_CONCEPTS(1.0)" version="1.0" agencyID="ECB">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">ECB concepts</ns2:Name>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">ECB concepts</ns2:Name>
         <ns1:Concept id="COUNT_AREA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).COUNT_AREA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Counterpart area</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Counterpart area</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CURRENCY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CURRENCY">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Currency</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Currency</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DATA_TYPE_PDF" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DATA_TYPE_PDF">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Data type in the PDF context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Data type in the PDF context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SUFFIX_QNA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SUFFIX_QNA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">OECD QNA suffix</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">OECD QNA suffix</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESA95TP_TRANS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESA95TP_TRANS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Transactions and other flows</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Transactions and other flows</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TRD_PRODUCT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TRD_PRODUCT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Product breakdown -TRD context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Product breakdown -TRD context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="IR_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).IR_TYPE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Interest rate type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Interest rate type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BDS_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BDS_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Business demography item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Business demography item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DD_SUFFIX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DD_SUFFIX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Derived data suffix</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Derived data suffix</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SAFE_QUESTION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SAFE_QUESTION">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">SAFE question</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">SAFE question</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BANKING_IND" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BANKING_IND">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Banking indicator</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Banking indicator</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SEC_VALUATION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SEC_VALUATION">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Securities valuation</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Securities valuation</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BKN_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BKN_TYPE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Banknote or coin</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Banknote or coin</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="STS_CONCEPT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).STS_CONCEPT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Concept - STS context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Concept - STS context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FM_OUTS_AMOUNT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FM_OUTS_AMOUNT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Outstanding amount</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Outstanding amount</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DD_ECON_CONCEPT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DD_ECON_CONCEPT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Derived data economic concept</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Derived data economic concept</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MATURITY_CAT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MATURITY_CAT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Maturity category</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Maturity category</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="OBS_STATUS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).OBS_STATUS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Observation status</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Observation status</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="STS_INSTITUTION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).STS_INSTITUTION">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Institution originating the data flow</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Institution originating the data flow</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CB_VAL_METHOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CB_VAL_METHOD">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">CBD valuation method</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">CBD valuation method</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DATA_TYPE_PSS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DATA_TYPE_PSS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">PSS data type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">PSS data type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PROVIDER_FM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PROVIDER_FM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Financial market provider</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Financial market provider</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SSS_INFO_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SSS_INFO_TYPE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Information type in securities settlement, clearing, trading context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Information type in securities settlement, clearing, trading context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PD_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PD_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Projection database item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Projection database item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FM_COUPON_RATE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FM_COUPON_RATE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Coupon rate of the bond</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Coupon rate of the bond</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="NON_RESID_ECON_ACT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).NON_RESID_ECON_ACT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Non-resident economic activity</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Non-resident economic activity</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="REP_CTY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).REP_CTY">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Reporting country</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Reporting country</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="OFI_REP_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).OFI_REP_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">OFI reporting sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">OFI reporting sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESA95TP_PRICE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESA95TP_PRICE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Valuation</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Valuation</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BS_COUNT_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BS_COUNT_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">BS counterpart sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">BS counterpart sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="EFFECT_DOMAIN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).EFFECT_DOMAIN">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Effect domain</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Effect domain</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESA95TP_CPAREA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESA95TP_CPAREA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Counterpart area</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Counterpart area</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="EMBARGO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).EMBARGO">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Embargo</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Embargo</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="METHOD_PUBL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).METHOD_PUBL">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Methodology publication</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Methodology publication</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="REP_DELAY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).REP_DELAY">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Reporting delay</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Reporting delay</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="GOVNT_REF_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).GOVNT_REF_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Creditor user assets sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Creditor user assets sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MUFA_SOURCE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MUFA_SOURCE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">MUFA source</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">MUFA source</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="AME_REFERENCE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).AME_REFERENCE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Ameco reference</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Ameco reference</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DD_TRANSF" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DD_TRANSF">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Derived data transformation</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Derived data transformation</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BKN_SERIES" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BKN_SERIES">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Banknote/coin series</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Banknote/coin series</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="WEO_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).WEO_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">WEO item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">WEO item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BLS_AGG_METHOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BLS_AGG_METHOD">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">BLS aggregation method</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">BLS aggregation method</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESA95TP_CONS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESA95TP_CONS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Consolidation</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Consolidation</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SOURCE_DETAIL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SOURCE_DETAIL">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Source detail</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Source detail</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BOP_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BOP_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Balance of Payment item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Balance of Payment item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SHI_SUFFIX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SHI_SUFFIX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Series variation -SHI context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Series variation -SHI context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SOURCE_PUBL_2" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SOURCE_PUBL_2">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Publication source 2</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Publication source 2</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FIRM_TURNOVER" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FIRM_TURNOVER">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Firm turnover (SAFE)</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Firm turnover (SAFE)</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="IVF_REP_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).IVF_REP_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Investment funds reporting sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Investment funds reporting sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TRG_ACCOUNT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TRG_ACCOUNT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Type of accounts in TARGET2</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Type of accounts in TARGET2</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="COMP_METHOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).COMP_METHOD">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Compiliation methodology</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Compiliation methodology</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FVC_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FVC_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Assets and liabilities item in financial vehicle corporation context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Assets and liabilities item in financial vehicle corporation context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="OBS_VALUE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).OBS_VALUE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Observation value</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Observation value</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="STS_SUFFIX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).STS_SUFFIX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Series variation - STS context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Series variation - STS context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CB_EXP_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CB_EXP_TYPE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">CBD exposure type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">CBD exposure type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="AREA_DEFINITION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).AREA_DEFINITION">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Area definition</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Area definition</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MATURITY_NOT_IRATE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MATURITY_NOT_IRATE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Original maturity/Period of notice/Initial rate fixation</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Original maturity/Period of notice/Initial rate fixation</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FM_MATURITY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FM_MATURITY">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Bond maturity</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Bond maturity</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PORTFOLIO_CAT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PORTFOLIO_CAT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Portfolio category</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Portfolio category</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="AME_REF_AREA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).AME_REF_AREA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Ameco reference area</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Ameco reference area</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="COLLECTION_DETAIL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).COLLECTION_DETAIL">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Collection explanation detail</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Collection explanation detail</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SOURCE_DETAIL_2" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SOURCE_DETAIL_2">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Source detail 2</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Source detail 2</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ISSUER_RBG" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ISSUER_RBG">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Participation of the issuer in the reporting group</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Participation of the issuer in the reporting group</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="REPO_CPARTY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).REPO_CPARTY">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Repo counterparty</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Repo counterparty</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="COMPILATION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).COMPILATION">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Compilation</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Compilation</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="METHOD_DETAIL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).METHOD_DETAIL">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Methodology detail</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Methodology detail</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MUFA_DEBT_AREA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MUFA_DEBT_AREA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">MUFA debtor area</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">MUFA debtor area</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESA95TP_REGION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESA95TP_REGION">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">NUTS 3 regional classification</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">NUTS 3 regional classification</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FCT_TOPIC" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FCT_TOPIC">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Forecast topic</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Forecast topic</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SUBJECT_MEI" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SUBJECT_MEI">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">OECD MEI subject</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">OECD MEI subject</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="REPORTING_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).REPORTING_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Reporting sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Reporting sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SAFE_ANSWER" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SAFE_ANSWER">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">SAFE answer</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">SAFE answer</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PD_SEAS_EX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PD_SEAS_EX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Projection database season exercise</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Projection database season exercise</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DATA_TYPE_MUFA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DATA_TYPE_MUFA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Data type - MUFAs context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Data type - MUFAs context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BLS_COUNT_DETAIL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BLS_COUNT_DETAIL">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">BLS counterpart motivation</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">BLS counterpart motivation</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SEC_SUFFIX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SEC_SUFFIX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Series suffix - SEC context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Series suffix - SEC context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="VIS_CTY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).VIS_CTY">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Vis-a-vis country</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Vis-a-vis country</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SAFE_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SAFE_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">SAFE question related item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">SAFE question related item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="RT_DENOM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).RT_DENOM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Real time database series denomination</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Real time database series denomination</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CONF_STATUS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CONF_STATUS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Confidentiality status</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Confidentiality status</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DATA_TYPE_BKN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DATA_TYPE_BKN">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Banknote &amp; coin data type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Banknote &amp; coin data type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DATA_TYPE_LIG" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DATA_TYPE_LIG">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Data type - LIG context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Data type - LIG context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="OFI_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).OFI_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">OFI balance sheet item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">OFI balance sheet item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="REF_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).REF_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Reference sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Reference sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="UNIT_INDEX_BASE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).UNIT_INDEX_BASE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Unit index base</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Unit index base</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESA95_SUFFIX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESA95_SUFFIX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Series suffix - ESA95 context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Series suffix - ESA95 context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="COUNTERPART_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).COUNTERPART_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Counterpart sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Counterpart sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MUFA_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MUFA_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">MUFA item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">MUFA item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TRG_BAND" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TRG_BAND">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Value &amp; time bands for TARGET2 operations</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Value &amp; time bands for TARGET2 operations</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BANKING_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BANKING_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Banking reference BS/P&amp;L Item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Banking reference BS/P&amp;L Item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="IN_OUT_DATA_IFI" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).IN_OUT_DATA_IFI">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">IFI input-output data</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">IFI input-output data</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="OBS_COM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).OBS_COM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Observation comment</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Observation comment</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PSS_SYSTEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PSS_SYSTEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">PSS entry point</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">PSS entry point</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="STOCK_FLOW" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).STOCK_FLOW">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Stock/flow</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Stock/flow</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="COUNT_AREA_IFS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).COUNT_AREA_IFS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">IFS counterpart area</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">IFS counterpart area</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="OPTION_TYPE_PDF" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).OPTION_TYPE_PDF">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Option type in the PDF context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Option type in the PDF context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PD_ORIGIN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PD_ORIGIN">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Projection database data origin</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Projection database data origin</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SAFE_DENOM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SAFE_DENOM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Denomination in SAFE context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Denomination in SAFE context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="UNIT_MEASURE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).UNIT_MEASURE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Unit of measure</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Unit of measure</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ICP_SUFFIX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ICP_SUFFIX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Series variation - ICP context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Series variation - ICP context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FM_STRIKE_PRICE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FM_STRIKE_PRICE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Strike price of the options</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Strike price of the options</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="STO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).STO">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Stocks, Transactions, Other Flows</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Stocks, Transactions, Other Flows</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ADJUSTMENT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ADJUSTMENT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Adjustment indicator</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Adjustment indicator</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="INT_ACC_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).INT_ACC_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">International accounts item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">International accounts item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ADJU_DETAIL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ADJU_DETAIL">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Adjustment detail</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Adjustment detail</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="UNIT_MULT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).UNIT_MULT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Unit multiplier</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Unit multiplier</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SSS_INSTRUMENT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SSS_INSTRUMENT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Instrument in securities settlement, clearing and trading context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Instrument in securities settlement, clearing and trading context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MATURITY_RES" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MATURITY_RES">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Residual maturity</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Residual maturity</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESA95_ACCOUNT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESA95_ACCOUNT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">ESA95 account</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">ESA95 account</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PRICE_BASE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PRICE_BASE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Price base</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Price base</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BANKING_SUFFIX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BANKING_SUFFIX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">DBI suffix</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">DBI suffix</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DATA_TYPE_IFI" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DATA_TYPE_IFI">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Data type - IFI context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Data type - IFI context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="EXT_TITLE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).EXT_TITLE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">External title</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">External title</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="VAL_ROW" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).VAL_ROW">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Publication row value</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Publication row value</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESA95TP_BRKDWN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESA95TP_BRKDWN">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Activity/product/other brkdwns</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Activity/product/other brkdwns</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BS_REP_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BS_REP_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">BS reference sector breakdown</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">BS reference sector breakdown</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="NOM_CURR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).NOM_CURR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Nominal currency of the security</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Nominal currency of the security</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FM_LOT_SIZE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FM_LOT_SIZE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Lot size units</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Lot size units</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="VAL_REPORT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).VAL_REPORT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Publication sub-report value</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Publication sub-report value</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CIBL_CATEGORY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CIBL_CATEGORY">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Basis, measure</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Basis, measure</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="HOLDER_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).HOLDER_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Holder sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Holder sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="REF_PERIOD_DETAIL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).REF_PERIOD_DETAIL">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Reference period detail</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Reference period detail</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CIBL_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CIBL_TYPE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Data type (vis-a-vis sector / maturity / risk transfers etc.)</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Data type (vis-a-vis sector / maturity / risk transfers etc.)</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESA95_UNIT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESA95_UNIT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Series unit - ESA95 context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Series unit - ESA95 context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PRICE_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PRICE_TYPE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Price type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Price type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TPH" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TPH">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Third party holdings flag</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Third party holdings flag</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ORGANISATION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ORGANISATION">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Organisation</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Organisation</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESA95_BREAKDOWN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESA95_BREAKDOWN">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">ESA95 breakdown</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">ESA95 breakdown</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FIRM_SIZE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FIRM_SIZE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Firm size (SAFE)</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Firm size (SAFE)</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="COMPILING_ORG" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).COMPILING_ORG">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Compiling organisation</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Compiling organisation</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="RPP_SOURCE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).RPP_SOURCE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Source of property price statistics</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Source of property price statistics</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FVC_REP_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FVC_REP_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Reporting sector in financial vehicle corporation context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Reporting sector in financial vehicle corporation context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="UNIT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).UNIT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Unit</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Unit</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MEASURE_MEI" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MEASURE_MEI">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">OECD MEI measure</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">OECD MEI measure</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="REF_AREA_MEI" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).REF_AREA_MEI">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">OECD MEI &amp; QNA reference area</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">OECD MEI &amp; QNA reference area</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BANKING_REF" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BANKING_REF">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Banking reference institution</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Banking reference institution</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PUBL_MU" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PUBL_MU">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Source publication (Euro area only)</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Source publication (Euro area only)</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ISSUER_AREA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ISSUER_AREA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Issuer domicile country</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Issuer domicile country</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PROVIDER_FM_ID" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PROVIDER_FM_ID">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Financial market provider identifier</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Financial market provider identifier</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TRANS_TYPE_MMSR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TRANS_TYPE_MMSR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Transaction type in the Money Market context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Transaction type in the Money Market context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="LIG_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).LIG_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Large insurance group related items</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Large insurance group related items</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TRD_FLOW" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TRD_FLOW">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">External trade flow</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">External trade flow</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MARKET_ROLE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MARKET_ROLE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Market role</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Market role</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESA95TP_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESA95TP_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Reporting institutional sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Reporting institutional sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PRJ_PER_HORIZON" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PRJ_PER_HORIZON">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Period of the projection horizon - monthly NIPE, quarterly (B)MPE</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Period of the projection horizon - monthly NIPE, quarterly (B)MPE</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="COMMENT_TS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).COMMENT_TS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Title complement, detailed description of the series</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Title complement, detailed description of the series</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TIME_PER_COLLECT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TIME_PER_COLLECT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Time period collection</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Time period collection</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CURRENCY_P_H" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CURRENCY_P_H">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Currency purchase - holding</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Currency purchase - holding</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MATURITY_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MATURITY_TYPE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Maturity type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Maturity type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PSS_INSTRUMENT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PSS_INSTRUMENT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">PSS instrument</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">PSS instrument</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MUFA_CRED_AREA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MUFA_CRED_AREA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">MUFA creditor area</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">MUFA creditor area</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="UNIT_DETAIL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).UNIT_DETAIL">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Unit detail</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Unit detail</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DATA_TYPE_DBI" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DATA_TYPE_DBI">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Data type - DBI context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Data type - DBI context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="VAL_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).VAL_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Publication item value</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Publication item value</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="EXT_UNIT_MULT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).EXT_UNIT_MULT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">External unit multiplier</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">External unit multiplier</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="AME_AGG_METHOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).AME_AGG_METHOD">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Ameco aggregation method</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Ameco aggregation method</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MARKET_TRANS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MARKET_TRANS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">FXS market type transaction</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">FXS market type transaction</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SOURCE_PUB" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SOURCE_PUB">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Publication source</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Publication source</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PROPERTY_CPP" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PROPERTY_CPP">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Property types in CPP context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Property types in CPP context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PUBL_PUBLIC" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PUBL_PUBLIC">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Source publication (public)</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Source publication (public)</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ICP_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ICP_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Classification - ICP context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Classification - ICP context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SERIES_DENOM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SERIES_DENOM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Series denominat/spec calcul</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Series denominat/spec calcul</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="AME_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).AME_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Ameco item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Ameco item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="EAPLUS_FLAG" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).EAPLUS_FLAG">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">EAPlus flag</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">EAPlus flag</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="INSTR_TYPE_MMSR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).INSTR_TYPE_MMSR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Instrument type in the Money Market context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Instrument type in the Money Market context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SOURCE_DATA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SOURCE_DATA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Raw statistical data source</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Raw statistical data source</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SHI_INDICATOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SHI_INDICATOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Structural housing indicators</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Structural housing indicators</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ISSUER_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ISSUER_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Issuer ESA 2010 sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Issuer ESA 2010 sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="IR_FV_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).IR_FV_TYPE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Interest rate type (fix/var)</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Interest rate type (fix/var)</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="OECD_A16_CODE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).OECD_A16_CODE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">OECD A16 code</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">OECD A16 code</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CB_REP_FRAMEWRK" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CB_REP_FRAMEWRK">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">CBD reporting framework</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">CBD reporting framework</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="WOB_TAXATION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).WOB_TAXATION">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Weekly oil bulletin taxation</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Weekly oil bulletin taxation</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BIS_BLOCK" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BIS_BLOCK">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">International Financial Statistics block</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">International Financial Statistics block</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="COUNT_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).COUNT_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Counterpart sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Counterpart sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FLOW_STOCK_ENTRY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FLOW_STOCK_ENTRY">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Flows and stocks indicator</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Flows and stocks indicator</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DATA_TYPE_SEC" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DATA_TYPE_SEC">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Securities data type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Securities data type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BIS_TOPIC" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BIS_TOPIC">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">BIS economic phenomenon</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">BIS economic phenomenon</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="EONIA_BANK" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).EONIA_BANK">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">EONIA bank</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">EONIA bank</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MEASURE_QNA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MEASURE_QNA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">OECD QNA measure</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">OECD QNA measure</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MUFA_CRED_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MUFA_CRED_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">MUFA creditor sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">MUFA creditor sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="OEO_CODE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).OEO_CODE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">OEO code</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">OEO code</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PRE_BREAK_VALUE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PRE_BREAK_VALUE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Pre-break value</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Pre-break value</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DEBT_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DEBT_TYPE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Debt type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Debt type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="RT_ECON_CONCEPT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).RT_ECON_CONCEPT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Real time database item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Real time database item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESCB_FLAG" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESCB_FLAG">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">ESCB flag</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">ESCB flag</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="REF_AREA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).REF_AREA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Reference area</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Reference area</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CB_REP_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CB_REP_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">CBD reference sector breakdown</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">CBD reference sector breakdown</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ACCOUNT_ENTRY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ACCOUNT_ENTRY">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Accounting entries</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Accounting entries</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="R_L_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).R_L_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Resource or liability sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Resource or liability sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="RBG_ID" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).RBG_ID">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Reporting group</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Reporting group</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TITLE_COMPL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TITLE_COMPL">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Title complement</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Title complement</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CURR_BRKDWN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CURR_BRKDWN">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Currency breakdown</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Currency breakdown</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MA_FLAG" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MA_FLAG">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Macro-adjustment flag</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Macro-adjustment flag</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FM_PUT_CALL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FM_PUT_CALL">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">options type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">options type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FM_IDENTIFIER" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FM_IDENTIFIER">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Financial instrument Identifier</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Financial instrument Identifier</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SAFE_FILTER" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SAFE_FILTER">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">SAFE filter - applicable answer</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">SAFE filter - applicable answer</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TRG_CATEGORY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TRG_CATEGORY">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Type of payments in TARGET2</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Type of payments in TARGET2</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ICPF_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ICPF_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Insurance corporations and pension funds assets and liabilities</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Insurance corporations and pension funds assets and liabilities</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="RESID_ECON_ACT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).RESID_ECON_ACT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Resident economic activity</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Resident economic activity</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ADJUST_DETAIL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ADJUST_DETAIL">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Adjustment detail</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Adjustment detail</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="VALUATION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).VALUATION">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Valuation</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Valuation</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="COMP_APPROACH" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).COMP_APPROACH">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Compilation approach indicator</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Compilation approach indicator</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FIRM_OWNERSHIP" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FIRM_OWNERSHIP">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Firm other breakdowns (ownership, export) (SAFE)</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Firm other breakdowns (ownership, export) (SAFE)</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FM_CONTRACT_TIME" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FM_CONTRACT_TIME">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Contract month/expired date</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Contract month/expired date</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SUBJECT_QNA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SUBJECT_QNA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">OECD QNA subject</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">OECD QNA subject</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MEASURE_SNA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MEASURE_SNA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">OECD SNA measure</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">OECD SNA measure</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PRJ_QUARTER" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PRJ_QUARTER">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Quarter of the projection exercise</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Quarter of the projection exercise</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESA95TP_DC_AL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESA95TP_DC_AL">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Uses and resources</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Uses and resources</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="AGG_EQUN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).AGG_EQUN">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Aggregation equations</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Aggregation equations</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="COLLATERAL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).COLLATERAL">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Collateral</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Collateral</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="AME_TRANSFORMATION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).AME_TRANSFORMATION">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Ameco transformation</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Ameco transformation</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BIS_SUFFIX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BIS_SUFFIX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">BIS suffix</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">BIS suffix</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="COUNTERPART_AREA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).COUNTERPART_AREA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Counterpart area</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Counterpart area</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="GROUP_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).GROUP_TYPE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Group type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Group type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DATA_TYPE_BOP" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DATA_TYPE_BOP">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Data type - BoP related data</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Data type - BoP related data</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESA95TP_SUFFIX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESA95TP_SUFFIX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Reference table number</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Reference table number</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ICO_PAY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ICO_PAY">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Insurance corporations operations item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Insurance corporations operations item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DATA_TYPE_FM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DATA_TYPE_FM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Financial market data type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Financial market data type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DATA_TYPE_MM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DATA_TYPE_MM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Data type in money market context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Data type in money market context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FREQ" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FREQ">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Frequency</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Frequency</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BS_NFC_ACTIVITY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BS_NFC_ACTIVITY">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Activity</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Activity</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CB_SECTOR_SIZE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CB_SECTOR_SIZE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">CBD reference sector size</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">CBD reference sector size</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CURRENCY_DENOM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CURRENCY_DENOM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Currency denominator</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Currency denominator</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FCT_SOURCE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FCT_SOURCE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Forecaster identifier</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Forecaster identifier</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="STS_CLASS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).STS_CLASS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Classification - STS context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Classification - STS context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PROPERTY_SUFFIX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PROPERTY_SUFFIX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Property data series variation</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Property data series variation</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DISS_ORG" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DISS_ORG">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Data dissemination organisation</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Data dissemination organisation</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FIRM_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FIRM_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Firm economic activity (SAFE)</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Firm economic activity (SAFE)</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CCP_SYSTEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CCP_SYSTEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">System in the central counterparty clearing context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">System in the central counterparty clearing context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="EMBARGO_DETAIL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).EMBARGO_DETAIL">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Embargo details</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Embargo details</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BS_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BS_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Balance sheet item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Balance sheet item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="EONIA_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).EONIA_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">EONIA item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">EONIA item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DATA_TYPE_EST" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DATA_TYPE_EST">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Data type in the ESTER context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Data type in the ESTER context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TIME_HORIZON" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TIME_HORIZON">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Time horizon</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Time horizon</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BREAKS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BREAKS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Breaks</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Breaks</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="GOVNT_COUNT_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).GOVNT_COUNT_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Debtor resource liabil sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Debtor resource liabil sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SOURCE_AGENCY_2" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SOURCE_AGENCY_2">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Source agency 2</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Source agency 2</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FVC_ORI_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FVC_ORI_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Originator sector in financial vehicle corporation context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Originator sector in financial vehicle corporation context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="OLV_INDICATOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).OLV_INDICATOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Oversight Indicators</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Oversight Indicators</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CURRENCY_TRANS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CURRENCY_TRANS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Currency of transaction</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Currency of transaction</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MFI_LIST" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MFI_LIST">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">MFI category</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">MFI category</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="EXR_SUFFIX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).EXR_SUFFIX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Series variation - EXR context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Series variation - EXR context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="HOLDER_AREA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).HOLDER_AREA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Holder country</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Holder country</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BKN_DENOM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BKN_DENOM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">BKN denomination breakdown</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">BKN denomination breakdown</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MATURITY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MATURITY">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Maturity</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Maturity</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MM_SEGMENT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MM_SEGMENT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Money market segment</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Money market segment</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="INSTRUMENT_FM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).INSTRUMENT_FM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Financial market instrument</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Financial market instrument</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="COMMENT_OBS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).COMMENT_OBS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Comments to the observation value</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Comments to the observation value</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DOM_SER_IDS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DOM_SER_IDS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Domestic series ids</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Domestic series ids</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="GOVNT_ST_SUFFIX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).GOVNT_ST_SUFFIX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Series variation - GST context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Series variation - GST context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SEC_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SEC_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Securities item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Securities item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="GOVNT_VALUATION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).GOVNT_VALUATION">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Valuation - GST context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Valuation - GST context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FCT_BREAKDOWN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FCT_BREAKDOWN">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Forecast histograph breakdown</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Forecast histograph breakdown</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FLOATING_RATE_BASE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FLOATING_RATE_BASE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Floating rate base</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Floating rate base</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="WOB_CONCEPT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).WOB_CONCEPT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Weekly oil bulletin concept</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Weekly oil bulletin concept</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DATA_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DATA_TYPE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Data type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Data type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SEC_ISSUING_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SEC_ISSUING_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Securities issuing sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Securities issuing sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CURRENCY_S" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CURRENCY_S">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Currency sale</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Currency sale</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="IVF_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).IVF_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Investment funds item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Investment funds item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="NAT_TITLE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).NAT_TITLE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">National language title</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">National language title</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BLS_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BLS_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Bank lending survey item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Bank lending survey item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CIBL_TABLE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CIBL_TABLE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Type of reporting banks</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Type of reporting banks</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PSS_INFO_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PSS_INFO_TYPE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">PSS information type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">PSS information type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="EXT_REF_AREA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).EXT_REF_AREA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">External reference area</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">External reference area</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="OBS_PRE_BREAK" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).OBS_PRE_BREAK">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Pre-break observation value</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Pre-break observation value</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BOP_BASIS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BOP_BASIS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">BoP data collection basis</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">BoP data collection basis</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DATA_TYPE_MIR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DATA_TYPE_MIR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">MFI interest rate data type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">MFI interest rate data type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MODEL_ASSUMP_ERR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MODEL_ASSUMP_ERR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Model assumption error</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Model assumption error</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TRD_SUFFIX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TRD_SUFFIX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Series variation -TRD context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Series variation -TRD context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="INS_BUS_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).INS_BUS_TYPE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Type of insurance business</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Type of insurance business</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MUFA_VALUATION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MUFA_VALUATION">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">MUFAs valuation</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">MUFAs valuation</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CB_PORTFOLIO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CB_PORTFOLIO">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">CBD portfolio</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">CBD portfolio</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="OIL_PRODUCT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).OIL_PRODUCT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Oil product</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Oil product</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SSS_SYSTEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SSS_SYSTEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">System in securities settlement and clearing context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">System in securities settlement and clearing context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="METHOD_REF" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).METHOD_REF">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Methodology reference</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Methodology reference</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SOURCE_AGENCY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SOURCE_AGENCY">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Source agency</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Source agency</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FCT_HORIZON" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FCT_HORIZON">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Forecast horizon</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Forecast horizon</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="WEO_REF_AREA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).WEO_REF_AREA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">WEO reference area</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">WEO reference area</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DATA_TYPE_FXS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DATA_TYPE_FXS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Data type in FXS context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Data type in FXS context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="NA_PRICE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).NA_PRICE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Nat accounts price reference</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Nat accounts price reference</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="IFS_CODE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).IFS_CODE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">IFS code</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">IFS code</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SSI_INDICATOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SSI_INDICATOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Structural statist indicator</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Structural statist indicator</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PUBLICATION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PUBLICATION">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">ECB publication</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">ECB publication</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BKN_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BKN_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Banknote &amp; coin related items</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Banknote &amp; coin related items</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="OTHER_METH_EXPL" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).OTHER_METH_EXPL">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Methodological explanation</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Methodological explanation</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="IS_IN_EADB" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).IS_IN_EADB">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Is in EADB</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Is in EADB</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BS_SUFFIX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BS_SUFFIX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Balance sheet suffix</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Balance sheet suffix</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TR_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TR_TYPE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Transaction type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Transaction type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESA95TP_CPSECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESA95TP_CPSECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Counterpart institution sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Counterpart institution sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="VAL_COLUMN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).VAL_COLUMN">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Publication column value</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Publication column value</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PROPERTY_IND" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PROPERTY_IND">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Property indicator</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Property indicator</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MM_BANK" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MM_BANK">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Money market bank</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Money market bank</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MUFA_DEBT_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MUFA_DEBT_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">MUFA debtor sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">MUFA debtor sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FIRM_AGE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FIRM_AGE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Firm age (SAFE)</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Firm age (SAFE)</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DATA_COMP" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DATA_COMP">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Underlying compilation</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Underlying compilation</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="METHOD_AGENCY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).METHOD_AGENCY">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Methodology agency</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Methodology agency</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESA95TP_DENOM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESA95TP_DENOM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Denomination</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Denomination</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="PUBL_ECB" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).PUBL_ECB">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Source publication (ECB only)</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Source publication (ECB only)</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="RPP_GEO_COV" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).RPP_GEO_COV">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Property geographical coverage</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Property geographical coverage</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BENCHMARK_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BENCHMARK_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Benchmark item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Benchmark item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="RPP_SUFFIX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).RPP_SUFFIX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Series variation - RPP context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Series variation - RPP context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="AVAILABILITY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).AVAILABILITY">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Availability</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Availability</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CB_ITEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CB_ITEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Consolidated banking data item</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Consolidated banking data item</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESA95TP_ASSET" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESA95TP_ASSET">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Asset/instr classification</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Asset/instr classification</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MFI_STATUS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MFI_STATUS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">MFI status</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">MFI status</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CREDIT_RATING" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CREDIT_RATING">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Programme credit rating</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Programme credit rating</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BLS_COUNT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BLS_COUNT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">BLS contract counterpart</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">BLS contract counterpart</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="RIR_SUFFIX" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).RIR_SUFFIX">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Series variation - IR context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Series variation - IR context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="IR_BUS_COV" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).IR_BUS_COV">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">IR business coverage</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">IR business coverage</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="OBS_CONF" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).OBS_CONF">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Observation confidentiality</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Observation confidentiality</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SECURITY_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SECURITY_TYPE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Security type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Security type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="INSTR_ASSET" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).INSTR_ASSET">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Instrument and assets classification</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Instrument and assets classification</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="EXR_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).EXR_TYPE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Exchange rate type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Exchange rate type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SURVEY_FREQ" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SURVEY_FREQ">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Frequency of the survey</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Frequency of the survey</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="COVERAGE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).COVERAGE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Coverage</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Coverage</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="UNIT_PRICE_BASE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).UNIT_PRICE_BASE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Unit price base</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Unit price base</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="U_A_SECTOR" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).U_A_SECTOR">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Use or asset sector</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Use or asset sector</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="GOVNT_ITEM_ESA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).GOVNT_ITEM_ESA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">ESA item - GST context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">ESA item - GST context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="DECIMALS" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).DECIMALS">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Decimals</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Decimals</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MATURITY_ORIG" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MATURITY_ORIG">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Original maturity</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Original maturity</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="MFI_LIST_IND" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).MFI_LIST_IND">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Individual MFI list</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Individual MFI list</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TRG_ANCILLARY" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TRG_ANCILLARY">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Ancillary systems settling in TARGET2</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Ancillary systems settling in TARGET2</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="CPP_METHOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).CPP_METHOD">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Method in CPP context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Method in CPP context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="EXT_UNIT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).EXT_UNIT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">External unit</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">External unit</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ESA95TP_COM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ESA95TP_COM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Product breakdown</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Product breakdown</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="COLLECTION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).COLLECTION">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Collection indicator</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Collection indicator</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="RPP_DWELLING" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).RPP_DWELLING">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Type of residential property</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Type of residential property</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="AMOUNT_CAT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).AMOUNT_CAT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Amount category</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Amount category</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="BANK_SELECTION" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).BANK_SELECTION">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Bank selection</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Bank selection</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ICO_UNIT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ICO_UNIT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Insurance corporations operations unit</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Insurance corporations operations unit</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="ISSUER_IN" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).ISSUER_IN">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Split into EMU/non-EMU issuer</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Split into EMU/non-EMU issuer</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TITLE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TITLE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Title</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Title</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SUBJECT_SNA" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SUBJECT_SNA">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">OECD SNA subject</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">OECD SNA subject</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FXS_OP_TYPE" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FXS_OP_TYPE">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Operation type in FXS context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Operation type in FXS context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SEE_SYSTEM" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SEE_SYSTEM">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">System in securities exchange (trading) context</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">System in securities exchange (trading) context</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SECURITISATION_TYP" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SECURITISATION_TYP">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Asset securitisation type</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Asset securitisation type</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TIME_FORMAT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TIME_FORMAT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Time format code</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Time format code</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="FUNCTIONAL_CAT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).FUNCTIONAL_CAT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Functional category</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Functional category</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TRADE_WEIGHT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TRADE_WEIGHT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Weight in trade flows</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Weight in trade flows</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="SUBJECT_OEO" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).SUBJECT_OEO">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">OECD Economic Outlook subject</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">OECD Economic Outlook subject</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="AME_UNIT" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).AME_UNIT">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Ameco unit</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Ameco unit</ns2:Name>
         </ns1:Concept>
         <ns1:Concept id="TIME_PERIOD" urn="urn:sdmx:org.sdmx.infomodel.conceptscheme.Concept=ECB:ECB_CONCEPTS(1.0).TIME_PERIOD">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Time period or range</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Time period or range</ns2:Name>
         </ns1:Concept>
       </ns1:ConceptScheme>
     </ns1:ConceptSchemes>

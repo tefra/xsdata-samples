@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from enum import Enum
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
 class SimpleDataType(Enum):
@@ -15,7 +15,7 @@ class SimpleDataType(Enum):
     :cvar STRING: A string datatype corresponding to W3C XML Schema's
         xs:string datatype.
     :cvar ALPHA: A string datatype which only allows for the simple
-        aplhabetic charcter set of A-Z, a-z.
+        alphabetic character set of A-Z, a-z.
     :cvar ALPHA_NUMERIC: A string datatype which only allows for the
         simple alphabetic character set of A-Z, a-z plus the simple
         numeric character set of 0-9.

@@ -1,0 +1,223 @@
+from sdmx_ml.models.constraint_attachment_type import ConstraintAttachmentType
+from sdmx_ml.models.data_constraint_type import DataConstraintType
+from sdmx_ml.models.data_constraints_type import DataConstraintsType
+from sdmx_ml.models.data_key_set_type import DataKeySetType
+from sdmx_ml.models.data_key_type import DataKeyType
+from sdmx_ml.models.description import Description
+from sdmx_ml.models.member_selection_type import MemberSelectionType
+from sdmx_ml.models.name import Name
+from sdmx_ml.models.party_type import PartyType
+from sdmx_ml.models.sender_type import SenderType
+from sdmx_ml.models.simple_component_value_type import SimpleComponentValueType
+from sdmx_ml.models.structure import Structure
+from sdmx_ml.models.structure_header_type import StructureHeaderType
+from sdmx_ml.models.structures_type import StructuresType
+from xsdata.models.datatype import XmlDateTime
+
+
+obj = Structure(
+    header=StructureHeaderType(
+        id='IREF576479',
+        prepared=XmlDateTime(2024, 7, 30, 16, 40, 44, 0, 0),
+        sender=SenderType(
+            id='Unknown'
+        ),
+        receiver=[
+            PartyType(
+                id='not_supplied'
+            ),
+        ]
+    ),
+    structures=StructuresType(
+        data_constraints=DataConstraintsType(
+            data_constraint=[
+                DataConstraintType(
+                    id='CN_SERIES_SDG_GLC',
+                    urn='urn:sdmx:org.sdmx.infomodel.registry.DataConstraint=IAEG-SDGs:CN_SERIES_SDG_GLC(1.18)',
+                    name=[
+                        Name(
+                            value='SDG Series Level content constraints sub example'
+                        ),
+                    ],
+                    description=[
+                        Description(
+                            value='Sub-example of SDG Series Level content constraints for the Country Global Dataflow. They define which dimensions/codes are enabled for a set of series.'
+                        ),
+                    ],
+                    version='1.18',
+                    agency_id='IAEG-SDGs',
+                    constraint_attachment=ConstraintAttachmentType(
+                        choice=[
+                            ConstraintAttachmentType.Dataflow(
+                                value='urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=IAEG-SDGs:DF_SDG_GLC(1.18)'
+                            ),
+                        ]
+                    ),
+                    data_key_set=[
+                        DataKeySetType(
+                            key=[
+                                DataKeyType(
+                                    key_value=[
+                                        MemberSelectionType(
+                                            value_or_time_range=[
+                                                SimpleComponentValueType(
+                                                    value='SI_POV_DAY1'
+                                                ),
+                                                SimpleComponentValueType(
+                                                    value='SI_POV_EMP1'
+                                                ),
+                                            ],
+                                            id='SERIES'
+                                        ),
+                                        MemberSelectionType(
+                                            value_or_time_range=[
+                                                SimpleComponentValueType(
+                                                    value='PT'
+                                                ),
+                                            ],
+                                            id='UNIT_MEASURE'
+                                        ),
+                                        MemberSelectionType(
+                                            value_or_time_range=[
+                                                SimpleComponentValueType(
+                                                    value='0'
+                                                ),
+                                            ],
+                                            id='UNIT_MULT'
+                                        ),
+                                        MemberSelectionType(
+                                            value_or_time_range=[
+                                                SimpleComponentValueType(
+                                                    value='_T'
+                                                ),
+                                                SimpleComponentValueType(
+                                                    value='MS_MIGRANT'
+                                                ),
+                                                SimpleComponentValueType(
+                                                    value='MS_NOMIGRANT'
+                                                ),
+                                                SimpleComponentValueType(
+                                                    value='MS_EUMIGRANT'
+                                                ),
+                                                SimpleComponentValueType(
+                                                    value='MS_NONEUMIGRANT'
+                                                ),
+                                            ],
+                                            id='COMPOSITE_BREAKDOWN'
+                                        ),
+                                        MemberSelectionType(
+                                            value_or_time_range=[
+                                                SimpleComponentValueType(
+                                                    value='_T'
+                                                ),
+                                            ],
+                                            id='INCOME_WEALTH_QUANTILE'
+                                        ),
+                                        MemberSelectionType(
+                                            value_or_time_range=[
+                                                SimpleComponentValueType(
+                                                    value='_T'
+                                                ),
+                                            ],
+                                            id='PRODUCT'
+                                        ),
+                                        MemberSelectionType(
+                                            value_or_time_range=[
+                                                SimpleComponentValueType(
+                                                    value='_T'
+                                                ),
+                                            ],
+                                            id='ACTIVITY'
+                                        ),
+                                    ]
+                                ),
+                                DataKeyType(
+                                    key_value=[
+                                        MemberSelectionType(
+                                            value_or_time_range=[
+                                                SimpleComponentValueType(
+                                                    value='FB_BNK_ACCSS_ILF'
+                                                ),
+                                                SimpleComponentValueType(
+                                                    value='FB_BNK_ACCSS_OLF'
+                                                ),
+                                            ],
+                                            id='SERIES'
+                                        ),
+                                        MemberSelectionType(
+                                            value_or_time_range=[
+                                                SimpleComponentValueType(
+                                                    value='PT'
+                                                ),
+                                            ],
+                                            id='UNIT_MEASURE'
+                                        ),
+                                        MemberSelectionType(
+                                            value_or_time_range=[
+                                                SimpleComponentValueType(
+                                                    value='0'
+                                                ),
+                                            ],
+                                            id='UNIT_MULT'
+                                        ),
+                                        MemberSelectionType(
+                                            value_or_time_range=[
+                                                SimpleComponentValueType(
+                                                    value='Y15T24'
+                                                ),
+                                                SimpleComponentValueType(
+                                                    value='Y_GE15'
+                                                ),
+                                                SimpleComponentValueType(
+                                                    value='Y_GE25'
+                                                ),
+                                            ],
+                                            id='AGE'
+                                        ),
+                                        MemberSelectionType(
+                                            value_or_time_range=[
+                                                SimpleComponentValueType(
+                                                    value='_T'
+                                                ),
+                                                SimpleComponentValueType(
+                                                    value='MS_MIGRANT'
+                                                ),
+                                                SimpleComponentValueType(
+                                                    value='MS_NOMIGRANT'
+                                                ),
+                                                SimpleComponentValueType(
+                                                    value='MS_EUMIGRANT'
+                                                ),
+                                                SimpleComponentValueType(
+                                                    value='MS_NONEUMIGRANT'
+                                                ),
+                                            ],
+                                            id='COMPOSITE_BREAKDOWN'
+                                        ),
+                                        MemberSelectionType(
+                                            value_or_time_range=[
+                                                SimpleComponentValueType(
+                                                    value='_T'
+                                                ),
+                                            ],
+                                            id='PRODUCT'
+                                        ),
+                                        MemberSelectionType(
+                                            value_or_time_range=[
+                                                SimpleComponentValueType(
+                                                    value='_T'
+                                                ),
+                                            ],
+                                            id='ACTIVITY'
+                                        ),
+                                    ]
+                                ),
+                            ],
+                            is_included=True
+                        ),
+                    ]
+                ),
+            ]
+        )
+    )
+)

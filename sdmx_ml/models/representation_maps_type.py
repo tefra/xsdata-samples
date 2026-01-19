@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.representation_map_type import RepresentationMapType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -18,8 +18,8 @@ class RepresentationMapsType:
     service.
 
     :ivar representation_map: RepresentationMap provides the details of
-        a represenation map, which describes mappings between various
-        component represenations.
+        a representation map, which describes mappings between various
+        component representations.
     """
 
     representation_map: tuple[RepresentationMapType, ...] = field(
@@ -27,7 +27,7 @@ class RepresentationMapsType:
         metadata={
             "name": "RepresentationMap",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "min_occurs": 1,
         },
     )

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ns0:Structure xmlns:ns0="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message">
+<ns0:Structure xmlns:ns0="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message">
   <ns0:Header>
     <ns0:ID>IREF409212</ns0:ID>
     <ns0:Test>false</ns0:Test>
@@ -8,10 +8,10 @@
     <ns0:Receiver id="not_supplied"/>
   </ns0:Header>
   <ns0:Structures>
-    <ns1:Dataflows xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+    <ns1:Dataflows xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure">
       <ns1:Dataflow id="EXR" urn="urn:sdmx:org.sdmx.infomodel.datastructure.Dataflow=ECB:EXR(1.0)" version="1.0" agencyID="ECB">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">ECB Exchange Rates</ns2:Name>
-        <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">ECB Exchange Rates - example of a 'non-country-specific' data source</ns2:Description>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">ECB Exchange Rates</ns2:Name>
+        <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">ECB Exchange Rates - example of a 'non-country-specific' data source</ns2:Description>
         <ns1:Structure>urn:sdmx:org.sdmx.infomodel.datastructure.DataStructure=ECB:EXR(1.0)</ns1:Structure>
       </ns1:Dataflow>
     </ns1:Dataflows>

@@ -6,7 +6,7 @@ from sdmx_ml.models.queryable_data_source_type_2 import (
     QueryableDataSourceType2,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -28,13 +28,13 @@ class DataSourceType:
                 {
                     "name": "SimpleDataSource",
                     "type": str,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                     "max_occurs": 2,
                 },
                 {
                     "name": "QueryableDataSource",
                     "type": QueryableDataSourceType2,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                     "max_occurs": 2,
                 },
             ),

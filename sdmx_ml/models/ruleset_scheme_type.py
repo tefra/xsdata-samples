@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.ruleset_scheme_base_type import RulesetSchemeBaseType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -29,7 +29,7 @@ class RulesetSchemeType(RulesetSchemeBaseType):
         metadata={
             "name": "VtlMappingScheme",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "pattern": r".+\.transformation\.VtlMappingScheme=.+",
         },
     )

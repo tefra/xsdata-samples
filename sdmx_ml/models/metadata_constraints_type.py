@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.metadata_constraint_type import MetadataConstraintType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -18,7 +18,7 @@ class MetadataConstraintsType:
     service. This container may contain both attachment and content
     constraints.
 
-    :ivar metadata_constraint: MetadataConstraint specifies a sub set of
+    :ivar metadata_constraint: MetadataConstraint specifies a subset of
         the definition of the allowable content of a metadata set.
     """
 
@@ -27,7 +27,7 @@ class MetadataConstraintsType:
         metadata={
             "name": "MetadataConstraint",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "min_occurs": 1,
         },
     )

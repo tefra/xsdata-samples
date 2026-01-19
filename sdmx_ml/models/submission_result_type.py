@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.status_message_type_2 import StatusMessageType2
 from sdmx_ml.models.submitted_structure_type import SubmittedStructureType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -30,7 +30,7 @@ class SubmissionResultType:
         metadata={
             "name": "SubmittedStructure",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
             "required": True,
         }
     )
@@ -38,7 +38,7 @@ class SubmissionResultType:
         metadata={
             "name": "StatusMessage",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
             "required": True,
         }
     )

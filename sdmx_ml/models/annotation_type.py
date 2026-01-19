@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.annotation_urltype import AnnotationUrltype
 from sdmx_ml.models.text_type import TextType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -28,7 +28,7 @@ class AnnotationType:
         which points to an external resource which may contain or
         supplement the annotation. These can be localised by indicating
         a language for the resource. If a language is not specified, the
-        resource is assumed to not be localised. If a specific behavior
+        resource is assumed to not be localised. If a specific behaviour
         is desired, an annotation type should be defined which specifies
         the use of this field more exactly.
     :ivar annotation_text: AnnotationText holds a language-specific
@@ -44,7 +44,7 @@ class AnnotationType:
         metadata={
             "name": "AnnotationTitle",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
         },
     )
     annotation_type: None | str = field(
@@ -52,7 +52,7 @@ class AnnotationType:
         metadata={
             "name": "AnnotationType",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
         },
     )
     annotation_url: tuple[AnnotationUrltype, ...] = field(
@@ -60,7 +60,7 @@ class AnnotationType:
         metadata={
             "name": "AnnotationURL",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
         },
     )
     annotation_text: tuple[TextType, ...] = field(
@@ -68,7 +68,7 @@ class AnnotationType:
         metadata={
             "name": "AnnotationText",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
         },
     )
     annotation_value: None | str = field(
@@ -76,7 +76,7 @@ class AnnotationType:
         metadata={
             "name": "AnnotationValue",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
         },
     )
     id: None | str = field(

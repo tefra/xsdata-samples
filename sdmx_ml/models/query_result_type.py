@@ -5,7 +5,7 @@ from typing import ForwardRef
 
 from sdmx_ml.models.result_type import ResultType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -38,12 +38,12 @@ class QueryResultType:
                 {
                     "name": "DataResult",
                     "type": ForwardRef("QueryResultType.DataResult"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
                 {
                     "name": "MetadataResult",
                     "type": ForwardRef("QueryResultType.MetadataResult"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
             ),
         },

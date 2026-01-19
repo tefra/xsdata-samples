@@ -5,7 +5,7 @@ from typing import ForwardRef
 
 from sdmx_ml.models.obs_dimensions_code_type import ObsDimensionsCodeType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -65,17 +65,17 @@ class PayloadStructureType:
                     "type": ForwardRef(
                         "PayloadStructureType.ProvisionAgreement"
                     ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
                 },
                 {
                     "name": "StructureUsage",
                     "type": ForwardRef("PayloadStructureType.StructureUsage"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
                 },
                 {
                     "name": "Structure",
                     "type": ForwardRef("PayloadStructureType.Structure"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
                 },
             ),
         },
@@ -133,26 +133,29 @@ class PayloadStructureType:
     @dataclass(frozen=True, kw_only=True)
     class ProvisionAgreement:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r".+\.registry\.ProvisionAgreement=.+",
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
     class StructureUsage:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r".+\.datastructure\.Dataflow=.+|.+\.metadatastructure\.Metadataflow=.+",
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
     class Structure:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r".+\.datastructure\.DataStructure=.+|.+\.metadatastructure\.MetadataStructure=.+",
-            }
+            },
         )

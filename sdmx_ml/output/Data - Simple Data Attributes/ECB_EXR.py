@@ -49,7 +49,7 @@ obj = StructureSpecificData(
                             time_period=XmlPeriod("1999"),
                             local_attributes={
                                 'OBS_VALUE': '1.583993822393823',
-                                'OBS_STATUS': 'A',
+                                'OBS_STATUS': '#N/A',
                             }
                         ),
                         ObsType(

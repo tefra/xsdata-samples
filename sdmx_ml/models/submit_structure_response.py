@@ -6,7 +6,7 @@ from sdmx_ml.models.submit_structure_response_type_2 import (
     SubmitStructureResponseType2,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -20,4 +20,4 @@ class SubmitStructureResponse(SubmitStructureResponseType2):
     """
 
     class Meta:
-        namespace = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
+        namespace = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message"

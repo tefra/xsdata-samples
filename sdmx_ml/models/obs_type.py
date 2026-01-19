@@ -6,20 +6,18 @@ from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 
 from sdmx_ml.models.annotable_type import AnnotableType
 from sdmx_ml.models.comp_type import CompType
-from sdmx_ml.models.metadata_set_type import MetadataSetType
+from sdmx_ml.models.metadata_type import MetadataType
 
 __NAMESPACE__ = (
-    "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific"
+    "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/data/structurespecific"
 )
 
 
 @dataclass(frozen=True, kw_only=True)
 class ObsType(AnnotableType):
     """
-    <ns1:p
-    xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific">ObsType
-    is the abstract type which defines the structure of a grouped or
-    un-grouped observation.
+    ObsType is the abstract type which defines the structure of a grouped
+    or un-grouped observation.
 
     The observation must be provided a key, which is either a value for the
     dimension which is declared to be at the observation level if the
@@ -28,27 +26,26 @@ class ObsType(AnnotableType):
     key should disambiguate the observation within the context in which it
     is defined (e.g. there should not be another observation with the same
     dimension value in a series). The observation can contain an observed
-    value and/or attribute values.</ns1:p> <ns1:p
-    xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific">Data
-    structure definition schemas will derive a type or types based on this
-    that is specific to the data structure definition and the variation of
-    the format being expressed in the schema. The dimension value(s) which
-    make up the key and the data and metadata attribute values associated
-    with the key dimension(s) or the primary measure will be represented
-    with XML attributes. This is specified in the content model with the
-    declaration of anyAttributes in the "local" namespace. The derived
-    observation type will refine this structure so that the attributes are
-    explicit. The XML attributes will be given a name based on the
-    attribute's identifier. These XML attributes will be unqualified
-    (meaning they do not have a namespace associated with them). The
-    dimension XML attribute(s) will be required while the attribute XML
-    attributes will be optional. To allow for generic processing, it is
-    required that the only unqualified XML attributes in the derived
-    observation type be for the observation dimension(s) and attributes
-    declared in the data structure definition. If additional attributes are
-    required, these should be qualified with a namespace so that a generic
-    application can easily distinguish them as not being meant to represent
-    a data structure definition dimension or attribute.</ns1:p>.
+    value and/or attribute values. Data structure definition schemas will
+    derive a type or types based on this that is specific to the data
+    structure definition and the variation of the format being expressed in
+    the schema. The dimension value(s) which make up the key and the data
+    and metadata attribute values associated with the key dimension(s) or
+    the primary measure will be represented with XML attributes. This is
+    specified in the content model with the declaration of anyAttributes in
+    the "local" namespace. The derived observation type will refine this
+    structure so that the attributes are explicit. The XML attributes will
+    be given a name based on the attribute's identifier. These XML
+    attributes will be unqualified (meaning they do not have a namespace
+    associated with them). The dimension XML attribute(s) will be required
+    while the attribute XML attributes will be optional. To allow for
+    generic processing, it is required that the only unqualified XML
+    attributes in the derived observation type be for the observation
+    dimension(s) and attributes declared in the data structure definition.
+    If additional attributes are required, these should be qualified with a
+    namespace so that a generic application can easily distinguish them as
+    not being meant to represent a data structure definition dimension or
+    attribute.
 
     :ivar comp: Comp contains the details of observation measures or
         attributes that have complex representation and cannot be
@@ -82,7 +79,7 @@ class ObsType(AnnotableType):
             "namespace": "",
         },
     )
-    metadata: None | MetadataSetType = field(
+    metadata: None | MetadataType = field(
         default=None,
         metadata={
             "name": "Metadata",

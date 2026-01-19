@@ -6,7 +6,7 @@ from typing import ForwardRef
 from sdmx_ml.models.empty_type import EmptyType
 from sdmx_ml.models.maintainable_event_type import MaintainableEventType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -43,47 +43,47 @@ class DataRegistrationEventsType:
                 {
                     "name": "AllEvents",
                     "type": EmptyType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
                 {
                     "name": "RegistrationID",
                     "type": ForwardRef(
                         "DataRegistrationEventsType.RegistrationId"
                     ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
                 {
                     "name": "ProvisionAgreement",
                     "type": ForwardRef(
                         "DataRegistrationEventsType.ProvisionAgreement"
                     ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
                 {
                     "name": "DataProvider",
                     "type": ForwardRef(
                         "DataRegistrationEventsType.DataProvider"
                     ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
                 {
                     "name": "DataflowReference",
                     "type": ForwardRef(
                         "DataRegistrationEventsType.DataflowReference"
                     ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
                 {
                     "name": "KeyFamilyReference",
                     "type": ForwardRef(
                         "DataRegistrationEventsType.KeyFamilyReference"
                     ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
                 {
                     "name": "Category",
                     "type": ForwardRef("DataRegistrationEventsType.Category"),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
                 },
             ),
         },
@@ -100,28 +100,31 @@ class DataRegistrationEventsType:
     @dataclass(frozen=True, kw_only=True)
     class RegistrationId:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
     class ProvisionAgreement:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r".+\.registry\.ProvisionAgreement=.+",
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
     class DataProvider:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
-            }
+            },
         )
 
     @dataclass(frozen=True, kw_only=True)
@@ -135,8 +138,9 @@ class DataRegistrationEventsType:
     @dataclass(frozen=True, kw_only=True)
     class Category:
         value: str = field(
+            default="",
             metadata={
                 "required": True,
                 "pattern": r".+\.categoryscheme\.Category=.+",
-            }
+            },
         )

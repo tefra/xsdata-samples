@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 from sdmx_ml.models.text_type import TextType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -15,4 +15,4 @@ class Description(TextType):
     """
 
     class Meta:
-        namespace = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
+        namespace = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"

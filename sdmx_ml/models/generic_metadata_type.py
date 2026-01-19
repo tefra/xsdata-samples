@@ -8,7 +8,7 @@ from sdmx_ml.models.generic_metadata_header_type import (
 )
 from sdmx_ml.models.metadata_set_type import MetadataSetType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -21,7 +21,7 @@ class GenericMetadataType:
         metadata={
             "name": "Header",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "required": True,
         }
     )
@@ -30,7 +30,7 @@ class GenericMetadataType:
         metadata={
             "name": "MetadataSet",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
         },
     )
     footer: None | Footer = field(
@@ -38,6 +38,6 @@ class GenericMetadataType:
         metadata={
             "name": "Footer",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message/footer",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message/footer",
         },
     )

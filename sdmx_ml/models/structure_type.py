@@ -6,7 +6,7 @@ from sdmx_ml.models.footer import Footer
 from sdmx_ml.models.structure_header_type import StructureHeaderType
 from sdmx_ml.models.structures_type import StructuresType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -22,7 +22,7 @@ class StructureType:
         metadata={
             "name": "Header",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "required": True,
         }
     )
@@ -31,7 +31,7 @@ class StructureType:
         metadata={
             "name": "Structures",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
         },
     )
     footer: None | Footer = field(
@@ -39,6 +39,6 @@ class StructureType:
         metadata={
             "name": "Footer",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message/footer",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message/footer",
         },
     )

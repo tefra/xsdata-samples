@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.metadataflow_type import MetadataflowType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -18,7 +18,7 @@ class MetadataflowsType:
 
     :ivar metadataflow: Metadataflow provides the details of a metadata
         flow, which is defined as the structure of reference metadata
-        that will be provided for different reference periods
+        that will be provided for different reference periods.
     """
 
     metadataflow: tuple[MetadataflowType, ...] = field(
@@ -26,7 +26,7 @@ class MetadataflowsType:
         metadata={
             "name": "Metadataflow",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "min_occurs": 1,
         },
     )

@@ -6,7 +6,7 @@ from sdmx_ml.models.provision_agreement_base_type import (
     ProvisionAgreementBaseType,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -32,7 +32,7 @@ class ProvisionAgreementType(ProvisionAgreementBaseType):
         metadata={
             "name": "Dataflow",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
             "pattern": r".+\.datastructure\.Dataflow=.+",
         }
@@ -41,7 +41,7 @@ class ProvisionAgreementType(ProvisionAgreementBaseType):
         metadata={
             "name": "DataProvider",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
             "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
         }

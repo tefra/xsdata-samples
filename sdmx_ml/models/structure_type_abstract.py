@@ -8,7 +8,7 @@ from sdmx_ml.models.metadata_structure_components import (
     MetadataStructureComponents,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -32,12 +32,12 @@ class StructureTypeAbstract(MaintainableType):
                 {
                     "name": "MetadataStructureComponents",
                     "type": MetadataStructureComponents,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "DataStructureComponents",
                     "type": DataStructureComponents,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
             ),
         },

@@ -6,7 +6,7 @@ from xsdata.models.datatype import XmlDateTime
 
 from sdmx_ml.models.hierarchical_code_base_type import HierarchicalCodeBaseType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -31,15 +31,14 @@ class HierarchicalCodeType(HierarchicalCodeBaseType):
         hierarchy which defines this hierarchical code. This is only
         necessary if the nesting depth of the hierarchical code does not
         correspond to the nesting depth of the level to which it belongs
-        (i.e. the hieararchical code is to skip down a level).
-        Otherwise, the code is assumed to exist at the level in which
-        the nesting depth of the level matches the nesting depth of the
-        code.
-    :ivar valid_from: The validFrom attriubte indicates the point in
-        time in which the hiearchical code became effective. This can be
-        used to track the historicity of codes changing over time.
-    :ivar valid_to: The validTo attriubte indicates the point in time in
-        which the hiearchical code became no longer effective. This can
+        (i.e. the hierarchical code is to skip down a level). Otherwise,
+        the code is assumed to exist at the level in which the nesting
+        depth of the level matches the nesting depth of the code.
+    :ivar valid_from: The validFrom attribute indicates the point in
+        time in which the hierarchical code became effective. This can
+        be used to track the historicity of codes changing over time.
+    :ivar valid_to: The validTo attribute indicates the point in time in
+        which the hierarchical code became no longer effective. This can
         be used to track the historicity of codes changing over time.
     """
 
@@ -47,7 +46,7 @@ class HierarchicalCodeType(HierarchicalCodeBaseType):
         metadata={
             "name": "Code",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
             "pattern": r".+\.codelist\.Code=.+",
         }
@@ -57,7 +56,7 @@ class HierarchicalCodeType(HierarchicalCodeBaseType):
         metadata={
             "name": "HierarchicalCode",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     level: None | str = field(
@@ -65,7 +64,7 @@ class HierarchicalCodeType(HierarchicalCodeBaseType):
         metadata={
             "name": "Level",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )

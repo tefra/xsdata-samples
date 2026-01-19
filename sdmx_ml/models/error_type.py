@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.coded_status_message_type import CodedStatusMessageType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -25,7 +25,7 @@ class ErrorType:
         metadata={
             "name": "ErrorMessage",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "min_occurs": 1,
         },
     )

@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate
 from sdmx_ml.models.annotable_type import AnnotableType
 from sdmx_ml.models.mapped_value_type import MappedValueType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -17,7 +17,7 @@ class SingleValueMappingType(AnnotableType):
     optional target.
 
     :ivar source_value: There should be a source value for each source
-        represention (e.g. codelist, data type). Source values can be
+        representation (e.g. codelist, data type). Source values can be
         pattern matched by using regular expression or substrings using
         start/end indexes.
     :ivar target_value: The target value(s) is always an absolute
@@ -31,7 +31,7 @@ class SingleValueMappingType(AnnotableType):
         metadata={
             "name": "SourceValue",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
         }
     )
@@ -40,7 +40,7 @@ class SingleValueMappingType(AnnotableType):
         metadata={
             "name": "TargetValue",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     valid_from: None | XmlDate = field(

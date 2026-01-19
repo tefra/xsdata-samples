@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.party_type import PartyType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -24,7 +24,7 @@ class SenderType(PartyType):
         metadata={
             "name": "Timezone",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
             "pattern": r"Z|(\+|\-)(14:00|((0[0-9]|1[0-3]):[0-5][0-9]))",
         },
     )

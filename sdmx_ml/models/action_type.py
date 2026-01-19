@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from enum import Enum
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
 class ActionType(Enum):
@@ -14,33 +14,82 @@ class ActionType(Enum):
     entire data set for which it is given. Note that the actions indicated
     in the Message Header are optional, and used to summarize specific
     actions indicated with this data type for all registry interactions.
-    The "Informational" value is used when the message contains information
-    in response to a query, rather than being used to invoke a maintenance
-    activity.
+    When absent (not recommended), Merge is assumed.
 
-    :cvar APPEND: Append - this is an incremental update for an existing
-        data/metadata set or the provision of new data or documentation
-        (attribute values) formerly absent. If any of the supplied data
-        or metadata is already present, it will not replace that data or
-        metadata. This corresponds to the "Update" value found in
-        version 1.0 of the SDMX Technical Standards.
-    :cvar REPLACE: Replace - data/metadata is to be replaced, and may
-        also include additional data/metadata to be appended. The
-        replacement occurs at the level of the observation - that is, it
-        is not possible to replace an entire series.
-    :cvar DELETE: Delete - data/metadata is to be deleted. Deletion
-        occurs at the lowest level object. For instance, if a delete
-        data message contains a series with no observations, then the
-        entire series will be deleted. If the series contains
-        observations, then only those observations specified will be
-        deleted. The same basic concept applies for attributes. If a
-        series or observation in a delete message contains attributes,
-        then only those attributes will be deleted.
-    :cvar INFORMATION: Informational - data/metadata is being exchanged
-        for informational purposes only, and not meant to update a
-        system.
+    :cvar MERGE: Merge - Data or data-related reference metadata is to
+        be merged, through either update or insertion depending on
+        already existing information. This operation does not allow
+        deleting any component values. Updating individual values in
+        multi-valued measure, attribute or data-related reference
+        metadata values is not supported either. The complete multi-
+        valued value is to be provided. Only non-dimensional components
+        (measure, attribute or data-related reference metadata values)
+        can be omitted (null or absent) as long as at least one of those
+        components is present. Bulk merges are thus not supported. Only
+        the provided values are merged. Dimension values for higher-
+        level (data-related reference metadata) attributes can be
+        switched-off (using ~) when those are not attached to these
+        dimensions. All observations as well as the sets of data-related
+        reference metadata attributes at specific dimension combinations
+        impacted by the Merge action change their time stamp when used
+        to update an SDMX storage system.
+    :cvar APPEND: Append - Deprecated. When used to update an SDMX
+        storage system, the Merge action is assumed.
+    :cvar REPLACE: Replace - Data or data-related reference metadata is
+        to be replaced, through either update, insert or delete
+        depending on already existing information. A full replacement is
+        hereby assumed to take place at specific “replacement levels”:
+        for entire observations and for any specific dimension
+        combination for data-related reference metadata attributes.
+        Within these “replacement levels” the provided values are
+        inserted or updated, and omitted values are deleted. Values
+        provided for the other attributes (those above the observation
+        level) are merged (see Merge action). Only non-dimensional
+        components (measure, attribute or data-related reference
+        metadata values) can be omitted (null or absent). Bulk replacing
+        is thus not supported. Dimension values for higher-level (data-
+        related reference metadata) attributes can be switched-off
+        (using ~) when those are not attached to these dimensions.
+        Replacing non-existing elements is not resulting in an error.
+        All observations as well as the sets of data-related reference
+        metadata attributes at specific dimension combinations impacted
+        by the replace action change their time stamp when used to
+        update an SDMX storage system. Because the Replace action always
+        takes place at specific levels, it cannot be used to replace a
+        whole dataset or a whole series. However, a “replace all” effect
+        can be achieved by combining an `Delete` dataset containing a
+        completely wildcarded key (where all dimension values are
+        omitted) with a `Merge` or `Replace` dataset within the same
+        data message. Similarly, to replace a whole series, a message
+        can combine a `Delete` dataset containing only the partial key
+        of the series (where the not used dimension values are omitted)
+        with a `Merge` or `Replace` dataset for that series.
+    :cvar DELETE: Delete - Data or data-related reference metadata is to
+        be deleted. Deletion is hereby assumed to take place at the
+        lowest level of detail provided in the message. Any component
+        (including dimensions) can be omitted (dimensions: empty,
+        others: null or absent). Omitting dimension values allows for
+        bulk deletions. Partially omitting non-dimension component
+        values allows restricting the deletion of measure, attribute or
+        data-related reference metadata values to the ones being
+        present. Instead of real values for non-dimensional components,
+        it is sufficient to use any valid value. With this, whole
+        datasets, any slices of observations for dimension groups such
+        as time series, observations or individual measure, attribute
+        and data-related reference metadata attributes values can be
+        deleted. Dimension values for higher-level (data-related
+        reference metadata) attributes can be switched-off (using ~)
+        when those are not attached to these dimensions. Deleting non-
+        existing elements or values is not resulting in an error. All
+        observations as well as the sets of attributes and data-related
+        reference metadata at higher partial keys impacted by the Delete
+        action change their time stamp when used to update an SDMX
+        storage system.
+    :cvar INFORMATION: Information - Deprecated. When used to update an
+        SDMX storage system, the Merge action is assumed.
     """
 
+    MERGE = "Merge"
     APPEND = "Append"
     REPLACE = "Replace"
     DELETE = "Delete"

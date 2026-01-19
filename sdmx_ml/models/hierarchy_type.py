@@ -6,7 +6,7 @@ from sdmx_ml.models.hierarchical_code_type import HierarchicalCodeType
 from sdmx_ml.models.hierarchy_base_type import HierarchyBaseType
 from sdmx_ml.models.level_type import LevelType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -39,7 +39,7 @@ class HierarchyType(HierarchyBaseType):
         metadata={
             "name": "Level",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     hierarchical_code: tuple[HierarchicalCodeType, ...] = field(
@@ -47,7 +47,7 @@ class HierarchyType(HierarchyBaseType):
         metadata={
             "name": "HierarchicalCode",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "min_occurs": 1,
         },
     )

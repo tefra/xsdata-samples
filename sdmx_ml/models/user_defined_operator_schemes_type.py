@@ -6,7 +6,7 @@ from sdmx_ml.models.user_defined_operator_scheme_type import (
     UserDefinedOperatorSchemeType,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -30,7 +30,7 @@ class UserDefinedOperatorSchemesType:
             metadata={
                 "name": "UserDefinedOperatorScheme",
                 "type": "Element",
-                "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 "min_occurs": 1,
             },
         )

@@ -6,7 +6,7 @@ from typing import Any
 from sdmx_ml.models.component_list_type import ComponentListType
 from sdmx_ml.models.metadata_attribute_type import MetadataAttribute
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -37,7 +37,7 @@ class MetadataAttributeListType(ComponentListType):
         metadata={
             "name": "MetadataAttribute",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "min_occurs": 1,
         },
     )

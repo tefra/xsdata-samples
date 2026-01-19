@@ -6,7 +6,7 @@ from sdmx_ml.models.metadata_provision_agreement_base_type import (
     MetadataProvisionAgreementBaseType,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -27,7 +27,7 @@ class MetadataProvisionAgreementType(MetadataProvisionAgreementBaseType):
         pre-existing metadata provider in the registry. The reference is
         provided via a URN and/or a full set of reference fields.
     :ivar target: References identifiable structures to which the
-        refernece metadata described by the metadata structure used by
+        reference metadata described by the metadata structure used by
         the metadaflow should be restricted to. These references may
         include wildcards for parts of the reference.
     """
@@ -36,7 +36,7 @@ class MetadataProvisionAgreementType(MetadataProvisionAgreementBaseType):
         metadata={
             "name": "Metadataflow",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
             "pattern": r".+\.metadatastructure\.Metadataflow=.+",
         }
@@ -45,7 +45,7 @@ class MetadataProvisionAgreementType(MetadataProvisionAgreementBaseType):
         metadata={
             "name": "MetadataProvider",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
             "pattern": r".+\.base\.MetadataProvider=.+:METADATA_PROVIDERS\(.+\).+",
         }
@@ -55,7 +55,7 @@ class MetadataProvisionAgreementType(MetadataProvisionAgreementBaseType):
         metadata={
             "name": "Target",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "pattern": r".+\)(\.[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*)?|.+\)(\.\*(\.\*)*)?",
         },
     )

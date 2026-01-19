@@ -6,18 +6,19 @@ from typing import Any
 from sdmx_ml.models.structured_text import StructuredText
 from sdmx_ml.models.value_type import ValueType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
 @dataclass(frozen=True, kw_only=True)
 class StructuredTextValueType(ValueType):
     """
     StructuredTextValueType is a restriction of ValueType that allows
-    mutliple StructuredText (XHTML mixed content) elements to expressed a
+    multiple StructuredText (XHTML mixed content) elements to express a
     text value in multiple languages.
 
     The content of this should be restricted in its use to only allow a
-    langue code (xml:lang) to be used once within an element of this type.
+    language code (xml:lang) to be used once within an element of this
+    type.
     """
 
     content: Any = field(
@@ -32,6 +33,6 @@ class StructuredTextValueType(ValueType):
         metadata={
             "name": "StructuredText",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
         },
     )

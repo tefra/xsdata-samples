@@ -7,7 +7,7 @@ from sdmx_ml.models.data_structure_type_abstract import (
 )
 from sdmx_ml.models.obs_dimensions_code_type import ObsDimensionsCodeType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
 @dataclass(frozen=True, kw_only=True)

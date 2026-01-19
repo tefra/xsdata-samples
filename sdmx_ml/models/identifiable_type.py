@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.annotable_type import AnnotableType
 from sdmx_ml.models.link import Link
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -27,7 +27,7 @@ class IdentifiableType(AnnotableType):
         metadata={
             "name": "Link",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
         },
     )
     id: None | str = field(

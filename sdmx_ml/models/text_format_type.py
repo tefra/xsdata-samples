@@ -8,7 +8,7 @@ from xsdata.models.datatype import XmlDate, XmlDateTime, XmlDuration, XmlPeriod
 from sdmx_ml.models.data_type import DataType
 from sdmx_ml.models.sentinel_value_type import SentinelValueType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -31,8 +31,8 @@ class TextFormatType:
         combination with the interval, startValue, and endValue
         attributes or the timeInterval, startTime, and endTime,
         attributes. If this attribute holds a value of true, a start
-        value or time and a numeric or time interval must supplied. If
-        an end value is not given, then the sequence continues
+        value or time and a numeric or time interval must be supplied.
+        If an end value is not given, then the sequence continues
         indefinitely.
     :ivar interval: The interval attribute specifies the permitted
         interval (increment) in a sequence. In order for this to be
@@ -93,7 +93,7 @@ class TextFormatType:
         metadata={
             "name": "SentinelValue",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
         },
     )
     text_type: DataType = field(
@@ -194,7 +194,7 @@ class TextFormatType:
         },
     )
     is_multi_lingual: bool = field(
-        default=True,
+        default=False,
         metadata={
             "name": "isMultiLingual",
             "type": "Attribute",

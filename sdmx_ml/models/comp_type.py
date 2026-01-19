@@ -6,7 +6,7 @@ from sdmx_ml.models.annotable_type import AnnotableType
 from sdmx_ml.models.value_type import ValueType
 
 __NAMESPACE__ = (
-    "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/data/structurespecific"
+    "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/data/structurespecific"
 )
 
 
@@ -21,7 +21,7 @@ class CompType(AnnotableType):
     value with structured text (XHTML) cannot be expressed as an XML
     attribute. This type is meant to be restricted based on the component
     to restrict the cardinality and type of its Value element to conform to
-    the compoent definition. The type of the value element should be
+    the component definition. The type of the value element should be
     restricted to common:SimpleValueType, common:TextValueType, or
     common:StructuredValueType. In addition, the id attribute should be
     restricted to be a fixed value with the component identifier. This

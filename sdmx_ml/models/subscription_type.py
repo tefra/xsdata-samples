@@ -6,7 +6,7 @@ from sdmx_ml.models.event_selector_type import EventSelectorType
 from sdmx_ml.models.notification_urltype import NotificationUrltype
 from sdmx_ml.models.validity_period_type import ValidityPeriodType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -16,7 +16,7 @@ class SubscriptionType:
     registration or change event for registry resources.
 
     When it occurs as the content of a response message, the registry URN
-    must be provide, unless the response is a failure notification for the
+    must be provided, unless the response is a failure notification for the
     creation of a new subscription.
 
     :ivar organisation: Organisation provides a reference to the
@@ -48,7 +48,7 @@ class SubscriptionType:
         metadata={
             "name": "Organisation",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
             "required": True,
             "pattern": r".+\.base\.Agency=.+:AGENCIES\(.+\).+|.+\.base\.DataConsumer=.+:DATA_CONSUMERS\(.+\).+|.+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+|.+\.base\.MetadataProvider=.+:METADATA_PROVIDERS\(.+\).+|.+\.base\.OrganisationUnit=.+",
         }
@@ -58,7 +58,7 @@ class SubscriptionType:
         metadata={
             "name": "RegistryURN",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
         },
     )
     notification_mail_to: tuple[NotificationUrltype, ...] = field(
@@ -66,7 +66,7 @@ class SubscriptionType:
         metadata={
             "name": "NotificationMailTo",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
         },
     )
     notification_http: tuple[NotificationUrltype, ...] = field(
@@ -74,7 +74,7 @@ class SubscriptionType:
         metadata={
             "name": "NotificationHTTP",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
         },
     )
     subscriber_assigned_id: None | str = field(
@@ -82,7 +82,7 @@ class SubscriptionType:
         metadata={
             "name": "SubscriberAssignedID",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
             "pattern": r"[A-Za-z0-9_@$\-]+",
         },
     )
@@ -90,7 +90,7 @@ class SubscriptionType:
         metadata={
             "name": "ValidityPeriod",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
             "required": True,
         }
     )
@@ -98,7 +98,7 @@ class SubscriptionType:
         metadata={
             "name": "EventSelector",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
             "required": True,
         }
     )

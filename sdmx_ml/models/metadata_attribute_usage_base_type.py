@@ -5,7 +5,7 @@ from typing import Any
 
 from sdmx_ml.models.component_type import ComponentType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -16,7 +16,7 @@ class MetadataAttributeUsageBaseType(ComponentType):
 
     Since this is a usage of metadata attribute already defined in metadata
     structure, the typical id, concept identity, and representation are
-    excluded in place of a local refernce to the metadata attribute being
+    excluded in place of a local reference to the metadata attribute being
     used.
     """
 

@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.data_provider_scheme_type import DataProviderSchemeType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -18,7 +18,7 @@ class DataProviderSchemesType:
     service.
 
     :ivar data_provider_scheme: DataProviderScheme provides the details
-        of an data provider scheme, in which data providers are
+        of a data provider scheme, in which data providers are
         described.
     """
 
@@ -27,7 +27,7 @@ class DataProviderSchemesType:
         metadata={
             "name": "DataProviderScheme",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "min_occurs": 1,
         },
     )

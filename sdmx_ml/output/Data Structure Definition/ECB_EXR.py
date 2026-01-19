@@ -731,7 +731,8 @@ obj = Structure(
                                     local_representation=RepresentationType(
                                         text_format_or_enumeration_or_enumeration_format=[
                                             TextFormatType(
-                                                max_length=200
+                                                max_length=200,
+                                                is_multi_lingual=True
                                             ),
                                         ],
                                         min_occurs=0,

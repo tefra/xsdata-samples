@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from enum import Enum
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 class SimpleCodeDataType(Enum):
@@ -13,7 +13,7 @@ class SimpleCodeDataType(Enum):
     The possible values are simply Alpha, AlphaNumeric, or Numeric.
 
     :cvar ALPHA: A string datatype which only allows for the simple
-        aplhabetic charcter set of A-Z, a-z.
+        alphabetic character set of A-Z, a-z.
     :cvar ALPHA_NUMERIC: A string datatype which only allows for the
         simple alphabetic character set of A-Z, a-z plus the simple
         numeric character set of 0-9.

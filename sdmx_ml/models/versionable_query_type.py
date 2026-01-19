@@ -6,7 +6,7 @@ from sdmx_ml.models.identifiable_query_type import IdentifiableQueryType
 from sdmx_ml.models.wild_card_value_type import WildCardValueType
 from sdmx_ml.models.wildcard_type import WildcardType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)

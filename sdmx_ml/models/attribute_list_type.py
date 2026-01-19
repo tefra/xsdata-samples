@@ -6,7 +6,7 @@ from sdmx_ml.models.attribute_2 import Attribute2
 from sdmx_ml.models.attribute_list_base_type import AttributeListBaseType
 from sdmx_ml.models.metadata_attribute_usage import MetadataAttributeUsage
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -26,12 +26,12 @@ class AttributeListType(AttributeListBaseType):
                 {
                     "name": "Attribute",
                     "type": Attribute2,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "MetadataAttributeUsage",
                     "type": MetadataAttributeUsage,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
             ),
         },

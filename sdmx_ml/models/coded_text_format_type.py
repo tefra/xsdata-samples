@@ -8,14 +8,14 @@ from sdmx_ml.models.simple_component_text_format_type import (
     SimpleComponentTextFormatType,
 )
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
 class CodedTextFormatType(SimpleComponentTextFormatType):
     """
     CodedTextFormatType is a restricted version of the
-    SimpleComponentTextFormatType that only allows factets and text types
+    SimpleComponentTextFormatType that only allows facets and text types
     applicable to codes.
 
     Although the time facets permit any value, an actual code identifier

@@ -5,7 +5,7 @@ from typing import Any
 
 from sdmx_ml.models.base_header_type import BaseHeaderType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message"
 
 
 @dataclass(frozen=True, kw_only=True)

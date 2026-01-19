@@ -4,7 +4,7 @@ from dataclasses import dataclass
 
 from sdmx_ml.models.group_dimension_type import GroupDimensionType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -23,5 +23,5 @@ class GroupDimension(GroupDimensionType):
 
     class Meta:
         namespace = (
-            "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+            "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
         )

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ns0:Structure xmlns:ns0="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message">
+<ns0:Structure xmlns:ns0="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message">
   <ns0:Header>
     <ns0:ID>IREF257793</ns0:ID>
     <ns0:Test>false</ns0:Test>
@@ -8,24 +8,24 @@
     <ns0:Receiver id="not_supplied"/>
   </ns0:Header>
   <ns0:Structures>
-    <ns1:GeoGridCodelists xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+    <ns1:GeoGridCodelists xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure">
       <ns1:GeoGridCodelist id="CL_GRID_LOCATION" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=EXAMPLE:CL_GRID_LOCATION(1.0)" version="1.0" agencyID="EXAMPLE" geoType="GeoGridCodelist">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Grid Location</ns2:Name>
-        <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Example GeoGrid Codelist. The grid system is defined at the code list level, with each code being assigned to a specific cell in the grid by defining its row and column in GeoCell.</ns2:Description>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Grid Location</ns2:Name>
+        <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Example GeoGrid Codelist. The grid system is defined at the code list level, with each code being assigned to a specific cell in the grid by defining its row and column in GeoCell.</ns2:Description>
         <ns1:GeoGridCode id="L1" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=EXAMPLE:CL_GRID_LOCATION(1.0).L1">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Location 1</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Location 1</ns2:Name>
           <ns1:GeoCell>
 						GEO_COL, GEO_ROW: GEO_TAG
                     </ns1:GeoCell>
         </ns1:GeoGridCode>
         <ns1:GeoGridCode id="L2" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=EXAMPLE:CL_GRID_LOCATION(1.0).L2">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Location 2</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Location 2</ns2:Name>
           <ns1:GeoCell>
 						GEO_COL, GEO_ROW: GEO_TAG
                     </ns1:GeoCell>
         </ns1:GeoGridCode>
         <ns1:GeoGridCode id="L3" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=EXAMPLE:CL_GRID_LOCATION(1.0).L3">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Location 3</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Location 3</ns2:Name>
           <ns1:GeoCell>
 						GEO_COL, GEO_ROW: GEO_TAG
                     </ns1:GeoCell>

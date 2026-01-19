@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.reporting_taxonomy_map_type import ReportingTaxonomyMapType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -18,7 +18,7 @@ class ReportingTaxonomyMapsType:
     service.
 
     :ivar reporting_taxonomy_map: ReportingTaxonomyMap provides the
-        details of a reporting taxonomy map, which descibes mappings
+        details of a reporting taxonomy map, which describes mappings
         between reporting taxonomies.
     """
 
@@ -27,7 +27,7 @@ class ReportingTaxonomyMapsType:
         metadata={
             "name": "ReportingTaxonomyMap",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "min_occurs": 1,
         },
     )

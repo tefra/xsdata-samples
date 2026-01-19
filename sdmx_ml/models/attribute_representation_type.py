@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.representation_type import RepresentationType
 from sdmx_ml.models.unbounded_code_type import UnboundedCodeType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)

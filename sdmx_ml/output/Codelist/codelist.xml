@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ns0:Structure xmlns:ns0="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/message">
+<ns0:Structure xmlns:ns0="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message">
   <ns0:Header>
     <ns0:ID>IREF257793</ns0:ID>
     <ns0:Test>false</ns0:Test>
@@ -8,24 +8,24 @@
     <ns0:Receiver id="not_supplied"/>
   </ns0:Header>
   <ns0:Structures>
-    <ns1:Codelists xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure">
+    <ns1:Codelists xmlns:ns1="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure">
       <ns1:Codelist id="CL_AGE" urn="urn:sdmx:org.sdmx.infomodel.codelist.Codelist=SDMX:CL_AGE(1.0)" version="1.0" agencyID="SDMX" structureURL="https://registry.sdmx.org/FusionRegistry/ws/rest/codelist/SDMX/CL_AGE/1.0">
-        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Age</ns2:Name>
-        <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">This code list provides a set of building blocks to be used for creating simple or complex code identifiers relating to the concept of "age" as defined in the Cross-Domain Concepts and the Metadata Common Vocabulary, i.e. the length of time that a person has lived or a thing has existed. This code list was formally adopted on 7 February 2014. More information about and supporting material for this code list and SDMX code lists in general (e.g. list of generic codes for expressing general concepts like "Total", "Unknown", etc.; syntaxes for the creation of further codes; general guidelines for the creation of SDMX code lists) can be found at this address: https://sdmx.org/?page_id=4345.</ns2:Description>
+        <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Age</ns2:Name>
+        <ns2:Description xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">This code list provides a set of building blocks to be used for creating simple or complex code identifiers relating to the concept of "age" as defined in the Cross-Domain Concepts and the Metadata Common Vocabulary, i.e. the length of time that a person has lived or a thing has existed. This code list was formally adopted on 7 February 2014. More information about and supporting material for this code list and SDMX code lists in general (e.g. list of generic codes for expressing general concepts like "Total", "Unknown", etc.; syntaxes for the creation of further codes; general guidelines for the creation of SDMX code lists) can be found at this address: https://sdmx.org/?page_id=4345.</ns2:Description>
         <ns1:Code id="Y" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_AGE(1.0).Y">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Year(s)</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Year(s)</ns2:Name>
         </ns1:Code>
         <ns1:Code id="M" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_AGE(1.0).M">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Month(s)</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Month(s)</ns2:Name>
         </ns1:Code>
         <ns1:Code id="W" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_AGE(1.0).W">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Week(s)</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Week(s)</ns2:Name>
         </ns1:Code>
         <ns1:Code id="D" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_AGE(1.0).D">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Day(s)</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Day(s)</ns2:Name>
         </ns1:Code>
         <ns1:Code id="H" urn="urn:sdmx:org.sdmx.infomodel.codelist.Code=SDMX:CL_AGE(1.0).H">
-          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_0/common">Hour(s)</ns2:Name>
+          <ns2:Name xmlns:ns2="http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common">Hour(s)</ns2:Name>
         </ns1:Code>
       </ns1:Codelist>
     </ns1:Codelists>

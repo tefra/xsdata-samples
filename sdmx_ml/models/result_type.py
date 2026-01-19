@@ -4,7 +4,7 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.registration_type import RegistrationType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -32,7 +32,7 @@ class ResultType:
         metadata={
             "name": "Registration",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
             "required": True,
         }
     )
@@ -41,7 +41,7 @@ class ResultType:
         metadata={
             "name": "Constraint",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
             "pattern": r".+\.registry\.DataConstraint=.+|.+\.registry\.MetadataConstraint=.+",
         },
     )

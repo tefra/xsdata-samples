@@ -7,7 +7,7 @@ from sdmx_ml.models.metadata_constraint_base_type import (
 )
 from sdmx_ml.models.metadata_target_region_type import MetadataTargetRegionType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -27,7 +27,7 @@ class MetadataConstraintType(MetadataConstraintBaseType):
         metadata={
             "name": "MetadataTargetRegion",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "max_occurs": 2,
         },
     )

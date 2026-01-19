@@ -5,7 +5,7 @@ from dataclasses import dataclass, field
 from sdmx_ml.models.versionable_query_type import VersionableQueryType
 from sdmx_ml.models.wild_card_value_type import WildCardValueType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -16,7 +16,7 @@ class MaintainableQueryType(VersionableQueryType):
 
     :ivar agency_id: The agencyID attribute is used to query for an
         object based on its maintenance agency's identifier. This is
-        either an explicit value, or completely wild cared with the "%"
+        either an explicit value, or completely wildcarded with the "%"
         value.
     """
 

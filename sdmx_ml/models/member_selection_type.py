@@ -7,7 +7,7 @@ from xsdata.models.datatype import XmlDate, XmlDateTime, XmlPeriod
 from sdmx_ml.models.simple_component_value_type import SimpleComponentValueType
 from sdmx_ml.models.time_range_value_type import TimeRangeValueType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -47,12 +47,12 @@ class MemberSelectionType:
                 {
                     "name": "Value",
                     "type": SimpleComponentValueType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "TimeRange",
                     "type": TimeRangeValueType,
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
             ),
         },

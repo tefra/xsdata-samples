@@ -4,14 +4,14 @@ from dataclasses import dataclass, field
 
 from sdmx_ml.models.subscription_request_type import SubscriptionRequestType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry"
 
 
 @dataclass(frozen=True, kw_only=True)
 class SubmitSubscriptionsRequestType:
     """
     SubmitSubscriptionsRequestType defines the payload of a request message
-    used to submit addtions, updates, or deletions of subscriptions.
+    used to submit additions, updates, or deletions of subscriptions.
 
     Subscriptions are submitted to the registry to subscribe to
     registration and change events for specific registry resources.
@@ -22,7 +22,7 @@ class SubmitSubscriptionsRequestType:
         metadata={
             "name": "SubscriptionRequest",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/registry",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
             "min_occurs": 1,
         },
     )

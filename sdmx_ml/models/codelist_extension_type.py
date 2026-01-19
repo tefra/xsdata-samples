@@ -5,7 +5,7 @@ from typing import ForwardRef
 
 from sdmx_ml.models.code_selection_type import CodeSelectionType
 
-__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure"
+__NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -29,7 +29,7 @@ class CodelistExtensionType:
         metadata={
             "name": "Codelist",
             "type": "Element",
-            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+            "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
             "required": True,
             "pattern": r".+\.codelist\.Codelist=.+",
         }
@@ -48,14 +48,14 @@ class CodelistExtensionType:
                     "type": ForwardRef(
                         "CodelistExtensionType.InclusiveCodeSelection"
                     ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
                 {
                     "name": "ExclusiveCodeSelection",
                     "type": ForwardRef(
                         "CodelistExtensionType.ExclusiveCodeSelection"
                     ),
-                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_0/structure",
+                    "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
                 },
             ),
         },
