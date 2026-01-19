@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .strict_containment_aggregation_structure import (
@@ -16,7 +16,7 @@ class SuitabilitiesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "suitabilities_RelStructure"
 
-    suitability: Iterable[Suitability] = field(
+    suitability: Sequence[Suitability] = field(
         default_factory=list,
         metadata={
             "name": "Suitability",

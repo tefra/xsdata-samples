@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .month_validity_offset import MonthValidityOffset
@@ -16,7 +16,7 @@ class MonthValidityOffsetsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "monthValidityOffsets_RelStructure"
 
-    month_validity_offset: Iterable[MonthValidityOffset] = field(
+    month_validity_offset: Sequence[MonthValidityOffset] = field(
         default_factory=list,
         metadata={
             "name": "MonthValidityOffset",

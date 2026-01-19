@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -19,7 +19,7 @@ class GroupsOfDistanceMatrixElementsRelStructure(
     class Meta:
         name = "groupsOfDistanceMatrixElements_RelStructure"
 
-    group_of_distance_matrix_elements_ref_or_group_of_distance_matrix_elements: Iterable[
+    group_of_distance_matrix_elements_ref_or_group_of_distance_matrix_elements: Sequence[
         GroupOfDistanceMatrixElementsRef | GroupOfDistanceMatrixElements
     ] = field(
         default_factory=list,

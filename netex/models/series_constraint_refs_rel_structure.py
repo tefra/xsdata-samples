@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -14,7 +14,7 @@ class SeriesConstraintRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "seriesConstraintRefs_RelStructure"
 
-    series_constraint_ref: Iterable[SeriesConstraintRef] = field(
+    series_constraint_ref: Sequence[SeriesConstraintRef] = field(
         default_factory=list,
         metadata={
             "name": "SeriesConstraintRef",

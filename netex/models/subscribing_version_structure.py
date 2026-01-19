@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from xsdata.models.datatype import XmlDuration
@@ -68,7 +68,7 @@ class SubscribingVersionStructure(UsageParameterVersionStructure):
             },
         )
     )
-    installment_payment_methods: Iterable[PaymentMethodEnumeration] = field(
+    installment_payment_methods: Sequence[PaymentMethodEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "InstallmentPaymentMethods",

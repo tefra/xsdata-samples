@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .entity_in_version_structure import VersionedChildStructure
@@ -24,7 +24,7 @@ class JourneyPartPositionVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    scheduled_stop_point_ref: Iterable[
+    scheduled_stop_point_ref: Sequence[
         FareScheduledStopPointRef | ScheduledStopPointRef
     ] = field(
         default_factory=list,

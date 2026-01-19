@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -18,7 +18,7 @@ class DayTypesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dayTypesInFrame_RelStructure"
 
-    day_type: Iterable[FareDayType | OrganisationDayType | DayType] = field(
+    day_type: Sequence[FareDayType | OrganisationDayType | DayType] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

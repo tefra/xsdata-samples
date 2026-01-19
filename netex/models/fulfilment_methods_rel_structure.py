@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class FulfilmentMethodsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "fulfilmentMethods_RelStructure"
 
-    fulfilment_method_ref_or_fulfilment_method: Iterable[
+    fulfilment_method_ref_or_fulfilment_method: Sequence[
         FulfilmentMethodRef | FulfilmentMethod
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access_vehicle_equipment import AccessVehicleEquipment
@@ -32,7 +32,7 @@ class PassengerEquipmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "passengerEquipments_RelStructure"
 
-    passenger_equipment_ref_or_vehicle_equipment_ref_or_passenger_equipment: Iterable[
+    passenger_equipment_ref_or_vehicle_equipment_ref_or_passenger_equipment: Sequence[
         RubbishDisposalEquipmentRef
         | PassengerBeaconEquipmentRef
         | HelpPointEquipmentRef

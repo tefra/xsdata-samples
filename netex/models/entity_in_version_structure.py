@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import Any, ForwardRef
 
@@ -40,7 +40,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass(kw_only=True)
 class EntityInVersionStructure(EntityStructure):
-    validity_conditions_or_valid_between: Iterable[
+    validity_conditions_or_valid_between: Sequence[
         ValidityConditionsRelStructure | ValidBetween
     ] = field(
         default_factory=list,
@@ -321,7 +321,7 @@ class TimebandVersionedChildStructure(DataManagedObjectStructure):
             ),
         },
     )
-    choice: Iterable[XmlTime | TimeOfDayEnumeration | int | XmlDuration] = (
+    choice: Sequence[XmlTime | TimeOfDayEnumeration | int | XmlDuration] = (
         field(
             default_factory=list,
             metadata={
@@ -484,7 +484,7 @@ class ValidityRuleParameterVersionStructure(ValidityConditionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Iterable[
+    choice: Sequence[
         str
         | RelativeOperatorEnumeration
         | ValidityRuleParameterVersionStructure.AttributeValue
@@ -578,7 +578,7 @@ class TimebandsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timebands_RelStructure"
 
-    timeband_ref_or_timeband: Iterable[
+    timeband_ref_or_timeband: Sequence[
         TimebandRef | TimebandVersionedChildStructure
     ] = field(
         default_factory=list,
@@ -748,7 +748,7 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
         None
         | FareDayTypeRef
         | DayTypeRef
-        | Iterable[DayOfWeekEnumeration]
+        | Sequence[DayOfWeekEnumeration]
         | str
     ) = field(
         default=None,
@@ -767,7 +767,7 @@ class ValidDuringVersionStructure(ValidBetweenVersionStructure):
                 },
                 {
                     "name": "DaysOfWeek",
-                    "type": Iterable[DayOfWeekEnumeration],
+                    "type": Sequence[DayOfWeekEnumeration],
                     "namespace": "http://www.netex.org.uk/netex",
                     "default_factory": list,
                     "tokens": True,
@@ -839,7 +839,7 @@ class AlternativeTextsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "alternativeTexts_RelStructure"
 
-    alternative_text: Iterable[AlternativeText] = field(
+    alternative_text: Sequence[AlternativeText] = field(
         default_factory=list,
         metadata={
             "name": "AlternativeText",
@@ -855,7 +855,7 @@ class OperatingDaysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "operatingDays_RelStructure"
 
-    operating_day_ref_or_operating_day: Iterable[
+    operating_day_ref_or_operating_day: Sequence[
         OperatingDayRef | OperatingDay
     ] = field(
         default_factory=list,
@@ -977,7 +977,7 @@ class DayTypesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dayTypes_RelStructure"
 
-    day_type_ref_or_day_type: Iterable[
+    day_type_ref_or_day_type: Sequence[
         FareDayTypeRef
         | DayTypeRef
         | FareDayType
@@ -1090,7 +1090,7 @@ class ValidityConditionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "validityConditions_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         AvailabilityConditionRef
         | ValidityRuleParameterRef
         | ValidityTriggerRef

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .activation_assignment import ActivationAssignment
@@ -15,7 +15,7 @@ class ActivationAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "activationAssignments_RelStructure"
 
-    activation_assignment_ref_or_activation_assignment: Iterable[
+    activation_assignment_ref_or_activation_assignment: Sequence[
         ActivationAssignmentRef | ActivationAssignment
     ] = field(
         default_factory=list,

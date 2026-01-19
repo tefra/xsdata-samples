@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .description_reference import DescriptionReference
@@ -30,7 +30,7 @@ class AbstractGmltype:
             "namespace": "http://www.opengis.net/gml/3.2",
         },
     )
-    name: Iterable[Name] = field(
+    name: Sequence[Name] = field(
         default_factory=list,
         metadata={
             "type": "Element",

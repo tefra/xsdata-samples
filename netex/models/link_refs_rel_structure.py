@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .activation_link_ref import ActivationLinkRef
@@ -35,7 +35,7 @@ class LinkRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "linkRefs_RelStructure"
 
-    link_ref_or_infrastructure_link_ref_or_link_ref_by_value: Iterable[
+    link_ref_or_infrastructure_link_ref_or_link_ref_by_value: Sequence[
         OnwardVehicleMeetingLinkRef
         | VehicleMeetingLinkRef
         | ServiceLinkRef

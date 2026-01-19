@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .assistance_booking_service import AssistanceBookingService
@@ -42,7 +42,7 @@ class LocalServicesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "localServices_RelStructure"
 
-    local_service_ref_or_local_service_or_customer_service: Iterable[
+    local_service_ref_or_local_service_or_customer_service: Sequence[
         AssistanceBookingServiceRef
         | CateringServiceRef
         | RetailServiceRef

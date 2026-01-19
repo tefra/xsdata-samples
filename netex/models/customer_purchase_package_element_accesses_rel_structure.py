@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .customer_purchase_package_element_access import (
@@ -20,7 +20,7 @@ class CustomerPurchasePackageElementAccessesRelStructure(
     class Meta:
         name = "customerPurchasePackageElementAccesses_RelStructure"
 
-    customer_purchase_package_element_access: Iterable[
+    customer_purchase_package_element_access: Sequence[
         CustomerPurchasePackageElementAccess
     ] = field(
         default_factory=list,

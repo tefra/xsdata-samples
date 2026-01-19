@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .suitability import Suitability
@@ -39,7 +39,7 @@ class PassengerAccessibilityNeedsStructure:
 
     @dataclass(kw_only=True)
     class UserNeeds:
-        user_need: Iterable[UserNeed] = field(
+        user_need: Sequence[UserNeed] = field(
             default_factory=list,
             metadata={
                 "name": "UserNeed",
@@ -50,7 +50,7 @@ class PassengerAccessibilityNeedsStructure:
 
     @dataclass(kw_only=True)
     class Suitabilities:
-        suitability: Iterable[Suitability] = field(
+        suitability: Sequence[Suitability] = field(
             default_factory=list,
             metadata={
                 "name": "Suitability",

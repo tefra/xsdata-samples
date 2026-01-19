@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .point_on_route import PointOnRoute
@@ -16,7 +16,7 @@ class PointsOnRouteRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "pointsOnRoute_RelStructure"
 
-    point_on_route: Iterable[PointOnRoute] = field(
+    point_on_route: Sequence[PointOnRoute] = field(
         default_factory=list,
         metadata={
             "name": "PointOnRoute",

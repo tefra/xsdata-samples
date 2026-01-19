@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .frame_containment_structure import FrameContainmentStructure
@@ -16,7 +16,7 @@ class GroupsOfDistributionChannelsInFrameRelStructure(
     class Meta:
         name = "groupsOfDistributionChannelsInFrame_RelStructure"
 
-    group_of_distribution_channels: Iterable[GroupOfDistributionChannels] = (
+    group_of_distribution_channels: Sequence[GroupOfDistributionChannels] = (
         field(
             default_factory=list,
             metadata={

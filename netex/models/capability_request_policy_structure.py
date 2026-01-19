@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .empty_type_1 import EmptyType1
@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass(kw_only=True)
 class CapabilityRequestPolicyStructure:
-    national_language: Iterable[str] = field(
+    national_language: Sequence[str] = field(
         default_factory=list,
         metadata={
             "name": "NationalLanguage",

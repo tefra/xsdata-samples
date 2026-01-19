@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -21,7 +21,7 @@ class SecurityListingsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "securityListings_RelStructure"
 
-    security_listing: Iterable[
+    security_listing: Sequence[
         MediumAccessDeviceSecurityListing
         | TravelDocumentSecurityListing
         | RetailDeviceSecurityListing

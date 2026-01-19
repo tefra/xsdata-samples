@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class PointOfInterestEntrancesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "pointOfInterestEntrances_RelStructure"
 
-    point_of_interest_entrance_ref_or_point_of_interest_entrance: Iterable[
+    point_of_interest_entrance_ref_or_point_of_interest_entrance: Sequence[
         SiteComponentRefStructure | PointOfInterestEntrance
     ] = field(
         default_factory=list,

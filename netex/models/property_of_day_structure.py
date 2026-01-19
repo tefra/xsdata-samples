@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import ForwardRef
 
@@ -37,7 +37,7 @@ class PropertyOfDayStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    days_of_week: Iterable[DayOfWeekEnumeration] = field(
+    days_of_week: Sequence[DayOfWeekEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "DaysOfWeek",
@@ -46,7 +46,7 @@ class PropertyOfDayStructure:
             "tokens": True,
         },
     )
-    weeks_of_month: Iterable[WeekOfMonthEnumeration] = field(
+    weeks_of_month: Sequence[WeekOfMonthEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "WeeksOfMonth",
@@ -91,7 +91,7 @@ class PropertyOfDayStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    holiday_types: Iterable[HolidayTypeEnumeration] = field(
+    holiday_types: Sequence[HolidayTypeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "HolidayTypes",
@@ -100,7 +100,7 @@ class PropertyOfDayStructure:
             "tokens": True,
         },
     )
-    seasons: Iterable[SeasonEnumeration] = field(
+    seasons: Sequence[SeasonEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "Seasons",
@@ -109,7 +109,7 @@ class PropertyOfDayStructure:
             "tokens": True,
         },
     )
-    tides: Iterable[TideEnumeration] = field(
+    tides: Sequence[TideEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "Tides",

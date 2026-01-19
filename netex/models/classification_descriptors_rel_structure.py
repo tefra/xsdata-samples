@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .classification_descriptor_version_structure import (
@@ -20,7 +20,7 @@ class ClassificationDescriptorsRelStructure(
     class Meta:
         name = "classificationDescriptors_RelStructure"
 
-    classification_descriptor: Iterable[
+    classification_descriptor: Sequence[
         ClassificationDescriptorVersionStructure
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -17,7 +17,7 @@ class NetworkRestrictionsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "networkRestrictionsInFrame_RelStructure"
 
-    network_restriction: Iterable[
+    network_restriction: Sequence[
         OvertakingPossibility
         | MeetingRestriction
         | RestrictedManoeuvre

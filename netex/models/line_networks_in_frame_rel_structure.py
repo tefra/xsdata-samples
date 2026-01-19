@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class LineNetworksInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "lineNetworksInFrame_RelStructure"
 
-    line_network: Iterable[LineNetwork] = field(
+    line_network: Sequence[LineNetwork] = field(
         default_factory=list,
         metadata={
             "name": "LineNetwork",

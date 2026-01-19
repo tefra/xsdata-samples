@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .activation_point_ref import ActivationPointRef
@@ -47,7 +47,7 @@ class ComplexFeatureProjectionVersionStructure(ProjectionVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice: Iterable[
+    choice: Sequence[
         VehicleMeetingPointRef
         | WirePointRef
         | RoadPointRef

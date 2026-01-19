@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .path_link_in_sequence import PathLinkInSequence
@@ -16,7 +16,7 @@ class PathLinksInSequenceRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "pathLinksInSequence_RelStructure"
 
-    path_link_in_sequence: Iterable[PathLinkInSequence] = field(
+    path_link_in_sequence: Sequence[PathLinkInSequence] = field(
         default_factory=list,
         metadata={
             "name": "PathLinkInSequence",

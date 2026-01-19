@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import ForwardRef
 
@@ -91,7 +91,7 @@ class NetworkFrameTopicStructure(TopicStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    choice_1: Iterable[
+    choice_1: Sequence[
         MobilityJourneyFrameRef
         | MobilityServiceFrameRef
         | SalesTransactionFrameRef
@@ -193,7 +193,7 @@ class NetworkFrameTopicStructure(TopicStructure):
 
     @dataclass(kw_only=True)
     class SelectionValidityConditions:
-        validity_condition: Iterable[
+        validity_condition: Sequence[
             SimpleAvailabilityCondition
             | ValidDuring
             | AvailabilityCondition

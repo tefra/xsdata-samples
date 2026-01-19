@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .service_journey_interchange import ServiceJourneyInterchange
@@ -20,7 +20,7 @@ class ServiceJourneyInterchangesRelStructure(
     class Meta:
         name = "serviceJourneyInterchanges_RelStructure"
 
-    service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view: Iterable[
+    service_journey_interchange_ref_or_service_journey_interchange_or_service_journey_interchange_view: Sequence[
         ServiceJourneyInterchangeRef
         | ServiceJourneyInterchange
         | ServiceJourneyInterchangeView

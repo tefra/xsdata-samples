@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .monitored_vehicle_sharing_parking_bay_ref import (
@@ -23,7 +23,7 @@ class ParkingComponentRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "parkingComponentRefs_RelStructure"
 
-    parking_area_ref_or_parking_bay_ref_or_vehicle_sharing_parking_bay_ref: Iterable[
+    parking_area_ref_or_parking_bay_ref_or_vehicle_sharing_parking_bay_ref: Sequence[
         VehiclePoolingParkingAreaRef
         | VehicleSharingParkingAreaRef
         | TaxiParkingAreaRef

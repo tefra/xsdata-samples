@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .dead_run_ref import DeadRunRef
@@ -17,7 +17,7 @@ class ExplicitJourneyRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "explicitJourneyRefs_RelStructure"
 
-    service_journey_ref_or_vehicle_journey_ref: Iterable[
+    service_journey_ref_or_vehicle_journey_ref: Sequence[
         TemplateServiceJourneyRef
         | ServiceJourneyRef
         | DeadRunRef

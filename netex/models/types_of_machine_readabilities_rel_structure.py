@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class TypesOfMachineReadabilitiesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfMachineReadabilities_RelStructure"
 
-    type_of_machine_readability_ref: Iterable[TypeOfMachineReadabilityRef] = (
+    type_of_machine_readability_ref: Sequence[TypeOfMachineReadabilityRef] = (
         field(
             default_factory=list,
             metadata={

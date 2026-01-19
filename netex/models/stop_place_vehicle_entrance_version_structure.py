@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .air_submode import AirSubmode
@@ -160,7 +160,7 @@ class StopPlaceVehicleEntranceVersionStructure(
             ),
         },
     )
-    other_transport_modes: Iterable[VehicleModeEnumeration] = field(
+    other_transport_modes: Sequence[VehicleModeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "OtherTransportModes",

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class LogicalDisplaysInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "logicalDisplaysInFrame_RelStructure"
 
-    logical_display: Iterable[LogicalDisplay] = field(
+    logical_display: Sequence[LogicalDisplay] = field(
         default_factory=list,
         metadata={
             "name": "LogicalDisplay",

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class PathJunctionsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "pathJunctionsInFrame_RelStructure"
 
-    path_junction: Iterable[PathJunction] = field(
+    path_junction: Sequence[PathJunction] = field(
         default_factory=list,
         metadata={
             "name": "PathJunction",

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .data_object_request import DataObjectRequest
@@ -14,7 +14,7 @@ class ServiceRequest(ServiceRequestStructure):
     class Meta:
         namespace = "http://www.siri.org.uk/siri"
 
-    data_object_request: Iterable[DataObjectRequest] = field(
+    data_object_request: Sequence[DataObjectRequest] = field(
         default_factory=list,
         metadata={
             "name": "DataObjectRequest",

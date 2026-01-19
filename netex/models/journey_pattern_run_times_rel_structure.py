@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .journey_pattern_run_time import JourneyPatternRunTime
@@ -19,7 +19,7 @@ class JourneyPatternRunTimesRelStructure(
     class Meta:
         name = "journeyPatternRunTimes_RelStructure"
 
-    journey_pattern_run_time_ref_or_journey_pattern_run_time: Iterable[
+    journey_pattern_run_time_ref_or_journey_pattern_run_time: Sequence[
         JourneyPatternRunTimeRef | JourneyPatternRunTime
     ] = field(
         default_factory=list,

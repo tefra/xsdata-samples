@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .frame_containment_structure import FrameContainmentStructure
@@ -14,7 +14,7 @@ class TravelDocumentsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "travelDocumentsInFrame_RelStructure"
 
-    travel_document: Iterable[TravelDocument] = field(
+    travel_document: Sequence[TravelDocument] = field(
         default_factory=list,
         metadata={
             "name": "TravelDocument",

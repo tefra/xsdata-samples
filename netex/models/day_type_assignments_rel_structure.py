@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .day_type_assignment import DayTypeAssignment
@@ -16,7 +16,7 @@ class DayTypeAssignmentsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "dayTypeAssignments_RelStructure"
 
-    day_type_assignment: Iterable[DayTypeAssignment] = field(
+    day_type_assignment: Sequence[DayTypeAssignment] = field(
         default_factory=list,
         metadata={
             "name": "DayTypeAssignment",

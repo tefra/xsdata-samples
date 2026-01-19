@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -19,7 +19,7 @@ class StopAssignmentsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "stopAssignmentsInFrame_RelStructure"
 
-    stop_assignment: Iterable[
+    stop_assignment: Sequence[
         VehicleJourneyStopAssignment
         | FlexibleStopAssignment
         | NavigationPathAssignment

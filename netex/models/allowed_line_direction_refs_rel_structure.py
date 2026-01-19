@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .allowed_line_direction_ref import AllowedLineDirectionRef
@@ -14,7 +14,7 @@ class AllowedLineDirectionRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "allowedLineDirectionRefs_RelStructure"
 
-    allowed_line_direction_ref: Iterable[AllowedLineDirectionRef] = field(
+    allowed_line_direction_ref: Sequence[AllowedLineDirectionRef] = field(
         default_factory=list,
         metadata={
             "name": "AllowedLineDirectionRef",

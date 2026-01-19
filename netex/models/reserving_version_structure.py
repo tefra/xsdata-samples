@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from xsdata.models.datatype import XmlDuration
@@ -22,7 +22,7 @@ class ReservingVersionStructure(BookingPolicyVersionStructure):
     class Meta:
         name = "Reserving_VersionStructure"
 
-    reserving_requirements: Iterable[ReservationEnumeration] = field(
+    reserving_requirements: Sequence[ReservationEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "ReservingRequirements",

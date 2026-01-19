@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .additional_driver_option_ref import AdditionalDriverOptionRef
@@ -87,7 +87,7 @@ class PriceableObjectRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "priceableObjectRefs_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         CustomerPurchasePackageElementRef
         | CustomerPurchasePackageRef
         | ControllableElementRef

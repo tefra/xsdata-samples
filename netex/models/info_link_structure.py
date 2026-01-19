@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .type_of_info_link_enumeration import TypeOfInfoLinkEnumeration
@@ -16,7 +16,7 @@ class InfoLinkStructure:
             "required": True,
         },
     )
-    type_of_info_link: Iterable[TypeOfInfoLinkEnumeration] = field(
+    type_of_info_link: Sequence[TypeOfInfoLinkEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "typeOfInfoLink",

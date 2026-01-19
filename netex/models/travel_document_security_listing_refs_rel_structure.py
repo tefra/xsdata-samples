@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -18,7 +18,7 @@ class TravelDocumentSecurityListingRefsRelStructure(
     class Meta:
         name = "TravelDocumentSecurityListingRefs_RelStructure"
 
-    travel_document_security_listing_ref: Iterable[
+    travel_document_security_listing_ref: Sequence[
         TravelDocumentSecurityListingRef
     ] = field(
         default_factory=list,

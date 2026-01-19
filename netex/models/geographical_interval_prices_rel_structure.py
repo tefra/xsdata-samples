@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .cell_ref import CellRef
@@ -22,7 +22,7 @@ class GeographicalIntervalPricesRelStructure(
     class Meta:
         name = "geographicalIntervalPrices_RelStructure"
 
-    geographical_interval_price_ref_or_geographical_interval_price_or_cell_ref: Iterable[
+    geographical_interval_price_ref_or_geographical_interval_price_or_cell_ref: Sequence[
         GeographicalIntervalPriceRef
         | GeographicalIntervalPriceVersionedChildStructure
         | CellRef

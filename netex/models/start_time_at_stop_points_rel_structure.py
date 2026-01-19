@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .start_time_at_stop_point import StartTimeAtStopPoint
@@ -17,7 +17,7 @@ class StartTimeAtStopPointsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "startTimeAtStopPoints_RelStructure"
 
-    start_time_at_stop_point_ref_or_start_time_at_stop_point: Iterable[
+    start_time_at_stop_point_ref_or_start_time_at_stop_point: Sequence[
         StartTimeAtStopPointRef | StartTimeAtStopPoint
     ] = field(
         default_factory=list,

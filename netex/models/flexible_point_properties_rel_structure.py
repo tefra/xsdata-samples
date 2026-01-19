@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class FlexiblePointPropertiesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "flexiblePointProperties_RelStructure"
 
-    flexible_point_properties: Iterable[FlexiblePointProperties] = field(
+    flexible_point_properties: Sequence[FlexiblePointProperties] = field(
         default_factory=list,
         metadata={
             "name": "FlexiblePointProperties",

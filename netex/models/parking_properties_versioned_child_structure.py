@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from xsdata.models.datatype import XmlDuration
@@ -41,7 +41,7 @@ class ParkingPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_user_types: Iterable[ParkingUserEnumeration] = field(
+    parking_user_types: Sequence[ParkingUserEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "ParkingUserTypes",
@@ -50,7 +50,7 @@ class ParkingPropertiesVersionedChildStructure(VersionedChildStructure):
             "tokens": True,
         },
     )
-    parking_vehicle_types: Iterable[ParkingVehicleEnumeration] = field(
+    parking_vehicle_types: Sequence[ParkingVehicleEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "ParkingVehicleTypes",
@@ -67,7 +67,7 @@ class ParkingPropertiesVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_stay_list: Iterable[ParkingStayEnumeration] = field(
+    parking_stay_list: Sequence[ParkingStayEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "ParkingStayList",

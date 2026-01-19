@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class FarePointsInPatternRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "farePointsInPattern_RelStructure"
 
-    fare_point_in_pattern_ref_or_fare_point_in_pattern: Iterable[
+    fare_point_in_pattern_ref_or_fare_point_in_pattern: Sequence[
         FarePointInPatternRef | FarePointInPattern
     ] = field(
         default_factory=list,

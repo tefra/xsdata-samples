@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .branding import Branding
@@ -90,7 +90,7 @@ class TypesOfValueStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "typesOfValueStructure"
 
-    type_of_value_or_type_of_entity: Iterable[
+    type_of_value_or_type_of_entity: Sequence[
         TypeOfFleet
         | ParkingBayStatus
         | TypeOfMediumAccessDevice

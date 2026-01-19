@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .distance_matrix_element_inverse_ref import (
@@ -17,7 +17,7 @@ class DistanceMatrixElementRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "distanceMatrixElementRefs_RelStructure"
 
-    distance_matrix_element_ref_or_distance_matrix_element_inverse_ref: Iterable[
+    distance_matrix_element_ref_or_distance_matrix_element_inverse_ref: Sequence[
         DistanceMatrixElementRef | DistanceMatrixElementInverseRef
     ] = field(
         default_factory=list,

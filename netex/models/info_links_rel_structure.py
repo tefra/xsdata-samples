@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .info_link import InfoLink
@@ -13,7 +13,7 @@ class InfoLinksRelStructure:
     class Meta:
         name = "infoLinks_RelStructure"
 
-    info_link: Iterable[InfoLink] = field(
+    info_link: Sequence[InfoLink] = field(
         default_factory=list,
         metadata={
             "name": "InfoLink",

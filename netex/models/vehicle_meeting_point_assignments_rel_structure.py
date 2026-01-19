@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -22,7 +22,7 @@ class VehicleMeetingPointAssignmentsRelStructure(
     class Meta:
         name = "vehicleMeetingPointAssignments_RelStructure"
 
-    dynamic_vehicle_meeting_point_assignment_ref_or_vehicle_meeting_point_assignment_ref_or_vehicle_meeting_point_assignment: Iterable[
+    dynamic_vehicle_meeting_point_assignment_ref_or_vehicle_meeting_point_assignment_ref_or_vehicle_meeting_point_assignment: Sequence[
         DynamicVehicleMeetingPointAssignmentRef
         | VehicleMeetingPointAssignmentRef
         | VehicleMeetingPointAssignment1

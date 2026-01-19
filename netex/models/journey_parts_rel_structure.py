@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class JourneyPartsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "journeyParts_RelStructure"
 
-    journey_part_ref_or_journey_part: Iterable[
+    journey_part_ref_or_journey_part: Sequence[
         JourneyPartRef | JourneyPart
     ] = field(
         default_factory=list,

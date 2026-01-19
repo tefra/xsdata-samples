@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .all_distribution_channels_ref import AllDistributionChannelsRef
@@ -65,7 +65,7 @@ class TypeOfEntityRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfEntityRefs_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         TypeOfRetailDeviceRef
         | CustomerAccountStatusRef
         | TypeOfCustomerAccountRef

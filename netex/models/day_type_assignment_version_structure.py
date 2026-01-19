@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from xsdata.models.datatype import XmlDate
@@ -82,7 +82,7 @@ class DayTypeAssignmentVersionStructure(AssignmentVersionStructure1):
             ),
         },
     )
-    timeband_ref: Iterable[TimebandRef] = field(
+    timeband_ref: Sequence[TimebandRef] = field(
         default_factory=list,
         metadata={
             "name": "TimebandRef",

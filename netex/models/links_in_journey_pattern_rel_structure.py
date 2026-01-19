@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .service_link_in_journey_pattern import ServiceLinkInJourneyPattern
@@ -17,7 +17,7 @@ class LinksInJourneyPatternRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "linksInJourneyPattern_RelStructure"
 
-    service_link_in_journey_pattern_or_timing_link_in_journey_pattern: Iterable[
+    service_link_in_journey_pattern_or_timing_link_in_journey_pattern: Sequence[
         ServiceLinkInJourneyPattern | TimingLinkInJourneyPattern
     ] = field(
         default_factory=list,

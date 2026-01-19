@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .companion_profile import CompanionProfile
@@ -15,7 +15,7 @@ class CompanionProfilesRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "companionProfiles_RelStructure"
 
-    companion_profile_ref_or_companion_profile: Iterable[
+    companion_profile_ref_or_companion_profile: Sequence[
         CompanionProfileRef | CompanionProfile
     ] = field(
         default_factory=list,

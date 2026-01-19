@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .accepted_driver_permit import AcceptedDriverPermit
@@ -572,7 +572,7 @@ class VersionFrameMembersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "versionFrameMembers_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         EntityInVersionInFrameRefStructure
         | Fleet
         | IndividualPassengerInfo

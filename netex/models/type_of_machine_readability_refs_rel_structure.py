@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -14,7 +14,7 @@ class TypeOfMachineReadabilityRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "TypeOfMachineReadabilityRefs_RelStructure"
 
-    type_of_machine_readability_ref: Iterable[TypeOfMachineReadabilityRef] = (
+    type_of_machine_readability_ref: Sequence[TypeOfMachineReadabilityRef] = (
         field(
             default_factory=list,
             metadata={

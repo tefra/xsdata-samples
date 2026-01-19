@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class ServiceFacilitySetsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "serviceFacilitySets_RelStructure"
 
-    service_facility_set_ref_or_service_facility_set: Iterable[
+    service_facility_set_ref_or_service_facility_set: Sequence[
         ServiceFacilitySetRef | ServiceFacilitySet
     ] = field(
         default_factory=list,

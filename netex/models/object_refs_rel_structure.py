@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .accepted_driver_permit_ref import AcceptedDriverPermitRef
@@ -577,7 +577,7 @@ class ObjectRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "objectRefs_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         TripLegRef
         | IndividualPassengerInfoRef
         | VehiclePoolingDriverInfoRef

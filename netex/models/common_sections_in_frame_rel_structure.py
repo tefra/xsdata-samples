@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class CommonSectionsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "commonSectionsInFrame_RelStructure"
 
-    common_section: Iterable[CommonSection] = field(
+    common_section: Sequence[CommonSection] = field(
         default_factory=list,
         metadata={
             "name": "CommonSection",

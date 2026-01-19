@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .block_part import BlockPart
@@ -17,7 +17,7 @@ class BlockPartsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "blockParts_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         TrainBlockPartRef | BlockPartRef | BlockPart | TrainBlockPart
     ] = field(
         default_factory=list,

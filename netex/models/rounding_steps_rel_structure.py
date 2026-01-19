@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .rounding_step import RoundingStep
@@ -16,7 +16,7 @@ class RoundingStepsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "roundingSteps_RelStructure"
 
-    rounding_step: Iterable[RoundingStep] = field(
+    rounding_step: Sequence[RoundingStep] = field(
         default_factory=list,
         metadata={
             "name": "RoundingStep",

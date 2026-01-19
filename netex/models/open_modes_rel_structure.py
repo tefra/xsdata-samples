@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class OpenModesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "openModesRelStructure"
 
-    open_transport_mode: Iterable[OpenTransportMode] = field(
+    open_transport_mode: Sequence[OpenTransportMode] = field(
         default_factory=list,
         metadata={
             "name": "OpenTransportMode",

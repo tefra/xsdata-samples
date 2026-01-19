@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .fulfilment_method_ref import FulfilmentMethodRef
@@ -14,7 +14,7 @@ class FulfilmentMethodRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "fulfilmentMethodRefs_RelStructure"
 
-    fulfilment_method_ref: Iterable[FulfilmentMethodRef] = field(
+    fulfilment_method_ref: Sequence[FulfilmentMethodRef] = field(
         default_factory=list,
         metadata={
             "name": "FulfilmentMethodRef",

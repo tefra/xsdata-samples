@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .capped_discount_right_ref import CappedDiscountRightRef
@@ -16,7 +16,7 @@ class DiscountRightRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "discountRightRefs_RelStructure"
 
-    capped_discount_right_ref_or_sale_discount_right_ref_or_usage_discount_right_ref: Iterable[
+    capped_discount_right_ref_or_sale_discount_right_ref_or_usage_discount_right_ref: Sequence[
         CappedDiscountRightRef | SaleDiscountRightRef | UsageDiscountRightRef
     ] = field(
         default_factory=list,

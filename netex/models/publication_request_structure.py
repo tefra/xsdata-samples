@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from xsdata.models.datatype import XmlDateTime
@@ -78,7 +78,7 @@ class PublicationRequestStructure:
 
     @dataclass(kw_only=True)
     class Topics:
-        network_frame_topic: Iterable[NetworkFrameTopicStructure] = field(
+        network_frame_topic: Sequence[NetworkFrameTopicStructure] = field(
             default_factory=list,
             metadata={
                 "name": "NetworkFrameTopic",

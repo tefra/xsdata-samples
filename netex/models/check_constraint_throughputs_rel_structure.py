@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .check_constraint_throughput import CheckConstraintThroughput
@@ -19,7 +19,7 @@ class CheckConstraintThroughputsRelStructure(
     class Meta:
         name = "checkConstraintThroughputs_RelStructure"
 
-    check_constraint_throughput_ref_or_check_constraint_throughput: Iterable[
+    check_constraint_throughput_ref_or_check_constraint_throughput: Sequence[
         CheckConstraintThroughputRef | CheckConstraintThroughput
     ] = field(
         default_factory=list,

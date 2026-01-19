@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access_mode_enumeration import AccessModeEnumeration
@@ -33,7 +33,7 @@ class SiteElementVersionStructure(AddressablePlaceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    access_modes: Iterable[AccessModeEnumeration] = field(
+    access_modes: Sequence[AccessModeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "AccessModes",

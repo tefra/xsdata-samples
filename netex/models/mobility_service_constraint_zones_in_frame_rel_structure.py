@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -16,7 +16,7 @@ class MobilityServiceConstraintZonesInFrameRelStructure(
     class Meta:
         name = "mobilityServiceConstraintZonesInFrame_RelStructure"
 
-    mobility_service_constraint_zone: Iterable[
+    mobility_service_constraint_zone: Sequence[
         MobilityServiceConstraintZone
     ] = field(
         default_factory=list,

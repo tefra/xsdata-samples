@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class TypesOfRetailDeviceRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfRetailDevice_RelStructure"
 
-    type_of_retail_device_ref_or_type_of_retail_device: Iterable[
+    type_of_retail_device_ref_or_type_of_retail_device: Sequence[
         TypeOfRetailDeviceRef | TypeOfRetailDevice
     ] = field(
         default_factory=list,

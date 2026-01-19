@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .line_section_point_type_enumeration import (
@@ -37,7 +37,7 @@ class PointOnLineSectionVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    connecting_vehicle_modes: Iterable[VehicleModeEnumeration] = field(
+    connecting_vehicle_modes: Sequence[VehicleModeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "ConnectingVehicleModes",

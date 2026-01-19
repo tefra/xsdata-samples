@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import ForwardRef
 
@@ -12,7 +12,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass(kw_only=True)
 class EnvelopeType:
-    lower_corner_or_upper_corner_or_pos: Iterable[
+    lower_corner_or_upper_corner_or_pos: Sequence[
         EnvelopeType.LowerCorner | EnvelopeType.UpperCorner | Pos
     ] = field(
         default_factory=list,

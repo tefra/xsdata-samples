@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class StopAreasInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "stopAreasInFrame_RelStructure"
 
-    stop_area: Iterable[StopArea] = field(
+    stop_area: Sequence[StopArea] = field(
         default_factory=list,
         metadata={
             "name": "StopArea",

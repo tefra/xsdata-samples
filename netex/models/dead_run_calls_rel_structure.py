@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .dead_run_call_versioned_child_structure import (
@@ -18,7 +18,7 @@ class DeadRunCallsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "deadRunCalls_RelStructure"
 
-    dead_run_call: Iterable[DeadRunCallVersionedChildStructure] = field(
+    dead_run_call: Sequence[DeadRunCallVersionedChildStructure] = field(
         default_factory=list,
         metadata={
             "name": "DeadRunCall",

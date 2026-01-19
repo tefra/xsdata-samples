@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class SeriesConstraintsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "SeriesConstraints_RelStructure"
 
-    series_constraint_ref_or_series_constraint: Iterable[
+    series_constraint_ref_or_series_constraint: Sequence[
         SeriesConstraintRef | SeriesConstraint
     ] = field(
         default_factory=list,

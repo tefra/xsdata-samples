@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .activation_point_ref import ActivationPointRef
@@ -29,7 +29,7 @@ class PointRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "pointRefs_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         VehicleMeetingPointRef
         | WirePointRef
         | RoadPointRef

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .group_of_points import GroupOfPoints
@@ -16,7 +16,7 @@ class GroupOfPointsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "groupOfPoints_RelStructure"
 
-    group_of_points: Iterable[GroupOfPoints] = field(
+    group_of_points: Sequence[GroupOfPoints] = field(
         default_factory=list,
         metadata={
             "name": "GroupOfPoints",

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .stop_point_in_journey_pattern import StopPointInJourneyPattern
@@ -18,7 +18,7 @@ class StopPointsInJourneyPatternRelStructure(
     class Meta:
         name = "stopPointsInJourneyPattern_RelStructure"
 
-    stop_point_in_journey_pattern: Iterable[StopPointInJourneyPattern] = field(
+    stop_point_in_journey_pattern: Sequence[StopPointInJourneyPattern] = field(
         default_factory=list,
         metadata={
             "name": "StopPointInJourneyPattern",

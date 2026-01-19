@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .entitlement_given_ref import EntitlementGivenRef
@@ -14,7 +14,7 @@ class EntitlementGivenRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "entitlementGivenRefs_RelStructure"
 
-    entitlement_given_ref: Iterable[EntitlementGivenRef] = field(
+    entitlement_given_ref: Sequence[EntitlementGivenRef] = field(
         default_factory=list,
         metadata={
             "name": "EntitlementGivenRef",

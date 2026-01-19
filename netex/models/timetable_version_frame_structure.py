@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .accessibility_assessment import AccessibilityAssessment
@@ -87,7 +87,7 @@ class TimetableVersionFrameStructure(CommonVersionFrameStructure):
     class Meta:
         name = "Timetable_VersionFrameStructure"
 
-    vehicle_modes: Iterable[VehicleModeEnumeration] = field(
+    vehicle_modes: Sequence[VehicleModeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "VehicleModes",

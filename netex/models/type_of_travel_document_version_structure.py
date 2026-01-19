@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
@@ -51,7 +51,7 @@ class TypeOfTravelDocumentVersionStructure(TypeOfEntityVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    machine_readable: Iterable[MachineReadableEnumeration] = field(
+    machine_readable: Sequence[MachineReadableEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "MachineReadable",

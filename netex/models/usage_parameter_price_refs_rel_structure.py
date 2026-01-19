@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .strict_containment_aggregation_structure import (
@@ -18,7 +18,7 @@ class UsageParameterPriceRefsRelStructure(
     class Meta:
         name = "usageParameterPriceRefs_RelStructure"
 
-    usage_parameter_price_ref: Iterable[UsageParameterPriceRef] = field(
+    usage_parameter_price_ref: Sequence[UsageParameterPriceRef] = field(
         default_factory=list,
         metadata={
             "name": "UsageParameterPriceRef",

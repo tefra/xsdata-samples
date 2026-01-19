@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class FleetsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "fleets_RelStructure"
 
-    fleet: Iterable[Fleet] = field(
+    fleet: Sequence[Fleet] = field(
         default_factory=list,
         metadata={
             "name": "Fleet",

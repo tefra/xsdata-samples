@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -14,7 +14,7 @@ class ValidityRuleParameterRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "validityRuleParameterRefs_RelStructure"
 
-    validity_rule_parameter_ref: Iterable[ValidityRuleParameterRef] = field(
+    validity_rule_parameter_ref: Sequence[ValidityRuleParameterRef] = field(
         default_factory=list,
         metadata={
             "name": "ValidityRuleParameterRef",

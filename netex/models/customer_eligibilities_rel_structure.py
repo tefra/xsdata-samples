@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .commercial_profile_eligibility import CommercialProfileEligibility
@@ -18,7 +18,7 @@ class CustomerEligibilitiesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "customerEligibilities_RelStructure"
 
-    customer_eligibility: Iterable[
+    customer_eligibility: Sequence[
         ResidentialQualificationEligibility
         | CommercialProfileEligibility
         | UserProfileEligibility

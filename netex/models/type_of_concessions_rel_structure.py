@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class TypeOfConcessionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typeOfConcessions_RelStructure"
 
-    type_of_concession_ref_or_type_of_concession: Iterable[
+    type_of_concession_ref_or_type_of_concession: Sequence[
         TypeOfConcessionRef | TypeOfConcession
     ] = field(
         default_factory=list,

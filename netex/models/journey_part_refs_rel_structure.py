@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .journey_part_ref import JourneyPartRef
@@ -14,7 +14,7 @@ class JourneyPartRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "journeyPartRefs_RelStructure"
 
-    journey_part_ref: Iterable[JourneyPartRef] = field(
+    journey_part_ref: Sequence[JourneyPartRef] = field(
         default_factory=list,
         metadata={
             "name": "JourneyPartRef",

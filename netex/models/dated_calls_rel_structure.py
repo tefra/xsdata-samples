@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .dated_call import DatedCall
@@ -16,7 +16,7 @@ class DatedCallsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "datedCalls_RelStructure"
 
-    dated_call: Iterable[DatedCall] = field(
+    dated_call: Sequence[DatedCall] = field(
         default_factory=list,
         metadata={
             "name": "DatedCall",

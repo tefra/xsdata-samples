@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .class_in_frame_ref import ClassInFrameRef
@@ -14,7 +14,7 @@ class ClassInFrameRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "ClassInFrameRefs_RelStructure"
 
-    class_in_frame_ref: Iterable[ClassInFrameRef] = field(
+    class_in_frame_ref: Sequence[ClassInFrameRef] = field(
         default_factory=list,
         metadata={
             "name": "ClassInFrameRef",

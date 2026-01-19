@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -17,7 +17,7 @@ class FlexibleQuaysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "flexibleQuays_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         HailAndRideAreaRef | FlexibleAreaRef | FlexibleQuayRef | FlexibleQuay
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .frame_containment_structure import FrameContainmentStructure
@@ -14,7 +14,7 @@ class FarePricesInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "farePricesInFrame_RelStructure"
 
-    price_group: Iterable[PriceGroup] = field(
+    price_group: Sequence[PriceGroup] = field(
         default_factory=list,
         metadata={
             "name": "PriceGroup",

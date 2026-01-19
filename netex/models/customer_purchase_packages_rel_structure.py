@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .customer_purchase_package import CustomerPurchasePackage
@@ -15,7 +15,7 @@ class CustomerPurchasePackagesRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "customerPurchasePackages_RelStructure"
 
-    customer_purchase_package_or_customer_purchase_package_ref: Iterable[
+    customer_purchase_package_or_customer_purchase_package_ref: Sequence[
         CustomerPurchasePackage | CustomerPurchasePackageRef
     ] = field(
         default_factory=list,

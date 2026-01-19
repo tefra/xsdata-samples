@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access_summary import AccessSummary
@@ -16,7 +16,7 @@ class AccessSummariesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "accessSummaries_RelStructure"
 
-    access_summary: Iterable[AccessSummary] = field(
+    access_summary: Sequence[AccessSummary] = field(
         default_factory=list,
         metadata={
             "name": "AccessSummary",

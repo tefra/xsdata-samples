@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .frame_containment_structure import FrameContainmentStructure
@@ -16,7 +16,7 @@ class ValidityParameterAssignmentsInFrameRelStructure(
     class Meta:
         name = "validityParameterAssignmentsInFrame_RelStructure"
 
-    validity_parameter_assignment: Iterable[ValidityParameterAssignment] = (
+    validity_parameter_assignment: Sequence[ValidityParameterAssignment] = (
         field(
             default_factory=list,
             metadata={

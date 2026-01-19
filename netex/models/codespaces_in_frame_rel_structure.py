@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .codespace import Codespace
@@ -14,7 +14,7 @@ class CodespacesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "codespacesInFrame_RelStructure"
 
-    codespace: Iterable[Codespace] = field(
+    codespace: Sequence[Codespace] = field(
         default_factory=list,
         metadata={
             "name": "Codespace",

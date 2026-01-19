@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class TimeDemandTypesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timeDemandTypesInFrame_RelStructure"
 
-    time_demand_type: Iterable[TimeDemandType] = field(
+    time_demand_type: Sequence[TimeDemandType] = field(
         default_factory=list,
         metadata={
             "name": "TimeDemandType",

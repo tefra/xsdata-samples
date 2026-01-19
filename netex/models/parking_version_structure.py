@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .accesses_rel_structure import AccessesRelStructure
@@ -100,7 +100,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_vehicle_types: Iterable[ParkingVehicleEnumeration] = field(
+    parking_vehicle_types: Sequence[ParkingVehicleEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "ParkingVehicleTypes",
@@ -189,7 +189,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_payment_process: Iterable[ParkingPaymentProcessEnumeration] = (
+    parking_payment_process: Sequence[ParkingPaymentProcessEnumeration] = (
         field(
             default_factory=list,
             metadata={
@@ -200,7 +200,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             },
         )
     )
-    payment_methods: Iterable[PaymentMethodEnumeration] = field(
+    payment_methods: Sequence[PaymentMethodEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "PaymentMethods",
@@ -230,7 +230,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "pattern": r"[A-Z][A-Z][A-Z]",
         },
     )
-    currencies_accepted: Iterable[str] = field(
+    currencies_accepted: Sequence[str] = field(
         default_factory=list,
         metadata={
             "name": "CurrenciesAccepted",
@@ -242,7 +242,7 @@ class ParkingVersionStructure(SiteVersionStructure):
             "tokens": True,
         },
     )
-    cards_accepted: Iterable[str] = field(
+    cards_accepted: Sequence[str] = field(
         default_factory=list,
         metadata={
             "name": "CardsAccepted",

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .fare_contract_security_listing_ref import FareContractSecurityListingRef
@@ -16,7 +16,7 @@ class FareContractSecurityListingRefsRelStructure(
     class Meta:
         name = "FareContractSecurityListingRefs_RelStructure"
 
-    fare_contract_security_listing_ref: Iterable[
+    fare_contract_security_listing_ref: Sequence[
         FareContractSecurityListingRef
     ] = field(
         default_factory=list,

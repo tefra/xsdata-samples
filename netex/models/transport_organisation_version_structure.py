@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import Any, ForwardRef
 
@@ -215,7 +215,7 @@ class TransportOrganisationVersionStructure(OrganisationVersionStructure):
             ),
         },
     )
-    operator_activities: Iterable[OperatorActivitiesEnumeration] = field(
+    operator_activities: Sequence[OperatorActivitiesEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "OperatorActivities",

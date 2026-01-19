@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class WhitelistsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "whitelists_RelStructure"
 
-    whitelist_ref_or_whitelist: Iterable[WhitelistRef | Whitelist] = field(
+    whitelist_ref_or_whitelist: Sequence[WhitelistRef | Whitelist] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

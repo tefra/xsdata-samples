@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -19,7 +19,7 @@ class TrainComponentLabelAssignmentsRelStructure(
     class Meta:
         name = "trainComponentLabelAssignments_RelStructure"
 
-    train_component_label_assignment_ref_or_train_component_label_assignment: Iterable[
+    train_component_label_assignment_ref_or_train_component_label_assignment: Sequence[
         TrainComponentLabelAssignmentRef | TrainComponentLabelAssignment
     ] = field(
         default_factory=list,

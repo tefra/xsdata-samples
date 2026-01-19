@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .strict_containment_aggregation_structure import (
@@ -20,7 +20,7 @@ class TopographicPlaceDescriptorsRelStructure(
     class Meta:
         name = "topographicPlaceDescriptors_RelStructure"
 
-    topographic_place_descriptor: Iterable[
+    topographic_place_descriptor: Sequence[
         TopographicPlaceDescriptorVersionedChildStructure
     ] = field(
         default_factory=list,

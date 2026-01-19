@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .language_use_enumeration import LanguageUseEnumeration
@@ -18,7 +18,7 @@ class LanguageUsageStructure:
             "required": True,
         }
     )
-    language_use: Iterable[LanguageUseEnumeration] = field(
+    language_use: Sequence[LanguageUseEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "LanguageUse",

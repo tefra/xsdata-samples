@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .commercial_profile_eligibility_ref import CommercialProfileEligibilityRef
@@ -18,7 +18,7 @@ class CustomerEligibilityRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "customerEligibilityRefs_RelStructure"
 
-    customer_eligibility_ref: Iterable[
+    customer_eligibility_ref: Sequence[
         ResidentialQualificationEligibilityRef
         | CommercialProfileEligibilityRef
         | UserProfileEligibilityRef

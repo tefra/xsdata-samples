@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .abstract_curve_type import AbstractCurveType
@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass(kw_only=True)
 class LineStringType(AbstractCurveType):
-    pos_or_point_property_or_pos_list: Iterable[
+    pos_or_point_property_or_pos_list: Sequence[
         Pos | PointProperty | PosList
     ] = field(
         default_factory=list,

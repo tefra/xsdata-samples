@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .strict_containment_aggregation_structure import (
@@ -18,7 +18,7 @@ class TrainsInCompoundTrainRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "trainsInCompoundTrain_RelStructure"
 
-    train_in_compound_train: Iterable[
+    train_in_compound_train: Sequence[
         TrainInCompoundTrainVersionedChildStructure
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access_vehicle_equipment import AccessVehicleEquipment
@@ -15,7 +15,7 @@ class VehicleEquipmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "vehicleEquipments_RelStructure"
 
-    access_vehicle_equipment_or_wheelchair_vehicle_equipment: Iterable[
+    access_vehicle_equipment_or_wheelchair_vehicle_equipment: Sequence[
         AccessVehicleEquipment | WheelchairVehicleEquipment
     ] = field(
         default_factory=list,

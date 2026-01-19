@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from decimal import Decimal
 
@@ -66,7 +66,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             ),
         },
     )
-    parking_user_types: Iterable[ParkingUserEnumeration] = field(
+    parking_user_types: Sequence[ParkingUserEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "ParkingUserTypes",
@@ -123,7 +123,7 @@ class ParkingBayVersionStructure(ParkingComponentVersionStructure):
             ),
         },
     )
-    parking_stay_list: Iterable[ParkingStayEnumeration] = field(
+    parking_stay_list: Sequence[ParkingStayEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "ParkingStayList",

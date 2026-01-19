@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .partial_refund_basis_enumeration import PartialRefundBasisEnumeration
@@ -25,7 +25,7 @@ class RefundingVersionStructure(ResellingVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    refund_policy: Iterable[RefundPolicyEnumeration] = field(
+    refund_policy: Sequence[RefundPolicyEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "RefundPolicy",
@@ -42,7 +42,7 @@ class RefundingVersionStructure(ResellingVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    payment_method: Iterable[PaymentMethodEnumeration] = field(
+    payment_method: Sequence[PaymentMethodEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "PaymentMethod",

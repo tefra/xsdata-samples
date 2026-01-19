@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -14,7 +14,7 @@ class TimeIntervalRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "timeIntervalRefs_RelStructure"
 
-    time_interval_ref: Iterable[TimeIntervalRef] = field(
+    time_interval_ref: Sequence[TimeIntervalRef] = field(
         default_factory=list,
         metadata={
             "name": "TimeIntervalRef",

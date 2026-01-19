@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .common_section_point_member import CommonSectionPointMember
@@ -19,7 +19,7 @@ class CommonSectionPointMembersRelStructure(
     class Meta:
         name = "commonSectionPointMembers_RelStructure"
 
-    common_section_point_member: Iterable[
+    common_section_point_member: Sequence[
         LineSectionPointMember | CommonSectionPointMember
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .trace import Trace
@@ -13,7 +13,7 @@ class TracesRelStructure:
     class Meta:
         name = "traces_RelStructure"
 
-    trace: Iterable[Trace] = field(
+    trace: Sequence[Trace] = field(
         default_factory=list,
         metadata={
             "name": "Trace",

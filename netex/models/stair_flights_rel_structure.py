@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .stair_flight import StairFlight
@@ -16,7 +16,7 @@ class StairFlightsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "stairFlights_RelStructure"
 
-    stair_flight: Iterable[StairFlight] = field(
+    stair_flight: Sequence[StairFlight] = field(
         default_factory=list,
         metadata={
             "name": "StairFlight",

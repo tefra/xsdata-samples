@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -14,7 +14,7 @@ class OpenTransportModeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "openTransportModeRefs_RelStructure"
 
-    open_transport_mode_ref: Iterable[OpenTransportModeRef] = field(
+    open_transport_mode_ref: Sequence[OpenTransportModeRef] = field(
         default_factory=list,
         metadata={
             "name": "OpenTransportModeRef",

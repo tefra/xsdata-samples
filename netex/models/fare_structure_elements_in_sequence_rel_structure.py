@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .controllable_element_in_sequence import ControllableElementInSequence
@@ -19,7 +19,7 @@ class FareStructureElementsInSequenceRelStructure(
     class Meta:
         name = "fareStructureElementsInSequence_RelStructure"
 
-    fare_structure_element_in_sequence_or_controllable_element_in_sequence: Iterable[
+    fare_structure_element_in_sequence_or_controllable_element_in_sequence: Sequence[
         FareStructureElementInSequence | ControllableElementInSequence
     ] = field(
         default_factory=list,

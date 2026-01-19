@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class TimingPatternsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timingPatternsInFrame_RelStructure"
 
-    timing_pattern: Iterable[TimingPattern] = field(
+    timing_pattern: Sequence[TimingPattern] = field(
         default_factory=list,
         metadata={
             "name": "TimingPattern",

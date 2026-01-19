@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .abstract_subscription_request_structure import (
@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass(kw_only=True)
 class SubscriptionRequestStructure(AbstractSubscriptionRequestStructure):
-    data_object_subscription_request: Iterable[
+    data_object_subscription_request: Sequence[
         DataObjectSubscriptionRequest
     ] = field(
         default_factory=list,

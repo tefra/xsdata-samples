@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .fare_demand_factor import FareDemandFactor
@@ -23,7 +23,7 @@ class QualityStructureFactorsRelStructure(
     class Meta:
         name = "qualityStructureFactors_RelStructure"
 
-    quality_structure_factor_ref_or_quality_structure_factor: Iterable[
+    quality_structure_factor_ref_or_quality_structure_factor: Sequence[
         FareQuotaFactorRef
         | FareDemandFactorRef
         | QualityStructureFactorRef

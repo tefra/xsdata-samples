@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class ResponsibilityRolesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "responsibilityRolesInFrame_RelStructure"
 
-    responsibility_role: Iterable[ResponsibilityRole] = field(
+    responsibility_role: Sequence[ResponsibilityRole] = field(
         default_factory=list,
         metadata={
             "name": "ResponsibilityRole",

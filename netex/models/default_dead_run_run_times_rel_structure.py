@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .default_dead_run_run_time import DefaultDeadRunRunTime
@@ -18,7 +18,7 @@ class DefaultDeadRunRunTimesRelStructure(
     class Meta:
         name = "defaultDeadRunRunTimes_RelStructure"
 
-    default_dead_run_run_time: Iterable[DefaultDeadRunRunTime] = field(
+    default_dead_run_run_time: Sequence[DefaultDeadRunRunTime] = field(
         default_factory=list,
         metadata={
             "name": "DefaultDeadRunRunTime",

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -15,7 +15,7 @@ class QuayRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "quayRefs_RelStructure"
 
-    quay_ref: Iterable[TaxiStandRef | QuayRef] = field(
+    quay_ref: Sequence[TaxiStandRef | QuayRef] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

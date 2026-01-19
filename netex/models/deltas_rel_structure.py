@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .delta import Delta
@@ -13,7 +13,7 @@ class DeltasRelStructure:
     class Meta:
         name = "deltas_RelStructure"
 
-    delta: Iterable[Delta] = field(
+    delta: Sequence[Delta] = field(
         default_factory=list,
         metadata={
             "name": "Delta",

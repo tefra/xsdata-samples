@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access_zone_ref import AccessZoneRef
@@ -23,7 +23,7 @@ class GroupMembershipRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "groupMembershipRefs_RelStructure"
 
-    zone_ref_or_tariff_zone_ref: Iterable[
+    zone_ref_or_tariff_zone_ref: Sequence[
         MobilityServiceConstraintZoneRef
         | StopAreaRef
         | TransportAdministrativeZoneRef

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .allowed_line_direction import AllowedLineDirection
@@ -15,7 +15,7 @@ class AllowedLineDirectionsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "allowedLineDirections_RelStructure"
 
-    allowed_line_direction_ref_or_allowed_line_direction: Iterable[
+    allowed_line_direction_ref_or_allowed_line_direction: Sequence[
         AllowedLineDirectionRef | AllowedLineDirection
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .activation_link import ActivationLink
@@ -14,7 +14,7 @@ class ActivationLinksInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "activationLinksInFrame_RelStructure"
 
-    activation_link: Iterable[ActivationLink] = field(
+    activation_link: Sequence[ActivationLink] = field(
         default_factory=list,
         metadata={
             "name": "ActivationLink",

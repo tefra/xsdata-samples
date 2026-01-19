@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -14,7 +14,7 @@ class PointOfInterestRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "pointOfInterestRefs_RelStructure"
 
-    point_of_interest_ref: Iterable[PointOfInterestRef] = field(
+    point_of_interest_ref: Sequence[PointOfInterestRef] = field(
         default_factory=list,
         metadata={
             "name": "PointOfInterestRef",

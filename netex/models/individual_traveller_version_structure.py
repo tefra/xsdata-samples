@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .customer_ref import CustomerRef
@@ -78,7 +78,7 @@ class IndividualTravellerVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    languages: Iterable[str] = field(
+    languages: Sequence[str] = field(
         default_factory=list,
         metadata={
             "name": "Languages",

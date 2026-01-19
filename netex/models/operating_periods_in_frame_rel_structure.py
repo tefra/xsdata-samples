@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class OperatingPeriodsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "operatingPeriodsInFrame_RelStructure"
 
-    operating_period_or_uic_operating_period: Iterable[
+    operating_period_or_uic_operating_period: Sequence[
         OperatingPeriod | UicOperatingPeriod
     ] = field(
         default_factory=list,

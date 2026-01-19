@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .destination_display_variant import DestinationDisplayVariant
@@ -18,7 +18,7 @@ class DestinationDisplayVariantsRelStructure(
     class Meta:
         name = "destinationDisplayVariants_RelStructure"
 
-    destination_display_variant: Iterable[DestinationDisplayVariant] = field(
+    destination_display_variant: Sequence[DestinationDisplayVariant] = field(
         default_factory=list,
         metadata={
             "name": "DestinationDisplayVariant",

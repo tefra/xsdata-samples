@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from decimal import Decimal
 
@@ -79,7 +79,7 @@ class PathLinkVersionStructure(LinkVersionStructure):
             ),
         },
     )
-    access_modes: Iterable[AccessModeEnumeration] = field(
+    access_modes: Sequence[AccessModeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "AccessModes",

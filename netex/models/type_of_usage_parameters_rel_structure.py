@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class TypeOfUsageParametersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typeOfUsageParameters_RelStructure"
 
-    type_of_usage_parameter_ref_or_type_of_usage_parameter: Iterable[
+    type_of_usage_parameter_ref_or_type_of_usage_parameter: Sequence[
         TypeOfUsageParameterRef | TypeOfUsageParameter
     ] = field(
         default_factory=list,

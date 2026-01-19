@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class AddressesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "addressesInFrame_RelStructure"
 
-    address: Iterable[PostalAddress | RoadAddress] = field(
+    address: Sequence[PostalAddress | RoadAddress] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

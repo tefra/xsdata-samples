@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
@@ -21,7 +21,7 @@ class FareProductRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "fareProductRefs_RelStructure"
 
-    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: Iterable[
+    preassigned_fare_product_ref_or_fare_product_ref_or_sale_discount_right_ref: Sequence[
         SupplementProductRef
         | PreassignedFareProductRef
         | AmountOfPriceUnitProductRef

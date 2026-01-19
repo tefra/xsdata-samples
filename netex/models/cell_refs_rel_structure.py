@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .cell_ref import CellRef
@@ -16,7 +16,7 @@ class CellRefsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "cellRefs_RelStructure"
 
-    cell_ref: Iterable[CellRef] = field(
+    cell_ref: Sequence[CellRef] = field(
         default_factory=list,
         metadata={
             "name": "CellRef",

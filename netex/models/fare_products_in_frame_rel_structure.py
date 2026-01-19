@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .amount_of_price_unit_product import AmountOfPriceUnitProduct
@@ -20,7 +20,7 @@ class FareProductsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "fareProductsInFrame_RelStructure"
 
-    fare_product: Iterable[
+    fare_product: Sequence[
         SupplementProduct
         | PreassignedFareProduct
         | AmountOfPriceUnitProduct

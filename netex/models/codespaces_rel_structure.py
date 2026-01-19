@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .codespace import Codespace
@@ -15,7 +15,7 @@ class CodespacesRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "codespaces_RelStructure"
 
-    codespace_ref_or_codespace: Iterable[CodespaceRef | Codespace] = field(
+    codespace_ref_or_codespace: Sequence[CodespaceRef | Codespace] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

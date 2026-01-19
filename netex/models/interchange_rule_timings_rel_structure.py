@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class InterchangeRuleTimingsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "interchangeRuleTimings_RelStructure"
 
-    interchange_rule_timing_ref_or_interchange_rule_timing: Iterable[
+    interchange_rule_timing_ref_or_interchange_rule_timing: Sequence[
         InterchangeRuleTimingRef | InterchangeRuleTiming
     ] = field(
         default_factory=list,

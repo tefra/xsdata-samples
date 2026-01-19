@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .dated_special_service_ref import DatedSpecialServiceRef
@@ -165,7 +165,7 @@ class LinkInLinkSequenceVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    description: Iterable[MultilingualString] = field(
+    description: Sequence[MultilingualString] = field(
         default_factory=list,
         metadata={
             "name": "Description",

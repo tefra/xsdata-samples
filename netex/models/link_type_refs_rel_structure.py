@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -14,7 +14,7 @@ class LinkTypeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "linkTypeRefs_RelStructure"
 
-    type_of_link_ref: Iterable[TypeOfLinkRef] = field(
+    type_of_link_ref: Sequence[TypeOfLinkRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfLinkRef",

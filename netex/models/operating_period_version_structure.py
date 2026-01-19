@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from xsdata.models.datatype import XmlDateTime
@@ -84,7 +84,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             ),
         },
     )
-    holiday_type: Iterable[HolidayTypeEnumeration] = field(
+    holiday_type: Sequence[HolidayTypeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "HolidayType",
@@ -92,7 +92,7 @@ class OperatingPeriodVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    season: Iterable[SeasonEnumeration] = field(
+    season: Sequence[SeasonEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "Season",

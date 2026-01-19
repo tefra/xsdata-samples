@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from xsdata.models.datatype import XmlDuration
@@ -74,7 +74,7 @@ class InterchangeRuleParameterStructure:
             ),
         },
     )
-    all_lines_or_lines_in_direction_refs_or_line_in_direction_ref: Iterable[
+    all_lines_or_lines_in_direction_refs_or_line_in_direction_ref: Sequence[
         EmptyType2 | LinesInDirectionRefsRelStructure | LineInDirectionRef
     ] = field(
         default_factory=list,

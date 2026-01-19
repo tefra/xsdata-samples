@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access_vehicle_equipment import AccessVehicleEquipment
@@ -69,7 +69,7 @@ class EquipmentsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "equipmentsInFrame_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         OnlineService
         | VehicleRentalService
         | VehicleSharingService

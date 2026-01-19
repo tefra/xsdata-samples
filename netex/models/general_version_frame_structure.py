@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import ForwardRef
 
@@ -684,7 +684,7 @@ class EntitiesInVersionRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "entitiesInVersion_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         VehicleTypeZoneRestriction
         | MediumApplicationInstance
         | CustomerPaymentMeans
@@ -4402,7 +4402,7 @@ class FramesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "frames_RelStructure"
 
-    common_frame: Iterable[
+    common_frame: Sequence[
         MobilityJourneyFrame
         | MobilityServiceFrame
         | SalesTransactionFrame
@@ -4555,7 +4555,7 @@ class GeneralFrameMembersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "generalFrameMembers_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         GeneralFrameMember
         | Fleet
         | IndividualPassengerInfo

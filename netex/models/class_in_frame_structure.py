@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .class_attribute_in_frame import ClassAttributeInFrame
@@ -62,7 +62,7 @@ class ClassInFrameStructure:
 
     @dataclass(kw_only=True)
     class Attributes:
-        class_attribute_in_frame: Iterable[ClassAttributeInFrame] = field(
+        class_attribute_in_frame: Sequence[ClassAttributeInFrame] = field(
             default_factory=list,
             metadata={
                 "name": "ClassAttributeInFrame",
@@ -74,7 +74,7 @@ class ClassInFrameStructure:
 
     @dataclass(kw_only=True)
     class Relationships:
-        class_relationship_in_frame: Iterable[ClassRelationshipInFrame] = (
+        class_relationship_in_frame: Sequence[ClassRelationshipInFrame] = (
             field(
                 default_factory=list,
                 metadata={

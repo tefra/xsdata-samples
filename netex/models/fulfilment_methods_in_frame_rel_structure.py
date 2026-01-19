@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .frame_containment_structure import FrameContainmentStructure
@@ -14,7 +14,7 @@ class FulfilmentMethodsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "fulfilmentMethodsInFrame_RelStructure"
 
-    fulfilment_method: Iterable[FulfilmentMethod] = field(
+    fulfilment_method: Sequence[FulfilmentMethod] = field(
         default_factory=list,
         metadata={
             "name": "FulfilmentMethod",

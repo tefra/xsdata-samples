@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .booking_method_enumeration import BookingMethodEnumeration
@@ -14,7 +14,7 @@ class BookingPolicyVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "BookingPolicy_VersionStructure"
 
-    booking_methods: Iterable[BookingMethodEnumeration] = field(
+    booking_methods: Sequence[BookingMethodEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "BookingMethods",

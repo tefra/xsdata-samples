@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .fare_contract_ref import FareContractRef
@@ -14,7 +14,7 @@ class ContractRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "contractRefs_RelStructure"
 
-    fare_contract_ref: Iterable[FareContractRef] = field(
+    fare_contract_ref: Sequence[FareContractRef] = field(
         default_factory=list,
         metadata={
             "name": "FareContractRef",

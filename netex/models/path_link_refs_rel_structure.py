@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -15,7 +15,7 @@ class PathLinkRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "pathLinkRefs_RelStructure"
 
-    path_link_ref_or_path_link_ref_by_value: Iterable[
+    path_link_ref_or_path_link_ref_by_value: Sequence[
         PathLinkRef | PathLinkRefByValue
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .alternative_name import AlternativeName
@@ -16,7 +16,7 @@ class AlternativeNamesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "alternativeNames_RelStructure"
 
-    alternative_name: Iterable[AlternativeName] = field(
+    alternative_name: Sequence[AlternativeName] = field(
         default_factory=list,
         metadata={
             "name": "AlternativeName",

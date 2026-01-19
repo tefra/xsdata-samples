@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .codespace_assignment_versioned_child_structure import (
@@ -18,7 +18,7 @@ class CodespaceAssignmentsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "codespaceAssignments_RelStructure"
 
-    codespace_assignment: Iterable[
+    codespace_assignment: Sequence[
         CodespaceAssignmentVersionedChildStructure
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import ForwardRef
 
@@ -24,7 +24,7 @@ class TypesOfFrameRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typesOfFrame_RelStructure"
 
-    type_of_frame_ref_or_type_of_frame: Iterable[
+    type_of_frame_ref_or_type_of_frame: Sequence[
         TypeOfFrameRef | TypeOfFrame
     ] = field(
         default_factory=list,

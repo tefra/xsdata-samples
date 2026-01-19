@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .customer_account_status_ref import CustomerAccountStatusRef
@@ -14,7 +14,7 @@ class CustomerAccountStatusRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "customerAccountStatusRefs_RelStructure"
 
-    customer_account_status_ref: Iterable[CustomerAccountStatusRef] = field(
+    customer_account_status_ref: Sequence[CustomerAccountStatusRef] = field(
         default_factory=list,
         metadata={
             "name": "CustomerAccountStatusRef",

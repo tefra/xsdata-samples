@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .complex_feature_member_versioned_child_structure import (
@@ -16,7 +16,7 @@ class ComplexFeatureMembersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "complexFeatureMembers_RelStructure"
 
-    complex_feature_member: Iterable[
+    complex_feature_member: Sequence[
         ComplexFeatureMemberVersionedChildStructure
     ] = field(
         default_factory=list,

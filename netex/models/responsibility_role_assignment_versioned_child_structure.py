@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .data_role_type_enumeration import DataRoleTypeEnumeration
@@ -40,7 +40,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    data_role_type: Iterable[DataRoleTypeEnumeration] = field(
+    data_role_type: Sequence[DataRoleTypeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "DataRoleType",
@@ -49,7 +49,7 @@ class ResponsibilityRoleAssignmentVersionedChildStructure(
             "tokens": True,
         },
     )
-    stakeholder_role_type: Iterable[StakeholderRoleTypeEnumeration] = field(
+    stakeholder_role_type: Sequence[StakeholderRoleTypeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "StakeholderRoleType",

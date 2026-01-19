@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .line_string import LineString
@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.opengis.net/gml/3.2"
 
 @dataclass(kw_only=True)
 class GeometryArrayPropertyType:
-    choice: Iterable[MultiSurface | Polygon | LineString | Point1] = field(
+    choice: Sequence[MultiSurface | Polygon | LineString | Point1] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .capability_not_supported_error import CapabilityNotSupportedError
@@ -38,7 +38,7 @@ class ServiceDeliveryStructure(ProducerResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    data_object_delivery: Iterable[DataObjectDelivery] = field(
+    data_object_delivery: Sequence[DataObjectDelivery] = field(
         default_factory=list,
         metadata={
             "name": "DataObjectDelivery",

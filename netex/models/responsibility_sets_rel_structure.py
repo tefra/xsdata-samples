@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class ResponsibilitySetsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "responsibilitySets_RelStructure"
 
-    responsibility_set_ref_or_responsibility_set: Iterable[
+    responsibility_set_ref_or_responsibility_set: Sequence[
         ResponsibilitySetRef | ResponsibilitySet
     ] = field(
         default_factory=list,

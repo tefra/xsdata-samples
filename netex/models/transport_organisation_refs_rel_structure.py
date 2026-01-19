@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .authority_ref import AuthorityRef
@@ -15,7 +15,7 @@ class TransportOrganisationRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "transportOrganisationRefs_RelStructure"
 
-    transport_organisation_ref: Iterable[AuthorityRef | OperatorRef] = field(
+    transport_organisation_ref: Sequence[AuthorityRef | OperatorRef] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

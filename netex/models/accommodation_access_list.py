@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .accommodation_access_enumeration import AccommodationAccessEnumeration
@@ -13,7 +13,7 @@ class AccommodationAccessList:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: Iterable[AccommodationAccessEnumeration] = field(
+    value: Sequence[AccommodationAccessEnumeration] = field(
         default_factory=list,
         metadata={
             "tokens": True,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import ForwardRef
 
@@ -71,7 +71,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    code_prefix: Iterable[str] = field(
+    code_prefix: Sequence[str] = field(
         default_factory=list,
         metadata={
             "name": "CodePrefix",
@@ -79,7 +79,7 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    start_value_or_end_value: Iterable[
+    start_value_or_end_value: Sequence[
         CodespaceAssignmentVersionedChildStructure.StartValue
         | CodespaceAssignmentVersionedChildStructure.EndValue
     ] = field(

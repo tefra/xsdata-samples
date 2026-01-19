@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access_vehicle_equipment import AccessVehicleEquipment
@@ -134,7 +134,7 @@ class EquipmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "equipments_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         RetailDeviceRef
         | OnlineServiceRef
         | VehicleRentalServiceRef
