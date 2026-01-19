@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .driver_schedule_frame import DriverScheduleFrame
@@ -28,7 +28,7 @@ class DataObjectsRelStructure:
     class Meta:
         name = "dataObjects_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         CompositeFrame
         | MobilityJourneyFrame
         | MobilityServiceFrame

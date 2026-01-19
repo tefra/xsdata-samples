@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class PointsOfInterestInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "pointsOfInterestInFrame_RelStructure"
 
-    point_of_interest: Iterable[PointOfInterest] = field(
+    point_of_interest: Sequence[PointOfInterest] = field(
         default_factory=list,
         metadata={
             "name": "PointOfInterest",

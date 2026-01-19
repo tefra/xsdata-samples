@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .cell_ref import CellRef
@@ -20,7 +20,7 @@ class ParkingPricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "parkingPrices_RelStructure"
 
-    parking_price_ref_or_cell_ref_or_parking_price: Iterable[
+    parking_price_ref_or_cell_ref_or_parking_price: Sequence[
         ParkingPriceRef | CellRef | ParkingPriceVersionedChildStructure
     ] = field(
         default_factory=list,

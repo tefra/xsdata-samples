@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from decimal import Decimal
 from typing import ForwardRef
@@ -15,7 +15,7 @@ class LocationStructure1:
     class Meta:
         name = "LocationStructure"
 
-    longitude_or_latitude_or_coordinates: Iterable[
+    longitude_or_latitude_or_coordinates: Sequence[
         LocationStructure1.Longitude
         | LocationStructure1.Latitude
         | CoordinatesStructure

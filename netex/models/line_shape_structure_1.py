@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .location_structure_1 import LocationStructure1
@@ -13,7 +13,7 @@ class LineShapeStructure1:
     class Meta:
         name = "LineShapeStructure"
 
-    point: Iterable[LocationStructure1] = field(
+    point: Sequence[LocationStructure1] = field(
         default_factory=list,
         metadata={
             "name": "Point",

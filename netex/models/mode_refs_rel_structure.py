@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .mode_ref import ModeRef
@@ -14,7 +14,7 @@ class ModeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "modeRefs_RelStructure"
 
-    mode_ref: Iterable[ModeRef] = field(
+    mode_ref: Sequence[ModeRef] = field(
         default_factory=list,
         metadata={
             "name": "ModeRef",

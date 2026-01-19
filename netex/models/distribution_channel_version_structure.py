@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
@@ -149,7 +149,7 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             ),
         },
     )
-    payment_methods: Iterable[PaymentMethodEnumeration] = field(
+    payment_methods: Sequence[PaymentMethodEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "PaymentMethods",
@@ -168,7 +168,7 @@ class DistributionChannelVersionStructure(TypeOfValueVersionStructure):
             },
         )
     )
-    distribution_rights: Iterable[DistributionRightsEnumeration] = field(
+    distribution_rights: Sequence[DistributionRightsEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "DistributionRights",

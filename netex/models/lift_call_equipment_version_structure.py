@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from decimal import Decimal
 
@@ -63,7 +63,7 @@ class LiftCallEquipmentVersionStructure(AccessEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    door_orientation: Iterable[CompassBearing8Enumeration] = field(
+    door_orientation: Sequence[CompassBearing8Enumeration] = field(
         default_factory=list,
         metadata={
             "name": "DoorOrientation",

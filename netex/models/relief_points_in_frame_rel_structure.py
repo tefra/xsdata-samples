@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -16,7 +16,7 @@ class ReliefPointsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "reliefPointsInFrame_RelStructure"
 
-    relief_point_or_parking_point: Iterable[
+    relief_point_or_parking_point: Sequence[
         ParkingPoint | GaragePoint | ReliefPoint
     ] = field(
         default_factory=list,

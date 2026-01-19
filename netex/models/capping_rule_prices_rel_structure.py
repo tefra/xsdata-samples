@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .capping_rule_price import CappingRulePrice
@@ -18,7 +18,7 @@ class CappingRulePricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "cappingRulePrices_RelStructure"
 
-    capping_rule_price_ref_or_cell_ref_or_capping_rule_price: Iterable[
+    capping_rule_price_ref_or_cell_ref_or_capping_rule_price: Sequence[
         CappingRulePriceRef | CellRef | CappingRulePrice
     ] = field(
         default_factory=list,

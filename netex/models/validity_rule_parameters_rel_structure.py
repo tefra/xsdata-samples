@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class ValidityRuleParametersRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "validityRuleParameters_RelStructure"
 
-    validity_rule_parameter: Iterable[
+    validity_rule_parameter: Sequence[
         ValidityRuleParameterVersionStructure
     ] = field(
         default_factory=list,

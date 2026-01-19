@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .complex_feature import ComplexFeature
@@ -15,7 +15,7 @@ class SpatialFeaturesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "spatialFeaturesInFrame_RelStructure"
 
-    simple_feature_or_complex_feature: Iterable[
+    simple_feature_or_complex_feature: Sequence[
         SimpleFeature | ComplexFeature
     ] = field(
         default_factory=list,

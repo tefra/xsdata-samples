@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -16,7 +16,7 @@ class CustomerPurchasePackageElementsRelStructure(
     class Meta:
         name = "customerPurchasePackageElements_RelStructure"
 
-    customer_purchase_package_element: Iterable[
+    customer_purchase_package_element: Sequence[
         CustomerPurchasePackageElement
     ] = field(
         default_factory=list,

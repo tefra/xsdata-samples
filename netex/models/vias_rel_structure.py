@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .empty_type_2 import EmptyType2
@@ -17,7 +17,7 @@ class ViasRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "vias_RelStructure"
 
-    none_or_via: Iterable[EmptyType2 | ViaVersionedChildStructure] = field(
+    none_or_via: Sequence[EmptyType2 | ViaVersionedChildStructure] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -16,7 +16,7 @@ class RoutingConstraintZonesInFrameRelStructure(
     class Meta:
         name = "routingConstraintZonesInFrame_RelStructure"
 
-    routing_constraint_zone: Iterable[RoutingConstraintZone] = field(
+    routing_constraint_zone: Sequence[RoutingConstraintZone] = field(
         default_factory=list,
         metadata={
             "name": "RoutingConstraintZone",

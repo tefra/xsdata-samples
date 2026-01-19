@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .offered_travel_specification_ref import OfferedTravelSpecificationRef
@@ -16,7 +16,7 @@ class TravelSpecificationRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "travelSpecificationRefs_RelStructure"
 
-    travel_specification_ref: Iterable[
+    travel_specification_ref: Sequence[
         OfferedTravelSpecificationRef
         | RequestedTravelSpecificationRef
         | TravelSpecificationRef

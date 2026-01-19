@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .blacklist import Blacklist
@@ -14,7 +14,7 @@ class BlacklistsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "blacklistsInFrame_RelStructure"
 
-    blacklist: Iterable[Blacklist] = field(
+    blacklist: Sequence[Blacklist] = field(
         default_factory=list,
         metadata={
             "name": "Blacklist",

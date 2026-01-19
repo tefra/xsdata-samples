@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .default_service_journey_run_time import DefaultServiceJourneyRunTime
@@ -18,7 +18,7 @@ class DefaultServiceJourneyRunTimesRelStructure(
     class Meta:
         name = "defaultServiceJourneyRunTimes_RelStructure"
 
-    default_service_journey_run_time: Iterable[
+    default_service_journey_run_time: Sequence[
         DefaultServiceJourneyRunTime
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
@@ -23,7 +23,7 @@ class ServiceAccessRightRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "serviceAccessRightRefs_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         EntitlementProductRef
         | SupplementProductRef
         | PreassignedFareProductRef

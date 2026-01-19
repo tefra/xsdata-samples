@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .authority import Authority
@@ -22,7 +22,7 @@ class OrganisationsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "organisationsInFrame_RelStructure"
 
-    organisation_or_transport_organisation: Iterable[
+    organisation_or_transport_organisation: Sequence[
         RetailConsortium
         | ServicedOrganisation
         | GeneralOrganisation

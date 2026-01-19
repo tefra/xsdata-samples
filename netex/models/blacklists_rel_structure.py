@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .blacklist import Blacklist
@@ -15,7 +15,7 @@ class BlacklistsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "blacklists_RelStructure"
 
-    blacklist_ref_or_blacklist: Iterable[BlacklistRef | Blacklist] = field(
+    blacklist_ref_or_blacklist: Sequence[BlacklistRef | Blacklist] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

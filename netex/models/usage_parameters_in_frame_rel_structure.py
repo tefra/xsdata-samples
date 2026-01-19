@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .additional_driver_option import AdditionalDriverOption
@@ -50,7 +50,7 @@ class UsageParametersInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "usageParametersInFrame_RelStructure"
 
-    usage_parameter: Iterable[
+    usage_parameter: Sequence[
         AdditionalDriverOption
         | RentalOption
         | RentalPenaltyPolicy

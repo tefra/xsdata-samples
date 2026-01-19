@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .fare_demand_factor import FareDemandFactor
@@ -17,7 +17,7 @@ class FareDemandFactorsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "fareDemandFactors_RelStructure"
 
-    fare_demand_factor_ref_or_fare_demand_factor: Iterable[
+    fare_demand_factor_ref_or_fare_demand_factor: Sequence[
         FareDemandFactorRef | FareDemandFactor
     ] = field(
         default_factory=list,

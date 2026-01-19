@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access_space import AccessSpace
@@ -15,7 +15,7 @@ class AccessSpacesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "accessSpaces_RelStructure"
 
-    access_space_ref_or_access_space: Iterable[
+    access_space_ref_or_access_space: Sequence[
         AccessSpaceRef | AccessSpace
     ] = field(
         default_factory=list,

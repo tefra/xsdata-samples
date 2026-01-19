@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class OperationalContextsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "operationalContextsInFrame_RelStructure"
 
-    operational_context: Iterable[OperationalContext] = field(
+    operational_context: Sequence[OperationalContext] = field(
         default_factory=list,
         metadata={
             "name": "OperationalContext",

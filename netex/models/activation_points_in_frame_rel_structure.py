@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .activation_point import ActivationPoint
@@ -15,7 +15,7 @@ class ActivationPointsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "activationPointsInFrame_RelStructure"
 
-    activation_point: Iterable[BeaconPoint | ActivationPoint] = field(
+    activation_point: Sequence[BeaconPoint | ActivationPoint] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

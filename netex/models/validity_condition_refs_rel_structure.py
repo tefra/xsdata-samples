@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .availability_condition_ref import AvailabilityConditionRef
@@ -17,7 +17,7 @@ class ValidityConditionRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "validityConditionRefs_RelStructure"
 
-    validity_condition_ref: Iterable[
+    validity_condition_ref: Sequence[
         AvailabilityConditionRef
         | ValidityRuleParameterRef
         | ValidityTriggerRef

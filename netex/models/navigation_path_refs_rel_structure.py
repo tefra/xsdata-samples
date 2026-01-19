@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .navigation_path_ref import NavigationPathRef
@@ -14,7 +14,7 @@ class NavigationPathRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "navigationPathRefs_RelStructure"
 
-    navigation_path_ref: Iterable[NavigationPathRef] = field(
+    navigation_path_ref: Sequence[NavigationPathRef] = field(
         default_factory=list,
         metadata={
             "name": "NavigationPathRef",

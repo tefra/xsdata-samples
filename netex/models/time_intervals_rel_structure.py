@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class TimeIntervalsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "timeIntervals_RelStructure"
 
-    time_interval_ref_or_time_interval: Iterable[
+    time_interval_ref_or_time_interval: Sequence[
         TimeIntervalRef | TimeInterval
     ] = field(
         default_factory=list,

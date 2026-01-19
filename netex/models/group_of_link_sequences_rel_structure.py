@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .group_of_link_sequences import GroupOfLinkSequences
@@ -16,7 +16,7 @@ class GroupOfLinkSequencesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "groupOfLinkSequences_RelStructure"
 
-    group_of_link_sequences: Iterable[GroupOfLinkSequences] = field(
+    group_of_link_sequences: Sequence[GroupOfLinkSequences] = field(
         default_factory=list,
         metadata={
             "name": "GroupOfLinkSequences",

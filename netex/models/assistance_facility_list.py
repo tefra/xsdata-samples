@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .assistance_facility_enumeration import AssistanceFacilityEnumeration
@@ -13,7 +13,7 @@ class AssistanceFacilityList:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: Iterable[AssistanceFacilityEnumeration] = field(
+    value: Sequence[AssistanceFacilityEnumeration] = field(
         default_factory=list,
         metadata={
             "tokens": True,

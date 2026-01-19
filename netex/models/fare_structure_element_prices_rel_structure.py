@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .cell_ref import CellRef
@@ -22,7 +22,7 @@ class FareStructureElementPricesRelStructure(
     class Meta:
         name = "fareStructureElementPrices_RelStructure"
 
-    fare_structure_element_price_ref_or_fare_structure_element_price_or_cell_ref: Iterable[
+    fare_structure_element_price_ref_or_fare_structure_element_price_or_cell_ref: Sequence[
         FareStructureElementPriceRef
         | FareStructureElementPriceVersionedChildStructure
         | CellRef

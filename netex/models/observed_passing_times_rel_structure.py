@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .observed_passing_time import ObservedPassingTime
@@ -16,7 +16,7 @@ class ObservedPassingTimesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "observedPassingTimes_RelStructure"
 
-    observed_passing_time: Iterable[ObservedPassingTime] = field(
+    observed_passing_time: Sequence[ObservedPassingTime] = field(
         default_factory=list,
         metadata={
             "name": "ObservedPassingTime",

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from decimal import Decimal
 
@@ -127,7 +127,7 @@ class AccessVehicleEquipmentVersionStructure(
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    suitable_for: Iterable[MobilityEnumeration] = field(
+    suitable_for: Sequence[MobilityEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "SuitableFor",

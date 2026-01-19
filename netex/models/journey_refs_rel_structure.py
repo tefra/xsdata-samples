@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .dated_special_service_ref import DatedSpecialServiceRef
@@ -23,7 +23,7 @@ class JourneyRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "journeyRefs_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         SingleJourneyRef
         | DatedVehicleJourneyRef
         | DatedSpecialServiceRef

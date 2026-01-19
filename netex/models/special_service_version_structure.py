@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from xsdata.models.datatype import XmlDuration, XmlTime
@@ -213,7 +213,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    booking_methods: Iterable[BookingMethodEnumeration] = field(
+    booking_methods: Sequence[BookingMethodEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "BookingMethods",
@@ -238,7 +238,7 @@ class SpecialServiceVersionStructure(JourneyVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    buy_when: Iterable[PurchaseMomentEnumeration] = field(
+    buy_when: Sequence[PurchaseMomentEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "BuyWhen",

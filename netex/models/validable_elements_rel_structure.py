@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .strict_containment_aggregation_structure import (
@@ -17,7 +17,7 @@ class ValidableElementsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "validableElements_RelStructure"
 
-    validable_element_ref_or_validable_element: Iterable[
+    validable_element_ref_or_validable_element: Sequence[
         ValidableElementRef | ValidableElement
     ] = field(
         default_factory=list,

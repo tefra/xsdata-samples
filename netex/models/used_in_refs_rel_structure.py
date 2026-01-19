@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .group_of_distance_matrix_elements_ref import (
@@ -19,7 +19,7 @@ class UsedInRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "usedInRefs_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         ParkingTariffRef
         | TariffRef
         | GroupOfDistanceMatrixElementsRef

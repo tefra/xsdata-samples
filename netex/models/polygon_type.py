@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .abstract_surface_type import AbstractSurfaceType
@@ -19,7 +19,7 @@ class PolygonType(AbstractSurfaceType):
             "namespace": "http://www.opengis.net/gml/3.2",
         },
     )
-    interior: Iterable[Interior] = field(
+    interior: Sequence[Interior] = field(
         default_factory=list,
         metadata={
             "type": "Element",

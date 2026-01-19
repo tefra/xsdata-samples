@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access_ref import AccessRef
@@ -14,7 +14,7 @@ class AccessRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "accessRefs_RelStructure"
 
-    access_ref: Iterable[AccessRef] = field(
+    access_ref: Sequence[AccessRef] = field(
         default_factory=list,
         metadata={
             "name": "AccessRef",

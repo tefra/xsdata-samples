@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .compound_train_ref import CompoundTrainRef
@@ -16,7 +16,7 @@ class VehicleTypeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "vehicleTypeRefs_RelStructure"
 
-    vehicle_type_ref: Iterable[
+    vehicle_type_ref: Sequence[
         CompoundTrainRef | TrainRef | VehicleTypeRef
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .responsibility_role_assignment import ResponsibilityRoleAssignment
@@ -18,7 +18,7 @@ class ResponsibilityRoleAssignmentsRelStructure(
     class Meta:
         name = "responsibilityRoleAssignments_RelStructure"
 
-    responsibility_role_assignment: Iterable[ResponsibilityRoleAssignment] = (
+    responsibility_role_assignment: Sequence[ResponsibilityRoleAssignment] = (
         field(
             default_factory=list,
             metadata={

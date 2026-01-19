@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class TypesOfSecurityListRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfSecurityList_RelStructure"
 
-    type_of_security_list_ref_or_type_of_security_list: Iterable[
+    type_of_security_list_ref_or_type_of_security_list: Sequence[
         TypeOfSecurityListRef | TypeOfSecurityList
     ] = field(
         default_factory=list,

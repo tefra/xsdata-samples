@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .destination_display_ref import DestinationDisplayRef
@@ -14,7 +14,7 @@ class DestinationDisplayRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "destinationDisplayRefs_RelStructure"
 
-    destination_display_ref: Iterable[DestinationDisplayRef] = field(
+    destination_display_ref: Sequence[DestinationDisplayRef] = field(
         default_factory=list,
         metadata={
             "name": "DestinationDisplayRef",

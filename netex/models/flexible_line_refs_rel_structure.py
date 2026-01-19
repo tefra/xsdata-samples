@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .flexible_line_ref import FlexibleLineRef
@@ -14,7 +14,7 @@ class FlexibleLineRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "flexibleLineRefs_RelStructure"
 
-    flexible_line_ref: Iterable[FlexibleLineRef] = field(
+    flexible_line_ref: Sequence[FlexibleLineRef] = field(
         default_factory=list,
         metadata={
             "name": "FlexibleLineRef",

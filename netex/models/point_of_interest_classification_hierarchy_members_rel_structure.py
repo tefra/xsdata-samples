@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .point_of_interest_classification_hierarchy_member_structure import (
@@ -20,7 +20,7 @@ class PointOfInterestClassificationHierarchyMembersRelStructure(
     class Meta:
         name = "pointOfInterestClassificationHierarchyMembers_RelStructure"
 
-    classification_hierarchy_member: Iterable[
+    classification_hierarchy_member: Sequence[
         PointOfInterestClassificationHierarchyMemberStructure
     ] = field(
         default_factory=list,

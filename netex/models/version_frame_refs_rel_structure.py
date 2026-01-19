@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .composite_frame_ref import CompositeFrameRef
@@ -27,7 +27,7 @@ class VersionFrameRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "versionFrameRefs_RelStructure"
 
-    version_frame_ref: Iterable[
+    version_frame_ref: Sequence[
         MobilityJourneyFrameRef
         | MobilityServiceFrameRef
         | SalesTransactionFrameRef

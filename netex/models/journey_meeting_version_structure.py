@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from xsdata.models.datatype import XmlTime
@@ -143,7 +143,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    connecting_stop_point_ref: Iterable[ScheduledStopPointRefStructure] = (
+    connecting_stop_point_ref: Sequence[ScheduledStopPointRefStructure] = (
         field(
             default_factory=list,
             metadata={
@@ -153,7 +153,7 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             },
         )
     )
-    connecting_stop_point_name: Iterable[MultilingualString] = field(
+    connecting_stop_point_name: Sequence[MultilingualString] = field(
         default_factory=list,
         metadata={
             "name": "ConnectingStopPointName",

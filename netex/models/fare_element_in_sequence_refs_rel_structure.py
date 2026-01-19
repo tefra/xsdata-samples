@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access_right_in_product_ref import AccessRightInProductRef
@@ -20,7 +20,7 @@ class FareElementInSequenceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "fareElementInSequenceRefs_RelStructure"
 
-    fare_element_in_sequence_ref: Iterable[
+    fare_element_in_sequence_ref: Sequence[
         ControllableElementInSequenceRef
         | FareStructureElementInSequenceRef
         | AccessRightInProductRef

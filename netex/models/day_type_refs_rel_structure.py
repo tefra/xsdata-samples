@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .day_type_ref import DayTypeRef
@@ -15,7 +15,7 @@ class DayTypeRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "dayTypeRefs_RelStructure"
 
-    day_type_ref: Iterable[FareDayTypeRef | DayTypeRef] = field(
+    day_type_ref: Sequence[FareDayTypeRef | DayTypeRef] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

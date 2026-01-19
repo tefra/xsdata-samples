@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .flexible_stop_place_ref import FlexibleStopPlaceRef
@@ -14,7 +14,7 @@ class FlexibleStopPlaceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "flexibleStopPlaceRefs_RelStructure"
 
-    flexible_stop_place_ref: Iterable[FlexibleStopPlaceRef] = field(
+    flexible_stop_place_ref: Sequence[FlexibleStopPlaceRef] = field(
         default_factory=list,
         metadata={
             "name": "FlexibleStopPlaceRef",

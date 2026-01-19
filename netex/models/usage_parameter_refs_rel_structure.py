@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .additional_driver_option_ref import AdditionalDriverOptionRef
@@ -52,7 +52,7 @@ class UsageParameterRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "usageParameterRefs_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         AdditionalDriverOptionRef
         | RentalOptionRef
         | RentalPenaltyPolicyRef

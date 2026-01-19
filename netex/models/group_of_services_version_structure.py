@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .day_type_ref_structure import DayTypeRefStructure
@@ -107,7 +107,7 @@ class GroupOfServicesVersionStructure(GroupOfEntitiesVersionStructure):
 
     @dataclass(kw_only=True)
     class DayTypes:
-        day_type_ref: Iterable[DayTypeRefStructure] = field(
+        day_type_ref: Sequence[DayTypeRefStructure] = field(
             default_factory=list,
             metadata={
                 "name": "DayTypeRef",

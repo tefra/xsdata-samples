@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .class_in_frame_ref import ClassInFrameRef
@@ -15,7 +15,7 @@ class ClassRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "classRefs_RelStructure"
 
-    class_ref: Iterable[ClassInFrameRef | ClassRef] = field(
+    class_ref: Sequence[ClassInFrameRef | ClassRef] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

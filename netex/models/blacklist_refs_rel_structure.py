@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .blacklist_ref import BlacklistRef
@@ -14,7 +14,7 @@ class BlacklistRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "blacklistRefs_RelStructure"
 
-    blacklist_ref: Iterable[BlacklistRef] = field(
+    blacklist_ref: Sequence[BlacklistRef] = field(
         default_factory=list,
         metadata={
             "name": "BlacklistRef",

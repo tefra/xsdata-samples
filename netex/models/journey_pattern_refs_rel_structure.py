@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .dead_run_journey_pattern_ref import DeadRunJourneyPatternRef
@@ -17,7 +17,7 @@ class JourneyPatternRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "journeyPatternRefs_RelStructure"
 
-    journey_pattern_ref: Iterable[
+    journey_pattern_ref: Sequence[
         ServiceJourneyPatternRef
         | ServicePatternRef
         | DeadRunJourneyPatternRef

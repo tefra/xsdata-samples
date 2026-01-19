@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -25,7 +25,7 @@ class ParkingBaysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "parkingBays_RelStructure"
 
-    parking_bay_ref_or_vehicle_sharing_parking_bay_ref_or_parking_bay: Iterable[
+    parking_bay_ref_or_vehicle_sharing_parking_bay_ref_or_parking_bay: Sequence[
         VehiclePoolingParkingBayRef
         | MonitoredVehicleSharingParkingBayRef
         | VehicleSharingParkingBayRef

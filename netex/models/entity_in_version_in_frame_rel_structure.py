@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .accepted_driver_permit_ref import AcceptedDriverPermitRef
@@ -588,7 +588,7 @@ class EntityInVersionInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "entityInVersionInFrame_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         TripLegRef
         | IndividualPassengerInfoRef
         | VehiclePoolingDriverInfoRef

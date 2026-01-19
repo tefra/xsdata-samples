@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from decimal import Decimal
 
@@ -41,7 +41,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    capped_discount_right_ref: Iterable[CappedDiscountRightRef] = field(
+    capped_discount_right_ref: Sequence[CappedDiscountRightRef] = field(
         default_factory=list,
         metadata={
             "name": "CappedDiscountRightRef",
@@ -49,7 +49,7 @@ class CappingRuleVersionedChildStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    preassigned_fare_product_ref: Iterable[
+    preassigned_fare_product_ref: Sequence[
         SupplementProductRef | PreassignedFareProductRef
     ] = field(
         default_factory=list,

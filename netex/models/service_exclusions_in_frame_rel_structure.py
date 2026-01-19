@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class ServiceExclusionsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "serviceExclusionsInFrame_RelStructure"
 
-    service_exclusion: Iterable[ServiceExclusion] = field(
+    service_exclusion: Sequence[ServiceExclusion] = field(
         default_factory=list,
         metadata={
             "name": "ServiceExclusion",

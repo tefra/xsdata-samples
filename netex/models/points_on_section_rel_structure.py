@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .point_on_line_section import PointOnLineSection
@@ -17,7 +17,7 @@ class PointsOnSectionRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "pointsOnSection_RelStructure"
 
-    point_on_section: Iterable[PointOnLineSection | PointOnSection] = field(
+    point_on_section: Sequence[PointOnLineSection | PointOnSection] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

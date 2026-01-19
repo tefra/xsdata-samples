@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -21,7 +21,7 @@ class PointOfInterestClassificationsViewsRelStructure(
     class Meta:
         name = "pointOfInterestClassificationsViews_RelStructure"
 
-    point_of_interest_classification_ref_or_point_of_interest_classification_view: Iterable[
+    point_of_interest_classification_ref_or_point_of_interest_classification_view: Sequence[
         PointOfInterestClassificationRef | PointOfInterestClassificationView
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class GeographicalUnitsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "geographicalUnits_RelStructure"
 
-    geographical_unit_ref_or_geographical_unit: Iterable[
+    geographical_unit_ref_or_geographical_unit: Sequence[
         GeographicalUnitRef | GeographicalUnit
     ] = field(
         default_factory=list,

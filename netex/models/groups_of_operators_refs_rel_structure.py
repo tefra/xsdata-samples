@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .group_of_operators_ref import GroupOfOperatorsRef
@@ -14,7 +14,7 @@ class GroupsOfOperatorsRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "groupsOfOperatorsRefs_RelStructure"
 
-    group_of_operators_ref: Iterable[GroupOfOperatorsRef] = field(
+    group_of_operators_ref: Sequence[GroupOfOperatorsRef] = field(
         default_factory=list,
         metadata={
             "name": "GroupOfOperatorsRef",

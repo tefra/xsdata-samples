@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .day_of_week_enumeration import DayOfWeekEnumeration
@@ -23,7 +23,7 @@ class MinimumStayVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    requires_nights_away: Iterable[DayOfWeekEnumeration] = field(
+    requires_nights_away: Sequence[DayOfWeekEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "RequiresNightsAway",

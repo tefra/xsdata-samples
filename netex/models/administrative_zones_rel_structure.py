@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import ForwardRef
 
@@ -32,7 +32,7 @@ class AdministrativeZonesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "administrativeZones_RelStructure"
 
-    administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone: Iterable[
+    administrative_zone_ref_or_transport_administrative_zone_or_administrative_zone: Sequence[
         AdministrativeZoneRef
         | TransportAdministrativeZone
         | AdministrativeZone
@@ -181,7 +181,7 @@ class TransportAdministrativeZoneVersionStructure(
     class Meta:
         name = "TransportAdministrativeZone_VersionStructure"
 
-    vehicle_modes: Iterable[AllModesEnumeration] = field(
+    vehicle_modes: Sequence[AllModesEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "VehicleModes",

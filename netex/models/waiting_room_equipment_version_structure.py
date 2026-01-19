@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .class_of_use_ref import ClassOfUseRef
@@ -18,7 +18,7 @@ class WaitingRoomEquipmentVersionStructure(WaitingEquipmentVersionStructure):
     class Meta:
         name = "WaitingRoomEquipment_VersionStructure"
 
-    fare_class: Iterable[FareClassEnumeration] = field(
+    fare_class: Sequence[FareClassEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "FareClass",
@@ -35,7 +35,7 @@ class WaitingRoomEquipmentVersionStructure(WaitingEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    sanitary: Iterable[SanitaryFacilityEnumeration] = field(
+    sanitary: Sequence[SanitaryFacilityEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "Sanitary",

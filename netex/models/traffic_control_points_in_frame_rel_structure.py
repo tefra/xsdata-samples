@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class TrafficControlPointsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "trafficControlPointsInFrame_RelStructure"
 
-    traffic_control_point: Iterable[TrafficControlPoint] = field(
+    traffic_control_point: Sequence[TrafficControlPoint] = field(
         default_factory=list,
         metadata={
             "name": "TrafficControlPoint",

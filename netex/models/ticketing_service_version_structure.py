@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .local_service_version_structure import LocalServiceVersionStructure
@@ -19,7 +19,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
     class Meta:
         name = "TicketingService_VersionStructure"
 
-    vehicle_modes: Iterable[VehicleModeEnumeration] = field(
+    vehicle_modes: Sequence[VehicleModeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "VehicleModes",
@@ -28,7 +28,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "tokens": True,
         },
     )
-    ticketing_service_list: Iterable[TicketingServiceFacilityEnumeration] = (
+    ticketing_service_list: Sequence[TicketingServiceFacilityEnumeration] = (
         field(
             default_factory=list,
             metadata={
@@ -39,7 +39,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             },
         )
     )
-    ticket_type_list: Iterable[Iterable[TicketTypeEnumeration]] = field(
+    ticket_type_list: Sequence[Sequence[TicketTypeEnumeration]] = field(
         default_factory=list,
         metadata={
             "name": "TicketTypeList",
@@ -88,7 +88,7 @@ class TicketingServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    payment_methods: Iterable[PaymentMethodEnumeration] = field(
+    payment_methods: Sequence[PaymentMethodEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "PaymentMethods",

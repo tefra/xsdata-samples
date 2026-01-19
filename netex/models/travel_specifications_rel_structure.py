@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -20,7 +20,7 @@ class TravelSpecificationsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "travelSpecifications_RelStructure"
 
-    travel_specification_ref_or_travel_specification: Iterable[
+    travel_specification_ref_or_travel_specification: Sequence[
         OfferedTravelSpecificationRef
         | RequestedTravelSpecificationRef
         | TravelSpecificationRef

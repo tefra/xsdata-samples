@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .place_in_sequence import PlaceInSequence
@@ -16,7 +16,7 @@ class PlacesInSequenceRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "placesInSequence_RelStructure"
 
-    place_in_sequence: Iterable[PlaceInSequence] = field(
+    place_in_sequence: Sequence[PlaceInSequence] = field(
         default_factory=list,
         metadata={
             "name": "PlaceInSequence",

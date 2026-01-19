@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access_space_ref import AccessSpaceRef
@@ -65,7 +65,7 @@ class DummyPlaceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "dummyPlaceRefs_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         HailAndRideAreaRef
         | FlexibleAreaRef
         | FlexibleQuayRef

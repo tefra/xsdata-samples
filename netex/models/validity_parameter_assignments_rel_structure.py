@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access_right_parameter_assignment import AccessRightParameterAssignment
@@ -27,7 +27,7 @@ class ValidityParameterAssignmentsRelStructure(
     class Meta:
         name = "validityParameterAssignments_RelStructure"
 
-    access_right_parameter_assignment: Iterable[
+    access_right_parameter_assignment: Sequence[
         CustomerPurchaseParameterAssignment
         | SpecificParameterAssignment
         | GenericParameterAssignmentInContext

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .address_ref import AddressRef
@@ -144,7 +144,7 @@ class TravelSpecificationSummaryEndpointStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    tariff_zone_ref: Iterable[TariffZoneRef] = field(
+    tariff_zone_ref: Sequence[TariffZoneRef] = field(
         default_factory=list,
         metadata={
             "name": "TariffZoneRef",

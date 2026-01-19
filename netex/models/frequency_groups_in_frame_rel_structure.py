@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class FrequencyGroupsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "frequencyGroupsInFrame_RelStructure"
 
-    headway_journey_group_or_rhythmical_journey_group: Iterable[
+    headway_journey_group_or_rhythmical_journey_group: Sequence[
         HeadwayJourneyGroup | RhythmicalJourneyGroup
     ] = field(
         default_factory=list,

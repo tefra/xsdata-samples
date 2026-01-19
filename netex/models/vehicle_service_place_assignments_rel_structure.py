@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -18,7 +18,7 @@ class VehicleServicePlaceAssignmentsRelStructure(
     class Meta:
         name = "vehicleServicePlaceAssignments_RelStructure"
 
-    vehicle_sharing_place_assignment_or_vehicle_pooling_place_assignment_or_taxi_service_place_assignment: Iterable[
+    vehicle_sharing_place_assignment_or_vehicle_pooling_place_assignment_or_taxi_service_place_assignment: Sequence[
         VehicleSharingPlaceAssignment
         | VehiclePoolingPlaceAssignment
         | TaxiServicePlaceAssignment

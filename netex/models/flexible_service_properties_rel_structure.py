@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .flexible_service_properties import FlexibleServiceProperties
@@ -15,7 +15,7 @@ class FlexibleServicePropertiesRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "flexibleServiceProperties_RelStructure"
 
-    flexible_service_properties_ref_or_flexible_service_properties: Iterable[
+    flexible_service_properties_ref_or_flexible_service_properties: Sequence[
         FlexibleServicePropertiesRef | FlexibleServiceProperties
     ] = field(
         default_factory=list,

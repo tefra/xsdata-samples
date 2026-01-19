@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from decimal import Decimal
 
@@ -17,7 +17,7 @@ class LuggageServiceVersionStructure(LocalServiceVersionStructure):
     class Meta:
         name = "LuggageService_VersionStructure"
 
-    luggage_service_facility_list: Iterable[
+    luggage_service_facility_list: Sequence[
         LuggageServiceFacilityEnumeration
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .local_service_version_structure import LocalServiceVersionStructure
@@ -14,7 +14,7 @@ class RetailServiceVersionStructure(LocalServiceVersionStructure):
     class Meta:
         name = "RetailService_VersionStructure"
 
-    service_list: Iterable[RetailServiceEnumeration] = field(
+    service_list: Sequence[RetailServiceEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "ServiceList",

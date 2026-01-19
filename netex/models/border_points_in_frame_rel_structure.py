@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .border_point import BorderPoint
@@ -14,7 +14,7 @@ class BorderPointsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "borderPointsInFrame_RelStructure"
 
-    border_point: Iterable[BorderPoint] = field(
+    border_point: Sequence[BorderPoint] = field(
         default_factory=list,
         metadata={
             "name": "BorderPoint",

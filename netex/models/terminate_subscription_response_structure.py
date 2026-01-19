@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .response_endpoint_structure import ResponseEndpointStructure
@@ -13,7 +13,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass(kw_only=True)
 class TerminateSubscriptionResponseStructure(ResponseEndpointStructure):
-    termination_response_status: Iterable[
+    termination_response_status: Sequence[
         TerminationResponseStatusStructure
     ] = field(
         default_factory=list,

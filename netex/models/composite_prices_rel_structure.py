@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .capping_rule_price import CappingRulePrice
@@ -56,7 +56,7 @@ class CompositePricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "compositePrices_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         CustomerPurchasePackagePriceRef
         | ParkingPriceRef
         | TimeIntervalPriceRef

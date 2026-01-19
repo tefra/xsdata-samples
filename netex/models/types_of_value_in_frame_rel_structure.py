@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .branding import Branding
@@ -89,7 +89,7 @@ class TypesOfValueInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfValueInFrame_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         ValueSet
         | TypeOfFleet
         | ParkingBayStatus

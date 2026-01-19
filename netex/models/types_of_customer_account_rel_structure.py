@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class TypesOfCustomerAccountRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfCustomerAccount_RelStructure"
 
-    type_of_customer_account_ref_or_type_of_customer_account: Iterable[
+    type_of_customer_account_ref_or_type_of_customer_account: Sequence[
         TypeOfCustomerAccountRef | TypeOfCustomerAccount
     ] = field(
         default_factory=list,

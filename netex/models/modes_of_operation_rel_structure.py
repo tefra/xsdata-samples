@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .alternative_mode_of_operation import AlternativeModeOfOperation
@@ -20,7 +20,7 @@ class ModesOfOperationRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "modesOfOperationRelStructure"
 
-    mode_of_operation_or_alternative_mode_of_operation_or_conventional_mode_of_operation: Iterable[
+    mode_of_operation_or_alternative_mode_of_operation_or_conventional_mode_of_operation: Sequence[
         PersonalModeOfOperation
         | AlternativeModeOfOperation
         | VehiclePooling

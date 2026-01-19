@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from decimal import Decimal
 
@@ -79,7 +79,7 @@ class SectionsInSequenceRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "sectionsInSequence_RelStructure"
 
-    section_in_sequence: Iterable[SectionInSequence] = field(
+    section_in_sequence: Sequence[SectionInSequence] = field(
         default_factory=list,
         metadata={
             "name": "SectionInSequence",

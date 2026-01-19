@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .accessibility_info_facility_list import AccessibilityInfoFacilityList
@@ -179,7 +179,7 @@ class FacilitySetVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    passenger_information_equipment_list: Iterable[
+    passenger_information_equipment_list: Sequence[
         PassengerInformationEquipmentEnumeration
     ] = field(
         default_factory=list,

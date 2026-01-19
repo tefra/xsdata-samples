@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .link_on_section import LinkOnSection
@@ -16,7 +16,7 @@ class LinksOnSectionRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "linksOnSection_RelStructure"
 
-    link_on_section: Iterable[LinkOnSection] = field(
+    link_on_section: Sequence[LinkOnSection] = field(
         default_factory=list,
         metadata={
             "name": "LinkOnSection",

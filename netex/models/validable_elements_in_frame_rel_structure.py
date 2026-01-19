@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .frame_containment_structure import FrameContainmentStructure
@@ -14,7 +14,7 @@ class ValidableElementsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "validableElementsInFrame_RelStructure"
 
-    validable_element: Iterable[ValidableElement] = field(
+    validable_element: Sequence[ValidableElement] = field(
         default_factory=list,
         metadata={
             "name": "ValidableElement",

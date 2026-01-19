@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class TypesOfTravelDocumentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "typesOfTravelDocuments_RelStructure"
 
-    type_of_travel_document_ref_or_type_of_travel_document: Iterable[
+    type_of_travel_document_ref_or_type_of_travel_document: Sequence[
         TypeOfTravelDocumentRef | TypeOfTravelDocument
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import Any, ForwardRef
 
@@ -396,7 +396,7 @@ class FarePricesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "farePrices_RelStructure"
 
-    fare_price_ref_or_cell_ref_or_fare_price: Iterable[
+    fare_price_ref_or_cell_ref_or_fare_price: Sequence[
         CustomerPurchasePackagePriceRef
         | ParkingPriceRef
         | TimeIntervalPriceRef
@@ -628,7 +628,7 @@ class FareTablesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "fareTables_RelStructure"
 
-    fare_table_ref_or_fare_table: Iterable[
+    fare_table_ref_or_fare_table: Sequence[
         StandardFareTableRef
         | FareTableRef
         | StandardFareTable
@@ -1016,7 +1016,7 @@ class PriceGroupsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "priceGroups_RelStructure"
 
-    price_group_ref_or_price_group: Iterable[PriceGroupRef | PriceGroup] = (
+    price_group_ref_or_price_group: Sequence[PriceGroupRef | PriceGroup] = (
         field(
             default_factory=list,
             metadata={
@@ -1330,7 +1330,7 @@ class CellVersionedChildStructure(VersionedChildStructure):
             ),
         },
     )
-    choice_1: Iterable[
+    choice_1: Sequence[
         CustomerPurchasePackageElementRef
         | CustomerPurchasePackageRef
         | ControllableElementRef
@@ -2592,7 +2592,7 @@ class CellsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "cells_RelStructure"
 
-    choice: Iterable[
+    choice: Sequence[
         Cell
         | CellsRelStructure.CellInContext
         | CustomerPurchasePackagePrice

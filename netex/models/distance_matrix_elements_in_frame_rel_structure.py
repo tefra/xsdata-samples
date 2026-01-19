@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .distance_matrix_element import DistanceMatrixElement
@@ -14,7 +14,7 @@ class DistanceMatrixElementsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "distanceMatrixElementsInFrame_RelStructure"
 
-    distance_matrix_element: Iterable[DistanceMatrixElement] = field(
+    distance_matrix_element: Sequence[DistanceMatrixElement] = field(
         default_factory=list,
         metadata={
             "name": "DistanceMatrixElement",

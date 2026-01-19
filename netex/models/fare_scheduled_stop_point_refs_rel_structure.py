@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .fare_scheduled_stop_point_ref import FareScheduledStopPointRef
@@ -14,7 +14,7 @@ class FareScheduledStopPointRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "fareScheduledStopPointRefs_RelStructure"
 
-    fare_scheduled_stop_point_ref: Iterable[FareScheduledStopPointRef] = field(
+    fare_scheduled_stop_point_ref: Sequence[FareScheduledStopPointRef] = field(
         default_factory=list,
         metadata={
             "name": "FareScheduledStopPointRef",

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .amount_of_price_unit_product_ref import AmountOfPriceUnitProductRef
@@ -14,7 +14,7 @@ class AmountOfPriceUnitRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "amountOfPriceUnitRefs_RelStructure"
 
-    amount_of_price_unit_product_ref: Iterable[AmountOfPriceUnitProductRef] = (
+    amount_of_price_unit_product_ref: Sequence[AmountOfPriceUnitProductRef] = (
         field(
             default_factory=list,
             metadata={

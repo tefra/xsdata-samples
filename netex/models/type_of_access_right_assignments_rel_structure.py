@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -17,7 +17,7 @@ class TypeOfAccessRightAssignmentsRelStructure(
     class Meta:
         name = "TypeOfAccessRightAssignments_RelStructure"
 
-    type_of_access_right_assignment_ref_or_type_of_access_right_assignment: Iterable[
+    type_of_access_right_assignment_ref_or_type_of_access_right_assignment: Sequence[
         TypeOfAccessRightAssignmentRef | TypeOfAccessRightAssignment
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .strict_containment_aggregation_structure import (
@@ -16,7 +16,7 @@ class TargetPassingTimesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "targetPassingTimes_RelStructure"
 
-    target_passing_time: Iterable[TargetPassingTime] = field(
+    target_passing_time: Sequence[TargetPassingTime] = field(
         default_factory=list,
         metadata={
             "name": "TargetPassingTime",

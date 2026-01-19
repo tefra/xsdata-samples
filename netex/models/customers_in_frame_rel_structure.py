@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .customer import Customer
@@ -14,7 +14,7 @@ class CustomersInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "customersInFrame_RelStructure"
 
-    customer: Iterable[Customer] = field(
+    customer: Sequence[Customer] = field(
         default_factory=list,
         metadata={
             "name": "Customer",

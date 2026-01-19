@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .authenticated_request_structure import AuthenticatedRequestStructure
@@ -64,7 +64,7 @@ class TerminateSubscriptionRequestStructure(AuthenticatedRequestStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    all_or_subscription_ref: Iterable[
+    all_or_subscription_ref: Sequence[
         EmptyType1 | SubscriptionQualifierStructure
     ] = field(
         default_factory=list,

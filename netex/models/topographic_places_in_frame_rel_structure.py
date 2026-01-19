@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class TopographicPlacesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "topographicPlacesInFrame_RelStructure"
 
-    topographic_place: Iterable[TopographicPlace] = field(
+    topographic_place: Sequence[TopographicPlace] = field(
         default_factory=list,
         metadata={
             "name": "TopographicPlace",

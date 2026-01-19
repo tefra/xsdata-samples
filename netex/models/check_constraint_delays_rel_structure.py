@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .check_constraint_delay import CheckConstraintDelay
@@ -17,7 +17,7 @@ class CheckConstraintDelaysRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "checkConstraintDelays_RelStructure"
 
-    check_constraint_delay_ref_or_check_constraint_delay: Iterable[
+    check_constraint_delay_ref_or_check_constraint_delay: Sequence[
         CheckConstraintDelayRef | CheckConstraintDelay
     ] = field(
         default_factory=list,

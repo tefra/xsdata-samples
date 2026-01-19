@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .medium_access_device_security_listing_ref import (
@@ -18,7 +18,7 @@ class MediumAccessDeviceSecurityListingRefsRelStructure(
     class Meta:
         name = "mediumAccessDeviceSecurityListingRefs_RelStructure"
 
-    medium_access_device_security_listing_ref: Iterable[
+    medium_access_device_security_listing_ref: Sequence[
         MediumAccessDeviceSecurityListingRef
     ] = field(
         default_factory=list,

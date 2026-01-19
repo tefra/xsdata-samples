@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -14,7 +14,7 @@ class OperationalContexRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "operationalContexRefs_RelStructure"
 
-    operational_context_ref: Iterable[OperationalContextRef] = field(
+    operational_context_ref: Sequence[OperationalContextRef] = field(
         default_factory=list,
         metadata={
             "name": "OperationalContextRef",

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access import Access
@@ -17,7 +17,7 @@ class TransfersInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "transfersInFrame_RelStructure"
 
-    transfer: Iterable[
+    transfer: Sequence[
         Connection | DefaultConnection | SiteConnection | Access
     ] = field(
         default_factory=list,

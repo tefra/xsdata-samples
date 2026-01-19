@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .check_constraint import CheckConstraint
@@ -15,7 +15,7 @@ class CheckConstraintsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "checkConstraints_RelStructure"
 
-    check_constraint_ref_or_check_constraint: Iterable[
+    check_constraint_ref_or_check_constraint: Sequence[
         CheckConstraintRef | CheckConstraint
     ] = field(
         default_factory=list,

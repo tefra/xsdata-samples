@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class TransferRestrictionsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "transferRestrictionsInFrame_RelStructure"
 
-    transfer_restriction: Iterable[TransferRestriction] = field(
+    transfer_restriction: Sequence[TransferRestriction] = field(
         default_factory=list,
         metadata={
             "name": "TransferRestriction",

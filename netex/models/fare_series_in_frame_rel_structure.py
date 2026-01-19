@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .frame_containment_structure import FrameContainmentStructure
@@ -14,7 +14,7 @@ class FareSeriesInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "fareSeriesInFrame_RelStructure"
 
-    series_constraint: Iterable[SeriesConstraint] = field(
+    series_constraint: Sequence[SeriesConstraint] = field(
         default_factory=list,
         metadata={
             "name": "SeriesConstraint",

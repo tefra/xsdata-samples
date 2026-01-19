@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class DriverTripsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "driverTripsInFrame_RelStructure"
 
-    driver_trip: Iterable[DriverTrip] = field(
+    driver_trip: Sequence[DriverTrip] = field(
         default_factory=list,
         metadata={
             "name": "DriverTrip",

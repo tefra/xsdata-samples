@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .error_description_structure import ErrorDescriptionStructure
@@ -15,7 +15,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass(kw_only=True)
 class SubscriptionTerminatedNotificationStructure(ProducerResponseStructure):
-    subscriber_ref: Iterable[ParticipantRefStructure] = field(
+    subscriber_ref: Sequence[ParticipantRefStructure] = field(
         default_factory=list,
         metadata={
             "name": "SubscriberRef",
@@ -23,7 +23,7 @@ class SubscriptionTerminatedNotificationStructure(ProducerResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscription_filter_ref: Iterable[SubscriptionFilterRefStructure] = field(
+    subscription_filter_ref: Sequence[SubscriptionFilterRefStructure] = field(
         default_factory=list,
         metadata={
             "name": "SubscriptionFilterRef",
@@ -31,7 +31,7 @@ class SubscriptionTerminatedNotificationStructure(ProducerResponseStructure):
             "namespace": "http://www.siri.org.uk/siri",
         },
     )
-    subscription_ref: Iterable[SubscriptionQualifierStructure] = field(
+    subscription_ref: Sequence[SubscriptionQualifierStructure] = field(
         default_factory=list,
         metadata={
             "name": "SubscriptionRef",

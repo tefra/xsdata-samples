@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class TrainStopAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "trainStopAssignments_RelStructure"
 
-    train_stop_assignment_ref_or_train_stop_assignment: Iterable[
+    train_stop_assignment_ref_or_train_stop_assignment: Sequence[
         TrainStopAssignmentRef | TrainStopAssignment
     ] = field(
         default_factory=list,

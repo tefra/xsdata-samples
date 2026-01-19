@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .fare_scheduled_stop_point import FareScheduledStopPoint
@@ -15,7 +15,7 @@ class FareScheduledStopPointsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "fareScheduledStopPointsInFrame_RelStructure"
 
-    scheduled_stop_point_or_fare_scheduled_stop_point: Iterable[
+    scheduled_stop_point_or_fare_scheduled_stop_point: Sequence[
         ScheduledStopPoint | FareScheduledStopPoint
     ] = field(
         default_factory=list,

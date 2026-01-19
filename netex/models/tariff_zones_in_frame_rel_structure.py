@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class TariffZonesInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "tariffZonesInFrame_RelStructure"
 
-    tariff_zone: Iterable[FareZone | TariffZone] = field(
+    tariff_zone: Sequence[FareZone | TariffZone] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

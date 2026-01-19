@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import Any
 
@@ -22,7 +22,7 @@ class FareTableRowsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "fareTableRows_RelStructure"
 
-    fare_table_row: Iterable[FareTableRow] = field(
+    fare_table_row: Sequence[FareTableRow] = field(
         default_factory=list,
         metadata={
             "name": "FareTableRow",

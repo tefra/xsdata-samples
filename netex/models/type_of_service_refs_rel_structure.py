@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -14,7 +14,7 @@ class TypeOfServiceRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typeOfServiceRefs_RelStructure"
 
-    type_of_service_ref: Iterable[TypeOfServiceRef] = field(
+    type_of_service_ref: Sequence[TypeOfServiceRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfServiceRef",

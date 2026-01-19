@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .onward_call import OnwardCall
@@ -16,7 +16,7 @@ class OnwardCallsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "onwardCalls_RelStructure"
 
-    onward_call: Iterable[OnwardCall] = field(
+    onward_call: Sequence[OnwardCall] = field(
         default_factory=list,
         metadata={
             "name": "OnwardCall",

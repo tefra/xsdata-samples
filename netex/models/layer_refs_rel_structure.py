@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .layer_ref import LayerRef
@@ -14,7 +14,7 @@ class LayerRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "layerRefs_RelStructure"
 
-    layer_ref: Iterable[LayerRef] = field(
+    layer_ref: Sequence[LayerRef] = field(
         default_factory=list,
         metadata={
             "name": "LayerRef",

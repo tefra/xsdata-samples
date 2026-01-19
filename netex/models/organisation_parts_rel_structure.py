@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -22,7 +22,7 @@ class OrganisationPartsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "organisationParts_RelStructure"
 
-    organisation_part_ref_or_organisation_part: Iterable[
+    organisation_part_ref_or_organisation_part: Sequence[
         ControlCentreRef
         | OrganisationalUnitRef
         | DepartmentRef

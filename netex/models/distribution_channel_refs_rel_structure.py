@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .distribution_channel_ref import DistributionChannelRef
@@ -14,7 +14,7 @@ class DistributionChannelRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "distributionChannelRefs_RelStructure"
 
-    distribution_channel_ref: Iterable[DistributionChannelRef] = field(
+    distribution_channel_ref: Sequence[DistributionChannelRef] = field(
         default_factory=list,
         metadata={
             "name": "DistributionChannelRef",

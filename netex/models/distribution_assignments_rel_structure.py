@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class DistributionAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "distributionAssignments_RelStructure"
 
-    distribution_assignment_ref_or_distribution_assignment: Iterable[
+    distribution_assignment_ref_or_distribution_assignment: Sequence[
         DistributionAssignmentRef | DistributionAssignment
     ] = field(
         default_factory=list,

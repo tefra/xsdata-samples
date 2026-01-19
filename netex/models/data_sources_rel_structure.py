@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class DataSourcesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "dataSources_RelStructure"
 
-    data_source_ref_or_data_source: Iterable[DataSourceRef | DataSource] = (
+    data_source_ref_or_data_source: Sequence[DataSourceRef | DataSource] = (
         field(
             default_factory=list,
             metadata={

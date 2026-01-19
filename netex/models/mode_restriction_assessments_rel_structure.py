@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class ModeRestrictionAssessmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "modeRestrictionAssessments_RelStructure"
 
-    mode_restriction_assessment_ref_or_mode_restriction_assessment: Iterable[
+    mode_restriction_assessment_ref_or_mode_restriction_assessment: Sequence[
         ModeRestrictionAssessmentRef | ModeRestrictionAssessment
     ] = field(
         default_factory=list,

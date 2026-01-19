@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -14,7 +14,7 @@ class WhitelistRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "whitelistRefs_RelStructure"
 
-    whitelist_ref: Iterable[WhitelistRef] = field(
+    whitelist_ref: Sequence[WhitelistRef] = field(
         default_factory=list,
         metadata={
             "name": "WhitelistRef",

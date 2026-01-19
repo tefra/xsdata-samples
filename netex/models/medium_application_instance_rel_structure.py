@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class MediumApplicationInstanceRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "mediumApplicationInstance_RelStructure"
 
-    medium_application_instance: Iterable[MediumApplicationInstance] = field(
+    medium_application_instance: Sequence[MediumApplicationInstance] = field(
         default_factory=list,
         metadata={
             "name": "MediumApplicationInstance",

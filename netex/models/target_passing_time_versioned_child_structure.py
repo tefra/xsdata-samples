@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import ForwardRef
 
@@ -21,7 +21,7 @@ class TargetPassingTimeVersionedChildStructure(
     class Meta:
         name = "TargetPassingTime_VersionedChildStructure"
 
-    choice_1: Iterable[
+    choice_1: Sequence[
         TargetPassingTimeVersionedChildStructure.AimedArrivalTime
         | TargetPassingTimeVersionedChildStructure.ArrivalDayOffset
         | TargetPassingTimeVersionedChildStructure.AimedDepartureTime

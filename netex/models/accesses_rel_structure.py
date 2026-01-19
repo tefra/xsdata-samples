@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access import Access
@@ -15,7 +15,7 @@ class AccessesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "accesses_RelStructure"
 
-    access_ref_or_access: Iterable[AccessRef | Access] = field(
+    access_ref_or_access: Sequence[AccessRef | Access] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

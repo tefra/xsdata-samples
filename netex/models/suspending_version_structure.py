@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from decimal import Decimal
 
@@ -17,7 +17,7 @@ class SuspendingVersionStructure(UsageParameterVersionStructure):
     class Meta:
         name = "Suspending_VersionStructure"
 
-    suspension_policy: Iterable[SuspensionPolicyEnumeration] = field(
+    suspension_policy: Sequence[SuspensionPolicyEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "SuspensionPolicy",

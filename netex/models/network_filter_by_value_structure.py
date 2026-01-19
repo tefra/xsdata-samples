@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access_space_ref import AccessSpaceRef
@@ -81,7 +81,7 @@ class NetworkFilterByValueStructure(ObjectFilterByValueStructure):
 
     @dataclass(kw_only=True)
     class Places:
-        choice: Iterable[
+        choice: Sequence[
             HailAndRideAreaRef
             | FlexibleAreaRef
             | FlexibleQuayRef

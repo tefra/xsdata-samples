@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .cell_ref import CellRef
@@ -24,7 +24,7 @@ class CustomerPurchasePackagePricesRelStructure(
     class Meta:
         name = "customerPurchasePackagePrices_RelStructure"
 
-    customer_purchase_package_price_ref_or_customer_purchase_package_price_or_cell_ref: Iterable[
+    customer_purchase_package_price_ref_or_customer_purchase_package_price_or_cell_ref: Sequence[
         CustomerPurchasePackagePriceRef
         | CustomerPurchasePackagePriceVersionedChildStructure
         | CellRef

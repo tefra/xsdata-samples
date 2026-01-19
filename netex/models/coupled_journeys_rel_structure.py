@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class CoupledJourneysRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "coupledJourneys_RelStructure"
 
-    coupled_journey_ref: Iterable[CoupledJourneyRef] = field(
+    coupled_journey_ref: Sequence[CoupledJourneyRef] = field(
         default_factory=list,
         metadata={
             "name": "CoupledJourneyRef",

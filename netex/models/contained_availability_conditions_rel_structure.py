@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -16,7 +16,7 @@ class ContainedAvailabilityConditionsRelStructure(
     class Meta:
         name = "containedAvailabilityConditions_RelStructure"
 
-    availability_condition: Iterable[AvailabilityCondition] = field(
+    availability_condition: Sequence[AvailabilityCondition] = field(
         default_factory=list,
         metadata={
             "name": "AvailabilityCondition",

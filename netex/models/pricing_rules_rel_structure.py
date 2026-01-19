@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .discounting_rule import DiscountingRule
@@ -17,7 +17,7 @@ class PricingRulesRelStructure(FrameContainmentStructure):
     class Meta:
         name = "pricingRules_RelStructure"
 
-    pricing_rule: Iterable[
+    pricing_rule: Sequence[
         LimitingRuleInContext | LimitingRule | DiscountingRule | PricingRule
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access_spaces_rel_structure import AccessSpacesRelStructure
@@ -183,7 +183,7 @@ class StopPlaceVersionStructure(SiteVersionStructure):
             ),
         },
     )
-    other_transport_modes: Iterable[VehicleModeEnumeration] = field(
+    other_transport_modes: Sequence[VehicleModeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "OtherTransportModes",

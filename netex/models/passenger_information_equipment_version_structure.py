@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from decimal import Decimal
 
@@ -253,7 +253,7 @@ class PassengerInformationEquipmentVersionStructure(
             ),
         },
     )
-    passenger_information_equipment_list: Iterable[
+    passenger_information_equipment_list: Sequence[
         PassengerInformationEquipmentEnumeration
     ] = field(
         default_factory=list,

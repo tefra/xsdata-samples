@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access_zone import AccessZone
@@ -15,7 +15,7 @@ class AccessZonesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "accessZones_RelStructure"
 
-    access_zone_ref_or_access_zone: Iterable[AccessZoneRef | AccessZone] = (
+    access_zone_ref_or_access_zone: Sequence[AccessZoneRef | AccessZone] = (
         field(
             default_factory=list,
             metadata={

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .scope_of_ticket_enumeration import ScopeOfTicketEnumeration
@@ -13,7 +13,7 @@ class ScopeOfTicketList:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: Iterable[ScopeOfTicketEnumeration] = field(
+    value: Sequence[ScopeOfTicketEnumeration] = field(
         default_factory=list,
         metadata={
             "tokens": True,

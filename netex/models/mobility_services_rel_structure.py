@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .car_pooling_service import CarPoolingService
@@ -19,7 +19,7 @@ class MobilityServicesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "mobilityServices_RelStructure"
 
-    mobility_service_or_common_vehicle_service_or_vehicle_pooling_service: Iterable[
+    mobility_service_or_common_vehicle_service_or_vehicle_pooling_service: Sequence[
         OnlineService
         | VehicleRentalService
         | VehicleSharingService

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class LinesInDirectionRefsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "linesInDirectionRefs_RelStructure"
 
-    line_in_direction_ref: Iterable[LineInDirectionRef] = field(
+    line_in_direction_ref: Sequence[LineInDirectionRef] = field(
         default_factory=list,
         metadata={
             "name": "LineInDirectionRef",

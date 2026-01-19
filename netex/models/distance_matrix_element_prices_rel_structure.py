@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .cell_ref import CellRef
@@ -20,7 +20,7 @@ class DistanceMatrixElementPricesRelStructure(
     class Meta:
         name = "distanceMatrixElementPrices_RelStructure"
 
-    distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref: Iterable[
+    distance_matrix_element_price_ref_or_distance_matrix_element_price_or_cell_ref: Sequence[
         DistanceMatrixElementPriceRef | DistanceMatrixElementPrice | CellRef
     ] = field(
         default_factory=list,

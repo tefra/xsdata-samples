@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class NavigationPathsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "navigationPaths_RelStructure"
 
-    navigation_path_ref_or_navigation_path: Iterable[
+    navigation_path_ref_or_navigation_path: Sequence[
         NavigationPathRef | NavigationPath
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .administrative_zone_ref import AdministrativeZoneRef
@@ -14,7 +14,7 @@ class AdministrativeZoneRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "administrativeZoneRefs_RelStructure"
 
-    administrative_zone_ref: Iterable[AdministrativeZoneRef] = field(
+    administrative_zone_ref: Sequence[AdministrativeZoneRef] = field(
         default_factory=list,
         metadata={
             "name": "AdministrativeZoneRef",

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import ForwardRef
 
@@ -18,7 +18,7 @@ class GenericParameterAssignmentsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "genericParameterAssignments_RelStructure"
 
-    generic_parameter_assignment_or_generic_parameter_assignment_in_context: Iterable[
+    generic_parameter_assignment_or_generic_parameter_assignment_in_context: Sequence[
         GenericParameterAssignment | GenericParameterAssignmentInContext
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access_ref import AccessRef
@@ -17,7 +17,7 @@ class TransferRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "transferRefs_RelStructure"
 
-    connection_ref_or_transfer_ref: Iterable[
+    connection_ref_or_transfer_ref: Sequence[
         DefaultConnectionRef | SiteConnectionRef | ConnectionRef | AccessRef
     ] = field(
         default_factory=list,

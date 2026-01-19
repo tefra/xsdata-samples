@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .price_rule_step_result_structure import PriceRuleStepResultStructure
@@ -16,7 +16,7 @@ class PriceRuleStepResultsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "priceRuleStepResults_RelStructure"
 
-    rule_step_result: Iterable[PriceRuleStepResultStructure] = field(
+    rule_step_result: Sequence[PriceRuleStepResultStructure] = field(
         default_factory=list,
         metadata={
             "name": "RuleStepResult",

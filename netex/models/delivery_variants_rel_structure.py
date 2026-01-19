@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .delivery_variant import DeliveryVariant
@@ -16,7 +16,7 @@ class DeliveryVariantsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "deliveryVariants_RelStructure"
 
-    delivery_variant: Iterable[DeliveryVariant] = field(
+    delivery_variant: Sequence[DeliveryVariant] = field(
         default_factory=list,
         metadata={
             "name": "DeliveryVariant",

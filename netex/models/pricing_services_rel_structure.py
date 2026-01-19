@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .pricing_service import PricingService
@@ -16,7 +16,7 @@ class PricingServicesRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "pricingServices_RelStructure"
 
-    pricing_service: Iterable[PricingService] = field(
+    pricing_service: Sequence[PricingService] = field(
         default_factory=list,
         metadata={
             "name": "PricingService",

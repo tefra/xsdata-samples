@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -18,7 +18,7 @@ class TrainComponentLabelAssignmentRefsRelStructure(
     class Meta:
         name = "TrainComponentLabelAssignmentRefs_RelStructure"
 
-    train_component_label_assignment_ref: Iterable[
+    train_component_label_assignment_ref: Sequence[
         TrainComponentLabelAssignmentRef
     ] = field(
         default_factory=list,

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .geographical_structure_factor import GeographicalStructureFactor
@@ -19,7 +19,7 @@ class GeographicalStructureFactorsRelStructure(
     class Meta:
         name = "geographicalStructureFactors_RelStructure"
 
-    geographical_structure_factor_ref_or_geographical_structure_factor: Iterable[
+    geographical_structure_factor_ref_or_geographical_structure_factor: Sequence[
         GeographicalStructureFactorRef | GeographicalStructureFactor
     ] = field(
         default_factory=list,

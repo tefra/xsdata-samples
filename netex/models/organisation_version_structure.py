@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from typing import Any
 
@@ -154,7 +154,7 @@ class OrganisationVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    organisation_type: Iterable[OrganisationTypeEnumeration] = field(
+    organisation_type: Sequence[OrganisationTypeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "OrganisationType",

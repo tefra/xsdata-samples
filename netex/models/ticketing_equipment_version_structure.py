@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from decimal import Decimal
 
@@ -23,7 +23,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
     class Meta:
         name = "TicketingEquipment_VersionStructure"
 
-    vehicle_modes: Iterable[AllModesEnumeration] = field(
+    vehicle_modes: Sequence[AllModesEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "VehicleModes",
@@ -106,7 +106,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    payment_methods: Iterable[PaymentMethodEnumeration] = field(
+    payment_methods: Sequence[PaymentMethodEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "PaymentMethods",
@@ -115,7 +115,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "tokens": True,
         },
     )
-    ticket_types_available: Iterable[TicketTypeEnumeration] = field(
+    ticket_types_available: Sequence[TicketTypeEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "TicketTypesAvailable",
@@ -124,7 +124,7 @@ class TicketingEquipmentVersionStructure(PassengerEquipmentVersionStructure):
             "tokens": True,
         },
     )
-    scope_of_tickets_available: Iterable[ScopeOfTicketEnumeration] = field(
+    scope_of_tickets_available: Sequence[ScopeOfTicketEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "ScopeOfTicketsAvailable",

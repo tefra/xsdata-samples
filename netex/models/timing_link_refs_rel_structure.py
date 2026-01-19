@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -15,7 +15,7 @@ class TimingLinkRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "timingLinkRefs_RelStructure"
 
-    timing_link_ref_or_timing_link_ref_by_value: Iterable[
+    timing_link_ref_or_timing_link_ref_by_value: Sequence[
         TimingLinkRef | TimingLinkRefByValue
     ] = field(
         default_factory=list,

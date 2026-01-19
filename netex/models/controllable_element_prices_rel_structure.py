@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .cell_ref import CellRef
@@ -20,7 +20,7 @@ class ControllableElementPricesRelStructure(
     class Meta:
         name = "controllableElementPrices_RelStructure"
 
-    controllable_element_price_ref_or_cell_ref_or_controllable_element_price: Iterable[
+    controllable_element_price_ref_or_cell_ref_or_controllable_element_price: Sequence[
         ControllableElementPriceRef | CellRef | ControllableElementPrice
     ] = field(
         default_factory=list,

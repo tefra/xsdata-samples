@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .all_vehicle_modes_of_transport_enumeration import (
@@ -72,7 +72,7 @@ class FlexibleStopPlaceVersionStructure(PlaceVersionStructure):
 
     @dataclass(kw_only=True)
     class Areas:
-        choice: Iterable[
+        choice: Sequence[
             FlexibleArea
             | FlexibleAreaRef
             | HailAndRideArea

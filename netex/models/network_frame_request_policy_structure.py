@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from xsdata.models.datatype import XmlDateTime, XmlDuration
@@ -52,7 +52,7 @@ class NetworkFrameRequestPolicyStructure:
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    request_detail: Iterable[OutputDetailEnumeration] = field(
+    request_detail: Sequence[OutputDetailEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "RequestDetail",

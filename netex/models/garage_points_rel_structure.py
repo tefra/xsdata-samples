@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .garage_point import GaragePoint
@@ -17,7 +17,7 @@ class GaragePointsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "garagePoints_RelStructure"
 
-    garage_point_ref_or_garage_point: Iterable[
+    garage_point_ref_or_garage_point: Sequence[
         GaragePointRef | GaragePoint
     ] = field(
         default_factory=list,

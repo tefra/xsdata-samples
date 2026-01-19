@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class SchematicMapsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "schematicMapsInFrame_RelStructure"
 
-    schematic_map: Iterable[SchematicMap] = field(
+    schematic_map: Sequence[SchematicMap] = field(
         default_factory=list,
         metadata={
             "name": "SchematicMap",

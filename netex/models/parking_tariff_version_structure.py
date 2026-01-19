@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .alternative_names_rel_structure import AlternativeNamesRelStructure
@@ -214,7 +214,7 @@ class ParkingTariffVersionStructure(DataManagedObjectStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    parking_vehicle_types: Iterable[ParkingVehicleEnumeration] = field(
+    parking_vehicle_types: Sequence[ParkingVehicleEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "ParkingVehicleTypes",

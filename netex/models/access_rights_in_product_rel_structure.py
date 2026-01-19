@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .access_right_in_product import AccessRightInProduct
@@ -17,7 +17,7 @@ class AccessRightsInProductRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "accessRightsInProduct_RelStructure"
 
-    access_right_in_product_ref_or_access_right_in_product: Iterable[
+    access_right_in_product_ref_or_access_right_in_product: Sequence[
         AccessRightInProductRef | AccessRightInProduct
     ] = field(
         default_factory=list,

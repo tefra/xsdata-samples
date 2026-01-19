@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -19,7 +19,7 @@ class SiteRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "siteRefs_RelStructure"
 
-    stop_place_ref_or_site_ref: Iterable[
+    stop_place_ref_or_site_ref: Sequence[
         TaxiRankRef
         | StopPlaceRef
         | ParkingRef

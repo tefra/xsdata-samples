@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .authority import Authority
@@ -15,7 +15,7 @@ class TransportOperatorsInFrameRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "transportOperatorsInFrame_RelStructure"
 
-    authority_or_operator: Iterable[Authority | Operator] = field(
+    authority_or_operator: Sequence[Authority | Operator] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .boarding_position_ref import BoardingPositionRef
@@ -14,7 +14,7 @@ class BoardingPositionRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "boardingPositionRefs_RelStructure"
 
-    boarding_position_ref: Iterable[BoardingPositionRef] = field(
+    boarding_position_ref: Sequence[BoardingPositionRef] = field(
         default_factory=list,
         metadata={
             "name": "BoardingPositionRef",

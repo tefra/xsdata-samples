@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from xsdata.models.datatype import XmlDateTime
@@ -14,7 +14,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass(kw_only=True)
 class SubscriptionResponseStructure(ResponseEndpointStructure):
-    response_status: Iterable[ResponseStatus] = field(
+    response_status: Sequence[ResponseStatus] = field(
         default_factory=list,
         metadata={
             "name": "ResponseStatus",

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .accepted_driver_permit import AcceptedDriverPermit
@@ -14,7 +14,7 @@ class AcceptedDriverPermitsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "acceptedDriverPermits_RelStructure"
 
-    accepted_driver_permit: Iterable[AcceptedDriverPermit] = field(
+    accepted_driver_permit: Sequence[AcceptedDriverPermit] = field(
         default_factory=list,
         metadata={
             "name": "AcceptedDriverPermit",

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from decimal import Decimal
 
@@ -118,7 +118,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    fare_points_in_pattern: Iterable[FarePointsInPatternRelStructure] = field(
+    fare_points_in_pattern: Sequence[FarePointsInPatternRelStructure] = field(
         default_factory=list,
         metadata={
             "name": "farePointsInPattern",
@@ -126,7 +126,7 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    journey_patterns: Iterable[JourneyPatternRefsRelStructure] = field(
+    journey_patterns: Sequence[JourneyPatternRefsRelStructure] = field(
         default_factory=list,
         metadata={
             "name": "journeyPatterns",
@@ -134,14 +134,14 @@ class SeriesConstraintVersionStructure(PriceableObjectVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    prices: Iterable[SeriesConstraintPricesRelStructure] = field(
+    prices: Sequence[SeriesConstraintPricesRelStructure] = field(
         default_factory=list,
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    replaces: Iterable[SeriesConstraintRefsRelStructure] = field(
+    replaces: Sequence[SeriesConstraintRefsRelStructure] = field(
         default_factory=list,
         metadata={
             "type": "Element",

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 from decimal import Decimal
 
@@ -114,7 +114,7 @@ class UserProfileVersionStructure(UsageParameterVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    proof_required: Iterable[ProofOfIdentityEnumeration] = field(
+    proof_required: Sequence[ProofOfIdentityEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "ProofRequired",

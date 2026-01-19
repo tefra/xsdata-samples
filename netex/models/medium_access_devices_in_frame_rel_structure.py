@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .emv_card import EmvCard
@@ -16,7 +16,7 @@ class MediumAccessDevicesInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "mediumAccessDevicesInFrame_RelStructure"
 
-    emv_card_or_smartcard_or_mobile_device: Iterable[
+    emv_card_or_smartcard_or_mobile_device: Sequence[
         EmvCard | Smartcard | MobileDevice
     ] = field(
         default_factory=list,

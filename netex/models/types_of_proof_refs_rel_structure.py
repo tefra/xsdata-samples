@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -14,7 +14,7 @@ class TypesOfProofRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "typesOfProofRefs_RelStructure"
 
-    type_of_proof_ref: Iterable[TypeOfProofRef] = field(
+    type_of_proof_ref: Sequence[TypeOfProofRef] = field(
         default_factory=list,
         metadata={
             "name": "TypeOfProofRef",

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -15,7 +15,7 @@ class RoutesRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "routes_RelStructure"
 
-    route_ref_or_route: Iterable[RouteRef | Route] = field(
+    route_ref_or_route: Sequence[RouteRef | Route] = field(
         default_factory=list,
         metadata={
             "type": "Elements",

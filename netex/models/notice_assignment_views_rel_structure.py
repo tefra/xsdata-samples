@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .containment_aggregation_structure import ContainmentAggregationStructure
@@ -14,7 +14,7 @@ class NoticeAssignmentViewsRelStructure(ContainmentAggregationStructure):
     class Meta:
         name = "noticeAssignmentViews_RelStructure"
 
-    notice_assignment_view: Iterable[NoticeAssignmentView] = field(
+    notice_assignment_view: Sequence[NoticeAssignmentView] = field(
         default_factory=list,
         metadata={
             "name": "NoticeAssignmentView",

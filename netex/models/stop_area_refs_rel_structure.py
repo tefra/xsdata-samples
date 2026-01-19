@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -14,7 +14,7 @@ class StopAreaRefsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "stopAreaRefs_RelStructure"
 
-    stop_area_ref: Iterable[StopAreaRefStructure] = field(
+    stop_area_ref: Sequence[StopAreaRefStructure] = field(
         default_factory=list,
         metadata={
             "name": "StopAreaRef",

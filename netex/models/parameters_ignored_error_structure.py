@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .error_code_structure import ErrorCodeStructure
@@ -10,7 +10,7 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass(kw_only=True)
 class ParametersIgnoredErrorStructure(ErrorCodeStructure):
-    parameter_name: Iterable[str] = field(
+    parameter_name: Sequence[str] = field(
         default_factory=list,
         metadata={
             "name": "ParameterName",

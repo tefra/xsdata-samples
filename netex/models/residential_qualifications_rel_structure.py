@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .one_to_many_relationship_structure import OneToManyRelationshipStructure
@@ -15,7 +15,7 @@ class ResidentialQualificationsRelStructure(OneToManyRelationshipStructure):
     class Meta:
         name = "residentialQualifications_RelStructure"
 
-    residential_qualification_ref_or_residential_qualification: Iterable[
+    residential_qualification_ref_or_residential_qualification: Sequence[
         ResidentialQualificationRef | ResidentialQualification
     ] = field(
         default_factory=list,

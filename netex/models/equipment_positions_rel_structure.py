@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .equipment_position import EquipmentPosition
@@ -16,7 +16,7 @@ class EquipmentPositionsRelStructure(StrictContainmentAggregationStructure):
     class Meta:
         name = "equipmentPositions_RelStructure"
 
-    equipment_position: Iterable[EquipmentPosition] = field(
+    equipment_position: Sequence[EquipmentPosition] = field(
         default_factory=list,
         metadata={
             "name": "EquipmentPosition",

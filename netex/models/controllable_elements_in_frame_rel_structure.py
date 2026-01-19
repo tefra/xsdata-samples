@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .controllable_element import ControllableElement
@@ -14,7 +14,7 @@ class ControllableElementsInFrameRelStructure(FrameContainmentStructure):
     class Meta:
         name = "controllableElementsInFrame_RelStructure"
 
-    controllable_element: Iterable[ControllableElement] = field(
+    controllable_element: Sequence[ControllableElement] = field(
         default_factory=list,
         metadata={
             "name": "ControllableElement",

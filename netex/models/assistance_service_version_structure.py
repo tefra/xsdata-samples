@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from collections.abc import Iterable
+from collections.abc import Sequence
 from dataclasses import dataclass, field
 
 from .accessibility_tool_enumeration import AccessibilityToolEnumeration
@@ -45,7 +45,7 @@ class AssistanceServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    accessibility_tool_list: Iterable[AccessibilityToolEnumeration] = field(
+    accessibility_tool_list: Sequence[AccessibilityToolEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "AccessibilityToolList",
@@ -54,7 +54,7 @@ class AssistanceServiceVersionStructure(LocalServiceVersionStructure):
             "tokens": True,
         },
     )
-    languages: Iterable[str] = field(
+    languages: Sequence[str] = field(
         default_factory=list,
         metadata={
             "name": "Languages",
@@ -71,7 +71,7 @@ class AssistanceServiceVersionStructure(LocalServiceVersionStructure):
             "namespace": "http://www.netex.org.uk/netex",
         },
     )
-    emergency_service_list: Iterable[EmergencyServiceEnumeration] = field(
+    emergency_service_list: Sequence[EmergencyServiceEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "EmergencyServiceList",
@@ -80,7 +80,7 @@ class AssistanceServiceVersionStructure(LocalServiceVersionStructure):
             "tokens": True,
         },
     )
-    safety_facility_list: Iterable[SafetyFacilityEnumeration] = field(
+    safety_facility_list: Sequence[SafetyFacilityEnumeration] = field(
         default_factory=list,
         metadata={
             "name": "SafetyFacilityList",
