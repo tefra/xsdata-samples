@@ -177,16 +177,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='paddr',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='11'
-                                                        ),
-                                                        right=Right(
-                                                            value='0'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='11'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='0'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),
@@ -213,16 +211,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='pwdata',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='31'
-                                                        ),
-                                                        right=Right(
-                                                            value='0'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='31'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='0'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),
@@ -241,16 +237,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='prdata',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='31'
-                                                        ),
-                                                        right=Right(
-                                                            value='0'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='31'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='0'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),

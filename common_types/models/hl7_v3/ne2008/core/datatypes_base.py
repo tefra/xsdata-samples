@@ -3345,20 +3345,18 @@ class IvlTsExplicit:
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: list[PqExplicit] = field(
-        default_factory=list,
+    width: None | PqExplicit = field(
+        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
         },
     )
-    high: list[IvxbTsExplicit] = field(
-        default_factory=list,
+    high: None | IvxbTsExplicit = field(
+        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
         },
     )
     center: None | TsExplicit = field(
@@ -3842,20 +3840,18 @@ class IvlTs(SxcmTs):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: list[Pq] = field(
-        default_factory=list,
+    width: None | Pq = field(
+        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
         },
     )
-    high: list[IvxbTs] = field(
-        default_factory=list,
+    high: None | IvxbTs = field(
+        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
         },
     )
     center: None | Ts = field(

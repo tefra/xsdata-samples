@@ -369,16 +369,14 @@ obj = Design(
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='2'
-                                        ),
-                                        right=Right(
-                                            value='2'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='2'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='2'
+                                    )
+                                )
                             ),
                             port_ref='clkout',
                             component_instance_ref='ucgu'
@@ -392,16 +390,14 @@ obj = Design(
                     internal_port_reference=[
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='0'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='0'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='clkout',
                             component_instance_ref='ucgu'
@@ -419,16 +415,14 @@ obj = Design(
                     internal_port_reference=[
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='0'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='0'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='rstout_an',
                             component_instance_ref='urgu'
@@ -450,16 +444,14 @@ obj = Design(
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='1'
-                                        ),
-                                        right=Right(
-                                            value='1'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='1'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='1'
+                                    )
+                                )
                             ),
                             port_ref='rstout_an',
                             component_instance_ref='urgu'
@@ -480,256 +472,224 @@ obj = Design(
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='15'
-                                        ),
-                                        right=Right(
-                                            value='15'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='15'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='15'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv1',
                             component_instance_ref='uahbbus'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='14'
-                                        ),
-                                        right=Right(
-                                            value='14'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='14'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='14'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv1',
                             component_instance_ref='uahbbus'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='13'
-                                        ),
-                                        right=Right(
-                                            value='13'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='13'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='13'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv1',
                             component_instance_ref='uahbbus'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='12'
-                                        ),
-                                        right=Right(
-                                            value='12'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='12'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='12'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv1',
                             component_instance_ref='uahbbus'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='11'
-                                        ),
-                                        right=Right(
-                                            value='11'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='11'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='11'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv1',
                             component_instance_ref='uahbbus'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='10'
-                                        ),
-                                        right=Right(
-                                            value='10'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='10'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='10'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv1',
                             component_instance_ref='uahbbus'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='9'
-                                        ),
-                                        right=Right(
-                                            value='9'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='9'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='9'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv1',
                             component_instance_ref='uahbbus'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='8'
-                                        ),
-                                        right=Right(
-                                            value='8'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='8'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='8'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv1',
                             component_instance_ref='uahbbus'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='7'
-                                        ),
-                                        right=Right(
-                                            value='7'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='7'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='7'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv1',
                             component_instance_ref='uahbbus'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='6'
-                                        ),
-                                        right=Right(
-                                            value='6'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='6'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='6'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv1',
                             component_instance_ref='uahbbus'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='5'
-                                        ),
-                                        right=Right(
-                                            value='5'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='5'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='5'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv1',
                             component_instance_ref='uahbbus'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='4'
-                                        ),
-                                        right=Right(
-                                            value='4'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='4'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='4'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv1',
                             component_instance_ref='uahbbus'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='3'
-                                        ),
-                                        right=Right(
-                                            value='3'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='3'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='3'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv1',
                             component_instance_ref='uahbbus'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='2'
-                                        ),
-                                        right=Right(
-                                            value='2'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='2'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='2'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv1',
                             component_instance_ref='uahbbus'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='1'
-                                        ),
-                                        right=Right(
-                                            value='1'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='1'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='1'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv1',
                             component_instance_ref='uahbbus'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='0'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='0'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv1',
                             component_instance_ref='uahbbus'
@@ -740,64 +700,56 @@ obj = Design(
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='3'
-                                        ),
-                                        right=Right(
-                                            value='3'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='3'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='3'
+                                    )
+                                )
                             ),
                             port_ref='hmaster_s',
                             component_instance_ref='uahbram'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='2'
-                                        ),
-                                        right=Right(
-                                            value='2'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='2'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='2'
+                                    )
+                                )
                             ),
                             port_ref='hmaster_s',
                             component_instance_ref='uahbram'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='1'
-                                        ),
-                                        right=Right(
-                                            value='1'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='1'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='1'
+                                    )
+                                )
                             ),
                             port_ref='hmaster_s',
                             component_instance_ref='uahbram'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='0'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='0'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='hmaster_s',
                             component_instance_ref='uahbram'

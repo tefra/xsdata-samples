@@ -515,48 +515,42 @@ obj = Design(
                     internal_port_reference=[
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='7'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='7'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='scaler',
                             component_instance_ref='i_uart_1'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='7'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='7'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='scaler',
                             component_instance_ref='i_uart'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='7'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='7'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='scaler',
                             component_instance_ref='i_uartcrosser'
@@ -587,16 +581,14 @@ obj = Design(
                     internal_port_reference=[
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='14'
-                                        ),
-                                        right=Right(
-                                            value='4'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='14'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='4'
+                                    )
+                                )
                             ),
                             port_ref='irq',
                             component_instance_ref='i_irqctrl'

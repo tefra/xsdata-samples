@@ -337,16 +337,14 @@ obj = Design(
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='0'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='0'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='clkout',
                             component_instance_ref='i_cgu'
@@ -372,16 +370,14 @@ obj = Design(
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='0'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='0'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='rstout_an',
                             component_instance_ref='i_rgu'

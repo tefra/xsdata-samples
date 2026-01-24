@@ -451,16 +451,14 @@ obj = Design(
                     internal_port_reference=[
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='23'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='23'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='dac_data',
                             component_instance_ref='i_mp3Decode'
@@ -482,48 +480,42 @@ obj = Design(
                     internal_port_reference=[
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='15'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='15'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv0',
                             component_instance_ref='i_ahbbus25'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='15'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='15'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv3',
                             component_instance_ref='i_ahbbus25'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='15'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='15'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='hsplit_slv4',
                             component_instance_ref='i_ahbbus25'

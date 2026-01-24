@@ -55,12 +55,10 @@ class ProceedingsSeriesMetadata:
             "type": "Element",
         },
     )
-    volume: list[Volume] = field(
-        default_factory=list,
+    volume: None | Volume = field(
+        default=None,
         metadata={
             "type": "Element",
-            "max_occurs": 2,
-            "sequence": 1,
         },
     )
     proceedings_subject: list[ProceedingsSubject] = field(
