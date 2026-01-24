@@ -223,16 +223,14 @@ obj = Design(
                     internal_port_reference=[
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='3'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='3'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='gpi',
                             component_instance_ref='i_i2c_gpio'
@@ -251,16 +249,14 @@ obj = Design(
                     internal_port_reference=[
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='9'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='9'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='address',
                             component_instance_ref='i_i2c_gpio'
@@ -279,16 +275,14 @@ obj = Design(
                     internal_port_reference=[
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='9'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='9'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='address',
                             component_instance_ref='i_i2c_memory'
@@ -323,32 +317,28 @@ obj = Design(
                     internal_port_reference=[
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='23'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='23'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='data',
                             component_instance_ref='i_dac'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='23'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='23'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='mp3Decode_dac_data',
                             component_instance_ref='i_Leon2Platform'
@@ -362,16 +352,14 @@ obj = Design(
                     internal_port_reference=[
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='3'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='3'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='gpo',
                             component_instance_ref='i_i2c_gpio'

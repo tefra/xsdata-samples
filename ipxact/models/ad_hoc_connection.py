@@ -117,7 +117,6 @@ class AdHocConnection:
             metadata={
                 "name": "externalPortReference",
                 "type": "Element",
-                "sequence": 1,
             },
         )
 

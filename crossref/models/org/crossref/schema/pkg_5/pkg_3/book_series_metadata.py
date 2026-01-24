@@ -86,12 +86,10 @@ class BookSeriesMetadata:
             "namespace": "http://www.ncbi.nlm.nih.gov/JATS1",
         },
     )
-    volume: list[Volume] = field(
-        default_factory=list,
+    volume: None | Volume = field(
+        default=None,
         metadata={
             "type": "Element",
-            "max_occurs": 2,
-            "sequence": 1,
         },
     )
     edition_number: None | EditionNumber = field(
@@ -104,7 +102,7 @@ class BookSeriesMetadata:
         default_factory=list,
         metadata={
             "type": "Element",
-            "max_occurs": 20,
+            "max_occurs": 10,
         },
     )
     isbn: list[Isbn] = field(

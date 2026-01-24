@@ -61,6 +61,6 @@ class CustomMetadata:
             "name": "program",
             "type": "Element",
             "namespace": "http://www.crossref.org/clinicaltrials.xsd",
-            "max_occurs": 4,
+            "max_occurs": 3,
         },
     )

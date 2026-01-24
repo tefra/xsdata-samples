@@ -30,12 +30,10 @@ class Name:
             "type": "Element",
         },
     )
-    given_name: list[GivenName] = field(
-        default_factory=list,
+    given_name: None | GivenName = field(
+        default=None,
         metadata={
             "type": "Element",
-            "max_occurs": 2,
-            "sequence": 1,
         },
     )
     prefix: None | Prefix = field(

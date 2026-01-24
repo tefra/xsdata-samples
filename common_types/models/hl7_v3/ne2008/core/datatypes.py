@@ -714,20 +714,18 @@ class IvlInt(SxcmInt):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: list[Int] = field(
-        default_factory=list,
+    width: None | Int = field(
+        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
         },
     )
-    high: list[IvxbInt] = field(
-        default_factory=list,
+    high: None | IvxbInt = field(
+        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
         },
     )
     center: None | Int = field(
@@ -765,20 +763,18 @@ class IvlMo(SxcmMo):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: list[Mo] = field(
-        default_factory=list,
+    width: None | Mo = field(
+        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
         },
     )
-    high: list[IvxbMo] = field(
-        default_factory=list,
+    high: None | IvxbMo = field(
+        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
         },
     )
     center: None | Mo = field(
@@ -816,20 +812,18 @@ class IvlPq(SxcmPq):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: list[Pq] = field(
-        default_factory=list,
+    width: None | Pq = field(
+        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
         },
     )
-    high: list[IvxbPq] = field(
-        default_factory=list,
+    high: None | IvxbPq = field(
+        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
         },
     )
     center: None | Pq = field(
@@ -867,20 +861,18 @@ class IvlReal(SxcmReal):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: list[Real] = field(
-        default_factory=list,
+    width: None | Real = field(
+        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
         },
     )
-    high: list[IvxbReal] = field(
-        default_factory=list,
+    high: None | IvxbReal = field(
+        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
         },
     )
     center: None | Real = field(
@@ -1059,20 +1051,18 @@ class IvlPpdPq(SxcmPpdPq):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: list[PpdPq] = field(
-        default_factory=list,
+    width: None | PpdPq = field(
+        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
         },
     )
-    high: list[IvxbPpdPq] = field(
-        default_factory=list,
+    high: None | IvxbPpdPq = field(
+        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
         },
     )
     center: None | PpdPq = field(
@@ -1110,20 +1100,18 @@ class IvlPpdTs(SxcmPpdTs):
             "namespace": "urn:hl7-org:v3",
         },
     )
-    width: list[PpdPq] = field(
-        default_factory=list,
+    width: None | PpdPq = field(
+        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
         },
     )
-    high: list[IvxbPpdTs] = field(
-        default_factory=list,
+    high: None | IvxbPpdTs = field(
+        default=None,
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "max_occurs": 3,
         },
     )
     center: None | PpdTs = field(

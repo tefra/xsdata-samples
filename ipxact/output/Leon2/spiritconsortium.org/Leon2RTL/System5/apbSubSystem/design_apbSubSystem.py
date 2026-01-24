@@ -611,48 +611,42 @@ obj = Design(
                     internal_port_reference=[
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='7'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='7'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='scaler',
                             component_instance_ref='i_uart_1'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='7'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='7'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='scaler',
                             component_instance_ref='i_uart'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='7'
-                                        ),
-                                        right=Right(
-                                            value='0'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='7'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='0'
+                                    )
+                                )
                             ),
                             port_ref='scaler',
                             component_instance_ref='i_uartcrosser'
@@ -683,128 +677,112 @@ obj = Design(
                     internal_port_reference=[
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='14'
-                                        ),
-                                        right=Right(
-                                            value='14'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='14'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='14'
+                                    )
+                                )
                             ),
                             port_ref='irq',
                             component_instance_ref='i_irqctrl'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='13'
-                                        ),
-                                        right=Right(
-                                            value='13'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='13'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='13'
+                                    )
+                                )
                             ),
                             port_ref='irq',
                             component_instance_ref='i_irqctrl'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='12'
-                                        ),
-                                        right=Right(
-                                            value='12'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='12'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='12'
+                                    )
+                                )
                             ),
                             port_ref='irq',
                             component_instance_ref='i_irqctrl'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='11'
-                                        ),
-                                        right=Right(
-                                            value='11'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='11'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='11'
+                                    )
+                                )
                             ),
                             port_ref='irq',
                             component_instance_ref='i_irqctrl'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='10'
-                                        ),
-                                        right=Right(
-                                            value='10'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='10'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='10'
+                                    )
+                                )
                             ),
                             port_ref='irq',
                             component_instance_ref='i_irqctrl'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='9'
-                                        ),
-                                        right=Right(
-                                            value='9'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='9'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='9'
+                                    )
+                                )
                             ),
                             port_ref='irq',
                             component_instance_ref='i_irqctrl'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='8'
-                                        ),
-                                        right=Right(
-                                            value='8'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='8'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='8'
+                                    )
+                                )
                             ),
                             port_ref='irq',
                             component_instance_ref='i_irqctrl'
                         ),
                         AdHocConnection.PortReferences.InternalPortReference(
                             part_select=PartSelect(
-                                range=[
-                                    Range(
-                                        left=Left(
-                                            value='7'
-                                        ),
-                                        right=Right(
-                                            value='7'
-                                        )
+                                range=Range(
+                                    left=Left(
+                                        value='7'
                                     ),
-                                ]
+                                    right=Right(
+                                        value='7'
+                                    )
+                                )
                             ),
                             port_ref='irq',
                             component_instance_ref='i_irqctrl'

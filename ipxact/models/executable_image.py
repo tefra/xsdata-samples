@@ -156,13 +156,11 @@ class ExecutableImage:
                 "type": "Element",
             },
         )
-        linker_command_file: list[LinkerCommandFile] = field(
-            default_factory=list,
+        linker_command_file: None | LinkerCommandFile = field(
+            default=None,
             metadata={
                 "name": "linkerCommandFile",
                 "type": "Element",
-                "max_occurs": 2,
-                "sequence": 1,
             },
         )
 

@@ -18,11 +18,10 @@ class PartSelect:
         name = "partSelect"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    range: list[Range] = field(
-        default_factory=list,
+    range: None | Range = field(
+        default=None,
         metadata={
             "type": "Element",
-            "max_occurs": 2,
         },
     )
     indices: None | Indices = field(

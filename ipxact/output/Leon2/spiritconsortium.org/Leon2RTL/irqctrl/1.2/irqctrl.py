@@ -303,16 +303,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='irq',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='14'
-                                                        ),
-                                                        right=Right(
-                                                            value='14'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='14'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='14'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),
@@ -351,16 +349,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='irq',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='13'
-                                                        ),
-                                                        right=Right(
-                                                            value='13'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='13'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='13'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),
@@ -399,16 +395,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='irq',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='12'
-                                                        ),
-                                                        right=Right(
-                                                            value='12'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='12'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='12'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),
@@ -447,16 +441,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='irq',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='11'
-                                                        ),
-                                                        right=Right(
-                                                            value='11'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='11'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='11'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),
@@ -495,16 +487,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='irq',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='10'
-                                                        ),
-                                                        right=Right(
-                                                            value='10'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='10'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='10'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),
@@ -543,16 +533,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='irq',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='9'
-                                                        ),
-                                                        right=Right(
-                                                            value='9'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='9'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='9'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),
@@ -591,16 +579,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='irq',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='8'
-                                                        ),
-                                                        right=Right(
-                                                            value='8'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='8'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='8'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),
@@ -639,16 +625,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='irq',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='7'
-                                                        ),
-                                                        right=Right(
-                                                            value='7'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='7'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='7'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),
@@ -687,16 +671,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='irq',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='6'
-                                                        ),
-                                                        right=Right(
-                                                            value='6'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='6'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='6'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),
@@ -735,16 +717,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='irq',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='5'
-                                                        ),
-                                                        right=Right(
-                                                            value='5'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='5'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='5'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),
@@ -783,16 +763,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='irq',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='4'
-                                                        ),
-                                                        right=Right(
-                                                            value='4'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='4'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='4'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),
@@ -831,16 +809,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='irq',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='3'
-                                                        ),
-                                                        right=Right(
-                                                            value='3'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='3'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='3'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),
@@ -879,16 +855,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='irq',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='2'
-                                                        ),
-                                                        right=Right(
-                                                            value='2'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='2'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='2'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),
@@ -927,16 +901,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='irq',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='1'
-                                                        ),
-                                                        right=Right(
-                                                            value='1'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='1'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='1'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),
@@ -975,16 +947,14 @@ obj = Component(
                                         physical_port=AbstractionTypes.AbstractionType.PortMaps.PortMap.PhysicalPort(
                                             name='irq',
                                             part_select=PartSelect(
-                                                range=[
-                                                    Range(
-                                                        left=Left(
-                                                            value='0'
-                                                        ),
-                                                        right=Right(
-                                                            value='0'
-                                                        )
+                                                range=Range(
+                                                    left=Left(
+                                                        value='0'
                                                     ),
-                                                ]
+                                                    right=Right(
+                                                        value='0'
+                                                    )
+                                                )
                                             )
                                         )
                                     ),

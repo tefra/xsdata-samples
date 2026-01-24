@@ -86,12 +86,10 @@ class BookSetMetadata:
             "namespace": "http://www.ncbi.nlm.nih.gov/JATS1",
         },
     )
-    volume: list[Volume] = field(
-        default_factory=list,
+    volume: None | Volume = field(
+        default=None,
         metadata={
             "type": "Element",
-            "max_occurs": 2,
-            "sequence": 1,
         },
     )
     edition_number: None | EditionNumber = field(

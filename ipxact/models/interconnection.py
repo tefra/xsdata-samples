@@ -78,7 +78,6 @@ class Interconnection:
         metadata={
             "name": "hierInterface",
             "type": "Element",
-            "sequence": 1,
         },
     )
     vendor_extensions: None | VendorExtensions = field(

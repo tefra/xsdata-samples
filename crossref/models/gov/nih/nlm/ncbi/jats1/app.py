@@ -74,12 +74,10 @@ class App:
             "type": "Element",
         },
     )
-    title: list[Title] = field(
-        default_factory=list,
+    title: None | Title = field(
+        default=None,
         metadata={
             "type": "Element",
-            "max_occurs": 2,
-            "sequence": 1,
         },
     )
     address: list[Address] = field(
