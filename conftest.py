@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from typing import Any
 
 import pytest
 from xsdata.formats.dataclass.context import XmlContext
@@ -13,7 +14,7 @@ from xsdata.formats.dataclass.serializers import TreeSerializer
 from xsdata.utils.debug import convert
 
 
-_session_context_data = {}
+_session_context_data: dict[str, Any] = {}
 
 
 def pytest_addoption(parser):
@@ -43,7 +44,7 @@ def pytest_sessionfinish(session, exitstatus):
 
     dump = Path(__file__).parent / "ctx.json"
     with dump.open("w") as f:
-        json.dump(_session_context_data, f, indent=4)
+        json.dump(_session_context_data, f, indent=4, sort_keys=True)
 
 
 @pytest.fixture
