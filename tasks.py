@@ -60,10 +60,14 @@ def build(
 
 
 @task
-def test(c: Context, suite: Optional[str] = None, output_format="dataclasses"):
+def test(c: Context, suite: Optional[str] = None, output_format="dataclasses", dump_context: bool = False):
     run = partial(c.run, pty=True, echo=True)
+    build_cmd_args = f"--output-format {output_format}"
+    if dump_context:
+        build_cmd_args = f"--dump-context"
+
     for s in get_suite(c, suite):
-        run(f"pytest --output-format {output_format} {s}/")
+        run(f"pytest {build_cmd_args} {s}/")
 
 
 @task
