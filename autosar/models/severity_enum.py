@@ -28,11 +28,7 @@ class SeverityEnum:
     class Meta:
         name = "SEVERITY-ENUM"
 
-    value: SeverityEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SeverityEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

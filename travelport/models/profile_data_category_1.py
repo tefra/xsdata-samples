@@ -20,8 +20,4 @@ class ProfileDataCategory1:
         name = "ProfileDataCategory"
         namespace = "http://www.travelport.com/schema/sharedUprofile_v20_0"
 
-    value: TypeProfileDataCategory1 = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TypeProfileDataCategory1 = field()

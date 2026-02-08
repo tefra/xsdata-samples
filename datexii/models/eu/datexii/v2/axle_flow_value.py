@@ -23,7 +23,6 @@ class AxleFlowValue(DataValue):
             "name": "axleFlowRate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     axle_flow_value_extension: None | ExtensionType = field(

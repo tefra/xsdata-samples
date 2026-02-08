@@ -93,7 +93,6 @@ class TransportExecutionPlanRequestType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     version_id: None | VersionId = field(
@@ -199,7 +198,6 @@ class TransportExecutionPlanRequestType:
             "name": "TransportUserParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     transport_service_provider_party: TransportServiceProviderParty = field(
@@ -207,7 +205,6 @@ class TransportExecutionPlanRequestType:
             "name": "TransportServiceProviderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     payee_party: None | PayeeParty = field(

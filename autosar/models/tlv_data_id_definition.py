@@ -118,7 +118,6 @@ class TlvDataIdDefinition:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -128,7 +127,6 @@ class TlvDataIdDefinition:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -138,7 +136,6 @@ class TlvDataIdDefinition:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -148,6 +145,5 @@ class TlvDataIdDefinition:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

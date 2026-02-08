@@ -31,14 +31,12 @@ class TypeRentalPeriod:
         metadata={
             "name": "RentalUnit",
             "type": "Attribute",
-            "required": True,
         }
     )
     length: int = field(
         metadata={
             "name": "Length",
             "type": "Attribute",
-            "required": True,
         }
     )
     requirement_passed: None | bool = field(

@@ -30,11 +30,7 @@ class DiagnosticDataCaptureEnum:
     class Meta:
         name = "DIAGNOSTIC-DATA-CAPTURE-ENUM"
 
-    value: DiagnosticDataCaptureEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticDataCaptureEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

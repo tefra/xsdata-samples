@@ -150,6 +150,5 @@ class ParkingAccess:
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

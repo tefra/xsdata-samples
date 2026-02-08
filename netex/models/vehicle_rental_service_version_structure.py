@@ -25,7 +25,6 @@ class VehicleRentalServiceVersionStructure(
             "name": "VehicleRentalRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     maximum_rental_period: None | XmlDuration = field(

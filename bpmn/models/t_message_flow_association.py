@@ -17,13 +17,11 @@ class TMessageFlowAssociation(TBaseElement):
         metadata={
             "name": "innerMessageFlowRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     outer_message_flow_ref: QName = field(
         metadata={
             "name": "outerMessageFlowRef",
             "type": "Attribute",
-            "required": True,
         }
     )

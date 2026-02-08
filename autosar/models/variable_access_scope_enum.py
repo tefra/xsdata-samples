@@ -28,11 +28,7 @@ class VariableAccessScopeEnum:
     class Meta:
         name = "VARIABLE-ACCESS-SCOPE-ENUM"
 
-    value: VariableAccessScopeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: VariableAccessScopeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

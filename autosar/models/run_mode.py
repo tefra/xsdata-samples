@@ -28,11 +28,7 @@ class RunMode:
     class Meta:
         name = "RUN-MODE"
 
-    value: RunModeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: RunModeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

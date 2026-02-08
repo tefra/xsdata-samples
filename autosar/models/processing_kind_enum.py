@@ -28,11 +28,7 @@ class ProcessingKindEnum:
     class Meta:
         name = "PROCESSING-KIND-ENUM"
 
-    value: ProcessingKindEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ProcessingKindEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

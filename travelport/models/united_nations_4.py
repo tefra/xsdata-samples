@@ -19,6 +19,5 @@ class UnitedNations4:
         metadata={
             "name": "Number",
             "type": "Attribute",
-            "required": True,
         }
     )

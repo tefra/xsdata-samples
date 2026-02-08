@@ -26,7 +26,6 @@ class NotifyProgramGbmresponseType(BaseGbmtype):
             "name": "Status",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1",
-            "required": True,
         }
     )
     error_message: None | str = field(

@@ -16,7 +16,6 @@ class TopicType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-            "required": True,
         }
     )
     scope_note: list[str] = field(

@@ -40,14 +40,12 @@ class Endpoint:
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -65,7 +63,6 @@ class Endpoint:
         metadata={
             "name": "DataType",
             "type": "Attribute",
-            "required": True,
         }
     )
     min_occurs: int = field(
@@ -86,6 +83,5 @@ class Endpoint:
         metadata={
             "name": "EndPointCode",
             "type": "Attribute",
-            "required": True,
         }
     )

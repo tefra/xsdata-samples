@@ -31,11 +31,7 @@ class VehicleDriverNotificationEnum:
     class Meta:
         name = "VEHICLE-DRIVER-NOTIFICATION-ENUM"
 
-    value: VehicleDriverNotificationEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: VehicleDriverNotificationEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

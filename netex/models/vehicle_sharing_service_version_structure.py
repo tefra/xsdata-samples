@@ -25,7 +25,6 @@ class VehicleSharingServiceVersionStructure(
             "name": "VehicleSharingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     sharing_policy_url: None | str = field(

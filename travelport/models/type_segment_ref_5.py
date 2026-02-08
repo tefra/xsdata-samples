@@ -14,6 +14,5 @@ class TypeSegmentRef5:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

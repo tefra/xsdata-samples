@@ -73,7 +73,6 @@ class Email3:
         metadata={
             "name": "EmailID",
             "type": "Attribute",
-            "required": True,
         }
     )
     el_stat: None | TypeElementStatus4 = field(

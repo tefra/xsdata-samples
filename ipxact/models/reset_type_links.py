@@ -45,14 +45,12 @@ class ResetTypeLinks:
             metadata={
                 "name": "externalResetTypeReference",
                 "type": "Element",
-                "required": True,
             }
         )
         reset_type_reference: ResetTypeLinks.ResetTypeLink.ResetTypeReference = field(
             metadata={
                 "name": "resetTypeReference",
                 "type": "Element",
-                "required": True,
             }
         )
         vendor_extensions: None | VendorExtensions = field(
@@ -80,7 +78,6 @@ class ResetTypeLinks:
                 metadata={
                     "name": "resetTypeRef",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -94,6 +91,5 @@ class ResetTypeLinks:
                 metadata={
                     "name": "resetTypeRef",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

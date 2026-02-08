@@ -34,6 +34,5 @@ class TermConditions:
         metadata={
             "name": "IncludeTermConditions",
             "type": "Attribute",
-            "required": True,
         }
     )

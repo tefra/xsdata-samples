@@ -27,7 +27,6 @@ class EffectiveDate:
         metadata={
             "name": "EarliestDate",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^:Z].*",
         }
     )

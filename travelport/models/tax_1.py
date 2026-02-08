@@ -32,6 +32,5 @@ class Tax1:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
         }
     )

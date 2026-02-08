@@ -72,6 +72,5 @@ class FibexElementRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

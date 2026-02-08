@@ -123,12 +123,10 @@ class ConstraintSet:
         left: UnsignedIntExpression = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         right: UnsignedIntExpression = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )

@@ -83,7 +83,6 @@ class BswEntryRelationship:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -93,6 +92,5 @@ class BswEntryRelationship:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

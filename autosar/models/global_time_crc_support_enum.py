@@ -29,11 +29,7 @@ class GlobalTimeCrcSupportEnum:
     class Meta:
         name = "GLOBAL-TIME-CRC-SUPPORT-ENUM"
 
-    value: GlobalTimeCrcSupportEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: GlobalTimeCrcSupportEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

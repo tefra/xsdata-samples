@@ -52,6 +52,5 @@ class UpsellSearchReq(BaseReq1):
         metadata={
             "name": "UpsellSearchModifier",
             "type": "Element",
-            "required": True,
         }
     )

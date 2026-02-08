@@ -39,7 +39,6 @@ class PriceMatchError:
         metadata={
             "name": "ErrorMessage",
             "type": "Element",
-            "required": True,
         }
     )
     vendor_code: None | str = field(

@@ -107,7 +107,6 @@ class SwDataDependencyArgs:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -117,6 +116,5 @@ class SwDataDependencyArgs:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

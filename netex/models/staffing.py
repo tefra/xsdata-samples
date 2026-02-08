@@ -12,8 +12,4 @@ class Staffing:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: StaffingEnumeration = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: StaffingEnumeration = field()

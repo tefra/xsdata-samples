@@ -7,12 +7,7 @@ __NAMESPACE__ = "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure"
 
 @dataclass(frozen=True, kw_only=True)
 class MappedValueType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     is_reg_ex: None | bool = field(
         default=None,
         metadata={

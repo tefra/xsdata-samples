@@ -29,11 +29,7 @@ class SendIndicationEnum:
     class Meta:
         name = "SEND-INDICATION-ENUM"
 
-    value: SendIndicationEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SendIndicationEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -23,6 +23,5 @@ class TypeCustomFieldAndGroupDeleteRef2:
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
         }
     )

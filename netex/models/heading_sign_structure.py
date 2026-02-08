@@ -23,7 +23,6 @@ class HeadingSignStructure(SignEquipmentVersionStructure):
             "name": "PlaceName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     line_ref: None | FlexibleLineRef | LineRef = field(

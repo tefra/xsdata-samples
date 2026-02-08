@@ -27,7 +27,6 @@ class FilterExitManagement:
             "name": "filterEnd",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     filter_out_of_range: bool = field(
@@ -35,7 +34,6 @@ class FilterExitManagement:
             "name": "filterOutOfRange",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     filter_exit_management_extension: None | ExtensionType = field(

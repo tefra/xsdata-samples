@@ -23,7 +23,6 @@ class TpegPointLocation:
             "name": "tpegDirection",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     tpeg_point_location_extension: None | ExtensionType = field(

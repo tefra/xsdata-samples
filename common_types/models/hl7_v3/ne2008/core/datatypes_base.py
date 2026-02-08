@@ -1348,14 +1348,12 @@ class RtoQtyQty(Qty):
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     denominator: Qty = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 

@@ -111,7 +111,6 @@ class CoctMt470000UvPerformer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -257,7 +256,6 @@ class CoctMt470000UvConsent:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     status_code: None | Cs = field(

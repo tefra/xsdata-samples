@@ -31,11 +31,7 @@ class DiagnosticTestResultUpdateEnum:
     class Meta:
         name = "DIAGNOSTIC-TEST-RESULT-UPDATE-ENUM"
 
-    value: DiagnosticTestResultUpdateEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticTestResultUpdateEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -83,6 +83,5 @@ class EthTpConnection:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

@@ -21,7 +21,6 @@ class MetaData7:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 10,
         }
@@ -30,7 +29,6 @@ class MetaData7:
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 50,
         }

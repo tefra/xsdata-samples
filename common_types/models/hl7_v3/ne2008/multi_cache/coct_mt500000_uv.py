@@ -94,7 +94,6 @@ class CoctMt500000UvAccommodationCoverage:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -157,7 +156,6 @@ class CoctMt500000UvCarrierOrganization:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -171,7 +169,6 @@ class CoctMt500000UvCarrierOrganization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -232,7 +229,6 @@ class CoctMt500000UvEmployerOrganization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -300,7 +296,6 @@ class CoctMt500000UvPolicyHolderOrganization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -347,7 +342,6 @@ class CoctMt500000UvCarrierRole:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     underwriting_carrier_organization: (
@@ -452,7 +446,6 @@ class CoctMt500000UvEmployment:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -621,7 +614,6 @@ class CoctMt500000UvPolicyHolderPerson:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     birth_time: None | TsExplicit = field(
@@ -1018,7 +1010,6 @@ class CoctMt500000UvCoveredParty:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     code: None | Cs = field(
@@ -1055,6 +1046,5 @@ class CoctMt500000UvCoveredParty:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -18,6 +18,5 @@ class XofaresType:
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
         }
     )

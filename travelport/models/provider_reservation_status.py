@@ -50,21 +50,18 @@ class ProviderReservationStatus:
         metadata={
             "name": "CreateDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     modified_date: XmlDateTime = field(
         metadata={
             "name": "ModifiedDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }
@@ -73,7 +70,6 @@ class ProviderReservationStatus:
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
-            "required": True,
             "max_length": 15,
         }
     )
@@ -81,6 +77,5 @@ class ProviderReservationStatus:
         metadata={
             "name": "Cancelled",
             "type": "Attribute",
-            "required": True,
         }
     )

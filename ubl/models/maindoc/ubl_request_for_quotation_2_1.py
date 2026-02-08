@@ -109,7 +109,6 @@ class RequestForQuotationType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: IssueTime = field(
@@ -117,7 +116,6 @@ class RequestForQuotationType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     submission_due_date: None | SubmissionDueDate = field(
@@ -199,7 +197,6 @@ class RequestForQuotationType:
             "name": "SellerSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     buyer_customer_party: None | BuyerCustomerParty = field(

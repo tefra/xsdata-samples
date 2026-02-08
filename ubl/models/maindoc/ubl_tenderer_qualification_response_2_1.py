@@ -100,7 +100,6 @@ class TendererQualificationResponseType:
             "name": "ContractFolderID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     contract_name: tuple[ContractName, ...] = field(
@@ -116,7 +115,6 @@ class TendererQualificationResponseType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -140,7 +138,6 @@ class TendererQualificationResponseType:
             "name": "SenderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     receiver_party: ReceiverParty = field(
@@ -148,7 +145,6 @@ class TendererQualificationResponseType:
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     resolution_document_reference: None | ResolutionDocumentReference = field(

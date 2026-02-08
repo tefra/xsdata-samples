@@ -31,6 +31,5 @@ class HotelUpsellSearchResult:
         metadata={
             "name": "HotelUpsellOffer",
             "type": "Element",
-            "required": True,
         }
     )

@@ -86,7 +86,6 @@ class CoctMt440001UvValuedItem:
             "name": "unitPriceAmt",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     net_amt: None | Mo = field(

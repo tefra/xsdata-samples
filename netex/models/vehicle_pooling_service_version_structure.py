@@ -22,7 +22,6 @@ class VehiclePoolingServiceVersionStructure(
             "name": "VehiclePoolingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     pooling_policy_url: None | str = field(

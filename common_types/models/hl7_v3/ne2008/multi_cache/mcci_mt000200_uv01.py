@@ -185,7 +185,6 @@ class McciMt000200Uv01EntityRsp:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     name: list[EnExplicit] = field(
@@ -213,7 +212,6 @@ class McciMt000200Uv01EntityRsp:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -298,7 +296,6 @@ class McciMt000200Uv01Organization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -374,7 +371,6 @@ class McciMt000200Uv01Place:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -421,7 +417,6 @@ class McciMt000200Uv01TargetMessage:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -467,7 +462,6 @@ class McciMt000200Uv01Acknowledgement:
             "name": "typeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     expected_sequence_number: None | Int = field(
@@ -571,7 +565,6 @@ class McciMt000200Uv01Agent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -624,7 +617,6 @@ class McciMt000200Uv01LocatedEntity:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -686,7 +678,6 @@ class McciMt000200Uv01RespondTo:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -802,7 +793,6 @@ class McciMt000200Uv01Device:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -856,7 +846,6 @@ class McciMt000200Uv01Receiver:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -870,7 +859,6 @@ class McciMt000200Uv01Receiver:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -915,7 +903,6 @@ class McciMt000200Uv01Sender:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -929,7 +916,6 @@ class McciMt000200Uv01Sender:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -967,7 +953,6 @@ class McciMt000200Uv01Message:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     creation_time: TsExplicit = field(
@@ -975,7 +960,6 @@ class McciMt000200Uv01Message:
             "name": "creationTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     security_text: None | St = field(
@@ -999,7 +983,6 @@ class McciMt000200Uv01Message:
             "name": "interactionId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     profile_id: list[Ii] = field(
@@ -1015,7 +998,6 @@ class McciMt000200Uv01Message:
             "name": "processingCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     processing_mode_code: Cs = field(
@@ -1023,7 +1005,6 @@ class McciMt000200Uv01Message:
             "name": "processingModeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     accept_ack_code: Cs = field(
@@ -1031,7 +1012,6 @@ class McciMt000200Uv01Message:
             "name": "acceptAckCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     attachment_text: list[EdExplicit] = field(
@@ -1063,7 +1043,6 @@ class McciMt000200Uv01Message:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     attention_line: list[McciMt000200Uv01AttentionLine] = field(

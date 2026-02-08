@@ -22,6 +22,5 @@ class Archive:
     name: ArchiveName = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

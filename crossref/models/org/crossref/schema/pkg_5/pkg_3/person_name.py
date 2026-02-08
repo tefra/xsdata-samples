@@ -48,7 +48,6 @@ class PersonName:
     surname: Surname = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     suffix: None | Suffix = field(
@@ -80,13 +79,11 @@ class PersonName:
     sequence: PersonNameSequence = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     contributor_role: PersonNameContributorRole = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     name_style: None | PersonNameNameStyle = field(

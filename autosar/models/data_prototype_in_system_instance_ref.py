@@ -115,7 +115,6 @@ class DataPrototypeInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -125,7 +124,6 @@ class DataPrototypeInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -135,7 +133,6 @@ class DataPrototypeInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -145,7 +142,6 @@ class DataPrototypeInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -155,6 +151,5 @@ class DataPrototypeInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

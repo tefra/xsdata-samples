@@ -13,12 +13,7 @@ class TitleType:
     class Meta:
         name = "titleType"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     type_value: None | TextualTypeEnum = field(
         default=None,
         metadata={
@@ -29,6 +24,5 @@ class TitleType:
     owner: OwnerTypeEnum = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

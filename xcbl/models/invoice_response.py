@@ -22,52 +22,27 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class BuyerInvoiceNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InvoiceResponseCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InvoiceResponseCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InvoiceResponseHeaderNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InvoiceResponseIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -76,7 +51,6 @@ class InvoiceReference:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -87,7 +61,6 @@ class InvoiceResponseDetail:
         metadata={
             "name": "LineItemNum",
             "type": "Element",
-            "required": True,
         }
     )
     invoice_response_coded: None | InvoiceResponseCoded = field(
@@ -140,7 +113,6 @@ class InvoicingParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -151,14 +123,12 @@ class InvoiceResponseParty:
         metadata={
             "name": "InvoicingParty",
             "type": "Element",
-            "required": True,
         }
     )
     bill_to_party: BillToParty = field(
         metadata={
             "name": "BillToParty",
             "type": "Element",
-            "required": True,
         }
     )
     remit_to_party: None | RemitToParty = field(
@@ -195,14 +165,12 @@ class InvoiceResponseHeader:
         metadata={
             "name": "BuyerInvoiceNumber",
             "type": "Element",
-            "required": True,
         }
     )
     invoice_reference: InvoiceReference = field(
         metadata={
             "name": "InvoiceReference",
             "type": "Element",
-            "required": True,
         }
     )
     invoice_response_issue_date: None | InvoiceResponseIssueDate = field(
@@ -216,21 +184,18 @@ class InvoiceResponseHeader:
         metadata={
             "name": "InvoiceType",
             "type": "Element",
-            "required": True,
         }
     )
     language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
     invoice_response_coded: InvoiceResponseCoded = field(
         metadata={
             "name": "InvoiceResponseCoded",
             "type": "Element",
-            "required": True,
         }
     )
     invoice_response_coded_other: None | InvoiceResponseCodedOther = field(
@@ -244,7 +209,6 @@ class InvoiceResponseHeader:
         metadata={
             "name": "InvoiceResponseParty",
             "type": "Element",
-            "required": True,
         }
     )
     invoice_response_header_note: None | InvoiceResponseHeaderNote = field(
@@ -290,7 +254,6 @@ class InvoiceResponse:
         metadata={
             "name": "InvoiceResponseHeader",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_invoice_response_detail: None | ListOfInvoiceResponseDetail = (

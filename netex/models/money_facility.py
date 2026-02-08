@@ -12,8 +12,4 @@ class MoneyFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: MoneyFacilityEnumeration = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: MoneyFacilityEnumeration = field()

@@ -113,6 +113,5 @@ class RuleBasedAxisCont:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

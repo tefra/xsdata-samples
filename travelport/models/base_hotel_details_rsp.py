@@ -29,7 +29,6 @@ class BaseHotelDetailsRsp(BaseRsp1):
             "name": "HotelProperty",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            "required": True,
         }
     )
     hotel_detail_item: list[HotelDetailItem] = field(

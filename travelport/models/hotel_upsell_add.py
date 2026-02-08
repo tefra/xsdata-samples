@@ -21,7 +21,6 @@ class HotelUpsellAdd:
         metadata={
             "name": "HotelUpsellQualify",
             "type": "Element",
-            "required": True,
         }
     )
     hotel_upsell_offer: None | HotelUpsellOffer = field(

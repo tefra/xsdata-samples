@@ -18,7 +18,6 @@ class RiskType:
             "name": "GlobalRiskID",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-            "required": True,
         }
     )
     local_risk_id: str = field(
@@ -26,7 +25,6 @@ class RiskType:
             "name": "LocalRiskID",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-            "required": True,
         }
     )
     reinsurance_agreement: None | str = field(

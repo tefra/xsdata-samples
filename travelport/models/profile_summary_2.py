@@ -226,21 +226,18 @@ class ProfileSummary2:
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-            "required": True,
         }
     )
     profile_type: TypeProfileType7 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-            "required": True,
         }
     )
     status: TypeProfileEntityStatus2 = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )
     hierarchy_level_id: None | str = field(
@@ -254,7 +251,6 @@ class ProfileSummary2:
         metadata={
             "name": "Version",
             "type": "Attribute",
-            "required": True,
             "min_inclusive": 0,
         }
     )

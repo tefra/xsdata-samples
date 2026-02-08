@@ -63,6 +63,5 @@ class ApplicationErrorMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

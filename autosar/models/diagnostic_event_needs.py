@@ -162,7 +162,6 @@ class DiagnosticEventNeeds:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | DiagnosticEventNeeds.ShortNameFragments = (
@@ -429,7 +428,6 @@ class DiagnosticEventNeeds:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -472,7 +470,6 @@ class DiagnosticEventNeeds:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -495,6 +492,5 @@ class DiagnosticEventNeeds:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

@@ -66,7 +66,6 @@ class LocationInfo:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
         }
     )
     counter_location: None | str = field(

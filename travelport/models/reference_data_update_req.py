@@ -41,14 +41,12 @@ class ReferenceDataUpdateReq(BaseReq1):
         metadata={
             "name": "Action",
             "type": "Attribute",
-            "required": True,
         }
     )
     type_code: str = field(
         metadata={
             "name": "TypeCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 50,
         }

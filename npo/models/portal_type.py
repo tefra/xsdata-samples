@@ -16,7 +16,6 @@ class PortalType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-            "required": True,
         }
     )
     section: None | SectionType = field(
@@ -29,12 +28,10 @@ class PortalType:
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     url: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -65,13 +65,11 @@ class AirAvailInfo:
             metadata={
                 "name": "FareInfoRef",
                 "type": "Attribute",
-                "required": True,
             }
         )
         host_token_ref: str = field(
             metadata={
                 "name": "HostTokenRef",
                 "type": "Attribute",
-                "required": True,
             }
         )

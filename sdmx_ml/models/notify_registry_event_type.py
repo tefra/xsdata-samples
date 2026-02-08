@@ -43,7 +43,6 @@ class NotifyRegistryEventType:
             "name": "EventTime",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
-            "required": True,
         }
     )
     object_urn_or_registration_id: (
@@ -75,7 +74,6 @@ class NotifyRegistryEventType:
             "name": "SubscriptionURN",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
-            "required": True,
         }
     )
     event_action: ActionType = field(
@@ -83,7 +81,6 @@ class NotifyRegistryEventType:
             "name": "EventAction",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
-            "required": True,
         }
     )
     structural_event_or_registration_event: (
@@ -109,19 +106,13 @@ class NotifyRegistryEventType:
 
     @dataclass(frozen=True, kw_only=True)
     class ObjectUrn:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
 
     @dataclass(frozen=True, kw_only=True)
     class RegistrationId:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
             },
         )

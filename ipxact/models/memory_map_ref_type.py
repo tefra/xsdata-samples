@@ -32,7 +32,6 @@ class MemoryMapRefType:
         metadata={
             "name": "memoryMapRef",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -42,12 +41,7 @@ class MemoryMapRefType:
         A reference to a mode.
         """
 
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         id: None | str = field(
             default=None,
             metadata={

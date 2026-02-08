@@ -105,7 +105,6 @@ class ModeSwitchedAckEvent:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | ModeSwitchedAckEvent.ShortNameFragments = (
@@ -259,7 +258,6 @@ class ModeSwitchedAckEvent:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -280,7 +278,6 @@ class ModeSwitchedAckEvent:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -290,6 +287,5 @@ class ModeSwitchedAckEvent:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

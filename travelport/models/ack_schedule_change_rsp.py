@@ -22,6 +22,5 @@ class AckScheduleChangeRsp(BaseRsp1):
         metadata={
             "name": "UniversalRecord",
             "type": "Element",
-            "required": True,
         }
     )

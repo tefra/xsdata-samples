@@ -79,7 +79,6 @@ class OrderCancellationType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     copy_indicator: None | CopyIndicator = field(
@@ -103,7 +102,6 @@ class OrderCancellationType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -179,7 +177,6 @@ class OrderCancellationType:
             "name": "BuyerCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     seller_supplier_party: SellerSupplierParty = field(
@@ -187,7 +184,6 @@ class OrderCancellationType:
             "name": "SellerSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     originator_customer_party: None | OriginatorCustomerParty = field(

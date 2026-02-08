@@ -100,6 +100,5 @@ class RailReservation(BaseReservation1):
         metadata={
             "name": "BookingStatus",
             "type": "Attribute",
-            "required": True,
         }
     )

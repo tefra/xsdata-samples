@@ -23,7 +23,6 @@ class Amenity:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
             "min_inclusive": 1,
             "max_inclusive": 999,
         }

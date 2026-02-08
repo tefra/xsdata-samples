@@ -20,7 +20,6 @@ class LicenseRef:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "min_length": 10,
             "pattern": r"([hH][tT][tT][pP]|[hH][tT][tT][pP][sS]|[fF][tT][pP])://.*",
         },

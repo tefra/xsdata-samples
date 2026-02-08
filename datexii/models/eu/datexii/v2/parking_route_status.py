@@ -27,7 +27,6 @@ class ParkingRouteStatus:
             "name": "parkingRouteReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     parking_route_active: bool = field(
@@ -35,7 +34,6 @@ class ParkingRouteStatus:
             "name": "parkingRouteActive",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     parking_route_status_extension: None | ExtensionType = field(

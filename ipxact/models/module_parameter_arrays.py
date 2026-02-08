@@ -32,14 +32,12 @@ class ModuleParameterArrays:
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                "required": True,
             }
         )
         right: Right = field(
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                "required": True,
             }
         )
         array_id: None | str = field(

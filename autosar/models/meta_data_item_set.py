@@ -87,7 +87,6 @@ class MetaDataItemSet:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 

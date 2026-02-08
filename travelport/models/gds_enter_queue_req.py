@@ -32,7 +32,6 @@ class GdsEnterQueueReq(BaseReq1):
             "name": "QueueSelector",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "required": True,
         }
     )
     pseudo_city_code: None | str = field(
@@ -48,7 +47,6 @@ class GdsEnterQueueReq(BaseReq1):
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }

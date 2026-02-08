@@ -41,14 +41,12 @@ class LoyaltyProgramEnrollment2(TypeKeyTaggedElement2):
         metadata={
             "name": "SupplierType",
             "type": "Attribute",
-            "required": True,
         }
     )
     supplier: str = field(
         metadata={
             "name": "Supplier",
             "type": "Attribute",
-            "required": True,
             "max_length": 6,
         }
     )
@@ -56,7 +54,6 @@ class LoyaltyProgramEnrollment2(TypeKeyTaggedElement2):
         metadata={
             "name": "Number",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 255,
         }

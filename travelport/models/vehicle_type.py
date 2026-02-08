@@ -16,8 +16,4 @@ class VehicleType:
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
-    value: TypeVehicleTypes = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TypeVehicleTypes = field()

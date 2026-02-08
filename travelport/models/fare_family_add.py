@@ -20,6 +20,5 @@ class FareFamilyAdd:
         metadata={
             "name": "FareFamily",
             "type": "Element",
-            "required": True,
         }
     )

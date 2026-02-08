@@ -107,7 +107,6 @@ class AirPricePoint:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     total_price: None | str = field(

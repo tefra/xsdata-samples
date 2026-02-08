@@ -74,7 +74,6 @@ class TravelerGroupInfo2(TypeAccountTypeProfileInfo2):
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }

@@ -24,7 +24,6 @@ class OpenlrGridAttributes:
             "name": "openlrNumColumns",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_num_rows: int = field(
@@ -32,7 +31,6 @@ class OpenlrGridAttributes:
             "name": "openlrNumRows",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_grid_attributes_extension: None | ExtensionType = field(

@@ -32,7 +32,6 @@ class TypeStartEndTime:
         metadata={
             "name": "Time",
             "type": "Attribute",
-            "required": True,
         }
     )
     requirement_passed: None | bool = field(

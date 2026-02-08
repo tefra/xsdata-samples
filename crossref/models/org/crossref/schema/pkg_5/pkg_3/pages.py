@@ -26,7 +26,6 @@ class Pages:
     first_page: FirstPage = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     last_page: None | LastPage = field(

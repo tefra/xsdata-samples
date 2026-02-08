@@ -12,8 +12,4 @@ class BoardingPermission:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: BoardingPermissionEnumeration = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: BoardingPermissionEnumeration = field()

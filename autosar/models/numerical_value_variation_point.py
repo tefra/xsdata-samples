@@ -124,7 +124,6 @@ class NumericalValueVariationPoint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -134,6 +133,5 @@ class NumericalValueVariationPoint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

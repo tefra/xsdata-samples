@@ -30,11 +30,7 @@ class DiagnosticEventDisplacementStrategyEnum:
     class Meta:
         name = "DIAGNOSTIC-EVENT-DISPLACEMENT-STRATEGY-ENUM"
 
-    value: DiagnosticEventDisplacementStrategyEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticEventDisplacementStrategyEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

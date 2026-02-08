@@ -56,14 +56,12 @@ class SavedTripSearchResult:
         metadata={
             "name": "SavedTripName",
             "type": "Attribute",
-            "required": True,
         }
     )
     locator_code: str = field(
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         }

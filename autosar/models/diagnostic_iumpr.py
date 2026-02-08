@@ -95,7 +95,6 @@ class DiagnosticIumpr:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | DiagnosticIumpr.ShortNameFragments = field(
@@ -221,6 +220,5 @@ class DiagnosticIumpr:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

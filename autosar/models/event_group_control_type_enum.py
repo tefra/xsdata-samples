@@ -30,11 +30,7 @@ class EventGroupControlTypeEnum:
     class Meta:
         name = "EVENT-GROUP-CONTROL-TYPE-ENUM"
 
-    value: EventGroupControlTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: EventGroupControlTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

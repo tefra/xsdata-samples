@@ -37,7 +37,6 @@ class SpecialDay:
             "name": "intersectWithApplicableDays",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     special_day_type: SpecialDayTypeEnum = field(
@@ -45,7 +44,6 @@ class SpecialDay:
             "name": "specialDayType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     special_day_name: None | MultilingualString = field(

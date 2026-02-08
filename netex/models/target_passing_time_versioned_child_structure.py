@@ -96,48 +96,24 @@ class TargetPassingTimeVersionedChildStructure(
 
     @dataclass(kw_only=True)
     class AimedArrivalTime:
-        value: XmlTime = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: XmlTime = field()
 
     @dataclass(kw_only=True)
     class ArrivalDayOffset:
-        value: int = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: int = field()
 
     @dataclass(kw_only=True)
     class AimedDepartureTime:
-        value: XmlTime = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: XmlTime = field()
 
     @dataclass(kw_only=True)
     class DepartureDayOffset:
-        value: int = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: int = field()
 
     @dataclass(kw_only=True)
     class AimedNonstopPassingTime:
-        value: XmlTime = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: XmlTime = field()
 
     @dataclass(kw_only=True)
     class PassingDayOffset:
-        value: int = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: int = field()

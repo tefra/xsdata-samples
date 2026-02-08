@@ -134,7 +134,6 @@ class FlexrayFifoConfiguration:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

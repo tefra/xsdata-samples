@@ -69,7 +69,6 @@ class RegistrationType:
             "name": "ProvisionAgreement",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
-            "required": True,
             "pattern": r".+\.registry\.ProvisionAgreement=.+",
         }
     )
@@ -78,7 +77,6 @@ class RegistrationType:
             "name": "Datasource",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
-            "required": True,
         }
     )
     id: None | str = field(

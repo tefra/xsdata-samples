@@ -99,6 +99,5 @@ class AggregationCondition:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

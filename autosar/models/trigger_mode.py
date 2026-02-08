@@ -29,11 +29,7 @@ class TriggerMode:
     class Meta:
         name = "TRIGGER-MODE"
 
-    value: TriggerModeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TriggerModeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

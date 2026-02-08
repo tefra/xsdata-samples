@@ -30,11 +30,7 @@ class DiagnosticClearDtcLimitationEnum:
     class Meta:
         name = "DIAGNOSTIC-CLEAR-DTC-LIMITATION-ENUM"
 
-    value: DiagnosticClearDtcLimitationEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticClearDtcLimitationEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -18,6 +18,5 @@ class LegRef:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -22,7 +22,6 @@ class DepartureDaysType:
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
             "length": 7,
         }
     )

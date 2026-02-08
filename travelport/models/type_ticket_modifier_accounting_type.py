@@ -19,6 +19,5 @@ class TypeTicketModifierAccountingType:
             "name": "Value",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-            "required": True,
         }
     )

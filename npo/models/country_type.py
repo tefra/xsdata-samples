@@ -10,12 +10,7 @@ class CountryType:
     class Meta:
         name = "countryType"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     code: None | str = field(
         default=None,
         metadata={

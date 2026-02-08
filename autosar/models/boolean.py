@@ -32,7 +32,6 @@ class Boolean:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "pattern": r"0|1|true|false",
         },
     )

@@ -23,7 +23,6 @@ class TimingLinkInJourneyPatternVersionedChildStructure(
             "name": "TimingLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     run_times: None | JourneyRunTimesRelStructure = field(

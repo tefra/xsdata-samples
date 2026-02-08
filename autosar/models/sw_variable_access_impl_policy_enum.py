@@ -31,11 +31,7 @@ class SwVariableAccessImplPolicyEnum:
     class Meta:
         name = "SW-VARIABLE-ACCESS-IMPL-POLICY-ENUM"
 
-    value: SwVariableAccessImplPolicyEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SwVariableAccessImplPolicyEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

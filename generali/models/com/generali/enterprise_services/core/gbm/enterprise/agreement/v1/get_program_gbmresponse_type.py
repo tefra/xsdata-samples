@@ -45,6 +45,5 @@ class GetProgramGbmresponseType(BaseGbmtype):
             "name": "ProgramGBO",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbm/enterprise/agreement/v1",
-            "required": True,
         }
     )

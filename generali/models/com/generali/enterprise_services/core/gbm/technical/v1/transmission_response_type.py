@@ -21,7 +21,6 @@ class TransmissionResponseType(BaseGbmtype):
             "name": "Status",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbm/technical/v1",
-            "required": True,
         }
     )
     error_message: None | str = field(

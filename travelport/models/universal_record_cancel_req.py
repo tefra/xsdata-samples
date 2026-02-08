@@ -36,7 +36,6 @@ class UniversalRecordCancelReq(BaseReq1):
         metadata={
             "name": "UniversalRecordLocatorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         }
@@ -45,6 +44,5 @@ class UniversalRecordCancelReq(BaseReq1):
         metadata={
             "name": "Version",
             "type": "Attribute",
-            "required": True,
         }
     )

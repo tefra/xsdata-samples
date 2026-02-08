@@ -29,11 +29,7 @@ class ModeActivationKind:
     class Meta:
         name = "MODE-ACTIVATION-KIND"
 
-    value: ModeActivationKindSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ModeActivationKindSimple = field()
     s: None | str = field(
         default=None,
         metadata={

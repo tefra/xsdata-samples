@@ -151,7 +151,6 @@ class ParkingRecord:
             "name": "parkingRecordVersionTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     parking_number_of_spaces: None | int = field(
@@ -261,7 +260,6 @@ class ParkingRecord:
             "name": "parkingLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     parking_route: list[ParkingRoute] = field(
@@ -389,12 +387,10 @@ class ParkingRecord:
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     version: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

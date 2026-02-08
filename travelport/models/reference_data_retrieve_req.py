@@ -60,7 +60,6 @@ class ReferenceDataRetrieveReq(BaseReq1):
         metadata={
             "name": "TypeCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 50,
         }

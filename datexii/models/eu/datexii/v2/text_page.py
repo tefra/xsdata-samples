@@ -17,13 +17,11 @@ class TextPage:
             "name": "vmsText",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     page_number: int = field(
         metadata={
             "name": "pageNumber",
             "type": "Attribute",
-            "required": True,
         }
     )

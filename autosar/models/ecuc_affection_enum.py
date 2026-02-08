@@ -30,11 +30,7 @@ class EcucAffectionEnum:
     class Meta:
         name = "ECUC-AFFECTION-ENUM"
 
-    value: EcucAffectionEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: EcucAffectionEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

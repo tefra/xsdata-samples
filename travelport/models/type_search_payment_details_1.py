@@ -39,7 +39,6 @@ class TypeSearchPaymentDetails1:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     payment_supplier: None | str = field(

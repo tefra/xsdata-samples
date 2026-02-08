@@ -28,11 +28,7 @@ class CanFrameTxBehaviorEnum:
     class Meta:
         name = "CAN-FRAME-TX-BEHAVIOR-ENUM"
 
-    value: CanFrameTxBehaviorEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: CanFrameTxBehaviorEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

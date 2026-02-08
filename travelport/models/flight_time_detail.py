@@ -80,7 +80,6 @@ class FlightTimeDetail:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     vendor_code: None | str = field(

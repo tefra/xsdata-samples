@@ -18,7 +18,6 @@ class TicketDesignator:
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
             "min_length": 0,
             "max_length": 20,
         }

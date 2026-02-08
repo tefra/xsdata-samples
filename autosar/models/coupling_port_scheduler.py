@@ -94,7 +94,6 @@ class CouplingPortScheduler:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | CouplingPortScheduler.ShortNameFragments = (
@@ -235,6 +234,5 @@ class CouplingPortScheduler:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

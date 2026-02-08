@@ -78,7 +78,6 @@ class FieldType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -124,7 +123,6 @@ class FieldType:
             "name": "bitOffset",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     field_definition_ref: None | FieldType.FieldDefinitionRef = field(
@@ -245,17 +243,11 @@ class FieldType:
 
     @dataclass(kw_only=True)
     class FieldDefinitionRef:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         type_definitions: str = field(
             metadata={
                 "name": "typeDefinitions",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -345,7 +337,6 @@ class FieldType:
                 "name": "fieldRef",
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                "required": True,
             }
         )
 
@@ -355,7 +346,6 @@ class FieldType:
                 metadata={
                     "name": "addressSpaceRef",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -365,7 +355,6 @@ class FieldType:
                 metadata={
                     "name": "memoryMapRef",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -605,7 +594,6 @@ class FieldType:
                             "name": "fieldRef",
                             "type": "Element",
                             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                            "required": True,
                         }
                     )
                     id: None | str = field(
@@ -622,7 +610,6 @@ class FieldType:
                             metadata={
                                 "name": "addressSpaceRef",
                                 "type": "Attribute",
-                                "required": True,
                             }
                         )
 
@@ -632,7 +619,6 @@ class FieldType:
                             metadata={
                                 "name": "memoryMapRef",
                                 "type": "Attribute",
-                                "required": True,
                             }
                         )
 
@@ -652,11 +638,7 @@ class FieldType:
                     values may only be read from the field.
                 """
 
-                value: bool = field(
-                    metadata={
-                        "required": True,
-                    }
-                )
+                value: bool = field()
                 test_constraint: TestableTestConstraint = field(
                     default=TestableTestConstraint.UNCONSTRAINED,
                     metadata={

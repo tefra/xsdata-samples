@@ -70,7 +70,6 @@ class Situation:
             "name": "headerInformation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     situation_record: list[SituationRecord] = field(
@@ -93,12 +92,10 @@ class Situation:
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     version: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

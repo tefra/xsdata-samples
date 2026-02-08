@@ -137,6 +137,5 @@ class PhysConstrs:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

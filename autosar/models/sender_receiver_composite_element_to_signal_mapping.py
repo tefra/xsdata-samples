@@ -187,7 +187,6 @@ class SenderReceiverCompositeElementToSignalMapping:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -210,7 +209,6 @@ class SenderReceiverCompositeElementToSignalMapping:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -233,7 +231,6 @@ class SenderReceiverCompositeElementToSignalMapping:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -243,7 +240,6 @@ class SenderReceiverCompositeElementToSignalMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

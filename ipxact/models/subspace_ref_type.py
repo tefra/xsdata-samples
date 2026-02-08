@@ -44,7 +44,6 @@ class SubspaceRefType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -75,7 +74,6 @@ class SubspaceRefType:
             "name": "baseAddress",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     parameters: None | Parameters = field(
@@ -97,7 +95,6 @@ class SubspaceRefType:
         metadata={
             "name": "initiatorRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     segment_ref: None | str = field(

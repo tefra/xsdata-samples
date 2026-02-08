@@ -17,6 +17,5 @@ class AirExchangeEligibilityRsp(BaseRsp1):
         metadata={
             "name": "ExchangeEligibilityInfo",
             "type": "Element",
-            "required": True,
         }
     )

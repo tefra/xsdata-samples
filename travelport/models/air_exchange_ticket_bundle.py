@@ -20,7 +20,6 @@ class AirExchangeTicketBundle:
             "name": "TicketNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "required": True,
         }
     )
     form_of_payment: list[FormOfPayment1] = field(

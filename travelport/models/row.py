@@ -37,7 +37,6 @@ class Row:
         metadata={
             "name": "Number",
             "type": "Attribute",
-            "required": True,
         }
     )
     search_traveler_ref: None | str = field(

@@ -28,12 +28,10 @@ class RegistrationRequestType:
             "name": "Registration",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
-            "required": True,
         }
     )
     action: ActionType = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

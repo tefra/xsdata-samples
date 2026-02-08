@@ -24,32 +24,17 @@ class AccountAssignmentId:
     class Meta:
         name = "AccountAssignmentID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AccountAssignmentOrderNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class BusinessArea:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -57,102 +42,52 @@ class BuyerOrderConfirmationId:
     class Meta:
         name = "BuyerOrderConfirmationID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class BuyerOrderConfirmationItemNum:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CommitmentItem:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ControllingArea:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CostCenter:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DistributionPercentage:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class FixedAssetSub:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class FunctionalArea:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Fund:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class FundsCenter:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -160,142 +95,72 @@ class Glaccount:
     class Meta:
         name = "GLAccount"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class GenericAccounting:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Network:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OperationNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationItemNum:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationResponseCode:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationResponseCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationResponseCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationResponseHeaderNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationResponseIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ProfitCenter:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SalesOrderReference:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -304,14 +169,12 @@ class AccountAssignment:
         metadata={
             "name": "AccountAssignmentID",
             "type": "Element",
-            "required": True,
         }
     )
     distribution_percentage: DistributionPercentage = field(
         metadata={
             "name": "DistributionPercentage",
             "type": "Element",
-            "required": True,
         }
     )
     glaccount: None | Glaccount = field(
@@ -450,14 +313,12 @@ class OrderConfirmationResponseParty:
         metadata={
             "name": "BuyerParty",
             "type": "Element",
-            "required": True,
         }
     )
     seller_party: SellerParty = field(
         metadata={
             "name": "SellerParty",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_party_coded: None | ListOfPartyCoded = field(
@@ -475,7 +336,6 @@ class OrderConfirmationType:
         metadata={
             "name": "OrderConfirmationTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     order_confirmation_type_coded_other: (
@@ -495,7 +355,6 @@ class SellerOrderConfirmationReference:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -518,7 +377,6 @@ class OrderConfirmationResponseHeader:
         metadata={
             "name": "BuyerOrderConfirmationID",
             "type": "Element",
-            "required": True,
         }
     )
     seller_order_confirmation_reference: SellerOrderConfirmationReference = (
@@ -526,7 +384,6 @@ class OrderConfirmationResponseHeader:
             metadata={
                 "name": "SellerOrderConfirmationReference",
                 "type": "Element",
-                "required": True,
             }
         )
     )
@@ -550,7 +407,6 @@ class OrderConfirmationResponseHeader:
         metadata={
             "name": "OrderConfirmationResponseCoded",
             "type": "Element",
-            "required": True,
         }
     )
     order_confirmation_response_coded_other: (
@@ -566,14 +422,12 @@ class OrderConfirmationResponseHeader:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
     order_confirmation_response_party: OrderConfirmationResponseParty = field(
         metadata={
             "name": "OrderConfirmationResponseParty",
             "type": "Element",
-            "required": True,
         }
     )
     order_confirmation_response_header_note: (
@@ -621,14 +475,12 @@ class OrderConfirmationResponseDetail:
         metadata={
             "name": "OrderConfirmationItemNum",
             "type": "Element",
-            "required": True,
         }
     )
     buyer_order_confirmation_item_num: BuyerOrderConfirmationItemNum = field(
         metadata={
             "name": "BuyerOrderConfirmationItemNum",
             "type": "Element",
-            "required": True,
         }
     )
     order_confirmation_response_code: None | OrderConfirmationResponseCode = (
@@ -700,7 +552,6 @@ class OrderConfirmationResponse:
             metadata={
                 "name": "OrderConfirmationResponseHeader",
                 "type": "Element",
-                "required": True,
             }
         )
     )

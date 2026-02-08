@@ -163,7 +163,6 @@ class CoctMt150007UvContactParty:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -239,7 +238,6 @@ class CoctMt150007UvOrganization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(

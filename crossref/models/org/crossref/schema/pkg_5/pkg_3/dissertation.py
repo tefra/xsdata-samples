@@ -83,7 +83,6 @@ class Dissertation:
     titles: Titles = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     abstract: list[Abstract] = field(
@@ -173,7 +172,6 @@ class Dissertation:
     doi_data: DoiData = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     citation_list: None | CitationList = field(

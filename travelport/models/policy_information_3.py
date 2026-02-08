@@ -41,7 +41,6 @@ class PolicyInformation3:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     name: None | object = field(

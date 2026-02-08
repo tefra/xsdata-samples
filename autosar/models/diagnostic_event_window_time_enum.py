@@ -31,11 +31,7 @@ class DiagnosticEventWindowTimeEnum:
     class Meta:
         name = "DIAGNOSTIC-EVENT-WINDOW-TIME-ENUM"
 
-    value: DiagnosticEventWindowTimeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticEventWindowTimeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

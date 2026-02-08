@@ -34,7 +34,6 @@ class DistanceFromLinearElementReferent(DistanceAlongLinearElement):
             "name": "distanceAlong",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     from_referent: Referent = field(
@@ -42,7 +41,6 @@ class DistanceFromLinearElementReferent(DistanceAlongLinearElement):
             "name": "fromReferent",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     towards_referent: None | Referent = field(

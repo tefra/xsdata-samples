@@ -29,11 +29,7 @@ class LinChecksumType:
     class Meta:
         name = "LIN-CHECKSUM-TYPE"
 
-    value: LinChecksumTypeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: LinChecksumTypeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

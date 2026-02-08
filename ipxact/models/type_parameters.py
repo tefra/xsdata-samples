@@ -58,7 +58,6 @@ class ServiceTypeDef:
         metadata={
             "name": "typeName",
             "type": "Element",
-            "required": True,
         }
     )
     type_definition: list[ServiceTypeDef.TypeDefinition] = field(
@@ -92,12 +91,7 @@ class ServiceTypeDef:
             service in a language specific top-level netlist
         """
 
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         implicit: bool = field(
             default=False,
             metadata={
@@ -107,12 +101,7 @@ class ServiceTypeDef:
 
     @dataclass(kw_only=True)
     class TypeDefinition:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         id: None | str = field(
             default=None,
             metadata={

@@ -45,7 +45,6 @@ class SeatAssignment6:
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
             "length": 2,
             "white_space": "collapse",
         }
@@ -54,7 +53,6 @@ class SeatAssignment6:
         metadata={
             "name": "Seat",
             "type": "Attribute",
-            "required": True,
         }
     )
     seat_type_code: None | str = field(

@@ -28,11 +28,7 @@ class ProgramminglanguageEnum:
     class Meta:
         name = "PROGRAMMINGLANGUAGE-ENUM"
 
-    value: ProgramminglanguageEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ProgramminglanguageEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

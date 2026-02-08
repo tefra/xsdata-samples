@@ -18,7 +18,6 @@ class StdAdoptedFrom:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "min_length": 2,
             "max_length": 150,
         },

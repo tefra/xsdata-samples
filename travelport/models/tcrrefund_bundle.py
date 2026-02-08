@@ -45,7 +45,6 @@ class TcrrefundBundle:
         metadata={
             "name": "AirRefundInfo",
             "type": "Element",
-            "required": True,
         }
     )
     waiver_code: None | WaiverCode = field(
@@ -92,14 +91,12 @@ class TcrrefundBundle:
         metadata={
             "name": "TCRNumber",
             "type": "Attribute",
-            "required": True,
         }
     )
     refund_type: TcrrefundBundleRefundType = field(
         metadata={
             "name": "RefundType",
             "type": "Attribute",
-            "required": True,
         }
     )
     refund_access_code: None | str = field(

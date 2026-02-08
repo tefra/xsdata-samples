@@ -34,12 +34,7 @@ class ConfirmationId:
     class Meta:
         name = "ConfirmationID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -47,112 +42,57 @@ class FxvalueDate:
     class Meta:
         name = "FXValueDate"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PayBeforeDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentDueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentExceptionCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentExceptionCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentExceptionNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentStatusResponseIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RequestedPaymentDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SequenceNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SettlementDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalNumberPaymentRequests:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -161,7 +101,6 @@ class CreditAmount:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -172,7 +111,6 @@ class DebitAmount:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -186,14 +124,12 @@ class FiaccountDetail:
         metadata={
             "name": "AccountDetail",
             "type": "Element",
-            "required": True,
         }
     )
     financial_institution: FinancialInstitution = field(
         metadata={
             "name": "FinancialInstitution",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -204,7 +140,6 @@ class ListOfOtherPaymentInfo:
         metadata={
             "name": "ListOfNameValuePair",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -215,7 +150,6 @@ class ListOfPaymentDates:
         metadata={
             "name": "ListOfDateCoded",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -226,7 +160,6 @@ class ListOfPaymentReferences:
         metadata={
             "name": "ListOfReference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -237,7 +170,6 @@ class OffendingPaymentElement:
         metadata={
             "name": "NameValuePair",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -251,7 +183,6 @@ class ParticipantUserId:
         metadata={
             "name": "Identifier",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -265,7 +196,6 @@ class PaymentRequestId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -279,7 +209,6 @@ class PaymentStatusRequestId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -304,7 +233,6 @@ class PaymentStatusResponseId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -315,7 +243,6 @@ class SendingParty:
         metadata={
             "name": "PayerParty",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -326,7 +253,6 @@ class SettlementAmount:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -337,7 +263,6 @@ class OriginatingFinancialInstitution:
         metadata={
             "name": "FIAccountDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -380,7 +305,6 @@ class PaymentException:
         metadata={
             "name": "PaymentExceptionCoded",
             "type": "Element",
-            "required": True,
         }
     )
     payment_exception_coded_other: None | PaymentExceptionCodedOther = field(
@@ -412,21 +336,18 @@ class PaymentStatusResponseHeader:
         metadata={
             "name": "PaymentStatusRequestID",
             "type": "Element",
-            "required": True,
         }
     )
     payment_status_response_id: PaymentStatusResponseId = field(
         metadata={
             "name": "PaymentStatusResponseID",
             "type": "Element",
-            "required": True,
         }
     )
     payment_status_response_issue_date: PaymentStatusResponseIssueDate = field(
         metadata={
             "name": "PaymentStatusResponseIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     sending_party: None | SendingParty = field(
@@ -440,7 +361,6 @@ class PaymentStatusResponseHeader:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
     general_note: None | GeneralNote = field(
@@ -458,7 +378,6 @@ class PaymentStatusResponseSummary:
         metadata={
             "name": "PaymentStatusRequestSummary",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -469,7 +388,6 @@ class ReceivingFinancialInstitution:
         metadata={
             "name": "FIAccountDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -492,7 +410,6 @@ class ListOfPaymentResponse:
         metadata={
             "name": "ListOfPaymentException",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -503,14 +420,12 @@ class PaymentStatusResponseDetail:
         metadata={
             "name": "PaymentRequestID",
             "type": "Element",
-            "required": True,
         }
     )
     confirmation_id: ConfirmationId = field(
         metadata={
             "name": "ConfirmationID",
             "type": "Element",
-            "required": True,
         }
     )
     sequence_number: None | SequenceNumber = field(
@@ -640,7 +555,6 @@ class PaymentStatusResponseDetail:
         metadata={
             "name": "ListOfPaymentResponse",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -663,20 +577,17 @@ class PaymentStatusResponse:
         metadata={
             "name": "PaymentStatusResponseHeader",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_payment_status_response_detail: ListOfPaymentStatusResponseDetail = field(
         metadata={
             "name": "ListOfPaymentStatusResponseDetail",
             "type": "Element",
-            "required": True,
         }
     )
     payment_status_response_summary: PaymentStatusResponseSummary = field(
         metadata={
             "name": "PaymentStatusResponseSummary",
             "type": "Element",
-            "required": True,
         }
     )

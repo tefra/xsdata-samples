@@ -15,9 +15,4 @@ class RunningNumber:
         name = "running_number"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

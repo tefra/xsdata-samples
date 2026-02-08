@@ -29,20 +29,17 @@ class TypeSavedTripProductInfo:
         metadata={
             "name": "ProductType",
             "type": "Attribute",
-            "required": True,
         }
     )
     vendor_code: str = field(
         metadata={
             "name": "VendorCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
         }
     )

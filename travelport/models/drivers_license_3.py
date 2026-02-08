@@ -42,7 +42,6 @@ class DriversLicense3:
         metadata={
             "name": "LicenseNumber",
             "type": "Attribute",
-            "required": True,
         }
     )
     el_stat: None | TypeElementStatus4 = field(

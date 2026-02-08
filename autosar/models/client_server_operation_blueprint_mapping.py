@@ -103,7 +103,6 @@ class ClientServerOperationBlueprintMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -113,6 +112,5 @@ class ClientServerOperationBlueprintMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

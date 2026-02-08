@@ -18,7 +18,6 @@ class MileageDisplayType:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     city: None | str = field(

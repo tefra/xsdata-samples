@@ -47,7 +47,6 @@ class AbstractorSubPortType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
             "white_space": "collapse",
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
         }
@@ -177,7 +176,6 @@ class AbstractorPortStructuredType:
             "name": "subPorts",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     struct_port_type_defs: StructPortTypeDefs = field(
@@ -185,7 +183,6 @@ class AbstractorPortStructuredType:
             "name": "structPortTypeDefs",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     packed: bool = field(

@@ -147,7 +147,6 @@ class RailJourney:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     origin: None | str = field(
@@ -172,7 +171,6 @@ class RailJourney:
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
-            "required": True,
         }
     )
     arrival_time: None | str = field(

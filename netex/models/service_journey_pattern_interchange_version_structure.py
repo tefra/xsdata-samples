@@ -21,7 +21,6 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "name": "FromPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     from_visit_number: None | int = field(
@@ -37,7 +36,6 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "name": "ToPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     to_visit_number: None | int = field(
@@ -53,7 +51,6 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "name": "FromJourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     to_journey_pattern_ref: JourneyPatternRefStructure = field(
@@ -61,6 +58,5 @@ class ServiceJourneyPatternInterchangeVersionStructure(
             "name": "ToJourneyPatternRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

@@ -63,7 +63,6 @@ class CoctMt280000Uv04CrossReference:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(

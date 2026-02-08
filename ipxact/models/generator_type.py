@@ -56,7 +56,6 @@ class GeneratorType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -125,7 +124,6 @@ class GeneratorType:
             "name": "generatorExe",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     vendor_extensions: None | VendorExtensions = field(
@@ -152,11 +150,7 @@ class GeneratorType:
 
     @dataclass(kw_only=True)
     class ApiType:
-        value: ApiType = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: ApiType = field()
         id: None | str = field(
             default=None,
             metadata={
@@ -179,7 +173,6 @@ class GeneratorType:
                 "name": "transportMethod",
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                "required": True,
             }
         )
         id: None | str = field(
@@ -192,11 +185,7 @@ class GeneratorType:
 
         @dataclass(kw_only=True)
         class TransportMethod:
-            value: TransportMethodType = field(
-                metadata={
-                    "required": True,
-                }
-            )
+            value: TransportMethodType = field()
             id: None | str = field(
                 default=None,
                 metadata={

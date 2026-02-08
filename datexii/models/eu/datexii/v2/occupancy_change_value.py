@@ -25,7 +25,6 @@ class OccupancyChangeValue(DataValue):
             "name": "occupancyChange",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     occupancy_change_value_extension: None | ExtensionType = field(

@@ -25,14 +25,12 @@ class HotelAmenity:
         metadata={
             "name": "Level",
             "type": "Attribute",
-            "required": True,
         }
     )
     amenity_code: int = field(
         metadata={
             "name": "AmenityCode",
             "type": "Attribute",
-            "required": True,
             "total_digits": 3,
         }
     )

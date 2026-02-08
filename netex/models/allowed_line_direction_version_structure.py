@@ -39,7 +39,6 @@ class AllowedLineDirectionVersionStructure(DataManagedObjectStructure):
             "name": "DirectionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     presentation: None | PresentationStructure = field(

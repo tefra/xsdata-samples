@@ -24,7 +24,6 @@ class OverlineEnd:
     rid: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     specific_use: None | str = field(

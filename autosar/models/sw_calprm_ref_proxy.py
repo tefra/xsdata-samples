@@ -76,6 +76,5 @@ class SwCalprmRefProxy:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

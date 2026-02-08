@@ -58,7 +58,6 @@ class PageType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:pages:2013",
-            "required": True,
         }
     )
     sub_title: None | str = field(
@@ -150,14 +149,12 @@ class PageType:
     url: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     type_value: PageTypeEnum = field(
         metadata={
             "name": "type",
             "type": "Attribute",
-            "required": True,
         }
     )
     creation_date: None | XmlDateTime = field(

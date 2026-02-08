@@ -838,7 +838,6 @@ class ActivityPropertyType:
             "name": "Name",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     value: Value = field(
@@ -846,7 +845,6 @@ class ActivityPropertyType:
             "name": "Value",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
 
@@ -858,7 +856,6 @@ class AddressLineType:
             "name": "Line",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
 
@@ -870,7 +867,6 @@ class AirTransportType:
             "name": "AircraftID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
 
@@ -1118,7 +1114,6 @@ class CardAccountType:
             "name": "PrimaryAccountNumberID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     network_id: NetworkId = field(
@@ -1126,7 +1121,6 @@ class CardAccountType:
             "name": "NetworkID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     card_type_code: None | CardTypeCode = field(
@@ -1210,7 +1204,6 @@ class CatalogueReferenceType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     uuid: None | Uuid = field(
@@ -1416,7 +1409,6 @@ class ConditionType:
             "name": "AttributeID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     measure: None | Measure = field(
@@ -1674,7 +1666,6 @@ class CreditAccountType:
             "name": "AccountID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
 
@@ -1686,7 +1677,6 @@ class DeliveryUnitType:
             "name": "BatchQuantity",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     consumer_unit_quantity: None | ConsumerUnitQuantity = field(
@@ -1714,7 +1704,6 @@ class DimensionType:
             "name": "AttributeID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     measure: None | Measure = field(
@@ -1778,7 +1767,6 @@ class EventCommentType:
             "name": "Comment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_date: None | IssueDate = field(
@@ -1846,7 +1834,6 @@ class EvidenceSuppliedType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
 
@@ -1950,7 +1937,6 @@ class ForecastExceptionCriterionLineType:
             "name": "ForecastPurposeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     forecast_type_code: ForecastTypeCode = field(
@@ -1958,7 +1944,6 @@ class ForecastExceptionCriterionLineType:
             "name": "ForecastTypeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     comparison_data_source_code: None | ComparisonDataSourceCode = field(
@@ -1974,7 +1959,6 @@ class ForecastExceptionCriterionLineType:
             "name": "DataSourceCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     time_delta_days_quantity: None | TimeDeltaDaysQuantity = field(
@@ -1994,7 +1978,6 @@ class ForecastExceptionType:
             "name": "ForecastPurposeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     forecast_type_code: ForecastTypeCode = field(
@@ -2002,7 +1985,6 @@ class ForecastExceptionType:
             "name": "ForecastTypeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_date: IssueDate = field(
@@ -2010,7 +1992,6 @@ class ForecastExceptionType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -2026,7 +2007,6 @@ class ForecastExceptionType:
             "name": "DataSourceCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     comparison_data_code: None | ComparisonDataCode = field(
@@ -2082,7 +2062,6 @@ class ItemPropertyGroupType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     name: None | Name = field(
@@ -2296,7 +2275,6 @@ class MeterReadingType:
             "name": "PreviousMeterReadingDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     previous_meter_quantity: PreviousMeterQuantity = field(
@@ -2304,7 +2282,6 @@ class MeterReadingType:
             "name": "PreviousMeterQuantity",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     latest_meter_reading_date: LatestMeterReadingDate = field(
@@ -2312,7 +2289,6 @@ class MeterReadingType:
             "name": "LatestMeterReadingDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     latest_meter_quantity: LatestMeterQuantity = field(
@@ -2320,7 +2296,6 @@ class MeterReadingType:
             "name": "LatestMeterQuantity",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     previous_meter_reading_method: None | PreviousMeterReadingMethod = field(
@@ -2372,7 +2347,6 @@ class MeterReadingType:
             "name": "DeliveredQuantity",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
 
@@ -2440,7 +2414,6 @@ class MonetaryTotalType:
             "name": "PayableAmount",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     payable_alternative_amount: None | PayableAlternativeAmount = field(
@@ -2460,7 +2433,6 @@ class PartyIdentificationType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
 
@@ -2472,7 +2444,6 @@ class PartyNameType:
             "name": "Name",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
 
@@ -2596,7 +2567,6 @@ class PhysicalAttributeType:
             "name": "AttributeID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     position_code: None | PositionCode = field(
@@ -2670,7 +2640,6 @@ class RailTransportType:
             "name": "TrainID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     rail_car_id: None | RailCarId = field(
@@ -2690,7 +2659,6 @@ class RegulationType:
             "name": "Name",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     legal_reference: None | LegalReference = field(
@@ -2746,7 +2714,6 @@ class RoadTransportType:
             "name": "LicensePlateID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
 
@@ -2802,7 +2769,6 @@ class ServiceFrequencyType:
             "name": "WeekDayCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
 
@@ -2876,7 +2842,6 @@ class TemperatureType:
             "name": "AttributeID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     measure: Measure = field(
@@ -2884,7 +2849,6 @@ class TemperatureType:
             "name": "Measure",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     description: tuple[Description, ...] = field(
@@ -2904,7 +2868,6 @@ class TransportEquipmentSealType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     seal_issuer_type_code: None | SealIssuerTypeCode = field(
@@ -2976,7 +2939,6 @@ class WebSiteAccessType:
             "name": "Password",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     login: Login = field(
@@ -2984,7 +2946,6 @@ class WebSiteAccessType:
             "name": "Login",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
 
@@ -4208,7 +4169,6 @@ class ClassificationSchemeType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     uuid: None | Uuid = field(
@@ -4333,7 +4293,6 @@ class ConsumptionHistoryType:
             "name": "Quantity",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     amount: None | Amount = field(
@@ -4373,7 +4332,6 @@ class ConsumptionHistoryType:
             "name": "Period",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -4385,7 +4343,6 @@ class ConsumptionReportReferenceType:
             "name": "ConsumptionReportID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     consumption_type: None | UblCommonBasicComponents21ConsumptionType = field(
@@ -4409,7 +4366,6 @@ class ConsumptionReportReferenceType:
             "name": "TotalConsumedQuantity",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     period: Period = field(
@@ -4417,7 +4373,6 @@ class ConsumptionReportReferenceType:
             "name": "Period",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -4541,7 +4496,6 @@ class EventTacticType:
             "name": "EventTacticEnumeration",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     period: None | Period = field(
@@ -4561,7 +4515,6 @@ class FinancialGuaranteeType:
             "name": "GuaranteeTypeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     description: tuple[Description, ...] = field(
@@ -4673,7 +4626,6 @@ class ItemPropertyType:
             "name": "Name",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     name_code: None | NameCode = field(
@@ -4889,7 +4841,6 @@ class RetailPlannedImpactType:
             "name": "Amount",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     forecast_purpose_code: ForecastPurposeCode = field(
@@ -4897,7 +4848,6 @@ class RetailPlannedImpactType:
             "name": "ForecastPurposeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     forecast_type_code: ForecastTypeCode = field(
@@ -4905,7 +4855,6 @@ class RetailPlannedImpactType:
             "name": "ForecastTypeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     period: None | Period = field(
@@ -5377,7 +5326,6 @@ class ConsumptionPointType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     description: tuple[Description, ...] = field(
@@ -5535,7 +5483,6 @@ class DocumentReferenceType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     copy_indicator: None | CopyIndicator = field(
@@ -6591,7 +6538,6 @@ class ConsumptionReportType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     consumption_type: None | UblCommonBasicComponents21ConsumptionType = field(
@@ -6917,7 +6863,6 @@ class EnergyTaxReportType:
             "name": "TaxScheme",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -7073,7 +7018,6 @@ class LineReferenceType:
             "name": "LineID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     uuid: None | Uuid = field(
@@ -7179,7 +7123,6 @@ class OrderReferenceType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     sales_order_id: None | SalesOrderId = field(
@@ -7303,7 +7246,6 @@ class PartyTaxSchemeType:
             "name": "TaxScheme",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -7387,7 +7329,6 @@ class TaxCategoryType:
             "name": "TaxScheme",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -7399,7 +7340,6 @@ class TenderRequirementType:
             "name": "Name",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     description: tuple[Description, ...] = field(
@@ -7751,7 +7691,6 @@ class DutyType:
             "name": "Amount",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     duty: None | UblCommonBasicComponents21Duty = field(
@@ -7825,7 +7764,6 @@ class EnvironmentalEmissionType:
             "name": "EnvironmentalEmissionTypeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     value_measure: ValueMeasure = field(
@@ -7833,7 +7771,6 @@ class EnvironmentalEmissionType:
             "name": "ValueMeasure",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     description: tuple[Description, ...] = field(
@@ -7861,7 +7798,6 @@ class ExchangeRateType:
             "name": "SourceCurrencyCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     source_currency_base_rate: None | SourceCurrencyBaseRate = field(
@@ -7877,7 +7813,6 @@ class ExchangeRateType:
             "name": "TargetCurrencyCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     target_currency_base_rate: None | TargetCurrencyBaseRate = field(
@@ -8067,7 +8002,6 @@ class LineResponseType:
             "name": "LineReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     response: tuple[Response, ...] = field(
@@ -8088,7 +8022,6 @@ class OrderLineReferenceType:
             "name": "LineID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     sales_order_line_id: None | SalesOrderLineId = field(
@@ -8132,7 +8065,6 @@ class ProjectReferenceType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     uuid: None | Uuid = field(
@@ -8248,7 +8180,6 @@ class TaxSubtotalType:
             "name": "TaxAmount",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     calculation_sequence_numeric: None | CalculationSequenceNumeric = field(
@@ -8314,7 +8245,6 @@ class TaxSubtotalType:
             "name": "TaxCategory",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -8326,7 +8256,6 @@ class UtilityItemType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     subscriber_id: None | SubscriberId = field(
@@ -8878,7 +8807,6 @@ class TaxTotalType:
             "name": "TaxAmount",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     rounding_amount: None | RoundingAmount = field(
@@ -9130,7 +9058,6 @@ class OnAccountPaymentType:
             "name": "EstimatedConsumedQuantity",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     note: tuple[Note, ...] = field(
@@ -9315,7 +9242,6 @@ class PriceExtensionType:
             "name": "Amount",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     tax_total: tuple[TaxTotal, ...] = field(
@@ -9856,7 +9782,6 @@ class ContractingPartyType1:
             "name": "Party",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -9928,7 +9853,6 @@ class CustomsDeclarationType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issuer_party: None | IssuerParty = field(
@@ -10104,7 +10028,6 @@ class DocumentDistributionType:
             "name": "PrintQualifier",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     maximum_copies_numeric: MaximumCopiesNumeric = field(
@@ -10112,7 +10035,6 @@ class DocumentDistributionType:
             "name": "MaximumCopiesNumeric",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     party: Party = field(
@@ -10120,7 +10042,6 @@ class DocumentDistributionType:
             "name": "Party",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -10132,7 +10053,6 @@ class DocumentResponseType:
             "name": "Response",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     document_reference: tuple[DocumentReference, ...] = field(
@@ -10221,7 +10141,6 @@ class EndorserPartyType:
             "name": "RoleCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     sequence_numeric: SequenceNumeric = field(
@@ -10229,7 +10148,6 @@ class EndorserPartyType:
             "name": "SequenceNumeric",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     party: Party = field(
@@ -10237,7 +10155,6 @@ class EndorserPartyType:
             "name": "Party",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     signatory_contact: SignatoryContact = field(
@@ -10245,7 +10162,6 @@ class EndorserPartyType:
             "name": "SignatoryContact",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -10565,7 +10481,6 @@ class ItemIdentificationType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     extended_id: None | ExtendedId = field(
@@ -10617,7 +10532,6 @@ class NotificationRequirementType:
             "name": "NotificationTypeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     post_event_notification_duration_measure: (
@@ -10875,7 +10789,6 @@ class PowerOfAttorneyType:
             "name": "AgentParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     witness_party: tuple[WitnessParty, ...] = field(
@@ -10995,7 +10908,6 @@ class ServiceProviderPartyType:
             "name": "Party",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     seller_contact: None | SellerContact = field(
@@ -11035,7 +10947,6 @@ class SignatureType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     note: tuple[Note, ...] = field(
@@ -11211,7 +11122,6 @@ class TradeFinancingType:
             "name": "FinancingParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     financing_financial_account: None | FinancingFinancialAccount = field(
@@ -11355,7 +11265,6 @@ class WinningPartyType:
             "name": "Party",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -11631,7 +11540,6 @@ class CertificateType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     certificate_type_code: CertificateTypeCode = field(
@@ -11639,7 +11547,6 @@ class CertificateType:
             "name": "CertificateTypeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     certificate_type: UblCommonBasicComponents21CertificateType = field(
@@ -11647,7 +11554,6 @@ class CertificateType:
             "name": "CertificateType",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     remarks: tuple[Remarks, ...] = field(
@@ -11663,7 +11569,6 @@ class CertificateType:
             "name": "IssuerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     document_reference: tuple[DocumentReference, ...] = field(
@@ -11751,7 +11656,6 @@ class EndorsementType:
             "name": "DocumentID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     approval_status: ApprovalStatus = field(
@@ -11759,7 +11663,6 @@ class EndorsementType:
             "name": "ApprovalStatus",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     remarks: tuple[Remarks, ...] = field(
@@ -11775,7 +11678,6 @@ class EndorsementType:
             "name": "EndorserParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     signature: tuple[Signature, ...] = field(
@@ -11989,7 +11891,6 @@ class PaymentMeansType:
             "name": "PaymentMeansCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     payment_due_date: None | PaymentDueDate = field(
@@ -12423,7 +12324,6 @@ class AllowanceChargeType:
             "name": "ChargeIndicator",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     allowance_charge_reason_code: None | AllowanceChargeReasonCode = field(
@@ -12471,7 +12371,6 @@ class AllowanceChargeType:
             "name": "Amount",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     base_amount: None | BaseAmount = field(
@@ -13071,7 +12970,6 @@ class BillingReferenceLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     amount: None | Amount = field(
@@ -13099,7 +12997,6 @@ class CatalogueItemSpecificationUpdateLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     contractor_customer_party: None | ContractorCustomerParty = field(
@@ -13123,7 +13020,6 @@ class CatalogueItemSpecificationUpdateLineType:
             "name": "Item",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -13195,7 +13091,6 @@ class DespatchLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     uuid: None | Uuid = field(
@@ -13292,7 +13187,6 @@ class DespatchLineType:
             "name": "Item",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     shipment: tuple[Shipment, ...] = field(
@@ -13338,7 +13232,6 @@ class EventLineItemType:
             "name": "SupplyItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -13350,7 +13243,6 @@ class ExceptionCriteriaLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     note: tuple[Note, ...] = field(
@@ -13366,7 +13258,6 @@ class ExceptionCriteriaLineType:
             "name": "ThresholdValueComparisonCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     threshold_quantity: ThresholdQuantity = field(
@@ -13374,7 +13265,6 @@ class ExceptionCriteriaLineType:
             "name": "ThresholdQuantity",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     exception_status_code: None | ExceptionStatusCode = field(
@@ -13455,7 +13345,6 @@ class ExceptionNotificationLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     note: tuple[Note, ...] = field(
@@ -13503,7 +13392,6 @@ class ExceptionNotificationLineType:
             "name": "ComparedValueMeasure",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     source_value_measure: SourceValueMeasure = field(
@@ -13511,7 +13399,6 @@ class ExceptionNotificationLineType:
             "name": "SourceValueMeasure",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     variance_quantity: None | VarianceQuantity = field(
@@ -13569,7 +13456,6 @@ class ExceptionNotificationLineType:
             "name": "SupplyItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -13581,7 +13467,6 @@ class InstructionForReturnsLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     note: tuple[Note, ...] = field(
@@ -13597,7 +13482,6 @@ class InstructionForReturnsLineType:
             "name": "Quantity",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     manufacturer_party: None | ManufacturerParty = field(
@@ -13613,7 +13497,6 @@ class InstructionForReturnsLineType:
             "name": "Item",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -13625,7 +13508,6 @@ class InventoryReportLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     note: tuple[Note, ...] = field(
@@ -13641,7 +13523,6 @@ class InventoryReportLineType:
             "name": "Quantity",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     inventory_value_amount: None | InventoryValueAmount = field(
@@ -13673,7 +13554,6 @@ class InventoryReportLineType:
             "name": "Item",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     inventory_location: None | InventoryLocation = field(
@@ -13693,7 +13573,6 @@ class PerformanceDataLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     note: tuple[Note, ...] = field(
@@ -13709,7 +13588,6 @@ class PerformanceDataLineType:
             "name": "PerformanceValueQuantity",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     performance_metric_type_code: PerformanceMetricTypeCode = field(
@@ -13717,7 +13595,6 @@ class PerformanceDataLineType:
             "name": "PerformanceMetricTypeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     period: None | Period = field(
@@ -13745,7 +13622,6 @@ class PriceType:
             "name": "PriceAmount",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     base_quantity: None | BaseQuantity = field(
@@ -13829,7 +13705,6 @@ class ReceiptLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     uuid: None | Uuid = field(
@@ -13993,7 +13868,6 @@ class StockAvailabilityReportLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     note: tuple[Note, ...] = field(
@@ -14009,7 +13883,6 @@ class StockAvailabilityReportLineType:
             "name": "Quantity",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     value_amount: None | ValueAmount = field(
@@ -14041,7 +13914,6 @@ class StockAvailabilityReportLineType:
             "name": "Item",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -14235,7 +14107,6 @@ class ConsignmentType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     carrier_assigned_id: None | CarrierAssignedId = field(
@@ -15263,7 +15134,6 @@ class MiscellaneousEventType:
             "name": "MiscellaneousEventTypeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     event_line_item: tuple[EventLineItem, ...] = field(
@@ -15284,7 +15154,6 @@ class PromotionalEventLineItemType:
             "name": "Amount",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     event_line_item: EventLineItem = field(
@@ -15292,7 +15161,6 @@ class PromotionalEventLineItemType:
             "name": "EventLineItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -15304,7 +15172,6 @@ class SalesItemType:
             "name": "Quantity",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     activity_property: tuple[ActivityProperty, ...] = field(
@@ -15336,7 +15203,6 @@ class SalesItemType:
             "name": "Item",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -15356,7 +15222,6 @@ class TelecommunicationsServiceType:
             "name": "CallDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     call_time: CallTime = field(
@@ -15364,7 +15229,6 @@ class TelecommunicationsServiceType:
             "name": "CallTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     service_number_called: ServiceNumberCalled = field(
@@ -15372,7 +15236,6 @@ class TelecommunicationsServiceType:
             "name": "ServiceNumberCalled",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     telecommunications_service_category: (
@@ -15690,7 +15553,6 @@ class ActivityDataLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     supply_chain_activity_type_code: SupplyChainActivityTypeCode = field(
@@ -15698,7 +15560,6 @@ class ActivityDataLineType:
             "name": "SupplyChainActivityTypeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     buyer_customer_party: None | BuyerCustomerParty = field(
@@ -15730,7 +15591,6 @@ class ActivityDataLineType:
             "name": "ActivityOriginLocation",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     activity_final_location: None | ActivityFinalLocation = field(
@@ -15759,7 +15619,6 @@ class ConsumptionLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     parent_document_line_reference_id: None | ParentDocumentLineReferenceId = (
@@ -15777,7 +15636,6 @@ class ConsumptionLineType:
             "name": "InvoicedQuantity",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     line_extension_amount: LineExtensionAmount = field(
@@ -15785,7 +15643,6 @@ class ConsumptionLineType:
             "name": "LineExtensionAmount",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     period: None | Period = field(
@@ -15825,7 +15682,6 @@ class ConsumptionLineType:
             "name": "UtilityItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     price: None | Price = field(
@@ -15853,7 +15709,6 @@ class ForecastLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     note: tuple[Note, ...] = field(
@@ -15877,7 +15732,6 @@ class ForecastLineType:
             "name": "ForecastTypeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     forecast_period: None | ForecastPeriod = field(
@@ -15905,7 +15759,6 @@ class ForecastRevisionLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     note: tuple[Note, ...] = field(
@@ -15929,7 +15782,6 @@ class ForecastRevisionLineType:
             "name": "RevisedForecastLineID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     source_forecast_issue_date: SourceForecastIssueDate = field(
@@ -15937,7 +15789,6 @@ class ForecastRevisionLineType:
             "name": "SourceForecastIssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     source_forecast_issue_time: SourceForecastIssueTime = field(
@@ -15945,7 +15796,6 @@ class ForecastRevisionLineType:
             "name": "SourceForecastIssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     adjustment_reason_code: None | AdjustmentReasonCode = field(
@@ -16396,7 +16246,6 @@ class ReminderLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     note: tuple[Note, ...] = field(
@@ -16514,7 +16363,6 @@ class RemittanceAdviceLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     note: tuple[Note, ...] = field(
@@ -16662,7 +16510,6 @@ class StatementLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     note: tuple[Note, ...] = field(
@@ -16844,7 +16691,6 @@ class TelecommunicationsSupplyLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     phone_number: PhoneNumber = field(
@@ -16852,7 +16698,6 @@ class TelecommunicationsSupplyLineType:
             "name": "PhoneNumber",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     description: tuple[Description, ...] = field(
@@ -17123,7 +16968,6 @@ class PromotionalEventType:
             "name": "PromotionalEventTypeCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     submission_date: None | SubmissionDate = field(
@@ -17172,7 +17016,6 @@ class ShipmentType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     shipping_priority_level_code: None | ShippingPriorityLevelCode = field(
@@ -17458,7 +17301,6 @@ class TelecommunicationsSupplyType:
             "name": "PrivacyCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     description: tuple[Description, ...] = field(
@@ -17563,7 +17405,6 @@ class CertificateOfOriginApplicationType:
             "name": "ReferenceID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     certificate_type: UblCommonBasicComponents21CertificateType = field(
@@ -17571,7 +17412,6 @@ class CertificateOfOriginApplicationType:
             "name": "CertificateType",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     application_status_code: None | ApplicationStatusCode = field(
@@ -17587,7 +17427,6 @@ class CertificateOfOriginApplicationType:
             "name": "OriginalJobID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     previous_job_id: None | PreviousJobId = field(
@@ -17611,7 +17450,6 @@ class CertificateOfOriginApplicationType:
             "name": "Shipment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     endorser_party: tuple[EndorserParty, ...] = field(
@@ -17628,7 +17466,6 @@ class CertificateOfOriginApplicationType:
             "name": "PreparationParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     issuer_party: IssuerParty = field(
@@ -17636,7 +17473,6 @@ class CertificateOfOriginApplicationType:
             "name": "IssuerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     exporter_party: None | ExporterParty = field(
@@ -17660,7 +17496,6 @@ class CertificateOfOriginApplicationType:
             "name": "IssuingCountry",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     document_distribution: tuple[DocumentDistribution, ...] = field(
@@ -17746,7 +17581,6 @@ class ConsumptionType:
             "name": "LegalMonetaryTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -17860,7 +17694,6 @@ class OrderedShipmentType:
             "name": "Shipment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     package: tuple[Package, ...] = field(
@@ -18244,7 +18077,6 @@ class CatalogueLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     action_code: None | ActionCode = field(
@@ -18464,7 +18296,6 @@ class CatalogueLineType:
             "name": "Item",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     keyword_item_property: tuple[KeywordItemProperty, ...] = field(
@@ -18504,7 +18335,6 @@ class CataloguePricingUpdateLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     contractor_customer_party: None | ContractorCustomerParty = field(
@@ -18542,7 +18372,6 @@ class CatalogueRequestLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     contract_subdivision: None | ContractSubdivision = field(
@@ -18584,7 +18413,6 @@ class CatalogueRequestLineType:
             "name": "Item",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -18654,7 +18482,6 @@ class ItemManagementProfileType:
             "name": "EffectivePeriod",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     item: Item = field(
@@ -18662,7 +18489,6 @@ class ItemManagementProfileType:
             "name": "Item",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     item_location_quantity: None | ItemLocationQuantity = field(
@@ -18818,7 +18644,6 @@ class RequestForTenderLineType:
             "name": "Item",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     sub_request_for_tender_line: tuple[SubRequestForTenderLine, ...] = field(
@@ -19376,7 +19201,6 @@ class SupplierConsumptionType:
             "name": "Consumption",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     contract: None | Contract = field(
@@ -20087,7 +19911,6 @@ class TransportScheduleType:
             "name": "SequenceNumeric",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     reference_date: None | ReferenceDate = field(
@@ -20127,7 +19950,6 @@ class TransportScheduleType:
             "name": "StatusLocation",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     actual_arrival_transport_event: None | ActualArrivalTransportEvent = field(
@@ -20329,7 +20151,6 @@ class CreditNoteLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     uuid: None | Uuid = field(
@@ -20557,7 +20378,6 @@ class DebitNoteLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     uuid: None | Uuid = field(
@@ -20589,7 +20409,6 @@ class DebitNoteLineType:
             "name": "LineExtensionAmount",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     tax_point_date: None | TaxPointDate = field(
@@ -20729,7 +20548,6 @@ class GoodsItemContainerType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     quantity: None | Quantity = field(
@@ -20757,7 +20575,6 @@ class InvoiceLineType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     uuid: None | Uuid = field(
@@ -20789,7 +20606,6 @@ class InvoiceLineType:
             "name": "LineExtensionAmount",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     tax_point_date: None | TaxPointDate = field(
@@ -20941,7 +20757,6 @@ class InvoiceLineType:
             "name": "Item",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     price: None | Price = field(
@@ -20985,7 +20800,6 @@ class LineItemType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     sales_order_id: None | SalesOrderId = field(
@@ -21185,7 +20999,6 @@ class LineItemType:
             "name": "Item",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     sub_line_item: tuple[SubLineItem, ...] = field(
@@ -21438,7 +21251,6 @@ class SubscriberConsumptionType:
             "name": "UtilityConsumptionPoint",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     on_account_payment: tuple[OnAccountPayment, ...] = field(
@@ -21702,7 +21514,6 @@ class TransportationServiceType:
             "name": "TransportServiceCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     tariff_class_code: None | TariffClassCode = field(
@@ -22052,7 +21863,6 @@ class OrderLineType:
             "name": "LineItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     seller_proposed_substitute_line_item: tuple[
@@ -22126,7 +21936,6 @@ class ProcurementProjectLotType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     tendering_terms: None | TenderingTerms = field(
@@ -22210,7 +22019,6 @@ class QuotationLineType:
             "name": "LineItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     seller_proposed_substitute_line_item: tuple[
@@ -22304,7 +22112,6 @@ class RequestForQuotationLineType:
             "name": "LineItem",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
 
@@ -22316,7 +22123,6 @@ class TransportationSegmentType:
             "name": "SequenceNumeric",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     transport_execution_plan_reference_id: (
@@ -22334,7 +22140,6 @@ class TransportationSegmentType:
             "name": "TransportationService",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     transport_service_provider_party: TransportServiceProviderParty = field(
@@ -22342,7 +22147,6 @@ class TransportationSegmentType:
             "name": "TransportServiceProviderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     referenced_consignment: None | ReferencedConsignment = field(
@@ -22406,7 +22210,6 @@ class QualificationResolutionType:
             "name": "AdmissionCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     exclusion_reason: tuple[ExclusionReason, ...] = field(
@@ -22430,7 +22233,6 @@ class QualificationResolutionType:
             "name": "ResolutionDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     resolution_time: None | ResolutionTime = field(
@@ -22458,7 +22260,6 @@ class TenderPreparationType:
             "name": "TenderEnvelopeID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     tender_envelope_type_code: None | TenderEnvelopeTypeCode = field(
@@ -22612,7 +22413,6 @@ class TendererPartyQualificationType:
             "name": "MainQualifyingParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     additional_qualifying_party: tuple[AdditionalQualifyingParty, ...] = field(
@@ -22686,7 +22486,6 @@ class TenderResultType:
             "name": "AwardDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     award_time: None | AwardTime = field(

@@ -31,7 +31,6 @@ class OriginDestinationInformationType(TravelDateTimeType):
             "name": "OriginLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     destination_location: OriginDestinationInformationType.DestinationLocation = field(
@@ -39,7 +38,6 @@ class OriginDestinationInformationType(TravelDateTimeType):
             "name": "DestinationLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     connection_locations: None | ConnectionType = field(

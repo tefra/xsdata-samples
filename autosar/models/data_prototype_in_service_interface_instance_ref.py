@@ -88,7 +88,6 @@ class DataPrototypeInServiceInterfaceInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -98,7 +97,6 @@ class DataPrototypeInServiceInterfaceInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -108,6 +106,5 @@ class DataPrototypeInServiceInterfaceInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

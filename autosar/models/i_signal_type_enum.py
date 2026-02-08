@@ -29,11 +29,7 @@ class ISignalTypeEnum:
     class Meta:
         name = "I-SIGNAL-TYPE-ENUM"
 
-    value: ISignalTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ISignalTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

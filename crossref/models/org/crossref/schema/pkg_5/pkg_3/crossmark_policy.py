@@ -20,7 +20,6 @@ class CrossmarkPolicy:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "min_length": 6,
             "max_length": 2048,
             "pattern": r"10\.[0-9]{4,9}/.{1,200}",

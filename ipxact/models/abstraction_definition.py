@@ -67,25 +67,21 @@ class AbstractionDefinition:
     vendor: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     library: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     version: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     display_name: None | str = field(
@@ -112,7 +108,6 @@ class AbstractionDefinition:
         metadata={
             "name": "busType",
             "type": "Element",
-            "required": True,
         }
     )
     extends: None | LibraryRefType = field(
@@ -124,7 +119,6 @@ class AbstractionDefinition:
     ports: AbstractionDefinition.Ports = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     choices: None | Choices = field(
@@ -193,7 +187,6 @@ class AbstractionDefinition:
                 metadata={
                     "name": "logicalName",
                     "type": "Element",
-                    "required": True,
                 }
             )
             display_name: None | DisplayName = field(
@@ -328,7 +321,6 @@ class AbstractionDefinition:
                     group: str = field(
                         metadata={
                             "type": "Element",
-                            "required": True,
                         }
                     )
                     presence: None | Presence = field(

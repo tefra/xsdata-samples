@@ -153,7 +153,6 @@ class ReferenceBase:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -180,6 +179,5 @@ class ReferenceBase:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

@@ -119,7 +119,6 @@ class UserDefinedCommunicationConnector:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: (
@@ -283,7 +282,6 @@ class UserDefinedCommunicationConnector:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

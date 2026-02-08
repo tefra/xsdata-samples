@@ -28,11 +28,7 @@ class IntervalTypeEnum:
     class Meta:
         name = "INTERVAL-TYPE-ENUM"
 
-    value: IntervalTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: IntervalTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

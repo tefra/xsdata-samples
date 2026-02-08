@@ -11,32 +11,17 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class EstimatedTotalValue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ItemNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ParentItemIdentifier:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -44,32 +29,17 @@ class SourcingCreateResponseId:
     class Meta:
         name = "SourcingCreateResponseID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingCreateResponseIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingCreateResponseNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -77,82 +47,42 @@ class SourcingItemId:
     class Meta:
         name = "SourcingItemID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingItemName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingItemResponseCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingItemResponseCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingResponseCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingResponseCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalNumberOfParticipants:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalNumberOfSourcingItems:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -160,12 +90,7 @@ class TrackingIdnumber:
     class Meta:
         name = "TrackingIDNumber"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -174,21 +99,18 @@ class SourcingCreateResponseDetail:
         metadata={
             "name": "SourcingItemID",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_item_name: SourcingItemName = field(
         metadata={
             "name": "SourcingItemName",
             "type": "Element",
-            "required": True,
         }
     )
     item_number: ItemNumber = field(
         metadata={
             "name": "ItemNumber",
             "type": "Element",
-            "required": True,
         }
     )
     parent_item_identifier: None | ParentItemIdentifier = field(
@@ -202,7 +124,6 @@ class SourcingCreateResponseDetail:
         metadata={
             "name": "SourcingItemResponseCoded",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_item_response_coded_other: (
@@ -231,7 +152,6 @@ class SourcingCreateResponsePurpose:
         metadata={
             "name": "Purpose",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -256,7 +176,6 @@ class SourcingCreateSummary:
         metadata={
             "name": "EstimatedTotalValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -281,7 +200,6 @@ class SourcingCreateResponseHeader:
         metadata={
             "name": "SourcingCreateResponsePurpose",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_create_response_issue_date: SourcingCreateResponseIssueDate = (
@@ -289,7 +207,6 @@ class SourcingCreateResponseHeader:
             metadata={
                 "name": "SourcingCreateResponseIssueDate",
                 "type": "Element",
-                "required": True,
             }
         )
     )
@@ -297,28 +214,24 @@ class SourcingCreateResponseHeader:
         metadata={
             "name": "SourcingCreateResponseID",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_create_reference: SourcingCreateReference = field(
         metadata={
             "name": "SourcingCreateReference",
             "type": "Element",
-            "required": True,
         }
     )
     tracking_idnumber: TrackingIdnumber = field(
         metadata={
             "name": "TrackingIDNumber",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_response_coded: SourcingResponseCoded = field(
         metadata={
             "name": "SourcingResponseCoded",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_response_coded_other: None | SourcingResponseCodedOther = field(
@@ -332,7 +245,6 @@ class SourcingCreateResponseHeader:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_create_response_note: None | SourcingCreateResponseNote = field(
@@ -350,7 +262,6 @@ class SourcingCreateResponseSummary:
         metadata={
             "name": "SourcingCreateSummary",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -361,7 +272,6 @@ class SourcingItemComponentResponse:
         metadata={
             "name": "SourcingCreateResponseDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -386,7 +296,6 @@ class SourcingCreateResponse:
         metadata={
             "name": "SourcingCreateResponseHeader",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_sourcing_create_response_detail: (

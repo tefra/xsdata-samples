@@ -168,7 +168,6 @@ class End2EndMethodProtectionProps:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -178,6 +177,5 @@ class End2EndMethodProtectionProps:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

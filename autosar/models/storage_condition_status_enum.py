@@ -31,11 +31,7 @@ class StorageConditionStatusEnum:
     class Meta:
         name = "STORAGE-CONDITION-STATUS-ENUM"
 
-    value: StorageConditionStatusEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: StorageConditionStatusEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -21,7 +21,6 @@ class DiversityControlType:
             "name": "LowFareBucket",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     dimensions: DiversityControlType.Dimensions = field(
@@ -29,7 +28,6 @@ class DiversityControlType:
             "name": "Dimensions",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
 
@@ -124,7 +122,6 @@ class DiversityControlType:
                 metadata={
                     "name": "Weight",
                     "type": "Attribute",
-                    "required": True,
                     "min_inclusive": 1,
                     "max_inclusive": 10,
                 }
@@ -156,7 +153,6 @@ class DiversityControlType:
                 metadata={
                     "name": "Weight",
                     "type": "Attribute",
-                    "required": True,
                     "min_inclusive": 1,
                     "max_inclusive": 10,
                 }
@@ -175,7 +171,6 @@ class DiversityControlType:
                     metadata={
                         "name": "Options",
                         "type": "Attribute",
-                        "required": True,
                         "pattern": r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%",
                     }
                 )
@@ -186,7 +181,6 @@ class DiversityControlType:
                     metadata={
                         "name": "Code",
                         "type": "Attribute",
-                        "required": True,
                         "pattern": r"[0-9A-Z]{2,3}",
                     }
                 )
@@ -194,7 +188,6 @@ class DiversityControlType:
                     metadata={
                         "name": "Options",
                         "type": "Attribute",
-                        "required": True,
                         "pattern": r"[1-9][0-9]*|0%?|100%|[1-9][0-9]?%",
                     }
                 )
@@ -215,7 +208,6 @@ class DiversityControlType:
                 metadata={
                     "name": "Weight",
                     "type": "Attribute",
-                    "required": True,
                     "min_inclusive": 1,
                     "max_inclusive": 10,
                 }
@@ -227,7 +219,6 @@ class DiversityControlType:
                     metadata={
                         "name": "Code",
                         "type": "Attribute",
-                        "required": True,
                         "pattern": r"[0-9A-Z]{2,3}",
                     }
                 )
@@ -238,7 +229,6 @@ class DiversityControlType:
                 metadata={
                     "name": "Weight",
                     "type": "Attribute",
-                    "required": True,
                     "min_inclusive": 1,
                     "max_inclusive": 10,
                 }
@@ -274,7 +264,6 @@ class DiversityControlType:
                 metadata={
                     "name": "Weight",
                     "type": "Attribute",
-                    "required": True,
                     "min_inclusive": 1,
                     "max_inclusive": 10,
                 }
@@ -328,7 +317,6 @@ class DiversityControlType:
                         metadata={
                             "name": "Begin",
                             "type": "Attribute",
-                            "required": True,
                             "pattern": r"([0-1]?[0-9]|2[0-3]):[0-5][0-9]",
                         }
                     )
@@ -336,7 +324,6 @@ class DiversityControlType:
                         metadata={
                             "name": "End",
                             "type": "Attribute",
-                            "required": True,
                             "pattern": r"([0-1]?[0-9]|2[0-3]):[0-5][0-9]",
                         }
                     )
@@ -355,7 +342,6 @@ class DiversityControlType:
                 metadata={
                     "name": "Weight",
                     "type": "Attribute",
-                    "required": True,
                     "min_inclusive": 1,
                     "max_inclusive": 10,
                 }

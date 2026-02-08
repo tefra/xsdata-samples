@@ -23,7 +23,6 @@ class Identifier:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "min_length": 1,
             "max_length": 255,
         },
@@ -31,6 +30,5 @@ class Identifier:
     id_type: IdentifierIdType = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

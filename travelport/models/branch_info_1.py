@@ -97,7 +97,6 @@ class BranchInfo1(TypeProfileInfo1):
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -106,7 +105,6 @@ class BranchInfo1(TypeProfileInfo1):
         metadata={
             "name": "GeoCityCode",
             "type": "Attribute",
-            "required": True,
             "max_length": 10,
         }
     )
@@ -114,14 +112,12 @@ class BranchInfo1(TypeProfileInfo1):
         metadata={
             "name": "Control",
             "type": "Attribute",
-            "required": True,
         }
     )
     branch_code: str = field(
         metadata={
             "name": "BranchCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 25,
         }
@@ -130,7 +126,6 @@ class BranchInfo1(TypeProfileInfo1):
         metadata={
             "name": "Currency",
             "type": "Attribute",
-            "required": True,
             "length": 3,
         }
     )

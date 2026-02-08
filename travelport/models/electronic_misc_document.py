@@ -66,7 +66,6 @@ class ElectronicMiscDocument:
         metadata={
             "name": "Number",
             "type": "Attribute",
-            "required": True,
             "length": 13,
         }
     )

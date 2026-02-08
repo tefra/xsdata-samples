@@ -32,14 +32,12 @@ class FareDetailsType:
         metadata={
             "name": "ComponentNo",
             "type": "Attribute",
-            "required": True,
         }
     )
     basis_code: str = field(
         metadata={
             "name": "BasisCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 15,
             "pattern": r"[A-Z0-9]+(/[A-Z0-9]+)?",

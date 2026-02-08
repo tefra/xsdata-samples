@@ -18,12 +18,7 @@ class ApplicationId:
     class Meta:
         name = "ApplicationID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -31,112 +26,57 @@ class ApplicationIdextension:
     class Meta:
         name = "ApplicationIDExtension"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ApplicationInstance:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ApplicationResponseIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ApplicationResponseNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ApplicationResponseTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class BusinessDocumentTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class BusinessDocumentTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DocumentStatusCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DocumentStatusCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ErrorTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ErrorTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -145,7 +85,6 @@ class ApplicationIdentification:
         metadata={
             "name": "ApplicationID",
             "type": "Element",
-            "required": True,
         }
     )
     application_idextension: None | ApplicationIdextension = field(
@@ -170,7 +109,6 @@ class ApplicationResponseReceiver:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -181,7 +119,6 @@ class ApplicationResponseSender:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -192,7 +129,6 @@ class DocumentReference:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -203,7 +139,6 @@ class ItemReference:
         metadata={
             "name": "LineItemNumberReference",
             "type": "Element",
-            "required": True,
         }
     )
     schedule_line_id: None | ScheduleLineId = field(
@@ -221,7 +156,6 @@ class ApplicationResponseDetail:
         metadata={
             "name": "ErrorTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     error_type_coded_other: None | ErrorTypeCodedOther = field(
@@ -242,7 +176,6 @@ class ApplicationResponseDetail:
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_structured_note: None | ListOfStructuredNote = field(
@@ -256,7 +189,6 @@ class ApplicationResponseDetail:
         metadata={
             "name": "ListOfNameValueSet",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -267,7 +199,6 @@ class RespondingApplication:
         metadata={
             "name": "ApplicationIdentification",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -278,7 +209,6 @@ class SendingApplication:
         metadata={
             "name": "ApplicationIdentification",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -289,21 +219,18 @@ class ApplicationResponseHeader:
         metadata={
             "name": "ApplicationResponseIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     application_response_type_coded: ApplicationResponseTypeCoded = field(
         metadata={
             "name": "ApplicationResponseTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     application_response_sender: ApplicationResponseSender = field(
         metadata={
             "name": "ApplicationResponseSender",
             "type": "Element",
-            "required": True,
         }
     )
     sending_application: None | SendingApplication = field(
@@ -317,7 +244,6 @@ class ApplicationResponseHeader:
         metadata={
             "name": "ApplicationResponseReceiver",
             "type": "Element",
-            "required": True,
         }
     )
     responding_application: None | RespondingApplication = field(
@@ -331,7 +257,6 @@ class ApplicationResponseHeader:
         metadata={
             "name": "BusinessDocumentTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     business_document_type_coded_other: (
@@ -347,14 +272,12 @@ class ApplicationResponseHeader:
         metadata={
             "name": "DocumentReference",
             "type": "Element",
-            "required": True,
         }
     )
     document_status_coded: DocumentStatusCoded = field(
         metadata={
             "name": "DocumentStatusCoded",
             "type": "Element",
-            "required": True,
         }
     )
     document_status_coded_other: None | DocumentStatusCodedOther = field(
@@ -405,7 +328,6 @@ class ApplicationResponse:
         metadata={
             "name": "ApplicationResponseHeader",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_application_response_detail: (

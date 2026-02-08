@@ -22,7 +22,6 @@ class Isbn:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "min_length": 10,
             "max_length": 17,
             "pattern": r"(97(8|9)-)?\d[\d \-]+[\dX]",

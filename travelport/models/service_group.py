@@ -37,6 +37,5 @@ class ServiceGroup:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
         }
     )

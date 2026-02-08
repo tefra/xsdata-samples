@@ -99,7 +99,6 @@ class AgencyInfo2(TypeProfileInfo1):
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -117,7 +116,6 @@ class AgencyInfo2(TypeProfileInfo1):
         metadata={
             "name": "AgencyCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 25,
         }

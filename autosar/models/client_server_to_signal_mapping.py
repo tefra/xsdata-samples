@@ -218,7 +218,6 @@ class ClientServerToSignalMapping:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -241,7 +240,6 @@ class ClientServerToSignalMapping:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -264,7 +262,6 @@ class ClientServerToSignalMapping:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -274,7 +271,6 @@ class ClientServerToSignalMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -284,7 +280,6 @@ class ClientServerToSignalMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -294,6 +289,5 @@ class ClientServerToSignalMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

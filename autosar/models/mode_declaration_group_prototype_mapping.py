@@ -96,7 +96,6 @@ class ModeDeclarationGroupPrototypeMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -106,7 +105,6 @@ class ModeDeclarationGroupPrototypeMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -116,6 +114,5 @@ class ModeDeclarationGroupPrototypeMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

@@ -30,11 +30,7 @@ class SerializationTechnologyEnum:
     class Meta:
         name = "SERIALIZATION-TECHNOLOGY-ENUM"
 
-    value: SerializationTechnologyEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SerializationTechnologyEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

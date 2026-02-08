@@ -39,7 +39,6 @@ class TypeSegmentPolicy:
         metadata={
             "name": "SegmentRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     in_policy: bool = field(

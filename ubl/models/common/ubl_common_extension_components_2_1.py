@@ -193,7 +193,6 @@ class UblextensionType:
             "name": "ExtensionContent",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2",
-            "required": True,
         }
     )
 

@@ -14,7 +14,6 @@ class HalfOpenTimestampRangeStructure:
             "name": "StartTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     end_time: None | XmlDateTime = field(

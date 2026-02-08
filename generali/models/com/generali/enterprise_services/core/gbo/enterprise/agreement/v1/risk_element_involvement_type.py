@@ -36,7 +36,6 @@ class RiskElementInvolvementType(RiskInvolvement):
             "name": "InsuredRiskElement",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     validity: None | TimePeriodType = field(

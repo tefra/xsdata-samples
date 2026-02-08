@@ -42,7 +42,6 @@ class SearchPriority:
             metadata={
                 "name": "Order",
                 "type": "Attribute",
-                "required": True,
                 "min_inclusive": 1,
                 "max_inclusive": 8,
             }
@@ -51,6 +50,5 @@ class SearchPriority:
             metadata={
                 "name": "Type",
                 "type": "Attribute",
-                "required": True,
             }
         )

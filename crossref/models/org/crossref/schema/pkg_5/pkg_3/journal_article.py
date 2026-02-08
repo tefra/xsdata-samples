@@ -165,7 +165,6 @@ class JournalArticle:
     doi_data: DoiData = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     citation_list: None | CitationList = field(

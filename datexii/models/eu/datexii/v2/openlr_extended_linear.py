@@ -25,7 +25,6 @@ class OpenlrExtendedLinear:
             "name": "firstDirection",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     opposite_direction: None | OpenlrLineLocationReference = field(

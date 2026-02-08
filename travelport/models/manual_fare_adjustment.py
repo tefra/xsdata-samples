@@ -40,21 +40,18 @@ class ManualFareAdjustment:
         metadata={
             "name": "AppliedOn",
             "type": "Attribute",
-            "required": True,
         }
     )
     adjustment_type: TypeAdjustmentType = field(
         metadata={
             "name": "AdjustmentType",
             "type": "Attribute",
-            "required": True,
         }
     )
     value: Decimal = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
         }
     )
     passenger_ref: None | str = field(

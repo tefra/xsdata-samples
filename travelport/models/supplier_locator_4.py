@@ -45,7 +45,6 @@ class SupplierLocator4:
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -53,7 +52,6 @@ class SupplierLocator4:
         metadata={
             "name": "SupplierLocatorCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     provider_reservation_info_ref: None | str = field(

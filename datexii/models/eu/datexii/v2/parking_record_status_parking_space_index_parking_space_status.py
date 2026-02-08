@@ -19,13 +19,11 @@ class ParkingRecordStatusParkingSpaceIndexParkingSpaceStatus:
             "name": "parkingSpaceStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     parking_space_index: int = field(
         metadata={
             "name": "parkingSpaceIndex",
             "type": "Attribute",
-            "required": True,
         }
     )

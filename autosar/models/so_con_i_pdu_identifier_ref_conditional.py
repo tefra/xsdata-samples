@@ -74,6 +74,5 @@ class SoConIPduIdentifierRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

@@ -32,24 +32,17 @@ class RailFareNote:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     note_name: str = field(
         metadata={
             "name": "NoteName",
             "type": "Attribute",
-            "required": True,
         }
     )
     el_stat: None | TypeElementStatus1 = field(

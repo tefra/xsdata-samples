@@ -36,7 +36,6 @@ class TypeSubKey5:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
         }
     )
     description: None | str = field(

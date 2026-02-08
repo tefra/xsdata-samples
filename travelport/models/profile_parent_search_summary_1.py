@@ -43,14 +43,12 @@ class ProfileParentSearchSummary1:
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-            "required": True,
         }
     )
     profile_type: TypeProfileType3 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-            "required": True,
         }
     )
     provisioning_code: None | str = field(
@@ -66,7 +64,6 @@ class ProfileParentSearchSummary1:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -75,7 +72,6 @@ class ProfileParentSearchSummary1:
         metadata={
             "name": "Version",
             "type": "Attribute",
-            "required": True,
             "min_inclusive": 0,
         }
     )
@@ -83,7 +79,6 @@ class ProfileParentSearchSummary1:
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )
     immediate_parent_ref: None | str = field(

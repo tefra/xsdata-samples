@@ -23,13 +23,11 @@ class TConversationLink(TBaseElement):
         metadata={
             "name": "sourceRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     target_ref: QName = field(
         metadata={
             "name": "targetRef",
             "type": "Attribute",
-            "required": True,
         }
     )

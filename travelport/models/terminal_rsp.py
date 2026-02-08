@@ -21,6 +21,5 @@ class TerminalRsp(BaseRsp4):
         metadata={
             "name": "TerminalCommandResponse",
             "type": "Element",
-            "required": True,
         }
     )

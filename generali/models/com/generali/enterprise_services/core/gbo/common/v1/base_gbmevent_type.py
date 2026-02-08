@@ -33,7 +33,6 @@ class BaseGbmeventType(BaseGbmtype):
         metadata={
             "name": "eventCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     business_event_code: None | str = field(

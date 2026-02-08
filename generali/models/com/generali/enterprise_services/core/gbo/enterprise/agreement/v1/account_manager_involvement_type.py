@@ -21,7 +21,6 @@ class AccountManagerInvolvementType:
             "name": "MultinationalFrontingOfficeRole",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     account_manager_type: AccountManagerInvolvementTypeAccountManagerType = field(
@@ -29,6 +28,5 @@ class AccountManagerInvolvementType:
             "name": "AccountManagerType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )

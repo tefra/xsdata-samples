@@ -76,7 +76,6 @@ class CoctMt110000Uv04AccountHolderLanguage:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     mode_code: Cs = field(
@@ -84,7 +83,6 @@ class CoctMt110000Uv04AccountHolderLanguage:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     preference_ind: Bl = field(
@@ -92,7 +90,6 @@ class CoctMt110000Uv04AccountHolderLanguage:
             "name": "preferenceInd",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -165,7 +162,6 @@ class CoctMt110000Uv04AccountHolderOrganization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -233,7 +229,6 @@ class CoctMt110000Uv04RelationshipRole:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -537,7 +532,6 @@ class CoctMt110000Uv04Account:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     code: None | Cs = field(

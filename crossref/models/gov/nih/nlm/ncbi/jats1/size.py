@@ -33,7 +33,6 @@ class Size:
     units: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     base: None | str = field(

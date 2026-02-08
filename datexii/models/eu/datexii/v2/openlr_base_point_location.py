@@ -39,7 +39,6 @@ class OpenlrBasePointLocation:
             "name": "openlrSideOfRoad",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_orientation: OpenlrOrientationEnum = field(
@@ -47,7 +46,6 @@ class OpenlrBasePointLocation:
             "name": "openlrOrientation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_positive_offset: None | int = field(
@@ -63,7 +61,6 @@ class OpenlrBasePointLocation:
             "name": "openlrLocationReferencePoint",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_last_location_reference_point: OpenlrLastLocationReferencePoint = (
@@ -72,7 +69,6 @@ class OpenlrBasePointLocation:
                 "name": "openlrLastLocationReferencePoint",
                 "type": "Element",
                 "namespace": "http://datex2.eu/schema/2/2_0",
-                "required": True,
             }
         )
     )

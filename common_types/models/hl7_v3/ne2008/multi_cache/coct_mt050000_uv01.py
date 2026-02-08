@@ -92,7 +92,6 @@ class CoctMt050000Uv01Patient:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     effective_time: None | IvlTsExplicit = field(

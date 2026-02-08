@@ -23,7 +23,6 @@ class TransTitleGroup:
         metadata={
             "name": "trans-title",
             "type": "Element",
-            "required": True,
         }
     )
     trans_subtitle: list[TransSubtitle] = field(

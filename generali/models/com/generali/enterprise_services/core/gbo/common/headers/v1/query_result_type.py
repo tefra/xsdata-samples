@@ -27,6 +27,5 @@ class QueryResultType(BaseHeaderType):
             "name": "TotalCount",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
-            "required": True,
         }
     )

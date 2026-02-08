@@ -400,7 +400,6 @@ class FlexrayArTpChannel:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -421,7 +420,6 @@ class FlexrayArTpChannel:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 

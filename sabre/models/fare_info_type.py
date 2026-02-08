@@ -40,7 +40,6 @@ class FareInfoType:
             "name": "FareReference",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
             "min_length": 1,
             "max_length": 8,
         }
@@ -50,7 +49,6 @@ class FareInfoType:
             "name": "RuleInfo",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     marketing_airline: list[CompanyNameType] = field(
@@ -66,7 +64,6 @@ class FareInfoType:
             "name": "DepartureAirport",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     arrival_airport: ResponseLocationType = field(
@@ -74,7 +71,6 @@ class FareInfoType:
             "name": "ArrivalAirport",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     negotiated_fare: bool = field(

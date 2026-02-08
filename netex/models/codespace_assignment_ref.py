@@ -10,9 +10,4 @@ class CodespaceAssignmentRef:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

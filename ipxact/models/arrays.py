@@ -31,13 +31,11 @@ class Arrays:
         left: Left = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         right: Right = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         array_id: None | str = field(

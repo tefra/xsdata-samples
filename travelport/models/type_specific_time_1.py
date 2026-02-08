@@ -21,6 +21,5 @@ class TypeSpecificTime1:
         metadata={
             "name": "Time",
             "type": "Attribute",
-            "required": True,
         }
     )

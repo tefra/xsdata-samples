@@ -16,8 +16,4 @@ class Meals:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    value: TypeMealService = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TypeMealService = field()

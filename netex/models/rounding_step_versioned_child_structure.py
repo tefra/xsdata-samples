@@ -27,7 +27,6 @@ class RoundingStepVersionedChildStructure(VersionedChildStructure):
             "name": "RoundIfGreaterThan",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     round_to: Decimal = field(
@@ -35,6 +34,5 @@ class RoundingStepVersionedChildStructure(VersionedChildStructure):
             "name": "RoundTo",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

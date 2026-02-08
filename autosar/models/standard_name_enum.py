@@ -28,11 +28,7 @@ class StandardNameEnum:
     class Meta:
         name = "STANDARD-NAME-ENUM"
 
-    value: StandardNameEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: StandardNameEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

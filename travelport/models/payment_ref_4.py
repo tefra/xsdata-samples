@@ -15,6 +15,5 @@ class PaymentRef4:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

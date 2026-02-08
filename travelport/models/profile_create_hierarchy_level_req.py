@@ -46,14 +46,12 @@ class ProfileCreateHierarchyLevelReq(BaseReq5):
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 64,
         }

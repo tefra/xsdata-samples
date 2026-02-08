@@ -43,7 +43,6 @@ class TicketInfo:
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "required": True,
         }
     )
     conjuncted_ticket_info: list[ConjunctedTicketInfo] = field(
@@ -66,7 +65,6 @@ class TicketInfo:
         metadata={
             "name": "Number",
             "type": "Attribute",
-            "required": True,
         }
     )
     iatanumber: None | str = field(
@@ -104,7 +102,6 @@ class TicketInfo:
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )
     bulk_ticket: None | bool = field(
@@ -118,7 +115,6 @@ class TicketInfo:
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     air_pricing_info_ref: None | str = field(

@@ -77,6 +77,5 @@ class CppImplementationDataTypeElementQualifier:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

@@ -144,7 +144,6 @@ class TravelComplianceData5:
             metadata={
                 "name": "InPolicy",
                 "type": "Attribute",
-                "required": True,
             }
         )
         policy_token: None | str = field(
@@ -174,7 +173,6 @@ class TravelComplianceData5:
             metadata={
                 "name": "InContract",
                 "type": "Attribute",
-                "required": True,
             }
         )
         contract_token: None | str = field(
@@ -203,13 +201,11 @@ class TravelComplianceData5:
             metadata={
                 "name": "Preferred",
                 "type": "Attribute",
-                "required": True,
             }
         )
         profile_type: TypeProfileType8 = field(
             metadata={
                 "name": "ProfileType",
                 "type": "Attribute",
-                "required": True,
             }
         )

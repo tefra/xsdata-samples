@@ -55,312 +55,157 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class BuyerChangeOrderNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class BuyerOrderResponseNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ChangeOrderHeaderNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ChangeOrderIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ChangeOrderSequence:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ChangeTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ChangeTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ItemDetailChangeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ItemDetailChangeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ItemDetailResponseCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ItemDetailResponseCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class NumberOfLines:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderHeaderNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderInvoiceMediumTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderInvoiceMediumTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderResponseDocTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderResponseDocTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderResponseHeaderNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderResponseIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PackageDetailChangeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PackageDetailChangeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PackageDetailNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PackageDetailResponseCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PackageDetailResponseCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PartLocation:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PartialShipmentAllowed:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SellerChangeOrderNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SellerOrderResponseNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalPackageDepth:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalPackages:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalTransport:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -368,12 +213,7 @@ class TrackingUrl:
     class Meta:
         name = "TrackingURL"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -382,7 +222,6 @@ class AvailabilityErrorInfo:
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -393,7 +232,6 @@ class ChangeOrderNumber:
         metadata={
             "name": "BuyerChangeOrderNumber",
             "type": "Element",
-            "required": True,
         }
     )
     seller_change_order_number: None | SellerChangeOrderNumber = field(
@@ -418,7 +256,6 @@ class ChangeOrderReference:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -429,7 +266,6 @@ class ChangeType:
         metadata={
             "name": "ChangeTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     change_type_coded_other: None | ChangeTypeCodedOther = field(
@@ -447,7 +283,6 @@ class GrossVolume:
         metadata={
             "name": "Measurement",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -458,7 +293,6 @@ class ItemDetailChanges:
         metadata={
             "name": "ItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -493,7 +327,6 @@ class OrderAllowancesOrCharges:
         metadata={
             "name": "ListOfAllowOrCharge",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -504,7 +337,6 @@ class OrderCurrency:
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -515,7 +347,6 @@ class OrderHeaderAttachments:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -526,7 +357,6 @@ class OrderHeaderPrice:
         metadata={
             "name": "ListOfPrice",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -537,7 +367,6 @@ class OrderLanguage:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -548,7 +377,6 @@ class OrderPaymentInstructions:
         metadata={
             "name": "PaymentInstructions",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -559,7 +387,6 @@ class OrderReference:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -570,7 +397,6 @@ class OrderResponseNumber:
         metadata={
             "name": "BuyerOrderResponseNumber",
             "type": "Element",
-            "required": True,
         }
     )
     seller_order_response_number: None | SellerOrderResponseNumber = field(
@@ -595,7 +421,6 @@ class OrderTaxReference:
         metadata={
             "name": "TaxReference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -606,7 +431,6 @@ class OrderTermsOfDelivery:
         metadata={
             "name": "TermsOfDelivery",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -617,7 +441,6 @@ class OriginalItemDetail:
         metadata={
             "name": "ItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -628,7 +451,6 @@ class OriginalPackageDetail:
         metadata={
             "name": "PackageDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -639,7 +461,6 @@ class PackageDetailChanges:
         metadata={
             "name": "PackageDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -650,7 +471,6 @@ class TaxAccountingCurrency:
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -661,7 +481,6 @@ class TotalAmount:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -672,7 +491,6 @@ class TotalGrossWeight:
         metadata={
             "name": "Measurement",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -683,7 +501,6 @@ class TotalNetNetWeight:
         metadata={
             "name": "Measurement",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -694,7 +511,6 @@ class TotalNetWeight:
         metadata={
             "name": "Measurement",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -705,7 +521,6 @@ class TotalTareWeight:
         metadata={
             "name": "Measurement",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -716,7 +531,6 @@ class TotalTax:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -727,7 +541,6 @@ class ChangeOrderItemDetail:
         metadata={
             "name": "ItemDetailChangeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     item_detail_change_coded_other: None | ItemDetailChangeCodedOther = field(
@@ -780,7 +593,6 @@ class ChangeOrderPackageDetail:
         metadata={
             "name": "PackageDetailChangeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     package_detail_change_coded_other: None | PackageDetailChangeCodedOther = (
@@ -821,14 +633,12 @@ class OrderHeader:
         metadata={
             "name": "OrderNumber",
             "type": "Element",
-            "required": True,
         }
     )
     order_issue_date: OrderIssueDate = field(
         metadata={
             "name": "OrderIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     order_references: None | OrderReferences = field(
@@ -849,7 +659,6 @@ class OrderHeader:
         metadata={
             "name": "Purpose",
             "type": "Element",
-            "required": True,
         }
     )
     requested_response: None | RequestedResponse = field(
@@ -870,7 +679,6 @@ class OrderHeader:
         metadata={
             "name": "OrderCurrency",
             "type": "Element",
-            "required": True,
         }
     )
     tax_accounting_currency: None | TaxAccountingCurrency = field(
@@ -884,7 +692,6 @@ class OrderHeader:
         metadata={
             "name": "OrderLanguage",
             "type": "Element",
-            "required": True,
         }
     )
     order_tax_reference: None | OrderTaxReference = field(
@@ -930,7 +737,6 @@ class OrderHeader:
         metadata={
             "name": "OrderParty",
             "type": "Element",
-            "required": True,
         }
     )
     part_location: None | PartLocation = field(
@@ -1078,7 +884,6 @@ class OrderHeaderChanges:
         metadata={
             "name": "OrderHeader",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1089,7 +894,6 @@ class OrderResponseItemDetail:
         metadata={
             "name": "ItemDetailResponseCoded",
             "type": "Element",
-            "required": True,
         }
     )
     item_detail_response_coded_other: None | ItemDetailResponseCodedOther = (
@@ -1200,7 +1004,6 @@ class OrderResponsePackageDetail:
         metadata={
             "name": "PackageDetailResponseCoded",
             "type": "Element",
-            "required": True,
         }
     )
     package_detail_response_coded_other: (
@@ -1287,7 +1090,6 @@ class OriginalOrderHeader:
         metadata={
             "name": "OrderHeader",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1298,42 +1100,36 @@ class ChangeOrderHeader:
         metadata={
             "name": "ChangeOrderNumber",
             "type": "Element",
-            "required": True,
         }
     )
     change_order_sequence: ChangeOrderSequence = field(
         metadata={
             "name": "ChangeOrderSequence",
             "type": "Element",
-            "required": True,
         }
     )
     change_order_issue_date: ChangeOrderIssueDate = field(
         metadata={
             "name": "ChangeOrderIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     order_reference: OrderReference = field(
         metadata={
             "name": "OrderReference",
             "type": "Element",
-            "required": True,
         }
     )
     seller_party: SellerParty = field(
         metadata={
             "name": "SellerParty",
             "type": "Element",
-            "required": True,
         }
     )
     buyer_party: BuyerParty = field(
         metadata={
             "name": "BuyerParty",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_reference_coded: None | ListOfReferenceCoded = field(
@@ -1347,7 +1143,6 @@ class ChangeOrderHeader:
         metadata={
             "name": "Purpose",
             "type": "Element",
-            "required": True,
         }
     )
     requested_response: None | RequestedResponse = field(
@@ -1361,7 +1156,6 @@ class ChangeOrderHeader:
         metadata={
             "name": "ChangeType",
             "type": "Element",
-            "required": True,
         }
     )
     order_type: None | OrderType = field(
@@ -1431,7 +1225,6 @@ class OriginalOrderSummary:
         metadata={
             "name": "OrderSummary",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1442,7 +1235,6 @@ class RevisedOrderSummary:
         metadata={
             "name": "OrderSummary",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1475,21 +1267,18 @@ class OrderResponseHeader:
         metadata={
             "name": "OrderResponseNumber",
             "type": "Element",
-            "required": True,
         }
     )
     order_response_issue_date: OrderResponseIssueDate = field(
         metadata={
             "name": "OrderResponseIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     order_response_doc_type_coded: OrderResponseDocTypeCoded = field(
         metadata={
             "name": "OrderResponseDocTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     order_response_doc_type_coded_other: (
@@ -1505,7 +1294,6 @@ class OrderResponseHeader:
         metadata={
             "name": "OrderReference",
             "type": "Element",
-            "required": True,
         }
     )
     change_order_reference: None | ChangeOrderReference = field(
@@ -1519,14 +1307,12 @@ class OrderResponseHeader:
         metadata={
             "name": "SellerParty",
             "type": "Element",
-            "required": True,
         }
     )
     buyer_party: BuyerParty = field(
         metadata={
             "name": "BuyerParty",
             "type": "Element",
-            "required": True,
         }
     )
     tracking_url: None | TrackingUrl = field(
@@ -1547,14 +1333,12 @@ class OrderResponseHeader:
         metadata={
             "name": "Purpose",
             "type": "Element",
-            "required": True,
         }
     )
     response_type: ResponseType = field(
         metadata={
             "name": "ResponseType",
             "type": "Element",
-            "required": True,
         }
     )
     order_status: None | OrderStatus = field(
@@ -1646,7 +1430,6 @@ class OrderResponse:
         metadata={
             "name": "OrderResponseHeader",
             "type": "Element",
-            "required": True,
         }
     )
     order_response_detail: None | OrderResponseDetail = field(

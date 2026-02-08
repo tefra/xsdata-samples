@@ -20,7 +20,6 @@ class MonthValidityOffsetVersionedStructure(DataManagedObjectStructure):
             "name": "Month",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     name: None | MultilingualString = field(
@@ -36,6 +35,5 @@ class MonthValidityOffsetVersionedStructure(DataManagedObjectStructure):
             "name": "DayOffset",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

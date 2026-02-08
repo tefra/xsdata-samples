@@ -39,7 +39,6 @@ class OrganisationActorType(BaseComponentType):
             "name": "LegalName",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-            "required": True,
         }
     )
     gunsnumber: str = field(
@@ -47,7 +46,6 @@ class OrganisationActorType(BaseComponentType):
             "name": "GUNSNumber",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-            "required": True,
             "length": 10,
             "pattern": r"G([0-9]{9})",
         }
@@ -57,7 +55,6 @@ class OrganisationActorType(BaseComponentType):
             "name": "DUNSNumber",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-            "required": True,
             "length": 9,
             "pattern": r"([0-9]{9})",
         }
@@ -67,6 +64,5 @@ class OrganisationActorType(BaseComponentType):
             "name": "NationalId",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-            "required": True,
         }
     )

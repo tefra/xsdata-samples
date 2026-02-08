@@ -15,6 +15,5 @@ class FlightStopsAsConnectionsType:
         metadata={
             "name": "Ind",
             "type": "Attribute",
-            "required": True,
         }
     )

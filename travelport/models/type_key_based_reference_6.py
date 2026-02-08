@@ -18,6 +18,5 @@ class TypeKeyBasedReference6:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

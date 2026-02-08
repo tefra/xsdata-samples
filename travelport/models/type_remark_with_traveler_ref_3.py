@@ -29,7 +29,6 @@ class TypeRemarkWithTravelerRef3:
             "name": "RemarkData",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
-            "required": True,
         }
     )
     booking_traveler_ref: list[str] = field(

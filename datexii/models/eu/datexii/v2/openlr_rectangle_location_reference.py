@@ -23,7 +23,6 @@ class OpenlrRectangleLocationReference(OpenlrAreaLocationReference):
             "name": "openlrRectangle",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_rectangle_location_reference_extension: None | ExtensionType = (

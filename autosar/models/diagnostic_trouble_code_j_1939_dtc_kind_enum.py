@@ -31,11 +31,7 @@ class DiagnosticTroubleCodeJ1939DtcKindEnum:
     class Meta:
         name = "DIAGNOSTIC-TROUBLE-CODE-J-1939-DTC-KIND-ENUM"
 
-    value: DiagnosticTroubleCodeJ1939DtcKindEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticTroubleCodeJ1939DtcKindEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

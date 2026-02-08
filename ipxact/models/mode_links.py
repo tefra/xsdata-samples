@@ -45,7 +45,6 @@ class ModeLinks:
                 metadata={
                     "name": "externalModeReference",
                     "type": "Element",
-                    "required": True,
                 }
             )
         )
@@ -53,7 +52,6 @@ class ModeLinks:
             metadata={
                 "name": "modeReference",
                 "type": "Element",
-                "required": True,
             }
         )
         vendor_extensions: None | VendorExtensions = field(
@@ -81,7 +79,6 @@ class ModeLinks:
                 metadata={
                     "name": "modeRef",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -95,6 +92,5 @@ class ModeLinks:
                 metadata={
                     "name": "modeRef",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

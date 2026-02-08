@@ -24,7 +24,6 @@ class DirectionBearingValue(DataValue):
             "name": "directionBearing",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     direction_bearing_value_extension: None | ExtensionType = field(

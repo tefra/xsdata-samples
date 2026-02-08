@@ -96,48 +96,24 @@ class EstimatedPassingTimeVersionedChildStructure(
 
     @dataclass(kw_only=True)
     class ExpectedArrivalTime:
-        value: XmlTime = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: XmlTime = field()
 
     @dataclass(kw_only=True)
     class ArrivalDayOffset:
-        value: int = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: int = field()
 
     @dataclass(kw_only=True)
     class ExpectedDepartureTime:
-        value: XmlTime = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: XmlTime = field()
 
     @dataclass(kw_only=True)
     class DepartureDayOffset:
-        value: int = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: int = field()
 
     @dataclass(kw_only=True)
     class ExpectedNonstopPassingTime:
-        value: XmlTime = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: XmlTime = field()
 
     @dataclass(kw_only=True)
     class PassingTimeDayOffset:
-        value: int = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: int = field()

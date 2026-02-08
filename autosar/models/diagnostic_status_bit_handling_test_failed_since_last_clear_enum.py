@@ -34,11 +34,7 @@ class DiagnosticStatusBitHandlingTestFailedSinceLastClearEnum:
         )
 
     value: DiagnosticStatusBitHandlingTestFailedSinceLastClearEnumSimple = (
-        field(
-            metadata={
-                "required": True,
-            }
-        )
+        field()
     )
     s: None | str = field(
         default=None,

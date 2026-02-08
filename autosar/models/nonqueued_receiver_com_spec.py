@@ -401,7 +401,6 @@ class NonqueuedReceiverComSpec:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -411,7 +410,6 @@ class NonqueuedReceiverComSpec:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

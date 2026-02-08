@@ -30,11 +30,7 @@ class MemorySectionType:
     class Meta:
         name = "MEMORY-SECTION-TYPE"
 
-    value: MemorySectionTypeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: MemorySectionTypeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

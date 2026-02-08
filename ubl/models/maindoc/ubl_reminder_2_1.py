@@ -97,7 +97,6 @@ class ReminderType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     copy_indicator: None | CopyIndicator = field(
@@ -121,7 +120,6 @@ class ReminderType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -261,7 +259,6 @@ class ReminderType:
             "name": "AccountingSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     accounting_customer_party: AccountingCustomerParty = field(
@@ -269,7 +266,6 @@ class ReminderType:
             "name": "AccountingCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     payee_party: None | PayeeParty = field(
@@ -367,7 +363,6 @@ class ReminderType:
             "name": "LegalMonetaryTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     reminder_line: tuple[ReminderLine, ...] = field(

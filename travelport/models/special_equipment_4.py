@@ -40,7 +40,6 @@ class SpecialEquipment4:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     el_stat: None | TypeElementStatus5 = field(

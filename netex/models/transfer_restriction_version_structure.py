@@ -38,7 +38,6 @@ class TransferRestrictionVersionStructure(AssignmentVersionStructure1):
             "name": "RestrictionType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     from_point_ref: None | ScheduledStopPointRefStructure = field(

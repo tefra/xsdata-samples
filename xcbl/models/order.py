@@ -15,7 +15,6 @@ class Order:
         metadata={
             "name": "OrderHeader",
             "type": "Element",
-            "required": True,
         }
     )
     order_detail: None | OrderDetail = field(

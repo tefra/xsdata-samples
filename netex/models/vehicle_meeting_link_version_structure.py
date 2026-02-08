@@ -20,7 +20,6 @@ class VehicleMeetingLinkVersionStructure(LinkVersionStructure):
             "name": "FromPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     to_point_ref: VehicleMeetingPointRefStructure = field(
@@ -28,6 +27,5 @@ class VehicleMeetingLinkVersionStructure(LinkVersionStructure):
             "name": "ToPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

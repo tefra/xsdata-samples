@@ -30,14 +30,12 @@ class SpecificTimeTable:
         metadata={
             "name": "StartDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -45,7 +43,6 @@ class SpecificTimeTable:
         metadata={
             "name": "FlightNumber",
             "type": "Attribute",
-            "required": True,
             "max_length": 5,
         }
     )
@@ -57,7 +54,6 @@ class SpecificTimeTable:
                 "name": "Airport",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
-                "required": True,
             }
         )
 
@@ -68,6 +64,5 @@ class SpecificTimeTable:
                 "name": "Airport",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
-                "required": True,
             }
         )

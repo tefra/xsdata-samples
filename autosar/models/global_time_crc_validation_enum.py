@@ -30,11 +30,7 @@ class GlobalTimeCrcValidationEnum:
     class Meta:
         name = "GLOBAL-TIME-CRC-VALIDATION-ENUM"
 
-    value: GlobalTimeCrcValidationEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: GlobalTimeCrcValidationEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -95,7 +95,6 @@ class ReferenceDataSearchRsp(BaseRsp1):
             metadata={
                 "name": "Code",
                 "type": "Attribute",
-                "required": True,
                 "length": 3,
             }
         )
@@ -130,7 +129,6 @@ class ReferenceDataSearchRsp(BaseRsp1):
             metadata={
                 "name": "Code",
                 "type": "Attribute",
-                "required": True,
                 "length": 2,
             }
         )
@@ -155,7 +153,6 @@ class ReferenceDataSearchRsp(BaseRsp1):
             metadata={
                 "name": "Code",
                 "type": "Attribute",
-                "required": True,
                 "length": 3,
                 "white_space": "collapse",
             }
@@ -164,7 +161,6 @@ class ReferenceDataSearchRsp(BaseRsp1):
             metadata={
                 "name": "Name",
                 "type": "Attribute",
-                "required": True,
             }
         )
         state_code: None | str = field(
@@ -189,7 +185,6 @@ class ReferenceDataSearchRsp(BaseRsp1):
             metadata={
                 "name": "Code",
                 "type": "Attribute",
-                "required": True,
                 "length": 2,
             }
         )
@@ -237,7 +232,6 @@ class ReferenceDataSearchRsp(BaseRsp1):
             metadata={
                 "name": "Code",
                 "type": "Attribute",
-                "required": True,
                 "length": 3,
             }
         )
@@ -245,7 +239,6 @@ class ReferenceDataSearchRsp(BaseRsp1):
             metadata={
                 "name": "Name",
                 "type": "Attribute",
-                "required": True,
             }
         )
         decimal: None | str = field(
@@ -262,7 +255,6 @@ class ReferenceDataSearchRsp(BaseRsp1):
             metadata={
                 "name": "Code",
                 "type": "Attribute",
-                "required": True,
             }
         )
         description: None | str = field(
@@ -279,7 +271,6 @@ class ReferenceDataSearchRsp(BaseRsp1):
             metadata={
                 "name": "Code",
                 "type": "Attribute",
-                "required": True,
                 "min_length": 3,
                 "max_length": 5,
             }
@@ -288,7 +279,6 @@ class ReferenceDataSearchRsp(BaseRsp1):
             metadata={
                 "name": "Description",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -298,7 +288,6 @@ class ReferenceDataSearchRsp(BaseRsp1):
             metadata={
                 "name": "Code",
                 "type": "Attribute",
-                "required": True,
                 "max_length": 6,
             }
         )
@@ -313,7 +302,6 @@ class ReferenceDataSearchRsp(BaseRsp1):
             metadata={
                 "name": "CountryCode",
                 "type": "Attribute",
-                "required": True,
                 "length": 2,
             }
         )
@@ -324,14 +312,12 @@ class ReferenceDataSearchRsp(BaseRsp1):
             metadata={
                 "name": "Code",
                 "type": "Attribute",
-                "required": True,
             }
         )
         description: str = field(
             metadata={
                 "name": "Description",
                 "type": "Attribute",
-                "required": True,
             }
         )
         providers: None | str = field(
@@ -345,14 +331,12 @@ class ReferenceDataSearchRsp(BaseRsp1):
             metadata={
                 "name": "Level",
                 "type": "Attribute",
-                "required": True,
             }
         )
         free_text_required: str = field(
             metadata={
                 "name": "FreeTextRequired",
                 "type": "Attribute",
-                "required": True,
             }
         )
         pattern: None | str = field(

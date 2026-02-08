@@ -108,12 +108,7 @@ class MultilineString:
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -134,7 +129,6 @@ class AdminEmail:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "pattern": r"[^@]+@[^.]+\..+",
         },
     )
@@ -152,17 +146,11 @@ class OtherHeiId:
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-api-registry/tree/stable-v1"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     type_value: OtherHeiIdValue = field(
         metadata={
             "name": "type",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -192,7 +180,6 @@ class HttpwithOptionalLang:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "pattern": r"https?://.+",
         },
     )
@@ -254,12 +241,7 @@ class StringWithOptionalLang:
     class Meta:
         target_namespace = "https://github.com/erasmus-without-paper/ewp-specs-architecture/blob/stable-v1/common-types.xsd"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     lang: None | str | LangValue = field(
         default=None,
         metadata={
@@ -337,7 +319,6 @@ class Hei:
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -400,7 +381,6 @@ class ManifestApiEntryBase:
     version: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
             "pattern": r"[0-9]+\.[0-9]+\.[0-9]+",
         }
     )
@@ -447,7 +427,6 @@ class ErrorResponse:
         metadata={
             "name": "developer-message",
             "type": "Element",
-            "required": True,
         }
     )
     user_message: list[MultilineStringWithOptionalLang] = field(
@@ -716,7 +695,6 @@ class Catalogue:
     institutions: Catalogue.Institutions = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     binaries: None | Catalogue.Binaries = field(
@@ -891,7 +869,6 @@ class Catalogue:
                     metadata={
                         "name": "sha-256",
                         "type": "Attribute",
-                        "required": True,
                         "pattern": r"[0-9a-f]{64}",
                     }
                 )
@@ -906,7 +883,6 @@ class Catalogue:
                     metadata={
                         "name": "sha-256",
                         "type": "Attribute",
-                        "required": True,
                         "pattern": r"[0-9a-f]{64}",
                     }
                 )
@@ -953,7 +929,6 @@ class Catalogue:
                     metadata={
                         "name": "sha-256",
                         "type": "Attribute",
-                        "required": True,
                         "pattern": r"[0-9a-f]{64}",
                     }
                 )
@@ -998,7 +973,6 @@ class Catalogue:
             value: bytes = field(
                 default=b"",
                 metadata={
-                    "required": True,
                     "format": "base64",
                 },
             )
@@ -1006,7 +980,6 @@ class Catalogue:
                 metadata={
                     "name": "sha-256",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"[0-9a-f]{64}",
                 }
             )

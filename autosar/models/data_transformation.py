@@ -103,7 +103,6 @@ class DataTransformation:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | DataTransformation.ShortNameFragments = field(
@@ -260,6 +259,5 @@ class DataTransformation:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

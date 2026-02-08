@@ -27,7 +27,6 @@ class BaggageInformationType:
             "name": "Allowance",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
 
@@ -43,7 +42,6 @@ class BaggageInformationType:
             metadata={
                 "name": "Id",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

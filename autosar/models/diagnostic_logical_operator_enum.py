@@ -30,11 +30,7 @@ class DiagnosticLogicalOperatorEnum:
     class Meta:
         name = "DIAGNOSTIC-LOGICAL-OPERATOR-ENUM"
 
-    value: DiagnosticLogicalOperatorEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticLogicalOperatorEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

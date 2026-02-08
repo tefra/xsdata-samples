@@ -241,16 +241,8 @@ class NetworkFrameTopicStructure(TopicStructure):
 
     @dataclass(kw_only=True)
     class ChangedSince:
-        value: XmlDateTime = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: XmlDateTime = field()
 
     @dataclass(kw_only=True)
     class CurrentAt:
-        value: XmlDateTime = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: XmlDateTime = field()

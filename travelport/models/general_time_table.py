@@ -44,14 +44,12 @@ class GeneralTimeTable:
         metadata={
             "name": "FlightOrigin",
             "type": "Element",
-            "required": True,
         }
     )
     flight_destination: TypeLocation1 = field(
         metadata={
             "name": "FlightDestination",
             "type": "Element",
-            "required": True,
         }
     )
     carrier_list: None | CarrierList = field(
@@ -65,7 +63,6 @@ class GeneralTimeTable:
         metadata={
             "name": "StartDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     end_date: None | str = field(

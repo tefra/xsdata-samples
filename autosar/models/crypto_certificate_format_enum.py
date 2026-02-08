@@ -30,11 +30,7 @@ class CryptoCertificateFormatEnum:
     class Meta:
         name = "CRYPTO-CERTIFICATE-FORMAT-ENUM"
 
-    value: CryptoCertificateFormatEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: CryptoCertificateFormatEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

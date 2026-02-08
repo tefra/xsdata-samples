@@ -12,7 +12,6 @@ class Text:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     description: None | object = field(

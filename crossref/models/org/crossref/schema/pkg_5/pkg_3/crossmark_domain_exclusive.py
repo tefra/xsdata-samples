@@ -11,8 +11,4 @@ class CrossmarkDomainExclusive:
         name = "crossmark_domain_exclusive"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    value: bool = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: bool = field()

@@ -18,13 +18,11 @@ class TypeAgencyHierarchyReference5:
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-            "required": True,
         }
     )
     profile_type: TypeAgencyProfileLevel5 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-            "required": True,
         }
     )

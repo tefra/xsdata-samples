@@ -19,7 +19,6 @@ class OptionsPerDatePairType:
         metadata={
             "name": "Departure",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
         }
     )
@@ -35,13 +34,11 @@ class OptionsPerDatePairType:
         metadata={
             "name": "Min",
             "type": "Attribute",
-            "required": True,
         }
     )
     max: int = field(
         metadata={
             "name": "Max",
             "type": "Attribute",
-            "required": True,
         }
     )

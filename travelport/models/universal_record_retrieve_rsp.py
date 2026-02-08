@@ -28,7 +28,6 @@ class UniversalRecordRetrieveRsp(BaseRsp1):
         metadata={
             "name": "UniversalRecord",
             "type": "Element",
-            "required": True,
         }
     )
     updated: bool = field(

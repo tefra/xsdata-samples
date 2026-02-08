@@ -126,7 +126,6 @@ class PositiveIntegerValueVariationPoint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -136,6 +135,5 @@ class PositiveIntegerValueVariationPoint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

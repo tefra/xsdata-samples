@@ -123,7 +123,6 @@ class ProfileRetrieveParentReq(BaseReq2):
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "min_length": 1,
                 "max_length": 128,
             },
@@ -132,7 +131,6 @@ class ProfileRetrieveParentReq(BaseReq2):
             metadata={
                 "name": "ProfileType",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -155,7 +153,6 @@ class ProfileRetrieveParentReq(BaseReq2):
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "min_length": 6,
                 "max_length": 128,
             },
@@ -164,7 +161,6 @@ class ProfileRetrieveParentReq(BaseReq2):
             metadata={
                 "name": "ProfileType",
                 "type": "Attribute",
-                "required": True,
             }
         )
         agency_code: None | str = field(

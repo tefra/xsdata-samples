@@ -150,7 +150,6 @@ class ServiceTiming:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | ServiceTiming.ShortNameFragments = field(
@@ -753,6 +752,5 @@ class ServiceTiming:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

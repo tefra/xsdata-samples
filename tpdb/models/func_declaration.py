@@ -14,13 +14,11 @@ class FuncDeclaration:
     name: Name = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     type_declaration: TypeDeclaration = field(
         metadata={
             "name": "typeDeclaration",
             "type": "Element",
-            "required": True,
         }
     )

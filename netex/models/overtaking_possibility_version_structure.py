@@ -33,7 +33,6 @@ class OvertakingPossibilityVersionStructure(
             "name": "OvertakingOnLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     overtaking_at_point_ref: None | PointRefStructure = field(

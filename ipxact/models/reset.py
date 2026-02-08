@@ -29,7 +29,6 @@ class Reset:
     value: UnsignedBitVectorExpression = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     mask: None | UnsignedBitVectorExpression = field(

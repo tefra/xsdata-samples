@@ -31,11 +31,7 @@ class TrustedPlatformExecutableLaunchBehaviorEnum:
     class Meta:
         name = "TRUSTED-PLATFORM-EXECUTABLE-LAUNCH-BEHAVIOR-ENUM"
 
-    value: TrustedPlatformExecutableLaunchBehaviorEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TrustedPlatformExecutableLaunchBehaviorEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

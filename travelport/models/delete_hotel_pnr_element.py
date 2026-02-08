@@ -20,7 +20,6 @@ class DeleteHotelPnrElement:
         metadata={
             "name": "ReservationLocatorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         }
@@ -29,13 +28,11 @@ class DeleteHotelPnrElement:
         metadata={
             "name": "Element",
             "type": "Attribute",
-            "required": True,
         }
     )
     key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

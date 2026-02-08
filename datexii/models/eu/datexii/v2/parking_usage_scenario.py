@@ -49,7 +49,6 @@ class ParkingUsageScenario:
             "name": "parkingUsageScenario",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     truck_parking_dynamic_management: list[

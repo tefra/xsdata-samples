@@ -143,7 +143,6 @@ class DiagnosticIndicatorTypeEnumValueVariationPoint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -153,6 +152,5 @@ class DiagnosticIndicatorTypeEnumValueVariationPoint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

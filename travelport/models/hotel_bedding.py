@@ -30,7 +30,6 @@ class HotelBedding:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
             "max_length": 15,
         }
     )

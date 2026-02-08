@@ -72,7 +72,6 @@ class MiscFormOfPayment7:
         metadata={
             "name": "Category",
             "type": "Attribute",
-            "required": True,
         }
     )
     acceptance_override: None | bool = field(

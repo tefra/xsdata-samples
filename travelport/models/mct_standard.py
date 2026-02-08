@@ -20,13 +20,11 @@ class MctStandard:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     time: int = field(
         metadata={
             "name": "Time",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -25,7 +25,6 @@ class TemplateInfoUpdate:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
         }
     )
     description: None | object = field(

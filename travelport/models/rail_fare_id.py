@@ -29,17 +29,11 @@ class RailFareId:
         name = "RailFareID"
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     category: None | str = field(

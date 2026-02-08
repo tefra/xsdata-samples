@@ -18,7 +18,6 @@ class TourCode:
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
             "max_length": 15,
         }
     )

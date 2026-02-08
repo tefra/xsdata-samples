@@ -11,7 +11,6 @@ class CanonicalizationMethodType:
         metadata={
             "name": "Algorithm",
             "type": "Attribute",
-            "required": True,
         }
     )
     content: tuple[object, ...] = field(
@@ -61,7 +60,6 @@ class DsakeyValueType:
             "name": "Y",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
             "format": "base64",
         }
     )
@@ -100,7 +98,6 @@ class DigestMethodType:
         metadata={
             "name": "Algorithm",
             "type": "Attribute",
-            "required": True,
         }
     )
     content: tuple[object, ...] = field(
@@ -121,7 +118,6 @@ class DigestValue:
     value: bytes = field(
         default=b"",
         metadata={
-            "required": True,
             "format": "base64",
         },
     )
@@ -132,12 +128,7 @@ class KeyName:
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -145,12 +136,7 @@ class MgmtData:
     class Meta:
         namespace = "http://www.w3.org/2000/09/xmldsig#"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -229,7 +215,6 @@ class RsakeyValueType:
             "name": "Modulus",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
             "format": "base64",
         }
     )
@@ -238,7 +223,6 @@ class RsakeyValueType:
             "name": "Exponent",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
             "format": "base64",
         }
     )
@@ -276,7 +260,6 @@ class SignatureMethodType:
         metadata={
             "name": "Algorithm",
             "type": "Attribute",
-            "required": True,
         }
     )
     content: tuple[object, ...] = field(
@@ -302,7 +285,6 @@ class SignaturePropertyType:
         metadata={
             "name": "Target",
             "type": "Attribute",
-            "required": True,
         }
     )
     id: None | str = field(
@@ -327,7 +309,6 @@ class SignatureValueType:
     value: bytes = field(
         default=b"",
         metadata={
-            "required": True,
             "format": "base64",
         },
     )
@@ -346,7 +327,6 @@ class TransformType:
         metadata={
             "name": "Algorithm",
             "type": "Attribute",
-            "required": True,
         }
     )
     content: tuple[object, ...] = field(
@@ -373,7 +353,6 @@ class X509IssuerSerialType:
             "name": "X509IssuerName",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
         }
     )
     x509_serial_number: int = field(
@@ -381,7 +360,6 @@ class X509IssuerSerialType:
             "name": "X509SerialNumber",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
         }
     )
 
@@ -612,7 +590,6 @@ class ReferenceType:
             "name": "DigestMethod",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
         }
     )
     digest_value: DigestValue = field(
@@ -620,7 +597,6 @@ class ReferenceType:
             "name": "DigestValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
         }
     )
     id: None | str = field(
@@ -767,7 +743,6 @@ class SignedInfoType:
             "name": "CanonicalizationMethod",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
         }
     )
     signature_method: SignatureMethod = field(
@@ -775,7 +750,6 @@ class SignedInfoType:
             "name": "SignatureMethod",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
         }
     )
     reference: tuple[Reference, ...] = field(
@@ -821,7 +795,6 @@ class SignatureType:
             "name": "SignedInfo",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
         }
     )
     signature_value: SignatureValue = field(
@@ -829,7 +802,6 @@ class SignatureType:
             "name": "SignatureValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
         }
     )
     key_info: None | KeyInfo = field(

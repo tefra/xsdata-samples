@@ -30,13 +30,11 @@ class TerminalReq(BaseReq4):
             "name": "HostToken",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
-            "required": True,
         }
     )
     terminal_command: TerminalCommand = field(
         metadata={
             "name": "TerminalCommand",
             "type": "Element",
-            "required": True,
         }
     )

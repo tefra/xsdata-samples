@@ -22,7 +22,6 @@ class MctSearch:
         metadata={
             "name": "ArriveStation",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }

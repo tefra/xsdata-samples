@@ -28,11 +28,7 @@ class HandleTimeoutEnum:
     class Meta:
         name = "HANDLE-TIMEOUT-ENUM"
 
-    value: HandleTimeoutEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: HandleTimeoutEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -33,6 +33,5 @@ class SubmitStructureResponseType2(RegistryInterfaceType):
             "name": "SubmitStructureResponse",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
-            "required": True,
         }
     )

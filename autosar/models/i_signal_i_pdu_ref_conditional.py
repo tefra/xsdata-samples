@@ -72,6 +72,5 @@ class ISignalIPduRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

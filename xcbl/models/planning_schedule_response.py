@@ -73,32 +73,17 @@ from xcbl.models.trading_partner_user_information import (
 
 @dataclass(kw_only=True)
 class PlanningScheduleHeaderNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PlanningScheduleResponseHeaderNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ScheduleIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -107,7 +92,6 @@ class BasePlanningDetail:
         metadata={
             "name": "LineItemNum",
             "type": "Element",
-            "required": True,
         }
     )
     line_item_type: None | LineItemType = field(
@@ -247,7 +231,6 @@ class BasePlanningDetail:
         metadata={
             "name": "ForecastFrequencyCoded",
             "type": "Element",
-            "required": True,
         }
     )
     forecast_frequency_coded_other: None | ForecastFrequencyCodedOther = field(
@@ -288,14 +271,12 @@ class PlanningScheduleHeader:
         metadata={
             "name": "ScheduleID",
             "type": "Element",
-            "required": True,
         }
     )
     schedule_issue_date: ScheduleIssueDate = field(
         metadata={
             "name": "ScheduleIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     schedule_references: None | ScheduleReferences = field(
@@ -316,7 +297,6 @@ class PlanningScheduleHeader:
         metadata={
             "name": "SchedulePurpose",
             "type": "Element",
-            "required": True,
         }
     )
     requested_response: None | RequestedResponse = field(
@@ -330,7 +310,6 @@ class PlanningScheduleHeader:
         metadata={
             "name": "ScheduleTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     schedule_type_coded_other: None | ScheduleTypeCodedOther = field(
@@ -344,7 +323,6 @@ class PlanningScheduleHeader:
         metadata={
             "name": "QuantityQualifierCoded",
             "type": "Element",
-            "required": True,
         }
     )
     quantity_qualifier_coded_other: None | QuantityQualifierCodedOther = field(
@@ -365,14 +343,12 @@ class PlanningScheduleHeader:
         metadata={
             "name": "ScheduleParty",
             "type": "Element",
-            "required": True,
         }
     )
     language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
     planning_schedule_header_note: None | PlanningScheduleHeaderNote = field(
@@ -404,7 +380,6 @@ class PlanningScheduleSummary:
         metadata={
             "name": "TotalNumberOfLineItems",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -415,7 +390,6 @@ class ScheduleDetail:
         metadata={
             "name": "CommitmentLevelCoded",
             "type": "Element",
-            "required": True,
         }
     )
     commitment_level_coded_other: None | CommitmentLevelCodedOther = field(
@@ -429,14 +403,12 @@ class ScheduleDetail:
         metadata={
             "name": "ScheduleDates",
             "type": "Element",
-            "required": True,
         }
     )
     schedule_quantities: ScheduleQuantities = field(
         metadata={
             "name": "ScheduleQuantities",
             "type": "Element",
-            "required": True,
         }
     )
     item_resource_authorization: None | ItemResourceAuthorization = field(
@@ -461,7 +433,6 @@ class ChangedPlanningScheduleHeader:
         metadata={
             "name": "PlanningScheduleHeader",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -484,7 +455,6 @@ class OriginalPlanningScheduleHeader:
         metadata={
             "name": "PlanningScheduleHeader",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -495,7 +465,6 @@ class PlanningScheduleResponseSummary:
         metadata={
             "name": "PlanningScheduleSummary",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -506,14 +475,12 @@ class LocationPlanningItemDetail:
         metadata={
             "name": "BasePlanningDetail",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_schedule_detail: ListOfScheduleDetail = field(
         metadata={
             "name": "ListOfScheduleDetail",
             "type": "Element",
-            "required": True,
         }
     )
     line_item_note: None | LineItemNote = field(
@@ -552,7 +519,6 @@ class LocationSchedule:
         metadata={
             "name": "ListOfScheduleDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -563,21 +529,18 @@ class PlanningScheduleResponseHeader:
         metadata={
             "name": "ScheduleResponseID",
             "type": "Element",
-            "required": True,
         }
     )
     schedule_response_issue_date: ScheduleResponseIssueDate = field(
         metadata={
             "name": "ScheduleResponseIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     schedule_reference: ScheduleReference = field(
         metadata={
             "name": "ScheduleReference",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_reference_coded: None | ListOfReferenceCoded = field(
@@ -591,35 +554,30 @@ class PlanningScheduleResponseHeader:
         metadata={
             "name": "BuyerParty",
             "type": "Element",
-            "required": True,
         }
     )
     seller_party: SellerParty = field(
         metadata={
             "name": "SellerParty",
             "type": "Element",
-            "required": True,
         }
     )
     purpose: Purpose = field(
         metadata={
             "name": "Purpose",
             "type": "Element",
-            "required": True,
         }
     )
     response_type: ResponseType = field(
         metadata={
             "name": "ResponseType",
             "type": "Element",
-            "required": True,
         }
     )
     language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
     original_planning_schedule_header: (
@@ -695,7 +653,6 @@ class LocationGroupedPlanningDetail:
         metadata={
             "name": "Location",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_contact: None | ListOfContact = field(
@@ -710,7 +667,6 @@ class LocationGroupedPlanningDetail:
             metadata={
                 "name": "ListOfLocationPlanningItemDetail",
                 "type": "Element",
-                "required": True,
             }
         )
     )
@@ -722,14 +678,12 @@ class MaterialGroupedPlanningDetail:
         metadata={
             "name": "BasePlanningDetail",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_location_schedule: ListOfLocationSchedule = field(
         metadata={
             "name": "ListOfLocationSchedule",
             "type": "Element",
-            "required": True,
         }
     )
     line_item_note: None | LineItemNote = field(
@@ -754,7 +708,6 @@ class ChangedLocationGroupedPlanningDetail:
         metadata={
             "name": "LocationGroupedPlanningDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -765,7 +718,6 @@ class ChangedMaterialGroupedPlanningDetail:
         metadata={
             "name": "MaterialGroupedPlanningDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -776,7 +728,6 @@ class OriginalLocationGroupedPlanningDetail:
         metadata={
             "name": "LocationGroupedPlanningDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -787,7 +738,6 @@ class OriginalMaterialGroupedPlanningDetail:
         metadata={
             "name": "MaterialGroupedPlanningDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -798,7 +748,6 @@ class LocationGroupedPlanningResponse:
         metadata={
             "name": "DetailResponseCoded",
             "type": "Element",
-            "required": True,
         }
     )
     detail_response_coded_other: None | DetailResponseCodedOther = field(
@@ -855,7 +804,6 @@ class MaterialGroupedPlanningResponse:
         metadata={
             "name": "DetailResponseCoded",
             "type": "Element",
-            "required": True,
         }
     )
     detail_response_coded_other: None | DetailResponseCodedOther = field(
@@ -940,7 +888,6 @@ class PlanningScheduleResponse:
         metadata={
             "name": "PlanningScheduleResponseHeader",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_location_grouped_planning_response: (

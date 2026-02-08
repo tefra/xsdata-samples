@@ -13,12 +13,7 @@ class SimpleMatcherType:
     class Meta:
         name = "simpleMatcherType"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     fuzziness: None | str = field(
         default=None,
         metadata={

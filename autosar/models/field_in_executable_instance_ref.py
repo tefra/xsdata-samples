@@ -99,7 +99,6 @@ class FieldInExecutableInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -109,7 +108,6 @@ class FieldInExecutableInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -119,7 +117,6 @@ class FieldInExecutableInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -129,6 +126,5 @@ class FieldInExecutableInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

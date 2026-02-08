@@ -29,11 +29,7 @@ class CalprmAxisCategoryEnum:
     class Meta:
         name = "CALPRM-AXIS-CATEGORY-ENUM"
 
-    value: CalprmAxisCategoryEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: CalprmAxisCategoryEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

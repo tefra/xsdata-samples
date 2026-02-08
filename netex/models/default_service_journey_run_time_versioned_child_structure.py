@@ -25,7 +25,6 @@ class DefaultServiceJourneyRunTimeVersionedChildStructure(
             "name": "RunTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     service_journey_ref: (

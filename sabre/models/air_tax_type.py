@@ -36,17 +36,11 @@ class AirTaxType:
         published_currency:
     """
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     tax_code: str = field(
         metadata={
             "name": "TaxCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 16,
         }

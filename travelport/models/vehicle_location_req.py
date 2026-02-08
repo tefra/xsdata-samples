@@ -49,7 +49,6 @@ class VehicleLocationReq(BaseReq1):
         metadata={
             "name": "PickupDateLocation",
             "type": "Element",
-            "required": True,
         }
     )
     reference_point: None | ReferencePoint1 = field(

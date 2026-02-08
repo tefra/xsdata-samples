@@ -23,6 +23,5 @@ class AddressBlockRef:
         metadata={
             "name": "addressBlockRef",
             "type": "Attribute",
-            "required": True,
         }
     )

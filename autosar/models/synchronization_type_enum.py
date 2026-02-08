@@ -29,11 +29,7 @@ class SynchronizationTypeEnum:
     class Meta:
         name = "SYNCHRONIZATION-TYPE-ENUM"
 
-    value: SynchronizationTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SynchronizationTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

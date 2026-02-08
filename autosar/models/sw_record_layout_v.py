@@ -190,7 +190,6 @@ class SwRecordLayoutV:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -200,6 +199,5 @@ class SwRecordLayoutV:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

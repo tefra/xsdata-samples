@@ -30,11 +30,7 @@ class EthernetConnectionNegotiationEnum:
     class Meta:
         name = "ETHERNET-CONNECTION-NEGOTIATION-ENUM"
 
-    value: EthernetConnectionNegotiationEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: EthernetConnectionNegotiationEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

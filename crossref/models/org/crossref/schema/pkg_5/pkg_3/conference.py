@@ -44,7 +44,6 @@ class Conference:
     event_metadata: EventMetadata = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     proceedings_series_metadata: None | ProceedingsSeriesMetadata = field(

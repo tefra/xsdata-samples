@@ -308,6 +308,5 @@ class HotelSearchModifiers:
             metadata={
                 "name": "Type",
                 "type": "Attribute",
-                "required": True,
             }
         )

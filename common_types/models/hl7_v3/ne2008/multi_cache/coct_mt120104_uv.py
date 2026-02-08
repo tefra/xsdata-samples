@@ -123,7 +123,6 @@ class CoctMt120104UvObservationDx:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     status_code: Cs = field(
@@ -131,7 +130,6 @@ class CoctMt120104UvObservationDx:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     effective_time: None | IvlTsExplicit = field(
@@ -146,7 +144,6 @@ class CoctMt120104UvObservationDx:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     target_site_code: None | Cd = field(
@@ -176,7 +173,6 @@ class CoctMt120104UvObservationDx:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(

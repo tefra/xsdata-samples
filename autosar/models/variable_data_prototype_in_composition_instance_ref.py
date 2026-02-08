@@ -106,7 +106,6 @@ class VariableDataPrototypeInCompositionInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -116,7 +115,6 @@ class VariableDataPrototypeInCompositionInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -126,6 +124,5 @@ class VariableDataPrototypeInCompositionInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

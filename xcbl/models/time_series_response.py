@@ -35,12 +35,7 @@ from xcbl.models.trading_partner_user_information import (
 
 @dataclass(kw_only=True)
 class CharacteristicAttributeDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -48,22 +43,12 @@ class CharacteristicAttributeId:
     class Meta:
         name = "CharacteristicAttributeID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CharacteristicAttributeNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -71,152 +56,77 @@ class CharacteristicCombinationId:
     class Meta:
         name = "CharacteristicCombinationID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CharacteristicCombinationPurposeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CharacteristicCombinationPurposeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CharacteristicCombinationResponseCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CharacteristicCombinationResponseCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CharacteristicName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ContactDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ContactFunctionCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ContactFunctionCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ContactName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ContactNumberTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ContactNumberTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ContactNumberValue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DimensionCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DimensionCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -224,22 +134,12 @@ class Gpssystem:
     class Meta:
         name = "GPSSystem"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class KeyFigureDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -247,42 +147,22 @@ class KeyFigureId:
     class Meta:
         name = "KeyFigureID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class KeyFigureName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Latitude:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LocationAttributeDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -290,62 +170,32 @@ class LocationAttributeId:
     class Meta:
         name = "LocationAttributeID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LocationDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LocationNotes:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LocationQualifierCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LocationQualifierCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Longitude:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -353,12 +203,7 @@ class Mdfbusiness:
     class Meta:
         name = "MDFBusiness"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 class MaximumValueConditionsCoded(Enum):
@@ -762,12 +607,7 @@ class Name11:
     class Meta:
         name = "Name1"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -775,12 +615,7 @@ class Name21:
     class Meta:
         name = "Name2"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -788,12 +623,7 @@ class Name31:
     class Meta:
         name = "Name3"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 class NameAddressAddressTypeCoded(Enum):
@@ -1018,32 +848,17 @@ class NameAddressAddressTypeCoded(Enum):
 
 @dataclass(kw_only=True)
 class PartyRoleCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PartyRoleCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ProductAttributeDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -1051,22 +866,12 @@ class ProductAttributeId:
     class Meta:
         name = "ProductAttributeID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ProductNotes:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -1074,12 +879,7 @@ class SourceId:
     class Meta:
         name = "SourceID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -1087,182 +887,92 @@ class TargetId:
     class Meta:
         name = "TargetID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TimeSeriesDataNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TimeSeriesDetailResponseCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TimeSeriesDetailResponseCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TimeSeriesHeaderResponseCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TimeSeriesHeaderResponseCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TimeSeriesIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TimeSeriesKeyFigurePurposeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TimeSeriesKeyFigurePurposeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TimeSeriesKeyFigureResponseCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TimeSeriesKeyFigureResponseCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TimeSeriesPurposeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TimeSeriesPurposeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TimeSeriesResponseIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TimeSeriesValue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalCharacteristicCombinations:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalKeyFigures:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalTimeSeriesData:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -1270,12 +980,7 @@ class Uomcoded:
     class Meta:
         name = "UOMCoded"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -1283,12 +988,7 @@ class UomcodedOther:
     class Meta:
         name = "UOMCodedOther"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -1297,7 +997,6 @@ class CharacteristicAttributeName:
         metadata={
             "name": "Identifier",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1308,7 +1007,6 @@ class ContactFunction:
         metadata={
             "name": "ContactFunctionCoded",
             "type": "Element",
-            "required": True,
         }
     )
     contact_function_coded_other: None | ContactFunctionCodedOther = field(
@@ -1329,7 +1027,6 @@ class ContactId:
         metadata={
             "name": "Identifier",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1340,14 +1037,12 @@ class ContactNumber:
         metadata={
             "name": "ContactNumberValue",
             "type": "Element",
-            "required": True,
         }
     )
     contact_number_type_coded: ContactNumberTypeCoded = field(
         metadata={
             "name": "ContactNumberTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     contact_number_type_coded_other: None | ContactNumberTypeCodedOther = (
@@ -1370,21 +1065,18 @@ class Gpscooridinates:
         metadata={
             "name": "GPSSystem",
             "type": "Element",
-            "required": True,
         }
     )
     latitude: Latitude = field(
         metadata={
             "name": "Latitude",
             "type": "Element",
-            "required": True,
         }
     )
     longitude: Longitude = field(
         metadata={
             "name": "Longitude",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1395,7 +1087,6 @@ class KeyFigure:
         metadata={
             "name": "KeyFigureID",
             "type": "Element",
-            "required": True,
         }
     )
     key_figure_name: None | KeyFigureName = field(
@@ -1435,7 +1126,6 @@ class LocId:
         metadata={
             "name": "Identifier",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1446,7 +1136,6 @@ class LocationAttributeName:
         metadata={
             "name": "Identifier",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1481,12 +1170,7 @@ class MaximumValue:
             "type": "Attribute",
         },
     )
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -1519,12 +1203,7 @@ class MeasurementValue:
             "type": "Attribute",
         },
     )
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -1557,12 +1236,7 @@ class MinimumValue:
             "type": "Attribute",
         },
     )
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -1593,7 +1267,6 @@ class NameAddress:
         metadata={
             "name": "Name1",
             "type": "Element",
-            "required": True,
         }
     )
     name2: None | Name21 = field(
@@ -1747,7 +1420,6 @@ class PartyId:
         metadata={
             "name": "Identifier",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1758,7 +1430,6 @@ class ProductAttributeName:
         metadata={
             "name": "Identifier",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1790,7 +1461,6 @@ class TimeSeriesBucket:
         metadata={
             "name": "ValidityDates",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1804,7 +1474,6 @@ class TimeSeriesId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1815,7 +1484,6 @@ class TimeSeriesReference:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1829,7 +1497,6 @@ class TimeSeriesResponseId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1867,7 +1534,6 @@ class TimeSeriesTimePeriod:
         metadata={
             "name": "ValidityDates",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1878,7 +1544,6 @@ class UnitOfMeasurement:
         metadata={
             "name": "UOMCoded",
             "type": "Element",
-            "required": True,
         }
     )
     uomcoded_other: None | UomcodedOther = field(
@@ -1908,7 +1573,6 @@ class LocationIdentifier:
         metadata={
             "name": "LocID",
             "type": "Element",
-            "required": True,
         }
     )
     location_description: None | LocationDescription = field(
@@ -1926,14 +1590,12 @@ class MeasurementRange:
         metadata={
             "name": "MinimumValue",
             "type": "Element",
-            "required": True,
         }
     )
     maximum_value: MaximumValue = field(
         metadata={
             "name": "MaximumValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1944,7 +1606,6 @@ class SourceKeyFigure:
         metadata={
             "name": "KeyFigure",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1955,7 +1616,6 @@ class TargetKeyFigure:
         metadata={
             "name": "KeyFigure",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1966,14 +1626,12 @@ class TimeSeriesData:
         metadata={
             "name": "TimeSeriesBucket",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_value: TimeSeriesValue = field(
         metadata={
             "name": "TimeSeriesValue",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_data_note: None | TimeSeriesDataNote = field(
@@ -1991,7 +1649,6 @@ class TimeSeriesPlanningData:
         metadata={
             "name": "SourceTargetID",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2002,7 +1659,6 @@ class TimeSeriesPlanningStep:
         metadata={
             "name": "SourceTargetID",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2013,7 +1669,6 @@ class TimeSeriesResponseSummary:
         metadata={
             "name": "TimeSeriesSummary",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2024,7 +1679,6 @@ class TimeSeriesSelection:
         metadata={
             "name": "SourceTargetID",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2035,7 +1689,6 @@ class TimeSeriesSystemType:
         metadata={
             "name": "SourceTargetID",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2053,7 +1706,6 @@ class Contact:
         metadata={
             "name": "ContactName",
             "type": "Element",
-            "required": True,
         }
     )
     contact_function: None | ContactFunction = field(
@@ -2163,7 +1815,6 @@ class Measurement:
         metadata={
             "name": "UnitOfMeasurement",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2174,14 +1825,12 @@ class Dimension:
         metadata={
             "name": "Measurement",
             "type": "Element",
-            "required": True,
         }
     )
     dimension_coded: DimensionCoded = field(
         metadata={
             "name": "DimensionCoded",
             "type": "Element",
-            "required": True,
         }
     )
     dimension_coded_other: None | DimensionCodedOther = field(
@@ -2211,7 +1860,6 @@ class OrderContact:
         metadata={
             "name": "Contact",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2222,7 +1870,6 @@ class ReceivingContact:
         metadata={
             "name": "Contact",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2233,7 +1880,6 @@ class ShippingContact:
         metadata={
             "name": "Contact",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2280,21 +1926,18 @@ class TimeSeriesKeyFigureData:
         metadata={
             "name": "CharacteristicCombinationID",
             "type": "Element",
-            "required": True,
         }
     )
     key_figure_information: KeyFigureInformation = field(
         metadata={
             "name": "KeyFigureInformation",
             "type": "Element",
-            "required": True,
         }
     )
     unit_of_measurement: UnitOfMeasurement = field(
         metadata={
             "name": "UnitOfMeasurement",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_data: list[TimeSeriesData] = field(
@@ -2337,7 +1980,6 @@ class OtherContacts:
         metadata={
             "name": "ListOfContact",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2348,14 +1990,12 @@ class CharacteristicAttribute:
         metadata={
             "name": "CharacteristicName",
             "type": "Element",
-            "required": True,
         }
     )
     characteristic_attribute_id: CharacteristicAttributeId = field(
         metadata={
             "name": "CharacteristicAttributeID",
             "type": "Element",
-            "required": True,
         }
     )
     characteristic_attribute_name: list[CharacteristicAttributeName] = field(
@@ -2403,7 +2043,6 @@ class ListOfChangedTimeSeriesKeyFigureData:
         metadata={
             "name": "ListOfTimeSeriesKeyFigureData",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2414,7 +2053,6 @@ class Party:
         metadata={
             "name": "PartyID",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_identifier: None | ListOfIdentifier = field(
@@ -2481,7 +2119,6 @@ class PartyCoded:
         metadata={
             "name": "PartyID",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_identifier: None | ListOfIdentifier = field(
@@ -2544,7 +2181,6 @@ class PartyCoded:
         metadata={
             "name": "PartyRoleCoded",
             "type": "Element",
-            "required": True,
         }
     )
     party_role_coded_other: None | PartyRoleCodedOther = field(
@@ -2574,7 +2210,6 @@ class OtherCharacteristicAttribute:
         metadata={
             "name": "CharacteristicAttribute",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2585,7 +2220,6 @@ class OtherLocationAttribute:
         metadata={
             "name": "CharacteristicAttribute",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2596,7 +2230,6 @@ class OtherProductAttribute:
         metadata={
             "name": "CharacteristicAttribute",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2607,7 +2240,6 @@ class ReceiverParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2618,7 +2250,6 @@ class SourceCharacteristicsOther:
         metadata={
             "name": "CharacteristicAttribute",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2629,7 +2260,6 @@ class SourceParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2640,7 +2270,6 @@ class TargetCharacteristicsOther:
         metadata={
             "name": "CharacteristicAttribute",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2651,7 +2280,6 @@ class BaseCharacteristicLocation:
         metadata={
             "name": "LocationAttributeID",
             "type": "Element",
-            "required": True,
         }
     )
     location_attribute_name: list[LocationAttributeName] = field(
@@ -2699,7 +2327,6 @@ class BaseCharacteristicProduct:
         metadata={
             "name": "ProductAttributeID",
             "type": "Element",
-            "required": True,
         }
     )
     product_attribute_name: list[ProductAttributeName] = field(
@@ -2788,7 +2415,6 @@ class SourceLocation:
         metadata={
             "name": "BaseCharacteristicLocation",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2799,7 +2425,6 @@ class SourceProduct:
         metadata={
             "name": "BaseCharacteristicProduct",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2810,7 +2435,6 @@ class SourceProductGroup:
         metadata={
             "name": "BaseCharacteristicProduct",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2821,7 +2445,6 @@ class TargetLocation:
         metadata={
             "name": "BaseCharacteristicLocation",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2832,7 +2455,6 @@ class TargetProduct:
         metadata={
             "name": "BaseCharacteristicProduct",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2843,7 +2465,6 @@ class TargetProductGroup:
         metadata={
             "name": "BaseCharacteristicProduct",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2854,21 +2475,18 @@ class TimeSeriesHeader:
         metadata={
             "name": "TimeSeriesIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_id: TimeSeriesId = field(
         metadata={
             "name": "TimeSeriesID",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_purpose_coded: TimeSeriesPurposeCoded = field(
         metadata={
             "name": "TimeSeriesPurposeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_purpose_coded_other: None | TimeSeriesPurposeCodedOther = (
@@ -2898,7 +2516,6 @@ class TimeSeriesHeader:
         metadata={
             "name": "TimeSeriesPlanningData",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_selection: None | TimeSeriesSelection = field(
@@ -2919,14 +2536,12 @@ class TimeSeriesHeader:
         metadata={
             "name": "TimeSeriesParty",
             "type": "Element",
-            "required": True,
         }
     )
     language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
     general_notes: None | GeneralNotes = field(
@@ -2944,7 +2559,6 @@ class TimeSeriesResponseParty:
         metadata={
             "name": "TimeSeriesParty",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2955,7 +2569,6 @@ class ChangedTimeSeriesHeader:
         metadata={
             "name": "TimeSeriesHeader",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3056,7 +2669,6 @@ class CharacteristicCombination:
         metadata={
             "name": "CharacteristicCombinationID",
             "type": "Element",
-            "required": True,
         }
     )
     characteristic_product: None | CharacteristicProduct = field(
@@ -3095,21 +2707,18 @@ class TimeSeriesResponseHeader:
         metadata={
             "name": "TimeSeriesResponseIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_response_id: TimeSeriesResponseId = field(
         metadata={
             "name": "TimeSeriesResponseID",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_reference: TimeSeriesReference = field(
         metadata={
             "name": "TimeSeriesReference",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_planning_data: None | TimeSeriesPlanningData = field(
@@ -3123,14 +2732,12 @@ class TimeSeriesResponseHeader:
         metadata={
             "name": "TimeSeriesResponseParty",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_header_response_coded: TimeSeriesHeaderResponseCoded = field(
         metadata={
             "name": "TimeSeriesHeaderResponseCoded",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_header_response_coded_other: (
@@ -3153,7 +2760,6 @@ class TimeSeriesResponseHeader:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
     general_notes: None | GeneralNotes = field(
@@ -3184,7 +2790,6 @@ class ListOfChangedCharacteristicCombinations:
             metadata={
                 "name": "ListOfCharacteristicCombinations",
                 "type": "Element",
-                "required": True,
             }
         )
     )
@@ -3196,14 +2801,12 @@ class TimeSeriesResponseDetail:
         metadata={
             "name": "TimeSeriesDetailResponseCoded",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_detail_response_coded_other: TimeSeriesDetailResponseCodedOther = field(
         metadata={
             "name": "TimeSeriesDetailResponseCodedOther",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_changed_characteristic_combinations: (
@@ -3232,20 +2835,17 @@ class TimeSeriesResponse:
         metadata={
             "name": "TimeSeriesResponseHeader",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_response_detail: TimeSeriesResponseDetail = field(
         metadata={
             "name": "TimeSeriesResponseDetail",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_response_summary: TimeSeriesResponseSummary = field(
         metadata={
             "name": "TimeSeriesResponseSummary",
             "type": "Element",
-            "required": True,
         }
     )

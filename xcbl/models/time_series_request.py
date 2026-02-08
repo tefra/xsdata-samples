@@ -14,32 +14,17 @@ from xcbl.models.time_series_response import (
 
 @dataclass(kw_only=True)
 class KeyFigureNotes:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class KeyFigurePurposeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class KeyFigurePurposeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -69,14 +54,12 @@ class KeyFigureData:
         metadata={
             "name": "KeyFigureInformation",
             "type": "Element",
-            "required": True,
         }
     )
     unit_of_measurement: UnitOfMeasurement = field(
         metadata={
             "name": "UnitOfMeasurement",
             "type": "Element",
-            "required": True,
         }
     )
     key_figure_notes: None | KeyFigureNotes = field(
@@ -94,7 +77,6 @@ class TimeSeriesRequestHeader:
         metadata={
             "name": "TimeSeriesHeader",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -105,7 +87,6 @@ class TimeSeriesRequestSummary:
         metadata={
             "name": "TimeSeriesSummary",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -148,20 +129,17 @@ class TimeSeriesRequest:
         metadata={
             "name": "TimeSeriesRequestHeader",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_request_detail: TimeSeriesRequestDetail = field(
         metadata={
             "name": "TimeSeriesRequestDetail",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_request_summary: TimeSeriesRequestSummary = field(
         metadata={
             "name": "TimeSeriesRequestSummary",
             "type": "Element",
-            "required": True,
         }
     )

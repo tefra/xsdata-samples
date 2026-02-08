@@ -28,7 +28,6 @@ class LoadConstraint:
         metadata={
             "name": "cellSpecification",
             "type": "Element",
-            "required": True,
         }
     )
     count: None | UnsignedPositiveIntExpression = field(

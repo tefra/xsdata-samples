@@ -29,7 +29,6 @@ class CurrencyConversion:
         metadata={
             "name": "From",
             "type": "Attribute",
-            "required": True,
             "length": 3,
         }
     )
@@ -37,7 +36,6 @@ class CurrencyConversion:
         metadata={
             "name": "To",
             "type": "Attribute",
-            "required": True,
             "length": 3,
         }
     )

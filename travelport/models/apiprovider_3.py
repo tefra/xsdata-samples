@@ -47,7 +47,6 @@ class Apiprovider3:
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }

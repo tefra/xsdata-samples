@@ -30,13 +30,11 @@ class AirSolutionChangedInfo:
         metadata={
             "name": "AirPricingSolution",
             "type": "Element",
-            "required": True,
         }
     )
     reason_code: AirSolutionChangedInfoReasonCode = field(
         metadata={
             "name": "ReasonCode",
             "type": "Attribute",
-            "required": True,
         }
     )

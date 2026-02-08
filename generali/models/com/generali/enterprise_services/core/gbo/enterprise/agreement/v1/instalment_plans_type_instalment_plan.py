@@ -46,7 +46,6 @@ class InstalmentPlansTypeInstalmentPlan:
             "name": "NumberOfInstalment",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     instalment_basis: InstalmentBasisEnum = field(
@@ -54,7 +53,6 @@ class InstalmentPlansTypeInstalmentPlan:
             "name": "InstalmentBasis",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     instalment_date: InstalmentDateEnum = field(
@@ -62,6 +60,5 @@ class InstalmentPlansTypeInstalmentPlan:
             "name": "InstalmentDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )

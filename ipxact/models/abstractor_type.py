@@ -64,28 +64,24 @@ class AbstractorType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     library: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     version: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     display_name: None | str = field(
@@ -116,7 +112,6 @@ class AbstractorType:
             "name": "abstractorMode",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     bus_type: LibraryRefType = field(
@@ -124,7 +119,6 @@ class AbstractorType:
             "name": "busType",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     abstractor_interfaces: AbstractorType.AbstractorInterfaces = field(
@@ -132,7 +126,6 @@ class AbstractorType:
             "name": "abstractorInterfaces",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     model: None | AbstractorModelType = field(
@@ -203,11 +196,7 @@ class AbstractorType:
             system
         """
 
-        value: AbstractorModeType = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: AbstractorModeType = field()
         group: None | str = field(
             default=None,
             metadata={

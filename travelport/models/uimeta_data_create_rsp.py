@@ -52,21 +52,18 @@ class UimetaDataCreateRsp(BaseRsp2):
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-            "required": True,
         }
     )
     profile_type: TypeProfileType3 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-            "required": True,
         }
     )
     meta_data_version: int = field(
         metadata={
             "name": "MetaDataVersion",
             "type": "Attribute",
-            "required": True,
             "min_inclusive": 0,
         }
     )

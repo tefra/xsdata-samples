@@ -29,11 +29,7 @@ class BswCallType:
     class Meta:
         name = "BSW-CALL-TYPE"
 
-    value: BswCallTypeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: BswCallTypeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

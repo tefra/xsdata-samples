@@ -131,6 +131,5 @@ class SwcToEcuMappingConstraint:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

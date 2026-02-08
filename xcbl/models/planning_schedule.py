@@ -44,7 +44,6 @@ class PlanningSchedule:
         metadata={
             "name": "PlanningScheduleHeader",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_location_grouped_planning_detail: (

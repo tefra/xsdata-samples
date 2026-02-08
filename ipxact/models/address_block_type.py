@@ -75,7 +75,6 @@ class AddressBlockType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -121,7 +120,6 @@ class AddressBlockType:
             "name": "baseAddress",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     address_block_definition_ref: (
@@ -237,17 +235,11 @@ class AddressBlockType:
 
     @dataclass(kw_only=True)
     class AddressBlockDefinitionRef:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         type_definitions: str = field(
             metadata={
                 "name": "typeDefinitions",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -283,7 +275,6 @@ class AddressBlockType:
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                "required": True,
             }
         )
         display_name: None | DisplayName = field(
@@ -329,7 +320,6 @@ class AddressBlockType:
                 "name": "addressOffset",
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                "required": True,
             }
         )
         register_definition_ref: (
@@ -425,16 +415,10 @@ class AddressBlockType:
 
         @dataclass(kw_only=True)
         class RegisterDefinitionRef:
-            value: str = field(
-                default="",
-                metadata={
-                    "required": True,
-                },
-            )
+            value: str = field(default="")
             type_definitions: str = field(
                 metadata={
                     "name": "typeDefinitions",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

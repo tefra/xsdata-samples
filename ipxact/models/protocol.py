@@ -24,7 +24,6 @@ class Protocol:
         metadata={
             "name": "protocolType",
             "type": "Element",
-            "required": True,
         }
     )
     payload: None | Payload = field(
@@ -36,11 +35,7 @@ class Protocol:
 
     @dataclass(kw_only=True)
     class ProtocolType:
-        value: ProtocolTypeType = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: ProtocolTypeType = field()
         custom: None | str = field(
             default=None,
             metadata={

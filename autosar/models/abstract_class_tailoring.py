@@ -112,7 +112,6 @@ class AbstractClassTailoring:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | AbstractClassTailoring.ShortNameFragments = (
@@ -343,7 +342,6 @@ class AggregationTailoring:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | AggregationTailoring.ShortNameFragments = (
@@ -589,7 +587,6 @@ class ClassContentConditional:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | ClassContentConditional.ShortNameFragments = (
@@ -913,7 +910,6 @@ class ConcreteClassTailoring:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | ConcreteClassTailoring.ShortNameFragments = (
@@ -1162,7 +1158,6 @@ class ReferenceTailoring:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | ReferenceTailoring.ShortNameFragments = field(

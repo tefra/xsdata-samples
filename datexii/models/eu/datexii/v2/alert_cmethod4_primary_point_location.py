@@ -24,7 +24,6 @@ class AlertCMethod4PrimaryPointLocation:
             "name": "alertCLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     offset_distance: OffsetDistance = field(
@@ -32,7 +31,6 @@ class AlertCMethod4PrimaryPointLocation:
             "name": "offsetDistance",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     alert_cmethod4_primary_point_location_extension: None | ExtensionType = (

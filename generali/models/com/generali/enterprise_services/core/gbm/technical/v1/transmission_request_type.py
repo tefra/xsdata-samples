@@ -27,6 +27,5 @@ class TransmissionRequestType(BaseGbmheaderType):
             "name": "Payload",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbm/technical/v1",
-            "required": True,
         }
     )

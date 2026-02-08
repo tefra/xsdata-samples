@@ -40,122 +40,62 @@ class BuyerIdreferenceDate:
     class Meta:
         name = "BuyerIDReferenceDate"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CompletionText:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class GeneralLineItemNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LangString:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class MinRetrySecs:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Parameter:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PriceCheckItemError:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PriceCheckResultIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PriceCheckResultNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class QuoteDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SeverityCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SeverityCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -163,32 +103,17 @@ class SupplierIdreferenceDate:
     class Meta:
         name = "SupplierIDReferenceDate"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SwVendorErrorRef:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalNumberOfLineItem:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -197,7 +122,6 @@ class CheckResultTransport:
         metadata={
             "name": "Transport",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -208,14 +132,12 @@ class LanguageString:
         metadata={
             "name": "LangString",
             "type": "Element",
-            "required": True,
         }
     )
     language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -226,7 +148,6 @@ class LineItemAttachment:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -249,7 +170,6 @@ class PriceCheckCurrency:
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -263,7 +183,6 @@ class PriceCheckResultId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -274,7 +193,6 @@ class PriceCheckResultLanguage:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -285,7 +203,6 @@ class PriceCheckShipToParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -296,7 +213,6 @@ class ResultListOfAttachment:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -307,7 +223,6 @@ class ResultPrice:
         metadata={
             "name": "Price",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -318,7 +233,6 @@ class Severity:
         metadata={
             "name": "SeverityCoded",
             "type": "Element",
-            "required": True,
         }
     )
     severity_coded_other: None | SeverityCodedOther = field(
@@ -336,7 +250,6 @@ class CheckResultBaseItemDetail:
         metadata={
             "name": "LineItemNum",
             "type": "Element",
-            "required": True,
         }
     )
     line_item_type: None | LineItemType = field(
@@ -474,7 +387,6 @@ class CompletionMsg:
         metadata={
             "name": "LanguageString",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -485,21 +397,18 @@ class PriceCheckResultHeader:
         metadata={
             "name": "PriceCheckResultID",
             "type": "Element",
-            "required": True,
         }
     )
     price_check_result_issue_date: PriceCheckResultIssueDate = field(
         metadata={
             "name": "PriceCheckResultIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     supplier_party: SupplierParty = field(
         metadata={
             "name": "SupplierParty",
             "type": "Element",
-            "required": True,
         }
     )
     supplier_idreference_date: None | SupplierIdreferenceDate = field(
@@ -513,7 +422,6 @@ class PriceCheckResultHeader:
         metadata={
             "name": "BuyerParty",
             "type": "Element",
-            "required": True,
         }
     )
     buyer_idreference_date: None | BuyerIdreferenceDate = field(
@@ -527,7 +435,6 @@ class PriceCheckResultHeader:
         metadata={
             "name": "PriceCheckShipToParty",
             "type": "Element",
-            "required": True,
         }
     )
     price_check_currency: None | PriceCheckCurrency = field(
@@ -573,21 +480,18 @@ class ErrorInfo:
         metadata={
             "name": "CompletionText",
             "type": "Element",
-            "required": True,
         }
     )
     completion_msg: CompletionMsg = field(
         metadata={
             "name": "CompletionMsg",
             "type": "Element",
-            "required": True,
         }
     )
     severity: Severity = field(
         metadata={
             "name": "Severity",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_parameter: None | ListOfParameter = field(
@@ -619,7 +523,6 @@ class QuotedItem:
         metadata={
             "name": "CheckResultBaseItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -630,7 +533,6 @@ class PriceCheckSummaryErrorInfo:
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -641,7 +543,6 @@ class PriceErrorInfo:
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -652,14 +553,12 @@ class PriceCheckResultItemDetail:
         metadata={
             "name": "QuotedItem",
             "type": "Element",
-            "required": True,
         }
     )
     result_price: ResultPrice = field(
         metadata={
             "name": "ResultPrice",
             "type": "Element",
-            "required": True,
         }
     )
     price_error_info: None | PriceErrorInfo = field(
@@ -691,7 +590,6 @@ class PriceCheckResultSummary:
         metadata={
             "name": "PriceCheckItemError",
             "type": "Element",
-            "required": True,
         }
     )
     price_check_summary_error_info: None | PriceCheckSummaryErrorInfo = field(
@@ -728,7 +626,6 @@ class PriceCheckResultDetail:
         metadata={
             "name": "ListOfPriceCheckResultItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -739,7 +636,6 @@ class PriceCheckResult:
         metadata={
             "name": "PriceCheckResultHeader",
             "type": "Element",
-            "required": True,
         }
     )
     price_check_result_detail: None | PriceCheckResultDetail = field(

@@ -30,11 +30,7 @@ class ModeErrorReactionPolicyEnum:
     class Meta:
         name = "MODE-ERROR-REACTION-POLICY-ENUM"
 
-    value: ModeErrorReactionPolicyEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ModeErrorReactionPolicyEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

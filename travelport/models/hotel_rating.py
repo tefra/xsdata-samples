@@ -44,6 +44,5 @@ class HotelRating:
         metadata={
             "name": "RatingProvider",
             "type": "Attribute",
-            "required": True,
         }
     )

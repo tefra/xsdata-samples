@@ -77,7 +77,6 @@ class ReportPaperMetadata:
     titles: Titles = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     edition_number: None | EditionNumber = field(

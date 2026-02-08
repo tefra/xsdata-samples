@@ -24,14 +24,12 @@ class PixconsumerPrpaIn201301UvproxyRequestType:
             "name": "PRPA_IN201301UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_system: NhinTargetSystemType = field(
@@ -39,7 +37,6 @@ class PixconsumerPrpaIn201301UvproxyRequestType:
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -54,7 +51,6 @@ class PixconsumerPrpaIn201301UvproxySecuredRequestType:
             "name": "PRPA_IN201301UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_system: NhinTargetSystemType = field(
@@ -62,7 +58,6 @@ class PixconsumerPrpaIn201301UvproxySecuredRequestType:
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -77,14 +72,12 @@ class PixconsumerPrpaIn201302UvproxyRequestType:
             "name": "PRPA_IN201302UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_system: NhinTargetSystemType = field(
@@ -92,7 +85,6 @@ class PixconsumerPrpaIn201302UvproxyRequestType:
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -107,7 +99,6 @@ class PixconsumerPrpaIn201302UvproxySecuredRequestType:
             "name": "PRPA_IN201302UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_system: NhinTargetSystemType = field(
@@ -115,7 +106,6 @@ class PixconsumerPrpaIn201302UvproxySecuredRequestType:
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -130,14 +120,12 @@ class PixconsumerPrpaIn201304UvproxyRequestType:
             "name": "PRPA_IN201304UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_system: NhinTargetSystemType = field(
@@ -145,7 +133,6 @@ class PixconsumerPrpaIn201304UvproxyRequestType:
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -160,7 +147,6 @@ class PixconsumerPrpaIn201304UvproxySecuredRequestType:
             "name": "PRPA_IN201304UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_system: NhinTargetSystemType = field(
@@ -168,7 +154,6 @@ class PixconsumerPrpaIn201304UvproxySecuredRequestType:
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -183,14 +168,12 @@ class PixconsumerPrpaIn201309UvproxyRequestType:
             "name": "PRPA_IN201309UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_system: NhinTargetSystemType = field(
@@ -198,7 +181,6 @@ class PixconsumerPrpaIn201309UvproxyRequestType:
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -213,7 +195,6 @@ class PixconsumerPrpaIn201309UvproxySecuredRequestType:
             "name": "PRPA_IN201309UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_system: NhinTargetSystemType = field(
@@ -221,7 +202,6 @@ class PixconsumerPrpaIn201309UvproxySecuredRequestType:
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 

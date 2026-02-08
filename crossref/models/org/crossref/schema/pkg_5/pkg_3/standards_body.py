@@ -25,12 +25,10 @@ class StandardsBody:
     standards_body_name: StandardsBodyName = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     standards_body_acronym: StandardsBodyAcronym = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )

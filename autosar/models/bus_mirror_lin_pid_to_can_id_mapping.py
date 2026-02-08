@@ -73,6 +73,5 @@ class BusMirrorLinPidToCanIdMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

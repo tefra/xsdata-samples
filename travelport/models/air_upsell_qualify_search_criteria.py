@@ -29,7 +29,6 @@ class AirUpsellQualifySearchCriteria(UpsellSearchCriteria):
         metadata={
             "name": "Carrier",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )

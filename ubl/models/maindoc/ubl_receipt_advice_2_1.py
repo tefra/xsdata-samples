@@ -81,7 +81,6 @@ class ReceiptAdviceType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     copy_indicator: None | CopyIndicator = field(
@@ -105,7 +104,6 @@ class ReceiptAdviceType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -187,7 +185,6 @@ class ReceiptAdviceType:
             "name": "DeliveryCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     despatch_supplier_party: DespatchSupplierParty = field(
@@ -195,7 +192,6 @@ class ReceiptAdviceType:
             "name": "DespatchSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     buyer_customer_party: None | BuyerCustomerParty = field(

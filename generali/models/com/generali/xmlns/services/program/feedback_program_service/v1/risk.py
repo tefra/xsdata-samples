@@ -20,27 +20,23 @@ class Risk:
         metadata={
             "name": "GlobalRiskID",
             "type": "Element",
-            "required": True,
         }
     )
     local_risk_id: str = field(
         metadata={
             "name": "LocalRiskID",
             "type": "Element",
-            "required": True,
         }
     )
     reinsurance_agreement: str = field(
         metadata={
             "name": "ReinsuranceAgreement",
             "type": "Element",
-            "required": True,
         }
     )
     locations: Locations = field(
         metadata={
             "name": "Locations",
             "type": "Element",
-            "required": True,
         }
     )

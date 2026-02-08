@@ -55,7 +55,6 @@ class PayloadPublication:
             "name": "publicationTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     publication_creator: InternationalIdentifier = field(
@@ -63,7 +62,6 @@ class PayloadPublication:
             "name": "publicationCreator",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     payload_publication_extension: None | ExtensionType = field(
@@ -77,6 +75,5 @@ class PayloadPublication:
     lang: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

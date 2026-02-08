@@ -52,7 +52,6 @@ class BankedBankType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -150,7 +149,6 @@ class BankedBankType:
         metadata={
             "name": "bankAlignment",
             "type": "Attribute",
-            "required": True,
         }
     )
     id: None | str = field(
@@ -175,17 +173,11 @@ class BankedBankType:
 
     @dataclass(kw_only=True)
     class BankDefinitionRef:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         type_definitions: str = field(
             metadata={
                 "name": "typeDefinitions",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

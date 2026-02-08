@@ -187,6 +187,5 @@ class Xref:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

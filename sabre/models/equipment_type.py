@@ -16,17 +16,11 @@ class EquipmentType:
         change_of_gauge: Indicates there is an equipment change.
     """
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     air_equip_type: str = field(
         metadata={
             "name": "AirEquipType",
             "type": "Attribute",
-            "required": True,
             "min_length": 3,
             "max_length": 3,
         }

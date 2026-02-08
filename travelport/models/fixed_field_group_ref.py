@@ -24,6 +24,5 @@ class FixedFieldGroupRef:
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
         }
     )

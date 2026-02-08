@@ -32,11 +32,7 @@ class ContainerIPduHeaderTypeEnum:
     class Meta:
         name = "CONTAINER-I-PDU-HEADER-TYPE-ENUM"
 
-    value: ContainerIPduHeaderTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ContainerIPduHeaderTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

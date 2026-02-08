@@ -26,11 +26,7 @@ class KeyUsageRestrictionEnum:
     class Meta:
         name = "KEY-USAGE-RESTRICTION-ENUM"
 
-    value: KeyUsageRestrictionEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: KeyUsageRestrictionEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

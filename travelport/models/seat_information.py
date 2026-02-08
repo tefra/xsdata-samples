@@ -37,42 +37,36 @@ class SeatInformation:
         metadata={
             "name": "Power",
             "type": "Element",
-            "required": True,
         }
     )
     video: str = field(
         metadata={
             "name": "Video",
             "type": "Element",
-            "required": True,
         }
     )
     type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Element",
-            "required": True,
         }
     )
     description: str = field(
         metadata={
             "name": "Description",
             "type": "Element",
-            "required": True,
         }
     )
     rating: SeatInformation.Rating = field(
         metadata={
             "name": "Rating",
             "type": "Element",
-            "required": True,
         }
     )
     key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -87,16 +81,10 @@ class SeatInformation:
             being good. Providers: 1G, 1V, 1P
         """
 
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         number: int = field(
             metadata={
                 "name": "Number",
                 "type": "Attribute",
-                "required": True,
             }
         )

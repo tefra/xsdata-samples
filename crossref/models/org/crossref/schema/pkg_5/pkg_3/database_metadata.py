@@ -53,7 +53,6 @@ class DatabaseMetadata:
     titles: Titles = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     description: None | Description = field(

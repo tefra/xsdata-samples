@@ -29,11 +29,7 @@ class CryptoKeySlotTypeEnum:
     class Meta:
         name = "CRYPTO-KEY-SLOT-TYPE-ENUM"
 
-    value: CryptoKeySlotTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: CryptoKeySlotTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

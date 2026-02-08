@@ -125,7 +125,6 @@ class QuqiMt020001Uv01AuthorOrPerformer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -261,7 +260,6 @@ class QuqiMt020001Uv01InformationRecipient:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -360,7 +358,6 @@ class QuqiMt020001Uv01Overseer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -420,7 +417,6 @@ class QuqiMt020001Uv01Reason:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_conduction_ind: None | str = field(

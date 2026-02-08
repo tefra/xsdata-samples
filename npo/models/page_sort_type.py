@@ -13,11 +13,7 @@ class PageSortType:
     class Meta:
         name = "pageSortType"
 
-    value: PageSortTypeEnum = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: PageSortTypeEnum = field()
     order: None | OrderTypeEnum = field(
         default=None,
         metadata={

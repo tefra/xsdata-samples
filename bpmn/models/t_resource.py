@@ -24,6 +24,5 @@ class TResource(TRootElement):
     name: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

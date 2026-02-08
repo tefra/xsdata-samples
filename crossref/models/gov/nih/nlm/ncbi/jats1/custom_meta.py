@@ -26,14 +26,12 @@ class CustomMeta:
         metadata={
             "name": "meta-name",
             "type": "Element",
-            "required": True,
         }
     )
     meta_value: MetaValue = field(
         metadata={
             "name": "meta-value",
             "type": "Element",
-            "required": True,
         }
     )
     assigning_authority: None | str = field(

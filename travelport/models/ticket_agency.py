@@ -28,13 +28,11 @@ class TicketAgency:
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     pseudo_city_code: object = field(
         metadata={
             "name": "PseudoCityCode",
             "type": "Attribute",
-            "required": True,
         }
     )

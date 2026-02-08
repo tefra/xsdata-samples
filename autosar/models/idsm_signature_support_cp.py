@@ -81,7 +81,6 @@ class IdsmSignatureSupportCp:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -91,6 +90,5 @@ class IdsmSignatureSupportCp:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

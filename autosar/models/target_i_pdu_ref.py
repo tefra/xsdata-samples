@@ -70,6 +70,5 @@ class TargetIPduRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

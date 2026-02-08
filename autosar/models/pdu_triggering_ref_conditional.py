@@ -72,6 +72,5 @@ class PduTriggeringRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

@@ -10,12 +10,7 @@ class SectionType:
     class Meta:
         name = "sectionType"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     path: None | str = field(
         default=None,
         metadata={

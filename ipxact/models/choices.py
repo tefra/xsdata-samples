@@ -40,7 +40,6 @@ class Choices:
         name: str = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         enumeration: list[Choices.Choice.Enumeration] = field(

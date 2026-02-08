@@ -34,7 +34,6 @@ class Journal:
     journal_metadata: JournalMetadata = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     journal_issue: None | JournalIssue = field(

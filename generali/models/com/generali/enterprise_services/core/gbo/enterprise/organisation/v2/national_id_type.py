@@ -16,7 +16,6 @@ class NationalIdType:
             "name": "ID",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-            "required": True,
         }
     )
     type_value: CodeType = field(
@@ -24,6 +23,5 @@ class NationalIdType:
             "name": "Type",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-            "required": True,
         }
     )

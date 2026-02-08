@@ -27,7 +27,6 @@ class MeasurementEquipmentFault(Fault):
             "name": "measurementEquipmentFault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     measurement_equipment_fault_extension: None | ExtensionType = field(

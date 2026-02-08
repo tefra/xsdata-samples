@@ -55,7 +55,6 @@ class BrandModifiers:
             metadata={
                 "name": "ModifierType",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -65,6 +64,5 @@ class BrandModifiers:
             metadata={
                 "name": "ReturnBasicDetails",
                 "type": "Attribute",
-                "required": True,
             }
         )

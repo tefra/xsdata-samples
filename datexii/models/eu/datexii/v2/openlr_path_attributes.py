@@ -31,7 +31,6 @@ class OpenlrPathAttributes:
             "name": "openlrLowestFRCToNextLRPoint",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_distance_to_next_lrpoint: int = field(
@@ -39,7 +38,6 @@ class OpenlrPathAttributes:
             "name": "openlrDistanceToNextLRPoint",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_path_attributes_extension: None | ExtensionType = field(

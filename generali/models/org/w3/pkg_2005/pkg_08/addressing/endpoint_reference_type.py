@@ -20,7 +20,6 @@ class EndpointReferenceType:
             "name": "Address",
             "type": "Element",
             "namespace": "http://www.w3.org/2005/08/addressing",
-            "required": True,
         }
     )
     reference_parameters: None | ReferenceParameters = field(

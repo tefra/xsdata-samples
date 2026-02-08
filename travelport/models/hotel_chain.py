@@ -18,7 +18,6 @@ class HotelChain:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )

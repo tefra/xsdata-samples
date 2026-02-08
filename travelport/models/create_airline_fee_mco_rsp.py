@@ -18,6 +18,5 @@ class CreateAirlineFeeMcoRsp(BaseRsp1):
             "name": "MCO",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "required": True,
         }
     )

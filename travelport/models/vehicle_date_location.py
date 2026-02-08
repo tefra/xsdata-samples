@@ -56,7 +56,6 @@ class VehicleDateLocation:
         metadata={
             "name": "PickupDateTime",
             "type": "Attribute",
-            "required": True,
         }
     )
     pickup_location: None | str = field(
@@ -72,7 +71,6 @@ class VehicleDateLocation:
         metadata={
             "name": "ReturnDateTime",
             "type": "Attribute",
-            "required": True,
         }
     )
     return_location: None | str = field(

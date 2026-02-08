@@ -254,7 +254,6 @@ class TypeDefinitions:
             name: str = field(
                 metadata={
                     "type": "Element",
-                    "required": True,
                 }
             )
             display_name: None | DisplayName = field(
@@ -316,7 +315,6 @@ class TypeDefinitions:
             name: str = field(
                 metadata={
                     "type": "Element",
-                    "required": True,
                 }
             )
             display_name: None | DisplayName = field(
@@ -383,7 +381,6 @@ class TypeDefinitions:
             name: str = field(
                 metadata={
                     "type": "Element",
-                    "required": True,
                 }
             )
             display_name: None | DisplayName = field(

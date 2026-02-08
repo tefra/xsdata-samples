@@ -23,6 +23,5 @@ class GeoCodelistType(GeoCodelistBaseType):
         metadata={
             "name": "geoType",
             "type": "Attribute",
-            "required": True,
         }
     )

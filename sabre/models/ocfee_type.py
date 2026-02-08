@@ -30,7 +30,6 @@ class OcfeeType:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
             "fraction_digits": 3,
         }
     )
@@ -45,7 +44,6 @@ class OcfeeType:
         metadata={
             "name": "OriginAirport",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 8,
         }
@@ -54,7 +52,6 @@ class OcfeeType:
         metadata={
             "name": "DestinationAirport",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 8,
         }
@@ -63,7 +60,6 @@ class OcfeeType:
         metadata={
             "name": "Carrier",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 8,
         }
@@ -72,7 +68,6 @@ class OcfeeType:
         metadata={
             "name": "PassengerCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[A-Za-z0-9]{2,3}",
         }
     )
@@ -87,13 +82,11 @@ class OcfeeType:
         metadata={
             "name": "StartSegment",
             "type": "Attribute",
-            "required": True,
         }
     )
     end_segment: object = field(
         metadata={
             "name": "EndSegment",
             "type": "Attribute",
-            "required": True,
         }
     )

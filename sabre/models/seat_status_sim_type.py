@@ -11,7 +11,6 @@ class SeatStatusSimType:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     command: None | str = field(

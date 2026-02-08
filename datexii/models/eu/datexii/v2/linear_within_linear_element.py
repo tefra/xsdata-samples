@@ -85,7 +85,6 @@ class LinearWithinLinearElement:
             "name": "linearElement",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     from_point: DistanceAlongLinearElement = field(
@@ -93,7 +92,6 @@ class LinearWithinLinearElement:
             "name": "fromPoint",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     to_point: DistanceAlongLinearElement = field(
@@ -101,7 +99,6 @@ class LinearWithinLinearElement:
             "name": "toPoint",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     linear_within_linear_element_extension: None | ExtensionType = field(

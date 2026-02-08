@@ -52,7 +52,6 @@ class FixedValueMapType(AnnotableType):
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
             },
         )
@@ -62,7 +61,6 @@ class FixedValueMapType(AnnotableType):
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
             },
         )

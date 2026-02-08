@@ -28,11 +28,7 @@ class TtcanTriggerType:
     class Meta:
         name = "TTCAN-TRIGGER-TYPE"
 
-    value: TtcanTriggerTypeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TtcanTriggerTypeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

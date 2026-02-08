@@ -53,7 +53,6 @@ class TravelerInformation2:
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-            "required": True,
         }
     )
 

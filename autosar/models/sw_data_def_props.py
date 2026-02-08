@@ -227,7 +227,6 @@ class SwPointerTargetProps:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -687,7 +686,6 @@ class SwDataDefPropsConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -697,7 +695,6 @@ class SwDataDefPropsConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -742,7 +739,6 @@ class SwDataDefPropsConditional:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -752,7 +748,6 @@ class SwDataDefPropsConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -762,7 +757,6 @@ class SwDataDefPropsConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -772,7 +766,6 @@ class SwDataDefPropsConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -897,7 +890,6 @@ class SwDataDefPropsConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -907,7 +899,6 @@ class SwDataDefPropsConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -917,6 +908,5 @@ class SwDataDefPropsConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

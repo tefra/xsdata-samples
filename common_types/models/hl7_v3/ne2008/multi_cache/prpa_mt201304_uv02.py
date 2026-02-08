@@ -188,7 +188,6 @@ class PrpaMt201304Uv02Employee:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -254,7 +253,6 @@ class PrpaMt201304Uv02Group:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -301,7 +299,6 @@ class PrpaMt201304Uv02Nation:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     name: None | On = field(
@@ -417,7 +414,6 @@ class PrpaMt201304Uv02OtherIds:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -554,7 +550,6 @@ class PrpaMt201304Uv02Subject:
             "name": "careProvision",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -568,7 +563,6 @@ class PrpaMt201304Uv02Subject:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -623,7 +617,6 @@ class PrpaMt201304Uv02Citizen:
             "name": "politicalNation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -797,7 +790,6 @@ class PrpaMt201304Uv02PatientOfOtherProvider:
             "name": "subjectOf",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -925,7 +917,6 @@ class PrpaMt201304Uv02NonPersonLivingSubject:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -1108,7 +1099,6 @@ class PrpaMt201304Uv02Patient:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     effective_time: None | IvlTsExplicit = field(

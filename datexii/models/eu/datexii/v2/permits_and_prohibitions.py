@@ -26,14 +26,12 @@ class PermitsAndProhibitions:
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     regulation: RegulationEnum = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     permits_and_prohibitions_extension: None | ExtensionType = field(

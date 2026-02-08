@@ -172,7 +172,6 @@ class AirFareDisplayReq(BaseReq1):
         metadata={
             "name": "Origin",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -181,7 +180,6 @@ class AirFareDisplayReq(BaseReq1):
         metadata={
             "name": "Destination",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -190,7 +188,6 @@ class AirFareDisplayReq(BaseReq1):
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }

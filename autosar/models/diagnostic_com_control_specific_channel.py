@@ -77,6 +77,5 @@ class DiagnosticComControlSpecificChannel:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

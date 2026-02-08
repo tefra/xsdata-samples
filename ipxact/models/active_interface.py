@@ -65,7 +65,6 @@ class ActiveInterface(InterfaceType):
             value: str = field(
                 default="",
                 metadata={
-                    "required": True,
                     "white_space": "collapse",
                     "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
                 },

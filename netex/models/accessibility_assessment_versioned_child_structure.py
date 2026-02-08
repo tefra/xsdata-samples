@@ -23,7 +23,6 @@ class AccessibilityAssessmentVersionedChildStructure(VersionedChildStructure):
             "name": "MobilityImpairedAccess",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     limitations: None | AccessibilityLimitationsRelStructure = field(

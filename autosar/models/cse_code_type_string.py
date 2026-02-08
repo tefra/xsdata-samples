@@ -29,11 +29,7 @@ class CseCodeTypeString:
     class Meta:
         name = "CSE-CODE-TYPE-STRING"
 
-    value: int = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: int = field()
     s: None | str = field(
         default=None,
         metadata={

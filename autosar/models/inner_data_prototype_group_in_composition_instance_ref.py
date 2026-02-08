@@ -90,7 +90,6 @@ class InnerDataPrototypeGroupInCompositionInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -100,6 +99,5 @@ class InnerDataPrototypeGroupInCompositionInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

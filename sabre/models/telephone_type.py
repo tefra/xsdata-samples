@@ -87,7 +87,6 @@ class TelephoneType:
         metadata={
             "name": "PhoneNumber",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 32,
         }

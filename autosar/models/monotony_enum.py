@@ -29,11 +29,7 @@ class MonotonyEnum:
     class Meta:
         name = "MONOTONY-ENUM"
 
-    value: MonotonyEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: MonotonyEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

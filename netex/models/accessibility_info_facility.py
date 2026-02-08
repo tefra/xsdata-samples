@@ -14,8 +14,4 @@ class AccessibilityInfoFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: AccessibilityInfoFacilityEnumeration = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: AccessibilityInfoFacilityEnumeration = field()

@@ -74,6 +74,5 @@ class DiagnosticServiceTableRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

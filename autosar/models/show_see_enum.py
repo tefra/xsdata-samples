@@ -29,11 +29,7 @@ class ShowSeeEnum:
     class Meta:
         name = "SHOW-SEE-ENUM"
 
-    value: ShowSeeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ShowSeeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

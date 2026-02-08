@@ -36,28 +36,24 @@ class BillingDetailItem:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
         }
     )
     data_type: TypeBillingDetailsDataType = field(
         metadata={
             "name": "DataType",
             "type": "Attribute",
-            "required": True,
         }
     )
     min_length: str = field(
         metadata={
             "name": "MinLength",
             "type": "Attribute",
-            "required": True,
         }
     )
     max_length: str = field(
         metadata={
             "name": "MaxLength",
             "type": "Attribute",
-            "required": True,
         }
     )
     value: None | str = field(

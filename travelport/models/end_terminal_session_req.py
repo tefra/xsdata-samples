@@ -27,6 +27,5 @@ class EndTerminalSessionReq(BaseReq4):
             "name": "HostToken",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v33_0",
-            "required": True,
         }
     )

@@ -36,7 +36,6 @@ class PersonName:
         metadata={
             "name": "Last",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 64,
         }

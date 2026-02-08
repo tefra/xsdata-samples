@@ -28,11 +28,7 @@ class ReentrancyLevelEnum:
     class Meta:
         name = "REENTRANCY-LEVEL-ENUM"
 
-    value: ReentrancyLevelEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ReentrancyLevelEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

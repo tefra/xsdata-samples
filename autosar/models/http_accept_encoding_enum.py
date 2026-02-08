@@ -29,11 +29,7 @@ class HttpAcceptEncodingEnum:
     class Meta:
         name = "HTTP-ACCEPT-ENCODING-ENUM"
 
-    value: HttpAcceptEncodingEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: HttpAcceptEncodingEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

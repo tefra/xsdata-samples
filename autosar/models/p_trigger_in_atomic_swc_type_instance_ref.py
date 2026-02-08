@@ -73,7 +73,6 @@ class PTriggerInAtomicSwcTypeInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -83,6 +82,5 @@ class PTriggerInAtomicSwcTypeInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

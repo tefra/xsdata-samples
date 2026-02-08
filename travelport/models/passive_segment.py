@@ -174,7 +174,6 @@ class PassiveSegment:
         metadata={
             "name": "SegmentType",
             "type": "Attribute",
-            "required": True,
         }
     )
     key: None | str = field(

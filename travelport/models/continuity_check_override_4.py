@@ -22,7 +22,6 @@ class ContinuityCheckOverride4:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "min_length": 1,
             "white_space": "collapse",
         },

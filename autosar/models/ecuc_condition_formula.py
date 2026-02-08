@@ -78,7 +78,6 @@ class EcucConditionFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -88,6 +87,5 @@ class EcucConditionFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

@@ -25,7 +25,6 @@ class UniversalRecordErrorInfo(TypeErrorInfo1):
         metadata={
             "name": "LocatorCode",
             "type": "Element",
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         }
@@ -34,6 +33,5 @@ class UniversalRecordErrorInfo(TypeErrorInfo1):
         metadata={
             "name": "Version",
             "type": "Element",
-            "required": True,
         }
     )

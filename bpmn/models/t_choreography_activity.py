@@ -36,7 +36,6 @@ class TChoreographyActivity(TFlowNode):
         metadata={
             "name": "initiatingParticipantRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     loop_type: TChoreographyLoopType = field(

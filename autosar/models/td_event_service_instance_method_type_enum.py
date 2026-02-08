@@ -31,11 +31,7 @@ class TdEventServiceInstanceMethodTypeEnum:
     class Meta:
         name = "TD-EVENT-SERVICE-INSTANCE-METHOD-TYPE-ENUM"
 
-    value: TdEventServiceInstanceMethodTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TdEventServiceInstanceMethodTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -27,7 +27,6 @@ class ActivationLinkVersionStructure(LinkVersionStructure):
             "name": "FromPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     to_point_ref: ActivationPointRefStructure = field(
@@ -35,6 +34,5 @@ class ActivationLinkVersionStructure(LinkVersionStructure):
             "name": "ToPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

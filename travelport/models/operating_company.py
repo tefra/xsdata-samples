@@ -23,12 +23,7 @@ class OperatingCompany:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     code: None | str = field(
         default=None,
         metadata={
@@ -40,6 +35,5 @@ class OperatingCompany:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
         }
     )

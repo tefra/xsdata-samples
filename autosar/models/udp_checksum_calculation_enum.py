@@ -30,11 +30,7 @@ class UdpChecksumCalculationEnum:
     class Meta:
         name = "UDP-CHECKSUM-CALCULATION-ENUM"
 
-    value: UdpChecksumCalculationEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: UdpChecksumCalculationEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

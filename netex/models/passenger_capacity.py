@@ -15,6 +15,5 @@ class PassengerCapacity(PassengerCapacityStructure):
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

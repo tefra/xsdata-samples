@@ -18,7 +18,6 @@ class TOperation(TBaseElement):
             "name": "inMessageRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-            "required": True,
         }
     )
     out_message_ref: None | QName = field(
@@ -40,7 +39,6 @@ class TOperation(TBaseElement):
     name: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     implementation_ref: None | QName = field(

@@ -184,7 +184,6 @@ class SenderReceiverToSignalGroupMapping:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -207,7 +206,6 @@ class SenderReceiverToSignalGroupMapping:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -230,7 +228,6 @@ class SenderReceiverToSignalGroupMapping:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -240,7 +237,6 @@ class SenderReceiverToSignalGroupMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

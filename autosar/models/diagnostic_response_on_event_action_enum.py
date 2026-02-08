@@ -31,11 +31,7 @@ class DiagnosticResponseOnEventActionEnum:
     class Meta:
         name = "DIAGNOSTIC-RESPONSE-ON-EVENT-ACTION-ENUM"
 
-    value: DiagnosticResponseOnEventActionEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticResponseOnEventActionEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

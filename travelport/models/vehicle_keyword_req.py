@@ -34,14 +34,12 @@ class VehicleKeywordReq(BaseSearchReq1):
         metadata={
             "name": "Vendor",
             "type": "Element",
-            "required": True,
         }
     )
     pickup_date_location: TypePickupDateLocation = field(
         metadata={
             "name": "PickupDateLocation",
             "type": "Element",
-            "required": True,
         }
     )
     keyword: list[Keyword1] = field(

@@ -22,7 +22,6 @@ class Issn:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "min_length": 8,
             "max_length": 9,
             "pattern": r"\d{4}-?\d{3}[\dX]",

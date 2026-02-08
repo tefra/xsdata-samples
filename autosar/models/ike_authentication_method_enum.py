@@ -30,11 +30,7 @@ class IkeAuthenticationMethodEnum:
     class Meta:
         name = "IKE-AUTHENTICATION-METHOD-ENUM"
 
-    value: IkeAuthenticationMethodEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: IkeAuthenticationMethodEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

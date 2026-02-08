@@ -45,7 +45,6 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "name": "OrganisationRole",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     policy_identifier: None | Idtype = field(
@@ -61,7 +60,6 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "name": "SequenceNumber",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     parent_sequence_number: None | NumericType = field(
@@ -77,7 +75,6 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "name": "RiskShare",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     retained_risk_share: PercentType = field(
@@ -85,7 +82,6 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "name": "RetainedRiskShare",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     overrider_percentage: PercentType = field(
@@ -93,7 +89,6 @@ class ReinsurerInvolvementType(OrganisationInvolvementType):
             "name": "OverriderPercentage",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     cover_type: None | CoverTypeEnum = field(

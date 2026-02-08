@@ -11,9 +11,4 @@ class GmlProfileSchema:
         name = "gmlProfileSchema"
         namespace = "http://www.opengis.net/gml/3.2"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

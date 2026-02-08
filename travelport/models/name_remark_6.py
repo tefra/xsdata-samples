@@ -43,7 +43,6 @@ class NameRemark6:
         metadata={
             "name": "RemarkData",
             "type": "Element",
-            "required": True,
         }
     )
     provider_reservation_info_ref: list[ProviderReservationInfoRef7] = field(

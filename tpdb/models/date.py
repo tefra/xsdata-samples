@@ -10,8 +10,4 @@ class Date:
     class Meta:
         name = "date"
 
-    value: XmlDate = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: XmlDate = field()

@@ -40,21 +40,18 @@ class ServiceFee1(TypeKeyElement1):
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     start_date: XmlDate = field(
         metadata={
             "name": "StartDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     supplier_type: TypeSupplierType1 = field(
         metadata={
             "name": "SupplierType",
             "type": "Attribute",
-            "required": True,
         }
     )
     amount: None | str = field(

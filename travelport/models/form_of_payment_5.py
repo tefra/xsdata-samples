@@ -219,7 +219,6 @@ class FormOfPayment5:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
             "max_length": 25,
         }
     )

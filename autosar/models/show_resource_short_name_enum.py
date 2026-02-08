@@ -31,11 +31,7 @@ class ShowResourceShortNameEnum:
     class Meta:
         name = "SHOW-RESOURCE-SHORT-NAME-ENUM"
 
-    value: ShowResourceShortNameEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ShowResourceShortNameEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

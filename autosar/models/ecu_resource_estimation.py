@@ -121,7 +121,6 @@ class EcuResourceEstimation:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -144,6 +143,5 @@ class EcuResourceEstimation:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

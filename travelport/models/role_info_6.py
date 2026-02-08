@@ -30,7 +30,6 @@ class RoleInfo6:
         metadata={
             "name": "Id",
             "type": "Attribute",
-            "required": True,
             "max_length": 19,
         }
     )
@@ -38,7 +37,6 @@ class RoleInfo6:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "max_length": 128,
         }
     )

@@ -19,7 +19,6 @@ class AccessSummaryVersionedChildStructure(VersionedChildStructure):
             "name": "AccessFeatureType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     count: int = field(
@@ -27,7 +26,6 @@ class AccessSummaryVersionedChildStructure(VersionedChildStructure):
             "name": "Count",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     transition: None | TransitionEnumeration = field(

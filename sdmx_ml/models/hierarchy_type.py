@@ -55,6 +55,5 @@ class HierarchyType(HierarchyBaseType):
         metadata={
             "name": "hasFormalLevels",
             "type": "Attribute",
-            "required": True,
         }
     )

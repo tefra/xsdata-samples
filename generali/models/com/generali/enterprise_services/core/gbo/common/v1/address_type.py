@@ -16,7 +16,6 @@ class AddressType:
             "name": "AddressLine1",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            "required": True,
         }
     )
     address_line2: None | str = field(
@@ -56,6 +55,5 @@ class AddressType:
             "name": "Country",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            "required": True,
         }
     )

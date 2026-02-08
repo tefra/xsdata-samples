@@ -17,6 +17,5 @@ class PermittedProviders5:
         metadata={
             "name": "Provider",
             "type": "Element",
-            "required": True,
         }
     )

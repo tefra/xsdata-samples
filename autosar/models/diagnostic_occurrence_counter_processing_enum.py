@@ -30,11 +30,7 @@ class DiagnosticOccurrenceCounterProcessingEnum:
     class Meta:
         name = "DIAGNOSTIC-OCCURRENCE-COUNTER-PROCESSING-ENUM"
 
-    value: DiagnosticOccurrenceCounterProcessingEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticOccurrenceCounterProcessingEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

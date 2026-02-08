@@ -109,7 +109,6 @@ class SelfBilledInvoiceType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     copy_indicator: None | CopyIndicator = field(
@@ -133,7 +132,6 @@ class SelfBilledInvoiceType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -325,7 +323,6 @@ class SelfBilledInvoiceType:
             "name": "AccountingCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     accounting_supplier_party: AccountingSupplierParty = field(
@@ -333,7 +330,6 @@ class SelfBilledInvoiceType:
             "name": "AccountingSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     buyer_customer_party: None | BuyerCustomerParty = field(
@@ -463,7 +459,6 @@ class SelfBilledInvoiceType:
             "name": "LegalMonetaryTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     invoice_line: tuple[InvoiceLine, ...] = field(

@@ -25,7 +25,6 @@ class DataRefType:
             "name": "PathNameText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
-            "required": True,
         }
     )
     path_value_text: None | str = field(

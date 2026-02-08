@@ -21,7 +21,6 @@ class TypeSavedTripNote:
         metadata={
             "name": "Text",
             "type": "Attribute",
-            "required": True,
             "max_length": 333,
         }
     )

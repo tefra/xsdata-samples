@@ -28,11 +28,7 @@ class MaximumMessageLengthType:
     class Meta:
         name = "MAXIMUM-MESSAGE-LENGTH-TYPE"
 
-    value: MaximumMessageLengthTypeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: MaximumMessageLengthTypeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

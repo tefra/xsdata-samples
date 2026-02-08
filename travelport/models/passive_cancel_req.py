@@ -56,14 +56,12 @@ class PassiveCancelReq(BaseReq1):
         metadata={
             "name": "PassiveReservationLocatorCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }
@@ -72,7 +70,6 @@ class PassiveCancelReq(BaseReq1):
         metadata={
             "name": "ProviderLocatorCode",
             "type": "Attribute",
-            "required": True,
             "max_length": 15,
         }
     )
@@ -80,6 +77,5 @@ class PassiveCancelReq(BaseReq1):
         metadata={
             "name": "Version",
             "type": "Attribute",
-            "required": True,
         }
     )

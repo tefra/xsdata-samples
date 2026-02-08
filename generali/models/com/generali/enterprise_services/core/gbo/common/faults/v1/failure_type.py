@@ -43,7 +43,6 @@ class FailureType:
             "name": "Text",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/faults/v1",
-            "required": True,
         }
     )
     data_ref: None | DataRefType = field(

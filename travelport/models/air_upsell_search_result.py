@@ -30,6 +30,5 @@ class AirUpsellSearchResult:
         metadata={
             "name": "AirUpsellOffer",
             "type": "Element",
-            "required": True,
         }
     )

@@ -15,12 +15,10 @@ class Links:
         metadata={
             "name": "self",
             "type": "Element",
-            "required": True,
         }
     )
     find: Find = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )

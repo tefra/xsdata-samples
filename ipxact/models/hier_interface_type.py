@@ -44,7 +44,6 @@ class HierInterfaceType:
         metadata={
             "name": "busRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     id: None | str = field(

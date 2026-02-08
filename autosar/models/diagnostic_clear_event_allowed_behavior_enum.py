@@ -30,11 +30,7 @@ class DiagnosticClearEventAllowedBehaviorEnum:
     class Meta:
         name = "DIAGNOSTIC-CLEAR-EVENT-ALLOWED-BEHAVIOR-ENUM"
 
-    value: DiagnosticClearEventAllowedBehaviorEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticClearEventAllowedBehaviorEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

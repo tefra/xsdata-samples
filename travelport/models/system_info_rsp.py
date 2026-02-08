@@ -18,13 +18,11 @@ class SystemInfoRsp(BaseRsp3):
         metadata={
             "name": "SystemInfo",
             "type": "Element",
-            "required": True,
         }
     )
     system_time: SystemTime = field(
         metadata={
             "name": "SystemTime",
             "type": "Element",
-            "required": True,
         }
     )

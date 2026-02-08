@@ -34,14 +34,12 @@ class ActionSummary:
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -59,20 +57,17 @@ class ActionSummary:
         metadata={
             "name": "ConsumingSystem",
             "type": "Attribute",
-            "required": True,
         }
     )
     target_service: str = field(
         metadata={
             "name": "TargetService",
             "type": "Attribute",
-            "required": True,
         }
     )
     profile_action_code: str = field(
         metadata={
             "name": "ProfileActionCode",
             "type": "Attribute",
-            "required": True,
         }
     )

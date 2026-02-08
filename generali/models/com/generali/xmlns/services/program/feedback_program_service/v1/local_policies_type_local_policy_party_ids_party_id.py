@@ -19,12 +19,7 @@ class LocalPoliciesTypeLocalPolicyPartyIdsPartyId:
     class Meta:
         global_type = False
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     party_type: None | str = field(
         default=None,
         metadata={
@@ -36,6 +31,5 @@ class LocalPoliciesTypeLocalPolicyPartyIdsPartyId:
         metadata={
             "name": "PartyGUNS",
             "type": "Attribute",
-            "required": True,
         }
     )

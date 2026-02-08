@@ -31,11 +31,7 @@ class EnvironmentCaptureToReportingEnum:
     class Meta:
         name = "ENVIRONMENT-CAPTURE-TO-REPORTING-ENUM"
 
-    value: EnvironmentCaptureToReportingEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: EnvironmentCaptureToReportingEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

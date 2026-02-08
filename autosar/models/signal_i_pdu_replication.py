@@ -101,6 +101,5 @@ class SignalIPduReplication:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

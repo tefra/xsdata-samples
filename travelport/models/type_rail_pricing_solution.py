@@ -95,7 +95,6 @@ class TypeRailPricingSolution:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     offer_id: None | int = field(
@@ -179,7 +178,6 @@ class TypeRailPricingSolution:
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }
@@ -188,7 +186,6 @@ class TypeRailPricingSolution:
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 5,
         }

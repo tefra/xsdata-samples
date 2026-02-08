@@ -15,7 +15,6 @@ class LhsFunapp:
     name: Name = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     arg: list[LhsFunappArg] = field(
@@ -52,7 +51,6 @@ class LhsLambda:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     funapp: None | LhsFunapp = field(

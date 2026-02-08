@@ -19,7 +19,6 @@ class MeetingPointServiceVersionStructure(CustomerServiceVersionStructure):
             "name": "MeetingPointServiceType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     label: None | MultilingualString = field(

@@ -29,11 +29,7 @@ class GraphicNotationEnum:
     class Meta:
         name = "GRAPHIC-NOTATION-ENUM"
 
-    value: GraphicNotationEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: GraphicNotationEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

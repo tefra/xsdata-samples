@@ -14,17 +14,11 @@ class FareRuleLong:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     category: int = field(
         metadata={
             "name": "Category",
             "type": "Attribute",
-            "required": True,
         }
     )
     type_value: None | str = field(

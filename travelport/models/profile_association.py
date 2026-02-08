@@ -25,13 +25,11 @@ class ProfileAssociation:
         metadata={
             "name": "TravelerID",
             "type": "Attribute",
-            "required": True,
         }
     )
     booking_traveler_ref: str = field(
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-            "required": True,
         }
     )

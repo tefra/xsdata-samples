@@ -36,6 +36,5 @@ class FareGuaranteeInfo:
         metadata={
             "name": "GuaranteeType",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -37,7 +37,6 @@ class NumberOfChildren:
         metadata={
             "name": "Count",
             "type": "Attribute",
-            "required": True,
         }
     )
     amount: None | str = field(

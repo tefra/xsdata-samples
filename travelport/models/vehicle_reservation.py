@@ -112,14 +112,12 @@ class VehicleReservation(BaseReservation1):
         metadata={
             "name": "VehicleDateLocation",
             "type": "Element",
-            "required": True,
         }
     )
     vehicle: Vehicle = field(
         metadata={
             "name": "Vehicle",
             "type": "Element",
-            "required": True,
         }
     )
     special_equipment: list[SpecialEquipment1] = field(
@@ -211,7 +209,6 @@ class VehicleReservation(BaseReservation1):
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     booking_confirmation: None | str = field(
@@ -225,7 +222,6 @@ class VehicleReservation(BaseReservation1):
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )
     provider_reservation_info_ref: None | str = field(

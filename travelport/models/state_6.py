@@ -15,9 +15,4 @@ class State6:
         name = "State"
         namespace = "http://www.travelport.com/schema/common_v34_0"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

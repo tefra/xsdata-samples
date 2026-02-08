@@ -28,11 +28,7 @@ class CanAddressingModeType:
     class Meta:
         name = "CAN-ADDRESSING-MODE-TYPE"
 
-    value: CanAddressingModeTypeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: CanAddressingModeTypeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

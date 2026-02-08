@@ -30,11 +30,7 @@ class TimeSynchronizationKindEnum:
     class Meta:
         name = "TIME-SYNCHRONIZATION-KIND-ENUM"
 
-    value: TimeSynchronizationKindEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TimeSynchronizationKindEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

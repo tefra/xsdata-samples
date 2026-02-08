@@ -31,11 +31,7 @@ class DataTransformationStatusForwardingEnum:
     class Meta:
         name = "DATA-TRANSFORMATION-STATUS-FORWARDING-ENUM"
 
-    value: DataTransformationStatusForwardingEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DataTransformationStatusForwardingEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

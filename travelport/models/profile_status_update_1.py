@@ -29,6 +29,5 @@ class ProfileStatusUpdate1:
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )

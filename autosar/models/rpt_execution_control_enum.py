@@ -28,11 +28,7 @@ class RptExecutionControlEnum:
     class Meta:
         name = "RPT-EXECUTION-CONTROL-ENUM"
 
-    value: RptExecutionControlEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: RptExecutionControlEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -109,7 +109,6 @@ class MeasuredStackUsage:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | MeasuredStackUsage.ShortNameFragments = field(
@@ -293,7 +292,6 @@ class MeasuredStackUsage:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -303,6 +301,5 @@ class MeasuredStackUsage:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

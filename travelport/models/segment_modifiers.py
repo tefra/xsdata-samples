@@ -30,7 +30,6 @@ class SegmentModifiers:
         metadata={
             "name": "AirSegmentRef",
             "type": "Element",
-            "required": True,
         }
     )
     ticket_validity: None | TicketValidity = field(

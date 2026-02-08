@@ -58,7 +58,6 @@ class EmdsummaryInfo:
         metadata={
             "name": "EMDTravelerInfo",
             "type": "Element",
-            "required": True,
         }
     )
     payment: None | Payment1 = field(

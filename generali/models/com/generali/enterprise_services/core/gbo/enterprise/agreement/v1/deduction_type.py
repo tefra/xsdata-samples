@@ -36,7 +36,6 @@ class DeductionType(BaseIdentifiedComponentType):
             "name": "Calculated",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     value: ValueTypeDeduction = field(
@@ -44,7 +43,6 @@ class DeductionType(BaseIdentifiedComponentType):
             "name": "Value",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     applies_to_premium_type: DeductionApplyToEnum = field(
@@ -52,7 +50,6 @@ class DeductionType(BaseIdentifiedComponentType):
             "name": "AppliesToPremiumType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     value_type: None | PremiumValueEnum = field(
@@ -68,7 +65,6 @@ class DeductionType(BaseIdentifiedComponentType):
             "name": "DeductionType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     time_applied: None | TimeAppliedEnum = field(

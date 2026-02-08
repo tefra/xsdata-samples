@@ -11,6 +11,5 @@ class BrandType:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
         }
     )

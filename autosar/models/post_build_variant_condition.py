@@ -81,6 +81,5 @@ class PostBuildVariantCondition:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

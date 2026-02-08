@@ -8,9 +8,4 @@ class Autoro:
     class Meta:
         name = "autoro"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

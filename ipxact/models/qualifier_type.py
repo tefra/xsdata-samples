@@ -174,11 +174,7 @@ class QualifierType:
         :ivar level: Assertion level
         """
 
-        value: bool = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: bool = field()
         level: None | IsResetLevel = field(
             default=None,
             metadata={
@@ -193,11 +189,7 @@ class QualifierType:
         :ivar level: Assertion level
         """
 
-        value: bool = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: bool = field()
         level: None | IsClockEnLevel = field(
             default=None,
             metadata={
@@ -213,11 +205,7 @@ class QualifierType:
         :ivar power_domain_ref: PowerDomain references
         """
 
-        value: bool = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: bool = field()
         level: None | IsPowerEnLevel = field(
             default=None,
             metadata={
@@ -240,11 +228,7 @@ class QualifierType:
         :ivar user: User flow type information
         """
 
-        value: bool = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: bool = field()
         flow_type: None | IsFlowControlFlowType = field(
             default=None,
             metadata={
@@ -266,11 +250,7 @@ class QualifierType:
         :ivar user: User behaviour
         """
 
-        value: bool = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: bool = field()
         user: None | str = field(
             default=None,
             metadata={

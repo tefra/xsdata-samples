@@ -89,7 +89,6 @@ class DatedSpecialServiceVersionStructure(SpecialServiceVersionStructure):
             "name": "OperatingDayRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     external_dated_vehicle_journey_ref: None | ExternalObjectRefStructure = (

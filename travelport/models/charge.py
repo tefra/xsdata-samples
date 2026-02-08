@@ -28,20 +28,17 @@ class Charge:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
         }
     )
     rate_period: str = field(
         metadata={
             "name": "RatePeriod",
             "type": "Attribute",
-            "required": True,
         }
     )
     included_in_est_total_ind: bool = field(
         metadata={
             "name": "IncludedInEstTotalInd",
             "type": "Attribute",
-            "required": True,
         }
     )

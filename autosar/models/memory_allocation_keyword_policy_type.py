@@ -31,11 +31,7 @@ class MemoryAllocationKeywordPolicyType:
     class Meta:
         name = "MEMORY-ALLOCATION-KEYWORD-POLICY-TYPE"
 
-    value: MemoryAllocationKeywordPolicyTypeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: MemoryAllocationKeywordPolicyTypeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

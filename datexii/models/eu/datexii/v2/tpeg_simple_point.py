@@ -29,14 +29,12 @@ class TpegSimplePoint(TpegPointLocation):
             "name": "tpegSimplePointLocationType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     point: TpegPoint = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     tpeg_simple_point_extension: None | ExtensionType = field(

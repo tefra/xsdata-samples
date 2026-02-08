@@ -114,7 +114,6 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "HotelProperty",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            "required": True,
         }
     )
     third_party_information: None | ThirdPartyInformation1 = field(
@@ -130,7 +129,6 @@ class HotelCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "HotelStay",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            "required": True,
         }
     )
     guarantee: None | Guarantee1 = field(

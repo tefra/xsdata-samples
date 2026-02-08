@@ -28,11 +28,7 @@ class PncGatewayTypeEnum:
     class Meta:
         name = "PNC-GATEWAY-TYPE-ENUM"
 
-    value: PncGatewayTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: PncGatewayTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

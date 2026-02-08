@@ -27,7 +27,6 @@ class Database:
     database_metadata: DatabaseMetadata = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     dataset: list[Dataset] = field(

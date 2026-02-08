@@ -16,13 +16,11 @@ class VmsUnitVmsIndexVms:
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     vms_index: int = field(
         metadata={
             "name": "vmsIndex",
             "type": "Attribute",
-            "required": True,
         }
     )

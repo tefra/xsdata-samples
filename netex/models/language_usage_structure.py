@@ -15,7 +15,6 @@ class LanguageUsageStructure:
             "name": "Language",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     language_use: Sequence[LanguageUseEnumeration] = field(

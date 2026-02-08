@@ -49,7 +49,6 @@ class Channels:
         name: str = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         display_name: None | DisplayName = field(
@@ -101,7 +100,6 @@ class Channels:
                 metadata={
                     "name": "localName",
                     "type": "Element",
-                    "required": True,
                 }
             )
             vendor_extensions: None | VendorExtensions = field(

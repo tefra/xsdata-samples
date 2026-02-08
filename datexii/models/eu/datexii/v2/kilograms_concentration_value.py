@@ -25,7 +25,6 @@ class KilogramsConcentrationValue(DataValue):
             "name": "kilogramsConcentration",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     kilograms_concentration_value_extension: None | ExtensionType = field(

@@ -17,7 +17,6 @@ class GeneratorSelectorType:
             "name": "groupSelector",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     id: None | str = field(

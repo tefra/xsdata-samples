@@ -17,14 +17,12 @@ class RailUpdate:
         metadata={
             "name": "BookingAction",
             "type": "Element",
-            "required": True,
         }
     )
     reservation_locator_code: str = field(
         metadata={
             "name": "ReservationLocatorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         }
@@ -64,6 +62,5 @@ class RailUpdate:
             metadata={
                 "name": "Type",
                 "type": "Attribute",
-                "required": True,
             }
         )

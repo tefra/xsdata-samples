@@ -171,7 +171,6 @@ class EcucChoiceContainerDef:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | EcucChoiceContainerDef.ShortNameFragments = (
@@ -395,7 +394,6 @@ class EcucChoiceContainerDef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -429,7 +427,6 @@ class EcucChoiceContainerDef:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -588,7 +585,6 @@ class EcucParamConfContainerDef:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: (
@@ -836,7 +832,6 @@ class EcucParamConfContainerDef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -870,7 +865,6 @@ class EcucParamConfContainerDef:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 

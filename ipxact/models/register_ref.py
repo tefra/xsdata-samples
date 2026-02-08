@@ -23,6 +23,5 @@ class RegisterRef:
         metadata={
             "name": "registerRef",
             "type": "Attribute",
-            "required": True,
         }
     )

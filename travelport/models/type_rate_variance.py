@@ -28,20 +28,17 @@ class TypeRateVariance:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     value: Decimal = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
         }
     )
     apply: str = field(
         metadata={
             "name": "Apply",
             "type": "Attribute",
-            "required": True,
         }
     )

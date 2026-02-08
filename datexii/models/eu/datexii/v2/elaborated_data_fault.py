@@ -27,7 +27,6 @@ class ElaboratedDataFault(Fault):
             "name": "elaboratedDataFault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     elaborated_data_fault_extension: None | ExtensionType = field(

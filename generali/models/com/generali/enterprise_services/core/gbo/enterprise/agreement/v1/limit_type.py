@@ -39,7 +39,6 @@ class LimitType(BaseIdentifiedComponentType):
             "name": "Value",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     maximum: None | AmountType = field(
@@ -63,7 +62,6 @@ class LimitType(BaseIdentifiedComponentType):
             "name": "Basis",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     time_specification: None | NumericType = field(
@@ -87,7 +85,6 @@ class LimitType(BaseIdentifiedComponentType):
             "name": "ValueAppliesTo",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     type_value: LimitTypeType = field(
@@ -95,7 +92,6 @@ class LimitType(BaseIdentifiedComponentType):
             "name": "Type",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     indemnity: None | IndemnityType = field(

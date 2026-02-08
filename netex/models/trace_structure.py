@@ -25,7 +25,6 @@ class TraceStructure:
             "name": "ChangedAt",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     changed_by: None | str = field(

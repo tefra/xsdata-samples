@@ -28,6 +28,5 @@ class AlternateContactElectronicAddress2(TypeTaggableElectronicAddress2):
         metadata={
             "name": "AlternateContactRef",
             "type": "Attribute",
-            "required": True,
         }
     )

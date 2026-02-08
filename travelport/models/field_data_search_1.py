@@ -51,7 +51,6 @@ class FieldDataSearch1:
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
         }
     )

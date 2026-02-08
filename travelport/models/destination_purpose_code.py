@@ -24,13 +24,11 @@ class DestinationPurposeCode:
         metadata={
             "name": "Destination",
             "type": "Attribute",
-            "required": True,
         }
     )
     purpose: TypePurposeCode = field(
         metadata={
             "name": "Purpose",
             "type": "Attribute",
-            "required": True,
         }
     )

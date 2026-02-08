@@ -36,7 +36,6 @@ class NormalizedInstruction:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "pattern": r"[1-9][0-9]*",
         },
     )

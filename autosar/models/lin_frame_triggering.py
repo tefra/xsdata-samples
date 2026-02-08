@@ -108,7 +108,6 @@ class LinFrameTriggering:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | LinFrameTriggering.ShortNameFragments = field(
@@ -279,7 +278,6 @@ class LinFrameTriggering:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -289,7 +287,6 @@ class LinFrameTriggering:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

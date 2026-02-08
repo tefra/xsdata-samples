@@ -268,7 +268,6 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
         metadata={
             "name": "GivenName",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -277,7 +276,6 @@ class TravelerInfo1(TypeAccountTypeProfileInfo1):
         metadata={
             "name": "Surname",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }

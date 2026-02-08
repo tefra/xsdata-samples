@@ -87,7 +87,6 @@ class CoctMt090003Uv01Device:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -149,7 +148,6 @@ class CoctMt090003Uv01Organization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -332,6 +330,5 @@ class CoctMt090003Uv01AssignedEntity:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )

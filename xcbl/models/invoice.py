@@ -64,222 +64,112 @@ from xcbl.models.trading_partner_user_information import (
 
 @dataclass(kw_only=True)
 class AllowOrChargeIndicatorCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AllowOrChargeIndicatorCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AllowOrChargeTreatmentCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AllowOrChargeTreatmentCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InvoiceHeaderNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InvoiceIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InvoiceMediumCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InvoiceMediumCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InvoicePaymentStatusCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InvoicePaymentStatusCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InvoicePurposeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InvoicePurposeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class NotaFiscalType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OtherPaymentInfo:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentCodedMeanOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentRecordOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentReferenceNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RequirementDetails:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RequirementTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RequirementTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TaxPointDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -310,7 +200,6 @@ class BuyerTax:
         metadata={
             "name": "Tax",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -321,7 +210,6 @@ class ChargeTotal:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -332,7 +220,6 @@ class ForeignCurrencyPayment:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -346,7 +233,6 @@ class FromFitransfer:
         metadata={
             "name": "FIAccount",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -357,7 +243,6 @@ class GrossValue:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -368,7 +253,6 @@ class InvoiceAllowancesOrCharges:
         metadata={
             "name": "ListOfAllowOrCharge",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -379,7 +263,6 @@ class InvoiceCurrency:
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -390,7 +273,6 @@ class InvoiceCurrencyAmt:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -401,7 +283,6 @@ class InvoiceHeaderAttachments:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -412,7 +293,6 @@ class InvoiceLanguage:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -441,7 +321,6 @@ class InvoicePaymentInstructions:
         metadata={
             "name": "PaymentInstructions",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -472,7 +351,6 @@ class InvoicePurpose:
         metadata={
             "name": "InvoicePurposeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     invoice_purpose_coded_other: None | InvoicePurposeCodedOther = field(
@@ -490,7 +368,6 @@ class InvoiceTaxReference:
         metadata={
             "name": "TaxReference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -501,7 +378,6 @@ class InvoiceTermsOfDelivery:
         metadata={
             "name": "TermsOfDelivery",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -524,7 +400,6 @@ class ManufacturingParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -535,7 +410,6 @@ class NetValue:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -546,7 +420,6 @@ class PaymentMean:
         metadata={
             "name": "PaymentMeanCoded",
             "type": "Element",
-            "required": True,
         }
     )
     payment_coded_mean_other: None | PaymentCodedMeanOther = field(
@@ -564,7 +437,6 @@ class PaymentRef:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -575,7 +447,6 @@ class PrepaidAmount:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -586,7 +457,6 @@ class RemitToTax:
         metadata={
             "name": "Tax",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -597,7 +467,6 @@ class RemitToTaxInformation:
         metadata={
             "name": "PartyTaxInformation",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -608,7 +477,6 @@ class RequirementReference:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -619,7 +487,6 @@ class SummaryAllowOrCharge:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -630,7 +497,6 @@ class TaxSummary:
         metadata={
             "name": "Tax",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -641,7 +507,6 @@ class TaxValue:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -652,7 +517,6 @@ class TaxValueInTaxAccountingCurrency:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -666,7 +530,6 @@ class ToFitransfer:
         metadata={
             "name": "FIAccount",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -677,7 +540,6 @@ class TotalAmountMinusDiscount:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -688,7 +550,6 @@ class TotalAmountPayable:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -699,7 +560,6 @@ class TotalDiscount:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -720,7 +580,6 @@ class Fitransfer:
         metadata={
             "name": "ToFITransfer",
             "type": "Element",
-            "required": True,
         }
     )
     payment_record_other: None | PaymentRecordOther = field(
@@ -738,7 +597,6 @@ class InvoiceDetail:
         metadata={
             "name": "ListOfInvoiceItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_package_detail: None | ListOfPackageDetail = field(
@@ -756,7 +614,6 @@ class InvoiceParty:
         metadata={
             "name": "BuyerParty",
             "type": "Element",
-            "required": True,
         }
     )
     buyer_tax_information: None | BuyerTaxInformation = field(
@@ -777,7 +634,6 @@ class InvoiceParty:
         metadata={
             "name": "SellerParty",
             "type": "Element",
-            "required": True,
         }
     )
     seller_tax_information: None | SellerTaxInformation = field(
@@ -872,14 +728,12 @@ class InvoiceTotals:
         metadata={
             "name": "NetValue",
             "type": "Element",
-            "required": True,
         }
     )
     gross_value: GrossValue = field(
         metadata={
             "name": "GrossValue",
             "type": "Element",
-            "required": True,
         }
     )
     tax_value: None | TaxValue = field(
@@ -960,14 +814,12 @@ class PaymentAmount:
         metadata={
             "name": "InvoiceCurrencyAmt",
             "type": "Element",
-            "required": True,
         }
     )
     foreign_currency_payment: ForeignCurrencyPayment = field(
         metadata={
             "name": "ForeignCurrencyPayment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -978,7 +830,6 @@ class SpecificRequirement:
         metadata={
             "name": "RequirementTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     requirement_type_coded_other: None | RequirementTypeCodedOther = field(
@@ -1010,7 +861,6 @@ class TotalAllowOrCharge:
         metadata={
             "name": "AllowOrChargeIndicatorCoded",
             "type": "Element",
-            "required": True,
         }
     )
     allow_or_charge_indicator_coded_other: (
@@ -1026,14 +876,12 @@ class TotalAllowOrCharge:
         metadata={
             "name": "AllowanceOrChargeDescription",
             "type": "Element",
-            "required": True,
         }
     )
     summary_allow_or_charge: SummaryAllowOrCharge = field(
         metadata={
             "name": "SummaryAllowOrCharge",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1093,21 +941,18 @@ class ActualPayment:
         metadata={
             "name": "PaymentAmount",
             "type": "Element",
-            "required": True,
         }
     )
     payment_date: PaymentDate = field(
         metadata={
             "name": "PaymentDate",
             "type": "Element",
-            "required": True,
         }
     )
     payment_mean: PaymentMean = field(
         metadata={
             "name": "PaymentMean",
             "type": "Element",
-            "required": True,
         }
     )
     payment_record: None | PaymentRecord = field(
@@ -1132,14 +977,12 @@ class CountryRequirement:
         metadata={
             "name": "Country",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_specific_requirement: ListOfSpecificRequirement = field(
         metadata={
             "name": "ListOfSpecificRequirement",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1227,7 +1070,6 @@ class OtherCountryRequirments:
         metadata={
             "name": "ListOfCountryRequirement",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1263,14 +1105,12 @@ class InvoiceHeader:
         metadata={
             "name": "InvoiceNumber",
             "type": "Element",
-            "required": True,
         }
     )
     invoice_issue_date: InvoiceIssueDate = field(
         metadata={
             "name": "InvoiceIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     tax_point_date: None | TaxPointDate = field(
@@ -1291,14 +1131,12 @@ class InvoiceHeader:
         metadata={
             "name": "InvoicePurpose",
             "type": "Element",
-            "required": True,
         }
     )
     invoice_type: InvoiceType = field(
         metadata={
             "name": "InvoiceType",
             "type": "Element",
-            "required": True,
         }
     )
     invoice_currency: None | InvoiceCurrency = field(
@@ -1333,7 +1171,6 @@ class InvoiceHeader:
         metadata={
             "name": "InvoiceLanguage",
             "type": "Element",
-            "required": True,
         }
     )
     invoice_tax_reference: None | InvoiceTaxReference = field(
@@ -1368,7 +1205,6 @@ class InvoiceHeader:
         metadata={
             "name": "InvoiceParty",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_transport_routing: None | ListOfTransportRouting = field(
@@ -1442,14 +1278,12 @@ class Invoice:
         metadata={
             "name": "InvoiceHeader",
             "type": "Element",
-            "required": True,
         }
     )
     invoice_detail: InvoiceDetail = field(
         metadata={
             "name": "InvoiceDetail",
             "type": "Element",
-            "required": True,
         }
     )
     invoice_summary: None | InvoiceSummary = field(

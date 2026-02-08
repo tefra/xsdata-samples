@@ -18,7 +18,6 @@ class TypeEmailAddress:
             "name": "Email",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "required": True,
         }
     )
     simple_name: None | SimpleName1 = field(

@@ -92,7 +92,6 @@ class SwAxisGeneric:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

@@ -77,7 +77,6 @@ class PointAlongLinearElement:
             "name": "linearElement",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     distance_along_linear_element: DistanceAlongLinearElement = field(
@@ -85,7 +84,6 @@ class PointAlongLinearElement:
             "name": "distanceAlongLinearElement",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     point_along_linear_element_extension: None | ExtensionType = field(

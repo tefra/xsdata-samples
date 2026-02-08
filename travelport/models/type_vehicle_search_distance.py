@@ -54,7 +54,6 @@ class TypeVehicleSearchDistance:
         metadata={
             "name": "MaxDistance",
             "type": "Attribute",
-            "required": True,
             "max_inclusive": 999,
         }
     )

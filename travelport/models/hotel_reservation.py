@@ -136,7 +136,6 @@ class HotelReservation(BaseReservation1):
         metadata={
             "name": "HotelProperty",
             "type": "Element",
-            "required": True,
         }
     )
     hotel_rate_detail: list[HotelRateDetail] = field(
@@ -152,7 +151,6 @@ class HotelReservation(BaseReservation1):
         metadata={
             "name": "HotelStay",
             "type": "Element",
-            "required": True,
         }
     )
     hotel_special_request: None | HotelSpecialRequest = field(
@@ -261,7 +259,6 @@ class HotelReservation(BaseReservation1):
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )
     booking_confirmation: None | str = field(

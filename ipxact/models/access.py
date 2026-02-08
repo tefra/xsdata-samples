@@ -13,8 +13,4 @@ class Access:
         name = "access"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: AccessType = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: AccessType = field()

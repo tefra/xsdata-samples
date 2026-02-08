@@ -28,11 +28,7 @@ class DtcFormatTypeEnum:
     class Meta:
         name = "DTC-FORMAT-TYPE-ENUM"
 
-    value: DtcFormatTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DtcFormatTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

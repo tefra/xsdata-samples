@@ -104,7 +104,6 @@ class ModuleParameterType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -148,7 +147,6 @@ class ModuleParameterType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     vendor_extensions: None | VendorExtensions = field(
@@ -300,14 +298,12 @@ class ModuleParameterType:
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                    "required": True,
                 }
             )
             right: Right = field(
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                    "required": True,
                 }
             )
             vector_id: None | str = field(

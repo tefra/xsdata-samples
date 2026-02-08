@@ -101,7 +101,6 @@ class SolutionGroup:
         metadata={
             "name": "TripType",
             "type": "Attribute",
-            "required": True,
         }
     )
     diversification: None | TypeDiversity = field(

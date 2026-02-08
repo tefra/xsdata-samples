@@ -188,7 +188,6 @@ class FlexrayTpConnection:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -198,7 +197,6 @@ class FlexrayTpConnection:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -221,7 +219,6 @@ class FlexrayTpConnection:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -231,7 +228,6 @@ class FlexrayTpConnection:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -241,7 +237,6 @@ class FlexrayTpConnection:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -251,7 +246,6 @@ class FlexrayTpConnection:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -261,7 +255,6 @@ class FlexrayTpConnection:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -271,6 +264,5 @@ class FlexrayTpConnection:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

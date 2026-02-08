@@ -14,13 +14,11 @@ class TypeFailureInfo:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
         }
     )
     message: str = field(
         metadata={
             "name": "Message",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -44,7 +44,6 @@ class AbstractorPortTransactionalType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     kind: None | Kind = field(

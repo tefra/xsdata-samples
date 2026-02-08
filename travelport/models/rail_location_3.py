@@ -22,7 +22,6 @@ class RailLocation3(Location3):
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",

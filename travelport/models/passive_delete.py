@@ -16,7 +16,6 @@ class PassiveDelete:
         metadata={
             "name": "ReservationLocatorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         }
@@ -25,7 +24,6 @@ class PassiveDelete:
         metadata={
             "name": "Element",
             "type": "Attribute",
-            "required": True,
         }
     )
     key: None | str = field(

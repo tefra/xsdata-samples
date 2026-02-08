@@ -5,382 +5,192 @@ from dataclasses import dataclass, field
 
 @dataclass(kw_only=True)
 class AcademicTitleCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AcademicTitleCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AgencyCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AgencyCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AgencyDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Building:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CertificatePurposeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CertificatePurposeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class City:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CodeListIdentifierCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CodeListIdentifierCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CommunicationDetailDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CommunicationValue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ContactRelationTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ContactRelationTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CountryCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CountryCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class County:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DateFormatCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DateFormatCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DefaultCommunication:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Department:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class District:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class EndDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class FirstName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Floor:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class FullName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class GeneralNotes:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class HouseNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Ident:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InhouseMail:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LanguageCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LanguageCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LastName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LocaleCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LocaleCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class MiddleName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class NumberFormat:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -388,12 +198,7 @@ class OrganizationAddressId:
     class Meta:
         name = "OrganizationAddressID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -408,42 +213,22 @@ class Pobox:
             "type": "Attribute",
         },
     )
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PersonCommunicationTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PersonCommunicationTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PostalCode:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -451,42 +236,22 @@ class PrimaryIdurn:
     class Meta:
         name = "PrimaryIDURN"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RegionCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RegionCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RoomNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -494,122 +259,62 @@ class ShortId:
     class Meta:
         name = "ShortID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class StartDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Street:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class StreetSupplement1:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class StreetSupplement2:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TimeFormat:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TimezoneCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TimezoneCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TitleCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TitleCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TradingPartnerUserPurposeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TradingPartnerUserPurposeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -624,22 +329,12 @@ class UserId:
             "type": "Attribute",
         },
     )
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class UserRoleAuthority:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -647,82 +342,42 @@ class UserRoleId:
     class Meta:
         name = "UserRoleID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class UserRoleName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class UserStatusCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class UserStatusCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class X509Cert:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class X509Issuer:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class X509SerialNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class X509Subject:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -731,7 +386,6 @@ class AcademicTitle:
         metadata={
             "name": "AcademicTitleCoded",
             "type": "Element",
-            "required": True,
         }
     )
     academic_title_coded_other: None | AcademicTitleCodedOther = field(
@@ -749,7 +403,6 @@ class Agency:
         metadata={
             "name": "AgencyCoded",
             "type": "Element",
-            "required": True,
         }
     )
     agency_coded_other: None | AgencyCodedOther = field(
@@ -790,7 +443,6 @@ class CertificatePurpose:
         metadata={
             "name": "CertificatePurposeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     certificate_purpose_coded_other: None | CertificatePurposeCodedOther = (
@@ -810,7 +462,6 @@ class ContactRelationType:
         metadata={
             "name": "ContactRelationTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     contact_relation_type_coded_other: None | ContactRelationTypeCodedOther = (
@@ -830,7 +481,6 @@ class Country:
         metadata={
             "name": "CountryCoded",
             "type": "Element",
-            "required": True,
         }
     )
     country_coded_other: None | CountryCodedOther = field(
@@ -848,7 +498,6 @@ class DateFormat:
         metadata={
             "name": "DateFormatCoded",
             "type": "Element",
-            "required": True,
         }
     )
     date_format_coded_other: None | DateFormatCodedOther = field(
@@ -873,7 +522,6 @@ class Language:
         metadata={
             "name": "LanguageCoded",
             "type": "Element",
-            "required": True,
         }
     )
     language_coded_other: None | LanguageCodedOther = field(
@@ -905,14 +553,12 @@ class PersonCommunicationType:
         metadata={
             "name": "PersonCommunicationTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     person_communication_type_coded_other: PersonCommunicationTypeCodedOther = field(
         metadata={
             "name": "PersonCommunicationTypeCodedOther",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -923,7 +569,6 @@ class Region:
         metadata={
             "name": "RegionCoded",
             "type": "Element",
-            "required": True,
         }
     )
     region_coded_other: None | RegionCodedOther = field(
@@ -941,7 +586,6 @@ class Timezone:
         metadata={
             "name": "TimezoneCoded",
             "type": "Element",
-            "required": True,
         }
     )
     timezone_coded_other: None | TimezoneCodedOther = field(
@@ -959,7 +603,6 @@ class Title:
         metadata={
             "name": "TitleCoded",
             "type": "Element",
-            "required": True,
         }
     )
     title_coded_other: None | TitleCodedOther = field(
@@ -977,7 +620,6 @@ class TradingPartnerUserPurpose:
         metadata={
             "name": "TradingPartnerUserPurposeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     trading_partner_user_purpose_coded_other: (
@@ -1004,7 +646,6 @@ class UserRole:
         metadata={
             "name": "UserRoleName",
             "type": "Element",
-            "required": True,
         }
     )
     user_role_id: None | UserRoleId = field(
@@ -1022,7 +663,6 @@ class UserStatus:
         metadata={
             "name": "UserStatusCoded",
             "type": "Element",
-            "required": True,
         }
     )
     user_status_coded_other: None | UserStatusCodedOther = field(
@@ -1040,14 +680,12 @@ class ValidityDates:
         metadata={
             "name": "StartDate",
             "type": "Element",
-            "required": True,
         }
     )
     end_date: EndDate = field(
         metadata={
             "name": "EndDate",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1058,21 +696,18 @@ class X509CertificateInfo:
         metadata={
             "name": "X509Subject",
             "type": "Element",
-            "required": True,
         }
     )
     x509_issuer: X509Issuer = field(
         metadata={
             "name": "X509Issuer",
             "type": "Element",
-            "required": True,
         }
     )
     x509_serial_number: X509SerialNumber = field(
         metadata={
             "name": "X509SerialNumber",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1092,14 +727,12 @@ class CommunicationDetail:
         metadata={
             "name": "PersonCommunicationType",
             "type": "Element",
-            "required": True,
         }
     )
     communication_value: CommunicationValue = field(
         metadata={
             "name": "CommunicationValue",
             "type": "Element",
-            "required": True,
         }
     )
     default_communication: None | DefaultCommunication = field(
@@ -1117,7 +750,6 @@ class CorrespondenceLanguage:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1128,14 +760,12 @@ class Identifier:
         metadata={
             "name": "Agency",
             "type": "Element",
-            "required": True,
         }
     )
     ident: Ident = field(
         metadata={
             "name": "Ident",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1157,7 +787,6 @@ class ListOfContactRelationType:
         metadata={
             "name": "ContactRelationType",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1180,7 +809,6 @@ class PersonTimezone:
         metadata={
             "name": "Timezone",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1194,14 +822,12 @@ class PrimaryId:
         metadata={
             "name": "Agency",
             "type": "Element",
-            "required": True,
         }
     )
     ident: Ident = field(
         metadata={
             "name": "Ident",
             "type": "Element",
-            "required": True,
         }
     )
     short_id: None | ShortId = field(
@@ -1259,7 +885,6 @@ class TradingPartnerId:
         metadata={
             "name": "Identifier",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1440,7 +1065,6 @@ class PersonAddress:
         metadata={
             "name": "ListOfCommunicationDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1483,7 +1107,6 @@ class PersonProfile:
         metadata={
             "name": "LastName",
             "type": "Element",
-            "required": True,
         }
     )
     first_name: None | FirstName = field(
@@ -1553,7 +1176,6 @@ class PersonProfile:
         metadata={
             "name": "PersonAddress",
             "type": "Element",
-            "required": True,
         }
     )
     general_notes: None | GeneralNotes = field(
@@ -1571,7 +1193,6 @@ class TradingPartnerOrganizationReference:
         metadata={
             "name": "Identifications",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1582,21 +1203,18 @@ class TradingPartnerUser:
         metadata={
             "name": "TradingPartnerOrganizationReference",
             "type": "Element",
-            "required": True,
         }
     )
     user_id: UserId = field(
         metadata={
             "name": "UserID",
             "type": "Element",
-            "required": True,
         }
     )
     person_profile: PersonProfile = field(
         metadata={
             "name": "PersonProfile",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_user_role: None | ListOfUserRole = field(
@@ -1640,13 +1258,11 @@ class TradingPartnerUserInformation:
         metadata={
             "name": "TradingPartnerUserPurpose",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_trading_partner_user: ListOfTradingPartnerUser = field(
         metadata={
             "name": "ListOfTradingPartnerUser",
             "type": "Element",
-            "required": True,
         }
     )

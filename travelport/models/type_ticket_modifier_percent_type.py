@@ -24,7 +24,6 @@ class TypeTicketModifierPercentType:
         metadata={
             "name": "Percent",
             "type": "Attribute",
-            "required": True,
             "pattern": r"([0-9]{1,2}|100)\.[0-9]{1,2}",
         }
     )

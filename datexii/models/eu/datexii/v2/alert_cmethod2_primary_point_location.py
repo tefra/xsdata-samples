@@ -23,7 +23,6 @@ class AlertCMethod2PrimaryPointLocation:
             "name": "alertCLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     alert_cmethod2_primary_point_location_extension: None | ExtensionType = (

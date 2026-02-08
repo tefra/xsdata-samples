@@ -25,7 +25,6 @@ class AlertCMethod4Point(AlertCPoint):
             "name": "alertCDirection",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     alert_cmethod4_primary_point_location: AlertCMethod4PrimaryPointLocation = field(
@@ -33,7 +32,6 @@ class AlertCMethod4Point(AlertCPoint):
             "name": "alertCMethod4PrimaryPointLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     alert_cmethod4_point_extension: None | ExtensionType = field(

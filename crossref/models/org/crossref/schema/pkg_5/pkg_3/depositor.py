@@ -25,12 +25,10 @@ class Depositor:
     depositor_name: DepositorName = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     email_address: EmailAddress = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )

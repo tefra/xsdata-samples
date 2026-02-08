@@ -126,7 +126,6 @@ class DataDumpEntry:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -136,7 +135,6 @@ class DataDumpEntry:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

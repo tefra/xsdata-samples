@@ -28,7 +28,6 @@ class DeleteOverrideDefinition:
         metadata={
             "name": "TemplateFieldID",
             "type": "Attribute",
-            "required": True,
         }
     )
     template_field_type: None | TypeCustomFieldOrGroupType = field(

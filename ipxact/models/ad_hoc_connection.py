@@ -41,7 +41,6 @@ class AdHocConnection:
     name: str = field(
         metadata={
             "type": "Element",
-            "required": True,
             "white_space": "collapse",
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
         }
@@ -77,7 +76,6 @@ class AdHocConnection:
         metadata={
             "name": "portReferences",
             "type": "Element",
-            "required": True,
         }
     )
     vendor_extensions: None | VendorExtensions = field(
@@ -158,7 +156,6 @@ class AdHocConnection:
                 metadata={
                     "name": "portRef",
                     "type": "Attribute",
-                    "required": True,
                     "white_space": "collapse",
                     "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
                 }
@@ -167,7 +164,6 @@ class AdHocConnection:
                 metadata={
                     "name": "componentInstanceRef",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
             id: None | str = field(

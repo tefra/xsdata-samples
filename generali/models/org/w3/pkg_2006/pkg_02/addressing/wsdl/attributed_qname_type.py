@@ -11,11 +11,7 @@ class AttributedQnameType:
     class Meta:
         name = "AttributedQNameType"
 
-    value: QName = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: QName = field()
     other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={

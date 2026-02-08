@@ -74,7 +74,6 @@ class ValidatingCarrierInfoType:
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"[a-zA-Z]{2}",
                 }
             )
@@ -104,7 +103,6 @@ class ValidatingCarrierInfoType:
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"[a-zA-Z]{2}",
                 }
             )

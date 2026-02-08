@@ -78,7 +78,6 @@ class PackingListType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     uuid: None | Uuid = field(
@@ -174,7 +173,6 @@ class PackingListType:
             "name": "Shipment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     document_reference: tuple[DocumentReference, ...] = field(

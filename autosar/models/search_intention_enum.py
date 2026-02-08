@@ -29,11 +29,7 @@ class SearchIntentionEnum:
     class Meta:
         name = "SEARCH-INTENTION-ENUM"
 
-    value: SearchIntentionEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SearchIntentionEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

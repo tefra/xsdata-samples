@@ -31,11 +31,7 @@ class EventAcceptanceStatusEnum:
     class Meta:
         name = "EVENT-ACCEPTANCE-STATUS-ENUM"
 
-    value: EventAcceptanceStatusEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: EventAcceptanceStatusEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

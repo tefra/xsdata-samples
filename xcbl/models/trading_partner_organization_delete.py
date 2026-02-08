@@ -14,14 +14,12 @@ class TradingPartnerOrganizationDeletion:
         metadata={
             "name": "TradingPartnerIdentifications",
             "type": "Element",
-            "required": True,
         }
     )
     trading_partner_display_name: TradingPartnerDisplayName = field(
         metadata={
             "name": "TradingPartnerDisplayName",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -46,6 +44,5 @@ class TradingPartnerOrganizationDelete:
         metadata={
             "name": "ListOfTradingPartnerOrganizationDeletion",
             "type": "Element",
-            "required": True,
         }
     )

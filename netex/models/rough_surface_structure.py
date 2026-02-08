@@ -15,7 +15,6 @@ class RoughSurfaceStructure(AccessEquipmentVersionStructure):
             "name": "SurfaceType",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     visual_contrast: None | bool = field(

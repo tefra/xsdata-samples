@@ -31,7 +31,6 @@ class MeasuredDataPublication(PayloadPublication):
             "name": "measurementSiteTableReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     header_information: HeaderInformation = field(
@@ -39,7 +38,6 @@ class MeasuredDataPublication(PayloadPublication):
             "name": "headerInformation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     site_measurements: list[SiteMeasurements] = field(

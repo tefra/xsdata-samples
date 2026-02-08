@@ -29,11 +29,7 @@ class FilterDebouncingEnum:
     class Meta:
         name = "FILTER-DEBOUNCING-ENUM"
 
-    value: FilterDebouncingEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: FilterDebouncingEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

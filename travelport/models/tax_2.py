@@ -50,7 +50,6 @@ class Tax2:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
         }
     )
     effective_date: None | XmlDate = field(

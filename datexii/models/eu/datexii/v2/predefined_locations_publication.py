@@ -25,7 +25,6 @@ class PredefinedLocationsPublication(PayloadPublication):
             "name": "headerInformation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     predefined_location_container: list[PredefinedLocationContainer] = field(

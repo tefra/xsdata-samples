@@ -86,7 +86,6 @@ class CatalogueType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     uuid: None | Uuid = field(
@@ -118,7 +117,6 @@ class CatalogueType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -230,7 +228,6 @@ class CatalogueType:
             "name": "ProviderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     receiver_party: ReceiverParty = field(
@@ -238,7 +235,6 @@ class CatalogueType:
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     seller_supplier_party: None | SellerSupplierParty = field(

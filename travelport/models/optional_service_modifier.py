@@ -37,7 +37,6 @@ class OptionalServiceModifier:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -55,7 +54,6 @@ class OptionalServiceModifier:
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 5,
         }
@@ -64,20 +62,17 @@ class OptionalServiceModifier:
         metadata={
             "name": "ServiceSubCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     travel_date: XmlDate = field(
         metadata={
             "name": "TravelDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     description: str = field(
         metadata={
             "name": "Description",
             "type": "Attribute",
-            "required": True,
         }
     )

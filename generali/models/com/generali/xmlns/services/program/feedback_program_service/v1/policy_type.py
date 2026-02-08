@@ -24,7 +24,6 @@ class PolicyType:
             "name": "PolicyID",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-            "required": True,
         }
     )
     status: None | Status = field(
@@ -40,7 +39,6 @@ class PolicyType:
             "name": "LocalPolicies",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-            "required": True,
         }
     )
     errors: None | ErrorsType = field(

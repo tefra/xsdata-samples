@@ -133,7 +133,6 @@ class BrandingInfo:
         metadata={
             "name": "CommercialName",
             "type": "Attribute",
-            "required": True,
         }
     )
     chargeable: None | str = field(

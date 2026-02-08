@@ -47,7 +47,6 @@ class MonitorInterconnection:
     name: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -74,7 +73,6 @@ class MonitorInterconnection:
         metadata={
             "name": "monitoredActiveInterface",
             "type": "Element",
-            "required": True,
         }
     )
     monitor_interface: list[MonitorInterfaceType] = field(

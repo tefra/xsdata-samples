@@ -36,7 +36,6 @@ class Certificate2:
         metadata={
             "name": "Number",
             "type": "Attribute",
-            "required": True,
         }
     )
     amount: None | str = field(

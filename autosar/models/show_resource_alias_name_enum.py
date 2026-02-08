@@ -31,11 +31,7 @@ class ShowResourceAliasNameEnum:
     class Meta:
         name = "SHOW-RESOURCE-ALIAS-NAME-ENUM"
 
-    value: ShowResourceAliasNameEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ShowResourceAliasNameEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

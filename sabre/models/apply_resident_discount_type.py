@@ -15,6 +15,5 @@ class ApplyResidentDiscountType:
         metadata={
             "name": "Ind",
             "type": "Attribute",
-            "required": True,
         }
     )

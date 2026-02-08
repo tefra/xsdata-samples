@@ -107,7 +107,6 @@ class GuaranteeCertificateType:
             "name": "ContractFolderID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_date: IssueDate = field(
@@ -115,7 +114,6 @@ class GuaranteeCertificateType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -147,7 +145,6 @@ class GuaranteeCertificateType:
             "name": "LiabilityAmount",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     constitution_code: None | ConstitutionCode = field(
@@ -214,7 +211,6 @@ class GuaranteeCertificateType:
             "name": "GuarantorParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     interested_party: InterestedParty = field(
@@ -222,7 +218,6 @@ class GuaranteeCertificateType:
             "name": "InterestedParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     beneficiary_party: None | BeneficiaryParty = field(

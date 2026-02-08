@@ -24,14 +24,12 @@ class InterfaceType:
         metadata={
             "name": "componentInstanceRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     bus_ref: str = field(
         metadata={
             "name": "busRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     id: None | str = field(

@@ -40,7 +40,6 @@ class FieldGroupData1(TypeKeyTaggedElement1):
         metadata={
             "name": "FieldGroupID",
             "type": "Attribute",
-            "required": True,
         }
     )
     owner_id: None | int = field(

@@ -28,11 +28,7 @@ class FloatEnum:
     class Meta:
         name = "FLOAT-ENUM"
 
-    value: FloatEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: FloatEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

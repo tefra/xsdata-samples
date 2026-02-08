@@ -41,7 +41,6 @@ class ParkingTable:
             "name": "parkingTableVersionTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     parking_record: list[ParkingRecord] = field(
@@ -64,12 +63,10 @@ class ParkingTable:
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     version: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

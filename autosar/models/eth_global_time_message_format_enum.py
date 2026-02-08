@@ -31,11 +31,7 @@ class EthGlobalTimeMessageFormatEnum:
     class Meta:
         name = "ETH-GLOBAL-TIME-MESSAGE-FORMAT-ENUM"
 
-    value: EthGlobalTimeMessageFormatEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: EthGlobalTimeMessageFormatEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

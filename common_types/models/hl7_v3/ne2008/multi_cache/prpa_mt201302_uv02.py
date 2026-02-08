@@ -384,7 +384,6 @@ class PrpaMt201302Uv02Group:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -445,7 +444,6 @@ class PrpaMt201302Uv02LanguageCommunication:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     mode_code: None | Ce = field(
@@ -528,7 +526,6 @@ class PrpaMt201302Uv02Nation:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     name: None | OnExplicit = field(
@@ -712,7 +709,6 @@ class PrpaMt201302Uv02Subject2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -751,7 +747,6 @@ class PrpaMt201302Uv02Subject3:
             "name": "careProvision",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -765,7 +760,6 @@ class PrpaMt201302Uv02Subject3:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -810,7 +804,6 @@ class PrpaMt201302Uv02AdministrativeObservation:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     status_code: None | Cs = field(
@@ -833,7 +826,6 @@ class PrpaMt201302Uv02AdministrativeObservation:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -847,7 +839,6 @@ class PrpaMt201302Uv02AdministrativeObservation:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1111,7 +1102,6 @@ class PrpaMt201302Uv02Citizen:
             "name": "politicalNation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -1251,7 +1241,6 @@ class PrpaMt201302Uv02ContactParty:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     negation_ind: None | str = field(
@@ -1373,7 +1362,6 @@ class PrpaMt201302Uv02Employee:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     negation_ind: None | str = field(
@@ -1700,7 +1688,6 @@ class PrpaMt201302Uv02OtherIds:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1740,7 +1727,6 @@ class PrpaMt201302Uv02PatientOfOtherProvider:
             "name": "subjectOf",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -1818,7 +1804,6 @@ class PrpaMt201302Uv02PersonalRelationship:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     addr: list[AdExplicit] = field(
@@ -2273,7 +2258,6 @@ class PrpaMt201302Uv02NonPersonLivingSubject:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -2751,7 +2735,6 @@ class PrpaMt201302Uv02Patient:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     effective_time: None | IvlTsExplicit = field(

@@ -128,7 +128,6 @@ class IpIamAuthenticConnectionProps:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -138,6 +137,5 @@ class IpIamAuthenticConnectionProps:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

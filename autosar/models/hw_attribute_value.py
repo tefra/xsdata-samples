@@ -107,6 +107,5 @@ class HwAttributeValue:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

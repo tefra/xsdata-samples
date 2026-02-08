@@ -84,7 +84,6 @@ class ConstantSpecificationMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -94,6 +93,5 @@ class ConstantSpecificationMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

@@ -22,18 +22,15 @@ class ReviewDate:
     month: Month = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     day: Day = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     year: Year = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )

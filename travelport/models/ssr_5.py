@@ -88,7 +88,6 @@ class Ssr5:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
             "min_length": 4,
             "max_length": 4,
         }

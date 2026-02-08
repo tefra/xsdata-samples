@@ -31,21 +31,18 @@ class AlternateLocationDistance:
             "name": "Distance",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "required": True,
         }
     )
     key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     search_location: str = field(
         metadata={
             "name": "SearchLocation",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -54,7 +51,6 @@ class AlternateLocationDistance:
         metadata={
             "name": "AlternateLocation",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }

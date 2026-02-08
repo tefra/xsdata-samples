@@ -89,7 +89,6 @@ class RunnableEntityInCompositionInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -99,6 +98,5 @@ class RunnableEntityInCompositionInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

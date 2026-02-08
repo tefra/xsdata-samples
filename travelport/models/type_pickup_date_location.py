@@ -33,7 +33,6 @@ class TypePickupDateLocation:
         metadata={
             "name": "Date",
             "type": "Attribute",
-            "required": True,
         }
     )
     location: None | str = field(

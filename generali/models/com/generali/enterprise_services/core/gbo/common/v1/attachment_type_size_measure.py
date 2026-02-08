@@ -21,6 +21,5 @@ class AttachmentTypeSizeMeasure(MeasureType):
         metadata={
             "name": "unitCode",
             "type": "Attribute",
-            "required": True,
         }
     )

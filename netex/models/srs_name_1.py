@@ -11,9 +11,4 @@ class SrsName1:
         name = "SrsName"
         namespace = "http://www.siri.org.uk/siri"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

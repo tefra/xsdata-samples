@@ -29,11 +29,7 @@ class CryptoObjectTypeEnum:
     class Meta:
         name = "CRYPTO-OBJECT-TYPE-ENUM"
 
-    value: CryptoObjectTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: CryptoObjectTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

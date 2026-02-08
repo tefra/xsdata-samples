@@ -73,7 +73,6 @@ class VehicleSharingPlaceAssignmentVersionStructure(
             "name": "VehicleSharingParkingAreaRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     parking_bay_ref_or_vehicle_sharing_parking_bay_ref: (

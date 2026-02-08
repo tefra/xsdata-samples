@@ -70,14 +70,12 @@ class HotelRulesReq(BaseReq1):
             metadata={
                 "name": "HotelProperty",
                 "type": "Element",
-                "required": True,
             }
         )
         hotel_stay: HotelStay = field(
             metadata={
                 "name": "HotelStay",
                 "type": "Element",
-                "required": True,
             }
         )
         hotel_rules_modifiers: None | HotelRulesModifiers = field(
@@ -91,14 +89,12 @@ class HotelRulesReq(BaseReq1):
             metadata={
                 "name": "RatePlanType",
                 "type": "Attribute",
-                "required": True,
             }
         )
         base: str = field(
             metadata={
                 "name": "Base",
                 "type": "Attribute",
-                "required": True,
             }
         )
         rules_detail_reqd: None | HotelRulesLookupRulesDetailReqd = field(

@@ -24,7 +24,6 @@ class IntermediaryInvolvementType(OrganisationInvolvementType):
             "name": "OrganisationRole",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     intermediary_type: IntermediaryTypeEnum = field(
@@ -32,6 +31,5 @@ class IntermediaryInvolvementType(OrganisationInvolvementType):
             "name": "IntermediaryType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )

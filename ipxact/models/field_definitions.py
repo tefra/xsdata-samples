@@ -75,7 +75,6 @@ class FieldDefinitions:
         name: str = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         display_name: None | DisplayName = field(
@@ -109,7 +108,6 @@ class FieldDefinitions:
             metadata={
                 "name": "bitWidth",
                 "type": "Element",
-                "required": True,
             }
         )
         volatile: None | bool = field(
@@ -383,7 +381,6 @@ class FieldDefinitions:
                             metadata={
                                 "name": "fieldRef",
                                 "type": "Element",
-                                "required": True,
                             }
                         )
                         id: None | str = field(
@@ -400,7 +397,6 @@ class FieldDefinitions:
                                 metadata={
                                     "name": "addressSpaceRef",
                                     "type": "Attribute",
-                                    "required": True,
                                 }
                             )
 
@@ -410,7 +406,6 @@ class FieldDefinitions:
                                 metadata={
                                     "name": "memoryMapRef",
                                     "type": "Attribute",
-                                    "required": True,
                                 }
                             )
 
@@ -431,11 +426,7 @@ class FieldDefinitions:
                         from the field.
                     """
 
-                    value: bool = field(
-                        metadata={
-                            "required": True,
-                        }
-                    )
+                    value: bool = field()
                     test_constraint: TestableTestConstraint = field(
                         default=TestableTestConstraint.UNCONSTRAINED,
                         metadata={

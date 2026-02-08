@@ -126,7 +126,6 @@ class UnlimitedIntegerValueVariationPoint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -136,6 +135,5 @@ class UnlimitedIntegerValueVariationPoint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

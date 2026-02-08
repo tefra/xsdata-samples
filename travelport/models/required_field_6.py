@@ -24,6 +24,5 @@ class RequiredField6:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -35,7 +35,6 @@ class TypeGuestRoomInformation:
             "name": "Adults",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            "required": True,
         }
     )
     booking_traveler_ref: list[BookingTravelerRef1] = field(

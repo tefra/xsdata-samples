@@ -11,6 +11,5 @@ class Find:
     href: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )

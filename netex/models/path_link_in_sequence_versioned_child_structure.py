@@ -26,7 +26,6 @@ class PathLinkInSequenceVersionedChildStructure(
             "name": "PathLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     reverse: None | bool = field(
@@ -84,6 +83,5 @@ class PathLinkInSequenceVersionedChildStructure(
                 "name": "PathLinkView",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
-                "required": True,
             }
         )

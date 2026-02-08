@@ -87,6 +87,5 @@ class RuleBasedValueCont:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

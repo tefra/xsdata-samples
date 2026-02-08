@@ -28,11 +28,7 @@ class RemotingTechnologyEnum:
     class Meta:
         name = "REMOTING-TECHNOLOGY-ENUM"
 
-    value: RemotingTechnologyEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: RemotingTechnologyEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

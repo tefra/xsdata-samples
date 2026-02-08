@@ -44,92 +44,47 @@ from xcbl.models.trading_partner_user_information import (
 
 @dataclass(kw_only=True)
 class AggregationTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AggregationTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AllOrNothing:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AlternativeBuyerContactName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AlternativeContactEmail:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AlternativeContactFaxNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AlternativeContactMobile:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AlternativeContactPhoneNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AttributeCharacteristic:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -142,32 +97,17 @@ class AttributeName:
             "required": True,
         },
     )
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class BundleName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class BuyerContactName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -175,162 +115,82 @@ class CommunityId:
     class Meta:
         name = "CommunityID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ComponentSourcingIndicator:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ContactEmail:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ContactFaxNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ContactMobile:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ContactPhoneNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Credit:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DecisionDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DeliveryDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class FormulaName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class GroupIndicator:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class KeyValString:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Keyword:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LineItemNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Operator:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PartialQuoteIndicator:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -338,132 +198,67 @@ class PreferredUom:
     class Meta:
         name = "PreferredUOM"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ProjectName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class QuoteWinRuleCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class QuoteWinRuleCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RequiredToRespond:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RequisitionNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingAttributeDataTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingAttributeDataTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingAttributeDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingAttributeFieldSize:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingAttributeName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingAttributeType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingCreateGeneralNotes:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -471,132 +266,67 @@ class SourcingCreateId:
     class Meta:
         name = "SourcingCreateID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingCreateIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingCreateName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingItemDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingStatus:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SupplierView:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class VisibilityIndicator:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class VisibilityOfAmounts:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class VisibilityOfComments:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class VisibilityOfParticipants:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class VisibilityOfQuantities:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Weighting:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -605,7 +335,6 @@ class AggregationType:
         metadata={
             "name": "AggregationTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     aggregation_type_coded_other: None | AggregationTypeCodedOther = field(
@@ -623,7 +352,6 @@ class BaseCurrency:
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -634,7 +362,6 @@ class Bundle:
         metadata={
             "name": "BundleName",
             "type": "Element",
-            "required": True,
         }
     )
     line_item_number: list[LineItemNumber] = field(
@@ -653,14 +380,12 @@ class DropDownMenuValue:
         metadata={
             "name": "Value",
             "type": "Element",
-            "required": True,
         }
     )
     credit: Credit = field(
         metadata={
             "name": "Credit",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -689,21 +414,18 @@ class KeyVal:
         metadata={
             "name": "KeyValString",
             "type": "Element",
-            "required": True,
         }
     )
     language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
     keyword: Keyword = field(
         metadata={
             "name": "Keyword",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -726,7 +448,6 @@ class Project:
         metadata={
             "name": "ProjectName",
             "type": "Element",
-            "required": True,
         }
     )
     revision_number: None | RevisionNumber = field(
@@ -751,7 +472,6 @@ class QuoteCurrency:
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -762,7 +482,6 @@ class SourcingCreateListOfAttachment:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -773,7 +492,6 @@ class SourcingCreatePurpose:
         metadata={
             "name": "Purpose",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -784,7 +502,6 @@ class SourcingDeliveryDetail:
         metadata={
             "name": "DeliveryDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -795,7 +512,6 @@ class SourcingQuantity:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -806,7 +522,6 @@ class SourcingValidityDates:
         metadata={
             "name": "ValidityDates",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -932,14 +647,12 @@ class AdditionalAttribute:
         metadata={
             "name": "Operator",
             "type": "Element",
-            "required": True,
         }
     )
     formula_attribute: FormulaAttribute = field(
         metadata={
             "name": "FormulaAttribute",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -986,7 +699,6 @@ class ListToInform:
         metadata={
             "name": "ListOfParty",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1043,7 +755,6 @@ class ValidQuoteCurrency:
         metadata={
             "name": "QuoteCurrency",
             "type": "Element",
-            "required": True,
         }
     )
     rate_of_exchange_detail: None | RateOfExchangeDetail = field(
@@ -1061,14 +772,12 @@ class Formula:
         metadata={
             "name": "FormulaName",
             "type": "Element",
-            "required": True,
         }
     )
     formula_attribute: FormulaAttribute = field(
         metadata={
             "name": "FormulaAttribute",
             "type": "Element",
-            "required": True,
         }
     )
     additional_attribute: list[AdditionalAttribute] = field(
@@ -1105,7 +814,6 @@ class SourcingAttribute:
         metadata={
             "name": "SourcingAttributeName",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_attribute_description: None | SourcingAttributeDescription = (
@@ -1121,7 +829,6 @@ class SourcingAttribute:
         metadata={
             "name": "SourcingAttributeDataTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_attribute_data_type_coded_other: (
@@ -1151,7 +858,6 @@ class SourcingAttribute:
         metadata={
             "name": "RequiredToRespond",
             "type": "Element",
-            "required": True,
         }
     )
     supplier_view: None | SupplierView = field(
@@ -1179,7 +885,6 @@ class SourcingAttribute:
         metadata={
             "name": "AttributeCharacteristic",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_attribute_field_size: None | SourcingAttributeFieldSize = field(
@@ -1197,7 +902,6 @@ class SourcingPartners:
         metadata={
             "name": "PartyID",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_identifier: None | ListOfIdentifier = field(
@@ -1260,7 +964,6 @@ class SourcingPartners:
         metadata={
             "name": "GroupIndicator",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_key_val: None | ListOfKeyVal = field(
@@ -1278,7 +981,6 @@ class SourcingRulesProfile:
         metadata={
             "name": "QuoteWinRuleCoded",
             "type": "Element",
-            "required": True,
         }
     )
     quote_win_rule_coded_other: None | QuoteWinRuleCodedOther = field(
@@ -1315,7 +1017,6 @@ class SourcingCurrency:
         metadata={
             "name": "BaseCurrency",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_valid_quote_currency: None | ListOfValidQuoteCurrency = field(
@@ -1333,14 +1034,12 @@ class SourcingItem:
         metadata={
             "name": "SourcingItemID",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_item_name: SourcingItemName = field(
         metadata={
             "name": "SourcingItemName",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_item_description: None | SourcingItemDescription = field(
@@ -1475,7 +1174,6 @@ class SourcingCreateDetail:
         metadata={
             "name": "SourcingItem",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_delivery_detail: None | SourcingDeliveryDetail = field(
@@ -1496,7 +1194,6 @@ class SourcingCreateDetail:
         metadata={
             "name": "ComponentSourcingIndicator",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_sourcing_item_component: None | ListOfSourcingItemComponent = (
@@ -1516,7 +1213,6 @@ class SourcingParticipants:
         metadata={
             "name": "InitiatingParty",
             "type": "Element",
-            "required": True,
         }
     )
     community_id: None | CommunityId = field(
@@ -1560,21 +1256,18 @@ class SourcingCreateHeader:
         metadata={
             "name": "SourcingCreatePurpose",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_create_issue_date: SourcingCreateIssueDate = field(
         metadata={
             "name": "SourcingCreateIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_create_id: SourcingCreateId = field(
         metadata={
             "name": "SourcingCreateID",
             "type": "Element",
-            "required": True,
         }
     )
     project: None | Project = field(
@@ -1595,7 +1288,6 @@ class SourcingCreateHeader:
         metadata={
             "name": "SourcingValidityDates",
             "type": "Element",
-            "required": True,
         }
     )
     decision_date: None | DecisionDate = field(
@@ -1630,7 +1322,6 @@ class SourcingCreateHeader:
         metadata={
             "name": "SourcingParticipants",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_reference_coded: None | ListOfReferenceCoded = field(
@@ -1644,7 +1335,6 @@ class SourcingCreateHeader:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_create_general_notes: None | SourcingCreateGeneralNotes = field(
@@ -1678,7 +1368,6 @@ class SourcingItemComponent:
         metadata={
             "name": "SourcingCreateDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1701,20 +1390,17 @@ class SourcingCreate:
         metadata={
             "name": "SourcingCreateHeader",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_sourcing_create_detail: ListOfSourcingCreateDetail = field(
         metadata={
             "name": "ListOfSourcingCreateDetail",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_create_summary: SourcingCreateSummary = field(
         metadata={
             "name": "SourcingCreateSummary",
             "type": "Element",
-            "required": True,
         }
     )

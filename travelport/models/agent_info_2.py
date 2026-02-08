@@ -91,7 +91,6 @@ class AgentInfo2(TypeProfileInfo2):
         metadata={
             "name": "UserName",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -127,7 +126,6 @@ class AgentInfo2(TypeProfileInfo2):
         metadata={
             "name": "GivenName",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -145,7 +143,6 @@ class AgentInfo2(TypeProfileInfo2):
         metadata={
             "name": "Surname",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }

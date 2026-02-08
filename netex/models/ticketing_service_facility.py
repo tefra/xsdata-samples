@@ -14,8 +14,4 @@ class TicketingServiceFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: TicketingServiceFacilityEnumeration = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TicketingServiceFacilityEnumeration = field()

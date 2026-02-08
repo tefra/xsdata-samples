@@ -62,7 +62,6 @@ class Guarantee4:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     key: None | str = field(

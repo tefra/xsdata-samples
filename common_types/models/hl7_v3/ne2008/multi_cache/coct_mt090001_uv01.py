@@ -70,6 +70,5 @@ class CoctMt090001Uv01AssignedEntity:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )

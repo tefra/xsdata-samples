@@ -36,7 +36,6 @@ class OverallPeriod:
             "name": "overallStartTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     overall_end_time: None | XmlDateTime = field(

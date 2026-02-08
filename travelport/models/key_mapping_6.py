@@ -29,20 +29,17 @@ class KeyMapping6:
         metadata={
             "name": "ElementName",
             "type": "Attribute",
-            "required": True,
         }
     )
     original_key: str = field(
         metadata={
             "name": "OriginalKey",
             "type": "Attribute",
-            "required": True,
         }
     )
     new_key: str = field(
         metadata={
             "name": "NewKey",
             "type": "Attribute",
-            "required": True,
         }
     )

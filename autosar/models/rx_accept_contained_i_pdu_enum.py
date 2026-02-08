@@ -31,11 +31,7 @@ class RxAcceptContainedIPduEnum:
     class Meta:
         name = "RX-ACCEPT-CONTAINED-I-PDU-ENUM"
 
-    value: RxAcceptContainedIPduEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: RxAcceptContainedIPduEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

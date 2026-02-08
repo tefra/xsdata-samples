@@ -63,7 +63,6 @@ class ReportPaperSeriesMetadata:
     series_metadata: SeriesMetadata = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     contributors: None | Contributors = field(

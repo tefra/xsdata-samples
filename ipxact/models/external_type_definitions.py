@@ -40,7 +40,6 @@ class ExternalTypeDefinitions:
     name: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -67,7 +66,6 @@ class ExternalTypeDefinitions:
         metadata={
             "name": "typeDefinitionsRef",
             "type": "Element",
-            "required": True,
         }
     )
     view_links: None | ViewLinks = field(

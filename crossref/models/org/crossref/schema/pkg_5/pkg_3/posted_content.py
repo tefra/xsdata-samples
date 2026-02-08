@@ -73,13 +73,11 @@ class PostedContent:
     titles: Titles = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     posted_date: PostedDate = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     acceptance_date: None | AcceptanceDate = field(
@@ -141,7 +139,6 @@ class PostedContent:
     doi_data: DoiData = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     citation_list: None | CitationList = field(

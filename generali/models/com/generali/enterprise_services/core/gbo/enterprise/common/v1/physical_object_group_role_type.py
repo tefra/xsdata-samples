@@ -18,6 +18,5 @@ class PhysicalObjectGroupRoleType:
             "name": "PhysicalObjectGroup",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-            "required": True,
         }
     )

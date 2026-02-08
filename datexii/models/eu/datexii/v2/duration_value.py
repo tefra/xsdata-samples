@@ -21,7 +21,6 @@ class DurationValue(DataValue):
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     duration_value_extension: None | ExtensionType = field(

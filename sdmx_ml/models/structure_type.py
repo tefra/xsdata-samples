@@ -23,7 +23,6 @@ class StructureType:
             "name": "Header",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
-            "required": True,
         }
     )
     structures: None | StructuresType = field(

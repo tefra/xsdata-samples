@@ -12,12 +12,10 @@ class CreatedDateTime:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     format: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )

@@ -35,20 +35,17 @@ class TagDelete2:
         metadata={
             "name": "Element",
             "type": "Attribute",
-            "required": True,
         }
     )
     key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     tag_id: str = field(
         metadata={
             "name": "TagID",
             "type": "Attribute",
-            "required": True,
         }
     )

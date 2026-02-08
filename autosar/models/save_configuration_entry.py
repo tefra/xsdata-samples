@@ -115,7 +115,6 @@ class SaveConfigurationEntry:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -125,6 +124,5 @@ class SaveConfigurationEntry:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

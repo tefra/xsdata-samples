@@ -24,7 +24,6 @@ class VehicleLocation:
             "name": "VendorLocation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "required": True,
         }
     )
     distance: None | Distance1 = field(
@@ -47,6 +46,5 @@ class VehicleLocation:
         metadata={
             "name": "LocationInformation",
             "type": "Element",
-            "required": True,
         }
     )

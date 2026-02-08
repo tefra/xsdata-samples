@@ -49,13 +49,11 @@ class VehicleRulesReq(BaseSearchReq1):
             metadata={
                 "name": "VehicleDateLocation",
                 "type": "Element",
-                "required": True,
             }
         )
         vehicle_search_modifiers: VehicleSearchModifiers = field(
             metadata={
                 "name": "VehicleSearchModifiers",
                 "type": "Element",
-                "required": True,
             }
         )

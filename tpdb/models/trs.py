@@ -17,7 +17,6 @@ class Trs:
     rules: Rules = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     signature: None | Signature = field(

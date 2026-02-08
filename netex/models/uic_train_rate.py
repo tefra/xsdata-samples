@@ -12,8 +12,4 @@ class UicTrainRate:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: UicRateTypeEnumeration = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: UicRateTypeEnumeration = field()

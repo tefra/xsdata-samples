@@ -28,11 +28,7 @@ class ShowContentEnum:
     class Meta:
         name = "SHOW-CONTENT-ENUM"
 
-    value: ShowContentEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ShowContentEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

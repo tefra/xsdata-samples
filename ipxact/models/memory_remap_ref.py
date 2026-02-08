@@ -15,6 +15,5 @@ class MemoryRemapRef:
         metadata={
             "name": "memoryRemapRef",
             "type": "Attribute",
-            "required": True,
         }
     )

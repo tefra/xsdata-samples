@@ -11,7 +11,6 @@ class CachePartitionType:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[A-Z0-9_]{1,}",
         }
     )

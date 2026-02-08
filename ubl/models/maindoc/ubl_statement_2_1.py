@@ -88,7 +88,6 @@ class StatementType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     copy_indicator: None | CopyIndicator = field(
@@ -112,7 +111,6 @@ class StatementType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -136,7 +134,6 @@ class StatementType:
             "name": "DocumentCurrencyCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     total_debit_amount: None | TotalDebitAmount = field(
@@ -210,7 +207,6 @@ class StatementType:
             "name": "AccountingSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     accounting_customer_party: AccountingCustomerParty = field(
@@ -218,7 +214,6 @@ class StatementType:
             "name": "AccountingCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     buyer_customer_party: None | BuyerCustomerParty = field(

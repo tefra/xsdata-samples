@@ -30,11 +30,7 @@ class NoteTypeEnum:
     class Meta:
         name = "NOTE-TYPE-ENUM"
 
-    value: NoteTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: NoteTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

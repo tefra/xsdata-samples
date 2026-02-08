@@ -25,6 +25,5 @@ class GeoGridCodelistType(GeoGridCodelistBaseType):
             "name": "GridDefinition",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
         }
     )

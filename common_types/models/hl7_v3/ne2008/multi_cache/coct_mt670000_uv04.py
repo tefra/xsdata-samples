@@ -136,7 +136,6 @@ class CoctMt670000Uv04GuarantorLanguage:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     mode_code: Cs = field(
@@ -144,7 +143,6 @@ class CoctMt670000Uv04GuarantorLanguage:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     preference_ind: None | Cs = field(
@@ -225,7 +223,6 @@ class CoctMt670000Uv04GuarantorOrganization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(

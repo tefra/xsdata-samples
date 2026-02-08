@@ -91,21 +91,18 @@ class TypeFeeInfo6:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
         }
     )
     code: str = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
         }
     )
     fee_token: None | str = field(
@@ -186,6 +183,5 @@ class TypeFeeInfo6:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )

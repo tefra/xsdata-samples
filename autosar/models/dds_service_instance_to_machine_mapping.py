@@ -114,7 +114,6 @@ class DdsServiceInstanceToMachineMapping:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: (
@@ -284,7 +283,6 @@ class DdsServiceInstanceToMachineMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -307,7 +305,6 @@ class DdsServiceInstanceToMachineMapping:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -330,7 +327,6 @@ class DdsServiceInstanceToMachineMapping:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -353,7 +349,6 @@ class DdsServiceInstanceToMachineMapping:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -376,6 +371,5 @@ class DdsServiceInstanceToMachineMapping:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

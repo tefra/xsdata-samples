@@ -20,6 +20,5 @@ class TaxiServicePlaceAssignmentRefsRelStructure(
             "name": "TaxiServicePlaceAssignmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

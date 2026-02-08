@@ -26,7 +26,6 @@ class RGBColour:
             "name": "rgbRedValue",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     rgb_green_value: int = field(
@@ -34,7 +33,6 @@ class RGBColour:
             "name": "rgbGreenValue",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     rgb_blue_value: int = field(
@@ -42,7 +40,6 @@ class RGBColour:
             "name": "rgbBlueValue",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     colour_name: None | MultilingualString = field(

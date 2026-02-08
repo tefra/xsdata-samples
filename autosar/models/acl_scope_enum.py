@@ -29,11 +29,7 @@ class AclScopeEnum:
     class Meta:
         name = "ACL-SCOPE-ENUM"
 
-    value: AclScopeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: AclScopeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -16,13 +16,11 @@ class Location:
         metadata={
             "name": "GlobalLocationID",
             "type": "Element",
-            "required": True,
         }
     )
     local_location_id: str = field(
         metadata={
             "name": "LocalLocationID",
             "type": "Element",
-            "required": True,
         }
     )

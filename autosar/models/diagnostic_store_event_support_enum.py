@@ -31,11 +31,7 @@ class DiagnosticStoreEventSupportEnum:
     class Meta:
         name = "DIAGNOSTIC-STORE-EVENT-SUPPORT-ENUM"
 
-    value: DiagnosticStoreEventSupportEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticStoreEventSupportEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

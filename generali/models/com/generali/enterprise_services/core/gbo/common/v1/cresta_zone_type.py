@@ -16,7 +16,6 @@ class CrestaZoneType:
             "name": "CrestaZoneIdentifier",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            "required": True,
         }
     )
     cresta_zone_name: None | Idtype = field(

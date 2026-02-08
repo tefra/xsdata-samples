@@ -18,6 +18,5 @@ class Shape(Node):
             "name": "Bounds",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/DD/20100524/DC",
-            "required": True,
         }
     )

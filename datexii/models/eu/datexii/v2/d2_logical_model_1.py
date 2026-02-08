@@ -23,7 +23,6 @@ class D2LogicalModel1:
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     payload_publication: None | PayloadPublication = field(

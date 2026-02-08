@@ -72,6 +72,5 @@ class SocketAddressRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

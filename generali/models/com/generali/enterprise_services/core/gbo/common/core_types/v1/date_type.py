@@ -28,8 +28,4 @@ class DateType:
     xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">date</ns1:PrimitiveType>.
     """
 
-    value: XmlDate = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: XmlDate = field()

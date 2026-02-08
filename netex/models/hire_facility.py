@@ -13,8 +13,5 @@ class HireFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: HireFacilityEnumeration = field(
-        default=HireFacilityEnumeration.UNKNOWN,
-        metadata={
-            "required": True,
-        },
+        default=HireFacilityEnumeration.UNKNOWN
     )

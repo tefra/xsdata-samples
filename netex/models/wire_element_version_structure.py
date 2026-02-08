@@ -20,7 +20,6 @@ class WireElementVersionStructure(InfrastructureLinkVersionStructure):
             "name": "FromPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     to_point_ref: WirePointRefStructure = field(
@@ -28,6 +27,5 @@ class WireElementVersionStructure(InfrastructureLinkVersionStructure):
             "name": "ToPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

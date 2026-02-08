@@ -62,7 +62,6 @@ class AttributeType2(AttributeBaseType):
             "name": "AttributeRelationship",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
         }
     )
     measure_relationship: None | MeasureRelationshipType = field(

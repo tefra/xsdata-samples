@@ -18,6 +18,5 @@ class FareRuleShortRef:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

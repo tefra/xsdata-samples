@@ -31,7 +31,6 @@ class PointOfInterestClassificationHierarchyMemberStructure(
                 "name": "ParentClassificationRef",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
-                "required": True,
             }
         )
     )
@@ -40,6 +39,5 @@ class PointOfInterestClassificationHierarchyMemberStructure(
             "name": "PointOfInterestClassificationRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

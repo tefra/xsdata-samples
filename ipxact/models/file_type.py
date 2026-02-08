@@ -17,11 +17,7 @@ class FileType:
         name = "fileType"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: SimpleFileType = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SimpleFileType = field()
     user: None | str = field(
         default=None,
         metadata={

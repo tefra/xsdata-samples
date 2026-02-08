@@ -55,7 +55,6 @@ class SectionNamePrefix:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | SectionNamePrefix.ShortNameFragments = field(
@@ -123,6 +122,5 @@ class SectionNamePrefix:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

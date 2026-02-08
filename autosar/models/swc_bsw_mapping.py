@@ -116,7 +116,6 @@ class SwcBswMapping:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | SwcBswMapping.ShortNameFragments = field(
@@ -276,7 +275,6 @@ class SwcBswMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -297,7 +295,6 @@ class SwcBswMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

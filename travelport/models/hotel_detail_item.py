@@ -27,6 +27,5 @@ class HotelDetailItem:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
         }
     )

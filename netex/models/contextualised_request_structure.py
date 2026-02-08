@@ -26,7 +26,6 @@ class ContextualisedRequestStructure:
             "name": "RequestTimestamp",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
         }
     )
     account_id: None | str = field(
@@ -58,7 +57,6 @@ class ContextualisedRequestStructure:
             "name": "RequestorRef",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
         }
     )
     message_identifier: None | MessageQualifierStructure = field(

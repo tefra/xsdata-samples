@@ -18,7 +18,6 @@ class Orcid:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "pattern": r"https?://orcid.org/[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[X0-9]{1}",
         },
     )

@@ -55,7 +55,6 @@ class PrpaMt201307Uv02DataSource:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -109,7 +108,6 @@ class PrpaMt201307Uv02PatientIdentifier:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -218,7 +216,6 @@ class PrpaMt201307Uv02QueryByParameter:
             "name": "queryId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     status_code: Cs = field(
@@ -226,7 +223,6 @@ class PrpaMt201307Uv02QueryByParameter:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     modify_code: None | Cs = field(
@@ -266,7 +262,6 @@ class PrpaMt201307Uv02QueryByParameter:
             "name": "parameterList",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(

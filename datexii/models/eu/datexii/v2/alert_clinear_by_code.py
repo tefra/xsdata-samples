@@ -27,7 +27,6 @@ class AlertCLinearByCode(AlertCLinear):
             "name": "alertCDirection",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     location_code_for_linear_location: AlertCLocation = field(
@@ -35,7 +34,6 @@ class AlertCLinearByCode(AlertCLinear):
             "name": "locationCodeForLinearLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     alert_clinear_by_code_extension: None | ExtensionType = field(

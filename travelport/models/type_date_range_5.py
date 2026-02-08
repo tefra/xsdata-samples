@@ -20,13 +20,11 @@ class TypeDateRange5:
         metadata={
             "name": "StartDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     end_date: XmlDate = field(
         metadata={
             "name": "EndDate",
             "type": "Attribute",
-            "required": True,
         }
     )

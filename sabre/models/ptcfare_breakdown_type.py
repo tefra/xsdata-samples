@@ -51,7 +51,6 @@ class PtcfareBreakdownType:
             "name": "PassengerTypeQuantity",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     fare_basis_codes: PtcfareBreakdownType.FareBasisCodes = field(
@@ -59,7 +58,6 @@ class PtcfareBreakdownType:
             "name": "FareBasisCodes",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     passenger_fare: FareType = field(
@@ -67,7 +65,6 @@ class PtcfareBreakdownType:
             "name": "PassengerFare",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     endorsements: None | PtcfareBreakdownType.Endorsements = field(
@@ -189,7 +186,6 @@ class PtcfareBreakdownType:
             value: str = field(
                 default="",
                 metadata={
-                    "required": True,
                     "min_length": 1,
                     "max_length": 16,
                 },
@@ -357,12 +353,7 @@ class PtcfareBreakdownType:
 
         @dataclass(kw_only=True)
         class FareType:
-            value: str = field(
-                default="",
-                metadata={
-                    "required": True,
-                },
-            )
+            value: str = field(default="")
             name: None | str = field(
                 default=None,
                 metadata={
@@ -420,7 +411,6 @@ class PtcfareBreakdownType:
                     "name": "FareReference",
                     "type": "Element",
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
-                    "required": True,
                     "min_length": 1,
                     "max_length": 8,
                 }

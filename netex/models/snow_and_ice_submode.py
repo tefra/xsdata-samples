@@ -13,8 +13,5 @@ class SnowAndIceSubmode:
         namespace = "http://www.netex.org.uk/netex"
 
     value: SnowAndIceSubmodeEnumeration = field(
-        default=SnowAndIceSubmodeEnumeration.UNKNOWN,
-        metadata={
-            "required": True,
-        },
+        default=SnowAndIceSubmodeEnumeration.UNKNOWN
     )

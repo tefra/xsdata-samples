@@ -18,14 +18,12 @@ class TAssociation(TArtifact):
         metadata={
             "name": "sourceRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     target_ref: QName = field(
         metadata={
             "name": "targetRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     association_direction: TAssociationDirection = field(

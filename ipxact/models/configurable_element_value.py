@@ -28,7 +28,6 @@ class ConfigurableElementValue(ComplexBaseExpression):
         metadata={
             "name": "referenceId",
             "type": "Attribute",
-            "required": True,
         }
     )
     id: None | str = field(

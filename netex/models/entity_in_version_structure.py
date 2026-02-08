@@ -194,7 +194,6 @@ class AlternativeTextVersionedChildStructure(VersionedChildStructure):
             "name": "Text",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     attribute_name: None | str = field(
@@ -229,7 +228,6 @@ class OperatingDayVersionStructure(DataManagedObjectStructure):
             "name": "CalendarDate",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     service_calendar_ref: None | ServiceCalendarRef = field(

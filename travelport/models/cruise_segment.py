@@ -39,7 +39,6 @@ class CruiseSegment(Segment1):
         metadata={
             "name": "CruiseStay",
             "type": "Element",
-            "required": True,
         }
     )
     vendor: None | str = field(
@@ -64,7 +63,6 @@ class CruiseSegment(Segment1):
         metadata={
             "name": "Origin",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 5,
         }
@@ -73,7 +71,6 @@ class CruiseSegment(Segment1):
         metadata={
             "name": "Destination",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 5,
         }

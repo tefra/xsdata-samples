@@ -29,11 +29,7 @@ class ModificationTypeEnum:
     class Meta:
         name = "MODIFICATION-TYPE-ENUM"
 
-    value: ModificationTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ModificationTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

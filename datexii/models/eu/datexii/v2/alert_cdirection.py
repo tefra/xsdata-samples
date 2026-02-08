@@ -35,7 +35,6 @@ class AlertCDirection:
             "name": "alertCDirectionCoded",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     alert_cdirection_named: None | MultilingualString = field(

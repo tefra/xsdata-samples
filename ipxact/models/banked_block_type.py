@@ -65,7 +65,6 @@ class BankedBlockType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -103,14 +102,12 @@ class BankedBlockType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     width: UnsignedPositiveIntExpression = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     usage: None | UsageType = field(
@@ -217,7 +214,6 @@ class BankedBlockType:
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                "required": True,
             }
         )
         display_name: None | DisplayName = field(
@@ -263,7 +259,6 @@ class BankedBlockType:
                 "name": "addressOffset",
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                "required": True,
             }
         )
         register_definition_ref: (
@@ -359,16 +354,10 @@ class BankedBlockType:
 
         @dataclass(kw_only=True)
         class RegisterDefinitionRef:
-            value: str = field(
-                default="",
-                metadata={
-                    "required": True,
-                },
-            )
+            value: str = field(default="")
             type_definitions: str = field(
                 metadata={
                     "name": "typeDefinitions",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

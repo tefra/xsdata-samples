@@ -122,7 +122,6 @@ class TimeValueValueVariationPoint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -132,6 +131,5 @@ class TimeValueValueVariationPoint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

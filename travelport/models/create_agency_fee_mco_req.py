@@ -45,7 +45,6 @@ class CreateAgencyFeeMcoReq(BaseReq1):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "required": True,
         }
     )
     form_of_payment: None | FormOfPayment1 = field(
@@ -86,7 +85,6 @@ class CreateAgencyFeeMcoReq(BaseReq1):
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
         }
     )
     location_code: None | str = field(

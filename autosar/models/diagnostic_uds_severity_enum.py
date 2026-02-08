@@ -30,11 +30,7 @@ class DiagnosticUdsSeverityEnum:
     class Meta:
         name = "DIAGNOSTIC-UDS-SEVERITY-ENUM"
 
-    value: DiagnosticUdsSeverityEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticUdsSeverityEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -69,7 +69,6 @@ class LocationStructure1:
     class Longitude:
         value: Decimal = field(
             metadata={
-                "required": True,
                 "min_inclusive": Decimal("-180"),
                 "max_inclusive": Decimal("180"),
             }
@@ -79,7 +78,6 @@ class LocationStructure1:
     class Latitude:
         value: Decimal = field(
             metadata={
-                "required": True,
                 "min_inclusive": Decimal("-90"),
                 "max_inclusive": Decimal("90"),
             }

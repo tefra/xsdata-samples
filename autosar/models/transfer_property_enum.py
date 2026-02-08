@@ -28,11 +28,7 @@ class TransferPropertyEnum:
     class Meta:
         name = "TRANSFER-PROPERTY-ENUM"
 
-    value: TransferPropertyEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TransferPropertyEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

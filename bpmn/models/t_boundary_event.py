@@ -24,6 +24,5 @@ class TBoundaryEvent(TCatchEvent):
         metadata={
             "name": "attachedToRef",
             "type": "Attribute",
-            "required": True,
         }
     )

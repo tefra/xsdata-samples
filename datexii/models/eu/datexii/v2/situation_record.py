@@ -91,7 +91,6 @@ class SituationRecord:
             "name": "situationRecordCreationTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     situation_record_observation_time: None | XmlDateTime = field(
@@ -107,7 +106,6 @@ class SituationRecord:
             "name": "situationRecordVersionTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     situation_record_first_supplier_version_time: None | XmlDateTime = field(
@@ -131,7 +129,6 @@ class SituationRecord:
             "name": "probabilityOfOccurrence",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     severity: None | SeverityEnum = field(
@@ -152,7 +149,6 @@ class SituationRecord:
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     impact: None | Impact = field(
@@ -198,7 +194,6 @@ class SituationRecord:
             "name": "groupOfLocations",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     management: None | Management = field(
@@ -219,12 +214,10 @@ class SituationRecord:
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     version: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -30,11 +30,7 @@ class CsTransformerErrorReactionEnum:
     class Meta:
         name = "CS-TRANSFORMER-ERROR-REACTION-ENUM"
 
-    value: CsTransformerErrorReactionEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: CsTransformerErrorReactionEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

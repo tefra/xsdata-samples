@@ -14,8 +14,4 @@ class AllVehicleModes:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: AllVehicleModesOfTransportEnumeration = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: AllVehicleModesOfTransportEnumeration = field()

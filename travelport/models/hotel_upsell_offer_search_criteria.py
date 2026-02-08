@@ -28,6 +28,5 @@ class HotelUpsellOfferSearchCriteria:
         metadata={
             "name": "RatePlanType",
             "type": "Attribute",
-            "required": True,
         }
     )

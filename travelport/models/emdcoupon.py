@@ -70,14 +70,12 @@ class Emdcoupon:
         metadata={
             "name": "Number",
             "type": "Attribute",
-            "required": True,
         }
     )
     status: str = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )
     svc_description: None | str = field(
@@ -98,7 +96,6 @@ class Emdcoupon:
         metadata={
             "name": "RFIC",
             "type": "Attribute",
-            "required": True,
             "length": 1,
         }
     )

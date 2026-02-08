@@ -94,6 +94,5 @@ class NvDataPortAnnotation:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

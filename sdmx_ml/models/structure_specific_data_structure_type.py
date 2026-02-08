@@ -28,14 +28,12 @@ class StructureSpecificDataStructureType(DataStructureTypeAbstract):
     namespace: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     dimension_at_observation: str | ObsDimensionsCodeType = field(
         metadata={
             "name": "dimensionAtObservation",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[A-Za-z][A-Za-z0-9_\-]*",
         }
     )

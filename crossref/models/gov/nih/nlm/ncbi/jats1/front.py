@@ -23,14 +23,12 @@ class Front:
         metadata={
             "name": "journal-meta",
             "type": "Element",
-            "required": True,
         }
     )
     article_meta: ArticleMeta = field(
         metadata={
             "name": "article-meta",
             "type": "Element",
-            "required": True,
         }
     )
     notes: None | Notes = field(

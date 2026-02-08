@@ -24,7 +24,6 @@ class ClaimType:
             "name": "ClaimNumber",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     policy_number: str = field(
@@ -32,7 +31,6 @@ class ClaimType:
             "name": "PolicyNumber",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     status: str = field(
@@ -40,7 +38,6 @@ class ClaimType:
             "name": "Status",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     source: str = field(
@@ -48,7 +45,6 @@ class ClaimType:
             "name": "Source",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     contact: str = field(
@@ -56,7 +52,6 @@ class ClaimType:
             "name": "Contact",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     interest: None | str = field(
@@ -72,7 +67,6 @@ class ClaimType:
             "name": "DateOpen",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     date_last_transaction: DateTimeType = field(
@@ -80,7 +74,6 @@ class ClaimType:
             "name": "DateLastTransaction",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     date_of_loss: None | DateTimeType = field(
@@ -104,7 +97,6 @@ class ClaimType:
             "name": "DateLastUpdated",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     last_update_by: str = field(
@@ -112,7 +104,6 @@ class ClaimType:
             "name": "LastUpdateBy",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     adjuster: None | str = field(
@@ -168,7 +159,6 @@ class ClaimType:
             "name": "Currency",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     deductibles: AmountType = field(
@@ -176,7 +166,6 @@ class ClaimType:
             "name": "Deductibles",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     paid_claim: AmountType = field(
@@ -184,7 +173,6 @@ class ClaimType:
             "name": "PaidClaim",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     paid_vendor_fee: AmountType = field(
@@ -192,7 +180,6 @@ class ClaimType:
             "name": "PaidVendorFee",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     recovery_reserve: None | AmountType = field(
@@ -208,7 +195,6 @@ class ClaimType:
             "name": "ClaimReserve",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     vendor_fee_reserve: AmountType = field(
@@ -216,7 +202,6 @@ class ClaimType:
             "name": "VendorFeeReserve",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     total_incurred: None | AmountType = field(

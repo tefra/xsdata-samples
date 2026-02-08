@@ -37,7 +37,6 @@ class TpegFramedPoint(TpegPointLocation):
             "name": "tpegFramedPointLocationType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     framed_point: TpegNonJunctionPoint = field(
@@ -45,14 +44,12 @@ class TpegFramedPoint(TpegPointLocation):
             "name": "framedPoint",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     to: TpegPoint = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     from_value: TpegPoint = field(
@@ -60,7 +57,6 @@ class TpegFramedPoint(TpegPointLocation):
             "name": "from",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     tpeg_framed_point_extension: None | ExtensionType = field(

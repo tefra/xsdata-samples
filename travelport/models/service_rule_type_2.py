@@ -87,7 +87,6 @@ class ServiceRuleType2:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -292,7 +291,6 @@ class ServiceRuleType2:
                 metadata={
                     "name": "Modification",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
             automatically_applied_on_add: bool = field(
@@ -380,6 +378,5 @@ class ServiceRuleType2:
                 metadata={
                     "name": "SecondaryType",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

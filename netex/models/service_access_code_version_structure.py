@@ -22,7 +22,6 @@ class ServiceAccessCodeVersionStructure(TravelDocumentVersionStructure):
             "name": "AccessCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     expiry_date: None | XmlDateTime = field(

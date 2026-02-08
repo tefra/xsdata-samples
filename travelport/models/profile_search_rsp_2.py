@@ -62,6 +62,5 @@ class ProfileSearchRsp2(BaseRsp5):
         metadata={
             "name": "MoreResults",
             "type": "Attribute",
-            "required": True,
         }
     )

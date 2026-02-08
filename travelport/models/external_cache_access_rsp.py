@@ -35,16 +35,10 @@ class ExternalCacheAccessRsp(BaseRsp3):
             Cache entry key
         """
 
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         key: str = field(
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )

@@ -19,12 +19,7 @@ class CompanyNameType:
             such as DUNS, IATA or internal code, etc.
     """
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     company_short_name: None | str = field(
         default=None,
         metadata={

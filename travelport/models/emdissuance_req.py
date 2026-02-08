@@ -51,7 +51,6 @@ class EmdissuanceReq(BaseReq1):
             "name": "ProviderReservationDetail",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "required": True,
         }
     )
     ticket_number: None | TicketNumber1 = field(
@@ -80,7 +79,6 @@ class EmdissuanceReq(BaseReq1):
         metadata={
             "name": "UniversalRecordLocatorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         }

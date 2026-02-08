@@ -118,7 +118,6 @@ class CanTpNode:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | CanTpNode.ShortNameFragments = field(
@@ -284,7 +283,6 @@ class CanTpNode:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -294,6 +292,5 @@ class CanTpNode:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

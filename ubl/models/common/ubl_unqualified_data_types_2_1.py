@@ -36,38 +36,22 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True, kw_only=True)
 class DateTimeType:
-    value: XmlDateTime = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: XmlDateTime = field()
 
 
 @dataclass(frozen=True, kw_only=True)
 class DateType:
-    value: XmlDate = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: XmlDate = field()
 
 
 @dataclass(frozen=True, kw_only=True)
 class IndicatorType:
-    value: bool = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: bool = field()
 
 
 @dataclass(frozen=True, kw_only=True)
 class TimeType:
-    value: XmlTime = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: XmlTime = field()
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -76,7 +60,6 @@ class AmountType(CctsCctSchemaModule21AmountType):
         metadata={
             "name": "currencyID",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -87,7 +70,6 @@ class BinaryObjectType(CctsCctSchemaModule21BinaryObjectType):
         metadata={
             "name": "mimeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -103,7 +85,6 @@ class GraphicType(CctsCctSchemaModule21BinaryObjectType):
         metadata={
             "name": "mimeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -119,7 +100,6 @@ class MeasureType(CctsCctSchemaModule21MeasureType):
         metadata={
             "name": "unitCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -145,7 +125,6 @@ class PictureType(CctsCctSchemaModule21BinaryObjectType):
         metadata={
             "name": "mimeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -166,7 +145,6 @@ class SoundType(CctsCctSchemaModule21BinaryObjectType):
         metadata={
             "name": "mimeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -187,6 +165,5 @@ class VideoType(CctsCctSchemaModule21BinaryObjectType):
         metadata={
             "name": "mimeCode",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -30,7 +30,6 @@ class TotalPremiumType:
             "name": "WarrantyAppliesAfterDays",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     ppwbasis: None | WarrantyEnum = field(
@@ -54,7 +53,6 @@ class TotalPremiumType:
             "name": "Currency",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     premiums: None | TotalPremiumTypePremiums = field(

@@ -269,7 +269,6 @@ class CoctMt090000Uv01LicensedEntity:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -338,7 +337,6 @@ class CoctMt090000Uv01RoleOther:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -569,7 +567,6 @@ class CoctMt090000Uv01Device:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -677,7 +674,6 @@ class CoctMt090000Uv01Organization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -922,6 +918,5 @@ class CoctMt090000Uv01AssignedEntity:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )

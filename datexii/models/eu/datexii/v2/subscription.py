@@ -62,7 +62,6 @@ class Subscription:
             "name": "operatingMode",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     subscription_start_time: XmlDateTime = field(
@@ -70,7 +69,6 @@ class Subscription:
             "name": "subscriptionStartTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     subscription_state: SubscriptionStateEnum = field(
@@ -78,7 +76,6 @@ class Subscription:
             "name": "subscriptionState",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     subscription_stop_time: None | XmlDateTime = field(
@@ -94,7 +91,6 @@ class Subscription:
             "name": "updateMethod",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     target: list[Target] = field(

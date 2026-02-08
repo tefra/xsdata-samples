@@ -34,7 +34,6 @@ class TimingConstraint:
 
     value: float = field(
         metadata={
-            "required": True,
             "min_inclusive": 0.0,
             "max_inclusive": 100.0,
         }
@@ -57,7 +56,6 @@ class TimingConstraint:
         metadata={
             "name": "clockName",
             "type": "Attribute",
-            "required": True,
             "white_space": "collapse",
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
         }

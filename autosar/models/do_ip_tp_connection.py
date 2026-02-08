@@ -99,7 +99,6 @@ class DoIpTpConnection:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -109,7 +108,6 @@ class DoIpTpConnection:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -119,6 +117,5 @@ class DoIpTpConnection:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

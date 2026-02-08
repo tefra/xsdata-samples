@@ -12,7 +12,6 @@ class CapabilityGeneralInteractionStructure:
             "name": "Interaction",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
         }
     )
     delivery: CapabilityGeneralInteractionStructure.Delivery = field(
@@ -20,7 +19,6 @@ class CapabilityGeneralInteractionStructure:
             "name": "Delivery",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
         }
     )
     multipart_despatch: bool = field(
@@ -29,7 +27,6 @@ class CapabilityGeneralInteractionStructure:
             "name": "MultipartDespatch",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
         },
     )
     multiple_subscriber_filter: bool = field(
@@ -38,7 +35,6 @@ class CapabilityGeneralInteractionStructure:
             "name": "MultipleSubscriberFilter",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
         },
     )
     has_confirm_delivery: bool = field(
@@ -47,7 +43,6 @@ class CapabilityGeneralInteractionStructure:
             "name": "HasConfirmDelivery",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
         },
     )
     has_heartbeat: bool = field(
@@ -56,7 +51,6 @@ class CapabilityGeneralInteractionStructure:
             "name": "HasHeartbeat",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
         },
     )
     visit_numberis_order: None | bool = field(
@@ -76,7 +70,6 @@ class CapabilityGeneralInteractionStructure:
                 "name": "RequestResponse",
                 "type": "Element",
                 "namespace": "http://www.siri.org.uk/siri",
-                "required": True,
             },
         )
         publish_subscribe: bool = field(
@@ -85,7 +78,6 @@ class CapabilityGeneralInteractionStructure:
                 "name": "PublishSubscribe",
                 "type": "Element",
                 "namespace": "http://www.siri.org.uk/siri",
-                "required": True,
             },
         )
 
@@ -96,7 +88,6 @@ class CapabilityGeneralInteractionStructure:
                 "name": "DirectDelivery",
                 "type": "Element",
                 "namespace": "http://www.siri.org.uk/siri",
-                "required": True,
             }
         )
         fetched_delivery: bool = field(
@@ -104,6 +95,5 @@ class CapabilityGeneralInteractionStructure:
                 "name": "FetchedDelivery",
                 "type": "Element",
                 "namespace": "http://www.siri.org.uk/siri",
-                "required": True,
             }
         )

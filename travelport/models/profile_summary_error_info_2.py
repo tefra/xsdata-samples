@@ -72,21 +72,18 @@ class ProfileSummaryErrorInfo2(TypeErrorInfo5):
             metadata={
                 "name": "ProfileID",
                 "type": "Attribute",
-                "required": True,
             }
         )
         profile_type: TypeProfileType7 = field(
             metadata={
                 "name": "ProfileType",
                 "type": "Attribute",
-                "required": True,
             }
         )
         name: str = field(
             metadata={
                 "name": "Name",
                 "type": "Attribute",
-                "required": True,
             }
         )
         description: None | str = field(

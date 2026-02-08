@@ -32,14 +32,12 @@ class LegDetail:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     origin_airport: str = field(
         metadata={
             "name": "OriginAirport",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -48,7 +46,6 @@ class LegDetail:
         metadata={
             "name": "DestinationAirport",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -57,7 +54,6 @@ class LegDetail:
         metadata={
             "name": "Carrier",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )

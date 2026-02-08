@@ -57,7 +57,6 @@ class AirCancelReq(BaseReq1):
             "name": "AirReservationLocatorCode",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-            "required": True,
         }
     )
     air_segment: list[AirSegment] = field(
@@ -90,6 +89,5 @@ class AirCancelReq(BaseReq1):
         metadata={
             "name": "Version",
             "type": "Attribute",
-            "required": True,
         }
     )

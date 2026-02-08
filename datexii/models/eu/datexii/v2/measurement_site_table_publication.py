@@ -23,7 +23,6 @@ class MeasurementSiteTablePublication(PayloadPublication):
             "name": "headerInformation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     measurement_site_table: list[MeasurementSiteTable] = field(

@@ -120,7 +120,6 @@ class SwcToEcuMapping:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | SwcToEcuMapping.ShortNameFragments = field(
@@ -291,7 +290,6 @@ class SwcToEcuMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -301,7 +299,6 @@ class SwcToEcuMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -311,7 +308,6 @@ class SwcToEcuMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -321,6 +317,5 @@ class SwcToEcuMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

@@ -12,9 +12,4 @@ class AirSubmode:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: AirSubmodeEnumeration = field(
-        default=AirSubmodeEnumeration.UNKNOWN,
-        metadata={
-            "required": True,
-        },
-    )
+    value: AirSubmodeEnumeration = field(default=AirSubmodeEnumeration.UNKNOWN)

@@ -31,21 +31,18 @@ class SponsoredFltInfo:
         metadata={
             "name": "SponsoredLNB",
             "type": "Attribute",
-            "required": True,
         }
     )
     neutral_lnb: int = field(
         metadata={
             "name": "NeutralLNB",
             "type": "Attribute",
-            "required": True,
         }
     )
     flt_key: str = field(
         metadata={
             "name": "FltKey",
             "type": "Attribute",
-            "required": True,
             "max_length": 5,
         }
     )

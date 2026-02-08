@@ -14,14 +14,12 @@ class TradingPartnerUserDeletion:
         metadata={
             "name": "TradingPartnerOrganizationReference",
             "type": "Element",
-            "required": True,
         }
     )
     user_id: UserId = field(
         metadata={
             "name": "UserID",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -45,7 +43,6 @@ class TradingPartnerUserDelete:
             metadata={
                 "name": "ListOfTradingPartnerUserDeletion",
                 "type": "Element",
-                "required": True,
             }
         )
     )

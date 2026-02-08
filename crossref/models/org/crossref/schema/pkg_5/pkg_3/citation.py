@@ -26,7 +26,6 @@ class Citation(CitationT):
     key: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
             "white_space": "collapse",

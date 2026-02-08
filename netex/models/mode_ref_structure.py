@@ -15,6 +15,5 @@ class ModeRefStructure(SubmodeRefStructure):
     mode: AllVehicleModesOfTransportEnumeration = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

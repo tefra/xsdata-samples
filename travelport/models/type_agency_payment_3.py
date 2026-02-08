@@ -27,7 +27,6 @@ class TypeAgencyPayment3:
         metadata={
             "name": "AgencyBillingIdentifier",
             "type": "Attribute",
-            "required": True,
             "max_length": 128,
         }
     )

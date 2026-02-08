@@ -29,7 +29,6 @@ class TitleGroup:
         metadata={
             "name": "article-title",
             "type": "Element",
-            "required": True,
         }
     )
     subtitle: list[Subtitle] = field(

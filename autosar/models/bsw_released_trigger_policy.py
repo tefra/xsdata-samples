@@ -84,6 +84,5 @@ class BswReleasedTriggerPolicy:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

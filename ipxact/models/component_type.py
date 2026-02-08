@@ -92,28 +92,24 @@ class ComponentType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     library: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     version: str = field(
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     display_name: None | str = field(
@@ -334,7 +330,6 @@ class ComponentType:
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                    "required": True,
                 }
             )
             display_name: None | DisplayName = field(
@@ -428,7 +423,6 @@ class ComponentType:
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                    "required": True,
                 }
             )
             display_name: None | DisplayName = field(
@@ -510,7 +504,6 @@ class ComponentType:
                     metadata={
                         "type": "Element",
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                        "required": True,
                     }
                 )
                 display_name: None | DisplayName = field(
@@ -541,7 +534,6 @@ class ComponentType:
                         "name": "portRef",
                         "type": "Element",
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                        "required": True,
                     }
                 )
                 sub_port_reference: list[SubPortReference] = field(
@@ -574,7 +566,6 @@ class ComponentType:
                         metadata={
                             "name": "portRef",
                             "type": "Attribute",
-                            "required": True,
                             "white_space": "collapse",
                             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
                         }
@@ -604,7 +595,6 @@ class ComponentType:
                     metadata={
                         "type": "Element",
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                        "required": True,
                     }
                 )
                 display_name: None | DisplayName = field(
@@ -671,7 +661,6 @@ class ComponentType:
                         "name": "addressBlockRef",
                         "type": "Element",
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                        "required": True,
                     }
                 )
                 register_file_ref: list[RegisterFileRef] = field(
@@ -687,7 +676,6 @@ class ComponentType:
                         "name": "registerRef",
                         "type": "Element",
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                        "required": True,
                     }
                 )
                 alternate_register_ref: None | AlternateRegisterRef = field(
@@ -703,7 +691,6 @@ class ComponentType:
                         "name": "fieldRef",
                         "type": "Element",
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                        "required": True,
                     }
                 )
                 range: None | Range = field(
@@ -727,7 +714,6 @@ class ComponentType:
                         metadata={
                             "name": "addressSpaceRef",
                             "type": "Attribute",
-                            "required": True,
                         }
                     )
 
@@ -737,7 +723,6 @@ class ComponentType:
                         metadata={
                             "name": "memoryMapRef",
                             "type": "Attribute",
-                            "required": True,
                         }
                     )
 
@@ -810,7 +795,6 @@ class ComponentType:
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                    "required": True,
                 }
             )
             display_name: None | DisplayName = field(
@@ -840,14 +824,12 @@ class ComponentType:
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                    "required": True,
                 }
             )
             width: UnsignedPositiveIntExpression = field(
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                    "required": True,
                 }
             )
             regions: None | ComponentType.Cpus.Cpu.Regions = field(
@@ -878,7 +860,6 @@ class ComponentType:
                     "name": "memoryMapRef",
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                    "required": True,
                 }
             )
             parameters: None | Parameters = field(
@@ -940,7 +921,6 @@ class ComponentType:
                         metadata={
                             "type": "Element",
                             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                            "required": True,
                         }
                     )
                     display_name: None | DisplayName = field(
@@ -971,14 +951,12 @@ class ComponentType:
                             "name": "addressOffset",
                             "type": "Element",
                             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                            "required": True,
                         }
                     )
                     range: UnsignedPositiveLongintExpression = field(
                         metadata={
                             "type": "Element",
                             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                            "required": True,
                         }
                     )
                     vendor_extensions: None | VendorExtensions = field(
@@ -1028,7 +1006,6 @@ class ComponentType:
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                    "required": True,
                 }
             )
             display_name: None | DisplayName = field(

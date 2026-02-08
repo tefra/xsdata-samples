@@ -72,6 +72,5 @@ class ApplicationEndpointRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

@@ -96,7 +96,6 @@ class FixedField:
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
         }
     )
     label: None | str = field(
@@ -166,7 +165,6 @@ class FixedField:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -175,7 +173,6 @@ class FixedField:
         metadata={
             "name": "DataType",
             "type": "Attribute",
-            "required": True,
         }
     )
     component: None | str = field(
@@ -213,7 +210,6 @@ class FixedField:
         metadata={
             "name": "Searchable",
             "type": "Attribute",
-            "required": True,
         }
     )
     inheritable: bool = field(

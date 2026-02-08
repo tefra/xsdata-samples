@@ -27,7 +27,6 @@ class AlertCLinear:
             "name": "alertCLocationCountryCode",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
             "max_length": 1024,
         }
     )
@@ -36,7 +35,6 @@ class AlertCLinear:
             "name": "alertCLocationTableNumber",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
             "max_length": 1024,
         }
     )
@@ -45,7 +43,6 @@ class AlertCLinear:
             "name": "alertCLocationTableVersion",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
             "max_length": 1024,
         }
     )

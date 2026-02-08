@@ -77,7 +77,6 @@ class AirUpsellQualify:
         metadata={
             "name": "Carrier",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -85,7 +84,6 @@ class AirUpsellQualify:
         metadata={
             "name": "EffectiveDate",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^:Z].*",
         }
     )
@@ -93,7 +91,6 @@ class AirUpsellQualify:
         metadata={
             "name": "ExpirationDate",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^:Z].*",
         }
     )

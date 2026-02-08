@@ -17,13 +17,11 @@ class TConversationAssociation(TBaseElement):
         metadata={
             "name": "innerConversationNodeRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     outer_conversation_node_ref: QName = field(
         metadata={
             "name": "outerConversationNodeRef",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -267,7 +267,6 @@ class CoctMt090400UvLicensedEntity:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -336,7 +335,6 @@ class CoctMt090400UvRoleOther:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -549,7 +547,6 @@ class CoctMt090400UvOrganization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -783,6 +780,5 @@ class CoctMt090400UvAssignedParty:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )

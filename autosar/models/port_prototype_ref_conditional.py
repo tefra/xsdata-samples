@@ -72,6 +72,5 @@ class PortPrototypeRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

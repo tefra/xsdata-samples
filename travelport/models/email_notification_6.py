@@ -44,6 +44,5 @@ class EmailNotification6:
         metadata={
             "name": "Recipients",
             "type": "Attribute",
-            "required": True,
         }
     )

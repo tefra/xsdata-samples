@@ -28,7 +28,6 @@ class TpegAreaLocation:
             "name": "tpegAreaLocationType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     tpeg_height: None | TpegHeight = field(

@@ -84,7 +84,6 @@ class CatalogueItemSpecificationUpdateType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     uuid: None | Uuid = field(
@@ -108,7 +107,6 @@ class CatalogueItemSpecificationUpdateType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -180,7 +178,6 @@ class CatalogueItemSpecificationUpdateType:
             "name": "RelatedCatalogueReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     referenced_contract: tuple[ReferencedContract, ...] = field(
@@ -204,7 +201,6 @@ class CatalogueItemSpecificationUpdateType:
             "name": "ProviderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     receiver_party: ReceiverParty = field(
@@ -212,7 +208,6 @@ class CatalogueItemSpecificationUpdateType:
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     seller_supplier_party: None | SellerSupplierParty = field(

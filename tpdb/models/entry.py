@@ -8,8 +8,4 @@ class Entry:
     class Meta:
         name = "entry"
 
-    value: int = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: int = field()

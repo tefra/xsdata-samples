@@ -45,7 +45,6 @@ class UimetaDataCreateReq(BaseReq2):
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-            "required": True,
         }
     )
     description: None | str = field(

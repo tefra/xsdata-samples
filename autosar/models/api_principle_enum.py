@@ -29,11 +29,7 @@ class ApiPrincipleEnum:
     class Meta:
         name = "API-PRINCIPLE-ENUM"
 
-    value: ApiPrincipleEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ApiPrincipleEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

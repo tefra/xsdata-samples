@@ -8,9 +8,4 @@ class Ofc:
     class Meta:
         name = "ofc"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

@@ -30,11 +30,7 @@ class DiagnosticDebounceBehaviorEnum:
     class Meta:
         name = "DIAGNOSTIC-DEBOUNCE-BEHAVIOR-ENUM"
 
-    value: DiagnosticDebounceBehaviorEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticDebounceBehaviorEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

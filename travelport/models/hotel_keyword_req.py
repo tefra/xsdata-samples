@@ -52,7 +52,6 @@ class HotelKeywordReq(BaseReq1):
         metadata={
             "name": "HotelChain",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )

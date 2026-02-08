@@ -35,7 +35,6 @@ class DeltaStructure:
             "name": "ToVersionRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     modification: None | ModificationEnumeration = field(

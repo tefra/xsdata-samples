@@ -124,7 +124,6 @@ class HwElement:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | HwElement.ShortNameFragments = field(
@@ -290,7 +289,6 @@ class HwElement:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -311,7 +309,6 @@ class HwElement:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 

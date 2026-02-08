@@ -78,7 +78,6 @@ class TransportProgressStatusType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     copy_indicator: None | CopyIndicator = field(
@@ -102,7 +101,6 @@ class TransportProgressStatusType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: IssueTime = field(
@@ -110,7 +108,6 @@ class TransportProgressStatusType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     note: tuple[Note, ...] = field(
@@ -176,7 +173,6 @@ class TransportProgressStatusType:
             "name": "TransportMeans",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     transport_schedule: tuple[TransportSchedule, ...] = field(

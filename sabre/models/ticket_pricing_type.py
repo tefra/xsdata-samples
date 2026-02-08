@@ -34,7 +34,6 @@ class TicketPricingType:
                 "name": "OriginDestinationOptions",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "required": True,
             }
         )
     )
@@ -43,7 +42,6 @@ class TicketPricingType:
             "name": "AirItineraryPricingInfo",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     notes: list[FreeTextType] = field(
@@ -75,7 +73,6 @@ class TicketPricingType:
         metadata={
             "name": "Number",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -128,7 +125,6 @@ class TicketPricingType:
                         "name": "DepartureAirport",
                         "type": "Element",
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
-                        "required": True,
                     }
                 )
                 arrival_airport: ResponseLocationType = field(
@@ -136,14 +132,12 @@ class TicketPricingType:
                         "name": "ArrivalAirport",
                         "type": "Element",
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
-                        "required": True,
                     }
                 )
                 departure_date_time: str = field(
                     metadata={
                         "name": "DepartureDateTime",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
 
@@ -180,7 +174,6 @@ class TicketPricingType:
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
-                    "required": True,
                     "min_length": 1,
                     "max_length": 8,
                 }

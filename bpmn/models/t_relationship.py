@@ -34,7 +34,6 @@ class TRelationship(TBaseElement):
         metadata={
             "name": "type",
             "type": "Attribute",
-            "required": True,
         }
     )
     direction: None | TRelationshipDirection = field(

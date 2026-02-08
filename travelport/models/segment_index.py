@@ -14,8 +14,4 @@ class SegmentIndex:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    value: int = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: int = field()

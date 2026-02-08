@@ -29,11 +29,7 @@ class ArraySizeHandlingEnum:
     class Meta:
         name = "ARRAY-SIZE-HANDLING-ENUM"
 
-    value: ArraySizeHandlingEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ArraySizeHandlingEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

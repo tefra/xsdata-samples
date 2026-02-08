@@ -40,7 +40,6 @@ class FareRuleLookup:
         metadata={
             "name": "Origin",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -49,7 +48,6 @@ class FareRuleLookup:
         metadata={
             "name": "Destination",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -58,7 +56,6 @@ class FareRuleLookup:
         metadata={
             "name": "Carrier",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -66,14 +63,12 @@ class FareRuleLookup:
         metadata={
             "name": "FareBasis",
             "type": "Attribute",
-            "required": True,
         }
     )
     provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }

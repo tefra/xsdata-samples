@@ -237,7 +237,6 @@ class TypeBaseAirSegment(Segment1):
         metadata={
             "name": "Group",
             "type": "Attribute",
-            "required": True,
         }
     )
     carrier: None | str = field(
@@ -267,7 +266,6 @@ class TypeBaseAirSegment(Segment1):
         metadata={
             "name": "Origin",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -276,7 +274,6 @@ class TypeBaseAirSegment(Segment1):
         metadata={
             "name": "Destination",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }

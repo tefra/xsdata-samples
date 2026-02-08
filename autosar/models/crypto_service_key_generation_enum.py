@@ -32,11 +32,7 @@ class CryptoServiceKeyGenerationEnum:
     class Meta:
         name = "CRYPTO-SERVICE-KEY-GENERATION-ENUM"
 
-    value: CryptoServiceKeyGenerationEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: CryptoServiceKeyGenerationEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

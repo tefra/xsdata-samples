@@ -36,13 +36,11 @@ class Anonymous:
     sequence: AnonymousSequence = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     contributor_role: AnonymousContributorRole = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     name_style: None | AnonymousNameStyle = field(

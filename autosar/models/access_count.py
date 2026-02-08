@@ -86,6 +86,5 @@ class AccessCount:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

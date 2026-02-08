@@ -47,7 +47,6 @@ class FlightOption:
         metadata={
             "name": "Origin",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -56,7 +55,6 @@ class FlightOption:
         metadata={
             "name": "Destination",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }

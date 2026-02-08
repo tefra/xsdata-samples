@@ -39,7 +39,6 @@ class TypePhone1(TypeTckeyElement):
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     country: None | str = field(
@@ -62,7 +61,6 @@ class TypePhone1(TypeTckeyElement):
         metadata={
             "name": "LocalNumber",
             "type": "Attribute",
-            "required": True,
             "max_length": 50,
         }
     )

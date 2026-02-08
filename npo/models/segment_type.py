@@ -28,14 +28,12 @@ class SegmentType(BaseMediaType):
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-            "required": True,
         }
     )
     mid_ref: str = field(
         metadata={
             "name": "midRef",
             "type": "Attribute",
-            "required": True,
             "min_length": 4,
             "max_length": 255,
             "pattern": r"[ \.a-zA-Z0-9_-]+",
@@ -45,13 +43,11 @@ class SegmentType(BaseMediaType):
         metadata={
             "name": "urnRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     type_value: SegmentTypeEnum = field(
         metadata={
             "name": "type",
             "type": "Attribute",
-            "required": True,
         }
     )

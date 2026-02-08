@@ -23,7 +23,6 @@ class OpenlrRectangle:
             "name": "openlrLowerLeft",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_upper_right: PointCoordinates = field(
@@ -31,7 +30,6 @@ class OpenlrRectangle:
             "name": "openlrUpperRight",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_rectangle_extension: None | ExtensionType = field(

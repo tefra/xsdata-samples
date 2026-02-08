@@ -8,9 +8,4 @@ class Bib:
     class Meta:
         name = "bib"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

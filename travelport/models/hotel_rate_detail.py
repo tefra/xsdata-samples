@@ -218,7 +218,6 @@ class HotelRateDetail:
         metadata={
             "name": "RatePlanType",
             "type": "Attribute",
-            "required": True,
         }
     )
     base: None | str = field(

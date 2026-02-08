@@ -22,6 +22,5 @@ class Noisbn:
     reason: NoisbnReason = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

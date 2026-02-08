@@ -28,11 +28,7 @@ class BswInterruptCategory:
     class Meta:
         name = "BSW-INTERRUPT-CATEGORY"
 
-    value: BswInterruptCategorySimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: BswInterruptCategorySimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -20,7 +20,6 @@ class Day:
 
     value: int = field(
         metadata={
-            "required": True,
             "min_inclusive": 1,
             "max_inclusive": 31,
             "total_digits": 2,

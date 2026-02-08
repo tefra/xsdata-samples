@@ -108,6 +108,5 @@ class UdpNmClusterCoupling:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

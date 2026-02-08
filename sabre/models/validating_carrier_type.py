@@ -40,7 +40,6 @@ class ValidatingCarrierType:
             metadata={
                 "name": "Code",
                 "type": "Attribute",
-                "required": True,
                 "pattern": r"[0-9A-Z]{2,3}",
             }
         )
@@ -48,6 +47,5 @@ class ValidatingCarrierType:
             metadata={
                 "name": "Level",
                 "type": "Attribute",
-                "required": True,
             }
         )

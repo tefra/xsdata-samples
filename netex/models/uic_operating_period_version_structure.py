@@ -17,6 +17,5 @@ class UicOperatingPeriodVersionStructure(OperatingPeriodVersionStructure):
             "name": "ValidDayBits",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

@@ -116,7 +116,6 @@ class J1939TpPg:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -137,7 +136,6 @@ class J1939TpPg:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -147,6 +145,5 @@ class J1939TpPg:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

@@ -18,6 +18,5 @@ class AlternateLocationDistanceRef:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

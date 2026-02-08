@@ -42,7 +42,6 @@ class OverrideDefinition:
         metadata={
             "name": "TemplateFieldID",
             "type": "Attribute",
-            "required": True,
         }
     )
     hide: bool = field(

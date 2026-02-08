@@ -47,7 +47,6 @@ class SubPortType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
             "white_space": "collapse",
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
         }
@@ -185,7 +184,6 @@ class PortStructuredType:
             "name": "structPortTypeDefs",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     packed: bool = field(

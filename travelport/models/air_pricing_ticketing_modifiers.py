@@ -30,6 +30,5 @@ class AirPricingTicketingModifiers:
         metadata={
             "name": "TicketingModifiers",
             "type": "Element",
-            "required": True,
         }
     )

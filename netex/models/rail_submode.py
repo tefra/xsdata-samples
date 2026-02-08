@@ -13,8 +13,5 @@ class RailSubmode:
         namespace = "http://www.netex.org.uk/netex"
 
     value: RailSubmodeEnumeration = field(
-        default=RailSubmodeEnumeration.UNKNOWN,
-        metadata={
-            "required": True,
-        },
+        default=RailSubmodeEnumeration.UNKNOWN
     )

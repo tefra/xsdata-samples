@@ -14,13 +14,11 @@ class EpochMapType(EpochMapBaseType):
         metadata={
             "name": "basePeriod",
             "type": "Attribute",
-            "required": True,
         }
     )
     epoch_period: EpochPeriodType = field(
         metadata={
             "name": "epochPeriod",
             "type": "Attribute",
-            "required": True,
         }
     )

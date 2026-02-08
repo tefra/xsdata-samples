@@ -68,7 +68,6 @@ class LParagraph:
         metadata={
             "name": "L",
             "type": "Attribute",
-            "required": True,
         }
     )
     content: list[object] = field(
@@ -153,7 +152,6 @@ class LParagraph:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

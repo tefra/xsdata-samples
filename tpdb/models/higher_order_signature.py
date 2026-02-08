@@ -33,7 +33,6 @@ class HigherOrderSignature:
             metadata={
                 "name": "functionSymbolTypeInfo",
                 "type": "Element",
-                "required": True,
             }
         )
     )

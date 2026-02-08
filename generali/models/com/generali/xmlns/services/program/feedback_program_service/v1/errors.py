@@ -20,6 +20,5 @@ class Errors:
         metadata={
             "name": "ErrorItem",
             "type": "Element",
-            "required": True,
         }
     )

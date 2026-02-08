@@ -19,7 +19,6 @@ class UpsellSearchCriteria:
             "name": "EffectiveDate",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/util_v52_0",
-            "required": True,
         }
     )
     expiration_date: ExpirationDate = field(
@@ -27,6 +26,5 @@ class UpsellSearchCriteria:
             "name": "ExpirationDate",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/util_v52_0",
-            "required": True,
         }
     )

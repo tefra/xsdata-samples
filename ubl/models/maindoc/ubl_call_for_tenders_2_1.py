@@ -107,7 +107,6 @@ class CallForTendersType:
             "name": "ContractFolderID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     approval_date: None | ApprovalDate = field(
@@ -123,7 +122,6 @@ class CallForTendersType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -197,7 +195,6 @@ class CallForTendersType:
             "name": "ContractingParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     originator_customer_party: tuple[OriginatorCustomerParty, ...] = field(
@@ -237,7 +234,6 @@ class CallForTendersType:
             "name": "ProcurementProject",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     procurement_project_lot: tuple[ProcurementProjectLot, ...] = field(

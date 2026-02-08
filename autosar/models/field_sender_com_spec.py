@@ -205,7 +205,6 @@ class FieldSenderComSpec:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

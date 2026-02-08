@@ -272,7 +272,6 @@ class RepcMt000301UvComponent:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -286,7 +285,6 @@ class RepcMt000301UvComponent:
         metadata={
             "name": "contextConductionInd",
             "type": "Attribute",
-            "required": True,
             "pattern": r"true|false",
         }
     )
@@ -580,7 +578,6 @@ class RepcMt000301UvOrganization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -709,7 +706,6 @@ class RepcMt000301UvPerformer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -775,7 +771,6 @@ class RepcMt000301UvPlace:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -1010,7 +1005,6 @@ class RepcMt000301UvSeverityObservation:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     status_code: Cs = field(
@@ -1018,14 +1012,12 @@ class RepcMt000301UvSeverityObservation:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     value: Cv = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -1383,7 +1375,6 @@ class RepcMt000301UvVerifier:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -1428,7 +1419,6 @@ class RepcMt000301UvAnnotation:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     status_code: Cs = field(
@@ -1436,7 +1426,6 @@ class RepcMt000301UvAnnotation:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     author: list[RepcMt000301UvAuthor] = field(
@@ -1591,7 +1580,6 @@ class RepcMt000301UvControlActEvent:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     status_code: Cs = field(
@@ -1599,7 +1587,6 @@ class RepcMt000301UvControlActEvent:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     effective_time: TsExplicit = field(
@@ -1607,7 +1594,6 @@ class RepcMt000301UvControlActEvent:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     reason_code: None | Cv = field(
@@ -1732,7 +1718,6 @@ class RepcMt000301UvHealthCareFacility:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1822,7 +1807,6 @@ class RepcMt000301UvSubject1:
         metadata={
             "name": "contextConductionInd",
             "type": "Attribute",
-            "required": True,
             "pattern": r"true|false",
         }
     )
@@ -2043,7 +2027,6 @@ class RepcMt000301UvLocation:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: None | ContextControl = field(
@@ -2139,7 +2122,6 @@ class RepcMt000301UvSubject3:
         metadata={
             "name": "contextConductionInd",
             "type": "Attribute",
-            "required": True,
             "pattern": r"true|false",
         }
     )
@@ -2230,7 +2212,6 @@ class RepcMt000301UvSubject5:
         metadata={
             "name": "contextConductionInd",
             "type": "Attribute",
-            "required": True,
             "pattern": r"true|false",
         }
     )
@@ -2277,7 +2258,6 @@ class RepcMt000301UvConditionEvent:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     text: None | EdExplicit = field(
@@ -2634,7 +2614,6 @@ class RepcMt000301UvSequelTo:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(

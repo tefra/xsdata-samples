@@ -74,7 +74,6 @@ class TransportServiceDescriptionRequestType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     copy_indicator: None | CopyIndicator = field(
@@ -98,7 +97,6 @@ class TransportServiceDescriptionRequestType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: IssueTime = field(
@@ -106,7 +104,6 @@ class TransportServiceDescriptionRequestType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     note: tuple[Note, ...] = field(

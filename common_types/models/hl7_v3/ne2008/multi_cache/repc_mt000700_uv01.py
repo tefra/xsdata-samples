@@ -104,7 +104,6 @@ class RepcMt000700Uv01LocatedEntity:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -177,7 +176,6 @@ class RepcMt000700Uv01Organization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -262,7 +260,6 @@ class RepcMt000700Uv01Device:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(

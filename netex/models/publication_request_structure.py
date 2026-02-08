@@ -25,7 +25,6 @@ class PublicationRequestStructure:
             "name": "RequestTimestamp",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     participant_ref: None | ParticipantRef = field(

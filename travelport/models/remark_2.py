@@ -51,7 +51,6 @@ class Remark2(TypeKeyTaggedElement1):
         metadata={
             "name": "RemarkText",
             "type": "Element",
-            "required": True,
             "min_length": 1,
             "max_length": 255,
         }
@@ -60,7 +59,6 @@ class Remark2(TypeKeyTaggedElement1):
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     accounting_remark_type: None | str = field(

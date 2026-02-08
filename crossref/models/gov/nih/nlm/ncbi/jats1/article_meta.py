@@ -110,7 +110,6 @@ class ArticleMeta:
         metadata={
             "name": "title-group",
             "type": "Element",
-            "required": True,
         }
     )
     contrib_group: list[ContribGroup] = field(

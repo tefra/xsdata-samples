@@ -31,11 +31,7 @@ class DiagnosticAccessPermissionValidityEnum:
     class Meta:
         name = "DIAGNOSTIC-ACCESS-PERMISSION-VALIDITY-ENUM"
 
-    value: DiagnosticAccessPermissionValidityEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticAccessPermissionValidityEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

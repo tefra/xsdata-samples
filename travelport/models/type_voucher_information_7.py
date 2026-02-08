@@ -36,7 +36,6 @@ class TypeVoucherInformation7:
         metadata={
             "name": "VoucherType",
             "type": "Attribute",
-            "required": True,
         }
     )
     amount: None | str = field(

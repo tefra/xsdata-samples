@@ -82,7 +82,6 @@ class BranchGroupInfo2(TypeProfileInfo2):
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -91,7 +90,6 @@ class BranchGroupInfo2(TypeProfileInfo2):
         metadata={
             "name": "BranchGroupCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 25,
         }

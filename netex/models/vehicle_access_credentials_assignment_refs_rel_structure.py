@@ -22,6 +22,5 @@ class VehicleAccessCredentialsAssignmentRefsRelStructure(
             "name": "VehicleAccessCredentialsAssignmentRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

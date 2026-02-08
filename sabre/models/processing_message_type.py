@@ -19,7 +19,6 @@ class ProcessingMessageType:
         metadata={
             "name": "PricingSource",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[0-9A-Z_]{1,13}",
         }
     )
@@ -27,6 +26,5 @@ class ProcessingMessageType:
         metadata={
             "name": "Message",
             "type": "Attribute",
-            "required": True,
         }
     )

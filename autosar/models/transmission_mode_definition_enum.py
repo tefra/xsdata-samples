@@ -30,11 +30,7 @@ class TransmissionModeDefinitionEnum:
     class Meta:
         name = "TRANSMISSION-MODE-DEFINITION-ENUM"
 
-    value: TransmissionModeDefinitionEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TransmissionModeDefinitionEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

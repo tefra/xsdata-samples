@@ -35,6 +35,5 @@ class StatusMessageType2:
     status: StatusType = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

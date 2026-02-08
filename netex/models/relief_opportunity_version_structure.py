@@ -38,7 +38,6 @@ class ReliefOpportunityVersionStructure(DataManagedObjectStructure):
             "name": "Time",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     day_offset: None | int = field(

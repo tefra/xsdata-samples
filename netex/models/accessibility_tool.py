@@ -12,8 +12,4 @@ class AccessibilityTool:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: AccessibilityToolEnumeration = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: AccessibilityToolEnumeration = field()

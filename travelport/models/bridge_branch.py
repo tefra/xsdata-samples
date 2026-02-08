@@ -30,14 +30,12 @@ class BridgeBranch:
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-            "required": True,
         }
     )
     branch_code: str = field(
         metadata={
             "name": "BranchCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 25,
         }
@@ -46,7 +44,6 @@ class BridgeBranch:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }

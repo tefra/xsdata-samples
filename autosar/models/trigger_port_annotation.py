@@ -92,6 +92,5 @@ class TriggerPortAnnotation:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

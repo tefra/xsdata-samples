@@ -143,7 +143,6 @@ class DiagnosticDebounceBehaviorEnumValueVariationPoint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -153,6 +152,5 @@ class DiagnosticDebounceBehaviorEnumValueVariationPoint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

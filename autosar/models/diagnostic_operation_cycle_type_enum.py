@@ -31,11 +31,7 @@ class DiagnosticOperationCycleTypeEnum:
     class Meta:
         name = "DIAGNOSTIC-OPERATION-CYCLE-TYPE-ENUM"
 
-    value: DiagnosticOperationCycleTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticOperationCycleTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -28,7 +28,6 @@ class Characteristic3:
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
         }
     )
     position: None | TypePosition = field(

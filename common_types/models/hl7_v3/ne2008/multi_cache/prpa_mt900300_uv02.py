@@ -159,7 +159,6 @@ class PrpaMt900300Uv02EncounterTimeframe:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     semantics_text: None | St = field(
@@ -382,7 +381,6 @@ class PrpaMt900300Uv02TypeOfEncounter:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     semantics_text: None | St = field(
@@ -444,7 +442,6 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     modify_code: None | Cs = field(
@@ -527,7 +524,6 @@ class PrpaMt900300Uv02QueryByParameterPayload:
             "name": "patientId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     responsible_organization: (

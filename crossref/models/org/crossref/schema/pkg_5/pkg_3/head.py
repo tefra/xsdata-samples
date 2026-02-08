@@ -31,24 +31,20 @@ class Head:
     doi_batch_id: DoiBatchId = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     timestamp: Timestamp = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     depositor: Depositor = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     registrant: Registrant = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )

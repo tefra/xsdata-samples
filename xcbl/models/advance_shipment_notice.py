@@ -71,12 +71,7 @@ class AsnheaderNote:
     class Meta:
         name = "ASNHeaderNote"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -84,12 +79,7 @@ class AsnissueDate:
     class Meta:
         name = "ASNIssueDate"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -97,12 +87,7 @@ class AsnpurposeCoded:
     class Meta:
         name = "ASNPurposeCoded"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -110,12 +95,7 @@ class AsnpurposeCodedOther:
     class Meta:
         name = "ASNPurposeCodedOther"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -123,12 +103,7 @@ class AsnstatusCoded:
     class Meta:
         name = "ASNStatusCoded"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -136,12 +111,7 @@ class AsnstatusCodedOther:
     class Meta:
         name = "ASNStatusCodedOther"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -149,12 +119,7 @@ class AsntypeCoded:
     class Meta:
         name = "ASNTypeCoded"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -162,72 +127,37 @@ class AsntypeCodedOther:
     class Meta:
         name = "ASNTypeCodedOther"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CollectionDateOfCargo:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class EarliestDeliveryDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LatestDeliveryDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ScheduleDeliveryDateAfter:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ScheduleDeliveryDateBefore:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ShippedDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -239,7 +169,6 @@ class AsnallowancesOrCharges:
         metadata={
             "name": "ListOfAllowOrCharge",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -253,7 +182,6 @@ class Asncurrency:
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -330,7 +258,6 @@ class AsnheaderAttachments:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -344,7 +271,6 @@ class Asnlanguage:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -358,7 +284,6 @@ class AsnlineItemListOfAllowOrCharge:
         metadata={
             "name": "ListOfAllowOrCharge",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -372,7 +297,6 @@ class AsnlineItemReferences:
         metadata={
             "name": "ASNReferences",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -386,7 +310,6 @@ class AsnpackageDetail:
         metadata={
             "name": "PackageDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -400,7 +323,6 @@ class Asnparty:
         metadata={
             "name": "OrderParty",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -414,7 +336,6 @@ class AsnpaymentInstructions:
         metadata={
             "name": "PaymentInstructions",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -428,7 +349,6 @@ class Asnpurpose:
         metadata={
             "name": "ASNPurposeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     asnpurpose_coded_other: None | AsnpurposeCodedOther = field(
@@ -449,7 +369,6 @@ class Asnstatus:
         metadata={
             "name": "ASNStatusCoded",
             "type": "Element",
-            "required": True,
         }
     )
     asnstatus_coded_other: None | AsnstatusCodedOther = field(
@@ -498,7 +417,6 @@ class AsntermsOfDelivery:
         metadata={
             "name": "TermsOfDelivery",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -512,7 +430,6 @@ class Asntype:
         metadata={
             "name": "ASNTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     asntype_coded_other: None | AsntypeCodedOther = field(
@@ -530,7 +447,6 @@ class LineItemOrderReference:
         metadata={
             "name": "PurchaseOrderReference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -541,7 +457,6 @@ class ReferenceToPackage:
         metadata={
             "name": "ItemPackagingReference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -555,7 +470,6 @@ class AsnbaseItemDetail:
         metadata={
             "name": "LineItemNum",
             "type": "Element",
-            "required": True,
         }
     )
     line_item_type: None | LineItemType = field(
@@ -772,14 +686,12 @@ class Asnheader:
         metadata={
             "name": "ASNNumber",
             "type": "Element",
-            "required": True,
         }
     )
     asnissue_date: AsnissueDate = field(
         metadata={
             "name": "ASNIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     asnorder_number: list[AsnorderNumber] = field(
@@ -801,7 +713,6 @@ class Asnheader:
         metadata={
             "name": "ASNPurpose",
             "type": "Element",
-            "required": True,
         }
     )
     asntype: None | Asntype = field(
@@ -836,14 +747,12 @@ class Asnheader:
         metadata={
             "name": "ASNDates",
             "type": "Element",
-            "required": True,
         }
     )
     asnparty: Asnparty = field(
         metadata={
             "name": "ASNParty",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_transport_routing: None | ListOfTransportRouting = field(
@@ -928,7 +837,6 @@ class AsnitemDetail:
         metadata={
             "name": "ASNBaseItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
     asnline_item_list_of_allow_or_charge: (
@@ -994,7 +902,6 @@ class Asndetail:
         metadata={
             "name": "ListOfASNItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_asnpackage_detail: None | ListOfAsnpackageDetail = field(
@@ -1012,7 +919,6 @@ class AdvanceShipmentNotice:
         metadata={
             "name": "ASNHeader",
             "type": "Element",
-            "required": True,
         }
     )
     asndetail: None | Asndetail = field(

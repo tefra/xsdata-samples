@@ -31,7 +31,6 @@ class NameType:
     role: RoleType = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     gtaa_uri: None | str = field(

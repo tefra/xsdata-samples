@@ -13,12 +13,10 @@ class Point:
     x: float = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     y: float = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

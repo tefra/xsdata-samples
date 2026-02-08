@@ -27,6 +27,5 @@ class DriveConstraint:
         metadata={
             "name": "cellSpecification",
             "type": "Element",
-            "required": True,
         }
     )

@@ -62,7 +62,6 @@ class Emdsummary:
         metadata={
             "name": "Number",
             "type": "Attribute",
-            "required": True,
             "length": 13,
         }
     )

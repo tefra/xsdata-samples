@@ -38,7 +38,6 @@ class AgentIdoverride5:
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }
@@ -47,7 +46,6 @@ class AgentIdoverride5:
         metadata={
             "name": "AgentID",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 32,
         }

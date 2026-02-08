@@ -105,7 +105,6 @@ class Vehicle:
         metadata={
             "name": "VendorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 5,
         }
@@ -114,28 +113,24 @@ class Vehicle:
         metadata={
             "name": "AirConditioning",
             "type": "Attribute",
-            "required": True,
         }
     )
     transmission_type: TypeVehicleTransmission = field(
         metadata={
             "name": "TransmissionType",
             "type": "Attribute",
-            "required": True,
         }
     )
     vehicle_class: TypeVehicleClass = field(
         metadata={
             "name": "VehicleClass",
             "type": "Attribute",
-            "required": True,
         }
     )
     category: TypeVehicleCategory = field(
         metadata={
             "name": "Category",
             "type": "Attribute",
-            "required": True,
         }
     )
     description: None | str = field(

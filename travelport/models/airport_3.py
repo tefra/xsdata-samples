@@ -21,7 +21,6 @@ class Airport3(Location3):
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }

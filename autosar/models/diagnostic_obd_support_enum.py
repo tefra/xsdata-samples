@@ -32,11 +32,7 @@ class DiagnosticObdSupportEnum:
     class Meta:
         name = "DIAGNOSTIC-OBD-SUPPORT-ENUM"
 
-    value: DiagnosticObdSupportEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticObdSupportEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

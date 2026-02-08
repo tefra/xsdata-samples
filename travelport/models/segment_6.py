@@ -50,7 +50,6 @@ class Segment6:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     status: None | str = field(

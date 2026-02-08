@@ -101,14 +101,12 @@ class McaiMt900001Uv01DetectedIssueManagement:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: XActMoodDefEvn = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -167,7 +165,6 @@ class McaiMt900001Uv01Role:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -223,7 +220,6 @@ class McaiMt900001Uv01SourceOf:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_conduction_ind: str = field(
@@ -283,7 +279,6 @@ class McaiMt900001Uv01Subject:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -351,7 +346,6 @@ class McaiMt900001Uv01ActOrderRequired:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -497,7 +491,6 @@ class McaiMt900001Uv01DetectedIssueEvent:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     text: None | EdExplicit = field(

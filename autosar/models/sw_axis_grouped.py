@@ -134,7 +134,6 @@ class SwAxisGrouped:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -144,6 +143,5 @@ class SwAxisGrouped:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

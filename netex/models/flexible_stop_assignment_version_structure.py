@@ -21,7 +21,6 @@ class FlexibleStopAssignmentVersionStructure(StopAssignmentVersionStructure):
             "name": "FlexibleStopPlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     flexible_quay_ref: (

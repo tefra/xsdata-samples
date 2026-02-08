@@ -28,7 +28,6 @@ class SpeedPercentile:
             "name": "vehiclePercentage",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     speed_percentile: SpeedValue = field(
@@ -36,7 +35,6 @@ class SpeedPercentile:
             "name": "speedPercentile",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     speed_percentile_extension: None | ExtensionType = field(

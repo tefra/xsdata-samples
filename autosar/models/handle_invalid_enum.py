@@ -28,11 +28,7 @@ class HandleInvalidEnum:
     class Meta:
         name = "HANDLE-INVALID-ENUM"
 
-    value: HandleInvalidEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: HandleInvalidEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

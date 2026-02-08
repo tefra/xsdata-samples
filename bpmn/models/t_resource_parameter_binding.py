@@ -34,6 +34,5 @@ class TResourceParameterBinding(TBaseElement):
         metadata={
             "name": "parameterRef",
             "type": "Attribute",
-            "required": True,
         }
     )

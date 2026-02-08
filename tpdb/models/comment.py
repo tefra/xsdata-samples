@@ -13,13 +13,11 @@ class Comment:
     author: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     date: XmlDate = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     content: list[object] = field(

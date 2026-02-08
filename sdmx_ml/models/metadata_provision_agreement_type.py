@@ -37,7 +37,6 @@ class MetadataProvisionAgreementType(MetadataProvisionAgreementBaseType):
             "name": "Metadataflow",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
             "pattern": r".+\.metadatastructure\.Metadataflow=.+",
         }
     )
@@ -46,7 +45,6 @@ class MetadataProvisionAgreementType(MetadataProvisionAgreementBaseType):
             "name": "MetadataProvider",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
             "pattern": r".+\.base\.MetadataProvider=.+:METADATA_PROVIDERS\(.+\).+",
         }
     )

@@ -52,7 +52,6 @@ class ExecutableImage:
     name: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -106,7 +105,6 @@ class ExecutableImage:
         metadata={
             "name": "imageId",
             "type": "Attribute",
-            "required": True,
         }
     )
     image_type: None | str = field(
@@ -186,13 +184,11 @@ class ExecutableImage:
                 metadata={
                     "name": "fileType",
                     "type": "Element",
-                    "required": True,
                 }
             )
             command: StringExpression = field(
                 metadata={
                     "type": "Element",
-                    "required": True,
                 }
             )
             flags: None | StringExpression = field(

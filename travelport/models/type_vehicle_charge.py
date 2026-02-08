@@ -63,7 +63,6 @@ class TypeVehicleCharge:
         metadata={
             "name": "Category",
             "type": "Attribute",
-            "required": True,
         }
     )
     name: None | str = field(

@@ -115,7 +115,6 @@ class TdEventBswModeDeclaration:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: (
@@ -293,7 +292,6 @@ class TdEventBswModeDeclaration:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -303,7 +301,6 @@ class TdEventBswModeDeclaration:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -313,7 +310,6 @@ class TdEventBswModeDeclaration:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -323,6 +319,5 @@ class TdEventBswModeDeclaration:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

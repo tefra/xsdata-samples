@@ -33,7 +33,6 @@ class Assertion:
     name: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -60,7 +59,6 @@ class Assertion:
         metadata={
             "name": "assert",
             "type": "Element",
-            "required": True,
         }
     )
     id: None | str = field(

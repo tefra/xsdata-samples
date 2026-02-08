@@ -22,7 +22,6 @@ class FeedbackProgramPolicies:
     action: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     schema_location: str = field(
@@ -30,55 +29,47 @@ class FeedbackProgramPolicies:
             "name": "schemaLocation",
             "type": "Attribute",
             "namespace": "http://www.w3.org/2001/XMLSchema-instance",
-            "required": True,
         }
     )
     consumer_id: str = field(
         metadata={
             "name": "ConsumerID",
             "type": "Element",
-            "required": True,
         }
     )
     transmission_id: str = field(
         metadata={
             "name": "TransmissionID",
             "type": "Element",
-            "required": True,
         }
     )
     program_id: str = field(
         metadata={
             "name": "ProgramID",
             "type": "Element",
-            "required": True,
         }
     )
     local_program_id: str = field(
         metadata={
             "name": "LocalProgramID",
             "type": "Element",
-            "required": True,
         }
     )
     policies: Policies = field(
         metadata={
             "name": "Policies",
             "type": "Element",
-            "required": True,
         }
     )
     status: str = field(
         metadata={
             "name": "Status",
             "type": "Element",
-            "required": True,
         }
     )
     errors: Errors = field(
         metadata={
             "name": "Errors",
             "type": "Element",
-            "required": True,
         }
     )

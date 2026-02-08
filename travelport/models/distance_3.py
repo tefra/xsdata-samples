@@ -36,7 +36,6 @@ class Distance3:
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
         }
     )
     direction: None | str = field(

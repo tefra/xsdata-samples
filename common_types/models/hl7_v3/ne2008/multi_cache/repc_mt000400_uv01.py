@@ -77,7 +77,6 @@ class RepcMt000400Uv01Author5:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     mode_code: Ce = field(
@@ -85,7 +84,6 @@ class RepcMt000400Uv01Author5:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     signature_code: Cs = field(
@@ -93,7 +91,6 @@ class RepcMt000400Uv01Author5:
             "name": "signatureCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     signature_text: None | EdExplicit = field(
@@ -254,7 +251,6 @@ class RepcMt000400Uv01Component4:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: str = field(
@@ -370,7 +366,6 @@ class RepcMt000400Uv01ActCategory:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     author: list[RepcMt000400Uv01Author5] = field(
@@ -449,7 +444,6 @@ class RepcMt000400Uv01ActList:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     effective_time: None | IvlTsExplicit = field(

@@ -25,7 +25,6 @@ class Discount:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
         }
     )
     description: None | str = field(

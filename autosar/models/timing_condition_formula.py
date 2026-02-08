@@ -108,7 +108,6 @@ class TimingConditionFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -118,7 +117,6 @@ class TimingConditionFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -128,7 +126,6 @@ class TimingConditionFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -138,7 +135,6 @@ class TimingConditionFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -148,6 +144,5 @@ class TimingConditionFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

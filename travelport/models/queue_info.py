@@ -36,14 +36,12 @@ class QueueInfo:
         metadata={
             "name": "Queue",
             "type": "Attribute",
-            "required": True,
         }
     )
     pseudo_city_code: str = field(
         metadata={
             "name": "PseudoCityCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 10,
         }
@@ -52,14 +50,12 @@ class QueueInfo:
         metadata={
             "name": "TotalPNRCount",
             "type": "Attribute",
-            "required": True,
         }
     )
     pnrcount: int = field(
         metadata={
             "name": "PNRCount",
             "type": "Attribute",
-            "required": True,
         }
     )
     title: None | str = field(

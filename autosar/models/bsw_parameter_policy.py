@@ -86,6 +86,5 @@ class BswParameterPolicy:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

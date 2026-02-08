@@ -20,6 +20,5 @@ class MirReportRetrieveRsp(BaseRsp1):
         metadata={
             "name": "Report",
             "type": "Element",
-            "required": True,
         }
     )

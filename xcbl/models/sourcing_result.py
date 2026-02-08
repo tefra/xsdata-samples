@@ -32,112 +32,57 @@ from xcbl.models.trading_partner_user_information import (
 
 @dataclass(kw_only=True)
 class AttachmentActionCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AttachmentActionCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AttachmentDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AttachmentLocation:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AttachmentPurpose:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AttachmentTitle:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class BasisCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class BasisCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class BuyerLineItemNum:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CancelByDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CarrierName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -145,12 +90,7 @@ class CatalogId:
     class Meta:
         name = "CatalogID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -158,12 +98,7 @@ class CatalogItemId:
     class Meta:
         name = "CatalogItemID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -171,12 +106,7 @@ class CatalogUrl:
     class Meta:
         name = "CatalogURL"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -184,12 +114,7 @@ class CategoryId:
     class Meta:
         name = "CategoryID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -197,142 +122,72 @@ class TypeificationId:
     class Meta:
         name = "ClassificationID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CodeExtension:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CodeVersion:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CompanyRegistrationNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ContractItemNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ContractTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ContractTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CustShippingContractNum:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Datatype:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Date:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DateOfRateOfExchange:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DateQualifierCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DateQualifierCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DescriptionText:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -340,22 +195,12 @@ class Emsnum:
     class Meta:
         name = "EMSNum"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class EquipementSizeTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -363,122 +208,62 @@ class EquipmentId:
     class Meta:
         name = "EquipmentID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class EquipmentNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class EquipmentOwnerCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class EquipmentOwnerCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class EquipmentProviderCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class EquipmentProviderCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class EquipmentSizeTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class EquipmentStatusCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class EquipmentStatusCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class FileName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class FullIndicatorCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class FullIndicatorCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -486,12 +271,7 @@ class HazardTypeCoded:
     class Meta:
         name = "HazardClassCoded"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -499,242 +279,122 @@ class HazardTypeCodedOther:
     class Meta:
         name = "HazardClassCodedOther"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class HazardCode:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class HazardNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class HazardOfficialText:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class HazardPackingCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class HazardPackingCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class HazardousPlacardIdentification:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class HazardousPlacardText:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class HazardousRegulationsCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class HazardousRegulationsCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class HazardousShipmentCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class HazardousShipmentCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class HazardousShipmentNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class HazardousZoneCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class HazardousZoneCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Immutable:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class IndicatorCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class IndicatorCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InverseRateOfExchange:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ItemCharacteristicCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ItemCharacteristicCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ItemCharacteristicValue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ItemDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LineItemNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 class LineItemNumberReferenceLineItemNumTypeCoded(Enum):
@@ -744,22 +404,12 @@ class LineItemNumberReferenceLineItemNumTypeCoded(Enum):
 
 @dataclass(kw_only=True)
 class LineItemTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LineItemTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -767,92 +417,47 @@ class Mimetype:
     class Meta:
         name = "MIMEType"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ManufacturerName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class MaximumMonetaryValue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class MethodOfHandlingCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class MethodOfHandlingCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Mfag:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class MinimumMonetaryValue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class MonetaryAmount:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class MonetaryLimitValue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 class MonetaryLimitSignificanceCoded(Enum):
@@ -872,22 +477,12 @@ class MonetaryLimitSignificanceCoded(Enum):
 
 @dataclass(kw_only=True)
 class Multiplier:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Name:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -895,12 +490,7 @@ class NoteId:
     class Meta:
         name = "NoteID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -908,52 +498,27 @@ class NoteUrl:
     class Meta:
         name = "NoteURL"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class NumberOfLineItemsAwarded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OffCatalogFlag:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OperationalTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OperationalTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -961,12 +526,7 @@ class PackageIdreference:
     class Meta:
         name = "PackageIDReference"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -974,12 +534,7 @@ class PartId:
     class Meta:
         name = "PartID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -987,152 +542,77 @@ class PartIdext:
     class Meta:
         name = "PartIDExt"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Percent:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PercentQualifierCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PercentQualifierCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PriceMultiplierCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PriceMultiplierCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PriceTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PriceTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ProductIdentifier:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ProductIdentifierExt:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ProductIdentifierQualifierCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ProductIdentifierQualifierCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PromiseDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class QuantityQualifierCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class QuantityQualifierCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 class QuantityValueConditionsCoded(Enum):
@@ -1269,42 +749,22 @@ class QuantityValueSignificanceCoded(Enum):
 
 @dataclass(kw_only=True)
 class RateOfExchange:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ReLink:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ReasonTaxExemptCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ReasonTaxExemptCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -1312,212 +772,107 @@ class RefId:
     class Meta:
         name = "RefID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ReferenceDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ReferenceTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ReferenceTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RefrigerationOn:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RegisteredName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RegisteredOffice:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ReplacementFile:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RequestedDeliverByDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RequestedDeliveryDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RequestedShipByDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Residue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RevisionNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RiskOfLossCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RiskOfLossCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RiskOfLossDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SalesActionCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SalesActionCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SalesActionValue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SalesRequirementCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SalesRequirementCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -1525,142 +880,72 @@ class ScheduleLineId:
     class Meta:
         name = "ScheduleLineID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ScheduleLineNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SealIssuerCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SealIssuerCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SealNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SealStatusCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SealStatusCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SealStatusInfo:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SellerLineItemNum:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Service:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ServiceCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ServiceCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ServiceLevelCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ServiceLevelCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -1668,142 +953,72 @@ class SetId:
     class Meta:
         name = "SetID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SetName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ShipmentMethodOfPaymentCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ShipmentMethodOfPaymentCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ShipmentStatusEventCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ShipmentStatusEventCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ShippingInstructions:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SimplePackageNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingResultDetailNotes:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingResultGeneralNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingResultIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class StandardCategoryType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class StatusReasonCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class StatusReasonCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -1811,32 +1026,17 @@ class SupplierShoppingCartId:
     class Meta:
         name = "SupplierShoppingCartID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SurfaceLayerPositionCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SurfaceLayerPositionCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -1844,132 +1044,67 @@ class SystemId:
     class Meta:
         name = "SystemID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TaxAmount:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TaxAmountInTaxAccountingCurrency:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TaxCategoryCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TaxCategoryCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TaxFunctionQualifierCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TaxFunctionQualifierCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TaxPaymentMethodCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TaxPaymentMethodCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TaxPercent:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TaxTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TaxableAmount:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TaxableAmountInTaxAccountingCurrency:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -1977,162 +1112,82 @@ class TechnicalId:
     class Meta:
         name = "TechnicalID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TermsOfDeliveryDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TermsOfDeliveryFunctionCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TermsOfDeliveryFunctionCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TextTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TextTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalAwardValue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalNumParticipants:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalNumSourcingResults:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalNumWinningQuotes:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransitDirectionCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransitDirectionCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransitTime:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransitTimeQualifierCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransitTimeQualifierCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransportDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -2140,132 +1195,67 @@ class TransportId:
     class Meta:
         name = "TransportID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransportLegCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransportLegCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransportMeansCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransportMeansCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransportModeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransportModeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransportNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransportReference:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransportTermsCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransportTermsCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TremCardNum:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TypeOfCargo:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -2273,52 +1263,27 @@ class Undgnum:
     class Meta:
         name = "UNDGNum"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class UnitPriceBasis:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class UnitPriceValue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class Value:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class WinningQuoteIndicator:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -2341,7 +1306,6 @@ class Attachment:
         metadata={
             "name": "AttachmentPurpose",
             "type": "Element",
-            "required": True,
         }
     )
     file_name: None | FileName = field(
@@ -2390,7 +1354,6 @@ class Attachment:
         metadata={
             "name": "AttachmentLocation",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2401,7 +1364,6 @@ class BillToParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2412,7 +1374,6 @@ class BuyerParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2426,7 +1387,6 @@ class CarrierId:
         metadata={
             "name": "Identifier",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2437,7 +1397,6 @@ class CatalogReference:
         metadata={
             "name": "CatalogURL",
             "type": "Element",
-            "required": True,
         }
     )
     catalog_id: None | CatalogId = field(
@@ -2462,7 +1421,6 @@ class CommodityCode:
         metadata={
             "name": "Identifier",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2476,7 +1434,6 @@ class ContractId:
         metadata={
             "name": "Identifier",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2487,7 +1444,6 @@ class ContractType:
         metadata={
             "name": "ContractTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     contract_type_coded_other: None | ContractTypeCodedOther = field(
@@ -2505,7 +1461,6 @@ class CountryOfDestination:
         metadata={
             "name": "Country",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2516,7 +1471,6 @@ class CountryOfOrigin:
         metadata={
             "name": "Country",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2527,7 +1481,6 @@ class DateQualifier:
         metadata={
             "name": "DateQualifierCoded",
             "type": "Element",
-            "required": True,
         }
     )
     date_qualifier_coded_other: None | DateQualifierCodedOther = field(
@@ -2545,14 +1498,12 @@ class Description:
         metadata={
             "name": "DescriptionText",
             "type": "Element",
-            "required": True,
         }
     )
     language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2563,7 +1514,6 @@ class FinalRecipient:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2574,7 +1524,6 @@ class HazardousContact:
         metadata={
             "name": "Contact",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2585,7 +1534,6 @@ class HazardousIdentifiers:
         metadata={
             "name": "HazardousRegulationsCoded",
             "type": "Element",
-            "required": True,
         }
     )
     hazardous_regulations_coded_other: (
@@ -2713,7 +1661,6 @@ class InitiatingParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2756,7 +1703,6 @@ class ItemCharacteristic:
         metadata={
             "name": "ItemCharacteristicValue",
             "type": "Element",
-            "required": True,
         }
     )
     identifier: None | Identifier = field(
@@ -2788,7 +1734,6 @@ class LineItemNum:
         metadata={
             "name": "BuyerLineItemNum",
             "type": "Element",
-            "required": True,
         }
     )
     seller_line_item_num: None | SellerLineItemNum = field(
@@ -2812,12 +1757,7 @@ class LineItemNumberReference:
             },
         )
     )
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -2826,7 +1766,6 @@ class LineItemType:
         metadata={
             "name": "LineItemTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     line_item_type_coded_other: None | LineItemTypeCodedOther = field(
@@ -2844,7 +1783,6 @@ class ListOfConditions:
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2855,7 +1793,6 @@ class ListOfEquipmentMeasurements:
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2878,7 +1815,6 @@ class ListOfTemperatureCoded:
         metadata={
             "name": "ListOfDimension",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2892,7 +1828,6 @@ class ManufacturerId:
         metadata={
             "name": "Identifier",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2903,7 +1838,6 @@ class ManufacturingToParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2914,7 +1848,6 @@ class MaterialIssuer:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2939,14 +1872,12 @@ class MonetaryLimit:
         metadata={
             "name": "MonetaryLimitValue",
             "type": "Element",
-            "required": True,
         }
     )
     currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2957,21 +1888,18 @@ class MonetaryRange:
         metadata={
             "name": "MinimumMonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
     maximum_monetary_value: MaximumMonetaryValue = field(
         metadata={
             "name": "MaximumMonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
     currency: Currency = field(
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2982,14 +1910,12 @@ class NameValuePair:
         metadata={
             "name": "Name",
             "type": "Element",
-            "required": True,
         }
     )
     value: Value = field(
         metadata={
             "name": "Value",
             "type": "Element",
-            "required": True,
         }
     )
     datatype: None | Datatype = field(
@@ -3007,7 +1933,6 @@ class NatureOfGoods:
         metadata={
             "name": "Identifier",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3018,7 +1943,6 @@ class PartNum:
         metadata={
             "name": "PartID",
             "type": "Element",
-            "required": True,
         }
     )
     part_idext: None | PartIdext = field(
@@ -3043,7 +1967,6 @@ class PercentQualifier:
         metadata={
             "name": "PercentQualifierCoded",
             "type": "Element",
-            "required": True,
         }
     )
     percent_qualifier_coded_other: None | PercentQualifierCodedOther = field(
@@ -3061,7 +1984,6 @@ class PriceMultiplier:
         metadata={
             "name": "PriceMultiplierCoded",
             "type": "Element",
-            "required": True,
         }
     )
     price_multiplier_coded_other: None | PriceMultiplierCodedOther = field(
@@ -3075,7 +1997,6 @@ class PriceMultiplier:
         metadata={
             "name": "Multiplier",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3086,7 +2007,6 @@ class PricingType:
         metadata={
             "name": "PriceTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     price_type_coded_other: None | PriceTypeCodedOther = field(
@@ -3104,7 +2024,6 @@ class PrimaryReference:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3116,7 +2035,6 @@ class ProductIdentifierCoded:
             metadata={
                 "name": "ProductIdentifierQualifierCoded",
                 "type": "Element",
-                "required": True,
             }
         )
     )
@@ -3133,7 +2051,6 @@ class ProductIdentifierCoded:
         metadata={
             "name": "ProductIdentifier",
             "type": "Element",
-            "required": True,
         }
     )
     product_identifier_ext: None | ProductIdentifierExt = field(
@@ -3151,14 +2068,12 @@ class QuantityRange:
         metadata={
             "name": "MinimumValue",
             "type": "Element",
-            "required": True,
         }
     )
     maximum_value: MaximumValue = field(
         metadata={
             "name": "MaximumValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3193,12 +2108,7 @@ class QuantityValue:
             "type": "Attribute",
         },
     )
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -3207,21 +2117,18 @@ class QuoteAwardDetails:
         metadata={
             "name": "Name",
             "type": "Element",
-            "required": True,
         }
     )
     number_of_line_items_awarded: NumberOfLineItemsAwarded = field(
         metadata={
             "name": "NumberOfLineItemsAwarded",
             "type": "Element",
-            "required": True,
         }
     )
     total_award_value: TotalAwardValue = field(
         metadata={
             "name": "TotalAwardValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3232,7 +2139,6 @@ class ReferenceCurrency:
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3243,7 +2149,6 @@ class RemitToParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3288,7 +2193,6 @@ class SalesRequirement:
         metadata={
             "name": "SalesRequirementCoded",
             "type": "Element",
-            "required": True,
         }
     )
     sales_requirement_coded_other: None | SalesRequirementCodedOther = field(
@@ -3306,7 +2210,6 @@ class SealIssuer:
         metadata={
             "name": "SealIssuerCoded",
             "type": "Element",
-            "required": True,
         }
     )
     seal_issuer_coded_other: None | SealIssuerCodedOther = field(
@@ -3349,7 +2252,6 @@ class SellerParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3360,7 +2262,6 @@ class ShipFromLocation:
         metadata={
             "name": "Location",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3371,7 +2272,6 @@ class ShipFromParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3382,7 +2282,6 @@ class ShipToLocation:
         metadata={
             "name": "Location",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3393,7 +2292,6 @@ class ShipToParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3404,7 +2302,6 @@ class ShipToSubLocation:
         metadata={
             "name": "Location",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3415,7 +2312,6 @@ class SoldToParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3426,7 +2322,6 @@ class SourcingResultCurrency:
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3440,7 +2335,6 @@ class SourcingResultId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3454,7 +2348,6 @@ class SourcingResultItemId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3465,7 +2358,6 @@ class SourcingResultPurpose:
         metadata={
             "name": "Purpose",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3479,14 +2371,12 @@ class StandardCategoryId:
         metadata={
             "name": "StandardCategoryType",
             "type": "Element",
-            "required": True,
         }
     )
     classification_id: TypeificationId = field(
         metadata={
             "name": "ClassificationID",
             "type": "Element",
-            "required": True,
         }
     )
     technical_id: None | TechnicalId = field(
@@ -3504,7 +2394,6 @@ class StatusReason:
         metadata={
             "name": "StatusReasonCoded",
             "type": "Element",
-            "required": True,
         }
     )
     status_reason_coded_other: None | StatusReasonCodedOther = field(
@@ -3568,7 +2457,6 @@ class SupportingReference:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3579,7 +2467,6 @@ class SupportingSubReference:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3590,7 +2477,6 @@ class TargetCurrency:
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3601,7 +2487,6 @@ class TaxIdentifier:
         metadata={
             "name": "Identifier",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3612,7 +2497,6 @@ class TaxLocation:
         metadata={
             "name": "Location",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3623,7 +2507,6 @@ class TaxTypeCodedOther:
         metadata={
             "name": "Identifier",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3634,7 +2517,6 @@ class TermsOfDelivery:
         metadata={
             "name": "TermsOfDeliveryFunctionCoded",
             "type": "Element",
-            "required": True,
         }
     )
     terms_of_delivery_function_coded_other: (
@@ -3664,7 +2546,6 @@ class TermsOfDelivery:
         metadata={
             "name": "ShipmentMethodOfPaymentCoded",
             "type": "Element",
-            "required": True,
         }
     )
     shipment_method_of_payment_coded_other: (
@@ -3726,7 +2607,6 @@ class TransitDirection:
         metadata={
             "name": "TransitDirectionCoded",
             "type": "Element",
-            "required": True,
         }
     )
     transit_direction_coded_other: None | TransitDirectionCodedOther = field(
@@ -3767,7 +2647,6 @@ class TransportMeans:
         metadata={
             "name": "TransportMeansCoded",
             "type": "Element",
-            "required": True,
         }
     )
     transport_means_coded_other: None | TransportMeansCodedOther = field(
@@ -3785,7 +2664,6 @@ class TransportMode:
         metadata={
             "name": "TransportModeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     transport_mode_coded_other: None | TransportModeCodedOther = field(
@@ -3803,7 +2681,6 @@ class UnitPrice:
         metadata={
             "name": "UnitPriceValue",
             "type": "Element",
-            "required": True,
         }
     )
     currency: None | Currency = field(
@@ -3828,7 +2705,6 @@ class WarehouseParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3857,7 +2733,6 @@ class BuyerPartNumber:
         metadata={
             "name": "PartNum",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -3979,7 +2854,6 @@ class Contract:
         metadata={
             "name": "ContractID",
             "type": "Element",
-            "required": True,
         }
     )
     contract_type: None | ContractType = field(
@@ -4011,14 +2885,12 @@ class DateCoded:
         metadata={
             "name": "Date",
             "type": "Element",
-            "required": True,
         }
     )
     date_qualifier: DateQualifier = field(
         metadata={
             "name": "DateQualifier",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4101,7 +2973,6 @@ class ListOfRateOfExchangeReference:
         metadata={
             "name": "ListOfReference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4136,7 +3007,6 @@ class ManufacturerPartNumber:
         metadata={
             "name": "PartID",
             "type": "Element",
-            "required": True,
         }
     )
     part_idext: None | PartIdext = field(
@@ -4175,7 +3045,6 @@ class ParentItemNumber:
         metadata={
             "name": "LineItemNumberReference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4239,7 +3108,6 @@ class Quantity:
         metadata={
             "name": "UnitOfMeasurement",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4264,14 +3132,12 @@ class QuantityCoded:
         metadata={
             "name": "UnitOfMeasurement",
             "type": "Element",
-            "required": True,
         }
     )
     quantity_qualifier_coded: QuantityQualifierCoded = field(
         metadata={
             "name": "QuantityQualifierCoded",
             "type": "Element",
-            "required": True,
         }
     )
     quantity_qualifier_coded_other: None | QuantityQualifierCodedOther = field(
@@ -4289,7 +3155,6 @@ class RatePerUnit:
         metadata={
             "name": "UnitPrice",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4300,7 +3165,6 @@ class ReferenceCoded:
         metadata={
             "name": "ReferenceTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     reference_type_coded_other: None | ReferenceTypeCodedOther = field(
@@ -4314,7 +3178,6 @@ class ReferenceCoded:
         metadata={
             "name": "PrimaryReference",
             "type": "Element",
-            "required": True,
         }
     )
     supporting_reference: None | SupportingReference = field(
@@ -4346,7 +3209,6 @@ class SealInfo:
         metadata={
             "name": "SealNumber",
             "type": "Element",
-            "required": True,
         }
     )
     seal_issuer: None | SealIssuer = field(
@@ -4371,7 +3233,6 @@ class SellerPartNumber:
         metadata={
             "name": "PartNum",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4414,7 +3275,6 @@ class StandardPartNumber:
         metadata={
             "name": "ProductIdentifierCoded",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4425,7 +3285,6 @@ class Tax:
         metadata={
             "name": "TaxFunctionQualifierCoded",
             "type": "Element",
-            "required": True,
         }
     )
     tax_function_qualifier_coded_other: (
@@ -4441,7 +3300,6 @@ class Tax:
         metadata={
             "name": "TaxCategoryCoded",
             "type": "Element",
-            "required": True,
         }
     )
     tax_category_coded_other: None | TaxCategoryCodedOther = field(
@@ -4469,7 +3327,6 @@ class Tax:
         metadata={
             "name": "TaxTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     tax_type_coded_other: None | TaxTypeCodedOther = field(
@@ -4520,7 +3377,6 @@ class Tax:
         metadata={
             "name": "TaxAmount",
             "type": "Element",
-            "required": True,
         }
     )
     tax_amount_in_tax_accounting_currency: (
@@ -4561,7 +3417,6 @@ class AllowOrChgDesc:
         metadata={
             "name": "ServiceCoded",
             "type": "Element",
-            "required": True,
         }
     )
     service_coded_other: None | ServiceCodedOther = field(
@@ -4579,7 +3434,6 @@ class BasisQuantityRange:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4590,7 +3444,6 @@ class BuyerTaxInformation:
         metadata={
             "name": "PartyTaxInformation",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4601,7 +3454,6 @@ class CalculatedPriceBasisQuantity:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4612,7 +3464,6 @@ class ContractItem:
         metadata={
             "name": "Contract",
             "type": "Element",
-            "required": True,
         }
     )
     contract_item_number: None | ContractItemNumber = field(
@@ -4630,7 +3481,6 @@ class Control:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4641,7 +3491,6 @@ class Emergency:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4652,7 +3501,6 @@ class Flashpoint:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4663,7 +3511,6 @@ class LineItemAttachments:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4722,7 +3569,6 @@ class ListOfSourcingResultDetailAttachment:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4733,7 +3579,6 @@ class MaxBackOrderQuantity:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4744,7 +3589,6 @@ class NameValueSet:
         metadata={
             "name": "SetName",
             "type": "Element",
-            "required": True,
         }
     )
     set_id: None | SetId = field(
@@ -4758,7 +3602,6 @@ class NameValueSet:
         metadata={
             "name": "ListOfNameValuePair",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4769,7 +3612,6 @@ class OtherItemIdentifiers:
         metadata={
             "name": "ListOfProductIdentifierCoded",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4787,7 +3629,6 @@ class PackageReference:
         metadata={
             "name": "PackageIDReference",
             "type": "Element",
-            "required": True,
         }
     )
     package_reference: None | PackageReference = field(
@@ -4805,7 +3646,6 @@ class PriceBasisQuantity:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4816,7 +3656,6 @@ class PriceQuantityRange:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4827,14 +3666,12 @@ class Rate:
         metadata={
             "name": "RatePerUnit",
             "type": "Element",
-            "required": True,
         }
     )
     unit_price_basis: UnitPriceBasis = field(
         metadata={
             "name": "UnitPriceBasis",
             "type": "Element",
-            "required": True,
         }
     )
     unit_of_measurement: None | UnitOfMeasurement = field(
@@ -4852,21 +3689,18 @@ class RateOfExchangeDetail:
         metadata={
             "name": "ReferenceCurrency",
             "type": "Element",
-            "required": True,
         }
     )
     target_currency: TargetCurrency = field(
         metadata={
             "name": "TargetCurrency",
             "type": "Element",
-            "required": True,
         }
     )
     rate_of_exchange: RateOfExchange = field(
         metadata={
             "name": "RateOfExchange",
             "type": "Element",
-            "required": True,
         }
     )
     inverse_rate_of_exchange: None | InverseRateOfExchange = field(
@@ -4900,7 +3734,6 @@ class SellerTaxInformation:
         metadata={
             "name": "PartyTaxInformation",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4911,7 +3744,6 @@ class ShipToSubQuantity:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4922,7 +3754,6 @@ class ShipmentStatusReasons:
         metadata={
             "name": "ListOfStatusReason",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4933,7 +3764,6 @@ class SourcingResultListOfAttachment:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4944,7 +3774,6 @@ class SubstitutePartNumbers:
         metadata={
             "name": "ListOfProductIdentifierCoded",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4955,7 +3784,6 @@ class TotalQuantity:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4966,7 +3794,6 @@ class AllowanceOrChargeDescription:
         metadata={
             "name": "AllowOrChgDesc",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -4977,7 +3804,6 @@ class HazardousReferences:
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -5044,7 +3870,6 @@ class ListOfItemReferences:
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -5067,7 +3892,6 @@ class ListOfOtherDeliveryDate:
         metadata={
             "name": "ListOfDateCoded",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -5078,7 +3902,6 @@ class MonetaryValue:
         metadata={
             "name": "MonetaryAmount",
             "type": "Element",
-            "required": True,
         }
     )
     currency: None | Currency = field(
@@ -5149,7 +3972,6 @@ class OrderParty:
         metadata={
             "name": "BuyerParty",
             "type": "Element",
-            "required": True,
         }
     )
     buyer_tax_information: None | BuyerTaxInformation = field(
@@ -5163,7 +3985,6 @@ class OrderParty:
         metadata={
             "name": "SellerParty",
             "type": "Element",
-            "required": True,
         }
     )
     seller_tax_information: None | SellerTaxInformation = field(
@@ -5297,7 +4118,6 @@ class Price:
         metadata={
             "name": "UnitPrice",
             "type": "Element",
-            "required": True,
         }
     )
     price_basis_quantity: None | PriceBasisQuantity = field(
@@ -5345,35 +4165,30 @@ class SourcingResultHeader:
         metadata={
             "name": "SourcingResultPurpose",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_result_issue_date: SourcingResultIssueDate = field(
         metadata={
             "name": "SourcingResultIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_result_id: SourcingResultId = field(
         metadata={
             "name": "SourcingResultID",
             "type": "Element",
-            "required": True,
         }
     )
     tracking_id: TrackingId = field(
         metadata={
             "name": "TrackingID",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_create_reference: SourcingCreateReference = field(
         metadata={
             "name": "SourcingCreateReference",
             "type": "Element",
-            "required": True,
         }
     )
     initiating_party: None | InitiatingParty = field(
@@ -5387,7 +4202,6 @@ class SourcingResultHeader:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_reference_coded: None | ListOfReferenceCoded = field(
@@ -5449,7 +4263,6 @@ class TransportEquipment:
         metadata={
             "name": "EquipmentID",
             "type": "Element",
-            "required": True,
         }
     )
     equipment_size_type_coded: None | EquipmentSizeTypeCoded = field(
@@ -5622,7 +4435,6 @@ class ItemContractReferences:
         metadata={
             "name": "ListOfContractItem",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -5703,7 +4515,6 @@ class PercentageMonetaryValue:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -5714,7 +4525,6 @@ class QuantityMonetaryValue:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -5725,7 +4535,6 @@ class SourcingResultDates:
         metadata={
             "name": "OrderDates",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -5736,7 +4545,6 @@ class SourcingResultParty:
         metadata={
             "name": "OrderParty",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -5747,7 +4555,6 @@ class SubLocationItemPackagingReference:
         metadata={
             "name": "ItemPackagingReference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -5758,7 +4565,6 @@ class TotalValue:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -5769,7 +4575,6 @@ class HazardousMaterials:
         metadata={
             "name": "Hazardous",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -5780,14 +4585,12 @@ class PercentageAllowanceOrCharge:
         metadata={
             "name": "PercentQualifier",
             "type": "Element",
-            "required": True,
         }
     )
     percent: Percent = field(
         metadata={
             "name": "Percent",
             "type": "Element",
-            "required": True,
         }
     )
     percentage_monetary_value: None | PercentageMonetaryValue = field(
@@ -5805,14 +4608,12 @@ class QuantityAllowanceOrCharge:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
     rate: Rate = field(
         metadata={
             "name": "Rate",
             "type": "Element",
-            "required": True,
         }
     )
     quantity_monetary_value: None | QuantityMonetaryValue = field(
@@ -5830,14 +4631,12 @@ class ShipToSubInformation:
         metadata={
             "name": "ShipToSubLocation",
             "type": "Element",
-            "required": True,
         }
     )
     ship_to_sub_quantity: ShipToSubQuantity = field(
         metadata={
             "name": "ShipToSubQuantity",
             "type": "Element",
-            "required": True,
         }
     )
     sub_location_item_packaging_reference: (
@@ -5857,7 +4656,6 @@ class Transport:
         metadata={
             "name": "TransportID",
             "type": "Element",
-            "required": True,
         }
     )
     transport_mode: None | TransportMode = field(
@@ -5959,7 +4757,6 @@ class BaseItemDetail:
         metadata={
             "name": "LineItemNum",
             "type": "Element",
-            "required": True,
         }
     )
     line_item_type: None | LineItemType = field(
@@ -6134,7 +4931,6 @@ class AllowOrCharge:
         metadata={
             "name": "IndicatorCoded",
             "type": "Element",
-            "required": True,
         }
     )
     indicator_coded_other: None | IndicatorCodedOther = field(
@@ -6162,7 +4958,6 @@ class AllowOrCharge:
         metadata={
             "name": "MethodOfHandlingCoded",
             "type": "Element",
-            "required": True,
         }
     )
     method_of_handling_coded_other: None | MethodOfHandlingCodedOther = field(
@@ -6176,7 +4971,6 @@ class AllowOrCharge:
         metadata={
             "name": "AllowanceOrChargeDescription",
             "type": "Element",
-            "required": True,
         }
     )
     validity_dates: None | ValidityDates = field(
@@ -6204,7 +4998,6 @@ class AllowOrCharge:
         metadata={
             "name": "TypeOfAllowanceOrCharge",
             "type": "Element",
-            "required": True,
         }
     )
     tax: list[Tax] = field(
@@ -6252,7 +5045,6 @@ class ScheduleLine:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
     requested_delivery_date: None | RequestedDeliveryDate = field(
@@ -6382,7 +5174,6 @@ class ItemAllowancesOrCharges:
         metadata={
             "name": "ListOfAllowOrCharge",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -6393,7 +5184,6 @@ class PricingDetail:
         metadata={
             "name": "ListOfPrice",
             "type": "Element",
-            "required": True,
         }
     )
     tax: list[Tax] = field(
@@ -6425,7 +5215,6 @@ class ItemDetail:
         metadata={
             "name": "BaseItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
     pricing_detail: None | PricingDetail = field(
@@ -6485,7 +5274,6 @@ class SourcingResultItem:
         metadata={
             "name": "ItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -6508,21 +5296,18 @@ class SourcingResultDetail:
         metadata={
             "name": "SourcingResultItemID",
             "type": "Element",
-            "required": True,
         }
     )
     winning_quote_indicator: WinningQuoteIndicator = field(
         metadata={
             "name": "WinningQuoteIndicator",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_result_party: SourcingResultParty = field(
         metadata={
             "name": "SourcingResultParty",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_result_dates: None | SourcingResultDates = field(
@@ -6543,7 +5328,6 @@ class SourcingResultDetail:
         metadata={
             "name": "ListOfSourcingResultItem",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_result_detail_notes: None | SourcingResultDetailNotes = field(
@@ -6582,20 +5366,17 @@ class SourcingResult:
         metadata={
             "name": "SourcingResultHeader",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_sourcing_result_detail: ListOfSourcingResultDetail = field(
         metadata={
             "name": "ListOfSourcingResultDetail",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_result_summary: SourcingResultSummary = field(
         metadata={
             "name": "SourcingResultSummary",
             "type": "Element",
-            "required": True,
         }
     )

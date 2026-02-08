@@ -32,11 +32,7 @@ class DiagnosticHandleDddiConfigurationEnum:
     class Meta:
         name = "DIAGNOSTIC-HANDLE-DDDI-CONFIGURATION-ENUM"
 
-    value: DiagnosticHandleDddiConfigurationEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticHandleDddiConfigurationEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

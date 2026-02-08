@@ -24,12 +24,7 @@ class AtpcheckTypeCoded:
     class Meta:
         name = "ATPCheckTypeCoded"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -37,82 +32,42 @@ class AtpcheckTypeCodedOther:
     class Meta:
         name = "ATPCheckTypeCodedOther"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AvailabilityDeliveryOptionCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AvailabilityDeliveryOptionCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AvailabilityResponseIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AvailabilityToPromisePurposeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AvailabilityToPromisePurposeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AvailabilityToPromiseResponseCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AvailabilityToPromiseResponseCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -124,7 +79,6 @@ class AtpcheckType:
         metadata={
             "name": "ATPCheckTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     atpcheck_type_coded_other: None | AtpcheckTypeCodedOther = field(
@@ -145,7 +99,6 @@ class Atpresponse:
         metadata={
             "name": "AvailabilityToPromiseResponseCoded",
             "type": "Element",
-            "required": True,
         }
     )
     availability_to_promise_response_coded_other: (
@@ -166,7 +119,6 @@ class AvailabilityDeliveryOption:
             metadata={
                 "name": "AvailabilityDeliveryOptionCoded",
                 "type": "Element",
-                "required": True,
             }
         )
     )
@@ -187,7 +139,6 @@ class AvailabilityResponseHeaderTransport:
         metadata={
             "name": "TransportRouting",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -201,7 +152,6 @@ class AvailabilityResponseId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -212,7 +162,6 @@ class AvailabilityResponseListOfAttachment:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -223,7 +172,6 @@ class AvailabilityShipToParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -237,7 +185,6 @@ class AvailabilityToPromiseId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -248,7 +195,6 @@ class AvailabilityToPromisePurpose:
         metadata={
             "name": "AvailabilityToPromisePurposeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     availability_to_promise_purpose_coded_other: (
@@ -268,7 +214,6 @@ class AvailabilityToPromiseResponseBaseItemDetail:
         metadata={
             "name": "BaseItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -279,7 +224,6 @@ class AvailabilityToPromiseResponseDeliveryDetail:
         metadata={
             "name": "DeliveryDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -290,7 +234,6 @@ class AvailabilityToPromiseResponseItemListOfAttachment:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -312,7 +255,6 @@ class AvailabilityToPromiseResponseTransportDetail:
         metadata={
             "name": "Transport",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -323,7 +265,6 @@ class RespondingParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -334,7 +275,6 @@ class AvailabilityResponseDeliveryOption:
         metadata={
             "name": "AvailabilityDeliveryOption",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -345,7 +285,6 @@ class AvailabilityToPromiseItemResponse:
         metadata={
             "name": "AvailabilityToPromisePurpose",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -356,28 +295,24 @@ class AvailabilityToPromiseResponseHeader:
         metadata={
             "name": "AvailabilityResponseID",
             "type": "Element",
-            "required": True,
         }
     )
     availability_response_issue_date: AvailabilityResponseIssueDate = field(
         metadata={
             "name": "AvailabilityResponseIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     availability_to_promise_id: AvailabilityToPromiseId = field(
         metadata={
             "name": "AvailabilityToPromiseID",
             "type": "Element",
-            "required": True,
         }
     )
     atpresponse: Atpresponse = field(
         metadata={
             "name": "ATPResponse",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_reference_coded: None | ListOfReferenceCoded = field(
@@ -391,7 +326,6 @@ class AvailabilityToPromiseResponseHeader:
         metadata={
             "name": "AvailabilityResponseDeliveryOption",
             "type": "Element",
-            "required": True,
         }
     )
     atpcheck_type: None | AtpcheckType = field(
@@ -405,7 +339,6 @@ class AvailabilityToPromiseResponseHeader:
         metadata={
             "name": "InitiatingParty",
             "type": "Element",
-            "required": True,
         }
     )
     responding_party: None | RespondingParty = field(
@@ -464,7 +397,6 @@ class AvailabilityToPromiseResponseItemDetail:
         metadata={
             "name": "AvailabilityToPromiseResponseBaseItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
     availability_to_promise_response_delivery_detail: (
@@ -536,7 +468,6 @@ class AvailabilityToPromiseResponse:
         metadata={
             "name": "AvailabilityToPromiseResponseHeader",
             "type": "Element",
-            "required": True,
         }
     )
     availability_to_promise_response_detail: (

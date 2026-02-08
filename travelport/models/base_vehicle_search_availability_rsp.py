@@ -20,7 +20,6 @@ class BaseVehicleSearchAvailabilityRsp(BaseSearchRsp1):
             "name": "VehicleDateLocation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-            "required": True,
         }
     )
     vehicle: list[Vehicle] = field(

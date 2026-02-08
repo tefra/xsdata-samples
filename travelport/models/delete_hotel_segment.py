@@ -23,6 +23,5 @@ class DeleteHotelSegment:
             "name": "HotelReservationRef",
             "type": "Element",
             "namespace": "",
-            "required": True,
         }
     )

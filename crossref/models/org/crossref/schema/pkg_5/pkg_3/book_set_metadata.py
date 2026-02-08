@@ -64,7 +64,6 @@ class BookSetMetadata:
     set_metadata: SetMetadata = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     contributors: None | Contributors = field(
@@ -122,7 +121,6 @@ class BookSetMetadata:
     publisher: Publisher = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     publisher_item: None | PublisherItem = field(

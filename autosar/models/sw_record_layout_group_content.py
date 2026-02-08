@@ -96,6 +96,5 @@ class SwRecordLayoutGroupContent:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

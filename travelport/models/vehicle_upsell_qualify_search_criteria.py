@@ -24,7 +24,6 @@ class VehicleUpsellQualifySearchCriteria(UpsellSearchCriteria):
         metadata={
             "name": "VendorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 5,
         }

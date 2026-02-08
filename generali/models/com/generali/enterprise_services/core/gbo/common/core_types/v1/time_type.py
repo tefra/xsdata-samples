@@ -23,8 +23,4 @@ class TimeType:
     xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Time</ns1:PrimitiveType>.
     """
 
-    value: XmlTime = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: XmlTime = field()

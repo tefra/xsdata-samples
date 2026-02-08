@@ -30,7 +30,6 @@ class ConjunctedTicketInfo:
         metadata={
             "name": "Number",
             "type": "Attribute",
-            "required": True,
         }
     )
     iatanumber: None | str = field(
@@ -68,6 +67,5 @@ class ConjunctedTicketInfo:
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )

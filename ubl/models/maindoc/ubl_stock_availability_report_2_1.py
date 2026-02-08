@@ -78,7 +78,6 @@ class StockAvailabilityReportType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     copy_indicator: None | CopyIndicator = field(
@@ -102,7 +101,6 @@ class StockAvailabilityReportType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -158,7 +156,6 @@ class StockAvailabilityReportType:
             "name": "SellerSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     retailer_customer_party: None | RetailerCustomerParty = field(
@@ -174,7 +171,6 @@ class StockAvailabilityReportType:
             "name": "InventoryReportingParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     stock_availability_report_line: tuple[StockAvailabilityReportLine, ...] = (

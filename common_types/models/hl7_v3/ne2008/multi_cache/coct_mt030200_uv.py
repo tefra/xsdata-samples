@@ -307,7 +307,6 @@ class CoctMt030200UvContactParty:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -422,7 +421,6 @@ class CoctMt030200UvEmployment:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     negation_ind: None | str = field(
@@ -519,7 +517,6 @@ class CoctMt030200UvEntity:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -813,7 +810,6 @@ class CoctMt030200UvLanguageCommunication:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     mode_code: None | Ce = field(
@@ -913,7 +909,6 @@ class CoctMt030200UvOtherIds:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )

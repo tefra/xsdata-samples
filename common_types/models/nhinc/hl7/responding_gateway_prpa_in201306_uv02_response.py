@@ -18,7 +18,6 @@ class CommunityPrpaIn201306Uv02ResponseType:
             "name": "PRPA_IN201306UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_community: NhinTargetCommunityType = field(
@@ -26,7 +25,6 @@ class CommunityPrpaIn201306Uv02ResponseType:
             "name": "nhinTargetCommunity",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 

@@ -31,11 +31,7 @@ class CycleRepetitionType:
     class Meta:
         name = "CYCLE-REPETITION-TYPE"
 
-    value: CycleRepetitionTypeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: CycleRepetitionTypeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

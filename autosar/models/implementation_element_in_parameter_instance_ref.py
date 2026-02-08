@@ -90,7 +90,6 @@ class ImplementationElementInParameterInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -100,6 +99,5 @@ class ImplementationElementInParameterInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

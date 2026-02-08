@@ -27,14 +27,12 @@ class SystemInfo:
         metadata={
             "name": "SystemType",
             "type": "Attribute",
-            "required": True,
         }
     )
     application_version: str = field(
         metadata={
             "name": "ApplicationVersion",
             "type": "Attribute",
-            "required": True,
         }
     )
     description: None | str = field(

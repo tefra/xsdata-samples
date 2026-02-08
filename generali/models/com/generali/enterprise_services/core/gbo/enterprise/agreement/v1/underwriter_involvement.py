@@ -21,6 +21,5 @@ class UnderwriterInvolvement(ContactInvolvement):
             "name": "UnderwriterRole",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )

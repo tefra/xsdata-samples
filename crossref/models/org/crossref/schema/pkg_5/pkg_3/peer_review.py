@@ -82,13 +82,11 @@ class PeerReview:
     titles: Titles = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     review_date: ReviewDate = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     institution: list[Institution] = field(
@@ -122,7 +120,6 @@ class PeerReview:
             "name": "program",
             "type": "Element",
             "namespace": "http://www.crossref.org/relations.xsd",
-            "required": True,
         }
     )
     scn_policies: None | ScnPolicies = field(
@@ -134,7 +131,6 @@ class PeerReview:
     doi_data: DoiData = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     stage: None | PeerReviewStage = field(

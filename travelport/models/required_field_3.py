@@ -24,6 +24,5 @@ class RequiredField3:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
         }
     )

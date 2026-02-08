@@ -103,7 +103,6 @@ class UnawardedNotificationType:
             "name": "ContractFolderID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_date: IssueDate = field(
@@ -111,7 +110,6 @@ class UnawardedNotificationType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -151,7 +149,6 @@ class UnawardedNotificationType:
             "name": "SenderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     receiver_party: ReceiverParty = field(
@@ -159,7 +156,6 @@ class UnawardedNotificationType:
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     minutes_document_reference: None | MinutesDocumentReference = field(

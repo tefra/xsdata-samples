@@ -53,7 +53,6 @@ class FlexExploreModifiers:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     radius: None | int = field(

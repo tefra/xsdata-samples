@@ -135,7 +135,6 @@ class RailSegment(Segment1):
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
-            "required": True,
         }
     )
     arrival_time: None | str = field(

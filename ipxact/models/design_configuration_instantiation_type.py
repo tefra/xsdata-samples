@@ -42,7 +42,6 @@ class DesignConfigurationInstantiationType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -80,7 +79,6 @@ class DesignConfigurationInstantiationType:
             "name": "designConfigurationRef",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     parameters: None | Parameters = field(

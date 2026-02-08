@@ -56,7 +56,6 @@ class VehicleRulesRsp(BaseSearchRsp1):
         metadata={
             "name": "Vehicle",
             "type": "Element",
-            "required": True,
         }
     )
     operation_time: list[OperationTime] = field(
@@ -239,7 +238,6 @@ class VehicleRulesRsp(BaseSearchRsp1):
             metadata={
                 "name": "Code",
                 "type": "Attribute",
-                "required": True,
             }
         )
         amount: None | str = field(

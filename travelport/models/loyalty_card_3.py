@@ -69,7 +69,6 @@ class LoyaltyCard3:
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -107,7 +106,6 @@ class LoyaltyCard3:
         metadata={
             "name": "CardNumber",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 36,
         }

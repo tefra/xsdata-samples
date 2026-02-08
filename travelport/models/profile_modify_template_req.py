@@ -38,14 +38,12 @@ class ProfileModifyTemplateReq(BaseReq5):
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
         }
     )
     version: int = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
-            "required": True,
             "min_inclusive": 0,
         }
     )

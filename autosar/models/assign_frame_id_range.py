@@ -136,7 +136,6 @@ class AssignFrameIdRange:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -146,7 +145,6 @@ class AssignFrameIdRange:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

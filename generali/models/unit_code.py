@@ -12,6 +12,5 @@ class UnitCode:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )

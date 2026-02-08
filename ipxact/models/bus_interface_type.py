@@ -93,7 +93,6 @@ class BusInterfaceType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -124,7 +123,6 @@ class BusInterfaceType:
             "name": "busType",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     abstraction_types: None | AbstractionTypes = field(
@@ -299,12 +297,7 @@ class BusInterfaceType:
                 A reference to a mode.
                 """
 
-                value: str = field(
-                    default="",
-                    metadata={
-                        "required": True,
-                    },
-                )
+                value: str = field(default="")
                 id: None | str = field(
                     default=None,
                     metadata={
@@ -390,7 +383,6 @@ class BusInterfaceType:
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                "required": True,
             }
         )
 
@@ -435,7 +427,6 @@ class BusInterfaceType:
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                    "required": True,
                 }
             )
 
@@ -455,7 +446,6 @@ class BusInterfaceType:
                         "name": "remapAddress",
                         "type": "Element",
                         "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                        "required": True,
                     }
                 )
                 mode_ref: list[ModeRef] = field(
@@ -480,7 +470,6 @@ class BusInterfaceType:
             metadata={
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                "required": True,
             }
         )
 
@@ -504,6 +493,5 @@ class BusInterfaceType:
             metadata={
                 "name": "interfaceMode",
                 "type": "Attribute",
-                "required": True,
             }
         )

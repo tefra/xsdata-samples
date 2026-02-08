@@ -90,7 +90,6 @@ class AbstractorModelType:
                 metadata={
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                    "required": True,
                 }
             )
             display_name: None | DisplayName = field(
@@ -155,7 +154,6 @@ class AbstractorModelType:
                 value: str = field(
                     default="",
                     metadata={
-                        "required": True,
                         "pattern": r"[a-zA-Z0-9_+\*\.]*:[a-zA-Z0-9_+\*\.]*:[a-zA-Z0-9_+\*\.]*",
                     },
                 )

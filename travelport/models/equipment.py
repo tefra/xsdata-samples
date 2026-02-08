@@ -30,14 +30,12 @@ class Equipment:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     description: str = field(
         metadata={
             "name": "Description",
             "type": "Attribute",
-            "required": True,
         }
     )
     quantity: None | int = field(

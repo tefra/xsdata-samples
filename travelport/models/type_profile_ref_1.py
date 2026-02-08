@@ -20,13 +20,11 @@ class TypeProfileRef1:
         metadata={
             "name": "ProfileEntityID",
             "type": "Attribute",
-            "required": True,
         }
     )
     profile_level: TypeProfileLevel1 = field(
         metadata={
             "name": "ProfileLevel",
             "type": "Attribute",
-            "required": True,
         }
     )

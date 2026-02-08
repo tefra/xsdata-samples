@@ -74,6 +74,5 @@ class DiagnosticTroubleCodeRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

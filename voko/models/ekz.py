@@ -33,7 +33,6 @@ class Trdgrp:
     lng: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     content: list[object] = field(
@@ -181,7 +180,6 @@ class Ref:
     cel: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     content: list[object] = field(

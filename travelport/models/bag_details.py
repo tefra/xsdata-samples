@@ -49,7 +49,6 @@ class BagDetails:
         metadata={
             "name": "ApplicableBags",
             "type": "Attribute",
-            "required": True,
         }
     )
     base_price: None | str = field(

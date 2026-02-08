@@ -48,20 +48,17 @@ class CategoryInfo:
         metadata={
             "name": "Category",
             "type": "Attribute",
-            "required": True,
         }
     )
     count: int = field(
         metadata={
             "name": "Count",
             "type": "Attribute",
-            "required": True,
         }
     )
     total_count: int = field(
         metadata={
             "name": "TotalCount",
             "type": "Attribute",
-            "required": True,
         }
     )

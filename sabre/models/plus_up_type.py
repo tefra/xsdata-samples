@@ -24,7 +24,6 @@ class PlusUpType:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
             "fraction_digits": 3,
         }
     )
@@ -32,7 +31,6 @@ class PlusUpType:
         metadata={
             "name": "OriginCity",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[a-zA-Z]{3}",
         }
     )
@@ -40,7 +38,6 @@ class PlusUpType:
         metadata={
             "name": "DestinationCity",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[a-zA-Z]{3}",
         }
     )

@@ -39,6 +39,5 @@ class ProfileSearchFieldReq1(BaseReq2):
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-            "required": True,
         }
     )

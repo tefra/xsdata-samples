@@ -13,8 +13,5 @@ class ScopeOfTicket:
         namespace = "http://www.netex.org.uk/netex"
 
     value: ScopeOfTicketEnumeration = field(
-        default=ScopeOfTicketEnumeration.UNKNOWN,
-        metadata={
-            "required": True,
-        },
+        default=ScopeOfTicketEnumeration.UNKNOWN
     )

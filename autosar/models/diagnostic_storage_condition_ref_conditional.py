@@ -75,6 +75,5 @@ class DiagnosticStorageConditionRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

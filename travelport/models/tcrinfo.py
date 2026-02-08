@@ -30,7 +30,6 @@ class Tcrinfo:
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )
     date: None | XmlDateTime = field(
@@ -44,13 +43,11 @@ class Tcrinfo:
         metadata={
             "name": "TCRNumber",
             "type": "Attribute",
-            "required": True,
         }
     )
     provider_reservation_info_ref: str = field(
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-            "required": True,
         }
     )

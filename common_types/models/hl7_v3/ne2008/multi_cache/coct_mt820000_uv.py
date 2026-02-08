@@ -202,7 +202,6 @@ class CoctMt820000UvRoleOther:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -393,7 +392,6 @@ class CoctMt820000UvAssignedProvider:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -454,7 +452,6 @@ class CoctMt820000UvPerformer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -536,7 +533,6 @@ class CoctMt820000UvCareProvision:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(

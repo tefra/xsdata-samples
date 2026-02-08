@@ -44,21 +44,18 @@ class AgentAction4:
         metadata={
             "name": "ActionType",
             "type": "Attribute",
-            "required": True,
         }
     )
     agent_code: str = field(
         metadata={
             "name": "AgentCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     branch_code: str = field(
         metadata={
             "name": "BranchCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 25,
         }
@@ -67,7 +64,6 @@ class AgentAction4:
         metadata={
             "name": "AgencyCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     agent_sine: None | str = field(
@@ -81,7 +77,6 @@ class AgentAction4:
         metadata={
             "name": "EventTime",
             "type": "Attribute",
-            "required": True,
         }
     )
     agent_override: None | str = field(

@@ -28,11 +28,7 @@ class DependencyUsageEnum:
     class Meta:
         name = "DEPENDENCY-USAGE-ENUM"
 
-    value: DependencyUsageEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DependencyUsageEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

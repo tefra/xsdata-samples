@@ -27,6 +27,5 @@ class AirSegmentSpecialUpdate:
         metadata={
             "name": "Action",
             "type": "Attribute",
-            "required": True,
         }
     )

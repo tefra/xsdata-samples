@@ -30,11 +30,7 @@ class SomeipTransformerSessionHandlingEnum:
     class Meta:
         name = "SOMEIP-TRANSFORMER-SESSION-HANDLING-ENUM"
 
-    value: SomeipTransformerSessionHandlingEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SomeipTransformerSessionHandlingEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

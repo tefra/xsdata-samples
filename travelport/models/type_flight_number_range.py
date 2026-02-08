@@ -18,7 +18,6 @@ class TypeFlightNumberRange:
         metadata={
             "name": "FlightNumberRangeStart",
             "type": "Attribute",
-            "required": True,
             "max_length": 5,
         }
     )
@@ -26,7 +25,6 @@ class TypeFlightNumberRange:
         metadata={
             "name": "FlightNumberRangeEnd",
             "type": "Attribute",
-            "required": True,
             "max_length": 5,
         }
     )

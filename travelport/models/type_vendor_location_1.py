@@ -32,7 +32,6 @@ class TypeVendorLocation1:
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }
@@ -41,7 +40,6 @@ class TypeVendorLocation1:
         metadata={
             "name": "VendorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 5,
         }

@@ -26,6 +26,5 @@ class OwnershipChange3:
         metadata={
             "name": "OwningPCC",
             "type": "Attribute",
-            "required": True,
         }
     )

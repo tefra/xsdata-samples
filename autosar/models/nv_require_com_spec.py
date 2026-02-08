@@ -205,6 +205,5 @@ class NvRequireComSpec:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

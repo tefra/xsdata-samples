@@ -116,12 +116,10 @@ class ParkingRouteDetails(ParkingRoute):
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     version: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

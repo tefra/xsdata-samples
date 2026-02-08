@@ -26,6 +26,5 @@ class CharacteristicType(BaseSimpleComponentType):
             "name": "Values",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            "required": True,
         }
     )

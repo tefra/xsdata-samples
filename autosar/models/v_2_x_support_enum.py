@@ -26,11 +26,7 @@ class V2XSupportEnum:
     class Meta:
         name = "V-2-X-SUPPORT-ENUM"
 
-    value: V2XSupportEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: V2XSupportEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

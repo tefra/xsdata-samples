@@ -29,7 +29,6 @@ class Comment:
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     comment_date_time: None | XmlDateTime = field(

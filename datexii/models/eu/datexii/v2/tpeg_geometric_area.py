@@ -27,7 +27,6 @@ class TpegGeometricArea(TpegAreaLocation):
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     centre_point: PointCoordinates = field(
@@ -35,7 +34,6 @@ class TpegGeometricArea(TpegAreaLocation):
             "name": "centrePoint",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     name: None | TpegAreaDescriptor = field(

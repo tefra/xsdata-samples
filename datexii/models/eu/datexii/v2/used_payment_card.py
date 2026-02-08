@@ -35,7 +35,6 @@ class UsedPaymentCard:
             "name": "paymentCard",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     other_payment_card: None | str = field(

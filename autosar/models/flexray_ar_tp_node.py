@@ -100,7 +100,6 @@ class FlexrayArTpNode:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | FlexrayArTpNode.ShortNameFragments = field(
@@ -247,7 +246,6 @@ class FlexrayArTpNode:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -257,6 +255,5 @@ class FlexrayArTpNode:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

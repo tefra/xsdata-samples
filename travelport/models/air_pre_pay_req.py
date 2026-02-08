@@ -76,7 +76,6 @@ class AirPrePayReq(BaseReq1):
             metadata={
                 "name": "StartFromResult",
                 "type": "Attribute",
-                "required": True,
                 "min_inclusive": 1,
             }
         )
@@ -84,7 +83,6 @@ class AirPrePayReq(BaseReq1):
             metadata={
                 "name": "MaxResults",
                 "type": "Attribute",
-                "required": True,
                 "min_inclusive": 1,
                 "max_inclusive": 200,
             }
@@ -105,7 +103,6 @@ class AirPrePayReq(BaseReq1):
             metadata={
                 "name": "Id",
                 "type": "Attribute",
-                "required": True,
                 "min_length": 1,
                 "max_length": 36,
             }

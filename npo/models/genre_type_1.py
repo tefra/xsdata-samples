@@ -20,7 +20,6 @@ class GenreType1:
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
             "pattern": r"3(\.[0-9]+)+",
         }
     )

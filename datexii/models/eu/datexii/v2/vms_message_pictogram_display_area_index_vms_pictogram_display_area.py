@@ -19,13 +19,11 @@ class VmsMessagePictogramDisplayAreaIndexVmsPictogramDisplayArea:
             "name": "vmsPictogramDisplayArea",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     pictogram_display_area_index: int = field(
         metadata={
             "name": "pictogramDisplayAreaIndex",
             "type": "Attribute",
-            "required": True,
         }
     )

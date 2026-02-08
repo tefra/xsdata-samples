@@ -38,14 +38,12 @@ class DistanceMatrixElementRefByValueStructure:
         metadata={
             "name": "fromRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     to_ref: str = field(
         metadata={
             "name": "toRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     name_of_point_ref_class: None | str = field(

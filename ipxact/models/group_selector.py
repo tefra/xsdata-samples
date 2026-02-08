@@ -52,12 +52,7 @@ class GroupSelector:
 
     @dataclass(kw_only=True)
     class Name:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         id: None | str = field(
             default=None,
             metadata={

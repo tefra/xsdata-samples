@@ -42,7 +42,6 @@ class ParkingVehicle:
             "name": "parkingRecordReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     parking_space_reference: None | str = field(
@@ -75,7 +74,6 @@ class ParkingVehicle:
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     individual_charge: None | IndividualCharge = field(
@@ -105,12 +103,10 @@ class ParkingVehicle:
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     version: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

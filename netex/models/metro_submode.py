@@ -13,8 +13,5 @@ class MetroSubmode:
         namespace = "http://www.netex.org.uk/netex"
 
     value: MetroSubmodeEnumeration = field(
-        default=MetroSubmodeEnumeration.UNKNOWN,
-        metadata={
-            "required": True,
-        },
+        default=MetroSubmodeEnumeration.UNKNOWN
     )

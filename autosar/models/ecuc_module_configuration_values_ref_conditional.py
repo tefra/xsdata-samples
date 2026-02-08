@@ -75,6 +75,5 @@ class EcucModuleConfigurationValuesRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

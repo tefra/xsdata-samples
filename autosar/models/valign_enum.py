@@ -28,11 +28,7 @@ class ValignEnum:
     class Meta:
         name = "VALIGN-ENUM"
 
-    value: ValignEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ValignEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -44,21 +44,18 @@ class ProfileChildSummary1:
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-            "required": True,
         }
     )
     profile_type: TypeProfileType3 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -76,14 +73,12 @@ class ProfileChildSummary1:
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )
     version: int = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
-            "required": True,
             "min_inclusive": 0,
         }
     )

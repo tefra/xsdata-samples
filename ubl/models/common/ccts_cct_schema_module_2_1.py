@@ -10,11 +10,7 @@ __NAMESPACE__ = (
 
 @dataclass(frozen=True, kw_only=True)
 class AmountType:
-    value: Decimal = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: Decimal = field()
     currency_id: None | str = field(
         default=None,
         metadata={
@@ -36,7 +32,6 @@ class BinaryObjectType:
     value: bytes = field(
         default=b"",
         metadata={
-            "required": True,
             "format": "base64",
         },
     )
@@ -83,12 +78,7 @@ class BinaryObjectType:
 
 @dataclass(frozen=True, kw_only=True)
 class CodeType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     list_id: None | str = field(
         default=None,
         metadata={
@@ -155,12 +145,7 @@ class CodeType:
 
 @dataclass(frozen=True, kw_only=True)
 class DateTimeType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     format: None | str = field(
         default=None,
         metadata={
@@ -171,12 +156,7 @@ class DateTimeType:
 
 @dataclass(frozen=True, kw_only=True)
 class IdentifierType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     scheme_id: None | str = field(
         default=None,
         metadata={
@@ -230,12 +210,7 @@ class IdentifierType:
 
 @dataclass(frozen=True, kw_only=True)
 class IndicatorType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     format: None | str = field(
         default=None,
         metadata={
@@ -246,11 +221,7 @@ class IndicatorType:
 
 @dataclass(frozen=True, kw_only=True)
 class MeasureType:
-    value: Decimal = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: Decimal = field()
     unit_code: None | str = field(
         default=None,
         metadata={
@@ -269,11 +240,7 @@ class MeasureType:
 
 @dataclass(frozen=True, kw_only=True)
 class NumericType:
-    value: Decimal = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: Decimal = field()
     format: None | str = field(
         default=None,
         metadata={
@@ -284,11 +251,7 @@ class NumericType:
 
 @dataclass(frozen=True, kw_only=True)
 class QuantityType:
-    value: Decimal = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: Decimal = field()
     unit_code: None | str = field(
         default=None,
         metadata={
@@ -321,12 +284,7 @@ class QuantityType:
 
 @dataclass(frozen=True, kw_only=True)
 class TextType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     language_id: None | str = field(
         default=None,
         metadata={

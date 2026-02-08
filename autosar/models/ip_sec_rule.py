@@ -157,7 +157,6 @@ class IpSecRule:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | IpSecRule.ShortNameFragments = field(
@@ -416,7 +415,6 @@ class IpSecRule:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -426,7 +424,6 @@ class IpSecRule:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -449,7 +446,6 @@ class IpSecRule:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -472,6 +468,5 @@ class IpSecRule:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

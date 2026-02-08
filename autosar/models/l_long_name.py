@@ -62,7 +62,6 @@ class LLongName:
         metadata={
             "name": "L",
             "type": "Attribute",
-            "required": True,
         }
     )
     blueprint_value: None | str = field(

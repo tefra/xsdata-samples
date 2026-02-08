@@ -47,7 +47,6 @@ class HazardousMaterials:
             "name": "chemicalName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     dangerous_goods_flash_point: None | float = field(

@@ -28,7 +28,6 @@ class Subjects:
             "name": "subjectTypeOfWorks",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     number_of_subjects: None | int = field(

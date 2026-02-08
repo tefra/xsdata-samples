@@ -23,7 +23,6 @@ class RegisterFileRef:
         metadata={
             "name": "registerFileRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     id: None | str = field(

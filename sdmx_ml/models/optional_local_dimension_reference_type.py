@@ -10,7 +10,6 @@ class OptionalLocalDimensionReferenceType:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "pattern": r"[A-Za-z][A-Za-z0-9_\-]*",
         },
     )

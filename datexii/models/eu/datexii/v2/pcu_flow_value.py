@@ -23,7 +23,6 @@ class PcuFlowValue(DataValue):
             "name": "pcuFlowRate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     pcu_flow_value_extension: None | ExtensionType = field(

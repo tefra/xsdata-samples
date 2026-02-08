@@ -37,6 +37,5 @@ class ComplexProcessingMessageType(ProcessingMessageType):
             metadata={
                 "name": "DepartureDate",
                 "type": "Attribute",
-                "required": True,
             }
         )

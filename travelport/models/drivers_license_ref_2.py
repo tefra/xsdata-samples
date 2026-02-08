@@ -15,6 +15,5 @@ class DriversLicenseRef2:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

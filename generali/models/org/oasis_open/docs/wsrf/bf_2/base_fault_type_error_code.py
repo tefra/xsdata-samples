@@ -13,7 +13,6 @@ class BaseFaultTypeErrorCode:
     dialect: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     content: list[object] = field(

@@ -22,7 +22,6 @@ class AlternativeId:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -37,14 +36,12 @@ class AttributeValueBoolean:
             "name": "DEFINITION",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     the_value: bool = field(
         metadata={
             "name": "THE-VALUE",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -70,14 +67,12 @@ class AttributeValueDate:
             "name": "DEFINITION",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     the_value: XmlDateTime = field(
         metadata={
             "name": "THE-VALUE",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -103,7 +98,6 @@ class AttributeValueEnumeration:
             "name": "DEFINITION",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     values: None | AttributeValueEnumeration.Values = field(
@@ -148,14 +142,12 @@ class AttributeValueInteger:
             "name": "DEFINITION",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     the_value: int = field(
         metadata={
             "name": "THE-VALUE",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -181,14 +173,12 @@ class AttributeValueReal:
             "name": "DEFINITION",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     the_value: float = field(
         metadata={
             "name": "THE-VALUE",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -214,14 +204,12 @@ class AttributeValueString:
             "name": "DEFINITION",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     the_value: str = field(
         metadata={
             "name": "THE-VALUE",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -246,14 +234,12 @@ class EmbeddedValue:
         metadata={
             "name": "KEY",
             "type": "Attribute",
-            "required": True,
         }
     )
     other_content: str = field(
         metadata={
             "name": "OTHER-CONTENT",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -276,7 +262,6 @@ class ReqIfHeader:
             "name": "CREATION-TIME",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     repository_id: None | str = field(
@@ -292,7 +277,6 @@ class ReqIfHeader:
             "name": "REQ-IF-TOOL-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     req_if_version: str = field(
@@ -302,7 +286,6 @@ class ReqIfHeader:
             "name": "REQ-IF-VERSION",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         },
     )
     source_tool_id: str = field(
@@ -310,7 +293,6 @@ class ReqIfHeader:
             "name": "SOURCE-TOOL-ID",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     title: str = field(
@@ -318,14 +300,12 @@ class ReqIfHeader:
             "name": "TITLE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     identifier: str = field(
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -370,7 +350,6 @@ class AttributeDefinitionBoolean:
             "name": "TYPE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     desc: None | str = field(
@@ -384,7 +363,6 @@ class AttributeDefinitionBoolean:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     is_editable: None | bool = field(
@@ -398,7 +376,6 @@ class AttributeDefinitionBoolean:
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -469,7 +446,6 @@ class AttributeDefinitionDate:
             "name": "TYPE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     desc: None | str = field(
@@ -483,7 +459,6 @@ class AttributeDefinitionDate:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     is_editable: None | bool = field(
@@ -497,7 +472,6 @@ class AttributeDefinitionDate:
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -570,7 +544,6 @@ class AttributeDefinitionEnumeration:
             "name": "TYPE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     desc: None | str = field(
@@ -584,7 +557,6 @@ class AttributeDefinitionEnumeration:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     is_editable: None | bool = field(
@@ -598,7 +570,6 @@ class AttributeDefinitionEnumeration:
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -612,7 +583,6 @@ class AttributeDefinitionEnumeration:
         metadata={
             "name": "MULTI-VALUED",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -676,7 +646,6 @@ class AttributeDefinitionInteger:
             "name": "TYPE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     desc: None | str = field(
@@ -690,7 +659,6 @@ class AttributeDefinitionInteger:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     is_editable: None | bool = field(
@@ -704,7 +672,6 @@ class AttributeDefinitionInteger:
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -775,7 +742,6 @@ class AttributeDefinitionReal:
             "name": "TYPE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     desc: None | str = field(
@@ -789,7 +755,6 @@ class AttributeDefinitionReal:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     is_editable: None | bool = field(
@@ -803,7 +768,6 @@ class AttributeDefinitionReal:
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -874,7 +838,6 @@ class AttributeDefinitionString:
             "name": "TYPE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     desc: None | str = field(
@@ -888,7 +851,6 @@ class AttributeDefinitionString:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     is_editable: None | bool = field(
@@ -902,7 +864,6 @@ class AttributeDefinitionString:
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -971,14 +932,12 @@ class DatatypeDefinitionBoolean:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     last_change: XmlDateTime = field(
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -1025,14 +984,12 @@ class DatatypeDefinitionDate:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     last_change: XmlDateTime = field(
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -1079,14 +1036,12 @@ class DatatypeDefinitionInteger:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     last_change: XmlDateTime = field(
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -1100,14 +1055,12 @@ class DatatypeDefinitionInteger:
         metadata={
             "name": "MAX",
             "type": "Attribute",
-            "required": True,
         }
     )
     min: int = field(
         metadata={
             "name": "MIN",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1140,7 +1093,6 @@ class DatatypeDefinitionReal:
         metadata={
             "name": "ACCURACY",
             "type": "Attribute",
-            "required": True,
         }
     )
     desc: None | str = field(
@@ -1154,14 +1106,12 @@ class DatatypeDefinitionReal:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     last_change: XmlDateTime = field(
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -1175,14 +1125,12 @@ class DatatypeDefinitionReal:
         metadata={
             "name": "MAX",
             "type": "Attribute",
-            "required": True,
         }
     )
     min: float = field(
         metadata={
             "name": "MIN",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1222,14 +1170,12 @@ class DatatypeDefinitionString:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     last_change: XmlDateTime = field(
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -1243,7 +1189,6 @@ class DatatypeDefinitionString:
         metadata={
             "name": "MAX-LENGTH",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1283,14 +1228,12 @@ class DatatypeDefinitionXhtml:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     last_change: XmlDateTime = field(
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -1331,7 +1274,6 @@ class EnumValue:
             "name": "PROPERTIES",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     desc: None | str = field(
@@ -1345,14 +1287,12 @@ class EnumValue:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     last_change: XmlDateTime = field(
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -1404,7 +1344,6 @@ class RelationGroup:
             "name": "SOURCE-SPECIFICATION",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     spec_relations: None | RelationGroup.SpecRelations = field(
@@ -1420,7 +1359,6 @@ class RelationGroup:
             "name": "TARGET-SPECIFICATION",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     type_value: RelationGroup.Type = field(
@@ -1428,7 +1366,6 @@ class RelationGroup:
             "name": "TYPE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     desc: None | str = field(
@@ -1442,14 +1379,12 @@ class RelationGroup:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     last_change: XmlDateTime = field(
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -1550,7 +1485,6 @@ class SpecHierarchy:
             "name": "OBJECT",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     desc: None | str = field(
@@ -1564,7 +1498,6 @@ class SpecHierarchy:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     is_editable: None | bool = field(
@@ -1585,7 +1518,6 @@ class SpecHierarchy:
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -1720,7 +1652,6 @@ class AttributeValueXhtml:
             "name": "THE-VALUE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     the_original_value: None | XhtmlContent = field(
@@ -1736,7 +1667,6 @@ class AttributeValueXhtml:
             "name": "DEFINITION",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     is_simplified: None | bool = field(
@@ -1793,14 +1723,12 @@ class DatatypeDefinitionEnumeration:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     last_change: XmlDateTime = field(
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -1860,7 +1788,6 @@ class AttributeDefinitionXhtml:
             "name": "TYPE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     desc: None | str = field(
@@ -1874,7 +1801,6 @@ class AttributeDefinitionXhtml:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     is_editable: None | bool = field(
@@ -1888,7 +1814,6 @@ class AttributeDefinitionXhtml:
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -1959,7 +1884,6 @@ class SpecObject:
             "name": "TYPE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     desc: None | str = field(
@@ -1973,14 +1897,12 @@ class SpecObject:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     last_change: XmlDateTime = field(
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -2099,7 +2021,6 @@ class SpecRelation:
             "name": "SOURCE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     target: SpecRelation.Target = field(
@@ -2107,7 +2028,6 @@ class SpecRelation:
             "name": "TARGET",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     type_value: SpecRelation.Type = field(
@@ -2115,7 +2035,6 @@ class SpecRelation:
             "name": "TYPE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     desc: None | str = field(
@@ -2129,14 +2048,12 @@ class SpecRelation:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     last_change: XmlDateTime = field(
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -2285,7 +2202,6 @@ class Specification:
             "name": "TYPE",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/ReqIF/20110401/reqif.xsd",
-            "required": True,
         }
     )
     desc: None | str = field(
@@ -2299,14 +2215,12 @@ class Specification:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     last_change: XmlDateTime = field(
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -2442,14 +2356,12 @@ class RelationGroupType:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     last_change: XmlDateTime = field(
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -2565,14 +2477,12 @@ class SpecObjectType:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     last_change: XmlDateTime = field(
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -2688,14 +2598,12 @@ class SpecRelationType:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     last_change: XmlDateTime = field(
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -2811,14 +2719,12 @@ class SpecificationType:
         metadata={
             "name": "IDENTIFIER",
             "type": "Attribute",
-            "required": True,
         }
     )
     last_change: XmlDateTime = field(
         metadata={
             "name": "LAST-CHANGE",
             "type": "Attribute",
-            "required": True,
         }
     )
     long_name: None | str = field(
@@ -3107,14 +3013,12 @@ class ReqIf:
         metadata={
             "name": "THE-HEADER",
             "type": "Element",
-            "required": True,
         }
     )
     core_content: ReqIf.CoreContent = field(
         metadata={
             "name": "CORE-CONTENT",
             "type": "Element",
-            "required": True,
         }
     )
     tool_extensions: None | ReqIf.ToolExtensions = field(

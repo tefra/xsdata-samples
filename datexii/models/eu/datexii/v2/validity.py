@@ -34,7 +34,6 @@ class Validity:
             "name": "validityStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     overrunning: None | bool = field(
@@ -49,7 +48,6 @@ class Validity:
             "name": "validityTimeSpecification",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     validity_extension: None | ExtensionType = field(

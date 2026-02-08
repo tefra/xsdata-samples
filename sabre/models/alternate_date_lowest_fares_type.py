@@ -19,7 +19,6 @@ class AlternateDateLowestFaresType:
             "name": "DepartureDateTime",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     returnl_date_time: str = field(
@@ -27,7 +26,6 @@ class AlternateDateLowestFaresType:
             "name": "ReturnlDateTime",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     lowest_fare: CurrencyAmountType = field(
@@ -35,6 +33,5 @@ class AlternateDateLowestFaresType:
             "name": "LowestFare",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )

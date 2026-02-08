@@ -81,6 +81,5 @@ class ModeDrivenTransmissionModeCondition:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

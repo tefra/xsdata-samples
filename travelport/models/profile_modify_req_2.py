@@ -83,7 +83,6 @@ class ProfileModifyReq2(BaseReq5):
         metadata={
             "name": "Version",
             "type": "Attribute",
-            "required": True,
             "min_inclusive": 0,
         }
     )
@@ -116,7 +115,6 @@ class ProfileModifyReq2(BaseReq5):
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "min_length": 1,
                 "max_length": 128,
             },
@@ -125,7 +123,6 @@ class ProfileModifyReq2(BaseReq5):
             metadata={
                 "name": "ProfileType",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -148,7 +145,6 @@ class ProfileModifyReq2(BaseReq5):
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "min_length": 6,
                 "max_length": 128,
             },
@@ -157,7 +153,6 @@ class ProfileModifyReq2(BaseReq5):
             metadata={
                 "name": "ProfileType",
                 "type": "Attribute",
-                "required": True,
             }
         )
         agency_code: None | str = field(

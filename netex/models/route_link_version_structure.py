@@ -22,7 +22,6 @@ class RouteLinkVersionStructure(LinkVersionStructure):
             "name": "FromPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     to_point_ref: RoutePointRefStructure = field(
@@ -30,7 +29,6 @@ class RouteLinkVersionStructure(LinkVersionStructure):
             "name": "ToPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     operational_context_ref: None | OperationalContextRef = field(

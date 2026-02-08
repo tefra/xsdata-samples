@@ -23,7 +23,6 @@ class VehicleFlowValue(DataValue):
             "name": "vehicleFlowRate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     vehicle_flow_value_extension: None | ExtensionType = field(

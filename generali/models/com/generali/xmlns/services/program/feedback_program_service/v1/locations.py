@@ -20,6 +20,5 @@ class Locations:
         metadata={
             "name": "Location",
             "type": "Element",
-            "required": True,
         }
     )

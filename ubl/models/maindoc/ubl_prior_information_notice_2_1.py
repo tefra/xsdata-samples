@@ -113,7 +113,6 @@ class PriorInformationNoticeType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -161,7 +160,6 @@ class PriorInformationNoticeType:
             "name": "ContractingParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     originator_customer_party: tuple[OriginatorCustomerParty, ...] = field(

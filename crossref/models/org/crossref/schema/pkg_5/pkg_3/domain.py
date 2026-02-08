@@ -22,7 +22,6 @@ class Domain:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "min_length": 4,
             "max_length": 1024,
             "pattern": r"[A-Za-z0-9_]+([-.][A-Za-z0-9_]+)*\.[A-Za-z0-9_]+([-.][A-Za-z0-9_]+)*",

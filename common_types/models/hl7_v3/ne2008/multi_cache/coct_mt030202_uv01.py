@@ -114,7 +114,6 @@ class CoctMt030202Uv01Place:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(

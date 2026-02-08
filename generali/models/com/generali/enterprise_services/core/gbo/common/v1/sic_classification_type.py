@@ -22,7 +22,6 @@ class SicClassificationType:
             "name": "Code",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            "required": True,
         }
     )
     type_value: SictypeEnum = field(
@@ -30,7 +29,6 @@ class SicClassificationType:
             "name": "Type",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            "required": True,
         }
     )
     short_description: None | TextType = field(

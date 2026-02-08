@@ -31,11 +31,7 @@ class PersistencyCollectionLevelUpdateStrategyEnum:
     class Meta:
         name = "PERSISTENCY-COLLECTION-LEVEL-UPDATE-STRATEGY-ENUM"
 
-    value: PersistencyCollectionLevelUpdateStrategyEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: PersistencyCollectionLevelUpdateStrategyEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

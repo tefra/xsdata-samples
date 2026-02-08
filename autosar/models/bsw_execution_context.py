@@ -29,11 +29,7 @@ class BswExecutionContext:
     class Meta:
         name = "BSW-EXECUTION-CONTEXT"
 
-    value: BswExecutionContextSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: BswExecutionContextSimple = field()
     s: None | str = field(
         default=None,
         metadata={

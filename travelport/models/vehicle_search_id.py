@@ -24,6 +24,5 @@ class VehicleSearchId:
         metadata={
             "name": "MediaLinksSearchId",
             "type": "Attribute",
-            "required": True,
         }
     )

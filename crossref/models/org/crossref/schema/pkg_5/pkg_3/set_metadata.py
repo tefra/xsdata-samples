@@ -37,7 +37,6 @@ class SetMetadata:
     titles: Titles = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     isbn: list[Isbn] = field(

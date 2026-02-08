@@ -72,7 +72,6 @@ class ProfileCreateReq2(BaseReq5):
         metadata={
             "name": "ProfileData",
             "type": "Element",
-            "required": True,
         }
     )
     profile_link: list[ProfileLink2] = field(
@@ -87,7 +86,6 @@ class ProfileCreateReq2(BaseReq5):
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-            "required": True,
         }
     )
     status: TypeProfileEntityStatus2 = field(
@@ -190,7 +188,6 @@ class ProfileCreateReq2(BaseReq5):
             value: str = field(
                 default="",
                 metadata={
-                    "required": True,
                     "min_length": 1,
                     "max_length": 128,
                 },
@@ -199,7 +196,6 @@ class ProfileCreateReq2(BaseReq5):
                 metadata={
                     "name": "ProfileType",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -222,7 +218,6 @@ class ProfileCreateReq2(BaseReq5):
             value: str = field(
                 default="",
                 metadata={
-                    "required": True,
                     "min_length": 6,
                     "max_length": 128,
                 },
@@ -231,7 +226,6 @@ class ProfileCreateReq2(BaseReq5):
                 metadata={
                     "name": "ProfileType",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
             agency_code: None | str = field(

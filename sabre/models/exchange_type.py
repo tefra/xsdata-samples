@@ -42,7 +42,6 @@ class ExchangeType:
             "name": "Fare",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     pos: ExchangePostype = field(
@@ -50,7 +49,6 @@ class ExchangeType:
             "name": "POS",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     origin_destination_information: list[
@@ -85,7 +83,6 @@ class ExchangeType:
             "name": "TravelerInfoSummary",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     tpa_extensions: None | ExchangeTpaExtensionsType = field(
@@ -100,7 +97,6 @@ class ExchangeType:
         metadata={
             "name": "OriginalTktIssueDateTime",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}(T[0-9]{2}:[0-9]{2}:[0-9]{2})?",
         }
     )

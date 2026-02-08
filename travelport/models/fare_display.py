@@ -81,7 +81,6 @@ class FareDisplay:
         metadata={
             "name": "FareDisplayRule",
             "type": "Element",
-            "required": True,
         }
     )
     fare_pricing: list[FarePricing] = field(
@@ -165,7 +164,6 @@ class FareDisplay:
         metadata={
             "name": "Carrier",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -173,14 +171,12 @@ class FareDisplay:
         metadata={
             "name": "FareBasis",
             "type": "Attribute",
-            "required": True,
         }
     )
     amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
         }
     )
     trip_type: None | TypeFareTripType = field(

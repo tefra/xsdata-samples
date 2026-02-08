@@ -136,7 +136,6 @@ class OrderChangeType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -152,7 +151,6 @@ class OrderChangeType:
             "name": "SequenceNumberID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     note: tuple[Note, ...] = field(
@@ -242,7 +240,6 @@ class OrderChangeType:
             "name": "OrderReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     quotation_document_reference: None | QuotationDocumentReference = field(
@@ -292,7 +289,6 @@ class OrderChangeType:
             "name": "BuyerCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     seller_supplier_party: SellerSupplierParty = field(
@@ -300,7 +296,6 @@ class OrderChangeType:
             "name": "SellerSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     originator_customer_party: None | OriginatorCustomerParty = field(

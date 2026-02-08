@@ -30,12 +30,7 @@ class FormattedTextTextType1:
     class Meta:
         name = "FormattedTextTextType"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     formatted: None | bool = field(
         default=None,
         metadata={

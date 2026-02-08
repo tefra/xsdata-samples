@@ -13,12 +13,7 @@ class TextMatcherType:
     class Meta:
         name = "textMatcherType"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     match_type: None | StandardMatchType = field(
         default=None,
         metadata={

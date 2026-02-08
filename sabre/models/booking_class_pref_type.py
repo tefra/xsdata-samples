@@ -22,7 +22,6 @@ class BookingClassPrefType:
         metadata={
             "name": "ResBookDesigCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[A-Z]{1,2}",
         }
     )

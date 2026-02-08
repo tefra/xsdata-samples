@@ -17,7 +17,6 @@ class AirlineType:
         metadata={
             "name": "Operating",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[0-9A-Z]{2,3}",
         }
     )
@@ -25,7 +24,6 @@ class AirlineType:
         metadata={
             "name": "Marketing",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[0-9A-Z]{2,3}",
         }
     )

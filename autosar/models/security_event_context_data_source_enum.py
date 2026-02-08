@@ -28,11 +28,7 @@ class SecurityEventContextDataSourceEnum:
     class Meta:
         name = "SECURITY-EVENT-CONTEXT-DATA-SOURCE-ENUM"
 
-    value: SecurityEventContextDataSourceEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SecurityEventContextDataSourceEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

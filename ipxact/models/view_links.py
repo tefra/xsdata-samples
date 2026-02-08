@@ -45,7 +45,6 @@ class ViewLinks:
                 metadata={
                     "name": "externalViewReference",
                     "type": "Element",
-                    "required": True,
                 }
             )
         )
@@ -53,7 +52,6 @@ class ViewLinks:
             metadata={
                 "name": "viewReference",
                 "type": "Element",
-                "required": True,
             }
         )
         vendor_extensions: None | VendorExtensions = field(
@@ -81,7 +79,6 @@ class ViewLinks:
                 metadata={
                     "name": "viewRef",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -95,6 +92,5 @@ class ViewLinks:
                 metadata={
                     "name": "viewRef",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

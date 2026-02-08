@@ -23,13 +23,11 @@ class SaComponent:
     component_list: ComponentList = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     parent_doi: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
             "min_length": 6,
             "max_length": 2048,
         }

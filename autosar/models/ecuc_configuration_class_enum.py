@@ -31,11 +31,7 @@ class EcucConfigurationClassEnum:
     class Meta:
         name = "ECUC-CONFIGURATION-CLASS-ENUM"
 
-    value: EcucConfigurationClassEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: EcucConfigurationClassEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

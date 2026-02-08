@@ -18,7 +18,6 @@ class HotelStay:
         metadata={
             "name": "CheckinDate",
             "type": "Element",
-            "required": True,
             "pattern": r"[^:Z].*",
         }
     )
@@ -26,7 +25,6 @@ class HotelStay:
         metadata={
             "name": "CheckoutDate",
             "type": "Element",
-            "required": True,
             "pattern": r"[^:Z].*",
         }
     )

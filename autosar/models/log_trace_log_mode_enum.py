@@ -28,11 +28,7 @@ class LogTraceLogModeEnum:
     class Meta:
         name = "LOG-TRACE-LOG-MODE-ENUM"
 
-    value: LogTraceLogModeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: LogTraceLogModeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

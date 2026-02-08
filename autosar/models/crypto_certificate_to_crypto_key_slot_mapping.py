@@ -76,7 +76,6 @@ class CryptoCertificateToCryptoKeySlotMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -100,6 +99,5 @@ class CryptoCertificateToCryptoKeySlotMapping:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

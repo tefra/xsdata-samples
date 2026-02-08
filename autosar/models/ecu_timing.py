@@ -153,7 +153,6 @@ class EcuTiming:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | EcuTiming.ShortNameFragments = field(
@@ -743,6 +742,5 @@ class EcuTiming:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

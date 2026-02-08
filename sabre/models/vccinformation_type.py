@@ -49,7 +49,6 @@ class VccinformationType:
         metadata={
             "name": "CommissionAmount",
             "type": "Attribute",
-            "required": True,
             "fraction_digits": 3,
         }
     )

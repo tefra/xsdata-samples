@@ -10,12 +10,7 @@ class RelationType2:
     class Meta:
         name = "relationType"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     uri_ref: None | str = field(
         default=None,
         metadata={
@@ -26,13 +21,11 @@ class RelationType2:
     broadcaster: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     type_value: str = field(
         metadata={
             "name": "type",
             "type": "Attribute",
-            "required": True,
         }
     )

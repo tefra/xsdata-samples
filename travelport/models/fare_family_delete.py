@@ -19,13 +19,11 @@ class FareFamilyDelete:
         metadata={
             "name": "FareFamilyRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     version: int = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
-            "required": True,
         }
     )

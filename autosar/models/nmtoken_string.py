@@ -28,12 +28,7 @@ class NmtokenString:
     class Meta:
         name = "NMTOKEN-STRING"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     s: None | str = field(
         default=None,
         metadata={

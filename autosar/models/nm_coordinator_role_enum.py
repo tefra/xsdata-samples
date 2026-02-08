@@ -28,11 +28,7 @@ class NmCoordinatorRoleEnum:
     class Meta:
         name = "NM-COORDINATOR-ROLE-ENUM"
 
-    value: NmCoordinatorRoleEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: NmCoordinatorRoleEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

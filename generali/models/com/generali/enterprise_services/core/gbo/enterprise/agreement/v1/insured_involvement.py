@@ -21,7 +21,6 @@ class InsuredInvolvement:
             "name": "InsuredRole",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     type_value: InsuredInvolvementType = field(
@@ -29,6 +28,5 @@ class InsuredInvolvement:
             "name": "Type",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )

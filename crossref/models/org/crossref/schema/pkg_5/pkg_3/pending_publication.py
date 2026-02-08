@@ -62,7 +62,6 @@ class PendingPublication:
     publication: Publication = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     titles: None | Titles = field(
@@ -74,7 +73,6 @@ class PendingPublication:
     acceptance_date: AcceptanceDate = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     institution: list[Institution] = field(
@@ -136,7 +134,6 @@ class PendingPublication:
     doi: Doi = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     language: None | PendingPublicationLanguage = field(

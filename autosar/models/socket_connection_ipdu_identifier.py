@@ -141,7 +141,6 @@ class SocketConnectionIpduIdentifier:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -151,7 +150,6 @@ class SocketConnectionIpduIdentifier:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -174,6 +172,5 @@ class SocketConnectionIpduIdentifier:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

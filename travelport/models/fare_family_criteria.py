@@ -18,7 +18,6 @@ class FareFamilyCriteria:
         metadata={
             "name": "Carrier",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )

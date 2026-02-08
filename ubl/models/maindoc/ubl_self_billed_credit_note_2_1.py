@@ -108,7 +108,6 @@ class SelfBilledCreditNoteType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     copy_indicator: None | CopyIndicator = field(
@@ -132,7 +131,6 @@ class SelfBilledCreditNoteType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -164,7 +162,6 @@ class SelfBilledCreditNoteType:
             "name": "DocumentCurrencyCode",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     tax_currency_code: None | TaxCurrencyCode = field(
@@ -324,7 +321,6 @@ class SelfBilledCreditNoteType:
             "name": "AccountingCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     accounting_supplier_party: AccountingSupplierParty = field(
@@ -332,7 +328,6 @@ class SelfBilledCreditNoteType:
             "name": "AccountingSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     payee_party: None | PayeeParty = field(
@@ -454,7 +449,6 @@ class SelfBilledCreditNoteType:
             "name": "LegalMonetaryTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     credit_note_line: tuple[CreditNoteLine, ...] = field(

@@ -89,6 +89,5 @@ class PassiveReservation(BaseReservation1):
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-            "required": True,
         }
     )

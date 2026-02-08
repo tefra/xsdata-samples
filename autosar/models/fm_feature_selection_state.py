@@ -28,11 +28,7 @@ class FmFeatureSelectionState:
     class Meta:
         name = "FM-FEATURE-SELECTION-STATE"
 
-    value: FmFeatureSelectionStateSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: FmFeatureSelectionStateSimple = field()
     s: None | str = field(
         default=None,
         metadata={

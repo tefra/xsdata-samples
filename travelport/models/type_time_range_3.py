@@ -18,13 +18,11 @@ class TypeTimeRange3:
         metadata={
             "name": "EarliestTime",
             "type": "Attribute",
-            "required": True,
         }
     )
     latest_time: str = field(
         metadata={
             "name": "LatestTime",
             "type": "Attribute",
-            "required": True,
         }
     )

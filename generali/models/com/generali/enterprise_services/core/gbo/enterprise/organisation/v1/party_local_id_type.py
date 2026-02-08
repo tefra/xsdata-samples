@@ -12,7 +12,6 @@ class PartyLocalIdType:
             "name": "Id",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-            "required": True,
         }
     )
     sender: str = field(
@@ -20,7 +19,6 @@ class PartyLocalIdType:
             "name": "Sender",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-            "required": True,
         }
     )
     party_type: str = field(
@@ -28,6 +26,5 @@ class PartyLocalIdType:
             "name": "PartyType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-            "required": True,
         }
     )

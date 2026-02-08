@@ -29,7 +29,6 @@ class PercentageDistanceAlongLinearElement(DistanceAlongLinearElement):
             "name": "percentageDistanceAlong",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     percentage_distance_along_linear_element_extension: (

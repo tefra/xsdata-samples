@@ -21,7 +21,6 @@ class ImageType1:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:shared:2009",
-            "required": True,
         }
     )
     description: None | str = field(
@@ -106,7 +105,6 @@ class ImageType1:
     owner: OwnerTypeEnum = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     highlighted: bool = field(

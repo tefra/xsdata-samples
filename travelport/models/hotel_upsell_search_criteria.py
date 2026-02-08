@@ -35,7 +35,6 @@ class HotelUpsellSearchCriteria:
             metadata={
                 "name": "HotelUpsellQualifySearchCriteria",
                 "type": "Element",
-                "required": True,
             }
         )
     )

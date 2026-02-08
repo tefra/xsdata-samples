@@ -28,7 +28,6 @@ class BillingPointOfSaleInfo3:
         metadata={
             "name": "OriginApplication",
             "type": "Attribute",
-            "required": True,
         }
     )
     cidbnumber: None | str = field(

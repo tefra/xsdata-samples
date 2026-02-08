@@ -21,7 +21,6 @@ class MerchandisingAvailabilityDetails:
         metadata={
             "name": "AirItineraryDetails",
             "type": "Element",
-            "required": True,
         }
     )
     account_code: None | AccountCode1 = field(

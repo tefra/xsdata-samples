@@ -10,6 +10,5 @@ class Reference:
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

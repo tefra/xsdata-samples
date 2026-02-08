@@ -92,7 +92,6 @@ class InnerRunnableEntityGroupInCompositionInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -102,6 +101,5 @@ class InnerRunnableEntityGroupInCompositionInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

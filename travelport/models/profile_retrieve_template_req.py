@@ -46,7 +46,6 @@ class ProfileRetrieveTemplateReq(BaseReq5):
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
         }
     )
     version: None | int = field(

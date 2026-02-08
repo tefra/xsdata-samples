@@ -14,8 +14,4 @@ class VehicleAccessFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: VehicleAccessFacilityEnumeration = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: VehicleAccessFacilityEnumeration = field()

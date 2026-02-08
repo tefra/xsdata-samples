@@ -31,11 +31,7 @@ class SignalServiceTranslationControlEnum:
     class Meta:
         name = "SIGNAL-SERVICE-TRANSLATION-CONTROL-ENUM"
 
-    value: SignalServiceTranslationControlEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SignalServiceTranslationControlEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

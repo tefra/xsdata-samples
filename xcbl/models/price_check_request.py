@@ -45,22 +45,12 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class PriceCheckRequestIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PriceCheckRequestNotes:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -72,7 +62,6 @@ class PriceCheckRequestId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -83,7 +72,6 @@ class PriceCheckRequestLanguage:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -105,7 +93,6 @@ class PriceCheckRequestTransport:
         metadata={
             "name": "Transport",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -116,7 +103,6 @@ class PriceCurrency:
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -127,7 +113,6 @@ class RequestListOfAttachment:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -138,7 +123,6 @@ class PriceCheckRequestBaseItemDetail:
         metadata={
             "name": "LineItemNum",
             "type": "Element",
-            "required": True,
         }
     )
     line_item_type: None | LineItemType = field(
@@ -282,21 +266,18 @@ class PriceCheckRequestHeader:
         metadata={
             "name": "PriceCheckRequestID",
             "type": "Element",
-            "required": True,
         }
     )
     price_check_request_issue_date: PriceCheckRequestIssueDate = field(
         metadata={
             "name": "PriceCheckRequestIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     supplier_party: SupplierParty = field(
         metadata={
             "name": "SupplierParty",
             "type": "Element",
-            "required": True,
         }
     )
     supplier_idreference_date: None | SupplierIdreferenceDate = field(
@@ -310,7 +291,6 @@ class PriceCheckRequestHeader:
         metadata={
             "name": "BuyerParty",
             "type": "Element",
-            "required": True,
         }
     )
     buyer_idreference_date: None | BuyerIdreferenceDate = field(
@@ -331,7 +311,6 @@ class PriceCheckRequestHeader:
         metadata={
             "name": "PriceCheckShipToParty",
             "type": "Element",
-            "required": True,
         }
     )
     price_currency: None | PriceCurrency = field(
@@ -378,7 +357,6 @@ class PriceCheckRequestItemDetail:
             metadata={
                 "name": "PriceCheckRequestBaseItemDetail",
                 "type": "Element",
-                "required": True,
             }
         )
     )
@@ -416,7 +394,6 @@ class PriceCheckRequestDetail:
         metadata={
             "name": "ListOfPriceCheckRequestItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -427,7 +404,6 @@ class PriceCheckRequest:
         metadata={
             "name": "PriceCheckRequestHeader",
             "type": "Element",
-            "required": True,
         }
     )
     price_check_request_detail: None | PriceCheckRequestDetail = field(

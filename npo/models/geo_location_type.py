@@ -17,7 +17,6 @@ class GeoLocationType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-            "required": True,
         }
     )
     scope_note: list[str] = field(
@@ -31,7 +30,6 @@ class GeoLocationType:
     role: GeoRoleType = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     gtaa_uri: None | str = field(

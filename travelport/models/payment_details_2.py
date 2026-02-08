@@ -81,7 +81,6 @@ class PaymentDetails2(TypeKeyTaggedElement2):
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     issued_to_name: None | str = field(
@@ -104,7 +103,6 @@ class PaymentDetails2(TypeKeyTaggedElement2):
         metadata={
             "name": "PaymentSupplier",
             "type": "Attribute",
-            "required": True,
             "max_length": 6,
         }
     )
@@ -112,7 +110,6 @@ class PaymentDetails2(TypeKeyTaggedElement2):
         metadata={
             "name": "AccountNumber",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }

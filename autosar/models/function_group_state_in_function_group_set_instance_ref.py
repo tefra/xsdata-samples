@@ -75,7 +75,6 @@ class FunctionGroupStateInFunctionGroupSetInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -85,6 +84,5 @@ class FunctionGroupStateInFunctionGroupSetInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

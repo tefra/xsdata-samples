@@ -29,11 +29,7 @@ class ShowResourceTypeEnum:
     class Meta:
         name = "SHOW-RESOURCE-TYPE-ENUM"
 
-    value: ShowResourceTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ShowResourceTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

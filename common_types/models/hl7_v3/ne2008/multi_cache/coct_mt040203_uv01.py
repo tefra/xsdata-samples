@@ -106,6 +106,5 @@ class CoctMt040203Uv01NotificationParty:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )

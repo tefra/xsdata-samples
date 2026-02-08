@@ -73,12 +73,7 @@ class TransTypeDef:
             language of the referenced view.
         """
 
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         exact: bool = field(
             default=True,
             metadata={
@@ -88,12 +83,7 @@ class TransTypeDef:
 
     @dataclass(kw_only=True)
     class TypeDefinition:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         id: None | str = field(
             default=None,
             metadata={
@@ -104,12 +94,7 @@ class TransTypeDef:
 
     @dataclass(kw_only=True)
     class ViewRef:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         id: None | str = field(
             default=None,
             metadata={

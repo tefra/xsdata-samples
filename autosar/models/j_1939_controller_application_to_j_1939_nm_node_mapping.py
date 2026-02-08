@@ -84,7 +84,6 @@ class J1939ControllerApplicationToJ1939NmNodeMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -94,6 +93,5 @@ class J1939ControllerApplicationToJ1939NmNodeMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

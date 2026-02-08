@@ -12,11 +12,7 @@ class AttributedQnameType:
     class Meta:
         name = "AttributedQNameType"
 
-    value: QName = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: QName = field()
     other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
@@ -31,12 +27,7 @@ class AttributedUritype:
     class Meta:
         name = "AttributedURIType"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
@@ -48,11 +39,7 @@ class AttributedUritype:
 
 @dataclass(kw_only=True)
 class AttributedUnsignedLongType:
-    value: int = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: int = field()
     other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={
@@ -145,12 +132,7 @@ class ReferenceParameters(ReferenceParametersType):
 
 @dataclass(kw_only=True)
 class RelatesToType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     relationship_type: RelationshipType | str = field(
         default=RelationshipType.HTTP_WWW_W3_ORG_2005_08_ADDRESSING_REPLY,
         metadata={
@@ -186,7 +168,6 @@ class EndpointReferenceType:
             "name": "Address",
             "type": "Element",
             "namespace": "http://www.w3.org/2005/08/addressing",
-            "required": True,
         }
     )
     reference_parameters: None | ReferenceParameters = field(

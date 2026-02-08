@@ -74,6 +74,5 @@ class CommunicationConnectorRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

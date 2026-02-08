@@ -89,7 +89,6 @@ class OrganisationGbotype:
             "name": "PrimaryAddress",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v1",
-            "required": True,
         }
     )
     gen_global_ultimate_guns: None | str = field(

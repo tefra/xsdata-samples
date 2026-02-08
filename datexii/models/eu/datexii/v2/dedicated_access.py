@@ -30,7 +30,6 @@ class DedicatedAccess:
             "name": "dedicatedAccess",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     distance_from_parking_space: None | int = field(

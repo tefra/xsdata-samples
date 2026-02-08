@@ -82,7 +82,6 @@ class EcucQueryExpression:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -92,6 +91,5 @@ class EcucQueryExpression:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

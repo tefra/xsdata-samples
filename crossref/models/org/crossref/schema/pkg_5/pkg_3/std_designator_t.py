@@ -24,7 +24,6 @@ class StdDesignatorT:
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
-            "required": True,
         }
     )
     std_alt_script: list[StdAltScript] = field(

@@ -26,7 +26,6 @@ class FileSetRef:
         metadata={
             "name": "localName",
             "type": "Element",
-            "required": True,
         }
     )
     vendor_extensions: None | VendorExtensions = field(

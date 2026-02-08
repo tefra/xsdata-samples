@@ -34,6 +34,5 @@ class VehicleUpsellSearchCriteria:
         metadata={
             "name": "VehicleUpsellQualifySearchCriteria",
             "type": "Element",
-            "required": True,
         }
     )

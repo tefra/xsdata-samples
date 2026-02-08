@@ -49,7 +49,6 @@ class EnumerationDefinitions:
         name: str = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         display_name: None | DisplayName = field(
@@ -75,7 +74,6 @@ class EnumerationDefinitions:
         width: UnsignedPositiveIntExpression = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         enumerated_value: list[EnumeratedValueType] = field(

@@ -23,7 +23,6 @@ class FeedbackProgramPoliciesResponse:
         metadata={
             "name": "ResponseCode",
             "type": "Element",
-            "required": True,
         }
     )
     response_text: None | str = field(

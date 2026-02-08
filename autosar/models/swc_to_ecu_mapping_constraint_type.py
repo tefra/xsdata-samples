@@ -31,11 +31,7 @@ class SwcToEcuMappingConstraintType:
     class Meta:
         name = "SWC-TO-ECU-MAPPING-CONSTRAINT-TYPE"
 
-    value: SwcToEcuMappingConstraintTypeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SwcToEcuMappingConstraintTypeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

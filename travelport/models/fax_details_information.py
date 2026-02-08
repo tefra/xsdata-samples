@@ -36,6 +36,5 @@ class FaxDetailsInformation:
         metadata={
             "name": "FaxDetails",
             "type": "Element",
-            "required": True,
         }
     )

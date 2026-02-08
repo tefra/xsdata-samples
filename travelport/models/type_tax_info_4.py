@@ -75,7 +75,6 @@ class TypeTaxInfo4:
         metadata={
             "name": "Category",
             "type": "Attribute",
-            "required": True,
         }
     )
     carrier_defined_category: None | str = field(
@@ -110,7 +109,6 @@ class TypeTaxInfo4:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
         }
     )
     origin_airport: None | str = field(

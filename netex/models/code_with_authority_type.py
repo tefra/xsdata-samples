@@ -13,6 +13,5 @@ class CodeWithAuthorityType(CodeType):
         metadata={
             "name": "codeSpace",
             "type": "Attribute",
-            "required": True,
         }
     )

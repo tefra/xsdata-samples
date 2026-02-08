@@ -67,62 +67,32 @@ from xcbl.models.trading_partner_user_information import (
 
 @dataclass(kw_only=True)
 class QuoteIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class QuoteTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class QuoteTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ReferenceReleaseNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TaxTreatmentCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TaxTreatmentCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -131,7 +101,6 @@ class ListOfQuotePackageDetail:
         metadata={
             "name": "ListOfPackageDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -142,7 +111,6 @@ class QuotationReqReference:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -153,7 +121,6 @@ class QuoteAllowanceOrCharge:
         metadata={
             "name": "ListOfAllowOrCharge",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -164,7 +131,6 @@ class QuoteDeliveryDetail:
         metadata={
             "name": "DeliveryDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -178,7 +144,6 @@ class QuoteId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -189,7 +154,6 @@ class QuoteItemListOfAttachment:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -200,7 +164,6 @@ class QuoteItemParty:
         metadata={
             "name": "OrderParty",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -211,7 +174,6 @@ class QuoteItemReferences:
         metadata={
             "name": "RequestQuoteReference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -222,7 +184,6 @@ class QuoteLanguage:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -233,7 +194,6 @@ class QuoteListOfAttachment:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -244,7 +204,6 @@ class QuoteParty:
         metadata={
             "name": "OrderParty",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -255,7 +214,6 @@ class QuotePricingDetail:
         metadata={
             "name": "PricingDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -277,7 +235,6 @@ class QuoteTermsOfDelivery:
         metadata={
             "name": "TermsOfDelivery",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -288,7 +245,6 @@ class QuoteTermsOfPayment:
         metadata={
             "name": "PaymentInstructions",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -299,7 +255,6 @@ class QuoteTransport:
         metadata={
             "name": "TransportRouting",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -310,7 +265,6 @@ class QuoteType:
         metadata={
             "name": "QuoteTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     quote_type_coded_other: None | QuoteTypeCodedOther = field(
@@ -328,7 +282,6 @@ class TaxReference:
         metadata={
             "name": "TaxFunctionQualifierCoded",
             "type": "Element",
-            "required": True,
         }
     )
     tax_function_qualifier_coded_other: (
@@ -344,7 +297,6 @@ class TaxReference:
         metadata={
             "name": "TaxCategoryCoded",
             "type": "Element",
-            "required": True,
         }
     )
     tax_category_coded_other: None | TaxCategoryCodedOther = field(
@@ -372,7 +324,6 @@ class TaxReference:
         metadata={
             "name": "TaxTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     tax_type_coded_other: None | TaxTypeCodedOther = field(
@@ -423,7 +374,6 @@ class TaxReference:
         metadata={
             "name": "TaxAmount",
             "type": "Element",
-            "required": True,
         }
     )
     tax_amount_in_tax_accounting_currency: (
@@ -446,7 +396,6 @@ class TaxReference:
         metadata={
             "name": "TaxTreatmentCoded",
             "type": "Element",
-            "required": True,
         }
     )
     tax_treatment_coded_other: None | TaxTreatmentCodedOther = field(
@@ -464,7 +413,6 @@ class QuotationRequestReference:
         metadata={
             "name": "QuotationReqReference",
             "type": "Element",
-            "required": True,
         }
     )
     reference_release_number: None | ReferenceReleaseNumber = field(
@@ -482,7 +430,6 @@ class QuoteItemDetail:
         metadata={
             "name": "LineItemNum",
             "type": "Element",
-            "required": True,
         }
     )
     line_item_type: None | LineItemType = field(
@@ -626,7 +573,6 @@ class QuoteItemType:
         metadata={
             "name": "QuoteType",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -637,7 +583,6 @@ class QuoteTax:
         metadata={
             "name": "TaxReference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -648,14 +593,12 @@ class QuoteDetails:
         metadata={
             "name": "QuoteItemType",
             "type": "Element",
-            "required": True,
         }
     )
     quote_item_detail: QuoteItemDetail = field(
         metadata={
             "name": "QuoteItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
     quote_pricing_detail: None | QuotePricingDetail = field(
@@ -694,14 +637,12 @@ class QuoteHeader:
         metadata={
             "name": "QuoteIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     quote_id: QuoteId = field(
         metadata={
             "name": "QuoteID",
             "type": "Element",
-            "required": True,
         }
     )
     quotation_request_reference: None | QuotationRequestReference = field(
@@ -729,7 +670,6 @@ class QuoteHeader:
         metadata={
             "name": "QuoteParty",
             "type": "Element",
-            "required": True,
         }
     )
     quote_transport: None | QuoteTransport = field(
@@ -822,7 +762,6 @@ class Quote:
         metadata={
             "name": "QuoteHeader",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_quote_details: None | ListOfQuoteDetails = field(

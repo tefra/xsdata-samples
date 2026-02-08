@@ -17,6 +17,5 @@ class KeepSameCabinType:
         metadata={
             "name": "Enabled",
             "type": "Attribute",
-            "required": True,
         }
     )

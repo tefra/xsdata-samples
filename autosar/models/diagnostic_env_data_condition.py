@@ -220,6 +220,5 @@ class DiagnosticEnvDataCondition:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

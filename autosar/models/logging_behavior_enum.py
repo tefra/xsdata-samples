@@ -29,11 +29,7 @@ class LoggingBehaviorEnum:
     class Meta:
         name = "LOGGING-BEHAVIOR-ENUM"
 
-    value: LoggingBehaviorEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: LoggingBehaviorEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

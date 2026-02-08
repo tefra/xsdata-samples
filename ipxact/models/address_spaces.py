@@ -76,7 +76,6 @@ class AddressSpaces:
         name: str = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         display_name: None | DisplayName = field(
@@ -102,13 +101,11 @@ class AddressSpaces:
         range: UnsignedPositiveLongintExpression = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         width: UnsignedPositiveIntExpression = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         segments: None | AddressSpaces.AddressSpace.Segments = field(
@@ -185,7 +182,6 @@ class AddressSpaces:
                 name: str = field(
                     metadata={
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 display_name: None | DisplayName = field(
@@ -212,13 +208,11 @@ class AddressSpaces:
                     metadata={
                         "name": "addressOffset",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 range: UnsignedPositiveLongintExpression = field(
                     metadata={
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 vendor_extensions: None | VendorExtensions = field(

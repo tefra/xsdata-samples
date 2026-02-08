@@ -25,14 +25,12 @@ class GroupType(BaseMediaType):
         metadata={
             "name": "isOrdered",
             "type": "Attribute",
-            "required": True,
         }
     )
     type_value: GroupTypeEnum = field(
         metadata={
             "name": "type",
             "type": "Attribute",
-            "required": True,
         }
     )
     default_element: None | int = field(

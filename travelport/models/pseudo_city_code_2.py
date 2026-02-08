@@ -15,7 +15,6 @@ class PseudoCityCode2:
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 10,
         }

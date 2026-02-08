@@ -28,11 +28,7 @@ class IpTransportProtocolEnum:
     class Meta:
         name = "IP-TRANSPORT-PROTOCOL-ENUM"
 
-    value: IpTransportProtocolEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: IpTransportProtocolEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

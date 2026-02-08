@@ -70,6 +70,5 @@ class EcuInstanceRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

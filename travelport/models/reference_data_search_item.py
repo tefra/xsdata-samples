@@ -53,6 +53,5 @@ class ReferenceDataSearchItem:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )

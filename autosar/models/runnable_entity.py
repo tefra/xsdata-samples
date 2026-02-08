@@ -276,7 +276,6 @@ class RunnableEntity:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | RunnableEntity.ShortNameFragments = field(
@@ -638,7 +637,6 @@ class RunnableEntity:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -661,7 +659,6 @@ class RunnableEntity:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -684,7 +681,6 @@ class RunnableEntity:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -694,7 +690,6 @@ class RunnableEntity:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

@@ -65,7 +65,6 @@ class ReviewBooking5:
         metadata={
             "name": "Queue",
             "type": "Attribute",
-            "required": True,
             "max_inclusive": 99,
         }
     )
@@ -81,7 +80,6 @@ class ReviewBooking5:
         metadata={
             "name": "DateTime",
             "type": "Attribute",
-            "required": True,
         }
     )
     pseudo_city_code: None | str = field(
@@ -113,7 +111,6 @@ class ReviewBooking5:
         metadata={
             "name": "Remarks",
             "type": "Attribute",
-            "required": True,
             "max_length": 300,
         }
     )

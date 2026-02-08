@@ -26,7 +26,6 @@ class ContactByReference(Contact):
             "name": "contactReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     contact_by_reference_extension: None | ExtensionType = field(

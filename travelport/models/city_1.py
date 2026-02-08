@@ -21,7 +21,6 @@ class City1(Location1):
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }

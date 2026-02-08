@@ -19,12 +19,7 @@ class FeeApplication:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     code: None | str = field(
         default=None,
         metadata={

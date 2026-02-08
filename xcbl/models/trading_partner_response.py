@@ -13,12 +13,7 @@ class AlternateId:
     class Meta:
         name = "AlternateID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -26,72 +21,37 @@ class MessageType:
     class Meta:
         name = "MessageClass"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class MessageDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class MessageNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class MessageTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class MessageTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PrimaryReturnCodeDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PrimaryReturnCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -99,32 +59,17 @@ class RedirectUrl:
     class Meta:
         name = "RedirectURL"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RefDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RefNum:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -132,12 +77,7 @@ class ReturnedIdentificationUrn:
     class Meta:
         name = "ReturnedIdentificationURN"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -145,12 +85,7 @@ class ServiceId:
     class Meta:
         name = "ServiceID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -159,7 +94,6 @@ class Reference:
         metadata={
             "name": "RefNum",
             "type": "Element",
-            "required": True,
         }
     )
     ref_date: None | RefDate = field(
@@ -177,7 +111,6 @@ class SecondaryMessageInformation:
         metadata={
             "name": "MessageTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     message_type_coded_other: None | MessageTypeCodedOther = field(
@@ -219,7 +152,6 @@ class TradingPartnerPrimaryId:
         metadata={
             "name": "PrimaryID",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -242,7 +174,6 @@ class MessageResponseIdentifier:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -297,14 +228,12 @@ class PrimaryMessageInformation:
         metadata={
             "name": "MessageResponseIdentifier",
             "type": "Element",
-            "required": True,
         }
     )
     primary_return_coded: PrimaryReturnCoded = field(
         metadata={
             "name": "PrimaryReturnCoded",
             "type": "Element",
-            "required": True,
         }
     )
     primary_return_code_description: None | PrimaryReturnCodeDescription = (
@@ -324,7 +253,6 @@ class ReturnMessageInformation:
         metadata={
             "name": "PrimaryMessageInformation",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_secondary_message_information: (
@@ -344,7 +272,6 @@ class TradingPartnerResponseInfo:
         metadata={
             "name": "ReturnMessageInformation",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_returned_identification: None | ListOfReturnedIdentification = (
@@ -391,7 +318,6 @@ class TradingPartnerResponse:
             metadata={
                 "name": "ListOfTradingPartnerResponseInfo",
                 "type": "Element",
-                "required": True,
             }
         )
     )

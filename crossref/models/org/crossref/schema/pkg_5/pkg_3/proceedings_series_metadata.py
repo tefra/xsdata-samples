@@ -46,7 +46,6 @@ class ProceedingsSeriesMetadata:
     series_metadata: SeriesMetadata = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     proceedings_title: None | ProceedingsTitle = field(

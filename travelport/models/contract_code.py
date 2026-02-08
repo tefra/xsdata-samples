@@ -27,7 +27,6 @@ class ContractCode:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 64,
         }

@@ -82,7 +82,6 @@ class WaybillType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     carrier_assigned_id: None | CarrierAssignedId = field(
@@ -202,7 +201,6 @@ class WaybillType:
             "name": "Shipment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     document_reference: tuple[DocumentReference, ...] = field(

@@ -25,7 +25,6 @@ class LanguageOption:
         metadata={
             "name": "Language",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -33,7 +32,6 @@ class LanguageOption:
         metadata={
             "name": "Country",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )

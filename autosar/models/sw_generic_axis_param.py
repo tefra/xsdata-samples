@@ -82,6 +82,5 @@ class SwGenericAxisParam:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

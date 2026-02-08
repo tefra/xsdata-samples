@@ -21,7 +21,6 @@ class Bld:
     lok: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     prm: None | str = field(

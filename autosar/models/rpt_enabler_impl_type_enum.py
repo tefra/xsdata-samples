@@ -29,11 +29,7 @@ class RptEnablerImplTypeEnum:
     class Meta:
         name = "RPT-ENABLER-IMPL-TYPE-ENUM"
 
-    value: RptEnablerImplTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: RptEnablerImplTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

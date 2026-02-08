@@ -31,6 +31,5 @@ class VehicleUpsellSearchResult:
         metadata={
             "name": "VehicleUpsellOffer",
             "type": "Element",
-            "required": True,
         }
     )

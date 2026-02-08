@@ -174,7 +174,6 @@ class CoctMt010000Uv01Admitter:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     mode_code: None | Ce = field(
@@ -244,7 +243,6 @@ class CoctMt010000Uv01Attender:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     mode_code: None | Ce = field(
@@ -493,7 +491,6 @@ class CoctMt010000Uv01Component:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: None | ContextControl = field(
@@ -608,7 +605,6 @@ class CoctMt010000Uv01Discharger:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     mode_code: None | Ce = field(
@@ -692,7 +688,6 @@ class CoctMt010000Uv01InFulfillmentOf:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -806,7 +801,6 @@ class CoctMt010000Uv01ObservationEvent02:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -891,7 +885,6 @@ class CoctMt010000Uv01PertinentInformation2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1005,7 +998,6 @@ class CoctMt010000Uv01Referrer:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     mode_code: None | Ce = field(
@@ -1075,7 +1067,6 @@ class CoctMt010000Uv01ResponsibleParty1:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     id: list[Ii] = field(
@@ -1152,7 +1143,6 @@ class CoctMt010000Uv01Subject1:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -1166,7 +1156,6 @@ class CoctMt010000Uv01Subject1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1218,7 +1207,6 @@ class CoctMt010000Uv01TransportedBy:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1271,7 +1259,6 @@ class CoctMt010000Uv01Location3:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1331,7 +1318,6 @@ class CoctMt010000Uv01PertinentInformation3:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1447,7 +1433,6 @@ class CoctMt010000Uv01ServiceDeliveryLocation:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1485,7 +1470,6 @@ class CoctMt010000Uv01Location1:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     id: list[Ii] = field(
@@ -1524,7 +1508,6 @@ class CoctMt010000Uv01Location1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1578,7 +1561,6 @@ class CoctMt010000Uv01Encounter:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     effective_time: None | IvlTsExplicit = field(
@@ -1673,7 +1655,6 @@ class CoctMt010000Uv01Encounter:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     responsible_party: list[CoctMt010000Uv01ResponsibleParty1] = field(
@@ -1899,6 +1880,5 @@ class CoctMt010000Uv01SequelTo:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )

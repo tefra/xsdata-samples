@@ -37,7 +37,6 @@ class McoVoidReq(BaseReq1):
         metadata={
             "name": "Number",
             "type": "Attribute",
-            "required": True,
         }
     )
     return_mco: bool = field(

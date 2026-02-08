@@ -29,11 +29,7 @@ class ShowResourceCategoryEnum:
     class Meta:
         name = "SHOW-RESOURCE-CATEGORY-ENUM"
 
-    value: ShowResourceCategoryEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ShowResourceCategoryEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -19,6 +19,5 @@ class OvertakingPossibility(OvertakingPossibilityVersionStructure):
         metadata={
             "name": "OvertakingAtPointRef",
             "type": "Element",
-            "required": True,
         }
     )

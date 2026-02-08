@@ -31,42 +31,22 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class AuctionResultDetailNotes:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AuctionResultGeneralNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AuctionResultIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ForwardAuctionIndicator:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -74,12 +54,7 @@ class MvbvariableName:
     class Meta:
         name = "MVBVariableName"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -87,42 +62,22 @@ class MvbvariableValue:
     class Meta:
         name = "MVBVariableValue"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalNumAuctionResults:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalNumWinningBids:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class WinningBidIndicator:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -131,7 +86,6 @@ class AuctionResultCurrency:
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -142,7 +96,6 @@ class AuctionResultDates:
         metadata={
             "name": "OrderDates",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -156,7 +109,6 @@ class AuctionResultId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -170,7 +122,6 @@ class AuctionResultItemId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -181,7 +132,6 @@ class AuctionResultListOfAttachment:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -192,7 +142,6 @@ class AuctionResultParty:
         metadata={
             "name": "OrderParty",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -203,7 +152,6 @@ class AuctionResultPurpose:
         metadata={
             "name": "Purpose",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -239,7 +187,6 @@ class ListOfAuctionResultDetailAttachment:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -250,14 +197,12 @@ class Range:
         metadata={
             "name": "MinimumValue",
             "type": "Element",
-            "required": True,
         }
     )
     maximum_value: MaximumValue = field(
         metadata={
             "name": "MaximumValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -268,35 +213,30 @@ class AuctionResultHeader:
         metadata={
             "name": "AuctionResultPurpose",
             "type": "Element",
-            "required": True,
         }
     )
     auction_result_issue_date: AuctionResultIssueDate = field(
         metadata={
             "name": "AuctionResultIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     auction_result_id: AuctionResultId = field(
         metadata={
             "name": "AuctionResultID",
             "type": "Element",
-            "required": True,
         }
     )
     auction_create_reference: AuctionCreateReference = field(
         metadata={
             "name": "AuctionCreateReference",
             "type": "Element",
-            "required": True,
         }
     )
     forward_auction_indicator: ForwardAuctionIndicator = field(
         metadata={
             "name": "ForwardAuctionIndicator",
             "type": "Element",
-            "required": True,
         }
     )
     initiating_party: None | InitiatingParty = field(
@@ -310,7 +250,6 @@ class AuctionResultHeader:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_reference_coded: None | ListOfReferenceCoded = field(
@@ -347,7 +286,6 @@ class Mvbrange:
         metadata={
             "name": "Range",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -361,7 +299,6 @@ class Mvbvariable:
         metadata={
             "name": "MVBVariableName",
             "type": "Element",
-            "required": True,
         }
     )
     mvbvariable_value: None | MvbvariableValue = field(
@@ -401,7 +338,6 @@ class AuctionResultItem:
         metadata={
             "name": "BaseItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
     pricing_detail: None | PricingDetail = field(
@@ -480,21 +416,18 @@ class AuctionResultDetail:
         metadata={
             "name": "AuctionResultItemID",
             "type": "Element",
-            "required": True,
         }
     )
     winning_bid_indicator: WinningBidIndicator = field(
         metadata={
             "name": "WinningBidIndicator",
             "type": "Element",
-            "required": True,
         }
     )
     auction_result_party: AuctionResultParty = field(
         metadata={
             "name": "AuctionResultParty",
             "type": "Element",
-            "required": True,
         }
     )
     auction_result_dates: None | AuctionResultDates = field(
@@ -515,7 +448,6 @@ class AuctionResultDetail:
         metadata={
             "name": "ListOfAuctionResultItem",
             "type": "Element",
-            "required": True,
         }
     )
     auction_result_detail_notes: None | AuctionResultDetailNotes = field(
@@ -554,20 +486,17 @@ class AuctionResult:
         metadata={
             "name": "AuctionResultHeader",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_auction_result_detail: ListOfAuctionResultDetail = field(
         metadata={
             "name": "ListOfAuctionResultDetail",
             "type": "Element",
-            "required": True,
         }
     )
     auction_result_summary: AuctionResultSummary = field(
         metadata={
             "name": "AuctionResultSummary",
             "type": "Element",
-            "required": True,
         }
     )

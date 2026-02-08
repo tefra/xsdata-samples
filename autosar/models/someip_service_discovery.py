@@ -104,7 +104,6 @@ class SomeipServiceDiscovery:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -114,7 +113,6 @@ class SomeipServiceDiscovery:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -137,6 +135,5 @@ class SomeipServiceDiscovery:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

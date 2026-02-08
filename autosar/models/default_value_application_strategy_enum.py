@@ -35,11 +35,7 @@ class DefaultValueApplicationStrategyEnum:
     class Meta:
         name = "DEFAULT-VALUE-APPLICATION-STRATEGY-ENUM"
 
-    value: DefaultValueApplicationStrategyEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DefaultValueApplicationStrategyEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

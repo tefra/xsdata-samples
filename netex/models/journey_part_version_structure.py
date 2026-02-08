@@ -108,7 +108,6 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "name": "StartTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     start_time_day_offset: None | int = field(
@@ -124,7 +123,6 @@ class JourneyPartVersionStructure(DataManagedObjectStructure):
             "name": "EndTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     end_time_day_offset: None | int = field(

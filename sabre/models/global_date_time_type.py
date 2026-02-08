@@ -18,7 +18,6 @@ class GlobalDateTimeType(DateTimeType):
         metadata={
             "name": "DateTime",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}",
         }
     )

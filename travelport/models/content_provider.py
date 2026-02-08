@@ -75,7 +75,6 @@ class ContentProvider:
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     supplier_code: None | str = field(
@@ -89,21 +88,18 @@ class ContentProvider:
         metadata={
             "name": "AgencyCredentials",
             "type": "Attribute",
-            "required": True,
         }
     )
     active: bool = field(
         metadata={
             "name": "Active",
             "type": "Attribute",
-            "required": True,
         }
     )
     provisionable: bool = field(
         metadata={
             "name": "Provisionable",
             "type": "Attribute",
-            "required": True,
         }
     )
     merchandising_achadapter: None | str = field(

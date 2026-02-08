@@ -27,7 +27,6 @@ class AssigningAuthorityType:
             "name": "assigningAuthorityId",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
 
@@ -42,7 +41,6 @@ class ConnectcustomHttpHeadersType:
             "name": "headerName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     header_value: str = field(
@@ -50,7 +48,6 @@ class ConnectcustomHttpHeadersType:
             "name": "headerValue",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
 
@@ -61,7 +58,6 @@ class CeType:
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     code_system: None | str = field(
@@ -85,7 +81,6 @@ class CeType:
             "name": "codeSystemVersion",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     display_name: str = field(
@@ -93,7 +88,6 @@ class CeType:
             "name": "displayName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     original_text: str = field(
@@ -101,7 +95,6 @@ class CeType:
             "name": "originalText",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     translation: list[CeType] = field(
@@ -123,7 +116,6 @@ class CreateEprrequestType:
             "name": "endpointURL",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     namespace_uri: str = field(
@@ -131,7 +123,6 @@ class CreateEprrequestType:
             "name": "namespaceURI",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     namespace_prefix: str = field(
@@ -139,7 +130,6 @@ class CreateEprrequestType:
             "name": "namespacePrefix",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     service_name: str = field(
@@ -147,7 +137,6 @@ class CreateEprrequestType:
             "name": "serviceName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     port_name: str = field(
@@ -155,7 +144,6 @@ class CreateEprrequestType:
             "name": "portName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
 
@@ -174,7 +162,6 @@ class HomeCommunityType:
             "name": "homeCommunityId",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     name: None | str = field(
@@ -193,7 +180,6 @@ class QualifiedSubjectIdentifierType:
             "name": "SubjectIdentifier",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     assigning_authority_identifier: str = field(
@@ -201,7 +187,6 @@ class QualifiedSubjectIdentifierType:
             "name": "AssigningAuthorityIdentifier",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
 
@@ -212,14 +197,12 @@ class ResponseType:
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     message: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
 
@@ -231,7 +214,6 @@ class SamlAuthnStatementType:
             "name": "authInstant",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     session_index: None | str = field(
@@ -247,7 +229,6 @@ class SamlAuthnStatementType:
             "name": "authContextClassRef",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     subject_locality_address: None | str = field(
@@ -295,7 +276,6 @@ class SamlConditionsType:
             "name": "notBefore",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     not_on_or_after: str = field(
@@ -303,7 +283,6 @@ class SamlConditionsType:
             "name": "notOnOrAfter",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
 
@@ -355,7 +334,6 @@ class TokenRetrieveInfoType:
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
 
@@ -366,14 +344,12 @@ class UrlInfoType:
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     id: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
 
@@ -402,28 +378,24 @@ class AddressType:
             "name": "addressType",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     city: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     country: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     state: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     street_address: str = field(
@@ -431,7 +403,6 @@ class AddressType:
             "name": "streetAddress",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     zip_code: str = field(
@@ -439,7 +410,6 @@ class AddressType:
             "name": "zipCode",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
 
@@ -514,7 +484,6 @@ class NhinTargetCommunityType:
             "name": "homeCommunity",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     list_value: None | str = field(
@@ -583,7 +552,6 @@ class PersonNameType:
             "name": "familyName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     given_name: str = field(
@@ -591,7 +559,6 @@ class PersonNameType:
             "name": "givenName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     name_type: CeType = field(
@@ -599,7 +566,6 @@ class PersonNameType:
             "name": "nameType",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     second_name_or_initials: str = field(
@@ -607,7 +573,6 @@ class PersonNameType:
             "name": "secondNameOrInitials",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     full_name: str = field(
@@ -615,21 +580,18 @@ class PersonNameType:
             "name": "fullName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     prefix: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     suffix: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
 
@@ -641,7 +603,6 @@ class PhoneType:
             "name": "areaCode",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     country_code: str = field(
@@ -649,14 +610,12 @@ class PhoneType:
             "name": "countryCode",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     extension: str = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     local_number: str = field(
@@ -664,7 +623,6 @@ class PhoneType:
             "name": "localNumber",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     phone_number_type: CeType = field(
@@ -672,7 +630,6 @@ class PhoneType:
             "name": "phoneNumberType",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
 
@@ -833,7 +790,6 @@ class SamlSubjectConfirmationType:
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     subject_condition: None | SamlConditionsType = field(
@@ -1001,7 +957,6 @@ class UserType:
             "name": "personName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     user_name: str = field(
@@ -1009,14 +964,12 @@ class UserType:
             "name": "userName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     org: HomeCommunityType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     role_coded: CeType = field(
@@ -1024,7 +977,6 @@ class UserType:
             "name": "roleCoded",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
 
@@ -1049,7 +1001,6 @@ class ConfigAssertionType:
             "name": "userInfo",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     config_instance: str = field(
@@ -1057,7 +1008,6 @@ class ConfigAssertionType:
             "name": "configInstance",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     auth_method: str = field(
@@ -1065,7 +1015,6 @@ class ConfigAssertionType:
             "name": "authMethod",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
 
@@ -1176,7 +1125,6 @@ class AssertionType:
             "name": "homeCommunity",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     national_provider_id: None | str = field(
@@ -1272,14 +1220,12 @@ class AssertionType:
             "name": "userInfo",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     authorized: bool = field(
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     purpose_of_disclosure_coded: CeType = field(
@@ -1287,7 +1233,6 @@ class AssertionType:
             "name": "purposeOfDisclosureCoded",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     acp_attribute: None | str = field(
@@ -1446,7 +1391,6 @@ class TokenCreationInfoType:
         metadata={
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     action_name: str = field(
@@ -1454,7 +1398,6 @@ class TokenCreationInfoType:
             "name": "actionName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
     resource_name: str = field(
@@ -1462,7 +1405,6 @@ class TokenCreationInfoType:
             "name": "resourceName",
             "type": "Element",
             "namespace": "urn:gov:hhs:fha:nhinc:common:nhinccommon",
-            "required": True,
         }
     )
 

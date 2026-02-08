@@ -34,7 +34,6 @@ class BaseFaultType:
             "name": "Timestamp",
             "type": "Element",
             "namespace": "http://docs.oasis-open.org/wsrf/bf-2",
-            "required": True,
         }
     )
     originator: None | EndpointReferenceType = field(

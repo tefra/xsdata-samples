@@ -73,7 +73,6 @@ class AirTravelerType:
             "name": "PersonName",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     telephone: list[TelephoneType] = field(
@@ -134,7 +133,6 @@ class AirTravelerType:
             "name": "TravelerRefNumber",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     flight_segment_rphs: None | AirTravelerType.FlightSegmentRphs = field(
@@ -185,7 +183,6 @@ class AirTravelerType:
         metadata={
             "name": "PassengerTypeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[a-zA-Z]{3}",
         }
     )
@@ -204,7 +201,6 @@ class AirTravelerType:
                 "name": "UniqueID",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "required": True,
             }
         )
 

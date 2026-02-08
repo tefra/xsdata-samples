@@ -35,7 +35,6 @@ class AddrSpaceRefType:
         metadata={
             "name": "addressSpaceRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     id: None | str = field(

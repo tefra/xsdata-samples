@@ -55,7 +55,6 @@ class CoctMt030207UvLanguageCommunication:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     mode_code: None | Ce = field(

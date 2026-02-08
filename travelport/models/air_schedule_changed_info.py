@@ -22,6 +22,5 @@ class AirScheduleChangedInfo:
         metadata={
             "name": "AirPricingSolution",
             "type": "Element",
-            "required": True,
         }
     )

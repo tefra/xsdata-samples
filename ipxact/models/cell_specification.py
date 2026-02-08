@@ -52,11 +52,7 @@ class CellSpecification:
 
     @dataclass(kw_only=True)
     class CellFunction:
-        value: CellFunctionValueType = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: CellFunctionValueType = field()
         other: None | str = field(
             default=None,
             metadata={

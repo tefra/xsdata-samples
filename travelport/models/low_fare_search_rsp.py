@@ -34,7 +34,6 @@ class LowFareSearchRsp(AirSearchRsp):
         metadata={
             "name": "CurrencyType",
             "type": "Attribute",
-            "required": True,
             "length": 3,
         }
     )

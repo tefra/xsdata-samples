@@ -28,7 +28,6 @@ class Month:
 
     value: int = field(
         metadata={
-            "required": True,
             "min_inclusive": 1,
             "max_inclusive": 34,
             "total_digits": 2,

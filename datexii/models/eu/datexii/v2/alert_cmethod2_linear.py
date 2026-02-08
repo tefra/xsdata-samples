@@ -30,7 +30,6 @@ class AlertCMethod2Linear(AlertCLinear):
             "name": "alertCDirection",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     alert_cmethod2_primary_point_location: AlertCMethod2PrimaryPointLocation = field(
@@ -38,7 +37,6 @@ class AlertCMethod2Linear(AlertCLinear):
             "name": "alertCMethod2PrimaryPointLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     alert_cmethod2_secondary_point_location: AlertCMethod2SecondaryPointLocation = field(
@@ -46,7 +44,6 @@ class AlertCMethod2Linear(AlertCLinear):
             "name": "alertCMethod2SecondaryPointLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     alert_cmethod2_linear_extension: None | ExtensionType = field(

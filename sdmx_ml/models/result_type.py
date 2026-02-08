@@ -33,7 +33,6 @@ class ResultType:
             "name": "Registration",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
-            "required": True,
         }
     )
     constraint: tuple[str, ...] = field(

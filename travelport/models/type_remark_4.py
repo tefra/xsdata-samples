@@ -21,12 +21,7 @@ class TypeRemark4:
     class Meta:
         name = "typeRemark"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     provider_reservation_info_ref: None | str = field(
         default=None,
         metadata={

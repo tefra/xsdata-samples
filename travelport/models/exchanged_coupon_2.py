@@ -27,7 +27,6 @@ class ExchangedCoupon2:
         metadata={
             "name": "TicketNumber",
             "type": "Attribute",
-            "required": True,
             "length": 13,
         }
     )

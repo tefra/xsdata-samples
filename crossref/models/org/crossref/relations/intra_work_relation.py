@@ -36,14 +36,12 @@ class IntraWorkRelation:
         metadata={
             "name": "relationship-type",
             "type": "Attribute",
-            "required": True,
         }
     )
     identifier_type: IntraWorkRelationIdentifierType = field(
         metadata={
             "name": "identifier-type",
             "type": "Attribute",
-            "required": True,
         }
     )
     namespace: None | str = field(

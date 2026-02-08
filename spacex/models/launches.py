@@ -79,7 +79,6 @@ class Failures(DictMixin):
     time: int = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     altitude: None | int = field(
@@ -91,7 +90,6 @@ class Failures(DictMixin):
     reason: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -209,19 +207,16 @@ class Links(DictMixin):
     patch: Patch = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     reddit: Reddit = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     flickr: Flickr = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     presskit: None | str = field(
@@ -271,7 +266,6 @@ class Launches(DictMixin):
     links: Links = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     static_fire_date_utc: None | XmlDateTime = field(
@@ -289,13 +283,11 @@ class Launches(DictMixin):
     tbd: bool = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     net: bool = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     window: None | int = field(
@@ -307,7 +299,6 @@ class Launches(DictMixin):
     rocket: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     success: None | bool = field(
@@ -350,13 +341,11 @@ class Launches(DictMixin):
     launchpad: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     auto_update: bool = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     launch_library_id: None | str = field(
@@ -374,43 +363,36 @@ class Launches(DictMixin):
     flight_number: int = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     date_utc: XmlDateTime = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     date_unix: int = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     date_local: XmlDateTime = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     date_precision: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     upcoming: bool = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     cores: list[Cores] = field(
@@ -423,6 +405,5 @@ class Launches(DictMixin):
     id: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )

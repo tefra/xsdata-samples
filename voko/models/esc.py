@@ -8,9 +8,4 @@ class Esc:
     class Meta:
         name = "esc"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

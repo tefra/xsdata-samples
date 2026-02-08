@@ -30,11 +30,7 @@ class DiagnosticTypeOfDtcSupportedEnum:
     class Meta:
         name = "DIAGNOSTIC-TYPE-OF-DTC-SUPPORTED-ENUM"
 
-    value: DiagnosticTypeOfDtcSupportedEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticTypeOfDtcSupportedEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

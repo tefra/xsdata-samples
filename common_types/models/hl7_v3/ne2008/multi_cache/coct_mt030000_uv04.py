@@ -308,7 +308,6 @@ class CoctMt030000Uv04ContactParty:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -423,7 +422,6 @@ class CoctMt030000Uv04Employment:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     negation_ind: None | str = field(
@@ -520,7 +518,6 @@ class CoctMt030000Uv04Entity:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -812,7 +809,6 @@ class CoctMt030000Uv04LanguageCommunication:
             "name": "languageCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     mode_code: None | Ce = field(
@@ -912,7 +908,6 @@ class CoctMt030000Uv04OtherIds:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1355,14 +1350,12 @@ class CoctMt030000Uv04NonPersonLivingSubject:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: XDeterminerInstanceKind = field(
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 

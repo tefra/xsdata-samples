@@ -73,7 +73,6 @@ class IpSecConfig:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

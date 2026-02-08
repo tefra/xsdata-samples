@@ -29,11 +29,7 @@ class ResumePosition:
     class Meta:
         name = "RESUME-POSITION"
 
-    value: ResumePositionSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ResumePositionSimple = field()
     s: None | str = field(
         default=None,
         metadata={

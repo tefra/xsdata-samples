@@ -86,7 +86,6 @@ class McParameterElementGroup:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -96,6 +95,5 @@ class McParameterElementGroup:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

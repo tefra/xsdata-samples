@@ -75,7 +75,6 @@ class ConferencePaper:
     titles: Titles = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     abstract: list[Abstract] = field(
@@ -162,7 +161,6 @@ class ConferencePaper:
     doi_data: DoiData = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     citation_list: None | CitationList = field(

@@ -136,7 +136,6 @@ class MeasurementSiteRecord:
             "name": "measurementSiteLocation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     measurement_site_record_extension: None | ExtensionType = field(
@@ -150,12 +149,10 @@ class MeasurementSiteRecord:
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     version: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -13,24 +13,20 @@ class Bounds:
     x: float = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     y: float = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     width: float = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     height: float = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

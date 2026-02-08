@@ -22,17 +22,11 @@ class PriceChangeType:
         Contains segment reference information
     """
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
         }
     )
     carrier: None | str = field(

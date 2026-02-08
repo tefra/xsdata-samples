@@ -342,7 +342,6 @@ class CoctMt510000Uv06CoverageLimitObservation:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -627,7 +626,6 @@ class CoctMt510000Uv06EligibilityStatusObservation:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -703,7 +701,6 @@ class CoctMt510000Uv06Organization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -1066,7 +1063,6 @@ class CoctMt510000Uv06PreviousPolicyOrProgram:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     effective_time: None | IvlTsExplicit = field(
@@ -1151,7 +1147,6 @@ class CoctMt510000Uv06ServiceDefinition:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1212,7 +1207,6 @@ class CoctMt510000Uv06Subject3:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2464,7 +2458,6 @@ class CoctMt510000Uv06ResponsibleParty:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2519,7 +2512,6 @@ class CoctMt510000Uv06Subject:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2706,7 +2698,6 @@ class CoctMt510000Uv06CoverageCharge:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2876,7 +2867,6 @@ class CoctMt510000Uv06FinancialParticipationCharge:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -3340,7 +3330,6 @@ class CoctMt510000Uv06CoveredParty:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -3748,14 +3737,12 @@ class CoctMt510000Uv06Benefit:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMoodCompletionTrack = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     negation_ind: None | str = field(
@@ -4202,7 +4189,6 @@ class CoctMt510000Uv06PolicyOrProgram:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     status_code: None | Cs = field(
@@ -4396,7 +4382,6 @@ class CoctMt510000Uv06Component:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 

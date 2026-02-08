@@ -49,7 +49,6 @@ class IndirectInterfaceType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -80,7 +79,6 @@ class IndirectInterfaceType:
             "name": "indirectAddressRef",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     indirect_data_ref: IndirectDataRef = field(
@@ -88,7 +86,6 @@ class IndirectInterfaceType:
             "name": "indirectDataRef",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     memory_map_ref: None | str = field(

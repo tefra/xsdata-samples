@@ -20,7 +20,6 @@ class VehicleTypeAtPointVersionStructure(NetworkRestrictionVersionStructure):
             "name": "ForVehicleTypeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     capacity: None | int = field(

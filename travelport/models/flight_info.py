@@ -60,14 +60,12 @@ class FlightInfo:
         metadata={
             "name": "CriteriaKey",
             "type": "Attribute",
-            "required": True,
         }
     )
     carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -75,7 +73,6 @@ class FlightInfo:
         metadata={
             "name": "FlightNumber",
             "type": "Attribute",
-            "required": True,
             "max_length": 5,
         }
     )
@@ -101,7 +98,6 @@ class FlightInfo:
         metadata={
             "name": "DepartureDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     class_of_service: None | str = field(

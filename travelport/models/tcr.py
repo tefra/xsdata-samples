@@ -159,21 +159,18 @@ class Tcr:
         metadata={
             "name": "TCRNumber",
             "type": "Attribute",
-            "required": True,
         }
     )
     status: TypeTcrstatus = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )
     modified_date: str = field(
         metadata={
             "name": "ModifiedDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     confirmed_date: None | str = field(
@@ -187,56 +184,48 @@ class Tcr:
         metadata={
             "name": "BasePrice",
             "type": "Attribute",
-            "required": True,
         }
     )
     taxes: str = field(
         metadata={
             "name": "Taxes",
             "type": "Attribute",
-            "required": True,
         }
     )
     fees: str = field(
         metadata={
             "name": "Fees",
             "type": "Attribute",
-            "required": True,
         }
     )
     refundable: bool = field(
         metadata={
             "name": "Refundable",
             "type": "Attribute",
-            "required": True,
         }
     )
     exchangeable: bool = field(
         metadata={
             "name": "Exchangeable",
             "type": "Attribute",
-            "required": True,
         }
     )
     voidable: bool = field(
         metadata={
             "name": "Voidable",
             "type": "Attribute",
-            "required": True,
         }
     )
     modifiable: bool = field(
         metadata={
             "name": "Modifiable",
             "type": "Attribute",
-            "required": True,
         }
     )
     provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }
@@ -245,7 +234,6 @@ class Tcr:
         metadata={
             "name": "ProviderLocatorCode",
             "type": "Attribute",
-            "required": True,
             "max_length": 15,
         }
     )

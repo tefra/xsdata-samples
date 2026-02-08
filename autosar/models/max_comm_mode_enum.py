@@ -29,11 +29,7 @@ class MaxCommModeEnum:
     class Meta:
         name = "MAX-COMM-MODE-ENUM"
 
-    value: MaxCommModeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: MaxCommModeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

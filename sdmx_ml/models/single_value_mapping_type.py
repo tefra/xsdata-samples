@@ -32,7 +32,6 @@ class SingleValueMappingType(AnnotableType):
             "name": "SourceValue",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
         }
     )
     target_value: None | str = field(

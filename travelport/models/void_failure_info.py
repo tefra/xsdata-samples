@@ -10,17 +10,11 @@ class VoidFailureInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     ticket_number: str = field(
         metadata={
             "name": "TicketNumber",
             "type": "Attribute",
-            "required": True,
         }
     )
     code: None | int = field(

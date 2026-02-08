@@ -101,7 +101,6 @@ class SwcServiceDependencyInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -111,7 +110,6 @@ class SwcServiceDependencyInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -121,7 +119,6 @@ class SwcServiceDependencyInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -131,6 +128,5 @@ class SwcServiceDependencyInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

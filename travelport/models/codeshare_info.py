@@ -24,12 +24,7 @@ class CodeshareInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/air_v52_0"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     operating_carrier: None | str = field(
         default=None,
         metadata={

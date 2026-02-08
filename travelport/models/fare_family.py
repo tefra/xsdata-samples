@@ -38,7 +38,6 @@ class FareFamily:
         metadata={
             "name": "Carrier",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -46,7 +45,6 @@ class FareFamily:
         metadata={
             "name": "Label",
             "type": "Attribute",
-            "required": True,
             "min_length": 0,
             "max_length": 32,
         }
@@ -55,7 +53,6 @@ class FareFamily:
         metadata={
             "name": "FareBasis",
             "type": "Attribute",
-            "required": True,
             "max_length": 20,
         }
     )
@@ -70,6 +67,5 @@ class FareFamily:
         metadata={
             "name": "Version",
             "type": "Attribute",
-            "required": True,
         }
     )

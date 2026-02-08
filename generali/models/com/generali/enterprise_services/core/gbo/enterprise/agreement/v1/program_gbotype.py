@@ -112,7 +112,6 @@ class ProgramGbotype(AgreementType):
             "name": "YearSequenceNumber",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     producer: ProducerInvolvementType = field(
@@ -120,7 +119,6 @@ class ProgramGbotype(AgreementType):
             "name": "Producer",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     cancellation_days_notice: NumberType = field(
@@ -128,7 +126,6 @@ class ProgramGbotype(AgreementType):
             "name": "CancellationDaysNotice",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     risks: None | ProgramGbotypeRisks = field(
@@ -144,7 +141,6 @@ class ProgramGbotype(AgreementType):
             "name": "Covers",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     deductibles: None | DeductiblesType = field(

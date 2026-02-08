@@ -26,7 +26,6 @@ class Publisher:
     publisher_name: PublisherName = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     publisher_place: None | PublisherPlace = field(

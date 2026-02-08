@@ -77,14 +77,12 @@ class ScheduleEventType:
             "name": "guideDay",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-            "required": True,
         }
     )
     start: XmlDateTime = field(
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-            "required": True,
         }
     )
     offset: None | XmlDuration = field(
@@ -98,7 +96,6 @@ class ScheduleEventType:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-            "required": True,
         }
     )
     po_prog_id: None | str = field(
@@ -154,7 +151,6 @@ class ScheduleEventType:
         metadata={
             "name": "midRef",
             "type": "Attribute",
-            "required": True,
             "min_length": 4,
             "max_length": 255,
             "pattern": r"[ \.a-zA-Z0-9_-]+",
@@ -164,7 +160,6 @@ class ScheduleEventType:
         metadata={
             "name": "urnRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     type_value: None | ScheduleEventTypeEnum = field(

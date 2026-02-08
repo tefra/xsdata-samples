@@ -29,7 +29,6 @@ class TypeAnchorFlightData:
         metadata={
             "name": "AirlineCode",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -37,7 +36,6 @@ class TypeAnchorFlightData:
         metadata={
             "name": "FlightNumber",
             "type": "Attribute",
-            "required": True,
             "max_length": 5,
         }
     )

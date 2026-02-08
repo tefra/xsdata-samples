@@ -208,6 +208,5 @@ class PortDefinedArgumentValue:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

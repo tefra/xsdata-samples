@@ -28,55 +28,47 @@ class LocalPolicy:
         metadata={
             "name": "LocalPolicyID",
             "type": "Element",
-            "required": True,
         }
     )
     status: str = field(
         metadata={
             "name": "Status",
             "type": "Element",
-            "required": True,
         }
     )
     party_ids: PartyIds = field(
         metadata={
             "name": "PartyIDs",
             "type": "Element",
-            "required": True,
         }
     )
     risks: Risks = field(
         metadata={
             "name": "Risks",
             "type": "Element",
-            "required": True,
         }
     )
     reinsurance_agreements: ReinsuranceAgreements = field(
         metadata={
             "name": "ReinsuranceAgreements",
             "type": "Element",
-            "required": True,
         }
     )
     inception_date: XmlDateTime = field(
         metadata={
             "name": "InceptionDate",
             "type": "Element",
-            "required": True,
         }
     )
     issuance_date: XmlDateTime = field(
         metadata={
             "name": "IssuanceDate",
             "type": "Element",
-            "required": True,
         }
     )
     expiry_date: XmlDateTime = field(
         metadata={
             "name": "ExpiryDate",
             "type": "Element",
-            "required": True,
         }
     )

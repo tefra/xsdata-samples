@@ -25,14 +25,12 @@ class TSequenceFlow(TFlowElement):
         metadata={
             "name": "sourceRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     target_ref: str = field(
         metadata={
             "name": "targetRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     is_immediate: None | bool = field(

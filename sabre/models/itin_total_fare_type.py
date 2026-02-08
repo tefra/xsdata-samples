@@ -57,7 +57,6 @@ class ItinTotalFareType(FareType):
             metadata={
                 "name": "Amount",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -67,7 +66,6 @@ class ItinTotalFareType(FareType):
             metadata={
                 "name": "Amount",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -77,7 +75,6 @@ class ItinTotalFareType(FareType):
             metadata={
                 "name": "Amount",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -93,7 +90,6 @@ class ItinTotalFareType(FareType):
             metadata={
                 "name": "Amount",
                 "type": "Attribute",
-                "required": True,
                 "fraction_digits": 3,
             }
         )
@@ -101,7 +97,6 @@ class ItinTotalFareType(FareType):
             metadata={
                 "name": "TaxAmount",
                 "type": "Attribute",
-                "required": True,
                 "fraction_digits": 3,
             }
         )

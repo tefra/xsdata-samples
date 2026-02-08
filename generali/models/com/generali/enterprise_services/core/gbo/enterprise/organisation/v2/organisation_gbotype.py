@@ -87,7 +87,6 @@ class OrganisationGbotype:
             "name": "PrimaryAddress",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-            "required": True,
         }
     )
     global_ultimate_guns: None | str = field(
@@ -145,7 +144,6 @@ class OrganisationGbotype:
             "name": "IsIndividual",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/organisation/v2",
-            "required": True,
         }
     )
     creation_date: None | XmlDateTime = field(

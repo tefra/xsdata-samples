@@ -35,34 +35,29 @@ class RailSpecificSeatAssignment:
         metadata={
             "name": "CoachLabel",
             "type": "Attribute",
-            "required": True,
         }
     )
     place_label: str = field(
         metadata={
             "name": "PlaceLabel",
             "type": "Attribute",
-            "required": True,
         }
     )
     assignment: str = field(
         metadata={
             "name": "Assignment",
             "type": "Attribute",
-            "required": True,
         }
     )
     rail_segment_ref: str = field(
         metadata={
             "name": "RailSegmentRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     booking_traveler_ref: str = field(
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-            "required": True,
         }
     )

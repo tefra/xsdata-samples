@@ -19,9 +19,4 @@ class Presence:
         name = "presence"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: PresenceType = field(
-        default=PresenceType.OPTIONAL,
-        metadata={
-            "required": True,
-        },
-    )
+    value: PresenceType = field(default=PresenceType.OPTIONAL)

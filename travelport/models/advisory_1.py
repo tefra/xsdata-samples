@@ -54,14 +54,12 @@ class Advisory1(TypeKeyElement1):
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     start_date: XmlDate = field(
         metadata={
             "name": "StartDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     end_date: None | XmlDate = field(
@@ -102,14 +100,12 @@ class Advisory1(TypeKeyElement1):
         metadata={
             "name": "GeoPoliticalAreaType",
             "type": "Attribute",
-            "required": True,
         }
     )
     geo_political_area_code: str = field(
         metadata={
             "name": "GeoPoliticalAreaCode",
             "type": "Attribute",
-            "required": True,
             "max_length": 6,
         }
     )

@@ -35,7 +35,6 @@ class LinearElementByPoints(LinearElement):
             "name": "startPointOfLinearElement",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     intermediate_point_on_linear_element: list[
@@ -53,7 +52,6 @@ class LinearElementByPoints(LinearElement):
             "name": "endPointOfLinearElement",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     linear_element_by_points_extension: None | ExtensionType = field(

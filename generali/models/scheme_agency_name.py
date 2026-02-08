@@ -12,6 +12,5 @@ class SchemeAgencyName:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )

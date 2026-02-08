@@ -31,7 +31,6 @@ class ClientDataList:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 255,
         }
@@ -40,7 +39,6 @@ class ClientDataList:
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 255,
         }

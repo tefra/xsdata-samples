@@ -45,7 +45,6 @@ class LoyaltyProgram3:
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )

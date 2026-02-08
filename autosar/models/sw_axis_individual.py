@@ -190,7 +190,6 @@ class SwAxisIndividual:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -235,7 +234,6 @@ class SwAxisIndividual:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -245,7 +243,6 @@ class SwAxisIndividual:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -255,7 +252,6 @@ class SwAxisIndividual:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -265,6 +261,5 @@ class SwAxisIndividual:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

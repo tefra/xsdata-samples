@@ -60,25 +60,21 @@ class GeneratorChain:
     vendor: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     library: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     version: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     display_name: None | str = field(
@@ -171,12 +167,7 @@ class GeneratorChain:
 
     @dataclass(kw_only=True)
     class ChainGroup:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         id: None | str = field(
             default=None,
             metadata={

@@ -30,7 +30,6 @@ class TypeProductInfo:
         metadata={
             "name": "ProductType",
             "type": "Attribute",
-            "required": True,
         }
     )
     vendor_code: None | str = field(
@@ -44,13 +43,11 @@ class TypeProductInfo:
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     provider_locator_code: str = field(
         metadata={
             "name": "ProviderLocatorCode",
             "type": "Attribute",
-            "required": True,
         }
     )

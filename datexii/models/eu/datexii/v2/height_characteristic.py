@@ -28,7 +28,6 @@ class HeightCharacteristic:
             "name": "comparisonOperator",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     vehicle_height: float = field(
@@ -36,7 +35,6 @@ class HeightCharacteristic:
             "name": "vehicleHeight",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     height_characteristic_extension: None | ExtensionType = field(

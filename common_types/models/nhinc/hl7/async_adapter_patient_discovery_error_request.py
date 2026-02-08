@@ -19,7 +19,6 @@ class AsyncAdapterPatientDiscoveryErrorRequestType:
             "name": "PRPA_IN201305UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     prpa_in201306_uv02: PrpaIn201306Uv02 = field(
@@ -27,14 +26,12 @@ class AsyncAdapterPatientDiscoveryErrorRequestType:
             "name": "PRPA_IN201306UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_communities: NhinTargetCommunitiesType = field(
@@ -42,7 +39,6 @@ class AsyncAdapterPatientDiscoveryErrorRequestType:
             "name": "NhinTargetCommunities",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     error_msg: str = field(
@@ -50,7 +46,6 @@ class AsyncAdapterPatientDiscoveryErrorRequestType:
             "name": "errorMsg",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -62,7 +57,6 @@ class AsyncAdapterPatientDiscoveryErrorSecuredRequestType:
             "name": "PRPA_IN201305UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     prpa_in201306_uv02: PrpaIn201306Uv02 = field(
@@ -70,7 +64,6 @@ class AsyncAdapterPatientDiscoveryErrorSecuredRequestType:
             "name": "PRPA_IN201306UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_communities: NhinTargetCommunitiesType = field(
@@ -78,7 +71,6 @@ class AsyncAdapterPatientDiscoveryErrorSecuredRequestType:
             "name": "NhinTargetCommunities",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     error_msg: str = field(
@@ -86,7 +78,6 @@ class AsyncAdapterPatientDiscoveryErrorSecuredRequestType:
             "name": "errorMsg",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 

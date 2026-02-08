@@ -74,6 +74,5 @@ class DdsEventQosProps:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

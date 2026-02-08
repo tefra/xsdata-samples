@@ -20,7 +20,6 @@ class MctCount:
         metadata={
             "name": "Connection",
             "type": "Attribute",
-            "required": True,
         }
     )
     carrier: None | str = field(
@@ -35,6 +34,5 @@ class MctCount:
         metadata={
             "name": "Count",
             "type": "Attribute",
-            "required": True,
         }
     )

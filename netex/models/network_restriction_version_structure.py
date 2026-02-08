@@ -18,6 +18,5 @@ class NetworkRestrictionVersionStructure(AssignmentVersionStructure1):
             "name": "Restricted",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         },
     )

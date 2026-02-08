@@ -68,7 +68,6 @@ class RegisterFileDefinitions:
         name: str = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         display_name: None | DisplayName = field(
@@ -101,7 +100,6 @@ class RegisterFileDefinitions:
         range: UnsignedPositiveLongintExpression = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         access_policies: None | AccessPolicies = field(
@@ -181,7 +179,6 @@ class RegisterFileDefinitions:
             name: str = field(
                 metadata={
                     "type": "Element",
-                    "required": True,
                 }
             )
             display_name: None | DisplayName = field(
@@ -224,7 +221,6 @@ class RegisterFileDefinitions:
                 metadata={
                     "name": "addressOffset",
                     "type": "Element",
-                    "required": True,
                 }
             )
             register_definition_ref: (
@@ -311,16 +307,10 @@ class RegisterFileDefinitions:
 
             @dataclass(kw_only=True)
             class RegisterDefinitionRef:
-                value: str = field(
-                    default="",
-                    metadata={
-                        "required": True,
-                    },
-                )
+                value: str = field(default="")
                 type_definitions: str = field(
                     metadata={
                         "name": "typeDefinitions",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )

@@ -46,7 +46,6 @@ class BaseCoreReq2:
             "name": "BillingPointOfSaleInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/uprofileCommon_v30_0",
-            "required": True,
         }
     )
     agent_idoverride: list[AgentIdoverride2] = field(

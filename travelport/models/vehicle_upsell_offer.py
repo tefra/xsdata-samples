@@ -54,28 +54,24 @@ class VehicleUpsellOffer:
         metadata={
             "name": "AirConditioning",
             "type": "Attribute",
-            "required": True,
         }
     )
     transmission_type: TypeVehicleTransmission = field(
         metadata={
             "name": "TransmissionType",
             "type": "Attribute",
-            "required": True,
         }
     )
     vehicle_class: TypeVehicleClass = field(
         metadata={
             "name": "VehicleClass",
             "type": "Attribute",
-            "required": True,
         }
     )
     category: TypeVehicleCategory = field(
         metadata={
             "name": "Category",
             "type": "Attribute",
-            "required": True,
         }
     )
     door_count: None | TypeDoorCount = field(

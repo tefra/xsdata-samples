@@ -32,20 +32,17 @@ class LinkerCommandFile:
     name: StringExpression = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     command_line_switch: StringExpression = field(
         metadata={
             "name": "commandLineSwitch",
             "type": "Element",
-            "required": True,
         }
     )
     enable: UnsignedBitExpression = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     generator_ref: list[GeneratorRef] = field(

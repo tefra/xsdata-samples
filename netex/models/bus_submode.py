@@ -12,9 +12,4 @@ class BusSubmode:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: BusSubmodeEnumeration = field(
-        default=BusSubmodeEnumeration.UNKNOWN,
-        metadata={
-            "required": True,
-        },
-    )
+    value: BusSubmodeEnumeration = field(default=BusSubmodeEnumeration.UNKNOWN)

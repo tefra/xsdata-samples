@@ -26,17 +26,11 @@ class VehicleDisclaimer:
     class Meta:
         namespace = "http://www.travelport.com/schema/vehicle_v52_0"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     type_value: TypeVehicleDisclaimer = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     sub_type: None | str = field(

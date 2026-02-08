@@ -39,7 +39,6 @@ class VmsUnit(VmsSetting):
             "name": "vmsUnitTableReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     vms_unit_reference: VmsUnitRecordVersionedReference = field(
@@ -47,7 +46,6 @@ class VmsUnit(VmsSetting):
             "name": "vmsUnitReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     vms: list[VmsUnitVmsIndexVms] = field(

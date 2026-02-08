@@ -25,7 +25,6 @@ class ParkingUsageScenarioStatus:
             "name": "usageScenarioOperationStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     parking_usage_scenario_status_extension: None | ExtensionType = field(

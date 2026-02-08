@@ -19,7 +19,6 @@ class AlternateLocationLowestFaresType:
             "name": "OriginLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     destination_location: ResponseLocationType = field(
@@ -27,7 +26,6 @@ class AlternateLocationLowestFaresType:
             "name": "DestinationLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     lowest_fare: CurrencyAmountType = field(
@@ -35,6 +33,5 @@ class AlternateLocationLowestFaresType:
             "name": "LowestFare",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )

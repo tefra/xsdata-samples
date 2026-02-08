@@ -46,7 +46,6 @@ class HotelUpsellOffer:
         metadata={
             "name": "RatePlanType",
             "type": "Attribute",
-            "required": True,
         }
     )
     key: None | str = field(

@@ -25,7 +25,6 @@ class TypeTicketModifierValueType:
             "name": "Value",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-            "required": True,
         }
     )
     net_fare_value: None | bool = field(

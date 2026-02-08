@@ -39,122 +39,62 @@ class AsnlineItemNumber:
     class Meta:
         name = "ASNLineItemNumber"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ChangeOrderSequenceNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DeliveryStageQualifierCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DeliveryStageQualifierOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DiscrepancyCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DiscrepancyCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ElementIdentifierCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ElementIdentifierCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class GoodsConditionCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class GoodsConditionCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class GoodsReceiptDetailNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class GoodsReceiptHeaderNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -162,72 +102,37 @@ class GoodsReceiptId:
     class Meta:
         name = "GoodsReceiptID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class GoodsReceiptIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class GoodsReceiptTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class GoodsReceiptTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class IdentifyingReference:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ShipByDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class UnacceptablePackaging:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -239,7 +144,6 @@ class Asnreference:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -250,14 +154,12 @@ class DestinationRef:
         metadata={
             "name": "RouteID",
             "type": "Element",
-            "required": True,
         }
     )
     location_id: LocationId = field(
         metadata={
             "name": "LocationID",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -303,7 +205,6 @@ class GoodsCondition:
         metadata={
             "name": "GoodsConditionCoded",
             "type": "Element",
-            "required": True,
         }
     )
     goods_condition_coded_other: None | GoodsConditionCodedOther = field(
@@ -321,7 +222,6 @@ class GoodsReceiptLanguage:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -357,7 +257,6 @@ class GoodsReceiptParty:
         metadata={
             "name": "ScheduleParty",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -368,7 +267,6 @@ class GoodsReceiptPurpose:
         metadata={
             "name": "Purpose",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -379,7 +277,6 @@ class ItemShipFromParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -390,7 +287,6 @@ class ItemShipToParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -401,7 +297,6 @@ class ListOfGoodsReceiptPackageDetail:
         metadata={
             "name": "ListOfPackageDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -412,7 +307,6 @@ class OtherItemDates:
         metadata={
             "name": "ListOfDateCoded",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -423,7 +317,6 @@ class QuantityDifference:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -434,7 +327,6 @@ class QuantityReceived:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -445,7 +337,6 @@ class QuantityShipped:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -456,7 +347,6 @@ class GoodsReceiptItemOrderReference:
         metadata={
             "name": "GoodsReceiptOrderReference",
             "type": "Element",
-            "required": True,
         }
     )
     purchase_order_line_item_number: None | PurchaseOrderLineItemNumber = (
@@ -476,14 +366,12 @@ class LineItemGoodsCondition:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
     goods_condition: GoodsCondition = field(
         metadata={
             "name": "GoodsCondition",
             "type": "Element",
-            "required": True,
         }
     )
     discrepancy_coded: None | DiscrepancyCoded = field(
@@ -657,28 +545,24 @@ class GoodsReceiptHeader:
         metadata={
             "name": "GoodsReceiptID",
             "type": "Element",
-            "required": True,
         }
     )
     goods_receipt_issue_date: GoodsReceiptIssueDate = field(
         metadata={
             "name": "GoodsReceiptIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     goods_receipt_purpose: GoodsReceiptPurpose = field(
         metadata={
             "name": "GoodsReceiptPurpose",
             "type": "Element",
-            "required": True,
         }
     )
     goods_receipt_type_coded: GoodsReceiptTypeCoded = field(
         metadata={
             "name": "GoodsReceiptTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     goods_receipt_type_coded_other: None | GoodsReceiptTypeCodedOther = field(
@@ -713,14 +597,12 @@ class GoodsReceiptHeader:
         metadata={
             "name": "GoodsReceiptLanguage",
             "type": "Element",
-            "required": True,
         }
     )
     goods_receipt_party: GoodsReceiptParty = field(
         metadata={
             "name": "GoodsReceiptParty",
             "type": "Element",
-            "required": True,
         }
     )
     terms_of_delivery: list[TermsOfDelivery] = field(
@@ -807,42 +689,36 @@ class GoodsReceiptItemDetail:
         metadata={
             "name": "LineItemNum",
             "type": "Element",
-            "required": True,
         }
     )
     line_item_type: LineItemType = field(
         metadata={
             "name": "LineItemType",
             "type": "Element",
-            "required": True,
         }
     )
     parent_item_number: ParentItemNumber = field(
         metadata={
             "name": "ParentItemNumber",
             "type": "Element",
-            "required": True,
         }
     )
     item_identifiers: ItemIdentifiers = field(
         metadata={
             "name": "ItemIdentifiers",
             "type": "Element",
-            "required": True,
         }
     )
     quantity_shipped: QuantityShipped = field(
         metadata={
             "name": "QuantityShipped",
             "type": "Element",
-            "required": True,
         }
     )
     quantity_received: QuantityReceived = field(
         metadata={
             "name": "QuantityReceived",
             "type": "Element",
-            "required": True,
         }
     )
     quantity_difference: None | QuantityDifference = field(
@@ -932,7 +808,6 @@ class GoodsReceiptDetail:
         metadata={
             "name": "ListOfGoodsReceiptItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_goods_receipt_package_detail: (
@@ -952,7 +827,6 @@ class GoodsReceipt:
         metadata={
             "name": "GoodsReceiptHeader",
             "type": "Element",
-            "required": True,
         }
     )
     goods_receipt_detail: None | GoodsReceiptDetail = field(

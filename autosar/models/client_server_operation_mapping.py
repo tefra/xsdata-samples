@@ -116,7 +116,6 @@ class ClientServerOperationMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -126,7 +125,6 @@ class ClientServerOperationMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -136,6 +134,5 @@ class ClientServerOperationMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

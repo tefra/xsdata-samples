@@ -74,6 +74,5 @@ class DiagnosticConnectionRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

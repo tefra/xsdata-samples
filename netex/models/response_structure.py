@@ -14,6 +14,5 @@ class ResponseStructure:
             "name": "ResponseTimestamp",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
         }
     )

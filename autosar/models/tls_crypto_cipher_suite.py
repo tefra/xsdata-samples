@@ -117,7 +117,6 @@ class TlsCryptoCipherSuite:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | TlsCryptoCipherSuite.ShortNameFragments = (
@@ -293,7 +292,6 @@ class TlsCryptoCipherSuite:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -303,7 +301,6 @@ class TlsCryptoCipherSuite:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -313,7 +310,6 @@ class TlsCryptoCipherSuite:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -336,7 +332,6 @@ class TlsCryptoCipherSuite:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -346,6 +341,5 @@ class TlsCryptoCipherSuite:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

@@ -57,7 +57,6 @@ class SourceType:
             "name": "RequestorID",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     position: None | PositionType = field(

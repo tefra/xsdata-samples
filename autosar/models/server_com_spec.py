@@ -124,7 +124,6 @@ class ServerComSpec:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -134,7 +133,6 @@ class ServerComSpec:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -144,7 +142,6 @@ class ServerComSpec:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

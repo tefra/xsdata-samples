@@ -12,6 +12,5 @@ class ListName:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )

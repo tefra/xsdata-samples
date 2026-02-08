@@ -29,11 +29,7 @@ class GraphicFitEnum:
     class Meta:
         name = "GRAPHIC-FIT-ENUM"
 
-    value: GraphicFitEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: GraphicFitEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

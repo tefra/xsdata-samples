@@ -31,7 +31,6 @@ class UrlLink:
             "name": "urlLinkAddress",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     url_link_description: None | MultilingualString = field(

@@ -28,11 +28,7 @@ class DiagnosticEventKindEnum:
     class Meta:
         name = "DIAGNOSTIC-EVENT-KIND-ENUM"
 
-    value: DiagnosticEventKindEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticEventKindEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

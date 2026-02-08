@@ -25,13 +25,11 @@ class PrintBlankFormItinerary:
         metadata={
             "name": "IncludeDescription",
             "type": "Attribute",
-            "required": True,
         }
     )
     include_header: bool = field(
         metadata={
             "name": "IncludeHeader",
             "type": "Attribute",
-            "required": True,
         }
     )

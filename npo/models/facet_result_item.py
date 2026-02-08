@@ -14,7 +14,6 @@ class FacetResultItem:
         metadata={
             "type": "Element",
             "namespace": "urn:vpro:api:2013",
-            "required": True,
         }
     )
     selected: None | bool = field(

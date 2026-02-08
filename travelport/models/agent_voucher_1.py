@@ -19,6 +19,5 @@ class AgentVoucher1:
         metadata={
             "name": "Number",
             "type": "Attribute",
-            "required": True,
         }
     )

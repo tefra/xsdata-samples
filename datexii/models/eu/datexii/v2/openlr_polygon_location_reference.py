@@ -25,7 +25,6 @@ class OpenlrPolygonLocationReference(OpenlrAreaLocationReference):
             "name": "openlrPolygonCorners",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_polygon_location_reference_extension: None | ExtensionType = field(

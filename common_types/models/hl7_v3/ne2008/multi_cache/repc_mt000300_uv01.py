@@ -276,7 +276,6 @@ class RepcMt000300Uv01Component:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: None | ContextControl = field(
@@ -585,7 +584,6 @@ class RepcMt000300Uv01Organization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -714,7 +712,6 @@ class RepcMt000300Uv01Performer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -780,7 +777,6 @@ class RepcMt000300Uv01Place:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -902,7 +898,6 @@ class RepcMt000300Uv01Reason:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -1627,7 +1622,6 @@ class RepcMt000300Uv01Verifier:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -1672,7 +1666,6 @@ class RepcMt000300Uv01Annotation:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     status_code: Cs = field(
@@ -1680,7 +1673,6 @@ class RepcMt000300Uv01Annotation:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     confidentiality_code: None | Ce = field(
@@ -1764,7 +1756,6 @@ class RepcMt000300Uv01ControlActEvent:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     status_code: Cs = field(
@@ -1772,7 +1763,6 @@ class RepcMt000300Uv01ControlActEvent:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     effective_time: TsExplicit = field(
@@ -1780,7 +1770,6 @@ class RepcMt000300Uv01ControlActEvent:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     reason_code: None | Cv = field(
@@ -1905,7 +1894,6 @@ class RepcMt000300Uv01HealthCareFacility:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1958,7 +1946,6 @@ class RepcMt000300Uv01Location:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: None | ContextControl = field(
@@ -2194,7 +2181,6 @@ class RepcMt000300Uv01Concern:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     effective_time: None | IvlTsExplicit = field(
@@ -2376,14 +2362,12 @@ class RepcMt000300Uv01Concern:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -2613,7 +2597,6 @@ class RepcMt000300Uv01SequelTo:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(

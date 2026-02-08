@@ -30,11 +30,7 @@ class CommunicationDirectionType:
     class Meta:
         name = "COMMUNICATION-DIRECTION-TYPE"
 
-    value: CommunicationDirectionTypeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: CommunicationDirectionTypeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

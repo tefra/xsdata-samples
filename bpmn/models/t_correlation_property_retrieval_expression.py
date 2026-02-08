@@ -19,13 +19,11 @@ class TCorrelationPropertyRetrievalExpression(TBaseElement):
             "name": "messagePath",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-            "required": True,
         }
     )
     message_ref: QName = field(
         metadata={
             "name": "messageRef",
             "type": "Attribute",
-            "required": True,
         }
     )

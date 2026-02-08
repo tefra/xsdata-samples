@@ -18,17 +18,11 @@ class TypeNativeSearchModifier:
     class Meta:
         name = "typeNativeSearchModifier"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }

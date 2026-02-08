@@ -129,7 +129,6 @@ class ApplicationDataPrototypeInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -139,7 +138,6 @@ class ApplicationDataPrototypeInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -149,7 +147,6 @@ class ApplicationDataPrototypeInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -159,7 +156,6 @@ class ApplicationDataPrototypeInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -169,7 +165,6 @@ class ApplicationDataPrototypeInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -179,6 +174,5 @@ class ApplicationDataPrototypeInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

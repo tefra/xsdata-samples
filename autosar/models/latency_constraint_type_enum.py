@@ -30,11 +30,7 @@ class LatencyConstraintTypeEnum:
     class Meta:
         name = "LATENCY-CONSTRAINT-TYPE-ENUM"
 
-    value: LatencyConstraintTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: LatencyConstraintTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

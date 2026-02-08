@@ -91,6 +91,5 @@ class EcucConfigurationClassAffection:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

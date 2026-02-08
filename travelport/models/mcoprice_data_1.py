@@ -45,7 +45,6 @@ class McopriceData1:
         metadata={
             "name": "MCOAmount",
             "type": "Attribute",
-            "required": True,
         }
     )
     mcoequivalent_fare: None | str = field(

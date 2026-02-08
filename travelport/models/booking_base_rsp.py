@@ -32,6 +32,5 @@ class BookingBaseRsp(BaseRsp1):
         metadata={
             "name": "SessionKey",
             "type": "Attribute",
-            "required": True,
         }
     )

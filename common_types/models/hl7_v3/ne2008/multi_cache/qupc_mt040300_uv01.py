@@ -51,7 +51,6 @@ class QupcMt040300Uv01CareProvisionCode:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -96,7 +95,6 @@ class QupcMt040300Uv01CareProvisionReason:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -141,7 +139,6 @@ class QupcMt040300Uv01CareRecordTimePeriod:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -186,7 +183,6 @@ class QupcMt040300Uv01ClinicalStatementTimePeriod:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -231,7 +227,6 @@ class QupcMt040300Uv01IncludeCarePlanAttachment:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -276,7 +271,6 @@ class QupcMt040300Uv01MaximumHistoryStatements:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -321,7 +315,6 @@ class QupcMt040300Uv01PatientAdministrativeGender:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -366,7 +359,6 @@ class QupcMt040300Uv01PatientBirthTime:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -411,7 +403,6 @@ class QupcMt040300Uv01PatientId:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -456,7 +447,6 @@ class QupcMt040300Uv01PatientName:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -584,7 +574,6 @@ class QupcMt040300Uv01ParameterList:
             "name": "patientId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     patient_name: None | QupcMt040300Uv01PatientName = field(

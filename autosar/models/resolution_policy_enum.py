@@ -29,11 +29,7 @@ class ResolutionPolicyEnum:
     class Meta:
         name = "RESOLUTION-POLICY-ENUM"
 
-    value: ResolutionPolicyEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ResolutionPolicyEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

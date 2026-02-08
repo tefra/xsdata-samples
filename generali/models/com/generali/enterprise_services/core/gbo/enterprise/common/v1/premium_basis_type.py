@@ -21,7 +21,6 @@ class PremiumBasisType:
             "name": "Value",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-            "required": True,
         }
     )
     basis: PremiumBasisTypeBasis = field(
@@ -29,6 +28,5 @@ class PremiumBasisType:
             "name": "Basis",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-            "required": True,
         }
     )

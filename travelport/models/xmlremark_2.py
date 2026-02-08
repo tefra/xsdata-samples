@@ -34,12 +34,7 @@ class Xmlremark2:
         name = "XMLRemark"
         namespace = "http://www.travelport.com/schema/common_v32_0"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     key: None | str = field(
         default=None,
         metadata={

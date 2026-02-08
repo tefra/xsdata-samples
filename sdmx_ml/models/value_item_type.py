@@ -38,6 +38,5 @@ class ValueItemType(AnnotableType):
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -33,11 +33,7 @@ class ArgumentDirectionEnum:
     class Meta:
         name = "ARGUMENT-DIRECTION-ENUM"
 
-    value: ArgumentDirectionEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ArgumentDirectionEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

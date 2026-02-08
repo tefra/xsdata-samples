@@ -21,7 +21,6 @@ class SignSetting(OperatorAction):
             "name": "vmsSetting",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     sign_setting_extension: None | ExtensionType = field(

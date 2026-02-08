@@ -25,7 +25,6 @@ class ExchangeFareType:
         metadata={
             "name": "BaseFareAmount",
             "type": "Attribute",
-            "required": True,
             "fraction_digits": 3,
         }
     )
@@ -41,7 +40,6 @@ class ExchangeFareType:
         metadata={
             "name": "BaseFareCurrency",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[a-zA-Z]{3}",
         }
     )
@@ -49,7 +47,6 @@ class ExchangeFareType:
         metadata={
             "name": "FareCalcCurrency",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[a-zA-Z]{3}",
         }
     )

@@ -28,11 +28,7 @@ class DataFilterTypeEnum:
     class Meta:
         name = "DATA-FILTER-TYPE-ENUM"
 
-    value: DataFilterTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DataFilterTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

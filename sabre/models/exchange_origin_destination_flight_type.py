@@ -41,7 +41,6 @@ class ExchangeOriginDestinationFlightType:
             "name": "OriginLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     destination_location: RequestLocationType = field(
@@ -49,7 +48,6 @@ class ExchangeOriginDestinationFlightType:
             "name": "DestinationLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     airline: AirlineType = field(
@@ -57,7 +55,6 @@ class ExchangeOriginDestinationFlightType:
             "name": "Airline",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     side_trip: None | SideTripType = field(
@@ -98,7 +95,6 @@ class ExchangeOriginDestinationFlightType:
             "name": "Fare",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     plus_up: list[PlusUpType] = field(
@@ -113,14 +109,12 @@ class ExchangeOriginDestinationFlightType:
         metadata={
             "name": "Number",
             "type": "Attribute",
-            "required": True,
         }
     )
     departure_date_time: str = field(
         metadata={
             "name": "DepartureDateTime",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?",
         }
     )
@@ -128,7 +122,6 @@ class ExchangeOriginDestinationFlightType:
         metadata={
             "name": "ArrivalDateTime",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?",
         }
     )
@@ -143,7 +136,6 @@ class ExchangeOriginDestinationFlightType:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[AKO]",
         }
     )
@@ -158,7 +150,6 @@ class ExchangeOriginDestinationFlightType:
         metadata={
             "name": "ClassOfService",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[A-Z]{1,2}",
         }
     )
@@ -190,7 +181,6 @@ class ExchangeOriginDestinationFlightType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)%?",
                 }
             )

@@ -16,7 +16,6 @@ class PlaceSignStructure(SignEquipmentVersionStructure):
             "name": "PlaceName",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     place_ref: None | PlaceRef = field(

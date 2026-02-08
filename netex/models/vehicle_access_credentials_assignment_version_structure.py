@@ -102,6 +102,5 @@ class VehicleAccessCredentialsAssignmentVersionStructure(
             "name": "ServiceAccessCodeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

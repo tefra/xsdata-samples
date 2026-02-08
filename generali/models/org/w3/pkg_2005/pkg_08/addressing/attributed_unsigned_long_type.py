@@ -7,11 +7,7 @@ __NAMESPACE__ = "http://www.w3.org/2005/08/addressing"
 
 @dataclass(kw_only=True)
 class AttributedUnsignedLongType:
-    value: int = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: int = field()
     other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={

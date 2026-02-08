@@ -71,7 +71,6 @@ class ActionStatus6:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     ticket_date: None | str = field(

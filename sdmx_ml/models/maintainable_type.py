@@ -48,7 +48,6 @@ class MaintainableType(MaintainableBaseType):
         metadata={
             "name": "agencyID",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[A-Za-z][A-Za-z0-9_\-]*(\.[A-Za-z][A-Za-z0-9_\-]*)*",
         }
     )

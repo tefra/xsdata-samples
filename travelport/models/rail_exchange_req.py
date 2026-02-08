@@ -87,7 +87,6 @@ class RailExchangeReq(BaseCreateWithFormOfPaymentReq1):
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         }
@@ -96,7 +95,6 @@ class RailExchangeReq(BaseCreateWithFormOfPaymentReq1):
         metadata={
             "name": "BookingActionType",
             "type": "Attribute",
-            "required": True,
         }
     )
     refund_option: None | str = field(

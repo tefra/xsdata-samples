@@ -18,7 +18,6 @@ class TParticipantAssociation(TBaseElement):
             "name": "innerParticipantRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-            "required": True,
         }
     )
     outer_participant_ref: QName = field(
@@ -26,6 +25,5 @@ class TParticipantAssociation(TBaseElement):
             "name": "outerParticipantRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-            "required": True,
         }
     )

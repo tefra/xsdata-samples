@@ -51,7 +51,6 @@ class AutoSeatAssignment:
         metadata={
             "name": "SeatType",
             "type": "Attribute",
-            "required": True,
         }
     )
     group: bool = field(

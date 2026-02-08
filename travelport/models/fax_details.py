@@ -41,7 +41,6 @@ class FaxDetails:
             "name": "PhoneNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "required": True,
         }
     )
     term_conditions: None | TermConditions = field(

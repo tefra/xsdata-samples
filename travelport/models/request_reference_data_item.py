@@ -47,7 +47,6 @@ class RequestReferenceDataItem:
             metadata={
                 "name": "Type",
                 "type": "Attribute",
-                "required": True,
                 "length": 2,
             }
         )

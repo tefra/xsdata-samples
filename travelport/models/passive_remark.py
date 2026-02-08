@@ -37,6 +37,5 @@ class PassiveRemark:
         metadata={
             "name": "PassiveSegmentRef",
             "type": "Attribute",
-            "required": True,
         }
     )

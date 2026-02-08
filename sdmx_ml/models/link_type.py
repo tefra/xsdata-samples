@@ -19,13 +19,11 @@ class LinkType:
     rel: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     url: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     urn: None | str = field(

@@ -65,12 +65,7 @@ class WireTypeDef:
             constrained the number of bits in the vector
         """
 
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         constrained: list[str] = field(
             default_factory=list,
             metadata={
@@ -81,12 +76,7 @@ class WireTypeDef:
 
     @dataclass(kw_only=True)
     class TypeDefinition:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         id: None | str = field(
             default=None,
             metadata={
@@ -97,12 +87,7 @@ class WireTypeDef:
 
     @dataclass(kw_only=True)
     class ViewRef:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         id: None | str = field(
             default=None,
             metadata={

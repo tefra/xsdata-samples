@@ -23,8 +23,4 @@ class PercentType:
     xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">URI</ns1:PrimitiveType>.
     """
 
-    value: Decimal = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: Decimal = field()

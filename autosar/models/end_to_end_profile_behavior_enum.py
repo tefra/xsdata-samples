@@ -30,11 +30,7 @@ class EndToEndProfileBehaviorEnum:
     class Meta:
         name = "END-TO-END-PROFILE-BEHAVIOR-ENUM"
 
-    value: EndToEndProfileBehaviorEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: EndToEndProfileBehaviorEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

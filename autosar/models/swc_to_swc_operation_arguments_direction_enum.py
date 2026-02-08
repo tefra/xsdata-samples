@@ -30,11 +30,7 @@ class SwcToSwcOperationArgumentsDirectionEnum:
     class Meta:
         name = "SWC-TO-SWC-OPERATION-ARGUMENTS-DIRECTION-ENUM"
 
-    value: SwcToSwcOperationArgumentsDirectionEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SwcToSwcOperationArgumentsDirectionEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

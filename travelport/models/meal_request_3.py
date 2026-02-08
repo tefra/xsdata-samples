@@ -19,7 +19,6 @@ class MealRequest3:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
             "length": 4,
         }
     )

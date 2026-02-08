@@ -150,7 +150,6 @@ class CommissionRemark3:
             metadata={
                 "name": "TravelerType",
                 "type": "Attribute",
-                "required": True,
                 "min_length": 3,
                 "max_length": 5,
             }

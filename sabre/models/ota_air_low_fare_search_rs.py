@@ -194,7 +194,6 @@ class OtaAirLowFareSearchRs:
         metadata={
             "name": "Version",
             "type": "Attribute",
-            "required": True,
         }
     )
     transaction_identifier: None | str = field(
@@ -383,7 +382,6 @@ class OtaAirLowFareSearchRs:
                 metadata={
                     "name": "RPH",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"[0-9]{1,8}",
                 }
             )
@@ -434,7 +432,6 @@ class OtaAirLowFareSearchRs:
                 metadata={
                     "name": "RPH",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"[0-9]{1,8}",
                 }
             )
@@ -590,7 +587,6 @@ class OtaAirLowFareSearchRs:
                     metadata={
                         "name": "RPH",
                         "type": "Attribute",
-                        "required": True,
                         "pattern": r"[0-9]{1,8}",
                     }
                 )
@@ -644,7 +640,6 @@ class OtaAirLowFareSearchRs:
                     metadata={
                         "name": "RPH",
                         "type": "Attribute",
-                        "required": True,
                         "pattern": r"[0-9]{1,8}",
                     }
                 )
@@ -802,7 +797,6 @@ class OtaAirLowFareSearchRs:
                     metadata={
                         "name": "RPH",
                         "type": "Attribute",
-                        "required": True,
                         "pattern": r"[0-9]{1,8}",
                     }
                 )
@@ -856,7 +850,6 @@ class OtaAirLowFareSearchRs:
                     metadata={
                         "name": "RPH",
                         "type": "Attribute",
-                        "required": True,
                         "pattern": r"[0-9]{1,8}",
                     }
                 )
@@ -1014,7 +1007,6 @@ class OtaAirLowFareSearchRs:
                     metadata={
                         "name": "RPH",
                         "type": "Attribute",
-                        "required": True,
                         "pattern": r"[0-9]{1,8}",
                     }
                 )
@@ -1068,7 +1060,6 @@ class OtaAirLowFareSearchRs:
                     metadata={
                         "name": "RPH",
                         "type": "Attribute",
-                        "required": True,
                         "pattern": r"[0-9]{1,8}",
                     }
                 )
@@ -1127,6 +1118,5 @@ class OtaAirLowFareSearchRs:
                     metadata={
                         "name": "SequenceNumber",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )

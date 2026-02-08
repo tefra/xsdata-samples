@@ -164,7 +164,6 @@ class StandardFareTableVersionStructure(GroupOfEntitiesVersionStructure):
             "name": "SecondClassSingle",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     first_class_return: None | Decimal = field(

@@ -26,11 +26,7 @@ class Float:
     class Meta:
         name = "FLOAT"
 
-    value: float = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: float = field()
     s: None | str = field(
         default=None,
         metadata={

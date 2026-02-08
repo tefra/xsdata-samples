@@ -222,7 +222,6 @@ class ExchangeOriginDestinationInformationType(
             metadata={
                 "name": "Number",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -232,7 +231,6 @@ class ExchangeOriginDestinationInformationType(
             metadata={
                 "name": "Number",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -296,7 +294,6 @@ class ExchangeOriginDestinationInformationType(
             metadata={
                 "name": "Value",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -306,7 +303,6 @@ class ExchangeOriginDestinationInformationType(
             metadata={
                 "name": "Number",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

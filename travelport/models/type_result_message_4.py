@@ -23,17 +23,11 @@ class TypeResultMessage4:
     class Meta:
         name = "typeResultMessage"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     code: int = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
         }
     )
     type_value: None | TypeResultMessageType4 = field(

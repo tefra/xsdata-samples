@@ -21,7 +21,6 @@ class MaintenanceType:
             "name": "Year",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     type_value: MaintenanceTypeEnum = field(
@@ -29,6 +28,5 @@ class MaintenanceType:
             "name": "Type",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )

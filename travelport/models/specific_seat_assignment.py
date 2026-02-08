@@ -33,14 +33,12 @@ class SpecificSeatAssignment:
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     segment_ref: str = field(
         metadata={
             "name": "SegmentRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     flight_detail_ref: None | str = field(
@@ -54,7 +52,6 @@ class SpecificSeatAssignment:
         metadata={
             "name": "SeatId",
             "type": "Attribute",
-            "required": True,
         }
     )
     rail_coach_number: None | str = field(

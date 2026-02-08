@@ -88,7 +88,6 @@ class CoctMt060000Uv01Entity:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -212,7 +211,6 @@ class CoctMt060000Uv01Location:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -272,7 +270,6 @@ class CoctMt060000Uv01Performer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -333,7 +330,6 @@ class CoctMt060000Uv01RoleTransport:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -387,7 +383,6 @@ class CoctMt060000Uv01Subject:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -527,6 +522,5 @@ class CoctMt060000Uv01Transportation:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )

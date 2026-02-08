@@ -73,6 +73,5 @@ class LGraphic:
         metadata={
             "name": "L",
             "type": "Attribute",
-            "required": True,
         }
     )

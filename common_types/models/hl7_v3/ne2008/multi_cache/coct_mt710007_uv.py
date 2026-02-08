@@ -61,7 +61,6 @@ class CoctMt710007UvLocatedEntity:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -166,7 +165,6 @@ class CoctMt710007UvPlace:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(

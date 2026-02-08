@@ -108,7 +108,6 @@ class AgreementType(BaseGbotype):
             "name": "ExpiryDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     inception_date: DateTimeType = field(
@@ -116,7 +115,6 @@ class AgreementType(BaseGbotype):
             "name": "InceptionDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     renewable: None | bool = field(
@@ -172,7 +170,6 @@ class AgreementType(BaseGbotype):
             "name": "Status",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     status_date: None | DateTimeType = field(
@@ -220,7 +217,6 @@ class AgreementType(BaseGbotype):
             "name": "UnderwritingYear",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     version: int = field(
@@ -228,7 +224,6 @@ class AgreementType(BaseGbotype):
             "name": "Version",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     account_managers: None | AgreementTypeAccountManagers = field(
@@ -300,7 +295,6 @@ class AgreementType(BaseGbotype):
             "name": "LayerType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     line_of_business: LineOfBusinessType = field(
@@ -308,7 +302,6 @@ class AgreementType(BaseGbotype):
             "name": "LineOfBusiness",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     payout_benefits: None | AgreementTypePayoutBenefits = field(
@@ -324,7 +317,6 @@ class AgreementType(BaseGbotype):
             "name": "LocalCurrency",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     remittance_currency: CodeType = field(
@@ -332,7 +324,6 @@ class AgreementType(BaseGbotype):
             "name": "RemittanceCurrency",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     local_data: None | LocalDataType = field(

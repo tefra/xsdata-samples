@@ -29,11 +29,7 @@ class RptAccessEnum:
     class Meta:
         name = "RPT-ACCESS-ENUM"
 
-    value: RptAccessEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: RptAccessEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

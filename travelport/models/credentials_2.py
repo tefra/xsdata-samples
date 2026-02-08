@@ -25,7 +25,6 @@ class Credentials2:
         metadata={
             "name": "UserId",
             "type": "Attribute",
-            "required": True,
             "max_length": 36,
         }
     )

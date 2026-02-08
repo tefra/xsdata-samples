@@ -34,21 +34,18 @@ class TypeGuaranteeInformation7:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     agency_type: TypeGuaranteeInformationAgencyType7 = field(
         metadata={
             "name": "AgencyType",
             "type": "Attribute",
-            "required": True,
         }
     )
     iatanumber: str = field(
         metadata={
             "name": "IATANumber",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }

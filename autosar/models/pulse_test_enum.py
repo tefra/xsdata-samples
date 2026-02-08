@@ -30,11 +30,7 @@ class PulseTestEnum:
     class Meta:
         name = "PULSE-TEST-ENUM"
 
-    value: PulseTestEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: PulseTestEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

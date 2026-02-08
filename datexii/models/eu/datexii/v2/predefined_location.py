@@ -38,7 +38,6 @@ class PredefinedLocation(PredefinedLocationContainer):
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     predefined_location_extension: None | ExtensionType = field(
@@ -52,12 +51,10 @@ class PredefinedLocation(PredefinedLocationContainer):
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     version: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

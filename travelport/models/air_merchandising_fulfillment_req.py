@@ -87,7 +87,6 @@ class AirMerchandisingFulfillmentReq(BaseReq1):
             "name": "AirSolution",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-            "required": True,
         }
     )
     credit_card: None | CreditCard1 = field(

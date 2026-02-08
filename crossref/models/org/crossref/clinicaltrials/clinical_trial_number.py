@@ -26,7 +26,6 @@ class ClinicalTrialNumber:
     registry: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
             "min_length": 12,
             "max_length": 200,
             "pattern": r"10.18810/[a-z-]+",

@@ -76,14 +76,12 @@ class AirSegmentDetails:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }
@@ -92,7 +90,6 @@ class AirSegmentDetails:
         metadata={
             "name": "Carrier",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -100,7 +97,6 @@ class AirSegmentDetails:
         metadata={
             "name": "Origin",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -109,7 +105,6 @@ class AirSegmentDetails:
         metadata={
             "name": "Destination",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -118,14 +113,12 @@ class AirSegmentDetails:
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
-            "required": True,
         }
     )
     arrival_time: XmlDateTime = field(
         metadata={
             "name": "ArrivalTime",
             "type": "Attribute",
-            "required": True,
         }
     )
     equipment: None | str = field(
@@ -164,7 +157,6 @@ class AirSegmentDetails:
         metadata={
             "name": "FlightNumber",
             "type": "Attribute",
-            "required": True,
             "max_length": 5,
         }
     )

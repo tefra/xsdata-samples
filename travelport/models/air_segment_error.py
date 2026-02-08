@@ -20,13 +20,11 @@ class AirSegmentError:
         metadata={
             "name": "AirSegment",
             "type": "Element",
-            "required": True,
         }
     )
     error_message: str = field(
         metadata={
             "name": "ErrorMessage",
             "type": "Element",
-            "required": True,
         }
     )

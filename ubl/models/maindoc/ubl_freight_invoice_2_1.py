@@ -103,7 +103,6 @@ class FreightInvoiceType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     copy_indicator: None | CopyIndicator = field(
@@ -127,7 +126,6 @@ class FreightInvoiceType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -318,7 +316,6 @@ class FreightInvoiceType:
             "name": "AccountingSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     accounting_customer_party: AccountingCustomerParty = field(
@@ -326,7 +323,6 @@ class FreightInvoiceType:
             "name": "AccountingCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     payee_party: None | PayeeParty = field(
@@ -424,7 +420,6 @@ class FreightInvoiceType:
             "name": "LegalMonetaryTotal",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     invoice_line: tuple[InvoiceLine, ...] = field(

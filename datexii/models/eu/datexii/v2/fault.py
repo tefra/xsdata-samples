@@ -59,7 +59,6 @@ class Fault:
             "name": "faultLastUpdateTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     fault_severity: None | FaultSeverityEnum = field(

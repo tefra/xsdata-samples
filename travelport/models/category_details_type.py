@@ -30,6 +30,5 @@ class CategoryDetailsType:
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
         }
     )

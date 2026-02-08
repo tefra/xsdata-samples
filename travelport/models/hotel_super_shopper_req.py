@@ -34,7 +34,6 @@ class HotelSuperShopperReq(BaseSearchReq1):
         metadata={
             "name": "HotelStay",
             "type": "Element",
-            "required": True,
         }
     )
     quick_response: None | QuickResponse = field(

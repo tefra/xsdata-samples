@@ -83,28 +83,24 @@ class TypeProfileParentWithData2:
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-            "required": True,
         }
     )
     profile_type: TypeProfileType7 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
         }
     )
     status: TypeProfileEntityStatusWithDelete2 = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )
     hierarchy_level_id: None | str = field(
@@ -118,7 +114,6 @@ class TypeProfileParentWithData2:
         metadata={
             "name": "Version",
             "type": "Attribute",
-            "required": True,
             "min_inclusive": 0,
         }
     )

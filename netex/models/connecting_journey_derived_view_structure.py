@@ -29,7 +29,6 @@ class ConnectingJourneyDerivedViewStructure(DerivedViewStructure):
             "name": "ServiceJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     departure_time_or_frequency: None | XmlTime | FrequencyStructure = field(

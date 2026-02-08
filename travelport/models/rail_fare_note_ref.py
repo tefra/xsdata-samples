@@ -20,6 +20,5 @@ class RailFareNoteRef:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

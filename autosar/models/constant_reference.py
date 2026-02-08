@@ -84,6 +84,5 @@ class ConstantReference:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

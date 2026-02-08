@@ -22,7 +22,6 @@ class ResourceWrap:
         metadata={
             "name": "resource-name",
             "type": "Element",
-            "required": True,
         }
     )
     resource_id: list[ResourceId] = field(

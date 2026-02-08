@@ -164,7 +164,6 @@ class ConditionalChangeNad:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -174,6 +173,5 @@ class ConditionalChangeNad:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

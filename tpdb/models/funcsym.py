@@ -16,13 +16,11 @@ class Funcsym:
     name: Name = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     arity: Arity = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     theory: None | Theory = field(

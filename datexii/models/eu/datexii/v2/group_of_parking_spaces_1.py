@@ -66,7 +66,6 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "name": "parkingNumberOfSpaces",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     parking_type_of_group: ParkingTypeOfGroup = field(
@@ -74,7 +73,6 @@ class GroupOfParkingSpaces1(ParkingSpaceBasics):
             "name": "parkingTypeOfGroup",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     identical_to_group: list[str] = field(

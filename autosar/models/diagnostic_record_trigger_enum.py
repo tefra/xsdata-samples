@@ -30,11 +30,7 @@ class DiagnosticRecordTriggerEnum:
     class Meta:
         name = "DIAGNOSTIC-RECORD-TRIGGER-ENUM"
 
-    value: DiagnosticRecordTriggerEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticRecordTriggerEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

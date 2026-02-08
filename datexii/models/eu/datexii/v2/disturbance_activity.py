@@ -28,7 +28,6 @@ class DisturbanceActivity(Activity):
             "name": "disturbanceActivityType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     disturbance_activity_extension: None | ExtensionType = field(

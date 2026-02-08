@@ -30,7 +30,6 @@ class CrossmarkDomain:
     domain: Domain = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     filter: None | Filter = field(

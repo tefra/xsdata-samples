@@ -31,11 +31,7 @@ class DiagnosticInhibitionMaskEnum:
     class Meta:
         name = "DIAGNOSTIC-INHIBITION-MASK-ENUM"
 
-    value: DiagnosticInhibitionMaskEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticInhibitionMaskEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -121,14 +121,12 @@ class TypeCustomField1:
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -146,7 +144,6 @@ class TypeCustomField1:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     encrypted: bool = field(

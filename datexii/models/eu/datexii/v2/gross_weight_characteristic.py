@@ -27,7 +27,6 @@ class GrossWeightCharacteristic:
             "name": "comparisonOperator",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     gross_vehicle_weight: float = field(
@@ -35,7 +34,6 @@ class GrossWeightCharacteristic:
             "name": "grossVehicleWeight",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     gross_weight_characteristic_extension: None | ExtensionType = field(

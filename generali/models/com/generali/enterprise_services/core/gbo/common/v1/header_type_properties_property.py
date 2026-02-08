@@ -10,15 +10,9 @@ class HeaderTypePropertiesProperty:
     class Meta:
         global_type = False
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     key: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

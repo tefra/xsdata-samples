@@ -179,7 +179,6 @@ class SwcImplementation:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | SwcImplementation.ShortNameFragments = field(
@@ -506,7 +505,6 @@ class SwcImplementation:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -549,7 +547,6 @@ class SwcImplementation:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -559,7 +556,6 @@ class SwcImplementation:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

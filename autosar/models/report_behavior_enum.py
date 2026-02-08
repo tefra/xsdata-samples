@@ -29,11 +29,7 @@ class ReportBehaviorEnum:
     class Meta:
         name = "REPORT-BEHAVIOR-ENUM"
 
-    value: ReportBehaviorEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ReportBehaviorEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

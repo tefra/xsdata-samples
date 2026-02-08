@@ -7,9 +7,4 @@ __NAMESPACE__ = "http://www.siri.org.uk/siri"
 
 @dataclass(kw_only=True)
 class SubscriptionFilterRefStructure:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

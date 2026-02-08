@@ -28,7 +28,6 @@ class TypeSearchAccountingReference1:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -37,6 +36,5 @@ class TypeSearchAccountingReference1:
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
         }
     )

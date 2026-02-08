@@ -29,11 +29,7 @@ class IPsecIpProtocolEnum:
     class Meta:
         name = "I-PSEC-IP-PROTOCOL-ENUM"
 
-    value: IPsecIpProtocolEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: IPsecIpProtocolEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

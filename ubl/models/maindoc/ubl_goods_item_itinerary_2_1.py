@@ -80,7 +80,6 @@ class GoodsItemItineraryType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     copy_indicator: None | CopyIndicator = field(
@@ -104,7 +103,6 @@ class GoodsItemItineraryType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: IssueTime = field(
@@ -112,7 +110,6 @@ class GoodsItemItineraryType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     note: tuple[Note, ...] = field(
@@ -128,7 +125,6 @@ class GoodsItemItineraryType:
             "name": "VersionID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     transport_execution_plan_reference_id: TransportExecutionPlanReferenceId = field(
@@ -136,7 +132,6 @@ class GoodsItemItineraryType:
             "name": "TransportExecutionPlanReferenceID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     signature: tuple[Signature, ...] = field(

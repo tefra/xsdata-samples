@@ -18,7 +18,6 @@ class AirRepriceRsp(BaseRsp1):
         metadata={
             "name": "AirPricingSolution",
             "type": "Element",
-            "required": True,
         }
     )
     fare_rule: list[FareRule] = field(

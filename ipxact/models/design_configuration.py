@@ -59,25 +59,21 @@ class DesignConfiguration:
     vendor: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     library: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     version: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     display_name: None | str = field(
@@ -183,7 +179,6 @@ class DesignConfiguration:
             metadata={
                 "name": "interconnectionRef",
                 "type": "Element",
-                "required": True,
             }
         )
         abstractor_instances: list[
@@ -280,14 +275,12 @@ class DesignConfiguration:
                     metadata={
                         "name": "componentRef",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
                 bus_ref: str = field(
                     metadata={
                         "name": "busRef",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
                 id: None | str = field(
@@ -315,7 +308,6 @@ class DesignConfiguration:
                     metadata={
                         "name": "instanceName",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 display_name: None | DisplayName = field(
@@ -342,14 +334,12 @@ class DesignConfiguration:
                     metadata={
                         "name": "abstractorRef",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 view_name: str = field(
                     metadata={
                         "name": "viewName",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 id: None | str = field(
@@ -373,13 +363,11 @@ class DesignConfiguration:
             metadata={
                 "name": "instanceName",
                 "type": "Element",
-                "required": True,
             }
         )
         view: DesignConfiguration.ViewConfiguration.View = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         vendor_extensions: None | VendorExtensions = field(
@@ -418,6 +406,5 @@ class DesignConfiguration:
                 metadata={
                     "name": "viewRef",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

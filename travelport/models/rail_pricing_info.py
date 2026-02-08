@@ -115,7 +115,6 @@ class RailPricingInfo:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     exchange_amount: None | str = field(

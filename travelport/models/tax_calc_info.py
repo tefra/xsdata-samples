@@ -18,7 +18,6 @@ class TaxCalcInfo:
         metadata={
             "name": "Origin",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -27,7 +26,6 @@ class TaxCalcInfo:
         metadata={
             "name": "Destination",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -36,7 +34,6 @@ class TaxCalcInfo:
         metadata={
             "name": "BaseFare",
             "type": "Attribute",
-            "required": True,
         }
     )
     qsurcharge: None | str = field(

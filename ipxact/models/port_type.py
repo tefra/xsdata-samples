@@ -46,7 +46,6 @@ class PortType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
             "white_space": "collapse",
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
         }

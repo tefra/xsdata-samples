@@ -48,7 +48,6 @@ class FileSetType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -128,12 +127,7 @@ class FileSetType:
 
     @dataclass(kw_only=True)
     class Group:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         id: None | str = field(
             default=None,
             metadata={
@@ -180,7 +174,6 @@ class FileSetType:
                 "name": "fileRef",
                 "type": "Element",
                 "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                "required": True,
             }
         )
         return_type: None | ReturnTypeType = field(
@@ -238,7 +231,6 @@ class FileSetType:
                 metadata={
                     "name": "dataType",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -257,7 +249,6 @@ class FileSetType:
                     "name": "sourceName",
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                    "required": True,
                 }
             )
             file_type: FileType = field(
@@ -265,7 +256,6 @@ class FileSetType:
                     "name": "fileType",
                     "type": "Element",
                     "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-                    "required": True,
                 }
             )
             id: None | str = field(

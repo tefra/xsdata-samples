@@ -79,7 +79,6 @@ class RtePluginProps:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -89,6 +88,5 @@ class RtePluginProps:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

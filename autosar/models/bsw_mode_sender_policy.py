@@ -112,6 +112,5 @@ class BswModeSenderPolicy:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

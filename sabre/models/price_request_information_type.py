@@ -431,7 +431,6 @@ class PriceRequestInformationType:
                         "name": "Price",
                         "type": "Element",
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
-                        "required": True,
                     }
                 )
             )
@@ -440,7 +439,6 @@ class PriceRequestInformationType:
                     "name": "DirectFlights",
                     "type": "Element",
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
-                    "required": True,
                 }
             )
             time: PriceRequestInformationType.TpaExtensions.Priority.Time = (
@@ -449,7 +447,6 @@ class PriceRequestInformationType:
                         "name": "Time",
                         "type": "Element",
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
-                        "required": True,
                     }
                 )
             )
@@ -458,7 +455,6 @@ class PriceRequestInformationType:
                     "name": "Vendor",
                     "type": "Element",
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
-                    "required": True,
                 }
             )
 
@@ -468,7 +464,6 @@ class PriceRequestInformationType:
                     metadata={
                         "name": "Priority",
                         "type": "Attribute",
-                        "required": True,
                         "min_inclusive": 1,
                         "max_inclusive": 4,
                     }
@@ -480,7 +475,6 @@ class PriceRequestInformationType:
                     metadata={
                         "name": "Priority",
                         "type": "Attribute",
-                        "required": True,
                         "min_inclusive": 1,
                         "max_inclusive": 4,
                     }
@@ -492,7 +486,6 @@ class PriceRequestInformationType:
                     metadata={
                         "name": "Priority",
                         "type": "Attribute",
-                        "required": True,
                         "min_inclusive": 1,
                         "max_inclusive": 4,
                     }
@@ -504,7 +497,6 @@ class PriceRequestInformationType:
                     metadata={
                         "name": "Priority",
                         "type": "Attribute",
-                        "required": True,
                         "min_inclusive": 1,
                         "max_inclusive": 4,
                     }
@@ -594,7 +586,6 @@ class PriceRequestInformationType:
                     metadata={
                         "name": "Ind",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
 
@@ -604,7 +595,6 @@ class PriceRequestInformationType:
                     metadata={
                         "name": "Ind",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
 
@@ -614,7 +604,6 @@ class PriceRequestInformationType:
                     metadata={
                         "name": "Ind",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
 
@@ -624,7 +613,6 @@ class PriceRequestInformationType:
                     metadata={
                         "name": "Ind",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
 
@@ -634,7 +622,6 @@ class PriceRequestInformationType:
                     metadata={
                         "name": "Ind",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
 
@@ -644,7 +631,6 @@ class PriceRequestInformationType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -717,7 +703,6 @@ class PriceRequestInformationType:
                     metadata={
                         "name": "Ind",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
 
@@ -755,7 +740,6 @@ class PriceRequestInformationType:
                 metadata={
                     "name": "Type",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -854,7 +838,6 @@ class PriceRequestInformationType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"(\+|-)?([0-9]+(\.[0-9]*)?|\.[0-9]+)%?",
                 }
             )
@@ -964,7 +947,6 @@ class PriceRequestInformationType:
             metadata={
                 "name": "Code",
                 "type": "Attribute",
-                "required": True,
                 "min_length": 1,
                 "max_length": 20,
             }

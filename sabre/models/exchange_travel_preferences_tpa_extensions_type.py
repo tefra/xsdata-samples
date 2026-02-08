@@ -74,7 +74,6 @@ class ExchangeTravelPreferencesTpaExtensionsType:
             metadata={
                 "name": "Value",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -84,7 +83,6 @@ class ExchangeTravelPreferencesTpaExtensionsType:
             metadata={
                 "name": "Value",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

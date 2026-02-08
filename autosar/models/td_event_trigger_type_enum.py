@@ -28,11 +28,7 @@ class TdEventTriggerTypeEnum:
     class Meta:
         name = "TD-EVENT-TRIGGER-TYPE-ENUM"
 
-    value: TdEventTriggerTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TdEventTriggerTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

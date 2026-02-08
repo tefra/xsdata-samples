@@ -40,7 +40,6 @@ class TcrexchangeBundle:
             "name": "AirExchangeInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "required": True,
         }
     )
     air_pricing_info_ref: list[AirPricingInfoRef] = field(
@@ -81,6 +80,5 @@ class TcrexchangeBundle:
         metadata={
             "name": "TCRNumber",
             "type": "Attribute",
-            "required": True,
         }
     )

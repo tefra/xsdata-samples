@@ -43,92 +43,47 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class OrderDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderStatusCheckItemError:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderStatusDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderStatusIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderStatusResultNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ShipDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class StatusEventCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class StatusEventCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class StatusNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -137,7 +92,6 @@ class BuyerReferenceNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -148,7 +102,6 @@ class ItemStatusQuantity:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -162,7 +115,6 @@ class OrderStatusId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -173,7 +125,6 @@ class OrderStatusItemResultTransport:
         metadata={
             "name": "Transport",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -184,7 +135,6 @@ class OrderStatusResultLanguage:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -195,7 +145,6 @@ class OrderStatusResultParty:
         metadata={
             "name": "OrderParty",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -206,7 +155,6 @@ class OrderStatusSummaryErrorInfo:
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -217,7 +165,6 @@ class OtherReference:
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -228,7 +175,6 @@ class SellerReferenceNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -239,7 +185,6 @@ class StatusEvent:
         metadata={
             "name": "StatusEventCoded",
             "type": "Element",
-            "required": True,
         }
     )
     status_event_coded_other: None | StatusEventCodedOther = field(
@@ -257,7 +202,6 @@ class VarianceQty:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -268,21 +212,18 @@ class OrderStatusResultHeader:
         metadata={
             "name": "OrderStatusID",
             "type": "Element",
-            "required": True,
         }
     )
     order_status_issue_date: OrderStatusIssueDate = field(
         metadata={
             "name": "OrderStatusIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     order_status_result_party: OrderStatusResultParty = field(
         metadata={
             "name": "OrderStatusResultParty",
             "type": "Element",
-            "required": True,
         }
     )
     order_status_result_language: None | OrderStatusResultLanguage = field(
@@ -314,7 +255,6 @@ class OrderStatusResultSummary:
         metadata={
             "name": "OrderStatusCheckItemError",
             "type": "Element",
-            "required": True,
         }
     )
     order_status_summary_error_info: None | OrderStatusSummaryErrorInfo = (
@@ -341,7 +281,6 @@ class ShipmentStatusEvent:
         metadata={
             "name": "StatusEvent",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_status_reason: None | ListOfStatusReason = field(
@@ -380,7 +319,6 @@ class Status:
         metadata={
             "name": "StatusEvent",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_status_reason: None | ListOfStatusReason = field(
@@ -412,7 +350,6 @@ class ItemStatusEvent:
         metadata={
             "name": "Status",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -423,7 +360,6 @@ class OrderStatus:
         metadata={
             "name": "Status",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -434,7 +370,6 @@ class PaymentStatusEvent:
         metadata={
             "name": "Status",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -445,14 +380,12 @@ class ItemStatus:
         metadata={
             "name": "ItemStatusQuantity",
             "type": "Element",
-            "required": True,
         }
     )
     item_status_event: ItemStatusEvent = field(
         metadata={
             "name": "ItemStatusEvent",
             "type": "Element",
-            "required": True,
         }
     )
     payment_status_event: None | PaymentStatusEvent = field(
@@ -477,7 +410,6 @@ class OrderStatusResultItem:
         metadata={
             "name": "LineItemNum",
             "type": "Element",
-            "required": True,
         }
     )
     line_item_type: None | LineItemType = field(
@@ -612,7 +544,6 @@ class OrderStatusResultItem:
         metadata={
             "name": "VarianceQty",
             "type": "Element",
-            "required": True,
         }
     )
     item_status: list[ItemStatus] = field(
@@ -650,14 +581,12 @@ class OrderStatusResultReference:
         metadata={
             "name": "BuyerReferenceNumber",
             "type": "Element",
-            "required": True,
         }
     )
     seller_reference_number: SellerReferenceNumber = field(
         metadata={
             "name": "SellerReferenceNumber",
             "type": "Element",
-            "required": True,
         }
     )
     other_reference: None | OtherReference = field(
@@ -671,21 +600,18 @@ class OrderStatusResultReference:
         metadata={
             "name": "OrderDate",
             "type": "Element",
-            "required": True,
         }
     )
     order_status_date: OrderStatusDate = field(
         metadata={
             "name": "OrderStatusDate",
             "type": "Element",
-            "required": True,
         }
     )
     order_status: OrderStatus = field(
         metadata={
             "name": "OrderStatus",
             "type": "Element",
-            "required": True,
         }
     )
     payment_status_event: None | PaymentStatusEvent = field(
@@ -719,7 +645,6 @@ class OrderStatusDetailResult:
         metadata={
             "name": "OrderStatusResultReference",
             "type": "Element",
-            "required": True,
         }
     )
     general_line_item_note: None | GeneralLineItemNote = field(
@@ -756,7 +681,6 @@ class OrderStatusResultDetail:
         metadata={
             "name": "ListOfOrderStatusResultDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -767,7 +691,6 @@ class OrderStatusResult:
         metadata={
             "name": "OrderStatusResultHeader",
             "type": "Element",
-            "required": True,
         }
     )
     order_status_result_detail: None | OrderStatusResultDetail = field(

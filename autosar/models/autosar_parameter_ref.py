@@ -95,6 +95,5 @@ class AutosarParameterRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

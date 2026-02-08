@@ -62,7 +62,6 @@ class RegisterFile:
     name: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -102,7 +101,6 @@ class RegisterFile:
         metadata={
             "name": "addressOffset",
             "type": "Element",
-            "required": True,
         }
     )
     register_file_definition_ref: (
@@ -181,17 +179,11 @@ class RegisterFile:
 
     @dataclass(kw_only=True)
     class RegisterFileDefinitionRef:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         type_definitions: str = field(
             metadata={
                 "name": "typeDefinitions",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -226,7 +218,6 @@ class RegisterFile:
         name: str = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         display_name: None | DisplayName = field(
@@ -266,7 +257,6 @@ class RegisterFile:
             metadata={
                 "name": "addressOffset",
                 "type": "Element",
-                "required": True,
             }
         )
         register_definition_ref: (
@@ -352,16 +342,10 @@ class RegisterFile:
 
         @dataclass(kw_only=True)
         class RegisterDefinitionRef:
-            value: str = field(
-                default="",
-                metadata={
-                    "required": True,
-                },
-            )
+            value: str = field(default="")
             type_definitions: str = field(
                 metadata={
                     "name": "typeDefinitions",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

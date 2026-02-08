@@ -109,7 +109,6 @@ class AirExchangeInfo3:
         metadata={
             "name": "ExchangeAmount",
             "type": "Attribute",
-            "required": True,
         }
     )
     base_fare: None | str = field(

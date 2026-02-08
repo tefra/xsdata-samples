@@ -47,12 +47,7 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class OrderStatusRequestNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -61,7 +56,6 @@ class OrderStatusItemTransport:
         metadata={
             "name": "Transport",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -72,7 +66,6 @@ class OrderStatusLanguage:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -83,7 +76,6 @@ class OrderStatusListOfAttachment:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -94,7 +86,6 @@ class OrderStatusParty:
         metadata={
             "name": "OrderParty",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -108,7 +99,6 @@ class OrderStatusRequestId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -130,7 +120,6 @@ class OrderStatusItem:
         metadata={
             "name": "LineItemNum",
             "type": "Element",
-            "required": True,
         }
     )
     line_item_type: None | LineItemType = field(
@@ -263,7 +252,6 @@ class OrderStatusItem:
         metadata={
             "name": "VarianceQty",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -274,21 +262,18 @@ class OrderStatusRequestHeader:
         metadata={
             "name": "OrderStatusRequestID",
             "type": "Element",
-            "required": True,
         }
     )
     order_status_issue_date: OrderStatusIssueDate = field(
         metadata={
             "name": "OrderStatusIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     order_status_party: OrderStatusParty = field(
         metadata={
             "name": "OrderStatusParty",
             "type": "Element",
-            "required": True,
         }
     )
     order_status_language: None | OrderStatusLanguage = field(
@@ -341,14 +326,12 @@ class OrderStatusReference:
         metadata={
             "name": "BuyerReferenceNumber",
             "type": "Element",
-            "required": True,
         }
     )
     seller_reference_number: SellerReferenceNumber = field(
         metadata={
             "name": "SellerReferenceNumber",
             "type": "Element",
-            "required": True,
         }
     )
     other_reference: None | OtherReference = field(
@@ -362,7 +345,6 @@ class OrderStatusReference:
         metadata={
             "name": "OrderDate",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_order_status_item: None | ListOfOrderStatusItem = field(
@@ -380,7 +362,6 @@ class OrderStatusDetailRequest:
         metadata={
             "name": "OrderStatusReference",
             "type": "Element",
-            "required": True,
         }
     )
     general_line_item_note: None | GeneralLineItemNote = field(
@@ -418,7 +399,6 @@ class OrderStatusRequestDetail:
             metadata={
                 "name": "ListOfOrderStatusRequestDetail",
                 "type": "Element",
-                "required": True,
             }
         )
     )
@@ -430,7 +410,6 @@ class OrderStatusRequest:
         metadata={
             "name": "OrderStatusRequestHeader",
             "type": "Element",
-            "required": True,
         }
     )
     order_status_request_detail: None | OrderStatusRequestDetail = field(

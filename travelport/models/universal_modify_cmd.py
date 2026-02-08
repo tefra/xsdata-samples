@@ -161,6 +161,5 @@ class UniversalModifyCmd:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

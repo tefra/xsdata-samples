@@ -35,13 +35,11 @@ class Drv:
     mrk: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     kap: Kap = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     subdrv: list[Subdrv] = field(

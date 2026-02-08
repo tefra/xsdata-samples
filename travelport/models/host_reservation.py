@@ -40,7 +40,6 @@ class HostReservation:
         metadata={
             "name": "Carrier",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -48,7 +47,6 @@ class HostReservation:
         metadata={
             "name": "CarrierLocatorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         }
@@ -57,7 +55,6 @@ class HostReservation:
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }
@@ -66,7 +63,6 @@ class HostReservation:
         metadata={
             "name": "ProviderLocatorCode",
             "type": "Attribute",
-            "required": True,
             "max_length": 15,
         }
     )

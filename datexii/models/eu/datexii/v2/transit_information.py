@@ -72,7 +72,6 @@ class TransitInformation(NonRoadEventInformation):
             "name": "transitServiceInformation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     transit_service_type: TransitServiceTypeEnum = field(
@@ -80,7 +79,6 @@ class TransitInformation(NonRoadEventInformation):
             "name": "transitServiceType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     scheduled_departure_time: None | XmlDateTime = field(

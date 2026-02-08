@@ -22,14 +22,12 @@ class MctException:
         metadata={
             "name": "Time",
             "type": "Attribute",
-            "required": True,
         }
     )
     arrive_station: str = field(
         metadata={
             "name": "ArriveStation",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -47,7 +45,6 @@ class MctException:
         metadata={
             "name": "Connection",
             "type": "Attribute",
-            "required": True,
         }
     )
     arrive_carrier: None | str = field(

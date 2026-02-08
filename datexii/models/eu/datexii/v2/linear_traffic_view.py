@@ -30,7 +30,6 @@ class LinearTrafficView:
             "name": "linearPredefinedLocationReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     traffic_view_record: list[TrafficViewRecord] = field(
@@ -53,6 +52,5 @@ class LinearTrafficView:
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

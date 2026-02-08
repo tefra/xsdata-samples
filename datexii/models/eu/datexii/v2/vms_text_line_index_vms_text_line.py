@@ -17,13 +17,11 @@ class VmsTextLineIndexVmsTextLine:
             "name": "vmsTextLine",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     line_index: int = field(
         metadata={
             "name": "lineIndex",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -27,7 +27,6 @@ class HeaviestAxleWeightCharacteristic:
             "name": "comparisonOperator",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     heaviest_axle_weight: float = field(
@@ -35,7 +34,6 @@ class HeaviestAxleWeightCharacteristic:
             "name": "heaviestAxleWeight",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     heaviest_axle_weight_characteristic_extension: None | ExtensionType = (

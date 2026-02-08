@@ -74,6 +74,5 @@ class HealthChannelExternalReportedStatus:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

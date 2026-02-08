@@ -13,7 +13,6 @@ class CarrierCode:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "length": 2,
         },
     )

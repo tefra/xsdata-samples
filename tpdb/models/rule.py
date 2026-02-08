@@ -15,13 +15,11 @@ class Rule:
     lhs: Lhs = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     rhs: Rhs = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     conditions: None | Conditions = field(

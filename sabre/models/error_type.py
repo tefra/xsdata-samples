@@ -55,7 +55,6 @@ class ErrorType(FreeTextType):
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     short_text: None | str = field(

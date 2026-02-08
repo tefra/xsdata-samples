@@ -29,7 +29,6 @@ class AxleSpacing:
             "name": "axleSpacing",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     axle_spacing_sequence_identifier: int = field(
@@ -37,7 +36,6 @@ class AxleSpacing:
             "name": "axleSpacingSequenceIdentifier",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     axle_spacing_extension: None | ExtensionType = field(

@@ -16,7 +16,6 @@ class UniversalDelete:
         metadata={
             "name": "Element",
             "type": "Attribute",
-            "required": True,
         }
     )
     key: None | str = field(

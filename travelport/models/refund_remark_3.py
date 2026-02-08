@@ -24,6 +24,5 @@ class RefundRemark3:
         metadata={
             "name": "RemarkData",
             "type": "Element",
-            "required": True,
         }
     )

@@ -25,17 +25,11 @@ class TypeTextElement:
     class Meta:
         name = "typeTextElement"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     language_code: None | str = field(

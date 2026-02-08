@@ -43,7 +43,6 @@ class Name6:
         metadata={
             "name": "First",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 256,
         }
@@ -61,7 +60,6 @@ class Name6:
         metadata={
             "name": "Last",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 256,
         }

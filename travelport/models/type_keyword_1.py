@@ -59,7 +59,6 @@ class TypeKeyword1:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "max_length": 12,
         }
     )

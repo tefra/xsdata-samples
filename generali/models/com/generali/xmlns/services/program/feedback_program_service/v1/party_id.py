@@ -17,19 +17,12 @@ class PartyId:
         metadata={
             "name": "PartyGUNS",
             "type": "Attribute",
-            "required": True,
         }
     )
     party_type: str = field(
         metadata={
             "name": "PartyType",
             "type": "Attribute",
-            "required": True,
         }
     )
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

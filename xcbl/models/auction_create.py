@@ -21,7 +21,6 @@ class AuctionCreateDetail:
         metadata={
             "name": "AuctionItem",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_mvbvariables: None | ListOfMvbvariables = field(
@@ -63,7 +62,6 @@ class AuctionCreateDetail:
         metadata={
             "name": "ComponentAuctionIndicator",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_auction_item_components: None | ListOfAuctionItemComponents = (
@@ -83,7 +81,6 @@ class AuctionItemComponent:
         metadata={
             "name": "AuctionCreateDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -106,21 +103,18 @@ class AuctionCreate:
         metadata={
             "name": "AuctionCreateHeader",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_auction_create_detail: ListOfAuctionCreateDetail = field(
         metadata={
             "name": "ListOfAuctionCreateDetail",
             "type": "Element",
-            "required": True,
         }
     )
     auction_create_summary: AuctionCreateSummary = field(
         metadata={
             "name": "AuctionCreateSummary",
             "type": "Element",
-            "required": True,
         }
     )
 

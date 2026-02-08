@@ -69,7 +69,6 @@ class VehicleUpsellQualify:
         metadata={
             "name": "VendorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 5,
         }
@@ -78,7 +77,6 @@ class VehicleUpsellQualify:
         metadata={
             "name": "EffectiveDate",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^:Z].*",
         }
     )
@@ -86,7 +84,6 @@ class VehicleUpsellQualify:
         metadata={
             "name": "ExpirationDate",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^:Z].*",
         }
     )

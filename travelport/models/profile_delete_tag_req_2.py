@@ -30,7 +30,6 @@ class ProfileDeleteTagReq2(BaseReq5):
         metadata={
             "name": "TagRef",
             "type": "Element",
-            "required": True,
         }
     )
     override: bool = field(

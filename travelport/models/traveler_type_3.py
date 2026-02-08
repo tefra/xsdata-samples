@@ -19,7 +19,6 @@ class TravelerType3:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
             "min_length": 3,
             "max_length": 5,
         }

@@ -51,7 +51,6 @@ class Adjustment:
         metadata={
             "name": "AdjustedTotalPrice",
             "type": "Attribute",
-            "required": True,
         }
     )
     approximate_adjusted_total_price: None | str = field(

@@ -47,7 +47,6 @@ class CrlidentifierType:
             "name": "Issuer",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "required": True,
         }
     )
     issue_time: XmlDateTime = field(
@@ -55,7 +54,6 @@ class CrlidentifierType:
             "name": "IssueTime",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "required": True,
         }
     )
     number: None | int = field(
@@ -96,7 +94,6 @@ class EncapsulatedPkidataType:
     value: bytes = field(
         default=b"",
         metadata={
-            "required": True,
             "format": "base64",
         },
     )
@@ -122,7 +119,6 @@ class IncludeType:
         metadata={
             "name": "URI",
             "type": "Attribute",
-            "required": True,
         }
     )
     referenced_data: None | bool = field(
@@ -157,7 +153,6 @@ class QualifyingPropertiesReferenceType:
         metadata={
             "name": "URI",
             "type": "Attribute",
-            "required": True,
         }
     )
     id: None | str = field(
@@ -199,12 +194,7 @@ class Spuri:
         name = "SPURI"
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -248,11 +238,7 @@ class SigningTime:
     class Meta:
         namespace = "http://uri.etsi.org/01903/v1.3.2#"
 
-    value: XmlDateTime = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: XmlDateTime = field()
 
 
 @dataclass(frozen=True, kw_only=True)
@@ -350,7 +336,6 @@ class CounterSignatureType:
             "name": "Signature",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
         }
     )
 
@@ -362,7 +347,6 @@ class DigestAlgAndValueType:
             "name": "DigestMethod",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
         }
     )
     digest_value: DigestValue = field(
@@ -370,7 +354,6 @@ class DigestAlgAndValueType:
             "name": "DigestValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
         }
     )
 
@@ -384,12 +367,7 @@ class EncapsulatedPkidata(EncapsulatedPkidataType):
 
 @dataclass(frozen=True, kw_only=True)
 class IdentifierType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     qualifier: None | QualifierType = field(
         default=None,
         metadata={
@@ -412,7 +390,6 @@ class NoticeReferenceType:
             "name": "Organization",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "required": True,
         }
     )
     notice_numbers: IntegerListType = field(
@@ -420,7 +397,6 @@ class NoticeReferenceType:
             "name": "NoticeNumbers",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "required": True,
         }
     )
 
@@ -435,7 +411,6 @@ class OcspidentifierType:
             "name": "ResponderID",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "required": True,
         }
     )
     produced_at: XmlDateTime = field(
@@ -443,7 +418,6 @@ class OcspidentifierType:
             "name": "ProducedAt",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "required": True,
         }
     )
     uri: None | str = field(
@@ -510,7 +484,6 @@ class ReferenceInfoType:
             "name": "DigestMethod",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
         }
     )
     digest_value: DigestValue = field(
@@ -518,7 +491,6 @@ class ReferenceInfoType:
             "name": "DigestValue",
             "type": "Element",
             "namespace": "http://www.w3.org/2000/09/xmldsig#",
-            "required": True,
         }
     )
     id: None | str = field(
@@ -592,7 +564,6 @@ class CrlrefType:
             "name": "DigestAlgAndValue",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "required": True,
         }
     )
     crlidentifier: None | CrlidentifierType = field(
@@ -615,7 +586,6 @@ class CertIdtype:
             "name": "CertDigest",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "required": True,
         }
     )
     issuer_serial: X509IssuerSerialType = field(
@@ -623,7 +593,6 @@ class CertIdtype:
             "name": "IssuerSerial",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "required": True,
         }
     )
     uri: None | str = field(
@@ -657,7 +626,6 @@ class OcsprefType:
             "name": "OCSPIdentifier",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "required": True,
         }
     )
     digest_alg_and_value: None | DigestAlgAndValueType = field(
@@ -677,7 +645,6 @@ class ObjectIdentifierType:
             "name": "Identifier",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "required": True,
         }
     )
     description: None | str = field(
@@ -833,7 +800,6 @@ class CommitmentTypeIndicationType:
             "name": "CommitmentTypeId",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "required": True,
         }
     )
     object_reference: tuple[str, ...] = field(
@@ -902,7 +868,6 @@ class DataObjectFormatType:
         metadata={
             "name": "ObjectReference",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1000,7 +965,6 @@ class SignaturePolicyIdType:
             "name": "SigPolicyId",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "required": True,
         }
     )
     transforms: None | Transforms = field(
@@ -1016,7 +980,6 @@ class SignaturePolicyIdType:
             "name": "SigPolicyHash",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "required": True,
         }
     )
     sig_policy_qualifiers: None | SigPolicyQualifiersListType = field(
@@ -1048,7 +1011,6 @@ class CompleteCertificateRefsType:
             "name": "CertRefs",
             "type": "Element",
             "namespace": "http://uri.etsi.org/01903/v1.3.2#",
-            "required": True,
         }
     )
     id: None | str = field(
@@ -1560,7 +1522,6 @@ class QualifyingPropertiesType:
         metadata={
             "name": "Target",
             "type": "Attribute",
-            "required": True,
         }
     )
     id: None | str = field(

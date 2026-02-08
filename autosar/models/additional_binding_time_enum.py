@@ -31,11 +31,7 @@ class AdditionalBindingTimeEnum:
     class Meta:
         name = "ADDITIONAL-BINDING-TIME-ENUM"
 
-    value: AdditionalBindingTimeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: AdditionalBindingTimeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -28,11 +28,7 @@ class TransformerClassEnum:
     class Meta:
         name = "TRANSFORMER-CLASS-ENUM"
 
-    value: TransformerClassEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TransformerClassEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

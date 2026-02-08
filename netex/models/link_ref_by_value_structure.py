@@ -38,14 +38,12 @@ class LinkRefByValueStructure:
         metadata={
             "name": "fromPointRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     to_point_ref: str = field(
         metadata={
             "name": "toPointRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     name_of_point_ref_class: None | str = field(

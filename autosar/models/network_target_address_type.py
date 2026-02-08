@@ -28,11 +28,7 @@ class NetworkTargetAddressType:
     class Meta:
         name = "NETWORK-TARGET-ADDRESS-TYPE"
 
-    value: NetworkTargetAddressTypeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: NetworkTargetAddressTypeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

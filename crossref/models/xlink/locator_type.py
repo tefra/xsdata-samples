@@ -35,7 +35,6 @@ class LocatorType:
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-            "required": True,
         }
     )
     role: None | str = field(

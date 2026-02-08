@@ -78,7 +78,6 @@ class PortPrototypeBlueprintMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -88,6 +87,5 @@ class PortPrototypeBlueprintMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

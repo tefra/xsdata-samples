@@ -18,7 +18,6 @@ class FareRuleCategory:
         metadata={
             "name": "Category",
             "type": "Attribute",
-            "required": True,
             "min_inclusive": 1,
             "max_inclusive": 50,
         }

@@ -86,7 +86,6 @@ class PortGroupInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -96,7 +95,6 @@ class PortGroupInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -106,6 +104,5 @@ class PortGroupInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

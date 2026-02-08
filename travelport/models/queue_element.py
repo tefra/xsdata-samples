@@ -37,7 +37,6 @@ class QueueElement:
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }
@@ -46,7 +45,6 @@ class QueueElement:
         metadata={
             "name": "ProviderLocatorCode",
             "type": "Attribute",
-            "required": True,
             "max_length": 15,
         }
     )

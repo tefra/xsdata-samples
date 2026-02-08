@@ -30,7 +30,6 @@ class TaxiServicePlaceAssignmentVersionStructure(
             "name": "TaxiServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     taxi_parking_area_ref: None | TaxiParkingAreaRef = field(

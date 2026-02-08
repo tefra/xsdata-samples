@@ -28,12 +28,7 @@ class BaseTypeEncodingString:
     class Meta:
         name = "BASE-TYPE-ENCODING-STRING"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     s: None | str = field(
         default=None,
         metadata={

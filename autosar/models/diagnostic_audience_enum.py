@@ -28,11 +28,7 @@ class DiagnosticAudienceEnum:
     class Meta:
         name = "DIAGNOSTIC-AUDIENCE-ENUM"
 
-    value: DiagnosticAudienceEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticAudienceEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

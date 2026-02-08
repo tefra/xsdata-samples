@@ -30,7 +30,6 @@ class GlobalPositionAddressType:
             "name": "Latitude",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            "required": True,
         }
     )
     longitude: NumericType = field(
@@ -38,7 +37,6 @@ class GlobalPositionAddressType:
             "name": "Longitude",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            "required": True,
         }
     )
     wgscode: Idtype = field(
@@ -46,6 +44,5 @@ class GlobalPositionAddressType:
             "name": "WGSCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            "required": True,
         }
     )

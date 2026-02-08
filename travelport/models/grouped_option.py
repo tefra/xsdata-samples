@@ -22,6 +22,5 @@ class GroupedOption:
         metadata={
             "name": "OptionalServiceRef",
             "type": "Attribute",
-            "required": True,
         }
     )

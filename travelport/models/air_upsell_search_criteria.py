@@ -34,6 +34,5 @@ class AirUpsellSearchCriteria:
         metadata={
             "name": "AirUpsellQualifySearchCriteria",
             "type": "Element",
-            "required": True,
         }
     )

@@ -71,7 +71,6 @@ class ProfileSearchReq2(BaseReq5):
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-            "required": True,
         }
     )
     profile_parent_id: None | object = field(

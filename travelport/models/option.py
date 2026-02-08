@@ -49,7 +49,6 @@ class Option:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     travel_time: None | XmlDuration = field(

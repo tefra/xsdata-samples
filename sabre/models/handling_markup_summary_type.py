@@ -21,7 +21,6 @@ class HandlingMarkupSummaryType:
         metadata={
             "name": "TypeCode",
             "type": "Attribute",
-            "required": True,
             "length": 1,
         }
     )
@@ -29,14 +28,12 @@ class HandlingMarkupSummaryType:
         metadata={
             "name": "Description",
             "type": "Attribute",
-            "required": True,
         }
     )
     monetary_amount_value: Decimal = field(
         metadata={
             "name": "MonetaryAmountValue",
             "type": "Attribute",
-            "required": True,
             "fraction_digits": 3,
         }
     )

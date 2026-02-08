@@ -44,7 +44,6 @@ class GdsExitQueueReq(BaseReq1):
         metadata={
             "name": "RemoveCurrent",
             "type": "Attribute",
-            "required": True,
         }
     )
     queue_session_token: None | str = field(
@@ -58,7 +57,6 @@ class GdsExitQueueReq(BaseReq1):
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }

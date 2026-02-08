@@ -43,7 +43,6 @@ class TelephoneNumberType:
             "name": "FullNumberText",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            "required": True,
         }
     )
     country_code_text: None | TelephoneNumberCountryCodeType = field(

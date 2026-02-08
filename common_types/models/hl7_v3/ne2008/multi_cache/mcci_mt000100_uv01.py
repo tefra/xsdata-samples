@@ -114,7 +114,6 @@ class McciMt000100Uv01EntityRsp:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     name: list[EnExplicit] = field(
@@ -142,7 +141,6 @@ class McciMt000100Uv01EntityRsp:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -227,7 +225,6 @@ class McciMt000100Uv01Organization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -303,7 +300,6 @@ class McciMt000100Uv01Place:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -366,7 +362,6 @@ class McciMt000100Uv01Agent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -419,7 +414,6 @@ class McciMt000100Uv01LocatedEntity:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -481,7 +475,6 @@ class McciMt000100Uv01RespondTo:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -597,7 +590,6 @@ class McciMt000100Uv01Device:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -651,7 +643,6 @@ class McciMt000100Uv01Receiver:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -665,7 +656,6 @@ class McciMt000100Uv01Receiver:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -710,7 +700,6 @@ class McciMt000100Uv01Sender:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -724,6 +713,5 @@ class McciMt000100Uv01Sender:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )

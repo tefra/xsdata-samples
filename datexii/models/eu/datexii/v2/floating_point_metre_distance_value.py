@@ -24,7 +24,6 @@ class FloatingPointMetreDistanceValue(DataValue):
             "name": "floatingPointMetreDistance",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     floating_point_metre_distance_value_extension: None | ExtensionType = (

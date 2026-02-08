@@ -46,25 +46,21 @@ class Design:
     vendor: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     library: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     version: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     display_name: None | str = field(

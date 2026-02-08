@@ -20,7 +20,6 @@ class MeasureBaseType(ComponentType):
             "name": "ConceptIdentity",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
             "pattern": r".+\.conceptscheme\.Concept=.+",
         }
     )

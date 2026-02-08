@@ -24,7 +24,6 @@ class LoyaltyCardDetails:
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -32,7 +31,6 @@ class LoyaltyCardDetails:
         metadata={
             "name": "PriorityCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[a-zA-Z0-9]{1,1}",
         }
     )

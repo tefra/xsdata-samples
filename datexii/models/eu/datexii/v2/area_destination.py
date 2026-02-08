@@ -20,7 +20,6 @@ class AreaDestination(Destination):
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     area_destination_extension: None | ExtensionType = field(

@@ -135,7 +135,6 @@ class ClientComSpec:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -145,7 +144,6 @@ class ClientComSpec:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -155,7 +153,6 @@ class ClientComSpec:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

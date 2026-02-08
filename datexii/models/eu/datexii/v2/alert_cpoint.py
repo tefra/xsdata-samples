@@ -28,7 +28,6 @@ class AlertCPoint:
             "name": "alertCLocationCountryCode",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
             "max_length": 1024,
         }
     )
@@ -37,7 +36,6 @@ class AlertCPoint:
             "name": "alertCLocationTableNumber",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
             "max_length": 1024,
         }
     )
@@ -46,7 +44,6 @@ class AlertCPoint:
             "name": "alertCLocationTableVersion",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
             "max_length": 1024,
         }
     )

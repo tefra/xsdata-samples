@@ -53,7 +53,6 @@ class BookingAirExchangeReq(BookingBaseReq):
             "name": "AirReservationLocatorCode",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-            "required": True,
         }
     )
     ticket_number: list[TicketNumber1] = field(

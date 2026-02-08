@@ -54,7 +54,6 @@ class SessionContext:
         id: str = field(
             metadata={
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -72,12 +71,10 @@ class SessionContext:
         nm: str = field(
             metadata={
                 "type": "Attribute",
-                "required": True,
             }
         )
         val: str = field(
             metadata={
                 "type": "Attribute",
-                "required": True,
             }
         )

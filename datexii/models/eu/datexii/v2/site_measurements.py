@@ -38,7 +38,6 @@ class SiteMeasurements:
                 "name": "measurementSiteReference",
                 "type": "Element",
                 "namespace": "http://datex2.eu/schema/2/2_0",
-                "required": True,
             }
         )
     )
@@ -47,7 +46,6 @@ class SiteMeasurements:
             "name": "measurementTimeDefault",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     measured_value: list[SiteMeasurementsIndexMeasuredValue] = field(

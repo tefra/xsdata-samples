@@ -35,14 +35,12 @@ class Emdcommission:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     value: Decimal = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
         }
     )
     currency_code: None | str = field(

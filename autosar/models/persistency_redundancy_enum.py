@@ -29,11 +29,7 @@ class PersistencyRedundancyEnum:
     class Meta:
         name = "PERSISTENCY-REDUNDANCY-ENUM"
 
-    value: PersistencyRedundancyEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: PersistencyRedundancyEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

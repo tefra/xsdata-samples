@@ -43,7 +43,6 @@ class ComponentInstance:
         metadata={
             "name": "instanceName",
             "type": "Element",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -70,7 +69,6 @@ class ComponentInstance:
         metadata={
             "name": "componentRef",
             "type": "Element",
-            "required": True,
         }
     )
     power_domain_links: None | PowerDomainLinks = field(

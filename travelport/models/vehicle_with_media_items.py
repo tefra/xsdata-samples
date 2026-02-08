@@ -31,7 +31,6 @@ class VehicleWithMediaItems:
         metadata={
             "name": "Vehicle",
             "type": "Element",
-            "required": True,
         }
     )
     media_item: list[MediaItem1] = field(

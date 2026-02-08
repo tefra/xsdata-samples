@@ -49,7 +49,6 @@ class HeaderInformation:
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     information_status: InformationStatusEnum = field(
@@ -57,7 +56,6 @@ class HeaderInformation:
             "name": "informationStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     urgency: None | UrgencyEnum = field(

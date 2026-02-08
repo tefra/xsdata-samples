@@ -28,7 +28,6 @@ class DateRangeInfo:
         metadata={
             "name": "DateRange",
             "type": "Attribute",
-            "required": True,
         }
     )
     title: None | str = field(
@@ -42,6 +41,5 @@ class DateRangeInfo:
         metadata={
             "name": "Count",
             "type": "Attribute",
-            "required": True,
         }
     )

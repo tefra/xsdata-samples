@@ -49,7 +49,6 @@ class PrePayProfileInfo:
         metadata={
             "name": "PrePayId",
             "type": "Element",
-            "required": True,
         }
     )
     pre_pay_customer: None | PrePayCustomer = field(

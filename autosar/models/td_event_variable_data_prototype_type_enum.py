@@ -31,11 +31,7 @@ class TdEventVariableDataPrototypeTypeEnum:
     class Meta:
         name = "TD-EVENT-VARIABLE-DATA-PROTOTYPE-TYPE-ENUM"
 
-    value: TdEventVariableDataPrototypeTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TdEventVariableDataPrototypeTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

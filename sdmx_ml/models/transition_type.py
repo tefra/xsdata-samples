@@ -31,7 +31,6 @@ class TransitionType(TransitionBaseType):
             "name": "TargetStep",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
             "pattern": r"[A-Za-z0-9_@$\-]+(\.[A-Za-z0-9_@$\-]+)*",
         }
     )

@@ -54,7 +54,6 @@ class AddressBankDefinitionType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -93,7 +92,6 @@ class AddressBankDefinitionType:
             "name": "baseAddress",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     bank_definition_ref: None | AddressBankDefinitionType.BankDefinitionRef = (
@@ -162,7 +160,6 @@ class AddressBankDefinitionType:
         metadata={
             "name": "bankAlignment",
             "type": "Attribute",
-            "required": True,
         }
     )
     id: None | str = field(
@@ -187,17 +184,11 @@ class AddressBankDefinitionType:
 
     @dataclass(kw_only=True)
     class BankDefinitionRef:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         type_definitions: str = field(
             metadata={
                 "name": "typeDefinitions",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

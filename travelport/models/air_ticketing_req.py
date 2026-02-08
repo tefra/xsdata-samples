@@ -68,7 +68,6 @@ class AirTicketingReq(AirBaseReq):
         metadata={
             "name": "AirReservationLocatorCode",
             "type": "Element",
-            "required": True,
         }
     )
     air_pricing_info_ref: list[AirTicketingReq.AirPricingInfoRef] = field(
@@ -173,6 +172,5 @@ class AirTicketingReq(AirBaseReq):
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )

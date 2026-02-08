@@ -47,7 +47,6 @@ class ProgramType(BaseMediaType):
         metadata={
             "name": "type",
             "type": "Attribute",
-            "required": True,
             "doc": "The type of this program (e.g. BROADCAST, TRACK, CLIP)",
         }
     )

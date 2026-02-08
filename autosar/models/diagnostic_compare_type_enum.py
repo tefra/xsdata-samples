@@ -31,11 +31,7 @@ class DiagnosticCompareTypeEnum:
     class Meta:
         name = "DIAGNOSTIC-COMPARE-TYPE-ENUM"
 
-    value: DiagnosticCompareTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticCompareTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

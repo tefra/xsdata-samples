@@ -32,7 +32,6 @@ class AirRepriceReq(AirBaseReq):
         metadata={
             "name": "AirPricingSolution",
             "type": "Element",
-            "required": True,
         }
     )
     fare_rule_type: TypeFareRuleType = field(

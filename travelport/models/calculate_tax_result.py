@@ -28,20 +28,17 @@ class CalculateTaxResult:
         metadata={
             "name": "TotalBaseFare",
             "type": "Attribute",
-            "required": True,
         }
     )
     total_tax: str = field(
         metadata={
             "name": "TotalTax",
             "type": "Attribute",
-            "required": True,
         }
     )
     total_fare: str = field(
         metadata={
             "name": "TotalFare",
             "type": "Attribute",
-            "required": True,
         }
     )

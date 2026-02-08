@@ -19,6 +19,5 @@ class RailFareIdref:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

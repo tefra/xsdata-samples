@@ -29,11 +29,7 @@ class AutoCollectEnum:
     class Meta:
         name = "AUTO-COLLECT-ENUM"
 
-    value: AutoCollectEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: AutoCollectEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

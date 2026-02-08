@@ -32,6 +32,5 @@ class PenaltyFareInformation:
         metadata={
             "name": "ProhibitPenaltyFares",
             "type": "Attribute",
-            "required": True,
         }
     )

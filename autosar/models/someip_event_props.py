@@ -74,6 +74,5 @@ class SomeipEventProps:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

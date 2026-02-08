@@ -30,7 +30,6 @@ class ClockDriverType:
             "name": "clockPeriod",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     clock_pulse_offset: ClockDriverType.ClockPulseOffset = field(
@@ -38,7 +37,6 @@ class ClockDriverType:
             "name": "clockPulseOffset",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     clock_pulse_value: UnsignedBitExpression = field(
@@ -46,7 +44,6 @@ class ClockDriverType:
             "name": "clockPulseValue",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     clock_pulse_duration: ClockDriverType.ClockPulseDuration = field(
@@ -54,7 +51,6 @@ class ClockDriverType:
             "name": "clockPulseDuration",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     id: None | str = field(

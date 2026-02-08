@@ -25,7 +25,6 @@ class OpenlrLocationReferencePoint(OpenlrBaseLocationReferencePoint):
             "name": "openlrPathAttributes",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_location_reference_point_extension: None | ExtensionType = field(

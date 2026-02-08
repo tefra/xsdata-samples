@@ -17,12 +17,10 @@ class SiteMeasurementsIndexMeasuredValue:
             "name": "measuredValue",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     index: int = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

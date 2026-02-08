@@ -49,7 +49,6 @@ class IndividualCharge:
             "name": "chargePaid",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
             "total_digits": 8,
             "fraction_digits": 2,
         }

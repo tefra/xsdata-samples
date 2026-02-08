@@ -28,11 +28,7 @@ class DoIpEntityRoleEnum:
     class Meta:
         name = "DO-IP-ENTITY-ROLE-ENUM"
 
-    value: DoIpEntityRoleEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DoIpEntityRoleEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

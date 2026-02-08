@@ -132,7 +132,6 @@ class Etr:
             "name": "BookingTraveler",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "required": True,
         }
     )
     form_of_payment: list[FormOfPayment1] = field(
@@ -175,7 +174,6 @@ class Etr:
         metadata={
             "name": "FareCalc",
             "type": "Element",
-            "required": True,
         }
     )
     ticket: list[Ticket] = field(
@@ -336,7 +334,6 @@ class Etr:
         metadata={
             "name": "IssuedDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     bulk_ticket: None | bool = field(

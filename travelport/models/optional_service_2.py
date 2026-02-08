@@ -77,7 +77,6 @@ class OptionalService2:
         metadata={
             "name": "FeatureType",
             "type": "Attribute",
-            "required": True,
             "length": 1,
         }
     )

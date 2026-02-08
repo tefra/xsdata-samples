@@ -17,7 +17,6 @@ class GoverningCarrierOverrideType:
         metadata={
             "name": "AirlineCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[0-9A-Z]{2,3}",
         }
     )

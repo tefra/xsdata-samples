@@ -18,6 +18,5 @@ class DatedSpecialServiceRefsRelStructure(OneToManyRelationshipStructure):
             "name": "DatedSpecialServiceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

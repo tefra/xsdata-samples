@@ -21,7 +21,6 @@ class EngineeringMaintenanceType:
             "name": "InceptionDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     expiry_date: DateTimeType = field(
@@ -29,7 +28,6 @@ class EngineeringMaintenanceType:
             "name": "ExpiryDate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     years: EngineeringMaintenanceTypeYears = field(
@@ -37,6 +35,5 @@ class EngineeringMaintenanceType:
             "name": "Years",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )

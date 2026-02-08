@@ -137,24 +137,12 @@ class PropertyOfDayStructure:
 
     @dataclass(kw_only=True)
     class MonthOfYear:
-        value: XmlPeriod = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: XmlPeriod = field()
 
     @dataclass(kw_only=True)
     class DayOfMonth:
-        value: XmlPeriod = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: XmlPeriod = field()
 
     @dataclass(kw_only=True)
     class DayOfYear:
-        value: XmlPeriod = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: XmlPeriod = field()

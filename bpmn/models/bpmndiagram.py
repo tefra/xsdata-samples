@@ -19,7 +19,6 @@ class Bpmndiagram(Diagram):
         metadata={
             "name": "BPMNPlane",
             "type": "Element",
-            "required": True,
         }
     )
     bpmnlabel_style: list[BpmnlabelStyle] = field(

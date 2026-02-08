@@ -39,7 +39,6 @@ class Article:
     front: Front = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     body: None | Body = field(

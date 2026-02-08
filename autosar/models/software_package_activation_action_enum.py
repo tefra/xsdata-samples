@@ -31,11 +31,7 @@ class SoftwarePackageActivationActionEnum:
     class Meta:
         name = "SOFTWARE-PACKAGE-ACTIVATION-ACTION-ENUM"
 
-    value: SoftwarePackageActivationActionEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SoftwarePackageActivationActionEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

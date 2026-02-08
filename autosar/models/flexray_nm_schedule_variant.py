@@ -28,11 +28,7 @@ class FlexrayNmScheduleVariant:
     class Meta:
         name = "FLEXRAY-NM-SCHEDULE-VARIANT"
 
-    value: FlexrayNmScheduleVariantSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: FlexrayNmScheduleVariantSimple = field()
     s: None | str = field(
         default=None,
         metadata={

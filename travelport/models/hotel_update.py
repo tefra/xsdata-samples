@@ -183,7 +183,6 @@ class HotelUpdate:
         metadata={
             "name": "ReservationLocatorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         }

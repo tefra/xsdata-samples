@@ -39,21 +39,18 @@ class Leg:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     group: int = field(
         metadata={
             "name": "Group",
             "type": "Attribute",
-            "required": True,
         }
     )
     origin: str = field(
         metadata={
             "name": "Origin",
             "type": "Attribute",
-            "required": True,
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",
@@ -63,7 +60,6 @@ class Leg:
         metadata={
             "name": "Destination",
             "type": "Attribute",
-            "required": True,
             "min_length": 3,
             "max_length": 8,
             "white_space": "collapse",

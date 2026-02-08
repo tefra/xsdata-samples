@@ -21,6 +21,5 @@ class MctCountReq(BaseReq1):
         metadata={
             "name": "MctSearch",
             "type": "Element",
-            "required": True,
         }
     )

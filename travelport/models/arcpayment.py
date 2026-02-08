@@ -26,7 +26,6 @@ class Arcpayment:
         metadata={
             "name": "ARCIdentifier",
             "type": "Attribute",
-            "required": True,
             "max_length": 128,
         }
     )

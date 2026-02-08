@@ -36,13 +36,11 @@ class ProfileDeleteHierarchyLevelReq(BaseReq5):
         metadata={
             "name": "HierarchyLevelID",
             "type": "Attribute",
-            "required": True,
         }
     )
     profile_type: TypeDeleteHierarchyLvlProfileType = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-            "required": True,
         }
     )

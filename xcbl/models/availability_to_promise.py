@@ -28,12 +28,7 @@ from xcbl.models.trading_partner_response import Reference
 
 @dataclass(kw_only=True)
 class AvailabilityIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -45,7 +40,6 @@ class AvailabilityId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -56,7 +50,6 @@ class AvailabilityToPromiseBaseItemDetail:
         metadata={
             "name": "BaseItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -67,7 +60,6 @@ class AvailabilityToPromiseDeliveryDetail:
         metadata={
             "name": "DeliveryDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -78,7 +70,6 @@ class AvailabilityToPromiseHeaderTransport:
         metadata={
             "name": "TransportRouting",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -89,7 +80,6 @@ class AvailabilityToPromiseItemListOfAttachment:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -100,7 +90,6 @@ class AvailabilityToPromiseListOfAttachment:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -122,7 +111,6 @@ class AvailabilityToPromiseTransportDetail:
         metadata={
             "name": "Transport",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -133,14 +121,12 @@ class AvailabilityToPromiseHeader:
         metadata={
             "name": "AvailabilityID",
             "type": "Element",
-            "required": True,
         }
     )
     availability_issue_date: AvailabilityIssueDate = field(
         metadata={
             "name": "AvailabilityIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_reference_coded: None | ListOfReferenceCoded = field(
@@ -154,14 +140,12 @@ class AvailabilityToPromiseHeader:
         metadata={
             "name": "AvailabilityToPromisePurpose",
             "type": "Element",
-            "required": True,
         }
     )
     availability_delivery_option: AvailabilityDeliveryOption = field(
         metadata={
             "name": "AvailabilityDeliveryOption",
             "type": "Element",
-            "required": True,
         }
     )
     atpcheck_type: None | AtpcheckType = field(
@@ -182,7 +166,6 @@ class AvailabilityToPromiseHeader:
         metadata={
             "name": "InitiatingParty",
             "type": "Element",
-            "required": True,
         }
     )
     responding_party: None | RespondingParty = field(
@@ -232,7 +215,6 @@ class AvailabilityToPromiseItemDetail:
         metadata={
             "name": "AvailabilityToPromiseBaseItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
     availability_to_promise_delivery_detail: (
@@ -304,7 +286,6 @@ class AvailabilityToPromise:
         metadata={
             "name": "AvailabilityToPromiseHeader",
             "type": "Element",
-            "required": True,
         }
     )
     availability_to_promise_detail: None | AvailabilityToPromiseDetail = field(

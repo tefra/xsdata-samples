@@ -238,7 +238,6 @@ class ExchangeSourceType:
         metadata={
             "name": "AgentCity",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[a-zA-Z]{3}",
         }
     )
@@ -246,7 +245,6 @@ class ExchangeSourceType:
         metadata={
             "name": "MainTravelAgencyPCC",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 16,
         }
@@ -255,7 +253,6 @@ class ExchangeSourceType:
         metadata={
             "name": "Carrier",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[0-9A-Z]{2,3}",
         }
     )

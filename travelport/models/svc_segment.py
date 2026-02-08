@@ -52,7 +52,6 @@ class SvcSegment:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     carrier: None | str = field(

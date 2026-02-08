@@ -997,13 +997,11 @@ class Categories:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     properties: Properties = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1017,19 +1015,16 @@ class CategoryCode:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     description: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     properties: Properties = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1043,19 +1038,16 @@ class CreatedById:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     description: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     properties: Properties = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     required: list[str] = field(
@@ -1076,7 +1068,6 @@ class Criteria:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     description: None | object = field(
@@ -1088,7 +1079,6 @@ class Criteria:
     properties: Properties = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1102,19 +1092,16 @@ class Id:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     description: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     properties: Properties = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     required: list[str] = field(
@@ -1135,19 +1122,16 @@ class Identification:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     description: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     properties: Properties = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1161,13 +1145,11 @@ class Ids:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     properties: Properties = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1181,19 +1163,16 @@ class LastModifiedById:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     description: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     properties: Properties = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     required: list[str] = field(
@@ -1214,13 +1193,11 @@ class QueryExpression:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     properties: Properties = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1234,19 +1211,16 @@ class StatusCode:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     description: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     properties: Properties = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     required: list[str] = field(
@@ -1267,19 +1241,16 @@ class ValidityPeriod:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     description: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     properties: Properties = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1293,13 +1264,11 @@ class ValueExpression:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     properties: Properties = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1313,19 +1282,16 @@ class VersionId:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     description: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     properties: Properties = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     required: list[str] = field(

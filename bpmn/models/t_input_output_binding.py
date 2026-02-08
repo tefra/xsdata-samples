@@ -17,20 +17,17 @@ class TInputOutputBinding(TBaseElement):
         metadata={
             "name": "operationRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     input_data_ref: str = field(
         metadata={
             "name": "inputDataRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     output_data_ref: str = field(
         metadata={
             "name": "outputDataRef",
             "type": "Attribute",
-            "required": True,
         }
     )

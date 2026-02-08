@@ -103,7 +103,6 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -113,7 +112,6 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -123,7 +121,6 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -133,6 +130,5 @@ class ModeDeclarationGroupPrototypeInSystemInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

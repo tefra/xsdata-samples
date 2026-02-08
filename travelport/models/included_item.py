@@ -25,13 +25,11 @@ class IncludedItem:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
         }
     )
     description: str = field(
         metadata={
             "name": "Description",
             "type": "Attribute",
-            "required": True,
         }
     )

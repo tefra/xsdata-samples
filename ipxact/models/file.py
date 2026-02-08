@@ -54,7 +54,6 @@ class File:
     name: IpxactUri = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     file_type: list[FileType] = field(
@@ -162,11 +161,7 @@ class File:
             that are needed in top file
         """
 
-        value: bool = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: bool = field()
         external_declarations: bool = field(
             default=False,
             metadata={
@@ -183,12 +178,7 @@ class File:
             and another process may override this name.
         """
 
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         default: bool = field(
             default=False,
             metadata={
@@ -198,12 +188,7 @@ class File:
 
     @dataclass(kw_only=True)
     class ExportedName:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         id: None | str = field(
             default=None,
             metadata={
@@ -273,12 +258,7 @@ class File:
 
     @dataclass(kw_only=True)
     class ImageType:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         id: None | str = field(
             default=None,
             metadata={

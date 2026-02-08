@@ -14,7 +14,6 @@ class Cbytes:
     value: bytes = field(
         default=b"",
         metadata={
-            "required": True,
             "format": "base64",
         },
     )

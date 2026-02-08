@@ -28,11 +28,7 @@ class IpAddressKeepEnum:
     class Meta:
         name = "IP-ADDRESS-KEEP-ENUM"
 
-    value: IpAddressKeepEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: IpAddressKeepEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

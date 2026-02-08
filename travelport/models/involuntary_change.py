@@ -20,6 +20,5 @@ class InvoluntaryChange:
         metadata={
             "name": "TicketEndorsement",
             "type": "Element",
-            "required": True,
         }
     )

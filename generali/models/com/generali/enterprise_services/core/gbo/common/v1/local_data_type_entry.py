@@ -23,6 +23,5 @@ class LocalDataTypeEntry:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

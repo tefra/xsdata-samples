@@ -31,11 +31,7 @@ class DiagnosticValueAccessEnum:
     class Meta:
         name = "DIAGNOSTIC-VALUE-ACCESS-ENUM"
 
-    value: DiagnosticValueAccessEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticValueAccessEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

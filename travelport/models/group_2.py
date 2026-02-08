@@ -54,7 +54,6 @@ class Group2:
         metadata={
             "name": "Name",
             "type": "Element",
-            "required": True,
             "min_length": 1,
             "white_space": "collapse",
         }
@@ -117,7 +116,6 @@ class Group2:
         metadata={
             "name": "GroupSize",
             "type": "Attribute",
-            "required": True,
         }
     )
     el_stat: None | TypeElementStatus3 = field(
@@ -141,7 +139,6 @@ class Group2:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -151,6 +148,5 @@ class Group2:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )

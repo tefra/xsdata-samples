@@ -30,11 +30,7 @@ class ServiceVersionAcceptanceKindEnum:
     class Meta:
         name = "SERVICE-VERSION-ACCEPTANCE-KIND-ENUM"
 
-    value: ServiceVersionAcceptanceKindEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ServiceVersionAcceptanceKindEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

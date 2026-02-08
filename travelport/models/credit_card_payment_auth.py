@@ -42,13 +42,11 @@ class CreditCardPaymentAuth:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
         }
     )
     perform_avs: bool = field(
         metadata={
             "name": "PerformAVS",
             "type": "Attribute",
-            "required": True,
         }
     )

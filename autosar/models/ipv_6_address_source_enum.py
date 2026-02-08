@@ -28,11 +28,7 @@ class Ipv6AddressSourceEnum:
     class Meta:
         name = "IPV-6-ADDRESS-SOURCE-ENUM"
 
-    value: Ipv6AddressSourceEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: Ipv6AddressSourceEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

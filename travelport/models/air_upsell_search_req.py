@@ -30,7 +30,6 @@ class AirUpsellSearchReq(AirBaseReq):
         metadata={
             "name": "AirItinerary",
             "type": "Element",
-            "required": True,
         }
     )
     air_price_result: list[AirPriceResult] = field(

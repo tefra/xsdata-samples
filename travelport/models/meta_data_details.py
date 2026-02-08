@@ -36,7 +36,6 @@ class MetaDataDetails:
         metadata={
             "name": "ElementName",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 50,
         }
@@ -54,7 +53,6 @@ class MetaDataDetails:
         metadata={
             "name": "Customization",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 50,
         }

@@ -27,6 +27,5 @@ class PaymentRestriction1:
         metadata={
             "name": "AddressRestriction",
             "type": "Element",
-            "required": True,
         }
     )

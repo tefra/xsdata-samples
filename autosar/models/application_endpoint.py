@@ -124,7 +124,6 @@ class ApplicationEndpoint:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | ApplicationEndpoint.ShortNameFragments = (
@@ -337,7 +336,6 @@ class ApplicationEndpoint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -358,7 +356,6 @@ class ApplicationEndpoint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -368,7 +365,6 @@ class ApplicationEndpoint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

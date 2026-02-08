@@ -28,11 +28,7 @@ class MappingDirectionEnum:
     class Meta:
         name = "MAPPING-DIRECTION-ENUM"
 
-    value: MappingDirectionEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: MappingDirectionEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

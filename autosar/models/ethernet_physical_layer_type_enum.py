@@ -30,11 +30,7 @@ class EthernetPhysicalLayerTypeEnum:
     class Meta:
         name = "ETHERNET-PHYSICAL-LAYER-TYPE-ENUM"
 
-    value: EthernetPhysicalLayerTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: EthernetPhysicalLayerTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

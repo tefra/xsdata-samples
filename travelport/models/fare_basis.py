@@ -25,7 +25,6 @@ class FareBasis:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
         }
     )
     segment_ref: None | str = field(

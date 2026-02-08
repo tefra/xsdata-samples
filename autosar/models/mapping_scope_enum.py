@@ -28,11 +28,7 @@ class MappingScopeEnum:
     class Meta:
         name = "MAPPING-SCOPE-ENUM"
 
-    value: MappingScopeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: MappingScopeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

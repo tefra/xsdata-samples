@@ -25,7 +25,6 @@ class DoiData:
     doi: Doi = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     timestamp: None | Timestamp = field(
@@ -37,7 +36,6 @@ class DoiData:
     resource: Resource = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     collection: list[Collection] = field(

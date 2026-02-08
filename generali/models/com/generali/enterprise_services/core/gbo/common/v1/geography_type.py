@@ -33,7 +33,6 @@ class GeographyType:
             "name": "Name",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            "required": True,
         }
     )
     country: None | CountryGbotype = field(

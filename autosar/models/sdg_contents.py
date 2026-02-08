@@ -111,6 +111,5 @@ class SdgContents:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

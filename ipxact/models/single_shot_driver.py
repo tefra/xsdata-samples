@@ -31,21 +31,18 @@ class SingleShotDriver:
         metadata={
             "name": "singleShotOffset",
             "type": "Element",
-            "required": True,
         }
     )
     single_shot_value: UnsignedBitVectorExpression = field(
         metadata={
             "name": "singleShotValue",
             "type": "Element",
-            "required": True,
         }
     )
     single_shot_duration: SingleShotDriver.SingleShotDuration = field(
         metadata={
             "name": "singleShotDuration",
             "type": "Element",
-            "required": True,
         }
     )
 

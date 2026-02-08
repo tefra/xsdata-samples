@@ -29,11 +29,7 @@ class SenderIntentEnum:
     class Meta:
         name = "SENDER-INTENT-ENUM"
 
-    value: SenderIntentEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SenderIntentEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

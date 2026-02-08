@@ -112,7 +112,6 @@ class Wire:
         group: str = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         presence: None | Presence = field(

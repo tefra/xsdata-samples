@@ -25,7 +25,6 @@ class TimePeriodByHour(TimePeriodOfDay):
             "name": "startTimeOfPeriod",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     end_time_of_period: XmlTime = field(
@@ -33,7 +32,6 @@ class TimePeriodByHour(TimePeriodOfDay):
             "name": "endTimeOfPeriod",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     time_period_by_hour_extension: None | ExtensionType = field(

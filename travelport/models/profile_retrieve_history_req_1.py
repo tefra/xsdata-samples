@@ -39,7 +39,6 @@ class ProfileRetrieveHistoryReq1(BaseReq2):
         metadata={
             "name": "ProfileID",
             "type": "Element",
-            "required": True,
         }
     )
     profile_history_retrieve_criteria: (

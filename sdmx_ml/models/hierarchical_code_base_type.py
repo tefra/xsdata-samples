@@ -25,7 +25,6 @@ class HierarchicalCodeBaseType(IdentifiableType):
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
             "pattern": r"[A-Za-z0-9_@$\-]+",
         }
     )

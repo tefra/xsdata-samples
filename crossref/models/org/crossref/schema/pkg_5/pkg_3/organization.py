@@ -36,7 +36,6 @@ class Organization:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "min_length": 1,
             "max_length": 511,
             "white_space": "collapse",
@@ -45,13 +44,11 @@ class Organization:
     sequence: OrganizationSequence = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     contributor_role: OrganizationContributorRole = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     name_style: None | OrganizationNameStyle = field(

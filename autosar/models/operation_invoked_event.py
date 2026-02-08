@@ -108,7 +108,6 @@ class OperationInvokedEvent:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | OperationInvokedEvent.ShortNameFragments = (
@@ -264,7 +263,6 @@ class OperationInvokedEvent:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -285,6 +283,5 @@ class OperationInvokedEvent:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

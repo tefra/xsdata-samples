@@ -75,6 +75,5 @@ class SomeipMethodProps:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

@@ -33,7 +33,6 @@ class TrackingType(BaseHeaderType):
             "name": "TrackingID",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
-            "required": True,
         }
     )
     conversation_id: str = field(
@@ -41,6 +40,5 @@ class TrackingType(BaseHeaderType):
             "name": "ConversationID",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
-            "required": True,
         }
     )

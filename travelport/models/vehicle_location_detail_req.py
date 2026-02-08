@@ -31,14 +31,12 @@ class VehicleLocationDetailReq(BaseReq1):
         metadata={
             "name": "Vendor",
             "type": "Element",
-            "required": True,
         }
     )
     vehicle_date_location: VehicleDateLocation = field(
         metadata={
             "name": "VehicleDateLocation",
             "type": "Element",
-            "required": True,
         }
     )
     point_of_sale: None | PointOfSale1 = field(

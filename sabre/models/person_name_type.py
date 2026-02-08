@@ -82,7 +82,6 @@ class PersonNameType:
             "name": "Surname",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
             "min_length": 1,
             "max_length": 64,
         }

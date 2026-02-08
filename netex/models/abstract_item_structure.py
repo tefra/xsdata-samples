@@ -14,6 +14,5 @@ class AbstractItemStructure:
             "name": "RecordedAtTime",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
         }
     )

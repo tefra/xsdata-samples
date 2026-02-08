@@ -150,6 +150,5 @@ class ReceiverAnnotation:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

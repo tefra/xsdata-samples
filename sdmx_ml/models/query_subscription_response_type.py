@@ -32,7 +32,6 @@ class QuerySubscriptionResponseType:
             "name": "StatusMessage",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
-            "required": True,
         }
     )
     subscription: tuple[SubscriptionType, ...] = field(

@@ -31,11 +31,7 @@ class HandleTerminationAndRestartEnum:
     class Meta:
         name = "HANDLE-TERMINATION-AND-RESTART-ENUM"
 
-    value: HandleTerminationAndRestartEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: HandleTerminationAndRestartEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

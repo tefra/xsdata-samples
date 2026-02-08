@@ -218,7 +218,6 @@ class FlexibleFaresType:
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -228,7 +227,6 @@ class FlexibleFaresType:
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -238,7 +236,6 @@ class FlexibleFaresType:
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -248,7 +245,6 @@ class FlexibleFaresType:
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -258,7 +254,6 @@ class FlexibleFaresType:
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -268,7 +263,6 @@ class FlexibleFaresType:
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -278,7 +272,6 @@ class FlexibleFaresType:
                 metadata={
                     "name": "Type",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -293,7 +286,6 @@ class FlexibleFaresType:
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
-                    "required": True,
                     "min_length": 1,
                     "max_length": 8,
                 }
@@ -305,7 +297,6 @@ class FlexibleFaresType:
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -315,7 +306,6 @@ class FlexibleFaresType:
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -325,7 +315,6 @@ class FlexibleFaresType:
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"[A-Za-z]{3}[0-9]{2}",
                 }
             )
@@ -336,7 +325,6 @@ class FlexibleFaresType:
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
-                    "required": True,
                     "min_length": 1,
                     "max_length": 20,
                 }

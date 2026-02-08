@@ -25,6 +25,5 @@ class CarrierList:
         metadata={
             "name": "IncludeCarrier",
             "type": "Attribute",
-            "required": True,
         }
     )

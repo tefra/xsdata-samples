@@ -338,7 +338,6 @@ class OptionalService1:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }

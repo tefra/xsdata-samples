@@ -83,7 +83,6 @@ class Ticket:
         metadata={
             "name": "TicketNumber",
             "type": "Attribute",
-            "required": True,
             "length": 13,
         }
     )

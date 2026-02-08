@@ -27,7 +27,6 @@ class BookingTravelerInformation2:
         metadata={
             "name": "Name",
             "type": "Element",
-            "required": True,
         }
     )
     booking_traveler_ref: None | str = field(

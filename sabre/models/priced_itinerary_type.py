@@ -101,7 +101,6 @@ class PricedItineraryType:
         metadata={
             "name": "SequenceNumber",
             "type": "Attribute",
-            "required": True,
         }
     )
     origin_destination_rph: None | str = field(
@@ -337,7 +336,6 @@ class PricedItineraryType:
                 metadata={
                     "name": "ActionCode",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -361,7 +359,6 @@ class PricedItineraryType:
                         metadata={
                             "name": "Code",
                             "type": "Attribute",
-                            "required": True,
                             "pattern": r"[0-9A-Z]{1,3}",
                         }
                     )
@@ -377,7 +374,6 @@ class PricedItineraryType:
                 metadata={
                     "name": "Source",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -415,7 +411,6 @@ class PricedItineraryType:
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"[A-Z][0-9A-Z]|[0-9A-Z][A-Z][0-9A-Z]?|[A-Za-z]{0}",
                 }
             )
@@ -432,7 +427,6 @@ class PricedItineraryType:
                 metadata={
                     "name": "WeighedPriceAmount",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 

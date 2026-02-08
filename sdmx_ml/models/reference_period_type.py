@@ -22,13 +22,11 @@ class ReferencePeriodType:
         metadata={
             "name": "startTime",
             "type": "Attribute",
-            "required": True,
         }
     )
     end_time: XmlDateTime = field(
         metadata={
             "name": "endTime",
             "type": "Attribute",
-            "required": True,
         }
     )

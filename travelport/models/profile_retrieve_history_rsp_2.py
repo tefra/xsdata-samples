@@ -29,13 +29,11 @@ class ProfileRetrieveHistoryRsp2(BaseRsp5):
         metadata={
             "name": "ProfileHistory",
             "type": "Element",
-            "required": True,
         }
     )
     more_results: bool = field(
         metadata={
             "name": "MoreResults",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -21,13 +21,11 @@ class Vector:
     left: Left = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     right: Right = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     id: None | str = field(

@@ -87,7 +87,6 @@ class CoctMt140007UvDevice:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(

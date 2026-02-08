@@ -62,25 +62,21 @@ class BusDefinition:
     vendor: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     library: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     version: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     display_name: None | str = field(
@@ -107,7 +103,6 @@ class BusDefinition:
         metadata={
             "name": "directConnection",
             "type": "Element",
-            "required": True,
         }
     )
     broadcast: None | bool = field(
@@ -120,7 +115,6 @@ class BusDefinition:
         metadata={
             "name": "isAddressable",
             "type": "Element",
-            "required": True,
         }
     )
     extends: None | LibraryRefType = field(
@@ -203,12 +197,7 @@ class BusDefinition:
 
         @dataclass(kw_only=True)
         class SystemGroupName:
-            value: str = field(
-                default="",
-                metadata={
-                    "required": True,
-                },
-            )
+            value: str = field(default="")
             id: None | str = field(
                 default=None,
                 metadata={

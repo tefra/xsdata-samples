@@ -45,12 +45,7 @@ class GuestReviews:
             Name of the comment's poster.
         """
 
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         comment_id: None | str = field(
             default=None,
             metadata={

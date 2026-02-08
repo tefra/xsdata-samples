@@ -29,11 +29,7 @@ class PduCollectionTriggerEnum:
     class Meta:
         name = "PDU-COLLECTION-TRIGGER-ENUM"
 
-    value: PduCollectionTriggerEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: PduCollectionTriggerEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

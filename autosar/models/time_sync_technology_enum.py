@@ -30,11 +30,7 @@ class TimeSyncTechnologyEnum:
     class Meta:
         name = "TIME-SYNC-TECHNOLOGY-ENUM"
 
-    value: TimeSyncTechnologyEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TimeSyncTechnologyEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

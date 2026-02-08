@@ -33,7 +33,6 @@ class Ip6AddressString:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "pattern": r"[0-9A-Fa-f]{1,4}(:[0-9A-Fa-f]{1,4}){7,7}|ANY",
         },
     )

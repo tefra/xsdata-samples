@@ -16,9 +16,4 @@ class IpxactUri:
     class Meta:
         name = "ipxactURI"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

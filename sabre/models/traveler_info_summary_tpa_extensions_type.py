@@ -57,14 +57,12 @@ class TravelerInfoSummaryTpaExtensionsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
             carrier: str = field(
                 metadata={
                     "name": "Carrier",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -74,13 +72,11 @@ class TravelerInfoSummaryTpaExtensionsType:
                 metadata={
                     "name": "Tier",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
             carrier: str = field(
                 metadata={
                     "name": "Carrier",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

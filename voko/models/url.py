@@ -14,9 +14,4 @@ class Url:
             "type": "Attribute",
         },
     )
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

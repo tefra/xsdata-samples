@@ -104,7 +104,6 @@ class ContractNoticeType:
             "name": "ContractFolderID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_date: None | IssueDate = field(
@@ -168,7 +167,6 @@ class ContractNoticeType:
             "name": "ContractingParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     originator_customer_party: tuple[OriginatorCustomerParty, ...] = field(
@@ -208,7 +206,6 @@ class ContractNoticeType:
             "name": "ProcurementProject",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     procurement_project_lot: tuple[ProcurementProjectLot, ...] = field(

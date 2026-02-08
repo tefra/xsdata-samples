@@ -14,12 +14,10 @@ class Condition:
     lhs: Lhs = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     rhs: Rhs = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )

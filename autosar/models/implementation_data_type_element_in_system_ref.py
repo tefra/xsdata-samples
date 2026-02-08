@@ -159,7 +159,6 @@ class ImplementationDataTypeElementInSystemRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -182,7 +181,6 @@ class ImplementationDataTypeElementInSystemRef:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -192,7 +190,6 @@ class ImplementationDataTypeElementInSystemRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -202,7 +199,6 @@ class ImplementationDataTypeElementInSystemRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -225,7 +221,6 @@ class ImplementationDataTypeElementInSystemRef:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -235,6 +230,5 @@ class ImplementationDataTypeElementInSystemRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

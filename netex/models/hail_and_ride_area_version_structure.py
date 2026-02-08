@@ -45,7 +45,6 @@ class HailAndRideAreaVersionStructure(FlexibleQuayVersionStructure):
             "name": "StartPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     end_point_ref: PointRefStructure = field(
@@ -53,6 +52,5 @@ class HailAndRideAreaVersionStructure(FlexibleQuayVersionStructure):
             "name": "EndPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

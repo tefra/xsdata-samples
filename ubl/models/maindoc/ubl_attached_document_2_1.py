@@ -79,7 +79,6 @@ class AttachedDocumentType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     uuid: None | Uuid = field(
@@ -95,7 +94,6 @@ class AttachedDocumentType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -135,7 +133,6 @@ class AttachedDocumentType:
             "name": "ParentDocumentID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     parent_document_type_code: None | ParentDocumentTypeCode = field(
@@ -167,7 +164,6 @@ class AttachedDocumentType:
             "name": "SenderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     receiver_party: ReceiverParty = field(
@@ -175,7 +171,6 @@ class AttachedDocumentType:
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     attachment: Attachment = field(
@@ -183,7 +178,6 @@ class AttachedDocumentType:
             "name": "Attachment",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     parent_document_line_reference: tuple[ParentDocumentLineReference, ...] = (

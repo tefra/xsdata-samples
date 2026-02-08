@@ -64,7 +64,6 @@ class FindEmployeesOnFlightRsp(BaseRsp1):
             metadata={
                 "name": "UniversalRecordLocator",
                 "type": "Attribute",
-                "required": True,
                 "min_length": 5,
                 "max_length": 8,
             }
@@ -73,7 +72,6 @@ class FindEmployeesOnFlightRsp(BaseRsp1):
             metadata={
                 "name": "Destination",
                 "type": "Attribute",
-                "required": True,
                 "length": 3,
                 "white_space": "collapse",
             }
@@ -82,7 +80,6 @@ class FindEmployeesOnFlightRsp(BaseRsp1):
             metadata={
                 "name": "Origin",
                 "type": "Attribute",
-                "required": True,
                 "length": 3,
                 "white_space": "collapse",
             }
@@ -91,21 +88,18 @@ class FindEmployeesOnFlightRsp(BaseRsp1):
             metadata={
                 "name": "DepartureDate",
                 "type": "Attribute",
-                "required": True,
             }
         )
         flight_number: str = field(
             metadata={
                 "name": "FlightNumber",
                 "type": "Attribute",
-                "required": True,
             }
         )
         carrier: str = field(
             metadata={
                 "name": "Carrier",
                 "type": "Attribute",
-                "required": True,
                 "length": 2,
             }
         )

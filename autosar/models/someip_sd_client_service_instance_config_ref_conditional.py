@@ -75,6 +75,5 @@ class SomeipSdClientServiceInstanceConfigRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

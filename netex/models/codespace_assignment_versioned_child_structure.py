@@ -134,18 +134,8 @@ class CodespaceAssignmentVersionedChildStructure(VersionedChildStructure):
 
     @dataclass(kw_only=True)
     class StartValue:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
 
     @dataclass(kw_only=True)
     class EndValue:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")

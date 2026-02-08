@@ -72,6 +72,5 @@ class CpSoftwareClusterRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

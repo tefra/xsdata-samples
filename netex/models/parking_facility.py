@@ -12,8 +12,4 @@ class ParkingFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: ParkingFacilityEnumeration = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ParkingFacilityEnumeration = field()

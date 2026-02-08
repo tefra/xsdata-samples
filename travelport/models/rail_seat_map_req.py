@@ -21,6 +21,5 @@ class RailSeatMapReq(BaseReq1):
         metadata={
             "name": "RailInfo",
             "type": "Element",
-            "required": True,
         }
     )

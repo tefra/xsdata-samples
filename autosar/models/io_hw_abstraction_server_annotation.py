@@ -200,7 +200,6 @@ class IoHwAbstractionServerAnnotation:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -210,7 +209,6 @@ class IoHwAbstractionServerAnnotation:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -220,7 +218,6 @@ class IoHwAbstractionServerAnnotation:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -230,6 +227,5 @@ class IoHwAbstractionServerAnnotation:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

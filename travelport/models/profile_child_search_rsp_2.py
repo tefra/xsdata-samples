@@ -41,7 +41,6 @@ class ProfileChildSearchRsp2(BaseRsp5):
         metadata={
             "name": "MoreResults",
             "type": "Attribute",
-            "required": True,
         }
     )
     number_of_children: None | int = field(

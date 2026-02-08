@@ -19,7 +19,6 @@ class VehicleLocationDetailRsp(BaseRsp1):
         metadata={
             "name": "VendorInfo",
             "type": "Element",
-            "required": True,
         }
     )
     location_info: list[LocationInfo] = field(

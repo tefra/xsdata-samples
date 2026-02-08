@@ -23,6 +23,5 @@ class TypeEndpointRef:
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
         }
     )

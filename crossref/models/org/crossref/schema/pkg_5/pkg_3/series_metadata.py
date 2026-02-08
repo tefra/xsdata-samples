@@ -64,7 +64,6 @@ class SeriesMetadata:
     titles: Titles = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     abstract: list[Abstract] = field(

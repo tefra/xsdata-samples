@@ -33,6 +33,5 @@ class DataKeySetType:
         metadata={
             "name": "isIncluded",
             "type": "Attribute",
-            "required": True,
         }
     )

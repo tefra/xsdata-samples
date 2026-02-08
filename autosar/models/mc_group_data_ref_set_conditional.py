@@ -103,7 +103,6 @@ class McGroupDataRefSetConditional:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -126,6 +125,5 @@ class McGroupDataRefSetConditional:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

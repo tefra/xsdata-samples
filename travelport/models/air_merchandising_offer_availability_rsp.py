@@ -34,7 +34,6 @@ class AirMerchandisingOfferAvailabilityRsp(BaseRsp1):
         metadata={
             "name": "AirSolution",
             "type": "Element",
-            "required": True,
         }
     )
     remark: None | Remark1 = field(

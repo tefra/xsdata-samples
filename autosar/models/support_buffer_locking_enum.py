@@ -29,11 +29,7 @@ class SupportBufferLockingEnum:
     class Meta:
         name = "SUPPORT-BUFFER-LOCKING-ENUM"
 
-    value: SupportBufferLockingEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SupportBufferLockingEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

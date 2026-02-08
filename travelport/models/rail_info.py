@@ -81,7 +81,6 @@ class RailInfo:
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
-            "required": True,
         }
     )
     arrival_time: None | str = field(
@@ -95,7 +94,6 @@ class RailInfo:
         metadata={
             "name": "TrainNumber",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 8,
         }
@@ -104,7 +102,6 @@ class RailInfo:
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }
@@ -113,7 +110,6 @@ class RailInfo:
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 5,
         }

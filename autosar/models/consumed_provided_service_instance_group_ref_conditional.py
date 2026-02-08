@@ -75,6 +75,5 @@ class ConsumedProvidedServiceInstanceGroupRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

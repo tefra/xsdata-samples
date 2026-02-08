@@ -73,7 +73,6 @@ class Emdinfo:
         metadata={
             "name": "EMDTravelerInfo",
             "type": "Element",
-            "required": True,
         }
     )
     supplier_locator: list[SupplierLocator1] = field(
@@ -143,7 +142,6 @@ class Emdinfo:
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }
@@ -152,7 +150,6 @@ class Emdinfo:
         metadata={
             "name": "ProviderLocatorCode",
             "type": "Attribute",
-            "required": True,
             "max_length": 15,
         }
     )

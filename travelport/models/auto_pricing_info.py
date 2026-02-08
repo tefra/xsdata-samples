@@ -79,7 +79,6 @@ class AutoPricingInfo:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     pricing_type: None | str = field(

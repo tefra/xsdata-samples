@@ -30,11 +30,7 @@ class DiagnosticDenominatorConditionEnum:
     class Meta:
         name = "DIAGNOSTIC-DENOMINATOR-CONDITION-ENUM"
 
-    value: DiagnosticDenominatorConditionEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticDenominatorConditionEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

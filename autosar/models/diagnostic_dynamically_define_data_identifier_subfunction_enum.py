@@ -32,11 +32,7 @@ class DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnum:
         name = "DIAGNOSTIC-DYNAMICALLY-DEFINE-DATA-IDENTIFIER-SUBFUNCTION-ENUM"
 
     value: DiagnosticDynamicallyDefineDataIdentifierSubfunctionEnumSimple = (
-        field(
-            metadata={
-                "required": True,
-            }
-        )
+        field()
     )
     s: None | str = field(
         default=None,

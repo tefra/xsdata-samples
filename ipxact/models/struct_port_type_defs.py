@@ -44,7 +44,6 @@ class StructPortTypeDefs:
             metadata={
                 "name": "typeName",
                 "type": "Element",
-                "required": True,
             }
         )
         type_definition: list[
@@ -94,12 +93,7 @@ class StructPortTypeDefs:
                 constrained the number of bits in the vector
             """
 
-            value: str = field(
-                default="",
-                metadata={
-                    "required": True,
-                },
-            )
+            value: str = field(default="")
             constrained: list[str] = field(
                 default_factory=list,
                 metadata={
@@ -110,12 +104,7 @@ class StructPortTypeDefs:
 
         @dataclass(kw_only=True)
         class TypeDefinition:
-            value: str = field(
-                default="",
-                metadata={
-                    "required": True,
-                },
-            )
+            value: str = field(default="")
             id: None | str = field(
                 default=None,
                 metadata={
@@ -137,12 +126,7 @@ class StructPortTypeDefs:
 
         @dataclass(kw_only=True)
         class ViewRef:
-            value: str = field(
-                default="",
-                metadata={
-                    "required": True,
-                },
-            )
+            value: str = field(default="")
             id: None | str = field(
                 default=None,
                 metadata={

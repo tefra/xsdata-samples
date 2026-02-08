@@ -100,7 +100,6 @@ class SeatMapReq(BaseReq1):
         metadata={
             "name": "ReturnSeatPricing",
             "type": "Attribute",
-            "required": True,
         }
     )
     return_branding_info: bool = field(

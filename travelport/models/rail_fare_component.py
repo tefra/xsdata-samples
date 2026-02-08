@@ -42,7 +42,6 @@ class RailFareComponent:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     amount: None | str = field(

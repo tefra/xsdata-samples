@@ -27,7 +27,6 @@ class WidthCharacteristic:
             "name": "comparisonOperator",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     vehicle_width: float = field(
@@ -35,7 +34,6 @@ class WidthCharacteristic:
             "name": "vehicleWidth",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     width_characteristic_extension: None | ExtensionType = field(

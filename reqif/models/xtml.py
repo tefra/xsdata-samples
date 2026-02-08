@@ -359,7 +359,6 @@ class XhtmlParamType:
     name: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     value: None | str = field(

@@ -92,7 +92,6 @@ class TypeAddress1(TypeTckeyElement):
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }

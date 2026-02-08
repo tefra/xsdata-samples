@@ -34,7 +34,6 @@ class OptionalServiceApplicationLimitType1:
         metadata={
             "name": "ApplicableLevel",
             "type": "Attribute",
-            "required": True,
         }
     )
     provider_defined_applicable_levels: None | str = field(
@@ -48,7 +47,6 @@ class OptionalServiceApplicationLimitType1:
         metadata={
             "name": "MaximumQuantity",
             "type": "Attribute",
-            "required": True,
         }
     )
     minimum_quantity: None | int = field(

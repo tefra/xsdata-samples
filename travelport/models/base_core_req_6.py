@@ -48,7 +48,6 @@ class BaseCoreReq6:
             "name": "BillingPointOfSaleInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v34_0",
-            "required": True,
         }
     )
     agent_idoverride: list[AgentIdoverride6] = field(

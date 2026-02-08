@@ -31,11 +31,7 @@ class DiagnosticPeriodicRateCategoryEnum:
     class Meta:
         name = "DIAGNOSTIC-PERIODIC-RATE-CATEGORY-ENUM"
 
-    value: DiagnosticPeriodicRateCategoryEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticPeriodicRateCategoryEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

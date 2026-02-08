@@ -21,6 +21,5 @@ class CalculateTaxRsp(BaseRsp1):
         metadata={
             "name": "CalculateTaxResult",
             "type": "Element",
-            "required": True,
         }
     )

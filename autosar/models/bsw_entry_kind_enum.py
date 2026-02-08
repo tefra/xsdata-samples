@@ -29,11 +29,7 @@ class BswEntryKindEnum:
     class Meta:
         name = "BSW-ENTRY-KIND-ENUM"
 
-    value: BswEntryKindEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: BswEntryKindEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

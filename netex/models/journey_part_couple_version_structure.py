@@ -34,7 +34,6 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "name": "StartTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     start_time_day_offset: None | int = field(
@@ -50,7 +49,6 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "name": "EndTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     end_time_day_offset: None | int = field(
@@ -66,7 +64,6 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "name": "FromStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     to_stop_point_ref: ScheduledStopPointRefStructure = field(
@@ -74,7 +71,6 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "name": "ToStopPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     main_part_ref: JourneyPartRefStructure = field(
@@ -82,7 +78,6 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
             "name": "MainPartRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     block_ref: None | TrainBlockRef | BlockRef = field(
@@ -122,6 +117,5 @@ class JourneyPartCoupleVersionStructure(DataManagedObjectStructure):
     order: int = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

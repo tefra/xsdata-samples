@@ -31,7 +31,6 @@ class Referent:
             "name": "referentIdentifier",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
             "max_length": 1024,
         }
     )
@@ -49,7 +48,6 @@ class Referent:
             "name": "referentType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     referent_description: None | MultilingualString = field(

@@ -82,7 +82,6 @@ class AddressBlockDefinitions:
         name: str = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         display_name: None | DisplayName = field(
@@ -115,13 +114,11 @@ class AddressBlockDefinitions:
         range: UnsignedPositiveLongintExpression = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         width: UnsignedPositiveIntExpression = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         usage: None | UsageType = field(
@@ -219,7 +216,6 @@ class AddressBlockDefinitions:
             name: str = field(
                 metadata={
                     "type": "Element",
-                    "required": True,
                 }
             )
             display_name: None | DisplayName = field(
@@ -262,7 +258,6 @@ class AddressBlockDefinitions:
                 metadata={
                     "name": "addressOffset",
                     "type": "Element",
-                    "required": True,
                 }
             )
             register_definition_ref: (
@@ -349,16 +344,10 @@ class AddressBlockDefinitions:
 
             @dataclass(kw_only=True)
             class RegisterDefinitionRef:
-                value: str = field(
-                    default="",
-                    metadata={
-                        "required": True,
-                    },
-                )
+                value: str = field(default="")
                 type_definitions: str = field(
                     metadata={
                         "name": "typeDefinitions",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )

@@ -59,7 +59,6 @@ class EmdretrieveReq(BaseReq1):
                 "name": "ProviderReservationDetail",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/common_v52_0",
-                "required": True,
             }
         )
 
@@ -92,7 +91,6 @@ class EmdretrieveReq(BaseReq1):
             metadata={
                 "name": "EMDNumber",
                 "type": "Element",
-                "required": True,
                 "length": 13,
             }
         )

@@ -40,7 +40,6 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "From",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     to: PathLinkEndStructure = field(
@@ -48,7 +47,6 @@ class PathLinkVersionStructure(LinkVersionStructure):
             "name": "To",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     description: None | MultilingualString = field(

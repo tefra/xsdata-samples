@@ -24,6 +24,5 @@ class TagRef1:
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
         }
     )

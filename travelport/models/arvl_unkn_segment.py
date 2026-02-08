@@ -40,7 +40,6 @@ class ArvlUnknSegment:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     origin: None | str = field(
@@ -75,6 +74,5 @@ class ArvlUnknSegment:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )

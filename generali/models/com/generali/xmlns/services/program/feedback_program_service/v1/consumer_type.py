@@ -9,9 +9,4 @@ __NAMESPACE__ = (
 
 @dataclass(kw_only=True)
 class ConsumerType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

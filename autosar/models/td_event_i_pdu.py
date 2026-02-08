@@ -103,7 +103,6 @@ class TdEventIPdu:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | TdEventIPdu.ShortNameFragments = field(
@@ -261,7 +260,6 @@ class TdEventIPdu:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -271,7 +269,6 @@ class TdEventIPdu:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -281,6 +278,5 @@ class TdEventIPdu:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

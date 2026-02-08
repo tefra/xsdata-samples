@@ -60,14 +60,12 @@ class FieldGroup1:
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -113,20 +111,17 @@ class FieldGroup1:
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-            "required": True,
         }
     )
     profile_type: TypeProfileType3 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-            "required": True,
         }
     )
     is_used: bool = field(
         metadata={
             "name": "IsUsed",
             "type": "Attribute",
-            "required": True,
         }
     )

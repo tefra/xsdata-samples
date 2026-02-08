@@ -28,7 +28,6 @@ class OtherClockDriver(ClockDriverType):
         metadata={
             "name": "clockName",
             "type": "Attribute",
-            "required": True,
         }
     )
     clock_source: None | str = field(

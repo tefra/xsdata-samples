@@ -28,17 +28,11 @@ class ResponseMessage3:
         name = "ResponseMessage"
         namespace = "http://www.travelport.com/schema/common_v32_0"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     code: int = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
         }
     )
     type_value: None | ResponseMessageType3 = field(

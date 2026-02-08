@@ -14,8 +14,4 @@ class UicProductCharacteristic:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: UicProductCharacteristicEnumeration = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: UicProductCharacteristicEnumeration = field()

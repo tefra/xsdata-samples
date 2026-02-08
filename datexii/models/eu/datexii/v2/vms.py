@@ -60,7 +60,6 @@ class Vms:
             "name": "vmsWorking",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     vms_message_sequencing_interval: None | float = field(

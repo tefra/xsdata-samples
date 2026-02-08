@@ -31,7 +31,6 @@ class CreateFault201310RequestType:
             "name": "senderOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     receiver_oid: str = field(
@@ -39,7 +38,6 @@ class CreateFault201310RequestType:
             "name": "receiverOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -67,7 +65,6 @@ class Create201302RequestType:
             "name": "remotePatientId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     remote_device_id: str = field(
@@ -75,7 +72,6 @@ class Create201302RequestType:
             "name": "remoteDeviceId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     sender_oid: str = field(
@@ -83,7 +79,6 @@ class Create201302RequestType:
             "name": "senderOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     receiver_oid: str = field(
@@ -91,7 +86,6 @@ class Create201302RequestType:
             "name": "receiverOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -103,7 +97,6 @@ class Create201305RequestType:
             "name": "PRPA201301Patient",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     local_device_id: str = field(
@@ -111,7 +104,6 @@ class Create201305RequestType:
             "name": "localDeviceId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     sender_oid: str = field(
@@ -119,7 +111,6 @@ class Create201305RequestType:
             "name": "senderOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     receiver_oid: str = field(
@@ -127,7 +118,6 @@ class Create201305RequestType:
             "name": "receiverOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -139,7 +129,6 @@ class Create201310RequestType:
             "name": "pseudoPatientId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     pseudo_assigning_authority_id: str = field(
@@ -147,7 +136,6 @@ class Create201310RequestType:
             "name": "pseudoAssigningAuthorityId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     local_device_id: str = field(
@@ -155,7 +143,6 @@ class Create201310RequestType:
             "name": "localDeviceId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     sender_oid: str = field(
@@ -163,7 +150,6 @@ class Create201310RequestType:
             "name": "senderOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     receiver_oid: str = field(
@@ -171,7 +157,6 @@ class Create201310RequestType:
             "name": "receiverOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     prpa201307_query_by_parameter: PrpaMt201307Uv02QueryByParameter = field(
@@ -179,7 +164,6 @@ class Create201310RequestType:
             "name": "PRPA201307QueryByParameter",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -191,7 +175,6 @@ class CreateAckMsgRequestType:
             "name": "localDeviceId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     orig_msg_id: Ii = field(
@@ -199,7 +182,6 @@ class CreateAckMsgRequestType:
             "name": "origMsgId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     msg_text: str = field(
@@ -207,7 +189,6 @@ class CreateAckMsgRequestType:
             "name": "msgText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     sender_oid: str = field(
@@ -215,7 +196,6 @@ class CreateAckMsgRequestType:
             "name": "senderOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     receiver_oid: str = field(
@@ -223,7 +203,6 @@ class CreateAckMsgRequestType:
             "name": "receiverOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -244,14 +223,12 @@ class PixconsumerMcciIn000002Uv01RequestType:
             "name": "MCCI_IN000002UV01",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -266,14 +243,12 @@ class PixconsumerPrpaIn201304UvrequestType:
             "name": "PRPA_IN201304UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_communities: None | NhinTargetCommunitiesType = field(
@@ -296,7 +271,6 @@ class PixconsumerPrpaIn201304UvsecuredRequestType:
             "name": "PRPA_IN201304UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_communities: None | NhinTargetCommunitiesType = field(
@@ -319,14 +293,12 @@ class PixconsumerPrpaIn201309UvrequestType:
             "name": "PRPA_IN201309UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_communities: None | NhinTargetCommunitiesType = field(
@@ -349,7 +321,6 @@ class PixconsumerPrpaIn201309UvresponseType:
             "name": "PRPA_IN201310UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -364,7 +335,6 @@ class PixconsumerPrpaIn201309UvsecuredRequestType:
             "name": "PRPA_IN201309UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_communities: None | NhinTargetCommunitiesType = field(
@@ -387,14 +357,12 @@ class PixconsumerPrpaIn201310UvrequestType:
             "name": "PRPA_IN201310UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -409,7 +377,6 @@ class PixconsumerPrpaIn201310UvsecuredRequestType:
             "name": "PRPA_IN201310UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 

@@ -84,7 +84,6 @@ class ReissueInfoType:
                 "name": "ChangeFee",
                 "type": "Element",
                 "namespace": "http://www.opentravel.org/OTA/2003/05",
-                "required": True,
             }
         )
 

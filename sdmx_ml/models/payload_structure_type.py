@@ -84,7 +84,6 @@ class PayloadStructureType:
         metadata={
             "name": "structureID",
             "type": "Attribute",
-            "required": True,
         }
     )
     schema_url: None | str = field(
@@ -135,7 +134,6 @@ class PayloadStructureType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.registry\.ProvisionAgreement=.+",
             },
         )
@@ -145,7 +143,6 @@ class PayloadStructureType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.datastructure\.Dataflow=.+|.+\.metadatastructure\.Metadataflow=.+",
             },
         )
@@ -155,7 +152,6 @@ class PayloadStructureType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.datastructure\.DataStructure=.+|.+\.metadatastructure\.MetadataStructure=.+",
             },
         )

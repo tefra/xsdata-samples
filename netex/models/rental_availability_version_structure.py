@@ -18,7 +18,6 @@ class RentalAvailabilityVersionStructure(LogEntryVersionStructure):
             "name": "ParkingRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     is_operational: None | bool = field(

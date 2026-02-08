@@ -83,7 +83,6 @@ class OrderResponseSimpleType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     copy_indicator: None | CopyIndicator = field(
@@ -107,7 +106,6 @@ class OrderResponseSimpleType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -131,7 +129,6 @@ class OrderResponseSimpleType:
             "name": "AcceptedIndicator",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     rejection_note: tuple[RejectionNote, ...] = field(
@@ -171,7 +168,6 @@ class OrderResponseSimpleType:
             "name": "OrderReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     additional_document_reference: tuple[AdditionalDocumentReference, ...] = (
@@ -197,7 +193,6 @@ class OrderResponseSimpleType:
             "name": "SellerSupplierParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     buyer_customer_party: BuyerCustomerParty = field(
@@ -205,7 +200,6 @@ class OrderResponseSimpleType:
             "name": "BuyerCustomerParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     originator_customer_party: None | OriginatorCustomerParty = field(

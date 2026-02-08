@@ -74,7 +74,6 @@ class StandardMetadata:
     titles: Titles = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     abstract: list[Abstract] = field(
@@ -87,7 +86,6 @@ class StandardMetadata:
     designators: Designators = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     edition_number: None | EditionNumber = field(
@@ -118,7 +116,6 @@ class StandardMetadata:
     standards_body: StandardsBody = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     publisher_item: None | PublisherItem = field(
@@ -165,7 +162,6 @@ class StandardMetadata:
     doi_data: DoiData = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     citation_list: None | CitationList = field(

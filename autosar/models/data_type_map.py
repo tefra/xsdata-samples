@@ -80,7 +80,6 @@ class DataTypeMap:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -90,6 +89,5 @@ class DataTypeMap:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

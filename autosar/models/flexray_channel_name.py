@@ -28,11 +28,7 @@ class FlexrayChannelName:
     class Meta:
         name = "FLEXRAY-CHANNEL-NAME"
 
-    value: FlexrayChannelNameSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: FlexrayChannelNameSimple = field()
     s: None | str = field(
         default=None,
         metadata={

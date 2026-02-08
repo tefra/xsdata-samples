@@ -46,7 +46,6 @@ class ProviderReservationDivideReq(BaseReq1):
         metadata={
             "name": "UniversalRecordLocatorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         }
@@ -55,7 +54,6 @@ class ProviderReservationDivideReq(BaseReq1):
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }
@@ -64,7 +62,6 @@ class ProviderReservationDivideReq(BaseReq1):
         metadata={
             "name": "ProviderLocatorCode",
             "type": "Attribute",
-            "required": True,
             "max_length": 15,
         }
     )
@@ -72,7 +69,6 @@ class ProviderReservationDivideReq(BaseReq1):
         metadata={
             "name": "CreateChildUniversalRecord",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -82,6 +78,5 @@ class ProviderReservationDivideReq(BaseReq1):
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )

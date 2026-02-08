@@ -27,6 +27,5 @@ class HotelRuleItem:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
         }
     )

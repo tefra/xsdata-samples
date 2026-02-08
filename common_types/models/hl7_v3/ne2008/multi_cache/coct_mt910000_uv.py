@@ -120,7 +120,6 @@ class CoctMt910000UvOtherIds:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -159,7 +158,6 @@ class CoctMt910000UvSubjectPerson:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     name: list[Pn] = field(
@@ -284,7 +282,6 @@ class CoctMt910000UvEmployee:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -653,7 +650,6 @@ class CoctMt910000UvPersonalRelationship:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     status_code: None | Cs = field(

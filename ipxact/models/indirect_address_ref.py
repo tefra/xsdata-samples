@@ -84,7 +84,6 @@ class IndirectAddressRef:
         metadata={
             "name": "fieldRef",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -94,7 +93,6 @@ class IndirectAddressRef:
             metadata={
                 "name": "addressSpaceRef",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -104,6 +102,5 @@ class IndirectAddressRef:
             metadata={
                 "name": "memoryMapRef",
                 "type": "Attribute",
-                "required": True,
             }
         )

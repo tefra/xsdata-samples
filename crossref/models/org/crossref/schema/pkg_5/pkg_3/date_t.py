@@ -35,7 +35,6 @@ class DateT:
         metadata={
             "type": "Element",
             "namespace": "http://www.crossref.org/schema/5.3.1",
-            "required": True,
         }
     )
     media_type: DateTMediaType = field(

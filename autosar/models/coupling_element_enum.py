@@ -28,11 +28,7 @@ class CouplingElementEnum:
     class Meta:
         name = "COUPLING-ELEMENT-ENUM"
 
-    value: CouplingElementEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: CouplingElementEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

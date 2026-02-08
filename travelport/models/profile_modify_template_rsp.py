@@ -21,6 +21,5 @@ class ProfileModifyTemplateRsp(BaseRsp5):
         metadata={
             "name": "ProfileTemplate",
             "type": "Element",
-            "required": True,
         }
     )

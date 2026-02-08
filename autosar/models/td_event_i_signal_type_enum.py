@@ -28,11 +28,7 @@ class TdEventISignalTypeEnum:
     class Meta:
         name = "TD-EVENT-I-SIGNAL-TYPE-ENUM"
 
-    value: TdEventISignalTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TdEventISignalTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

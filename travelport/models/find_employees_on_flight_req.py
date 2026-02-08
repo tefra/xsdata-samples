@@ -36,6 +36,5 @@ class FindEmployeesOnFlightReq(BaseReq1):
         metadata={
             "name": "AccountID",
             "type": "Attribute",
-            "required": True,
         }
     )

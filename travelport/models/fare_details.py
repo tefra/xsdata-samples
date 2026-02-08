@@ -37,21 +37,18 @@ class FareDetails:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     passenger_detail_ref: str = field(
         metadata={
             "name": "PassengerDetailRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     fare_basis: str = field(
         metadata={
             "name": "FareBasis",
             "type": "Attribute",
-            "required": True,
             "max_length": 20,
         }
     )

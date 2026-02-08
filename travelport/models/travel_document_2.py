@@ -112,7 +112,6 @@ class TravelDocument2(TypeKeyTaggedElement2):
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     document_number: None | str = field(

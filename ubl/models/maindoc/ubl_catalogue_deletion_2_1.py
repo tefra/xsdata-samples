@@ -82,7 +82,6 @@ class CatalogueDeletionType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     uuid: None | Uuid = field(
@@ -106,7 +105,6 @@ class CatalogueDeletionType:
             "name": "IssueDate",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     issue_time: None | IssueTime = field(
@@ -170,7 +168,6 @@ class CatalogueDeletionType:
             "name": "DeletedCatalogueReference",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     referenced_contract: tuple[ReferencedContract, ...] = field(
@@ -194,7 +191,6 @@ class CatalogueDeletionType:
             "name": "ReceiverParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     provider_party: ProviderParty = field(
@@ -202,7 +198,6 @@ class CatalogueDeletionType:
             "name": "ProviderParty",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     seller_supplier_party: None | SellerSupplierParty = field(

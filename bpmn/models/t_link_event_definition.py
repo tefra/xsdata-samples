@@ -30,6 +30,5 @@ class TLinkEventDefinition(TEventDefinition):
     name: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -66,7 +66,6 @@ class TypeTicketFailureInfo:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
         }
     )
     message: None | str = field(

@@ -43,7 +43,6 @@ class PerilStructureType(BaseIdentifiedComponentType):
             "name": "Peril",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     worldwide_flag: None | str = field(

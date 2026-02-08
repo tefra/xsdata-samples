@@ -28,11 +28,7 @@ class ChapterEnumBreak:
     class Meta:
         name = "CHAPTER-ENUM-BREAK"
 
-    value: ChapterEnumBreakSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ChapterEnumBreakSimple = field()
     s: None | str = field(
         default=None,
         metadata={

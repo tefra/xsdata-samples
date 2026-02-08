@@ -13,22 +13,15 @@ class ScheduleEventTitle:
     class Meta:
         name = "scheduleEventTitle"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     owner: OwnerTypeEnum = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     type_value: TextualTypeEnum = field(
         metadata={
             "name": "type",
             "type": "Attribute",
-            "required": True,
         }
     )

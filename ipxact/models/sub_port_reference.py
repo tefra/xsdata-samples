@@ -30,7 +30,6 @@ class SubPortReference:
         metadata={
             "name": "subPortRef",
             "type": "Attribute",
-            "required": True,
             "white_space": "collapse",
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
         }

@@ -78,7 +78,6 @@ class StrucDocFootnoteRef:
         metadata={
             "name": "IDREF",
             "type": "Attribute",
-            "required": True,
         }
     )
 

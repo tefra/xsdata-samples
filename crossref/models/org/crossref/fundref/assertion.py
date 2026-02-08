@@ -37,7 +37,6 @@ class Assertion:
     name: AssertionName = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     content: list[object] = field(

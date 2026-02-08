@@ -71,7 +71,6 @@ class BaseHeaderType:
             "name": "ID",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
-            "required": True,
             "pattern": r"[A-Za-z0-9_@$\-]+",
         }
     )
@@ -81,7 +80,6 @@ class BaseHeaderType:
             "name": "Test",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
-            "required": True,
         },
     )
     prepared: XmlDateTime | XmlDate = field(
@@ -89,7 +87,6 @@ class BaseHeaderType:
             "name": "Prepared",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
-            "required": True,
         }
     )
     sender: SenderType = field(
@@ -97,7 +94,6 @@ class BaseHeaderType:
             "name": "Sender",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/message",
-            "required": True,
         }
     )
     receiver: tuple[PartyType, ...] = field(

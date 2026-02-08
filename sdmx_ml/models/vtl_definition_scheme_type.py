@@ -22,6 +22,5 @@ class VtlDefinitionSchemeType(ItemSchemeType):
         metadata={
             "name": "vtlVersion",
             "type": "Attribute",
-            "required": True,
         }
     )

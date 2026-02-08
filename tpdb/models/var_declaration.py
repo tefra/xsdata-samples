@@ -14,13 +14,11 @@ class VarDeclaration:
     var: Var = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     type_value: Type = field(
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )

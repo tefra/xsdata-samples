@@ -221,7 +221,6 @@ class CoctMt490000Uv04Diagnosis:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     text: None | St = field(
@@ -235,7 +234,6 @@ class CoctMt490000Uv04Diagnosis:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -249,7 +247,6 @@ class CoctMt490000Uv04Diagnosis:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -297,7 +294,6 @@ class CoctMt490000Uv04Location:
             "name": "serviceDeliveryLocation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -311,7 +307,6 @@ class CoctMt490000Uv04Location:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -349,7 +344,6 @@ class CoctMt490000Uv04ManufacturedProductOrganization:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     telecom: None | TelExplicit = field(
@@ -370,7 +364,6 @@ class CoctMt490000Uv04ManufacturedProductOrganization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -474,7 +467,6 @@ class CoctMt490000Uv04ProviderPerson:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     telecom: None | TelExplicit = field(
@@ -551,7 +543,6 @@ class CoctMt490000Uv04WarrantorOrganization:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     telecom: None | TelExplicit = field(
@@ -572,7 +563,6 @@ class CoctMt490000Uv04WarrantorOrganization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -735,7 +725,6 @@ class CoctMt490000Uv04PertinentInformation:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -775,7 +764,6 @@ class CoctMt490000Uv04Warrantor:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     warranting_warrantor_organization: (
@@ -962,7 +950,6 @@ class CoctMt490000Uv04ManufacturedMaterial:
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1096,7 +1083,6 @@ class CoctMt490000Uv04ManufacturedProduct:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1135,7 +1121,6 @@ class CoctMt490000Uv04Product:
             "name": "manufacturedProduct",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -1196,7 +1181,6 @@ class CoctMt490000Uv04BillableClinicalProduct:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     effective_time: IvlTsExplicit = field(
@@ -1204,14 +1188,12 @@ class CoctMt490000Uv04BillableClinicalProduct:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     product: CoctMt490000Uv04Product = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     referrer: None | CoctMt490000Uv04Referrer = field(
@@ -1250,7 +1232,6 @@ class CoctMt490000Uv04BillableClinicalProduct:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     pertinent_information: list[CoctMt490000Uv04PertinentInformation] = field(
@@ -1273,13 +1254,11 @@ class CoctMt490000Uv04BillableClinicalProduct:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: XActMoodIntentEvent = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )

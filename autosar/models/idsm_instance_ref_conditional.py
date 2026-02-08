@@ -72,6 +72,5 @@ class IdsmInstanceRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

@@ -29,7 +29,6 @@ class VehiclePickupLocation:
         metadata={
             "name": "Vendor",
             "type": "Element",
-            "required": True,
         }
     )
     vehicle_modifier: list[VehicleModifier] = field(
@@ -44,7 +43,6 @@ class VehiclePickupLocation:
         metadata={
             "name": "PickUpLocation",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }

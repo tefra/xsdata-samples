@@ -25,12 +25,7 @@ class RailSegmentInfo:
     class Meta:
         namespace = "http://www.travelport.com/schema/rail_v52_0"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     category: None | str = field(
         default=None,
         metadata={
@@ -42,6 +37,5 @@ class RailSegmentInfo:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )

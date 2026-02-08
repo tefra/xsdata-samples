@@ -30,8 +30,4 @@ class NumericType:
     xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">decimal</ns1:PrimitiveType>.
     """
 
-    value: Decimal = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: Decimal = field()

@@ -154,7 +154,6 @@ class Mco5(Mcoinformation5):
         metadata={
             "name": "MCOIssued",
             "type": "Attribute",
-            "required": True,
         }
     )
     mcoissue_date: None | XmlDateTime = field(

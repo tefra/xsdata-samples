@@ -75,6 +75,5 @@ class CompositionSwComponentTypeRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

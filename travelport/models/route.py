@@ -29,6 +29,5 @@ class Route:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

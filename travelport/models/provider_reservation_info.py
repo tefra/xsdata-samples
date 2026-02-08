@@ -94,14 +94,12 @@ class ProviderReservationInfo:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }
@@ -110,7 +108,6 @@ class ProviderReservationInfo:
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
-            "required": True,
             "max_length": 15,
         }
     )
@@ -118,7 +115,6 @@ class ProviderReservationInfo:
         metadata={
             "name": "CreateDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     host_create_date: None | XmlDate = field(
@@ -139,7 +135,6 @@ class ProviderReservationInfo:
         metadata={
             "name": "ModifiedDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     imported: None | bool = field(

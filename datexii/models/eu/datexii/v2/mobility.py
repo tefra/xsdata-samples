@@ -25,7 +25,6 @@ class Mobility:
             "name": "mobilityType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     mobility_extension: None | ExtensionType = field(

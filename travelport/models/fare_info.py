@@ -251,21 +251,18 @@ class FareInfo:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     fare_basis: str = field(
         metadata={
             "name": "FareBasis",
             "type": "Attribute",
-            "required": True,
         }
     )
     passenger_type_code: str = field(
         metadata={
             "name": "PassengerTypeCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 3,
             "max_length": 5,
         }
@@ -274,7 +271,6 @@ class FareInfo:
         metadata={
             "name": "Origin",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -283,7 +279,6 @@ class FareInfo:
         metadata={
             "name": "Destination",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -292,7 +287,6 @@ class FareInfo:
         metadata={
             "name": "EffectiveDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     travel_date: None | XmlDate = field(

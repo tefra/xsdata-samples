@@ -21,8 +21,4 @@ class NumberType:
     xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">Integer</ns1:PrimitiveType>.
     """
 
-    value: int = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: int = field()

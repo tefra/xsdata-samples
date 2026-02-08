@@ -134,6 +134,5 @@ class HwPinConnector:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

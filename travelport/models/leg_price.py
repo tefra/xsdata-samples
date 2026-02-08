@@ -38,14 +38,12 @@ class LegPrice:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     total_price: str = field(
         metadata={
             "name": "TotalPrice",
             "type": "Attribute",
-            "required": True,
         }
     )
     approximate_total_price: None | str = field(

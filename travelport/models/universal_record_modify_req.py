@@ -48,7 +48,6 @@ class UniversalRecordModifyReq(BaseReq1):
         metadata={
             "name": "RecordIdentifier",
             "type": "Element",
-            "required": True,
         }
     )
     universal_modify_cmd: list[UniversalModifyCmd] = field(
@@ -86,7 +85,6 @@ class UniversalRecordModifyReq(BaseReq1):
         metadata={
             "name": "Version",
             "type": "Attribute",
-            "required": True,
         }
     )
     override_mct: bool = field(

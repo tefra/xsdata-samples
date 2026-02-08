@@ -36,6 +36,5 @@ class EndpointRef(TypeEndpointRef):
         metadata={
             "name": "EndPointCode",
             "type": "Attribute",
-            "required": True,
         }
     )

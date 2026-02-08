@@ -21,7 +21,6 @@ class TopographicPlaceDescriptorVersionedChildStructure(
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     short_name: None | MultilingualString = field(
@@ -50,7 +49,6 @@ class TopographicPlaceDescriptorVersionedChildStructure(
                 "name": "QualifierName",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
-                "required": True,
             }
         )
         topographic_place_ref: None | TopographicPlaceRef = field(

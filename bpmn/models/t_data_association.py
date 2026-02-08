@@ -27,7 +27,6 @@ class TDataAssociation(TBaseElement):
             "name": "targetRef",
             "type": "Element",
             "namespace": "http://www.omg.org/spec/BPMN/20100524/MODEL",
-            "required": True,
         }
     )
     transformation: None | TFormalExpression = field(

@@ -35,14 +35,12 @@ class ProprietaryData1(TypeKeyElement1):
         metadata={
             "name": "ProprietaryDataType",
             "type": "Attribute",
-            "required": True,
         }
     )
     value: str = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 255,
         }
@@ -51,6 +49,5 @@ class ProprietaryData1(TypeKeyElement1):
         metadata={
             "name": "OwnerID",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -15,12 +15,7 @@ class GeoRestrictionType:
     class Meta:
         name = "geoRestrictionType"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     region_id: None | GeoRestrictionEnum = field(
         default=None,
         metadata={

@@ -26,7 +26,6 @@ class Bsppayment:
         metadata={
             "name": "BSPIdentifier",
             "type": "Attribute",
-            "required": True,
             "max_length": 128,
         }
     )

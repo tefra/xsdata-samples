@@ -42,6 +42,5 @@ class AlternativeQuayDescriptor(
         metadata={
             "name": "TypeOfName",
             "type": "Element",
-            "required": True,
         }
     )

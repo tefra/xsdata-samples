@@ -21,7 +21,6 @@ class ErrorElementType:
             "name": "Code",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-            "required": True,
         }
     )
     description: str = field(
@@ -29,7 +28,6 @@ class ErrorElementType:
             "name": "Description",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-            "required": True,
         }
     )
     type_value: ErrorElementTypeType = field(
@@ -37,7 +35,6 @@ class ErrorElementType:
             "name": "Type",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-            "required": True,
         }
     )
     level: ErrorElementTypeLevel = field(
@@ -45,6 +42,5 @@ class ErrorElementType:
             "name": "Level",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-            "required": True,
         }
     )

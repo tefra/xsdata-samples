@@ -21,6 +21,5 @@ class SellingFareDataType:
         metadata={
             "name": "LayerTypeName",
             "type": "Attribute",
-            "required": True,
         }
     )

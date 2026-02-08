@@ -35,7 +35,6 @@ class OpenlrLineAttributes:
             "name": "openlrFunctionalRoadClass",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_form_of_way: OpenlrFormOfWayEnum = field(
@@ -43,7 +42,6 @@ class OpenlrLineAttributes:
             "name": "openlrFormOfWay",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_bearing: int = field(
@@ -51,7 +49,6 @@ class OpenlrLineAttributes:
             "name": "openlrBearing",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_line_attributes_extension: None | ExtensionType = field(

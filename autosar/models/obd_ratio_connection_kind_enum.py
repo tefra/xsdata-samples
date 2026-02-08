@@ -32,11 +32,7 @@ class ObdRatioConnectionKindEnum:
     class Meta:
         name = "OBD-RATIO-CONNECTION-KIND-ENUM"
 
-    value: ObdRatioConnectionKindEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ObdRatioConnectionKindEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

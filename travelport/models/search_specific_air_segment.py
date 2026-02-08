@@ -34,14 +34,12 @@ class SearchSpecificAirSegment:
         metadata={
             "name": "DepartureTime",
             "type": "Attribute",
-            "required": True,
         }
     )
     carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -49,7 +47,6 @@ class SearchSpecificAirSegment:
         metadata={
             "name": "FlightNumber",
             "type": "Attribute",
-            "required": True,
             "max_length": 5,
         }
     )
@@ -57,7 +54,6 @@ class SearchSpecificAirSegment:
         metadata={
             "name": "Origin",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -66,7 +62,6 @@ class SearchSpecificAirSegment:
         metadata={
             "name": "Destination",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }

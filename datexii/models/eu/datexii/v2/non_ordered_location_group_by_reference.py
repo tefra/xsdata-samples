@@ -31,7 +31,6 @@ class NonOrderedLocationGroupByReference(NonOrderedLocations):
             "name": "predefinedNonOrderedLocationGroupReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     non_ordered_location_group_by_reference_extension: None | ExtensionType = (

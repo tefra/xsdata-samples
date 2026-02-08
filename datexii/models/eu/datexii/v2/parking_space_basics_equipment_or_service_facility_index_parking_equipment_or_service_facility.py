@@ -19,13 +19,11 @@ class ParkingSpaceBasicsEquipmentOrServiceFacilityIndexParkingEquipmentOrService
             "name": "parkingEquipmentOrServiceFacility",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     equipment_or_service_facility_index: int = field(
         metadata={
             "name": "equipmentOrServiceFacilityIndex",
             "type": "Attribute",
-            "required": True,
         }
     )

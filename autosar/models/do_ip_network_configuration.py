@@ -195,6 +195,5 @@ class DoIpNetworkConfiguration:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

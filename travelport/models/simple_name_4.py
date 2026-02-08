@@ -15,9 +15,4 @@ class SimpleName4:
         name = "SimpleName"
         namespace = "http://www.travelport.com/schema/common_v37_0"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

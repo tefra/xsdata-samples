@@ -98,7 +98,6 @@ class CoctMt740000Uv04Diagnosis:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     text: None | St = field(
@@ -112,7 +111,6 @@ class CoctMt740000Uv04Diagnosis:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -126,7 +124,6 @@ class CoctMt740000Uv04Diagnosis:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -190,7 +187,6 @@ class CoctMt740000Uv04Location:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -299,7 +295,6 @@ class CoctMt740000Uv04ProviderPerson:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     telecom: None | TelExplicit = field(
@@ -487,7 +482,6 @@ class CoctMt740000Uv04PertinentInformation1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -555,7 +549,6 @@ class CoctMt740000Uv04PertinentInformation2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -609,7 +602,6 @@ class CoctMt740000Uv04Performer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -758,7 +750,6 @@ class CoctMt740000Uv04Referral:
             "name": "reasonCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     referrer: None | CoctMt740000Uv04Referrer = field(
@@ -780,7 +771,6 @@ class CoctMt740000Uv04Referral:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -902,14 +892,12 @@ class CoctMt740000Uv04OralHealthService:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     code: Cs = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     effective_time: None | IvlTsExplicit = field(
@@ -1004,13 +992,11 @@ class CoctMt740000Uv04OralHealthService:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: XActMoodIntentEvent = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )

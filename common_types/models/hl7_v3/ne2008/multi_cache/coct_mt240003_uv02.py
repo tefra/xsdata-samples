@@ -105,6 +105,5 @@ class CoctMt240003Uv02ServiceDeliveryLocation:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )

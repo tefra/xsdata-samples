@@ -81,7 +81,6 @@ class DateMapType(IdentifiableType):
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
             },
         )
@@ -91,7 +90,6 @@ class DateMapType(IdentifiableType):
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
             },
         )
@@ -101,7 +99,6 @@ class DateMapType(IdentifiableType):
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
             },
         )

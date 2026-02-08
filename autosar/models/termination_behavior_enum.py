@@ -29,11 +29,7 @@ class TerminationBehaviorEnum:
     class Meta:
         name = "TERMINATION-BEHAVIOR-ENUM"
 
-    value: TerminationBehaviorEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TerminationBehaviorEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -28,11 +28,7 @@ class DataTypePolicyEnum:
     class Meta:
         name = "DATA-TYPE-POLICY-ENUM"
 
-    value: DataTypePolicyEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DataTypePolicyEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

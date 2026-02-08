@@ -37,7 +37,6 @@ class AvailabilityConstraintType(AnnotableType):
             "name": "ConstraintAttachment",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
         }
     )
     cube_region: CubeRegionType = field(
@@ -45,7 +44,6 @@ class AvailabilityConstraintType(AnnotableType):
             "name": "CubeRegion",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
         }
     )
     series_count: None | int = field(

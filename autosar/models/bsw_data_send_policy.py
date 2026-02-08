@@ -94,7 +94,6 @@ class BswDataSendPolicy:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -104,6 +103,5 @@ class BswDataSendPolicy:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

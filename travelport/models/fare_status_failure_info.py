@@ -25,7 +25,6 @@ class FareStatusFailureInfo:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
         }
     )
     reason: None | str = field(

@@ -57,11 +57,7 @@ class QuantityType:
         xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">string</ns1:PrimitiveType>
     """
 
-    value: Decimal = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: Decimal = field()
     unit_code: None | str = field(
         default=None,
         metadata={

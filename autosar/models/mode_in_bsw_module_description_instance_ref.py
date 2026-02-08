@@ -74,7 +74,6 @@ class ModeInBswModuleDescriptionInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -84,6 +83,5 @@ class ModeInBswModuleDescriptionInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

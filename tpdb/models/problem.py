@@ -29,13 +29,11 @@ class Problem:
     trs: Trs = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     strategy: Strategy = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     startterm: None | Startterm = field(
@@ -60,6 +58,5 @@ class Problem:
         metadata={
             "name": "type",
             "type": "Attribute",
-            "required": True,
         }
     )

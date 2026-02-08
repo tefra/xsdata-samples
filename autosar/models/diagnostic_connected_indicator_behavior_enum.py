@@ -30,11 +30,7 @@ class DiagnosticConnectedIndicatorBehaviorEnum:
     class Meta:
         name = "DIAGNOSTIC-CONNECTED-INDICATOR-BEHAVIOR-ENUM"
 
-    value: DiagnosticConnectedIndicatorBehaviorEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticConnectedIndicatorBehaviorEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

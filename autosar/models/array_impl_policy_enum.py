@@ -29,11 +29,7 @@ class ArrayImplPolicyEnum:
     class Meta:
         name = "ARRAY-IMPL-POLICY-ENUM"
 
-    value: ArrayImplPolicyEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ArrayImplPolicyEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

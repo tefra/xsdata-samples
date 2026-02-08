@@ -49,7 +49,6 @@ class SubscriptionType:
             "name": "Organisation",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
-            "required": True,
             "pattern": r".+\.base\.Agency=.+:AGENCIES\(.+\).+|.+\.base\.DataConsumer=.+:DATA_CONSUMERS\(.+\).+|.+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+|.+\.base\.MetadataProvider=.+:METADATA_PROVIDERS\(.+\).+|.+\.base\.OrganisationUnit=.+",
         }
     )
@@ -91,7 +90,6 @@ class SubscriptionType:
             "name": "ValidityPeriod",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
-            "required": True,
         }
     )
     event_selector: EventSelectorType = field(
@@ -99,6 +97,5 @@ class SubscriptionType:
             "name": "EventSelector",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
-            "required": True,
         }
     )

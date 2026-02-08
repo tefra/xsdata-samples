@@ -38,20 +38,17 @@ class TimeSeries:
         metadata={
             "name": "TimeSeriesHeader",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_detail: TimeSeriesDetail = field(
         metadata={
             "name": "TimeSeriesDetail",
             "type": "Element",
-            "required": True,
         }
     )
     time_series_summary: TimeSeriesSummary = field(
         metadata={
             "name": "TimeSeriesSummary",
             "type": "Element",
-            "required": True,
         }
     )

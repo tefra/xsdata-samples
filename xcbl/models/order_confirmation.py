@@ -33,92 +33,47 @@ class ContractItemId:
     class Meta:
         name = "ContractItemID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DeliveryComplete:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationActionCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationActionCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationDetailShortDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationHeaderNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationHeaderShortDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderConfirmationIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SellerOrderConfirmationNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -127,14 +82,12 @@ class ContractAndSystemReference:
         metadata={
             "name": "ContractID",
             "type": "Element",
-            "required": True,
         }
     )
     contract_item_id: ContractItemId = field(
         metadata={
             "name": "ContractItemID",
             "type": "Element",
-            "required": True,
         }
     )
     system_id: None | SystemId = field(
@@ -152,7 +105,6 @@ class OrderConfirmationAction:
         metadata={
             "name": "OrderConfirmationActionCoded",
             "type": "Element",
-            "required": True,
         }
     )
     order_confirmation_action_coded_other: (
@@ -204,7 +156,6 @@ class OrderConfirmationDetailReferences:
         metadata={
             "name": "PurchaseOrderReference",
             "type": "Element",
-            "required": True,
         }
     )
     category: None | Category = field(
@@ -243,21 +194,18 @@ class OrderConfirmationHeader:
         metadata={
             "name": "SellerOrderConfirmationNumber",
             "type": "Element",
-            "required": True,
         }
     )
     seller_order_number: SellerOrderNumber = field(
         metadata={
             "name": "SellerOrderNumber",
             "type": "Element",
-            "required": True,
         }
     )
     order_confirmation_issue_date: OrderConfirmationIssueDate = field(
         metadata={
             "name": "OrderConfirmationIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     order_confirmation_type: None | OrderConfirmationType = field(
@@ -340,7 +288,6 @@ class OrderConfirmationItemDetail:
         metadata={
             "name": "OrderConfirmationItemNum",
             "type": "Element",
-            "required": True,
         }
     )
     order_confirmation_action: None | OrderConfirmationAction = field(
@@ -364,7 +311,6 @@ class OrderConfirmationItemDetail:
             metadata={
                 "name": "OrderConfirmationDetailReferences",
                 "type": "Element",
-                "required": True,
             }
         )
     )
@@ -379,7 +325,6 @@ class OrderConfirmationItemDetail:
         metadata={
             "name": "ItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_account_assignment: None | ListOfAccountAssignment = field(
@@ -409,7 +354,6 @@ class OrderConfirmationDetail:
         metadata={
             "name": "ListOfOrderConfirmationItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -420,13 +364,11 @@ class OrderConfirmation:
         metadata={
             "name": "OrderConfirmationHeader",
             "type": "Element",
-            "required": True,
         }
     )
     order_confirmation_detail: OrderConfirmationDetail = field(
         metadata={
             "name": "OrderConfirmationDetail",
             "type": "Element",
-            "required": True,
         }
     )

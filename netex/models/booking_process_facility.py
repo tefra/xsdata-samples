@@ -12,8 +12,4 @@ class BookingProcessFacility:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: BookingProcessEnumeration = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: BookingProcessEnumeration = field()

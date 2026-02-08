@@ -28,11 +28,7 @@ class FrArTpAckType:
     class Meta:
         name = "FR-AR-TP-ACK-TYPE"
 
-    value: FrArTpAckTypeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: FrArTpAckTypeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

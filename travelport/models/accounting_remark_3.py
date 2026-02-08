@@ -48,7 +48,6 @@ class AccountingRemark3:
         metadata={
             "name": "RemarkData",
             "type": "Element",
-            "required": True,
         }
     )
     booking_traveler_ref: list[str] = field(

@@ -36,7 +36,6 @@ class QueryCriteriaType:
             "name": "QueryExpression",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            "required": True,
         }
     )
     start_index: None | int = field(

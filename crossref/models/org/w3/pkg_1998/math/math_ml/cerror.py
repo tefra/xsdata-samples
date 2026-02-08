@@ -51888,7 +51888,6 @@ class Maction:
     actiontype: object = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     selection: None | int = field(

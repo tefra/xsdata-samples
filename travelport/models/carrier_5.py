@@ -19,7 +19,6 @@ class Carrier5:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )

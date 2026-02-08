@@ -48,7 +48,6 @@ class Collection:
     property: CollectionProperty = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     multi_resolution: None | CollectionMultiResolution = field(

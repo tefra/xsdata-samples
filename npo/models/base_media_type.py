@@ -372,7 +372,6 @@ class BaseMediaType:
         metadata={
             "name": "avType",
             "type": "Attribute",
-            "required": True,
         }
     )
     sort_date: None | XmlDateTime = field(

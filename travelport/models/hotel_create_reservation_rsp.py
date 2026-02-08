@@ -57,7 +57,6 @@ class HotelCreateReservationRsp(BaseRsp1):
                 "name": "HotelProperty",
                 "type": "Element",
                 "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-                "required": True,
             }
         )
         hotel_rate_detail: None | HotelRateDetail = field(

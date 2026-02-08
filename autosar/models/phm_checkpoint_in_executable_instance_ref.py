@@ -100,7 +100,6 @@ class PhmCheckpointInExecutableInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -110,7 +109,6 @@ class PhmCheckpointInExecutableInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -120,7 +118,6 @@ class PhmCheckpointInExecutableInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -130,6 +127,5 @@ class PhmCheckpointInExecutableInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

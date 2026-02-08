@@ -17,7 +17,6 @@ class AirUpsellAdd:
         metadata={
             "name": "AirUpsellQualify",
             "type": "Element",
-            "required": True,
         }
     )
     air_upsell_offer: None | AirUpsellOffer = field(

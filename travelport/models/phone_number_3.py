@@ -95,7 +95,6 @@ class PhoneNumber3:
         metadata={
             "name": "Number",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 83,
         }

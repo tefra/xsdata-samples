@@ -33,7 +33,6 @@ class ProvisionAgreementType(ProvisionAgreementBaseType):
             "name": "Dataflow",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
             "pattern": r".+\.datastructure\.Dataflow=.+",
         }
     )
@@ -42,7 +41,6 @@ class ProvisionAgreementType(ProvisionAgreementBaseType):
             "name": "DataProvider",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
             "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
         }
     )

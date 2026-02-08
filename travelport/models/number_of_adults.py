@@ -25,12 +25,7 @@ class NumberOfAdults:
     class Meta:
         namespace = "http://www.travelport.com/schema/hotel_v52_0"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     extra_adults: None | int = field(
         default=None,
         metadata={

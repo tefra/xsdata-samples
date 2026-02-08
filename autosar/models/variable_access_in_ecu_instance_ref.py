@@ -87,7 +87,6 @@ class VariableAccessInEcuInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -97,7 +96,6 @@ class VariableAccessInEcuInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -107,6 +105,5 @@ class VariableAccessInEcuInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

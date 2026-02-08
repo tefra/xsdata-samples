@@ -7,12 +7,7 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass(kw_only=True)
 class ExternalObjectRefStructure:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     type_value: None | str = field(
         default=None,
         metadata={
@@ -23,6 +18,5 @@ class ExternalObjectRefStructure:
     ref: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

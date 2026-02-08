@@ -144,7 +144,6 @@ class RailFare:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     fare_basis: None | str = field(
@@ -158,7 +157,6 @@ class RailFare:
         metadata={
             "name": "CabinClass",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -194,7 +192,6 @@ class RailFare:
         metadata={
             "name": "EffectiveDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     amount: None | str = field(

@@ -12,7 +12,6 @@ class TelephoneContactStructure:
             "name": "TelNationalNumber",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
             "pattern": r"[0-9 /-]{1,20}",
         }
     )

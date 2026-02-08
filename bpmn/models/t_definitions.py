@@ -366,7 +366,6 @@ class TDefinitions:
         metadata={
             "name": "targetNamespace",
             "type": "Attribute",
-            "required": True,
         }
     )
     expression_language: str = field(

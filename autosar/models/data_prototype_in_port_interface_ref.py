@@ -183,7 +183,6 @@ class DataPrototypeInPortInterfaceRef:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -193,7 +192,6 @@ class DataPrototypeInPortInterfaceRef:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -203,7 +201,6 @@ class DataPrototypeInPortInterfaceRef:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -213,7 +210,6 @@ class DataPrototypeInPortInterfaceRef:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -223,7 +219,6 @@ class DataPrototypeInPortInterfaceRef:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -233,7 +228,6 @@ class DataPrototypeInPortInterfaceRef:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -243,7 +237,6 @@ class DataPrototypeInPortInterfaceRef:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -253,7 +246,6 @@ class DataPrototypeInPortInterfaceRef:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -263,6 +255,5 @@ class DataPrototypeInPortInterfaceRef:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

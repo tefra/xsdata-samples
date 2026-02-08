@@ -148,7 +148,6 @@ class ModifyField2:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -166,7 +165,6 @@ class ModifyField2:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     encrypted: bool = field(
@@ -231,7 +229,6 @@ class ModifyField2:
         metadata={
             "name": "Action",
             "type": "Attribute",
-            "required": True,
         }
     )
     force: bool = field(
@@ -255,7 +252,6 @@ class ModifyField2:
             metadata={
                 "name": "Action",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -272,7 +268,6 @@ class ModifyField2:
             metadata={
                 "name": "Action",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -289,7 +284,6 @@ class ModifyField2:
             metadata={
                 "name": "Action",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -306,7 +300,6 @@ class ModifyField2:
             metadata={
                 "name": "Action",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -323,7 +316,6 @@ class ModifyField2:
             metadata={
                 "name": "Action",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -340,6 +332,5 @@ class ModifyField2:
             metadata={
                 "name": "Action",
                 "type": "Attribute",
-                "required": True,
             }
         )

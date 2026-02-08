@@ -29,11 +29,7 @@ class ArraySizeSemanticsEnum:
     class Meta:
         name = "ARRAY-SIZE-SEMANTICS-ENUM"
 
-    value: ArraySizeSemanticsEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ArraySizeSemanticsEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

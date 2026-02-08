@@ -22,6 +22,5 @@ class ProfileRetrieveRsp1(BaseRsp2):
         metadata={
             "name": "Profile",
             "type": "Element",
-            "required": True,
         }
     )

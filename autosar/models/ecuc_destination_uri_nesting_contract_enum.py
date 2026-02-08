@@ -31,11 +31,7 @@ class EcucDestinationUriNestingContractEnum:
     class Meta:
         name = "ECUC-DESTINATION-URI-NESTING-CONTRACT-ENUM"
 
-    value: EcucDestinationUriNestingContractEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: EcucDestinationUriNestingContractEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

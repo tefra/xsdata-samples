@@ -17,7 +17,6 @@ class BoundingBoxStructure1:
             "name": "UpperLeft",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
         }
     )
     lower_right: LocationStructure1 = field(
@@ -25,6 +24,5 @@ class BoundingBoxStructure1:
             "name": "LowerRight",
             "type": "Element",
             "namespace": "http://www.siri.org.uk/siri",
-            "required": True,
         }
     )

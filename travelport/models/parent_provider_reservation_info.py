@@ -16,7 +16,6 @@ class ParentProviderReservationInfo(PnrdivideInfo):
         metadata={
             "name": "UniversalLocatorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         }

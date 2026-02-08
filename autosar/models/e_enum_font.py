@@ -28,11 +28,7 @@ class EEnumFont:
     class Meta:
         name = "E-ENUM-FONT"
 
-    value: EEnumFontSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: EEnumFontSimple = field()
     s: None | str = field(
         default=None,
         metadata={

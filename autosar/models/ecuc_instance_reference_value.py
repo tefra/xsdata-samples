@@ -111,7 +111,6 @@ class EcucInstanceReferenceValue:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

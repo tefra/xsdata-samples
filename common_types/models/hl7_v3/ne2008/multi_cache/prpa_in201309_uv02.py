@@ -182,14 +182,12 @@ class PrpaIn201309Uv02QuqiMt021001Uv01ControlActProcess:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: XActMoodIntentEvent = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -227,7 +225,6 @@ class PrpaIn201309Uv02McciMt000100Uv01Message:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     creation_time: TsExplicit = field(
@@ -235,7 +232,6 @@ class PrpaIn201309Uv02McciMt000100Uv01Message:
             "name": "creationTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     security_text: None | St = field(
@@ -259,7 +255,6 @@ class PrpaIn201309Uv02McciMt000100Uv01Message:
             "name": "interactionId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     profile_id: list[Ii] = field(
@@ -275,7 +270,6 @@ class PrpaIn201309Uv02McciMt000100Uv01Message:
             "name": "processingCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     processing_mode_code: Cs = field(
@@ -283,7 +277,6 @@ class PrpaIn201309Uv02McciMt000100Uv01Message:
             "name": "processingModeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     accept_ack_code: Cs = field(
@@ -291,7 +284,6 @@ class PrpaIn201309Uv02McciMt000100Uv01Message:
             "name": "acceptAckCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     sequence_number: None | Int = field(
@@ -331,7 +323,6 @@ class PrpaIn201309Uv02McciMt000100Uv01Message:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     attention_line: list[McciMt000100Uv01AttentionLine] = field(
@@ -349,7 +340,6 @@ class PrpaIn201309Uv02McciMt000100Uv01Message:
                 "name": "controlActProcess",
                 "type": "Element",
                 "namespace": "urn:hl7-org:v3",
-                "required": True,
             }
         )
     )

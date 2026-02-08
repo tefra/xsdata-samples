@@ -29,11 +29,7 @@ class DtcKindEnum:
     class Meta:
         name = "DTC-KIND-ENUM"
 
-    value: DtcKindEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DtcKindEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -21,7 +21,6 @@ class VehicleUpsellAdd:
         metadata={
             "name": "VehicleUpsellQualify",
             "type": "Element",
-            "required": True,
         }
     )
     vehicle_upsell_offer: None | VehicleUpsellOffer = field(

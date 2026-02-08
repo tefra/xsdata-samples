@@ -40,14 +40,12 @@ class ProfileRetrieveBridgeBranchesRsp(BaseRsp5):
         metadata={
             "name": "AgentID",
             "type": "Attribute",
-            "required": True,
         }
     )
     user_name: str = field(
         metadata={
             "name": "UserName",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }

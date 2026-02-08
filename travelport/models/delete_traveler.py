@@ -22,13 +22,11 @@ class DeleteTraveler:
         metadata={
             "name": "Element",
             "type": "Attribute",
-            "required": True,
         }
     )
     key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

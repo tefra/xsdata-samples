@@ -26,6 +26,5 @@ class AlternateContactPhone1(TypeTaggablePhone1):
         metadata={
             "name": "AlternateContactRef",
             "type": "Attribute",
-            "required": True,
         }
     )

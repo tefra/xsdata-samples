@@ -28,11 +28,7 @@ class AreaEnumNohref:
     class Meta:
         name = "AREA-ENUM-NOHREF"
 
-    value: AreaEnumNohrefSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: AreaEnumNohrefSimple = field()
     s: None | str = field(
         default=None,
         metadata={

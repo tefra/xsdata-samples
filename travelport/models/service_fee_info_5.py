@@ -165,7 +165,6 @@ class ServiceFeeInfo5:
         metadata={
             "name": "BaseAmount",
             "type": "Attribute",
-            "required": True,
         }
     )
     taxes: None | str = field(

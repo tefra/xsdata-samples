@@ -84,7 +84,6 @@ class BillOfLadingType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     carrier_assigned_id: None | CarrierAssignedId = field(

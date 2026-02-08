@@ -29,7 +29,6 @@ class TpegOtherPointDescriptor(TpegPointDescriptor):
             "name": "tpegOtherPointDescriptorType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     tpeg_other_point_descriptor_extension: None | ExtensionType = field(

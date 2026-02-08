@@ -28,11 +28,7 @@ class SignalFanEnum:
     class Meta:
         name = "SIGNAL-FAN-ENUM"
 
-    value: SignalFanEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SignalFanEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

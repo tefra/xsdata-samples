@@ -112,6 +112,5 @@ class FmFeatureDecomposition:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

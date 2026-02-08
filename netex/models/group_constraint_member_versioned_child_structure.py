@@ -28,7 +28,6 @@ class GroupConstraintMemberVersionedChildStructure(VersionedChildStructure):
             "name": "MemberClassRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     member_type_of_value_ref: None | TypeOfValueRefStructure = field(

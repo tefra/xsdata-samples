@@ -90,7 +90,6 @@ class PostBuildVariantCriterionValue:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

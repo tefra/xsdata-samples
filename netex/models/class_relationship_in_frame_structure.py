@@ -18,7 +18,6 @@ class ClassRelationshipInFrameStructure:
             "name": "RelationshipRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     mandatory: None | MandatoryEnumeration = field(

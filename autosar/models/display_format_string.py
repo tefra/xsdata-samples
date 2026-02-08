@@ -52,7 +52,6 @@ class DisplayFormatString:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "pattern": r"%[ \-+#]?[0-9]*(\.[0-9]+)?[diouxXfeEgGcs]",
         },
     )

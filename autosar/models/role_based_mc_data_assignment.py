@@ -124,7 +124,6 @@ class RoleBasedMcDataAssignment:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -147,6 +146,5 @@ class RoleBasedMcDataAssignment:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

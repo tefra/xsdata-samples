@@ -28,11 +28,7 @@ class SoAdProtocolType:
     class Meta:
         name = "SO-AD-PROTOCOL-TYPE"
 
-    value: SoAdProtocolTypeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SoAdProtocolTypeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

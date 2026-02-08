@@ -67,7 +67,6 @@ class Models:
     description: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     fault_cause: None | FaultCause = field(

@@ -30,11 +30,7 @@ class DiagnosticTypeOfFreezeFrameRecordNumerationEnum:
     class Meta:
         name = "DIAGNOSTIC-TYPE-OF-FREEZE-FRAME-RECORD-NUMERATION-ENUM"
 
-    value: DiagnosticTypeOfFreezeFrameRecordNumerationEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticTypeOfFreezeFrameRecordNumerationEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

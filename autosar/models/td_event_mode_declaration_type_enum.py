@@ -31,11 +31,7 @@ class TdEventModeDeclarationTypeEnum:
     class Meta:
         name = "TD-EVENT-MODE-DECLARATION-TYPE-ENUM"
 
-    value: TdEventModeDeclarationTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TdEventModeDeclarationTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -134,7 +134,6 @@ class McSwEmulationMethodSupport:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -155,6 +154,5 @@ class McSwEmulationMethodSupport:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

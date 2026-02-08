@@ -76,12 +76,7 @@ class DriverType:
 
     @dataclass(kw_only=True)
     class ViewRef:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         id: None | str = field(
             default=None,
             metadata={

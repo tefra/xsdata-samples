@@ -18,7 +18,6 @@ class TicketNumber2:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "min_length": 1,
             "max_length": 13,
         },

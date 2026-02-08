@@ -23,7 +23,6 @@ class IntegerMetreDistanceValue(DataValue):
             "name": "integerMetreDistance",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     integer_metre_distance_value_extension: None | ExtensionType = field(

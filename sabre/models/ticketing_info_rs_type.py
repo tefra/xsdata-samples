@@ -69,7 +69,6 @@ class TicketingInfoRsType:
         metadata={
             "name": "TicketType",
             "type": "Attribute",
-            "required": True,
         }
     )
     valid_interline: ValidInterlineType = field(

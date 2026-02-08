@@ -118,7 +118,6 @@ class OtaAirLowFareSearchRq:
         metadata={
             "name": "POS",
             "type": "Element",
-            "required": True,
         }
     )
     origin_destination_information: list[
@@ -149,7 +148,6 @@ class OtaAirLowFareSearchRq:
         metadata={
             "name": "TravelerInfoSummary",
             "type": "Element",
-            "required": True,
         }
     )
     tpa_extensions: None | OtaAirLowFareSearchRq.TpaExtensions = field(
@@ -186,7 +184,6 @@ class OtaAirLowFareSearchRq:
         metadata={
             "name": "Version",
             "type": "Attribute",
-            "required": True,
         }
     )
     transaction_identifier: None | str = field(
@@ -583,7 +580,6 @@ class OtaAirLowFareSearchRq:
                 metadata={
                     "name": "PseudoCityCode",
                     "type": "Attribute",
-                    "required": True,
                     "min_length": 1,
                     "max_length": 16,
                 }
@@ -623,7 +619,6 @@ class OtaAirLowFareSearchRq:
                         metadata={
                             "name": "Code",
                             "type": "Attribute",
-                            "required": True,
                             "min_length": 1,
                             "max_length": 8,
                         }
@@ -674,7 +669,6 @@ class OtaAirLowFareSearchRq:
                 metadata={
                     "name": "SpecifiedLocation",
                     "type": "Element",
-                    "required": True,
                 }
             )
             alternate_location: list[
@@ -723,7 +717,6 @@ class OtaAirLowFareSearchRq:
                 metadata={
                     "name": "Number",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1013,7 +1006,6 @@ class OtaAirLowFareSearchRq:
                     metadata={
                         "name": "Number",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
 
@@ -1023,7 +1015,6 @@ class OtaAirLowFareSearchRq:
                     metadata={
                         "name": "Number",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
 
@@ -1087,7 +1078,6 @@ class OtaAirLowFareSearchRq:
                     metadata={
                         "name": "Value",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
 
@@ -1097,7 +1087,6 @@ class OtaAirLowFareSearchRq:
                     metadata={
                         "name": "Number",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
 
@@ -1209,14 +1198,12 @@ class OtaAirLowFareSearchRq:
             metadata={
                 "name": "Origins",
                 "type": "Element",
-                "required": True,
             }
         )
         destinations: OtaAirLowFareSearchRq.Leg.Destinations = field(
             metadata={
                 "name": "Destinations",
                 "type": "Element",
-                "required": True,
             }
         )
         connection_locations: None | ConnectionType = field(
@@ -1244,7 +1231,6 @@ class OtaAirLowFareSearchRq:
             metadata={
                 "name": "RPH",
                 "type": "Attribute",
-                "required": True,
                 "pattern": r"[0-9]{1,8}",
             }
         )
@@ -1369,7 +1355,6 @@ class OtaAirLowFareSearchRq:
                     metadata={
                         "name": "Code",
                         "type": "Attribute",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 8,
                     }

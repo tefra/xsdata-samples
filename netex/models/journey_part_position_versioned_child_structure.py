@@ -49,7 +49,6 @@ class JourneyPartPositionVersionedChildStructure(VersionedChildStructure):
             "name": "PositionInTrain",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     order: None | int = field(

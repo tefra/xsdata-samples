@@ -38,7 +38,6 @@ class HotelUpsellQualifySearchCriteria(UpsellSearchCriteria):
         metadata={
             "name": "HotelChainCode",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )

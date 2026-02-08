@@ -176,7 +176,6 @@ class CoctMt150000Uv02ContactParty:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -307,7 +306,6 @@ class CoctMt150000Uv02Organization:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminer = field(
@@ -400,7 +398,6 @@ class CoctMt150000Uv02OrganizationContains:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -484,6 +481,5 @@ class CoctMt150000Uv02OrganizationPartOf:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )

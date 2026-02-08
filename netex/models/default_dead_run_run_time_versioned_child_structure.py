@@ -24,7 +24,6 @@ class DefaultDeadRunRunTimeVersionedChildStructure(
             "name": "RunTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     dead_run_ref: None | DeadRunRef = field(

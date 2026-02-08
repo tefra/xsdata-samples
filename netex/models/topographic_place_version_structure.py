@@ -39,7 +39,6 @@ class TopographicPlaceVersionStructure(PlaceVersionStructure):
             "name": "Descriptor",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     alternative_descriptors: None | TopographicPlaceDescriptorsRelStructure = (

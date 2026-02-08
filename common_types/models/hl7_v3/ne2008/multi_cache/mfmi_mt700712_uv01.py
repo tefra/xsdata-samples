@@ -99,7 +99,6 @@ class MfmiMt700712Uv01ActDefinition:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     text: None | EdExplicit = field(
@@ -120,7 +119,6 @@ class MfmiMt700712Uv01ActDefinition:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -378,7 +376,6 @@ class MfmiMt700712Uv01AuthorOrPerformer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -584,7 +581,6 @@ class MfmiMt700712Uv01InformationRecipient:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -683,7 +679,6 @@ class MfmiMt700712Uv01Overseer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -743,14 +738,12 @@ class MfmiMt700712Uv01PriorRegisteredAct:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMoodCompletionTrack = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -810,7 +803,6 @@ class MfmiMt700712Uv01PriorRegisteredRole:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -866,7 +858,6 @@ class MfmiMt700712Uv01QueryAck:
             "name": "queryResponseCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     result_total_quantity: None | Int = field(
@@ -950,7 +941,6 @@ class MfmiMt700712Uv01Reason:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_conduction_ind: None | str = field(
@@ -1158,7 +1148,6 @@ class MfmiMt700712Uv01Subject3:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1295,7 +1284,6 @@ class MfmiMt700712Uv01InFulfillmentOf:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 

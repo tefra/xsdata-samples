@@ -27,14 +27,12 @@ class RailBookingInfo:
         metadata={
             "name": "RailFareRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     rail_journey_ref: str = field(
         metadata={
             "name": "RailJourneyRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     optional_service: bool = field(

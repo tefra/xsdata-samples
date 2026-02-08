@@ -58,19 +58,13 @@ class VersionableObjectEventType:
 
     @dataclass(frozen=True, kw_only=True)
     class Urn:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
 
     @dataclass(frozen=True, kw_only=True)
     class Id:
         value: str | WildCardValueType = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
             },
         )
@@ -80,7 +74,6 @@ class VersionableObjectEventType:
         value: str | WildcardType | WildCardValueType = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r"(0|[1-9]\d*)(\.(0|[1-9]\d*))?",
             },
         )

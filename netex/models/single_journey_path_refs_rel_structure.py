@@ -18,6 +18,5 @@ class SingleJourneyPathRefsRelStructure(OneToManyRelationshipStructure):
             "name": "SingleJourneyPathRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

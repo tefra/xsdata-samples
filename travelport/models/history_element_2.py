@@ -62,21 +62,18 @@ class HistoryElement2:
         metadata={
             "name": "Action",
             "type": "Attribute",
-            "required": True,
         }
     )
     modified_by_agent_id: int = field(
         metadata={
             "name": "ModifiedByAgentID",
             "type": "Attribute",
-            "required": True,
         }
     )
     modified_by_agent_user_name: str = field(
         metadata={
             "name": "ModifiedByAgentUserName",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[a-zA-Z0-9\-_\.@ ]{1,128}",
         }
     )
@@ -84,14 +81,12 @@ class HistoryElement2:
         metadata={
             "name": "ModifiedDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     component: str = field(
         metadata={
             "name": "Component",
             "type": "Attribute",
-            "required": True,
             "max_length": 50,
         }
     )

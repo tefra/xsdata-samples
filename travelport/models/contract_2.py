@@ -51,7 +51,6 @@ class Contract2(TypeKeyTaggedElement2):
         metadata={
             "name": "Supplier",
             "type": "Attribute",
-            "required": True,
             "max_length": 6,
         }
     )
@@ -59,14 +58,12 @@ class Contract2(TypeKeyTaggedElement2):
         metadata={
             "name": "SupplierType",
             "type": "Attribute",
-            "required": True,
         }
     )
     provider: str = field(
         metadata={
             "name": "Provider",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }
@@ -75,7 +72,6 @@ class Contract2(TypeKeyTaggedElement2):
         metadata={
             "name": "StartDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     expiration_date: None | XmlDate = field(
@@ -104,7 +100,6 @@ class Contract2(TypeKeyTaggedElement2):
         metadata={
             "name": "SupplierContractNumber",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 50,
         }

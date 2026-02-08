@@ -42,7 +42,6 @@ class Junction:
             "name": "junctionName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     junction_number: None | str = field(

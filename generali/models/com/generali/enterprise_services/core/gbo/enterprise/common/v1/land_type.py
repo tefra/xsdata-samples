@@ -24,7 +24,6 @@ class LandType(ExpansiveStructureType):
             "name": "LandAreaM2",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-            "required": True,
         }
     )
     soli_type: TextType = field(
@@ -32,6 +31,5 @@ class LandType(ExpansiveStructureType):
             "name": "SoliType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-            "required": True,
         }
     )

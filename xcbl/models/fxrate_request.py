@@ -42,12 +42,7 @@ class FxrateRequestIssueDate:
     class Meta:
         name = "FXRateRequestIssueDate"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -55,12 +50,7 @@ class FxrateRequestNote:
     class Meta:
         name = "FXRateRequestNote"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -72,21 +62,18 @@ class FxrateRequestHeader:
         metadata={
             "name": "FXRateRequestID",
             "type": "Element",
-            "required": True,
         }
     )
     fxrate_request_issue_date: FxrateRequestIssueDate = field(
         metadata={
             "name": "FXRateRequestIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
     payment_mean_coded: None | PaymentMeanCoded = field(
@@ -114,7 +101,6 @@ class FxrateRequestHeader:
         metadata={
             "name": "IndicativeIndicator",
             "type": "Element",
-            "required": True,
         }
     )
     general_note: None | GeneralNote = field(
@@ -135,7 +121,6 @@ class RateQuoteId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -163,21 +148,18 @@ class FxrateRequestDetail:
         metadata={
             "name": "ReferenceCurrency",
             "type": "Element",
-            "required": True,
         }
     )
     target_currency: TargetCurrency = field(
         metadata={
             "name": "TargetCurrency",
             "type": "Element",
-            "required": True,
         }
     )
     settlement_amount: SettlementAmount = field(
         metadata={
             "name": "SettlementAmount",
             "type": "Element",
-            "required": True,
         }
     )
     debit_amount: None | DebitAmount = field(
@@ -294,7 +276,6 @@ class FxrateRequest:
         metadata={
             "name": "FXRateRequestHeader",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_fxrate_request_detail: None | ListOfFxrateRequestDetail = field(

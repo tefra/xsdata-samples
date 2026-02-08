@@ -30,11 +30,7 @@ class DiagnosticJumpToBootLoaderEnum:
     class Meta:
         name = "DIAGNOSTIC-JUMP-TO-BOOT-LOADER-ENUM"
 
-    value: DiagnosticJumpToBootLoaderEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticJumpToBootLoaderEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

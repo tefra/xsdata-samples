@@ -8,8 +8,4 @@ class Arity:
     class Meta:
         name = "arity"
 
-    value: int = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: int = field()

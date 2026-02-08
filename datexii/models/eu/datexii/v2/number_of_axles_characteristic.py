@@ -27,7 +27,6 @@ class NumberOfAxlesCharacteristic:
             "name": "comparisonOperator",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     number_of_axles: int = field(
@@ -35,7 +34,6 @@ class NumberOfAxlesCharacteristic:
             "name": "numberOfAxles",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     number_of_axles_characteristic_extension: None | ExtensionType = field(

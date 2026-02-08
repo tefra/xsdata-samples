@@ -13,8 +13,5 @@ class CoachSubmode:
         namespace = "http://www.netex.org.uk/netex"
 
     value: CoachSubmodeEnumeration = field(
-        default=CoachSubmodeEnumeration.UNKNOWN,
-        metadata={
-            "required": True,
-        },
+        default=CoachSubmodeEnumeration.UNKNOWN
     )

@@ -23,6 +23,5 @@ class FieldRef:
         metadata={
             "name": "fieldRef",
             "type": "Attribute",
-            "required": True,
         }
     )

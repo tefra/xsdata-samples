@@ -30,17 +30,11 @@ class FlightCriteria:
     class Meta:
         namespace = "http://www.travelport.com/schema/util_v52_0"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     carrier: str = field(
         metadata={
             "name": "Carrier",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -48,21 +42,18 @@ class FlightCriteria:
         metadata={
             "name": "FlightNumber",
             "type": "Attribute",
-            "required": True,
         }
     )
     departure_date: XmlDate = field(
         metadata={
             "name": "DepartureDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     origin: str = field(
         metadata={
             "name": "Origin",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -71,7 +62,6 @@ class FlightCriteria:
         metadata={
             "name": "Destination",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }

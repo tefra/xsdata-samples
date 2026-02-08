@@ -15,7 +15,6 @@ class RhsFunapp:
     name: Name = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     arg: list[RhsFunappArg] = field(
@@ -52,7 +51,6 @@ class RhsLambda:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     funapp: None | RhsFunapp = field(

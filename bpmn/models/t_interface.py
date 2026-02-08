@@ -25,7 +25,6 @@ class TInterface(TRootElement):
     name: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     implementation_ref: None | QName = field(

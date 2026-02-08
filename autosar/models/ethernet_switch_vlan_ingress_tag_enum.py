@@ -30,11 +30,7 @@ class EthernetSwitchVlanIngressTagEnum:
     class Meta:
         name = "ETHERNET-SWITCH-VLAN-INGRESS-TAG-ENUM"
 
-    value: EthernetSwitchVlanIngressTagEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: EthernetSwitchVlanIngressTagEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

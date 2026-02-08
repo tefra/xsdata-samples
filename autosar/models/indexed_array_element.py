@@ -93,7 +93,6 @@ class IndexedArrayElement:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -103,6 +102,5 @@ class IndexedArrayElement:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

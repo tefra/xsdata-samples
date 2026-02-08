@@ -14,7 +14,6 @@ class CodespaceStructure(EntityStructure):
             "name": "Xmlns",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     xmlns_url: None | str = field(

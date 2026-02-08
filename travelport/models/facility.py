@@ -143,7 +143,6 @@ class Facility:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     seat_code: None | str = field(

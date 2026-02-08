@@ -17,7 +17,6 @@ class AirReservationLocatorCode:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         },

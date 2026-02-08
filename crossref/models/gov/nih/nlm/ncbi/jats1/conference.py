@@ -33,7 +33,6 @@ class Conference:
         metadata={
             "name": "conf-date",
             "type": "Element",
-            "required": True,
         }
     )
     conf_name: list[ConfName] = field(

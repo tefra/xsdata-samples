@@ -98,7 +98,6 @@ class ServiceFeeInfo2:
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )
     description: None | str = field(
@@ -133,7 +132,6 @@ class ServiceFeeInfo2:
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     provider_reservation_info_ref: None | str = field(
@@ -161,7 +159,6 @@ class ServiceFeeInfo2:
         metadata={
             "name": "BaseAmount",
             "type": "Attribute",
-            "required": True,
         }
     )
     taxes: None | str = field(

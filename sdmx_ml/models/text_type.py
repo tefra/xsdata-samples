@@ -17,12 +17,7 @@ class TextType:
         English.
     """
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     lang: str = field(
         default="en",
         metadata={

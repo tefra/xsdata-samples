@@ -104,6 +104,5 @@ class PerInstanceMemorySize:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

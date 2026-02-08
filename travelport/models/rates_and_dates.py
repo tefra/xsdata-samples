@@ -21,14 +21,12 @@ class RatesAndDates:
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )
     start: str = field(
         metadata={
             "name": "Start",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^:Z].*",
         }
     )
@@ -36,7 +34,6 @@ class RatesAndDates:
         metadata={
             "name": "End",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^:Z].*",
         }
     )
@@ -44,13 +41,11 @@ class RatesAndDates:
         metadata={
             "name": "Low",
             "type": "Attribute",
-            "required": True,
         }
     )
     high: str = field(
         metadata={
             "name": "High",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -18,7 +18,6 @@ class OptionalServicesInfo:
         metadata={
             "name": "AirPricingSolution",
             "type": "Element",
-            "required": True,
         }
     )
     form_of_payment: list[FormOfPayment1] = field(

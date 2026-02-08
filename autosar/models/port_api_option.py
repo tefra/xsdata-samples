@@ -165,7 +165,6 @@ class PortApiOption:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

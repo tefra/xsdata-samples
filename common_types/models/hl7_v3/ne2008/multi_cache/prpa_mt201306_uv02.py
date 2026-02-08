@@ -66,7 +66,6 @@ class PrpaMt201306Uv02LivingSubjectAdministrativeGender:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -120,7 +119,6 @@ class PrpaMt201306Uv02LivingSubjectBirthPlaceAddress:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -174,7 +172,6 @@ class PrpaMt201306Uv02LivingSubjectBirthPlaceName:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -228,7 +225,6 @@ class PrpaMt201306Uv02LivingSubjectBirthTime:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -282,7 +278,6 @@ class PrpaMt201306Uv02LivingSubjectDeceasedTime:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -336,7 +331,6 @@ class PrpaMt201306Uv02LivingSubjectId:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -390,7 +384,6 @@ class PrpaMt201306Uv02LivingSubjectName:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -435,7 +428,6 @@ class PrpaMt201306Uv02MatchAlgorithm:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     semantics_text: StExplicit = field(
@@ -443,7 +435,6 @@ class PrpaMt201306Uv02MatchAlgorithm:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -488,7 +479,6 @@ class PrpaMt201306Uv02MatchWeight:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     semantics_text: St = field(
@@ -496,7 +486,6 @@ class PrpaMt201306Uv02MatchWeight:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -541,7 +530,6 @@ class PrpaMt201306Uv02MinimumDegreeMatch:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     semantics_text: StExplicit = field(
@@ -549,7 +537,6 @@ class PrpaMt201306Uv02MinimumDegreeMatch:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -603,7 +590,6 @@ class PrpaMt201306Uv02MothersMaidenName:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -657,7 +643,6 @@ class PrpaMt201306Uv02OtherIdsScopingOrganization:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -711,7 +696,6 @@ class PrpaMt201306Uv02PatientAddress:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -756,7 +740,6 @@ class PrpaMt201306Uv02PatientStatusCode:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     semantics_text: St = field(
@@ -764,7 +747,6 @@ class PrpaMt201306Uv02PatientStatusCode:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -818,7 +800,6 @@ class PrpaMt201306Uv02PatientTelecom:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -926,7 +907,6 @@ class PrpaMt201306Uv02PrincipalCareProvisionId:
             "name": "semanticsText",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -1293,7 +1273,6 @@ class PrpaMt201306Uv02QueryByParameter:
             "name": "queryId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     status_code: Cs = field(
@@ -1301,7 +1280,6 @@ class PrpaMt201306Uv02QueryByParameter:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     modify_code: None | Cs = field(
@@ -1374,7 +1352,6 @@ class PrpaMt201306Uv02QueryByParameter:
             "name": "parameterList",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     sort_control: list[PrpaMt201306Uv02SortControl] = field(

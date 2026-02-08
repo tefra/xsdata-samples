@@ -30,11 +30,7 @@ class DiagnosticRoutineTypeEnum:
     class Meta:
         name = "DIAGNOSTIC-ROUTINE-TYPE-ENUM"
 
-    value: DiagnosticRoutineTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticRoutineTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

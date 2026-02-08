@@ -140,6 +140,5 @@ class CoctMt040200Uv01ResponsibleParty:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )

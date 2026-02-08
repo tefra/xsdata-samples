@@ -21,6 +21,5 @@ class BookingTerminalReq(BookingBaseReq):
         metadata={
             "name": "Command",
             "type": "Element",
-            "required": True,
         }
     )

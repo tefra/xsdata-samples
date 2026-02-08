@@ -19,6 +19,5 @@ class BrandId:
         metadata={
             "name": "Id",
             "type": "Attribute",
-            "required": True,
         }
     )

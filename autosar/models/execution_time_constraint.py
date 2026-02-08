@@ -126,7 +126,6 @@ class ExecutionTimeConstraint:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | ExecutionTimeConstraint.ShortNameFragments = (
@@ -315,7 +314,6 @@ class ExecutionTimeConstraint:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -325,7 +323,6 @@ class ExecutionTimeConstraint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -335,6 +332,5 @@ class ExecutionTimeConstraint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

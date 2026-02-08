@@ -46,22 +46,12 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class AvailabilityCheckRequestIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AvailabilityCheckRequestNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -73,7 +63,6 @@ class AvailabilityCheckRequestId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -84,7 +73,6 @@ class AvailabilityCheckRequestLanguage:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -106,7 +94,6 @@ class AvailabilityCheckRequestTransport:
         metadata={
             "name": "Transport",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -117,7 +104,6 @@ class AvailabilityCheckRequestBaseItemDetail:
         metadata={
             "name": "LineItemNum",
             "type": "Element",
-            "required": True,
         }
     )
     line_item_type: None | LineItemType = field(
@@ -264,21 +250,18 @@ class AvailabilityCheckRequestHeader:
         metadata={
             "name": "AvailabilityCheckRequestID",
             "type": "Element",
-            "required": True,
         }
     )
     availability_check_request_issue_date: AvailabilityCheckRequestIssueDate = field(
         metadata={
             "name": "AvailabilityCheckRequestIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     supplier_party: SupplierParty = field(
         metadata={
             "name": "SupplierParty",
             "type": "Element",
-            "required": True,
         }
     )
     supplier_idreference_date: None | SupplierIdreferenceDate = field(
@@ -292,7 +275,6 @@ class AvailabilityCheckRequestHeader:
         metadata={
             "name": "BuyerParty",
             "type": "Element",
-            "required": True,
         }
     )
     buyer_idreference_date: None | BuyerIdreferenceDate = field(
@@ -313,7 +295,6 @@ class AvailabilityCheckRequestHeader:
         metadata={
             "name": "AvailabilityShipToParty",
             "type": "Element",
-            "required": True,
         }
     )
     availability_check_request_language: (
@@ -349,7 +330,6 @@ class AvailabilityCheckRequestItemDetail:
         metadata={
             "name": "AvailabilityCheckRequestBaseItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
     general_line_item_note: None | GeneralLineItemNote = field(
@@ -388,7 +368,6 @@ class AvailabilityCheckRequestDetail:
         metadata={
             "name": "ListOfAvailabilityCheckRequestItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -399,7 +378,6 @@ class AvailabilityCheckRequest:
         metadata={
             "name": "AvailabilityCheckRequestHeader",
             "type": "Element",
-            "required": True,
         }
     )
     availability_check_request_detail: (

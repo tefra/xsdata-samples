@@ -32,7 +32,6 @@ class RailAutoSeatAssignment:
         metadata={
             "name": "SeatType",
             "type": "Attribute",
-            "required": True,
             "min_length": 0,
             "max_length": 255,
         }
@@ -41,7 +40,6 @@ class RailAutoSeatAssignment:
         metadata={
             "name": "SeatValue",
             "type": "Attribute",
-            "required": True,
             "min_length": 0,
             "max_length": 255,
         }

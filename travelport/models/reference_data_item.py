@@ -38,7 +38,6 @@ class ReferenceDataItem:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -65,7 +64,6 @@ class ReferenceDataItem:
         metadata={
             "name": "Deprecated",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -82,7 +80,6 @@ class ReferenceDataItem:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "min_length": 1,
                 "max_length": 255,
             },

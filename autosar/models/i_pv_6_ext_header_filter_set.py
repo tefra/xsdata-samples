@@ -90,7 +90,6 @@ class IPv6ExtHeaderFilterSet:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | IPv6ExtHeaderFilterSet.ShortNameFragments = (

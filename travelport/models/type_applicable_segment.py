@@ -23,7 +23,6 @@ class TypeApplicableSegment:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     air_itinerary_details_ref: None | str = field(

@@ -58,21 +58,18 @@ class ProfileHistory2:
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-            "required": True,
         }
     )
     profile_type: TypeProfileType7 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-            "required": True,
         }
     )
     profile_name: object = field(
         metadata={
             "name": "ProfileName",
             "type": "Attribute",
-            "required": True,
         }
     )
     created_by_agent_id: None | int = field(

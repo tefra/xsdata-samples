@@ -34,11 +34,7 @@ class ByteOrderEnum:
     class Meta:
         name = "BYTE-ORDER-ENUM"
 
-    value: ByteOrderEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ByteOrderEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

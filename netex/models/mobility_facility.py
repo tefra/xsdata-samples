@@ -13,8 +13,5 @@ class MobilityFacility:
         namespace = "http://www.netex.org.uk/netex"
 
     value: MobilityFacilityEnumeration = field(
-        default=MobilityFacilityEnumeration.UNKNOWN,
-        metadata={
-            "required": True,
-        },
+        default=MobilityFacilityEnumeration.UNKNOWN
     )

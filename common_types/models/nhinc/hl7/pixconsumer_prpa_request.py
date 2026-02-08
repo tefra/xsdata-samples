@@ -22,14 +22,12 @@ class PixconsumerPrpaIn201301UvrequestType:
             "name": "PRPA_IN201301UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_communities: None | NhinTargetCommunitiesType = field(
@@ -52,7 +50,6 @@ class PixconsumerPrpaIn201301UvsecuredRequestType:
             "name": "PRPA_IN201301UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_communities: None | NhinTargetCommunitiesType = field(
@@ -75,14 +72,12 @@ class PixconsumerPrpaIn201302UvrequestType:
             "name": "PRPA_IN201302UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_communities: None | NhinTargetCommunitiesType = field(
@@ -105,7 +100,6 @@ class PixconsumerPrpaIn201302UvsecuredRequestType:
             "name": "PRPA_IN201302UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_communities: None | NhinTargetCommunitiesType = field(

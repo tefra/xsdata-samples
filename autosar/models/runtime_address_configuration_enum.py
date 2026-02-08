@@ -31,11 +31,7 @@ class RuntimeAddressConfigurationEnum:
     class Meta:
         name = "RUNTIME-ADDRESS-CONFIGURATION-ENUM"
 
-    value: RuntimeAddressConfigurationEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: RuntimeAddressConfigurationEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

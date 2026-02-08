@@ -32,7 +32,6 @@ class ProviderInfo2(TypeKeyElement2):
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }
@@ -41,7 +40,6 @@ class ProviderInfo2(TypeKeyElement2):
         metadata={
             "name": "PseudoCityCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 10,
         }

@@ -235,7 +235,6 @@ class CoctMt300000Uv04Location:
             "name": "serviceDeliveryLocation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -249,7 +248,6 @@ class CoctMt300000Uv04Location:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -309,14 +307,12 @@ class CoctMt300000Uv04ManufacturedMaterialKind:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminerDetermined = field(
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -581,7 +577,6 @@ class CoctMt300000Uv04SubstitutionRole:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -643,7 +638,6 @@ class CoctMt300000Uv04SupplyOrder:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -714,7 +708,6 @@ class CoctMt300000Uv04ManufacturedProduct:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -767,7 +760,6 @@ class CoctMt300000Uv04Performer1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -820,7 +812,6 @@ class CoctMt300000Uv04Performer2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -887,7 +878,6 @@ class CoctMt300000Uv04PrescriberRole:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -941,7 +931,6 @@ class CoctMt300000Uv04Reason:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1089,7 +1078,6 @@ class CoctMt300000Uv04Substitution:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     reason_code: None | Cs = field(
@@ -1189,7 +1177,6 @@ class CoctMt300000Uv04PertinentInformation:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1249,7 +1236,6 @@ class CoctMt300000Uv04PertinentInformation2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -1385,7 +1371,6 @@ class CoctMt300000Uv04InFulfillmentOf:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1490,7 +1475,6 @@ class CoctMt300000Uv04SubstanceAdministrationIntent:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1545,7 +1529,6 @@ class CoctMt300000Uv04Reason2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -1598,14 +1581,12 @@ class CoctMt300000Uv04SupplyEvent:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     quantity: PqExplicit = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     expected_use_time: None | IvlTs = field(
@@ -1651,7 +1632,6 @@ class CoctMt300000Uv04SupplyEvent:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     reason_of: None | CoctMt300000Uv04Reason2 = field(
@@ -1673,13 +1653,11 @@ class CoctMt300000Uv04SupplyEvent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: XActMoodIntentEvent = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -56,7 +56,6 @@ class PrpaMt900350Uv02Admitter:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     assigned_person: None | CoctMt090100Uv01AssignedPerson = field(
@@ -126,7 +125,6 @@ class PrpaMt900350Uv02Attender:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     status_code: None | Cs = field(
@@ -196,7 +194,6 @@ class PrpaMt900350Uv02ResponsibleParty:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     status_code: None | Cs = field(
@@ -266,7 +263,6 @@ class PrpaMt900350Uv02Subject:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -280,7 +276,6 @@ class PrpaMt900350Uv02Subject:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -326,7 +321,6 @@ class PrpaMt900350Uv02EncounterEvent:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     status_code: Cs = field(
@@ -334,7 +328,6 @@ class PrpaMt900350Uv02EncounterEvent:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     effective_time: IvlTsExplicit = field(
@@ -342,14 +335,12 @@ class PrpaMt900350Uv02EncounterEvent:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     subject: PrpaMt900350Uv02Subject = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     responsible_party: list[PrpaMt900350Uv02ResponsibleParty] = field(

@@ -48,7 +48,6 @@ class Osi6:
         metadata={
             "name": "Carrier",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -64,7 +63,6 @@ class Osi6:
         metadata={
             "name": "Text",
             "type": "Attribute",
-            "required": True,
             "max_length": 256,
         }
     )

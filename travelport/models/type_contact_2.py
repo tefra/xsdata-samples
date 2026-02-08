@@ -45,7 +45,6 @@ class TypeContact2(TypeKeyTaggedElement2):
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     given_name: None | str = field(

@@ -8,52 +8,27 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class GeneralNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PurposeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PurposeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingResultResponseCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingResultResponseCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -61,22 +36,12 @@ class SourcingResultResponseId:
     class Meta:
         name = "SourcingResultResponseID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SourcingresultResponseissueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -84,12 +49,7 @@ class TrackingId:
     class Meta:
         name = "TrackingID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -98,7 +58,6 @@ class Purpose:
         metadata={
             "name": "PurposeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     purpose_coded_other: None | PurposeCodedOther = field(
@@ -116,7 +75,6 @@ class SourcingCreateReference:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -127,7 +85,6 @@ class SourcingResultReference:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -138,7 +95,6 @@ class SourcingResultResponsePurpose:
         metadata={
             "name": "Purpose",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -149,35 +105,30 @@ class SourcingResultResponse:
         metadata={
             "name": "SourcingResultResponsePurpose",
             "type": "Element",
-            "required": True,
         }
     )
     sourcingresult_responseissue_date: SourcingresultResponseissueDate = field(
         metadata={
             "name": "SourcingresultResponseissueDate",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_result_response_id: SourcingResultResponseId = field(
         metadata={
             "name": "SourcingResultResponseID",
             "type": "Element",
-            "required": True,
         }
     )
     tracking_id: TrackingId = field(
         metadata={
             "name": "TrackingID",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_create_reference: SourcingCreateReference = field(
         metadata={
             "name": "SourcingCreateReference",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_result_reference: None | SourcingResultReference = field(
@@ -191,7 +142,6 @@ class SourcingResultResponse:
         metadata={
             "name": "SourcingResultResponseCoded",
             "type": "Element",
-            "required": True,
         }
     )
     sourcing_result_response_coded_other: (
@@ -207,7 +157,6 @@ class SourcingResultResponse:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
     general_note: None | GeneralNote = field(

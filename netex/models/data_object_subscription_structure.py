@@ -19,7 +19,6 @@ class DataObjectSubscriptionStructure(AbstractSubscriptionStructure):
             "name": "DataObjectRequest",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     subscription_policy: None | NetworkFrameSubscriptionPolicyStructure = (

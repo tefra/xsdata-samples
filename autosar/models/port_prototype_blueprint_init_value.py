@@ -96,7 +96,6 @@ class PortPrototypeBlueprintInitValue:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

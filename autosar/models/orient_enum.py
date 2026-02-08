@@ -28,11 +28,7 @@ class OrientEnum:
     class Meta:
         name = "ORIENT-ENUM"
 
-    value: OrientEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: OrientEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

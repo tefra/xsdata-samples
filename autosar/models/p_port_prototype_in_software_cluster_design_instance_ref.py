@@ -89,7 +89,6 @@ class PPortPrototypeInSoftwareClusterDesignInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -99,7 +98,6 @@ class PPortPrototypeInSoftwareClusterDesignInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -109,6 +107,5 @@ class PPortPrototypeInSoftwareClusterDesignInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

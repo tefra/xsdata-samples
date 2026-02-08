@@ -20,7 +20,6 @@ class DataObjectRequestStructure(AbstractFunctionalServiceRequestStructure):
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     policy: None | NetworkFrameRequestPolicyStructure = field(
@@ -47,6 +46,5 @@ class DataObjectRequestStructure(AbstractFunctionalServiceRequestStructure):
                 "name": "NetworkFrameTopic",
                 "type": "Element",
                 "namespace": "http://www.netex.org.uk/netex",
-                "required": True,
             }
         )

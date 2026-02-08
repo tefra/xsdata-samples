@@ -32,7 +32,6 @@ class BackOfficeHandOff:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     location: None | str = field(

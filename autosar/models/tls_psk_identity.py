@@ -83,6 +83,5 @@ class TlsPskIdentity:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

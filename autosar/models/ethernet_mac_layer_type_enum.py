@@ -28,11 +28,7 @@ class EthernetMacLayerTypeEnum:
     class Meta:
         name = "ETHERNET-MAC-LAYER-TYPE-ENUM"
 
-    value: EthernetMacLayerTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: EthernetMacLayerTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

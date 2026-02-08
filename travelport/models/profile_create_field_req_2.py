@@ -50,6 +50,5 @@ class ProfileCreateFieldReq2(BaseReq5):
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -66,7 +66,6 @@ class CoctMt310000Uv04AcommodationRequestor:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -130,7 +129,6 @@ class CoctMt310000Uv04Location:
             "name": "serviceDeliveryLocation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -144,7 +142,6 @@ class CoctMt310000Uv04Location:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -182,7 +179,6 @@ class CoctMt310000Uv04MedicalService:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -196,7 +192,6 @@ class CoctMt310000Uv04MedicalService:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -243,7 +238,6 @@ class CoctMt310000Uv04MinimumAvailableAccommodation:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -257,7 +251,6 @@ class CoctMt310000Uv04MinimumAvailableAccommodation:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -329,7 +322,6 @@ class CoctMt310000Uv04AccommodationRequestorRole:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -391,7 +383,6 @@ class CoctMt310000Uv04PertinentInformation1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -431,7 +422,6 @@ class CoctMt310000Uv04PertinentInformation3:
             "name": "medicalService",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -452,7 +442,6 @@ class CoctMt310000Uv04PertinentInformation3:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -492,7 +481,6 @@ class CoctMt310000Uv04Author:
             "name": "accommodationRequestorRole",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -554,7 +542,6 @@ class CoctMt310000Uv04Encounter:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     pertinent_information: CoctMt310000Uv04PertinentInformation3 = field(
@@ -562,7 +549,6 @@ class CoctMt310000Uv04Encounter:
             "name": "pertinentInformation",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -625,7 +611,6 @@ class CoctMt310000Uv04AccommodationRequested:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     effective_time: None | TsExplicit = field(
@@ -640,7 +625,6 @@ class CoctMt310000Uv04AccommodationRequested:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -654,7 +638,6 @@ class CoctMt310000Uv04AccommodationRequested:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -701,7 +684,6 @@ class CoctMt310000Uv04PertinentInformation2:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -722,7 +704,6 @@ class CoctMt310000Uv04PertinentInformation2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -762,7 +743,6 @@ class CoctMt310000Uv04InFulfillmentOf:
             "name": "accommodationRequested",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -776,7 +756,6 @@ class CoctMt310000Uv04InFulfillmentOf:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -814,7 +793,6 @@ class CoctMt310000Uv04AccomodationSupplied:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     effective_time: IvlTsExplicit = field(
@@ -822,7 +800,6 @@ class CoctMt310000Uv04AccomodationSupplied:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     reason_code: Cs = field(
@@ -830,14 +807,12 @@ class CoctMt310000Uv04AccomodationSupplied:
             "name": "reasonCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     location: CoctMt310000Uv04Location = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     in_fulfillment_of: CoctMt310000Uv04InFulfillmentOf = field(
@@ -845,7 +820,6 @@ class CoctMt310000Uv04AccomodationSupplied:
             "name": "inFulfillmentOf",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     pertinent_information1: None | CoctMt310000Uv04PertinentInformation1 = (
@@ -864,7 +838,6 @@ class CoctMt310000Uv04AccomodationSupplied:
             "name": "pertinentInformation2",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -887,6 +860,5 @@ class CoctMt310000Uv04AccomodationSupplied:
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )

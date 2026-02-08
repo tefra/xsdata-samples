@@ -18,6 +18,5 @@ class RailFareRef:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

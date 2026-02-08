@@ -16,27 +16,23 @@ class ErrorItem:
         metadata={
             "name": "Code",
             "type": "Element",
-            "required": True,
         }
     )
     description: str = field(
         metadata={
             "name": "Description",
             "type": "Element",
-            "required": True,
         }
     )
     type_value: str = field(
         metadata={
             "name": "Type",
             "type": "Element",
-            "required": True,
         }
     )
     level: str = field(
         metadata={
             "name": "Level",
             "type": "Element",
-            "required": True,
         }
     )

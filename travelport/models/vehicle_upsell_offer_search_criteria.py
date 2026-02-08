@@ -35,7 +35,6 @@ class VehicleUpsellOfferSearchCriteria:
         metadata={
             "name": "VehicleClass",
             "type": "Attribute",
-            "required": True,
         }
     )
     category: None | TypeVehicleCategory = field(

@@ -31,11 +31,7 @@ class HandleOutOfRangeStatusEnum:
     class Meta:
         name = "HANDLE-OUT-OF-RANGE-STATUS-ENUM"
 
-    value: HandleOutOfRangeStatusEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: HandleOutOfRangeStatusEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

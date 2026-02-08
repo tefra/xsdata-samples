@@ -44,14 +44,12 @@ class FareSurcharge:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
         }
     )
     segment_ref: None | str = field(

@@ -422,7 +422,6 @@ class AirPricingInfo:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     command_key: None | str = field(
@@ -576,7 +575,6 @@ class AirPricingInfo:
         metadata={
             "name": "PricingMethod",
             "type": "Attribute",
-            "required": True,
         }
     )
     checksum: None | str = field(

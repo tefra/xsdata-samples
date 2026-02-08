@@ -29,7 +29,6 @@ class PointOfCommencement2:
         metadata={
             "name": "CityOrAirportCode",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -38,6 +37,5 @@ class PointOfCommencement2:
         metadata={
             "name": "Time",
             "type": "Attribute",
-            "required": True,
         }
     )

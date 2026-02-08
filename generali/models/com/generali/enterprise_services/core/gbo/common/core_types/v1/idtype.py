@@ -87,12 +87,7 @@ class Idtype:
     class Meta:
         name = "IDType"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     scheme_id: None | str = field(
         default=None,
         metadata={

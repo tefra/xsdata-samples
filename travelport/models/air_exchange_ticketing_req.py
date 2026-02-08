@@ -59,7 +59,6 @@ class AirExchangeTicketingReq(BaseReq1):
         metadata={
             "name": "AirReservationLocatorCode",
             "type": "Element",
-            "required": True,
         }
     )
     ticket_number: TicketNumber1 = field(
@@ -67,7 +66,6 @@ class AirExchangeTicketingReq(BaseReq1):
             "name": "TicketNumber",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "required": True,
         }
     )
     ticketing_modifiers_ref: list[TypeTicketingModifiersRef] = field(

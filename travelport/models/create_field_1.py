@@ -122,7 +122,6 @@ class CreateField1:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -140,7 +139,6 @@ class CreateField1:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     encrypted: bool = field(

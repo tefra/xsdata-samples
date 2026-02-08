@@ -32,11 +32,7 @@ class EEnum:
     class Meta:
         name = "E-ENUM"
 
-    value: EEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: EEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

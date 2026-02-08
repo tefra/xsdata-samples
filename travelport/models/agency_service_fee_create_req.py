@@ -43,7 +43,6 @@ class AgencyServiceFeeCreateReq(BaseReq1):
         metadata={
             "name": "UniversalRecordLocatorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         }
@@ -52,7 +51,6 @@ class AgencyServiceFeeCreateReq(BaseReq1):
         metadata={
             "name": "ProviderLocatorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         }
@@ -61,6 +59,5 @@ class AgencyServiceFeeCreateReq(BaseReq1):
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -72,7 +72,6 @@ class AirExchangeReq(BaseReq1):
         metadata={
             "name": "AirReservationLocatorCode",
             "type": "Element",
-            "required": True,
         }
     )
     ticket_number: list[TicketNumber1] = field(

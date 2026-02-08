@@ -14,11 +14,7 @@ class Anonymous:
     class Meta:
         namespace = "http://www.w3.org/2006/02/addressing/wsdl"
 
-    value: AnonymousType = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: AnonymousType = field()
     other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={

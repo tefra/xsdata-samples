@@ -29,12 +29,7 @@ class MimeTypeString:
     class Meta:
         name = "MIME-TYPE-STRING"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     s: None | str = field(
         default=None,
         metadata={

@@ -31,11 +31,7 @@ class DataTransformationKindEnum:
     class Meta:
         name = "DATA-TRANSFORMATION-KIND-ENUM"
 
-    value: DataTransformationKindEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DataTransformationKindEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

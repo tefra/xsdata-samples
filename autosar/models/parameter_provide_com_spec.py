@@ -206,6 +206,5 @@ class ParameterProvideComSpec:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

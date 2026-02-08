@@ -28,11 +28,7 @@ class FieldAccessEnum:
     class Meta:
         name = "FIELD-ACCESS-ENUM"
 
-    value: FieldAccessEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: FieldAccessEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

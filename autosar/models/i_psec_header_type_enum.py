@@ -28,11 +28,7 @@ class IPsecHeaderTypeEnum:
     class Meta:
         name = "I-PSEC-HEADER-TYPE-ENUM"
 
-    value: IPsecHeaderTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: IPsecHeaderTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

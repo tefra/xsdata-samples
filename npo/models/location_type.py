@@ -23,7 +23,6 @@ class LocationType:
             "name": "programUrl",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-            "required": True,
         }
     )
     av_attributes: None | AvAttributesType = field(
@@ -71,7 +70,6 @@ class LocationType:
     owner: OwnerTypeEnum = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     urn: None | str = field(

@@ -12,12 +12,10 @@ class Duration:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     description: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )

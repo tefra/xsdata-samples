@@ -22,7 +22,6 @@ class CountryGbotype:
             "name": "ISOCode2",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            "required": True,
             "pattern": r"[A-Z][A-Z]",
         }
     )

@@ -39,7 +39,6 @@ class ClearboxElementType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -70,7 +69,6 @@ class ClearboxElementType:
             "name": "clearboxType",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     driveable: None | bool = field(

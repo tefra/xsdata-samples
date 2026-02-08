@@ -22,12 +22,7 @@ from xcbl.models.trading_partner_user_information import (
 
 @dataclass(kw_only=True)
 class PaymentStatusRequestIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -36,7 +31,6 @@ class ListOfPaymentRequestReferences:
         metadata={
             "name": "ListOfReference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -47,7 +41,6 @@ class PaymentDateRange:
         metadata={
             "name": "ValidityDates",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -58,14 +51,12 @@ class PaymentStatusRequestHeader:
         metadata={
             "name": "PaymentStatusRequestID",
             "type": "Element",
-            "required": True,
         }
     )
     payment_status_request_issue_date: PaymentStatusRequestIssueDate = field(
         metadata={
             "name": "PaymentStatusRequestIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     payer_party: None | PayerParty = field(
@@ -79,7 +70,6 @@ class PaymentStatusRequestHeader:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
     general_notes: None | GeneralNotes = field(
@@ -164,7 +154,6 @@ class PaymentStatusRequest:
         metadata={
             "name": "PaymentStatusRequestHeader",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_payment_status_request_detail: ListOfPaymentStatusRequestDetail = (
@@ -172,7 +161,6 @@ class PaymentStatusRequest:
             metadata={
                 "name": "ListOfPaymentStatusRequestDetail",
                 "type": "Element",
-                "required": True,
             }
         )
     )
@@ -180,6 +168,5 @@ class PaymentStatusRequest:
         metadata={
             "name": "PaymentStatusRequestSummary",
             "type": "Element",
-            "required": True,
         }
     )

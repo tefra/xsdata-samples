@@ -25,7 +25,6 @@ class MicrogramsConcentrationValue(DataValue):
             "name": "microgramsConcentration",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     micrograms_concentration_value_extension: None | ExtensionType = field(

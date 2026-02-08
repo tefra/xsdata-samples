@@ -68,7 +68,6 @@ class CoctMt020000Uv01ActAppointmentRequest:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -82,7 +81,6 @@ class CoctMt020000Uv01ActAppointmentRequest:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -129,7 +127,6 @@ class CoctMt020000Uv01ActRequest:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -143,7 +140,6 @@ class CoctMt020000Uv01ActRequest:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -344,7 +340,6 @@ class CoctMt020000Uv01Appointment:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     code: None | Cd = field(
@@ -391,7 +386,6 @@ class CoctMt020000Uv01Appointment:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(

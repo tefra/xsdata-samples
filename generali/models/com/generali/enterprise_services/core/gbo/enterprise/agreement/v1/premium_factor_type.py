@@ -27,7 +27,6 @@ class PremiumFactorType(BaseComponentType):
             "name": "Amount",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     description: TextType = field(
@@ -35,7 +34,6 @@ class PremiumFactorType(BaseComponentType):
             "name": "Description",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     percentage: PercentType = field(
@@ -43,6 +41,5 @@ class PremiumFactorType(BaseComponentType):
             "name": "Percentage",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )

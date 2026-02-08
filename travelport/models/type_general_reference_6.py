@@ -14,6 +14,5 @@ class TypeGeneralReference6:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

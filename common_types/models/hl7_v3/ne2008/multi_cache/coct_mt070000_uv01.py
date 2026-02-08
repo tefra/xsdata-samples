@@ -103,6 +103,5 @@ class CoctMt070000Uv01LocatedEntity:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )

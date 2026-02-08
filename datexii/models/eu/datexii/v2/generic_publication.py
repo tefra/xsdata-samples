@@ -24,7 +24,6 @@ class GenericPublication(PayloadPublication):
             "name": "genericPublicationName",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
             "max_length": 1024,
         }
     )

@@ -62,7 +62,6 @@ class BookFlightSegmentType:
             "name": "DepartureAirport",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     arrival_airport: AirportInformationType = field(
@@ -70,7 +69,6 @@ class BookFlightSegmentType:
             "name": "ArrivalAirport",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     operating_airline: None | OperatingAirlineType = field(
@@ -164,7 +162,6 @@ class BookFlightSegmentType:
         metadata={
             "name": "DepartureDateTime",
             "type": "Attribute",
-            "required": True,
         }
     )
     arrival_date_time: None | str = field(

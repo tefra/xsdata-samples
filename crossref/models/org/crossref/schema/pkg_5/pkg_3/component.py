@@ -92,7 +92,6 @@ class Component:
     parent_relation: ComponentParentRelation = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     reg_agency: None | str = field(

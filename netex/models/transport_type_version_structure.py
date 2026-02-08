@@ -139,16 +139,8 @@ class TransportTypeVersionStructure(DataManagedObjectStructure):
 
     @dataclass(kw_only=True)
     class FuelType:
-        value: FuelTypeEnumeration = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: FuelTypeEnumeration = field()
 
     @dataclass(kw_only=True)
     class TypeOfFuel:
-        value: FuelTypeEnumeration = field(
-            metadata={
-                "required": True,
-            }
-        )
+        value: FuelTypeEnumeration = field()

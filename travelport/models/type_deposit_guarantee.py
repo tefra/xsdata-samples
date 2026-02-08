@@ -56,7 +56,6 @@ class TypeDepositGuarantee:
         metadata={
             "name": "Purpose",
             "type": "Attribute",
-            "required": True,
         }
     )
     type_value: None | TypeDepositGuaranteeType = field(

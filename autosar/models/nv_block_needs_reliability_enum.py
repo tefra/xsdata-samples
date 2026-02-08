@@ -35,11 +35,7 @@ class NvBlockNeedsReliabilityEnum:
     class Meta:
         name = "NV-BLOCK-NEEDS-RELIABILITY-ENUM"
 
-    value: NvBlockNeedsReliabilityEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: NvBlockNeedsReliabilityEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

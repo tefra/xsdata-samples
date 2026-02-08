@@ -28,11 +28,7 @@ class DiagnosticResponseToEcuResetEnum:
     class Meta:
         name = "DIAGNOSTIC-RESPONSE-TO-ECU-RESET-ENUM"
 
-    value: DiagnosticResponseToEcuResetEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticResponseToEcuResetEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

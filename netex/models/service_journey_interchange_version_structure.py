@@ -54,7 +54,6 @@ class ServiceJourneyInterchangeVersionStructure(InterchangeVersionStructure):
             "name": "FromJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     to_journey_ref: VehicleJourneyRefStructure = field(
@@ -62,7 +61,6 @@ class ServiceJourneyInterchangeVersionStructure(InterchangeVersionStructure):
             "name": "ToJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     service_journey_pattern_interchange_ref: (

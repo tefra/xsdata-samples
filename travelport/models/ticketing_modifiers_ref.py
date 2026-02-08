@@ -18,6 +18,5 @@ class TicketingModifiersRef:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

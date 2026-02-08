@@ -394,7 +394,6 @@ class UniversalRecord:
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         }
@@ -433,6 +432,5 @@ class UniversalRecord:
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )

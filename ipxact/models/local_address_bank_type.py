@@ -53,7 +53,6 @@ class LocalAddressBankType:
         metadata={
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     display_name: None | DisplayName = field(
@@ -92,7 +91,6 @@ class LocalAddressBankType:
             "name": "baseAddress",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     address_block: list[BankedBlockType] = field(
@@ -151,7 +149,6 @@ class LocalAddressBankType:
         metadata={
             "name": "bankAlignment",
             "type": "Attribute",
-            "required": True,
         }
     )
     id: None | str = field(

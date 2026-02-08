@@ -43,7 +43,6 @@ class ExpertSolution:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     total_price: None | str = field(
@@ -64,6 +63,5 @@ class ExpertSolution:
         metadata={
             "name": "CreatedDate",
             "type": "Attribute",
-            "required": True,
         }
     )

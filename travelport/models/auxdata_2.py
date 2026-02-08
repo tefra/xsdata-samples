@@ -26,13 +26,11 @@ class Auxdata2:
             metadata={
                 "name": "Reason",
                 "type": "Element",
-                "required": True,
             }
         )
         description: str = field(
             metadata={
                 "name": "Description",
                 "type": "Element",
-                "required": True,
             }
         )

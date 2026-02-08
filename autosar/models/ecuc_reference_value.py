@@ -112,7 +112,6 @@ class EcucReferenceValue:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -133,6 +132,5 @@ class EcucReferenceValue:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

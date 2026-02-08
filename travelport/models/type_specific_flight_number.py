@@ -18,7 +18,6 @@ class TypeSpecificFlightNumber:
         metadata={
             "name": "FlightNumber",
             "type": "Attribute",
-            "required": True,
             "max_length": 5,
         }
     )

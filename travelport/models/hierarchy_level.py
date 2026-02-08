@@ -52,21 +52,18 @@ class HierarchyLevel:
         metadata={
             "name": "HierarchyLevelID",
             "type": "Attribute",
-            "required": True,
         }
     )
     profile_type: TypeProfileType7 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 64,
         }
@@ -75,7 +72,6 @@ class HierarchyLevel:
         metadata={
             "name": "LevelNumber",
             "type": "Attribute",
-            "required": True,
         }
     )
     description: None | str = field(

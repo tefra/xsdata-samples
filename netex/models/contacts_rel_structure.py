@@ -18,6 +18,5 @@ class ContactsRelStructure(ContainmentAggregationStructure):
             "name": "Contact",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

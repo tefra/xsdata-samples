@@ -28,11 +28,7 @@ class RequestMethodEnum:
     class Meta:
         name = "REQUEST-METHOD-ENUM"
 
-    value: RequestMethodEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: RequestMethodEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

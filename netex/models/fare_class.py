@@ -12,9 +12,4 @@ class FareClass:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: FareClassEnumeration = field(
-        default=FareClassEnumeration.UNKNOWN,
-        metadata={
-            "required": True,
-        },
-    )
+    value: FareClassEnumeration = field(default=FareClassEnumeration.UNKNOWN)

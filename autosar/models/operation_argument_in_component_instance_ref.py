@@ -138,7 +138,6 @@ class OperationArgumentInComponentInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -148,7 +147,6 @@ class OperationArgumentInComponentInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -158,7 +156,6 @@ class OperationArgumentInComponentInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -168,7 +165,6 @@ class OperationArgumentInComponentInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -178,7 +174,6 @@ class OperationArgumentInComponentInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -188,7 +183,6 @@ class OperationArgumentInComponentInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -198,6 +192,5 @@ class OperationArgumentInComponentInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

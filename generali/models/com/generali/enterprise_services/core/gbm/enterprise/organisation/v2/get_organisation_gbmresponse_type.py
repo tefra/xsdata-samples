@@ -30,6 +30,5 @@ class GetOrganisationGbmresponseType(BaseGbmheaderType):
             "name": "OrganisationGBO",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbm/enterprise/organisation/v2",
-            "required": True,
         }
     )

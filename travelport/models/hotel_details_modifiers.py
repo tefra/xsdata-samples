@@ -94,7 +94,6 @@ class HotelDetailsModifiers:
         metadata={
             "name": "HotelStay",
             "type": "Element",
-            "required": True,
         }
     )
     number_of_children: None | NumberOfChildren = field(

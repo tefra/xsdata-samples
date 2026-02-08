@@ -29,11 +29,7 @@ class TimeValue:
     class Meta:
         name = "TIME-VALUE"
 
-    value: float = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: float = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -17,6 +17,5 @@ class JumpCabinLogicType:
         metadata={
             "name": "Disabled",
             "type": "Attribute",
-            "required": True,
         }
     )

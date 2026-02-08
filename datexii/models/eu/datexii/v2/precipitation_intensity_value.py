@@ -24,7 +24,6 @@ class PrecipitationIntensityValue(DataValue):
             "name": "millimetresPerHourIntensity",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     precipitation_intensity_value_extension: None | ExtensionType = field(

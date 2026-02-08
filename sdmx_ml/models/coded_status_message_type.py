@@ -17,6 +17,5 @@ class CodedStatusMessageType(StatusMessageType1):
     code: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

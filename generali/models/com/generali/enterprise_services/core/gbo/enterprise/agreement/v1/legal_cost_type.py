@@ -21,7 +21,6 @@ class LegalCostType:
             "name": "Amount",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     cost_type: LegalCostTypeCostType = field(
@@ -29,6 +28,5 @@ class LegalCostType:
             "name": "CostType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )

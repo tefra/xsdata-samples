@@ -17,7 +17,6 @@ class MeasureListType:
     uom: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^: \n\r\t]+",
         }
     )

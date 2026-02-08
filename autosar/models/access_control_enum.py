@@ -29,11 +29,7 @@ class AccessControlEnum:
     class Meta:
         name = "ACCESS-CONTROL-ENUM"
 
-    value: AccessControlEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: AccessControlEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

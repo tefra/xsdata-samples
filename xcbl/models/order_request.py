@@ -47,32 +47,17 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class BuyerOrderRequestNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class OrderRequestIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SellerOrderRequestNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -93,7 +78,6 @@ class OrderRequestCurrency:
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -104,7 +88,6 @@ class OrderRequestDates:
         metadata={
             "name": "OrderDates",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -115,7 +98,6 @@ class OrderRequestLanguage:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -126,7 +108,6 @@ class OrderRequestNumber:
         metadata={
             "name": "BuyerOrderRequestNumber",
             "type": "Element",
-            "required": True,
         }
     )
     seller_order_request_number: None | SellerOrderRequestNumber = field(
@@ -165,7 +146,6 @@ class OrderRequestParty:
         metadata={
             "name": "SellerParty",
             "type": "Element",
-            "required": True,
         }
     )
     seller_tax_information: None | SellerTaxInformation = field(
@@ -218,7 +198,6 @@ class OrderRequestReferences:
         metadata={
             "name": "OrderReferences",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -229,7 +208,6 @@ class OrderRequestSummary:
         metadata={
             "name": "OrderSummary",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -240,7 +218,6 @@ class OrderRequestTaxReference:
         metadata={
             "name": "TaxReference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -251,7 +228,6 @@ class OrderDetail:
         metadata={
             "name": "ListOfItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_package_detail: None | ListOfPackageDetail = field(
@@ -276,7 +252,6 @@ class OrderRequestHeader:
         metadata={
             "name": "OrderRequestIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     order_request_references: None | OrderRequestReferences = field(
@@ -304,7 +279,6 @@ class OrderRequestHeader:
         metadata={
             "name": "OrderRequestCurrency",
             "type": "Element",
-            "required": True,
         }
     )
     tax_accounting_currency: None | TaxAccountingCurrency = field(
@@ -318,7 +292,6 @@ class OrderRequestHeader:
         metadata={
             "name": "OrderRequestLanguage",
             "type": "Element",
-            "required": True,
         }
     )
     order_request_tax_reference: None | OrderRequestTaxReference = field(
@@ -364,7 +337,6 @@ class OrderRequestHeader:
         metadata={
             "name": "OrderRequestParty",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_transport: None | ListOfTransport = field(
@@ -438,7 +410,6 @@ class OrderRequestDetail:
         metadata={
             "name": "OrderDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -449,7 +420,6 @@ class OrderRequest:
         metadata={
             "name": "OrderRequestHeader",
             "type": "Element",
-            "required": True,
         }
     )
     order_request_detail: None | OrderRequestDetail = field(

@@ -15,7 +15,6 @@ class BankRef:
         metadata={
             "name": "bankRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     id: None | str = field(

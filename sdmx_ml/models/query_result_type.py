@@ -52,7 +52,6 @@ class QueryResultType:
         metadata={
             "name": "timeSeriesMatch",
             "type": "Attribute",
-            "required": True,
         }
     )
 

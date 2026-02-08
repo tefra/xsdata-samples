@@ -31,11 +31,7 @@ class ServerArgumentImplPolicyEnum:
     class Meta:
         name = "SERVER-ARGUMENT-IMPL-POLICY-ENUM"
 
-    value: ServerArgumentImplPolicyEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ServerArgumentImplPolicyEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

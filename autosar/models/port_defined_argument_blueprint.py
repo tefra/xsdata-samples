@@ -88,6 +88,5 @@ class PortDefinedArgumentBlueprint:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

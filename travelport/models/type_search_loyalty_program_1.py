@@ -25,14 +25,12 @@ class TypeSearchLoyaltyProgram1:
         metadata={
             "name": "Number",
             "type": "Attribute",
-            "required": True,
         }
     )
     supplier_code: str = field(
         metadata={
             "name": "SupplierCode",
             "type": "Attribute",
-            "required": True,
             "max_length": 6,
         }
     )

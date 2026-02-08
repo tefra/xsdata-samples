@@ -22,13 +22,11 @@ class ProviderReservationDivideRsp(BaseRsp1):
         metadata={
             "name": "ParentProviderReservationInfo",
             "type": "Element",
-            "required": True,
         }
     )
     child_provider_reservation_info: ChildProviderReservationInfo = field(
         metadata={
             "name": "ChildProviderReservationInfo",
             "type": "Element",
-            "required": True,
         }
     )

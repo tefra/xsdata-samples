@@ -43,21 +43,18 @@ class Commission8(TypeKeyElement2):
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     supplier_type: TypeSupplierType2 = field(
         metadata={
             "name": "SupplierType",
             "type": "Attribute",
-            "required": True,
         }
     )
     supplier: str = field(
         metadata={
             "name": "Supplier",
             "type": "Attribute",
-            "required": True,
             "max_length": 6,
         }
     )

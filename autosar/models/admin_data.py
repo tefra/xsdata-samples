@@ -313,7 +313,6 @@ class BlueprintFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -323,7 +322,6 @@ class BlueprintFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -333,7 +331,6 @@ class BlueprintFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -343,7 +340,6 @@ class BlueprintFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -460,7 +456,6 @@ class DefItem:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | DefItem.ShortNameFragments = field(
@@ -621,7 +616,6 @@ class ReferrableRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -874,7 +868,6 @@ class Sdg:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -884,7 +877,6 @@ class Sdg:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -1633,7 +1625,6 @@ class StructuredReq:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | StructuredReq.ShortNameFragments = field(
@@ -1906,7 +1897,6 @@ class StructuredReq:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1945,7 +1935,6 @@ class StructuredReq:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -3299,7 +3288,6 @@ class TraceableText:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: None | TraceableText.ShortNameFragments = field(
@@ -3554,6 +3542,5 @@ class TraceableText:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

@@ -96,6 +96,5 @@ class ModePortAnnotation:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

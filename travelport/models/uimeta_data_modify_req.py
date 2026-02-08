@@ -45,14 +45,12 @@ class UimetaDataModifyReq(BaseReq2):
         metadata={
             "name": "ProfileID",
             "type": "Attribute",
-            "required": True,
         }
     )
     meta_data_version: int = field(
         metadata={
             "name": "MetaDataVersion",
             "type": "Attribute",
-            "required": True,
             "min_inclusive": 0,
         }
     )

@@ -62,7 +62,6 @@ class ElaboratedDataPublication(PayloadPublication):
             "name": "headerInformation",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     reference_settings: None | ReferenceSettings = field(

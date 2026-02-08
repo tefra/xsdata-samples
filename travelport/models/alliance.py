@@ -24,6 +24,5 @@ class Alliance:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
         }
     )

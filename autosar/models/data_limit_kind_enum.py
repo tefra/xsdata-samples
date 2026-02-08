@@ -29,11 +29,7 @@ class DataLimitKindEnum:
     class Meta:
         name = "DATA-LIMIT-KIND-ENUM"
 
-    value: DataLimitKindEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DataLimitKindEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

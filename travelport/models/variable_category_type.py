@@ -43,6 +43,5 @@ class VariableCategoryType:
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
         }
     )

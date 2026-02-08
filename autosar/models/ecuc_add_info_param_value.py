@@ -124,7 +124,6 @@ class EcucAddInfoParamValue:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

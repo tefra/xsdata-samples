@@ -83,7 +83,6 @@ class LocalPoliciesTypeLocalPolicy:
             "name": "Status",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-            "required": True,
         }
     )
     party_ids: None | LocalPoliciesTypeLocalPolicyPartyIds = field(

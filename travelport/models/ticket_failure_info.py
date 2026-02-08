@@ -44,14 +44,12 @@ class TicketFailureInfo:
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "required": True,
         }
     )
     code: int = field(
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
         }
     )
     message: None | str = field(
@@ -65,6 +63,5 @@ class TicketFailureInfo:
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-            "required": True,
         }
     )

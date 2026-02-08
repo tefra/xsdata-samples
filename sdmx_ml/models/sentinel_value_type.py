@@ -42,6 +42,5 @@ class SentinelValueType:
     value: object = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

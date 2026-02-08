@@ -29,11 +29,7 @@ class CouplingPortRoleEnum:
     class Meta:
         name = "COUPLING-PORT-ROLE-ENUM"
 
-    value: CouplingPortRoleEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: CouplingPortRoleEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

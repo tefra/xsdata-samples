@@ -22,7 +22,6 @@ class Var:
     kap: Kap = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     uzo: list[Uzo] = field(

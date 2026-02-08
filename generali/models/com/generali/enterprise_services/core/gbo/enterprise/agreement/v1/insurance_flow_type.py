@@ -33,7 +33,6 @@ class InsuranceFlowType(OrganisationInvolvementType):
             "name": "SequenceNumber",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     risk_share: PercentType = field(
@@ -41,7 +40,6 @@ class InsuranceFlowType(OrganisationInvolvementType):
             "name": "RiskShare",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     cedants: None | InsuranceFlowTypeCedants = field(

@@ -25,7 +25,6 @@ class VehicleCountValue(DataValue):
             "name": "vehicleCount",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     vehicle_count_value_extension: None | ExtensionType = field(

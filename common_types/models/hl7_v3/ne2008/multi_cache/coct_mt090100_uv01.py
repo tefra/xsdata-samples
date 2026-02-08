@@ -266,7 +266,6 @@ class CoctMt090100Uv01LicensedEntity:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -335,7 +334,6 @@ class CoctMt090100Uv01RoleOther:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -669,6 +667,5 @@ class CoctMt090100Uv01AssignedPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )

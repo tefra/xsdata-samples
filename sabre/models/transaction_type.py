@@ -215,12 +215,7 @@ class TransactionType:
 
     @dataclass(kw_only=True)
     class RequestType:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         name: None | str = field(
             default=None,
             metadata={
@@ -231,12 +226,7 @@ class TransactionType:
 
     @dataclass(kw_only=True)
     class ServiceTag:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         name: None | str = field(
             default=None,
             metadata={
@@ -378,7 +368,6 @@ class TransactionType:
                 metadata={
                     "name": "FareType",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
             pseudo_city_code: None | str = field(
@@ -462,7 +451,6 @@ class TransactionType:
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"[A-Za-z0-9_]+(/[A-Za-z0-9_]+)*",
                 }
             )
@@ -473,7 +461,6 @@ class TransactionType:
                     metadata={
                         "name": "Name",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
                 value: None | str = field(
@@ -510,7 +497,6 @@ class TransactionType:
             metadata={
                 "name": "Value",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

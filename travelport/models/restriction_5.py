@@ -26,7 +26,6 @@ class Restriction5:
         metadata={
             "name": "Operation",
             "type": "Attribute",
-            "required": True,
         }
     )
     reason: None | str = field(

@@ -31,7 +31,6 @@ class ModifyTag2:
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
         }
     )
     name: None | str = field(

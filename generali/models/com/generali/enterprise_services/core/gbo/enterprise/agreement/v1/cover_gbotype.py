@@ -110,7 +110,6 @@ class CoverGbotype(AgreementType):
             "name": "ClaimJurisdiction",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     cost_in_addition: bool = field(
@@ -119,7 +118,6 @@ class CoverGbotype(AgreementType):
             "name": "CostInAddition",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         },
     )
     policy_jurisdiction: TextType = field(
@@ -127,7 +125,6 @@ class CoverGbotype(AgreementType):
             "name": "PolicyJurisdiction",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     layer: None | NumberType = field(
@@ -151,7 +148,6 @@ class CoverGbotype(AgreementType):
             "name": "Visible",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     country_of_business: None | str = field(
@@ -216,7 +212,6 @@ class CoverGbotype(AgreementType):
             "name": "PolicyType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     coverages: CoveragesType = field(
@@ -224,7 +219,6 @@ class CoverGbotype(AgreementType):
             "name": "Coverages",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     policy_holder_involvement: None | PolicyholderInvolvement = field(
@@ -248,7 +242,6 @@ class CoverGbotype(AgreementType):
             "name": "Deductions",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     total_deductions: TotalDeductionsType = field(
@@ -256,7 +249,6 @@ class CoverGbotype(AgreementType):
             "name": "TotalDeductions",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     extensions: None | ExtensionsType = field(
@@ -288,7 +280,6 @@ class CoverGbotype(AgreementType):
             "name": "Premiums",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     total_premium: None | TotalPremiumType = field(
@@ -368,7 +359,6 @@ class CoverGbotype(AgreementType):
             "name": "CountryOfRisk",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
             "pattern": r"[A-Z][A-Z]",
         }
     )

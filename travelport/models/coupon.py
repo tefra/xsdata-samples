@@ -142,7 +142,6 @@ class Coupon:
         metadata={
             "name": "Origin",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -151,7 +150,6 @@ class Coupon:
         metadata={
             "name": "Destination",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -174,14 +172,12 @@ class Coupon:
         metadata={
             "name": "StopoverCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     booking_class: str = field(
         metadata={
             "name": "BookingClass",
             "type": "Attribute",
-            "required": True,
             "max_length": 2,
         }
     )
@@ -189,7 +185,6 @@ class Coupon:
         metadata={
             "name": "FareBasis",
             "type": "Attribute",
-            "required": True,
         }
     )
     not_valid_before: None | XmlDate = field(
@@ -210,7 +205,6 @@ class Coupon:
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
             "max_length": 1,
         }
     )

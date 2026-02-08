@@ -39,7 +39,6 @@ class RetailerRulesType:
             metadata={
                 "name": "Code",
                 "type": "Attribute",
-                "required": True,
                 "pattern": r"[0-9a-zA-Z]{2,20}",
             }
         )

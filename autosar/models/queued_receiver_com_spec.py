@@ -293,7 +293,6 @@ class QueuedReceiverComSpec:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -303,7 +302,6 @@ class QueuedReceiverComSpec:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

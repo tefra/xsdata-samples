@@ -129,7 +129,6 @@ class SenderRecArrayElementMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -348,7 +347,6 @@ class SenderRecRecordElementMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -381,7 +379,6 @@ class SenderRecRecordElementMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -391,7 +388,6 @@ class SenderRecRecordElementMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

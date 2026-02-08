@@ -443,7 +443,6 @@ class SavedTrip:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 50,
         }
@@ -473,7 +472,6 @@ class SavedTrip:
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )
     created_by_agent: None | str = field(

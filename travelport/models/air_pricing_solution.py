@@ -240,7 +240,6 @@ class AirPricingSolution:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     complete_itinerary: bool = field(

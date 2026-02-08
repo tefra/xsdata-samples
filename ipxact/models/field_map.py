@@ -36,7 +36,6 @@ class FieldMap:
         metadata={
             "name": "fieldSlice",
             "type": "Element",
-            "required": True,
         }
     )
     sub_port_reference: list[SubPortReference] = field(
@@ -102,7 +101,6 @@ class FieldMap:
             metadata={
                 "name": "addressBlockRef",
                 "type": "Element",
-                "required": True,
             }
         )
         register_file_ref: list[RegisterFileRef] = field(
@@ -116,7 +114,6 @@ class FieldMap:
             metadata={
                 "name": "registerRef",
                 "type": "Element",
-                "required": True,
             }
         )
         alternate_register_ref: None | AlternateRegisterRef = field(
@@ -130,7 +127,6 @@ class FieldMap:
             metadata={
                 "name": "fieldRef",
                 "type": "Element",
-                "required": True,
             }
         )
         range: None | Range = field(
@@ -146,7 +142,6 @@ class FieldMap:
                 metadata={
                     "name": "addressSpaceRef",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -156,22 +151,15 @@ class FieldMap:
                 metadata={
                     "name": "memoryMapRef",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
     @dataclass(kw_only=True)
     class ModeRef:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         priority: int = field(
             metadata={
                 "type": "Attribute",
-                "required": True,
             }
         )
         id: None | str = field(

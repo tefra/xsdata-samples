@@ -12,6 +12,5 @@ class Type:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )

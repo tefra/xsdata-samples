@@ -30,7 +30,6 @@ class CedantInvolvementType(OrganisationInvolvementType):
             "name": "OrganisationRole",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     policy_identifier: None | Idtype = field(

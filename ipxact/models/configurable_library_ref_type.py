@@ -31,25 +31,21 @@ class ConfigurableLibraryRefType:
     vendor: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     library: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     version: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     id: None | str = field(

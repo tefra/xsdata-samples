@@ -29,7 +29,6 @@ class FareValidity:
         metadata={
             "name": "RailJourneyRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     not_valid_before: None | XmlDate = field(

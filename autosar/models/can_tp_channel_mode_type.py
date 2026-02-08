@@ -28,11 +28,7 @@ class CanTpChannelModeType:
     class Meta:
         name = "CAN-TP-CHANNEL-MODE-TYPE"
 
-    value: CanTpChannelModeTypeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: CanTpChannelModeTypeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

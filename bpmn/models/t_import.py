@@ -13,19 +13,16 @@ class TImport:
     namespace: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     location: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     import_type: str = field(
         metadata={
             "name": "importType",
             "type": "Attribute",
-            "required": True,
         }
     )

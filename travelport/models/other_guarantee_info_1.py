@@ -23,16 +23,10 @@ class OtherGuaranteeInfo1:
         name = "OtherGuaranteeInfo"
         namespace = "http://www.travelport.com/schema/common_v52_0"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     type_value: OtherGuaranteeInfoType1 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )

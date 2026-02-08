@@ -56,7 +56,6 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "name": "FromJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     to_journey_ref: VehicleJourneyRefStructure = field(
@@ -64,7 +63,6 @@ class JourneyMeetingVersionStructure(DataManagedObjectStructure):
             "name": "ToJourneyRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     from_point_in_journey_pattern_ref: (

@@ -85,14 +85,12 @@ class ProviderReservationSearchResult:
         metadata={
             "name": "Ticketed",
             "type": "Attribute",
-            "required": True,
         }
     )
     provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     provider_locator_code: None | str = field(

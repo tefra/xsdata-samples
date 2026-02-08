@@ -187,7 +187,6 @@ class CouplingPortDetails:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

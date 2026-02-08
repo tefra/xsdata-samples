@@ -30,12 +30,7 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class ExcpetionNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -43,32 +38,17 @@ class Finote:
     class Meta:
         name = "FINote"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentRequestAcknCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentRequestAcknCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -76,52 +56,27 @@ class PaymentRequestAcknId:
     class Meta:
         name = "PaymentRequestAcknID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentRequestAcknIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentRequestNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentSequenceNo:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SuccessfulReceptIndicator:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -140,7 +95,6 @@ class FiaccountData:
         metadata={
             "name": "FinancialInstitution",
             "type": "Element",
-            "required": True,
         }
     )
     sequence: None | Sequence = field(
@@ -168,7 +122,6 @@ class PaymentDocumentId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -179,7 +132,6 @@ class PaymentRequestAcknSummary:
         metadata={
             "name": "PaymentRequestSummary",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -193,7 +145,6 @@ class PaymentRequestIdreference:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -219,7 +170,6 @@ class PaymentRequestAcknHeader:
         metadata={
             "name": "PaymentRequestAcknCoded",
             "type": "Element",
-            "required": True,
         }
     )
     payment_request_ackn_coded_other: None | PaymentRequestAcknCodedOther = (
@@ -235,14 +185,12 @@ class PaymentRequestAcknHeader:
         metadata={
             "name": "PaymentRequestAcknIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     payment_request_ackn_id: PaymentRequestAcknId = field(
         metadata={
             "name": "PaymentRequestAcknID",
             "type": "Element",
-            "required": True,
         }
     )
     payment_request_idreference: None | PaymentRequestIdreference = field(
@@ -263,7 +211,6 @@ class PaymentRequestAcknHeader:
         metadata={
             "name": "SuccessfulReceptIndicator",
             "type": "Element",
-            "required": True,
         }
     )
     general_note: None | GeneralNote = field(
@@ -277,7 +224,6 @@ class PaymentRequestAcknHeader:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -288,7 +234,6 @@ class ListOfFinancialInstitutions:
         metadata={
             "name": "ListOfFIAccount",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -299,14 +244,12 @@ class FinancialInstitutionDetail:
         metadata={
             "name": "OriginatingFinancialInstitution",
             "type": "Element",
-            "required": True,
         }
     )
     receiving_financial_institution: ReceivingFinancialInstitution = field(
         metadata={
             "name": "ReceivingFinancialInstitution",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_financial_institutions: None | ListOfFinancialInstitutions = field(
@@ -324,14 +267,12 @@ class PaymentRequestAcknDetail:
         metadata={
             "name": "ConfirmationID",
             "type": "Element",
-            "required": True,
         }
     )
     payment_document_id: PaymentDocumentId = field(
         metadata={
             "name": "PaymentDocumentID",
             "type": "Element",
-            "required": True,
         }
     )
     payment_sequence_no: None | PaymentSequenceNo = field(
@@ -431,7 +372,6 @@ class PaymentRequestAcknowledgment:
         metadata={
             "name": "PaymentRequestAcknHeader",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_payment_request_ackn_detail: ListOfPaymentRequestAcknDetail = (
@@ -439,7 +379,6 @@ class PaymentRequestAcknowledgment:
             metadata={
                 "name": "ListOfPaymentRequestAcknDetail",
                 "type": "Element",
-                "required": True,
             }
         )
     )
@@ -447,6 +386,5 @@ class PaymentRequestAcknowledgment:
         metadata={
             "name": "PaymentRequestAcknSummary",
             "type": "Element",
-            "required": True,
         }
     )

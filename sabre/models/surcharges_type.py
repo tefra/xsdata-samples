@@ -7,12 +7,7 @@ __NAMESPACE__ = "http://www.opentravel.org/OTA/2003/05"
 
 @dataclass(kw_only=True)
 class SurchargesType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     ind: None | str = field(
         default=None,
         metadata={

@@ -25,7 +25,6 @@ class InstitutionId:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "pattern": r"[hH][tT][tT][pP][sS]://.{1,50}",
         },
     )
@@ -33,6 +32,5 @@ class InstitutionId:
         metadata={
             "name": "type",
             "type": "Attribute",
-            "required": True,
         }
     )

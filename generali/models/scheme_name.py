@@ -12,6 +12,5 @@ class SchemeName:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )

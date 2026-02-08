@@ -12,7 +12,6 @@ class Error:
             "name": "Timestamp",
             "type": "Element",
             "namespace": "",
-            "required": True,
         }
     )
     code: str = field(
@@ -20,7 +19,6 @@ class Error:
             "name": "Code",
             "type": "Element",
             "namespace": "",
-            "required": True,
         }
     )
     message: None | str = field(

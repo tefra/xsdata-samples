@@ -25,13 +25,11 @@ class TypeActionReference:
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
         }
     )
     profile_action_code: str = field(
         metadata={
             "name": "ProfileActionCode",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -43,7 +43,6 @@ class SignalTypeDef:
         metadata={
             "name": "signalType",
             "type": "Element",
-            "required": True,
         }
     )
     view_ref: list[SignalTypeDef.ViewRef] = field(
@@ -63,12 +62,7 @@ class SignalTypeDef:
 
     @dataclass(kw_only=True)
     class ViewRef:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         id: None | str = field(
             default=None,
             metadata={

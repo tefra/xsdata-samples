@@ -37,7 +37,6 @@ class SingleProfileMigrationReq2(BaseReq5):
         metadata={
             "name": "ExternalSystem",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 10,
         }
@@ -46,14 +45,12 @@ class SingleProfileMigrationReq2(BaseReq5):
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-            "required": True,
         }
     )
     pcc: str = field(
         metadata={
             "name": "PCC",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 10,
         }
@@ -62,7 +59,6 @@ class SingleProfileMigrationReq2(BaseReq5):
         metadata={
             "name": "AccountProfileTitle",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 50,
         }

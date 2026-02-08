@@ -90,6 +90,5 @@ class ModeSwitchReceiverComSpec:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

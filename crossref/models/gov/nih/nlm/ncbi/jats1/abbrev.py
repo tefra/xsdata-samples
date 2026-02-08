@@ -1317,7 +1317,6 @@ class IndexTerm:
     term: Term = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     index_term: None | IndexTerm = field(
@@ -3039,7 +3038,6 @@ class DefItem:
     term: Term = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     def_value: list[Def] = field(
@@ -6337,7 +6335,6 @@ class Graphic:
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-            "required": True,
         }
     )
     role: None | str = field(
@@ -7470,7 +7467,6 @@ class InlineMedia:
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-            "required": True,
         }
     )
     role: None | str = field(
@@ -13283,7 +13279,6 @@ class Media:
         metadata={
             "type": "Attribute",
             "namespace": "http://www.w3.org/1999/xlink",
-            "required": True,
         }
     )
     role: None | str = field(
@@ -13439,7 +13434,6 @@ class NamedContent:
         metadata={
             "name": "content-type",
             "type": "Attribute",
-            "required": True,
         }
     )
     hreflang: None | str = field(
@@ -15514,13 +15508,11 @@ class Ruby:
     rb: Rb = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     rt: Rt = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     content_type: None | str = field(
@@ -15572,7 +15564,6 @@ class Speech:
     speaker: Speaker = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     p: list[P] = field(
@@ -15739,7 +15730,6 @@ class QuestionWrap:
     question: Question = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     answer: None | Answer = field(
@@ -15869,7 +15859,6 @@ class RelatedArticle:
         metadata={
             "name": "related-article-type",
             "type": "Attribute",
-            "required": True,
         }
     )
     specific_use: None | str = field(
@@ -18759,7 +18748,6 @@ class Target:
     id: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     specific_use: None | str = field(

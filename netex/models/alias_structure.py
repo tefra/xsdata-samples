@@ -14,7 +14,6 @@ class AliasStructure:
             "name": "PrivateCode",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     identifier_type: None | str = field(

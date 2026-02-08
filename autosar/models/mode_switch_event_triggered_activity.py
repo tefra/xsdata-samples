@@ -85,6 +85,5 @@ class ModeSwitchEventTriggeredActivity:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

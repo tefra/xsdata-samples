@@ -28,7 +28,6 @@ class AirExchangeBundleTotal:
             "name": "AirExchangeInfo",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "required": True,
         }
     )
     penalty: list[Penalty1] = field(

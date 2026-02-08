@@ -42,7 +42,6 @@ class SubmittedStructureType:
             "name": "MaintainableObject",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
-            "required": True,
             "pattern": r".+\)",
         }
     )

@@ -27,12 +27,7 @@ class RequiresDriver:
         name = "requiresDriver"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: bool = field(
-        default=False,
-        metadata={
-            "required": True,
-        },
-    )
+    value: bool = field(default=False)
     driver_type: RequiresDriverDriverType = field(
         default=RequiresDriverDriverType.ANY,
         metadata={

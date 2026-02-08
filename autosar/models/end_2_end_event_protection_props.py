@@ -107,7 +107,6 @@ class End2EndEventProtectionProps:
             "name": "SHORT-NAME",
             "type": "Element",
             "namespace": "http://autosar.org/schema/r4.0",
-            "required": True,
         }
     )
     short_name_fragments: (
@@ -299,7 +298,6 @@ class End2EndEventProtectionProps:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -309,6 +307,5 @@ class End2EndEventProtectionProps:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

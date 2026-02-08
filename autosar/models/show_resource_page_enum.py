@@ -29,11 +29,7 @@ class ShowResourcePageEnum:
     class Meta:
         name = "SHOW-RESOURCE-PAGE-ENUM"
 
-    value: ShowResourcePageEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ShowResourcePageEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

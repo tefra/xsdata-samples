@@ -28,11 +28,7 @@ class SecurityEventReportingModeEnum:
     class Meta:
         name = "SECURITY-EVENT-REPORTING-MODE-ENUM"
 
-    value: SecurityEventReportingModeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SecurityEventReportingModeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

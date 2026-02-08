@@ -17,7 +17,6 @@ class BoundingBoxStructure2:
             "name": "UpperLeft",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     lower_right: LocationStructure2 = field(
@@ -25,6 +24,5 @@ class BoundingBoxStructure2:
             "name": "LowerRight",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

@@ -30,7 +30,6 @@ class ExternalIdentifier1(TypeKeyElement1):
         metadata={
             "name": "ExtID",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 255,
         }

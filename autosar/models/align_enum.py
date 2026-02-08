@@ -28,11 +28,7 @@ class AlignEnum:
     class Meta:
         name = "ALIGN-ENUM"
 
-    value: AlignEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: AlignEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

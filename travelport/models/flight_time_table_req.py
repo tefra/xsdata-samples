@@ -28,6 +28,5 @@ class FlightTimeTableReq(BaseSearchReq1):
         metadata={
             "name": "FlightTimeTableCriteria",
             "type": "Element",
-            "required": True,
         }
     )

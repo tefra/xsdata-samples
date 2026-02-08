@@ -29,11 +29,7 @@ class ItemLabelPosEnum:
     class Meta:
         name = "ITEM-LABEL-POS-ENUM"
 
-    value: ItemLabelPosEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ItemLabelPosEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

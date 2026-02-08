@@ -26,6 +26,5 @@ class TCorrelationSubscription(TBaseElement):
         metadata={
             "name": "correlationKeyRef",
             "type": "Attribute",
-            "required": True,
         }
     )

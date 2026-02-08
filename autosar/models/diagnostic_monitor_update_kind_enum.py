@@ -31,11 +31,7 @@ class DiagnosticMonitorUpdateKindEnum:
     class Meta:
         name = "DIAGNOSTIC-MONITOR-UPDATE-KIND-ENUM"
 
-    value: DiagnosticMonitorUpdateKindEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticMonitorUpdateKindEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -96,7 +96,6 @@ class Assertion:
     name: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 150,
         }

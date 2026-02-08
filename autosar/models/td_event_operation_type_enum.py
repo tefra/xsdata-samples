@@ -28,11 +28,7 @@ class TdEventOperationTypeEnum:
     class Meta:
         name = "TD-EVENT-OPERATION-TYPE-ENUM"
 
-    value: TdEventOperationTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TdEventOperationTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

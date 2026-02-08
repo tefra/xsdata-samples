@@ -72,7 +72,6 @@ class BaseReservation4:
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         }
@@ -81,14 +80,12 @@ class BaseReservation4:
         metadata={
             "name": "CreateDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     modified_date: str = field(
         metadata={
             "name": "ModifiedDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     customer_number: None | str = field(

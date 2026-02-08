@@ -18,7 +18,6 @@ class PremiumAllocationType:
             "name": "CountryCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-            "required": True,
             "pattern": r"[A-Z][A-Z]",
         }
     )
@@ -27,7 +26,6 @@ class PremiumAllocationType:
             "name": "BeginningOfYear",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-            "required": True,
         }
     )
     beginning_of_year_local_share: AmountType = field(
@@ -35,6 +33,5 @@ class PremiumAllocationType:
             "name": "BeginningOfYearLocalShare",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-            "required": True,
         }
     )

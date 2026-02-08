@@ -18,14 +18,12 @@ class Count:
     count: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     count_type: str = field(
         metadata={
             "name": "count-type",
             "type": "Attribute",
-            "required": True,
         }
     )
     id: None | str = field(

@@ -22,12 +22,7 @@ class Mcoremark2:
         name = "MCORemark"
         namespace = "http://www.travelport.com/schema/common_v32_0"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     additional_rmk: None | bool = field(
         default=None,
         metadata={

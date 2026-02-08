@@ -34,12 +34,7 @@ class AsamRecordLayoutSemantics:
     class Meta:
         name = "ASAM-RECORD-LAYOUT-SEMANTICS"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     s: None | str = field(
         default=None,
         metadata={

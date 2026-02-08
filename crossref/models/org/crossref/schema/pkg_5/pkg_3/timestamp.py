@@ -18,8 +18,4 @@ class Timestamp:
         name = "timestamp"
         namespace = "http://www.crossref.org/schema/5.3.1"
 
-    value: int = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: int = field()

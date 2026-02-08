@@ -25,7 +25,6 @@ class JourneyFrequencyGroupVersionStructure(GroupOfEntitiesVersionStructure):
             "name": "FirstDepartureTime",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     first_day_offset: None | int = field(

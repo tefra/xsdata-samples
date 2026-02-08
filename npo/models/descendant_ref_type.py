@@ -33,6 +33,5 @@ class DescendantRefType:
         metadata={
             "name": "type",
             "type": "Attribute",
-            "required": True,
         }
     )

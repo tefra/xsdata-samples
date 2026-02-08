@@ -419,7 +419,6 @@ class ReportingCategoryType(ReportingCategoryBaseType):
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.datastructure\.DataStructure=.+|.+\.metadatastructure\.MetadataStructure=.+",
             },
         )
@@ -429,7 +428,6 @@ class ReportingCategoryType(ReportingCategoryBaseType):
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.datastructure\.Dataflow=.+|.+\.metadatastructure\.Metadataflow=.+",
             },
         )
@@ -566,7 +564,6 @@ class CustomTypeType(CustomTypeBaseType):
             "name": "VtlScalarType",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
         }
     )
     data_type: SimpleDataType | str = field(
@@ -574,7 +571,6 @@ class CustomTypeType(CustomTypeBaseType):
             "name": "DataType",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
         }
     )
     vtl_literal_format: None | str = field(
@@ -652,7 +648,6 @@ class GeoFeatureSetCodeType(GeoRefCodeType):
     value: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -671,7 +666,6 @@ class GeoGridCodeType(GeoRefCodeType):
             "name": "GeoCell",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
         }
     )
 
@@ -719,7 +713,6 @@ class NamePersonalisationType(NamePersonalisationBaseType):
             "name": "VtlDefaultName",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
         }
     )
     personalised_name: str = field(
@@ -727,14 +720,12 @@ class NamePersonalisationType(NamePersonalisationBaseType):
             "name": "PersonalisedName",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
         }
     )
     vtl_artefact: str = field(
         metadata={
             "name": "vtlArtefact",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -794,21 +785,18 @@ class RulesetType(RulesetBaseType):
             "name": "RulesetDefinition",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
         }
     )
     ruleset_type: str = field(
         metadata={
             "name": "rulesetType",
             "type": "Attribute",
-            "required": True,
         }
     )
     ruleset_scope: str = field(
         metadata={
             "name": "rulesetScope",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -844,7 +832,6 @@ class TransformationType(TransformationBaseType):
             "name": "Expression",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
         }
     )
     result: str = field(
@@ -852,14 +839,12 @@ class TransformationType(TransformationBaseType):
             "name": "Result",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
         }
     )
     is_persistent: bool = field(
         metadata={
             "name": "isPersistent",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -885,7 +870,6 @@ class UserDefinedOperatorType(UserDefinedOperatorBaseType):
             "name": "OperatorDefinition",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/structure",
-            "required": True,
         }
     )
 
@@ -965,7 +949,6 @@ class VtlMappingType(VtlMappingBaseType):
     alias: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -974,7 +957,6 @@ class VtlMappingType(VtlMappingBaseType):
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.datastructure\.Dataflow=.+",
             },
         )
@@ -984,7 +966,6 @@ class VtlMappingType(VtlMappingBaseType):
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.codelist\.Codelist=.+",
             },
         )
@@ -994,7 +975,6 @@ class VtlMappingType(VtlMappingBaseType):
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.conceptscheme\.Concept=.+",
             },
         )

@@ -20,6 +20,5 @@ class FareFamilyUpdate:
         metadata={
             "name": "FareFamily",
             "type": "Element",
-            "required": True,
         }
     )

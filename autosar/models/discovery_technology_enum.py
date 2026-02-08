@@ -28,11 +28,7 @@ class DiscoveryTechnologyEnum:
     class Meta:
         name = "DISCOVERY-TECHNOLOGY-ENUM"
 
-    value: DiscoveryTechnologyEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiscoveryTechnologyEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -126,7 +126,6 @@ class PassengerTypeQuantityType(TravelerCountType):
                 metadata={
                     "name": "Years",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -136,7 +135,6 @@ class PassengerTypeQuantityType(TravelerCountType):
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -146,7 +144,6 @@ class PassengerTypeQuantityType(TravelerCountType):
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 

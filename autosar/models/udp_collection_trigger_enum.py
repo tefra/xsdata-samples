@@ -30,11 +30,7 @@ class UdpCollectionTriggerEnum:
     class Meta:
         name = "UDP-COLLECTION-TRIGGER-ENUM"
 
-    value: UdpCollectionTriggerEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: UdpCollectionTriggerEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -33,7 +33,6 @@ class Variance:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     time: None | str = field(

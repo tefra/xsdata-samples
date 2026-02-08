@@ -46,14 +46,12 @@ class GdsQueueListReq(BaseReq1):
         metadata={
             "name": "GdsQueueSelector",
             "type": "Element",
-            "required": True,
         }
     )
     provider_code: str = field(
         metadata={
             "name": "ProviderCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 5,
         }

@@ -30,11 +30,7 @@ class EthernetCouplingPortSchedulerEnum:
     class Meta:
         name = "ETHERNET-COUPLING-PORT-SCHEDULER-ENUM"
 
-    value: EthernetCouplingPortSchedulerEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: EthernetCouplingPortSchedulerEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

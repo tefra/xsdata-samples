@@ -30,11 +30,7 @@ class TransportLayerProtocolEnum:
     class Meta:
         name = "TRANSPORT-LAYER-PROTOCOL-ENUM"
 
-    value: TransportLayerProtocolEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TransportLayerProtocolEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

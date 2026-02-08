@@ -13,11 +13,7 @@ class MediaSortType:
     class Meta:
         name = "mediaSortType"
 
-    value: MediaSortTypeEnum = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: MediaSortTypeEnum = field()
     order: None | OrderTypeEnum = field(
         default=None,
         metadata={

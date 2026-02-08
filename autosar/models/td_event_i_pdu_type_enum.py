@@ -28,11 +28,7 @@ class TdEventIPduTypeEnum:
     class Meta:
         name = "TD-EVENT-I-PDU-TYPE-ENUM"
 
-    value: TdEventIPduTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TdEventIPduTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

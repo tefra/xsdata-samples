@@ -27,13 +27,11 @@ class CustomerReceiptInfo:
         metadata={
             "name": "BookingTravelerRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     email_ref: str = field(
         metadata={
             "name": "EmailRef",
             "type": "Attribute",
-            "required": True,
         }
     )

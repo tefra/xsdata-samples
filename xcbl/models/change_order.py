@@ -81,7 +81,6 @@ class ChangeOrder:
         metadata={
             "name": "ChangeOrderHeader",
             "type": "Element",
-            "required": True,
         }
     )
     change_order_detail: None | ChangeOrderDetail = field(

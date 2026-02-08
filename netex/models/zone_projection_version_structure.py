@@ -20,7 +20,6 @@ class ZoneProjectionVersionStructure(ProjectionVersionStructure):
             "name": "ProjectedZoneRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     project_to_zone_ref: None | ZoneRefStructure = field(

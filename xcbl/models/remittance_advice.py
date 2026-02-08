@@ -88,12 +88,7 @@ class AsnpartialOrderCoded:
     class Meta:
         name = "ASNPartialOrderCoded"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -101,372 +96,187 @@ class AsnpartialOrderCodedOther:
     class Meta:
         name = "ASNPartialOrderCodedOther"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ActualPaymentStatusCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ActualPaymentStatusCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ActualShipToDateTime:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AdjustmentDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AdjustmentNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AdjustmentPercent:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AdjustmentReasonCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AdjustmentReasonCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CertificateAuthority:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class EncryptedData:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ExpectedShipToDateTime:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class FinancialInstitutionQaulifierCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class FinancialInstitutionQaulifierCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class FixedAsset:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InvoiceDueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InvoiceLineItemNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InvoiceTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InvoiceTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class IsCredit:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LineItemReference:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PartialOrderCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PartialOrderCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentReasonCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentReasonCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentSettlementDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PurchaseOrderDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PurchaseOrderLineItemNumber:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ReceiptDateTime:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RemittaceAdviceIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RemittanceAdviceStatusCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RemittanceAdviceStatusCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class SummaryNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalLineItem:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TotalPaymentDocuments:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TraceTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TraceTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -474,32 +284,17 @@ class TrackingCallUrl:
     class Meta:
         name = "TrackingCallURL"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransactionHandlingCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class TransactionHandlingCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -507,22 +302,12 @@ class Url:
     class Meta:
         name = "URL"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class WorkBreakdownStructure:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -534,7 +319,6 @@ class Asnnumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -548,7 +332,6 @@ class AsnpartialOrder:
         metadata={
             "name": "ASNPartialOrderCoded",
             "type": "Element",
-            "required": True,
         }
     )
     asnpartial_order_coded_other: None | AsnpartialOrderCodedOther = field(
@@ -566,7 +349,6 @@ class ActualAmount:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -597,7 +379,6 @@ class AdjustmentAmount:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -611,7 +392,6 @@ class AirWayBillNumber1:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -625,7 +405,6 @@ class AirWaybillNumber2:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -636,7 +415,6 @@ class AuthorizationAssignedBy:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -647,7 +425,6 @@ class AuthorizationNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -658,7 +435,6 @@ class BillOfLadingNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -669,7 +445,6 @@ class CarrierReferenceNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -680,7 +455,6 @@ class ContractNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -691,7 +465,6 @@ class CostAllocationNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -702,7 +475,6 @@ class Damaged:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -713,7 +485,6 @@ class DeliveryNoteNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -731,7 +502,6 @@ class EncryptedField:
         metadata={
             "name": "EncryptedData",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -742,7 +512,6 @@ class ExpectedAmount:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -753,7 +522,6 @@ class ExportLicenceNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -764,7 +532,6 @@ class FinancialInstitutionCoded:
         metadata={
             "name": "FinancialInstitutionQaulifierCoded",
             "type": "Element",
-            "required": True,
         }
     )
     financial_institution_qaulifier_coded_other: (
@@ -780,7 +547,6 @@ class FinancialInstitutionCoded:
         metadata={
             "name": "FinancialInstitution",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -791,7 +557,6 @@ class ImportLicenceNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -802,7 +567,6 @@ class InvoiceCurrencyTotalValue:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -813,7 +577,6 @@ class InvoiceNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -824,7 +587,6 @@ class InvoiceType:
         metadata={
             "name": "InvoiceTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     invoice_type_coded_other: None | InvoiceTypeCodedOther = field(
@@ -842,7 +604,6 @@ class InvoicingDetailAmountDue:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -853,7 +614,6 @@ class InvoicingDetailAmountPaid:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -864,7 +624,6 @@ class InvoicingDetailReference:
         metadata={
             "name": "ReferenceCoded",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -875,7 +634,6 @@ class InvoicingPeriod:
         metadata={
             "name": "ValidityDates",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -886,7 +644,6 @@ class LetterOfCreditNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -897,7 +654,6 @@ class ListOfOtherInvoiceDates:
         metadata={
             "name": "ListOfDateCoded",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -920,7 +676,6 @@ class ListOfRemittanceAdviceReference:
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -943,7 +698,6 @@ class Ordered:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -957,7 +711,6 @@ class OtherAsnreferences:
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -993,7 +746,6 @@ class OtherInvoiceReferences:
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1004,7 +756,6 @@ class PackingListNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1015,7 +766,6 @@ class PayeeParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1026,7 +776,6 @@ class PayerParty:
         metadata={
             "name": "PartyID",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_identifier: None | ListOfIdentifier = field(
@@ -1100,7 +849,6 @@ class PaymentCurrency:
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1111,7 +859,6 @@ class PaymentCurrencyTotalValue:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1122,7 +869,6 @@ class ProformaInvoiceNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1133,7 +879,6 @@ class PurchaseOrderNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1144,7 +889,6 @@ class RemittanceAdviceAttachment:
         metadata={
             "name": "Attachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1158,7 +902,6 @@ class RemittanceAdviceId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1169,7 +912,6 @@ class RemittanceAdvicePurpose:
         metadata={
             "name": "Purpose",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1180,7 +922,6 @@ class Returned:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1191,7 +932,6 @@ class ShipmentIdentifier:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1202,7 +942,6 @@ class ShippedToDate:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1213,7 +952,6 @@ class SupplierOrderNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1224,7 +962,6 @@ class SupplierParty:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1235,7 +972,6 @@ class TaxAccountingSubTotalValue:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1246,7 +982,6 @@ class TaxPeriod:
         metadata={
             "name": "ValidityDates",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1257,7 +992,6 @@ class TotalAmountDue:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1268,7 +1002,6 @@ class TotalAmountPaid:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1279,7 +1012,6 @@ class TotalSettlementAmount:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1290,7 +1022,6 @@ class TotalTaxAmount:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1301,7 +1032,6 @@ class TraceReference:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1312,7 +1042,6 @@ class TrackingNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1323,7 +1052,6 @@ class Unusable:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1341,7 +1069,6 @@ class Adjustment:
         metadata={
             "name": "AdjustmentReasonCoded",
             "type": "Element",
-            "required": True,
         }
     )
     adjustment_reason_coded_other: None | AdjustmentReasonCodedOther = field(
@@ -1383,7 +1110,6 @@ class Adjustment:
         metadata={
             "name": "ActualAmount",
             "type": "Element",
-            "required": True,
         }
     )
     adjustment_note: None | AdjustmentNote = field(
@@ -1401,7 +1127,6 @@ class AuthorizationReference:
         metadata={
             "name": "AuthorizationNumber",
             "type": "Element",
-            "required": True,
         }
     )
     authorization_assigned_by: None | AuthorizationAssignedBy = field(
@@ -1419,14 +1144,12 @@ class CarrierReference:
         metadata={
             "name": "CarrierReferenceNumber",
             "type": "Element",
-            "required": True,
         }
     )
     transport_route_id: TransportRouteId = field(
         metadata={
             "name": "TransportRouteID",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1437,7 +1160,6 @@ class CostAllocation:
         metadata={
             "name": "CostAllocationNumber",
             "type": "Element",
-            "required": True,
         }
     )
     work_breakdown_structure: None | WorkBreakdownStructure = field(
@@ -1554,7 +1276,6 @@ class InvoicePricingDetail:
         metadata={
             "name": "ListOfPrice",
             "type": "Element",
-            "required": True,
         }
     )
     tax: list[Tax] = field(
@@ -1582,7 +1303,6 @@ class InvoicePricingDetail:
         metadata={
             "name": "InvoiceCurrencyTotalValue",
             "type": "Element",
-            "required": True,
         }
     )
     payment_currency_total_value: None | PaymentCurrencyTotalValue = field(
@@ -1645,7 +1365,6 @@ class ListOfSummaryItems:
         metadata={
             "name": "ListOfValues",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1656,14 +1375,12 @@ class PaymentParty:
         metadata={
             "name": "PayerParty",
             "type": "Element",
-            "required": True,
         }
     )
     payee_party: PayeeParty = field(
         metadata={
             "name": "PayeeParty",
             "type": "Element",
-            "required": True,
         }
     )
     buyer_party: None | BuyerParty = field(
@@ -1702,7 +1419,6 @@ class PurchaseOrderReference:
         metadata={
             "name": "PurchaseOrderNumber",
             "type": "Element",
-            "required": True,
         }
     )
     purchase_order_date: None | PurchaseOrderDate = field(
@@ -1743,7 +1459,6 @@ class RelatedInvoiceType:
         metadata={
             "name": "InvoiceType",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1754,7 +1469,6 @@ class TraceType:
         metadata={
             "name": "TraceTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     trace_type_coded_other: None | TraceTypeCodedOther = field(
@@ -1779,7 +1493,6 @@ class TrackingInformation:
         metadata={
             "name": "TrackingNumber",
             "type": "Element",
-            "required": True,
         }
     )
     tracking_call_url: None | TrackingCallUrl = field(
@@ -1804,7 +1517,6 @@ class EncryptedInfo:
         metadata={
             "name": "ListOfEncryptedField",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1815,7 +1527,6 @@ class LineItemDates:
         metadata={
             "name": "InvoiceDates",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1850,14 +1561,12 @@ class RelatedInvoiceRef:
         metadata={
             "name": "RelatedInvoiceType",
             "type": "Element",
-            "required": True,
         }
     )
     invoice_number: InvoiceNumber = field(
         metadata={
             "name": "InvoiceNumber",
             "type": "Element",
-            "required": True,
         }
     )
     invoice_line_item_number: None | InvoiceLineItemNumber = field(
@@ -1875,21 +1584,18 @@ class RemittanceAdviceHeader:
         metadata={
             "name": "RemittanceAdvicePurpose",
             "type": "Element",
-            "required": True,
         }
     )
     remittace_advice_issue_date: RemittaceAdviceIssueDate = field(
         metadata={
             "name": "RemittaceAdviceIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     remittance_advice_id: RemittanceAdviceId = field(
         metadata={
             "name": "RemittanceAdviceID",
             "type": "Element",
-            "required": True,
         }
     )
     remittance_advice_status_coded: None | RemittanceAdviceStatusCoded = field(
@@ -1926,14 +1632,12 @@ class RemittanceAdviceHeader:
         metadata={
             "name": "TotalAmountPaid",
             "type": "Element",
-            "required": True,
         }
     )
     payment_currency: PaymentCurrency = field(
         metadata={
             "name": "PaymentCurrency",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_rate_of_exchange_detail: None | ListOfRateOfExchangeDetail = field(
@@ -1954,7 +1658,6 @@ class RemittanceAdviceHeader:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
     is_credit: None | IsCredit = field(
@@ -1984,7 +1687,6 @@ class RemittanceAdviceHeader:
         metadata={
             "name": "PaymentParty",
             "type": "Element",
-            "required": True,
         }
     )
     payment_reason_coded: None | PaymentReasonCoded = field(
@@ -2207,7 +1909,6 @@ class AsnorderNumber:
         metadata={
             "name": "BuyerOrderNumber",
             "type": "Element",
-            "required": True,
         }
     )
     seller_order_number: None | SellerOrderNumber = field(
@@ -2246,7 +1947,6 @@ class RemittanceAdviceSummary:
         metadata={
             "name": "PaymentRequestSummary",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2387,7 +2087,6 @@ class LineItemReferences:
         metadata={
             "name": "InvoiceReferences",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2398,7 +2097,6 @@ class InvoiceBaseItemDetail:
         metadata={
             "name": "LineItemNum",
             "type": "Element",
-            "required": True,
         }
     )
     line_item_type: None | LineItemType = field(
@@ -2542,14 +2240,12 @@ class InvoiceItemDetail:
         metadata={
             "name": "InvoiceBaseItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
     invoice_pricing_detail: InvoicePricingDetail = field(
         metadata={
             "name": "InvoicePricingDetail",
             "type": "Element",
-            "required": True,
         }
     )
     line_item_dates: None | LineItemDates = field(
@@ -2609,7 +2305,6 @@ class InvoicingItemDetail:
         metadata={
             "name": "InvoiceItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2620,7 +2315,6 @@ class InvoicingDetail:
         metadata={
             "name": "InvoicingDetailReference",
             "type": "Element",
-            "required": True,
         }
     )
     invoicing_detail_amount_due: None | InvoicingDetailAmountDue = field(
@@ -2671,7 +2365,6 @@ class Subsidiary:
         metadata={
             "name": "PartyID",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_identifier: None | ListOfIdentifier = field(
@@ -2734,7 +2427,6 @@ class Subsidiary:
         metadata={
             "name": "ListOfInvoicingDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -2815,20 +2507,17 @@ class RemittanceAdvice:
         metadata={
             "name": "RemittanceAdviceHeader",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_remittance_advice_detail: ListOfRemittanceAdviceDetail = field(
         metadata={
             "name": "ListOfRemittanceAdviceDetail",
             "type": "Element",
-            "required": True,
         }
     )
     remittance_advice_summary: RemittanceAdviceSummary = field(
         metadata={
             "name": "RemittanceAdviceSummary",
             "type": "Element",
-            "required": True,
         }
     )

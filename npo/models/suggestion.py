@@ -11,9 +11,4 @@ class Suggestion:
         name = "suggestion"
         namespace = "urn:vpro:api:2013"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

@@ -42,7 +42,6 @@ class VehicleTypeIdentifier:
         metadata={
             "name": "AirConditioning",
             "type": "Attribute",
-            "required": True,
         }
     )
     transmission_type: None | TypeVehicleTransmission = field(

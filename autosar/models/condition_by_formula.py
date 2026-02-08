@@ -88,7 +88,6 @@ class ConditionByFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -98,6 +97,5 @@ class ConditionByFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

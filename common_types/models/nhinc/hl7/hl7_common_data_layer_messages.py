@@ -40,7 +40,6 @@ class CareRecordQupcIn043100Uv01RequestType:
             "name": "localDeviceId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     sender_oid: str = field(
@@ -48,7 +47,6 @@ class CareRecordQupcIn043100Uv01RequestType:
             "name": "senderOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     receiver_oid: str = field(
@@ -56,14 +54,12 @@ class CareRecordQupcIn043100Uv01RequestType:
             "name": "receiverOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     query: QupcIn043100Uv01McciMt000100Uv01Message = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -78,7 +74,6 @@ class CareRecordQupcIn043200Uv01ResponseType:
             "name": "careRecord",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -93,7 +88,6 @@ class FindEncountersPrpaIn900300Uv02RequestType:
             "name": "localDeviceId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     sender_oid: str = field(
@@ -101,7 +95,6 @@ class FindEncountersPrpaIn900300Uv02RequestType:
             "name": "senderOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     receiver_oid: str = field(
@@ -109,14 +102,12 @@ class FindEncountersPrpaIn900300Uv02RequestType:
             "name": "receiverOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     query: PrpaIn900300Uv02McciMt000100Uv01Message = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -145,7 +136,6 @@ class FindPatientsPrpaIn201305Uv02RequestType:
             "name": "localDeviceId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     sender_oid: str = field(
@@ -153,7 +143,6 @@ class FindPatientsPrpaIn201305Uv02RequestType:
             "name": "senderOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     receiver_oid: str = field(
@@ -161,14 +150,12 @@ class FindPatientsPrpaIn201305Uv02RequestType:
             "name": "receiverOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     query: PrpaIn201305Uv02McciMt000100Uv01Message = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -197,7 +184,6 @@ class PatientDemographicsPrpaIn201307Uv02RequestType:
             "name": "localDeviceId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     sender_oid: str = field(
@@ -205,7 +191,6 @@ class PatientDemographicsPrpaIn201307Uv02RequestType:
             "name": "senderOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     receiver_oid: str = field(
@@ -213,14 +198,12 @@ class PatientDemographicsPrpaIn201307Uv02RequestType:
             "name": "receiverOID",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     query: PrpaIn201307Uv02McciMt000100Uv01Message = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -234,7 +217,6 @@ class PatientDemographicsPrpaMt201303Uv02ResponseType:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 

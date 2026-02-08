@@ -26,7 +26,6 @@ class IssueTitleGroup:
         metadata={
             "name": "issue-title",
             "type": "Element",
-            "required": True,
         }
     )
     issue_subtitle: list[IssueSubtitle] = field(

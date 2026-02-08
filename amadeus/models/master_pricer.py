@@ -200,14 +200,12 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "numberOfUnits",
                     "type": "Element",
-                    "required": True,
                 }
             )
             type_of_unit: str = field(
                 metadata={
                     "name": "typeOfUnit",
                     "type": "Element",
-                    "required": True,
                     "min_length": 1,
                     "max_length": 3,
                 }
@@ -232,7 +230,6 @@ class FareMasterPricerTravelBoardSearch:
             option: str = field(
                 metadata={
                     "type": "Element",
-                    "required": True,
                     "min_length": 1,
                     "max_length": 3,
                 }
@@ -274,7 +271,6 @@ class FareMasterPricerTravelBoardSearch:
             ref: Decimal = field(
                 metadata={
                     "type": "Element",
-                    "required": True,
                 }
             )
             infant_indicator: None | str = field(
@@ -307,7 +303,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "referenceQualifier",
                     "type": "Element",
-                    "required": True,
                     "min_length": 1,
                     "max_length": 3,
                 }
@@ -346,7 +341,6 @@ class FareMasterPricerTravelBoardSearch:
             metadata={
                 "name": "formOfPaymentDetails",
                 "type": "Element",
-                "required": True,
             }
         )
         passenger_fee_reference: (
@@ -379,7 +373,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "type",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 3,
                     }
@@ -549,7 +542,6 @@ class FareMasterPricerTravelBoardSearch:
             metadata={
                 "name": "passengerReference",
                 "type": "Element",
-                "required": True,
             }
         )
         psg_details_info: list[
@@ -591,7 +583,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "discountPtc",
                     "type": "Element",
-                    "required": True,
                 }
             )
             flequent_flyer_details: (
@@ -731,7 +722,6 @@ class FareMasterPricerTravelBoardSearch:
             metadata={
                 "name": "familyInformation",
                 "type": "Element",
-                "required": True,
             }
         )
         family_criteria: (
@@ -806,7 +796,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "commercialFamily",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 10,
                     }
@@ -966,7 +955,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "cabinDesignator",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 1,
                     }
@@ -977,7 +965,6 @@ class FareMasterPricerTravelBoardSearch:
                 date: str = field(
                     metadata={
                         "type": "Element",
-                        "required": True,
                         "min_length": 6,
                         "max_length": 6,
                     }
@@ -995,7 +982,6 @@ class FareMasterPricerTravelBoardSearch:
                 name: str = field(
                     metadata={
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 5,
                     }
@@ -1016,7 +1002,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "referenceInfo",
                     "type": "Element",
-                    "required": True,
                 }
             )
             family_criteria: (
@@ -1058,7 +1043,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "refNumber",
                             "type": "Element",
-                            "required": True,
                         }
                     )
 
@@ -1216,7 +1200,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "cabinDesignator",
                             "type": "Element",
-                            "required": True,
                             "min_length": 1,
                             "max_length": 1,
                         }
@@ -1227,7 +1210,6 @@ class FareMasterPricerTravelBoardSearch:
                     date: str = field(
                         metadata={
                             "type": "Element",
-                            "required": True,
                             "min_length": 6,
                             "max_length": 6,
                         }
@@ -1245,7 +1227,6 @@ class FareMasterPricerTravelBoardSearch:
                     name: str = field(
                         metadata={
                             "type": "Element",
-                            "required": True,
                             "min_length": 1,
                             "max_length": 5,
                         }
@@ -1266,7 +1247,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "logicalLink",
                     "type": "Element",
-                    "required": True,
                 }
             )
             family_criteria: (
@@ -1296,7 +1276,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "booleanExpression",
                         "type": "Element",
-                        "required": True,
                     }
                 )
 
@@ -1466,7 +1445,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "cabinDesignator",
                             "type": "Element",
-                            "required": True,
                             "min_length": 1,
                             "max_length": 1,
                         }
@@ -1477,7 +1455,6 @@ class FareMasterPricerTravelBoardSearch:
                     date: str = field(
                         metadata={
                             "type": "Element",
-                            "required": True,
                             "min_length": 6,
                             "max_length": 6,
                         }
@@ -1495,7 +1472,6 @@ class FareMasterPricerTravelBoardSearch:
                     name: str = field(
                         metadata={
                             "type": "Element",
-                            "required": True,
                             "min_length": 1,
                             "max_length": 5,
                         }
@@ -1516,7 +1492,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "referenceInfo",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 family_criteria: (
@@ -1558,7 +1533,6 @@ class FareMasterPricerTravelBoardSearch:
                             metadata={
                                 "name": "refNumber",
                                 "type": "Element",
-                                "required": True,
                             }
                         )
 
@@ -1716,7 +1690,6 @@ class FareMasterPricerTravelBoardSearch:
                             metadata={
                                 "name": "cabinDesignator",
                                 "type": "Element",
-                                "required": True,
                                 "min_length": 1,
                                 "max_length": 1,
                             }
@@ -1727,7 +1700,6 @@ class FareMasterPricerTravelBoardSearch:
                         date: str = field(
                             metadata={
                                 "type": "Element",
-                                "required": True,
                                 "min_length": 6,
                                 "max_length": 6,
                             }
@@ -1745,7 +1717,6 @@ class FareMasterPricerTravelBoardSearch:
                         name: str = field(
                             metadata={
                                 "type": "Element",
-                                "required": True,
                                 "min_length": 1,
                                 "max_length": 5,
                             }
@@ -1766,7 +1737,6 @@ class FareMasterPricerTravelBoardSearch:
             metadata={
                 "name": "pricingTickInfo",
                 "type": "Element",
-                "required": True,
             }
         )
         corporate: (
@@ -1925,7 +1895,6 @@ class FareMasterPricerTravelBoardSearch:
                 date: str = field(
                     metadata={
                         "type": "Element",
-                        "required": True,
                         "min_length": 6,
                         "max_length": 6,
                     }
@@ -1946,7 +1915,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "locationId",
                         "type": "Element",
-                        "required": True,
                         "min_length": 3,
                         "max_length": 5,
                     }
@@ -1966,7 +1934,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "locationId",
                         "type": "Element",
-                        "required": True,
                         "min_length": 3,
                         "max_length": 5,
                     }
@@ -1986,7 +1953,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "locationId",
                         "type": "Element",
-                        "required": True,
                         "min_length": 3,
                         "max_length": 5,
                     }
@@ -2049,7 +2015,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "corporateQualifier",
                         "type": "Element",
-                        "required": True,
                         "min_length": 0,
                         "max_length": 3,
                     }
@@ -2071,7 +2036,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "referenceNumber",
                     "type": "Element",
-                    "required": True,
                     "min_length": 1,
                     "max_length": 35,
                 }
@@ -2120,7 +2084,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "feeType",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 5,
                     }
@@ -2129,7 +2092,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "feeIdNumber",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 50,
                     }
@@ -2163,7 +2125,6 @@ class FareMasterPricerTravelBoardSearch:
                 currency: str = field(
                     metadata={
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 3,
                     }
@@ -2188,7 +2149,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "type",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 3,
                     }
@@ -2229,7 +2189,6 @@ class FareMasterPricerTravelBoardSearch:
                 carrier: str = field(
                     metadata={
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 3,
                     }
@@ -2315,7 +2274,6 @@ class FareMasterPricerTravelBoardSearch:
                 amount: Decimal = field(
                     metadata={
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 currency: None | str = field(
@@ -2353,7 +2311,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "moneyInfo",
                     "type": "Element",
-                    "required": True,
                 }
             )
         )
@@ -2381,7 +2338,6 @@ class FareMasterPricerTravelBoardSearch:
             amount: Decimal = field(
                 metadata={
                     "type": "Element",
-                    "required": True,
                 }
             )
             currency: None | str = field(
@@ -2406,7 +2362,6 @@ class FareMasterPricerTravelBoardSearch:
             amount: Decimal = field(
                 metadata={
                     "type": "Element",
-                    "required": True,
                 }
             )
             currency: None | str = field(
@@ -2583,7 +2538,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "carrierQualifier",
                     "type": "Element",
-                    "required": True,
                     "min_length": 0,
                     "max_length": 1,
                 }
@@ -2619,7 +2573,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "inclusionIdentifier",
                     "type": "Element",
-                    "required": True,
                     "min_length": 0,
                     "max_length": 1,
                 }
@@ -2628,7 +2581,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "locationId",
                     "type": "Element",
-                    "required": True,
                     "min_length": 3,
                     "max_length": 5,
                 }
@@ -2649,7 +2601,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "exclusionIdentifier",
                     "type": "Element",
-                    "required": True,
                     "min_length": 0,
                     "max_length": 1,
                 }
@@ -2658,7 +2609,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "locationId",
                     "type": "Element",
-                    "required": True,
                     "min_length": 3,
                     "max_length": 5,
                 }
@@ -2679,14 +2629,12 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "numberOfUnits",
                     "type": "Element",
-                    "required": True,
                 }
             )
             type_of_unit: str = field(
                 metadata={
                     "name": "typeOfUnit",
                     "type": "Element",
-                    "required": True,
                     "min_length": 1,
                     "max_length": 3,
                 }
@@ -2767,7 +2715,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "bucketInfo",
                     "type": "Element",
-                    "required": True,
                 }
             )
         )
@@ -2901,7 +2848,6 @@ class FareMasterPricerTravelBoardSearch:
             metadata={
                 "name": "requestedSegmentRef",
                 "type": "Element",
-                "required": True,
             }
         )
         departure_localization: (
@@ -3007,7 +2953,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "segRef",
                     "type": "Element",
-                    "required": True,
                 }
             )
             location_forcing: list[
@@ -3027,7 +2972,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "airportCityQualifier",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 1,
                     }
@@ -3036,7 +2980,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "segmentNumber",
                         "type": "Element",
-                        "required": True,
                     }
                 )
 
@@ -3141,7 +3084,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "locationId",
                         "type": "Element",
-                        "required": True,
                         "min_length": 3,
                         "max_length": 5,
                     }
@@ -3287,7 +3229,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "locationId",
                         "type": "Element",
-                        "required": True,
                         "min_length": 3,
                         "max_length": 5,
                     }
@@ -3329,7 +3270,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "firstDateTimeDetail",
                     "type": "Element",
-                    "required": True,
                 }
             )
             range_of_date: (
@@ -3534,7 +3474,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "carrierQualifier",
                         "type": "Element",
-                        "required": True,
                         "min_length": 0,
                         "max_length": 1,
                     }
@@ -3570,7 +3509,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "inclusionIdentifier",
                         "type": "Element",
-                        "required": True,
                         "min_length": 0,
                         "max_length": 1,
                     }
@@ -3579,7 +3517,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "locationId",
                         "type": "Element",
-                        "required": True,
                         "min_length": 3,
                         "max_length": 5,
                     }
@@ -3600,7 +3537,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "exclusionIdentifier",
                         "type": "Element",
-                        "required": True,
                         "min_length": 0,
                         "max_length": 1,
                     }
@@ -3609,7 +3545,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "locationId",
                         "type": "Element",
-                        "required": True,
                         "min_length": 3,
                         "max_length": 5,
                     }
@@ -3630,14 +3565,12 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "numberOfUnits",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 type_of_unit: str = field(
                     metadata={
                         "name": "typeOfUnit",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 3,
                     }
@@ -3662,7 +3595,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "commercialFamily",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 10,
                     }
@@ -3742,7 +3674,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "propFlightGrDetail",
                     "type": "Element",
-                    "required": True,
                 }
             )
             price_to_beat: (
@@ -3825,7 +3756,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "moneyInfo",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 additional_money_info: list[
@@ -3852,7 +3782,6 @@ class FareMasterPricerTravelBoardSearch:
                     amount: Decimal = field(
                         metadata={
                             "type": "Element",
-                            "required": True,
                         }
                     )
                     currency: None | str = field(
@@ -3877,7 +3806,6 @@ class FareMasterPricerTravelBoardSearch:
                     amount: Decimal = field(
                         metadata={
                             "type": "Element",
-                            "required": True,
                         }
                     )
                     currency: None | str = field(
@@ -3904,7 +3832,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "flightInformation",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 avl_info: list[
@@ -3984,7 +3911,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "productDateTime",
                             "type": "Element",
-                            "required": True,
                         }
                     )
                     location: list[
@@ -4053,7 +3979,6 @@ class FareMasterPricerTravelBoardSearch:
                             metadata={
                                 "name": "dateOfDeparture",
                                 "type": "Element",
-                                "required": True,
                                 "min_length": 6,
                                 "max_length": 6,
                             }
@@ -4101,7 +4026,6 @@ class FareMasterPricerTravelBoardSearch:
                             metadata={
                                 "name": "locationId",
                                 "type": "Element",
-                                "required": True,
                                 "min_length": 3,
                                 "max_length": 5,
                             }
@@ -4130,7 +4054,6 @@ class FareMasterPricerTravelBoardSearch:
                             metadata={
                                 "name": "marketingCarrier",
                                 "type": "Element",
-                                "required": True,
                                 "min_length": 2,
                                 "max_length": 3,
                             }
@@ -4247,7 +4170,6 @@ class FareMasterPricerTravelBoardSearch:
                             metadata={
                                 "name": "attributeType",
                                 "type": "Element",
-                                "required": True,
                                 "min_length": 1,
                                 "max_length": 5,
                             }
@@ -4290,7 +4212,6 @@ class FareMasterPricerTravelBoardSearch:
                         rbd: str = field(
                             metadata={
                                 "type": "Element",
-                                "required": True,
                                 "min_length": 1,
                                 "max_length": 1,
                             }
@@ -4521,7 +4442,6 @@ class FareMasterPricerTravelBoardSearch:
                         qualifier: str = field(
                             metadata={
                                 "type": "Element",
-                                "required": True,
                                 "min_length": 1,
                                 "max_length": 3,
                             }
@@ -4712,7 +4632,6 @@ class FareMasterPricerTravelBoardSearch:
                         date: str = field(
                             metadata={
                                 "type": "Element",
-                                "required": True,
                                 "min_length": 6,
                                 "max_length": 6,
                             }
@@ -4753,7 +4672,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "moneyInfo",
                             "type": "Element",
-                            "required": True,
                         }
                     )
                     additional_money_info: list[
@@ -4780,7 +4698,6 @@ class FareMasterPricerTravelBoardSearch:
                         amount: Decimal = field(
                             metadata={
                                 "type": "Element",
-                                "required": True,
                             }
                         )
                         currency: None | str = field(
@@ -4805,7 +4722,6 @@ class FareMasterPricerTravelBoardSearch:
                         amount: Decimal = field(
                             metadata={
                                 "type": "Element",
-                                "required": True,
                             }
                         )
                         currency: None | str = field(
@@ -4832,7 +4748,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "travelResponseDetails",
                     "type": "Element",
-                    "required": True,
                 }
             )
             time_table_date: (
@@ -4931,21 +4846,18 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "boardPointDetails",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 offpoint_details: FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.OffpointDetails = field(
                     metadata={
                         "name": "offpointDetails",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 company_details: FareMasterPricerTravelBoardSearch.Itinerary.FlightInfoPnr.TravelResponseDetails.CompanyDetails = field(
                     metadata={
                         "name": "companyDetails",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 flight_identification: (
@@ -5023,7 +4935,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "trueLocationId",
                             "type": "Element",
-                            "required": True,
                             "min_length": 3,
                             "max_length": 3,
                         }
@@ -5035,7 +4946,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "trueLocationId",
                             "type": "Element",
-                            "required": True,
                             "min_length": 3,
                             "max_length": 3,
                         }
@@ -5047,7 +4957,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "marketingCompany",
                             "type": "Element",
-                            "required": True,
                             "min_length": 2,
                             "max_length": 3,
                         }
@@ -5059,7 +4968,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "flightNumber",
                             "type": "Element",
-                            "required": True,
                         }
                     )
                     operational_suffix: None | str = field(
@@ -5169,7 +5077,6 @@ class FareMasterPricerTravelBoardSearch:
                     qualifier: str = field(
                         metadata={
                             "type": "Element",
-                            "required": True,
                             "min_length": 1,
                             "max_length": 3,
                         }
@@ -5291,7 +5198,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "codeshareDetails",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 other_codeshare_details: list[
@@ -5311,7 +5217,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "transportStageQualifier",
                             "type": "Element",
-                            "required": True,
                             "min_length": 1,
                             "max_length": 1,
                         }
@@ -5348,7 +5253,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "transportStageQualifier",
                             "type": "Element",
-                            "required": True,
                             "min_length": 1,
                             "max_length": 1,
                         }
@@ -5385,14 +5289,12 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "freeTextDetails",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 free_text: str = field(
                     metadata={
                         "name": "freeText",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 70,
                     }
@@ -5404,7 +5306,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "textSubjectQualifier",
                             "type": "Element",
-                            "required": True,
                             "min_length": 1,
                             "max_length": 3,
                         }
@@ -5421,7 +5322,6 @@ class FareMasterPricerTravelBoardSearch:
                     source: str = field(
                         metadata={
                             "type": "Element",
-                            "required": True,
                             "min_length": 1,
                             "max_length": 3,
                         }
@@ -5429,7 +5329,6 @@ class FareMasterPricerTravelBoardSearch:
                     encoding: str = field(
                         metadata={
                             "type": "Element",
-                            "required": True,
                             "min_length": 1,
                             "max_length": 3,
                         }
@@ -5559,7 +5458,6 @@ class FareMasterPricerTravelBoardSearch:
                     date: str = field(
                         metadata={
                             "type": "Element",
-                            "required": True,
                             "min_length": 6,
                             "max_length": 6,
                         }
@@ -5600,7 +5498,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "dateTimeInfo",
                         "type": "Element",
-                        "required": True,
                     }
                 )
 
@@ -5674,7 +5571,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "actionRequestCode",
                     "type": "Element",
-                    "required": True,
                     "min_length": 1,
                     "max_length": 3,
                 }
@@ -5696,7 +5592,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "flightNumber",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 5,
                     }
@@ -5749,7 +5644,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "attributeType",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 5,
                     }
@@ -5770,7 +5664,6 @@ class FareMasterPricerTravelBoardSearch:
             metadata={
                 "name": "ticketNumberDetails",
                 "type": "Element",
-                "required": True,
             }
         )
         ticket_requested_segments: list[
@@ -5815,7 +5708,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "actionIdentification",
                     "type": "Element",
-                    "required": True,
                 }
             )
             connect_point_details: (
@@ -5835,7 +5727,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "actionRequestCode",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 3,
                     }
@@ -5857,7 +5748,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "flightNumber",
                             "type": "Element",
-                            "required": True,
                             "min_length": 1,
                             "max_length": 5,
                         }
@@ -5909,7 +5799,6 @@ class FareMasterPricerTravelBoardSearch:
                     location: str = field(
                         metadata={
                             "type": "Element",
-                            "required": True,
                             "min_length": 1,
                             "max_length": 3,
                         }
@@ -5921,7 +5810,6 @@ class FareMasterPricerTravelBoardSearch:
             metadata={
                 "name": "itemFFCNumber",
                 "type": "Element",
-                "required": True,
             }
         )
         nb_of_units: (
@@ -5951,7 +5839,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "itemNumberId",
                     "type": "Element",
-                    "required": True,
                 }
             )
 
@@ -6019,7 +5906,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "typeOfUnit",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 3,
                     }
@@ -6053,7 +5939,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "refNumber",
                         "type": "Element",
-                        "required": True,
                     }
                 )
 
@@ -6063,7 +5948,6 @@ class FareMasterPricerTravelBoardSearch:
             metadata={
                 "name": "feeTypeInfo",
                 "type": "Element",
-                "required": True,
             }
         )
         rate_tax: (
@@ -6092,7 +5976,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "carrierFeeDetails",
                     "type": "Element",
-                    "required": True,
                 }
             )
             other_selection_details: list[
@@ -6112,7 +5995,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "type",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 3,
                     }
@@ -6132,7 +6014,6 @@ class FareMasterPricerTravelBoardSearch:
                 option: str = field(
                     metadata={
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 3,
                     }
@@ -6167,7 +6048,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "typeQualifier",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 3,
                     }
@@ -6195,7 +6075,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "feeInfo",
                     "type": "Element",
-                    "required": True,
                 }
             )
             associated_amounts: (
@@ -6225,7 +6104,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "dataTypeInformation",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 data_information: list[
@@ -6245,7 +6123,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "subType",
                             "type": "Element",
-                            "required": True,
                             "min_length": 1,
                             "max_length": 3,
                         }
@@ -6290,7 +6167,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "typeQualifier",
                             "type": "Element",
-                            "required": True,
                             "min_length": 1,
                             "max_length": 3,
                         }
@@ -6326,7 +6202,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "itemNumberInfo",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 service_attributes_info: (
@@ -6356,7 +6231,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "itemNumberDetails",
                             "type": "Element",
-                            "required": True,
                         }
                     )
 
@@ -6426,7 +6300,6 @@ class FareMasterPricerTravelBoardSearch:
                             metadata={
                                 "name": "attributeType",
                                 "type": "Element",
-                                "required": True,
                                 "min_length": 1,
                                 "max_length": 25,
                             }
@@ -6447,7 +6320,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "serviceRequirementsInfo",
                             "type": "Element",
-                            "required": True,
                         }
                     )
                     seat_details: list[
@@ -6467,7 +6339,6 @@ class FareMasterPricerTravelBoardSearch:
                             metadata={
                                 "name": "serviceClassification",
                                 "type": "Element",
-                                "required": True,
                                 "min_length": 1,
                                 "max_length": 4,
                             }
@@ -6545,7 +6416,6 @@ class FareMasterPricerTravelBoardSearch:
             metadata={
                 "name": "officeIdInformation",
                 "type": "Element",
-                "required": True,
             }
         )
         nb_of_units: (
@@ -6702,7 +6572,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "typeOfUnit",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 3,
                     }
@@ -6728,7 +6597,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "attributeType",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 5,
                     }
@@ -6832,7 +6700,6 @@ class FareMasterPricerTravelBoardSearch:
                 date: str = field(
                     metadata={
                         "type": "Element",
-                        "required": True,
                         "min_length": 6,
                         "max_length": 6,
                     }
@@ -6853,7 +6720,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "locationId",
                         "type": "Element",
-                        "required": True,
                         "min_length": 3,
                         "max_length": 5,
                     }
@@ -6873,7 +6739,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "locationId",
                         "type": "Element",
-                        "required": True,
                         "min_length": 3,
                         "max_length": 5,
                     }
@@ -6893,7 +6758,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "locationId",
                         "type": "Element",
-                        "required": True,
                         "min_length": 3,
                         "max_length": 5,
                     }
@@ -7063,7 +6927,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "carrierQualifier",
                         "type": "Element",
-                        "required": True,
                         "min_length": 0,
                         "max_length": 1,
                     }
@@ -7099,7 +6962,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "inclusionIdentifier",
                         "type": "Element",
-                        "required": True,
                         "min_length": 0,
                         "max_length": 1,
                     }
@@ -7108,7 +6970,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "locationId",
                         "type": "Element",
-                        "required": True,
                         "min_length": 3,
                         "max_length": 5,
                     }
@@ -7129,7 +6990,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "exclusionIdentifier",
                         "type": "Element",
-                        "required": True,
                         "min_length": 0,
                         "max_length": 1,
                     }
@@ -7138,7 +6998,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "locationId",
                         "type": "Element",
-                        "required": True,
                         "min_length": 3,
                         "max_length": 5,
                     }
@@ -7159,14 +7018,12 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "numberOfUnits",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 type_of_unit: str = field(
                     metadata={
                         "name": "typeOfUnit",
                         "type": "Element",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 3,
                     }
@@ -7178,7 +7035,6 @@ class FareMasterPricerTravelBoardSearch:
                 metadata={
                     "name": "requestedSegmentRef",
                     "type": "Element",
-                    "required": True,
                 }
             )
             flight_info: (
@@ -7198,7 +7054,6 @@ class FareMasterPricerTravelBoardSearch:
                     metadata={
                         "name": "segRef",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 location_forcing: list[
@@ -7218,7 +7073,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "airportCityQualifier",
                             "type": "Element",
-                            "required": True,
                             "min_length": 1,
                             "max_length": 1,
                         }
@@ -7227,7 +7081,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "segmentNumber",
                             "type": "Element",
-                            "required": True,
                         }
                     )
 
@@ -7322,7 +7175,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "carrierQualifier",
                             "type": "Element",
-                            "required": True,
                             "min_length": 0,
                             "max_length": 1,
                         }
@@ -7358,7 +7210,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "inclusionIdentifier",
                             "type": "Element",
-                            "required": True,
                             "min_length": 0,
                             "max_length": 1,
                         }
@@ -7367,7 +7218,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "locationId",
                             "type": "Element",
-                            "required": True,
                             "min_length": 3,
                             "max_length": 5,
                         }
@@ -7388,7 +7238,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "exclusionIdentifier",
                             "type": "Element",
-                            "required": True,
                             "min_length": 0,
                             "max_length": 1,
                         }
@@ -7397,7 +7246,6 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "locationId",
                             "type": "Element",
-                            "required": True,
                             "min_length": 3,
                             "max_length": 5,
                         }
@@ -7418,14 +7266,12 @@ class FareMasterPricerTravelBoardSearch:
                         metadata={
                             "name": "numberOfUnits",
                             "type": "Element",
-                            "required": True,
                         }
                     )
                     type_of_unit: str = field(
                         metadata={
                             "name": "typeOfUnit",
                             "type": "Element",
-                            "required": True,
                             "min_length": 1,
                             "max_length": 3,
                         }

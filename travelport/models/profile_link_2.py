@@ -52,14 +52,12 @@ class ProfileLink2:
         metadata={
             "name": "TravelerID",
             "type": "Attribute",
-            "required": True,
         }
     )
     relationship: TypeProfileLinkRelationship2 = field(
         metadata={
             "name": "Relationship",
             "type": "Attribute",
-            "required": True,
         }
     )
     given_name: None | str = field(

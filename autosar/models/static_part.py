@@ -98,6 +98,5 @@ class StaticPart:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

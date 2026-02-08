@@ -68,7 +68,6 @@ class LOverviewParagraph:
         metadata={
             "name": "L",
             "type": "Attribute",
-            "required": True,
         }
     )
     blueprint_value: None | str = field(
@@ -145,7 +144,6 @@ class LOverviewParagraph:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

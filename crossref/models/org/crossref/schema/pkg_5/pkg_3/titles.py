@@ -24,7 +24,6 @@ class Titles:
     title: Title = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     subtitle: list[Subtitle] = field(

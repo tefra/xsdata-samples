@@ -122,7 +122,6 @@ class LifeCycleInfo:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -132,7 +131,6 @@ class LifeCycleInfo:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -155,6 +153,5 @@ class LifeCycleInfo:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

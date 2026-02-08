@@ -216,7 +216,6 @@ class NonqueuedSenderComSpec:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

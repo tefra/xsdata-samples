@@ -30,11 +30,7 @@ class DiagnosticIndicatorTypeEnum:
     class Meta:
         name = "DIAGNOSTIC-INDICATOR-TYPE-ENUM"
 
-    value: DiagnosticIndicatorTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticIndicatorTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

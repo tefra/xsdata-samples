@@ -79,7 +79,6 @@ class CertificateOfOriginType:
             "name": "ID",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
-            "required": True,
         }
     )
     uuid: None | Uuid = field(
@@ -167,7 +166,6 @@ class CertificateOfOriginType:
             "name": "CertificateOfOriginApplication",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     issuer_endorsement: IssuerEndorsement = field(
@@ -175,7 +173,6 @@ class CertificateOfOriginType:
             "name": "IssuerEndorsement",
             "type": "Element",
             "namespace": "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2",
-            "required": True,
         }
     )
     embassy_endorsement: None | EmbassyEndorsement = field(

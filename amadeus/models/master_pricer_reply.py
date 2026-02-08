@@ -123,7 +123,6 @@ class ApplicationErrorInformationType:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 4,
         }
@@ -175,7 +174,6 @@ class AttributeInformationTypeU:
             "name": "attributeType",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 25,
         }
@@ -209,7 +207,6 @@ class AttributeInformationType97181C:
             "name": "attributeType",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 25,
         }
@@ -334,7 +331,6 @@ class CabinInformationType:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 5,
         }
@@ -364,7 +360,6 @@ class CabinProductDetailsType:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 1,
         }
@@ -445,7 +440,6 @@ class CabinProductDetailsType195516C:
             "name": "avlStatus",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 0,
             "max_length": 3,
         }
@@ -468,7 +462,6 @@ class CabinProductDetailsType205138C:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 1,
         }
@@ -517,7 +510,6 @@ class CabinProductDetailsType229142C:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 1,
         }
@@ -556,7 +548,6 @@ class CategoryDescriptionType:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"-?[0-9]{1,3}",
         }
     )
@@ -582,7 +573,6 @@ class ClassInformationType:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 5,
         }
@@ -613,7 +603,6 @@ class CodedAttributeInformationType:
             "name": "attributeType",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 5,
         }
@@ -647,7 +636,6 @@ class CodedAttributeInformationType270108C:
             "name": "attributeType",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 5,
         }
@@ -707,7 +695,6 @@ class CompanyIdentificationType:
             "name": "marketingCarrier",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 2,
             "max_length": 3,
         }
@@ -917,7 +904,6 @@ class ConversionRateDetailsTypeI179848C:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -1018,7 +1004,6 @@ class DataTypeInformationType:
             "name": "subType",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -1157,7 +1142,6 @@ class DateTimePeriodDetailsTypeI:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -1189,7 +1173,6 @@ class DiscountPenaltyInformationType:
             "name": "fareQualifier",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -1352,7 +1335,6 @@ class FareCategoryCodesTypeI:
             "name": "fareType",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 20,
         }
@@ -1499,7 +1481,6 @@ class FareFamilyDetailsType:
             "name": "commercialFamily",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 10,
         }
@@ -1628,7 +1609,6 @@ class FreeTextQualificationType:
             "name": "textSubjectQualifier",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -1659,7 +1639,6 @@ class FreeTextQualificationTypeI:
             "name": "textSubjectQualifier",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -1684,7 +1663,6 @@ class FreeTextQualificationType120769C:
             "name": "textSubjectQualifier",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -2059,7 +2037,6 @@ class ItineraryDetailsType:
             "name": "airportCityQualifier",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 1,
         }
@@ -2069,7 +2046,6 @@ class ItineraryDetailsType:
             "name": "segmentNumber",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"-?[0-9]{1,3}",
         }
     )
@@ -2089,7 +2065,6 @@ class LocationIdentificationDetailsType:
             "name": "locationId",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 3,
             "max_length": 5,
         }
@@ -2175,7 +2150,6 @@ class MiniRulesType:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -2204,7 +2178,6 @@ class MonetaryInformationDetailsType:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
         }
     )
     currency: None | str = field(
@@ -2234,7 +2207,6 @@ class MonetaryInformationDetailsTypeI:
             "name": "typeQualifier",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 6,
         }
@@ -2279,7 +2251,6 @@ class MonetaryInformationDetailsType245528C:
             "name": "typeQualifier",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -2363,7 +2334,6 @@ class OriginAndDestinationRequestType134833S:
             "name": "segRef",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"-?[0-9]{1,2}",
         }
     )
@@ -2523,7 +2493,6 @@ class ProductDateTimeType:
             "name": "dateOfDeparture",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"(0[1-9]|[1-2][0-9]|3[0-1])(0[1-9]|1[0-2])[0-9]{2}",
         }
     )
@@ -2575,7 +2544,6 @@ class ProductDetailsType:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 17,
         }
@@ -2829,7 +2797,6 @@ class ReferencingDetailsType:
             "name": "refNumber",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"-?[0-9]{0,3}",
         }
     )
@@ -2862,7 +2829,6 @@ class ReferencingDetailsType191583C:
             "name": "refNumber",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"-?[0-9]{0,6}",
         }
     )
@@ -2895,7 +2861,6 @@ class ReferencingDetailsType195561C:
             "name": "refNumber",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"-?[0-9]{0,3}",
         }
     )
@@ -2976,7 +2941,6 @@ class SelectionDetailsInformationType:
             "name": "type",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -3006,7 +2970,6 @@ class SequenceInformationTypeU:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 10,
         }
@@ -3102,7 +3065,6 @@ class SpecialRequirementsTypeDetailsType:
             "name": "serviceClassification",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 4,
         }
@@ -3406,7 +3368,6 @@ class ApplicationErrorInformationType78543S:
             "name": "applicationErrorDetail",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
         }
     )
 
@@ -3464,7 +3425,6 @@ class AttributeTypeU:
             "name": "attributeDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
         }
     )
 
@@ -3505,7 +3465,6 @@ class CategDescrType:
             "name": "descriptionInfo",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
         }
     )
     process_indicator: None | str = field(
@@ -3733,7 +3692,6 @@ class FareFamilyType:
             "name": "refNumber",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"-?[0-9]{1,3}",
         }
     )
@@ -4143,7 +4101,6 @@ class FlightServicesType:
             "name": "serviceType",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -4381,7 +4338,6 @@ class ItemNumberType:
             "name": "itemNumber",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
         }
     )
 
@@ -4486,7 +4442,6 @@ class ItemNumberType80866S:
             "name": "itemNumberDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
         }
     )
 
@@ -4520,7 +4475,6 @@ class MiniRulesType78547S:
         metadata={
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 0,
             "max_length": 3,
         }
@@ -4596,7 +4550,6 @@ class MonetaryInformationType174241S:
             "name": "monetaryDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
         }
     )
     other_monetary_details: list[MonetaryInformationDetailsType245528C] = (
@@ -4672,7 +4625,6 @@ class OriginAndDestinationRequestType:
             "name": "segRef",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "pattern": r"-?[0-9]{1,2}",
         }
     )
@@ -4708,7 +4660,6 @@ class PricingTicketingSubsequentType193023S:
             "name": "paxFareNum",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
             "min_length": 1,
             "max_length": 3,
         }
@@ -4718,7 +4669,6 @@ class PricingTicketingSubsequentType193023S:
             "name": "totalFareAmount",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
         }
     )
     total_tax_amount: None | Decimal = field(
@@ -4996,7 +4946,6 @@ class SelectionDetailsType:
             "name": "carrierFeeDetails",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
         }
     )
 
@@ -5035,7 +4984,6 @@ class SpecialRequirementsDetailsType:
             "name": "serviceRequirementsInfo",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
         }
     )
     seat_details: list[SpecialRequirementsDataDetailsType] = field(
@@ -5064,7 +5012,6 @@ class SpecificDataInformationType:
             "name": "dataTypeInformation",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
         }
     )
     data_information: list[DataInformationType] = field(
@@ -5208,7 +5155,6 @@ class TravelProductType:
             "name": "productDateTime",
             "type": "Element",
             "namespace": "http://xml.amadeus.com/FMPTBR_15_3_1A",
-            "required": True,
         }
     )
     location: list[LocationIdentificationDetailsType] = field(
@@ -5583,7 +5529,6 @@ class FareMasterPricerTravelBoardSearchReply:
             metadata={
                 "name": "applicationError",
                 "type": "Element",
-                "required": True,
             }
         )
         error_message_text: None | InteractiveFreeTextType78544S = field(
@@ -5605,7 +5550,6 @@ class FareMasterPricerTravelBoardSearchReply:
             metadata={
                 "name": "itineraryAmounts",
                 "type": "Element",
-                "required": True,
             }
         )
         amounts_per_sgt: list[
@@ -5631,7 +5575,6 @@ class FareMasterPricerTravelBoardSearchReply:
                 metadata={
                     "name": "sgtRef",
                     "type": "Element",
-                    "required": True,
                 }
             )
             amounts: None | MonetaryInformationType = field(
@@ -5654,7 +5597,6 @@ class FareMasterPricerTravelBoardSearchReply:
             metadata={
                 "name": "paxRef",
                 "type": "Element",
-                "required": True,
             }
         )
         pax_attributes: None | FareInformationType80868S = field(
@@ -5668,7 +5610,6 @@ class FareMasterPricerTravelBoardSearchReply:
             metadata={
                 "name": "itineraryAmounts",
                 "type": "Element",
-                "required": True,
             }
         )
         amounts_per_sgt: list[
@@ -5694,7 +5635,6 @@ class FareMasterPricerTravelBoardSearchReply:
                 metadata={
                     "name": "sgtRef",
                     "type": "Element",
-                    "required": True,
                 }
             )
             amounts: None | MonetaryInformationType = field(
@@ -5718,7 +5658,6 @@ class FareMasterPricerTravelBoardSearchReply:
             metadata={
                 "name": "feeReference",
                 "type": "Element",
-                "required": True,
             }
         )
         fee_information: None | DiscountAndPenaltyInformationType = field(
@@ -5754,14 +5693,12 @@ class FareMasterPricerTravelBoardSearchReply:
             metadata={
                 "name": "officeIdInformation",
                 "type": "Element",
-                "required": True,
             }
         )
         office_id_reference: ItemReferencesAndVersionsType78536S = field(
             metadata={
                 "name": "officeIdReference",
                 "type": "Element",
-                "required": True,
             }
         )
 
@@ -5777,7 +5714,6 @@ class FareMasterPricerTravelBoardSearchReply:
             metadata={
                 "name": "requestedSegmentRef",
                 "type": "Element",
-                "required": True,
             }
         )
         group_of_flights: list[
@@ -5804,7 +5740,6 @@ class FareMasterPricerTravelBoardSearchReply:
                 metadata={
                     "name": "propFlightGrDetail",
                     "type": "Element",
-                    "required": True,
                 }
             )
             flight_details: list[
@@ -5840,7 +5775,6 @@ class FareMasterPricerTravelBoardSearchReply:
                     metadata={
                         "name": "flightInformation",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 avl_info: list[FlightProductInformationType141442S] = field(
@@ -5913,7 +5847,6 @@ class FareMasterPricerTravelBoardSearchReply:
             metadata={
                 "name": "itemNumber",
                 "type": "Element",
-                "required": True,
             }
         )
         warning_message: list[InteractiveFreeTextType78544S] = field(
@@ -5935,7 +5868,6 @@ class FareMasterPricerTravelBoardSearchReply:
             metadata={
                 "name": "recPriceInfo",
                 "type": "Element",
-                "required": True,
             }
         )
         mini_rule: list[MiniRulesType78547S] = field(
@@ -5999,7 +5931,6 @@ class FareMasterPricerTravelBoardSearchReply:
                 metadata={
                     "name": "recommendationSegRef",
                     "type": "Element",
-                    "required": True,
                 }
             )
             segment_monetary_information: None | MonetaryInformationType = (
@@ -6030,7 +5961,6 @@ class FareMasterPricerTravelBoardSearchReply:
                 metadata={
                     "name": "paxFareDetail",
                     "type": "Element",
-                    "required": True,
                 }
             )
             fee_ref: None | ReferenceInfoType134839S = field(
@@ -6089,7 +6019,6 @@ class FareMasterPricerTravelBoardSearchReply:
                     metadata={
                         "name": "pricingMessage",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 monetary_information: None | MonetaryInformationType185955S = (
@@ -6117,7 +6046,6 @@ class FareMasterPricerTravelBoardSearchReply:
                     metadata={
                         "name": "segmentRef",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 group_of_fares: list[
@@ -6165,7 +6093,6 @@ class FareMasterPricerTravelBoardSearchReply:
                         metadata={
                             "name": "productInformation",
                             "type": "Element",
-                            "required": True,
                         }
                     )
                     fare_calculation_code_details: list[
@@ -6205,7 +6132,6 @@ class FareMasterPricerTravelBoardSearchReply:
                 metadata={
                     "name": "specificRecItem",
                     "type": "Element",
-                    "required": True,
                 }
             )
             specific_product_details: list[
@@ -6231,7 +6157,6 @@ class FareMasterPricerTravelBoardSearchReply:
                     metadata={
                         "name": "productReferences",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 fare_context_details: list[
@@ -6258,7 +6183,6 @@ class FareMasterPricerTravelBoardSearchReply:
                         metadata={
                             "name": "requestedSegmentInfo",
                             "type": "Element",
-                            "required": True,
                         }
                     )
                     cnx_context_details: list[
@@ -6283,7 +6207,6 @@ class FareMasterPricerTravelBoardSearchReply:
                             metadata={
                                 "name": "fareCnxInfo",
                                 "type": "Element",
-                                "required": True,
                             }
                         )
 
@@ -6299,7 +6222,6 @@ class FareMasterPricerTravelBoardSearchReply:
         reference: SequenceDetailsTypeU = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         amt_group: list[
@@ -6334,7 +6256,6 @@ class FareMasterPricerTravelBoardSearchReply:
             ref: ReferenceInfoType165972S = field(
                 metadata={
                     "type": "Element",
-                    "required": True,
                 }
             )
             amount: None | MonetaryInformationTypeI = field(
@@ -6358,7 +6279,6 @@ class FareMasterPricerTravelBoardSearchReply:
             ref: SegmentRepetitionControlTypeI = field(
                 metadata={
                     "type": "Element",
-                    "required": True,
                 }
             )
             description: None | FareInformationTypeI = field(
@@ -6407,14 +6327,12 @@ class FareMasterPricerTravelBoardSearchReply:
             metadata={
                 "name": "globalMessageMarker",
                 "type": "Element",
-                "required": True,
             }
         )
         global_message: InteractiveFreeTextType78534S = field(
             metadata={
                 "name": "globalMessage",
                 "type": "Element",
-                "required": True,
             }
         )
 
@@ -6427,7 +6345,6 @@ class FareMasterPricerTravelBoardSearchReply:
         attributes: CodedAttributeType = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
 
@@ -6450,7 +6367,6 @@ class FareMasterPricerTravelBoardSearchReply:
             metadata={
                 "name": "serviceTypeInfo",
                 "type": "Element",
-                "required": True,
             }
         )
         service_fee_ref_grp: list[
@@ -6477,7 +6393,6 @@ class FareMasterPricerTravelBoardSearchReply:
             metadata={
                 "name": "globalMessageMarker",
                 "type": "Element",
-                "required": True,
             }
         )
         service_fee_info_grp: list[
@@ -6521,7 +6436,6 @@ class FareMasterPricerTravelBoardSearchReply:
                 metadata={
                     "name": "refInfo",
                     "type": "Element",
-                    "required": True,
                 }
             )
 
@@ -6538,7 +6452,6 @@ class FareMasterPricerTravelBoardSearchReply:
                 metadata={
                     "name": "itemNumberInfo",
                     "type": "Element",
-                    "required": True,
                 }
             )
             service_cov_info_grp: list[
@@ -6567,7 +6480,6 @@ class FareMasterPricerTravelBoardSearchReply:
                     metadata={
                         "name": "paxRefInfo",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 coverage_per_flights_info: list[ActionDetailsType] = field(
@@ -6604,7 +6516,6 @@ class FareMasterPricerTravelBoardSearchReply:
                 metadata={
                     "name": "itemNumberInfo",
                     "type": "Element",
-                    "required": True,
                 }
             )
             service_details_grp: list[
@@ -6630,7 +6541,6 @@ class FareMasterPricerTravelBoardSearchReply:
                     metadata={
                         "name": "refInfo",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 service_matched_info_group: list[
@@ -6657,7 +6567,6 @@ class FareMasterPricerTravelBoardSearchReply:
                         metadata={
                             "name": "paxRefInfo",
                             "type": "Element",
-                            "required": True,
                         }
                     )
                     pricing_info: None | FareInformationType80868S = field(
@@ -6687,7 +6596,6 @@ class FareMasterPricerTravelBoardSearchReply:
                 metadata={
                     "name": "serviceOptionInfo",
                     "type": "Element",
-                    "required": True,
                 }
             )
             fee_description_grp: (
@@ -6716,7 +6624,6 @@ class FareMasterPricerTravelBoardSearchReply:
                     metadata={
                         "name": "itemNumberInfo",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 service_attributes_info: None | AttributeType = field(
@@ -6755,7 +6662,6 @@ class FareMasterPricerTravelBoardSearchReply:
                 metadata={
                     "name": "freeBagAllownceInfo",
                     "type": "Element",
-                    "required": True,
                 }
             )
             item_number_info: None | ItemNumberType166130S = field(
@@ -6771,7 +6677,6 @@ class FareMasterPricerTravelBoardSearchReply:
         mnr: MiniRulesType = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         mnr_details: list[
@@ -6797,7 +6702,6 @@ class FareMasterPricerTravelBoardSearchReply:
                 metadata={
                     "name": "mnrRef",
                     "type": "Element",
-                    "required": True,
                 }
             )
             date_info: list[DateAndTimeInformationType182345S] = field(
@@ -6831,7 +6735,6 @@ class FareMasterPricerTravelBoardSearchReply:
                     metadata={
                         "name": "catInfo",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 mon_info: None | MonetaryInformationType174241S = field(

@@ -47,7 +47,6 @@ class CreateAirlineFeeMcoReq(BaseReq1):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "required": True,
         }
     )
     form_of_payment: None | FormOfPayment1 = field(
@@ -97,14 +96,12 @@ class CreateAirlineFeeMcoReq(BaseReq1):
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
         }
     )
     location_code: str = field(
         metadata={
             "name": "LocationCode",
             "type": "Attribute",
-            "required": True,
             "length": 3,
         }
     )
@@ -112,7 +109,6 @@ class CreateAirlineFeeMcoReq(BaseReq1):
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
-            "required": True,
             "max_length": 8,
         }
     )

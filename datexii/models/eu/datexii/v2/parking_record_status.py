@@ -91,7 +91,6 @@ class ParkingRecordStatus:
             "name": "parkingRecordReference",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     parking_status_origin_time: XmlDateTime = field(
@@ -99,7 +98,6 @@ class ParkingRecordStatus:
             "name": "parkingStatusOriginTime",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     parking_status_description: None | MultilingualString = field(
@@ -167,7 +165,6 @@ class ParkingRecordStatus:
             "name": "parkingOccupancy",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     group_of_parking_spaces_status: list[

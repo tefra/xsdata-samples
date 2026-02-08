@@ -75,6 +75,5 @@ class DiagnosticOperationCycleRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

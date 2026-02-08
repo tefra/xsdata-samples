@@ -62,7 +62,6 @@ class VehicleDetail:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
         }
     )
     supplier_code: None | str = field(
@@ -97,35 +96,30 @@ class VehicleDetail:
         metadata={
             "name": "Class",
             "type": "Attribute",
-            "required": True,
         }
     )
     category: TypeVehicleCategory = field(
         metadata={
             "name": "Category",
             "type": "Attribute",
-            "required": True,
         }
     )
     air_conditioning: bool = field(
         metadata={
             "name": "AirConditioning",
             "type": "Attribute",
-            "required": True,
         }
     )
     transmission: TypeVehicleTransmission = field(
         metadata={
             "name": "Transmission",
             "type": "Attribute",
-            "required": True,
         }
     )
     make_model: str = field(
         metadata={
             "name": "MakeModel",
             "type": "Attribute",
-            "required": True,
         }
     )
     fuel_type: None | TypeFuel = field(

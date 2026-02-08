@@ -27,12 +27,7 @@ class ComplexTiedValueExpression:
     class Meta:
         name = "complexTiedValueExpression"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     other_attributes: dict[str, str] = field(
         default_factory=dict,
         metadata={

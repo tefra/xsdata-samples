@@ -125,7 +125,6 @@ class HotelProperty:
         metadata={
             "name": "HotelChain",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -133,7 +132,6 @@ class HotelProperty:
         metadata={
             "name": "HotelCode",
             "type": "Attribute",
-            "required": True,
             "max_length": 32,
         }
     )

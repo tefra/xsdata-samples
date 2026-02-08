@@ -54,14 +54,12 @@ class Commission6:
         metadata={
             "name": "Level",
             "type": "Attribute",
-            "required": True,
         }
     )
     type_value: TypeCommissionType3 = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     modifier: None | TypeCommissionModifier3 = field(

@@ -18,6 +18,5 @@ class RailwayTrackType(ExpansiveStructureType):
             "name": "Electrified",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-            "required": True,
         }
     )

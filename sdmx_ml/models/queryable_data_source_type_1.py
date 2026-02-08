@@ -33,7 +33,6 @@ class QueryableDataSourceType1:
             "name": "DataURL",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/common",
-            "required": True,
         }
     )
     wsdlurl: None | str = field(
@@ -56,13 +55,11 @@ class QueryableDataSourceType1:
         metadata={
             "name": "isRESTDatasource",
             "type": "Attribute",
-            "required": True,
         }
     )
     is_web_service_datasource: bool = field(
         metadata={
             "name": "isWebServiceDatasource",
             "type": "Attribute",
-            "required": True,
         }
     )

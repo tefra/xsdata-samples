@@ -86,6 +86,5 @@ class BswPerInstanceMemoryPolicy:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

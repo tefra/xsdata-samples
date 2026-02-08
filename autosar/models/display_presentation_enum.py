@@ -30,11 +30,7 @@ class DisplayPresentationEnum:
     class Meta:
         name = "DISPLAY-PRESENTATION-ENUM"
 
-    value: DisplayPresentationEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DisplayPresentationEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

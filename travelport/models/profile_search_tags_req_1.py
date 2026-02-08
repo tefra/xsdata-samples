@@ -26,6 +26,5 @@ class ProfileSearchTagsReq1(BaseReq2):
         metadata={
             "name": "AgencyID",
             "type": "Attribute",
-            "required": True,
         }
     )

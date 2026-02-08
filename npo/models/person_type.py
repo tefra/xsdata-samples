@@ -18,7 +18,6 @@ class PersonType:
             "name": "givenName",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-            "required": True,
         }
     )
     family_name: str = field(
@@ -26,13 +25,11 @@ class PersonType:
             "name": "familyName",
             "type": "Element",
             "namespace": "urn:vpro:media:2009",
-            "required": True,
         }
     )
     role: RoleType = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     gtaa_uri: None | str = field(

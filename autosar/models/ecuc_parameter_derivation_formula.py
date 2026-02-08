@@ -77,7 +77,6 @@ class EcucParameterDerivationFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -87,6 +86,5 @@ class EcucParameterDerivationFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

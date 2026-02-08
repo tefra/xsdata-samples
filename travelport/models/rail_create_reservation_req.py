@@ -47,7 +47,6 @@ class RailCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
             "name": "RailPricingSolution",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/rail_v52_0",
-            "required": True,
         }
     )
     payment: None | Payment1 = field(
@@ -96,6 +95,5 @@ class RailCreateReservationReq(BaseCreateWithFormOfPaymentReq1):
         metadata={
             "name": "BookingActionType",
             "type": "Attribute",
-            "required": True,
         }
     )

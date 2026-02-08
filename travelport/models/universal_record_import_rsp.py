@@ -22,6 +22,5 @@ class UniversalRecordImportRsp(BaseRsp1):
         metadata={
             "name": "UniversalRecord",
             "type": "Element",
-            "required": True,
         }
     )

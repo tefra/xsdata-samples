@@ -114,7 +114,6 @@ class CoverageType:
             "name": "CoverageCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     clauses: None | ClausesType = field(
@@ -182,7 +181,6 @@ class ExposureType(BaseIdentifiedComponentType):
             "name": "AnnualRate",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     estimated_value: AmountOrQuantityType = field(
@@ -190,7 +188,6 @@ class ExposureType(BaseIdentifiedComponentType):
             "name": "EstimatedValue",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     premium: None | PremiumType = field(
@@ -214,7 +211,6 @@ class ExposureType(BaseIdentifiedComponentType):
             "name": "ApplyRateType",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     unit: None | CodeDescriptionType = field(

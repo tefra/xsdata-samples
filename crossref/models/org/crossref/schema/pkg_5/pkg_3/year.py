@@ -17,7 +17,6 @@ class Year:
 
     value: int = field(
         metadata={
-            "required": True,
             "min_inclusive": 1400,
             "max_inclusive": 2200,
             "total_digits": 4,

@@ -26,7 +26,6 @@ class RoadsideAssistance(OperatorAction):
             "name": "roadsideAssistanceType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     roadside_assistance_extension: None | ExtensionType = field(

@@ -8,9 +8,4 @@ class Vspec:
     class Meta:
         name = "vspec"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

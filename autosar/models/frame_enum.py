@@ -29,11 +29,7 @@ class FrameEnum:
     class Meta:
         name = "FRAME-ENUM"
 
-    value: FrameEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: FrameEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -8,9 +8,4 @@ class G:
     class Meta:
         name = "g"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

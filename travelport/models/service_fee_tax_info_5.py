@@ -25,13 +25,11 @@ class ServiceFeeTaxInfo5:
         metadata={
             "name": "Category",
             "type": "Attribute",
-            "required": True,
         }
     )
     amount: str = field(
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
         }
     )

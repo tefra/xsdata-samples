@@ -21,6 +21,5 @@ class RiskPartyInvolvement(RiskInvolvement):
             "name": "InsuredRole",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )

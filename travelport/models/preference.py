@@ -21,6 +21,5 @@ class Preference:
         metadata={
             "name": "Owner",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -21,7 +21,6 @@ class AirlineLowestFaresType:
             "name": "Airline",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     no_stops: int = field(
@@ -29,7 +28,6 @@ class AirlineLowestFaresType:
             "name": "NoStops",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     lowest_fare: CurrencyAmountType = field(
@@ -37,7 +35,6 @@ class AirlineLowestFaresType:
             "name": "LowestFare",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     itinerary_count: None | object = field(

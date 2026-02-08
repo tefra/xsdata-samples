@@ -21,7 +21,6 @@ class TypeErrorInfo3:
             "name": "Code",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v32_0",
-            "required": True,
         }
     )
     service: str = field(
@@ -29,7 +28,6 @@ class TypeErrorInfo3:
             "name": "Service",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v32_0",
-            "required": True,
         }
     )
     type_value: str = field(
@@ -37,7 +35,6 @@ class TypeErrorInfo3:
             "name": "Type",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v32_0",
-            "required": True,
         }
     )
     description: str = field(
@@ -45,7 +42,6 @@ class TypeErrorInfo3:
             "name": "Description",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v32_0",
-            "required": True,
         }
     )
     transaction_id: str = field(
@@ -53,7 +49,6 @@ class TypeErrorInfo3:
             "name": "TransactionId",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v32_0",
-            "required": True,
         }
     )
     trace_id: None | str = field(

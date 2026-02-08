@@ -90,6 +90,5 @@ class DynamicPartAlternative:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

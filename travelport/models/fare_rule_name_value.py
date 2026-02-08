@@ -18,13 +18,11 @@ class FareRuleNameValue:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
         }
     )
     value: str = field(
         metadata={
             "name": "Value",
             "type": "Attribute",
-            "required": True,
         }
     )

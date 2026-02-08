@@ -25,7 +25,6 @@ class GdsQueueAgentListReq(BaseReq1):
         metadata={
             "name": "AgentID",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 32,
         }

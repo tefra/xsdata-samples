@@ -29,7 +29,6 @@ class HotelPropertyWithMediaItems:
         metadata={
             "name": "HotelProperty",
             "type": "Element",
-            "required": True,
         }
     )
     media_item: list[MediaItem1] = field(

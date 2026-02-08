@@ -104,7 +104,6 @@ class VariableInAtomicSwcTypeInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -114,7 +113,6 @@ class VariableInAtomicSwcTypeInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -124,7 +122,6 @@ class VariableInAtomicSwcTypeInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -134,6 +131,5 @@ class VariableInAtomicSwcTypeInstanceRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

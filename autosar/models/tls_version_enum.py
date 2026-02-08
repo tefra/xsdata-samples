@@ -29,11 +29,7 @@ class TlsVersionEnum:
     class Meta:
         name = "TLS-VERSION-ENUM"
 
-    value: TlsVersionEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: TlsVersionEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

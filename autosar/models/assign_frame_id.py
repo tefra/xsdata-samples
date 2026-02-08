@@ -138,7 +138,6 @@ class AssignFrameId:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -148,7 +147,6 @@ class AssignFrameId:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -158,6 +156,5 @@ class AssignFrameId:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

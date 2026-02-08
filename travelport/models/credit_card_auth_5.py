@@ -71,7 +71,6 @@ class CreditCardAuth5:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
         }
     )
     auth_code: None | str = field(
@@ -85,7 +84,6 @@ class CreditCardAuth5:
         metadata={
             "name": "AuthResultCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     avsresult_code: None | str = field(

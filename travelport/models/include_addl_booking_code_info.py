@@ -28,7 +28,6 @@ class IncludeAddlBookingCodeInfo:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     secondary_carrier: None | str = field(

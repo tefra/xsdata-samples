@@ -30,11 +30,7 @@ class SoAdConnectorType:
     class Meta:
         name = "SO-AD-CONNECTOR-TYPE"
 
-    value: SoAdConnectorTypeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SoAdConnectorTypeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

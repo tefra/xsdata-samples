@@ -51,6 +51,5 @@ class UpsellSearchRsp(BaseRsp1):
         metadata={
             "name": "MoreResults",
             "type": "Attribute",
-            "required": True,
         }
     )

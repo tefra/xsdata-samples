@@ -177,7 +177,6 @@ class ContentItem:
     doi_data: DoiData = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     citation_list: None | CitationList = field(
@@ -195,7 +194,6 @@ class ContentItem:
     component_type: ContentItemComponentType = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     level_sequence_number: int = field(

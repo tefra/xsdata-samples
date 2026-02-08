@@ -1271,7 +1271,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Hours",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1322,7 +1321,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1332,7 +1330,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1342,7 +1339,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1352,7 +1348,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1362,7 +1357,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Ind",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1372,7 +1366,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1382,7 +1375,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1392,7 +1384,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1402,7 +1393,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1412,7 +1402,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1422,7 +1411,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1432,7 +1420,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1442,7 +1429,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1452,7 +1438,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1462,7 +1447,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1472,7 +1456,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1482,7 +1465,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1492,7 +1474,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1502,7 +1483,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1512,7 +1492,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1522,7 +1501,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1532,7 +1510,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1542,7 +1519,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1552,7 +1528,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1562,7 +1537,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1572,7 +1546,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1582,7 +1555,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1592,7 +1564,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1602,7 +1573,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1612,7 +1582,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1622,7 +1591,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1632,7 +1600,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1642,7 +1609,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1652,7 +1618,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1662,7 +1627,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1672,7 +1636,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1682,7 +1645,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1692,7 +1654,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1702,7 +1663,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1712,7 +1672,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1769,7 +1728,6 @@ class AirSearchPrefsType:
                     "name": "SettlementValidation",
                     "type": "Element",
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
-                    "required": True,
                 }
             )
             ietvalidation: AirSearchPrefsType.TpaExtensions.ValidatingCarrierCheck.Ietvalidation = field(
@@ -1777,7 +1735,6 @@ class AirSearchPrefsType:
                     "name": "IETValidation",
                     "type": "Element",
                     "namespace": "http://www.opentravel.org/OTA/2003/05",
-                    "required": True,
                 }
             )
             carrier: list[
@@ -1811,7 +1768,6 @@ class AirSearchPrefsType:
                     metadata={
                         "name": "Ind",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
 
@@ -1825,7 +1781,6 @@ class AirSearchPrefsType:
                     metadata={
                         "name": "Ind",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
 
@@ -1835,7 +1790,6 @@ class AirSearchPrefsType:
                     metadata={
                         "name": "Code",
                         "type": "Attribute",
-                        "required": True,
                         "pattern": r"[0-9A-Z]{2,3}",
                     }
                 )
@@ -1846,7 +1800,6 @@ class AirSearchPrefsType:
                     metadata={
                         "name": "Code",
                         "type": "Attribute",
-                        "required": True,
                         "pattern": r"[a-zA-Z]{2}",
                     }
                 )
@@ -1863,7 +1816,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -1953,7 +1905,6 @@ class AirSearchPrefsType:
                     metadata={
                         "name": "PriceWeight",
                         "type": "Attribute",
-                        "required": True,
                         "min_inclusive": 0,
                         "max_inclusive": 10,
                     }
@@ -1962,7 +1913,6 @@ class AirSearchPrefsType:
                     metadata={
                         "name": "TravelTimeWeight",
                         "type": "Attribute",
-                        "required": True,
                         "min_inclusive": 0,
                         "max_inclusive": 10,
                     }
@@ -1998,7 +1948,6 @@ class AirSearchPrefsType:
                         metadata={
                             "name": "Begin",
                             "type": "Attribute",
-                            "required": True,
                             "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
                         }
                     )
@@ -2006,7 +1955,6 @@ class AirSearchPrefsType:
                         metadata={
                             "name": "End",
                             "type": "Attribute",
-                            "required": True,
                             "pattern": r"([0-1][0-9]|2[0-3])[0-5][0-9]",
                         }
                     )
@@ -2014,7 +1962,6 @@ class AirSearchPrefsType:
                         metadata={
                             "name": "Percentage",
                             "type": "Attribute",
-                            "required": True,
                             "min_inclusive": 0,
                             "max_inclusive": 100,
                         }
@@ -2031,7 +1978,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -2086,7 +2032,6 @@ class AirSearchPrefsType:
                     metadata={
                         "name": "Ignore",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
 
@@ -2167,7 +2112,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"[a-zA-Z]{2}",
                 }
             )
@@ -2175,7 +2119,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "PreferLevel",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"Unacceptable",
                 }
             )
@@ -2220,7 +2163,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -2230,7 +2172,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Value",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -2273,7 +2214,6 @@ class AirSearchPrefsType:
             metadata={
                 "name": "Enable",
                 "type": "Attribute",
-                "required": True,
             }
         )
         summary: None | bool = field(
@@ -2296,7 +2236,6 @@ class AirSearchPrefsType:
                 metadata={
                     "name": "Code",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
             count: None | object = field(
@@ -2319,7 +2258,6 @@ class AirSearchPrefsType:
             metadata={
                 "name": "Status",
                 "type": "Attribute",
-                "required": True,
             }
         )
         airline_code: None | str = field(
@@ -2342,6 +2280,5 @@ class AirSearchPrefsType:
             metadata={
                 "name": "Level",
                 "type": "Attribute",
-                "required": True,
             }
         )

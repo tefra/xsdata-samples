@@ -18,9 +18,4 @@ class Group:
         name = "group"
         namespace = "http://www.accellera.org/XMLSchema/IPXACT/1685-2022"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

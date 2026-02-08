@@ -143,7 +143,6 @@ class DataSetType(AnnotableType):
             "name": "structureRef",
             "type": "Attribute",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/data/structurespecific",
-            "required": True,
         }
     )
     set_id: None | str = field(

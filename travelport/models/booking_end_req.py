@@ -34,7 +34,6 @@ class BookingEndReq(BookingBaseReq):
         metadata={
             "name": "SessionActivity",
             "type": "Element",
-            "required": True,
         }
     )
     queue_selector: list[QueueSelector1] = field(

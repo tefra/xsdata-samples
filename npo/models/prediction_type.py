@@ -14,12 +14,7 @@ class PredictionType:
     class Meta:
         name = "predictionType"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     state: None | PredictionStateEnum = field(
         default=None,
         metadata={

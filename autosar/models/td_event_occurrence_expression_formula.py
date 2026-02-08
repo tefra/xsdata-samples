@@ -106,7 +106,6 @@ class TdEventOccurrenceExpressionFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -116,7 +115,6 @@ class TdEventOccurrenceExpressionFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -126,7 +124,6 @@ class TdEventOccurrenceExpressionFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -136,6 +133,5 @@ class TdEventOccurrenceExpressionFormula:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

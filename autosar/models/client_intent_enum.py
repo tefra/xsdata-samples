@@ -29,11 +29,7 @@ class ClientIntentEnum:
     class Meta:
         name = "CLIENT-INTENT-ENUM"
 
-    value: ClientIntentEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ClientIntentEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

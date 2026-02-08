@@ -37,7 +37,6 @@ class TypeOtasubKey1:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
         }
     )
     description: None | str = field(

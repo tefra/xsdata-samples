@@ -18,7 +18,6 @@ class FigCount:
     count: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     id: None | str = field(

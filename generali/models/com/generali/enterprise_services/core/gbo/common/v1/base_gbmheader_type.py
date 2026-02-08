@@ -24,6 +24,5 @@ class BaseGbmheaderType:
             "name": "Header",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            "required": True,
         }
     )

@@ -28,11 +28,7 @@ class DiagPduType:
     class Meta:
         name = "DIAG-PDU-TYPE"
 
-    value: DiagPduTypeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagPduTypeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

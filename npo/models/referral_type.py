@@ -12,12 +12,7 @@ class ReferralType:
     class Meta:
         name = "referralType"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     referrer: None | str = field(
         default=None,
         metadata={

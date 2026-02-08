@@ -73,7 +73,6 @@ class CoctMt810000UvPerformer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -197,7 +196,6 @@ class CoctMt810000UvVerificationRequest:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -259,7 +257,6 @@ class CoctMt810000UvInFulfillmentOf:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -375,7 +372,6 @@ class CoctMt810000UvSupport:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -499,7 +495,6 @@ class CoctMt810000UvVerification:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(

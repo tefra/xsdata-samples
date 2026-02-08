@@ -20,7 +20,6 @@ class OpenlrGeoCoordinate:
             "name": "openlrCoordinate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_geo_coordinate_extension: None | ExtensionType = field(

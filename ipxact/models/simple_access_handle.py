@@ -37,7 +37,6 @@ class SimpleAccessHandle:
             "name": "pathSegments",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     vendor_extensions: None | VendorExtensions = field(
@@ -58,12 +57,7 @@ class SimpleAccessHandle:
 
     @dataclass(kw_only=True)
     class ViewRef:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         id: None | str = field(
             default=None,
             metadata={

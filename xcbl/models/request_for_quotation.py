@@ -37,12 +37,7 @@ from xcbl.models.trading_partner_user_information import (
 
 @dataclass(kw_only=True)
 class AccountControlKey:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -50,222 +45,112 @@ class AccountId:
     class Meta:
         name = "AccountID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AccountName1:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AccountName2:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AccountTypeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AccountTypeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AdviseBefore:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CancelIfNotDelivered:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CardAuthCode:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CardExpirationDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CardHolderName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CardNum:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CardRefNum:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CardType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class CardTypeOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DeliveryDateEarliest:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DeliveryDateLatest:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DiscountDateTimeRefCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DiscountDateTimeRefCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DiscountDayOfMonth:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DiscountDaysDue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DiscountDueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class DiscountPercent:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -273,12 +158,7 @@ class FibranchCity:
     class Meta:
         name = "FIBranchCity"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -286,12 +166,7 @@ class FibranchHouseNumber:
     class Meta:
         name = "FIBranchHouseNumber"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -299,12 +174,7 @@ class FibranchId:
     class Meta:
         name = "FIBranchID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -312,12 +182,7 @@ class FibranchName:
     class Meta:
         name = "FIBranchName"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -325,12 +190,7 @@ class FibranchPostalCode:
     class Meta:
         name = "FIBranchPostalCode"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -338,12 +198,7 @@ class FibranchStreet:
     class Meta:
         name = "FIBranchStreet"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -351,12 +206,7 @@ class FibranchStreetSupplement1:
     class Meta:
         name = "FIBranchStreetSupplement1"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -364,12 +214,7 @@ class FibranchStreetSupplement2:
     class Meta:
         name = "FIBranchStreetSupplement2"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -377,22 +222,12 @@ class FinancialInstitutionId:
     class Meta:
         name = "FinancialInstitutionID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class FinancialInstitutionName:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -400,172 +235,87 @@ class Iban:
     class Meta:
         name = "IBAN"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class NetDateTimeRefCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class NetDateTimeRefCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class NetDaysDue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class NetDueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentMeanCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentMeanCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentSystemCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentSystemCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentTermCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentTermCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentTermValue:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentTermsNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RequestQuoteGeneralNotes:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RequestQuoteIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RequestQuotePurposeCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RequestQuotePurposeCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -573,12 +323,7 @@ class SecondaryAccountId:
     class Meta:
         name = "SecondaryAccountID"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -587,7 +332,6 @@ class AccountNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -598,7 +342,6 @@ class AccountReferences:
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -609,7 +352,6 @@ class BuyersCatalogNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -620,7 +362,6 @@ class CardInfo:
         metadata={
             "name": "CardNum",
             "type": "Element",
-            "required": True,
         }
     )
     card_auth_code: None | CardAuthCode = field(
@@ -673,7 +414,6 @@ class ContractReference:
         metadata={
             "name": "Contract",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -684,7 +424,6 @@ class DiscountAmount:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -698,7 +437,6 @@ class FibranchCountry:
         metadata={
             "name": "Country",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -712,7 +450,6 @@ class FibranchRegion:
         metadata={
             "name": "Region",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -723,7 +460,6 @@ class ListOfRequestQuotePackageDetail:
         metadata={
             "name": "ListOfPackageDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -734,7 +470,6 @@ class OtherRequestQuoteReferences:
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -745,7 +480,6 @@ class PaymentMeanReference:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -756,7 +490,6 @@ class PriceListNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -767,7 +500,6 @@ class PriceListVersionNumber:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -778,7 +510,6 @@ class RequestQuoteAllowanceOrCharge:
         metadata={
             "name": "ListOfAllowOrCharge",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -789,7 +520,6 @@ class RequestQuoteCurrency:
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -800,7 +530,6 @@ class RequestQuoteDeliveryDetail:
         metadata={
             "name": "DeliveryDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -814,7 +543,6 @@ class RequestQuoteId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -825,7 +553,6 @@ class RequestQuoteItemDetail:
         metadata={
             "name": "BaseItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -836,7 +563,6 @@ class RequestQuoteItemListOfAttachment:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -847,7 +573,6 @@ class RequestQuoteLanguage:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -858,7 +583,6 @@ class RequestQuoteListOfAttachment:
         metadata={
             "name": "ListOfAttachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -869,7 +593,6 @@ class RequestQuoteParty:
         metadata={
             "name": "OrderParty",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -880,7 +603,6 @@ class RequestQuotePricingDetail:
         metadata={
             "name": "PricingDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -891,7 +613,6 @@ class RequestQuotePurpose:
         metadata={
             "name": "RequestQuotePurposeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     request_quote_purpose_coded_other: None | RequestQuotePurposeCodedOther = (
@@ -922,7 +643,6 @@ class RequestQuoteTax:
         metadata={
             "name": "Tax",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -933,7 +653,6 @@ class RequestQuoteTermsOfDelivery:
         metadata={
             "name": "TermsOfDelivery",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -944,7 +663,6 @@ class RequestQuoteTransport:
         metadata={
             "name": "TransportRouting",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -955,7 +673,6 @@ class RequestQuoteValidityDate:
         metadata={
             "name": "ValidityDates",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -966,7 +683,6 @@ class ResultingOrderType:
         metadata={
             "name": "OrderType",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -977,7 +693,6 @@ class AccountDetail:
         metadata={
             "name": "AccountID",
             "type": "Element",
-            "required": True,
         }
     )
     secondary_account_id: None | SecondaryAccountId = field(
@@ -1005,7 +720,6 @@ class AccountDetail:
         metadata={
             "name": "AccountTypeCoded",
             "type": "Element",
-            "required": True,
         }
     )
     account_type_coded_other: None | AccountTypeCodedOther = field(
@@ -1019,7 +733,6 @@ class AccountDetail:
         metadata={
             "name": "AccountName1",
             "type": "Element",
-            "required": True,
         }
     )
     account_name2: None | AccountName2 = field(
@@ -1134,14 +847,12 @@ class FinancialInstitution:
         metadata={
             "name": "FinancialInstitutionID",
             "type": "Element",
-            "required": True,
         }
     )
     financial_institution_name: FinancialInstitutionName = field(
         metadata={
             "name": "FinancialInstitutionName",
             "type": "Element",
-            "required": True,
         }
     )
     fibranch_id: None | FibranchId = field(
@@ -1222,7 +933,6 @@ class RequestQuoteDate:
         metadata={
             "name": "RequestQuoteValidityDate",
             "type": "Element",
-            "required": True,
         }
     )
     decision_date: None | DecisionDate = field(
@@ -1275,7 +985,6 @@ class RequestQuoteDetails:
         metadata={
             "name": "RequestQuoteItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
     request_quote_pricing_detail: None | RequestQuotePricingDetail = field(
@@ -1365,7 +1074,6 @@ class Fiaccount:
         metadata={
             "name": "FinancialInstitution",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1388,7 +1096,6 @@ class PaymentTermDetails:
         metadata={
             "name": "Discounts",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1402,7 +1109,6 @@ class OriginatingFiaccount:
         metadata={
             "name": "FIAccount",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1413,7 +1119,6 @@ class PaymentTerm:
         metadata={
             "name": "PaymentTermCoded",
             "type": "Element",
-            "required": True,
         }
     )
     payment_term_coded_other: None | PaymentTermCodedOther = field(
@@ -1448,7 +1153,6 @@ class ReceivingFiaccount:
         metadata={
             "name": "FIAccount",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1459,7 +1163,6 @@ class PaymentMethod:
         metadata={
             "name": "PaymentMeanCoded",
             "type": "Element",
-            "required": True,
         }
     )
     payment_mean_coded_other: None | PaymentMeanCodedOther = field(
@@ -1565,7 +1268,6 @@ class RequestQuoteTermsOfPayment:
         metadata={
             "name": "PaymentInstructions",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -1576,14 +1278,12 @@ class RequestQuoteHeader:
         metadata={
             "name": "RequestQuoteIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     request_quote_id: RequestQuoteId = field(
         metadata={
             "name": "RequestQuoteID",
             "type": "Element",
-            "required": True,
         }
     )
     request_quote_reference: None | RequestQuoteReference = field(
@@ -1611,7 +1311,6 @@ class RequestQuoteHeader:
         metadata={
             "name": "RequestQuoteParty",
             "type": "Element",
-            "required": True,
         }
     )
     resulting_order_type: None | ResultingOrderType = field(
@@ -1698,7 +1397,6 @@ class RequestForQuotation:
         metadata={
             "name": "RequestQuoteHeader",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_request_quote_details: None | ListOfRequestQuoteDetails = field(

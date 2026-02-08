@@ -4514,7 +4514,6 @@ class EntityEntityStructure(EntityStructure):
         metadata={
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     created: None | XmlDateTime = field(

@@ -34,6 +34,5 @@ class FareStatus:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
         }
     )

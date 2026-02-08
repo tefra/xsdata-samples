@@ -21,14 +21,12 @@ class ProxyPrpaIn201306UvproxyRequestType:
             "name": "PRPA_IN201306UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_system: NhinTargetSystemType = field(
@@ -36,7 +34,6 @@ class ProxyPrpaIn201306UvproxyRequestType:
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 
@@ -51,7 +48,6 @@ class ProxyPrpaIn201306UvproxySecuredRequestType:
             "name": "PRPA_IN201306UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_system: NhinTargetSystemType = field(
@@ -59,7 +55,6 @@ class ProxyPrpaIn201306UvproxySecuredRequestType:
             "name": "nhinTargetSystem",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
 

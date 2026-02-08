@@ -35,7 +35,6 @@ class GeneralNetworkManagement(NetworkManagement):
             "name": "generalNetworkManagementType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     traffic_manually_directed_by: None | PersonCategoryEnum = field(

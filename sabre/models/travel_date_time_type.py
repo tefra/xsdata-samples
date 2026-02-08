@@ -135,7 +135,6 @@ class TravelDateTimeType:
                 metadata={
                     "name": "Days",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -151,14 +150,12 @@ class TravelDateTimeType:
                 metadata={
                     "name": "MinDays",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
             max_days: int = field(
                 metadata={
                     "name": "MaxDays",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -168,7 +165,6 @@ class TravelDateTimeType:
                 metadata={
                     "name": "Date",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
                 }
             )
@@ -179,7 +175,6 @@ class TravelDateTimeType:
                 metadata={
                     "name": "FromDate",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
                 }
             )
@@ -187,7 +182,6 @@ class TravelDateTimeType:
                 metadata={
                     "name": "ToDate",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
                 }
             )
@@ -225,7 +219,6 @@ class TravelDateTimeType:
                 metadata={
                     "name": "Date",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
                 }
             )
@@ -236,7 +229,6 @@ class TravelDateTimeType:
                 metadata={
                     "name": "FromDate",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
                 }
             )
@@ -244,7 +236,6 @@ class TravelDateTimeType:
                 metadata={
                     "name": "ToDate",
                     "type": "Attribute",
-                    "required": True,
                     "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}",
                 }
             )

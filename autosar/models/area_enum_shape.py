@@ -28,11 +28,7 @@ class AreaEnumShape:
     class Meta:
         name = "AREA-ENUM-SHAPE"
 
-    value: AreaEnumShapeSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: AreaEnumShapeSimple = field()
     s: None | str = field(
         default=None,
         metadata={

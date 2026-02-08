@@ -35,7 +35,6 @@ class BookingInfo:
         metadata={
             "name": "BookingCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     booking_count: None | str = field(
@@ -56,7 +55,6 @@ class BookingInfo:
         metadata={
             "name": "FareInfoRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     segment_ref: None | str = field(

@@ -36,13 +36,11 @@ class Art:
     mrk: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     kap: Kap = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     subart: list[Subart] = field(

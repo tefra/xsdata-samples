@@ -30,21 +30,18 @@ class GeoPoliticalAreaFilter2:
         metadata={
             "name": "FilterType",
             "type": "Attribute",
-            "required": True,
         }
     )
     geo_political_area_type: TypeGeoPoliticalAreaType2 = field(
         metadata={
             "name": "GeoPoliticalAreaType",
             "type": "Attribute",
-            "required": True,
         }
     )
     geo_political_area_code: str = field(
         metadata={
             "name": "GeoPoliticalAreaCode",
             "type": "Attribute",
-            "required": True,
             "max_length": 6,
         }
     )

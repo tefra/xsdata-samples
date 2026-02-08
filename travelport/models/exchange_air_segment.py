@@ -29,7 +29,6 @@ class ExchangeAirSegment:
         metadata={
             "name": "AirSegment",
             "type": "Element",
-            "required": True,
         }
     )
     cabin_class: CabinClass1 = field(
@@ -37,7 +36,6 @@ class ExchangeAirSegment:
             "name": "CabinClass",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/common_v52_0",
-            "required": True,
         }
     )
     fare_basis_code: None | str = field(

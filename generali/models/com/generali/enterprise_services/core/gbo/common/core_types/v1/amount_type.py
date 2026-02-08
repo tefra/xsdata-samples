@@ -52,11 +52,7 @@ class AmountType:
         xmlns:ns1="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">string</ns1:PrimitiveType>
     """
 
-    value: Decimal = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: Decimal = field()
     currency_id: None | str = field(
         default=None,
         metadata={

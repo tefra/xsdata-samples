@@ -127,6 +127,5 @@ class SwCalprmAxis:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

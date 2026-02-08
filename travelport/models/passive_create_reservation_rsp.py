@@ -17,6 +17,5 @@ class PassiveCreateReservationRsp(BaseRsp1):
         metadata={
             "name": "UniversalRecord",
             "type": "Element",
-            "required": True,
         }
     )

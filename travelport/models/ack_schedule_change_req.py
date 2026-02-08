@@ -21,7 +21,6 @@ class AckScheduleChangeReq(BaseReq1):
         metadata={
             "name": "UniversalRecordLocatorCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     provider_code: None | str = field(
@@ -52,6 +51,5 @@ class AckScheduleChangeReq(BaseReq1):
         metadata={
             "name": "Version",
             "type": "Attribute",
-            "required": True,
         }
     )

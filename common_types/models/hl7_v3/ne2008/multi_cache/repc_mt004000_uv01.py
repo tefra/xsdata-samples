@@ -117,7 +117,6 @@ class RepcMt004000Uv01Author:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     mode_code: Ce = field(
@@ -125,7 +124,6 @@ class RepcMt004000Uv01Author:
             "name": "modeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     signature_code: Ce = field(
@@ -133,7 +131,6 @@ class RepcMt004000Uv01Author:
             "name": "signatureCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     signature_text: None | EdExplicit = field(
@@ -262,7 +259,6 @@ class RepcMt004000Uv01CareProvisionRequestOrPromise:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -276,14 +272,12 @@ class RepcMt004000Uv01CareProvisionRequestOrPromise:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: XActMoodOrdPrms = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -336,7 +330,6 @@ class RepcMt004000Uv01Component:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: None | ContextControl = field(
@@ -350,7 +343,6 @@ class RepcMt004000Uv01Component:
         metadata={
             "name": "contextConductionInd",
             "type": "Attribute",
-            "required": True,
             "pattern": r"true|false",
         }
     )
@@ -572,7 +564,6 @@ class RepcMt004000Uv01Performer:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -639,7 +630,6 @@ class RepcMt004000Uv01PertinentInformation:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -654,7 +644,6 @@ class RepcMt004000Uv01PertinentInformation:
         metadata={
             "name": "contextConductionInd",
             "type": "Attribute",
-            "required": True,
             "pattern": r"true|false",
         }
     )
@@ -725,7 +714,6 @@ class RepcMt004000Uv01PertinentInformation4:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -869,7 +857,6 @@ class RepcMt004000Uv01PertinentInformation5:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^\s]+",
         }
     )
@@ -884,7 +871,6 @@ class RepcMt004000Uv01PertinentInformation5:
         metadata={
             "name": "contextConductionInd",
             "type": "Attribute",
-            "required": True,
             "pattern": r"true|false",
         }
     )
@@ -1052,7 +1038,6 @@ class RepcMt004000Uv01Reason:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -1290,7 +1275,6 @@ class RepcMt004000Uv01Subject3:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -1389,7 +1373,6 @@ class RepcMt004000Uv01Verifier:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -1451,7 +1434,6 @@ class RepcMt004000Uv01InFulfillmentOf2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: None | ContextControl = field(
@@ -1465,7 +1447,6 @@ class RepcMt004000Uv01InFulfillmentOf2:
         metadata={
             "name": "contextConductionInd",
             "type": "Attribute",
-            "required": True,
             "pattern": r"true|false",
         }
     )
@@ -1707,7 +1688,6 @@ class RepcMt004000Uv01CareProvisionEvent:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -1814,7 +1794,6 @@ class RepcMt004000Uv01ReplacementOf:
         metadata={
             "name": "contextConductionInd",
             "type": "Attribute",
-            "required": True,
             "pattern": r"true|false",
         }
     )

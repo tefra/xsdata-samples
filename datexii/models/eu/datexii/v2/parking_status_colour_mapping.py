@@ -27,7 +27,6 @@ class ParkingStatusColourMapping:
             "name": "parkingSiteStatus",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     rgb_colour: RGBColour = field(
@@ -35,7 +34,6 @@ class ParkingStatusColourMapping:
             "name": "rgbColour",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     parking_status_colour_mapping_extension: None | ExtensionType = field(

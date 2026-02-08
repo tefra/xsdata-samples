@@ -19,6 +19,5 @@ class BridgedBranch:
         metadata={
             "name": "BranchId",
             "type": "Attribute",
-            "required": True,
         }
     )

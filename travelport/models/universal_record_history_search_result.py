@@ -59,21 +59,18 @@ class UniversalRecordHistorySearchResult:
         metadata={
             "name": "ModifiedDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     element_type: str = field(
         metadata={
             "name": "ElementType",
             "type": "Attribute",
-            "required": True,
         }
     )
     action: str = field(
         metadata={
             "name": "Action",
             "type": "Attribute",
-            "required": True,
         }
     )
     transaction_id: None | str = field(

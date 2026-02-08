@@ -106,6 +106,5 @@ class FareRulesFilter:
             metadata={
                 "name": "Value",
                 "type": "Attribute",
-                "required": True,
             }
         )

@@ -42,7 +42,6 @@ class OriginDestinationFlightType:
             "name": "OriginLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     destination_location: RequestLocationType = field(
@@ -50,7 +49,6 @@ class OriginDestinationFlightType:
             "name": "DestinationLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     airline: AirlineType = field(
@@ -58,7 +56,6 @@ class OriginDestinationFlightType:
             "name": "Airline",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     side_trip: None | SideTripType = field(
@@ -114,14 +111,12 @@ class OriginDestinationFlightType:
         metadata={
             "name": "Number",
             "type": "Attribute",
-            "required": True,
         }
     )
     departure_date_time: str = field(
         metadata={
             "name": "DepartureDateTime",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?",
         }
     )
@@ -129,7 +124,6 @@ class OriginDestinationFlightType:
         metadata={
             "name": "ArrivalDateTime",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?",
         }
     )
@@ -144,7 +138,6 @@ class OriginDestinationFlightType:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[AKO]",
         }
     )

@@ -61,6 +61,5 @@ class MacMulticastConfiguration:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

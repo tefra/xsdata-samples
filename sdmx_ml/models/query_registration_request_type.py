@@ -45,7 +45,6 @@ class QueryRegistrationRequestType:
             "name": "QueryType",
             "type": "Element",
             "namespace": "http://www.sdmx.org/resources/sdmxml/schemas/v3_1/registry",
-            "required": True,
         }
     )
     choice: (
@@ -142,7 +141,6 @@ class QueryRegistrationRequestType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.registry\.ProvisionAgreement=.+",
             },
         )
@@ -152,7 +150,6 @@ class QueryRegistrationRequestType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
             },
         )
@@ -162,7 +159,6 @@ class QueryRegistrationRequestType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.datastructure\.Dataflow=.+",
             },
         )
@@ -172,7 +168,6 @@ class QueryRegistrationRequestType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.metadatastructure\.Metadataflow=.+",
             },
         )

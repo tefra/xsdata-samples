@@ -77,7 +77,6 @@ class ClientServerApplicationErrorMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -87,6 +86,5 @@ class ClientServerApplicationErrorMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

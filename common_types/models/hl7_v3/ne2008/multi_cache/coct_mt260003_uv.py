@@ -95,7 +95,6 @@ class CoctMt260003UvAssignedEntity:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -109,7 +108,6 @@ class CoctMt260003UvAssignedEntity:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -148,7 +146,6 @@ class CoctMt260003UvDetectedMedicationIssueDefinition:
             "name": "effectiveTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -225,14 +222,12 @@ class CoctMt260003UvManufacturedMaterialKind:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     determiner_code: EntityDeterminerDetermined = field(
         metadata={
             "name": "determinerCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -270,7 +265,6 @@ class CoctMt260003UvPharmacy:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -341,14 +335,12 @@ class CoctMt260003UvSeverityObservation:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     value: Ce = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -362,7 +354,6 @@ class CoctMt260003UvSeverityObservation:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -554,7 +545,6 @@ class CoctMt260003UvLocation:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -610,7 +600,6 @@ class CoctMt260003UvManufacturedProduct:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -725,7 +714,6 @@ class CoctMt260003UvConsumable:
             "name": "manufacturedProduct",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -779,7 +767,6 @@ class CoctMt260003UvManagement:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     author: None | CoctMt260003UvAuthor = field(
@@ -801,7 +788,6 @@ class CoctMt260003UvManagement:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -886,7 +872,6 @@ class CoctMt260003UvOtherSupply:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(
@@ -947,7 +932,6 @@ class CoctMt260003UvMitigates:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -985,7 +969,6 @@ class CoctMt260003UvOtherMedication:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -1134,7 +1117,6 @@ class CoctMt260003UvDetectedMedicationIssue:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     value: None | Ce = field(

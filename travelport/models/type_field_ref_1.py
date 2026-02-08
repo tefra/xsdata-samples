@@ -23,6 +23,5 @@ class TypeFieldRef1:
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -288,7 +288,6 @@ class SavedTripActivity:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -298,7 +297,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -308,7 +306,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -318,7 +315,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -328,7 +324,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -338,7 +333,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -348,7 +342,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -358,7 +351,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -368,7 +360,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -378,7 +369,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -388,7 +378,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -398,7 +387,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -408,7 +396,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -418,7 +405,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -428,7 +414,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -438,7 +423,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -448,7 +432,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -458,7 +441,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -468,7 +450,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -478,7 +459,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -488,7 +468,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -498,7 +477,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -508,7 +486,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -518,7 +495,6 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -528,6 +504,5 @@ class SavedTripActivity:
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )

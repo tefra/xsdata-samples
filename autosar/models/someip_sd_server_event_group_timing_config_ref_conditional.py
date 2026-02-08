@@ -75,6 +75,5 @@ class SomeipSdServerEventGroupTimingConfigRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

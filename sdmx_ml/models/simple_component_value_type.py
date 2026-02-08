@@ -28,12 +28,7 @@ class SimpleComponentValueType:
     :ivar valid_to:
     """
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     cascade_values: bool | ExcludeRootType = field(
         default=False,
         metadata={

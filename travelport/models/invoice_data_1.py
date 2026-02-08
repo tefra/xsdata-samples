@@ -52,7 +52,6 @@ class InvoiceData1:
         metadata={
             "name": "InvoiceNumber",
             "type": "Attribute",
-            "required": True,
         }
     )
     issue_date: None | XmlDateTime = field(
@@ -66,6 +65,5 @@ class InvoiceData1:
         metadata={
             "name": "ProviderReservationInfoRef",
             "type": "Attribute",
-            "required": True,
         }
     )

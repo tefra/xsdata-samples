@@ -20,7 +20,6 @@ class ServiceLinkVersionStructure(LinkVersionStructure):
             "name": "FromPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     to_point_ref: ScheduledStopPointRefStructure = field(
@@ -28,7 +27,6 @@ class ServiceLinkVersionStructure(LinkVersionStructure):
             "name": "ToPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     vehicle_mode: None | VehicleMode = field(

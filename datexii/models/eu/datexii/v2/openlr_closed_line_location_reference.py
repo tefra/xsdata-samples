@@ -41,7 +41,6 @@ class OpenlrClosedLineLocationReference(OpenlrAreaLocationReference):
             "name": "openlrLastLine",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_closed_line_location_reference_extension: None | ExtensionType = (

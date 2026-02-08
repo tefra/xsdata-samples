@@ -13,12 +13,7 @@ class ExtendedMatcherType:
     class Meta:
         name = "extendedMatcherType"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     fuzziness: None | str = field(
         default=None,
         metadata={

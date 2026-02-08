@@ -17,17 +17,11 @@ class ResponseLocationType:
             such as IATA, ARC, or internal code, etc.
     """
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     location_code: str = field(
         metadata={
             "name": "LocationCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 8,
         }

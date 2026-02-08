@@ -102,7 +102,6 @@ class CppTemplateArgument:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -112,6 +111,5 @@ class CppTemplateArgument:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

@@ -19,7 +19,6 @@ class TaxDetail6:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
         }
     )
     origin_airport: None | str = field(

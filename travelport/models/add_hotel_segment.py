@@ -38,7 +38,6 @@ class AddHotelSegment:
             "name": "HotelRateDetail",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            "required": True,
         }
     )
     hotel_property: HotelProperty = field(
@@ -46,7 +45,6 @@ class AddHotelSegment:
             "name": "HotelProperty",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            "required": True,
         }
     )
     hotel_stay: HotelStay = field(
@@ -54,7 +52,6 @@ class AddHotelSegment:
             "name": "HotelStay",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            "required": True,
         }
     )
     hotel_bedding: list[HotelBedding] = field(

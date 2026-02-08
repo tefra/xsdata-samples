@@ -29,6 +29,5 @@ class UimetaDataRetrieveReq(BaseReq2):
         metadata={
             "name": "ProfileID",
             "type": "Element",
-            "required": True,
         }
     )

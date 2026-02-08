@@ -237,7 +237,6 @@ class SwRecordLayoutGroup:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -247,6 +246,5 @@ class SwRecordLayoutGroup:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

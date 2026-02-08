@@ -24,13 +24,11 @@ class BrandedFareSearchReq(BaseReq1):
         metadata={
             "name": "FareFamilyCriteria",
             "type": "Element",
-            "required": True,
         }
     )
     branded_fare_search_modifier: BrandedFareSearchModifier = field(
         metadata={
             "name": "BrandedFareSearchModifier",
             "type": "Element",
-            "required": True,
         }
     )

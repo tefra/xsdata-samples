@@ -188,7 +188,6 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
             "name": "statusCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     effective_time: None | IvlTsExplicit = field(
@@ -244,7 +243,6 @@ class QupcIn043200Uv01MfmiMt700712Uv01RegistrationEvent:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     null_flavor: None | NullFlavor = field(
@@ -499,7 +497,6 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
             "name": "queryAck",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     parameter_list: None | QupcMt040300Uv01ParameterList = field(
@@ -522,14 +519,12 @@ class QupcIn043200Uv01MfmiMt700712Uv01ControlActProcess:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: XActMoodIntentEvent = field(
         metadata={
             "name": "moodCode",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -567,7 +562,6 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     creation_time: TsExplicit = field(
@@ -575,7 +569,6 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "name": "creationTime",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     security_text: None | St = field(
@@ -599,7 +592,6 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "name": "interactionId",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     profile_id: list[Ii] = field(
@@ -615,7 +607,6 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "name": "processingCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     processing_mode_code: Cs = field(
@@ -623,7 +614,6 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "name": "processingModeCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     accept_ack_code: Cs = field(
@@ -631,7 +621,6 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
             "name": "acceptAckCode",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     attachment_text: list[EdExplicit] = field(
@@ -663,7 +652,6 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     attention_line: list[McciMt000300Uv01AttentionLine] = field(
@@ -689,7 +677,6 @@ class QupcIn043200Uv01McciMt000300Uv01Message:
                 "name": "controlActProcess",
                 "type": "Element",
                 "namespace": "urn:hl7-org:v3",
-                "required": True,
             }
         )
     )

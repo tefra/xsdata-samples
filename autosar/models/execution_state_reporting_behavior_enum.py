@@ -31,11 +31,7 @@ class ExecutionStateReportingBehaviorEnum:
     class Meta:
         name = "EXECUTION-STATE-REPORTING-BEHAVIOR-ENUM"
 
-    value: ExecutionStateReportingBehaviorEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ExecutionStateReportingBehaviorEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

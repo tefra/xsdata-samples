@@ -125,7 +125,6 @@ class EcucNumericalParamValue:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

@@ -164,6 +164,5 @@ class CoctMt090102Uv02AssignedPerson:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )

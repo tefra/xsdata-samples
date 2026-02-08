@@ -29,11 +29,7 @@ class PgwideEnum:
     class Meta:
         name = "PGWIDE-ENUM"
 
-    value: PgwideEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: PgwideEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -91,14 +91,12 @@ class FlightDetails:
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )
     origin: str = field(
         metadata={
             "name": "Origin",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }
@@ -107,7 +105,6 @@ class FlightDetails:
         metadata={
             "name": "Destination",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }

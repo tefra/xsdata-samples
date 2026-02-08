@@ -111,7 +111,6 @@ class EndToEndProtectionISignalIPdu:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -121,6 +120,5 @@ class EndToEndProtectionISignalIPdu:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

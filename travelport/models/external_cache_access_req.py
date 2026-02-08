@@ -45,7 +45,6 @@ class ExternalCacheAccessReq(BaseReq3):
         metadata={
             "name": "CacheName",
             "type": "Attribute",
-            "required": True,
         }
     )
 
@@ -62,7 +61,6 @@ class ExternalCacheAccessReq(BaseReq3):
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -79,6 +77,5 @@ class ExternalCacheAccessReq(BaseReq3):
             metadata={
                 "name": "Key",
                 "type": "Attribute",
-                "required": True,
             }
         )

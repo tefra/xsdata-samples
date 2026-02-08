@@ -35,21 +35,18 @@ class DefaultTemplate:
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-            "required": True,
         }
     )
     template_id: int = field(
         metadata={
             "name": "TemplateID",
             "type": "Attribute",
-            "required": True,
         }
     )
     template_version: int = field(
         metadata={
             "name": "TemplateVersion",
             "type": "Attribute",
-            "required": True,
             "min_inclusive": 0,
         }
     )

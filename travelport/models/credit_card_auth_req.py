@@ -40,7 +40,6 @@ class CreditCardAuthReq(BaseReq1):
         metadata={
             "name": "PlatingCarrier",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )

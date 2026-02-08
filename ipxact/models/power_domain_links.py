@@ -41,7 +41,6 @@ class PowerDomainLinks:
             metadata={
                 "name": "externalPowerDomainReference",
                 "type": "Element",
-                "required": True,
             }
         )
         internal_power_domain_reference: list[
@@ -64,12 +63,7 @@ class PowerDomainLinks:
 
         @dataclass(kw_only=True)
         class InternalPowerDomainReference:
-            value: str = field(
-                default="",
-                metadata={
-                    "required": True,
-                },
-            )
+            value: str = field(default="")
             id: None | str = field(
                 default=None,
                 metadata={

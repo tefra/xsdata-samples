@@ -54,12 +54,7 @@ class DomainTypeDef:
 
     @dataclass(kw_only=True)
     class TypeName:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         id: None | str = field(
             default=None,
             metadata={
@@ -70,12 +65,7 @@ class DomainTypeDef:
 
     @dataclass(kw_only=True)
     class TypeDefinition:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         id: None | str = field(
             default=None,
             metadata={
@@ -86,12 +76,7 @@ class DomainTypeDef:
 
     @dataclass(kw_only=True)
     class ViewRef:
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         id: None | str = field(
             default=None,
             metadata={

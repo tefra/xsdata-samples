@@ -29,11 +29,7 @@ class BuildTypeEnum:
     class Meta:
         name = "BUILD-TYPE-ENUM"
 
-    value: BuildTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: BuildTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

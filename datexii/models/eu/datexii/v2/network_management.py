@@ -44,7 +44,6 @@ class NetworkManagement(OperatorAction):
             "name": "complianceOption",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     applicable_for_traffic_direction: list[DirectionEnum] = field(

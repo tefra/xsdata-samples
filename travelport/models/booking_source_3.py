@@ -30,7 +30,6 @@ class BookingSource3:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
         }
     )
@@ -38,6 +37,5 @@ class BookingSource3:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )

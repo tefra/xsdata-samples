@@ -55,7 +55,6 @@ class FareType:
             "name": "BaseFare",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     non_refundable_base_fare: None | CurrencyAmountType = field(
@@ -127,7 +126,6 @@ class FareType:
             "name": "TotalFare",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     reissue_info_list: None | FareType.ReissueInfoList = field(
@@ -468,7 +466,6 @@ class FareType:
                     metadata={
                         "name": "FareBasisCode",
                         "type": "Attribute",
-                        "required": True,
                         "min_length": 1,
                         "max_length": 15,
                         "pattern": r"[A-Z0-9]+(/[A-Z0-9]+)?",
@@ -478,7 +475,6 @@ class FareType:
                     metadata={
                         "name": "FareComponentID",
                         "type": "Attribute",
-                        "required": True,
                     }
                 )
 
@@ -597,7 +593,6 @@ class FareType:
                         "name": "BaseFare",
                         "type": "Element",
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
-                        "required": True,
                     }
                 )
                 equiv_fare: (
@@ -623,7 +618,6 @@ class FareType:
                         "name": "TotalFare",
                         "type": "Element",
                         "namespace": "http://www.opentravel.org/OTA/2003/05",
-                        "required": True,
                     }
                 )
                 total_mileage: (
@@ -680,7 +674,6 @@ class FareType:
                             "name": "Tax",
                             "type": "Element",
                             "namespace": "http://www.opentravel.org/OTA/2003/05",
-                            "required": True,
                         }
                     )
 
@@ -690,7 +683,6 @@ class FareType:
                         metadata={
                             "name": "Amount",
                             "type": "Attribute",
-                            "required": True,
                         }
                     )
 
@@ -871,7 +863,6 @@ class FareType:
                             "name": "Tax",
                             "type": "Element",
                             "namespace": "http://www.opentravel.org/OTA/2003/05",
-                            "required": True,
                         }
                     )
 
@@ -889,14 +880,12 @@ class FareType:
                         metadata={
                             "name": "LegIndex",
                             "type": "Attribute",
-                            "required": True,
                         }
                     )
                     flight_index: int = field(
                         metadata={
                             "name": "FlightIndex",
                             "type": "Attribute",
-                            "required": True,
                         }
                     )
 
@@ -983,7 +972,6 @@ class FareType:
                         metadata={
                             "name": "TransactionType",
                             "type": "Attribute",
-                            "required": True,
                             "pattern": r"[0-9A-Za-z]+",
                         }
                     )
@@ -991,7 +979,6 @@ class FareType:
                         metadata={
                             "name": "Code",
                             "type": "Attribute",
-                            "required": True,
                             "pattern": r"[0-9A-Za-z]{2,20}",
                         }
                     )

@@ -35,7 +35,6 @@ class CacheType(BaseHeaderType):
             "name": "UseCache",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/headers/v1",
-            "required": True,
         }
     )
     max_age_quantity: None | int = field(

@@ -31,11 +31,7 @@ class DiagnosticProcessingStyleEnum:
     class Meta:
         name = "DIAGNOSTIC-PROCESSING-STYLE-ENUM"
 
-    value: DiagnosticProcessingStyleEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticProcessingStyleEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

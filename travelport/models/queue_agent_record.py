@@ -34,7 +34,6 @@ class QueueAgentRecord:
         metadata={
             "name": "UniversalRecordLocatorCode",
             "type": "Element",
-            "required": True,
             "min_length": 5,
             "max_length": 8,
         }
@@ -43,7 +42,6 @@ class QueueAgentRecord:
         metadata={
             "name": "PseudoCityCode",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 10,
         }
@@ -52,21 +50,18 @@ class QueueAgentRecord:
         metadata={
             "name": "QueueSessionToken",
             "type": "Attribute",
-            "required": True,
         }
     )
     queue_number: str = field(
         metadata={
             "name": "QueueNumber",
             "type": "Attribute",
-            "required": True,
         }
     )
     lastupdated: str = field(
         metadata={
             "name": "Lastupdated",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^:Z].*",
         }
     )
@@ -74,7 +69,6 @@ class QueueAgentRecord:
         metadata={
             "name": "TargetBranch",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 25,
         }

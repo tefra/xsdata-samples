@@ -47,7 +47,6 @@ class BookingDisplayReq(BookingBaseReq):
             metadata={
                 "name": "ProviderCode",
                 "type": "Attribute",
-                "required": True,
                 "min_length": 2,
                 "max_length": 5,
             }
@@ -56,7 +55,6 @@ class BookingDisplayReq(BookingBaseReq):
             metadata={
                 "name": "ProviderLocatorCode",
                 "type": "Attribute",
-                "required": True,
                 "max_length": 15,
             }
         )

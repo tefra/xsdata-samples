@@ -16,7 +16,6 @@ class PathLinkEndStructure:
             "name": "PlaceRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     level_ref: None | LevelRefStructure = field(

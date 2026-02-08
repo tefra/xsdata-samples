@@ -25,7 +25,6 @@ class BaseAirPriceRsp(BaseRsp1):
             "name": "AirItinerary",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-            "required": True,
         }
     )
     air_price_result: list[AirPriceResult] = field(

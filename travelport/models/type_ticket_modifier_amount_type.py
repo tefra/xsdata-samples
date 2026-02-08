@@ -24,6 +24,5 @@ class TypeTicketModifierAmountType:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
         }
     )

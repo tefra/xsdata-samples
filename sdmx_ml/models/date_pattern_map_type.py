@@ -20,12 +20,10 @@ class DatePatternMapType(DatePatternMapBaseType):
         metadata={
             "name": "sourcePattern",
             "type": "Attribute",
-            "required": True,
         }
     )
     locale: str = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -57,7 +57,6 @@ class BankDefinitions:
         name: str = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         display_name: None | DisplayName = field(

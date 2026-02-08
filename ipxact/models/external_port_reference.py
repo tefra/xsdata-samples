@@ -49,7 +49,6 @@ class ExternalPortReference:
         metadata={
             "name": "portRef",
             "type": "Attribute",
-            "required": True,
             "white_space": "collapse",
             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
         }

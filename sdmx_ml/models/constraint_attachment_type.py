@@ -91,7 +91,6 @@ class ConstraintAttachmentType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
             },
         )
@@ -101,7 +100,6 @@ class ConstraintAttachmentType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.base\.MetadataProvider=.+:METADATA_PROVIDERS\(.+\).+",
             },
         )
@@ -111,7 +109,6 @@ class ConstraintAttachmentType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.datastructure\.DataStructure=.+",
             },
         )
@@ -121,7 +118,6 @@ class ConstraintAttachmentType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.metadatastructure\.MetadataStructure=.+",
             },
         )
@@ -131,7 +127,6 @@ class ConstraintAttachmentType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.datastructure\.Dataflow=.+",
             },
         )
@@ -141,7 +136,6 @@ class ConstraintAttachmentType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.metadatastructure\.Metadataflow=.+",
             },
         )
@@ -151,7 +145,6 @@ class ConstraintAttachmentType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.registry\.ProvisionAgreement=.+",
             },
         )
@@ -161,7 +154,6 @@ class ConstraintAttachmentType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.registry\.MetadataProvisionAgreement=.+",
             },
         )

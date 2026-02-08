@@ -30,11 +30,7 @@ class DiagnosticMemoryEntryStorageTriggerEnum:
     class Meta:
         name = "DIAGNOSTIC-MEMORY-ENTRY-STORAGE-TRIGGER-ENUM"
 
-    value: DiagnosticMemoryEntryStorageTriggerEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticMemoryEntryStorageTriggerEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

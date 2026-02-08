@@ -11,6 +11,5 @@ class Self:
     href: str = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )

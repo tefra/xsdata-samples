@@ -69,172 +69,87 @@ class AcceptFxmarketRate:
     class Meta:
         name = "AcceptFXMarketRate"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ChargeRegulationCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class ChargeRegulationCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class IndustrySectorCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class IndustrySectorCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class InternationalPaymentIndicator:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class IntraCompanyPaymentIndicator:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LegalReportingDescription:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LegalReportingImportDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LegalReportingIndicator:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LegalReportingPaymentDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class LegalReportingSupplementalCode:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentInstructionNotes:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentRequestIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentUrgencyCoded:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class PaymentUrgencyCodedOther:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class RepetitiveCode:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -243,7 +158,6 @@ class ChargeAccount:
         metadata={
             "name": "AccountDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -254,7 +168,6 @@ class ChargeFinancialInstitution:
         metadata={
             "name": "FinancialInstitution",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -265,7 +178,6 @@ class Company:
         metadata={
             "name": "PartyID",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_identifier: None | ListOfIdentifier = field(
@@ -346,7 +258,6 @@ class FeeAmount:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -357,7 +268,6 @@ class LegalReportingInvoicedAmount:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -368,7 +278,6 @@ class LegalReportingPayeeCountry:
         metadata={
             "name": "Country",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -379,7 +288,6 @@ class LegalReportingPaymentAmount:
         metadata={
             "name": "MonetaryValue",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -390,7 +298,6 @@ class LegalReportingSupplyingCountry:
         metadata={
             "name": "Country",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -404,7 +311,6 @@ class OriginatingFispecificId:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -415,7 +321,6 @@ class PaymentDetailAttachment:
         metadata={
             "name": "Attachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -426,7 +331,6 @@ class PaymentDocumentDetail:
         metadata={
             "name": "RemittanceAdviceDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -437,7 +341,6 @@ class PaymentReference:
         metadata={
             "name": "ListOfReferenceCoded",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -448,7 +351,6 @@ class PaymentRequestAttachment:
         metadata={
             "name": "Attachment",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -466,7 +368,6 @@ class PaymentRequestParty:
         metadata={
             "name": "PayeeParty",
             "type": "Element",
-            "required": True,
         }
     )
     buyer_party: None | BuyerParty = field(
@@ -505,7 +406,6 @@ class PaymentRequestPurpose:
         metadata={
             "name": "Purpose",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -519,7 +419,6 @@ class ReceivingFispecificId:
         metadata={
             "name": "Party",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -530,7 +429,6 @@ class SettlementCurrency:
         metadata={
             "name": "Currency",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -541,7 +439,6 @@ class FinancialChargesAllocation:
         metadata={
             "name": "ChargeRegulationCoded",
             "type": "Element",
-            "required": True,
         }
     )
     charge_regulation_coded_other: None | ChargeRegulationCodedOther = field(
@@ -580,7 +477,6 @@ class LegalReportingParty:
         metadata={
             "name": "Company",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -603,35 +499,30 @@ class PaymentRequestHeader:
         metadata={
             "name": "PaymentRequestPurpose",
             "type": "Element",
-            "required": True,
         }
     )
     payment_request_issue_date: PaymentRequestIssueDate = field(
         metadata={
             "name": "PaymentRequestIssueDate",
             "type": "Element",
-            "required": True,
         }
     )
     payment_request_id: PaymentRequestId = field(
         metadata={
             "name": "PaymentRequestID",
             "type": "Element",
-            "required": True,
         }
     )
     payer_party: PayerParty = field(
         metadata={
             "name": "PayerParty",
             "type": "Element",
-            "required": True,
         }
     )
     language: Language = field(
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
     general_notes: None | GeneralNotes = field(
@@ -656,7 +547,6 @@ class LegalReportingInformation:
         metadata={
             "name": "LegalReportingIndicator",
             "type": "Element",
-            "required": True,
         }
     )
     legal_reporting_supplemental_code: (
@@ -679,7 +569,6 @@ class LegalReportingInformation:
         metadata={
             "name": "LegalReportingInvoicedAmount",
             "type": "Element",
-            "required": True,
         }
     )
     legal_reporting_payment_amount: None | LegalReportingPaymentAmount = field(
@@ -734,7 +623,6 @@ class PaymentRequestDetail:
         metadata={
             "name": "PaymentDocumentID",
             "type": "Element",
-            "required": True,
         }
     )
     payment_sequence_no: None | PaymentSequenceNo = field(
@@ -802,21 +690,18 @@ class PaymentRequestDetail:
         metadata={
             "name": "SettlementAmount",
             "type": "Element",
-            "required": True,
         }
     )
     settlement_currency: SettlementCurrency = field(
         metadata={
             "name": "SettlementCurrency",
             "type": "Element",
-            "required": True,
         }
     )
     payment_request_party: PaymentRequestParty = field(
         metadata={
             "name": "PaymentRequestParty",
             "type": "Element",
-            "required": True,
         }
     )
     legal_reporting_information: None | LegalReportingInformation = field(
@@ -876,7 +761,6 @@ class PaymentRequestDetail:
         metadata={
             "name": "PaymentMeanCoded",
             "type": "Element",
-            "required": True,
         }
     )
     payment_mean_coded_other: None | PaymentMeanCodedOther = field(
@@ -992,20 +876,17 @@ class PaymentRequest:
         metadata={
             "name": "PaymentRequestHeader",
             "type": "Element",
-            "required": True,
         }
     )
     list_of_payment_request_detail: ListOfPaymentRequestDetail = field(
         metadata={
             "name": "ListOfPaymentRequestDetail",
             "type": "Element",
-            "required": True,
         }
     )
     payment_request_summary: PaymentRequestSummary = field(
         metadata={
             "name": "PaymentRequestSummary",
             "type": "Element",
-            "required": True,
         }
     )

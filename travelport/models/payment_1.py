@@ -58,14 +58,12 @@ class Payment1:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     form_of_payment_ref: str = field(
         metadata={
             "name": "FormOfPaymentRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     booking_traveler_ref: None | str = field(
@@ -79,7 +77,6 @@ class Payment1:
         metadata={
             "name": "Amount",
             "type": "Attribute",
-            "required": True,
         }
     )
     amount_type: None | str = field(

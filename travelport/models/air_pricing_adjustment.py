@@ -28,13 +28,11 @@ class AirPricingAdjustment:
         metadata={
             "name": "Adjustment",
             "type": "Element",
-            "required": True,
         }
     )
     key: str = field(
         metadata={
             "name": "Key",
             "type": "Attribute",
-            "required": True,
         }
     )

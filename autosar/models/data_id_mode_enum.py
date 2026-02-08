@@ -29,11 +29,7 @@ class DataIdModeEnum:
     class Meta:
         name = "DATA-ID-MODE-ENUM"
 
-    value: DataIdModeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DataIdModeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

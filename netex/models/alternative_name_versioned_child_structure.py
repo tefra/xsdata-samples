@@ -52,7 +52,6 @@ class AlternativeNameVersionedChildStructure(VersionedChildStructure):
             "name": "Name",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     short_name: None | MultilingualString = field(

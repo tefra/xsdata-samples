@@ -97,6 +97,5 @@ class ReferenceCondition:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

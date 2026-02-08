@@ -73,6 +73,5 @@ class OrderedMaster:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

@@ -41,13 +41,11 @@ class Update:
         metadata={
             "name": "type",
             "type": "Attribute",
-            "required": True,
         }
     )
     date: XmlDate = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     content: list[object] = field(

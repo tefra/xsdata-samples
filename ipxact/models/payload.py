@@ -35,7 +35,6 @@ class Payload:
         metadata={
             "name": "type",
             "type": "Element",
-            "required": True,
         }
     )
     extension: None | Payload.Extension = field(
@@ -59,12 +58,7 @@ class Payload:
         :ivar mandatory: True if the payload extension is mandatory.
         """
 
-        value: str = field(
-            default="",
-            metadata={
-                "required": True,
-            },
-        )
+        value: str = field(default="")
         mandatory: bool = field(
             default=False,
             metadata={

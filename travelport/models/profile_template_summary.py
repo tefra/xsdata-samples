@@ -27,20 +27,17 @@ class ProfileTemplateSummary:
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
         }
     )
     name: object = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
         }
     )
     version: object = field(
         metadata={
             "name": "Version",
             "type": "Attribute",
-            "required": True,
         }
     )

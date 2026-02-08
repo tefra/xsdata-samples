@@ -104,7 +104,6 @@ class PremiumType:
             "name": "NumberOfInstallments",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     description: None | TextType = field(

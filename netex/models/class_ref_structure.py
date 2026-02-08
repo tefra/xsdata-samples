@@ -7,16 +7,10 @@ __NAMESPACE__ = "http://www.netex.org.uk/netex"
 
 @dataclass(kw_only=True)
 class ClassRefStructure:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     name_of_class: str = field(
         metadata={
             "name": "nameOfClass",
             "type": "Attribute",
-            "required": True,
         }
     )

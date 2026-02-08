@@ -27,7 +27,6 @@ class TpegAreaDescriptor(TpegDescriptor):
             "name": "tpegAreaDescriptorType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     tpeg_area_descriptor_extension: None | ExtensionType = field(

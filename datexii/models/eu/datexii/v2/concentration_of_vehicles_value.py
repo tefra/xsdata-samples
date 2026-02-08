@@ -24,7 +24,6 @@ class ConcentrationOfVehiclesValue(DataValue):
             "name": "concentrationOfVehicles",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     concentration_of_vehicles_value_extension: None | ExtensionType = field(

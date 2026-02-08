@@ -129,7 +129,6 @@ class PortInterfaceElementInImplementationDatatypeRef:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -139,7 +138,6 @@ class PortInterfaceElementInImplementationDatatypeRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -149,7 +147,6 @@ class PortInterfaceElementInImplementationDatatypeRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -159,6 +156,5 @@ class PortInterfaceElementInImplementationDatatypeRef:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

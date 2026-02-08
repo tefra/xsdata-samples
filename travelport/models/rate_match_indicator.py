@@ -25,14 +25,12 @@ class RateMatchIndicator:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     status: RateMatchIndicatorStatus = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )
     value: None | str = field(

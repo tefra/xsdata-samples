@@ -134,7 +134,6 @@ class MetadataSetType(MetadataSetBaseType):
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.registry\.MetadataProvisionAgreement=.+",
             },
         )
@@ -144,7 +143,6 @@ class MetadataSetType(MetadataSetBaseType):
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.metadatastructure\.Metadataflow=.+",
             },
         )

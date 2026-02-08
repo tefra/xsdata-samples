@@ -18,7 +18,6 @@ class LineOfBusinessType:
             "name": "LineOfBusiness",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/common/v1",
-            "required": True,
         }
     )
     sub_line_of_business: None | LineOfBusinessDetailType = field(

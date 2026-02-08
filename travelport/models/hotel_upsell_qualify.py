@@ -54,7 +54,6 @@ class HotelUpsellQualify:
         metadata={
             "name": "HotelChainCode",
             "type": "Attribute",
-            "required": True,
             "length": 2,
         }
     )
@@ -86,7 +85,6 @@ class HotelUpsellQualify:
         metadata={
             "name": "EffectiveDate",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^:Z].*",
         }
     )
@@ -94,7 +92,6 @@ class HotelUpsellQualify:
         metadata={
             "name": "ExpirationDate",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[^:Z].*",
         }
     )

@@ -28,7 +28,6 @@ class Ssrinfo3:
         metadata={
             "name": "SSR",
             "type": "Element",
-            "required": True,
         }
     )
     booking_traveler_ref: list[str] = field(

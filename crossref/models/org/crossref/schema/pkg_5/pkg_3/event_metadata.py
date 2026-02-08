@@ -43,7 +43,6 @@ class EventMetadata:
     conference_name: ConferenceName = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     conference_theme: None | ConferenceTheme = field(

@@ -49,7 +49,6 @@ class BaseHotelSearchReq(BaseSearchReq1):
             "name": "HotelStay",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/hotel_v52_0",
-            "required": True,
         }
     )
     point_of_sale: None | PointOfSale1 = field(

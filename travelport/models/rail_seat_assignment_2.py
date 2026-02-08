@@ -54,7 +54,6 @@ class RailSeatAssignment2:
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
             "length": 2,
             "white_space": "collapse",
         }
@@ -63,7 +62,6 @@ class RailSeatAssignment2:
         metadata={
             "name": "Seat",
             "type": "Attribute",
-            "required": True,
         }
     )
     rail_segment_ref: None | str = field(

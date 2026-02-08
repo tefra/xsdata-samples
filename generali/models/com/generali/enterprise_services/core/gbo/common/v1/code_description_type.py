@@ -19,7 +19,6 @@ class CodeDescriptionType:
             "name": "Code",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            "required": True,
         }
     )
     description: None | TextType = field(

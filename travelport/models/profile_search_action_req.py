@@ -25,7 +25,6 @@ class ProfileSearchActionReq(BaseReq5):
         metadata={
             "name": "ConsumingSystem",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }

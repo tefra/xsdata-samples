@@ -18,7 +18,6 @@ class TaxCodeType:
         metadata={
             "name": "TaxCode",
             "type": "Attribute",
-            "required": True,
             "pattern": r"[A-Z0-9]{2}[A-Z0-9]{0,1}",
         }
     )

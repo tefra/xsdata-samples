@@ -20,12 +20,10 @@ class CoordinateLocation3(Location3):
     latitude: float = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )
     longitude: float = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

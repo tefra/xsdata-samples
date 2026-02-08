@@ -44,28 +44,24 @@ class McoSearchResult:
         metadata={
             "name": "CreateDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     number: str = field(
         metadata={
             "name": "Number",
             "type": "Attribute",
-            "required": True,
         }
     )
     status: TypeMcostatus = field(
         metadata={
             "name": "Status",
             "type": "Attribute",
-            "required": True,
         }
     )
     type_value: TypeMcotype = field(
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     locator_code: None | str = field(

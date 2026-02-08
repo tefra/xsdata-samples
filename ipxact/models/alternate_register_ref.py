@@ -15,6 +15,5 @@ class AlternateRegisterRef:
         metadata={
             "name": "alternateRegisterRef",
             "type": "Attribute",
-            "required": True,
         }
     )

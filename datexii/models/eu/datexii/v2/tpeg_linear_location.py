@@ -32,7 +32,6 @@ class TpegLinearLocation:
             "name": "tpegDirection",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     tpeg_linear_location_type: TpegLoc01LinearLocationSubtypeEnum = field(
@@ -40,14 +39,12 @@ class TpegLinearLocation:
             "name": "tpegLinearLocationType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     to: TpegPoint = field(
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     from_value: TpegPoint = field(
@@ -55,7 +52,6 @@ class TpegLinearLocation:
             "name": "from",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     tpeg_linear_location_extension: None | ExtensionType = field(

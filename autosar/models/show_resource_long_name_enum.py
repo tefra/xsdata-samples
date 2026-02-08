@@ -29,11 +29,7 @@ class ShowResourceLongNameEnum:
     class Meta:
         name = "SHOW-RESOURCE-LONG-NAME-ENUM"
 
-    value: ShowResourceLongNameEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ShowResourceLongNameEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

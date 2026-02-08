@@ -13,8 +13,5 @@ class TelecabinSubmode:
         namespace = "http://www.netex.org.uk/netex"
 
     value: TelecabinSubmodeEnumeration = field(
-        default=TelecabinSubmodeEnumeration.UNKNOWN,
-        metadata={
-            "required": True,
-        },
+        default=TelecabinSubmodeEnumeration.UNKNOWN
     )

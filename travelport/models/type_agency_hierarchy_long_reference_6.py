@@ -28,14 +28,12 @@ class TypeAgencyHierarchyLongReference6(TypeAgencyHierarchyReference6):
         metadata={
             "name": "ProfileVersion",
             "type": "Attribute",
-            "required": True,
         }
     )
     profile_name: str = field(
         metadata={
             "name": "ProfileName",
             "type": "Attribute",
-            "required": True,
             "max_length": 102,
         }
     )

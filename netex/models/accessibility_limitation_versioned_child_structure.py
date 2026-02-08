@@ -28,7 +28,6 @@ class AccessibilityLimitationVersionedChildStructure(VersionedChildStructure):
             "name": "WheelchairAccess",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     step_free_access: None | StepFreeAccess = field(

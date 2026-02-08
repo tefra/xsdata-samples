@@ -34,7 +34,6 @@ class EquipmentOrSystemFault(TrafficElement):
             "name": "equipmentOrSystemFaultType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     faulty_equipment_or_system_type: EquipmentOrSystemTypeEnum = field(
@@ -42,7 +41,6 @@ class EquipmentOrSystemFault(TrafficElement):
             "name": "faultyEquipmentOrSystemType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     equipment_or_system_fault_extension: None | ExtensionType = field(

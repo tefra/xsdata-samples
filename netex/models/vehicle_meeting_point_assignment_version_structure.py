@@ -62,7 +62,6 @@ class VehicleMeetingPointAssignmentVersionStructure(
             "name": "VehicleMeetingPointRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     choice: (

@@ -37,7 +37,6 @@ class PaymentAdvice3:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
             "max_length": 3,
         }
     )
@@ -45,7 +44,6 @@ class PaymentAdvice3:
         metadata={
             "name": "DocumentNumber",
             "type": "Attribute",
-            "required": True,
             "max_length": 22,
         }
     )
@@ -53,14 +51,12 @@ class PaymentAdvice3:
         metadata={
             "name": "IssueDate",
             "type": "Attribute",
-            "required": True,
         }
     )
     issue_city: str = field(
         metadata={
             "name": "IssueCity",
             "type": "Attribute",
-            "required": True,
             "length": 3,
             "white_space": "collapse",
         }

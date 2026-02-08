@@ -87,7 +87,6 @@ class BookingTraveler1:
         metadata={
             "name": "BookingTravelerName",
             "type": "Element",
-            "required": True,
         }
     )
     delivery_info: list[DeliveryInfo1] = field(

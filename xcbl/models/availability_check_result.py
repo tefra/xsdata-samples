@@ -28,32 +28,17 @@ from xcbl.models.trading_partner_user_information import Language
 
 @dataclass(kw_only=True)
 class AvailabilityCheckResultIssueDate:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AvailabilityCheckResultNote:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
 class AvailabilityItemErrors:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
 
 
 @dataclass(kw_only=True)
@@ -65,7 +50,6 @@ class AvailabilityCheckResultId:
         metadata={
             "name": "Reference",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -76,7 +60,6 @@ class AvailabilityCheckResultLanguage:
         metadata={
             "name": "Language",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -87,7 +70,6 @@ class AvailableQuantity:
         metadata={
             "name": "Quantity",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -98,7 +80,6 @@ class SummaryErrorInfo:
         metadata={
             "name": "ErrorInfo",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -109,7 +90,6 @@ class AvailabilityCheckResultHeader:
         metadata={
             "name": "AvailabilityCheckResultID",
             "type": "Element",
-            "required": True,
         }
     )
     availability_check_result_issue_date: AvailabilityCheckResultIssueDate = (
@@ -117,7 +97,6 @@ class AvailabilityCheckResultHeader:
             metadata={
                 "name": "AvailabilityCheckResultIssueDate",
                 "type": "Element",
-                "required": True,
             }
         )
     )
@@ -125,7 +104,6 @@ class AvailabilityCheckResultHeader:
         metadata={
             "name": "SupplierParty",
             "type": "Element",
-            "required": True,
         }
     )
     supplier_idreference_date: None | SupplierIdreferenceDate = field(
@@ -139,7 +117,6 @@ class AvailabilityCheckResultHeader:
         metadata={
             "name": "BuyerParty",
             "type": "Element",
-            "required": True,
         }
     )
     buyer_idreference_date: None | BuyerIdreferenceDate = field(
@@ -153,7 +130,6 @@ class AvailabilityCheckResultHeader:
         metadata={
             "name": "AvailabilityShipToParty",
             "type": "Element",
-            "required": True,
         }
     )
     availability_check_result_language: (
@@ -187,14 +163,12 @@ class AvailabilityCheckResultItemDetail:
         metadata={
             "name": "QuotedItem",
             "type": "Element",
-            "required": True,
         }
     )
     available_quantity: AvailableQuantity = field(
         metadata={
             "name": "AvailableQuantity",
             "type": "Element",
-            "required": True,
         }
     )
     delivery_date: None | DeliveryDate = field(
@@ -233,7 +207,6 @@ class AvailabilityCheckResultSummary:
         metadata={
             "name": "AvailabilityItemErrors",
             "type": "Element",
-            "required": True,
         }
     )
     summary_error_info: None | SummaryErrorInfo = field(
@@ -272,7 +245,6 @@ class AvailabilityCheckResultDetail:
         metadata={
             "name": "ListOfAvailabilityCheckResultItemDetail",
             "type": "Element",
-            "required": True,
         }
     )
 
@@ -283,7 +255,6 @@ class AvailabilityCheckResult:
         metadata={
             "name": "AvailabilityCheckResultHeader",
             "type": "Element",
-            "required": True,
         }
     )
     availability_check_result_detail: None | AvailabilityCheckResultDetail = (

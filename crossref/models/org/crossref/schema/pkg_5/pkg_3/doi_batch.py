@@ -24,13 +24,11 @@ class DoiBatch:
     head: Head = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     body: Body = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     version: str = field(

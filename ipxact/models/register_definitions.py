@@ -53,7 +53,6 @@ class RegisterDefinitions:
         name: str = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         display_name: None | DisplayName = field(
@@ -86,7 +85,6 @@ class RegisterDefinitions:
         size: UnsignedPositiveIntExpression = field(
             metadata={
                 "type": "Element",
-                "required": True,
             }
         )
         volatile: None | Volatile = field(

@@ -19,7 +19,6 @@ class PublicationDeliveryStructure:
             "name": "PublicationTimestamp",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     participant_ref: ParticipantRef = field(
@@ -27,7 +26,6 @@ class PublicationDeliveryStructure:
             "name": "ParticipantRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     publication_request: None | PublicationRequestStructure = field(

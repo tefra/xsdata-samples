@@ -30,11 +30,7 @@ class PduCollectionSemanticsEnum:
     class Meta:
         name = "PDU-COLLECTION-SEMANTICS-ENUM"
 
-    value: PduCollectionSemanticsEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: PduCollectionSemanticsEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

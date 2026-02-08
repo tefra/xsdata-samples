@@ -28,11 +28,7 @@ class SecuredPduHeaderEnum:
     class Meta:
         name = "SECURED-PDU-HEADER-ENUM"
 
-    value: SecuredPduHeaderEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SecuredPduHeaderEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

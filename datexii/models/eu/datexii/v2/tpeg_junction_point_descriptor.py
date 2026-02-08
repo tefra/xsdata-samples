@@ -29,7 +29,6 @@ class TpegJunctionPointDescriptor(TpegPointDescriptor):
             "name": "tpegJunctionPointDescriptorType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     tpeg_junction_point_descriptor_extension: None | ExtensionType = field(

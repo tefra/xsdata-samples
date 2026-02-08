@@ -62,7 +62,6 @@ class LVerbatim:
         metadata={
             "name": "L",
             "type": "Attribute",
-            "required": True,
         }
     )
     space: SpaceValue = field(

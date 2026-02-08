@@ -23,27 +23,23 @@ class Policy:
         metadata={
             "name": "PolicyID",
             "type": "Element",
-            "required": True,
         }
     )
     status: str = field(
         metadata={
             "name": "Status",
             "type": "Element",
-            "required": True,
         }
     )
     local_policies: LocalPolicies = field(
         metadata={
             "name": "LocalPolicies",
             "type": "Element",
-            "required": True,
         }
     )
     errors: Errors = field(
         metadata={
             "name": "Errors",
             "type": "Element",
-            "required": True,
         }
     )

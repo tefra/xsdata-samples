@@ -31,11 +31,7 @@ class DiagnosticInitialEventStatusEnum:
     class Meta:
         name = "DIAGNOSTIC-INITIAL-EVENT-STATUS-ENUM"
 
-    value: DiagnosticInitialEventStatusEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: DiagnosticInitialEventStatusEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

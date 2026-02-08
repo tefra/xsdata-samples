@@ -141,7 +141,6 @@ class StateDependentStartupConfig:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -151,6 +150,5 @@ class StateDependentStartupConfig:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

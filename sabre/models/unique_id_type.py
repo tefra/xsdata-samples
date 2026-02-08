@@ -56,7 +56,6 @@ class UniqueIdType:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )
     instance: None | str = field(
@@ -72,7 +71,6 @@ class UniqueIdType:
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 32,
         }

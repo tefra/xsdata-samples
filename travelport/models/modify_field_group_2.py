@@ -60,14 +60,12 @@ class ModifyFieldGroup2:
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
         }
     )
     name: str = field(
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
             "min_length": 1,
             "max_length": 128,
         }
@@ -113,7 +111,6 @@ class ModifyFieldGroup2:
         metadata={
             "name": "Action",
             "type": "Attribute",
-            "required": True,
         }
     )
     force: bool = field(

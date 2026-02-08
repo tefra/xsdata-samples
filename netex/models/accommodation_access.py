@@ -12,8 +12,4 @@ class AccommodationAccess:
     class Meta:
         namespace = "http://www.netex.org.uk/netex"
 
-    value: AccommodationAccessEnumeration = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: AccommodationAccessEnumeration = field()

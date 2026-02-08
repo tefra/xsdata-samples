@@ -21,7 +21,6 @@ class BaseVehicleSearchAvailabilityReq(BaseSearchReq1):
             "name": "VehicleDateLocation",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/vehicle_v52_0",
-            "required": True,
         }
     )
     vehicle_search_modifiers: None | VehicleSearchModifiers = field(

@@ -30,11 +30,7 @@ class RptServicePointEnum:
     class Meta:
         name = "RPT-SERVICE-POINT-ENUM"
 
-    value: RptServicePointEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: RptServicePointEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

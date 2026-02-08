@@ -42,7 +42,6 @@ class Date:
     year: Year = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     era: None | Era = field(

@@ -22,6 +22,5 @@ class AdditionalInfo:
         metadata={
             "name": "Category",
             "type": "Attribute",
-            "required": True,
         }
     )

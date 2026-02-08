@@ -105,7 +105,6 @@ class MetadataRegistrationEventsType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r"[A-Za-z0-9_@$\-]+",
             },
         )
@@ -115,7 +114,6 @@ class MetadataRegistrationEventsType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.registry\.ProvisionAgreement=.+",
             },
         )
@@ -125,7 +123,6 @@ class MetadataRegistrationEventsType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.base\.DataProvider=.+:DATA_PROVIDERS\(.+\).+",
             },
         )
@@ -143,7 +140,6 @@ class MetadataRegistrationEventsType:
         value: str = field(
             default="",
             metadata={
-                "required": True,
                 "pattern": r".+\.categoryscheme\.Category=.+",
             },
         )

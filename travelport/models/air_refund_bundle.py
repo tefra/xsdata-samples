@@ -39,7 +39,6 @@ class AirRefundBundle:
         metadata={
             "name": "AirRefundInfo",
             "type": "Element",
-            "required": True,
         }
     )
     name: list[Name1] = field(

@@ -29,7 +29,6 @@ class FareRuleShort:
         metadata={
             "name": "Category",
             "type": "Attribute",
-            "required": True,
         }
     )
     table_number: None | str = field(

@@ -28,11 +28,7 @@ class IPduSignalProcessingEnum:
     class Meta:
         name = "I-PDU-SIGNAL-PROCESSING-ENUM"
 
-    value: IPduSignalProcessingEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: IPduSignalProcessingEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

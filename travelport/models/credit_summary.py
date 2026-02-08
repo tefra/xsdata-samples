@@ -27,13 +27,11 @@ class CreditSummary:
         metadata={
             "name": "CurrentBalance",
             "type": "Attribute",
-            "required": True,
         }
     )
     initial_credit: Decimal = field(
         metadata={
             "name": "InitialCredit",
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -14,9 +14,4 @@ class TypeFreeFormText3:
     class Meta:
         name = "typeFreeFormText"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

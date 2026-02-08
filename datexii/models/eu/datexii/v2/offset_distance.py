@@ -26,7 +26,6 @@ class OffsetDistance:
             "name": "offsetDistance",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     offset_distance_extension: None | ExtensionType = field(

@@ -31,7 +31,6 @@ class JournalVolume:
     volume: Volume = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )
     publisher_item: None | PublisherItem = field(

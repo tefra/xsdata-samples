@@ -30,7 +30,6 @@ class HotelSuperShopperResults:
         metadata={
             "name": "HotelProperty",
             "type": "Element",
-            "required": True,
         }
     )
     hotel_detail_item: list[HotelDetailItem] = field(

@@ -136,7 +136,6 @@ class CoctMt960000Uv05Device1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -196,7 +195,6 @@ class CoctMt960000Uv05Device2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -326,7 +324,6 @@ class CoctMt960000Uv05Component2:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -379,7 +376,6 @@ class CoctMt960000Uv05PositionCoordinate:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     text: None | EdExplicit = field(
@@ -393,7 +389,6 @@ class CoctMt960000Uv05PositionCoordinate:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     method_code: None | Ce = field(
@@ -495,7 +490,6 @@ class CoctMt960000Uv05Component1:
         metadata={
             "name": "typeCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     context_control_code: ContextControl = field(
@@ -555,7 +549,6 @@ class CoctMt960000Uv05Position:
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     text: None | EdExplicit = field(
@@ -631,7 +624,6 @@ class CoctMt960000Uv05Position:
         metadata={
             "name": "classCode",
             "type": "Attribute",
-            "required": True,
         }
     )
     mood_code: ActMood = field(

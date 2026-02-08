@@ -36,7 +36,6 @@ class CardRestriction1:
         metadata={
             "name": "Code",
             "type": "Attribute",
-            "required": True,
             "min_length": 2,
             "max_length": 2,
         }
@@ -45,6 +44,5 @@ class CardRestriction1:
         metadata={
             "name": "Name",
             "type": "Attribute",
-            "required": True,
         }
     )

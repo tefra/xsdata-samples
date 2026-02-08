@@ -30,13 +30,11 @@ class RailSolutionChangedInfo:
         metadata={
             "name": "RailPricingSolution",
             "type": "Element",
-            "required": True,
         }
     )
     reason_code: RailSolutionChangedInfoReasonCode = field(
         metadata={
             "name": "ReasonCode",
             "type": "Attribute",
-            "required": True,
         }
     )

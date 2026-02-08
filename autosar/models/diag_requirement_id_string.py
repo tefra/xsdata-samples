@@ -29,7 +29,6 @@ class DiagRequirementIdString:
     value: str = field(
         default="",
         metadata={
-            "required": True,
             "pattern": r"[0-9a-zA-Z_\-]+",
         },
     )

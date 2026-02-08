@@ -36,7 +36,6 @@ class NoteType(BaseSimpleComponentType):
             "name": "Text",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/common/v1",
-            "required": True,
         }
     )
     last_modified_date_time: None | DateTimeType = field(

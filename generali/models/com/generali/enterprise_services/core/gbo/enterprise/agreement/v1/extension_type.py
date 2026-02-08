@@ -111,7 +111,6 @@ class ExtensionType:
             "name": "ExtensionCode",
             "type": "Element",
             "namespace": "http://generali.com/enterprise-services/core/gbo/enterprise/agreement/v1",
-            "required": True,
         }
     )
     geographical_scope: None | GeographicalScope = field(

@@ -28,7 +28,6 @@ class LengthCharacteristic:
             "name": "comparisonOperator",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     vehicle_length: float = field(
@@ -36,7 +35,6 @@ class LengthCharacteristic:
             "name": "vehicleLength",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     length_characteristic_extension: None | ExtensionType = field(

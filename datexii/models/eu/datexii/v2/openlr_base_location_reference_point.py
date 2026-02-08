@@ -22,7 +22,6 @@ class OpenlrBaseLocationReferencePoint:
             "name": "openlrCoordinate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_line_attributes: OpenlrLineAttributes = field(
@@ -30,7 +29,6 @@ class OpenlrBaseLocationReferencePoint:
             "name": "openlrLineAttributes",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_base_location_reference_point_extension: None | ExtensionType = (

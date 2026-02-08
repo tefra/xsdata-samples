@@ -108,6 +108,5 @@ class CanNmClusterCoupling:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

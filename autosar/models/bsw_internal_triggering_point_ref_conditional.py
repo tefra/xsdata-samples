@@ -75,6 +75,5 @@ class BswInternalTriggeringPointRefConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

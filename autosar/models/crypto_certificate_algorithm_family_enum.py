@@ -31,11 +31,7 @@ class CryptoCertificateAlgorithmFamilyEnum:
     class Meta:
         name = "CRYPTO-CERTIFICATE-ALGORITHM-FAMILY-ENUM"
 
-    value: CryptoCertificateAlgorithmFamilyEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: CryptoCertificateAlgorithmFamilyEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

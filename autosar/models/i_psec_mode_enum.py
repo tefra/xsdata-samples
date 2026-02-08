@@ -28,11 +28,7 @@ class IPsecModeEnum:
     class Meta:
         name = "I-PSEC-MODE-ENUM"
 
-    value: IPsecModeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: IPsecModeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

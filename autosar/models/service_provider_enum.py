@@ -28,11 +28,7 @@ class ServiceProviderEnum:
     class Meta:
         name = "SERVICE-PROVIDER-ENUM"
 
-    value: ServiceProviderEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ServiceProviderEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

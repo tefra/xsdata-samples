@@ -40,7 +40,6 @@ class TransparentBridge:
         metadata={
             "name": "initiatorRef",
             "type": "Attribute",
-            "required": True,
         }
     )
     id: None | str = field(

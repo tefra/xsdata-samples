@@ -28,7 +28,6 @@ class InfrastructureDamageObstruction(Obstruction):
             "name": "infrastructureDamageType",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     infrastructure_damage_obstruction_extension: None | ExtensionType = field(

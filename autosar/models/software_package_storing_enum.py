@@ -28,11 +28,7 @@ class SoftwarePackageStoringEnum:
     class Meta:
         name = "SOFTWARE-PACKAGE-STORING-ENUM"
 
-    value: SoftwarePackageStoringEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: SoftwarePackageStoringEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -40,14 +40,12 @@ class ProfileModifyHierarchyLevelReq(BaseReq5):
         metadata={
             "name": "HierarchyLevelID",
             "type": "Attribute",
-            "required": True,
         }
     )
     profile_type: TypeProfileType7 = field(
         metadata={
             "name": "ProfileType",
             "type": "Attribute",
-            "required": True,
         }
     )
     name: None | str = field(

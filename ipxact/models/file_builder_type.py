@@ -34,7 +34,6 @@ class FileBuilderType:
             "name": "fileType",
             "type": "Element",
             "namespace": "http://www.accellera.org/XMLSchema/IPXACT/1685-2022",
-            "required": True,
         }
     )
     command: None | StringExpression = field(

@@ -49,7 +49,6 @@ class FixedFieldUpdate:
         metadata={
             "name": "ID",
             "type": "Attribute",
-            "required": True,
         }
     )
     label: None | str = field(

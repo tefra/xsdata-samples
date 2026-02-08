@@ -295,7 +295,6 @@ class SomeipTransformationISignalPropsConditional:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -329,7 +328,6 @@ class SomeipTransformationISignalPropsConditional:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )
 
@@ -352,6 +350,5 @@ class SomeipTransformationISignalPropsConditional:
                 metadata={
                     "name": "DEST",
                     "type": "Attribute",
-                    "required": True,
                 }
             )

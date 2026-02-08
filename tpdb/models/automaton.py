@@ -13,6 +13,5 @@ class Automaton:
     automatonstuff: Automatonstuff = field(
         metadata={
             "type": "Element",
-            "required": True,
         }
     )

@@ -93,13 +93,11 @@ class UniversalRecordHistorySearchModifiers:
             metadata={
                 "name": "ModifiedStart",
                 "type": "Element",
-                "required": True,
             }
         )
         modified_end: XmlDate = field(
             metadata={
                 "name": "ModifiedEnd",
                 "type": "Element",
-                "required": True,
             }
         )

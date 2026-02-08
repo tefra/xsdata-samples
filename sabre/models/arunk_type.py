@@ -22,7 +22,6 @@ class ArunkType:
             "name": "OriginLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     destination_location: RequestLocationType = field(
@@ -30,7 +29,6 @@ class ArunkType:
             "name": "DestinationLocation",
             "type": "Element",
             "namespace": "http://www.opentravel.org/OTA/2003/05",
-            "required": True,
         }
     )
     side_trip: None | SideTripType = field(

@@ -28,7 +28,6 @@ class OpenlrCircleLocationReference(OpenlrAreaLocationReference):
         metadata={
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_geo_coordinate: OpenlrGeoCoordinate = field(
@@ -36,7 +35,6 @@ class OpenlrCircleLocationReference(OpenlrAreaLocationReference):
             "name": "openlrGeoCoordinate",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     openlr_circle_location_reference_extension: None | ExtensionType = field(

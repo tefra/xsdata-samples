@@ -58,6 +58,5 @@ class Book:
     book_type: BookBookType = field(
         metadata={
             "type": "Attribute",
-            "required": True,
         }
     )

@@ -20,6 +20,5 @@ class CabinClass1:
         metadata={
             "name": "Type",
             "type": "Attribute",
-            "required": True,
         }
     )

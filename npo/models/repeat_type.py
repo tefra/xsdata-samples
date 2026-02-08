@@ -10,16 +10,10 @@ class RepeatType:
     class Meta:
         name = "repeatType"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     is_rerun: bool = field(
         metadata={
             "name": "isRerun",
             "type": "Attribute",
-            "required": True,
         }
     )

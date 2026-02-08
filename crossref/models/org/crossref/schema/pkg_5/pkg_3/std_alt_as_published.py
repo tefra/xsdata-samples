@@ -41,6 +41,5 @@ class StdAltAsPublished(StdDesignatorT):
         metadata={
             "name": "approvedYear",
             "type": "Attribute",
-            "required": True,
         }
     )

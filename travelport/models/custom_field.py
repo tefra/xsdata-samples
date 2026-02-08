@@ -69,7 +69,6 @@ class CustomField(TypeCustomField2):
         metadata={
             "name": "Searchable",
             "type": "Attribute",
-            "required": True,
         }
     )
     search_option: bool = field(

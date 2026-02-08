@@ -11,12 +11,7 @@ __NAMESPACE__ = "http://www.w3.org/2005/08/addressing"
 
 @dataclass(kw_only=True)
 class RelatesToType:
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")
     relationship_type: RelationshipType | str = field(
         default=RelationshipType.HTTP_WWW_W3_ORG_2005_08_ADDRESSING_REPLY,
         metadata={

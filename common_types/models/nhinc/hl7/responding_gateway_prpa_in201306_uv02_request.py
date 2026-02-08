@@ -21,14 +21,12 @@ class RespondingGatewayPrpaIn201306Uv02RequestType:
             "name": "PRPA_IN201306UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     assertion: AssertionType = field(
         metadata={
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_communities: None | NhinTargetCommunitiesType = field(
@@ -51,7 +49,6 @@ class RespondingGatewayPrpaIn201306Uv02SecuredRequestType:
             "name": "PRPA_IN201306UV02",
             "type": "Element",
             "namespace": "urn:hl7-org:v3",
-            "required": True,
         }
     )
     nhin_target_communities: None | NhinTargetCommunitiesType = field(

@@ -30,7 +30,6 @@ class MirReportRetrieveReq(BaseReq1):
         metadata={
             "name": "LocatorCode",
             "type": "Attribute",
-            "required": True,
             "max_length": 8,
         }
     )

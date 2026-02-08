@@ -113,7 +113,6 @@ class AliasNameAssignment:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -123,6 +122,5 @@ class AliasNameAssignment:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )

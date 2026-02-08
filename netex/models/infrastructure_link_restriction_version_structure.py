@@ -22,7 +22,6 @@ class InfrastructureLinkRestrictionVersionStructure(
             "name": "FromLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     to_link_ref: LinkRefStructure = field(
@@ -30,6 +29,5 @@ class InfrastructureLinkRestrictionVersionStructure(
             "name": "ToLinkRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )

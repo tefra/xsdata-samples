@@ -31,11 +31,7 @@ class LogTraceDefaultLogLevelEnum:
     class Meta:
         name = "LOG-TRACE-DEFAULT-LOG-LEVEL-ENUM"
 
-    value: LogTraceDefaultLogLevelEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: LogTraceDefaultLogLevelEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

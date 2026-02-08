@@ -14,7 +14,6 @@ class LocationType:
             "name": "GlobalLocationID",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-            "required": True,
         }
     )
     local_location_id: str = field(
@@ -22,6 +21,5 @@ class LocationType:
             "name": "LocalLocationID",
             "type": "Element",
             "namespace": "http://xmlns.generali.com/services/program/FeedbackProgramService/v1",
-            "required": True,
         }
     )

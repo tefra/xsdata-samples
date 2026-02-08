@@ -29,11 +29,7 @@ class KeepWithPreviousEnum:
     class Meta:
         name = "KEEP-WITH-PREVIOUS-ENUM"
 
-    value: KeepWithPreviousEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: KeepWithPreviousEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

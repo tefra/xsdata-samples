@@ -131,7 +131,6 @@ class ClientServerArrayElementMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -203,7 +202,6 @@ class ClientServerArrayTypeMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -331,7 +329,6 @@ class ClientServerRecordElementMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -364,7 +361,6 @@ class ClientServerRecordElementMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -374,7 +370,6 @@ class ClientServerRecordElementMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 
@@ -446,7 +441,6 @@ class ClientServerRecordTypeMapping:
             metadata={
                 "name": "DEST",
                 "type": "Attribute",
-                "required": True,
             }
         )
 

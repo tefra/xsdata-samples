@@ -62,7 +62,6 @@ class AbstractionTypes:
             metadata={
                 "name": "abstractionRef",
                 "type": "Element",
-                "required": True,
             }
         )
         port_maps: None | AbstractionTypes.AbstractionType.PortMaps = field(
@@ -121,7 +120,6 @@ class AbstractionTypes:
                     metadata={
                         "name": "logicalPort",
                         "type": "Element",
-                        "required": True,
                     }
                 )
                 physical_port: (
@@ -181,7 +179,6 @@ class AbstractionTypes:
                     name: str = field(
                         metadata={
                             "type": "Element",
-                            "required": True,
                         }
                     )
                     range: None | Range = field(
@@ -211,7 +208,6 @@ class AbstractionTypes:
                     name: str = field(
                         metadata={
                             "type": "Element",
-                            "required": True,
                             "white_space": "collapse",
                             "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
                         }
@@ -252,7 +248,6 @@ class AbstractionTypes:
                         name: str = field(
                             metadata={
                                 "type": "Element",
-                                "required": True,
                                 "white_space": "collapse",
                                 "pattern": r"\i[\p{L}\p{N}\.\-:_]*",
                             }

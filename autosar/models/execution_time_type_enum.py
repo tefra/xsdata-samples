@@ -29,11 +29,7 @@ class ExecutionTimeTypeEnum:
     class Meta:
         name = "EXECUTION-TIME-TYPE-ENUM"
 
-    value: ExecutionTimeTypeEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ExecutionTimeTypeEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

@@ -115,7 +115,6 @@ class VmsPictogram:
             "name": "presenceOfRedTriangle",
             "type": "Element",
             "namespace": "http://datex2.eu/schema/2/2_0",
-            "required": True,
         }
     )
     vienna_convention_compliant: None | bool = field(

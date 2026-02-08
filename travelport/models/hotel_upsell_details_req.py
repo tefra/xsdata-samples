@@ -29,7 +29,6 @@ class HotelUpsellDetailsReq(BaseReq1):
         metadata={
             "name": "HotelProperty",
             "type": "Element",
-            "required": True,
         }
     )
     hotel_rate_detail: None | HotelRateDetail = field(

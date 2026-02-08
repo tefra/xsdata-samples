@@ -8,9 +8,4 @@ class Originalfilename:
     class Meta:
         name = "originalfilename"
 
-    value: str = field(
-        default="",
-        metadata={
-            "required": True,
-        },
-    )
+    value: str = field(default="")

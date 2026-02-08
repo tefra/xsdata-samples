@@ -28,11 +28,7 @@ class ListEnum:
     class Meta:
         name = "LIST-ENUM"
 
-    value: ListEnumSimple = field(
-        metadata={
-            "required": True,
-        }
-    )
+    value: ListEnumSimple = field()
     s: None | str = field(
         default=None,
         metadata={

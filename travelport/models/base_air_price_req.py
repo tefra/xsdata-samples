@@ -95,7 +95,6 @@ class BaseAirPriceReq(BaseCoreReq1):
             "name": "AirItinerary",
             "type": "Element",
             "namespace": "http://www.travelport.com/schema/air_v52_0",
-            "required": True,
         }
     )
     air_pricing_modifiers: None | AirPricingModifiers = field(

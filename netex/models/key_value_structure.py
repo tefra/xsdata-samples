@@ -12,7 +12,6 @@ class KeyValueStructure:
             "name": "Key",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     value: str = field(
@@ -20,7 +19,6 @@ class KeyValueStructure:
             "name": "Value",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
     type_of_key: None | str = field(

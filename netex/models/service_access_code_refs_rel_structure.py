@@ -18,6 +18,5 @@ class ServiceAccessCodeRefsRelStructure(OneToManyRelationshipStructure):
             "name": "ServiceAccessCodeRef",
             "type": "Element",
             "namespace": "http://www.netex.org.uk/netex",
-            "required": True,
         }
     )
