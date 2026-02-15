@@ -306,6 +306,6 @@ for key in SUITES.keys():
     collection.add_task(build)
     collection.add_task(test)
     collection.add_task(mypy)
-    collection.add_task(all_tasks)
+    collection.add_task(all_tasks, default=True)
     collection.configure({"suite": key})
     ns.add_collection(collection)
