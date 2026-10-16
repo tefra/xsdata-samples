@@ -3,7 +3,6 @@ from pathlib import Path
 import pytest
 from lxml import etree
 
-from sdmx_ml.models import *
 from tpdb.models import Problem
 
 here = Path(__file__).parent
